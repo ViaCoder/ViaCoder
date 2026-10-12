@@ -3,7 +3,7 @@ import path from 'node:path'
 import crypto from 'node:crypto'
 import ts from 'typescript'
 const repo = path.resolve(import.meta.dirname, '../..')
-const root = path.resolve(repo, '../.work/official-modules-2.1.287/darwin-arm64')
+const root = path.resolve(process.env.CLAUDE_OFFICIAL_MODULES_DIR ?? path.join(repo, '../.work/official-modules-2.1.287/darwin-arm64'))
 const bytes = fs.readFileSync(path.join(root, 'manifest.json'))
 const manifest = JSON.parse(bytes)
 const sha = x => crypto.createHash('sha256').update(x).digest('hex')
