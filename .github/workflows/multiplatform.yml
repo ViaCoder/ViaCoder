@@ -34,7 +34,7 @@ jobs:
           persist-credentials: false
       - uses: oven-sh/setup-bun@v2
         with:
-          bun-version: 1.4.2
+          bun-version: 1.4.3
       - name: Frozen development dependencies
         run: bun install --frozen-lockfile --ignore-scripts --registry=https://registry.npmjs.org
       - name: Native runner identity
@@ -62,7 +62,7 @@ jobs:
           persist-credentials: false
       - uses: oven-sh/setup-bun@v2
         with:
-          bun-version: 1.4.2
+          bun-version: 1.4.3
       - uses: actions/setup-node@v4
         with:
           node-version: '24'

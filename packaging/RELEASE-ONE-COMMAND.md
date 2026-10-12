@@ -8,7 +8,7 @@ the Windows local entry is `install/cc-release.ps1`. Neither cross-compiles
 native dependencies nor claims a target was tested from another architecture.
 
 ```sh
-# Current machine (public Bun 1.4.2 and target-native dependencies required).
+# Current machine (public Bun 1.4.3 and target-native dependencies required).
 ./install/cc-release local --offline
 
 # Specific host and password file; password contents are consumed only by
@@ -18,7 +18,7 @@ native dependencies nor claims a target was tested from another architecture.
 
 ## Windows local one-command entry and six-platform boundaries
 
-Run on the target machine with its matching public Bun **1.4.2**, PowerShell
+Run on the target machine with its matching public Bun **1.4.3**, PowerShell
 and `tar` already installed; this command does not download a runtime. Paths
 are passed as argument-array elements, including spaces and apostrophes.
 
@@ -61,7 +61,7 @@ acceptance by this entry. This batch adds source wiring; real Windows
 PowerShell/Bun/native install and per-target validation remain release gates.
 
 Deploy also requires `sshpass`, OpenSSH `ssh`/`scp`, `tar`, and `sha256sum` on
-the controller, plus Bun 1.4.2 on the target. SSH host-key checking retains
+the controller, plus Bun 1.4.3 on the target. SSH host-key checking retains
 the OpenSSH defaults. The deploy command packs locally, transfers only the
 archive and checksum to a generated temporary directory, verifies SHA256 on
 the target, then invokes the existing installer there with remote lifecycle

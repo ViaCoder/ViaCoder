@@ -1,5 +1,13 @@
 # 源码 + Bun 发行安装（非 standalone/native compile）
 
+## 六平台预构建安装包
+
+GitHub `release.yml` 使用六个目标平台的原生 runner，逐平台执行冻结依赖安装、离线交互测试、实际生产安装、打包、真实解包及再次离线安装。原 `tsconfig.json` 的整仓类型检查独立执行；全部成功后，`v2.1.287` 标签才能生成 GitHub Release。手动指定发布标签时也要求该标签已经指向当前被测试提交。
+
+发布包名为 `ViaCoder-2.1.287-{darwin,linux,win32}-{x64,arm64}`，macOS/Linux 使用 `.tar.gz`，Windows 使用 `.zip`。包内包含对应架构的 Bun 1.4.3 二进制、源码、生产依赖和 `INSTALL.txt`；不采用 `Bun --compile`，不启动官方整包。目标机使用包内 Bun 执行安装器，不联网获取依赖；沿用不可变发行目录、原子切换及回滚。
+
+该 CI 不使用用户 API key、OAuth 或 SSH 凭据，不证明桌面/Chrome 或真实账号资格能力。当前本机 darwin-arm64 的实际归档、解包、离线安装已验证；其余平台以新 GitHub CI 终态为准。
+
 ## 审计结论与边界
 
 - `bin/cc` 原来未解析软链接；现在解析绝对/相对链接，并用 `cd -P` 锁定实际发行路径。
@@ -12,7 +20,7 @@
 - 当前没有经四平台验证的本仓 native compile；不复制官方 binary 冒充本仓构建。
 - 官方 native 整包仅用于离线差分基准；发布器不携带或启动官方整包，不以它替代本仓源码及本地定制。
 - 若目标是“保留本地源码功能，同时复用官方 Bun/TLS/HTTP/2”，向目标平台提供公开的
-  Bun 1.4.2 并以它启动源码；官方 `claude` 的 `__BUN/__bun` 或 ELF 原生段不能拆出后
+  Bun 1.4.3 并以它启动源码；官方 `claude` 的 `__BUN/__bun` 或 ELF 原生段不能拆出后
   直接拼接。当前四平台官方整包检查均显示 `bun-v1.4.3`，它只作为离线差分基准，发布器
   不把它当作可插拔 runtime。
 - 公开 `bin/viacoder` 委托的内部 `bin/cc` 已传 `--feature=TRANSCRIPT_CLASSIFIER`，
@@ -24,7 +32,7 @@
 
 ## 六个平台
 
-在**目标平台本机**使用公开 Bun 1.4.2。macOS/Linux 使用 Bash 和 tar；Windows 使用原生 PowerShell 入口。Linux 仅 glibc >= 2.26，
+在**目标平台本机**使用公开 Bun 1.4.3。macOS/Linux 使用 Bash 和 tar；Windows 使用原生 PowerShell 入口。Linux 仅 glibc >= 2.26，
 不支持 musl/Android。macOS 还须满足所用 Bun 与预编译依赖的系统要求；各机器仍须实机验收。
 不要把开发机 node_modules 复制给另一架构，不做 `--cpu` 交叉安装后伪称已运行验收。
 
@@ -178,7 +186,7 @@ BUN_BIN=/absolute/path/to/bun ./install/cc-install preflight --target administra
 ```
 
 库存格式仅含 `schema: 1`、`platform`、Bun 进程 `arch`、stable `bun` 版本、`glibc`（macOS 为 null）。
-示例测试数据为 `{"schema":1,"platform":"linux","arch":"x64","bun":"1.4.2","glibc":"2.26"}`，
+示例测试数据为 `{"schema":1,"platform":"linux","arch":"x64","bun":"1.4.3","glibc":"2.26"}`，
 它不是本次目标的实测数据。文件限普通 JSON、4096 bytes，不接受 symlink、额外字段或密码参数。
 错误不回显文件内容/未知参数值。目标标签限 `user@hostname` / `user@IPv4`，不含密码或 shell 语法。
 

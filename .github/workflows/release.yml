@@ -1,0 +1,119 @@
+name: ViaCoder 2.1.287 test and native prebuilt release
+on:
+  pull_request:
+  push:
+    branches: [main]
+    tags: [v2.1.287]
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: Leave empty for tests only; v2.1.287 publishes after all jobs pass
+        required: false
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: viacoder-287-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  native:
+    name: Native ${{ matrix.target }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { runner: macos-15-intel, target: darwin-x64 }
+          - { runner: macos-15, target: darwin-arm64 }
+          - { runner: ubuntu-24.04, target: linux-x64 }
+          - { runner: ubuntu-24.04-arm, target: linux-arm64 }
+          - { runner: windows-2025, target: win32-x64 }
+          - { runner: windows-11-arm, target: win32-arm64 }
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 60
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.4.3
+      - name: Frozen development dependencies
+        run: bun install --frozen-lockfile --ignore-scripts --registry=https://registry.npmjs.org
+      - name: Native platform facts
+        run: bun --no-env-file --config=packaging/runtime.bunfig.toml scripts/ci/native-platform.mjs facts '${{ matrix.target }}'
+      - name: Scoped offline interaction tests
+        run: bun --no-env-file --config=packaging/runtime.bunfig.toml scripts/ci/native-platform.mjs tests '${{ matrix.target }}'
+      - name: Native production install, prebuilt package and offline package install
+        run: bun --no-env-file --config=packaging/runtime.bunfig.toml scripts/ci/distribution-287.mjs '${{ matrix.target }}'
+      - uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: prebuilt-${{ matrix.target }}
+          path: |
+            .distribution-287/ViaCoder-2.1.287-${{ matrix.target }}.tar.gz
+            .distribution-287/ViaCoder-2.1.287-${{ matrix.target }}.zip
+            .distribution-287/ViaCoder-2.1.287-${{ matrix.target }}*.sha256
+            .distribution-287/result-${{ matrix.target }}.json
+          if-no-files-found: error
+          retention-days: 7
+  types:
+    name: Original full tsconfig
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.4.3
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: bun install --frozen-lockfile --ignore-scripts --registry=https://registry.npmjs.org
+      - run: node --max-old-space-size=8192 node_modules/typescript/bin/tsc --noEmit --project tsconfig.json
+  release:
+    name: Publish six verified native prebuilt archives
+    if: ${{ github.ref == 'refs/tags/v2.1.287' || (github.event_name == 'workflow_dispatch' && inputs.release_tag == 'v2.1.287') }}
+    needs: [native, types]
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: prebuilt-*
+          merge-multiple: true
+          path: dist
+      - name: Verify tag, six target receipts and archive checksums
+        env:
+          RELEASE_TAG: v2.1.287
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse "refs/tags/$RELEASE_TAG^{commit}")" = "$GITHUB_SHA"
+          for target in darwin-x64 darwin-arm64 linux-x64 linux-arm64 win32-x64 win32-arm64; do
+            test -s "dist/result-$target.json"
+            grep -q '"status": "passed"' "dist/result-$target.json"
+            if [[ "$target" == win32-* ]]; then
+              test -s "dist/ViaCoder-2.1.287-$target.zip.sha256"
+            else
+              test -s "dist/ViaCoder-2.1.287-$target.tar.gz.sha256"
+            fi
+          done
+          (cd dist && sha256sum -c ./*.sha256)
+          test "$(find dist -maxdepth 1 -type f \( -name '*.tar.gz' -o -name '*.zip' \) | wc -l)" -eq 6
+      - name: Create GitHub release with ephemeral Actions token
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: v2.1.287
+        run: |
+          gh release create "$RELEASE_TAG" dist/*.tar.gz dist/*.zip dist/*.sha256 \
+            --verify-tag --title "ViaCoder 2.1.287" \
+            --notes "Six native-runner prebuilt source+Bun 1.4.3 distributions. Each archive includes production dependencies, native runtime and offline install/rollback instructions. These are not single-file executables. CI proves native CLI/native modules/Web fixture installation, not graphical desktop or authenticated model behavior."

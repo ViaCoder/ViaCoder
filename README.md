@@ -28,6 +28,13 @@
 
 发行物是**源码 + Bun 运行包，不是独立原生可执行文件**。六个平台目标在目标机按 Bun 进程架构安装 production/optional 依赖；Linux 要求 glibc >= 2.26，不支持 musl。平台映射不等于六平台实机验收通过，当前发布门仍待收口。详见[发行安装、验证及回滚](packaging/README.md)。
 
+### GitHub 测试与发布
+
+- PR、`main` 推送和手动运行触发 `.github/workflows/release.yml`：六个平台原生 runner 各自测试、打包、解包并实际离线安装；另运行原配置完整类型检查。
+- 标签 `v2.1.287` 仅在上述任务全部通过后发布六份安装包：macOS/Linux 的 `.tar.gz`，Windows 的 `.zip`，每份包含对应架构的 Bun 1.4.3 二进制、源码和生产依赖。
+- 下载包无需自行安装 Bun 或联网解析依赖。解包后按包内 `INSTALL.txt` 安装，入口为 `viacoder`，原配置与认证不随安装包分发。
+- `.github/workflows/multiplatform.yml` 保留手动平台专项验收；六平台 CI 的实际结果以 GitHub 运行记录为准，不以工作流文件存在代替通过。
+
 公开品牌为 **ViaCoder**，TUI命令为 `viacoder`，Web入口为 `viacoder serve`；仅提供 `viacoder` 公开入口，不占用系统 C 编译器的 `cc`。安装器移除本产品已确认管理的旧 `cclaude`/`cc` 链接，不改其他 `cc` 或 `/usr/bin/cc`。
 
 安装后使用 `viacoder` 启动。入口会保留当前工作目录，因此项目级设置和 `~/.claude/projects/` 下的原有会话记录继续可用；未设置 `CLAUDE_CONFIG_DIR` 时也不会覆盖默认的 `~/.claude`，macOS 会继续读取原有 Keychain OAuth 凭据。
@@ -44,7 +51,7 @@ Linux 使用同一个 `~/.claude` 配置目录和 `.credentials.json` OAuth 存�
 
 ### 1. 安装 Bun
 
-本项目使用当前公开发布的 Bun 1.4.2（发行安装严格要求该版本）；官方 2.1.284 原生包内嵌的 Bun 构建仅作为差分基准，不从二进制拆出。请先安装 Bun 1.4.2：
+本项目使用当前公开发布的 Bun 1.4.3（发行安装严格要求该版本）；官方 2.1.287 原生包内嵌的 Bun 构建仅作为差分基准，不从二进制拆出。请先安装 Bun 1.4.3：
 
 ```bash
 # macOS / Linux（官方安装脚本）

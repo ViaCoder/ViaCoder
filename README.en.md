@@ -1,5 +1,11 @@
 # ViaCoder
 
+## GitHub tests and releases
+
+`.github/workflows/release.yml` runs on pull requests, pushes to `main`, and manual dispatch. Six native runners (macOS, Linux, Windows × x64/arm64) test, package, extract and actually install each distribution offline; a separate job checks the original full TypeScript configuration. The `v2.1.287` tag publishes only after all jobs pass.
+
+Release assets are six native installation archives: `.tar.gz` for macOS/Linux and `.zip` for Windows. Each includes the corresponding Bun 1.4.3 executable, source and production dependencies—not a single-file compiled application. Follow the included `INSTALL.txt`; no destination Bun installation or dependency download is required. User credentials are never bundled. Actual platform acceptance is recorded by CI runs, not inferred from this workflow definition.
+
 <p align="right"><a href="./README.md">中文</a> | <strong>English</strong></p>
 
 A **locally runnable version** organized from the public Claude Code package logic, currently targeting version `2.1.287` (release acceptance is not complete), with support for any Anthropic-compatible API endpoint such as MiniMax and OpenRouter.
@@ -44,7 +50,7 @@ Linux uses the same `~/.claude` configuration directory and `.credentials.json` 
 
 ### 1. Install Bun
 
-This project uses the latest publicly published Bun 1.4.2 (release installation requires exactly 1.4.2). The Bun build embedded in the official Claude Code 2.1.284 native package remains a comparison baseline and is not extracted. Install Bun 1.4.2 before installation:
+This project uses the latest publicly published Bun 1.4.3 (release installation requires exactly 1.4.3). The Bun build embedded in the official Claude Code 2.1.287 native package remains a comparison baseline and is not extracted. Install Bun 1.4.3 before installation:
 
 ```bash
 # macOS / Linux (official install script)
