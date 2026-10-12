@@ -16,5 +16,5 @@ while [[ -L "$SOURCE" ]]; do
 done
 ROOT="$(cd -P "$(dirname "$SOURCE")/.." && pwd)"
 BUN_BIN="${BUN_BIN:-$(command -v bun || true)}"
-[[ -n "$BUN_BIN" ]] || { echo 'Set BUN_BIN to the destination Bun 1.4.2 runtime, the latest public Bun for this source release.' >&2; exit 1; }
+[[ -n "$BUN_BIN" ]] || { echo 'Set BUN_BIN to the destination Bun 1.4.3 runtime, the latest public Bun for this source release.' >&2; exit 1; }
 exec "$BUN_BIN" --no-env-file --config="$ROOT/packaging/runtime.bunfig.toml" "$ROOT/packaging/release.ts" "$@"

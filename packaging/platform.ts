@@ -3,7 +3,7 @@ export type Target = typeof TARGETS[number]
 // Source releases use the latest publicly published Bun. The Bun build
 // embedded in the official native package is a comparison baseline, not an
 // extractable runtime dependency.
-export const OFFICIAL_BUN_VERSION = '1.4.2'
+export const OFFICIAL_BUN_VERSION = '1.4.3'
 export const MIN_BUN = OFFICIAL_BUN_VERSION
 
 export function targetFor(os: string, arch: string, glibc?: string): Target {

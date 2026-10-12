@@ -53,13 +53,13 @@ if (-not $bun -and $HOME) {
   if (Test-Path -LiteralPath $candidate -PathType Leaf) { $bun = $candidate }
 }
 if (-not $bun) {
-  [Console]::Error.WriteLine('Bun 1.4.2 was not found; set BUN_BIN or add Bun to PATH.')
+  [Console]::Error.WriteLine('Bun 1.4.3 was not found; set BUN_BIN or add Bun to PATH.')
   exit 1
 }
 
 $version = (& $bun --version 2>$null | Out-String).Trim()
-if ($LASTEXITCODE -ne 0 -or $version -ne '1.4.2') {
-  [Console]::Error.WriteLine("Bun 1.4.2 is required for this source release; found $version")
+if ($LASTEXITCODE -ne 0 -or $version -ne '1.4.3') {
+  [Console]::Error.WriteLine("Bun 1.4.3 is required for this source release; found $version")
   exit 1
 }
 

@@ -25,5 +25,7 @@ function o7r(e,t,r){if(e!==d||!R())return;if(r.redirected&&u(r.url)==="refused")
 async function NVt(e,t,r){let s=globalThis.fetch,{method:a,url:n}=jAn(e,t);r7r(s,a,n);let f=await(r&&s===d?r:s)(e,t);return o7r(s,a,f),f}
 return NVt;})();
 function eI(e,n){let r=ku()?p7r():void 0;if(!r)return NVt(e,n);let{tls:s,...h}=n??{},g=n?.proxy===void 0&&n?.unix===void 0?h:n;return NVt(e,n,(b)=>r.fetch(b,g))}
-return {fetch:eI};
+// Source-runtime entry: actual FetchSession capability, unchanged pool and options.
+function sourceFetch(e,n){let r=p7r();if(!r)return NVt(e,n);let{tls:s,...h}=n??{},g=n?.proxy===void 0&&n?.unix===void 0?h:n;return NVt(e,n,(b)=>r.fetch(b,g))}
+return {fetch:eI,sourceFetch};
 }

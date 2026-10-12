@@ -70,7 +70,6 @@ export function readRootBackgroundModule287(specifier:string):Readonly<Record<st
   case 'chunk-wht9dj9x.js':return {shutdownDatadog:getRootBackgroundHostPorts287().rootBackgroundTelemetryShutdown287}
   case 'chunk-4j8pxnz6.js':return {logEvent:analytics().logEvent}
   case 'chunk-nc6ah7j4.js':return {sleep:(import.meta.require('node:timers/promises') as typeof import('node:timers/promises')).setTimeout}
-  case 'chunk-139mqjgn.js':return {getSettingsWithErrors:(import.meta.require('../../utils/settings/settings.js') as typeof import('../../utils/settings/settings.js')).getSettingsWithErrors}
   case 'chunk-xp1v6nj2.js':return {initializeErrorLogSink:(import.meta.require('../../utils/errorLogSink.js') as typeof import('../../utils/errorLogSink.js')).initializeErrorLogSink}
   case 'chunk-4fdra957.js':return {exitWithError:(message:string)=>{process.stderr.write(message+'\n');process.exit(1)}}
   default:return undefined

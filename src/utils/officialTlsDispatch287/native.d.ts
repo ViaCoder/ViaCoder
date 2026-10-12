@@ -10,4 +10,4 @@ export type TlsDispatchPorts287 = {
   k(): TlsSessionState287
   at(a: unknown, b: unknown): boolean
 }
-export declare function createNativeTlsDispatch287(ports: TlsDispatchPorts287): {fetch: TlsDispatch287}
+export declare function createNativeTlsDispatch287(ports: TlsDispatchPorts287): {fetch: TlsDispatch287; sourceFetch: TlsDispatch287}

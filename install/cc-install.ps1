@@ -25,7 +25,7 @@ if (-not $bun -and $HOME) {
   if (Test-Path -LiteralPath $candidate -PathType Leaf) { $bun = $candidate }
 }
 if (-not $bun) {
-  [Console]::Error.WriteLine('Set BUN_BIN or add Bun 1.4.2 to PATH.')
+  [Console]::Error.WriteLine('Set BUN_BIN or add Bun 1.4.3 to PATH.')
   exit 1
 }
 

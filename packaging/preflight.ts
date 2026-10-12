@@ -60,7 +60,7 @@ export function assessDeployment(target: string, facts?: unknown): PreflightResu
   try { releaseTarget = targetFor(facts.platform, facts.arch, facts.glibc ?? undefined) }
   catch { return blocked('Unsupported source-release platform: macOS/Linux/Windows x64/arm64 only; Linux requires glibc >= 2.26. musl/Android are not supported.') }
   try { checkBun(facts.bun) }
-  catch { return blocked('Bun 1.4.2 is required on the target for this source release; this preflight does not install a runtime.') }
+  catch { return blocked('Bun 1.4.3 is required on the target for this source release; this preflight does not install a runtime.') }
   return { ...base, status: 'platform-compatible', releaseTarget, nativeDependencies: nativePackages(releaseTarget),
     reason: 'Supplied platform facts are compatible only. This is not an installation or deployment verification.' }
 }

@@ -14,7 +14,7 @@ Usage:
   cc-release.ps1 local [--offline|--online] [--prefix DIR] [--bin-dir DIR] [--cache-dir DIR]
 
 Packs the current source and invokes the existing local installer on this
-machine. Bun 1.4.2 and target-native dependencies are required. Default
+machine. Bun 1.4.3 and target-native dependencies are required. Default
 mode is --online; --offline never retries online. Does not configure a
 provider or start a service. Native Windows SSH deployment is not an entry
 point; use this local command on the Windows target. Existing POSIX remote
