@@ -1,0 +1,197 @@
+{
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "version": "2.1.287",
+  "proofs": [
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "fy",
+      "start": 466008,
+      "end": 466119,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "063e2dc83bc4964506be63715004c92ac596808c1fa986cc4ee445dc44abbd7f",
+      "source": "function fy(e,n){let r=An(n),s=e.name;if(!s)return!1;return s.startsWith(`mcp__${r}__`)||s.startsWith(`${r}:`)}"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "KV",
+      "start": 466211,
+      "end": 466273,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "4e63c71e908a9617cedb42c99573786a4ab26211872f7b5f84d543d76f85a5fc",
+      "source": "function KV(e,n){let r=Ds(n);return e.filter((s)=>!zc(s,n,r))}"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "Jte",
+      "start": 466273,
+      "end": 466322,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "8364917b766b3db3ad3f05491afc848b320aa6a6cf986d06efa9e0f36c8a7a6e",
+      "source": "function Jte(e,n){return e.filter((r)=>!fy(r,n))}"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "hlt",
+      "start": 466322,
+      "end": 466374,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "e3e91dac9b12fd671d872c3e5d2c38f5db9b2eeb6f57f1da0d56802e9fd58a74",
+      "source": "function hlt(e,n){let r={...e};return delete r[n],r}"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "axr",
+      "start": 466428,
+      "end": 466534,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "adf8c6b5e5df3702a11907246f1cb6ae0bd3810306789ada7acda87f9304faa7",
+      "source": "function axr(e,n){return(e.scope===\"project\"||e.scope===\"local\")&&e.declaredIn!==void 0&&e.declaredIn!==n}"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "lxr",
+      "start": 466534,
+      "end": 466907,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "957a85e3f86add3387c9ade877aae57cab67d4b5663982cf697661f0c23c7ba2",
+      "source": "function lxr(e,n){let r=e.clients.filter(n);if(r.length===0)return{...e,stale:[]};let{tools:s,commands:g,resources:h}=e,b={...e.resourceTemplates};for(let D of r)s=KV(s,D.name),g=Jte(g,D.name),h=hlt(h,D.name),delete b[D.name];let w=new Set(r.map((D)=>D.name));return{clients:e.clients.filter((D)=>!w.has(D.name)),tools:s,commands:g,resources:h,resourceTemplates:b,stale:r}}"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "Kle",
+      "start": 470110,
+      "end": 470167,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "3e6c6c4fb0818309d425f8369a993b516a8ef12e02843896b93ff4b0f6e72fba",
+      "source": "function Kle(e){return e.type===\"stdio\"||e.type===void 0}"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "HA",
+      "start": 471552,
+      "end": 471593,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "24205f88754fbc54536e8b195601c0a2156b0aff6ebfcac84e3bbfebc78b1f5c",
+      "source": "function HA(){return Object.create(null)}"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "pG",
+      "start": 471593,
+      "end": 471729,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "d1852c0ac75d118dd8af236c9f13f2df514a5e4701bf091238e8035f9d4a2d9a",
+      "source": "function pG(e,n,r){let s=HA();if(e)for(let[g,h]of Object.entries(e))s[g]=r===void 0?{...h,scope:n}:{...h,scope:n,declaredIn:r};return s}"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "sde",
+      "start": 483440,
+      "end": 483476,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "6f1a042625caea3f440e0e1e000f93e1ced5c92786ddbab9f63f0bda8d8c5bb3",
+      "source": "function sde(e){return Zw(e)||mZ(e)}"
+    },
+    {
+      "file": "chunk-x695d2rs.js",
+      "name": "Ds",
+      "start": 862,
+      "end": 901,
+      "moduleSha256": "f6a2d997628fe7cd1b4c4a5f76228cc3781aedd26d850a47f99b2415f0868d8b",
+      "sha256": "cee87e6f109eacd3f9a6a74fc7bbf3f4545377d54e1bf6e3a478fd5b2643b235",
+      "source": "function Ds(e){return`mcp__${An(e)}__`}"
+    },
+    {
+      "file": "chunk-x695d2rs.js",
+      "name": "zc",
+      "start": 901,
+      "end": 1021,
+      "moduleSha256": "f6a2d997628fe7cd1b4c4a5f76228cc3781aedd26d850a47f99b2415f0868d8b",
+      "sha256": "95a99f68775f23500518228b8fa1b0e7b42d3114b2a0537b8d8fe39cc839530c",
+      "source": "function zc(e,n,r){if(e.mcpInfo?.serverName!==void 0)return e.mcpInfo.serverName===n;return e.name.startsWith(r??Ds(n))}"
+    },
+    {
+      "file": "chunk-x695d2rs.js",
+      "name": "us",
+      "start": 716,
+      "end": 862,
+      "moduleSha256": "f6a2d997628fe7cd1b4c4a5f76228cc3781aedd26d850a47f99b2415f0868d8b",
+      "sha256": "f75ad7bc035d3c2123d4d58fbbeb107f7daf65f1b8a0cb45bfc39c62cbe1f337",
+      "source": "function us(e){let n=e.split(\"__\"),[r,t,...o]=n;if(r!==\"mcp\"||!t)return null;let s=o.length>0?o.join(\"__\"):void 0;return{serverName:t,toolName:s}}"
+    },
+    {
+      "file": "chunk-x695d2rs.js",
+      "name": "mbt",
+      "start": 2690,
+      "end": 2794,
+      "moduleSha256": "f6a2d997628fe7cd1b4c4a5f76228cc3781aedd26d850a47f99b2415f0868d8b",
+      "sha256": "529b638e1c6a36c2dcdbf16fa6502574dd1ce6e0a0d4f5e78ade42715f3210e6",
+      "source": "function mbt(e,n){if(e.startsWith(\"plugin:\")||n.startsWith(\"plugin:\"))return e===n;return An(e)===An(n)}"
+    },
+    {
+      "file": "chunk-x695d2rs.js",
+      "name": "M8o",
+      "start": 1078,
+      "end": 1181,
+      "moduleSha256": "f6a2d997628fe7cd1b4c4a5f76228cc3781aedd26d850a47f99b2415f0868d8b",
+      "sha256": "68286dc9852eadd09dff4cb5110100d1bee17366d5d7c7315bc186251b3c9390",
+      "source": "function M8o(e,{listedServer:n,parsedServer:r}){if(n!==void 0)return e===n;return r!==void 0&&mbt(r,e)}"
+    },
+    {
+      "file": "chunk-ag87p919.js",
+      "name": "ac",
+      "start": 666,
+      "end": 687,
+      "moduleSha256": "e51f0caaaafdea4672ca46d11e18b7f617b617f5319cf0b7d214cab31c35fdfb",
+      "sha256": "ac777cd21e8a8967df9f9d20dd79d6192af3e76d7e9a286d5a17a77570f4ffea",
+      "source": "ac=\"claude-in-chrome\""
+    },
+    {
+      "file": "chunk-ag87p919.js",
+      "name": "Zw",
+      "start": 710,
+      "end": 743,
+      "moduleSha256": "e51f0caaaafdea4672ca46d11e18b7f617b617f5319cf0b7d214cab31c35fdfb",
+      "sha256": "ce8c2cdf8aa7012bc9bda0867665f817115b1e538a766e94b15ca2484afe880a",
+      "source": "function Zw(e){return An(e)===ac}"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "Ox",
+      "start": 610936,
+      "end": 610953,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "17cb2aee1afa940145c916f69dbf808d250ec0a5c6541e1e1bcedd0e336156b2",
+      "source": "Ox=\"computer-use\""
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "mZ",
+      "start": 611387,
+      "end": 611420,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "114bda6aa96058d22dbf8f25f764d7250e3bb33e768c13c20042d7b583c6e90c",
+      "source": "function mZ(e){return An(e)===Ox}"
+    },
+    {
+      "file": "chunk-g3pxfk8s.js",
+      "name": "$6e",
+      "start": 671,
+      "end": 697,
+      "moduleSha256": "4450272d756d3669720f6623ba10421ddce59a51a590b538b78ca5322450a268",
+      "sha256": "6bdad9a77059acb1f72b63fb88f91778bcce03c4d6f3a488f8036aaa24f2499c",
+      "source": "$6e=(r,o)=>Kle(o)&&!sde(r)"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "hf",
+      "start": 423342,
+      "end": 424201,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "3e8ad6fac19e5575b19611b9c56c35b550c014d03d26acb59ffed854e6909455",
+      "source": "async function hf(b,D={restartLaunchDirStdioServers:!1}){UVe.of(e.host).directoryChanged();let K=Ee(),ce=I.permissionPromptToolName,ke=[],Ie;R((Ke)=>{let{stale:$e,...Qe}=lxr(Ke.mcp,(mt)=>axr(mt.config,K));if($e.length===0)return Ke;return ke=$e,Ie=ce===void 0||I.permissionPromptToolServerName===void 0?void 0:Ke.mcp.tools.find((mt)=>Mt(mt,ce))?.mcpInfo?.serverName,{...Ke,mcp:{...Ke.mcp,...Qe}}});for(let Ke of ke){if(I.permissionPromptToolBinding!==void 0&&M8o(Ke.name,{listedServer:Ie,parsedServer:I.permissionPromptToolServerName}))I.permissionPromptToolBinding.swept=!0;if(Ts(Ke))await yn().clearServerCache(Ke.name,Ke.config).catch(()=>{})}if(D.restartLaunchDirStdioServers)await pb();await Ga({applyStagedInstalls:!1});let Ye=new Set(Object.keys(Lt.configs)),Oe=new Set(v().mcp.clients.filter((Ke)=>!Ye.has(Ke.name)).map((Ke)=>Ke.name));await ea(Oe,b)}"
+    }
+  ],
+  "nativeSha256": "af094ad7352a03ab4f4edafe9a9b480173fe24b1958cf0232c87b3937be857db",
+  "boundary": "hf pinned as original oracle/caller evidence; local adapter reuses canonical public plugin/skill/MCP owners, no project-dev-intent owner synthesized"
+}

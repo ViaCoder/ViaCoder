@@ -1,0 +1,92 @@
+{
+  "version": "2.1.283",
+  "source": "local official npm darwin-arm64 raw; no network",
+  "modules": [
+    {
+      "file": "chunk-mzg9kbjz.js",
+      "sha256": "2660d187f0268405be865291d47f395ba3af3e212a223de7c8f3b08b82bd0a7e",
+      "symbols": [
+        {
+          "symbol": "eye",
+          "start": 1404454,
+          "end": 1429568,
+          "sha256": "494ed76849da5d7e1e859e22f567fe50a974a1460b4a825c50b11267d43cafb3"
+        }
+      ]
+    },
+    {
+      "file": "chunk-j76azkk1.js",
+      "sha256": "e9ff741e3fc8ce5f76c02379dff41301e189a46fd2dfb64ed78301250b0f365e",
+      "symbols": [
+        {
+          "symbol": "hY",
+          "start": 1360,
+          "end": 1364,
+          "sha256": "ae30579d32ef6e958f15a544d891398049ccf399daf5b014c81f49d33a20c12d"
+        },
+        {
+          "symbol": "Hst",
+          "start": 1365,
+          "end": 1418,
+          "sha256": "ab6221010db730fcefb9b8247f7016e329aa3be1a815663a877fb3cf2d4e9c62"
+        }
+      ]
+    },
+    {
+      "file": "chunk-gg4jhzsm.js",
+      "sha256": "8c52a42c594ac9a5d17e9d506e378bd5db898c1f087f09d27a2c06a205b4313a",
+      "symbols": [
+        {
+          "symbol": "Ne",
+          "start": 58298,
+          "end": 79157,
+          "sha256": "c4a7fa6eacc1875210f96f2fc5741d606b4470ff2067028dd596575c19b17cea"
+        },
+        {
+          "symbol": "lr",
+          "start": 39313,
+          "end": 39657,
+          "sha256": "7cb69fc27eb62c930767016f560acf1bc4b17c4a44a0c4e1c44e5033015237b3"
+        },
+        {
+          "symbol": "_o",
+          "start": 109104,
+          "end": 110914,
+          "sha256": "9edb9544e5efc707112166ace460a75534468730e28fbc1a5b386f710062b49e"
+        },
+        {
+          "symbol": "lt",
+          "start": 80744,
+          "end": 80965,
+          "sha256": "3710ab73e14f249328b9f5706cf1958dbb373c8811fb4db424b51060708de1bf"
+        },
+        {
+          "symbol": "Ge",
+          "start": 80965,
+          "end": 81169,
+          "sha256": "8d5c0541d27aa992b68445b9480c38f1a9a8f4c6456babccc3ef78a549f47c90"
+        }
+      ]
+    },
+    {
+      "file": "chunk-vk9j502m.js",
+      "sha256": "4dc4b016aa62915af920cbf9b98c5053f11b84bfd387d5545659b879e49e565a",
+      "symbols": [
+        {
+          "symbol": "f6e",
+          "start": 2351,
+          "end": 4104,
+          "sha256": "2bb6a9b13ff77691da5cf2c63ced6597a808811ddf67796664e442b88926e2c3"
+        }
+      ]
+    }
+  ],
+  "contracts": {
+    "backoff": "hY=5; Hst=min(1000*2**(attempt-1),30000), immediate first retry",
+    "gates": "eye: shutdown/disabled/managed-policy/identity checks before and after dialing; cancel on owning-host lifecycle changes",
+    "cleanup": "Ne failure closes transport; _o discards connected late identity results via Ge",
+    "listenStream": "Ne: Maximum reconnection attempts leaves POST up; lr terminal errors close at 3; received messages reset consecutive errors",
+    "webSocket": "f6e: MCP JSON-RPC parsing, open/start/send guard, listener cleanup, early opened rejection observer"
+  },
+  "adaptation": "AbortSignal/settling timer handles and idempotent close adapt native lifecycle to the installed public SDK. No private OAuth/grant reconstruction."
+}

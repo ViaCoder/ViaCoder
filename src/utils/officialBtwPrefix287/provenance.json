@@ -1,0 +1,60 @@
+{
+  "version": "2.1.287",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16 end-exclusive",
+  "declarations": [
+    {
+      "file": "chunk-x7a54jgp.js",
+      "name": "$e",
+      "start": 25829,
+      "end": 26340,
+      "moduleSha256": "7ef96810a3b6d16312a78b7491b002c583c75482e866bf4541e6a7eb8e41cf35",
+      "sha256": "7d0066a528dfb5acc362d9415a9bff96f46910a7d28ff31451070cc991617fc5",
+      "source": "async function $e(i){let c=Bur(i.messages),m=JR();if(m)return{systemPrompt:m.systemPrompt,userContext:m.userContext,systemContext:m.systemContext,toolUseContext:i,forkContextMessages:c,advisorModel:i.getAdvisorSetting()};let[k,C,h]=await Promise.all([kA(i.options.tools,i.options.mainLoopModel),kC(i.session,i.storageV5,i.credentials),QB(i.session,i.options.cacheBreakerPhrase)]);return{systemPrompt:mi(k),userContext:C,systemContext:h,toolUseContext:i,forkContextMessages:c,advisorModel:i.getAdvisorSetting()}}"
+    },
+    {
+      "file": "chunk-6bs6skca.js",
+      "name": "Bur",
+      "start": 760,
+      "end": 887,
+      "moduleSha256": "dd7c4265b63e4d4abdd3a5735415a682c9aec5aca7a10b7eda22e7e70bd631c2",
+      "sha256": "9af38eef0a45b57c43fc220ffeeafd3731c56b4e7ca522dace0b1b99de5d0c85",
+      "source": "function Bur(s,o=!0){let r=s.at(-1),a=o&&r?.type===\"assistant\"&&r.message.stop_reason===null;return ai(a?s.slice(0,-1):[...s])}"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "ai",
+      "start": 4153234,
+      "end": 4153291,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "5b2477082f0e7bf0d8eec9882d623deac5300bd4c0e4dc32027c384b1f8031a0",
+      "source": "function ai(e,n){let r=hdt(e);return r===-1?e:e.slice(r)}"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "hdt",
+      "start": 4153146,
+      "end": 4153234,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "3909a693ced6889d43b51a0b4e8a890474d41a11f056c4d71c1d0fa0a7948318",
+      "source": "function hdt(e){for(let n=e.length-1;n>=0;n--){let r=e[n];if(r&&Bi(r))return n}return-1}"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "Bi",
+      "start": 4153002,
+      "end": 4153075,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "c6fd4b34a2c20322f2a47e176f6cb6ac63198fb5673fc4d0cb38c393abc4afd0",
+      "source": "function Bi(e){return e?.type===\"system\"&&e.subtype===\"compact_boundary\"}"
+    }
+  ],
+  "ports": [
+    "JR",
+    "kA",
+    "kC",
+    "QB",
+    "mi"
+  ],
+  "boundary": "Original JSX /btw $e directly invokes kA/kC/QB. This is not SDK pyr/IDn or main Um. Native side-question/UI/retry lifecycle outside this closure is separate."
+}

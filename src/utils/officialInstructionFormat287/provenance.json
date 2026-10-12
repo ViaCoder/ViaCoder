@@ -1,0 +1,78 @@
+{
+  "version": "2.1.287",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16 end-exclusive",
+  "declarations": [
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "RJ",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "startCodeUnits": 677066,
+      "endCodeUnits": 677140,
+      "sha256": "2749904b8889b8682660179b75fd79ca5e8ee17bc775f75e1560d22a15b78c4a",
+      "source": "function RJ(e){if(!E8())return e;return e.filter((n)=>n.type!==\"AutoMem\")}",
+      "variable": false
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "L0n",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "startCodeUnits": 677575,
+      "endCodeUnits": 677697,
+      "sha256": "4581463fd4013e70044931700b1727a0c2874fdb2a6bf5bc296c0850dfffe4f8",
+      "source": "function L0n(e){if((e.type===\"Project\"||e.type===\"Local\")&&k(\"tengu_paper_halyard\",!1))return!1;return Boolean(e.content)}",
+      "variable": false
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "xJ",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "startCodeUnits": 677512,
+      "endCodeUnits": 677575,
+      "sha256": "2aac2be88a9aa78cb768e52a0a06013136fe6760fd426e73e170cb91eb873ed2",
+      "source": "function xJ(e,n){return e.filter((r)=>(!n||n(r.type))&&L0n(r))}",
+      "variable": false
+    },
+    {
+      "file": "chunk-hhxhpvxp.js",
+      "name": "ws",
+      "moduleSha256": "ecdb6abdb941b1a990d5cda13d161a77996b7e2b4a07fef88c4f1c0d0afa9ca5",
+      "startCodeUnits": 19823,
+      "endCodeUnits": 20021,
+      "sha256": "74054bc5e47fa7eae262a846c59216d0355d762cfeec9043c41213806749bd22",
+      "source": "ws=\"Codebase and user instructions are shown below. Be sure to adhere to these instructions. IMPORTANT: These instructions OVERRIDE any default behavior and you MUST follow them exactly as written.\"",
+      "variable": true
+    },
+    {
+      "file": "chunk-hhxhpvxp.js",
+      "name": "Ts",
+      "moduleSha256": "ecdb6abdb941b1a990d5cda13d161a77996b7e2b4a07fef88c4f1c0d0afa9ca5",
+      "startCodeUnits": 20022,
+      "endCodeUnits": 20411,
+      "sha256": "8e20dd1c760f4c4efa54b1bb1b9362f33917a86e2265a3622586380c4ee0438e",
+      "source": "function Ts(e){switch(e){case\"Project\":return\" (project instructions, checked into the codebase)\";case\"Local\":return\" (user's private project instructions, not checked in)\";case\"AutoMem\":return\" (user's auto-memory, persists across conversations)\";case\"Managed\":return\" (organization-managed policy instructions)\";case\"User\":return\" (user's private global instructions for all projects)\"}}",
+      "variable": false
+    },
+    {
+      "file": "chunk-hhxhpvxp.js",
+      "name": "Z7n",
+      "moduleSha256": "ecdb6abdb941b1a990d5cda13d161a77996b7e2b4a07fef88c4f1c0d0afa9ca5",
+      "startCodeUnits": 20411,
+      "endCodeUnits": 20556,
+      "sha256": "784fa8f1de8f641030d3b451abbf505f397ed5d77899be383db9492ac7e82d4e",
+      "source": "function Z7n(e){return e.map((t)=>`Contents of ${t.path}${Ts(t.type)}:\n\n`+(t.type===\"AutoMem\"?jQ(t.content).trim():t.content.trim())).join(`\n\n`)}",
+      "variable": false
+    },
+    {
+      "file": "chunk-hhxhpvxp.js",
+      "name": "CPe",
+      "moduleSha256": "ecdb6abdb941b1a990d5cda13d161a77996b7e2b4a07fef88c4f1c0d0afa9ca5",
+      "startCodeUnits": 20556,
+      "endCodeUnits": 20616,
+      "sha256": "3cb140ff827cfdfedbf39ef4e13df0efc0e771461ccae9d31fcc4d52709d187b",
+      "source": "function CPe(e){let t=Z7n(e);return t===\"\"?\"\":`${ws}\n\n${t}`}",
+      "variable": false
+    }
+  ],
+  "boundary": "Whole RJ/xJ/L0n/CPe/Z7n/Ts/ws only. E8 is the existing canonical Memory loader; jQ is the existing original neutralizer. H0n/Projects/prompt-context hook are separate."
+}

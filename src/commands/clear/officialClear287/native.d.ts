@@ -1,0 +1,8 @@
+import type {AppState} from '../../../state/AppStateStore.js'
+import type {Message} from '../../../types/message.js'
+import type {ExecutionSession287} from '../../../services/context/officialExecutionOwners287/native.js'
+import type {HookSessionRegistry287} from '../../../utils/hooks/officialHooksConfiguration287/matcher.js'
+import type {ToolState287} from '../../../utils/officialToolState287/native.js'
+export interface ClearInput287 {session:ExecutionSession287;setMessages(update:(messages:Message[])=>Message[]):void;readFileState:{clear():void};sessionEnvVars?:{clear():void};toolState?:ToolState287;memorySelector?:unknown;getAppState?:()=>AppState;setAppState?:(update:(state:AppState)=>AppState)=>void;sessionHooksRegistry?:HookSessionRegistry287<unknown>;dialogStore?:{dismissKind(kind:string):void};isolationLatch?:{current:unknown};taskRegistry?:{resetWebSearchCalls():void};clearedSessionTitle?:string;storageV5?:unknown;credentials?:unknown;deferSessionStartHooks?:(run:(signal:AbortSignal)=>Promise<Message[]>)=>void;releaseDeferredSessionStartHooks?:()=>void;resetTrigger?:string;resetUserMessageUuid?:string}
+export interface ClearLifecycle287 {B_r(input:ClearInput287):AsyncGenerator<{type:'conversation_reset';newConversationId:string},void>;G_r(session:ExecutionSession287,preserved?:ReadonlySet<string>,setState?:ClearInput287['setAppState'],toolState?:ToolState287,storageV5?:unknown,keepSkills?:boolean):void;MMn():void;bZt(state:AppState):AppState;wZt(getState:()=>AppState):boolean|undefined}
+export function createClearLifecycleNative287(ports:{namespace(file:string):Record<string,unknown>}):ClearLifecycle287

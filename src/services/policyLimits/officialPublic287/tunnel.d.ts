@@ -1,0 +1,1 @@
+export declare function createPolicyTunnel287(ports:Record<string,unknown>):{mqr(value:string|undefined):void;eVo(listener:(epoch:number)=>void):()=>void;WJn(value:string|undefined):number|undefined;Myt:string}

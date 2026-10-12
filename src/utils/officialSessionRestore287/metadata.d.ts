@@ -1,0 +1,3 @@
+import type {LogOption} from '../../types/logs.js'
+export type TranscriptResumeMetadata287=Pick<LogOption,'isolationLatch'|'devModsFolder'|'atisLatch'|'artifactCommentMonitor'|'artifactAutoReactLedger'|'endedByModel'|'aiTitle'|'permissionMode'|'memoryModeStamps'|'bridgeSessionId'|'bridgeLastSeq'|'bridgeDialogKinds'|'bridgeSessionGroupingId'|'bridgeNoHistoryBackfill'|'bridgeOwnerAccountUuid'|'bridgeOwnerOrganizationUuid'|'sessionHistorySuppressed'>
+export function createTranscriptResumeMetadata287(ports:{dEe(value:unknown):boolean}):{accept(entry:unknown):void;read(id:string):TranscriptResumeMetadata287}

@@ -1,0 +1,838 @@
+{
+  "version": "2.1.286",
+  "platform": "darwin-arm64",
+  "binarySha256": "75e3016e9d2570767b08e43a7467d4817a4f149232c169ca295f2c95fef21433",
+  "offsetUnit": "UTF-16 code units",
+  "records": [
+    {
+      "group": "client",
+      "file": "chunk-majxx0zh.js",
+      "symbol": "J0",
+      "start": 572903,
+      "end": 573024,
+      "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+      "sha256": "1124c94159aa0f9d54da54bcc30aed2b52579e4758e2160e81d2f26225a6c86f",
+      "source": "J0=f(()=>ut({account:ut({uuid:de(),email:de()}).passthrough(),organization:ut({uuid:de()}).passthrough()}).passthrough())",
+      "variable": true
+    },
+    {
+      "group": "client",
+      "file": "chunk-majxx0zh.js",
+      "symbol": "cw",
+      "start": 573025,
+      "end": 573271,
+      "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+      "sha256": "ef35b04e75169abffd5c45778f0dc2ef933e0903f59b62a399513895b8d981f5",
+      "source": "function cw(e){let n=J0().safeParse(e);if(!n.success){m(\"oauth_profile_fetch\",\"malformed_response_body\"),t(`OAuth profile: response body failed shape validation \\u2014 ${n.error.message}`,{level:\"error\"});return}return y(\"oauth_profile_fetch\"),e}",
+      "variable": false
+    },
+    {
+      "group": "client",
+      "file": "chunk-majxx0zh.js",
+      "symbol": "fw",
+      "start": 573271,
+      "end": 573430,
+      "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+      "sha256": "6914b6f472fcf6d046b2db37db74ecb21fa8e6a1b87966eb1562e727f43cd5ef",
+      "source": "function fw(e){let{kind:n,status:r}=Xs(e);if(n===\"auth\")return\"no_auth\";if(r===429)return\"rate_limited\";if(n===\"timeout\")return\"timeout\";return\"network_error\"}",
+      "variable": false
+    },
+    {
+      "group": "client",
+      "file": "chunk-majxx0zh.js",
+      "symbol": "pw",
+      "start": 573430,
+      "end": 573534,
+      "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+      "sha256": "b0fd658934b2fdf3a6fefe8e3a37ed493d5ef5bfddb718443a23c5867cbea9e7",
+      "source": "function pw(e){let{kind:n,status:r}=Xs(e);return n===\"other\"||r===void 0?\"unexpected_error\":`http_${r}`}",
+      "variable": false
+    },
+    {
+      "group": "client",
+      "file": "chunk-majxx0zh.js",
+      "symbol": "kUo",
+      "start": 573534,
+      "end": 574026,
+      "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+      "sha256": "e1d532b1cd818d08fcb42ef5f7a855165550447ed7385c88b68eaab5c14673ad",
+      "source": "async function kUo(){let n=ce().oauthAccount?.accountUuid,r=AJ();if(!n||!r)return;let s=`${cn().BASE_API_URL}/api/claude_cli_profile`;try{let g=await ht.get(s,{headers:{\"User-Agent\":Po(),\"x-api-key\":r,\"anthropic-beta\":Uu,\"Cache-Control\":\"no-cache\"},params:{account_uuid:n},timeout:1e4});return cw(g.data)}catch(g){if(cu(g))p(\"oauth_profile_fetch\",`api_key_${fw(g)}`),t(`Failed to fetch oauth profile from API key: ${g}`,{level:\"error\"});else m(\"oauth_profile_fetch\",`api_key_${pw(g)}`),d(g)}}",
+      "variable": false
+    },
+    {
+      "group": "client",
+      "file": "chunk-majxx0zh.js",
+      "symbol": "z1e",
+      "start": 574026,
+      "end": 574457,
+      "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+      "sha256": "c152cab402c80e060d4b5dae07df7a77f40f89302ce7a24735fe9de00734f139",
+      "source": "async function z1e(e){let n=`${cn().BASE_API_URL}/api/oauth/profile`;try{let r=await ht.get(n,{headers:{\"User-Agent\":Po(),Authorization:`Bearer ${e}`,\"Content-Type\":\"application/json\",\"Cache-Control\":\"no-cache\"},timeout:1e4});return cw(r.data)}catch(r){if(cu(r))p(\"oauth_profile_fetch\",`token_${fw(r)}`),t(`Failed to fetch oauth profile from OAuth token: ${r}`,{level:\"error\"});else m(\"oauth_profile_fetch\",`token_${pw(r)}`),d(r)}}",
+      "variable": false
+    },
+    {
+      "group": "client",
+      "file": "chunk-majxx0zh.js",
+      "symbol": "gw",
+      "start": 574461,
+      "end": 574540,
+      "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+      "sha256": "6d05cdb499176f55e77391b2b4fe27a2c29b80981889557c768f951a5f95e80c",
+      "source": "gw=f(()=>de().regex(/^[\\p{L}\\p{N}](?:[\\p{L}\\p{N} .+-]{0,38}[\\p{L}\\p{N}+])?$/u))",
+      "variable": true
+    },
+    {
+      "group": "client",
+      "file": "chunk-majxx0zh.js",
+      "symbol": "k9n",
+      "start": 574589,
+      "end": 574800,
+      "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+      "sha256": "50a8ddce24b467d46d8aa5819c92430049786276a7a461f0396dc7b77080991a",
+      "source": "function k9n(e){let n=e?.organization?.plan_display_name;if(n===void 0||n===null)return null;let r=gw().safeParse(n);if(!r.success)return p(\"oauth_profile_fetch\",\"plan_display_name_rejected\"),null;return r.data}",
+      "variable": false
+    },
+    {
+      "group": "client",
+      "file": "chunk-majxx0zh.js",
+      "symbol": "cc",
+      "start": 607057,
+      "end": 607117,
+      "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+      "sha256": "233052afe95e5ff2473b052a5d10240050742b75c2591707474ba28edb0482d8",
+      "source": "function cc(){return a.CLAUDE_CODE_PROVIDER_MANAGED_BY_HOST}",
+      "variable": false
+    },
+    {
+      "group": "client",
+      "file": "chunk-majxx0zh.js",
+      "symbol": "nBt",
+      "start": 665337,
+      "end": 665423,
+      "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+      "sha256": "ca92aaaab2406df2bc0847e3c5daf2df0094130a36fcd0f4825dd83ba70c1996",
+      "source": "function nBt(){if(r9()||a.CLAUDE_CODE_OAUTH_TOKEN||cc())return!1;return!(bj()&&!GG())}",
+      "variable": false
+    },
+    {
+      "group": "client",
+      "file": "chunk-majxx0zh.js",
+      "symbol": "fK",
+      "start": 686091,
+      "end": 686104,
+      "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+      "sha256": "deedb90e688b86abbc70cc4a4aca7191383400cc9c09307e774522cee14784d5",
+      "source": "fK=2592000000",
+      "variable": true
+    },
+    {
+      "group": "client",
+      "file": "chunk-majxx0zh.js",
+      "symbol": "R9n",
+      "start": 686105,
+      "end": 686201,
+      "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+      "sha256": "fd3a68a25e02faf336de9e917111ceed64c533511856f0e237f3aa0f681fd34f",
+      "source": "function R9n(e,n){if(typeof e===\"number\")return Date.now()+e*1000;return n?Date.now()+fK:void 0}",
+      "variable": false
+    },
+    {
+      "group": "client",
+      "file": "chunk-majxx0zh.js",
+      "symbol": "Zgn",
+      "start": 686230,
+      "end": 686314,
+      "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+      "sha256": "bc23b7c324e587d94c9b38b3d0870032f4692d6a4cb95858ad3d3d91a60b2772",
+      "source": "function Zgn(e){if(typeof e!==\"string\")return[];return e.split(\" \").filter(Boolean)}",
+      "variable": false
+    },
+    {
+      "group": "client",
+      "file": "chunk-majxx0zh.js",
+      "symbol": "x9n",
+      "start": 686314,
+      "end": 687129,
+      "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+      "sha256": "a7f1f4951eda96d904d703d6c5d4fd9f5a0893a246414f7d9791a5862d04611a",
+      "source": "function x9n({codeChallenge:e,state:n,port:r,isManual:s,loginWithClaudeAi:g,inferenceOnly:h,orgUUID:b,loginHint:E,loginMethod:w,oauthClient:k}){let A=g?cn().CLAUDE_AI_AUTHORIZE_URL:cn().CONSOLE_AUTHORIZE_URL,M=new URL(A);M.searchParams.append(\"code\",\"true\"),M.searchParams.append(\"client_id\",k?.clientId??cn().CLIENT_ID),M.searchParams.append(\"response_type\",\"code\"),M.searchParams.append(\"redirect_uri\",s?cn().MANUAL_REDIRECT_URL:`http://localhost:${r}/callback`);let D=k?k.scopes:h?[PC]:L5r();if(M.searchParams.append(\"scope\",D.join(\" \")),M.searchParams.append(\"code_challenge\",e),M.searchParams.append(\"code_challenge_method\",\"S256\"),M.searchParams.append(\"state\",n),b)M.searchParams.append(\"orgUUID\",b);if(E)M.searchParams.append(\"login_hint\",E);if(w)M.searchParams.append(\"login_method\",w);return M.toString()}",
+      "variable": false
+    },
+    {
+      "group": "client",
+      "file": "chunk-majxx0zh.js",
+      "symbol": "ajr",
+      "start": 687129,
+      "end": 687863,
+      "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+      "sha256": "1df9f0a850ce3637ceceaef0d8dd2a5cb3a5ce236f440c710dd520e990196331",
+      "source": "async function ajr(e,{state:n,codeVerifier:r,port:s,useManualRedirect:g=!1,expiresIn:h,clientId:b}){let E={grant_type:\"authorization_code\",code:e,redirect_uri:g?cn().MANUAL_REDIRECT_URL:`http://localhost:${s}/callback`,client_id:b??cn().CLIENT_ID,code_verifier:r,state:n};if(h!==void 0)E.expires_in=h;let w=await ht.post(cn().TOKEN_URL,E,{headers:{\"Content-Type\":\"application/json\"},timeout:30000});if(w.status!==200)throw m(\"oauth_token_exchange\",w.status===401?\"oauth_exchange_invalid_code\":\"oauth_exchange_http_error\"),Error(w.status===401?\"Authentication failed: Invalid authorization code\":`Token exchange failed (${w.status}): ${w.statusText}`);return i(\"tengu_oauth_token_exchange_success\",{}),y(\"oauth_token_exchange\"),w.data}",
+      "variable": false
+    },
+    {
+      "group": "client",
+      "file": "chunk-majxx0zh.js",
+      "symbol": "Pde",
+      "start": 687863,
+      "end": 690503,
+      "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+      "sha256": "d164dde61217a1b90b0bfe0419e8e3a48af5d63c4f36bcdd2334340953fee124",
+      "source": "async function Pde(e,{scopes:n,expiresIn:r,clientId:s,skipProfileFetch:g,signal:h,telemetryContext:b,invalidScopeRetried:E,storageV5:w}={}){let k=Array.isArray(n)&&n.length?n:yJe(),A={grant_type:\"refresh_token\",refresh_token:e,client_id:s??cn().CLIENT_ID,scope:k.join(\" \")};if(r!==void 0)A.expires_in=r;try{let M=await ht.post(cn().TOKEN_URL,A,{headers:{\"Content-Type\":\"application/json\"},timeout:30000,signal:h});if(M.status!==200)throw Error(`Token refresh failed: ${M.statusText}`);let D=M.data,{access_token:B,refresh_token:K=e,expires_in:z}=D,W=Date.now()+z*1000,Y=R9n(D.refresh_token_expires_in,!1),Q=Zgn(D.scope);i(\"tengu_oauth_token_refresh_success\",{plugins_scope_requested:k.includes(hJe),plugins_scope_granted:Q.includes(hJe)}),y(\"oauth_token_refresh\");let X=ce(),ne=g?null:pn(),pe=X.oauthAccount?.billingType!==void 0&&X.oauthAccount?.accountCreatedAt!==void 0&&X.oauthAccount?.subscriptionCreatedAt!==void 0&&X.oauthAccount?.ccOnboardingFlags!==void 0&&ne?.subscriptionType!=null&&ne?.rateLimitTier!=null,le=g||pe?null:await P9n(B);if(le&&X.oauthAccount){let he={};if(le.displayName!==void 0)he.displayName=le.displayName;if(le.fullName!==void 0)he.fullName=le.fullName;if(typeof le.hasExtraUsageEnabled===\"boolean\")he.hasExtraUsageEnabled=le.hasExtraUsageEnabled;if(le.billingType!==null)he.billingType=le.billingType;if(le.accountCreatedAt!==void 0)he.accountCreatedAt=le.accountCreatedAt;if(le.subscriptionCreatedAt!==void 0)he.subscriptionCreatedAt=le.subscriptionCreatedAt;if(le.rawProfile)he.ccOnboardingFlags=le.ccOnboardingFlags,he.claudeCodeTrialEndsAt=le.claudeCodeTrialEndsAt,he.claudeCodeTrialDurationDays=le.claudeCodeTrialDurationDays,he.seatTier=le.seatTier,he.planDisplayName=oA(le.rawProfile)??void 0,he.profileFetchedAt=Date.now();if(Object.keys(he).length>0)await Te((_e)=>({..._e,oauthAccount:_e.oauthAccount?{..._e.oauthAccount,...he}:_e.oauthAccount}),w)}return{accessToken:B,refreshToken:K,expiresAt:W,refreshTokenExpiresAt:Y,scopes:Q,clientId:s,subscriptionType:le?.subscriptionType??ne?.subscriptionType??null,rateLimitTier:le?.rateLimitTier??ne?.rateLimitTier??null,profile:le?.rawProfile,tokenAccount:D.account?{uuid:D.account.uuid,emailAddress:D.account.email_address,organizationUuid:D.organization?.uuid}:void 0}}catch(M){let D=E===!0&&djr(M);if(i(\"tengu_oauth_token_refresh_failure\",{...Vd(M),...vYo(M),...b&&{context:c(b)},...D&&{context:_(\"invalid_scope_retried\")}}),I9n(M))m(\"oauth_token_refresh\",\"oauth_refresh_account_on_hold\");else if(Ide(M))m(\"oauth_token_refresh\",\"oauth_refresh_invalid_grant\");else if(!h?.aborted&&!b&&!D)p(\"oauth_token_refresh\",\"oauth_refresh_request_failed\");throw M}}",
+      "variable": false
+    },
+    {
+      "group": "client",
+      "file": "chunk-majxx0zh.js",
+      "symbol": "fUt",
+      "start": 690920,
+      "end": 691665,
+      "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+      "sha256": "064c474213b2ffc222c88f36619ffbe59ceb2a9fe46d898b8411ccb0c6f761aa",
+      "source": "async function fUt(e,n){let r=await ht.get(cn().ROLES_URL,{headers:{\"User-Agent\":Po(),Authorization:`Bearer ${e}`},timeout:1e4,signal:AbortSignal.timeout(1e4)});if(r.status!==200)throw m(\"oauth_fetch_roles\",\"oauth_roles_http_error\"),Error(`Failed to fetch user roles: ${r.statusText}`);let s=r.data;if(!ce().oauthAccount)throw m(\"oauth_fetch_roles\",\"oauth_roles_no_account\"),Error(\"OAuth account information not found in config\");await Te((h)=>({...h,oauthAccount:h.oauthAccount?{...h.oauthAccount,organizationRole:s.organization_role,workspaceRole:s.workspace_role,organizationName:s.organization_name}:h.oauthAccount}),n),i(\"tengu_oauth_roles_stored\",{org_role:s.organization_role==null?void 0:$_(s.organization_role)}),y(\"oauth_fetch_roles\")}",
+      "variable": false
+    },
+    {
+      "group": "client",
+      "file": "chunk-majxx0zh.js",
+      "symbol": "pK",
+      "start": 692567,
+      "end": 692680,
+      "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+      "sha256": "fce2535607afda82b2cf63a316567c470d6993598f0e7ce177cf631eebca1d2d",
+      "source": "pK=new Map([[\"claude_max\",\"max\"],[\"claude_pro\",\"pro\"],[\"claude_enterprise\",\"enterprise\"],[\"claude_team\",\"team\"]])",
+      "variable": true
+    },
+    {
+      "group": "client",
+      "file": "chunk-majxx0zh.js",
+      "symbol": "P9n",
+      "start": 692681,
+      "end": 693603,
+      "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+      "sha256": "9b29f4b96a3b3b9cd5abfc9bdcfcd60c4e9d5340e4fed25812f8d93e31b77cef",
+      "source": "async function P9n(e){let n=await z1e(e),r=n?.organization?.organization_type,g={subscriptionType:(r!==void 0?pK.get(r):void 0)??null,rateLimitTier:n?.organization?.rate_limit_tier??null,seatTier:n?.organization?.seat_tier??null,hasExtraUsageEnabled:n?.organization?.has_extra_usage_enabled??null,billingType:n?.organization?.billing_type??null,ccOnboardingFlags:n?.organization?.cc_onboarding_flags??{},claudeCodeTrialEndsAt:n?.organization?.claude_code_trial_ends_at??null,claudeCodeTrialDurationDays:n?.organization?.claude_code_trial_duration_days??null};if(n?.account?.display_name)g.displayName=n.account.display_name;if(n?.account?.full_name)g.fullName=n.account.full_name;if(n?.account?.created_at)g.accountCreatedAt=n.account.created_at;if(n?.organization?.subscription_created_at)g.subscriptionCreatedAt=n.organization.subscription_created_at;return i(\"tengu_oauth_profile_fetch_success\",{}),{...g,rawProfile:n}}",
+      "variable": false
+    },
+    {
+      "group": "client",
+      "file": "chunk-majxx0zh.js",
+      "symbol": "oA",
+      "start": 695307,
+      "end": 695383,
+      "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+      "sha256": "ab4952a6146422d15d4788ed39fa3960660bca93c1f9344ffc459265e7577f6d",
+      "source": "function oA(e){return nBt()?k9n(e):ce().oauthAccount?.planDisplayName??null}",
+      "variable": false
+    },
+    {
+      "group": "client",
+      "file": "chunk-majxx0zh.js",
+      "symbol": "Al",
+      "start": 696866,
+      "end": 697069,
+      "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+      "sha256": "75a60bdbff73c0166921e10303afedc3527ba8b96b65adde360827170ad412d2",
+      "source": "function Al(e){if(!e||typeof e!==\"object\")return{code:void 0,description:void 0};let n=e,r=n.error;return{code:typeof r===\"string\"?r:r&&typeof r===\"object\"?r.type:void 0,description:n.error_description}}",
+      "variable": false
+    },
+    {
+      "group": "client",
+      "file": "chunk-majxx0zh.js",
+      "symbol": "I9n",
+      "start": 697069,
+      "end": 697227,
+      "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+      "sha256": "6d2b4c8bc659dc9afae5f90b6697e8aaff53da8e1eb3dbc04a6eb8de5076c1da",
+      "source": "function I9n(e){if(!ht.isAxiosError(e)||!e.response)return!1;let n=e.response.status;if(n!==400&&n!==401&&n!==403)return!1;return G2t(e.response.data)!==null}",
+      "variable": false
+    },
+    {
+      "group": "client",
+      "file": "chunk-majxx0zh.js",
+      "symbol": "Ide",
+      "start": 697307,
+      "end": 697500,
+      "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+      "sha256": "0d58da9dac5e07058aa6996cd8889ff241dc506767f732bfd0de33e4af6cef53",
+      "source": "function Ide(e){if(!ht.isAxiosError(e)||!e.response)return!1;let n=e.response.status;if(n!==400&&n!==401)return!1;return Al(e.response.data).code===\"invalid_grant\"&&G2t(e.response.data)===null}",
+      "variable": false
+    },
+    {
+      "group": "client",
+      "file": "chunk-majxx0zh.js",
+      "symbol": "djr",
+      "start": 697500,
+      "end": 697624,
+      "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+      "sha256": "2f9b7b9563ee2a43889db4ebe17d4d25a1d62ab6e6afdb4f15653fd0af0fc786",
+      "source": "function djr(e){if(!ht.isAxiosError(e)||e.response?.status!==400)return!1;return Al(e.response.data).code===\"invalid_scope\"}",
+      "variable": false
+    },
+    {
+      "group": "client",
+      "file": "chunk-majxx0zh.js",
+      "symbol": "mK",
+      "start": 697845,
+      "end": 697999,
+      "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+      "sha256": "ef5ffdab67455a30cea5dedeb1a3822135d31112b29477d97525f748cd7b43d7",
+      "source": "mK=[\"Refresh token expired\",\"Refresh token not found or invalid\",\"No organization associated with this token\",\"No account associated with this token\",MXe]",
+      "variable": true
+    },
+    {
+      "group": "client",
+      "file": "chunk-majxx0zh.js",
+      "symbol": "vYo",
+      "start": 698000,
+      "end": 698228,
+      "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+      "sha256": "2b56139a1fd0bdc4be2bcb3b018597db6fc71b8b45d957fd5012e32527cc84ef",
+      "source": "function vYo(e){if(!ht.isAxiosError(e)||!e.response)return{};let{code:n,description:r}=Al(e.response.data);return{oauth_error_status:Sr(e.response.status),oauth_error_type:kzt(n),oauth_error_description:me(mK.find((s)=>s===r))}}",
+      "variable": false
+    },
+    {
+      "group": "classifier",
+      "file": "chunk-h730kz80.js",
+      "symbol": "kzt",
+      "start": 6011,
+      "end": 6108,
+      "moduleSha256": "2fd1d1c89c1b8ab482265e429afb8a6163f1d75acd78a6e6476325a79d794f99",
+      "sha256": "b2d99a226e33a0173da602c38518ac7037c871928d63c75d10b3ae64da24691f",
+      "source": "function kzt(n){return typeof n===\"string\"&&/^[a-z][a-z_]{0,39}$/.test(n)?Sn(n):_(\"unparseable\")}",
+      "variable": false
+    },
+    {
+      "group": "classifier",
+      "file": "chunk-h730kz80.js",
+      "symbol": "cu",
+      "start": 9277,
+      "end": 9459,
+      "moduleSha256": "2fd1d1c89c1b8ab482265e429afb8a6163f1d75acd78a6e6476325a79d794f99",
+      "sha256": "188db5864812b8b8a7f5e60523b7d6cd5b1e71a6b40bfaaa7b6cd885f91a78d8",
+      "source": "function cu(n,e){if(e?.(n))return!0;if(!n||typeof n!==\"object\"||!(\"isAxiosError\"in n)||!n.isAxiosError)return!1;let t=n.response?.status;return t===void 0||t===401||t===403||t===429}",
+      "variable": false
+    },
+    {
+      "group": "classifier",
+      "file": "chunk-h730kz80.js",
+      "symbol": "Xs",
+      "start": 9459,
+      "end": 9870,
+      "moduleSha256": "2fd1d1c89c1b8ab482265e429afb8a6163f1d75acd78a6e6476325a79d794f99",
+      "sha256": "7f7ca9caefc90b4ea8eb18a3ced4cb2aa8fc2e8a2b0b00d3d36234ff7dcbf1a9",
+      "source": "function Xs(n){let e=l(n);if(!n||typeof n!==\"object\"||!(\"isAxiosError\"in n)||!n.isAxiosError)return{kind:\"other\",message:e};let t=n,r=t.response?.status;if(r===401||r===403)return{kind:\"auth\",status:r,message:e};if(t.code===\"ECONNABORTED\")return{kind:\"timeout\",status:r,message:e};if(t.code===\"ECONNREFUSED\"||t.code===\"ENOTFOUND\")return{kind:\"network\",status:r,message:e};return{kind:\"http\",status:r,message:e}}",
+      "variable": false
+    }
+  ],
+  "ports": {
+    "client": [
+      "$_",
+      "AJ",
+      "G2t",
+      "GG",
+      "L5r",
+      "MXe",
+      "PC",
+      "Po",
+      "Sr",
+      "Te",
+      "Uu",
+      "Vd",
+      "Xs",
+      "_",
+      "a",
+      "bj",
+      "c",
+      "ce",
+      "cn",
+      "cu",
+      "d",
+      "de",
+      "f",
+      "hJe",
+      "ht",
+      "i",
+      "kzt",
+      "m",
+      "me",
+      "p",
+      "pn",
+      "r9",
+      "t",
+      "ut",
+      "y",
+      "yJe"
+    ],
+    "classifier": [
+      "Sn",
+      "_",
+      "l"
+    ]
+  },
+  "portBindings": {
+    "client": {
+      "$_": [
+        {
+          "kind": "import",
+          "file": "chunk-majxx0zh.js",
+          "module": "/$bunfs/root/chunk-h730kz80.js",
+          "imported": "$_",
+          "start": 771,
+          "end": 773,
+          "source": "$_",
+          "sha256": "ba1da4b707c41430dca7eea600d342d06d02ea979af441d6640844dafbabed89"
+        }
+      ],
+      "AJ": [
+        {
+          "kind": "local-declaration",
+          "file": "chunk-majxx0zh.js",
+          "start": 616832,
+          "end": 616871,
+          "source": "function AJ(){let{key:e}=BS();return e}",
+          "sha256": "80facdad0db6bd12ba765bf66761217e18239b0754c241d914922f583daf73bf"
+        }
+      ],
+      "G2t": [
+        {
+          "kind": "import",
+          "file": "chunk-majxx0zh.js",
+          "module": "/$bunfs/root/chunk-ttgve2cs.js",
+          "imported": "G2t",
+          "start": 4257,
+          "end": 4260,
+          "source": "G2t",
+          "sha256": "efd6db26e747af755e0474a804e4c4d6f0b9a4c54f343da55121a4771aa45455"
+        }
+      ],
+      "GG": [
+        {
+          "kind": "import",
+          "file": "chunk-majxx0zh.js",
+          "module": "/$bunfs/root/chunk-ar1aj28g.js",
+          "imported": "GG",
+          "start": 1080,
+          "end": 1082,
+          "source": "GG",
+          "sha256": "bee30e5b6d59c1bdf10100ef331706553fd3c4e6b0a342a092c6f6f733b8be36"
+        }
+      ],
+      "L5r": [
+        {
+          "kind": "import",
+          "file": "chunk-majxx0zh.js",
+          "module": "/$bunfs/root/chunk-0shqxty0.js",
+          "imported": "L5r",
+          "start": 1557,
+          "end": 1560,
+          "source": "L5r",
+          "sha256": "3f878fc48a8b3203ca2c2c2a32287930afe67eb57465e7118ed11a1ae85e6a94"
+        }
+      ],
+      "MXe": [
+        {
+          "kind": "import",
+          "file": "chunk-majxx0zh.js",
+          "module": "/$bunfs/root/chunk-ttgve2cs.js",
+          "imported": "MXe",
+          "start": 4249,
+          "end": 4252,
+          "source": "MXe",
+          "sha256": "1a32a852f11a7899862db3363413973a33a284e381ac7f506a814260a355bf75"
+        }
+      ],
+      "PC": [
+        {
+          "kind": "import",
+          "file": "chunk-majxx0zh.js",
+          "module": "/$bunfs/root/chunk-0shqxty0.js",
+          "imported": "PC",
+          "start": 1536,
+          "end": 1538,
+          "source": "PC",
+          "sha256": "21d017c40a91c15748f0b98cd826ba445d2d3fe227e310bfd58dcb6c431826a0"
+        }
+      ],
+      "Po": [
+        {
+          "kind": "import",
+          "file": "chunk-majxx0zh.js",
+          "module": "/$bunfs/root/chunk-178b5qmp.js",
+          "imported": "Po",
+          "start": 6339,
+          "end": 6341,
+          "source": "Po",
+          "sha256": "6652dad03ff5ed4b9d6a18afd8b94f3a75574d57ea0bfb542b0369d4d71eeffc"
+        }
+      ],
+      "Sr": [
+        {
+          "kind": "import",
+          "file": "chunk-majxx0zh.js",
+          "module": "/$bunfs/root/chunk-b006b4v9.js",
+          "imported": "Sr",
+          "start": 683,
+          "end": 685,
+          "source": "Sr",
+          "sha256": "264627804ee7d36d353c5b8a7fd83380b95e1bf4e6b4ad734a3799c2fe3f68b1"
+        }
+      ],
+      "Te": [
+        {
+          "kind": "local-declaration",
+          "file": "chunk-majxx0zh.js",
+          "start": 532951,
+          "end": 533002,
+          "source": "function Te(e,n){return Lc(e,n).then(()=>{return})}",
+          "sha256": "f2dfe9764132d08fe8bc3831910e609372003882231a0db095bd9b14f6db4a82"
+        }
+      ],
+      "Uu": [
+        {
+          "kind": "import",
+          "file": "chunk-majxx0zh.js",
+          "module": "/$bunfs/root/chunk-0shqxty0.js",
+          "imported": "Uu",
+          "start": 1550,
+          "end": 1552,
+          "source": "Uu",
+          "sha256": "2b07c468ed826b4de0a42c5176c7400f05bb7779a6f20ae2ab91f5375682c3e4"
+        }
+      ],
+      "Vd": [
+        {
+          "kind": "import",
+          "file": "chunk-majxx0zh.js",
+          "module": "/$bunfs/root/chunk-c1qt7nyf.js",
+          "imported": "Vd",
+          "start": 4194,
+          "end": 4196,
+          "source": "Vd",
+          "sha256": "c500b461e66fd90f4b682cef5201476c07bb44c61579607e4c7b3aea2c151397"
+        }
+      ],
+      "Xs": [
+        {
+          "kind": "import",
+          "file": "chunk-majxx0zh.js",
+          "module": "/$bunfs/root/chunk-h730kz80.js",
+          "imported": "Xs",
+          "start": 782,
+          "end": 784,
+          "source": "Xs",
+          "sha256": "49fdf351438a9d5fcbfff174db804f12cb9e5b46e3131e7481c491b6f1a992db"
+        }
+      ],
+      "_": [
+        {
+          "kind": "import",
+          "file": "chunk-majxx0zh.js",
+          "module": "/$bunfs/root/chunk-b006b4v9.js",
+          "imported": "_",
+          "start": 676,
+          "end": 677,
+          "source": "_",
+          "sha256": "d2e2adf7177b7a8afddbc12d1634cf23ea1a71020f6a1308070a16400fb68fde"
+        }
+      ],
+      "a": [
+        {
+          "kind": "import",
+          "file": "chunk-majxx0zh.js",
+          "module": "/$bunfs/root/chunk-07mxqtdh.js",
+          "imported": "a",
+          "start": 1681,
+          "end": 1682,
+          "source": "a",
+          "sha256": "ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb"
+        }
+      ],
+      "bj": [
+        {
+          "kind": "import",
+          "file": "chunk-majxx0zh.js",
+          "module": "/$bunfs/root/chunk-ar1aj28g.js",
+          "imported": "bj",
+          "start": 1074,
+          "end": 1076,
+          "source": "bj",
+          "sha256": "652742992acbaf9a5a3fbef60f7a51e853a93534fac251e375c662d6a5cd8d01"
+        }
+      ],
+      "c": [
+        {
+          "kind": "import",
+          "file": "chunk-majxx0zh.js",
+          "module": "/$bunfs/root/chunk-b006b4v9.js",
+          "imported": "c",
+          "start": 678,
+          "end": 679,
+          "source": "c",
+          "sha256": "2e7d2c03a9507ae265ecf5b5356885a53393a2029d241394997265a1a25aefc6"
+        }
+      ],
+      "ce": [
+        {
+          "kind": "local-declaration",
+          "file": "chunk-majxx0zh.js",
+          "start": 540067,
+          "end": 540243,
+          "source": "function ce(){let e=oe();if(dn())return e.testGlobalConfig;let n=e.readCache();if(n)return n;if(!e.enableSettled)throw Error(\"Config accessed before allowed.\");return ai(Ye())}",
+          "sha256": "ce2aefeaba18f37d3fd24d783b8ddd297b58122070828dad7b03d1085a7e3845"
+        }
+      ],
+      "cn": [
+        {
+          "kind": "import",
+          "file": "chunk-majxx0zh.js",
+          "module": "/$bunfs/root/chunk-0shqxty0.js",
+          "imported": "cn",
+          "start": 1569,
+          "end": 1571,
+          "source": "cn",
+          "sha256": "ff2082aa78aea80a27cb4fb91f0350153702c16dce790a77f0bb0bfbf6899977"
+        }
+      ],
+      "cu": [
+        {
+          "kind": "import",
+          "file": "chunk-majxx0zh.js",
+          "module": "/$bunfs/root/chunk-h730kz80.js",
+          "imported": "cu",
+          "start": 779,
+          "end": 781,
+          "source": "cu",
+          "sha256": "e67be79550661604d9b9c646911c80d74f6c691613224c207fa7088c20698acd"
+        }
+      ],
+      "d": [
+        {
+          "kind": "import",
+          "file": "chunk-majxx0zh.js",
+          "module": "/$bunfs/root/chunk-j72sz16r.js",
+          "imported": "d",
+          "start": 1946,
+          "end": 1947,
+          "source": "d",
+          "sha256": "18ac3e7343f016890c510e93f935261169d9e3f565436429830faf0934f4f8e4"
+        }
+      ],
+      "de": [
+        {
+          "kind": "import",
+          "file": "chunk-majxx0zh.js",
+          "module": "/$bunfs/root/chunk-dm2nmsyn.js",
+          "imported": "de",
+          "start": 5612,
+          "end": 5614,
+          "source": "de",
+          "sha256": "959a45d44e6fcf58361ed004681556fe50129f2109e817dec098c00c9e5d2578"
+        }
+      ],
+      "f": [
+        {
+          "kind": "import",
+          "file": "chunk-majxx0zh.js",
+          "module": "/$bunfs/root/chunk-2143w8bm.js",
+          "imported": "f",
+          "start": 2337,
+          "end": 2338,
+          "source": "f",
+          "sha256": "252f10c83610ebca1a059c0bae8255eba2f95be4d1d7bcfa89d7248a82d9f111"
+        }
+      ],
+      "hJe": [
+        {
+          "kind": "import",
+          "file": "chunk-majxx0zh.js",
+          "module": "/$bunfs/root/chunk-0shqxty0.js",
+          "imported": "hJe",
+          "start": 1542,
+          "end": 1545,
+          "source": "hJe",
+          "sha256": "1f99e5cd0cbdb6287950ebc887aea7b146d620ef67447aa569e6a66e40034b8a"
+        }
+      ],
+      "ht": [
+        {
+          "kind": "import",
+          "file": "chunk-majxx0zh.js",
+          "module": "/$bunfs/root/chunk-bkbr91zs.js",
+          "imported": "ht",
+          "start": 622,
+          "end": 624,
+          "source": "ht",
+          "sha256": "712dd58e22b0bca040fc9250038f84827f85593ab978e596ed75b3ba48bd1b23"
+        }
+      ],
+      "i": [
+        {
+          "kind": "import",
+          "file": "chunk-majxx0zh.js",
+          "module": "/$bunfs/root/chunk-kgb116ys.js",
+          "imported": "i",
+          "start": 1368,
+          "end": 1369,
+          "source": "i",
+          "sha256": "de7d1b721a1e0632b7cf04edf5032c8ecffa9f9a08492152b926f1a5a7e765d7"
+        }
+      ],
+      "kzt": [
+        {
+          "kind": "import",
+          "file": "chunk-majxx0zh.js",
+          "module": "/$bunfs/root/chunk-h730kz80.js",
+          "imported": "kzt",
+          "start": 767,
+          "end": 770,
+          "source": "kzt",
+          "sha256": "b8491ca8815c453dc3806a5c5c68b6d1d2c328bb85fdf117017877d53e6718d1"
+        }
+      ],
+      "m": [
+        {
+          "kind": "import",
+          "file": "chunk-majxx0zh.js",
+          "module": "/$bunfs/root/chunk-1zmpymz2.js",
+          "imported": "m",
+          "start": 1416,
+          "end": 1417,
+          "source": "m",
+          "sha256": "62c66a7a5dd70c3146618063c344e531e6d4b59e379808443ce962b3abd63c5a"
+        }
+      ],
+      "me": [
+        {
+          "kind": "import",
+          "file": "chunk-majxx0zh.js",
+          "module": "/$bunfs/root/chunk-b006b4v9.js",
+          "imported": "me",
+          "start": 680,
+          "end": 682,
+          "source": "me",
+          "sha256": "2744ccd10c7533bd736ad890f9dd5cab2adb27b07d500b9493f29cdc420cb2e0"
+        }
+      ],
+      "p": [
+        {
+          "kind": "import",
+          "file": "chunk-majxx0zh.js",
+          "module": "/$bunfs/root/chunk-1zmpymz2.js",
+          "imported": "p",
+          "start": 1418,
+          "end": 1419,
+          "source": "p",
+          "sha256": "148de9c5a7a44d19e56cd9ae1a554bf67847afb0c58f6e12fa29ac7ddfca9940"
+        }
+      ],
+      "pn": [
+        {
+          "kind": "local-declaration",
+          "file": "chunk-majxx0zh.js",
+          "start": 645456,
+          "end": 645578,
+          "source": "function pn(){if(r9())return null;let e=Jde.of(j().host);if(e.value!==void 0)return e.value;let n=zH();return e.value=n,n}",
+          "sha256": "44f4e490bd3b19f3105bca2ee9d272da78b02b9cfa9b110819fe9832388f3c97"
+        }
+      ],
+      "r9": [
+        {
+          "kind": "local-declaration",
+          "file": "chunk-majxx0zh.js",
+          "start": 615272,
+          "end": 615313,
+          "source": "function r9(){if(!kr())return!1;return!0}",
+          "sha256": "b7a76a17685d4ab5d7ec23ddbcd8b5b43414bd104e2b7a1098a11f681123d5c3"
+        }
+      ],
+      "t": [
+        {
+          "kind": "import",
+          "file": "chunk-majxx0zh.js",
+          "module": "/$bunfs/root/chunk-yx145v00.js",
+          "imported": "t",
+          "start": 1755,
+          "end": 1756,
+          "source": "t",
+          "sha256": "e3b98a4da31a127d4bde6e43033f66ba274cab0eb7eb1c70ec41402bf6273dd8"
+        }
+      ],
+      "ut": [
+        {
+          "kind": "import",
+          "file": "chunk-majxx0zh.js",
+          "module": "/$bunfs/root/chunk-dm2nmsyn.js",
+          "imported": "ut",
+          "start": 5618,
+          "end": 5620,
+          "source": "ut",
+          "sha256": "469cc643a19fb75901e5d331b8dc14befa8b98810b246c2fb22fff0c382dc39e"
+        }
+      ],
+      "y": [
+        {
+          "kind": "import",
+          "file": "chunk-majxx0zh.js",
+          "module": "/$bunfs/root/chunk-1zmpymz2.js",
+          "imported": "y",
+          "start": 1414,
+          "end": 1415,
+          "source": "y",
+          "sha256": "a1fce4363854ff888cff4b8e7875d600c2682390412a8cf79b37d0b11148b0fa"
+        }
+      ],
+      "yJe": [
+        {
+          "kind": "import",
+          "file": "chunk-majxx0zh.js",
+          "module": "/$bunfs/root/chunk-0shqxty0.js",
+          "imported": "yJe",
+          "start": 1553,
+          "end": 1556,
+          "source": "yJe",
+          "sha256": "ad36e074d850a2e94c8daa8899541b29a6218832f5262b8a3d3710ef6e4d9e5f"
+        }
+      ]
+    },
+    "classifier": {
+      "Sn": [
+        {
+          "kind": "import",
+          "file": "chunk-h730kz80.js",
+          "module": "/$bunfs/root/chunk-b006b4v9.js",
+          "imported": "Sn",
+          "start": 624,
+          "end": 626,
+          "source": "Sn",
+          "sha256": "f781ca12361b7fede614668f8a5eaf8b4c25b35e029cc45f744f4bb3f0c22f40"
+        }
+      ],
+      "_": [
+        {
+          "kind": "import",
+          "file": "chunk-h730kz80.js",
+          "module": "/$bunfs/root/chunk-b006b4v9.js",
+          "imported": "_",
+          "start": 622,
+          "end": 623,
+          "source": "_",
+          "sha256": "d2e2adf7177b7a8afddbc12d1634cf23ea1a71020f6a1308070a16400fb68fde"
+        }
+      ],
+      "l": [
+        {
+          "kind": "local-declaration",
+          "file": "chunk-h730kz80.js",
+          "start": 4755,
+          "end": 4815,
+          "source": "function l(n){return n instanceof Error?n.message:String(n)}",
+          "sha256": "2f921ed78ffeed39032d7e9c4783e05c294cba2ce61cc5ac20466ece27a81075"
+        }
+      ]
+    }
+  },
+  "returns": {
+    "client": "{authorize:x9n,exchange:ajr,refresh:Pde,roles:fUt,profile:P9n,tokenProfile:z1e,keyProfile:kUo,planLabel:oA,validatePlan:k9n,scopes:Zgn,refreshExpiry:R9n,invalidScope:djr}",
+    "classifier": "{expected:cu,classify:Xs,code:kzt}"
+  }
+}

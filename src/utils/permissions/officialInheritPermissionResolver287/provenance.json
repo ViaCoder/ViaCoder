@@ -1,0 +1,216 @@
+{
+  "version": "2.1.287",
+  "platform": "linux-x64",
+  "source": "pinned public corpus",
+  "offsetUnit": "UTF-16 code units",
+  "manifestSha256": "ecae5d9ddbf13ef27b6b6a1141953aab4ba311e47dde3ac2a7cc8b5a01c63784",
+  "resolverModule": {
+    "path": "chunk-79tb182f.js",
+    "sha256": "191a865195d39b1e4b5cf285d31dd2acc2fa2a65c96f7133a65b9d123d938877"
+  },
+  "helperModule": {
+    "path": "chunk-arccn7z5.js",
+    "sha256": "ed0a21dfa340d9806895ebe305d03e77ffc0639a3238b8dc2b4fd6a6b585fa8e"
+  },
+  "declarations": [
+    {
+      "file": "chunk-79tb182f.js",
+      "name": "oe",
+      "start": 15019,
+      "end": 15160,
+      "source": "function oe(){let{value:e,source:n}=Uo(\"tengu_auto_mode_config\",{});if(e?.enabled!==\"disabled\")return!1;return n===\"override\"||n===\"payload\"}",
+      "sha256": "28bcade40a719a85d902bfaeff79291b6ec9232b93c93a192904ea03706e3690",
+      "variable": false,
+      "moduleSha256": "191a865195d39b1e4b5cf285d31dd2acc2fa2a65c96f7133a65b9d123d938877"
+    },
+    {
+      "file": "chunk-79tb182f.js",
+      "name": "rGr",
+      "start": 15160,
+      "end": 20475,
+      "source": "function rGr(e){let{cli:n,env:r,settings:s,agentFrontmatter:u}=e,l=Tg(n.permissionMode),p=Tg(n.inheritPermissionMode),E=n.dangerouslySkipPermissions,g=u?.permissionMode,S=Boolean(E||l||g);if(Le(r.CLAUDE_CODE_SUBPROCESS_ENV_SCRUB)){let m=E||l&&l!==\"default\"||p&&p!==\"default\"||g&&g!==\"default\",P=\"Permission mode forced to default \\u2014 CLAUDE_CODE_SUBPROCESS_ENV_SCRUB is set \"+\"(allowed_non_write_users hardening). Declare allowedTools explicitly, or set CLAUDE_CODE_SUBPROCESS_ENV_SCRUB=0 to opt out.\";return{mode:\"default\",notification:m?P:void 0,fromAutoFallback:!1,baselineMode:\"default\",decidedByProactivityLevel:!1,modeSuppliedOnInvocation:!0,autoDefaultWithheldForPendingVerdict:!1,autoStartWithheldForHipaaTaint:!1}}let v=s.permissions?.disableBypassPermissionsMode===\"disable\",y=oe(),L=!y&&!I(s),c=[],h,D=p?ne(p,y,\"inherited auto mode dropped \\u2014 auto mode killswitch active (override- or payload-served)\"):void 0,_=p?D?.mode??nT(p):void 0;if(E)if(H(\"bypassPermissions\"))h=R,c.push(\"default\");else c.push(\"bypassPermissions\");if(l){let m=ne(l,y,\"auto mode killswitch active (override- or payload-served) \\u2014 falling back to default\");if(m){if(m.unconsented)h=R;c.push(m.mode)}}if(g)if(g===\"auto\"&&y)t(\"agent frontmatter requested auto mode but circuit breaker active \\u2014 falling through\",{level:\"warn\"});else if(_&&H8(g,_)===void 0)t(`agent frontmatter permissionMode \"${g}\" ignored \\u2014 it would widen the agent view's inherited mode (effective \"${_}\"), and the dispatched agent name is repo-controllable (settings \\`agent\\`)`,{level:\"warn\"}),i(\"tengu_agent_frontmatter_mode_widening_carry_ignored\",{});else c.push(g);if(nv()){let m=!Myn()?void 0:j().map((P)=>Tg(ge(P)?.permissions?.defaultMode)).find((P)=>P!=null);if(m!=null&&Le(r.CLAUDE_CODE_REMOTE)&&!U(m)){if(t(`settings defaultMode \"${m}\" is not supported in CLAUDE_CODE_REMOTE \\u2014 only acceptEdits, plan, default, and auto are allowed`,{level:\"warn\"}),c.length===0)i(\"tengu_ccr_unsupported_default_mode_ignored\",{mode_hash:an(m)}),c.push(\"default\")}else if(m===\"bypassPermissions\"){if(E||n.allowDangerouslySkipPermissions)c.push(m);else if(c.length===0)h='Permission mode bypassPermissions from settings was ignored \\u2014 enable the \"Claude Code: Allow Dangerously Skip Permissions\" setting in VS Code to consent to it',t('settings defaultMode \"bypassPermissions\" ignored for a VS Code-owned session without the allow-bypass setting',{level:\"warn\"}),i(\"tengu_settings_bypass_unconsented_noninteractive_ignored\",{}),process.stderr.write(`\\u26A0 ${h}\n`),c.push(\"default\")}else if(m===\"auto\")if(!y)c.push(m);else t('settings defaultMode \"auto\" ignored for the IDE session \\u2014 auto-mode circuit breaker is active',{level:\"warn\"});else if(m!=null)c.push(m)}else if(s.permissions?.defaultMode){let m=Tg(s.permissions.defaultMode);if(Le(r.CLAUDE_CODE_REMOTE)&&!U(m))t(`settings defaultMode \"${m}\" is not supported in CLAUDE_CODE_REMOTE \\u2014 only acceptEdits, plan, default, and auto are allowed`,{level:\"warn\"}),i(\"tengu_ccr_unsupported_default_mode_ignored\",{mode_hash:an(m)});else if(m===\"bypassPermissions\")if(!V(\"bypassPermissions\")){if(t('settings defaultMode \"bypassPermissions\" ignored \\u2014 only policy/user/flag settings may grant bypass mode (projectSettings and localSettings are repo-controllable)',{level:\"warn\"}),i(\"tengu_settings_bypass_mode_untrusted_source_ignored\",{}),!p)c.push(\"default\")}else if(H(\"bypassPermissions\")){if(c.length===0)h=R;c.push(\"default\")}else c.push(m);else if(m!==\"auto\")if(_&&!V(m)&&H8(m,_)===void 0)t(`settings defaultMode \"${m}\" ignored \\u2014 it would widen the agent view's inherited mode (effective \"${_}\"), and only policy/user/flag settings may do that (projectSettings and localSettings are repo-controllable)`,{level:\"warn\"}),i(\"tengu_settings_mode_widening_carry_ignored\",{});else c.push(m);else if(!V(\"auto\"))t('settings defaultMode \"auto\" ignored \\u2014 only policy/user/flag settings may grant auto mode (projectSettings and localSettings are repo-controllable)',{level:\"warn\"}),i(\"tengu_settings_auto_mode_untrusted_source_ignored\",{});else if(y)t(\"auto mode killswitch active (override- or payload-served) \\u2014 falling back to default\",{level:\"warn\"});else if(Le(r.CLAUDE_CODE_BRIDGE_CHILD_AUTO_DEFAULT)&&I(s))t('settings defaultMode \"auto\" ignored \\u2014 disableAutoMode is set and this is an unattended Remote Control machine session',{level:\"warn\"});else c.push(\"auto\")}if(p){let m=D;if(m){if(m.unconsented&&c.length===0)h=R;c.push(m.mode)}}let x;for(let m of c){if(m===\"bypassPermissions\"&&v){t(\"bypassPermissions mode is disabled by settings\",{level:\"warn\"}),h=\"Bypass permissions mode was disabled by settings\";continue}x={mode:m,notification:h};break}let M=!1,w=!1,B=!1;if(!x){let m=L&&(!Le(r.CLAUDE_CODE_REMOTE)&&Myn()&&(!n.isNonInteractiveSession||nv()||C(\"tengu_moss_anchor\",!0))||Le(r.CLAUDE_CODE_BRIDGE_CHILD_AUTO_DEFAULT)),P=\"default\";if(m){let A=ke(),ie=Le(r.CLAUDE_CODE_BRIDGE_CHILD_AUTO_DEFAULT);if(A===void 0||A===\"pending\"&&ie)P=\"auto\",M=!0;else if(A===\"taint\")h??=Oe,B=!0;else if(A===\"pending\")w=!0}x={mode:P,notification:h}}let W=x.mode,re=!1;return{mode:x.mode,notification:x.notification,fromAutoFallback:M,baselineMode:W,decidedByProactivityLevel:re,modeSuppliedOnInvocation:S,autoDefaultWithheldForPendingVerdict:w,autoStartWithheldForHipaaTaint:B}}",
+      "sha256": "245b89149623f7c511fc5153181c5f5986ef4d6834d84c862f6c6a738ab87a12",
+      "variable": false,
+      "moduleSha256": "191a865195d39b1e4b5cf285d31dd2acc2fa2a65c96f7133a65b9d123d938877"
+    },
+    {
+      "file": "chunk-79tb182f.js",
+      "name": "Oe",
+      "start": 20479,
+      "end": 20558,
+      "source": "Oe=\"Auto mode isn't the default for your organization \\xB7 Shift+Tab to switch\"",
+      "sha256": "ae96eec3b58d15c12c258c2ecb7248c7ee517ea9a3f15f1ad94a88a8daa76875",
+      "variable": true,
+      "moduleSha256": "191a865195d39b1e4b5cf285d31dd2acc2fa2a65c96f7133a65b9d123d938877"
+    },
+    {
+      "file": "chunk-79tb182f.js",
+      "name": "ke",
+      "start": 20559,
+      "end": 20683,
+      "source": "function ke(){let e=Q5o();if(Il(\"hipaa\")||e===\"unobtainable_seen_hipaa\")return\"taint\";return e===\"pending\"?\"pending\":void 0}",
+      "sha256": "e6a1bd9877986ff80f842229b19137e22caa61a1045892706e40345342faed3f",
+      "variable": false,
+      "moduleSha256": "191a865195d39b1e4b5cf285d31dd2acc2fa2a65c96f7133a65b9d123d938877"
+    },
+    {
+      "file": "chunk-79tb182f.js",
+      "name": "Myn",
+      "start": 23779,
+      "end": 23857,
+      "source": "function Myn(){return C(\"tengu_harbor_willow\",!0)||_3r()?.meadow_lantern===!0}",
+      "sha256": "4aebf8a43b3e997b275586b62852ee8c4c67bb9dcea1b98b73f7af44f94333f6",
+      "variable": false,
+      "moduleSha256": "191a865195d39b1e4b5cf285d31dd2acc2fa2a65c96f7133a65b9d123d938877"
+    },
+    {
+      "file": "chunk-79tb182f.js",
+      "name": "Ne",
+      "start": 23861,
+      "end": 23912,
+      "source": "Ne=[\"policySettings\",\"flagSettings\",\"userSettings\"]",
+      "sha256": "2ebdcc3ec8e7cf18d0ba7686cb4dd1e32e905780440bef877636e8f0eb587a28",
+      "variable": true,
+      "moduleSha256": "191a865195d39b1e4b5cf285d31dd2acc2fa2a65c96f7133a65b9d123d938877"
+    },
+    {
+      "file": "chunk-79tb182f.js",
+      "name": "He",
+      "start": 23913,
+      "end": 23955,
+      "source": "He=[\"acceptEdits\",\"plan\",\"default\",\"auto\"]",
+      "sha256": "c431fa98be5cde3bdfd6d5e8ddc3a598d35172ccae52d00621b0c57e5ff15f4d",
+      "variable": true,
+      "moduleSha256": "191a865195d39b1e4b5cf285d31dd2acc2fa2a65c96f7133a65b9d123d938877"
+    },
+    {
+      "file": "chunk-79tb182f.js",
+      "name": "U",
+      "start": 23956,
+      "end": 23992,
+      "source": "function U(e){return He.includes(e)}",
+      "sha256": "9aaf2e789fde93329e7c0597ec85e68d220116ffe37bfa27db1e0a848134602a",
+      "variable": false,
+      "moduleSha256": "191a865195d39b1e4b5cf285d31dd2acc2fa2a65c96f7133a65b9d123d938877"
+    },
+    {
+      "file": "chunk-79tb182f.js",
+      "name": "j",
+      "start": 23992,
+      "end": 24026,
+      "source": "function j(){return Ne.filter(tr)}",
+      "sha256": "2d85eae28e396dbf3f405acd233496b9166aa8e7633ef6b54b8a941925806dfa",
+      "variable": false,
+      "moduleSha256": "191a865195d39b1e4b5cf285d31dd2acc2fa2a65c96f7133a65b9d123d938877"
+    },
+    {
+      "file": "chunk-79tb182f.js",
+      "name": "V",
+      "start": 24026,
+      "end": 24098,
+      "source": "function V(e){return j().some((n)=>ge(n)?.permissions?.defaultMode===e)}",
+      "sha256": "d23dccfe0c8cb5289ca0396c3f3fd4857c09a96919bf608bac1bbd48116b696f",
+      "variable": false,
+      "moduleSha256": "191a865195d39b1e4b5cf285d31dd2acc2fa2a65c96f7133a65b9d123d938877"
+    },
+    {
+      "file": "chunk-79tb182f.js",
+      "name": "I",
+      "start": 24098,
+      "end": 24193,
+      "source": "function I(e){return e.permissions?.disableAutoMode===\"disable\"||e.disableAutoMode===\"disable\"}",
+      "sha256": "3880b62c19458b71d705b9daeb6acfe1bd2788d5e9a82c8be715c658273c60ef",
+      "variable": false,
+      "moduleSha256": "191a865195d39b1e4b5cf285d31dd2acc2fa2a65c96f7133a65b9d123d938877"
+    },
+    {
+      "file": "chunk-79tb182f.js",
+      "name": "R",
+      "start": 25547,
+      "end": 25656,
+      "source": "R=\"Permission mode downgraded to default \\u2014 bypass requires accepting the disclaimer interactively first\"",
+      "sha256": "e1b884b594b4822ef145c5ff589138aab0a570eb8cc49752df245bd4a6109597",
+      "variable": true,
+      "moduleSha256": "191a865195d39b1e4b5cf285d31dd2acc2fa2a65c96f7133a65b9d123d938877"
+    },
+    {
+      "file": "chunk-79tb182f.js",
+      "name": "H",
+      "start": 25657,
+      "end": 25775,
+      "source": "function H(e){if(!Pt())return!1;if(e===\"bypassPermissions\")return!Y2t()&&!le().bypassPermissionsModeAccepted;return!1}",
+      "sha256": "9a8b91cc71bba62736a8098d5097e446b9a0836f5236d0618e424cd7486db336",
+      "variable": false,
+      "moduleSha256": "191a865195d39b1e4b5cf285d31dd2acc2fa2a65c96f7133a65b9d123d938877"
+    },
+    {
+      "file": "chunk-79tb182f.js",
+      "name": "ne",
+      "start": 25775,
+      "end": 25912,
+      "source": "function ne(e,n,r){let s=nT(e);if(H(s))return{mode:\"default\",unconsented:!0};if(s===\"auto\"&&n){t(r,{level:\"warn\"});return}return{mode:s}}",
+      "sha256": "b4515845efb2e219563f74f0950675c79af5815d4134c020fac98bbfc8596f30",
+      "variable": false,
+      "moduleSha256": "191a865195d39b1e4b5cf285d31dd2acc2fa2a65c96f7133a65b9d123d938877"
+    },
+    {
+      "file": "chunk-arccn7z5.js",
+      "name": "Tg",
+      "start": 2994,
+      "end": 3041,
+      "source": "function Tg(e){return e===\"manual\"?\"default\":e}",
+      "sha256": "23b54e7638e781655dae01dbe57c6a6f469b2e269a6935225cd3d4d572674b0c",
+      "variable": false,
+      "moduleSha256": "ed0a21dfa340d9806895ebe305d03e77ffc0639a3238b8dc2b4fd6a6b585fa8e"
+    },
+    {
+      "file": "chunk-arccn7z5.js",
+      "name": "wr",
+      "start": 73654,
+      "end": 73735,
+      "source": "wr={plan:0,bubble:1,default:1,dontAsk:1,acceptEdits:2,auto:3,bypassPermissions:4}",
+      "sha256": "4d7e44ef09d8b53007fca8e641217fc30a120be9948355bfbdcaacaf1588e48b",
+      "variable": true,
+      "moduleSha256": "ed0a21dfa340d9806895ebe305d03e77ffc0639a3238b8dc2b4fd6a6b585fa8e"
+    },
+    {
+      "file": "chunk-arccn7z5.js",
+      "name": "H8",
+      "start": 73736,
+      "end": 73835,
+      "source": "function H8(e,n){if(!e)return;if(n===\"auto\"&&e===\"acceptEdits\")return;return wr[e]<=wr[n]?e:void 0}",
+      "sha256": "41242253af6b82639a7ca84ca05ae2436a5e5a9c82207850f6da250f3bff9182",
+      "variable": false,
+      "moduleSha256": "ed0a21dfa340d9806895ebe305d03e77ffc0639a3238b8dc2b4fd6a6b585fa8e"
+    },
+    {
+      "file": "chunk-arccn7z5.js",
+      "name": "nT",
+      "start": 74881,
+      "end": 74920,
+      "source": "function nT(e){return Ah(e)??\"default\"}",
+      "sha256": "46c3a8ba27e03836ab132e08daba4a325cfcafc785094fcd4d68be408c153d8b",
+      "variable": false,
+      "moduleSha256": "ed0a21dfa340d9806895ebe305d03e77ffc0639a3238b8dc2b4fd6a6b585fa8e"
+    }
+  ],
+  "ports": [
+    "Ah",
+    "C",
+    "Il",
+    "Le",
+    "Pt",
+    "Q5o",
+    "Uo",
+    "Y2t",
+    "_3r",
+    "an",
+    "ge",
+    "i",
+    "le",
+    "nv",
+    "t",
+    "tr"
+  ],
+  "caveat": "Exact declarations; unresolved references are host ports. No claim that private runtime ports are present in the public local host."
+}

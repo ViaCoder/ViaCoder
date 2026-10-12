@@ -1,0 +1,97 @@
+{
+  "version": "2.1.287",
+  "platform": "darwin-arm64",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16 code units",
+  "modules": [
+    {
+      "file": "chunk-nankzm0s.js",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "moduleLength": 706979,
+      "rows": [
+        {
+          "name": "UI",
+          "start": 369221,
+          "end": 369382,
+          "sha256": "dea3963b91b09edf8d5b3ad3d3e28f09606d886d976058501156bd2e80b12fa3",
+          "source": "UI=new Set([\"claude-opus-4-6\",\"claude-opus-4-7\",\"claude-opus-4-8\",\"claude-opus-5\",\"claude-opus-5-5\",\"claude-sonnet-4-0\",\"claude-sonnet-4-5\",\"claude-sonnet-4-6\"])",
+          "variable": true
+        },
+        {
+          "name": "BI",
+          "start": 369383,
+          "end": 369520,
+          "sha256": "f537877a73613925e073bddc73c7b4581a5e3e05ae9ae8f61b697b482658b9eb",
+          "source": "BI=new Map([[\"claude-3-7-sonnet\",\"Claude 3.7 Sonnet\"],[\"claude-3-5-sonnet\",\"Claude 3.5 Sonnet\"],[\"claude-3-5-haiku\",\"Claude 3.5 Haiku\"]])",
+          "variable": true
+        },
+        {
+          "name": "Wp",
+          "start": 369982,
+          "end": 370209,
+          "sha256": "3352b3bba369f616bc5b420dca3ad2eb188812737c7a36e667a701e2c64b4dac",
+          "source": "function Wp(e){if(He()===\"foundry\")return;let n=Be(e,{identity:!0}),r=BI.get(n);if(r!==void 0)return r;let s=xa(n);if(!s)return;return e.toLowerCase().includes(\"[1m]\")&&UI.has(n)?`${s.display_name} (1M context)`:s.display_name}",
+          "variable": false
+        }
+      ]
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "moduleLength": 4409957,
+      "rows": [
+        {
+          "name": "h_n",
+          "start": 131801,
+          "end": 131858,
+          "sha256": "e81fd1b1992d40e9ca189c771674356e07a5ed21b2c3bb4fdccc8df2be0939fa",
+          "source": "function h_n(e){return xa(Be(e))?.knowledge_cutoff??null}",
+          "variable": false
+        },
+        {
+          "name": "V3e",
+          "start": 131858,
+          "end": 131941,
+          "sha256": "47e04c5a80e911749463e58ffbe2e48511e660a896570c58925f9d5bf69c6608",
+          "source": "function V3e(e){return{modelId:e,marketingName:Wp(e)??null,knowledgeCutoff:h_n(e)}}",
+          "variable": false
+        },
+        {
+          "name": "__n",
+          "start": 131941,
+          "end": 132118,
+          "sha256": "801166377db357654ac440062c0829bb8b6630a2f7b9edbbfc3b111be74d214e",
+          "source": "function __n(e){return e.marketingName?`You are powered by the model named ${e.marketingName}. The exact model ID is ${e.modelId}.`:`You are powered by the model ${e.modelId}.`}",
+          "variable": false
+        },
+        {
+          "name": "v_n",
+          "start": 132118,
+          "end": 132218,
+          "sha256": "91ac5fca6d3c182e46b78f2fbfcc7b837f30cc75112ddc9e13cb7153f31c7c97",
+          "source": "function v_n(e){return e.knowledgeCutoff?`Assistant knowledge cutoff is ${e.knowledgeCutoff}.`:null}",
+          "variable": false
+        },
+        {
+          "name": "Y3e",
+          "start": 132218,
+          "end": 132288,
+          "sha256": "9bc7b4781e94eb73352cb457732e127455aae8faae409848a775e62420a453f0",
+          "source": "function Y3e(e){return[__n(e),v_n(e)].filter((n)=>n!==null).join(\" \")}",
+          "variable": false
+        }
+      ]
+    }
+  ],
+  "ports": {
+    "Be": "chunk-nankzm0s.js:Be",
+    "He": "chunk-nankzm0s.js:He",
+    "xa": "chunk-wz6xag6e.js:xa"
+  },
+  "roots": [
+    "Wp",
+    "h_n",
+    "V3e",
+    "Y3e"
+  ]
+}

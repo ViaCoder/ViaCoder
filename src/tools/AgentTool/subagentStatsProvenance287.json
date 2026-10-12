@@ -1,0 +1,103 @@
+{
+  "version": "2.1.287",
+  "platform": "darwin-arm64",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16 code units",
+  "roots": {
+    "registry": [
+      "chunk-89m3jf58.js",
+      "IMe"
+    ],
+    "snapshot": [
+      "chunk-89m3jf58.js",
+      "$4"
+    ]
+  },
+  "sourceContracts": {},
+  "modules": [
+    {
+      "file": "chunk-89m3jf58.js",
+      "moduleSha256": "d6a34749f7c6a2593be664f5188722cd18d23acb81f9661a6120f7714d3efb50",
+      "moduleLength": 2047,
+      "rows": [
+        {
+          "file": "chunk-89m3jf58.js",
+          "name": "n",
+          "start": 708,
+          "end": 952,
+          "moduleSha256": "d6a34749f7c6a2593be664f5188722cd18d23acb81f9661a6120f7714d3efb50",
+          "moduleLength": 2047,
+          "source": "function n(){return{spawned:0,requested:{background:0,foreground:0,unset:0},started_in_background:0,max_depth:0,spawned_by_subagents:0,completed:0,failed:0,killed:{parent:0,user:0,system:0},refused:{depth_limit:0,concurrency_limit:0,budget:0}}}",
+          "sha256": "d2e51120d8914c3fcbeff99c474cb6cb8058ccfdd5ca09e5f8b659e556084268",
+          "variable": false
+        },
+        {
+          "file": "chunk-89m3jf58.js",
+          "name": "s",
+          "start": 952,
+          "end": 1320,
+          "moduleSha256": "d6a34749f7c6a2593be664f5188722cd18d23acb81f9661a6120f7714d3efb50",
+          "moduleLength": 2047,
+          "source": "class s{#e;#t;constructor(e){this.#e=e}completed(){if(this.#n(\"completed\"))this.#e.completed+=1}failed(){if(this.#n(\"failed\"))this.#e.failed+=1}killed(e){if(this.#n(\"killed\"))this.#e.killed[e??\"user\"]+=1}cancelledAfterCompletion(){if(this.#t===\"completed\")this.#e.completed-=1,this.#t=void 0;this.killed(\"user\")}#n(e){if(this.#t!==void 0)return!1;return this.#t=e,!0}}",
+          "sha256": "0e26c572e4d3cbb709d822802f3d3de0d329a81b794da67ea0af46bc23059923",
+          "variable": false
+        },
+        {
+          "file": "chunk-89m3jf58.js",
+          "name": "r",
+          "start": 1320,
+          "end": 1922,
+          "moduleSha256": "d6a34749f7c6a2593be664f5188722cd18d23acb81f9661a6120f7714d3efb50",
+          "moduleLength": 2047,
+          "source": "class r{#e=n();#t=new Map;recordSpawn(e){let t=this.#e;if(t.spawned+=1,t.requested[e.runInBackground===void 0?\"unset\":e.runInBackground?\"background\":\"foreground\"]+=1,e.runsInBackground)t.started_in_background+=1;if(this.#t.set(e.agentType,(this.#t.get(e.agentType)??0)+1),t.max_depth=Math.max(t.max_depth,e.depth),e.depth>1)t.spawned_by_subagents+=1;return new s(t)}recordRefused(e){this.#e.refused[e]+=1}snapshot(){let e=this.#e;return{...e,requested:{...e.requested},killed:{...e.killed},refused:{...e.refused},by_type:Object.fromEntries(this.#t)}}reset(){Object.assign(this.#e,n()),this.#t.clear()}}",
+          "sha256": "e4a039caea3e851f5b016305ec93fdf4416baa0b980ab1879a7f36f26f11cbf7",
+          "variable": false
+        },
+        {
+          "file": "chunk-89m3jf58.js",
+          "name": "IMe",
+          "start": 1926,
+          "end": 1947,
+          "moduleSha256": "d6a34749f7c6a2593be664f5188722cd18d23acb81f9661a6120f7714d3efb50",
+          "moduleLength": 2047,
+          "source": "IMe=new Tt(()=>new r)",
+          "sha256": "f5c6f7ac23909beba83f7a9f14c8367fe119663c3e828ff3416e42c73b38c16f",
+          "variable": true
+        },
+        {
+          "file": "chunk-89m3jf58.js",
+          "name": "$4",
+          "start": 1948,
+          "end": 2030,
+          "moduleSha256": "d6a34749f7c6a2593be664f5188722cd18d23acb81f9661a6120f7714d3efb50",
+          "moduleLength": 2047,
+          "source": "function $4(e){if(!e)return;try{return IMe.of(e).snapshot()}catch(t){d(t);return}}",
+          "sha256": "ee3aa2143271203bc0be9c1f6e1ad20dc4a6c901fe9a34fb03b578c24ad4ede8",
+          "variable": false
+        }
+      ],
+      "bindings": {
+        "Tt": {
+          "port": "sessionRegistry",
+          "identity": "chunk-bn3p37gv.js:Tt"
+        },
+        "d": {
+          "port": "logError",
+          "identity": "chunk-amhtwhch.js:d"
+        }
+      },
+      "initializers": []
+    }
+  ],
+  "ports": [
+    {
+      "port": "sessionRegistry",
+      "identity": "chunk-bn3p37gv.js:Tt"
+    },
+    {
+      "port": "logError",
+      "identity": "chunk-amhtwhch.js:d"
+    }
+  ],
+  "nativeSha256": "75a603f1c29ffafb325fd8bda8ec32e10c24f03effb8abd89d42c7f2f5e34894"
+}

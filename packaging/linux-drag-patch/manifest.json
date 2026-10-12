@@ -1,0 +1,374 @@
+{
+  "schema": 1,
+  "id": "cclaude-linux-drag-073-v1",
+  "upstream": "agent-sh/computer-use-linux",
+  "version": "0.7.3",
+  "baseCommit": "374f0af3d5959bb88cfa45317df69da43cb040df",
+  "patchSha256": "4b7d189199f051c7be87888341e0e5c98c55a57ca625326d9ecd267d2028b41d",
+  "files": {
+    "src/abs_pointer.rs": {
+      "beforeSha256": "d56c8b0d41efa221d574b0806a3a8c10dec0e866c2f2d027efe56d793699b36c",
+      "afterSha256": "41f95b2f9872a6f93dca6c79c3b20dcc52184001eb04a48b02f2f30b1087f9ac"
+    },
+    "src/server.rs": {
+      "beforeSha256": "2d3a919f3fc14defc0d93be8ee01457ccf9f151bef5a528a58ab41c20cb27228",
+      "afterSha256": "a81c820d19ed44e7299dda24aee8514bef6654e0c5ab87477dcab1bf7422a2fc"
+    }
+  },
+  "upstreamTree": [
+    {
+      "path": ".agnix.toml",
+      "gitBlobSha1": "678fe783f21cea2eb942289c12928797e3ca11dc"
+    },
+    {
+      "path": ".cargo/audit.toml",
+      "gitBlobSha1": "cc8ea4c0e23d5b8180b05c11b4edc03bfab3674d"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "gitBlobSha1": "9a501dfbc4c397bbef81ddd1ce070886d9ad5027"
+    },
+    {
+      "path": ".github/workflows/sync-reminder.yml",
+      "gitBlobSha1": "9c770a1f0db24d0fd0cb12b963b29ec0b39d1a93"
+    },
+    {
+      "path": ".gitignore",
+      "gitBlobSha1": "0d89b076ca799c26a3040dd241cb226f0d177d97"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "gitBlobSha1": "5aa28225da051372106b65ea453e69b0a67ed296"
+    },
+    {
+      "path": "CODEOWNERS",
+      "gitBlobSha1": "1d39928b7e008181df3e0e0474dc0439bf474a76"
+    },
+    {
+      "path": "CODE_OF_CONDUCT.md",
+      "gitBlobSha1": "41b629ba7cb8745c531f3f428fb13b53b40a3c76"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "gitBlobSha1": "4aab31cbbfa5747b6acc1f9ab831e05bf0a56fbc"
+    },
+    {
+      "path": "Cargo.lock",
+      "gitBlobSha1": "b2bdea11419ce292446fe823440ad16fc12bb6d3"
+    },
+    {
+      "path": "Cargo.toml",
+      "gitBlobSha1": "648e089ae33061f9082a54d357fd1937255c4e50"
+    },
+    {
+      "path": "LICENSE",
+      "gitBlobSha1": "7d853f432c9ebc28e7de6e7fbdeaffb30986dd1a"
+    },
+    {
+      "path": "README.md",
+      "gitBlobSha1": "a7898fef63e6c43e78653a740de8f29bc925f828"
+    },
+    {
+      "path": "SECURITY.md",
+      "gitBlobSha1": "a5940d7cbf60a6eb0da624004da72419d2c26fe0"
+    },
+    {
+      "path": "examples/atspi_probe.rs",
+      "gitBlobSha1": "f7d95dbeb4fab12f37019b26449eb0f9d3124911"
+    },
+    {
+      "path": "examples/coordinate_probe.py",
+      "gitBlobSha1": "c1fcb4f4798594304ba430e0fed4ee89d860f85f"
+    },
+    {
+      "path": "gnome-shell-extension/computer-use-linux@avifenesh.dev/extension.js",
+      "gitBlobSha1": "4c58fa792fb0fb2863cc2d364a7f553636756708"
+    },
+    {
+      "path": "gnome-shell-extension/computer-use-linux@avifenesh.dev/metadata.json",
+      "gitBlobSha1": "fc44a32dfdf68f14b75f6ac227435bb7ffc90187"
+    },
+    {
+      "path": "install.sh",
+      "gitBlobSha1": "1f41192c13dea1f84ea20a2227d9455c11a4f754"
+    },
+    {
+      "path": "npm/README.md",
+      "gitBlobSha1": "f4d765693ad12a24e2e6710b2e8d13511e8da921"
+    },
+    {
+      "path": "npm/bin/computer-use-linux.js",
+      "gitBlobSha1": "101108121909f6995714df44ddcd8695a2808cbf"
+    },
+    {
+      "path": "npm/install.js",
+      "gitBlobSha1": "b08ed5fe97ebac2e53f0e45fbe34ebc81f05b3d9"
+    },
+    {
+      "path": "package.json",
+      "gitBlobSha1": "8c0b1362e097f29e6626481626dc7c48210a94f0"
+    },
+    {
+      "path": "pi/extension/THIRD_PARTY_NOTICES.txt",
+      "gitBlobSha1": "ff836d37c14a8429a37d1da825be787eaabd99dc"
+    },
+    {
+      "path": "pi/extension/generated-tools.ts",
+      "gitBlobSha1": "5d2e4f202ca2666e084f9f30d50070280079aaf4"
+    },
+    {
+      "path": "pi/extension/index.ts",
+      "gitBlobSha1": "a414415166935ea775f8af81f76c7a854cc53bd5"
+    },
+    {
+      "path": "pi/extension/mcp-client.bundle.cjs",
+      "gitBlobSha1": "c6a748707241134054167242b56997baa444a9e9"
+    },
+    {
+      "path": "pi/extension/mcp-client.ts",
+      "gitBlobSha1": "1080423651c627d3ded37969b4ba346e73bc7815"
+    },
+    {
+      "path": "pi/package-lock.json",
+      "gitBlobSha1": "af8d9414c767fa482574c7a4811bed10c062668b"
+    },
+    {
+      "path": "pi/package.json",
+      "gitBlobSha1": "4f04d34e2c4bd0aba1c6275c697f114f909374b4"
+    },
+    {
+      "path": "pi/scripts/build.mjs",
+      "gitBlobSha1": "1224c077739b53d6b9d1f6350d588280ed48dbe3"
+    },
+    {
+      "path": "pi/test/bundle-smoke.test.ts",
+      "gitBlobSha1": "d7a7a49716fd2ceac1df835b576135630c02bcf2"
+    },
+    {
+      "path": "pi/test/fixtures/mcp-server.mjs",
+      "gitBlobSha1": "71a9c6c2bef9641eeb771bb0e2e0c3f20c1fa358"
+    },
+    {
+      "path": "pi/test/index.test.ts",
+      "gitBlobSha1": "b4ee9ced55bb6ebc4539a4e676c0ef8540870ba3"
+    },
+    {
+      "path": "pi/test/mcp-client.test.ts",
+      "gitBlobSha1": "03b35d70d1c01c14ea0b7435d71917fe82f6fd1b"
+    },
+    {
+      "path": "pi/test/pi-integration.test.ts",
+      "gitBlobSha1": "41628422361453270dafeeb9ae1b54f4536dd95b"
+    },
+    {
+      "path": "pi/test/shell-environment.integration.test.ts",
+      "gitBlobSha1": "9e71643c1045e4d6dbbc24a3d927dca3c4f96fd6"
+    },
+    {
+      "path": "pi/test/shell-extension.test.ts",
+      "gitBlobSha1": "e0cdeee04d32d4ad5a5d9c096c24c2a4a308990e"
+    },
+    {
+      "path": "pi/tsconfig.json",
+      "gitBlobSha1": "2ff709caa2fdfa4bc4795b72a6cbf87fab61cebb"
+    },
+    {
+      "path": "scripts/accessibility_guard_test.sh",
+      "gitBlobSha1": "48a62421cd3299ebd559d19430c65b9571f07eb5"
+    },
+    {
+      "path": "scripts/check_npm_package.mjs",
+      "gitBlobSha1": "6497040047e7bc83c07cf776542ec5e9736003da"
+    },
+    {
+      "path": "scripts/generate_pi_tool_catalog.py",
+      "gitBlobSha1": "ab40076bbf71882a48085ba3939cd50fe01caf11"
+    },
+    {
+      "path": "scripts/install_sh_test.sh",
+      "gitBlobSha1": "ed91a6396968edf4888f62ae6a519bd37b51a201"
+    },
+    {
+      "path": "scripts/mcp_safety_check.py",
+      "gitBlobSha1": "d577febba1dc9b735fa6b6f22f6349d865d53b7c"
+    },
+    {
+      "path": "scripts/semantic_click_test.py",
+      "gitBlobSha1": "0865da38a0a86ecee0e6e62a8d00a7b8337ccc9d"
+    },
+    {
+      "path": "scripts/zod-check/check.mjs",
+      "gitBlobSha1": "a295c355667efb2740dcb8fe0f953d0f7b681782"
+    },
+    {
+      "path": "scripts/zod-check/package-lock.json",
+      "gitBlobSha1": "78a23922d266c4f7df014e280609ce35dc05dc84"
+    },
+    {
+      "path": "scripts/zod-check/package.json",
+      "gitBlobSha1": "9fd13e045db1d4ffd2205b18893f50497b4c4668"
+    },
+    {
+      "path": "skills/computer-use-linux/SKILL.md",
+      "gitBlobSha1": "59c1b568eafc8f1085a58a0ee4b958f34d26c13b"
+    },
+    {
+      "path": "skills/computer-use-linux/references/hermes-setup.md",
+      "gitBlobSha1": "83ad5409875f87de8072de02b0c6c77d03b54e03"
+    },
+    {
+      "path": "skills/computer-use-linux/references/pi-setup.md",
+      "gitBlobSha1": "d389b9843d573584382d8b896ee111e904ec3f5a"
+    },
+    {
+      "path": "src/abs_pointer.rs",
+      "gitBlobSha1": "d53df43a8358e8300c827e039084bb34a083892f"
+    },
+    {
+      "path": "src/accessibility_guard.rs",
+      "gitBlobSha1": "5f5562cb3a4723e2a048ca100beb09cb0e68e4d5"
+    },
+    {
+      "path": "src/atspi_tree.rs",
+      "gitBlobSha1": "28e7c362eed06cd8571e438e5776938e9fe1ae40"
+    },
+    {
+      "path": "src/bin/computer-use-linux-cosmic.rs",
+      "gitBlobSha1": "710cfaf8dcb1cd32863a1a77c1cb79bc5383511b"
+    },
+    {
+      "path": "src/cli.rs",
+      "gitBlobSha1": "d1a095474b652e67534c1617a24565f11894d96a"
+    },
+    {
+      "path": "src/command_runner.rs",
+      "gitBlobSha1": "c7e5ee34231860222e75e818da295cd2f8825986"
+    },
+    {
+      "path": "src/cosmic_helper.rs",
+      "gitBlobSha1": "71912563df6df898036fea3141f9c89856d83bd5"
+    },
+    {
+      "path": "src/diagnostics.rs",
+      "gitBlobSha1": "3e7900b80e19c64fffb3b273f0730da71ea95180"
+    },
+    {
+      "path": "src/gnome_extension.rs",
+      "gitBlobSha1": "fc24222c9286339a106daac8e3233f5cbc0f2609"
+    },
+    {
+      "path": "src/identity.rs",
+      "gitBlobSha1": "a8d57c6d388a72877747d7b25da5a34ddb3e0540"
+    },
+    {
+      "path": "src/lib.rs",
+      "gitBlobSha1": "f113cc7eb74651e13c76e2f0325fef20a88bc825"
+    },
+    {
+      "path": "src/main.rs",
+      "gitBlobSha1": "28fe6514cf73776eb0219f2767420138379b60e7"
+    },
+    {
+      "path": "src/remote_desktop.rs",
+      "gitBlobSha1": "0ffb20ee0f9725f75855550678eb8d659582d118"
+    },
+    {
+      "path": "src/screenshot.rs",
+      "gitBlobSha1": "a1f6c9e870ff20a703236018338d0b825c0879ac"
+    },
+    {
+      "path": "src/server.rs",
+      "gitBlobSha1": "a1faab94f9c8d682457daefe39eda9379730fe53"
+    },
+    {
+      "path": "src/terminal.rs",
+      "gitBlobSha1": "3af2917f94a91ebeca1a3fed2416e480b2b1d071"
+    },
+    {
+      "path": "src/windowing/backends/cosmic.rs",
+      "gitBlobSha1": "3b82318b1129c700740cd803bc4401425e0f846f"
+    },
+    {
+      "path": "src/windowing/backends/gnome.rs",
+      "gitBlobSha1": "4254c1a685858ac32506f794f9e867b3a5876aee"
+    },
+    {
+      "path": "src/windowing/backends/hyprland.rs",
+      "gitBlobSha1": "d2f519f6228ae18a5e333edf84bda10242d8a17f"
+    },
+    {
+      "path": "src/windowing/backends/i3.rs",
+      "gitBlobSha1": "5b40336c6df31d4b661b42a5a569cfaf8dc2d047"
+    },
+    {
+      "path": "src/windowing/backends/kwin.rs",
+      "gitBlobSha1": "b5faf017ca152ce0c88105e5fa28873607195044"
+    },
+    {
+      "path": "src/windowing/backends/mod.rs",
+      "gitBlobSha1": "77bf33e44ca8b202f44c6823e2aeafb0614a3ba5"
+    },
+    {
+      "path": "src/windowing/backends/x11.rs",
+      "gitBlobSha1": "fefb872dbeba4e18bb965f8fa5878e7240d068d6"
+    },
+    {
+      "path": "src/windowing/mod.rs",
+      "gitBlobSha1": "ef38ad3b400551db03196fadfe125cc22ca16184"
+    },
+    {
+      "path": "src/windowing/registry.rs",
+      "gitBlobSha1": "85783a22f0649e6317f51601cbb3ce68d7db3d32"
+    },
+    {
+      "path": "src/windowing/target.rs",
+      "gitBlobSha1": "406e761d6198e21e485c3cd602b8b6affc5aa31e"
+    },
+    {
+      "path": "src/windowing/types.rs",
+      "gitBlobSha1": "8282d94eee4ce877d14af6693fc407742c4c7bcb"
+    },
+    {
+      "path": "src/windows.rs",
+      "gitBlobSha1": "c8a64d137610c493fac4c26469a402673eb8fd88"
+    },
+    {
+      "path": "src/x11_display.rs",
+      "gitBlobSha1": "fba8f72fbdbeb0c0b91c265547bc9787e9d3f3e2"
+    },
+    {
+      "path": "src/ydotool.rs",
+      "gitBlobSha1": "981f8a774145db5c6c5b49157f635de4612048c4"
+    },
+    {
+      "path": "tests/fixtures/os-release.artix",
+      "gitBlobSha1": "755c73124a933f5fc39d435d2d35d1be9af4fded"
+    },
+    {
+      "path": "tests/fixtures/os-release.unknown",
+      "gitBlobSha1": "24d0c07fe423caf9f4708b6019c0a59b1e482e13"
+    },
+    {
+      "path": "tests/library_exports.rs",
+      "gitBlobSha1": "ccf97b9d9cbe699ead77af88f8cee0384ba90eab"
+    }
+  ],
+  "originalEvidence": {
+    "absDrag": {
+      "utf16Start": 5102,
+      "utf16End": 5949,
+      "sha256": "94e11c101d460e6fa413a918f7b26b4dcf27241c71639f0e039577f3bb593490"
+    },
+    "serverDrag": {
+      "utf16Start": 58343,
+      "utf16End": 63239,
+      "sha256": "3c2e6f06fba1c908659a18c90066fe38966984d3b7015648f82cd30449372138"
+    },
+    "runCancellationSafeInput": {
+      "utf16Start": 190864,
+      "utf16End": 191563,
+      "sha256": "195a0749e534ade8e84b7579fe9458e9bbdc65a95bbba513362450c027e68787"
+    }
+  },
+  "sourceTreeSha256": "d837e95f1b043918cbe8c5f7cd5622ac5cac7dd76445fe50603e65379dfeeefb"
+}

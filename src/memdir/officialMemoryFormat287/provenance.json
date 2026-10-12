@@ -1,0 +1,583 @@
+{
+  "version": "2.1.287",
+  "offsetUnit": "UTF-16 code units",
+  "scope": "memory template, metadata normalization/reader and access guidance; not full scan/store parity",
+  "platforms": [
+    {
+      "platform": "darwin-arm64",
+      "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+      "rows": [
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "moduleLength": 433955,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "start": 9863,
+          "end": 9933,
+          "sha256": "e8cd0937338eafdfe29a7806d93ead49d398955341ab127a671cba569dc3008a",
+          "source": "function N(e){return typeof e===\"object\"&&e!==null&&!Array.isArray(e)}",
+          "kind": "function"
+        },
+        {
+          "file": "chunk-6xrs6gmd.js",
+          "moduleLength": 253011,
+          "moduleSha256": "f9dd0da1e467d32595bc9af036ebe3d18edca89a87e6204bf2519aeb61615e17",
+          "start": 86939,
+          "end": 86975,
+          "sha256": "2c69af93fa0865e82d9450fc15852494da197056b5603cf64586b8069580be76",
+          "source": "jd=[\"name\",\"description\",\"metadata\"]",
+          "kind": "variable"
+        },
+        {
+          "file": "chunk-6xrs6gmd.js",
+          "moduleLength": 253011,
+          "moduleSha256": "f9dd0da1e467d32595bc9af036ebe3d18edca89a87e6204bf2519aeb61615e17",
+          "start": 87007,
+          "end": 87053,
+          "sha256": "4866c079742f1c125584cc16102109f7737ce941da8298817859c5bc5dfb1295",
+          "source": "go=(e)=>typeof e===\"string\"&&e.length>0?e:null",
+          "kind": "variable"
+        },
+        {
+          "file": "chunk-6xrs6gmd.js",
+          "moduleLength": 253011,
+          "moduleSha256": "f9dd0da1e467d32595bc9af036ebe3d18edca89a87e6204bf2519aeb61615e17",
+          "start": 87054,
+          "end": 87283,
+          "sha256": "7c3f2a3e337e40760b858e8a41296b67365ec2e79abb35ca1e794f259b58416a",
+          "source": "zd=(e)=>{let n=N(e.metadata)?e.metadata:{},r=Object.entries(e).reduce((s,[g,h])=>{if(jd.includes(g)||h==null)return s;return s[g]=h,s},{});return{name:go(e.name),description:go(e.description),metadata:Object.freeze({...r,...n})}}",
+          "kind": "variable"
+        },
+        {
+          "file": "chunk-6xrs6gmd.js",
+          "moduleLength": 253011,
+          "moduleSha256": "f9dd0da1e467d32595bc9af036ebe3d18edca89a87e6204bf2519aeb61615e17",
+          "start": 87680,
+          "end": 87708,
+          "sha256": "719dfbf1befa41039c32305d4f468754abd678dd63a54ed31e482aa4c9f092a6",
+          "source": "xSe=(e,n)=>go(e.metadata[n])",
+          "kind": "variable"
+        },
+        {
+          "file": "chunk-6xrs6gmd.js",
+          "moduleLength": 253011,
+          "moduleSha256": "f9dd0da1e467d32595bc9af036ebe3d18edca89a87e6204bf2519aeb61615e17",
+          "start": 88154,
+          "end": 88404,
+          "sha256": "6dcd2660ecaf76a6bd992813ea6cae469adb9f7ce370472c9793a8ca0145a0e4",
+          "source": "ho=[\"In the body, link to related memories with `[[name]]`, where `name` is the other memory's `name:` slug. Link liberally \\u2014 a `[[name]]` that doesn't match an existing memory yet is fine; it marks something worth writing later, not an error.\"]",
+          "kind": "variable"
+        },
+        {
+          "file": "chunk-6xrs6gmd.js",
+          "moduleLength": 253011,
+          "moduleSha256": "f9dd0da1e467d32595bc9af036ebe3d18edca89a87e6204bf2519aeb61615e17",
+          "start": 88405,
+          "end": 88817,
+          "sha256": "aa1df84a533c3ebb0bdbdccf9a3e87fbf98e9cead917f93fd86f96cc71e8dbcf",
+          "source": "function ea(e){return[\"```markdown\",\"---\",\"name: {{short-kebab-case-slug}}\",\"description: {{one-line summary, used to decide relevance in future conversations, so be specific}}\",\"metadata:\",`  type: {{${e.join(\", \")}}}`,\"---\",\"\",\"{{memory content \\u2014 for feedback/project types, structure as: rule/fact, then **Why:** and **How to apply:** lines. Link related memories with [[their-name]].}}\",\"```\",\"\",...ho]}",
+          "kind": "function"
+        },
+        {
+          "file": "chunk-6xrs6gmd.js",
+          "moduleLength": 253011,
+          "moduleSha256": "f9dd0da1e467d32595bc9af036ebe3d18edca89a87e6204bf2519aeb61615e17",
+          "start": 107379,
+          "end": 107858,
+          "sha256": "3be438959e8c72577156a693d07771fb1d3925f3516c0f3c17b58161a16261c3",
+          "source": "GUt=\"- Memory records can become stale over time. Use memory as context for what was true at a given point in time. Before answering the user or building assumptions based solely on information in memory records, verify that the memory is still correct and up-to-date by reading the current state of the files or resources. If a recalled memory conflicts with current information, trust what you observe now \\u2014 and update or remove the stale memory rather than acting on it.\"",
+          "kind": "variable"
+        },
+        {
+          "file": "chunk-6xrs6gmd.js",
+          "moduleLength": 253011,
+          "moduleSha256": "f9dd0da1e467d32595bc9af036ebe3d18edca89a87e6204bf2519aeb61615e17",
+          "start": 107859,
+          "end": 108204,
+          "sha256": "4fabb2cb560ff0c1850953c68aff5a9ace790f202c4235af919444aa5eb1a68a",
+          "source": "Pn=[\"## When to access memories\",\"- When memories seem relevant, or the user references prior-conversation work.\",\"- You MUST access memory when the user explicitly asks you to check, recall, or remember.\",\"- If the user says to *ignore* or *not use* memory: Do not apply remembered facts, cite, compare against, or mention memory content.\",GUt]",
+          "kind": "variable"
+        }
+      ]
+    },
+    {
+      "platform": "darwin-x64",
+      "manifestSha256": "ba9e122d28e8a42927eb23c7c86b62295f24a223546ee5476e761837579a709b",
+      "rows": [
+        {
+          "file": "chunk-qqfb9hb6.js",
+          "moduleLength": 433955,
+          "moduleSha256": "e35e1872fdad4c42744298233449a7a5541a94aba4375f79aadda9edd469b252",
+          "start": 9863,
+          "end": 9933,
+          "sha256": "e8cd0937338eafdfe29a7806d93ead49d398955341ab127a671cba569dc3008a",
+          "source": "function N(e){return typeof e===\"object\"&&e!==null&&!Array.isArray(e)}",
+          "kind": "function"
+        },
+        {
+          "file": "chunk-9qpv9vsn.js",
+          "moduleLength": 252983,
+          "moduleSha256": "4c7f42af008593105f128fbbe0fe741ca906b7050a1bfd0e101e431afcf290b5",
+          "start": 86939,
+          "end": 86975,
+          "sha256": "2c69af93fa0865e82d9450fc15852494da197056b5603cf64586b8069580be76",
+          "source": "jd=[\"name\",\"description\",\"metadata\"]",
+          "kind": "variable"
+        },
+        {
+          "file": "chunk-9qpv9vsn.js",
+          "moduleLength": 252983,
+          "moduleSha256": "4c7f42af008593105f128fbbe0fe741ca906b7050a1bfd0e101e431afcf290b5",
+          "start": 87007,
+          "end": 87053,
+          "sha256": "4866c079742f1c125584cc16102109f7737ce941da8298817859c5bc5dfb1295",
+          "source": "go=(e)=>typeof e===\"string\"&&e.length>0?e:null",
+          "kind": "variable"
+        },
+        {
+          "file": "chunk-9qpv9vsn.js",
+          "moduleLength": 252983,
+          "moduleSha256": "4c7f42af008593105f128fbbe0fe741ca906b7050a1bfd0e101e431afcf290b5",
+          "start": 87054,
+          "end": 87283,
+          "sha256": "7c3f2a3e337e40760b858e8a41296b67365ec2e79abb35ca1e794f259b58416a",
+          "source": "zd=(e)=>{let n=N(e.metadata)?e.metadata:{},r=Object.entries(e).reduce((s,[g,h])=>{if(jd.includes(g)||h==null)return s;return s[g]=h,s},{});return{name:go(e.name),description:go(e.description),metadata:Object.freeze({...r,...n})}}",
+          "kind": "variable"
+        },
+        {
+          "file": "chunk-9qpv9vsn.js",
+          "moduleLength": 252983,
+          "moduleSha256": "4c7f42af008593105f128fbbe0fe741ca906b7050a1bfd0e101e431afcf290b5",
+          "start": 87680,
+          "end": 87708,
+          "sha256": "719dfbf1befa41039c32305d4f468754abd678dd63a54ed31e482aa4c9f092a6",
+          "source": "xSe=(e,n)=>go(e.metadata[n])",
+          "kind": "variable"
+        },
+        {
+          "file": "chunk-9qpv9vsn.js",
+          "moduleLength": 252983,
+          "moduleSha256": "4c7f42af008593105f128fbbe0fe741ca906b7050a1bfd0e101e431afcf290b5",
+          "start": 88154,
+          "end": 88404,
+          "sha256": "6dcd2660ecaf76a6bd992813ea6cae469adb9f7ce370472c9793a8ca0145a0e4",
+          "source": "ho=[\"In the body, link to related memories with `[[name]]`, where `name` is the other memory's `name:` slug. Link liberally \\u2014 a `[[name]]` that doesn't match an existing memory yet is fine; it marks something worth writing later, not an error.\"]",
+          "kind": "variable"
+        },
+        {
+          "file": "chunk-9qpv9vsn.js",
+          "moduleLength": 252983,
+          "moduleSha256": "4c7f42af008593105f128fbbe0fe741ca906b7050a1bfd0e101e431afcf290b5",
+          "start": 88405,
+          "end": 88817,
+          "sha256": "aa1df84a533c3ebb0bdbdccf9a3e87fbf98e9cead917f93fd86f96cc71e8dbcf",
+          "source": "function ea(e){return[\"```markdown\",\"---\",\"name: {{short-kebab-case-slug}}\",\"description: {{one-line summary, used to decide relevance in future conversations, so be specific}}\",\"metadata:\",`  type: {{${e.join(\", \")}}}`,\"---\",\"\",\"{{memory content \\u2014 for feedback/project types, structure as: rule/fact, then **Why:** and **How to apply:** lines. Link related memories with [[their-name]].}}\",\"```\",\"\",...ho]}",
+          "kind": "function"
+        },
+        {
+          "file": "chunk-9qpv9vsn.js",
+          "moduleLength": 252983,
+          "moduleSha256": "4c7f42af008593105f128fbbe0fe741ca906b7050a1bfd0e101e431afcf290b5",
+          "start": 107379,
+          "end": 107858,
+          "sha256": "3be438959e8c72577156a693d07771fb1d3925f3516c0f3c17b58161a16261c3",
+          "source": "GUt=\"- Memory records can become stale over time. Use memory as context for what was true at a given point in time. Before answering the user or building assumptions based solely on information in memory records, verify that the memory is still correct and up-to-date by reading the current state of the files or resources. If a recalled memory conflicts with current information, trust what you observe now \\u2014 and update or remove the stale memory rather than acting on it.\"",
+          "kind": "variable"
+        },
+        {
+          "file": "chunk-9qpv9vsn.js",
+          "moduleLength": 252983,
+          "moduleSha256": "4c7f42af008593105f128fbbe0fe741ca906b7050a1bfd0e101e431afcf290b5",
+          "start": 107859,
+          "end": 108204,
+          "sha256": "6048176cba45ffbab8a08186943fe7c8b66f68cfe7b16cefedb83551bfa44ffb",
+          "source": "En=[\"## When to access memories\",\"- When memories seem relevant, or the user references prior-conversation work.\",\"- You MUST access memory when the user explicitly asks you to check, recall, or remember.\",\"- If the user says to *ignore* or *not use* memory: Do not apply remembered facts, cite, compare against, or mention memory content.\",GUt]",
+          "kind": "variable"
+        }
+      ]
+    },
+    {
+      "platform": "linux-arm64",
+      "manifestSha256": "f3be5b23f9cbb909555fe028143b9a3a40c1e3e49961e09c49d8e5a6b61ae83b",
+      "rows": [
+        {
+          "file": "chunk-66214g8w.js",
+          "moduleLength": 433952,
+          "moduleSha256": "e987402a4f2deeef6757d180cf4f5f1391abd675cc5f4e7b7159bae3f742aa2a",
+          "start": 9862,
+          "end": 9932,
+          "sha256": "ba3103b77504bf2db2bf19d65da559a9cc49307738b3cb06d7d32063c1cee40d",
+          "source": "function F(e){return typeof e===\"object\"&&e!==null&&!Array.isArray(e)}",
+          "kind": "function"
+        },
+        {
+          "file": "chunk-zs1a0y7d.js",
+          "moduleLength": 252983,
+          "moduleSha256": "a655c629832b47007964c3815f6e0f506d63274f132c1c519507d48774471d03",
+          "start": 86939,
+          "end": 86975,
+          "sha256": "eaf64fd0cdea6ff26ecc4d6f62544c0a2d0675eb3f2811072f2b7e5a0baafba8",
+          "source": "Gd=[\"name\",\"description\",\"metadata\"]",
+          "kind": "variable"
+        },
+        {
+          "file": "chunk-zs1a0y7d.js",
+          "moduleLength": 252983,
+          "moduleSha256": "a655c629832b47007964c3815f6e0f506d63274f132c1c519507d48774471d03",
+          "start": 87007,
+          "end": 87053,
+          "sha256": "4866c079742f1c125584cc16102109f7737ce941da8298817859c5bc5dfb1295",
+          "source": "go=(e)=>typeof e===\"string\"&&e.length>0?e:null",
+          "kind": "variable"
+        },
+        {
+          "file": "chunk-zs1a0y7d.js",
+          "moduleLength": 252983,
+          "moduleSha256": "a655c629832b47007964c3815f6e0f506d63274f132c1c519507d48774471d03",
+          "start": 87054,
+          "end": 87283,
+          "sha256": "a835fc452ce75e8cec4cfcf4bb1b54d7f35a36de8156128fdec86676f8a44e7f",
+          "source": "zd=(e)=>{let n=F(e.metadata)?e.metadata:{},r=Object.entries(e).reduce((s,[g,h])=>{if(Gd.includes(g)||h==null)return s;return s[g]=h,s},{});return{name:go(e.name),description:go(e.description),metadata:Object.freeze({...r,...n})}}",
+          "kind": "variable"
+        },
+        {
+          "file": "chunk-zs1a0y7d.js",
+          "moduleLength": 252983,
+          "moduleSha256": "a655c629832b47007964c3815f6e0f506d63274f132c1c519507d48774471d03",
+          "start": 87680,
+          "end": 87708,
+          "sha256": "a8faf86a0208d34e5ae8ba290074955f5ba63cdbec500269b3b60c12ab9e9655",
+          "source": "kbe=(e,n)=>go(e.metadata[n])",
+          "kind": "variable"
+        },
+        {
+          "file": "chunk-zs1a0y7d.js",
+          "moduleLength": 252983,
+          "moduleSha256": "a655c629832b47007964c3815f6e0f506d63274f132c1c519507d48774471d03",
+          "start": 88154,
+          "end": 88404,
+          "sha256": "6dcd2660ecaf76a6bd992813ea6cae469adb9f7ce370472c9793a8ca0145a0e4",
+          "source": "ho=[\"In the body, link to related memories with `[[name]]`, where `name` is the other memory's `name:` slug. Link liberally \\u2014 a `[[name]]` that doesn't match an existing memory yet is fine; it marks something worth writing later, not an error.\"]",
+          "kind": "variable"
+        },
+        {
+          "file": "chunk-zs1a0y7d.js",
+          "moduleLength": 252983,
+          "moduleSha256": "a655c629832b47007964c3815f6e0f506d63274f132c1c519507d48774471d03",
+          "start": 88405,
+          "end": 88817,
+          "sha256": "aa1df84a533c3ebb0bdbdccf9a3e87fbf98e9cead917f93fd86f96cc71e8dbcf",
+          "source": "function ea(e){return[\"```markdown\",\"---\",\"name: {{short-kebab-case-slug}}\",\"description: {{one-line summary, used to decide relevance in future conversations, so be specific}}\",\"metadata:\",`  type: {{${e.join(\", \")}}}`,\"---\",\"\",\"{{memory content \\u2014 for feedback/project types, structure as: rule/fact, then **Why:** and **How to apply:** lines. Link related memories with [[their-name]].}}\",\"```\",\"\",...ho]}",
+          "kind": "function"
+        },
+        {
+          "file": "chunk-zs1a0y7d.js",
+          "moduleLength": 252983,
+          "moduleSha256": "a655c629832b47007964c3815f6e0f506d63274f132c1c519507d48774471d03",
+          "start": 107379,
+          "end": 107858,
+          "sha256": "3659db2c14e9b241ebdf45951c0391ccbd368b699d6a7ce0ca06472b795ec380",
+          "source": "AHt=\"- Memory records can become stale over time. Use memory as context for what was true at a given point in time. Before answering the user or building assumptions based solely on information in memory records, verify that the memory is still correct and up-to-date by reading the current state of the files or resources. If a recalled memory conflicts with current information, trust what you observe now \\u2014 and update or remove the stale memory rather than acting on it.\"",
+          "kind": "variable"
+        },
+        {
+          "file": "chunk-zs1a0y7d.js",
+          "moduleLength": 252983,
+          "moduleSha256": "a655c629832b47007964c3815f6e0f506d63274f132c1c519507d48774471d03",
+          "start": 107859,
+          "end": 108204,
+          "sha256": "5229261a2801ee34f0098557d68f555b1b66f2bc99a77197da707ac5f810d6e0",
+          "source": "Pn=[\"## When to access memories\",\"- When memories seem relevant, or the user references prior-conversation work.\",\"- You MUST access memory when the user explicitly asks you to check, recall, or remember.\",\"- If the user says to *ignore* or *not use* memory: Do not apply remembered facts, cite, compare against, or mention memory content.\",AHt]",
+          "kind": "variable"
+        }
+      ]
+    },
+    {
+      "platform": "linux-x64",
+      "manifestSha256": "ecae5d9ddbf13ef27b6b6a1141953aab4ba311e47dde3ac2a7cc8b5a01c63784",
+      "rows": [
+        {
+          "file": "chunk-arccn7z5.js",
+          "moduleLength": 433952,
+          "moduleSha256": "ed0a21dfa340d9806895ebe305d03e77ffc0639a3238b8dc2b4fd6a6b585fa8e",
+          "start": 9862,
+          "end": 9932,
+          "sha256": "e8cd0937338eafdfe29a7806d93ead49d398955341ab127a671cba569dc3008a",
+          "source": "function N(e){return typeof e===\"object\"&&e!==null&&!Array.isArray(e)}",
+          "kind": "function"
+        },
+        {
+          "file": "chunk-k451frvt.js",
+          "moduleLength": 253012,
+          "moduleSha256": "5b69e2455785fc27723e00194d6e377402057aac6904bd950bd62190fc94f94e",
+          "start": 86939,
+          "end": 86975,
+          "sha256": "eaf64fd0cdea6ff26ecc4d6f62544c0a2d0675eb3f2811072f2b7e5a0baafba8",
+          "source": "Gd=[\"name\",\"description\",\"metadata\"]",
+          "kind": "variable"
+        },
+        {
+          "file": "chunk-k451frvt.js",
+          "moduleLength": 253012,
+          "moduleSha256": "5b69e2455785fc27723e00194d6e377402057aac6904bd950bd62190fc94f94e",
+          "start": 87007,
+          "end": 87053,
+          "sha256": "4866c079742f1c125584cc16102109f7737ce941da8298817859c5bc5dfb1295",
+          "source": "go=(e)=>typeof e===\"string\"&&e.length>0?e:null",
+          "kind": "variable"
+        },
+        {
+          "file": "chunk-k451frvt.js",
+          "moduleLength": 253012,
+          "moduleSha256": "5b69e2455785fc27723e00194d6e377402057aac6904bd950bd62190fc94f94e",
+          "start": 87054,
+          "end": 87283,
+          "sha256": "45124cd150e8a4cb2905fe491ef65ef726d0b840e9c0b4ccba1d370818ce93e3",
+          "source": "zd=(e)=>{let n=N(e.metadata)?e.metadata:{},r=Object.entries(e).reduce((s,[g,h])=>{if(Gd.includes(g)||h==null)return s;return s[g]=h,s},{});return{name:go(e.name),description:go(e.description),metadata:Object.freeze({...r,...n})}}",
+          "kind": "variable"
+        },
+        {
+          "file": "chunk-k451frvt.js",
+          "moduleLength": 253012,
+          "moduleSha256": "5b69e2455785fc27723e00194d6e377402057aac6904bd950bd62190fc94f94e",
+          "start": 87680,
+          "end": 87708,
+          "sha256": "ae6ba5ee864aebc0009dde4d56799455ff1fbd4157128aac5090e191d226216d",
+          "source": "Ebe=(e,n)=>go(e.metadata[n])",
+          "kind": "variable"
+        },
+        {
+          "file": "chunk-k451frvt.js",
+          "moduleLength": 253012,
+          "moduleSha256": "5b69e2455785fc27723e00194d6e377402057aac6904bd950bd62190fc94f94e",
+          "start": 88154,
+          "end": 88404,
+          "sha256": "6dcd2660ecaf76a6bd992813ea6cae469adb9f7ce370472c9793a8ca0145a0e4",
+          "source": "ho=[\"In the body, link to related memories with `[[name]]`, where `name` is the other memory's `name:` slug. Link liberally \\u2014 a `[[name]]` that doesn't match an existing memory yet is fine; it marks something worth writing later, not an error.\"]",
+          "kind": "variable"
+        },
+        {
+          "file": "chunk-k451frvt.js",
+          "moduleLength": 253012,
+          "moduleSha256": "5b69e2455785fc27723e00194d6e377402057aac6904bd950bd62190fc94f94e",
+          "start": 88405,
+          "end": 88817,
+          "sha256": "aa1df84a533c3ebb0bdbdccf9a3e87fbf98e9cead917f93fd86f96cc71e8dbcf",
+          "source": "function ea(e){return[\"```markdown\",\"---\",\"name: {{short-kebab-case-slug}}\",\"description: {{one-line summary, used to decide relevance in future conversations, so be specific}}\",\"metadata:\",`  type: {{${e.join(\", \")}}}`,\"---\",\"\",\"{{memory content \\u2014 for feedback/project types, structure as: rule/fact, then **Why:** and **How to apply:** lines. Link related memories with [[their-name]].}}\",\"```\",\"\",...ho]}",
+          "kind": "function"
+        },
+        {
+          "file": "chunk-k451frvt.js",
+          "moduleLength": 253012,
+          "moduleSha256": "5b69e2455785fc27723e00194d6e377402057aac6904bd950bd62190fc94f94e",
+          "start": 107379,
+          "end": 107858,
+          "sha256": "c7e38955577a676e89303425a2a1bf216f34c7fdcdd518644455dc547e4ab1e1",
+          "source": "RBt=\"- Memory records can become stale over time. Use memory as context for what was true at a given point in time. Before answering the user or building assumptions based solely on information in memory records, verify that the memory is still correct and up-to-date by reading the current state of the files or resources. If a recalled memory conflicts with current information, trust what you observe now \\u2014 and update or remove the stale memory rather than acting on it.\"",
+          "kind": "variable"
+        },
+        {
+          "file": "chunk-k451frvt.js",
+          "moduleLength": 253012,
+          "moduleSha256": "5b69e2455785fc27723e00194d6e377402057aac6904bd950bd62190fc94f94e",
+          "start": 107859,
+          "end": 108204,
+          "sha256": "e7ff30e4fa1c27462908911c46556f8db3d26d63c0ed3819ce49bd7bf28122c6",
+          "source": "Pn=[\"## When to access memories\",\"- When memories seem relevant, or the user references prior-conversation work.\",\"- You MUST access memory when the user explicitly asks you to check, recall, or remember.\",\"- If the user says to *ignore* or *not use* memory: Do not apply remembered facts, cite, compare against, or mention memory content.\",RBt]",
+          "kind": "variable"
+        }
+      ]
+    },
+    {
+      "platform": "win32-arm64",
+      "manifestSha256": "d0d8b3b882ba61ba321ab072b5cbc28a1a4089cfb4c5dce0698311aae10c739e",
+      "rows": [
+        {
+          "file": "chunk-ybk8ky4n.js",
+          "moduleLength": 434023,
+          "moduleSha256": "a961c53d9507de2b3f51eb0b934b756c5df5de8706d7f91adaf5371d18a6fb67",
+          "start": 9863,
+          "end": 9933,
+          "sha256": "ba3103b77504bf2db2bf19d65da559a9cc49307738b3cb06d7d32063c1cee40d",
+          "source": "function F(e){return typeof e===\"object\"&&e!==null&&!Array.isArray(e)}",
+          "kind": "function"
+        },
+        {
+          "file": "chunk-avtdrgv5.js",
+          "moduleLength": 253010,
+          "moduleSha256": "a03e61abd684a8c91ff542c5a41f199bf93a3aafa2fa231b3a853eb6c581b935",
+          "start": 86966,
+          "end": 87002,
+          "sha256": "eaf64fd0cdea6ff26ecc4d6f62544c0a2d0675eb3f2811072f2b7e5a0baafba8",
+          "source": "Gd=[\"name\",\"description\",\"metadata\"]",
+          "kind": "variable"
+        },
+        {
+          "file": "chunk-avtdrgv5.js",
+          "moduleLength": 253010,
+          "moduleSha256": "a03e61abd684a8c91ff542c5a41f199bf93a3aafa2fa231b3a853eb6c581b935",
+          "start": 87034,
+          "end": 87080,
+          "sha256": "4866c079742f1c125584cc16102109f7737ce941da8298817859c5bc5dfb1295",
+          "source": "go=(e)=>typeof e===\"string\"&&e.length>0?e:null",
+          "kind": "variable"
+        },
+        {
+          "file": "chunk-avtdrgv5.js",
+          "moduleLength": 253010,
+          "moduleSha256": "a03e61abd684a8c91ff542c5a41f199bf93a3aafa2fa231b3a853eb6c581b935",
+          "start": 87081,
+          "end": 87310,
+          "sha256": "a835fc452ce75e8cec4cfcf4bb1b54d7f35a36de8156128fdec86676f8a44e7f",
+          "source": "zd=(e)=>{let n=F(e.metadata)?e.metadata:{},r=Object.entries(e).reduce((s,[g,h])=>{if(Gd.includes(g)||h==null)return s;return s[g]=h,s},{});return{name:go(e.name),description:go(e.description),metadata:Object.freeze({...r,...n})}}",
+          "kind": "variable"
+        },
+        {
+          "file": "chunk-avtdrgv5.js",
+          "moduleLength": 253010,
+          "moduleSha256": "a03e61abd684a8c91ff542c5a41f199bf93a3aafa2fa231b3a853eb6c581b935",
+          "start": 87707,
+          "end": 87735,
+          "sha256": "ae6ba5ee864aebc0009dde4d56799455ff1fbd4157128aac5090e191d226216d",
+          "source": "Ebe=(e,n)=>go(e.metadata[n])",
+          "kind": "variable"
+        },
+        {
+          "file": "chunk-avtdrgv5.js",
+          "moduleLength": 253010,
+          "moduleSha256": "a03e61abd684a8c91ff542c5a41f199bf93a3aafa2fa231b3a853eb6c581b935",
+          "start": 88181,
+          "end": 88431,
+          "sha256": "6dcd2660ecaf76a6bd992813ea6cae469adb9f7ce370472c9793a8ca0145a0e4",
+          "source": "ho=[\"In the body, link to related memories with `[[name]]`, where `name` is the other memory's `name:` slug. Link liberally \\u2014 a `[[name]]` that doesn't match an existing memory yet is fine; it marks something worth writing later, not an error.\"]",
+          "kind": "variable"
+        },
+        {
+          "file": "chunk-avtdrgv5.js",
+          "moduleLength": 253010,
+          "moduleSha256": "a03e61abd684a8c91ff542c5a41f199bf93a3aafa2fa231b3a853eb6c581b935",
+          "start": 88432,
+          "end": 88844,
+          "sha256": "2b1431bb3c7f70cbeb91400491472c6be8318893b6c35e59a78c3cb80605030d",
+          "source": "function ta(e){return[\"```markdown\",\"---\",\"name: {{short-kebab-case-slug}}\",\"description: {{one-line summary, used to decide relevance in future conversations, so be specific}}\",\"metadata:\",`  type: {{${e.join(\", \")}}}`,\"---\",\"\",\"{{memory content \\u2014 for feedback/project types, structure as: rule/fact, then **Why:** and **How to apply:** lines. Link related memories with [[their-name]].}}\",\"```\",\"\",...ho]}",
+          "kind": "function"
+        },
+        {
+          "file": "chunk-avtdrgv5.js",
+          "moduleLength": 253010,
+          "moduleSha256": "a03e61abd684a8c91ff542c5a41f199bf93a3aafa2fa231b3a853eb6c581b935",
+          "start": 107406,
+          "end": 107885,
+          "sha256": "f34117391ae4034724df20dfbf20b8d238a039477f270763eb2e31520ee49a9a",
+          "source": "PHt=\"- Memory records can become stale over time. Use memory as context for what was true at a given point in time. Before answering the user or building assumptions based solely on information in memory records, verify that the memory is still correct and up-to-date by reading the current state of the files or resources. If a recalled memory conflicts with current information, trust what you observe now \\u2014 and update or remove the stale memory rather than acting on it.\"",
+          "kind": "variable"
+        },
+        {
+          "file": "chunk-avtdrgv5.js",
+          "moduleLength": 253010,
+          "moduleSha256": "a03e61abd684a8c91ff542c5a41f199bf93a3aafa2fa231b3a853eb6c581b935",
+          "start": 107886,
+          "end": 108231,
+          "sha256": "dec8a048fd8c5b0f5b9080f048e8cb0d83e561c70cccc2117d686761a1f52040",
+          "source": "Pn=[\"## When to access memories\",\"- When memories seem relevant, or the user references prior-conversation work.\",\"- You MUST access memory when the user explicitly asks you to check, recall, or remember.\",\"- If the user says to *ignore* or *not use* memory: Do not apply remembered facts, cite, compare against, or mention memory content.\",PHt]",
+          "kind": "variable"
+        }
+      ]
+    },
+    {
+      "platform": "win32-x64",
+      "manifestSha256": "c71e85888df3301fd3c4cb158744538810418e2d67591debe8e4f7c771fcdddc",
+      "rows": [
+        {
+          "file": "chunk-9w0h7x84.js",
+          "moduleLength": 434023,
+          "moduleSha256": "09945b200fb3147c000f6aa6b8f64828a2384c2e8a0acca5d60abae53dd826cc",
+          "start": 9863,
+          "end": 9933,
+          "sha256": "12ccae8ce3ee4200d8bfd8df3b359cfaae690c1c8577cd9eb6ddb303cdc1786c",
+          "source": "function H(e){return typeof e===\"object\"&&e!==null&&!Array.isArray(e)}",
+          "kind": "function"
+        },
+        {
+          "file": "chunk-vxxg0qkm.js",
+          "moduleLength": 253037,
+          "moduleSha256": "45944dfc736054e1d185af4773c0a1ae579641da4b4789edba41c9bddfc7aeeb",
+          "start": 86966,
+          "end": 87002,
+          "sha256": "eaf64fd0cdea6ff26ecc4d6f62544c0a2d0675eb3f2811072f2b7e5a0baafba8",
+          "source": "Gd=[\"name\",\"description\",\"metadata\"]",
+          "kind": "variable"
+        },
+        {
+          "file": "chunk-vxxg0qkm.js",
+          "moduleLength": 253037,
+          "moduleSha256": "45944dfc736054e1d185af4773c0a1ae579641da4b4789edba41c9bddfc7aeeb",
+          "start": 87034,
+          "end": 87080,
+          "sha256": "4866c079742f1c125584cc16102109f7737ce941da8298817859c5bc5dfb1295",
+          "source": "go=(e)=>typeof e===\"string\"&&e.length>0?e:null",
+          "kind": "variable"
+        },
+        {
+          "file": "chunk-vxxg0qkm.js",
+          "moduleLength": 253037,
+          "moduleSha256": "45944dfc736054e1d185af4773c0a1ae579641da4b4789edba41c9bddfc7aeeb",
+          "start": 87081,
+          "end": 87310,
+          "sha256": "3fc5d27d267339d709b21470b656564760ca4edcf13c2e7ea3ce860eb7c21acf",
+          "source": "zd=(e)=>{let n=H(e.metadata)?e.metadata:{},r=Object.entries(e).reduce((s,[g,h])=>{if(Gd.includes(g)||h==null)return s;return s[g]=h,s},{});return{name:go(e.name),description:go(e.description),metadata:Object.freeze({...r,...n})}}",
+          "kind": "variable"
+        },
+        {
+          "file": "chunk-vxxg0qkm.js",
+          "moduleLength": 253037,
+          "moduleSha256": "45944dfc736054e1d185af4773c0a1ae579641da4b4789edba41c9bddfc7aeeb",
+          "start": 87707,
+          "end": 87735,
+          "sha256": "a8faf86a0208d34e5ae8ba290074955f5ba63cdbec500269b3b60c12ab9e9655",
+          "source": "kbe=(e,n)=>go(e.metadata[n])",
+          "kind": "variable"
+        },
+        {
+          "file": "chunk-vxxg0qkm.js",
+          "moduleLength": 253037,
+          "moduleSha256": "45944dfc736054e1d185af4773c0a1ae579641da4b4789edba41c9bddfc7aeeb",
+          "start": 88181,
+          "end": 88431,
+          "sha256": "6dcd2660ecaf76a6bd992813ea6cae469adb9f7ce370472c9793a8ca0145a0e4",
+          "source": "ho=[\"In the body, link to related memories with `[[name]]`, where `name` is the other memory's `name:` slug. Link liberally \\u2014 a `[[name]]` that doesn't match an existing memory yet is fine; it marks something worth writing later, not an error.\"]",
+          "kind": "variable"
+        },
+        {
+          "file": "chunk-vxxg0qkm.js",
+          "moduleLength": 253037,
+          "moduleSha256": "45944dfc736054e1d185af4773c0a1ae579641da4b4789edba41c9bddfc7aeeb",
+          "start": 88432,
+          "end": 88844,
+          "sha256": "2b1431bb3c7f70cbeb91400491472c6be8318893b6c35e59a78c3cb80605030d",
+          "source": "function ta(e){return[\"```markdown\",\"---\",\"name: {{short-kebab-case-slug}}\",\"description: {{one-line summary, used to decide relevance in future conversations, so be specific}}\",\"metadata:\",`  type: {{${e.join(\", \")}}}`,\"---\",\"\",\"{{memory content \\u2014 for feedback/project types, structure as: rule/fact, then **Why:** and **How to apply:** lines. Link related memories with [[their-name]].}}\",\"```\",\"\",...ho]}",
+          "kind": "function"
+        },
+        {
+          "file": "chunk-vxxg0qkm.js",
+          "moduleLength": 253037,
+          "moduleSha256": "45944dfc736054e1d185af4773c0a1ae579641da4b4789edba41c9bddfc7aeeb",
+          "start": 107406,
+          "end": 107885,
+          "sha256": "ed52553f5d14752980db806344ce7359f491281f1f3cc83a44b52e1d91c998b0",
+          "source": "PBt=\"- Memory records can become stale over time. Use memory as context for what was true at a given point in time. Before answering the user or building assumptions based solely on information in memory records, verify that the memory is still correct and up-to-date by reading the current state of the files or resources. If a recalled memory conflicts with current information, trust what you observe now \\u2014 and update or remove the stale memory rather than acting on it.\"",
+          "kind": "variable"
+        },
+        {
+          "file": "chunk-vxxg0qkm.js",
+          "moduleLength": 253037,
+          "moduleSha256": "45944dfc736054e1d185af4773c0a1ae579641da4b4789edba41c9bddfc7aeeb",
+          "start": 107886,
+          "end": 108231,
+          "sha256": "841c669a8f655c39e6e15eb2156dec3ce51edffd70aeea7ef69eb4d14c13cb62",
+          "source": "Pn=[\"## When to access memories\",\"- When memories seem relevant, or the user references prior-conversation work.\",\"- You MUST access memory when the user explicitly asks you to check, recall, or remember.\",\"- If the user says to *ignore* or *not use* memory: Do not apply remembered facts, cite, compare against, or mention memory content.\",PBt]",
+          "kind": "variable"
+        }
+      ]
+    }
+  ]
+}

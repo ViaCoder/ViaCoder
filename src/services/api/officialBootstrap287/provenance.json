@@ -1,0 +1,61 @@
+{
+  "version": "2.1.287",
+  "platform": "darwin-arm64",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "module": "chunk-k9q4wymh.js",
+  "moduleSha256": "4456fa35d62354ccd84dc369ce4a61ef7896a30cba166d54acb14f55ee1f44c8",
+  "moduleLength": 11758,
+  "offsetUnit": "UTF-16 code units",
+  "declarations": [
+    {
+      "name": "Q",
+      "start": 1757,
+      "end": 3555,
+      "sha256": "db3f80a08d7c2a0c7dd7e488b8f2a361dbfd38faf9d8dd31559e7612aa93123d",
+      "source": "Q=f(()=>mt({client_data:Cg(Gc()).nullish(),additional_model_options:Qn(mt({model:ue(),name:ue(),description:ue(),disabled_reason:ue().nullish()}).transform(({model:e,name:n,description:s,disabled_reason:c})=>{let u=$x(Fn(e)),r=u?Wp(e):null,A=s;if(u&&r&&c==null){let _=s?s.startsWith(r)?s:`${r} \\xB7 ${s}`:r,o=wVo(e);A=o&&!ft()&&!_.includes(\"per Mtok\")?`${_} \\xB7 ${o}`:_}return{value:e,label:c!=null?`${n} (disabled)`:n,description:c?A?`${A} \\xB7 ${c}`:c:A,...c!=null&&{disabled:!0}}})).nullish(),additional_model_costs:Cg(mt({input_tokens:cn(),output_tokens:cn(),prompt_cache_write_tokens:cn(),prompt_cache_write_1h_tokens:cn().nullish(),prompt_cache_read_tokens:cn(),web_search_requests:cn().nullish()}).transform((e)=>({inputTokens:e.input_tokens,outputTokens:e.output_tokens,promptCacheWriteTokens:e.prompt_cache_write_tokens,...e.prompt_cache_write_1h_tokens!=null&&{promptCacheWrite1hTokens:e.prompt_cache_write_1h_tokens},promptCacheReadTokens:e.prompt_cache_read_tokens,webSearchRequests:e.web_search_requests??0.01}))).nullish(),model_access:Qn(mt({api_name:ue(),entitled:Eo(),max_effort_level:ue().nullish()}).transform(({api_name:e,entitled:n,max_effort_level:s})=>({apiName:e,entitled:n,...s!=null&&{maxEffortLevel:s}}))).nullish(),org_model_default:mt({name:ue(),updated_at:ue(),data_source:ue(),override_user_selection:Eo(),default_effort_level:ue().nullish(),override_user_effort:Eo().nullish()}).nullish(),oauth_account:mt({account_uuid:ue().nullish(),account_email:ue().nullish(),organization_uuid:ue().nullish(),organization_name:ue().nullish(),organization_type:ue().nullish(),organization_rate_limit_tier:ue().nullish(),user_rate_limit_tier:ue().nullish(),seat_tier:ue().nullish()}).passthrough().nullish(),auto_compact_windows:Cg(ue(),Gc()).nullish(),narrowed:Eo().nullish()}))"
+    },
+    {
+      "name": "nt",
+      "source": "async function nt(e,n){if(He()===\"gateway\"){if(!a.CLAUDE_CODE_ENABLE_GATEWAY_MODEL_DISCOVERY)return t(\"[Bootstrap] Skipped gateway /v1/models (CLAUDE_CODE_ENABLE_GATEWAY_MODEL_DISCOVERY not set)\"),{response:{additional_model_options:[]},viaScopelessOAuth:!1};let o=await it(n);return o&&{response:o,viaScopelessOAuth:!1}}if(At())return t(\"[Bootstrap] Skipped: Nonessential traffic disabled\"),null;if(He()!==\"firstParty\")return t(\"[Bootstrap] Skipped: 3P provider\"),null;let{params:s,userAgent:c}=et(e),u=async(o,g)=>{t(\"[Bootstrap] Fetching\");let l=await St.get(`${o}/api/claude_cli/bootstrap`,{headers:{\"Content-Type\":\"application/json\",\"User-Agent\":c,..._ut(),...g},params:s,timeout:5000}),h=Q().safeParse(l.data);if(!h.success)return t(`[Bootstrap] Response failed validation: ${h.error.message}`),p(\"api_bootstrap_fetch\",\"parse_failed\"),null;return t(\"[Bootstrap] Fetch ok\"),h.data},r=Xb();if(!r&&fd())try{let[o,g]=await Promise.all([epe(),yPe()]);if(o!==null){let l=await u(a.ANTHROPIC_BASE_URL||g?.baseURL||dn().BASE_API_URL,{...g?.extraHeaders,Authorization:`Bearer ${await o.getToken()}`,\"anthropic-beta\":cp});return l&&{response:l,viaScopelessOAuth:!1}}}catch(o){return t(`[Bootstrap] WIF fetch failed: ${St.isAxiosError(o)?o.response?.status??o.code:o instanceof Error?o.constructor.name:\"unknown\"}`),p(\"api_bootstrap_fetch\",\"wif_unavailable\"),null}if(!fn()?.accessToken&&!r)return t(\"[Bootstrap] Skipped: no usable OAuth, WIF, or API key\"),null;if(a.ANTHROPIC_UNIX_SOCKET)return t(\"[Bootstrap] Skipped: unix-socket-proxied session\"),p(\"api_bootstrap_fetch\",\"unix_socket_skip\"),null;let _=!1;try{let o=await E_(async()=>{let g=fn()?.accessToken,l=zp(),h;if(g&&(l||!r))_=!l&&!r,h={Authorization:`Bearer ${g}`,\"anthropic-beta\":cp};else if(r)_=!1,h={\"x-api-key\":r};else return t(\"[Bootstrap] No auth available on retry, aborting\"),null;return u(dn().BASE_API_URL,h)},{credentials:n});return o&&{response:o,viaScopelessOAuth:_}}catch(o){let g=St.isAxiosError(o)?o.response?.status:void 0;if(_&&g===403)return t(\"[Bootstrap] Skipped: 403 for OAuth token without profile scope\"),p(\"api_bootstrap_fetch\",\"no_profile_scope_403\"),null;throw t(`[Bootstrap] Fetch failed: ${St.isAxiosError(o)?o.response?.status??o.code:\"unknown\"}`),m(\"api_bootstrap_fetch\",\"request_failed\"),o}}",
+      "sha256": "67b0f0b3c32e14d0eae51e3a0c9f59ed7709f3a42036762a09770d544f42fcf8",
+      "start": 5670,
+      "end": 7947
+    },
+    {
+      "name": "at",
+      "source": "at=f(()=>mt({data:Qn(mt({id:ue(),display_name:ue().nullish(),description:ue().nullish()}))}))",
+      "sha256": "e5360ccea184f61b460187ffe3d4a2d9a46dfcdfedc782281165bc60b1bd2641",
+      "start": 10810,
+      "end": 10903
+    },
+    {
+      "name": "it",
+      "source": "async function it(e){await vj(e);let n=uo();if(!n)return null;try{let s=await St.get(`${n.url}/v1/models`,{headers:{Authorization:`Bearer ${n.jwt}`,\"anthropic-version\":\"2023-06-01\",\"User-Agent\":Mo()},params:{limit:1000},timeout:5000}),c=at().safeParse(s.data);if(!c.success)return t(`[Bootstrap] Gateway /v1/models failed validation: ${c.error.message}`),null;let u=c.data.data.filter((r)=>/(claude|anthropic)/i.test(r.id)).filter((r)=>{let A=$x(r.id);return A===null||QPe(fb(A.firstParty))}).map((r)=>({value:r.id,label:gA(r.display_name??\"\")||gA(r.id),description:bY(r.description??\"\")}));return t(`[Bootstrap] Gateway /v1/models \\u2192 ${u.length} custom options`),{additional_model_options:u}}catch(s){return t(`[Bootstrap] Gateway /v1/models fetch failed: ${St.isAxiosError(s)?s.response?.status??s.code:\"unknown\"}`),null}}",
+      "sha256": "cec19ab5145e1d3f9b7c7d44b903ca7e5d918678484707263fa8c0b10d18ff14",
+      "start": 10904,
+      "end": 11732
+    },
+    {
+      "name": "PQo",
+      "source": "async function PQo(e,n,{keepRenderCaches:s=!1,renderedClientData:c}={}){$Nn();try{let u=He()===\"firstParty\";if(!u)Ej(),vpe();let r=v(),A=v6e(),_=await nt(r,n);if(!_)return!1;let{response:o,viaScopelessOAuth:g}=_;if(A!==v6e())return t(\"[Bootstrap] Discarding response fetched under a superseded credential\"),p(\"api_bootstrap_fetch\",\"superseded_credential\"),!1;y(\"api_bootstrap_fetch\");let l=le(),h=o.narrowed??g,B=h&&o.additional_model_options==null,T=h&&o.additional_model_costs==null,S=h&&o.model_access==null,z=h&&o.org_model_default==null,U=h&&o.auto_compact_windows==null,b=o.client_data??null,E=B?l.additionalModelOptionsCache??[]:o.additional_model_options??[],I=T?l.additionalModelCostsCache??{}:o.additional_model_costs??{},P=S?l.modelAccessCache??[]:o.model_access??[],L=U?l.autoCompactWindowsCache??null:o.auto_compact_windows??null;ot(o.oauth_account);let V=v6e(),k=q(l.oauthAccount,o.oauth_account),F=o.org_model_default?{...o.org_model_default,...k?.organizationUuid&&{orgUuid:k.organizationUuid}}:z?l.orgModelDefaultCache??null:null,O=VZn({...r,organizationUuid:k?.organizationUuid??r.organizationUuid}),N=l.clientDataCacheSlots?.[O],w=F_t(N)?N:void 0,x=w!==void 0,Y=Or(k,l.oauthAccount),W=u&&w!==void 0&&Date.now()-w.at>cKo,G=u&&(w===void 0||!Or(w.data??null,b)),D=u&&(c!==void 0?!Or(c,b):G);i(\"tengu_client_data_cache_key\",{slot_hit:x,slot_changed:D,legacy_fallback:!x&&l.clientDataCache!=null,slot_stale:W});let H=u,j=typeof l.additionalModelOptionsAnsweredAt===\"number\",X=B||(H?Array.isArray(l.additionalModelOptionsCache)&&j&&Or(l.additionalModelOptionsCache,E):!j&&Or(l.additionalModelOptionsCache??[],E));if(!G&&!D&&!W&&X&&Or(l.additionalModelCostsCache??{},I)&&Or(l.modelAccessCache??[],P)&&Or(l.orgModelDefaultCache??null,F)&&(!u||Or(l.autoCompactWindowsCache??null,L))&&Y){if(t(\"[Bootstrap] Cache unchanged, skipping write\"),W_t(O),!S)oqr();return!0}t(\"[Bootstrap] Cache updated, persisting to disk\");let K=!1;if(await Ae((C)=>{if(V!==v6e())return K=!0,C;let M=q(C.oauthAccount,o.oauth_account),J=VZn({...r,organizationUuid:M?.organizationUuid??null});return{...C,clientDataCacheSlots:u?dKo(C.clientDataCacheSlots,J,{data:b,at:Date.now(),entrypoint:r.entrypoint??null,model:r.model,org:M?.organizationUuid??null}):C.clientDataCacheSlots,...B?{}:{additionalModelOptionsCache:E,additionalModelOptionsAnsweredAt:H?Date.now():void 0},...T?{}:{additionalModelCostsCache:I},...S?{}:{modelAccessCache:P},...z?{}:{orgModelDefaultCache:F},autoCompactWindowsCache:u&&!U?L:C.autoCompactWindowsCache??null,oauthAccount:M}},e),W_t(O),K)return!1;if(!S)oqr();if(D&&!s)Ej(),vpe();return!0}catch(u){if(Pu(u))t(`[Bootstrap] fetchBootstrapData failed: ${u}`,{level:\"error\"});else d(u);return!1}finally{_Kr()}}",
+      "sha256": "015ca1b868f17bfbc5d77b7077a1ed8829767cb29f2619035f731375b332c35d",
+      "start": 8092,
+      "end": 10806
+    }
+  ],
+  "ports": {
+    "f": "src/utils/lazySchema.ts:lazySchema",
+    "mt": "zod.object",
+    "Cg": "zod.record",
+    "Gc": "zod.unknown",
+    "Qn": "zod.array",
+    "ue": "zod.string",
+    "cn": "zod.number",
+    "Eo": "zod.boolean",
+    "$x": "src/utils/model/catalog.ts:getCatalogEntry",
+    "Fn": "src/utils/model/modelIdentity.ts:stripModelContextSuffix",
+    "Wp": "src/utils/model/model.ts:getMarketingNameForModel",
+    "wVo": "src/utils/model/modelCost.ts:getModelPricingString",
+    "ft": "src/utils/auth.ts:isClaudeAISubscriber"
+  }
+}

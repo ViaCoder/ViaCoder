@@ -1,0 +1,41 @@
+{
+  "version": "2.1.287",
+  "rangeConvention": "UTF-16 end-exclusive",
+  "file": "chunk-1x5y5a12.js",
+  "moduleSha256": "9df601352d5027e5a29227798a458a0d6fe5576ee2babac09d7ac8804d3dc2b3",
+  "start": 7322,
+  "end": 10523,
+  "sha256": "fd993f6a3ff98f1b12caacbce505c65880779cfbce1e8f43c3b8cb196b4f05cd",
+  "source": "function xpr({onMalformedRetryStatus:e=A}={}){let n=Ls({}),i=new Set;function l(t,u,{materialize:f=!0}={}){n.setState((m)=>{let h=t in m;if(!h&&!f)return m;let R=m[t]??{...y,defaultVerb:jL(hAt())??\"\"},_=u(R);if(_===R&&h)return m;return{...m,[t]:_}})}function a(t){function u(r,o){let s=Date.now(),g=r===\"requesting\"?o??null:null;l(t,(S)=>S.mode===r&&S.outputLimitRecovery===g?S:{...S,mode:r,thinkingStartedAt:r===\"thinking\"?s:null,outputLimitRecovery:g})}function f(r){l(t,(o)=>o.overrideMessage===r?o:{...o,overrideMessage:r})}function m(r,o){l(t,(s)=>s.overrideColor===r&&s.overrideShimmerColor===o?s:{...s,overrideColor:r,overrideShimmerColor:o})}function h(r,o=null){l(t,(s)=>s.turnEffort===r&&s.turnModel===o?s:{...s,turnEffort:r,turnModel:o},{materialize:r!==null||o!==null})}function R(r){let{status:o,malformed:s}=x(r);if(s!==null&&!i.has(s)){i.add(s);try{e(s)}catch{}}l(t,(g)=>g.retryStatus===o?g:{...g,retryStatus:o})}function _(r,o=null){let s=Date.now();l(t,(g)=>{if(g.isCompacting===r&&g.compactingHintText===o)return g;let S=r?g.compactingStartTime??s:null;return{...g,isCompacting:r,compactingHintText:o,compactingStartTime:S}})}function z(){l(t,(r)=>r.overrideMessage===null&&r.overrideColor===null&&r.overrideShimmerColor===null&&!r.isCompacting&&r.compactingHintText===null&&r.compactingStartTime===null?r:{...r,overrideMessage:null,overrideColor:null,overrideShimmerColor:null,isCompacting:!1,compactingHintText:null,compactingStartTime:null})}function I(){let r=jL(hAt())??\"\";l(t,(o)=>({...o,overrideMessage:null,overrideColor:null,overrideShimmerColor:null,isCompacting:!1,compactingHintText:null,compactingStartTime:null,turnEffort:null,turnModel:null,retryStatus:null,outputLimitRecovery:null,defaultVerb:r}))}function N(r){switch(r.type){case\"hooks_start\":m(\"claudeBlue_FOR_SYSTEM_SPINNER\",\"claudeBlueShimmer_FOR_SYSTEM_SPINNER\"),f(r.hookType===\"pre_compact\"?\"Running PreCompact hooks\\u2026\":r.hookType===\"post_compact\"?\"Running PostCompact hooks\\u2026\":Dfn);return;case\"compact_start\":f(\"Compacting conversation\"),_(!0,r.hintText??null);return;case\"compact_end\":z();return}}return{setMode:u,setMessage:f,setColors:m,setTurnEffort:h,setRetryStatus:R,setCompacting:_,resetOverrides:I,applyCompactProgress:N}}let c={setMode:(t,u)=>a(Ge()).setMode(t,u),setMessage:(t)=>a(Ge()).setMessage(t),setColors:(t,u)=>a(Ge()).setColors(t,u),setTurnEffort:(t,u)=>a(Ge()).setTurnEffort(t,u),setRetryStatus:(t)=>a(Ge()).setRetryStatus(t),setCompacting:(t,u)=>a(Ge()).setCompacting(t,u),resetOverrides:()=>a(Ge()).resetOverrides(),applyCompactProgress:(t)=>a(Ge()).applyCompactProgress(t)};return{getSnapshot:n.getSnapshot,getState:n.getState,setState:n.setState,subscribe:n.subscribe,get(t){return n.getState()[t??Ge()]??y},bind:a,main:c,evict(t){n.setState((u)=>{if(!(t in u))return u;let{[t]:f,...m}=u;return m})},applyEvent(t){switch(t.kind){case\"agent-mode\":a(t.agentId).setMode(t.mode,t.outputLimitRecovery);return;case\"agent-retry-status\":a(t.agentId).setRetryStatus(t.retryStatus);return;case\"agent-turn-effort\":a(t.agentId).setTurnEffort(t.turnEffort,t.turnModel);return;case\"main-message\":c.setMessage(t.message);return;case\"main-colors\":c.setColors(t.color,t.shimmerColor);return}}}}",
+  "bindings": {
+    "A": {
+      "file": "chunk-1x5y5a12.js",
+      "name": "A"
+    },
+    "jL": {
+      "file": "chunk-1x5y5a12.js",
+      "name": "jL"
+    },
+    "hAt": {
+      "file": "chunk-1x5y5a12.js",
+      "name": "hAt"
+    },
+    "Ge": {
+      "file": "chunk-bn3p37gv.js",
+      "name": "Ge"
+    },
+    "x": {
+      "file": "chunk-1x5y5a12.js",
+      "name": "x"
+    },
+    "y": {
+      "file": "chunk-1x5y5a12.js",
+      "name": "y"
+    },
+    "Dfn": {
+      "file": "chunk-dec2r715.js",
+      "name": "Dfn"
+    }
+  },
+  "adaptation": "Only lexical Ls adopts the actual AppState main/Agent spinner slots; full xpr body unchanged. No second spinner state store."
+}

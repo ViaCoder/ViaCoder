@@ -1,0 +1,240 @@
+{
+  "version": "2.1.287",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16 end-exclusive",
+  "declarations": [
+    {
+      "file": "chunk-eske5nfz.js",
+      "name": "ot",
+      "start": 3219,
+      "endExclusive": 3284,
+      "source": "function ot(t,n){let e=t.indexOf(n);return e===-1?t:t.slice(0,e)}",
+      "sha256": "7882373685973c541ad5bd2fda020e83e93e3a092155419e9e2f688837f0e340",
+      "moduleSha256": "0ab96d3fc2e14f26d13bba42a3f5583f805c2f100c56befce938b7b723d405a5",
+      "variable": false
+    },
+    {
+      "file": "chunk-amhtwhch.js",
+      "name": "a",
+      "start": 10695,
+      "endExclusive": 10708,
+      "source": "a=E.homedir()",
+      "sha256": "8077a7a6815ef982493bb228046809d5b1dcc6696b7d74d880a3172baade8a15",
+      "moduleSha256": "5fb2fb2d3d66c7ec04ce0fac39ed9f665b410441ebae71d3f893920600949ecb",
+      "variable": true
+    },
+    {
+      "file": "chunk-amhtwhch.js",
+      "name": "m",
+      "start": 10709,
+      "endExclusive": 10721,
+      "source": "m=E.tmpdir()",
+      "sha256": "edf040c59d56229d77bd6f6d45ca14243f14336b4cc06f8e4e296b54fc26eda9",
+      "moduleSha256": "5fb2fb2d3d66c7ec04ce0fac39ed9f665b410441ebae71d3f893920600949ecb",
+      "variable": true
+    },
+    {
+      "file": "chunk-amhtwhch.js",
+      "name": "b",
+      "start": 10732,
+      "endExclusive": 10913,
+      "source": "b=(e)=>{let r=o.join(a,\"Library\");return{data:o.join(r,\"Application Support\",e),config:o.join(r,\"Preferences\",e),cache:o.join(r,\"Caches\",e),log:o.join(r,\"Logs\",e),temp:o.join(m,e)}}",
+      "sha256": "16ed6aae8a648385b5f6064144e1e60b50c580ad55dddb8cc68665f32985347c",
+      "moduleSha256": "5fb2fb2d3d66c7ec04ce0fac39ed9f665b410441ebae71d3f893920600949ecb",
+      "variable": true
+    },
+    {
+      "file": "chunk-amhtwhch.js",
+      "name": "M",
+      "start": 10914,
+      "endExclusive": 11140,
+      "source": "M=(e)=>{let r=c.APPDATA||o.join(a,\"AppData\",\"Roaming\"),n=c.LOCALAPPDATA||o.join(a,\"AppData\",\"Local\");return{data:o.join(n,e,\"Data\"),config:o.join(r,e,\"Config\"),cache:o.join(n,e,\"Cache\"),log:o.join(n,e,\"Log\"),temp:o.join(m,e)}}",
+      "sha256": "1a36073ad847db34a4d8a34d2cf3bd1531840b752a0e882ebf727e9eda8f5ff1",
+      "moduleSha256": "5fb2fb2d3d66c7ec04ce0fac39ed9f665b410441ebae71d3f893920600949ecb",
+      "variable": true
+    },
+    {
+      "file": "chunk-amhtwhch.js",
+      "name": "N",
+      "start": 11141,
+      "endExclusive": 11423,
+      "source": "N=(e)=>{let r=o.basename(a);return{data:o.join(c.XDG_DATA_HOME||o.join(a,\".local\",\"share\"),e),config:o.join(c.XDG_CONFIG_HOME||o.join(a,\".config\"),e),cache:o.join(c.XDG_CACHE_HOME||o.join(a,\".cache\"),e),log:o.join(c.XDG_STATE_HOME||o.join(a,\".local\",\"state\"),e),temp:o.join(m,r,e)}}",
+      "sha256": "51d925cb496baa3a7c08b9d56148fa4f9761435ea17cfa458fd736782043e08a",
+      "moduleSha256": "5fb2fb2d3d66c7ec04ce0fac39ed9f665b410441ebae71d3f893920600949ecb",
+      "variable": true
+    },
+    {
+      "file": "chunk-amhtwhch.js",
+      "name": "g",
+      "start": 11424,
+      "endExclusive": 11639,
+      "source": "function g(e,{suffix:r=\"nodejs\"}={}){if(typeof e!==\"string\")throw TypeError(`Expected a string, got ${typeof e}`);if(r)e+=`-${r}`;if(l.platform===\"darwin\")return b(e);if(l.platform===\"win32\")return M(e);return N(e)}",
+      "sha256": "de4e3a81938de9460c94a35ce151468e834307a94094e58fab2b0ec9fa81d56f",
+      "moduleSha256": "5fb2fb2d3d66c7ec04ce0fac39ed9f665b410441ebae71d3f893920600949ecb",
+      "variable": false
+    },
+    {
+      "file": "chunk-amhtwhch.js",
+      "name": "L",
+      "start": 11671,
+      "endExclusive": 11688,
+      "source": "L=g(\"claude-cli\")",
+      "sha256": "2fa93a628916e26c897e76217f23d962befe00a1b0c789d9facb020f3203fd28",
+      "moduleSha256": "5fb2fb2d3d66c7ec04ce0fac39ed9f665b410441ebae71d3f893920600949ecb",
+      "variable": true
+    },
+    {
+      "file": "chunk-amhtwhch.js",
+      "name": "_",
+      "start": 11689,
+      "endExclusive": 11694,
+      "source": "_=200",
+      "sha256": "88f9c28712a3573bceaad4ba788b334edf578714cb57ec1c18ee17c793f5cff3",
+      "moduleSha256": "5fb2fb2d3d66c7ec04ce0fac39ed9f665b410441ebae71d3f893920600949ecb",
+      "variable": true
+    },
+    {
+      "file": "chunk-amhtwhch.js",
+      "name": "h",
+      "start": 11695,
+      "endExclusive": 11827,
+      "source": "function h(e){let r=e.replace(/[^a-zA-Z0-9]/g,\"-\");if(r.length<=_)return r;return`${r.slice(0,_)}-${Math.abs(tee(e)).toString(36)}`}",
+      "sha256": "9f0c1c3cd78a05b9e9b0d9c1461de30539c18057282b698c180abbce8203e30a",
+      "moduleSha256": "5fb2fb2d3d66c7ec04ce0fac39ed9f665b410441ebae71d3f893920600949ecb",
+      "variable": false
+    },
+    {
+      "file": "chunk-amhtwhch.js",
+      "name": "FTn",
+      "start": 11827,
+      "endExclusive": 11883,
+      "source": "function FTn(){try{return ae().cwd()}catch{return Ee()}}",
+      "sha256": "d210c1e2510282cc62ddbdd2134cce6b0bfc7c5c9cc247ef65316f108cb7a3bc",
+      "moduleSha256": "5fb2fb2d3d66c7ec04ce0fac39ed9f665b410441ebae71d3f893920600949ecb",
+      "variable": false
+    },
+    {
+      "file": "chunk-amhtwhch.js",
+      "name": "f",
+      "start": 11883,
+      "endExclusive": 11923,
+      "source": "function f(){return T(L.cache,h(FTn()))}",
+      "sha256": "a5ad968542add210b3702d1ad71354a7ffe378090f9d05f975931c7b4b41ed06",
+      "moduleSha256": "5fb2fb2d3d66c7ec04ce0fac39ed9f665b410441ebae71d3f893920600949ecb",
+      "variable": false
+    },
+    {
+      "file": "chunk-amhtwhch.js",
+      "name": "iet",
+      "start": 11927,
+      "endExclusive": 12015,
+      "source": "iet={baseLogs:()=>f(),errors:()=>T(f(),\"errors\"),mcpLogs:(e)=>T(f(),`mcp-logs-${h(e)}`)}",
+      "sha256": "6368d37ed34d2291eb661c0e5e057f81b48e0712e6c9495507487394017a6c41",
+      "moduleSha256": "5fb2fb2d3d66c7ec04ce0fac39ed9f665b410441ebae71d3f893920600949ecb",
+      "variable": true
+    },
+    {
+      "file": "chunk-925etgj7.js",
+      "name": "_",
+      "start": 6063,
+      "endExclusive": 6143,
+      "source": "function _(){return{messages:0,errors:0,filesRetainedFresh:0,filesPastCutoff:0}}",
+      "sha256": "21b46b3dc44aad4ba11884cc3230552a1035d26295550b541298aa47af7cf064",
+      "moduleSha256": "9751b4e35a52eada98a341f4c1b9784bfeda8c30635212647a99504a0ff969a0",
+      "variable": false
+    },
+    {
+      "file": "chunk-925etgj7.js",
+      "name": "M",
+      "start": 6143,
+      "endExclusive": 6336,
+      "source": "function M(e,r){return{messages:e.messages+r.messages,errors:e.errors+r.errors,filesRetainedFresh:e.filesRetainedFresh+r.filesRetainedFresh,filesPastCutoff:e.filesPastCutoff+r.filesPastCutoff}}",
+      "sha256": "9053b1eefe2819410711c1632df6ae20141a43733065667ab5dea260a20a2554",
+      "moduleSha256": "9751b4e35a52eada98a341f4c1b9784bfeda8c30635212647a99504a0ff969a0",
+      "variable": false
+    },
+    {
+      "file": "chunk-925etgj7.js",
+      "name": "Ae",
+      "start": 6336,
+      "endExclusive": 6447,
+      "source": "function Ae(e){let r=ot(e,\".\").replace(/T(\\d{2})-(\\d{2})-(\\d{2})-(\\d{3})Z/,\"T$1:$2:$3.$4Z\");return new Date(r)}",
+      "sha256": "126d89f6ac86b5db4bc46e18ff71311d93bb89406cd2a4ef29f13e1b3684e139",
+      "moduleSha256": "9751b4e35a52eada98a341f4c1b9784bfeda8c30635212647a99504a0ff969a0",
+      "variable": false
+    },
+    {
+      "file": "chunk-925etgj7.js",
+      "name": "Pge",
+      "start": 6447,
+      "endExclusive": 6483,
+      "source": "function Pge(e){return Ht(e)||ch(e)}",
+      "sha256": "56b55a58c4efd39a274b43eaad8e317a6b31e1bfef723ed6be670ca26fe1d9a4",
+      "moduleSha256": "9751b4e35a52eada98a341f4c1b9784bfeda8c30635212647a99504a0ff969a0",
+      "variable": false
+    },
+    {
+      "file": "chunk-925etgj7.js",
+      "name": "ue",
+      "start": 6483,
+      "endExclusive": 6841,
+      "source": "async function ue(e,r,n){let s=_();try{let a=await ae().readdir(e);for(let p of a)try{if(Ae(p.name)<r)if(await ae().unlink(h(e,p.name)),n)s.messages++;else s.errors++}catch(w){t(`Failed to clean up file ${p.name} in ${e}: ${w}`,{level:\"error\"})}}catch(a){if(W(a));else if(Pge(a))t(`cleanup readdir ${e} failed: ${a.code}`,{level:\"error\"});else d(a)}return s}",
+      "sha256": "521313e812f26931053182e81fdb8eedf36a1bd82925b3718b51432b61d1e885",
+      "moduleSha256": "9751b4e35a52eada98a341f4c1b9784bfeda8c30635212647a99504a0ff969a0",
+      "variable": false
+    },
+    {
+      "file": "chunk-925etgj7.js",
+      "name": "Me",
+      "start": 6841,
+      "endExclusive": 7263,
+      "source": "async function Me(){let e=ae(),r=$_();if(r===null)return _();let n=iet.errors(),s=iet.baseLogs(),a=await ue(n,r,!1);try{let p;try{p=await e.readdir(s)}catch{return a}let w=p.filter((m)=>m.isDirectory()&&m.name.startsWith(\"mcp-logs-\")).map((m)=>h(s,m.name));for(let m of w)a=M(a,await ue(m,r,!0)),await T(m,e)}catch(p){if(W(p));else if(Pge(p))t(`cleanup mcp-logs scan failed: ${p.code}`,{level:\"error\"});else d(p)}return a}",
+      "sha256": "1a5e23cc18861ff67477bb3baba7be8005753dbbab8658f7b6b6871f11201015",
+      "moduleSha256": "9751b4e35a52eada98a341f4c1b9784bfeda8c30635212647a99504a0ff969a0",
+      "variable": false
+    },
+    {
+      "file": "chunk-925etgj7.js",
+      "name": "x",
+      "start": 7263,
+      "endExclusive": 7541,
+      "source": "async function x(e,r,n,s,a=r,p){let w;try{w=await n.stat(e)}catch(m){if(W(m))return!1;throw m}if(!(w.mtime<r))return s.filesRetainedFresh++,!1;if(p!==void 0&&await p(e,w))return!1;try{await n.unlink(e)}catch(m){if(W(m))return!1;if(w.mtime<a)s.filesPastCutoff++;throw m}return!0}",
+      "sha256": "7cd3c1a6294c0f52dc40f0a23aa296018b0dbe024db8ad3706fab5a0e8052996",
+      "moduleSha256": "9751b4e35a52eada98a341f4c1b9784bfeda8c30635212647a99504a0ff969a0",
+      "variable": false
+    },
+    {
+      "file": "chunk-925etgj7.js",
+      "name": "z",
+      "start": 9885,
+      "endExclusive": 9966,
+      "source": "async function z(e,r){try{return(await r.lstat(e)).isDirectory()}catch{return!1}}",
+      "sha256": "e6c943f5ef9c810c2cca668aed2cea5739c770b6c67c22e667f42b19e2c8960a",
+      "moduleSha256": "9751b4e35a52eada98a341f4c1b9784bfeda8c30635212647a99504a0ff969a0",
+      "variable": false
+    },
+    {
+      "file": "chunk-925etgj7.js",
+      "name": "T",
+      "start": 7541,
+      "endExclusive": 7616,
+      "source": "async function T(e,r){if(!await z(e,r))return;try{await r.rmdir(e)}catch{}}",
+      "sha256": "0ead737d75676d17c70dd0b68e9815e6b843bfe88ec74addf71102e98dc4a482",
+      "moduleSha256": "9751b4e35a52eada98a341f4c1b9784bfeda8c30635212647a99504a0ff969a0",
+      "variable": false
+    },
+    {
+      "file": "chunk-925etgj7.js",
+      "name": "At",
+      "start": 29879,
+      "endExclusive": 30141,
+      "source": "async function At(){let e=$_(),r=_();if(e===null)return r;let n=ae(),s=h(we(),\"debug\"),a;try{a=await n.readdir(s)}catch{return r}for(let p of a){if(p.name===\"latest\"||!p.isFile())continue;try{if(await x(h(s,p.name),e,n,r))r.messages++}catch{r.errors++}}return r}",
+      "sha256": "3c7720fe975854afea72486a6db8c17ffaece7db6b267f9d35de803e423dedd7",
+      "moduleSha256": "9751b4e35a52eada98a341f4c1b9784bfeda8c30635212647a99504a0ff969a0",
+      "variable": false
+    }
+  ],
+  "nativeSha256": "692175986506d07c30d5d04a6a1c456ce3ca99a28df4f1649818de9bea60ff88",
+  "bodyRewriting": false,
+  "boundary": "Complete original Me/At and their module-local helpers plus readonly iet path closure. Original error predicates and filesystem/settings owners are injected from existing canonical production owners. No independent retention state. Whole fSr sweep is a separate remaining dependency."
+}

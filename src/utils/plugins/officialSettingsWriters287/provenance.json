@@ -1,0 +1,345 @@
+{
+  "version": "2.1.287",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16 code units; end-exclusive",
+  "declarations": [
+    {
+      "file": "chunk-tdtkpzh0.js",
+      "name": "WQ",
+      "start": 1120,
+      "end": 1286,
+      "moduleSha256": "f1f016d1ae828841a2f6fc2caf9ee19c9323f20d29b473bdeede38bc6bc7f1af",
+      "sha256": "93f335cda01e855b2bb1b4abe293234a43d3b99839c562f20ba2627d9b4adde2",
+      "source": "function WQ(t){let i=ZA(t);if(i.length>0)return[...i.toReversed(),t];let e=`@${$c}`,n=t.endsWith(e)?t.slice(0,-e.length):\"\";return n!==\"\"&&!n.includes(\"@\")?[n,t]:[t]}",
+      "variable": false
+    },
+    {
+      "file": "chunk-tdtkpzh0.js",
+      "name": "wyt",
+      "start": 1424,
+      "end": 1620,
+      "moduleSha256": "f1f016d1ae828841a2f6fc2caf9ee19c9323f20d29b473bdeede38bc6bc7f1af",
+      "sha256": "19a85e6dee8922066ac14ab2f680246f7a49d4a2258a93c818e9b2be25a55eb8",
+      "source": "function wyt(t,i){let e=TS(i),n=ZA(e);if(n.length===0)return{deciding:i,written:i,replaced:[]};let r=n.filter((s)=>t?.[s]!==void 0);return{deciding:t?.[e]===void 0?r[0]??e:e,written:e,replaced:r}}",
+      "variable": false
+    },
+    {
+      "file": "chunk-hrhfcbdv.js",
+      "name": "di",
+      "start": 9828,
+      "end": 9833,
+      "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+      "sha256": "21173ac8ca348fb58790860a7ec576df35da1082c00f228d08e6c67ed57f6b8c",
+      "source": "di=Oc",
+      "variable": true
+    },
+    {
+      "file": "chunk-nzhr6ks9.js",
+      "name": "g9e",
+      "start": 8095,
+      "end": 9613,
+      "moduleSha256": "8a7bb16e4139e770036e07177c764cb6e0e2de10caf937a113822fe086f386f2",
+      "sha256": "2f7ee34111f3f77b32a3f4aaa6a58b0429a4b0ffc87e0dd6c450320979274833",
+      "source": "async function g9e(e,r,n,i,s,a){try{let c={},p={};for(let[x,b]of Object.entries(n))if(i[x]?.sensitive===!0)p[x]=String(b);else c[x]=b;let g=new Set(Object.keys(p)),m=new Set(Object.keys(c)),y=Pe(e,r),w=0,h=await zn().mutate((x)=>{let b=x.pluginSecrets?.[y],H=b?di(b,(M,T)=>m.has(T)):void 0;if(w=H&&b?Object.keys(b).length-Object.keys(H).length:0,Object.keys(p).length===0&&w===0)return x;return{...x,pluginSecrets:{...x.pluginSecrets,[y]:{...H,...p}}}},a);if(!h.success)throw Error(`Failed to save sensitive config to secure storage for ${y}`);if(h.warning)t(`Server secrets save warning: ${h.warning}`,{level:\"warn\"});if(w>0)t(`saveMcpServerUserConfig: scrubbed ${w} stale non-sensitive key(s) from secureStorage for ${y}`);let S=ge(\"userSettings\")?.pluginConfigs,k={},v=0;for(let x of WQ(e)){let b=Object.keys(S?.[x]?.mcpServers?.[r]??{}).filter((T)=>g.has(T)),H=Object.fromEntries(b.map((T)=>[T,void 0])),M=x===e?c:{};if(Object.keys(M).length>0||b.length>0)k[x]={mcpServers:{[r]:{...M,...H}}},v+=b.length}if(Object.keys(k).length>0){let x=await hn(\"userSettings\",{pluginConfigs:k},void 0,s);if(x.error)throw x.error;if(v>0)t(`saveMcpServerUserConfig: scrubbed ${v} plaintext sensitive key(s) from settings.json for ${e}/${r}`)}t(`Saved user config for ${e}/${r} (${Object.keys(c).length} non-sensitive, ${Object.keys(p).length} sensitive)`)}catch(c){let p=Z(c);throw t(`Failed to save user config for ${e}/${r}: ${p.message}`,{level:\"error\"}),Error(`Failed to save user configuration for ${e}/${r}: ${p.message}`)}}",
+      "variable": false
+    },
+    {
+      "file": "chunk-nzhr6ks9.js",
+      "name": "Pe",
+      "start": 7751,
+      "end": 7786,
+      "moduleSha256": "8a7bb16e4139e770036e07177c764cb6e0e2de10caf937a113822fe086f386f2",
+      "sha256": "89503e576b7f5136d26a4dce2ce324c30e08d493ef9ddbeddd6838bd73643f5a",
+      "source": "function Pe(e,r){return`${e}/${r}`}",
+      "variable": false
+    },
+    {
+      "file": "chunk-nzhr6ks9.js",
+      "name": "Ede",
+      "start": 17149,
+      "end": 17190,
+      "moduleSha256": "8a7bb16e4139e770036e07177c764cb6e0e2de10caf937a113822fe086f386f2",
+      "sha256": "edc7dc17caba0eba9d7cb4b817bc206753300e544e5367ed668b5b7744fc7ac3",
+      "source": "function Ede(){ut().optionValues.clear()}",
+      "variable": false
+    },
+    {
+      "file": "chunk-nzhr6ks9.js",
+      "name": "k_e",
+      "start": 17190,
+      "end": 18574,
+      "moduleSha256": "8a7bb16e4139e770036e07177c764cb6e0e2de10caf937a113822fe086f386f2",
+      "sha256": "7d5ff02bccb750d804a7495ffaea118e84882b13e93ff41aab693e2e8cbdc396",
+      "source": "async function k_e(e,r,n,i,s){let a={},c={};for(let[h,S]of Object.entries(r))if(n[h]?.sensitive===!0)c[h]=String(S);else a[h]=S;let p=new Set(Object.keys(c)),g=new Set(Object.keys(a)),m=await zn().mutate((h)=>{let S=wyt(h.pluginSecrets,e),k=S.replaced.length===0?h.pluginSecrets?.[S.written]:[...S.replaced.toReversed(),S.written].reduce((b,H)=>({...b,...h.pluginSecrets?.[H]}),{}),v=k?di(k,(b,H)=>g.has(H)):void 0,x=v&&k&&Object.keys(v).length!==Object.keys(k).length;if(Object.keys(c).length===0&&!x&&S.replaced.length===0)return h;return{...h,pluginSecrets:{...di(h.pluginSecrets??{},(b,H)=>S.replaced.includes(H)),[S.written]:{...v,...c}}}},s);if(!m.success){let h=Error(`Failed to save sensitive plugin options for ${e} to secure storage`);throw t(h.message,{level:\"error\"}),h}if(m.warning)t(`Plugin secrets save warning: ${m.warning}`,{level:\"warn\"});let y=ge(\"userSettings\")?.pluginConfigs,w={};for(let h of WQ(e)){let S=Object.keys(y?.[h]?.options??{}).filter((x)=>p.has(x)),k=Object.fromEntries(S.map((x)=>[x,void 0])),v=h===e?a:{};if(Object.keys(v).length>0||S.length>0)w[h]={options:{...v,...k}}}if(Object.keys(w).length>0){let h=await hn(\"userSettings\",{pluginConfigs:bt(y,e,w)},void 0,i);if(h.error)throw t(`Failed to save plugin options for ${e} to settings.json: ${l(h.error)}`,{level:\"error\"}),Error(`Failed to save plugin options for ${e}: ${h.error.message}`)}Ede()}",
+      "variable": false
+    },
+    {
+      "file": "chunk-nzhr6ks9.js",
+      "name": "Le",
+      "start": 19137,
+      "end": 19448,
+      "moduleSha256": "8a7bb16e4139e770036e07177c764cb6e0e2de10caf937a113822fe086f386f2",
+      "sha256": "f9730335a1c5a3cd07c938610b43ec3f410f5be5b4ab32d30951df09dcde7ef1",
+      "source": "async function Le(e){Ro();let r=ge(\"userSettings\");if(r!==null&&r!==void 0)return r;let n=Zn(\"userSettings\");if(n===void 0||await ZF(n)===\"gone\")return;return t(`deletePluginOptions: the user settings file (${n}) is there and could not be read, so options of ${e} may remain in it`,{level:\"warn\"}),\"unreadable\"}",
+      "variable": false
+    },
+    {
+      "file": "chunk-nzhr6ks9.js",
+      "name": "BMo",
+      "start": 19448,
+      "end": 21182,
+      "moduleSha256": "8a7bb16e4139e770036e07177c764cb6e0e2de10caf937a113822fe086f386f2",
+      "sha256": "ea29b71d3011cf0ccc062ab72abd269bf0b329eb9ff1df4fd5dd38c1d1492223",
+      "source": "async function BMo(e,r,n,i){let s=!0,a=await Le(e);if(a===\"unreadable\")s=!1,i?.push(\"settings_unreadable\");let c=a===\"unreadable\"?void 0:a,p=WQ(e).filter((y)=>c?.pluginConfigs?.[y]!==void 0);if(p.length>0){let y=Object.fromEntries(p.map((h)=>[h,void 0])),{error:w}=await hn(\"userSettings\",{pluginConfigs:y},void 0,r);if(w)t(`deletePluginOptions: failed to clear settings.pluginConfigs[${e}]: ${w.message}`,{level:\"warn\"}),s=!1,i?.push(\"settings_write_failed\");else{let h=await Le(e);if(h===\"unreadable\")s=!1,i?.push(\"settings_unreadable\");let S=h===\"unreadable\"?void 0:h?.pluginConfigs;if(p.some((k)=>S?.[k]!==void 0))t(`deletePluginOptions: settings.pluginConfigs[${e}] still reads back after a write that reported no error`,{level:\"warn\"}),s=!1,i?.push(\"settings_remain\")}}let g=[e,...ZA(e)],m=(y)=>g.some((w)=>y===w||y.startsWith(`${w}/`));try{let y=zn();if(!(await y.mutate((h)=>{if(!h.pluginSecrets)return h;let S=Object.entries(h.pluginSecrets).filter(([k])=>!m(k));if(S.length===Object.keys(h.pluginSecrets).length)return h;return{...h,pluginSecrets:S.length>0?Object.fromEntries(S):void 0}},n)).success)t(`deletePluginOptions: failed to clear pluginSecrets for ${e} from keychain`,{level:\"warn\"}),s=!1,i?.push(\"secrets_write_failed\");else{let h=y.readAsyncStrict?await y.readAsyncStrict(n,{inaccessibleAs:\"failure\"}):await y.readAsync(n);if(h===Ka||Object.keys(h?.pluginSecrets??{}).some(m))t(`deletePluginOptions: after the delete, secure storage could not be read or still holds pluginSecrets for ${e}`,{level:\"warn\"}),s=!1,i?.push(h===Ka?\"secrets_unreadable\":\"secrets_remain\")}}catch(y){t(`deletePluginOptions: storage lock unavailable for ${e}: ${l(y)}`,{level:\"warn\"}),s=!1,i?.push(\"secrets_write_failed\")}return Ede(),s}",
+      "variable": false
+    },
+    {
+      "file": "chunk-nzhr6ks9.js",
+      "name": "bt",
+      "start": 26021,
+      "end": 26583,
+      "moduleSha256": "8a7bb16e4139e770036e07177c764cb6e0e2de10caf937a113822fe086f386f2",
+      "sha256": "32f19930591ca73974670f0032be3aef40a11142fb20147595cc25b97b746177",
+      "source": "function bt(e,r,n){let i=wyt(e,r);if(i.replaced.length===0)return n;let s=[...i.replaced.toReversed(),i.written],a=di(n,(g,m)=>i.replaced.includes(m)),c={...di(s.reduce((g,m)=>({...g,...e?.[m]?.options,...m===i.written?void 0:n[m]?.options}),{}),(g)=>g===void 0),...a[i.written]?.options},p=L(s.flatMap((g)=>Object.keys(e?.[g]?.mcpServers??{})));return{...a,...Object.fromEntries(i.replaced.map((g)=>[g,void 0])),[i.written]:{options:c,...p.length===0?{}:{mcpServers:Object.fromEntries(p.map((g)=>[g,s.reduce((m,y)=>({...m,...e?.[y]?.mcpServers?.[g]}),{})]))}}}}",
+      "variable": false
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "fLt",
+      "start": 3452138,
+      "end": 3452266,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "26c5c0dd587ead18afb1c73e2b331629333e83424a6c0a3dad9eccc64d46c482",
+      "source": "function fLt(e,n,r=\"userSettings\",s){return Ri(r,(g)=>({extraKnownMarketplaces:{...g?.extraKnownMarketplaces,[e]:n}}),void 0,s)}",
+      "variable": false
+    },
+    {
+      "file": "chunk-0pprbvtw.js",
+      "name": "ZF",
+      "start": 5153,
+      "end": 5254,
+      "moduleSha256": "ac21ef5f4681286c979e56a099405d29d52d2c119a6379365c57c316890afc3f",
+      "sha256": "3199cb7c0002e8135eb8af42acd70f12818f51afe14942be3ed9600f01403a1f",
+      "source": "async function ZF(e){return Q(e).then(()=>\"present\",(n)=>W(n)||E(n)===\"ENOTDIR\"?\"gone\":\"unreadable\")}",
+      "variable": false
+    }
+  ],
+  "ports": [
+    "TS",
+    "ZA",
+    "$c",
+    "zn",
+    "ge",
+    "hn",
+    "Ri",
+    "ut",
+    "Ro",
+    "Zn",
+    "Q",
+    "W",
+    "E",
+    "Oc",
+    "Ka",
+    "t",
+    "l",
+    "Z",
+    "L"
+  ],
+  "portEvidence": [
+    {
+      "file": "chunk-nzhr6ks9.js",
+      "name": "zn",
+      "kind": "import",
+      "start": 1131,
+      "end": 1133,
+      "moduleSha256": "8a7bb16e4139e770036e07177c764cb6e0e2de10caf937a113822fe086f386f2",
+      "sha256": "4f240c3fce857e766bc57dc127e931bdd4d17496a8e71c83b56feca4cc9b3c79",
+      "source": "zn"
+    },
+    {
+      "file": "chunk-nzhr6ks9.js",
+      "name": "ge",
+      "kind": "import",
+      "start": 1369,
+      "end": 1371,
+      "moduleSha256": "8a7bb16e4139e770036e07177c764cb6e0e2de10caf937a113822fe086f386f2",
+      "sha256": "309d20864f274b097f64106ec08fde76b42486d4e2f7165c7a9a233533dd8fc3",
+      "source": "ge"
+    },
+    {
+      "file": "chunk-nzhr6ks9.js",
+      "name": "hn",
+      "kind": "import",
+      "start": 1372,
+      "end": 1374,
+      "moduleSha256": "8a7bb16e4139e770036e07177c764cb6e0e2de10caf937a113822fe086f386f2",
+      "sha256": "7446783c207819c88f4358a528c02b9dbb7154a31cd89f4795a763ed8f829b5c",
+      "source": "hn"
+    },
+    {
+      "file": "chunk-nzhr6ks9.js",
+      "name": "ut",
+      "kind": "import",
+      "start": 1568,
+      "end": 1570,
+      "moduleSha256": "8a7bb16e4139e770036e07177c764cb6e0e2de10caf937a113822fe086f386f2",
+      "sha256": "469cc643a19fb75901e5d331b8dc14befa8b98810b246c2fb22fff0c382dc39e",
+      "source": "ut"
+    },
+    {
+      "file": "chunk-nzhr6ks9.js",
+      "name": "Ro",
+      "kind": "import",
+      "start": 1319,
+      "end": 1321,
+      "moduleSha256": "8a7bb16e4139e770036e07177c764cb6e0e2de10caf937a113822fe086f386f2",
+      "sha256": "14cb78d8521ff7c000e4cd3d7f8b15d7acb2fec3c83e0b6938fe39a241a7df60",
+      "source": "Ro"
+    },
+    {
+      "file": "chunk-nzhr6ks9.js",
+      "name": "Zn",
+      "kind": "import",
+      "start": 1366,
+      "end": 1368,
+      "moduleSha256": "8a7bb16e4139e770036e07177c764cb6e0e2de10caf937a113822fe086f386f2",
+      "sha256": "1310fe25797445df062c6c22638dd257608e7f6578f7dea58ff788ecf0a70dbc",
+      "source": "Zn"
+    },
+    {
+      "file": "chunk-nzhr6ks9.js",
+      "name": "Ka",
+      "kind": "import",
+      "start": 1128,
+      "end": 1130,
+      "moduleSha256": "8a7bb16e4139e770036e07177c764cb6e0e2de10caf937a113822fe086f386f2",
+      "sha256": "7d57fd69f38d7b9486ee83c39ff8c5a94f999c718343668b990ba440a4a35bff",
+      "source": "Ka"
+    },
+    {
+      "file": "chunk-nzhr6ks9.js",
+      "name": "t",
+      "kind": "import",
+      "start": 791,
+      "end": 792,
+      "moduleSha256": "8a7bb16e4139e770036e07177c764cb6e0e2de10caf937a113822fe086f386f2",
+      "sha256": "e3b98a4da31a127d4bde6e43033f66ba274cab0eb7eb1c70ec41402bf6273dd8",
+      "source": "t"
+    },
+    {
+      "file": "chunk-nzhr6ks9.js",
+      "name": "l",
+      "kind": "import",
+      "start": 679,
+      "end": 680,
+      "moduleSha256": "8a7bb16e4139e770036e07177c764cb6e0e2de10caf937a113822fe086f386f2",
+      "sha256": "acac86c0e609ca906f632b0e2dacccb2b77d22b0621f20ebece1a4835b93f6f0",
+      "source": "l"
+    },
+    {
+      "file": "chunk-nzhr6ks9.js",
+      "name": "Z",
+      "kind": "import",
+      "start": 677,
+      "end": 678,
+      "moduleSha256": "8a7bb16e4139e770036e07177c764cb6e0e2de10caf937a113822fe086f386f2",
+      "sha256": "bbeebd879e1dff6918546dc0c179fdde505f2a21591c9a9c96e36b054ec5af83",
+      "source": "Z"
+    },
+    {
+      "file": "chunk-nzhr6ks9.js",
+      "name": "L",
+      "kind": "import",
+      "start": 1996,
+      "end": 1997,
+      "moduleSha256": "8a7bb16e4139e770036e07177c764cb6e0e2de10caf937a113822fe086f386f2",
+      "sha256": "72dfcfb0c470ac255cde83fb8fe38de8a128188e03ea5ba5b2a93adbea1062fa",
+      "source": "L"
+    },
+    {
+      "file": "chunk-tdtkpzh0.js",
+      "name": "TS",
+      "kind": "import",
+      "start": 719,
+      "end": 721,
+      "moduleSha256": "f1f016d1ae828841a2f6fc2caf9ee19c9323f20d29b473bdeede38bc6bc7f1af",
+      "sha256": "76b30062ae9e1bd0de528674aaf5b013bf75e7320e9ee1b50500bcaff63f4571",
+      "source": "TS"
+    },
+    {
+      "file": "chunk-tdtkpzh0.js",
+      "name": "ZA",
+      "kind": "import",
+      "start": 722,
+      "end": 724,
+      "moduleSha256": "f1f016d1ae828841a2f6fc2caf9ee19c9323f20d29b473bdeede38bc6bc7f1af",
+      "sha256": "9a8bf3ebbe6f826e39772c4763bea0722b18c0e4b5b7ba2fe6813f02f7f0a06a",
+      "source": "ZA"
+    },
+    {
+      "file": "chunk-tdtkpzh0.js",
+      "name": "$c",
+      "kind": "import",
+      "start": 716,
+      "end": 718,
+      "moduleSha256": "f1f016d1ae828841a2f6fc2caf9ee19c9323f20d29b473bdeede38bc6bc7f1af",
+      "sha256": "564fe12eff5d6eabc695705a795a503020907a1282ce1635f968478056e740a5",
+      "source": "$c"
+    },
+    {
+      "file": "chunk-0pprbvtw.js",
+      "name": "Q",
+      "kind": "import",
+      "start": 1443,
+      "end": 1453,
+      "moduleSha256": "ac21ef5f4681286c979e56a099405d29d52d2c119a6379365c57c316890afc3f",
+      "sha256": "ad1d75f4c8e46215b5e6575c7a86c7582f628fcbd3490afa9f3ca40a8da1e559",
+      "source": "lstat as Q"
+    },
+    {
+      "file": "chunk-0pprbvtw.js",
+      "name": "W",
+      "kind": "import",
+      "start": 727,
+      "end": 728,
+      "moduleSha256": "ac21ef5f4681286c979e56a099405d29d52d2c119a6379365c57c316890afc3f",
+      "sha256": "fcb5f40df9be6bae66c1d77a6c15968866a9e6cbd7314ca432b019d17392f6f4",
+      "source": "W"
+    },
+    {
+      "file": "chunk-0pprbvtw.js",
+      "name": "E",
+      "kind": "import",
+      "start": 725,
+      "end": 726,
+      "moduleSha256": "ac21ef5f4681286c979e56a099405d29d52d2c119a6379365c57c316890afc3f",
+      "sha256": "a9f51566bd6705f7ea6ad54bb9deb449f795582d6529a0e22207b8981233ec58",
+      "source": "E"
+    },
+    {
+      "file": "chunk-hrhfcbdv.js",
+      "name": "Oc",
+      "kind": "public-local-cut",
+      "start": 9783,
+      "end": 9824,
+      "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+      "sha256": "7892723bec2357f832057efc29b6406d88e7f5bed8e15c96c723dec87c6929d0",
+      "source": "function Oc(e,n){return zr(e,tnr(TL(n)))}"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "Ri",
+      "kind": "import",
+      "start": 6686,
+      "end": 6688,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "a3b74c71ff3f4c4bca20bc784e723c71e7ef1c9ffafb0a0baa98163ac6782e1a",
+      "source": "Ri"
+    }
+  ],
+  "matureUpstreamCuts": {
+    "Oc": "lodash-es/omitBy",
+    "L": "lodash-es/uniq"
+  },
+  "scope": "Complete k_e/g9e/BMo/fLt; no new credential/settings/option/alias caches, original Ri queue and existing Mods optionValues invalidation. Private storage/backend stays host boundary."
+}

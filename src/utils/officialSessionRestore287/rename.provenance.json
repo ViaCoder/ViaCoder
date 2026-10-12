@@ -1,0 +1,126 @@
+{
+  "version": "2.1.287",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "rangeConvention": "UTF-16 end-exclusive",
+  "rows": [
+    {
+      "file": "chunk-z3rgg13c.js",
+      "name": "Fde",
+      "start": 5768,
+      "end": 6517,
+      "moduleSha256": "0a07a2bc0a0fa3c9f26f0cc7e9ef8eb79ef5f763a8c995346bc06c08bcf55e43",
+      "sha256": "adfcc4eaa9da367192cc9cd189a33d766fba8d23ba1826ebcb29b3bea27dc3f4",
+      "source": "async function Fde(e,n,s={}){let i=s.deps??v,r=e?Si(e):\"\";if(!r)return;let o=GH(),d=o.adoptions,p=++o.restores,c=()=>o.adoptions===d&&(!s.yieldToLaterRestore||o.restores===p);if(!await i.whenRegistered()||!c())return;if(s.autoOnly){await yU(r,n,\"auto\");return}let a=qv();if(a!==void 0&&a.source!==\"auto\"&&a.source!==\"derived\"&&Ir(a.name)===Ir(r))return;let u=await n$t(r,\"rename\",i);if(!c()||e4n(a,r,u.name))return;let g=async(f,S)=>{await yU(f,n,\"collision\"),Iw().announceYield(f,S)};if(!u.yielded){await yU(r,n,s.source),Jpn({name:r,deps:i,onYield:g});return}if(await yU(u.name,n,\"collision\"),Iw().userTypedName===r)Iw().userTypedName=u.name;if(Jpn({name:u.name,suffixBase:r,deps:i,onYield:g}),u.name===a?.name)return;Iw().announceYield(u.name,r)}",
+      "variable": false
+    },
+    {
+      "file": "chunk-z3rgg13c.js",
+      "name": "n$t",
+      "start": 3220,
+      "end": 3997,
+      "moduleSha256": "0a07a2bc0a0fa3c9f26f0cc7e9ef8eb79ef5f763a8c995346bc06c08bcf55e43",
+      "sha256": "04d93dc1a4a4043ad81961daf13a2e9e4a17be11e9c15fb60c486f132f5bfd7f",
+      "source": "async function n$t(e,n,s=v,i=e){if(!x())return{name:e,yielded:!1};if(i=N(i)??i,!await s.whenRegistered())return{name:e,yielded:!1};try{let r=await s.listLive(),o=r.find((a)=>a.pid===process.pid);if(!o)return{name:e,yielded:!1};let d=B({desiredName:e,self:o,live:r,moment:n,slug:s.slug,suffixBase:i});if(d.kind===\"keep\")return{name:e,yielded:!1};let p=z(e,o),c=Si(p!==void 0&&Ir(p)!==Ir(e)?p:d.newName)||d.newName;return t(`[session-name] \"${e}\" is held by live pid ${d.holders[0]?.pid}; this session takes \"${c}\"`,{level:\"info\"}),y(\"session_name_collision\"),Iw().lastYield={base:Ir(i),name:c},{name:c,yielded:!0}}catch(r){return t(`[session-name] uniqueness check failed, keeping \"${e}\": ${l(r)}`,{level:\"warn\"}),m(\"session_name_collision\",\"check_failed\"),{name:e,yielded:!1}}}",
+      "variable": false
+    },
+    {
+      "file": "chunk-z3rgg13c.js",
+      "name": "e4n",
+      "start": 5524,
+      "end": 5768,
+      "moduleSha256": "0a07a2bc0a0fa3c9f26f0cc7e9ef8eb79ef5f763a8c995346bc06c08bcf55e43",
+      "sha256": "f35584293481b8f91510f3f719fffbf6bcbd5d52a605f0b4669b05e010a56ff2",
+      "source": "function e4n(e,n,s){let i=qv();if(i===void 0||i.source===\"derived\"||i.source===\"auto\")return;if(i.source===\"collision\"&&A1e(e?.name??n,i.name)!==void 0)return;let r=Ir(i.name);if(e!==void 0&&r===Ir(e.name)||r===Ir(n)||r===Ir(s))return;return i}",
+      "variable": false
+    },
+    {
+      "file": "chunk-z3rgg13c.js",
+      "name": "Jpn",
+      "start": 5267,
+      "end": 5524,
+      "moduleSha256": "0a07a2bc0a0fa3c9f26f0cc7e9ef8eb79ef5f763a8c995346bc06c08bcf55e43",
+      "sha256": "1d5e2f040160e319ae8f66df76b91b1810bef56f9bec647746598c5fc6f63941",
+      "source": "function Jpn(e){let{name:n,onYield:s,deps:i}=e,r=e.suffixBase??n;(e.scheduleRecheck??T)(()=>{(async()=>{if(!w(n))return;let d=await n$t(n,\"recheck\",i,r);if(!d.yielded||!w(n))return;if(Iw().userTypedName===n)Iw().userTypedName=d.name;await s(d.name,n)})()})}",
+      "variable": false
+    },
+    {
+      "file": "chunk-z3rgg13c.js",
+      "name": "A1e",
+      "start": 4417,
+      "end": 4556,
+      "moduleSha256": "0a07a2bc0a0fa3c9f26f0cc7e9ef8eb79ef5f763a8c995346bc06c08bcf55e43",
+      "sha256": "7950ea69b5d2e7e12b7518b29bfb72360bc2379ddac61b9315a7a88056ec87ad",
+      "source": "function A1e(e,n){if(!x())return;let s=Iw().lastYield,i=N(e)??e;return s!==void 0&&n!==void 0&&Ir(s.name)===Ir(n)&&s.base===Ir(i)?n:void 0}",
+      "variable": false
+    },
+    {
+      "file": "chunk-z3rgg13c.js",
+      "name": "z",
+      "start": 3997,
+      "end": 4225,
+      "moduleSha256": "0a07a2bc0a0fa3c9f26f0cc7e9ef8eb79ef5f763a8c995346bc06c08bcf55e43",
+      "sha256": "228177137da81b4f87f2b760e04d71b087284404729b9c39e95c104381792eb4",
+      "source": "function z(e,n){let s=A1e(e,n.name);if(s!==void 0)return s;let i=n.name,r=i===void 0?void 0:A(i);if(i===void 0||r===void 0)return;let o=N(e)??e,d=re(o,Kk-r.suffix.length-1);return r.base.toLowerCase()===d.toLowerCase()?i:void 0}",
+      "variable": false
+    },
+    {
+      "file": "chunk-z3rgg13c.js",
+      "name": "w",
+      "start": 4556,
+      "end": 4619,
+      "moduleSha256": "0a07a2bc0a0fa3c9f26f0cc7e9ef8eb79ef5f763a8c995346bc06c08bcf55e43",
+      "sha256": "3b635f08eb1066a913b1b16ab77fc346142e60ab080bd09d00d665d64d2650c7",
+      "source": "function w(e){let n=qv();return n!==void 0&&Ir(n.name)===Ir(e)}",
+      "variable": false
+    },
+    {
+      "file": "chunk-z3rgg13c.js",
+      "name": "N",
+      "start": 4619,
+      "end": 4651,
+      "moduleSha256": "0a07a2bc0a0fa3c9f26f0cc7e9ef8eb79ef5f763a8c995346bc06c08bcf55e43",
+      "sha256": "8a8abb16402640e6a16e4248255e8d4a5d63c8ae62fb96f04904fe7065ea8a99",
+      "source": "function N(e){return A(e)?.base}",
+      "variable": false
+    },
+    {
+      "file": "chunk-z3rgg13c.js",
+      "name": "T",
+      "start": 4662,
+      "end": 4700,
+      "moduleSha256": "0a07a2bc0a0fa3c9f26f0cc7e9ef8eb79ef5f763a8c995346bc06c08bcf55e43",
+      "sha256": "4aa7302c2737505753d59769c7613792507cd21d5a6dfa979ce47e3ec8072fb3",
+      "source": "function T(e){setTimeout(e,I).unref()}",
+      "variable": false
+    },
+    {
+      "file": "chunk-z3rgg13c.js",
+      "name": "I",
+      "start": 4655,
+      "end": 4661,
+      "moduleSha256": "0a07a2bc0a0fa3c9f26f0cc7e9ef8eb79ef5f763a8c995346bc06c08bcf55e43",
+      "sha256": "e006e9ec26f3416c5fa1625d94b7abd9bc6ce6e0ee8c459e2d553b86209bfd98",
+      "source": "I=3000",
+      "variable": true
+    }
+  ],
+  "bindings": [
+    "v",
+    "Si",
+    "GH",
+    "yU",
+    "qv",
+    "Ir",
+    "Iw",
+    "x",
+    "B",
+    "A",
+    "re",
+    "Kk",
+    "t",
+    "y",
+    "m",
+    "l"
+  ],
+  "hostAdaptation": "GH/Iw/qv/yU resolve the already registered LocalRenameRegistry. B/A/re/Si/Ir use the existing mature local uniqueness helpers; no second registry/coordinator."
+}

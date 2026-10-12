@@ -1,0 +1,60 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Resolve the installed cc -> current -> immutable release chain before exec.
+# A running process must not follow a later `current` switch for lazy imports.
+SOURCE="${BASH_SOURCE[0]}"
+while [[ -L "$SOURCE" ]]; do
+  LINK_DIR="$(cd -P "$(dirname "$SOURCE")" && pwd)"
+  SOURCE="$(readlink "$SOURCE")"
+  [[ "$SOURCE" = /* ]] || SOURCE="$LINK_DIR/$SOURCE"
+done
+ROOT_DIR="$(cd -P "$(dirname "$SOURCE")/.." && pwd)"
+
+case "$(uname -s)" in
+  Darwin|Linux) ;;
+  *) echo "cc supports macOS and Linux only" >&2; exit 1 ;;
+esac
+
+case "$(uname -m)" in
+  arm64|aarch64|x86_64|amd64) ;;
+  *) echo "cc supports arm64 and amd64/x86_64 only" >&2; exit 1 ;;
+esac
+
+# Fixed public npm includes the classifier; runtime eligibility still gates Auto.
+BUN_ARGS=(--feature=TRANSCRIPT_CLASSIFIER --config="$ROOT_DIR/packaging/runtime.bunfig.toml" --preload "$ROOT_DIR/preload.ts")
+# Fixed npm Windows/Linux omit the native CLI computer-use branch. Their local
+# external desktop MCP defaults are registered independently of this feature.
+if [[ "$(uname -s)" == Darwin ]]; then BUN_ARGS+=(--feature=CHICAGO_MCP); fi
+if [[ -n "${CC_ENV_FILE:-}" ]]; then
+  [[ -f "$CC_ENV_FILE" ]] || { echo "CC_ENV_FILE does not exist: $CC_ENV_FILE" >&2; exit 1; }
+  BUN_ARGS+=(--env-file="$CC_ENV_FILE")
+elif [[ -f "$ROOT_DIR/.env" ]]; then
+  BUN_ARGS+=(--env-file="$ROOT_DIR/.env")
+fi
+
+# Prefer the caller's Bun, then use the standard Bun install location. This
+# keeps `cc` usable from launchers and non-interactive shells that do not load
+# the user's shell profile.
+BUN_BIN="${BUN_BIN:-$(command -v bun || true)}"
+if [[ -z "$BUN_BIN" && -x "${BUN_INSTALL:-$HOME/.bun}/bin/bun" ]]; then
+  BUN_BIN="${BUN_INSTALL:-$HOME/.bun}/bin/bun"
+fi
+if [[ -z "$BUN_BIN" ]]; then
+  echo "Bun runtime not found; install Bun from https://bun.sh" >&2
+  exit 1
+fi
+
+# Source releases use the latest publicly published Bun. The official native
+# package's embedded engine remains a comparison baseline only.
+BUN_VERSION="$($BUN_BIN --version 2>/dev/null || true)"
+if [[ "$BUN_VERSION" != "1.4.2" ]]; then
+  echo "Bun 1.4.2 is required for cclaude 2.1.287; found ${BUN_VERSION:-unknown}" >&2
+  exit 1
+fi
+
+# Keep the caller's working directory. Claude Code derives project settings and
+# transcript paths from it, so changing to ROOT_DIR would split session history.
+# Do not set CLAUDE_CONFIG_DIR here: leaving it unset preserves Claude Code's
+# default ~/.claude path and the existing macOS Keychain service name.
+exec "$BUN_BIN" "${BUN_ARGS[@]}" "$ROOT_DIR/src/entrypoints/cli.tsx" "$@"

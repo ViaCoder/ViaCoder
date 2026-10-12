@@ -1,0 +1,995 @@
+{
+  "sharedHookSources": [
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "eS",
+      "start": 4188593,
+      "end": 4189372,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "a911e8ab86b2030e3df1a0fdc67f68d19bcb839f649206d3f76fbfabe3ed9daf",
+      "source": "function eS(e,n,r,s,g=Date.now()){let h=E(r);e.failureSeq++;let b=s??c6,w=e.failuresByFile.get(b),j=w!==void 0&&g-w.lastAtMs<ikr?{consecutive:w.consecutive+1,firstAtMs:w.firstAtMs,lastAtMs:g}:{consecutive:1,firstAtMs:g,lastAtMs:g};if(e.failuresByFile.set(b,j),!e.latchingEnabled&&b!==c6)e.abandonedPaths.add(b),e.abandonedPendingPaths.delete(b);if(e.degradedStore.getState()===null&&b!==c6&&dkr.has(n)&&e.latchingEnabled&&!lkr(e,b)){let z=j.consecutive>=rkr&&g-j.firstAtMs>=skr;if(okr(h,\"darwin\")||z)e.degradedStore.setState(()=>({code:h??\"unknown\",source:n,filePath:b}))}i(\"tengu_transcript_write_failed\",{source:c(n),errno_code:sg(r)??S(\"none\"),errno_enospc:h===\"ENOSPC\",errno_emfile:h===\"EMFILE\",consecutive_failures:j.consecutive,degraded:e.degradedStore.getState()!==null})}",
+      "variable": false
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "Va",
+      "start": 4205271,
+      "end": 4205312,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "443eda2bf5dd64a33e622ab766a4d187fb4838f44ec0f8bcbd2f2055f1d5c8f3",
+      "source": "function Va(){return uPo.of(U()).current}",
+      "variable": false
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "Ha",
+      "start": 4200400,
+      "end": 4200434,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "ea640d57c64266488623e66f35fd73cfe406e1f137633d069e7aa20d5a75b1ca",
+      "source": "function Ha(){return eln()!==null}",
+      "variable": false
+    },
+    {
+      "file": "chunk-yzr5hfaq.js",
+      "name": "ml",
+      "start": 2110,
+      "end": 2205,
+      "moduleSha256": "160dcdcf8f0966e35e74687f7e56154fe3783da37ed0c621c6046141ca32ad35",
+      "sha256": "d169cd4f3eac1cd629262245cbceb71efa76902d1a42633531b79a47c8eb79ce",
+      "source": "function ml(){if(JC())return!0;let{dynamicTeamContext:t}=n();return!!(t?.agentId&&t?.teamName)}",
+      "variable": false
+    }
+  ],
+  "storageSources": [
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "Aye",
+      "start": 4348792,
+      "end": 4349048,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "361a38176acf66c70bd8dca808eb80c7785be7baea5c63354376d6185b5e4efe",
+      "source": "async function Aye(e,n,r,s){let g=await hVe(e,n,r,s),{sessionFile:h,v5Read:b}=g,w=await les(e,g,{path:h,modifiedAt:async()=>b!==void 0?new Date(b.mtimeMs):(await h_(h)).mtime});if(w!==null&&s?.length)Va().primeFilelessResume(e,s.map((D)=>D.uuid));return w}",
+      "variable": false
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "les",
+      "start": 4349048,
+      "end": 4351192,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "3c8b297af729b21e0ea3511003e782e3fb04cceff4136a42bba367d6c44245ed",
+      "source": "async function les(e,n,r){let{messages:s,summaries:g,customTitles:h,endedSessions:b,aiTitles:w,tags:D,relocatedCwds:j,agentNames:z,agentColors:K,agentSettings:he,prNumbers:_e,prUrls:ke,prRepositories:be,bridgeSessionIds:ve,bridgeLastSeqs:Te,bridgeDialogKindsBySession:xe,bridgeSessionGroupingIds:Pe,bridgeNoBackfill:$e,bridgeOwnerAccountUuids:Ne,bridgeOwnerOrganizationUuids:We,historySuppressed:qe,modes:Qe,permissionModes:Ze,isolationLatches:et,devModsFolders:bt,memoryModeStamps:ht,atisLatches:kt,worktreeStates:$t,artifactCommentMonitors:It,artifactAutoReactLedgers:jt,costStates:Xt,fileHistorySnapshots:un,fileHistoryDeltas:rn,attributionSnapshots:Yt,contentReplacements:Qt,leafUuids:nn,clearedToEmpty:Pn}=n;if(s.size===0)return null;if(r===void 0)Va().primeFilelessResume(e,s.keys());else uln(e,s.keys());let $n=BL(s.values(),(mo)=>nn.has(mo.uuid)&&!mo.isSidechain&&(mo.type===\"user\"||mo.type===\"assistant\"))??(nn.size===0&&!Pn?BL(s.values(),(mo)=>!mo.isSidechain):void 0);if(!$n){if(Pn&&r!==void 0){let mo=await r.modifiedAt();return pVe(n,{date:mo.toISOString(),fullPath:r.path,created:mo,modified:mo},e)}return null}let qn=ndt(s,$n);W0r(s,qn,$n.sessionId);let En=$n.sessionId,zn=g.get($n.uuid),xn=h.get(En),Jn=D.get(En),wn=he.get(En),eo=J2e(qn,0,zn,xn,ege(un,rn,qn),Jn,r?.path,tge(Yt,qn),wn,Qt.get(En)??[]),to=j.get(En);return{...eo,...r===void 0&&{sessionId:e},projectPath:to??eo.projectPath,rewindAnchorUuid:n.rewindAnchorUuid,aiTitle:w.get(En),relocatedCwd:to,...Bft({},b.has(En)),agentName:z.get(En)??eo.agentName,agentColor:K.get(En),mode:Qe.get(En),permissionMode:Ze.get(En),isolationLatch:et.get(En),devModsFolder:bt?.get(En),memoryModeStamps:ht.get(En)??[],atisLatch:nge(kt,En),prNumber:_e.get(En),prUrl:ke.get(En),prRepository:be.get(En),bridgeSessionId:ve.get(En),bridgeLastSeq:Te.get(En),bridgeDialogKinds:xe.get(En),bridgeSessionGroupingId:Pe.get(En),bridgeNoHistoryBackfill:$e.get(En),bridgeOwnerAccountUuid:Ne.get(En),bridgeOwnerOrganizationUuid:We.get(En),sessionHistorySuppressed:qe.has(En)?!0:void 0,worktreeSession:$t.get(En),artifactCommentMonitor:It.get(En),artifactAutoReactLedger:jt.get(En),costState:Xt.get(En)}}",
+      "variable": false
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "Cye",
+      "start": 4311890,
+      "end": 4314940,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "a83c0217422943f4b8049d1ffb0fc22920d58de1d85bf58c8956823f360fed3c",
+      "source": "async function Cye(e,n){if(!N7(e))return e;let r=e.fullPath;if(!r)return e;try{let s=wm(r,n?.storageV5),g=await WTe(r,s&&{storageV5:s}),{messages:h,summaries:b,customTitles:w,endedSessions:D,aiTitles:j,tags:z,relocatedCwds:K,agentNames:he,agentColors:_e,agentSettings:ke,prNumbers:be,prUrls:ve,prRepositories:Te,bridgeSessionIds:xe,bridgeLastSeqs:Pe,bridgeDialogKindsBySession:$e,bridgeSessionGroupingIds:Ne,bridgeNoBackfill:We,bridgeOwnerAccountUuids:qe,bridgeOwnerOrganizationUuids:Qe,historySuppressed:Ze,modes:et,permissionModes:bt,isolationLatches:ht,devModsFolders:kt,memoryModeStamps:$t,atisLatches:It,worktreeStates:jt,artifactCommentMonitors:Xt,artifactAutoReactLedgers:un,costStates:rn,fileHistorySnapshots:Yt,fileHistoryDeltas:Qt,attributionSnapshots:nn,contentReplacements:Pn,leafUuids:$n,clearedToEmpty:qn}=g;if(h.size===0)return e;if(e.sessionId!==void 0)uln(e.sessionId,h.keys());let En=BL(h.values(),(wn)=>$n.has(wn.uuid)&&(wn.type===\"user\"||wn.type===\"assistant\"));if(!En){if(qn)return pVe(g,e,e.sessionId);return e}let zn=ndt(h,En);W0r(h,zn,En.sessionId);let xn=En.sessionId;return{...e,rewindAnchorUuid:g.rewindAnchorUuid,messages:MGn(zn),firstPrompt:fVe(zn),messageCount:mVe(zn),summary:En?b.get(En.uuid):e.summary,customTitle:xn?w.get(xn):e.customTitle,...Bft({},xn?D.has(xn):ORe(e)),aiTitle:xn?j.get(xn):e.aiTitle,tag:xn?z.get(xn):e.tag,relocatedCwd:xn?K.get(xn):e.relocatedCwd,agentName:xn?he.get(xn):e.agentName,agentColor:xn?_e.get(xn):e.agentColor,agentSetting:xn?ke.get(xn):e.agentSetting,mode:xn?et.get(xn):e.mode,permissionMode:xn?bt.get(xn):e.permissionMode,isolationLatch:xn?ht.get(xn):e.isolationLatch,devModsFolder:xn?kt?.get(xn):e.devModsFolder,memoryModeStamps:xn?$t.get(xn)??[]:e.memoryModeStamps,atisLatch:xn?nge(It,xn):e.atisLatch,worktreeSession:xn&&jt.has(xn)?jt.get(xn):e.worktreeSession,artifactCommentMonitor:xn?Xt.get(xn):e.artifactCommentMonitor,artifactAutoReactLedger:xn?un.get(xn):e.artifactAutoReactLedger,costState:xn?rn.get(xn):e.costState,prNumber:xn?be.get(xn):e.prNumber,prUrl:xn?ve.get(xn):e.prUrl,prRepository:xn?Te.get(xn):e.prRepository,bridgeSessionId:xn?xe.get(xn):e.bridgeSessionId,bridgeLastSeq:xn?Pe.get(xn):e.bridgeLastSeq,bridgeDialogKinds:xn?$e.get(xn):e.bridgeDialogKinds,bridgeSessionGroupingId:xn?Ne.get(xn):e.bridgeSessionGroupingId,bridgeNoHistoryBackfill:xn?We.get(xn):e.bridgeNoHistoryBackfill,bridgeOwnerAccountUuid:xn?qe.get(xn):e.bridgeOwnerAccountUuid,bridgeOwnerOrganizationUuid:xn?Qe.get(xn):e.bridgeOwnerOrganizationUuid,sessionHistorySuppressed:xn?Ze.has(xn)?!0:void 0:e.sessionHistorySuppressed,gitBranch:En?.gitBranch??e.gitBranch,isSidechain:zn[0]?.isSidechain??e.isSidechain,teamName:zn[0]?.teamName??e.teamName,sessionKind:zn[0]?.sessionKind??e.sessionKind,leafUuid:En?.uuid??e.leafUuid,fileHistorySnapshots:ege(Yt,Qt,zn),attributionSnapshots:tge(nn,zn),contentReplacements:xn?Pn.get(xn)??[]:e.contentReplacements}}catch(s){if(Nhe(s))t(`loadFullLog: transcript unreadable (${E(s)}): ${l(s)}`,{level:\"error\"}),n?.onTranscriptUnreadable?.(NY(s));else d(s);return e}}",
+      "variable": false
+    }
+  ],
+  "metadataParent": {
+    "file": "chunk-mphp7acd.js",
+    "name": "hpn",
+    "start": 4334256,
+    "end": 4342818,
+    "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+    "sha256": "6cb2f1503b73ab66ae2989562a3969939a0d7586a5afd862be96f75eabfcd847",
+    "source": "function hpn(e){let n=new Map,r=new Map,s=new Map,g=new Set,h=new Map,b=new Map,w=new Map,D=new Map,j=new Map,z=new Map,K=new Map,he=new Map,_e=new Map,ke=new Map,be=new Map,ve=new Map,Te=new Map,xe=new Map,Pe=new Map,$e=new Map,Ne=new Set,We=new Map,qe=new Map,Qe=new Map,Ze=new Map,et=new Map,bt=new Map,ht=new Map,kt=new Map,$t=new Map,It=new Map,jt=new Map,Xt=new Map,un=new Map,rn=new Map,Yt=new Map,Qt=new Map,nn=!1,Pn,$n,qn=\"\",En,zn=!1,xn=!1,Jn=!1,wn=!1,eo=!1,to,ao=new Map,mo=L4t(),$o=(ur,kr=!0)=>{if(!Mfn(ur))return;let po=ur;if(sVe(po)){Tun(\"seen\");let Tr=po.parentUuid;ao.set(po.uuid,Tr&&ao.has(Tr)?ao.get(Tr)??null:Tr);return}if(l0(po)){if(po.parentUuid&&ao.has(po.parentUuid))Tun(\"rewrote\"),po.parentUuid=ao.get(po.parentUuid)??null;if(to!==void 0&&!po.isSidechain){if(po.parentUuid===null&&!Bi(po))po.parentUuid=to;to=void 0}if(!mo.admit(po,n))return;if(kr)OOe(po);if(po.type===\"assistant\"&&po.wireToolInputs!==void 0){let Tr=BOt(po.wireToolInputs,po.message?.content,po.batchToolUses);if(Tr===void 0)delete po.wireToolInputs;else po.wireToolInputs=Tr}if(po.type===\"assistant\"&&(po.wireToolInputs!==void 0||po.wireIngestContext!==void 0)){let Tr=WOt(po.wireIngestContext,po.wireToolInputs,po.message?.content);if(Tr===void 0)delete po.wireIngestContext;else po.wireIngestContext=Tr}if(n.set(po.uuid,po),!po.isSidechain&&!vSr(po)){if(Pn=po.uuid,typeof po.timestamp===\"string\"&&po.timestamp>qn)$n=po.uuid,qn=po.timestamp;zn=!1,Jn=!1,wn=!1}if(Bi(po))En=void 0,zn=!1,xn=!1}else if(po.type===\"summary\"&&po.leafUuid)r.set(po.leafUuid,po.summary);else if(po.type===\"last-prompt\"){if(po.leafUuid!==void 0)eo=!0;if(po.leafUuid)zn=po.explicit===!0||zn&&po.leafUuid===En,xn=po.explicit===!0||xn&&po.leafUuid===En,wn=po.rewound===!0||wn&&po.leafUuid===En,En=po.leafUuid,Jn=!1;else if(po.leafUuid===null&&po.explicit===!0)Jn=!0,En=void 0,zn=!1,xn=!1,wn=!1,to=void 0}else if(po.type===\"custom-title\"&&po.sessionId)s.set(po.sessionId,po.customTitle);else if(po.type===\"ended-by-model\"&&po.sessionId&&!Emn())g.add(po.sessionId);else if(po.type===\"ai-title\"&&po.sessionId)h.set(po.sessionId,po.aiTitle);else if(po.type===\"tag\"&&po.sessionId)b.set(po.sessionId,po.tag);else if(po.type===\"relocated\"&&po.sessionId)w.set(po.sessionId,po.relocatedCwd);else if(po.type===\"agent-name\"&&po.sessionId)D.set(po.sessionId,po.agentName);else if(po.type===\"agent-color\"&&po.sessionId)j.set(po.sessionId,po.agentColor);else if(po.type===\"agent-setting\"&&po.sessionId)z.set(po.sessionId,po.agentSetting);else if(po.type===\"mode\"&&po.sessionId)We.set(po.sessionId,po.mode);else if(po.type===\"permission-mode\"&&po.sessionId)qe.set(po.sessionId,po.permissionMode);else if(po.type===\"isolation-latch\"&&po.sessionId)Qe.set(po.sessionId,po.side);else if(po.type===\"dev-mods\"&&po.sessionId)if(typeof po.folder===\"string\"&&ksn(po.folder,po.sessionId))Ze.set(po.sessionId,po.folder);else t(\"dev mods: dropped a dev-mods entry naming a folder not its own\");else if(po.type===\"memory-mode\"&&po.sessionId&&(po.mode===\"on\"||po.mode===\"off\")&&(typeof po.afterUuid===\"string\"||po.afterUuid===null)&&typeof po.timestamp===\"string\"){let Tr=et.get(po.sessionId)??[];et.set(po.sessionId,Tr),Tr.push({mode:po.mode,afterUuid:po.afterUuid,timestamp:po.timestamp,...(po.reason===\"paused\"||po.reason===\"account_off\"||po.reason===\"account_read_only\"||po.reason===\"session_shape\"||po.reason===\"server_off\")&&{reason:po.reason},...typeof po.account===\"string\"&&{account:po.account},...(po.accountChoice===\"on\"||po.accountChoice===\"read_only\"||po.accountChoice===\"off\")&&{accountChoice:po.accountChoice}})}else if(po.type===\"atis-latch\"&&po.sessionId){if(typeof po.atis===\"string\"&&/^[\\x21-\\x7e]*$/.test(po.atis))bt.set(po.sessionId,po.atis)}else if(po.type===\"worktree-state\"&&po.sessionId)ht.set(po.sessionId,po.worktreeSession);else if(po.type===\"artifact-comment-monitor\"&&po.sessionId){let Tr=kt.get(po.sessionId);kt.set(po.sessionId,Tr===void 0?po:VGn(Tr,po))}else if(po.type===\"artifact-autoreact-ledger\"&&po.sessionId)$t.set(po.sessionId,po);else if(po.type===\"cost-state\"&&po.sessionId){let Tr=c3().safeParse(po);if(Tr.success)It.set(po.sessionId,{...Tr.data,sessionId:po.sessionId})}else if(po.type===\"pr-link\"&&po.sessionId)K.set(po.sessionId,po.prNumber),he.set(po.sessionId,po.prUrl),_e.set(po.sessionId,po.prRepository);else if(po.type===\"bridge-session\"&&po.sessionId){if(ke.set(po.sessionId,po.bridgeSessionId),be.set(po.sessionId,po.lastSequenceNum),po.sessionGroupingId)Te.set(po.sessionId,po.sessionGroupingId);else Te.delete(po.sessionId);if(po.noHistoryBackfill)xe.set(po.sessionId,!0);else xe.delete(po.sessionId);{let{ownerAccountUuid:Yr,ownerOrganizationUuid:gr}=po,_o=Yr!==void 0&&!dEe(Yr)||gr!==void 0&&!dEe(gr);if(!_o&&Yr)Pe.set(po.sessionId,Yr);else Pe.delete(po.sessionId);if(!_o&&gr)$e.set(po.sessionId,gr);else $e.delete(po.sessionId)}let Tr=EQ(po.declaredDialogKinds);if(Tr.length>0)ve.set(po.sessionId,Tr);else ve.delete(po.sessionId)}else if(po.type===\"history-suppression\"&&po.sessionId)Ne.add(po.sessionId);else if(po.type===\"file-history-snapshot\")jt.set(po.messageId,po);else if(po.type===\"file-history-delta\"){let Tr=Xt.get(po.messageId);if(Tr)Tr.push(po);else Xt.set(po.messageId,[po])}else if(po.type===\"attribution-snapshot\")un.clear(),un.set(po.messageId,po);else if(po.type===\"content-replacement\")if(po.agentId){let Tr=Yt.get(po.agentId)??[];Yt.set(po.agentId,Tr),Tr.push(...po.replacements)}else{let Tr=rn.get(po.sessionId)??[];rn.set(po.sessionId,Tr),Tr.push(...po.replacements)}else if(po.type===\"fork-context-ref\")Qt.set(po.agentId,po)};return{processEntry:$o,precede:(ur)=>{for(let kr of ur)$o(kr);to=ur.findLast((kr)=>bye(kr)&&n.has(kr.uuid))?.uuid},dropPreBoundaryEntries:()=>{n.clear(),jt.clear(),Xt.clear(),ao.clear()},attributionSnapshots:un,artifactCommentMonitors:kt,artifactAutoReactLedgers:$t,setTailTorn:(ur)=>{nn=ur},finish:()=>(mo.finish(n),Ao(Ykr(n)))};function Ao(ur){if(nn)for(let[xo,dr]of kt)kt.set(xo,{...dr,tailTorn:!0});if(!e&&Jn)return Po(new Set);let kr=new Set,po=zn&&En&&n.has(En)&&!n.get(En)?.isSidechain,Tr=(xo)=>{let dr=new Map([[xo,!0]]),or=(Fr)=>{let es=[],qs=!1,Vs=Fr;while(Vs){let fs=dr.get(Vs);if(fs!==void 0){qs=fs;break}dr.set(Vs,!1),es.push(Vs),Vs=n.get(Vs)?.parentUuid??void 0}for(let fs of es)dr.set(fs,qs);return qs},Wr=xo,_r=\"\";for(let Fr of n.values())if(!Fr.isSidechain&&Fr.uuid!==xo&&typeof Fr.timestamp===\"string\"&&Fr.timestamp>=_r&&or(Fr.uuid))Wr=Fr.uuid,_r=Fr.timestamp;return Wr},Yr=Pn;if(!e&&!eo&&Yr&&$n&&$n!==Yr)Yr=Tr(Yr);if(!e&&(!ur||po)){let xo=En&&n.has(En)?En:void 0;if(xo&&!zn&&Pn&&n.has(Pn)&&Pn!==xo&&tfn(n,Pn,xo,{direct:!0,throughBatch:!xn}))xo=Pn;if(!ur)xo??=Yr;if(xo&&n.has(xo)){let dr=new Set,or=n.get(xo);while(or){if(dr.has(or.uuid)){i(\"tengu_transcript_parent_cycle\",{});break}if(dr.add(or.uuid),or.type===\"user\"||or.type===\"assistant\"){kr.add(or.uuid);break}or=or.parentUuid?n.get(or.parentUuid):void 0}if(kr.size===1)return Po(kr)}}let gr=new Set,_o=new Set;for(let xo of n.values())if(xo.parentUuid!==null){if(gr.add(xo.parentUuid),xo.type===\"user\"||xo.type===\"assistant\")_o.add(xo.parentUuid)}let wo=[];for(let xo of n.values())if(!gr.has(xo.uuid))wo.push(xo);let br=!1;for(let xo of wo){let dr=new Set,or=xo;while(or){if(dr.has(or.uuid)){br=!0;break}if(dr.add(or.uuid),or.type===\"user\"||or.type===\"assistant\"){if(!_o.has(or.uuid))kr.add(or.uuid);break}or=or.parentUuid?n.get(or.parentUuid):void 0}}if(br)i(\"tengu_transcript_parent_cycle\",{});if(!e&&kr.size>1){let xo=En&&kr.has(En)&&(zn||!Pn||!tfn(n,Pn,En,{direct:!1,throughBatch:!xn}))?En:Pn;if(!xo||!n.has(xo))return Po(kr);let dr=new Set,or=n.get(xo);while(or){if(dr.has(or.uuid))break;if(dr.add(or.uuid),or.type===\"user\"||or.type===\"assistant\"){kr.clear(),kr.add(or.uuid);break}or=or.parentUuid?n.get(or.parentUuid):void 0}}return Po(kr)}function Po(ur){return{messages:n,summaries:r,customTitles:s,endedSessions:g,aiTitles:h,tags:b,relocatedCwds:w,agentNames:D,agentColors:j,agentSettings:z,prNumbers:K,prUrls:he,prRepositories:_e,bridgeSessionIds:ke,bridgeLastSeqs:be,bridgeDialogKindsBySession:ve,bridgeSessionGroupingIds:Te,bridgeNoBackfill:xe,bridgeOwnerAccountUuids:Pe,bridgeOwnerOrganizationUuids:$e,historySuppressed:Ne,modes:We,permissionModes:qe,isolationLatches:Qe,...Ze.size>0&&{devModsFolders:Ze},memoryModeStamps:et,atisLatches:bt,worktreeStates:ht,artifactCommentMonitors:kt,artifactAutoReactLedgers:$t,costStates:It,fileHistorySnapshots:jt,fileHistoryDeltas:Xt,attributionSnapshots:un,contentReplacements:rn,agentContentReplacements:Yt,forkContextRefs:Qt,leafUuids:ur,clearedToEmpty:!e&&Jn,rewindAnchorUuid:wn?En:void 0}}}",
+    "variable": false
+  },
+  "metadataBranches": [
+    {
+      "type": "ended-by-model",
+      "condition": {
+        "file": "chunk-mphp7acd.js",
+        "name": "hpn.ended-by-model.condition",
+        "start": 4336213,
+        "end": 4336261,
+        "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+        "sha256": "2d7d6f198a41164bb4d704cdfbe1061353c5ae485594f98dadb44cf819dc324c",
+        "source": "po.type===\"ended-by-model\"&&po.sessionId&&!Emn()",
+        "variable": false
+      },
+      "body": {
+        "file": "chunk-mphp7acd.js",
+        "name": "hpn.ended-by-model.body",
+        "start": 4336262,
+        "end": 4336282,
+        "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+        "sha256": "c061e3e347122747081fe10264eb0e2f0fc8e3a0cbccbf86ea07c7fe3a107459",
+        "source": "g.add(po.sessionId);",
+        "variable": false
+      }
+    },
+    {
+      "type": "ai-title",
+      "condition": {
+        "file": "chunk-mphp7acd.js",
+        "name": "hpn.ai-title.condition",
+        "start": 4336290,
+        "end": 4336324,
+        "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+        "sha256": "66577ec842ac8a4980d717d589218ece5b81c0ea224392171a13f4eee6e598fa",
+        "source": "po.type===\"ai-title\"&&po.sessionId",
+        "variable": false
+      },
+      "body": {
+        "file": "chunk-mphp7acd.js",
+        "name": "hpn.ai-title.body",
+        "start": 4336325,
+        "end": 4336356,
+        "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+        "sha256": "58de16d6412d7362cfb37c30132bb1fb7e4d11dbc50b0dcc9de37bcc47b2b603",
+        "source": "h.set(po.sessionId,po.aiTitle);",
+        "variable": false
+      }
+    },
+    {
+      "type": "permission-mode",
+      "condition": {
+        "file": "chunk-mphp7acd.js",
+        "name": "hpn.permission-mode.condition",
+        "start": 4336819,
+        "end": 4336860,
+        "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+        "sha256": "ae3ef42171bb0aa5a9eef489480a5184ecbc606ca8dab4b2b4b0505ec82cb2b8",
+        "source": "po.type===\"permission-mode\"&&po.sessionId",
+        "variable": false
+      },
+      "body": {
+        "file": "chunk-mphp7acd.js",
+        "name": "hpn.permission-mode.body",
+        "start": 4336861,
+        "end": 4336900,
+        "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+        "sha256": "7e0b2145ca3b805511b9527ca95a43afa4f42066a8c12ccd4e3353dd1ca4b7ea",
+        "source": "qe.set(po.sessionId,po.permissionMode);",
+        "variable": false
+      }
+    },
+    {
+      "type": "memory-mode",
+      "condition": {
+        "file": "chunk-mphp7acd.js",
+        "name": "hpn.memory-mode.condition",
+        "start": 4337194,
+        "end": 4337353,
+        "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+        "sha256": "7455db5a10419a724c0a5daab2caaba9a2e8dfa6a82e6e01b9c50684a73201c7",
+        "source": "po.type===\"memory-mode\"&&po.sessionId&&(po.mode===\"on\"||po.mode===\"off\")&&(typeof po.afterUuid===\"string\"||po.afterUuid===null)&&typeof po.timestamp===\"string\"",
+        "variable": false
+      },
+      "body": {
+        "file": "chunk-mphp7acd.js",
+        "name": "hpn.memory-mode.body",
+        "start": 4337354,
+        "end": 4337817,
+        "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+        "sha256": "e578a0c42412358f46ddd73f3e24a7daaa301cac4d24526f3c782705ddcfd9f8",
+        "source": "{let Tr=et.get(po.sessionId)??[];et.set(po.sessionId,Tr),Tr.push({mode:po.mode,afterUuid:po.afterUuid,timestamp:po.timestamp,...(po.reason===\"paused\"||po.reason===\"account_off\"||po.reason===\"account_read_only\"||po.reason===\"session_shape\"||po.reason===\"server_off\")&&{reason:po.reason},...typeof po.account===\"string\"&&{account:po.account},...(po.accountChoice===\"on\"||po.accountChoice===\"read_only\"||po.accountChoice===\"off\")&&{accountChoice:po.accountChoice}})}",
+        "variable": false
+      }
+    },
+    {
+      "type": "bridge-session",
+      "condition": {
+        "file": "chunk-mphp7acd.js",
+        "name": "hpn.bridge-session.condition",
+        "start": 4338553,
+        "end": 4338593,
+        "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+        "sha256": "b5145665ccb36545629254974a83fcfb781e5b3ade805fe8cf0a387f2d5681bd",
+        "source": "po.type===\"bridge-session\"&&po.sessionId",
+        "variable": false
+      },
+      "body": {
+        "file": "chunk-mphp7acd.js",
+        "name": "hpn.bridge-session.body",
+        "start": 4338594,
+        "end": 4339179,
+        "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+        "sha256": "bb85fe7dee9e0b6c66ad5192746b488cd05fdffd7ef78bd9a606b2c97c441578",
+        "source": "{if(ke.set(po.sessionId,po.bridgeSessionId),be.set(po.sessionId,po.lastSequenceNum),po.sessionGroupingId)Te.set(po.sessionId,po.sessionGroupingId);else Te.delete(po.sessionId);if(po.noHistoryBackfill)xe.set(po.sessionId,!0);else xe.delete(po.sessionId);{let{ownerAccountUuid:Yr,ownerOrganizationUuid:gr}=po,_o=Yr!==void 0&&!dEe(Yr)||gr!==void 0&&!dEe(gr);if(!_o&&Yr)Pe.set(po.sessionId,Yr);else Pe.delete(po.sessionId);if(!_o&&gr)$e.set(po.sessionId,gr);else $e.delete(po.sessionId)}let Tr=EQ(po.declaredDialogKinds);if(Tr.length>0)ve.set(po.sessionId,Tr);else ve.delete(po.sessionId)}",
+        "variable": false
+      }
+    },
+    {
+      "type": "history-suppression",
+      "condition": {
+        "file": "chunk-mphp7acd.js",
+        "name": "hpn.history-suppression.condition",
+        "start": 4339187,
+        "end": 4339232,
+        "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+        "sha256": "719c280bbb4009f017075b817ec52ea9e3ad8c4c1d174383fc766381a35e9306",
+        "source": "po.type===\"history-suppression\"&&po.sessionId",
+        "variable": false
+      },
+      "body": {
+        "file": "chunk-mphp7acd.js",
+        "name": "hpn.history-suppression.body",
+        "start": 4339233,
+        "end": 4339254,
+        "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+        "sha256": "aff800796fdfedbf09da2dd51f125d3a336c51a25ae5e28c43cf80456126a416",
+        "source": "Ne.add(po.sessionId);",
+        "variable": false
+      }
+    }
+  ],
+  "metadataHelpers": [
+    {
+      "file": "chunk-qd1zqdpb.js",
+      "name": "Emn",
+      "start": 700,
+      "end": 724,
+      "moduleSha256": "1ea63cbcea2f7e5729e6cff547056bbd0f9128160375f7a64d2472dba779a699",
+      "sha256": "1d84327c46509f80c78004a9f0d82d8205fdad92bf6d9e25d5d7003eece8c0bb",
+      "source": "function Emn(){return!1}",
+      "variable": false
+    },
+    {
+      "file": "chunk-4shr1gvc.js",
+      "name": "EQ",
+      "start": 1434,
+      "end": 1559,
+      "moduleSha256": "d08d389cb10b90b3b21ef80e31a779c1aeabcb83fed105c4ab3c7cc417b84f4e",
+      "sha256": "4b8fc211f16ea9401b2bff986918db0fdffe4dd226f79fc712f3b6152d2bb6c2",
+      "source": "function EQ(e){if(!Array.isArray(e))return[];return e.filter((r)=>typeof r===\"string\"&&r.length>0&&r.length<=64).slice(0,32)}",
+      "variable": false
+    }
+  ],
+  "stateRows": [
+    {
+      "file": "chunk-8tppeqgy.js",
+      "name": "Q",
+      "start": 6624,
+      "end": 6668,
+      "moduleSha256": "1936ac23419dfc18ae3bd82f1ab54724335e6f261ca7563ef41f61e34b726450",
+      "sha256": "2c55393f89f93ebdbf72dd815838a1730ce258dd9550c60566b999043f292469",
+      "source": "Q=ct({recorded:null},(e)=>{e.recorded=null})",
+      "variable": true
+    },
+    {
+      "file": "chunk-8tppeqgy.js",
+      "name": "Oxn",
+      "start": 6669,
+      "end": 6822,
+      "moduleSha256": "1936ac23419dfc18ae3bd82f1ab54724335e6f261ca7563ef41f61e34b726450",
+      "sha256": "449fd8190828a8630b75ce339a511a7caa79e4554d48f77271da069e862dc347",
+      "source": "function Oxn({sourceSessionId:e,transcriptPath:o}){let r=tn(e);Q.recorded=r===null?null:{liveSessionId:q(),source:{sessionId:r,transcriptPath:o??Yf(r)}}}",
+      "variable": false
+    },
+    {
+      "file": "chunk-8tppeqgy.js",
+      "name": "oio",
+      "start": 6822,
+      "end": 6908,
+      "moduleSha256": "1936ac23419dfc18ae3bd82f1ab54724335e6f261ca7563ef41f61e34b726450",
+      "sha256": "0aba5b1db231851f2ae5e7f95f76799ec6f5c5a68d8b9a5d1a187c40d43d54b5",
+      "source": "function oio(){let{recorded:e}=Q;return e!==null&&e.liveSessionId===q()?e.source:null}",
+      "variable": false
+    },
+    {
+      "file": "chunk-x954y317.js",
+      "name": "ct",
+      "start": 5356,
+      "end": 5382,
+      "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+      "sha256": "5da0f7703a355ff03a7692122a7882ea1749f0801ed8f38d6b64ce727d2cd856",
+      "source": "function ct(t,e){return t}",
+      "variable": false
+    },
+    {
+      "file": "chunk-3emzdyv3.js",
+      "name": "e",
+      "start": 661,
+      "end": 702,
+      "moduleSha256": "2c9d79253de31a7f06a119ca88f7c2bf9961bbee359e4227f8a95ef1210b292d",
+      "sha256": "9b4f3990ed02536968e150f9905d7abdfababb05ae2d0245e825baffc0f98667",
+      "source": "class e{last=null;record(s){this.last=s}}",
+      "variable": false
+    },
+    {
+      "file": "chunk-3emzdyv3.js",
+      "name": "w4",
+      "start": 706,
+      "end": 725,
+      "moduleSha256": "2c9d79253de31a7f06a119ca88f7c2bf9961bbee359e4227f8a95ef1210b292d",
+      "sha256": "3a2a0cd14ae1e5b8da16a1095e802b68fcbc1b10c0ddf0fa75a30b9623f7136b",
+      "source": "w4=new V(()=>new e)",
+      "variable": true
+    }
+  ],
+  "version": "2.1.287",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "rangeConvention": "UTF-16 end-exclusive",
+  "rows": [
+    {
+      "file": "chunk-8tppeqgy.js",
+      "name": "T5t",
+      "start": 21387,
+      "end": 24847,
+      "moduleSha256": "1936ac23419dfc18ae3bd82f1ab54724335e6f261ca7563ef41f61e34b726450",
+      "sha256": "85f1330f863169d2b87c131605f2aaa013866aec0f63d867f128a6e1ea067a0c",
+      "source": "async function T5t(e,o,r){OVe(r.session.host);let n=r.modeApi?.matchSessionMode(e.mode);if(n)e.messages.push(Nt(n,\"warning\"));let s=$io({...e,source:o.resumeSource??\"file\"},(h)=>e.messages.push(Nt(h,\"warning\"))),{adoptedSessionId:u,effectiveFork:l}=dxe(o.sessionIdOverride??e.sessionId,o.forkSession);if(u)ay(u,\"resume\",o.transcriptPath?re(o.transcriptPath):null),await C5t(r.session,r.storageV5),await cq();if(l){if(await $Te(e,{stripWorktreeSession:!0,stripRelocatedCwd:!0,storageV5:r.storageV5}),e.contentReplacements?.length)await Sne(e.contentReplacements,void 0,r.storageV5)}else f1(e,{storageV5:r.storageV5});if(Hie(s.declined===!0),Ott(e.messages),Bce(e),!l){let h=rve(w4.of(r.session.host),e.worktreeSession,void 0,{storageV5:r.storageV5});if(h)e.messages.push(Nt(Itt(h),\"warning\"));if(F()&&r.storageV5!==void 0)await Nce(r.storageV5);else Lce()}let m=await ZEe(e.projectPath,r.storageV5),{agentDefinition:f,agentType:g}=Rie(e.agentSetting,r.mainThreadAgentDefinition,r.agentDefinitions,{sessionAgentDefinitions:m,sessionCwd:e.projectPath,onResolveMiss:(h)=>e.messages.push(Nt(h,\"warning\"))}),y=e.permissionMode,w=!1,R=await Ae(y,r.permissionModeCliSet||!1),k=null;if(l)Ptt(e.messages);let A=await eve(e.messages,r.initialState.mainLoopModel,(h)=>e.messages.push(Nt(h,\"warning\")),{storageV5:r.storageV5,credentials:r.credentials}),b=A?tve(e.messages,A,l,r.storageV5,r.credentials):void 0;nve(e.messages,l),Htt(e.messages,{fork:l,startup:!0});let v;if(R){let{transitionPermissionMode:h}=await import(\"/$bunfs/root/chunk-5v3372cv.js\"),U=r.initialState.toolPermissionContext;try{v={...h(U.mode,R,U),mode:R}}catch(ae){t(`[sessionRestore] transitionPermissionMode rejected restored mode '${R}': ${ae}`)}}m1(r.modeApi?.isCoordinatorMode()?\"coordinator\":\"normal\");let x=o.includeAttribution?Pe(e):void 0,H=xtt(e.agentName,e.agentColor),M=r.initialState.standaloneAgentContext?{...H,...r.initialState.standaloneAgentContext}:H;Fde(M?.name,r.storageV5,{autoOnly:!e.customTitle&&!r.initialState.standaloneAgentContext?.name});let se=await Me(!!n,r.currentCwd,r.cliAgents,r.agentDefinitions,r.storageV5),j=r.initialState.initialMessage;if(a.CLAUDE_CODE_RESUME_INTERRUPTED_TURN&&e.turnInterruptionState?.kind===\"interrupted_prompt\"&&Hy(e.turnInterruptionState.message.origin))t(\"[sessionRestore] Auto-resuming interrupted turn for bg crash-respawn\"),Yln(\"repl_restore\",e.turnInterruptionState.message),Xln(e.messages,e.turnInterruptionState.message),j={message:e.turnInterruptionState.message};let T=r.initialState;Oxn({sourceSessionId:o.sessionIdOverride??e.sessionId,transcriptPath:o.transcriptPath});let W=nJ();return import.meta.require(\"/$bunfs/root/chunk-cd74mtad.js\").restoreGoalFromTranscript(e.messages,(h)=>{T=h(T)},W),{messages:e.messages.filter((h)=>!(h.type===\"system\"&&(h.subtype===\"bridge_status\"||h.subtype===\"cloud_session_status\"))),sessionStartHooks:e.sessionStartHooks,fileHistorySnapshots:e.fileHistorySnapshots,contentReplacements:e.contentReplacements,agentName:e.agentName,agentColor:e.agentColor===\"default\"?void 0:e.agentColor,restoredAgentDef:f,initialState:{...T,initialMessage:j,...!l&&e.bridgeSessionId&&!(T.replBridgeEnabled&&!T.replBridgeOutboundOnly)&&{replBridgeEnabled:!0,replBridgeOutboundOnly:!1},...e.endedByModel?{endedByModel:!0}:{},...g&&{agent:g},...k&&{attentionBudget:k},...b&&{mainLoopModel:b},...x&&{attribution:x},...M&&{standaloneAgentContext:M},...v&&{toolPermissionContext:v},agentDefinitions:se},sessionHooks:W}}",
+      "variable": false
+    },
+    {
+      "file": "chunk-8tppeqgy.js",
+      "name": "xtt",
+      "start": 7840,
+      "end": 7923,
+      "moduleSha256": "1936ac23419dfc18ae3bd82f1ab54724335e6f261ca7563ef41f61e34b726450",
+      "sha256": "079e8b6ba13984fb9b603c8b3bf52eec3e2368be1186488d9729d2a3e66093dc",
+      "source": "function xtt(e,o){if(!e&&!o)return;return{name:e??\"\",color:o===\"default\"?void 0:o}}",
+      "variable": false
+    },
+    {
+      "file": "chunk-8tppeqgy.js",
+      "name": "Rie",
+      "start": 7923,
+      "end": 9220,
+      "moduleSha256": "1936ac23419dfc18ae3bd82f1ab54724335e6f261ca7563ef41f61e34b726450",
+      "sha256": "640b07e6500f68408b11de88cc33ee40d062f83dca9bac3c558a1bdc3943b30a",
+      "source": "function Rie(e,o,r,n){if(o)return{agentDefinition:o,agentType:void 0};if(!e)return uee(void 0),xHe(void 0),{agentDefinition:void 0,agentType:void 0};let s=n?.sessionAgentDefinitions?T6(n.sessionAgentDefinitions.activeAgents,e):void 0,u=s??T6(r.activeAgents,e);if(s)t(`Resume: agent \"${e}\" restored from the session home set (${n?.sessionCwd??\"unknown\"})`);if(!u){if(t(`Resumed session had agent \"${e}\" but it is no longer available. Using default behavior.`),e!==cLe.agentType){if(p(\"session_resume\",\"agent_resolve_miss\"),n?.onResolveMiss){let l=Ee(),m=n.sessionAgentDefinitions&&n.sessionCwd&&n.sessionCwd!==l?`${n.sessionCwd} or ${l}`:l;n.onResolveMiss(Hn(`This session was running agent '${e}', which is no longer available (no agent by that name in ${m}). `+\"Continuing with the default tools and system prompt \\u2014 the agent's tool restrictions no longer apply. \"+\"To restore it, re-create the agent, or resume with an explicit --agent <name>.\"))}}return uee(void 0),xHe(void 0),{agentDefinition:void 0,agentType:void 0}}if(uee(u.agentType),xHe(u),!Kc()&&u.model&&u.model!==\"inherit\"){let l=Rt(u.model);if(Iy(l)||$r(l))Jp(l);else t(`Agent model \"${u.model}\" is not in the availableModels allowlist; keeping the session model`,{level:\"warn\"})}return{agentDefinition:u,agentType:u.agentType}}",
+      "variable": false
+    },
+    {
+      "file": "chunk-8tppeqgy.js",
+      "name": "ZEe",
+      "start": 9220,
+      "end": 9670,
+      "moduleSha256": "1936ac23419dfc18ae3bd82f1ab54724335e6f261ca7563ef41f61e34b726450",
+      "sha256": "268726fe66f15f9b199dea1e40b70df2bb37cac40de3a97d70b71f5d33c02465",
+      "source": "async function ZEe(e,o){if(!e||e===Ee())return;let r=Se(e);if(Ln(e)||Ln(r)||Lg(e)||Lg(r)||Lg(ne.normalize(e))||pm(e)||pm(r)||Sa(e)){t(`Resume: refusing cross-host session home shape \"${e}\"`);return}if(await wEe(e)){t(`Resume: refusing session home with unverifiable ancestry \"${e}\"`);return}if(!U_t(e)){t(`Resume: not loading agents from session home \"${e}\" \\u2014 workspace trust not persisted for it`);return}try{return await r0(e,o)}catch{return}}",
+      "variable": false
+    },
+    {
+      "file": "chunk-8tppeqgy.js",
+      "name": "Me",
+      "start": 14048,
+      "end": 14110,
+      "moduleSha256": "1936ac23419dfc18ae3bd82f1ab54724335e6f261ca7563ef41f61e34b726450",
+      "sha256": "9f4d57414d548b609dd4c623b0d5bb4db4d212e4511c87608280c181ed122b81",
+      "source": "async function Me(e,o,r,n,s){if(!e)return n;return wme(o,r,s)}",
+      "variable": false
+    },
+    {
+      "file": "chunk-8tppeqgy.js",
+      "name": "Ae",
+      "start": 9857,
+      "end": 10367,
+      "moduleSha256": "1936ac23419dfc18ae3bd82f1ab54724335e6f261ca7563ef41f61e34b726450",
+      "sha256": "045e5a7c59eeb3ed3ab9b1ca16963a2b5e9c918e91738193032dd1c6acb458ce",
+      "source": "async function Ae(e,o){if(o||!e)return;let r=kh(e);if(r===void 0)return;if(r===\"plan\"||r===\"bypassPermissions\")return;if(r===\"default\"){let{isAutoModeFromFallback:n,setProvisionalStartupMode:s}=await import(\"/$bunfs/root/chunk-sn191mdq.js\");if(s(void 0),n())return\"default\";return}if(r===\"auto\"){let{isAutoStartWithheldForHipaaTaint:n}=await import(\"/$bunfs/root/chunk-sn191mdq.js\");if(n()||ol(\"hipaa\"))return;let{isAutoModeGateEnabled:s}=await import(\"/$bunfs/root/chunk-5v3372cv.js\");if(!s())return}return r}",
+      "variable": false
+    },
+    {
+      "file": "chunk-8tppeqgy.js",
+      "name": "iGe",
+      "start": 10521,
+      "end": 10731,
+      "moduleSha256": "1936ac23419dfc18ae3bd82f1ab54724335e6f261ca7563ef41f61e34b726450",
+      "sha256": "f3dfa2ce3a2b2c08c9f11392ba7ceea4b21dc40a7a64a0db2a4e4a4449a78784",
+      "source": "function iGe(){return Boolean(Kc()!==void 0||a.ANTHROPIC_MODEL||a.ANTHROPIC_DEFAULT_FABLE_MODEL||a.ANTHROPIC_DEFAULT_OPUS_MODEL||a.ANTHROPIC_DEFAULT_SONNET_MODEL||a.ANTHROPIC_DEFAULT_HAIKU_MODEL||nIe()||!od())}",
+      "variable": false
+    },
+    {
+      "file": "chunk-8tppeqgy.js",
+      "name": "eve",
+      "start": 10731,
+      "end": 11491,
+      "moduleSha256": "1936ac23419dfc18ae3bd82f1ab54724335e6f261ca7563ef41f61e34b726450",
+      "sha256": "ae33642d4e43b5371c5081d2bc47aa1034d5a5a25bfb9552416772618ad3db02",
+      "source": "async function eve(e,o,r,{scheduleTelemetry:n=(l)=>l(),storageV5:s,credentials:u}={}){if(iGe())return;let l=N(e,o),m=l.kind===\"declined\"&&l.reason===\"not_allowed\"?await Jae(l.model,s,u):void 0;if(m!==void 0&&iGe())return;let f=m===\"overturned\"?N(e,o):l;if(f.kind===\"none\")return;if(f.kind===\"mode_dependent_setting\"){n(()=>i(\"tengu_resume_model_restore\",{outcome:c(\"skipped_mode_dependent_setting\"),is_eap:!1}));return}if(f.kind===\"declined\")n(()=>i(\"tengu_resume_model_restore\",{outcome:c(\"declined\"),decline_reason:me(f.reason),entitlement_reprobe:me(m),is_eap:jSe(f.model)}));if(f.kind===\"declined\"){let g=o&&Fn(o)||\"the default model\";r?.(`Session model ${f.model} could not be restored (${be[f.reason]}) \\u2014 using ${g} instead.`);return}return f.model}",
+      "variable": false
+    },
+    {
+      "file": "chunk-8tppeqgy.js",
+      "name": "N",
+      "start": 11714,
+      "end": 12455,
+      "moduleSha256": "1936ac23419dfc18ae3bd82f1ab54724335e6f261ca7563ef41f61e34b726450",
+      "sha256": "6365bfd99a3b7961598d4f0db469d77be5fea2043034a720f89ff6d660f1f423",
+      "source": "function N(e,o){let r=new Set(L9o.map((u)=>Be(u))),n=o?Rt(o):void 0,s=n?Fn(n):void 0;for(let u=e.length-1;u>=0;u--){let l=e[u];if(l?.type!==\"assistant\"||l.isMeta||typeof l.message?.model!==\"string\"||l.message.model===Ma)continue;let m=l.message.model,f=Xh(),g=typeof f===\"string\"?Ct(f):f;if($H(g)&&!jSe(m)&&ve(g,Be(m)))return{kind:\"mode_dependent_setting\"};let y=!(r.has(Be(m))||jSe(m)||Fn(m)===s)?\"unknown_family\":!Iy(m)&&!$r(m)?\"not_allowed\":KQ(m)?\"retired\":void 0;if(y)return{kind:\"declined\",model:m,reason:y};let R=(o&&zd(o)||n!==void 0&&zd(n))&&(Fn(m)===s||o&&Be(Rt(Fn(o)))===Be(m)),k=asn(e)?.modelId,A=k!==void 0&&zd(k)&&Be(Fn(k))===Be(m);if((R||A)&&wj(m))return{kind:\"ok\",model:m+\"[1m]\"};return{kind:\"ok\",model:m}}return{kind:\"none\"}}",
+      "variable": false
+    },
+    {
+      "file": "chunk-8tppeqgy.js",
+      "name": "ve",
+      "start": 11558,
+      "end": 11714,
+      "moduleSha256": "1936ac23419dfc18ae3bd82f1ab54724335e6f261ca7563ef41f61e34b726450",
+      "sha256": "30718401d23dce7cbf46eb8f4a635bbb1c298cb30ddfd2f386672aa7082a88e5",
+      "source": "function ve(e,o){if(e===\"opusplan\")return o.includes(\"opus\")||o.includes(\"sonnet\");if(e===\"haiku\")return o.includes(\"haiku\")||o.includes(\"sonnet\");return!1}",
+      "variable": false
+    },
+    {
+      "file": "chunk-8tppeqgy.js",
+      "name": "be",
+      "start": 10371,
+      "end": 10520,
+      "moduleSha256": "1936ac23419dfc18ae3bd82f1ab54724335e6f261ca7563ef41f61e34b726450",
+      "sha256": "fc7919c8e8e5c92f0fc7869fee145df35b6b43a911b08aa4877c81259d2fe5a1",
+      "source": "be={unknown_family:\"not a model this version of Claude Code recognizes\",not_allowed:\"not allowed by this account's model settings\",retired:\"retired\"}",
+      "variable": true
+    },
+    {
+      "file": "chunk-8tppeqgy.js",
+      "name": "Ott",
+      "start": 16795,
+      "end": 17107,
+      "moduleSha256": "1936ac23419dfc18ae3bd82f1ab54724335e6f261ca7563ef41f61e34b726450",
+      "sha256": "a9ec05bb5ff9b282e0fc552895966dd7da13bf00b4b56bea37a7481600088836",
+      "source": "function Ott(e){for(let[o,r]of[[Hxn(),Ce],[Dxn(),Ie]]){if(o===void 0)continue;let n=e.findLastIndex((s)=>s.type===\"system\"&&s.subtype===\"informational\"&&typeof s.content===\"string\"&&s.content.includes(r));if(n!==-1&&!e.slice(n+1).some((s)=>s.type===\"user\"||s.type===\"assistant\"))continue;e.push(Nt(o,\"notice\"))}}",
+      "variable": false
+    },
+    {
+      "file": "chunk-8tppeqgy.js",
+      "name": "Hxn",
+      "start": 16700,
+      "end": 16722,
+      "moduleSha256": "1936ac23419dfc18ae3bd82f1ab54724335e6f261ca7563ef41f61e34b726450",
+      "sha256": "e90697cb843b478609bad792a93435cf33293cd02dc8c0aa30a3d6f9b13830e8",
+      "source": "function Hxn(){return}",
+      "variable": false
+    },
+    {
+      "file": "chunk-8tppeqgy.js",
+      "name": "Dxn",
+      "start": 16773,
+      "end": 16795,
+      "moduleSha256": "1936ac23419dfc18ae3bd82f1ab54724335e6f261ca7563ef41f61e34b726450",
+      "sha256": "060914876d6cca795f3fce72de38637f26d0d6d9ab475cea891c50ca4d88e138",
+      "source": "function Dxn(){return}",
+      "variable": false
+    },
+    {
+      "file": "chunk-8tppeqgy.js",
+      "name": "Ce",
+      "start": 16667,
+      "end": 16699,
+      "moduleSha256": "1936ac23419dfc18ae3bd82f1ab54724335e6f261ca7563ef41f61e34b726450",
+      "sha256": "e191a8bd3fff2bb018ece6ef34097332d9e01d9d94d00322a7d6adb33bdc0dd8",
+      "source": "Ce=\"Memory is still paused from\"",
+      "variable": true
+    },
+    {
+      "file": "chunk-8tppeqgy.js",
+      "name": "Ie",
+      "start": 16726,
+      "end": 16772,
+      "moduleSha256": "1936ac23419dfc18ae3bd82f1ab54724335e6f261ca7563ef41f61e34b726450",
+      "sha256": "076f2133c1d04a6bcd2f9684592f8ac28eb33bb611a0341a95bab5e69b55430d",
+      "source": "Ie=\"Auto-memory is still off for this session\"",
+      "variable": true
+    },
+    {
+      "file": "chunk-8tppeqgy.js",
+      "name": "Htt",
+      "start": 24847,
+      "end": 24866,
+      "moduleSha256": "1936ac23419dfc18ae3bd82f1ab54724335e6f261ca7563ef41f61e34b726450",
+      "sha256": "3cece9149d6124d9428ac274e52ec4d1314a8b054a0953de57bb1ee74a9fc46b",
+      "source": "function Htt(e,o){}",
+      "variable": false
+    },
+    {
+      "file": "chunk-v155tbk3.js",
+      "name": "$io",
+      "start": 681,
+      "end": 730,
+      "moduleSha256": "8d1e4b97a3f015f10acaef61b95b27d4c9190db21b425d2cd5031ed70284b7ad",
+      "sha256": "24b87b840f609cfa83317f09a303f85c51ac47145490e336492405bd63f6b0c7",
+      "source": "function $io(e,o){return{pin:void 0,switched:!1}}",
+      "variable": false
+    },
+    {
+      "file": "chunk-v155tbk3.js",
+      "name": "Hie",
+      "start": 730,
+      "end": 750,
+      "moduleSha256": "8d1e4b97a3f015f10acaef61b95b27d4c9190db21b425d2cd5031ed70284b7ad",
+      "sha256": "03ec7e7d2a2704c02b4de988271cbb5498fb50b8d1d96bea14d6c4772e0b6b12",
+      "source": "function Hie(e=!1){}",
+      "variable": false
+    },
+    {
+      "file": "chunk-p54b66vv.js",
+      "name": "B",
+      "start": 1312,
+      "end": 1422,
+      "moduleSha256": "f3a80925f5efacd866866a5b846b48529ccfea55417fd8a0088d7dbcce946849",
+      "sha256": "81216a116a3c3c5615164be567b78e42b81d033f95b88e8045231ce8a98a7d5f",
+      "source": "function B(e){if(!l4(e))return!1;if(tn(e))return!0;return/^[A-Za-z0-9][A-Za-z0-9_]*$/.test(e)&&YH(e)!==void 0}",
+      "variable": false
+    },
+    {
+      "file": "chunk-p54b66vv.js",
+      "name": "Fgn",
+      "start": 1422,
+      "end": 1479,
+      "moduleSha256": "f3a80925f5efacd866866a5b846b48529ccfea55417fd8a0088d7dbcce946849",
+      "sha256": "d8d3e625433c40b87315b109c9206c62a08dfd917f6b6da20f629df184f9cba3",
+      "source": "function Fgn(e,n={}){return n.acceptCustomIds?l4(e):B(e)}",
+      "variable": false
+    },
+    {
+      "file": "chunk-p54b66vv.js",
+      "name": "dxe",
+      "start": 1479,
+      "end": 1892,
+      "moduleSha256": "f3a80925f5efacd866866a5b846b48529ccfea55417fd8a0088d7dbcce946849",
+      "sha256": "9cb79fc99e71907ee3c4136e1547c56f59621346afabc70a12e469f15379c7b4",
+      "source": "function dxe(e,n,i={}){if(n)return{adoptedSessionId:null,effectiveFork:!0};if(e===void 0)return{adoptedSessionId:null,effectiveFork:!1};if(Fgn(e,i))return{adoptedSessionId:e,effectiveFork:!1};return t(`resume: transcript session id (${typeof e}) rejected by the adoption gate; continuing as a fork under the fresh session id`),p(\"session_resume\",\"unadoptable_session_id\"),{adoptedSessionId:null,effectiveFork:!0}}",
+      "variable": false
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "rdt",
+      "start": 4297074,
+      "end": 4297596,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "e2d2d29a9a51b0a9cf7976ef161285c482bff6bbe3ca406aed1702763f6506c3",
+      "source": "function rdt(e,n={}){return{...e,...n.stripWorktreeSession&&{worktreeSession:void 0},...n.stripRelocatedCwd&&{relocatedCwd:void 0},memoryModeStamps:e.memoryModeStamps?.map((r)=>({...r,written:e.forkedFromSessionId!==void 0?r.written??!0:!1})),devModsFolder:void 0,artifactCommentMonitor:void 0,artifactAutoReactLedger:void 0,bridgeSessionId:void 0,bridgeLastSeq:void 0,bridgeDialogKinds:void 0,bridgeSessionGroupingId:void 0,bridgeNoHistoryBackfill:void 0,bridgeOwnerAccountUuid:void 0,bridgeOwnerOrganizationUuid:void 0}}",
+      "variable": false
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "Xln",
+      "start": 2918947,
+      "end": 2919029,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "cf04b75424f88269c8da3cc22b723db5753bf4e17839064f37c9a1fedad804e4",
+      "source": "function Xln(e,n){let r=e.findIndex((s)=>s.uuid===n.uuid);if(r!==-1)e.splice(r,2)}",
+      "variable": false
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "Mct",
+      "start": 1796475,
+      "end": 1796588,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "87d13e7de15b92064706657a31f64fac1d0629dedbd824c4da2ebfb316413980",
+      "source": "function Mct(e,n){let r=Bn();return{promise:n(r.signal).catch((s)=>(Qte(s),[])),placement:e,abort:()=>r.abort()}}",
+      "variable": false
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "Vln",
+      "start": 2890289,
+      "end": 2890465,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "38e3ab8eb0d74358d68f793034181cfb68c0fe90055f8f8bc469e5781af1e421",
+      "source": "function Vln(e){if(!e)return null;let n=e.split(\"|\");if(n.length===1)return{boundaryAt:e};return{...n[0]&&{sessionId:n[0]},boundaryAt:n[1]??\"\",...n[2]&&{parentSessionId:n[2]}}}",
+      "variable": false
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "asn",
+      "start": 132824,
+      "end": 132864,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "3493bd698914bd0a247c9da05d395ab762f941cc8242217d19d5bd27d3e56a71",
+      "source": "function asn(e){return Ahe(e)?.identity}",
+      "variable": false
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "Ahe",
+      "start": 132675,
+      "end": 132824,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "95390419dd52e263c031c801fe29ddec8a8ce928f14f33046c0efde749445690",
+      "source": "function Ahe(e){let n=e.findLast(T_n)?.attachment,r=Che().safeParse(n?.identity);return r.success?{type:\"model\",identity:r.data,text:n?.text}:void 0}",
+      "variable": false
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "T_n",
+      "start": 132601,
+      "end": 132675,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "383b87758df9d20378b201a361df4ee3125411559359373eeb1361c5d269a816",
+      "source": "function T_n(e){return e.type===\"attachment\"&&e.attachment.type===\"model\"}",
+      "variable": false
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "Che",
+      "start": 131676,
+      "end": 131763,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "10008d55b15404248bdfd473669721856082993bbc229f5adf0f7842363ce0a2",
+      "source": "Che=f(()=>u({modelId:o(),marketingName:o().nullable(),knowledgeCutoff:o().nullable()}))",
+      "variable": true
+    },
+    {
+      "file": "chunk-qd1zqdpb.js",
+      "name": "Bft",
+      "start": 615,
+      "end": 661,
+      "moduleSha256": "1ea63cbcea2f7e5729e6cff547056bbd0f9128160375f7a64d2472dba779a699",
+      "sha256": "80c54379005a9116f71a2433e27c744c7deabaef9747fe308516ab0a15589843",
+      "source": "function Bft(e,n){return{...e,endedByModel:n}}",
+      "variable": false
+    },
+    {
+      "file": "chunk-qd1zqdpb.js",
+      "name": "ORe",
+      "start": 661,
+      "end": 700,
+      "moduleSha256": "1ea63cbcea2f7e5729e6cff547056bbd0f9128160375f7a64d2472dba779a699",
+      "sha256": "1c296fcc73772a35a596c108a71bbfcf47d72ff4aae71ccdcbc69f6c18a0b295",
+      "source": "function ORe(e){return e?.endedByModel}",
+      "variable": false
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "Ij",
+      "start": 156234,
+      "end": 156273,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "d6f551ef1ab8aa8f5b749c15800056f43eaba184512e9deb40d53f702effbb14",
+      "source": "function Ij(){return LF().fromFallback}",
+      "variable": false
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "xIe",
+      "start": 156273,
+      "end": 156323,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "4bedf51062002323407d26982ec292ca3828ec24ae115443c28f49b08145e173",
+      "source": "function xIe(e){LF().setProvisionalStartupMode(e)}",
+      "variable": false
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "mds",
+      "start": 156323,
+      "end": 156381,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "09033db3118c5294acb2b0e65e3972964921be8bce720f89f3dc25617b86e204",
+      "source": "function mds(){return LF().autoStartWithheldForHipaaTaint}",
+      "variable": false
+    },
+    {
+      "file": "chunk-nankzm0s.js",
+      "name": "Hy",
+      "start": 127238,
+      "end": 127319,
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "sha256": "056729f6145068eea0d4947efe38a28423e58ec91b80e14a0a291d86b4f46c08",
+      "source": "function Hy(e){return e===void 0||e.kind===\"human\"||e.kind===\"auto-continuation\"}",
+      "variable": false
+    },
+    {
+      "file": "chunk-1b21she7.js",
+      "name": "jSe",
+      "start": 5222,
+      "end": 5266,
+      "moduleSha256": "66df76fe31929f24554fa368a67b8d85a0844736314e2c2d69c6dddfc57099f8",
+      "sha256": "f1d9f520bf346d5c43876b600a8fc0349021083100112b7fed712dee4fd93dc3",
+      "source": "function jSe(e){return/-eap($|\\[)/i.test(e)}",
+      "variable": false
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "Lct",
+      "start": 1797174,
+      "end": 1797271,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "cea6584cf88a9d270f7451021524f6ea177a8faf87054587d99d69fc199859c5",
+      "source": "function Lct(){let e=bie(),n=e.pendingHookSessionTitle;return e.pendingHookSessionTitle=void 0,n}",
+      "variable": false
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "idt",
+      "start": 4308276,
+      "end": 4308484,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "31b020cd30884ec53a33bc13a1577d160321b5210130863c99f6a4ac630ef896",
+      "source": "function idt(e){if(ml())return!1;let n=Si(e);if(!n)return!1;let r=xf(q()),s=r&&Si(r);if(n===s||A1e(n,s||void 0)!==void 0)return!1;return t(`Hook sessionTitle cached (${[...n].length} chars)`),ZD(n),jTe(n),!0}",
+      "variable": false
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "EFe",
+      "start": 4207793,
+      "end": 4207840,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "fac90b1474f4c85c1f860ec3872ba0fbe127dd9c2bed9e0f4128da66efb31c2d",
+      "source": "function EFe(e){return Eye(e,js().sessionFile)}",
+      "variable": false
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "Eye",
+      "start": 4296775,
+      "end": 4296842,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "fa50ce5ffc9b80605e97ff409447aa870007c6babf2589e28c9f7925f57aaefd",
+      "source": "function Eye(e,n){return e!==void 0&&n!=null&&ej(n)===`${e}.jsonl`}",
+      "variable": false
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "_Po",
+      "start": 4308484,
+      "end": 4308772,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "027c84fe45cdd37fa3f50316d1446e60c5b49611fb280bdbd09cdf83c21438c6",
+      "source": "async function _Po(e,n,r){if(!idt(e)||!EFe(n))return;if(Ha())return;let s=js();try{await s.reAppendSessionMetadataAsync(!0,!1,r,F()&&r!==void 0)}catch(g){if(as(g))t(`Hook title re-append failed (${E(g)}): ${l(g)}`,{level:\"error\"});else d(g);eS(Va().writerHealth,\"adopt\",g,s.sessionFile)}}",
+      "variable": false
+    },
+    {
+      "file": "chunk-c9me9cp7.js",
+      "name": "as",
+      "start": 7283,
+      "end": 7375,
+      "moduleSha256": "db81856ee883c31a0be18c305014a0d82d3bd698a459223b9de754b934b084ae",
+      "sha256": "c8891e6cd71509de7ba73d01f2f3d35232708fba7d419488998115b04a312a01",
+      "source": "function as(n){return n!==null&&typeof n===\"object\"&&\"errno\"in n&&typeof n.errno===\"number\"}",
+      "variable": false
+    },
+    {
+      "file": "chunk-x954y317.js",
+      "name": "Ln",
+      "start": 7227,
+      "end": 7275,
+      "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+      "sha256": "a7544d5dcd55adcf0ca6c54350b7dd2aace3bfcffeec0204e829b2a5f897c162",
+      "source": "function Ln(t){return/^[\\\\/]{2}/.test(t)||CD(t)}",
+      "variable": false
+    },
+    {
+      "file": "chunk-x954y317.js",
+      "name": "Lg",
+      "start": 7329,
+      "end": 7376,
+      "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+      "sha256": "eb0245b456bc8c932d6f7219f6ee5ccc5741d8b31267e48f6da62171391f1ac3",
+      "source": "function Lg(t){return/^[\\\\/]\\?\\?[\\\\/]/.test(t)}",
+      "variable": false
+    },
+    {
+      "file": "chunk-x954y317.js",
+      "name": "pm",
+      "start": 12728,
+      "end": 12777,
+      "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+      "sha256": "5cfeb3499326b9c2c759f9b8f2093b8d5e622f979d20b702b28b534d967b83a4",
+      "source": "function pm(t){return da(t)||O_(t)||w$(t)||jS(t)}",
+      "variable": false
+    },
+    {
+      "file": "chunk-x954y317.js",
+      "name": "Sa",
+      "start": 7559,
+      "end": 7621,
+      "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+      "sha256": "8ecd9cc96d72d6cb8f4dbf90eb2920532763d5c8194eaa98575382ce3d614233",
+      "source": "function Sa(t){return/(^|[\\\\/])\\.{1,2}[. ]*([\\\\/]|$)/.test(t)}",
+      "variable": false
+    },
+    {
+      "file": "chunk-x954y317.js",
+      "name": "CD",
+      "start": 22506,
+      "end": 22573,
+      "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+      "sha256": "9f5e7c088caa4dd78a84828f38adca74c7648141a5e012155e4a32cf89bc17e6",
+      "source": "function CD(t){return Ft.test(t)||t.includes(\"??\")&&Ft.test(Xt(t))}",
+      "variable": false
+    },
+    {
+      "file": "chunk-x954y317.js",
+      "name": "da",
+      "start": 11526,
+      "end": 11562,
+      "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+      "sha256": "0ef3c7539f554da9ec078359a324bbb64d7670577771ce892ddfd655de6b21d6",
+      "source": "function da(t){return UEe(t)!==null}",
+      "variable": false
+    },
+    {
+      "file": "chunk-x954y317.js",
+      "name": "O_",
+      "start": 12161,
+      "end": 12359,
+      "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+      "sha256": "a2484523122c49e520853f1b7857e1fdc191b8dbbfb016d07023bbca8742f172",
+      "source": "function O_(t){if(!t.startsWith(\"/\"))return!1;let e=[];for(let n of t.split(\"/\")){if(n===\"\"||n===\".\")continue;if(n===\"..\"){e.pop();continue}e.push(n)}return e.length===1&&e[0].toLowerCase()===\"net\"}",
+      "variable": false
+    },
+    {
+      "file": "chunk-x954y317.js",
+      "name": "jS",
+      "start": 7886,
+      "end": 8182,
+      "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+      "sha256": "99ffe4e5a3cbf6708f9ac9a17e5880d65fcdc17de7bd0f4d49adafc92aa73c3e",
+      "source": "function jS(t){if(!/\\/\\.(?:vol|file|nofollow|resolve)(?:\\/|$)/i.test(t))return!1;if(!t.startsWith(\"/\"))return!1;let e=[];for(let n of t.split(\"/\")){if(n===\"\"||n===\".\")continue;if(n===\"..\"){e.pop();continue}if(e.push(n),e.length===1&&/^\\.(?:vol|file|nofollow|resolve)$/i.test(n))return!0}return!1}",
+      "variable": false
+    },
+    {
+      "file": "chunk-x954y317.js",
+      "name": "Ft",
+      "start": 22577,
+      "end": 22597,
+      "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+      "sha256": "be89eb72d93dcb5bab40560ab6e99b3595f800cd5af0aceb194eb562ac0feef8",
+      "source": "Ft=/^[\\\\/]\\?\\?[\\\\/]/",
+      "variable": true
+    },
+    {
+      "file": "chunk-x954y317.js",
+      "name": "Xt",
+      "start": 22598,
+      "end": 22653,
+      "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+      "sha256": "193c741fc06a5afc4ed932f3624a7aecfda1266a6633044e3f6352fa22bc56da",
+      "source": "function Xt(t){return tt.win32?tt.win32.normalize(t):t}",
+      "variable": false
+    },
+    {
+      "file": "chunk-dd58qaje.js",
+      "name": "YH",
+      "start": 4790,
+      "end": 5091,
+      "moduleSha256": "ded5c77ddc9984f5fbd4b7cc485478fe07934efaf80850adc4761c6b00c00f74",
+      "sha256": "02fcdcdbc49fdcefa73c07715dd3d949741f20658b5c72b685a80fecfc4e5692",
+      "source": "function YH(r){let n=r.lastIndexOf(\"_\");if(n<0)return;let s=r.slice(n+1);if(!s.startsWith(\"01\"))return;let u=J(s.slice(2));if(u===void 0)return;let c=u.toString(16).padStart(32,\"0\");if(c.length!==32)return;return`${c.slice(0,8)}-${c.slice(8,12)}-${c.slice(12,16)}-${c.slice(16,20)}-${c.slice(20,32)}`}",
+      "variable": false
+    },
+    {
+      "file": "chunk-dd58qaje.js",
+      "name": "J",
+      "start": 4597,
+      "end": 4790,
+      "moduleSha256": "ded5c77ddc9984f5fbd4b7cc485478fe07934efaf80850adc4761c6b00c00f74",
+      "sha256": "98787bdce049ebd293650618f7fb5aa701b28d6ec8dbfd34cbe1d9858f2bc475",
+      "source": "function J(r){if(r.length!==22)return;let n=BigInt(58),s=0n;for(let u of r){let c=\"123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz\".indexOf(u);if(c<0)return;s=s*n+BigInt(c)}return s}",
+      "variable": false
+    }
+  ],
+  "carrier": {
+    "file": "chunk-mphp7acd.js",
+    "name": "Mye.return",
+    "start": 2935413,
+    "end": 2936849,
+    "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+    "sha256": "33b9b14c81773d06648f2d55191e62680c2b485c6efcc2968173bac54e40a322",
+    "source": "{messages:w,sessionStartHooks:Qe,turnInterruptionState:Pe.turnInterruptionState,supersededToolUseIds:Pe.supersededToolUseIds,supersededToolNames:Pe.supersededToolNames,answeredToolUseIds:Pe.answeredToolUseIds,rescueSuppressed:Pe.rescueSuppressed,deferredToolUse:be,fileHistorySnapshots:D?void 0:b?.fileHistorySnapshots,attributionSnapshots:b?.attributionSnapshots,contentReplacements:b?.contentReplacements,sessionId:z,agentName:j?void 0:b?.agentName,agentColor:b?.agentColor,agentSetting:b?.agentSetting,customTitle:j?void 0:b?.customTitle,...Bft({},ORe(b)),aiTitle:j?void 0:b?.aiTitle,tag:b?.tag,relocatedCwd:b?.relocatedCwd,projectPath:b?.projectPath,mode:b?.mode,permissionMode:b?.permissionMode,isolationLatch:b?.isolationLatch,devModsFolder:b?.devModsFolder,memoryModeStamps:b?.memoryModeStamps,atisLatch:b?.atisLatch,worktreeSession:b?.worktreeSession,artifactCommentMonitor:b?.artifactCommentMonitor,artifactAutoReactLedger:b?.artifactAutoReactLedger,costState:b?.costState,prNumber:b?.prNumber,prUrl:b?.prUrl,prRepository:b?.prRepository,bridgeSessionId:b?.bridgeSessionId,bridgeLastSeq:b?.bridgeLastSeq,bridgeDialogKinds:b?.bridgeDialogKinds,bridgeSessionGroupingId:b?.bridgeSessionGroupingId,bridgeNoHistoryBackfill:b?.bridgeNoHistoryBackfill,bridgeOwnerAccountUuid:b?.bridgeOwnerAccountUuid,bridgeOwnerOrganizationUuid:b?.bridgeOwnerOrganizationUuid,sessionHistorySuppressed:b?.sessionHistorySuppressed,fullPath:b?.fullPath}",
+    "variable": false
+  },
+  "hookTail": {
+    "file": "chunk-mphp7acd.js",
+    "name": "Mye.hookTail",
+    "start": 2934983,
+    "end": 2935276,
+    "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+    "sha256": "3d6cd8abf97359c3b0e1336aaee2703211000ff51f85d6d6829a6be93c021d8d",
+    "source": "(et)=>H5(i1(),Ne,{sessionId:qe,sessionTitle:xf(q())??(j?void 0:b?.customTitle),resumedMessages:We,orphaned:et,storageV5:r.storageV5,credentials:r.credentials}).then((bt)=>{if(et.aborted)return bt;wr(\"hooks_init_ms\",performance.now()-$e,$e);let ht=Lct();if(ht)_Po(ht,qe,r.storageV5);return bt})",
+    "variable": false
+  },
+  "loader": {
+    "file": "chunk-mphp7acd.js",
+    "name": "Mye",
+    "start": 2932999,
+    "end": 2937041,
+    "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+    "sha256": "fdc90381991602e1360af238aebe2c4f519fcff32aaff4a41947dc5df015a732",
+    "source": "async function Mye(e,n,r){let s,g=(b,w)=>{let D=r.onSessionResolved;if(D===void 0)return;s??=Promise.resolve().then(()=>D({sessionId:uS(b),transcriptPath:w})).catch((j)=>t(`resume: onSessionResolved hook failed: ${l(j)}`))},h=()=>{s?.then((b)=>b?.()).catch(()=>{})};try{let b=null,w=null,D=!1,j=!1,z,K,he=!1;if(e===void 0)b=await aHr({storageV5:r.storageV5,forkSession:r.forkSession,onNewestRunningInBackground:(et)=>{he=!0,r.onNewestRunningInBackground?.(et)}});else if(n&&typeof e===\"string\")b=await Aye(e,n,r.storageV5),z=b?.messages.at(-1)?.sessionId??b?.sessionId??e;else if(typeof e===\"string\"){let et=r.precedingRows?.rows.length?EPo(r.precedingRows.rows,e):void 0;b=await Aye(e,void 0,r.storageV5,et)??await F3o(e,r.storageV5)??await $3o(e,r.storageV5),z=e}else b=e;if(!b&&!w)return p(\"session_resume\",he?\"running_in_background\":\"not_found\"),null;if(b){if(N7(b))b=await Cye(b,{onTranscriptUnreadable:($t)=>{K=$t},storageV5:r.storageV5});if(!z)z=hp(b);let et=Fgn(z,r)?z:void 0,bt=r.forkSession?void 0:et;if(z)if(g(z,b.fullPath),s===void 0)await Pgt(b,et,r.storageV5);else await Promise.all([Pgt(b,et,r.storageV5),s]);let ht=Vln(a.CLAUDE_CODE_RESUME_SOURCE_ALIVE),kt=z??q();if(D=ht!==null&&(ht.sessionId===void 0||ht.sessionId===kt||ht.parentSessionId===kt),j=r.forkSession&&ht?.parentSessionId===kt,!D)ain(b,bt,r.storageV5);w=b.messages,hPo(w),x4t(w,b.fileSize)}let _e=w?.length??0;w=Jln(w),w=I5(w),N3o(w);let ke=b?.fullPath??n,be=ke?await CPo(ke,r.storageV5)??void 0:void 0,ve=w.length,Te=w.at(-1)?.uuid,xe=r.precedingRows?.first===!0&&r.precedingRows.rows.some((et)=>et.uuid===Te),Pe=i6t(w,be?new Set([be.toolUseID]):void 0,r.replyOnResume,b?.rewindAnchorUuid??r.precedingRows?.rows.findLast((et)=>et.type===\"user\"||et.type===\"assistant\")?.uuid,r.resumeInterruptedTurn,j,r.hostAnswerableToolUseIds,r.restoredCardToolUseId);w=Pe.messages;let $e=performance.now(),Ne=r.forkSession||xe||z!==void 0&&!Fgn(z,r)?\"fork\":\"resume\",We=w,qe=!r.forkSession&&Fgn(z,r)?z:q(),Qe=Mct(\"tail\",(et)=>H5(i1(),Ne,{sessionId:qe,sessionTitle:xf(q())??(j?void 0:b?.customTitle),resumedMessages:We,orphaned:et,storageV5:r.storageV5,credentials:r.credentials}).then((bt)=>{if(et.aborted)return bt;wr(\"hooks_init_ms\",performance.now()-$e,$e);let ht=Lct();if(ht)_Po(ht,qe,r.storageV5);return bt}));if(k4t({msgsLoaded:ve,msgsInJsonl:_e}),K!==void 0)p(\"session_resume\",\"transcript_unreadable\",{errno:K});else y(\"session_resume\");return{messages:w,sessionStartHooks:Qe,turnInterruptionState:Pe.turnInterruptionState,supersededToolUseIds:Pe.supersededToolUseIds,supersededToolNames:Pe.supersededToolNames,answeredToolUseIds:Pe.answeredToolUseIds,rescueSuppressed:Pe.rescueSuppressed,deferredToolUse:be,fileHistorySnapshots:D?void 0:b?.fileHistorySnapshots,attributionSnapshots:b?.attributionSnapshots,contentReplacements:b?.contentReplacements,sessionId:z,agentName:j?void 0:b?.agentName,agentColor:b?.agentColor,agentSetting:b?.agentSetting,customTitle:j?void 0:b?.customTitle,...Bft({},ORe(b)),aiTitle:j?void 0:b?.aiTitle,tag:b?.tag,relocatedCwd:b?.relocatedCwd,projectPath:b?.projectPath,mode:b?.mode,permissionMode:b?.permissionMode,isolationLatch:b?.isolationLatch,devModsFolder:b?.devModsFolder,memoryModeStamps:b?.memoryModeStamps,atisLatch:b?.atisLatch,worktreeSession:b?.worktreeSession,artifactCommentMonitor:b?.artifactCommentMonitor,artifactAutoReactLedger:b?.artifactAutoReactLedger,costState:b?.costState,prNumber:b?.prNumber,prUrl:b?.prUrl,prRepository:b?.prRepository,bridgeSessionId:b?.bridgeSessionId,bridgeLastSeq:b?.bridgeLastSeq,bridgeDialogKinds:b?.bridgeDialogKinds,bridgeSessionGroupingId:b?.bridgeSessionGroupingId,bridgeNoHistoryBackfill:b?.bridgeNoHistoryBackfill,bridgeOwnerAccountUuid:b?.bridgeOwnerAccountUuid,bridgeOwnerOrganizationUuid:b?.bridgeOwnerOrganizationUuid,sessionHistorySuppressed:b?.sessionHistorySuppressed,fullPath:b?.fullPath}}catch(b){if(m(\"session_resume\",\"load_failed\"),h(),Nhe(b))t(`loadConversationForResume failed (${E(b)}): ${l(b)}`,{level:\"error\"});else d(st(Z(b),\"loadConversationForResume failed\"));throw b}}",
+    "variable": false
+  },
+  "bindings": [
+    "f",
+    "o",
+    "u",
+    "UEe",
+    "w$",
+    "OVe",
+    "Nt",
+    "ay",
+    "C5t",
+    "cq",
+    "$Te",
+    "Sne",
+    "f1",
+    "Bce",
+    "rve",
+    "Itt",
+    "w4",
+    "F",
+    "Nce",
+    "Lce",
+    "wme",
+    "Ee",
+    "Se",
+    "ne",
+    "wEe",
+    "U_t",
+    "r0",
+    "uee",
+    "xHe",
+    "T6",
+    "t",
+    "p",
+    "Hn",
+    "cLe",
+    "Kc",
+    "Rt",
+    "Iy",
+    "$r",
+    "Jp",
+    "kh",
+    "ol",
+    "a",
+    "nIe",
+    "od",
+    "L9o",
+    "Be",
+    "Fn",
+    "Ma",
+    "Xh",
+    "Ct",
+    "$H",
+    "KQ",
+    "zd",
+    "wj",
+    "Jae",
+    "i",
+    "c",
+    "me",
+    "Ptt",
+    "tve",
+    "nve",
+    "Pe",
+    "Fde",
+    "Yln",
+    "Oxn",
+    "nJ",
+    "m1",
+    "re",
+    "l4",
+    "tn",
+    "Bn",
+    "Qte",
+    "LF",
+    "tt",
+    "H5",
+    "i1",
+    "q",
+    "xf",
+    "wr",
+    "bie",
+    "ml",
+    "Si",
+    "A1e",
+    "ZD",
+    "jTe",
+    "js",
+    "Va",
+    "eS",
+    "E",
+    "ej",
+    "Ha",
+    "d",
+    "l"
+  ],
+  "relocation": {
+    "import.meta.require": "ports.nativeRequire",
+    "import(\"/$bunfs/root/": "ports.nativeImport(\"/$bunfs/root/"
+  },
+  "cuts": "Imported leaves use existing owners; Ptt/tve/nve explicitly preserve frozen refusal/fallback C, not claimed original fallback recovery."
+}

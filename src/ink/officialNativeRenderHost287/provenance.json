@@ -1,0 +1,104 @@
+{
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16 end-exclusive",
+  "owner": {
+    "file": "chunk-p50qybax.js",
+    "name": "IDe",
+    "start": 303290,
+    "end": 353258,
+    "moduleSha256": "a5c603d3b6de009ebb273372a871ca694b0dbfd3e4fc1f2682eae668c0c643a2"
+  },
+  "rows": [
+    {
+      "file": "chunk-p50qybax.js",
+      "name": "frameListeners",
+      "start": 303773,
+      "end": 303796,
+      "source": "frameListeners=new Set;",
+      "property": true,
+      "moduleSha256": "a5c603d3b6de009ebb273372a871ca694b0dbfd3e4fc1f2682eae668c0c643a2",
+      "sha256": "806dc1c9d1edb74f43a8ff24b915f0298881ef8de6cc3809807d02c52d9d29c7"
+    },
+    {
+      "file": "chunk-p50qybax.js",
+      "name": "subscribeFrames",
+      "start": 303796,
+      "end": 303882,
+      "source": "subscribeFrames=(n)=>(this.frameListeners.add(n),()=>{this.frameListeners.delete(n)});",
+      "property": true,
+      "moduleSha256": "a5c603d3b6de009ebb273372a871ca694b0dbfd3e4fc1f2682eae668c0c643a2",
+      "sha256": "33ff598ee47f4af369021cbbf9b4b821e506d041e9e8990a75f22f05d6f15f9e"
+    },
+    {
+      "file": "chunk-p50qybax.js",
+      "name": "tellFrameListeners",
+      "start": 303882,
+      "end": 303940,
+      "source": "tellFrameListeners(){for(let n of this.frameListeners)n()}",
+      "property": false,
+      "moduleSha256": "a5c603d3b6de009ebb273372a871ca694b0dbfd3e4fc1f2682eae668c0c643a2",
+      "sha256": "a8ebebd3067fbf4843fcf100694868f7d323c5d8df9cdd1c76c59d745f94c6d2"
+    },
+    {
+      "file": "chunk-p50qybax.js",
+      "name": "clickListeners",
+      "start": 303940,
+      "end": 303963,
+      "source": "clickListeners=new Set;",
+      "property": true,
+      "moduleSha256": "a5c603d3b6de009ebb273372a871ca694b0dbfd3e4fc1f2682eae668c0c643a2",
+      "sha256": "ec0c8577c045909ba6981ba29c1b182f6a3a8510825f7356b71939f4e78d2a4b"
+    },
+    {
+      "file": "chunk-p50qybax.js",
+      "name": "subscribeClicks",
+      "start": 303963,
+      "end": 304049,
+      "source": "subscribeClicks=(n)=>(this.clickListeners.add(n),()=>{this.clickListeners.delete(n)});",
+      "property": true,
+      "moduleSha256": "a5c603d3b6de009ebb273372a871ca694b0dbfd3e4fc1f2682eae668c0c643a2",
+      "sha256": "eb60c91548031b0c6574882a148739c12ab8a986fe21a1bd702cce00a948b40f"
+    },
+    {
+      "file": "chunk-p50qybax.js",
+      "name": "tellClickedNowhere",
+      "start": 304049,
+      "end": 304181,
+      "source": "tellClickedNowhere(){let n=[...this.clickListeners];queueMicrotask(()=>{for(let u of n)if(this.clickListeners.has(u))u(null,null)})}",
+      "property": false,
+      "moduleSha256": "a5c603d3b6de009ebb273372a871ca694b0dbfd3e4fc1f2682eae668c0c643a2",
+      "sha256": "860dfda160414f4afd10a1bd376634a88f36a5d287bbd08d992e3b760392513e"
+    },
+    {
+      "file": "chunk-p50qybax.js",
+      "name": "hoverTrackedListeners",
+      "start": 303471,
+      "end": 303501,
+      "source": "hoverTrackedListeners=new Set;",
+      "property": true,
+      "moduleSha256": "a5c603d3b6de009ebb273372a871ca694b0dbfd3e4fc1f2682eae668c0c643a2",
+      "sha256": "b2dbe184c25612caf46e506566000322b0dec034ab8ae6dbba4875b137fe1dc4"
+    },
+    {
+      "file": "chunk-p50qybax.js",
+      "name": "subscribeHoverTracked",
+      "start": 303501,
+      "end": 303607,
+      "source": "subscribeHoverTracked=(n)=>(this.hoverTrackedListeners.add(n),()=>{this.hoverTrackedListeners.delete(n)});",
+      "property": true,
+      "moduleSha256": "a5c603d3b6de009ebb273372a871ca694b0dbfd3e4fc1f2682eae668c0c643a2",
+      "sha256": "2dd0f952e3e360e52b130af482b9ec448acde41a7595423bfa4f68b3f429babc"
+    },
+    {
+      "file": "chunk-p50qybax.js",
+      "name": "isHoverTracked",
+      "start": 303607,
+      "end": 303685,
+      "source": "isHoverTracked=()=>this.altScreenActive&&this.altScreenMouseTracking===\"full\";",
+      "property": true,
+      "moduleSha256": "a5c603d3b6de009ebb273372a871ca694b0dbfd3e4fc1f2682eae668c0c643a2",
+      "sha256": "05b8b5068ff4d7d35f67ca18657ff5d56d181a1412de5de22f6f28dc48a08568"
+    }
+  ],
+  "adaptation": "Property/member receiver installation on existing Ink this, not another root/cache/context; original function bodies unchanged."
+}

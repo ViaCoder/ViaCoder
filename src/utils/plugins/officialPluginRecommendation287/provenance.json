@@ -1,0 +1,156 @@
+{
+  "version": "2.1.287",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16 end-exclusive",
+  "rawModules": [
+    {
+      "file": "chunk-f2cpzzp9.js",
+      "sha256": "ecf059605929abc2d38c30fc6d3b5b0b69ef05c9d344e934443f320a48256dae",
+      "bytes": 1601421
+    }
+  ],
+  "declarations": [
+    {
+      "file": "chunk-f2cpzzp9.js",
+      "name": "GH",
+      "start": 1530980,
+      "endExclusive": 1532256,
+      "moduleSha256": "ecf059605929abc2d38c30fc6d3b5b0b69ef05c9d344e934443f320a48256dae",
+      "sha256": "a4c987a6d2d446da07e7e66b23dc89c6f6598e7ef6e832a8a08adb15b5bc109c",
+      "source": "async function GH(h,v,D,N,X,Se){let _e=abe(v,\"(unnamed plugin)\");try{let Pe=await g2(h,Se,\"install\");if(!Pe)throw Error(`Plugin ${h} not found in marketplace`);await X(Pe),N({key:`${D}-installed`,kind:\"feedback\",jsx:r(n,{color:\"success\",children:[e(Qe,{status:\"success\",withSpace:!0}),_e,\" installed \\xB7 restart to apply\"]}),priority:\"immediate\",timeoutMs:5000}),y(\"plugin_recommendation_install\")}catch(Pe){if(Pe instanceof Fl){t(`Plugin ${h} not installed: ${Pe.message}`),N({key:`${D}-install-refused`,text:Pe.message,color:\"warning\",priority:\"immediate\",timeoutMs:8000});let{code:Ie,kind:Oe}=s1t(Pe);if(Oe===\"bad\")m(\"plugin_recommendation_install\",Ie);else p(\"plugin_recommendation_install\",Ie);return}if(Pe instanceof oLt){t(`Plugin ${h} not installed: ${Pe.message}`),N({key:`${D}-install-refused`,text:Rdt({refused:h,askedFor:h,sharedWith:\"installed\",holders:Pe.holders,surface:\"notice\"}),color:\"warning\",priority:\"immediate\",timeoutMs:8000}),p(\"plugin_recommendation_install\",\"plugin_folder_held\");return}t(`Failed to install plugin ${h}: ${Pe instanceof Error?Pe.message:String(Pe)}`,{level:\"error\"}),N({key:`${D}-install-failed`,text:`Failed to install ${_e}`,color:\"error\",priority:\"immediate\",timeoutMs:5000}),m(\"plugin_recommendation_install\",\"install_failed\")}}",
+      "variable": false
+    },
+    {
+      "file": "chunk-f2cpzzp9.js",
+      "name": "nrt",
+      "start": 1533475,
+      "endExclusive": 1534542,
+      "moduleSha256": "ecf059605929abc2d38c30fc6d3b5b0b69ef05c9d344e934443f320a48256dae",
+      "sha256": "aa7c9a73b37c5dab04dd9476cf60c73c808e095a7837f7e2ca05ca0b18d44d5e",
+      "source": "function nrt({pluginId:h,pluginName:v},D,N,X){switch(t(`[useLspPluginRecommendation] User response: ${D} for ${v}`),D){case\"yes\":GH(h,v,\"lsp-plugin\",N,async(Se)=>{t(`[useLspPluginRecommendation] Installing plugin: ${h}`);let _e=await Il(X),Pe;if(typeof Se.entry.source===\"string\"){let Ie=await P9(h,Se.marketplaceInstallLocation,Se.entry.source,_e,vv(),X),Oe=Lgt(Ie);if(Oe.entryPath===void 0)throw new P(`Plugin ${Lt(h,120)}: ${Oe.reason}`,\"lsp plugin recommendation marketplace path refused\");Pe=Oe.entryPath}await AHr(h,Se.entry,\"user\",void 0,Pe,void 0,void 0,Se.marketplaceInstallLocation,tSe(h,_e),void 0,X,{explicitInstall:!1}),await Ri(\"userSettings\",(Ie)=>({enabledPlugins:{...Ie?.enabledPlugins,[h]:!0}}),void 0,X),t(`[useLspPluginRecommendation] Plugin installed: ${h}`)},X);break;case\"no\":break;case\"timeout\":t(\"[useLspPluginRecommendation] Auto-dismissed unanswered, incrementing ignored count\"),Qnt(X);break;case\"never\":Gnt(h,X);break;case\"disable\":Ae((Se)=>{if(Se.lspRecommendationDisabled)return Se;return{...Se,lspRecommendationDisabled:!0}},X);break}}",
+      "variable": false
+    },
+    {
+      "file": "chunk-f2cpzzp9.js",
+      "name": "Mbe",
+      "start": 1529059,
+      "endExclusive": 1530241,
+      "moduleSha256": "ecf059605929abc2d38c30fc6d3b5b0b69ef05c9d344e934443f320a48256dae",
+      "sha256": "e3675fd2a767f628e646385f061b492465dc4cb364ea2650f8f479187894de8f",
+      "source": "async function Mbe(h,v,D){if(Mgo())return t(\"[lspRecommendation] Recommendations are disabled\"),[];let N=Tgo(v).toLowerCase();if(!N)return t(\"[lspRecommendation] No file extension found\"),[];t(`[lspRecommendation] Looking for LSP plugins for ${N}`);let X=await Pgo(D),_e=le().lspRecommendationNeverPlugins??[],Pe=[];for(let[Oe,Ne]of X){if(!Ne.extensions.has(N))continue;if(_e.includes(Oe)){t(`[lspRecommendation] Skipping ${Oe} (in never suggest list)`);continue}if(CN(Oe)){t(`[lspRecommendation] Skipping ${Oe} (already installed)`);continue}Pe.push({info:Ne,pluginId:Oe})}let Ie=[];for(let{info:Oe,pluginId:Ne}of Pe)if(await qnt(h,Oe.command))Ie.push({info:Oe,pluginId:Ne}),t(`[lspRecommendation] Binary '${Oe.command}' found for ${Ne}`);else t(`[lspRecommendation] Skipping ${Ne} (binary '${Oe.command}' not found)`);return Ie.sort((Oe,Ne)=>{if(Oe.info.isOfficial&&!Ne.info.isOfficial)return-1;if(!Oe.info.isOfficial&&Ne.info.isOfficial)return 1;return 0}),Ie.map(({info:Oe,pluginId:Ne})=>({pluginId:Ne,pluginName:hf(Oe.entry),marketplaceName:Oe.marketplaceName,description:Oe.entry.description,isOfficial:Oe.isOfficial,extensions:Array.from(Oe.extensions),command:Oe.command}))}",
+      "variable": false
+    },
+    {
+      "file": "chunk-f2cpzzp9.js",
+      "name": "Pgo",
+      "start": 1528528,
+      "endExclusive": 1529059,
+      "moduleSha256": "ecf059605929abc2d38c30fc6d3b5b0b69ef05c9d344e934443f320a48256dae",
+      "sha256": "50b62cf769dadcbeee2117c18354bc2a8a2f43425c50c23289cdda03e2eb541c",
+      "source": "async function Pgo(h){let v=new Map;try{let D=await _c(h);for(let[N,X]of Object.entries(D)){if(!Lc(X.source))continue;try{let Se=await Ecn(N,h),_e=el(N);for(let Pe of Se.plugins){if(!Pe.lspServers)continue;let Ie=Rgo(Pe.lspServers);if(!Ie)continue;let Oe=`${Pe.name}@${N}`;v.set(Oe,{entry:Pe,marketplaceName:N,extensions:Ie.extensions,command:Ie.command,isOfficial:_e})}}catch(Se){t(`[lspRecommendation] Failed to load marketplace ${N}: ${Se}`)}}}catch(D){t(`[lspRecommendation] Failed to load marketplaces config: ${D}`)}return v}",
+      "variable": false
+    },
+    {
+      "file": "chunk-f2cpzzp9.js",
+      "name": "qnt",
+      "start": 1527442,
+      "endExclusive": 1527892,
+      "moduleSha256": "ecf059605929abc2d38c30fc6d3b5b0b69ef05c9d344e934443f320a48256dae",
+      "sha256": "ae41ed1e6c54c0fd1688464466ff838a896de14ea27cadf6ce6cd6eb4476c4e9",
+      "source": "async function qnt(h,v){if(!v||!v.trim())return t(\"[binaryCheck] Empty command provided, returning false\"),!1;let D=v.trim();if(!_go.test(D))return t(`[binaryCheck] Rejected command with unsafe characters: '${D}'`),!1;let N=Cgo.of(h),X=N.lookup(D);if(X!==void 0)return t(`[binaryCheck] Cache hit for '${D}': ${X}`),X;let Se=!1;if(await fc(D).catch(()=>null))Se=!0;return N.remember(D,Se),t(`[binaryCheck] Binary '${D}' ${Se?\"found\":\"not found\"}`),Se}",
+      "variable": false
+    },
+    {
+      "file": "chunk-f2cpzzp9.js",
+      "name": "Mgo",
+      "start": 1530615,
+      "endExclusive": 1530724,
+      "moduleSha256": "ecf059605929abc2d38c30fc6d3b5b0b69ef05c9d344e934443f320a48256dae",
+      "sha256": "9ec7d7fc02d0587d1741cebfb8042c94abcfa10124a0e4d43a477022e964fcfc",
+      "source": "function Mgo(){let h=le();return h.lspRecommendationDisabled===!0||(h.lspRecommendationIgnoredCount??0)>=xgo}",
+      "variable": false
+    },
+    {
+      "file": "chunk-f2cpzzp9.js",
+      "name": "Gnt",
+      "start": 1530241,
+      "endExclusive": 1530445,
+      "moduleSha256": "ecf059605929abc2d38c30fc6d3b5b0b69ef05c9d344e934443f320a48256dae",
+      "sha256": "33023268d9d9ae2dd76cc5ac0dc5bf0aa3711b5e9e80795a08214f7b2cee58c2",
+      "source": "function Gnt(h,v){Ae((D)=>{let N=D.lspRecommendationNeverPlugins??[];if(N.includes(h))return D;return{...D,lspRecommendationNeverPlugins:[...N,h]}},v),t(`[lspRecommendation] Added ${h} to never suggest`)}",
+      "variable": false
+    },
+    {
+      "file": "chunk-f2cpzzp9.js",
+      "name": "Qnt",
+      "start": 1530445,
+      "endExclusive": 1530615,
+      "moduleSha256": "ecf059605929abc2d38c30fc6d3b5b0b69ef05c9d344e934443f320a48256dae",
+      "sha256": "f0505e3c71939a2d16315c642a94578e8ea79f6886b5977d707e0b17ac28a1d5",
+      "source": "function Qnt(h){Ae((v)=>{let D=(v.lspRecommendationIgnoredCount??0)+1;return{...v,lspRecommendationIgnoredCount:D}},h),t(\"[lspRecommendation] Incremented ignored count\")}",
+      "variable": false
+    },
+    {
+      "file": "chunk-f2cpzzp9.js",
+      "name": "Rgo",
+      "start": 1527902,
+      "endExclusive": 1528182,
+      "moduleSha256": "ecf059605929abc2d38c30fc6d3b5b0b69ef05c9d344e934443f320a48256dae",
+      "sha256": "bf8c30db513bf0490a04e5c21fe8e5f0b5f702ede1e1f003803af12fed9e52ef",
+      "source": "function Rgo(h){if(!h)return null;if(typeof h===\"string\")return t(\"[lspRecommendation] Skipping string path lspServers (not readable from marketplace)\"),null;if(Array.isArray(h)){for(let v of h){if(typeof v===\"string\")continue;let D=Vnt(v);if(D)return D}return null}return Vnt(h)}",
+      "variable": false
+    },
+    {
+      "file": "chunk-f2cpzzp9.js",
+      "name": "Vnt",
+      "start": 1528235,
+      "endExclusive": 1528528,
+      "moduleSha256": "ecf059605929abc2d38c30fc6d3b5b0b69ef05c9d344e934443f320a48256dae",
+      "sha256": "bc46c0b28722fa0bbd0a188cac30d26787f3308a841757369c981cb94d069c0a",
+      "source": "function Vnt(h){let v=new Set,D=null;for(let[N,X]of Object.entries(h)){if(!$nt(X))continue;if(!D&&typeof X.command===\"string\")D=X.command;let Se=X.extensionToLanguage;if($nt(Se))for(let _e of Object.keys(Se))v.add(_e.toLowerCase())}if(!D||v.size===0)return null;return{extensions:v,command:D}}",
+      "variable": false
+    },
+    {
+      "file": "chunk-f2cpzzp9.js",
+      "name": "$nt",
+      "start": 1528182,
+      "endExclusive": 1528235,
+      "moduleSha256": "ecf059605929abc2d38c30fc6d3b5b0b69ef05c9d344e934443f320a48256dae",
+      "sha256": "67e1beb6ad75f54e4666dd810b39bf52c72ecee228de315be9bdc54ea5c3d68b",
+      "source": "function $nt(h){return typeof h===\"object\"&&h!==null}",
+      "variable": false
+    },
+    {
+      "file": "chunk-f2cpzzp9.js",
+      "name": "FX",
+      "start": 1532308,
+      "endExclusive": 1533475,
+      "moduleSha256": "ecf059605929abc2d38c30fc6d3b5b0b69ef05c9d344e934443f320a48256dae",
+      "sha256": "ad262b11234279fa5dfe75dac3d38eb09651fac8dd5cfcc23bd0f42c4fda6550",
+      "source": "function FX(h,v){let _e=w(9),D=z(Ngo),{addNotification:N}=_o(),{storageV5:X}=Te(),Se=ri(),Pe;if(_e[0]===b)Pe=new Set,_e[0]=Pe;else Pe=_e[0];let Ie=A(Pe),Oe,Ne;if(_e[1]!==N||_e[2]!==v||_e[3]!==Se||_e[4]!==h||_e[5]!==X||_e[6]!==D)Oe=()=>{v(\"lsp\",async()=>{if(eir()){return}let Ve=[];for(const qe of D){if(!Ie.current.has(qe))Ie.current.add(qe),Ve.push(qe)}for(const[ze,pt]of Ve.entries()){;try{let ht=(await Mbe(Se,pt,X))[0];if(ht){t(`[useLspPluginRecommendation] Found match: ${ht.pluginName} for ${pt}`);let yt={pluginId:ht.pluginId,pluginName:ht.pluginName,pluginDescription:ht.description,marketplaceName:ht.marketplaceName,fileExtension:znt(pt)};let bt=await h(Bb,{pluginName:yt.pluginName,pluginDescription:yt.pluginDescription,marketplaceName:yt.marketplaceName,fileExtension:yt.fileExtension},{place:\"under\"});if(bt===\"cancelled\"){for(const xt of Ve.slice(ze))Ie.current.delete(xt);return}tir(!0),nrt(yt,bt,N,X);return}}catch(St){let Ut=St;t(`[useLspPluginRecommendation] Failed to check for LSP plugins for ${pt}: ${Ut}`,{level:\"error\"})}}})},Ne=[D,v,h,N,X,Se],_e[1]=N,_e[2]=v,_e[3]=Se,_e[4]=h,_e[5]=X,_e[6]=D,_e[7]=Oe,_e[8]=Ne;else Oe=_e[7],Ne=_e[8];R(Oe,Ne)}",
+      "variable": false
+    },
+    {
+      "file": "chunk-f2cpzzp9.js",
+      "name": "UX",
+      "start": 1535876,
+      "endExclusive": 1537328,
+      "moduleSha256": "ecf059605929abc2d38c30fc6d3b5b0b69ef05c9d344e934443f320a48256dae",
+      "sha256": "c952f2153a583a81909d9fc8c99e97077545361e0d062678085a3e90de9f7ef6",
+      "source": "function UX(h,v){let _e=w(11),{pendingHint:D}=_r(),N=kt(D.subscribe,D.getSnapshot),{addNotification:X}=_o(),{storageV5:Se}=Te(),Pe,Ie;if(_e[0]!==D)Pe=()=>{let Ne=()=>{for(const Oe of D.takeSubmitted())Lbe(Oe,D)};return Ne(),D.subscribeSubmitted(Ne)},Ie=[D],_e[0]=D,_e[1]=Pe,_e[2]=Ie;else Pe=_e[1],Ie=_e[2];R(Pe,Ie);let Ve,qe;if(_e[3]!==X||_e[4]!==v||_e[5]!==D||_e[6]!==N||_e[7]!==h||_e[8]!==Se)Ve=()=>{if(!N){return}v(\"hint\",async()=>{if(D.shownThisSession){D.dismiss();return}let ze=await Fbe(N,Se);if(ze)t(`[useClaudeCodeHintRecommendation] surfacing ${ze.pluginId} from ${ze.sourceCommand}`);if(D.pending===N)D.dismiss();if(!ze){return}let pt=await h(Hb,{pluginName:ze.pluginName,pluginDescription:ze.pluginDescription,marketplaceName:ze.marketplaceName,sourceCommand:ze.sourceCommand},{place:\"under\"});if(pt===\"cancelled\"){return}Ut:switch(D.markShown(),Bbe(ze.pluginId,Se),i(\"tengu_plugin_hint_response\",{_PROTO_plugin_name:vn(ze.pluginId).name,_PROTO_marketplace_name:ze.marketplaceName,response:c(pt)}),pt){case\"yes\":{let{pluginId:St,pluginName:ht,marketplaceName:yt}=ze;GH(St,ht,\"hint-plugin\",X,async(bt)=>{let xt=await Pdt({pluginId:St,entry:bt.entry,marketplaceName:yt,scope:\"user\",trigger:\"hint\",storageV5:Se});if(!xt.success){throw xt.refusal??Error(xt.error)}},Se);break Ut}case\"disable\":{Hbe(Se);break Ut}case\"no\":}})},qe=[N,D,v,h,X,Se],_e[3]=X,_e[4]=v,_e[5]=D,_e[6]=N,_e[7]=h,_e[8]=Se,_e[9]=Ve,_e[10]=qe;else Ve=_e[9],qe=_e[10];R(Ve,qe)}",
+      "variable": false
+    },
+    {
+      "file": "chunk-f2cpzzp9.js",
+      "name": "Ibe",
+      "start": 1530728,
+      "endExclusive": 1530980,
+      "moduleSha256": "ecf059605929abc2d38c30fc6d3b5b0b69ef05c9d344e934443f320a48256dae",
+      "sha256": "259194151b2d69a2ca2749e2d9d9b670385568f26ab4590fb1b79bc568b2a157",
+      "source": "function Ibe(){let h=A(!1),v=A(new Map),D=ce((N,X)=>{if(Ft()||am())return;if(h.current){v.current.set(N,X);return}h.current=!0,X().catch(d).finally(()=>{h.current=!1;let[Se]=v.current;if(Se){let[_e,Pe]=Se;v.current.delete(_e),D(_e,Pe)}})},[]);return D}",
+      "variable": false
+    }
+  ],
+  "bodyRewriting": false,
+  "scope": "Complete original recommendation resolution/install response and refusal closure; existing Hpr scheduling and frozen official LSP automatic-install C retained."
+}

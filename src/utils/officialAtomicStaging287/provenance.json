@@ -1,0 +1,709 @@
+{
+  "version": "2.1.287",
+  "platform": "darwin-arm64",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "binarySha256": "6eab8333fe2121553100d8f40bfada384a3e989b94f947e18ba6677a6fcb41ea",
+  "offsetUnit": "UTF-16 code units; end-exclusive",
+  "roots": {
+    "ensure": [
+      "chunk-5vadtxaa.js",
+      "pB"
+    ],
+    "directories": [
+      "chunk-5vadtxaa.js",
+      "fB"
+    ],
+    "state": [
+      "chunk-5vadtxaa.js",
+      "mB"
+    ],
+    "publishGitignore": [
+      "chunk-f1vb7bx7.js",
+      "xtr"
+    ]
+  },
+  "modules": [
+    {
+      "file": "chunk-31g8tfvj.js",
+      "rows": [
+        {
+          "file": "chunk-31g8tfvj.js",
+          "name": "bL",
+          "start": 3011,
+          "end": 3026,
+          "moduleLength": 12449,
+          "moduleSha256": "a4ecd8a70a7c49ea9710cd923dece2900831d5a4306866de9af12b47793d717e",
+          "sha256": "4400030be2fd1a0726368ba488a071ee8ea056859e2b20c74f5d917139d46c5d",
+          "source": "bL=\".cc-writes\"",
+          "variable": true,
+          "exportNames": [
+            "bL"
+          ]
+        }
+      ],
+      "bindings": {},
+      "initializers": []
+    },
+    {
+      "file": "chunk-c9me9cp7.js",
+      "rows": [
+        {
+          "file": "chunk-c9me9cp7.js",
+          "name": "E",
+          "start": 4814,
+          "end": 4913,
+          "moduleLength": 10331,
+          "moduleSha256": "db81856ee883c31a0be18c305014a0d82d3bd698a459223b9de754b934b084ae",
+          "sha256": "a84ab0a2488aed5689416393c679dde4e7f4b29aa980e121bd56b25ab3e7b5e4",
+          "source": "function E(n){if(n&&typeof n===\"object\"&&\"code\"in n&&typeof n.code===\"string\")return n.code;return}",
+          "variable": false,
+          "exportNames": [
+            "E"
+          ]
+        }
+      ],
+      "bindings": {},
+      "initializers": []
+    },
+    {
+      "file": "chunk-f1vb7bx7.js",
+      "rows": [
+        {
+          "file": "chunk-f1vb7bx7.js",
+          "name": "Rtr",
+          "start": 4613,
+          "end": 4735,
+          "moduleLength": 111323,
+          "moduleSha256": "2f76d1800a2202fe6717904ab677e2509d0b124302d3d31e325353b307f795d1",
+          "sha256": "39cddd4db3d87bcf9522bd36c0f7d47b36ea670c4bb2ebd550a016897db1ca43",
+          "source": "async function Rtr(e,n){let{code:r}=await Je(\"git\",[\"check-ignore\",\"--\",e],{preserveOutputOnError:!1,cwd:n});return r===0}",
+          "variable": false,
+          "exportNames": [
+            "Rtr"
+          ]
+        },
+        {
+          "file": "chunk-f1vb7bx7.js",
+          "name": "Gr",
+          "start": 4735,
+          "end": 4898,
+          "moduleLength": 111323,
+          "moduleSha256": "2f76d1800a2202fe6717904ab677e2509d0b124302d3d31e325353b307f795d1",
+          "sha256": "54640926b0bcca22335422bcfc5273305c025b49fb8f144a2d2a567ce0d0a87b",
+          "source": "async function Gr(e){let{stdout:n,code:r}=await Je(\"git\",[\"config\",\"--global\",\"--get\",\"core.excludesfile\"],{preserveOutputOnError:!1,cwd:e});return Wr(r===0?n:\"\")}",
+          "variable": false,
+          "exportNames": [
+            "Gr"
+          ]
+        },
+        {
+          "file": "chunk-f1vb7bx7.js",
+          "name": "Wr",
+          "start": 4898,
+          "end": 5115,
+          "moduleLength": 111323,
+          "moduleSha256": "2f76d1800a2202fe6717904ab677e2509d0b124302d3d31e325353b307f795d1",
+          "sha256": "f8096d759e9f809e73e304fa21edcf299f3afb9888df9f9863e476bd7df71c56",
+          "source": "function Wr(e){let n=e.trim();if(n){if(n===\"~\"||n.startsWith(\"~/\"))return Ve(vt(),n.slice(2));if(Lt(n))return n}let r=a.XDG_CONFIG_HOME;if(r&&Lt(r))return Ve(r,\"git\",\"ignore\");return Ve(vt(),\".config\",\"git\",\"ignore\")}",
+          "variable": false,
+          "exportNames": [
+            "Wr"
+          ]
+        },
+        {
+          "file": "chunk-f1vb7bx7.js",
+          "name": "xtr",
+          "start": 5115,
+          "end": 6183,
+          "moduleLength": 111323,
+          "moduleSha256": "2f76d1800a2202fe6717904ab677e2509d0b124302d3d31e325353b307f795d1",
+          "sha256": "f9b33cf828e633d2e37056c9c41b207124c135b56b4b476ce259e2d17f743578",
+          "source": "async function xtr(e,n=oe()){try{if(!await J7r(n))return{written:!1,effective:!1};let r=e.replaceAll(\"\\\\\",\"/\"),s=`**/${r}`,g=r.endsWith(\"/\")?`${r}sample-file.txt`:r;if(await Rtr(g,n))return{written:!1,effective:!0};let h=await Gr(n),R=$r(h);await xr(R,{recursive:!0});try{if((await kr(h,{encoding:\"utf-8\"})).includes(s)){let b=await wt(g,n)?\"already_tracked\":\"excludesfile_not_read\";return t(`[gitignore] '${s}' already present in ${h} but git check-ignore reports not-ignored \\u2014 ${Ht(b,g)}`,{level:\"warn\"}),{written:!1,effective:!1,reason:b}}await Mr(h,`\n${s}\n`)}catch(I){if(E(I)===\"ENOENT\")await Ur(h,`${s}\n`,\"utf-8\");else throw I}if(!await Rtr(g,n)){let I=await wt(g,n)?\"already_tracked\":\"excludesfile_not_read\";return t(`[gitignore] wrote '${s}' to ${h} but git check-ignore still reports not-ignored \\u2014 ${Ht(I,g)}`,{level:\"warn\"}),{written:!0,effective:!1,reason:I}}return{written:!0,effective:!0}}catch(r){return t(`Failed to add gitignore entry to global gitignore: ${r instanceof Error?r.message:String(r)}`,{level:\"error\"}),{written:!1,effective:!1}}}",
+          "variable": false,
+          "exportNames": [
+            "xtr"
+          ]
+        },
+        {
+          "file": "chunk-f1vb7bx7.js",
+          "name": "wt",
+          "start": 6183,
+          "end": 6318,
+          "moduleLength": 111323,
+          "moduleSha256": "2f76d1800a2202fe6717904ab677e2509d0b124302d3d31e325353b307f795d1",
+          "sha256": "a52109afc31bc3df79802509142aa0d209196ddb8cfbcb7461944cd2e179545c",
+          "source": "async function wt(e,n){let{code:r}=await Je(\"git\",[\"ls-files\",\"--error-unmatch\",\"--\",e],{preserveOutputOnError:!1,cwd:n});return r===0}",
+          "variable": false,
+          "exportNames": [
+            "wt"
+          ]
+        },
+        {
+          "file": "chunk-f1vb7bx7.js",
+          "name": "Ht",
+          "start": 6318,
+          "end": 6484,
+          "moduleLength": 111323,
+          "moduleSha256": "2f76d1800a2202fe6717904ab677e2509d0b124302d3d31e325353b307f795d1",
+          "sha256": "a1a496323b64627ef950bd342713a3ba9eef372c6d45a8a9389d280e59d2b0a6",
+          "source": "function Ht(e,n){return e===\"already_tracked\"?`'${n}' is tracked in the index; gitignore rules do not apply to tracked files`:\"core.excludesfile may point elsewhere\"}",
+          "variable": false,
+          "exportNames": [
+            "Ht"
+          ]
+        }
+      ],
+      "bindings": {
+        "oe": {
+          "port": "cwd",
+          "identity": "chunk-s354e3rr.js:oe"
+        },
+        "J7r": {
+          "port": "inGitRepo",
+          "identity": "chunk-2ynta9xc.js:J7r"
+        },
+        "Je": {
+          "port": "exec",
+          "identity": "chunk-fmv8bhm3.js:Je"
+        },
+        "Ve": {
+          "builtin": "join",
+          "builtinModule": "path"
+        },
+        "vt": {
+          "builtin": "homedir",
+          "builtinModule": "os"
+        },
+        "Lt": {
+          "builtin": "isAbsolute",
+          "builtinModule": "path"
+        },
+        "a": {
+          "port": "environment",
+          "identity": "chunk-mbfze585.js:a"
+        },
+        "$r": {
+          "builtin": "dirname",
+          "builtinModule": "path"
+        },
+        "xr": {
+          "builtin": "mkdir",
+          "builtinModule": "fs/promises"
+        },
+        "kr": {
+          "builtin": "readFile",
+          "builtinModule": "fs/promises"
+        },
+        "t": {
+          "port": "debug",
+          "identity": "chunk-q80zaav8.js:t"
+        },
+        "Mr": {
+          "builtin": "appendFile",
+          "builtinModule": "fs/promises"
+        },
+        "E": {
+          "file": "chunk-c9me9cp7.js",
+          "name": "E"
+        },
+        "Ur": {
+          "builtin": "writeFile",
+          "builtinModule": "fs/promises"
+        }
+      },
+      "initializers": []
+    },
+    {
+      "file": "chunk-5vadtxaa.js",
+      "rows": [
+        {
+          "file": "chunk-5vadtxaa.js",
+          "name": "OE",
+          "start": 822702,
+          "end": 822743,
+          "moduleLength": 904948,
+          "moduleSha256": "ff838c0962e455385c1c79b36842823593a658a1662bcb42bb15fb5d468e2446",
+          "sha256": "da9d7ec3cc947c4724c9977a23a8a5646466f14769fe22ee78c02a56c31b4f5d",
+          "source": "function OE(e){return Qe(e,\".claude\",bL)}",
+          "variable": false,
+          "exportNames": [
+            "OE"
+          ]
+        },
+        {
+          "file": "chunk-5vadtxaa.js",
+          "name": "fB",
+          "start": 822743,
+          "end": 822911,
+          "moduleLength": 904948,
+          "moduleSha256": "ff838c0962e455385c1c79b36842823593a658a1662bcb42bb15fb5d468e2446",
+          "sha256": "ef33f5dd7548e90faa6b3b07b5c4b95d5fa66f635ce0020191ef792e944211f5",
+          "source": "function fB(e=!0){let r=new Set;if(r.add(OE(Ee())),e)r.add(OE(tP()));r.add(OE(cr())),r.add(Qe(we(),bL));let n=Zn(\"localSettings\");if(n)r.add(Hr(Cr(n),bL));return[...r]}",
+          "variable": false,
+          "exportNames": [
+            "fB"
+          ]
+        },
+        {
+          "file": "chunk-5vadtxaa.js",
+          "name": "BE",
+          "start": 822911,
+          "end": 822981,
+          "moduleLength": 904948,
+          "moduleSha256": "ff838c0962e455385c1c79b36842823593a658a1662bcb42bb15fb5d468e2446",
+          "sha256": "827f1a16f8016843c2f25c4dd10dd9ecb5e6314577c2c52e216bdd01c64c32fb",
+          "source": "function BE(e){Ba(Cr(e),{recursive:!0}),Ba(e,{recursive:!0,mode:448})}",
+          "variable": false,
+          "exportNames": [
+            "BE"
+          ]
+        },
+        {
+          "file": "chunk-5vadtxaa.js",
+          "name": "Rm",
+          "start": 822981,
+          "end": 823120,
+          "moduleLength": 904948,
+          "moduleSha256": "ff838c0962e455385c1c79b36842823593a658a1662bcb42bb15fb5d468e2446",
+          "sha256": "2cbb36e0de6b68c1b717db810dae14ef3fa1e4b003fb5ec478022179b4e74b1f",
+          "source": "function Rm(e){try{return Pa(Vo(Cr(e),ms.O_RDONLY|ms.O_DIRECTORY|ms.O_NOFOLLOW)),!0}catch(r){let n=E(r);return n!==\"ELOOP\"&&n!==\"ENOTDIR\"}}",
+          "variable": false,
+          "exportNames": [
+            "Rm"
+          ]
+        },
+        {
+          "file": "chunk-5vadtxaa.js",
+          "name": "pB",
+          "start": 823267,
+          "end": 824210,
+          "moduleLength": 904948,
+          "moduleSha256": "ff838c0962e455385c1c79b36842823593a658a1662bcb42bb15fb5d468e2446",
+          "sha256": "bd8e901116d83751c2b7ef1946aff516f32c56e030e9396b37c1b6d720928aee",
+          "source": "function pB(){for(let r of fB(!Ft())){if(!Rm(r))continue;let n=!1;try{if(!Is(r).isDirectory()){if(!Rm(r))continue;pee(r),BE(r),n=!0}else try{Pa(Vo(r,ms.O_RDONLY|ms.O_DIRECTORY)),n=!0}catch{try{if(!Rm(r))continue;XO(r),BE(r),n=!0}catch{}}}catch{try{if(!Rm(r))continue;BE(r),n=!0}catch(s){t(`ensureAtomicWriteStagingDirs: failed to create ${r}: ${s}`),p(\"sandbox_exec\",\"atomic_write_staging_dir_create_failed\")}}try{let s=Vo(r,ms.O_RDONLY|ms.O_DIRECTORY|ms.O_NOFOLLOW);try{let h=Wm(s);F8o(r,h.dev,h.ino,s)}catch(h){throw Pa(s),h}}catch(s){if(n)RZe(`Staging dir ${r} was just established but identity-record open failed (${E(s)??s})`)}}let e=mB();if(!e.stagingDirGitignoreFired)e.stagingDirGitignoreFired=!0,xtr(`.claude/${bL}/`,Ee()).then((r)=>{if(!r.written)return;if(r.effective)y(\"gitignore_global_rule\");else if(r.reason===\"already_tracked\")p(\"gitignore_global_rule\",r.reason);else m(\"gitignore_global_rule\",r.reason??\"write_ineffective\")})}",
+          "variable": false,
+          "exportNames": [
+            "pB"
+          ]
+        },
+        {
+          "file": "chunk-5vadtxaa.js",
+          "name": "Uee",
+          "start": 866980,
+          "end": 866983,
+          "moduleLength": 904948,
+          "moduleSha256": "ff838c0962e455385c1c79b36842823593a658a1662bcb42bb15fb5d468e2446",
+          "sha256": "2e2f32a125a1f53529c03b7e5af9c2deb1f5513430e53c97248272a1548b3982",
+          "source": "Uee",
+          "variable": true,
+          "exportNames": [
+            "Uee"
+          ]
+        },
+        {
+          "file": "chunk-5vadtxaa.js",
+          "name": "mB",
+          "start": 867017,
+          "end": 867104,
+          "moduleLength": 904948,
+          "moduleSha256": "ff838c0962e455385c1c79b36842823593a658a1662bcb42bb15fb5d468e2446",
+          "sha256": "2b95d02400c9826136782f5497bfcd74cbeb54681ce6524023da5fe9cc79f02e",
+          "source": "function mB(){return Uee??={osLinkedRootRealpaths:new Map,stagingDirGitignoreFired:!1}}",
+          "variable": false,
+          "exportNames": [
+            "mB"
+          ]
+        }
+      ],
+      "bindings": {
+        "Qe": {
+          "builtin": "resolve",
+          "builtinModule": "path"
+        },
+        "bL": {
+          "file": "chunk-31g8tfvj.js",
+          "name": "bL"
+        },
+        "Ee": {
+          "port": "originalCwd",
+          "identity": "chunk-bn3p37gv.js:Ee"
+        },
+        "tP": {
+          "port": "cwd",
+          "identity": "chunk-bn3p37gv.js:tP"
+        },
+        "cr": {
+          "port": "projectRoot",
+          "identity": "chunk-bn3p37gv.js:cr"
+        },
+        "we": {
+          "port": "configHome",
+          "identity": "chunk-brnn4zwp.js:we"
+        },
+        "Zn": {
+          "port": "settingsPath",
+          "identity": "chunk-f1vb7bx7.js:Zn"
+        },
+        "Hr": {
+          "builtin": "join",
+          "builtinModule": "path"
+        },
+        "Cr": {
+          "builtin": "dirname",
+          "builtinModule": "path"
+        },
+        "Ft": {
+          "port": "remoteWorkspace",
+          "identity": "chunk-2ynta9xc.js:Ft"
+        },
+        "Pa": {
+          "builtin": "closeSync",
+          "builtinModule": "fs"
+        },
+        "Vo": {
+          "builtin": "openSync",
+          "builtinModule": "fs"
+        },
+        "ms": {
+          "builtin": "constants",
+          "builtinModule": "fs"
+        },
+        "E": {
+          "file": "chunk-c9me9cp7.js",
+          "name": "E"
+        },
+        "Is": {
+          "builtin": "lstatSync",
+          "builtinModule": "fs"
+        },
+        "pee": {
+          "builtin": "unlinkSync",
+          "builtinModule": "fs"
+        },
+        "Ba": {
+          "builtin": "mkdirSync",
+          "builtinModule": "fs"
+        },
+        "XO": {
+          "builtin": "rmdirSync",
+          "builtinModule": "fs"
+        },
+        "t": {
+          "port": "debug",
+          "identity": "chunk-q80zaav8.js:t"
+        },
+        "p": {
+          "port": "sad",
+          "identity": "chunk-9d2ykxmy.js:p"
+        },
+        "Wm": {
+          "builtin": "fstatSync",
+          "builtinModule": "fs"
+        },
+        "F8o": {
+          "port": "record",
+          "identity": "chunk-0pprbvtw.js:F8o"
+        },
+        "RZe": {
+          "port": "tampered",
+          "identity": "chunk-0pprbvtw.js:RZe"
+        },
+        "xtr": {
+          "file": "chunk-f1vb7bx7.js",
+          "name": "xtr"
+        },
+        "y": {
+          "port": "ok",
+          "identity": "chunk-9d2ykxmy.js:y"
+        },
+        "m": {
+          "port": "bad",
+          "identity": "chunk-9d2ykxmy.js:m"
+        }
+      },
+      "initializers": []
+    }
+  ],
+  "ports": [
+    {
+      "port": "originalCwd",
+      "file": "chunk-bn3p37gv.js",
+      "name": "Ee",
+      "start": 74784,
+      "end": 74843,
+      "moduleLength": 117054,
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "sha256": "d2277f063f9f4d8d3f5b8687866ca420d8cb8ada7c0ca67effd44e36a95a01de",
+      "source": "function Ee(){return c()?.originalCwd??Es(n()).originalCwd}",
+      "variable": false
+    },
+    {
+      "port": "cwd",
+      "file": "chunk-bn3p37gv.js",
+      "name": "tP",
+      "start": 75503,
+      "end": 75536,
+      "moduleLength": 117054,
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "sha256": "1d814e01aa4e3c48854e849be8b013e04dafb8c9d3311ed7d71f22145afe35fa",
+      "source": "function tP(){return Es(n()).cwd}",
+      "variable": false
+    },
+    {
+      "port": "projectRoot",
+      "file": "chunk-bn3p37gv.js",
+      "name": "cr",
+      "start": 74990,
+      "end": 75049,
+      "moduleLength": 117054,
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "sha256": "125d3744743c259d4070c25b9569e510858954e38ba6f593326b4c635c3d1030",
+      "source": "function cr(){return c()?.projectRoot??Es(n()).projectRoot}",
+      "variable": false
+    },
+    {
+      "port": "configHome",
+      "file": "chunk-brnn4zwp.js",
+      "name": "we",
+      "start": 2650,
+      "end": 2703,
+      "moduleLength": 5165,
+      "moduleSha256": "6fc81e7fe2a8a0809d0901a28e8bd5487b116b245931c3ac30fcf9b6655400c7",
+      "sha256": "63b42dd97cd7e10b6036a953245378be172566a0e8e6ef7fc2af4700480bcf6d",
+      "source": "we=is(()=>(o()??u(R(),\".claude\")).normalize(\"NFC\"),o)",
+      "variable": true
+    },
+    {
+      "port": "settingsPath",
+      "file": "chunk-f1vb7bx7.js",
+      "name": "Zn",
+      "start": 87539,
+      "end": 87571,
+      "moduleLength": 111323,
+      "moduleSha256": "2f76d1800a2202fe6717904ab677e2509d0b124302d3d31e325353b307f795d1",
+      "sha256": "8f64c822879cee468aa22fd597bc891bbe4eab0e8aef18a82951683232de3994",
+      "source": "function Zn(e){return NU(e,M())}",
+      "variable": false
+    },
+    {
+      "port": "remoteWorkspace",
+      "file": "chunk-2ynta9xc.js",
+      "name": "Ft",
+      "start": 39975,
+      "end": 40014,
+      "moduleLength": 77871,
+      "moduleSha256": "f3e239a22bc356ef2664a104850f816b164d4874821637ec72f203620c439e1d",
+      "sha256": "a82e6943a59ccd260c24495c50a70763328ab86e87dc4facade1b9650944f189",
+      "source": "function Ft(){return Wn()||pr()!==null}",
+      "variable": false
+    },
+    {
+      "port": "debug",
+      "file": "chunk-q80zaav8.js",
+      "name": "t",
+      "start": 46026,
+      "end": 46071,
+      "moduleLength": 67079,
+      "moduleSha256": "f9503296591b825624caf5932b9c5973cde96b859259266a506b616dca5cd41e",
+      "sha256": "da9e0b5e590a43c6f7cf46f3cfcd93d97f399db1017ff8dae938bdbd15e13790",
+      "source": "function t(e,n={level:\"debug\"}){U().log(e,n)}",
+      "variable": false
+    },
+    {
+      "port": "sad",
+      "file": "chunk-9d2ykxmy.js",
+      "name": "p",
+      "start": 5608,
+      "end": 5692,
+      "moduleLength": 6102,
+      "moduleSha256": "bfd24b568576517815372ff12b0cace8dd73dadc60ddf90aeed702a5b7b4242c",
+      "sha256": "e02add1ceb43e9de6cfe415709fb67252764811dfe68e18b6054adbd2f7dfbda",
+      "source": "function p(e,r,u){i(\"tengu_feature_sad\",{...u,feature_name:c(e),error_code:tme(r)})}",
+      "variable": false
+    },
+    {
+      "port": "record",
+      "file": "chunk-0pprbvtw.js",
+      "name": "F8o",
+      "start": 2068,
+      "end": 2110,
+      "moduleLength": 16522,
+      "moduleSha256": "ac21ef5f4681286c979e56a099405d29d52d2c119a6379365c57c316890afc3f",
+      "sha256": "41f824c00fbfebc9eb37929863942e50be2b4d282733ae1011eee9dd77d35b1f",
+      "source": "function F8o(e,n,r,o){j().record(e,n,r,o)}",
+      "variable": false
+    },
+    {
+      "port": "tampered",
+      "file": "chunk-0pprbvtw.js",
+      "name": "RZe",
+      "start": 4539,
+      "end": 4626,
+      "moduleLength": 16522,
+      "moduleSha256": "ac21ef5f4681286c979e56a099405d29d52d2c119a6379365c57c316890afc3f",
+      "sha256": "4673f5161412ac40d55ca4140b20e789a75b27d310926680764bffc595e539a2",
+      "source": "function RZe(e){throw m(\"sandbox_exec\",\"atomic_write_staging_dir_tampered\"),new prr(e)}",
+      "variable": false
+    },
+    {
+      "port": "cwd",
+      "file": "chunk-s354e3rr.js",
+      "name": "oe",
+      "start": 1098,
+      "end": 1148,
+      "moduleLength": 1183,
+      "moduleSha256": "567ef3371f57fc1378c9e923c39f428683b7d791b1528bad0b34cefa35a4f70e",
+      "sha256": "77b60cc78e0aeaa08693fcca0da77379aceefeffc334fcd583e5b4537167ad76",
+      "source": "function oe(){try{return Aqt()}catch{return Ee()}}",
+      "variable": false
+    },
+    {
+      "port": "inGitRepo",
+      "file": "chunk-2ynta9xc.js",
+      "name": "J7r",
+      "start": 54462,
+      "end": 54488,
+      "moduleLength": 77871,
+      "moduleSha256": "f3e239a22bc356ef2664a104850f816b164d4874821637ec72f203620c439e1d",
+      "sha256": "f258429c495a32bf2b0853459620bc89ae145a7b3569fe7c7a3d72a6a4424b8d",
+      "source": "J7r=async(e)=>lr(e)!==null",
+      "variable": true
+    },
+    {
+      "port": "exec",
+      "file": "chunk-fmv8bhm3.js",
+      "name": "Je",
+      "start": 18171,
+      "end": 20808,
+      "moduleLength": 20985,
+      "moduleSha256": "f12234b916e119ba08925edd52562e4f1f5f62a9589769d536f8ede611adaf2f",
+      "sha256": "203fdeaf9891b53d55637ebc8c56ad2b83c44fc7f039b0ed1626150ea5ee1ebf",
+      "source": "async function Je(e,r,{abortSignal:n,timeout:o=10*B*U,preserveOutputOnError:i=!0,cwd:s,env:u,extendEnv:c,maxBuffer:p,shell:l,stdin:m,input:_,stdout:H,stderr:W,stripFinalNewline:V,encoding:Pe,allowRepoGitHooks:xe,allowGitTerminalPrompt:we,useToolMemoryCgroup:Ae=!0,toolCgroupClass:Ge=\"helper\",waitForExitAfterKill:ve=!1,withoutControllingTerminal:be=!1}={timeout:10*B*U,preserveOutputOnError:!0,maxBuffer:1e6}){if(Tz())return{stdout:\"\",stderr:Ybt,code:126,error:Ybt};let v=e,j=process.env,K=xWe(v,r,u===void 0?j:c===!1?u:{...j,...u},u&&\"GIT_CONFIG_COUNT\"in u?u.GIT_CONFIG_COUNT:a.GIT_CONFIG_COUNT,{allowRepoGitHooks:xe,allowGitTerminalPrompt:we}),Le=K?.args??r,b=K?.env??u,L=be&&O()!==\"windows\";if(L&&mA()){let f=`${Ce(e)} was not started because Claude Code was exiting; try again after it restarts`;return{stdout:\"\",stderr:f,code:1,error:f}}let g,h,J,F,Y=O()===\"linux\"?{noChildLeft:!0}:{},C=Y;try{let f=VZe(v,Le,{signal:n,timeout:o,cwd:s,env:b,shell:l,stdin:m,...p===void 0?{}:{maxBuffer:p},...V===void 0?{}:{stripFinalNewline:V},...Pe===\"latin1\"&&{encoding:\"latin1\"},...H===void 0?{}:{stdout:H},...W===void 0?{}:{stderr:W},...c===void 0?{}:{extendEnv:c},...Ae?Ga(Ge):{},...L&&{detached:!0},reject:!1});if(C=f.pid===void 0?Y:{},h=L?f.pid:void 0,h!==void 0){let y=h,N=()=>Oe(y),T=_t(N),x=$K(N,{alwaysLast:!0});J=()=>{T(),x()}}if(F=_===void 0?void 0:Ft(f),_!==void 0&&f.pid!==void 0)f.stdin?.end(_);if(g=await f,ve&&g.exitCode===void 0&&(n?.aborted===!0||g.timedOut))await Gt(f,At)}catch(f){let y=f.message;if(as(f))return t(`execFileNoThrow spawn failed: ${E(f)} ${y}`,{level:\"error\"}),{stdout:\"\",stderr:\"\",code:1,...C};else if(he(f))return t(`execFileNoThrow maxBuffer exceeded: ${y}`,{level:\"error\"}),{stdout:\"\",stderr:\"\",code:1,maxBufferExceeded:!0};else{let N=process.env,T=E(f)===\"ERR_INVALID_ARG_VALUE\"?vt(v,r,s,b,c===!1&&b!==void 0?void 0:N,N):void 0;if(T)t(`execFileNoThrow spawn refused: ${T.local}`,{level:\"error\"});let x=Z(f);d(st(T?ae(x,T.telemetry):x,T?.telemetry??\"execFileNoThrow unexpected rejection\"))}return{stdout:\"\",stderr:\"\",code:1}}finally{if(J?.(),h!==void 0&&(g===void 0||g.exitCode===void 0))Oe(h)}if(F?.truncatedBy!==void 0){let f=`stdin write failed: ${F.truncatedBy}`;return t(`execFileNoThrow ${f}`,{level:\"error\"}),{stdout:\"\",stderr:\"\",code:1,error:f}}if(!g.failed)return{stdout:G(g.stdout),stderr:G(g.stderr),code:0,exitCode:0};let z=he(g)?{maxBufferExceeded:!0}:{},X=g.timedOut?{timedOut:!0}:{};if(!i)return{stdout:\"\",stderr:\"\",code:g.exitCode??1,exitCode:g.exitCode,...z,...X,...C};let q=g.exitCode??1;return{stdout:G(g.stdout),stderr:G(g.stderr),code:q,error:kt(g,q),exitCode:g.exitCode,...z,...X,...C}}",
+      "variable": false
+    },
+    {
+      "port": "environment",
+      "file": "chunk-mbfze585.js",
+      "name": "a",
+      "start": 65484,
+      "end": 65495,
+      "moduleLength": 65738,
+      "moduleSha256": "2e40ea5244009e4c37b57879f34c96cc3e3bc7d3c5468f9e65d63fe5ce13287a",
+      "sha256": "44ef2e88407080f40da65be8f6c06357952a012f91c7fbf90982c130cc9ac988",
+      "source": "a=ZZe(jU,R)",
+      "variable": true
+    },
+    {
+      "port": "ok",
+      "file": "chunk-9d2ykxmy.js",
+      "name": "y",
+      "start": 5461,
+      "end": 5524,
+      "moduleLength": 6102,
+      "moduleSha256": "bfd24b568576517815372ff12b0cace8dd73dadc60ddf90aeed702a5b7b4242c",
+      "sha256": "875b389aa7f92e84373fdd3f907735494c5cc48031ffb7768e9072e8a816e311",
+      "source": "function y(e,r){i(\"tengu_feature_ok\",{feature_name:c(e),...r})}",
+      "variable": false
+    },
+    {
+      "port": "bad",
+      "file": "chunk-9d2ykxmy.js",
+      "name": "m",
+      "start": 5524,
+      "end": 5608,
+      "moduleLength": 6102,
+      "moduleSha256": "bfd24b568576517815372ff12b0cace8dd73dadc60ddf90aeed702a5b7b4242c",
+      "sha256": "e47c27fed50f0706aee4941e58ea57403505a6e081c83d363bdd6e25ec5ec3d9",
+      "source": "function m(e,r,u){i(\"tengu_feature_bad\",{...u,feature_name:c(e),error_code:tme(r)})}",
+      "variable": false
+    }
+  ],
+  "builtins": [
+    {
+      "builtin": "join",
+      "builtinModule": "path",
+      "alias": "builtin0"
+    },
+    {
+      "builtin": "homedir",
+      "builtinModule": "os",
+      "alias": "builtin1"
+    },
+    {
+      "builtin": "isAbsolute",
+      "builtinModule": "path",
+      "alias": "builtin2"
+    },
+    {
+      "builtin": "dirname",
+      "builtinModule": "path",
+      "alias": "builtin3"
+    },
+    {
+      "builtin": "mkdir",
+      "builtinModule": "fs/promises",
+      "alias": "builtin4"
+    },
+    {
+      "builtin": "readFile",
+      "builtinModule": "fs/promises",
+      "alias": "builtin5"
+    },
+    {
+      "builtin": "appendFile",
+      "builtinModule": "fs/promises",
+      "alias": "builtin6"
+    },
+    {
+      "builtin": "writeFile",
+      "builtinModule": "fs/promises",
+      "alias": "builtin7"
+    },
+    {
+      "builtin": "resolve",
+      "builtinModule": "path",
+      "alias": "builtin8"
+    },
+    {
+      "builtin": "closeSync",
+      "builtinModule": "fs",
+      "alias": "builtin9"
+    },
+    {
+      "builtin": "openSync",
+      "builtinModule": "fs",
+      "alias": "builtin10"
+    },
+    {
+      "builtin": "constants",
+      "builtinModule": "fs",
+      "alias": "builtin11"
+    },
+    {
+      "builtin": "lstatSync",
+      "builtinModule": "fs",
+      "alias": "builtin12"
+    },
+    {
+      "builtin": "unlinkSync",
+      "builtinModule": "fs",
+      "alias": "builtin13"
+    },
+    {
+      "builtin": "mkdirSync",
+      "builtinModule": "fs",
+      "alias": "builtin14"
+    },
+    {
+      "builtin": "rmdirSync",
+      "builtinModule": "fs",
+      "alias": "builtin15"
+    },
+    {
+      "builtin": "fstatSync",
+      "builtinModule": "fs",
+      "alias": "builtin16"
+    }
+  ],
+  "scope": "Full public pB/fB/Rm/BE/OE/mB and xtr; shared ne registry and existing execution/settings/Git subprocess owner cuts."
+}

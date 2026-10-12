@@ -1,0 +1,165 @@
+{
+  "version": "2.1.287",
+  "platform": "darwin-arm64",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "rangeConvention": "UTF-16 code units; end-exclusive",
+  "generatedSha256": "782e0b35848dcd8a61f508b018df8302e2486b15fa55e2b1de0da4f806a561bc",
+  "recovered": [
+    {
+      "file": "chunk-agp00faq.js",
+      "moduleSha256": "c9ab4a9df4431c0caf0c8e927caa878077b4aaa1ea89e8fd36e780456beccc28",
+      "name": "Wmo",
+      "start": 716,
+      "end": 847,
+      "sha256": "8423e3b2898a6a9d39a2e2bd7857393d425ebe0f2531602859fbab5d849301f5",
+      "source": "function Wmo(o,e,r){ro().bundledWorkflows.push({source:\"built-in\",...e,script:o,disableModelInvocation:r?.disableModelInvocation})}"
+    }
+  ],
+  "delegated": [
+    {
+      "file": "chunk-agp00faq.js",
+      "moduleSha256": "c9ab4a9df4431c0caf0c8e927caa878077b4aaa1ea89e8fd36e780456beccc28",
+      "name": "Vkt",
+      "start": 847,
+      "end": 959,
+      "sha256": "73de46d8130a3f338799dcf275fb89cbeeb42471d43da0bc1f8b724ee1492a35",
+      "source": "function Vkt(){if(gj())return[];let o=ro().bundledWorkflows;if(LPe())return o.filter((e)=>!L3(e.name));return o}"
+    },
+    {
+      "file": "chunk-57ewcm63.js",
+      "moduleSha256": "da9550ef49f1daea5aea0c4476117c0880df20edf7415421ad5b3aad7b32a64a",
+      "name": "_",
+      "start": 1629,
+      "end": 1896,
+      "sha256": "45fc371d7ffe610b094674e85265d4f84a8c7ad22aa0a46c6ba38208e7dd9c0e",
+      "source": "async function _(o,s,n,i,d){let w=ae(),e;try{e=await w.readdir(o)}catch{return[]}return(await Promise.all(e.map(async(l)=>{if(!(l.isFile()||l.isSymbolicLink()))return null;if(!l.name.endsWith(\".js\"))return null;return v(F(o,l.name),s,n,i,d)}))).filter((l)=>l!==null)}"
+    },
+    {
+      "file": "chunk-57ewcm63.js",
+      "moduleSha256": "da9550ef49f1daea5aea0c4476117c0880df20edf7415421ad5b3aad7b32a64a",
+      "name": "v",
+      "start": 1896,
+      "end": 2522,
+      "sha256": "bec68efd2cd8f596a3f26a39b60a5a55eee0c0a0b2506528473be852cdd7fd26",
+      "source": "async function v(o,s,n,i,d){let w=ae();if(tie(w,o,d))return null;try{let e=await rO(w,o,$b);if(e===null)return t(`Plugin workflow ${o}: not a regular file or exceeds ${$b} bytes \\u2014 skipping`,{level:\"warn\"}),null;let r=F_(e,{validateBody:!1});if(\"error\"in r)return t(`Plugin workflow ${o} has invalid meta: ${r.error} \\u2014 skipping`,{level:\"warn\"}),null;let l=`${s}:${r.meta.name}`;return{source:\"plugin\",plugin:n,pluginManifest:i,name:l,description:r.meta.description,whenToUse:r.meta.whenToUse,phases:r.meta.phases,script:e,filePath:o}}catch(e){return t(`Failed to load workflow from ${o}: ${e}`,{level:\"error\"}),null}}"
+    },
+    {
+      "file": "chunk-57ewcm63.js",
+      "moduleSha256": "da9550ef49f1daea5aea0c4476117c0880df20edf7415421ad5b3aad7b32a64a",
+      "name": "P",
+      "start": 2522,
+      "end": 3840,
+      "sha256": "cbdd51d794f7ff67f18807d3c0addb5263fc2c9b9f9aa44b88fb785270bbe425",
+      "source": "function P(o){let s=ut();return s.workflows??=(async()=>{let{enabled:n,errors:i}=await xi(o),d=[];if(i.length>0)t(`Plugin loading errors: ${i.map((e)=>Q_(e)).join(\", \")}`);let w=null;for(let e of n){let r=new Set,l=d.length;if(e.workflowsPath)try{let f=await _(e.workflowsPath,e.name,e.source,e.manifest,r);if(d.push(...f),f.length>0)t(`Loaded ${f.length} workflows from plugin ${e.name} default directory`)}catch(f){w=\"plugin_load_workflows_dir_failed\",t(`Failed to load workflows from plugin ${e.name} default directory: ${f}`,{level:\"error\"})}if(e.workflowsPaths)for(let f of e.workflowsPaths)try{let c=await ae().stat(f);if(c.isDirectory()){let g=await _(f,e.name,e.source,e.manifest,r);if(d.push(...g),g.length>0)t(`Loaded ${g.length} workflows from plugin ${e.name} custom path: ${f}`)}else if(c.isFile()&&f.endsWith(\".js\")){let g=await v(f,e.name,e.source,e.manifest,r);if(g)d.push(g),t(`Loaded workflow from plugin ${e.name} custom file: ${f}`)}}catch(u){w=\"plugin_load_workflows_path_failed\",t(`Failed to load workflows from plugin ${e.name} custom path ${f}: ${u}`,{level:\"error\"})}if(e.serverPluginId!==void 0)for(let f of d.slice(l))f.serverPluginId=e.serverPluginId}if(t(`Total plugin workflows loaded: ${d.length}`),w)m(\"plugin_load_workflows\",w);else y(\"plugin_load_workflows\");return d})(),s.workflows}"
+    },
+    {
+      "file": "chunk-57ewcm63.js",
+      "moduleSha256": "da9550ef49f1daea5aea0c4476117c0880df20edf7415421ad5b3aad7b32a64a",
+      "name": "W",
+      "start": 3868,
+      "end": 4069,
+      "sha256": "0a8d642375bb4eaf4448a90a5d19c7b496e383473e5cdb359709cb0ea176a8de",
+      "source": "function W(o,s){if(!s||jmo(o.script))return!0;return t(`Workflow ${o.filePath??o.name} (${o.source}) would override ${o.name} but does not parse \\u2014 keeping the ${s.source} copy`,{level:\"warn\"}),!1}"
+    },
+    {
+      "file": "chunk-57ewcm63.js",
+      "moduleSha256": "da9550ef49f1daea5aea0c4476117c0880df20edf7415421ad5b3aad7b32a64a",
+      "name": "S",
+      "start": 4069,
+      "end": 4183,
+      "sha256": "f47d17b685199254a32f87181c4f00656f209241ae368d17a1b95d7b5aa1930b",
+      "source": "function S(o){let s=new Map;for(let n of o){if(!W(n,s.get(n.name)))continue;s.set(n.name,n)}return[...s.values()]}"
+    },
+    {
+      "file": "chunk-57ewcm63.js",
+      "moduleSha256": "da9550ef49f1daea5aea0c4476117c0880df20edf7415421ad5b3aad7b32a64a",
+      "name": "T",
+      "start": 4253,
+      "end": 4438,
+      "sha256": "90b951cbb73b62f9929542e68da8e6f2c5a98ba261e249aff308fc5535313230",
+      "source": "async function T(o,s){try{return await jle(\"workflows\",o)}catch(n){if(as(n))return t(`loadWorkflowsDir: project-dir walk failed: ${n.code}`,{level:\"error\"}),s.walkFailed=!0,[];throw n}}"
+    },
+    {
+      "file": "chunk-57ewcm63.js",
+      "moduleSha256": "da9550ef49f1daea5aea0c4476117c0880df20edf7415421ad5b3aad7b32a64a",
+      "name": "D",
+      "start": 4438,
+      "end": 5305,
+      "sha256": "063ebec91a5a8dcc13abf056761d3e3c43650720ebddab6c2556234c0f94ffea",
+      "source": "async function D(o,s,n,i){if(i!==void 0&&s===\"userSettings\")return M(i,o,n);let d=ae(),w;try{w=await d.readdir(o)}catch{return[]}return(await Promise.all(w.map(async(r)=>{if(!(r.isFile()||r.isSymbolicLink()))return null;if(!r.name.endsWith(\".js\")){if(/\\.(mjs|cjs|ts)$/.test(r.name))n.nearMissExt++;return null}let l=h(o,r.name),f;try{f=await d.readFileBytes(l,$b+1)}catch{return n.skippedUnreadable++,null}if(f.byteLength>$b)return t(`Workflow ${l} exceeds ${$b} bytes \\u2014 skipping`,{level:\"warn\"}),n.skippedOversize++,null;let u=f.toString(\"utf-8\"),c=F_(u,{validateBody:!1});if(\"error\"in c)return t(`Workflow ${l} has invalid meta: ${c.error} \\u2014 skipping`,{level:\"warn\"}),n.skippedInvalidMeta++,null;return{source:s,name:c.meta.name,description:c.meta.description,whenToUse:c.meta.whenToUse,phases:c.meta.phases,script:u,filePath:l}}))).filter((r)=>r!==null)}"
+    },
+    {
+      "file": "chunk-57ewcm63.js",
+      "moduleSha256": "da9550ef49f1daea5aea0c4476117c0880df20edf7415421ad5b3aad7b32a64a",
+      "name": "M",
+      "start": 5305,
+      "end": 6795,
+      "sha256": "b5bee9994f525531c4ec185789515d70ae162fc9dfa86774b5122b157a0bc798",
+      "source": "async function M(o,s,n){let i=[];switch((await ui((e)=>o.listEntries({namespace:\"userConfigDir\",dir:\"workflows\"},e===void 0?void 0:{cursor:e}),(e)=>{for(let r of e){if(r.kind!==\"key\"||r.key.namespace!==\"userConfigDir\")continue;let l=r.key.relPath.at(-1);if(l===void 0||r.key.relPath.length!==1)continue;if(!l.endsWith(\".js\")){if(/\\.(mjs|cjs|ts)$/.test(l))n.nearMissExt++;continue}i.push({key:r.key,name:l})}})).status){case\"done\":break;case\"error\":return[];case\"capped\":t(`User workflows listing of ${s} truncated at ${Yp} pages \\u2014 loading the ${i.length} workflow files seen`,{level:\"warn\"}),n.userListingTruncated=!0;break}return(await Promise.all(i.map(async({key:e,name:r})=>{let l=await o.read([{key:e,offset:0,length:$b+1}]);if(!l.ok)return t(`Workflow ${h(s,r)} could not be read through the storage backend (${l.error.code}) \\u2014 skipping`,{level:\"warn\"}),n.skippedUnreadable++,null;let f=l.value.items[0];if(f===void 0||!f.found)return n.skippedUnreadable++,null;let u=h(s,r);if(f.value.byteLength>$b)return t(`Workflow ${u} exceeds ${$b} bytes \\u2014 skipping`,{level:\"warn\"}),n.skippedOversize++,null;let c=Buffer.from(f.value).toString(\"utf-8\"),g=F_(c,{validateBody:!1});if(\"error\"in g)return t(`Workflow ${u} has invalid meta: ${g.error} \\u2014 skipping`,{level:\"warn\"}),n.skippedInvalidMeta++,null;return{source:\"userSettings\",name:g.meta.name,description:g.meta.description,whenToUse:g.meta.whenToUse,phases:g.meta.phases,script:c,filePath:u}}))).filter((e)=>e!==null)}"
+    },
+    {
+      "file": "chunk-57ewcm63.js",
+      "moduleSha256": "da9550ef49f1daea5aea0c4476117c0880df20edf7415421ad5b3aad7b32a64a",
+      "name": "b",
+      "start": 6795,
+      "end": 7988,
+      "sha256": "acd13fd7bbf170fe15b709e1a3c19c64dbb906b101369c02ed9eed6981d21ca9",
+      "source": "async function b(o,s){let n=vot(),i={skippedInvalidMeta:0,skippedOversize:0,skippedUnreadable:0,nearMissExt:0,walkFailed:!1,userListingTruncated:!1},d=await T(o,i),[w,...e]=await Promise.all([tr(\"userSettings\")?D(n,\"userSettings\",i,s):Promise.resolve([]),...tr(\"projectSettings\")?d.map((u)=>D(u,\"projectSettings\",i)):[]]),r=new Map;for(let u of w){if(!W(u,r.get(u.name)))continue;r.set(u.name,u)}for(let u=e.length-1;u>=0;u--)for(let c of e[u]){if(!W(c,r.get(c.name)))continue;r.set(c.name,c)}let l=i.walkFailed&&tr(\"projectSettings\"),f=i.skippedInvalidMeta+i.skippedOversize+i.skippedUnreadable;if(l||i.userListingTruncated||f>0||i.nearMissExt>0)p(\"workflow_discover\",l?\"project_dir_walk_failed\":i.userListingTruncated?\"user_listing_truncated\":i.skippedInvalidMeta>0?\"invalid_meta\":i.skippedOversize>0?\"oversize\":i.skippedUnreadable>0?\"unreadable\":\"near_miss_extension\",{found:r.size,skipped_invalid_meta:i.skippedInvalidMeta,skipped_oversize:i.skippedOversize,skipped_unreadable:i.skippedUnreadable,near_miss_ext:i.nearMissExt,...i.userListingTruncated&&{user_listing_truncated:!0}});else y(\"workflow_discover\",{found:r.size});return[...r.values()].sort((u,c)=>u.name.localeCompare(c.name))}"
+    },
+    {
+      "file": "chunk-57ewcm63.js",
+      "moduleSha256": "da9550ef49f1daea5aea0c4476117c0880df20edf7415421ad5b3aad7b32a64a",
+      "name": "iCe",
+      "start": 7988,
+      "end": 8075,
+      "sha256": "a0d98502436e540af95bc0b40755c10ef5b5ed53128ad756e46844982aa0d246",
+      "source": "function iCe(o,s){return t8(ro().allWorkflows,`${dbn()}:${kVe()}:${n8(o)}`,()=>j(o,s))}"
+    },
+    {
+      "file": "chunk-57ewcm63.js",
+      "moduleSha256": "da9550ef49f1daea5aea0c4476117c0880df20edf7415421ad5b3aad7b32a64a",
+      "name": "j",
+      "start": 8075,
+      "end": 8437,
+      "sha256": "7a93831c337b8bb2183ec7685c4f628fdde566ac04052ea6f66e0010cd720bb4",
+      "source": "async function j(o,s){if(Gr(\"workflows\")||kVe())return[...Vkt()];let[n,i]=await Promise.all([b(o,s),P(s)]),d=S(i),w=Vkt(),e=new Map(w.map((k)=>[k.name,k])),r=O(d,e);for(let k of r)e.set(k.name,k);let l=O(n,e),f=new Set(l.map((k)=>k.name)),u=r.filter((k)=>!f.has(k.name)),c=new Set([...f,...u.map((k)=>k.name)]);return[...w.filter((k)=>!c.has(k.name)),...u,...l]}"
+    },
+    {
+      "file": "chunk-57ewcm63.js",
+      "moduleSha256": "da9550ef49f1daea5aea0c4476117c0880df20edf7415421ad5b3aad7b32a64a",
+      "name": "O",
+      "start": 8437,
+      "end": 8494,
+      "sha256": "ae9c6744e0aec8518c007032c41c85e49a51b4587b3022c445de9d496d94e167",
+      "source": "function O(o,s){return o.filter((n)=>W(n,s.get(n.name)))}"
+    },
+    {
+      "file": "chunk-57ewcm63.js",
+      "moduleSha256": "da9550ef49f1daea5aea0c4476117c0880df20edf7415421ad5b3aad7b32a64a",
+      "name": "VDn",
+      "start": 8565,
+      "end": 8612,
+      "sha256": "94c430901d2b68b21e72fcca96a21fd7daad45ab73a47cbfb1a771e6d5a46c46",
+      "source": "function VDn(){ro().allWorkflows.clear(),nyn()}"
+    },
+    {
+      "file": "chunk-pzbak5zb.js",
+      "moduleSha256": "6db2dfe1d4cb8897e710f2cfd7b87bcd65e5323da41f9acaad3768c9f62e978f",
+      "name": "F_",
+      "start": 3670,
+      "end": 4503,
+      "sha256": "1def4020686a03519f7458858879f866f81d53712e96eb26886f04c51ceaa931",
+      "source": "function F_(e,{validateBody:n=!0,maxBytes:t=$b}={}){if(e.length>t)return{error:`Script exceeds ${t} bytes`};let r=n?null:V.exec(e);if(r){let u=S(e,r[0].length),E=u&&I(e,u.end);if(u&&E!==void 0){let w=M(u.value);if(!(\"error\"in w))return{meta:w.meta,scriptBody:L(e,E)}}}let{parse:o}=w7e(),i;try{i=o(e,{ecmaVersion:\"latest\",sourceType:\"module\",allowAwaitOutsideFunction:!0,allowReturnOutsideFunction:!0})}catch(u){return{error:C(u,e)}}let a=i.body[0];if(!a||a.type!==\"ExportNamedDeclaration\"||!U(a))return{error:\"`export const meta = { name, description, phases }` must be the FIRST statement in the script\"};let l=a.declaration.declarations[0].init,f;try{f=j(l)}catch(u){return{error:`meta must be a pure literal: ${u instanceof Error?u.message:String(u)}`}}let p=M(f);if(\"error\"in p)return p;return{meta:p.meta,scriptBody:L(e,a.end)}}"
+    },
+    {
+      "file": "chunk-pzbak5zb.js",
+      "moduleSha256": "6db2dfe1d4cb8897e710f2cfd7b87bcd65e5323da41f9acaad3768c9f62e978f",
+      "name": "jmo",
+      "start": 4573,
+      "end": 4614,
+      "sha256": "fa78b0ea07f6c4aa8075c8c99ddc758722825791a886fdbb3cba4da1cdd0ddc9",
+      "source": "function jmo(e){return!(\"error\"in F_(e))}"
+    }
+  ],
+  "contract": "Same existing ro().allWorkflows/bundledWorkflows and ut().workflows; iCe(cwd,storageV5), P(storageV5) and F_ unchanged; no replacement loader callback or second owner"
+}

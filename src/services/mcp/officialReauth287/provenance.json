@@ -1,0 +1,15 @@
+{
+  "file": "chunk-f2cpzzp9.js",
+  "moduleSha256": "ecf059605929abc2d38c30fc6d3b5b0b69ef05c9d344e934443f320a48256dae",
+  "offsetUnit": "UTF16 end-exclusive",
+  "wholeSubscription": {
+    "name": "reauth-listener-registration",
+    "expression": "uhe.subscribe",
+    "start": 1471142,
+    "end": 1472326,
+    "sha256": "79dd09a050459fe6084c53bce5edf92b805e4e78018d099749e1b2693a289a69",
+    "source": "uhe.subscribe((Zt,gn)=>{(async()=>{let Jo=()=>void Ql().clearServerCache(Zt,gn).catch(()=>{}),bn=gr();try{let cn=Ie.get().clients.find((An)=>An.name===Zt);if(cn===void 0||!Ts(cn)||Io(Zt)||b1(Zt,gn)){Jo();return}if(vr(Zt,cn.config)!==vr(Zt,gn)){Jo();return}let wn=Ql(),Zo=await wn.connectToServer(Zt,gn,void 0,Se,_e);if(gr()!==bn){if(Zo.type===\"connected\")wn.detachAndCloseConnection(Zo);return}if(Zo.type!==\"connected\")return;let[Rn,ar,er,Gn]=await Promise.all([wn.fetchToolsForClient(Zo,Se),wn.fetchCommandsForClient(Zo),rb()&&Zo.capabilities?.resources?GS.fetchMcpSkillsForClient(Zo,Se):Promise.resolve([]),Zo.capabilities?.resources?wn.fetchResourcesForClient(Zo):Promise.resolve([])]);if(gr()!==bn){wn.detachAndCloseConnection(Zo);return}let Xo=Ie.get().clients.find((An)=>An.name===Zt);if(Xo===void 0||!Ts(Xo)||Io(Zt)||b1(Zt,gn)){Jo();return}qo({client:Zo,tools:Rn,commands:[...ar,...er],resources:Gn,resourceTemplates:[],replaceOnly:!0})}catch(cn){if(Jo(),!Io(Zt)&&gr()===bn)Do({name:Zt,type:\"failed\",config:gn,error:`Re-adopt after re-authentication failed: ${$o(cn,gn)}`,replaceOnly:!0});t(`Failed to re-adopt reauth connection for ${Zt}: ${$o(cn,gn)}`,{level:\"error\"})}})()})"
+  },
+  "sourceContract": "provenance-reference://not-bundled/4db22fca3cdd5a1f5cd2e89fd0f7e7fbdbd8d6e3b357f0f9600242d13320895f",
+  "transport": "factory free binding only; no new bus/SDK/cache"
+}

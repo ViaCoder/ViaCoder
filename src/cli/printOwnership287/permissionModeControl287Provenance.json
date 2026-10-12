@@ -1,0 +1,503 @@
+{
+  "version": "2.1.287",
+  "platform": "darwin-arm64",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16 end-exclusive",
+  "branch": {
+    "file": "chunk-xapeakym.js",
+    "name": "set_permission_mode",
+    "kind": "complete-control-thenStatement",
+    "start": 462432,
+    "end": 462738,
+    "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+    "sha256": "19a8661c5806b8682e32f67dc39502e71ff716ecbfaa5f79b99d45673745434f",
+    "source": "{let j=A.request,ue=kh(j.mode);if(ue===void 0||!gz(ue)){We(A,Sse,\"invalid_mode\");continue}R((J)=>{let ie=cp(j,J.toolPermissionContext);if(!ie.ok)return We(A,ie.error,ie.code),J;return Ze(A,{mode:ie.mode}),Yo(ie.mode),{...J,toolPermissionContext:ie.context,isUltraplanMode:j.ultraplan??J.isUltraplanMode}})}",
+    "variable": false
+  },
+  "originalIf": {
+    "file": "chunk-xapeakym.js",
+    "name": "set_permission_mode",
+    "kind": "complete-if-consequent-source-evidence",
+    "start": 462387,
+    "end": 462738,
+    "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+    "sha256": "208af99321778a6177e972c6b63899abfa112bb4be6b6f4f9faf64fac26df920",
+    "source": "if(A.request.subtype===\"set_permission_mode\"){let j=A.request,ue=kh(j.mode);if(ue===void 0||!gz(ue)){We(A,Sse,\"invalid_mode\");continue}R((J)=>{let ie=cp(j,J.toolPermissionContext);if(!ie.ok)return We(A,ie.error,ie.code),J;return Ze(A,{mode:ie.mode}),Yo(ie.mode),{...J,toolPermissionContext:ie.context,isUltraplanMode:j.ultraplan??J.isUltraplanMode}})}",
+    "variable": false
+  },
+  "rows": [
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "cp",
+      "kind": "complete-permission-declaration",
+      "start": 321396,
+      "end": 321588,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "590965d3c39fb45701d961060f0f21f160c57dbc1e7db6bae213c9b2a6044008",
+      "source": "function cp(e,r){let n=Q4(e.mode,r);if(!n.ok)return n;if(L2e(n.mode),r.mode===n.mode)return{ok:!0,mode:n.mode,context:r};return{ok:!0,mode:n.mode,context:{...aN(r.mode,n.mode,r),mode:n.mode}}}",
+      "variable": false
+    },
+    {
+      "file": "chunk-4zgx6txq.js",
+      "name": "Q4",
+      "kind": "complete-permission-declaration",
+      "start": 7300,
+      "end": 8039,
+      "moduleSha256": "6826d9c59803a523f3fc09fa2d2e045de39e5342c40364cf99e0a19d2c628044",
+      "sha256": "16317e93494584bc9a2c1d8a7fec6039e9ccf02d3fa393b0e435193f7160ef2e",
+      "source": "function Q4(e,o){let s=kh(e);if(s===void 0)return{ok:!1,error:Sse,code:\"invalid_mode\"};if(s===\"bypassPermissions\"){if(o.restricted)return{ok:!1,error:xLr,code:\"bypass_restricted\"};if(BE())return{ok:!1,error:\"Cannot set permission mode to bypassPermissions because it is disabled by settings or configuration\",code:\"bypass_disabled\"};if(!o.isBypassPermissionsModeAvailable)return{ok:!1,error:\"Cannot set permission mode to bypassPermissions because the session was not launched with --dangerously-skip-permissions\",code:\"bypass_not_launched\"}}if(s===\"auto\"&&!hE()){let l=Z4();return{ok:!1,error:l?`Cannot set permission mode to auto: ${NX(l)}`:\"Cannot set permission mode to auto\",code:l?ke[l]:\"auto_mode_unavailable\"}}return{ok:!0,mode:s}}",
+      "variable": false
+    },
+    {
+      "file": "chunk-4zgx6txq.js",
+      "name": "aN",
+      "kind": "complete-permission-declaration",
+      "start": 6689,
+      "end": 7127,
+      "moduleSha256": "6826d9c59803a523f3fc09fa2d2e045de39e5342c40364cf99e0a19d2c628044",
+      "sha256": "e07b4017706bef998611c2f557c5347f09eef9d5169acfc395717fd9b9b5659f",
+      "source": "function aN(e,o,s,l){if(e===o)return s;if(xIe(void 0),vJ({from:e,to:o,trigger:l}),pie(e,o),Pto(e,o),e===\"plan\"&&o!==\"plan\")wD(!0);if(o===\"plan\"&&e!==\"plan\")return Zst(s);let n=e===\"auto\"||e===\"plan\"&&mf(),u=o===\"auto\";if(u&&!n){if(!hE())throw Error(\"Cannot transition to auto mode: gate is not enabled\");rI(!0),s=d6(s)}else if(n&&!u)rI(!1),bO(!0),s=tle(s);if(e===\"plan\"&&o!==\"plan\"&&s.prePlanMode)return{...s,prePlanMode:void 0};return s}",
+      "variable": false
+    },
+    {
+      "file": "chunk-4zgx6txq.js",
+      "name": "NX",
+      "kind": "complete-permission-declaration",
+      "start": 18520,
+      "end": 18835,
+      "moduleSha256": "6826d9c59803a523f3fc09fa2d2e045de39e5342c40364cf99e0a19d2c628044",
+      "sha256": "31293fbb72688dcfe4578d332063bde3a53bfaf2abd978cea404e7a9aa4e6f27",
+      "source": "function NX(e){let o;switch(e){case\"settings\":o=\"auto mode disabled by settings\";break;case\"circuit-breaker\":o=\"auto mode is unavailable for your plan\";break;case\"fast-mode\":o=\"auto mode unavailable while fast mode is on \\xB7 run /fast off\";break;case\"model\":o=\"auto mode unavailable for this model\";break}return o}",
+      "variable": false
+    },
+    {
+      "file": "chunk-4zgx6txq.js",
+      "name": "ke",
+      "kind": "complete-permission-declaration",
+      "start": 7161,
+      "end": 7299,
+      "moduleSha256": "6826d9c59803a523f3fc09fa2d2e045de39e5342c40364cf99e0a19d2c628044",
+      "sha256": "ddb6f527206f2172bf920de2dadc58d43dd75191b6917de43528bc5aa94f1dcc",
+      "source": "ke={settings:\"auto_mode_settings\",\"circuit-breaker\":\"auto_mode_circuit_breaker\",\"fast-mode\":\"auto_mode_fast_mode\",model:\"auto_mode_model\"}",
+      "variable": true
+    },
+    {
+      "file": "chunk-hrhfcbdv.js",
+      "name": "KF",
+      "kind": "complete-permission-declaration",
+      "start": 2893,
+      "end": 2965,
+      "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+      "sha256": "9135079f3c1951c088cd8fed4f6813bc9388ae766148638a480ebf5381239a1e",
+      "source": "KF=[\"acceptEdits\",\"auto\",\"bypassPermissions\",\"default\",\"dontAsk\",\"plan\"]",
+      "variable": true
+    },
+    {
+      "file": "chunk-hrhfcbdv.js",
+      "name": "Vs",
+      "kind": "complete-permission-declaration",
+      "start": 2966,
+      "end": 2976,
+      "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+      "sha256": "41072c9dafee9722cc6d72a69fb81f9164c482d18d782dfce2c0ab1c03c3e28f",
+      "source": "Vs=[...KF]",
+      "variable": true
+    },
+    {
+      "file": "chunk-hrhfcbdv.js",
+      "name": "Tg",
+      "kind": "complete-permission-declaration",
+      "start": 2995,
+      "end": 3042,
+      "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+      "sha256": "23b54e7638e781655dae01dbe57c6a6f469b2e269a6935225cd3d4d572674b0c",
+      "source": "function Tg(e){return e===\"manual\"?\"default\":e}",
+      "variable": false
+    },
+    {
+      "file": "chunk-hrhfcbdv.js",
+      "name": "kh",
+      "kind": "complete-permission-declaration",
+      "start": 3042,
+      "end": 3096,
+      "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+      "sha256": "4daff7aaccedf796f58948b438da4ad3084be607513040db1fdf95c15c357633",
+      "source": "function kh(e){let n=Tg(e);return Vs.find((s)=>s===n)}",
+      "variable": false
+    },
+    {
+      "file": "chunk-hrhfcbdv.js",
+      "name": "Sse",
+      "kind": "complete-permission-declaration",
+      "start": 3100,
+      "end": 3165,
+      "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+      "sha256": "04ccc32f250d5a50dc963b8efa06d9d246fe2d98b31daf5aa952fe8d76017037",
+      "source": "Sse=`Cannot set permission mode: must be one of ${KF.join(\", \")}`",
+      "variable": true
+    },
+    {
+      "file": "chunk-hrhfcbdv.js",
+      "name": "gz",
+      "kind": "complete-permission-declaration",
+      "start": 74568,
+      "end": 74603,
+      "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+      "sha256": "0865a8efaa37b312b20241b0af07b99ae47ea0b7ff9aae6288a5f0dc8040db1a",
+      "source": "function gz(e){return e!==\"bubble\"}",
+      "variable": false
+    }
+  ],
+  "bindings": {
+    "chunk-xapeakym.js": {
+      "Q4": {
+        "file": "chunk-4zgx6txq.js",
+        "name": "Q4"
+      },
+      "L2e": {
+        "file": "chunk-xep95vq1.js",
+        "name": "L2e"
+      },
+      "aN": {
+        "file": "chunk-4zgx6txq.js",
+        "name": "aN"
+      },
+      "kh": {
+        "file": "chunk-hrhfcbdv.js",
+        "name": "kh"
+      },
+      "gz": {
+        "file": "chunk-hrhfcbdv.js",
+        "name": "gz"
+      },
+      "Sse": {
+        "file": "chunk-hrhfcbdv.js",
+        "name": "Sse"
+      },
+      "cp": {
+        "file": "chunk-xapeakym.js",
+        "name": "cp"
+      }
+    },
+    "chunk-4zgx6txq.js": {
+      "kh": {
+        "file": "chunk-hrhfcbdv.js",
+        "name": "kh"
+      },
+      "Sse": {
+        "file": "chunk-hrhfcbdv.js",
+        "name": "Sse"
+      },
+      "xLr": {
+        "file": "chunk-09m4fzsj.js",
+        "name": "xLr"
+      },
+      "BE": {
+        "file": "chunk-mgz5zc5d.js",
+        "name": "BE"
+      },
+      "hE": {
+        "file": "chunk-4zgx6txq.js",
+        "name": "hE"
+      },
+      "Z4": {
+        "file": "chunk-4zgx6txq.js",
+        "name": "Z4"
+      },
+      "NX": {
+        "file": "chunk-4zgx6txq.js",
+        "name": "NX"
+      },
+      "ke": {
+        "file": "chunk-4zgx6txq.js",
+        "name": "ke"
+      },
+      "xIe": {
+        "file": "chunk-xep95vq1.js",
+        "name": "xIe"
+      },
+      "vJ": {
+        "file": "chunk-qyc5w2q1.js",
+        "name": "vJ"
+      },
+      "pie": {
+        "file": "chunk-bn3p37gv.js",
+        "name": "pie"
+      },
+      "Pto": {
+        "file": "chunk-bn3p37gv.js",
+        "name": "Pto"
+      },
+      "wD": {
+        "file": "chunk-bn3p37gv.js",
+        "name": "wD"
+      },
+      "Zst": {
+        "file": "chunk-4zgx6txq.js",
+        "name": "Zst"
+      },
+      "mf": {
+        "file": "chunk-xep95vq1.js",
+        "name": "mf"
+      },
+      "rI": {
+        "file": "chunk-xep95vq1.js",
+        "name": "rI"
+      },
+      "d6": {
+        "file": "chunk-4zgx6txq.js",
+        "name": "d6"
+      },
+      "bO": {
+        "file": "chunk-bn3p37gv.js",
+        "name": "bO"
+      },
+      "tle": {
+        "file": "chunk-4zgx6txq.js",
+        "name": "tle"
+      }
+    },
+    "chunk-hrhfcbdv.js": {
+      "KF": {
+        "file": "chunk-hrhfcbdv.js",
+        "name": "KF"
+      },
+      "Tg": {
+        "file": "chunk-hrhfcbdv.js",
+        "name": "Tg"
+      },
+      "Vs": {
+        "file": "chunk-hrhfcbdv.js",
+        "name": "Vs"
+      }
+    }
+  },
+  "callerCells": [
+    "R",
+    "We",
+    "Yo",
+    "Ze"
+  ],
+  "writers": [
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Ze",
+      "kind": "complete-print-lexical-writer-source-evidence",
+      "start": 447026,
+      "end": 447072,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "8d835e7d24143c415f9e880f632560f5c956ae2e1c6c8887b3cc704b861ba6b7",
+      "source": "function(b,D){ht.enqueue(pEe(b.request_id,D))}",
+      "variable": false
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "We",
+      "kind": "complete-print-lexical-writer-source-evidence",
+      "start": 447135,
+      "end": 447184,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "8b9e14ed0ef0e8494dc3fd30b5b640668d4f7c8a78e82cf64845d7964fbd824a",
+      "source": "function(b,D,K){ht.enqueue(xz(b.request_id,D,K))}",
+      "variable": false
+    }
+  ],
+  "suppliers": [
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "L2e",
+      "kind": "same-owner-canonical-supplier",
+      "start": 156681,
+      "end": 156723,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "828d1e91a81b674ee06f27b257c7a9e1dc7018536f4d797347a720869cbda4b3",
+      "source": "function L2e(e){LF().setAccountSetMode(e)}",
+      "variable": false
+    },
+    {
+      "file": "chunk-09m4fzsj.js",
+      "name": "xLr",
+      "kind": "same-owner-canonical-supplier",
+      "start": 415455,
+      "end": 415511,
+      "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+      "sha256": "de8e8276198d154906280315117d66ccb2270adbf0e5b9ba288943762f7d2cb8",
+      "source": "xLr=\"bypassPermissions not supported in restricted mode\"",
+      "variable": true
+    },
+    {
+      "file": "chunk-mgz5zc5d.js",
+      "name": "BE",
+      "kind": "same-owner-canonical-supplier",
+      "start": 809,
+      "end": 845,
+      "moduleSha256": "431bbb7a25f2bb569909c1cb68a65f97ebe40053ad5b5fb331448d160ca99598",
+      "sha256": "8a85558320c391a25bb0ef26edd7397fa5cba14c1e6fd45c19413699580bd316",
+      "source": "function BE(){return H6r()!==void 0}",
+      "variable": false
+    },
+    {
+      "file": "chunk-4zgx6txq.js",
+      "name": "hE",
+      "kind": "same-owner-canonical-supplier",
+      "start": 22357,
+      "end": 22437,
+      "moduleSha256": "6826d9c59803a523f3fc09fa2d2e045de39e5342c40364cf99e0a19d2c628044",
+      "sha256": "cadd60595c782f4f655057c00fbdeb882da7bf8a8e263abd4db8d5ea5e5da178",
+      "source": "function hE(){if(RIe())return!1;if(W())return!1;if(!oIe(rt()))return!1;return!0}",
+      "variable": false
+    },
+    {
+      "file": "chunk-4zgx6txq.js",
+      "name": "Z4",
+      "kind": "same-owner-canonical-supplier",
+      "start": 22437,
+      "end": 22549,
+      "moduleSha256": "6826d9c59803a523f3fc09fa2d2e045de39e5342c40364cf99e0a19d2c628044",
+      "sha256": "0900dde9b54a2c104259fe58e6dcb92a107574e666dc11b086c4ff0b36238ef7",
+      "source": "function Z4(){if(W())return\"settings\";if(RIe())return\"circuit-breaker\";if(!oIe(rt()))return\"model\";return g4r()}",
+      "variable": false
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "xIe",
+      "kind": "same-owner-canonical-supplier",
+      "start": 156273,
+      "end": 156323,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "4bedf51062002323407d26982ec292ca3828ec24ae115443c28f49b08145e173",
+      "source": "function xIe(e){LF().setProvisionalStartupMode(e)}",
+      "variable": false
+    },
+    {
+      "file": "chunk-qyc5w2q1.js",
+      "name": "vJ",
+      "kind": "same-owner-canonical-supplier",
+      "start": 10479,
+      "end": 10614,
+      "moduleSha256": "ce0d693f079af69bba33948d8d2d15aeb484c315bb8a7e15bbbc480f32b52f7d",
+      "sha256": "18452fa545d080c804266ed23f2633b0dcf81362de2a08cef557b44d9a949221",
+      "source": "function vJ(e){if(e.from===e.to)return;ys(\"permission_mode_changed\",{from_mode:e.from,to_mode:e.to,...e.trigger&&{trigger:e.trigger}})}",
+      "variable": false
+    },
+    {
+      "file": "chunk-bn3p37gv.js",
+      "name": "pie",
+      "kind": "same-owner-canonical-supplier",
+      "start": 102867,
+      "end": 103049,
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "sha256": "58258f3110086334729f70154d638177e08a55c7ed7c9f32ecdedced5e63b4b1",
+      "source": "function pie(e,t){if(t===\"plan\"&&e!==\"plan\")n().sessionFlags.replaceNeedsPlanModeExitAttachment(!1);if(e===\"plan\"&&t!==\"plan\")n().sessionFlags.replaceNeedsPlanModeExitAttachment(!0)}",
+      "variable": false
+    },
+    {
+      "file": "chunk-bn3p37gv.js",
+      "name": "Pto",
+      "kind": "same-owner-canonical-supplier",
+      "start": 103188,
+      "end": 103423,
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "sha256": "f6cd88a439ee106942af60d330eb89583b9765c305e5cad9824e56754a9c0af7",
+      "source": "function Pto(e,t){if(e===\"auto\"&&t===\"plan\"||e===\"plan\"&&t===\"auto\")return;let o=e===\"auto\",r=t===\"auto\";if(r&&!o)n().sessionFlags.replaceNeedsAutoModeExitAttachment(!1);if(o&&!r)n().sessionFlags.replaceNeedsAutoModeExitAttachment(!0)}",
+      "variable": false
+    },
+    {
+      "file": "chunk-bn3p37gv.js",
+      "name": "wD",
+      "kind": "same-owner-canonical-supplier",
+      "start": 102592,
+      "end": 102652,
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "sha256": "d701a651da0f0bc4b1300629b94e1903252767292d0d2a7c686f7772e0859da9",
+      "source": "function wD(e){n().sessionFlags.replaceHasExitedPlanMode(e)}",
+      "variable": false
+    },
+    {
+      "file": "chunk-4zgx6txq.js",
+      "name": "Zst",
+      "kind": "same-owner-canonical-supplier",
+      "start": 23573,
+      "end": 23917,
+      "moduleSha256": "6826d9c59803a523f3fc09fa2d2e045de39e5342c40364cf99e0a19d2c628044",
+      "sha256": "8631aa48e206b3c535aaec9fdcd9edb6b9a1954d162060ed3cead261e173416a",
+      "source": "function Zst(e){let o=e.mode;if(o===\"plan\")return e;if(o===\"auto\"){if(JNn())return{...e,prePlanMode:\"auto\"};return rI(!1),bO(!0),{...tle(e),prePlanMode:\"auto\"}}if(o!==\"bypassPermissions\"){let s=_en(e);if(s)return{...s,prePlanMode:o}}return t(`[prepareContextForPlanMode] plain plan entry, prePlanMode=${o}`,{level:\"info\"}),{...e,prePlanMode:o}}",
+      "variable": false
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "mf",
+      "kind": "same-owner-canonical-supplier",
+      "start": 155733,
+      "end": 155766,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "5fba7647569a9649399345ad6c4ff02fcdf1ccb3ade0c03a51355154fe7acb88",
+      "source": "function mf(){return LF().active}",
+      "variable": false
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "rI",
+      "kind": "same-owner-canonical-supplier",
+      "start": 155700,
+      "end": 155733,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "b1d546b61f86fa93ff9215d8cba0e1fd68ec0d2c893cbc767b15fb80e81f452c",
+      "source": "function rI(e){LF().setActive(e)}",
+      "variable": false
+    },
+    {
+      "file": "chunk-4zgx6txq.js",
+      "name": "d6",
+      "kind": "same-owner-canonical-supplier",
+      "start": 5290,
+      "end": 5779,
+      "moduleSha256": "6826d9c59803a523f3fc09fa2d2e045de39e5342c40364cf99e0a19d2c628044",
+      "sha256": "1588379d44eec1a0484a348e89bc535173788e5e2ad09760d12fae8caec36f19",
+      "source": "function d6(e){let o=iBt(e.alwaysAllowRules,\"allow\"),s=Obo(o,[]);if(s.length===0)return e.strippedDangerousRules!==void 0?e:{...e,strippedDangerousRules:{}};for(let n of s)t(`Ignoring dangerous permission ${n.ruleDisplay} from ${n.sourceDisplay} (bypasses classifier)`);let l={};for(let[n,u]of Object.entries(e.strippedDangerousRules??{}))if(u)l[n]=[...u];for(let n of s){let u=On(n.ruleValue),m=l[n.source]??=[];if(!m.includes(u))m.push(u)}return{...DQo(e,s,!0),strippedDangerousRules:l}}",
+      "variable": false
+    },
+    {
+      "file": "chunk-bn3p37gv.js",
+      "name": "bO",
+      "kind": "same-owner-canonical-supplier",
+      "start": 103118,
+      "end": 103188,
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "sha256": "be6c036de5d8a0c9b81f75b38bab2ec9241d8521167752fe8dbbf76d355e7702",
+      "source": "function bO(e){n().sessionFlags.replaceNeedsAutoModeExitAttachment(e)}",
+      "variable": false
+    },
+    {
+      "file": "chunk-4zgx6txq.js",
+      "name": "tle",
+      "kind": "same-owner-canonical-supplier",
+      "start": 5779,
+      "end": 6103,
+      "moduleSha256": "6826d9c59803a523f3fc09fa2d2e045de39e5342c40364cf99e0a19d2c628044",
+      "sha256": "5ec9ae3baa40623da0dedb82e804bf4aa34832d14cd0ad546ba6c02f93812d7b",
+      "source": "function tle(e){let o=e.strippedDangerousRules;if(!o)return e;let s=e;for(let[l,n]of Object.entries(o)){if(!n||n.length===0)continue;let u=l===\"command\"?n.filter((m)=>!vin(m)):[...n];if(u.length===0)continue;s=ed(s,{type:\"addRules\",rules:u.map(jn),behavior:\"allow\",destination:l})}return{...s,strippedDangerousRules:void 0}}",
+      "variable": false
+    },
+    {
+      "file": "chunk-w77dxxmg.js",
+      "name": "xz",
+      "kind": "same-owner-canonical-error-frame",
+      "start": 1352,
+      "end": 1481,
+      "moduleSha256": "578d81d3b40925e069bda2e4c2c9df1f19502ed72781c30dd5913fc258e81813",
+      "sha256": "77e818030752614c2f234c85c0bb8cd6e252678b1a6c9b6f9768fdea35b0f88b",
+      "source": "function xz(e,n,t){return{type:\"control_response\",response:{subtype:\"error\",request_id:e,error:n,...t!==void 0&&{error_code:t}}}}",
+      "variable": false
+    }
+  ],
+  "nativeSha256": "328a061a5e69999e51b236fc2f5af5279be01973241b4432fb835ee58abfaeea",
+  "transport": [
+    "Whole original thenStatement, single-iteration shell preserves outer continue",
+    "Complete cp/Q4/aN and pure/static leaves, no body changes",
+    "All stateful gates/plan transitions borrow complete existing getPrintHostSource287 canonical suppliers; no new owner/store/cache",
+    "Actual print R/v/Ze/We/Yo; Yo uses the existing work-secret noteModeChoice",
+    "Auto alone stays on the pre-existing local SDK/Web extension gate; ordinary Plan uses original branch"
+  ],
+  "runtimeExecuted": false
+}

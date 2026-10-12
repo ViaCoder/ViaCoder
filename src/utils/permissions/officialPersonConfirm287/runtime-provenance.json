@@ -1,0 +1,3835 @@
+{
+  "version": "2.1.287",
+  "offsetUnit": "UTF-16 code units",
+  "platforms": [
+    {
+      "platform": "darwin-arm64",
+      "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+      "modules": [
+        {
+          "path": "chunk-w85axkr1.js",
+          "sha256": "2644d035cf3baaa6b0223727551e1543ab1b21639b5f1557d6f937b5ece71ba6"
+        },
+        {
+          "path": "chunk-m4akk3an.js",
+          "sha256": "6569ec7c04f6d3c418b686b9e2a7a757178ffd1b18d50caf80f103d84d38249b"
+        },
+        {
+          "path": "chunk-mphp7acd.js",
+          "sha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384"
+        },
+        {
+          "path": "chunk-1b21she7.js",
+          "sha256": "66df76fe31929f24554fa368a67b8d85a0844736314e2c2d69c6dddfc57099f8"
+        },
+        {
+          "path": "chunk-hrhfcbdv.js",
+          "sha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6"
+        },
+        {
+          "path": "chunk-aybmj3t4.js",
+          "sha256": "bf0b9819eea4ab1b4e8a70ffb924d5f5a1a62c148ea2ebf839429258515b91aa"
+        },
+        {
+          "path": "chunk-xep95vq1.js",
+          "sha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c"
+        },
+        {
+          "path": "chunk-mgz5zc5d.js",
+          "sha256": "431bbb7a25f2bb569909c1cb68a65f97ebe40053ad5b5fb331448d160ca99598"
+        },
+        {
+          "path": "chunk-vh4tv488.js",
+          "sha256": "6926945a42c325349bade787e1053a574789f4dac5bd0bd54f23f897d1364bf5"
+        },
+        {
+          "path": "chunk-sz5yqzkb.js",
+          "sha256": "dd813614586c8bd57ae3b63efacd7f4ea28391c9ecd159ab0a2afcb9822542f8"
+        }
+      ],
+      "rows": [
+        {
+          "file": "chunk-w85axkr1.js",
+          "name": "KFn",
+          "start": 1300,
+          "end": 1374,
+          "source": "function KFn(e,r){return e===r||e.behavior===\"ask\"&&e.forcedByCaller===!0}",
+          "sha256": "3ae795a23367afbb4835e3a51fc08b0bc1cbc6381d2f085e35b0744627a48f15",
+          "variable": false
+        },
+        {
+          "file": "chunk-w85axkr1.js",
+          "name": "YFn",
+          "start": 1374,
+          "end": 1440,
+          "source": "function YFn(e){return e===Hje||e===h0e||e===y0e||e===lnr||_tn(e)}",
+          "sha256": "f54aede21e920e6060a9c561c58c42a776875f872aade56f0f267316cb015a90",
+          "variable": false
+        },
+        {
+          "file": "chunk-w85axkr1.js",
+          "name": "Eit",
+          "start": 1480,
+          "end": 1494,
+          "source": "Eit=\"confirm_\"",
+          "sha256": "e8f34671f82190497a91ff87e2ad9c8729738d107c59cb22f2fe2c6ee4f4b4f5",
+          "variable": true
+        },
+        {
+          "file": "chunk-w85axkr1.js",
+          "name": "JPt",
+          "start": 1495,
+          "end": 1592,
+          "source": "function JPt(e){let r=pe(e);return y7()&&r.shouldAvoidPermissionPrompts!==!0&&r.mode!==\"dontAsk\"}",
+          "sha256": "a6abb53d7dc16a7ea7332e6d1fffde9c97b70e7b6b62892d2a899247ba6ac3fd",
+          "variable": false
+        },
+        {
+          "file": "chunk-w85axkr1.js",
+          "name": "Yqe",
+          "start": 1592,
+          "end": 2198,
+          "source": "async function Yqe(e){let{toolUseContext:r,source:i}=e;if(!JPt(r))return{kind:\"unanswered\",reason:\"no_one_to_ask\"};let s;try{s=await V(e)}catch(n){if(r.abortController.signal.aborted)t(`confirmWithUser(${i}): ask aborted with the turn: ${l(n)}`),s={kind:\"aborted\"};else d(n),s={kind:\"unanswered\",reason:\"error\"}}let a={source_hash:an(i)};switch(s.kind){case\"chose\":case\"declined\":case\"aborted\":y(\"permission_confirm_with_user\",{...a,answer:c(s.kind)});break;case\"unanswered\":if(s.reason===\"error\")m(\"permission_confirm_with_user\",\"error\",a);else p(\"permission_confirm_with_user\",s.reason,a);break}return s}",
+          "sha256": "7839398dc6bed46c4c8bbf8c1f981a623d7e510359ea8be73ff3251422b1a3db",
+          "variable": false
+        },
+        {
+          "file": "chunk-w85axkr1.js",
+          "name": "V",
+          "start": 2198,
+          "end": 3110,
+          "source": "async function V({canUseTool:e,toolUseContext:r,source:i,header:s,question:a,choices:n,personOnly:_}){let h=o5.inputSchema.safeParse({questions:[{question:a,header:s,options:n.map(({label:g,description:W})=>({label:g,description:W??\"\"})),multiSelect:!1}],metadata:{source:i}});if(!h.success)throw new P(`confirmWithUser(${i}): the question does not satisfy the AskUserQuestion schema: ${h.error.message}`,\"confirmWithUser: the question does not satisfy the AskUserQuestion schema\");let k=await o5.checkPermissions(h.data,r);if(k.behavior!==\"ask\")throw new P(`confirmWithUser(${i}): AskUserQuestion.checkPermissions answered ${k.behavior}, not ask`,\"confirmWithUser: AskUserQuestion.checkPermissions did not answer ask\");let C={...k,forcedByCaller:!0,..._===!0&&{personOnly:!0}},w=`${Eit}${b()}`,A=await e(o5,h.data,r,Jc({content:[]}),w,C).finally(()=>Jre(r.session,w));return O(A,C,r.abortController.signal,a,n)}",
+          "sha256": "5e66e5fb4e7bf9c81fe70e7f10a5b740cb9b76cd3838e20b57e6dea5b92130bb",
+          "variable": false
+        },
+        {
+          "file": "chunk-w85axkr1.js",
+          "name": "O",
+          "start": 3110,
+          "end": 3829,
+          "source": "function O(e,r,i,s,a){if(KFn(e,r))return{kind:\"unanswered\",reason:\"no_one_to_ask\"};if(i.aborted)return{kind:\"aborted\"};switch(e.behavior){case\"allow\":{let n=T().safeParse(e.updatedInput);if(!n.success)return{kind:\"unanswered\",reason:\"no_selection\"};if(n.data.followUp===!0)return{kind:\"declined\"};let _=E(n.data.answers?.[s]);if(_===\"\")return{kind:\"unanswered\",reason:\"no_selection\"};let h=a.find((k)=>U(k.label)===_);return h!==void 0?{kind:\"chose\",value:h.value}:{kind:\"declined\",typedAnswer:_}}case\"deny\":if(e.decisionReason.type===\"asyncAgent\"||e.decisionReason.type===\"other\"&&YFn(e.decisionReason.reason))return{kind:\"unanswered\",reason:\"no_one_to_ask\"};return{kind:\"declined\"};case\"ask\":return{kind:\"declined\"}}}",
+          "sha256": "2896f5b5a205868b022a37d61eae0d311cf40f246c954cbf52cec88c3c32d810",
+          "variable": false
+        },
+        {
+          "file": "chunk-w85axkr1.js",
+          "name": "T",
+          "start": 3833,
+          "end": 3902,
+          "source": "T=f(()=>u({answers:de(o(),se()).optional(),followUp:H().optional()}))",
+          "sha256": "bc4eabcd6601da62d6e13c65887b6e087839bc7e09c7961d631497700ed3c458",
+          "variable": true
+        },
+        {
+          "file": "chunk-w85axkr1.js",
+          "name": "E",
+          "start": 3903,
+          "end": 4037,
+          "source": "function E(e){if(typeof e===\"string\")return U(e);if(Array.isArray(e))return U(e.filter((r)=>typeof r===\"string\").join(\", \"));return\"\"}",
+          "sha256": "1202e009ea53bfa0ffb55f3ba65051b4b11f72ed4b77793898b242e9809dbfeb",
+          "variable": false
+        },
+        {
+          "file": "chunk-w85axkr1.js",
+          "name": "U",
+          "start": 4037,
+          "end": 4087,
+          "source": "function U(e){return e.replace(/\\s+/g,\" \").trim()}",
+          "sha256": "71e2dbe88b5c00c2645993fc5a1f6ffb1ac2c2a3896ed0ea21a8c3cf45240583",
+          "variable": false
+        }
+      ],
+      "ports": [
+        {
+          "local": "Hje",
+          "file": "chunk-hrhfcbdv.js",
+          "name": "Hje"
+        },
+        {
+          "local": "h0e",
+          "file": "chunk-hrhfcbdv.js",
+          "name": "h0e"
+        },
+        {
+          "local": "y0e",
+          "file": "chunk-hrhfcbdv.js",
+          "name": "y0e"
+        },
+        {
+          "local": "lnr",
+          "file": "chunk-hrhfcbdv.js",
+          "name": "lnr"
+        },
+        {
+          "local": "c",
+          "file": "chunk-n4qghq20.js",
+          "name": "c"
+        },
+        {
+          "local": "P",
+          "file": "chunk-c9me9cp7.js",
+          "name": "P"
+        },
+        {
+          "local": "l",
+          "file": "chunk-c9me9cp7.js",
+          "name": "l"
+        },
+        {
+          "local": "y",
+          "file": "chunk-9d2ykxmy.js",
+          "name": "y"
+        },
+        {
+          "local": "m",
+          "file": "chunk-9d2ykxmy.js",
+          "name": "m"
+        },
+        {
+          "local": "p",
+          "file": "chunk-9d2ykxmy.js",
+          "name": "p"
+        },
+        {
+          "local": "t",
+          "file": "chunk-q80zaav8.js",
+          "name": "t"
+        },
+        {
+          "local": "d",
+          "file": "chunk-amhtwhch.js",
+          "name": "d"
+        },
+        {
+          "local": "f",
+          "file": "chunk-5qqrzb2c.js",
+          "name": "f"
+        },
+        {
+          "local": "Jre",
+          "file": "chunk-1b21she7.js",
+          "name": "Jre"
+        },
+        {
+          "local": "pe",
+          "file": "chunk-m4akk3an.js",
+          "name": "pe"
+        },
+        {
+          "local": "o5",
+          "file": "chunk-brb1711z.js",
+          "name": "o5"
+        },
+        {
+          "local": "y7",
+          "file": "chunk-mphp7acd.js",
+          "name": "y7"
+        },
+        {
+          "local": "Jc",
+          "file": "chunk-mphp7acd.js",
+          "name": "Jc"
+        },
+        {
+          "local": "_tn",
+          "file": "chunk-sz5yqzkb.js",
+          "name": "_tn"
+        },
+        {
+          "local": "an",
+          "file": "chunk-vh4tv488.js",
+          "name": "an"
+        },
+        {
+          "local": "o",
+          "file": "chunk-aybmj3t4.js",
+          "name": "o"
+        },
+        {
+          "local": "H",
+          "file": "chunk-aybmj3t4.js",
+          "name": "H"
+        },
+        {
+          "local": "se",
+          "file": "chunk-aybmj3t4.js",
+          "name": "se"
+        },
+        {
+          "local": "u",
+          "file": "chunk-aybmj3t4.js",
+          "name": "u"
+        },
+        {
+          "local": "de",
+          "file": "chunk-aybmj3t4.js",
+          "name": "de"
+        },
+        {
+          "local": "b",
+          "file": "crypto",
+          "name": "randomUUID"
+        }
+      ],
+      "exports": {
+        "KFn": "KFn",
+        "YFn": "YFn",
+        "Eit": "Eit",
+        "JPt": "JPt",
+        "Yqe": "Yqe"
+      },
+      "allowed": "JPt",
+      "confirm": "Yqe",
+      "context": {
+        "rows": [
+          {
+            "file": "chunk-m4akk3an.js",
+            "name": "d",
+            "start": 899,
+            "end": 1046,
+            "source": "function d(e,o){if(o.length===0)return e;return{...e,alwaysAllowRules:{...e.alwaysAllowRules,command:L([...e.alwaysAllowRules.command||[],...o])}}}",
+            "sha256": "4516c6a5324ddbc9804dd96644039e75748ebc99a1df867309622e561a67d6ae",
+            "variable": false
+          },
+          {
+            "file": "chunk-m4akk3an.js",
+            "name": "u",
+            "start": 1046,
+            "end": 1190,
+            "source": "function u(e,o){if(o.length===0)return e;return{...e,alwaysDenyRules:{...e.alwaysDenyRules,command:L([...e.alwaysDenyRules.command||[],...o])}}}",
+            "sha256": "e2025c0b101993ad98a02c3e32cbb8c13b98039f361bf5ae2c602bd2217a4607",
+            "variable": false
+          },
+          {
+            "file": "chunk-m4akk3an.js",
+            "name": "f",
+            "start": 1861,
+            "end": 1969,
+            "source": "class f{mode;autoClassifierActive;constructor(e,o){this.mode=e,this.autoClassifierActive=o}toJSON(){return}}",
+            "sha256": "ac50b235352e9564895f2c41b6d8c4ee27b40d35ab960b29eb3785d9b80f767b",
+            "variable": false
+          },
+          {
+            "file": "chunk-m4akk3an.js",
+            "name": "HWo",
+            "start": 1969,
+            "end": 2007,
+            "source": "function HWo(e){return new f(e,Ta(e))}",
+            "sha256": "563cca5ee1c785ebc170ec7c9dc0b56ba64359f475166201683a8e2ab70d7075",
+            "variable": false
+          },
+          {
+            "file": "chunk-m4akk3an.js",
+            "name": "x6r",
+            "start": 2007,
+            "end": 2070,
+            "source": "function x6r(e){return e instanceof f&&!e.autoClassifierActive}",
+            "sha256": "12573ba97b75d0b691c5b43b98b22d29926d8e0dbddc32d0690f38dd52f20092",
+            "variable": false
+          },
+          {
+            "file": "chunk-m4akk3an.js",
+            "name": "c",
+            "start": 2070,
+            "end": 2288,
+            "source": "function c(e){if(!x6r(e))return;let o=e.mode;switch(o){case\"default\":case\"acceptEdits\":case\"dontAsk\":case\"bubble\":return o;case\"plan\":case\"bypassPermissions\":return\"default\";case\"auto\":return;default:{let n=o;return}}}",
+            "sha256": "ffd6b2b617a0250cb973b453a17ff7c94a7a8304a50e38bf358cf95efb958a50",
+            "variable": false
+          },
+          {
+            "file": "chunk-m4akk3an.js",
+            "name": "y",
+            "start": 2646,
+            "end": 2716,
+            "source": "function y(e){return e===So||e.startsWith(`${So}(`)||e.startsWith(HG)}",
+            "sha256": "a49fa317fc8e81dd92a9e5cfad91dfc78ed30dfa98ad928467f388efb7719772",
+            "variable": false
+          },
+          {
+            "file": "chunk-m4akk3an.js",
+            "name": "x",
+            "start": 2716,
+            "end": 3117,
+            "source": "function x(e){let o=y,n=!1,s={},r={};for(let[t,i]of Object.entries(e.strippedDangerousRules??{}))if(i!==void 0)r[t]=[...i];for(let[t,i]of Object.entries(e.alwaysAllowRules)){if(i===void 0)continue;let a=i.filter((l)=>!o(l));if(a.length!==i.length){n=!0;for(let l of i)if(o(l)){let p=r[t]??=[];if(!p.includes(l))p.push(l)}}s[t]=a}if(!n)return e;return{...e,alwaysAllowRules:s,strippedDangerousRules:r}}",
+            "sha256": "2c6457ee4100b97744cdc976fa761691b199b12b67e00018fd4254c84ceabc33",
+            "variable": false
+          },
+          {
+            "file": "chunk-m4akk3an.js",
+            "name": "pe",
+            "start": 3471,
+            "end": 4585,
+            "source": "function pe(e){let o=e.getAppState().toolPermissionContext,n=o!==void 0&&o.pollEventDeliveryGuard===!0;if(n)o=x(o);let s=e.permissionLayers;if(!s)return g(e,o);let r=s.findLast((t)=>t.kind===\"working_directory\");for(let t of s)switch(t.kind){case\"allowed_tools\":if(!n)o=d(o,[...t.allowedTools]);break;case\"disallowed_tools\":o=u(o,[...t.disallowedTools]);break;case\"bash_command_clamp\":o={...o,bashCommandClamps:[...o.bashCommandClamps??[],t.rules]};break;case\"avoid_prompts\":if(!o.shouldAvoidPermissionPrompts)o={...o,shouldAvoidPermissionPrompts:!0};break;case\"sandbox_auto_allow_suspended\":if(!o.sandboxAutoAllowSuspended)o={...o,sandboxAutoAllowSuspended:!0};break;case\"permission_mode\":{if(t.mode===\"bypassPermissions\"&&(BE()||!o.isBypassPermissionsModeAvailable))break;o={...o,mode:t.mode};break}case\"working_directory\":if(t===r&&!o.additionalWorkingDirectories.has(t.directory))o={...o,additionalWorkingDirectories:new Map([...o.additionalWorkingDirectories,[t.directory,{path:t.directory,source:\"session\"}]])};break;case\"effort\":case\"model\":case\"max_thinking_tokens\":case\"flag_settings\":break}return g(e,o)}",
+            "sha256": "87729daa65441dd9f13e80598e1a30d13adcd830d698d2ac4ad70da5f8b75cbc",
+            "variable": false
+          },
+          {
+            "file": "chunk-m4akk3an.js",
+            "name": "g",
+            "start": 4585,
+            "end": 4625,
+            "source": "function g(e,o){return b(e,k(e,h(e,o)))}",
+            "sha256": "5aca9a66c297f49bcd4b13063a7885bb45127d3c3e355f6b95d6c99a8d8f9322",
+            "variable": false
+          },
+          {
+            "file": "chunk-m4akk3an.js",
+            "name": "h",
+            "start": 4625,
+            "end": 4800,
+            "source": "function h(e,o){if(o===void 0||o.mode!==\"auto\"||e.forPromptShellCommand===!0||e.forRemoteExecution===!0)return o;let n=c(e.permissionModeAtRequest);return n===void 0?o:m(n,o)}",
+            "sha256": "d58d23c7552bf39853a9968a01658ef666632f2daa23b7371f03940106e7ad2e",
+            "variable": false
+          },
+          {
+            "file": "chunk-m4akk3an.js",
+            "name": "b",
+            "start": 5021,
+            "end": 5130,
+            "source": "function b(e,o){if(e.forPromptShellCommand!==!0||o===void 0)return o;return o.mode===\"auto\"?m(\"default\",o):o}",
+            "sha256": "e14e10e26d7e75d16c672360301d5c18326ad4d0232105f51a5eafb9990764a3",
+            "variable": false
+          },
+          {
+            "file": "chunk-m4akk3an.js",
+            "name": "m",
+            "start": 5130,
+            "end": 5212,
+            "source": "function m(e,o){return{...o,mode:e,modeBeforeRewrite:o.modeBeforeRewrite??o.mode}}",
+            "sha256": "5a4d4634b3f6ca804b5e2f2d7759a65b400ca81c3bc67886ae5a545dc0b08905",
+            "variable": false
+          },
+          {
+            "file": "chunk-m4akk3an.js",
+            "name": "k",
+            "start": 5212,
+            "end": 5405,
+            "source": "function k(e,o){if(e.forRemoteExecution!==!0||o===void 0)return o;let{blockReadsOutsideWorkingDirectories:n,...s}=o;return o.mode===\"acceptEdits\"||o.mode===\"bypassPermissions\"?m(\"default\",s):s}",
+            "sha256": "1c5c245e01d75bc01d0fc47619932be43e231fff318cc30c39abb2f03b2b9e3d",
+            "variable": false
+          }
+        ],
+        "ports": [
+          {
+            "local": "Ta",
+            "file": "chunk-xep95vq1.js",
+            "name": "Ta"
+          },
+          {
+            "local": "BE",
+            "file": "chunk-mgz5zc5d.js",
+            "name": "BE"
+          },
+          {
+            "local": "So",
+            "file": "chunk-csmetexx.js",
+            "name": "So"
+          },
+          {
+            "local": "HG",
+            "file": "chunk-csmetexx.js",
+            "name": "HG"
+          },
+          {
+            "local": "L",
+            "file": "chunk-h3rrxdgy.js",
+            "name": "L"
+          }
+        ],
+        "read": "pe",
+        "capture": "HWo",
+        "isCapturedNonAuto": "x6r"
+      },
+      "eligibility": {
+        "rows": [
+          {
+            "file": "chunk-mphp7acd.js",
+            "name": "y7",
+            "start": 1340762,
+            "end": 1340846,
+            "source": "function y7(){if(lh().length>0&&Ce())return!1;if(Ce()&&!hHt(EI()))return!1;return!0}",
+            "sha256": "4dbd1a48833e024c6b8a9e19a3c8258616ca21c68f05d621a797ae60c1a8973d",
+            "variable": false
+          },
+          {
+            "file": "chunk-mphp7acd.js",
+            "name": "hHt",
+            "start": 1340716,
+            "end": 1340762,
+            "source": "function hHt(e){return e!==void 0&&e!==\"none\"}",
+            "sha256": "34d75fc92c3ddc65f0cb9167c68d685b4f9fb090cdf18e447fe5f3425a845cfd",
+            "variable": false
+          }
+        ],
+        "read": "y7",
+        "ports": [
+          {
+            "local": "Ce",
+            "file": "chunk-bn3p37gv.js",
+            "name": "Ce"
+          },
+          {
+            "local": "EI",
+            "file": "chunk-bn3p37gv.js",
+            "name": "EI"
+          },
+          {
+            "local": "lh",
+            "file": "chunk-bn3p37gv.js",
+            "name": "lh"
+          }
+        ]
+      },
+      "cleanup": {
+        "rows": [
+          {
+            "file": "chunk-1b21she7.js",
+            "name": "xt",
+            "start": 128803,
+            "end": 128850,
+            "source": "xt=new Tt(()=>({calls:new Map,hostAttests:!1}))",
+            "sha256": "676edd2984cbb590e8e9af6323dbbedf8e1bafa604ee9d475d99cb94ca0ddd85",
+            "variable": true
+          },
+          {
+            "file": "chunk-1b21she7.js",
+            "name": "Cr",
+            "start": 129143,
+            "end": 129179,
+            "source": "Cr=new Tt(()=>({byToolUse:new Map}))",
+            "sha256": "ed5028870a2fe188e864c43d0a1569e6e521d3dfd31d09c2607b22032372ec4c",
+            "variable": true
+          },
+          {
+            "file": "chunk-1b21she7.js",
+            "name": "Jre",
+            "start": 129180,
+            "end": 129344,
+            "source": "function Jre(e,n){if(e!==void 0){xt.peek(e)?.calls.delete(n);let s=Cr.peek(e)?.byToolUse.get(n);if(s!==void 0){Cr.peek(e)?.byToolUse.delete(n);for(let r of s)r()}}}",
+            "sha256": "28b048debf60af840f4e965d6fa7f3a8f8f8f8cb92e32f93ebf35c1897b891d2",
+            "variable": false
+          }
+        ],
+        "ports": [
+          {
+            "local": "Tt",
+            "file": "chunk-bn3p37gv.js",
+            "name": "Tt"
+          }
+        ],
+        "finish": "Jre"
+      },
+      "constants": [
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "Hje",
+          "start": 9075,
+          "end": 9135,
+          "source": "Hje=\"tool permission stream closed before response received\"",
+          "sha256": "d0559e663dce821312c3127c506156e33a11861ef0e430f88b9ecf53fe5ad7e7",
+          "variable": true
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "h0e",
+          "start": 9136,
+          "end": 9196,
+          "source": "h0e=\"canUseTool returned a schema-invalid permission result\"",
+          "sha256": "7bd38045498904fce4030623058cefaae6821721463775fabc6b5da87af9c55a",
+          "variable": true
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "y0e",
+          "start": 9197,
+          "end": 9233,
+          "source": "y0e=\"tool permission request failed\"",
+          "sha256": "fb8b327c489bff11ca7403c28dd558fb607fcbf12c3dd1e4e97abb29d2182989",
+          "variable": true
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "lnr",
+          "start": 9332,
+          "end": 9380,
+          "source": "lnr=\"permission prompt tool no longer connected\"",
+          "sha256": "b58cb3c0105f6266f8e31819a31d0623f12fadbf8d915e9a094d86f775252950",
+          "variable": true
+        }
+      ],
+      "utilities": {
+        "rows": [
+          {
+            "file": "chunk-xep95vq1.js",
+            "name": "Ta",
+            "start": 155884,
+            "end": 155944,
+            "source": "function Ta(e,s=!1){return e===\"auto\"||e===\"plan\"&&!s&&mf()}",
+            "sha256": "5ed7e123688a0f5152dc80b540f4726f4cf48f69e5e87ef095202c8f7f895be8",
+            "variable": false
+          },
+          {
+            "file": "chunk-mgz5zc5d.js",
+            "name": "H6r",
+            "start": 662,
+            "end": 809,
+            "source": "function H6r(){if((er()||{}).permissions?.disableBypassPermissionsMode===\"disable\")return\"Bypass permissions mode was disabled by settings\";return}",
+            "sha256": "0b92de0fa7e55ef7b9a717865d62c9da63316b1f6c936cabced80ab5e5203560",
+            "variable": false
+          },
+          {
+            "file": "chunk-mgz5zc5d.js",
+            "name": "BE",
+            "start": 809,
+            "end": 845,
+            "source": "function BE(){return H6r()!==void 0}",
+            "sha256": "8a85558320c391a25bb0ef26edd7397fa5cba14c1e6fd45c19413699580bd316",
+            "variable": false
+          },
+          {
+            "file": "chunk-vh4tv488.js",
+            "name": "an",
+            "start": 698,
+            "end": 772,
+            "source": "function an(t){return bn(e(\"sha256\").update(t).digest(\"hex\").slice(0,12))}",
+            "sha256": "803c47b63d6e5480565087919b8caef1b84253e01649f58f1b046ea1d2fa5e35",
+            "variable": false
+          },
+          {
+            "file": "chunk-sz5yqzkb.js",
+            "name": "_tn",
+            "start": 1041,
+            "end": 1116,
+            "source": "function _tn(e){return e.startsWith(\"localDisplayOnly ask not forwarded:\")}",
+            "sha256": "a08adacf049ccc74681df6ae4f35371bd68322f4d71f205866c4f1e3c445aa66",
+            "variable": false
+          }
+        ],
+        "ports": [
+          {
+            "local": "er",
+            "file": "chunk-f1vb7bx7.js",
+            "name": "er"
+          },
+          {
+            "local": "bn",
+            "file": "chunk-n4qghq20.js",
+            "name": "bn"
+          },
+          {
+            "local": "e",
+            "file": "crypto",
+            "name": "createHash"
+          },
+          {
+            "local": "mf",
+            "hostBinding": true,
+            "accessor": {
+              "file": "chunk-xep95vq1.js",
+              "name": "mf",
+              "start": 155733,
+              "end": 155766,
+              "source": "function mf(){return LF().active}",
+              "sha256": "5fba7647569a9649399345ad6c4ff02fcdf1ccb3ade0c03a51355154fe7acb88",
+              "variable": false
+            }
+          }
+        ],
+        "mode": "Ta",
+        "bypass": "BE",
+        "hash": "an",
+        "reason": "_tn"
+      }
+    },
+    {
+      "platform": "darwin-x64",
+      "manifestSha256": "ba9e122d28e8a42927eb23c7c86b62295f24a223546ee5476e761837579a709b",
+      "modules": [
+        {
+          "path": "chunk-ya21pqjx.js",
+          "sha256": "0afe6202a9fb6a4d7df4d9d527b5034b26584b738b686ece7afc90582d90d7d2"
+        },
+        {
+          "path": "chunk-92nvb96n.js",
+          "sha256": "f4f668fbc057f7a3fb7555796d04b519c7e748e33bbfb3469969ba293b57d450"
+        },
+        {
+          "path": "chunk-xyr63zg5.js",
+          "sha256": "350a58d418914413ef2b573f1feee859c944ad06217c830e64e8c65f161cdeed"
+        },
+        {
+          "path": "chunk-b8aeyehv.js",
+          "sha256": "85b2c9eb84e7b40a649c0b70cec2922f794c49247ee53e53a9b0293478d6c053"
+        },
+        {
+          "path": "chunk-qqfb9hb6.js",
+          "sha256": "e35e1872fdad4c42744298233449a7a5541a94aba4375f79aadda9edd469b252"
+        },
+        {
+          "path": "chunk-h7f86550.js",
+          "sha256": "f6efe2f096a338a3024322204005d99a3be3882ef11e77cb700b7710df39665c"
+        },
+        {
+          "path": "chunk-1484hydp.js",
+          "sha256": "4cccb99a67ed5ad0ca7df1965914230508b9be4e8d079175a17b465d84f83c22"
+        },
+        {
+          "path": "chunk-8dggw7vt.js",
+          "sha256": "6b7e051f4d35e46e0f53889735586a4ea7530dfe6606ff72c8adee296841b5df"
+        },
+        {
+          "path": "chunk-1sdq23nt.js",
+          "sha256": "b6526d28b352e585be5b9258c5bae59296869a4bbc3217a72dbef3a97c245aea"
+        },
+        {
+          "path": "chunk-0mdjh753.js",
+          "sha256": "586deb55b0ce1abd0986848fce770262bde994cb1d3009d06bbd0ba0497d69fd"
+        }
+      ],
+      "rows": [
+        {
+          "file": "chunk-ya21pqjx.js",
+          "name": "qFn",
+          "start": 1300,
+          "end": 1374,
+          "source": "function qFn(e,r){return e===r||e.behavior===\"ask\"&&e.forcedByCaller===!0}",
+          "sha256": "52a86d4c559257e1c03850c9d2f63a99d8ac8444a6b1dad2eec2fdd19579c71a",
+          "variable": false
+        },
+        {
+          "file": "chunk-ya21pqjx.js",
+          "name": "YFn",
+          "start": 1374,
+          "end": 1440,
+          "source": "function YFn(e){return e===Oje||e===hPe||e===yPe||e===lnr||_tn(e)}",
+          "sha256": "b0882820200637942aae0f1515402f8b940a104a00ebd4b24d9bc0a95c7848c5",
+          "variable": false
+        },
+        {
+          "file": "chunk-ya21pqjx.js",
+          "name": "Eit",
+          "start": 1480,
+          "end": 1494,
+          "source": "Eit=\"confirm_\"",
+          "sha256": "e8f34671f82190497a91ff87e2ad9c8729738d107c59cb22f2fe2c6ee4f4b4f5",
+          "variable": true
+        },
+        {
+          "file": "chunk-ya21pqjx.js",
+          "name": "JHt",
+          "start": 1495,
+          "end": 1592,
+          "source": "function JHt(e){let r=pe(e);return y7()&&r.shouldAvoidPermissionPrompts!==!0&&r.mode!==\"dontAsk\"}",
+          "sha256": "b4c6c31b88de53d76ba59896d84d86a71e204adf0cd7bf76551d9db881995690",
+          "variable": false
+        },
+        {
+          "file": "chunk-ya21pqjx.js",
+          "name": "Y3e",
+          "start": 1592,
+          "end": 2198,
+          "source": "async function Y3e(e){let{toolUseContext:r,source:i}=e;if(!JHt(r))return{kind:\"unanswered\",reason:\"no_one_to_ask\"};let s;try{s=await P(e)}catch(n){if(r.abortController.signal.aborted)t(`confirmWithUser(${i}): ask aborted with the turn: ${l(n)}`),s={kind:\"aborted\"};else d(n),s={kind:\"unanswered\",reason:\"error\"}}let a={source_hash:an(i)};switch(s.kind){case\"chose\":case\"declined\":case\"aborted\":y(\"permission_confirm_with_user\",{...a,answer:c(s.kind)});break;case\"unanswered\":if(s.reason===\"error\")m(\"permission_confirm_with_user\",\"error\",a);else p(\"permission_confirm_with_user\",s.reason,a);break}return s}",
+          "sha256": "7c96c551975cc4885b373e5347797a557c02c667a484cef4b4b2804a32ced568",
+          "variable": false
+        },
+        {
+          "file": "chunk-ya21pqjx.js",
+          "name": "P",
+          "start": 2198,
+          "end": 3110,
+          "source": "async function P({canUseTool:e,toolUseContext:r,source:i,header:s,question:a,choices:n,personOnly:_}){let h=o5.inputSchema.safeParse({questions:[{question:a,header:s,options:n.map(({label:g,description:W})=>({label:g,description:W??\"\"})),multiSelect:!1}],metadata:{source:i}});if(!h.success)throw new H(`confirmWithUser(${i}): the question does not satisfy the AskUserQuestion schema: ${h.error.message}`,\"confirmWithUser: the question does not satisfy the AskUserQuestion schema\");let k=await o5.checkPermissions(h.data,r);if(k.behavior!==\"ask\")throw new H(`confirmWithUser(${i}): AskUserQuestion.checkPermissions answered ${k.behavior}, not ask`,\"confirmWithUser: AskUserQuestion.checkPermissions did not answer ask\");let C={...k,forcedByCaller:!0,..._===!0&&{personOnly:!0}},w=`${Eit}${b()}`,A=await e(o5,h.data,r,Jc({content:[]}),w,C).finally(()=>Jre(r.session,w));return V(A,C,r.abortController.signal,a,n)}",
+          "sha256": "6303a34f1189766b3bae108d06d792fb359c5e0c9b5aef4c489478f0e637262c",
+          "variable": false
+        },
+        {
+          "file": "chunk-ya21pqjx.js",
+          "name": "V",
+          "start": 3110,
+          "end": 3829,
+          "source": "function V(e,r,i,s,a){if(qFn(e,r))return{kind:\"unanswered\",reason:\"no_one_to_ask\"};if(i.aborted)return{kind:\"aborted\"};switch(e.behavior){case\"allow\":{let n=T().safeParse(e.updatedInput);if(!n.success)return{kind:\"unanswered\",reason:\"no_selection\"};if(n.data.followUp===!0)return{kind:\"declined\"};let _=E(n.data.answers?.[s]);if(_===\"\")return{kind:\"unanswered\",reason:\"no_selection\"};let h=a.find((k)=>U(k.label)===_);return h!==void 0?{kind:\"chose\",value:h.value}:{kind:\"declined\",typedAnswer:_}}case\"deny\":if(e.decisionReason.type===\"asyncAgent\"||e.decisionReason.type===\"other\"&&YFn(e.decisionReason.reason))return{kind:\"unanswered\",reason:\"no_one_to_ask\"};return{kind:\"declined\"};case\"ask\":return{kind:\"declined\"}}}",
+          "sha256": "09e56ee96cdffc0c3d89312d15bd5c420f89ff3506bc5c3caa213ca290b0e297",
+          "variable": false
+        },
+        {
+          "file": "chunk-ya21pqjx.js",
+          "name": "T",
+          "start": 3833,
+          "end": 3902,
+          "source": "T=f(()=>u({answers:de(o(),se()).optional(),followUp:O().optional()}))",
+          "sha256": "e7a8d04930d9d78490508a6a068bf899b3da9751aa79864644c0187ba7ea8ecd",
+          "variable": true
+        },
+        {
+          "file": "chunk-ya21pqjx.js",
+          "name": "E",
+          "start": 3903,
+          "end": 4037,
+          "source": "function E(e){if(typeof e===\"string\")return U(e);if(Array.isArray(e))return U(e.filter((r)=>typeof r===\"string\").join(\", \"));return\"\"}",
+          "sha256": "1202e009ea53bfa0ffb55f3ba65051b4b11f72ed4b77793898b242e9809dbfeb",
+          "variable": false
+        },
+        {
+          "file": "chunk-ya21pqjx.js",
+          "name": "U",
+          "start": 4037,
+          "end": 4087,
+          "source": "function U(e){return e.replace(/\\s+/g,\" \").trim()}",
+          "sha256": "71e2dbe88b5c00c2645993fc5a1f6ffb1ac2c2a3896ed0ea21a8c3cf45240583",
+          "variable": false
+        }
+      ],
+      "ports": [
+        {
+          "local": "Oje",
+          "file": "chunk-qqfb9hb6.js",
+          "name": "Oje"
+        },
+        {
+          "local": "hPe",
+          "file": "chunk-qqfb9hb6.js",
+          "name": "hPe"
+        },
+        {
+          "local": "yPe",
+          "file": "chunk-qqfb9hb6.js",
+          "name": "yPe"
+        },
+        {
+          "local": "lnr",
+          "file": "chunk-qqfb9hb6.js",
+          "name": "lnr"
+        },
+        {
+          "local": "c",
+          "file": "chunk-zde5y65p.js",
+          "name": "c"
+        },
+        {
+          "local": "H",
+          "file": "chunk-sbek65a7.js",
+          "name": "H"
+        },
+        {
+          "local": "l",
+          "file": "chunk-sbek65a7.js",
+          "name": "l"
+        },
+        {
+          "local": "y",
+          "file": "chunk-6dy1efbd.js",
+          "name": "y"
+        },
+        {
+          "local": "m",
+          "file": "chunk-6dy1efbd.js",
+          "name": "m"
+        },
+        {
+          "local": "p",
+          "file": "chunk-6dy1efbd.js",
+          "name": "p"
+        },
+        {
+          "local": "t",
+          "file": "chunk-twb9dkx9.js",
+          "name": "t"
+        },
+        {
+          "local": "d",
+          "file": "chunk-a7t07gyz.js",
+          "name": "d"
+        },
+        {
+          "local": "f",
+          "file": "chunk-5qqrzb2c.js",
+          "name": "f"
+        },
+        {
+          "local": "Jre",
+          "file": "chunk-b8aeyehv.js",
+          "name": "Jre"
+        },
+        {
+          "local": "pe",
+          "file": "chunk-92nvb96n.js",
+          "name": "pe"
+        },
+        {
+          "local": "o5",
+          "file": "chunk-e334gmac.js",
+          "name": "o5"
+        },
+        {
+          "local": "y7",
+          "file": "chunk-xyr63zg5.js",
+          "name": "y7"
+        },
+        {
+          "local": "Jc",
+          "file": "chunk-xyr63zg5.js",
+          "name": "Jc"
+        },
+        {
+          "local": "_tn",
+          "file": "chunk-0mdjh753.js",
+          "name": "_tn"
+        },
+        {
+          "local": "an",
+          "file": "chunk-1sdq23nt.js",
+          "name": "an"
+        },
+        {
+          "local": "o",
+          "file": "chunk-h7f86550.js",
+          "name": "o"
+        },
+        {
+          "local": "O",
+          "file": "chunk-h7f86550.js",
+          "name": "O"
+        },
+        {
+          "local": "se",
+          "file": "chunk-h7f86550.js",
+          "name": "se"
+        },
+        {
+          "local": "u",
+          "file": "chunk-h7f86550.js",
+          "name": "u"
+        },
+        {
+          "local": "de",
+          "file": "chunk-h7f86550.js",
+          "name": "de"
+        },
+        {
+          "local": "b",
+          "file": "crypto",
+          "name": "randomUUID"
+        }
+      ],
+      "exports": {
+        "qFn": "qFn",
+        "YFn": "YFn",
+        "Eit": "Eit",
+        "JHt": "JHt",
+        "Y3e": "Y3e"
+      },
+      "allowed": "JHt",
+      "confirm": "Y3e",
+      "context": {
+        "rows": [
+          {
+            "file": "chunk-92nvb96n.js",
+            "name": "d",
+            "start": 899,
+            "end": 1046,
+            "source": "function d(e,o){if(o.length===0)return e;return{...e,alwaysAllowRules:{...e.alwaysAllowRules,command:D([...e.alwaysAllowRules.command||[],...o])}}}",
+            "sha256": "6aa44aa747ee12a2b54354d48cd927d1422ce1e744da20a332d3e0568ba325e7",
+            "variable": false
+          },
+          {
+            "file": "chunk-92nvb96n.js",
+            "name": "u",
+            "start": 1046,
+            "end": 1190,
+            "source": "function u(e,o){if(o.length===0)return e;return{...e,alwaysDenyRules:{...e.alwaysDenyRules,command:D([...e.alwaysDenyRules.command||[],...o])}}}",
+            "sha256": "c1a9280d6eca24ceb100b736be19cfc7494aaf834a1e8c44aaa41b0d869d96bd",
+            "variable": false
+          },
+          {
+            "file": "chunk-92nvb96n.js",
+            "name": "f",
+            "start": 1861,
+            "end": 1969,
+            "source": "class f{mode;autoClassifierActive;constructor(e,o){this.mode=e,this.autoClassifierActive=o}toJSON(){return}}",
+            "sha256": "ac50b235352e9564895f2c41b6d8c4ee27b40d35ab960b29eb3785d9b80f767b",
+            "variable": false
+          },
+          {
+            "file": "chunk-92nvb96n.js",
+            "name": "OWo",
+            "start": 1969,
+            "end": 2007,
+            "source": "function OWo(e){return new f(e,ka(e))}",
+            "sha256": "a08d48f45592f17a6ad19447199483333efc622e033a2852613921c0d6a04398",
+            "variable": false
+          },
+          {
+            "file": "chunk-92nvb96n.js",
+            "name": "xGr",
+            "start": 2007,
+            "end": 2070,
+            "source": "function xGr(e){return e instanceof f&&!e.autoClassifierActive}",
+            "sha256": "62dc695a941f34285d84220d0b28d18550bd2efe9b18adceda8e6b719020f9ac",
+            "variable": false
+          },
+          {
+            "file": "chunk-92nvb96n.js",
+            "name": "c",
+            "start": 2070,
+            "end": 2288,
+            "source": "function c(e){if(!xGr(e))return;let o=e.mode;switch(o){case\"default\":case\"acceptEdits\":case\"dontAsk\":case\"bubble\":return o;case\"plan\":case\"bypassPermissions\":return\"default\";case\"auto\":return;default:{let n=o;return}}}",
+            "sha256": "0b4b468dc2d81b0c5cb8dbec3c7417cb458f9fb5cf1920ab3358f93392559dc6",
+            "variable": false
+          },
+          {
+            "file": "chunk-92nvb96n.js",
+            "name": "y",
+            "start": 2646,
+            "end": 2716,
+            "source": "function y(e){return e===So||e.startsWith(`${So}(`)||e.startsWith(O6)}",
+            "sha256": "11a4e31a28edf6422919ebfdce70f866b3d9a6b7a6a4a18ff52dbb6a1e694b73",
+            "variable": false
+          },
+          {
+            "file": "chunk-92nvb96n.js",
+            "name": "x",
+            "start": 2716,
+            "end": 3117,
+            "source": "function x(e){let o=y,n=!1,s={},r={};for(let[t,i]of Object.entries(e.strippedDangerousRules??{}))if(i!==void 0)r[t]=[...i];for(let[t,i]of Object.entries(e.alwaysAllowRules)){if(i===void 0)continue;let a=i.filter((l)=>!o(l));if(a.length!==i.length){n=!0;for(let l of i)if(o(l)){let p=r[t]??=[];if(!p.includes(l))p.push(l)}}s[t]=a}if(!n)return e;return{...e,alwaysAllowRules:s,strippedDangerousRules:r}}",
+            "sha256": "2c6457ee4100b97744cdc976fa761691b199b12b67e00018fd4254c84ceabc33",
+            "variable": false
+          },
+          {
+            "file": "chunk-92nvb96n.js",
+            "name": "pe",
+            "start": 3471,
+            "end": 4585,
+            "source": "function pe(e){let o=e.getAppState().toolPermissionContext,n=o!==void 0&&o.pollEventDeliveryGuard===!0;if(n)o=x(o);let s=e.permissionLayers;if(!s)return g(e,o);let r=s.findLast((t)=>t.kind===\"working_directory\");for(let t of s)switch(t.kind){case\"allowed_tools\":if(!n)o=d(o,[...t.allowedTools]);break;case\"disallowed_tools\":o=u(o,[...t.disallowedTools]);break;case\"bash_command_clamp\":o={...o,bashCommandClamps:[...o.bashCommandClamps??[],t.rules]};break;case\"avoid_prompts\":if(!o.shouldAvoidPermissionPrompts)o={...o,shouldAvoidPermissionPrompts:!0};break;case\"sandbox_auto_allow_suspended\":if(!o.sandboxAutoAllowSuspended)o={...o,sandboxAutoAllowSuspended:!0};break;case\"permission_mode\":{if(t.mode===\"bypassPermissions\"&&(BE()||!o.isBypassPermissionsModeAvailable))break;o={...o,mode:t.mode};break}case\"working_directory\":if(t===r&&!o.additionalWorkingDirectories.has(t.directory))o={...o,additionalWorkingDirectories:new Map([...o.additionalWorkingDirectories,[t.directory,{path:t.directory,source:\"session\"}]])};break;case\"effort\":case\"model\":case\"max_thinking_tokens\":case\"flag_settings\":break}return g(e,o)}",
+            "sha256": "87729daa65441dd9f13e80598e1a30d13adcd830d698d2ac4ad70da5f8b75cbc",
+            "variable": false
+          },
+          {
+            "file": "chunk-92nvb96n.js",
+            "name": "g",
+            "start": 4585,
+            "end": 4625,
+            "source": "function g(e,o){return b(e,k(e,h(e,o)))}",
+            "sha256": "5aca9a66c297f49bcd4b13063a7885bb45127d3c3e355f6b95d6c99a8d8f9322",
+            "variable": false
+          },
+          {
+            "file": "chunk-92nvb96n.js",
+            "name": "h",
+            "start": 4625,
+            "end": 4800,
+            "source": "function h(e,o){if(o===void 0||o.mode!==\"auto\"||e.forPromptShellCommand===!0||e.forRemoteExecution===!0)return o;let n=c(e.permissionModeAtRequest);return n===void 0?o:m(n,o)}",
+            "sha256": "d58d23c7552bf39853a9968a01658ef666632f2daa23b7371f03940106e7ad2e",
+            "variable": false
+          },
+          {
+            "file": "chunk-92nvb96n.js",
+            "name": "b",
+            "start": 5021,
+            "end": 5130,
+            "source": "function b(e,o){if(e.forPromptShellCommand!==!0||o===void 0)return o;return o.mode===\"auto\"?m(\"default\",o):o}",
+            "sha256": "e14e10e26d7e75d16c672360301d5c18326ad4d0232105f51a5eafb9990764a3",
+            "variable": false
+          },
+          {
+            "file": "chunk-92nvb96n.js",
+            "name": "m",
+            "start": 5130,
+            "end": 5212,
+            "source": "function m(e,o){return{...o,mode:e,modeBeforeRewrite:o.modeBeforeRewrite??o.mode}}",
+            "sha256": "5a4d4634b3f6ca804b5e2f2d7759a65b400ca81c3bc67886ae5a545dc0b08905",
+            "variable": false
+          },
+          {
+            "file": "chunk-92nvb96n.js",
+            "name": "k",
+            "start": 5212,
+            "end": 5405,
+            "source": "function k(e,o){if(e.forRemoteExecution!==!0||o===void 0)return o;let{blockReadsOutsideWorkingDirectories:n,...s}=o;return o.mode===\"acceptEdits\"||o.mode===\"bypassPermissions\"?m(\"default\",s):s}",
+            "sha256": "1c5c245e01d75bc01d0fc47619932be43e231fff318cc30c39abb2f03b2b9e3d",
+            "variable": false
+          }
+        ],
+        "ports": [
+          {
+            "local": "ka",
+            "file": "chunk-1484hydp.js",
+            "name": "ka"
+          },
+          {
+            "local": "BE",
+            "file": "chunk-8dggw7vt.js",
+            "name": "BE"
+          },
+          {
+            "local": "So",
+            "file": "chunk-n72tae0p.js",
+            "name": "So"
+          },
+          {
+            "local": "O6",
+            "file": "chunk-n72tae0p.js",
+            "name": "O6"
+          },
+          {
+            "local": "D",
+            "file": "chunk-aqx4g8xw.js",
+            "name": "D"
+          }
+        ],
+        "read": "pe",
+        "capture": "OWo",
+        "isCapturedNonAuto": "xGr"
+      },
+      "eligibility": {
+        "rows": [
+          {
+            "file": "chunk-xyr63zg5.js",
+            "name": "y7",
+            "start": 1340482,
+            "end": 1340566,
+            "source": "function y7(){if(lh().length>0&&Ae())return!1;if(Ae()&&!hOt(EI()))return!1;return!0}",
+            "sha256": "aea2443e5e47d447821e49b14b6e025cbdbe42b713a2f8b4ced187244fdb7e64",
+            "variable": false
+          },
+          {
+            "file": "chunk-xyr63zg5.js",
+            "name": "hOt",
+            "start": 1340436,
+            "end": 1340482,
+            "source": "function hOt(e){return e!==void 0&&e!==\"none\"}",
+            "sha256": "210a36729dbf2c097cf1fc3df5dca061999b0f6724a09064af7245563d5aa05e",
+            "variable": false
+          }
+        ],
+        "read": "y7",
+        "ports": [
+          {
+            "local": "Ae",
+            "file": "chunk-ascjmg0h.js",
+            "name": "Ae"
+          },
+          {
+            "local": "EI",
+            "file": "chunk-ascjmg0h.js",
+            "name": "EI"
+          },
+          {
+            "local": "lh",
+            "file": "chunk-ascjmg0h.js",
+            "name": "lh"
+          }
+        ]
+      },
+      "cleanup": {
+        "rows": [
+          {
+            "file": "chunk-b8aeyehv.js",
+            "name": "vt",
+            "start": 128747,
+            "end": 128794,
+            "source": "vt=new kt(()=>({calls:new Map,hostAttests:!1}))",
+            "sha256": "f7a99bca3e284d7c3bb0bfe56faf1fdb9b00580a0178c9a2d76cd6e556a099a2",
+            "variable": true
+          },
+          {
+            "file": "chunk-b8aeyehv.js",
+            "name": "Cr",
+            "start": 129087,
+            "end": 129123,
+            "source": "Cr=new kt(()=>({byToolUse:new Map}))",
+            "sha256": "df0efe2d1624991814564e6e403283c6a26da3c15363e30ce3c36e4be6514b57",
+            "variable": true
+          },
+          {
+            "file": "chunk-b8aeyehv.js",
+            "name": "Jre",
+            "start": 129124,
+            "end": 129288,
+            "source": "function Jre(e,n){if(e!==void 0){vt.peek(e)?.calls.delete(n);let s=Cr.peek(e)?.byToolUse.get(n);if(s!==void 0){Cr.peek(e)?.byToolUse.delete(n);for(let r of s)r()}}}",
+            "sha256": "0b89d1d9ecebf2f119c1faaa8bdbbc8ee3ac5ca7ca7d98d7624445bd9a293429",
+            "variable": false
+          }
+        ],
+        "ports": [
+          {
+            "local": "kt",
+            "file": "chunk-ascjmg0h.js",
+            "name": "kt"
+          }
+        ],
+        "finish": "Jre"
+      },
+      "constants": [
+        {
+          "file": "chunk-qqfb9hb6.js",
+          "name": "Oje",
+          "start": 9075,
+          "end": 9135,
+          "source": "Oje=\"tool permission stream closed before response received\"",
+          "sha256": "12461cfc014ab3396a9f3b59b1480a56bddc957ea59db0bc0bad00f25ae490d5",
+          "variable": true
+        },
+        {
+          "file": "chunk-qqfb9hb6.js",
+          "name": "hPe",
+          "start": 9136,
+          "end": 9196,
+          "source": "hPe=\"canUseTool returned a schema-invalid permission result\"",
+          "sha256": "4870d306e83a16fc86b613001cf2e7dfa2d05290a3ab969b00b611764f75f836",
+          "variable": true
+        },
+        {
+          "file": "chunk-qqfb9hb6.js",
+          "name": "yPe",
+          "start": 9197,
+          "end": 9233,
+          "source": "yPe=\"tool permission request failed\"",
+          "sha256": "ab5c0f8275cacf411e21e328663ba633038a31866086f00019c41ac252ce1cd3",
+          "variable": true
+        },
+        {
+          "file": "chunk-qqfb9hb6.js",
+          "name": "lnr",
+          "start": 9332,
+          "end": 9380,
+          "source": "lnr=\"permission prompt tool no longer connected\"",
+          "sha256": "b58cb3c0105f6266f8e31819a31d0623f12fadbf8d915e9a094d86f775252950",
+          "variable": true
+        }
+      ],
+      "utilities": {
+        "rows": [
+          {
+            "file": "chunk-1484hydp.js",
+            "name": "ka",
+            "start": 155884,
+            "end": 155944,
+            "source": "function ka(e,s=!1){return e===\"auto\"||e===\"plan\"&&!s&&mf()}",
+            "sha256": "08fac658da0db1ea8d8d2a4305eef8636c134842d645113832af033b427c82ae",
+            "variable": false
+          },
+          {
+            "file": "chunk-8dggw7vt.js",
+            "name": "OGr",
+            "start": 662,
+            "end": 809,
+            "source": "function OGr(){if((er()||{}).permissions?.disableBypassPermissionsMode===\"disable\")return\"Bypass permissions mode was disabled by settings\";return}",
+            "sha256": "a85850a0a24fa62adf83c51cdc973dd279f1994521cc6b58107c5a1df62569a4",
+            "variable": false
+          },
+          {
+            "file": "chunk-8dggw7vt.js",
+            "name": "BE",
+            "start": 809,
+            "end": 845,
+            "source": "function BE(){return OGr()!==void 0}",
+            "sha256": "b0c0d7940b8fe86f26c16b445f47c2d17bb57b2503f895f9cd2d7265d7676c02",
+            "variable": false
+          },
+          {
+            "file": "chunk-1sdq23nt.js",
+            "name": "an",
+            "start": 698,
+            "end": 772,
+            "source": "function an(t){return bn(e(\"sha256\").update(t).digest(\"hex\").slice(0,12))}",
+            "sha256": "803c47b63d6e5480565087919b8caef1b84253e01649f58f1b046ea1d2fa5e35",
+            "variable": false
+          },
+          {
+            "file": "chunk-0mdjh753.js",
+            "name": "_tn",
+            "start": 1041,
+            "end": 1116,
+            "source": "function _tn(e){return e.startsWith(\"localDisplayOnly ask not forwarded:\")}",
+            "sha256": "a08adacf049ccc74681df6ae4f35371bd68322f4d71f205866c4f1e3c445aa66",
+            "variable": false
+          }
+        ],
+        "ports": [
+          {
+            "local": "er",
+            "file": "chunk-v2te3hxm.js",
+            "name": "er"
+          },
+          {
+            "local": "bn",
+            "file": "chunk-zde5y65p.js",
+            "name": "bn"
+          },
+          {
+            "local": "e",
+            "file": "crypto",
+            "name": "createHash"
+          },
+          {
+            "local": "mf",
+            "hostBinding": true,
+            "accessor": {
+              "file": "chunk-1484hydp.js",
+              "name": "mf",
+              "start": 155733,
+              "end": 155766,
+              "source": "function mf(){return DF().active}",
+              "sha256": "92c54e9a4498c433e8eb9b00d37c2ead64623e5ac9fe1a570b13872dfedb9b6c",
+              "variable": false
+            }
+          }
+        ],
+        "mode": "ka",
+        "bypass": "BE",
+        "hash": "an",
+        "reason": "_tn"
+      }
+    },
+    {
+      "platform": "linux-arm64",
+      "manifestSha256": "f3be5b23f9cbb909555fe028143b9a3a40c1e3e49961e09c49d8e5a6b61ae83b",
+      "modules": [
+        {
+          "path": "chunk-bdgtgk1c.js",
+          "sha256": "a81853d5e610498dd5a34c9de19afb57aa43f46fc7aebceecd086232b156123c"
+        },
+        {
+          "path": "chunk-nty519z1.js",
+          "sha256": "2b5934306275c65ac35910e073f6681ba192b2070c1e4f3ea5118473e7872898"
+        },
+        {
+          "path": "chunk-gakypdfc.js",
+          "sha256": "a9a2bc50c519b09d776b68b9852839e84acbebec53deb2438e96d73f52e56db3"
+        },
+        {
+          "path": "chunk-za08ehv4.js",
+          "sha256": "a5264cfcb55d60d045f14cd0e26947cfa3c5ba9b151ade6063139758e06003f8"
+        },
+        {
+          "path": "chunk-66214g8w.js",
+          "sha256": "e987402a4f2deeef6757d180cf4f5f1391abd675cc5f4e7b7159bae3f742aa2a"
+        },
+        {
+          "path": "chunk-ab7yvgy4.js",
+          "sha256": "760c602d67ac093068dac3824d914107110e20e30a47b95f78a77afdf41b9403"
+        },
+        {
+          "path": "chunk-vh9qcyhh.js",
+          "sha256": "285555d8215beda82381e3f97531e7533b907993241a89acdf8a54d1873f3845"
+        },
+        {
+          "path": "chunk-hxm6t6gq.js",
+          "sha256": "25102f6d8e8bacfeba419c03ff9c474304e64dc4bc5d18af9ad400e41732f2e3"
+        },
+        {
+          "path": "chunk-g3c1712m.js",
+          "sha256": "956618ce6fc10a7acc6a2800cec8477395675d66e037392af8a81fda5b9a9fee"
+        },
+        {
+          "path": "chunk-p35vdbve.js",
+          "sha256": "0faf3efd8b4f851b2aa29b1cd4668b72d54e0b4ac7cded405e79742899411f0c"
+        }
+      ],
+      "rows": [
+        {
+          "file": "chunk-bdgtgk1c.js",
+          "name": "pUn",
+          "start": 1300,
+          "end": 1374,
+          "source": "function pUn(e,r){return e===r||e.behavior===\"ask\"&&e.forcedByCaller===!0}",
+          "sha256": "b9b9fc1818f3c0ef5e42e5b377f20a86279ec14e20668e06ccfc5a191cbb88c8",
+          "variable": false
+        },
+        {
+          "file": "chunk-bdgtgk1c.js",
+          "name": "fUn",
+          "start": 1374,
+          "end": 1440,
+          "source": "function fUn(e){return e===TWe||e===cIe||e===dIe||e===xtr||Ptn(e)}",
+          "sha256": "4c1892d200873b3aa49458e11170ea9bf7dcf10200d9abd119493c9efa6f878a",
+          "variable": false
+        },
+        {
+          "file": "chunk-bdgtgk1c.js",
+          "name": "kit",
+          "start": 1480,
+          "end": 1494,
+          "source": "kit=\"confirm_\"",
+          "sha256": "ad188be1152e6ef0ba69c874833d2fb32e51819e635ac000659f69ee0db1805c",
+          "variable": true
+        },
+        {
+          "file": "chunk-bdgtgk1c.js",
+          "name": "mOt",
+          "start": 1495,
+          "end": 1592,
+          "source": "function mOt(e){let r=pe(e);return dJ()&&r.shouldAvoidPermissionPrompts!==!0&&r.mode!==\"dontAsk\"}",
+          "sha256": "871e67e305ce7de80eea765c5625682685a2081e81c8f1587004cda9760755dc",
+          "variable": false
+        },
+        {
+          "file": "chunk-bdgtgk1c.js",
+          "name": "GVe",
+          "start": 1592,
+          "end": 2198,
+          "source": "async function GVe(e){let{toolUseContext:r,source:i}=e;if(!mOt(r))return{kind:\"unanswered\",reason:\"no_one_to_ask\"};let s;try{s=await V(e)}catch(n){if(r.abortController.signal.aborted)t(`confirmWithUser(${i}): ask aborted with the turn: ${l(n)}`),s={kind:\"aborted\"};else d(n),s={kind:\"unanswered\",reason:\"error\"}}let a={source_hash:an(i)};switch(s.kind){case\"chose\":case\"declined\":case\"aborted\":y(\"permission_confirm_with_user\",{...a,answer:c(s.kind)});break;case\"unanswered\":if(s.reason===\"error\")m(\"permission_confirm_with_user\",\"error\",a);else p(\"permission_confirm_with_user\",s.reason,a);break}return s}",
+          "sha256": "32c43f5a769a1244d938ea1ca9d35807d67404f25b3064f486d4102647cf2349",
+          "variable": false
+        },
+        {
+          "file": "chunk-bdgtgk1c.js",
+          "name": "V",
+          "start": 2198,
+          "end": 3110,
+          "source": "async function V({canUseTool:e,toolUseContext:r,source:i,header:s,question:a,choices:n,personOnly:_}){let h=Z6.inputSchema.safeParse({questions:[{question:a,header:s,options:n.map(({label:g,description:W})=>({label:g,description:W??\"\"})),multiSelect:!1}],metadata:{source:i}});if(!h.success)throw new P(`confirmWithUser(${i}): the question does not satisfy the AskUserQuestion schema: ${h.error.message}`,\"confirmWithUser: the question does not satisfy the AskUserQuestion schema\");let k=await Z6.checkPermissions(h.data,r);if(k.behavior!==\"ask\")throw new P(`confirmWithUser(${i}): AskUserQuestion.checkPermissions answered ${k.behavior}, not ask`,\"confirmWithUser: AskUserQuestion.checkPermissions did not answer ask\");let C={...k,forcedByCaller:!0,..._===!0&&{personOnly:!0}},w=`${kit}${b()}`,A=await e(Z6,h.data,r,Jc({content:[]}),w,C).finally(()=>Gre(r.session,w));return O(A,C,r.abortController.signal,a,n)}",
+          "sha256": "8859dd23b7a9bc6dc271d06262742ca6687049d072b8e195dc322d643880c828",
+          "variable": false
+        },
+        {
+          "file": "chunk-bdgtgk1c.js",
+          "name": "O",
+          "start": 3110,
+          "end": 3829,
+          "source": "function O(e,r,i,s,a){if(pUn(e,r))return{kind:\"unanswered\",reason:\"no_one_to_ask\"};if(i.aborted)return{kind:\"aborted\"};switch(e.behavior){case\"allow\":{let n=T().safeParse(e.updatedInput);if(!n.success)return{kind:\"unanswered\",reason:\"no_selection\"};if(n.data.followUp===!0)return{kind:\"declined\"};let _=E(n.data.answers?.[s]);if(_===\"\")return{kind:\"unanswered\",reason:\"no_selection\"};let h=a.find((k)=>U(k.label)===_);return h!==void 0?{kind:\"chose\",value:h.value}:{kind:\"declined\",typedAnswer:_}}case\"deny\":if(e.decisionReason.type===\"asyncAgent\"||e.decisionReason.type===\"other\"&&fUn(e.decisionReason.reason))return{kind:\"unanswered\",reason:\"no_one_to_ask\"};return{kind:\"declined\"};case\"ask\":return{kind:\"declined\"}}}",
+          "sha256": "063c0ce67cd5a72beb8d669bad15f11244e7a0f03cb18ce79638638fd154b1b3",
+          "variable": false
+        },
+        {
+          "file": "chunk-bdgtgk1c.js",
+          "name": "T",
+          "start": 3833,
+          "end": 3902,
+          "source": "T=f(()=>u({answers:de(o(),se()).optional(),followUp:M().optional()}))",
+          "sha256": "fe94923c49c5f5e400d2ee70d3472a8d84ac8d580bd58ffa5c811682e089c4e8",
+          "variable": true
+        },
+        {
+          "file": "chunk-bdgtgk1c.js",
+          "name": "E",
+          "start": 3903,
+          "end": 4037,
+          "source": "function E(e){if(typeof e===\"string\")return U(e);if(Array.isArray(e))return U(e.filter((r)=>typeof r===\"string\").join(\", \"));return\"\"}",
+          "sha256": "1202e009ea53bfa0ffb55f3ba65051b4b11f72ed4b77793898b242e9809dbfeb",
+          "variable": false
+        },
+        {
+          "file": "chunk-bdgtgk1c.js",
+          "name": "U",
+          "start": 4037,
+          "end": 4087,
+          "source": "function U(e){return e.replace(/\\s+/g,\" \").trim()}",
+          "sha256": "71e2dbe88b5c00c2645993fc5a1f6ffb1ac2c2a3896ed0ea21a8c3cf45240583",
+          "variable": false
+        }
+      ],
+      "ports": [
+        {
+          "local": "TWe",
+          "file": "chunk-66214g8w.js",
+          "name": "TWe"
+        },
+        {
+          "local": "cIe",
+          "file": "chunk-66214g8w.js",
+          "name": "cIe"
+        },
+        {
+          "local": "dIe",
+          "file": "chunk-66214g8w.js",
+          "name": "dIe"
+        },
+        {
+          "local": "xtr",
+          "file": "chunk-66214g8w.js",
+          "name": "xtr"
+        },
+        {
+          "local": "c",
+          "file": "chunk-n3azkrt9.js",
+          "name": "c"
+        },
+        {
+          "local": "P",
+          "file": "chunk-gwr1he3z.js",
+          "name": "P"
+        },
+        {
+          "local": "l",
+          "file": "chunk-gwr1he3z.js",
+          "name": "l"
+        },
+        {
+          "local": "y",
+          "file": "chunk-w649tjk0.js",
+          "name": "y"
+        },
+        {
+          "local": "m",
+          "file": "chunk-w649tjk0.js",
+          "name": "m"
+        },
+        {
+          "local": "p",
+          "file": "chunk-w649tjk0.js",
+          "name": "p"
+        },
+        {
+          "local": "t",
+          "file": "chunk-m2pbrf6n.js",
+          "name": "t"
+        },
+        {
+          "local": "d",
+          "file": "chunk-sh2djrhe.js",
+          "name": "d"
+        },
+        {
+          "local": "f",
+          "file": "chunk-bh1vweff.js",
+          "name": "f"
+        },
+        {
+          "local": "Gre",
+          "file": "chunk-za08ehv4.js",
+          "name": "Gre"
+        },
+        {
+          "local": "pe",
+          "file": "chunk-nty519z1.js",
+          "name": "pe"
+        },
+        {
+          "local": "Z6",
+          "file": "chunk-gbpqbyp2.js",
+          "name": "Z6"
+        },
+        {
+          "local": "dJ",
+          "file": "chunk-gakypdfc.js",
+          "name": "dJ"
+        },
+        {
+          "local": "Jc",
+          "file": "chunk-gakypdfc.js",
+          "name": "Jc"
+        },
+        {
+          "local": "Ptn",
+          "file": "chunk-p35vdbve.js",
+          "name": "Ptn"
+        },
+        {
+          "local": "an",
+          "file": "chunk-g3c1712m.js",
+          "name": "an"
+        },
+        {
+          "local": "o",
+          "file": "chunk-ab7yvgy4.js",
+          "name": "o"
+        },
+        {
+          "local": "M",
+          "file": "chunk-ab7yvgy4.js",
+          "name": "M"
+        },
+        {
+          "local": "se",
+          "file": "chunk-ab7yvgy4.js",
+          "name": "se"
+        },
+        {
+          "local": "u",
+          "file": "chunk-ab7yvgy4.js",
+          "name": "u"
+        },
+        {
+          "local": "de",
+          "file": "chunk-ab7yvgy4.js",
+          "name": "de"
+        },
+        {
+          "local": "b",
+          "file": "crypto",
+          "name": "randomUUID"
+        }
+      ],
+      "exports": {
+        "pUn": "pUn",
+        "fUn": "fUn",
+        "kit": "kit",
+        "mOt": "mOt",
+        "GVe": "GVe"
+      },
+      "allowed": "mOt",
+      "confirm": "GVe",
+      "context": {
+        "rows": [
+          {
+            "file": "chunk-nty519z1.js",
+            "name": "d",
+            "start": 899,
+            "end": 1046,
+            "source": "function d(e,o){if(o.length===0)return e;return{...e,alwaysAllowRules:{...e.alwaysAllowRules,command:L([...e.alwaysAllowRules.command||[],...o])}}}",
+            "sha256": "4516c6a5324ddbc9804dd96644039e75748ebc99a1df867309622e561a67d6ae",
+            "variable": false
+          },
+          {
+            "file": "chunk-nty519z1.js",
+            "name": "u",
+            "start": 1046,
+            "end": 1190,
+            "source": "function u(e,o){if(o.length===0)return e;return{...e,alwaysDenyRules:{...e.alwaysDenyRules,command:L([...e.alwaysDenyRules.command||[],...o])}}}",
+            "sha256": "e2025c0b101993ad98a02c3e32cbb8c13b98039f361bf5ae2c602bd2217a4607",
+            "variable": false
+          },
+          {
+            "file": "chunk-nty519z1.js",
+            "name": "f",
+            "start": 1861,
+            "end": 1969,
+            "source": "class f{mode;autoClassifierActive;constructor(e,o){this.mode=e,this.autoClassifierActive=o}toJSON(){return}}",
+            "sha256": "ac50b235352e9564895f2c41b6d8c4ee27b40d35ab960b29eb3785d9b80f767b",
+            "variable": false
+          },
+          {
+            "file": "chunk-nty519z1.js",
+            "name": "JWo",
+            "start": 1969,
+            "end": 2007,
+            "source": "function JWo(e){return new f(e,Ra(e))}",
+            "sha256": "75b655dc5abbf7722d5c2da715e37e72bdcbb6ca0136e918d7c2008e0afba1cb",
+            "variable": false
+          },
+          {
+            "file": "chunk-nty519z1.js",
+            "name": "Qzr",
+            "start": 2007,
+            "end": 2070,
+            "source": "function Qzr(e){return e instanceof f&&!e.autoClassifierActive}",
+            "sha256": "3ff95fac6780844e3df5179e267bad41d57d22a039fc123bc6a03ea0f973973c",
+            "variable": false
+          },
+          {
+            "file": "chunk-nty519z1.js",
+            "name": "c",
+            "start": 2070,
+            "end": 2288,
+            "source": "function c(e){if(!Qzr(e))return;let o=e.mode;switch(o){case\"default\":case\"acceptEdits\":case\"dontAsk\":case\"bubble\":return o;case\"plan\":case\"bypassPermissions\":return\"default\";case\"auto\":return;default:{let n=o;return}}}",
+            "sha256": "60393c5e41eb4b8f1f0d756c4fdbef487f0d7e0bb38ea3b63161199cc3150e82",
+            "variable": false
+          },
+          {
+            "file": "chunk-nty519z1.js",
+            "name": "y",
+            "start": 2646,
+            "end": 2716,
+            "source": "function y(e){return e===bo||e.startsWith(`${bo}(`)||e.startsWith(TG)}",
+            "sha256": "b8ff37b136b4f44337e794ce3749282471731e7d773d1db26d8c1c4a597e2c45",
+            "variable": false
+          },
+          {
+            "file": "chunk-nty519z1.js",
+            "name": "x",
+            "start": 2716,
+            "end": 3117,
+            "source": "function x(e){let o=y,n=!1,s={},r={};for(let[t,i]of Object.entries(e.strippedDangerousRules??{}))if(i!==void 0)r[t]=[...i];for(let[t,i]of Object.entries(e.alwaysAllowRules)){if(i===void 0)continue;let a=i.filter((l)=>!o(l));if(a.length!==i.length){n=!0;for(let l of i)if(o(l)){let p=r[t]??=[];if(!p.includes(l))p.push(l)}}s[t]=a}if(!n)return e;return{...e,alwaysAllowRules:s,strippedDangerousRules:r}}",
+            "sha256": "2c6457ee4100b97744cdc976fa761691b199b12b67e00018fd4254c84ceabc33",
+            "variable": false
+          },
+          {
+            "file": "chunk-nty519z1.js",
+            "name": "pe",
+            "start": 3471,
+            "end": 4585,
+            "source": "function pe(e){let o=e.getAppState().toolPermissionContext,n=o!==void 0&&o.pollEventDeliveryGuard===!0;if(n)o=x(o);let s=e.permissionLayers;if(!s)return g(e,o);let r=s.findLast((t)=>t.kind===\"working_directory\");for(let t of s)switch(t.kind){case\"allowed_tools\":if(!n)o=d(o,[...t.allowedTools]);break;case\"disallowed_tools\":o=u(o,[...t.disallowedTools]);break;case\"bash_command_clamp\":o={...o,bashCommandClamps:[...o.bashCommandClamps??[],t.rules]};break;case\"avoid_prompts\":if(!o.shouldAvoidPermissionPrompts)o={...o,shouldAvoidPermissionPrompts:!0};break;case\"sandbox_auto_allow_suspended\":if(!o.sandboxAutoAllowSuspended)o={...o,sandboxAutoAllowSuspended:!0};break;case\"permission_mode\":{if(t.mode===\"bypassPermissions\"&&(Uv()||!o.isBypassPermissionsModeAvailable))break;o={...o,mode:t.mode};break}case\"working_directory\":if(t===r&&!o.additionalWorkingDirectories.has(t.directory))o={...o,additionalWorkingDirectories:new Map([...o.additionalWorkingDirectories,[t.directory,{path:t.directory,source:\"session\"}]])};break;case\"effort\":case\"model\":case\"max_thinking_tokens\":case\"flag_settings\":break}return g(e,o)}",
+            "sha256": "d8694dea98758125d74f493d04b067531eb2386aa464f6a29cebde594147c6e3",
+            "variable": false
+          },
+          {
+            "file": "chunk-nty519z1.js",
+            "name": "g",
+            "start": 4585,
+            "end": 4625,
+            "source": "function g(e,o){return b(e,k(e,h(e,o)))}",
+            "sha256": "5aca9a66c297f49bcd4b13063a7885bb45127d3c3e355f6b95d6c99a8d8f9322",
+            "variable": false
+          },
+          {
+            "file": "chunk-nty519z1.js",
+            "name": "h",
+            "start": 4625,
+            "end": 4800,
+            "source": "function h(e,o){if(o===void 0||o.mode!==\"auto\"||e.forPromptShellCommand===!0||e.forRemoteExecution===!0)return o;let n=c(e.permissionModeAtRequest);return n===void 0?o:m(n,o)}",
+            "sha256": "d58d23c7552bf39853a9968a01658ef666632f2daa23b7371f03940106e7ad2e",
+            "variable": false
+          },
+          {
+            "file": "chunk-nty519z1.js",
+            "name": "b",
+            "start": 5021,
+            "end": 5130,
+            "source": "function b(e,o){if(e.forPromptShellCommand!==!0||o===void 0)return o;return o.mode===\"auto\"?m(\"default\",o):o}",
+            "sha256": "e14e10e26d7e75d16c672360301d5c18326ad4d0232105f51a5eafb9990764a3",
+            "variable": false
+          },
+          {
+            "file": "chunk-nty519z1.js",
+            "name": "m",
+            "start": 5130,
+            "end": 5212,
+            "source": "function m(e,o){return{...o,mode:e,modeBeforeRewrite:o.modeBeforeRewrite??o.mode}}",
+            "sha256": "5a4d4634b3f6ca804b5e2f2d7759a65b400ca81c3bc67886ae5a545dc0b08905",
+            "variable": false
+          },
+          {
+            "file": "chunk-nty519z1.js",
+            "name": "k",
+            "start": 5212,
+            "end": 5405,
+            "source": "function k(e,o){if(e.forRemoteExecution!==!0||o===void 0)return o;let{blockReadsOutsideWorkingDirectories:n,...s}=o;return o.mode===\"acceptEdits\"||o.mode===\"bypassPermissions\"?m(\"default\",s):s}",
+            "sha256": "1c5c245e01d75bc01d0fc47619932be43e231fff318cc30c39abb2f03b2b9e3d",
+            "variable": false
+          }
+        ],
+        "ports": [
+          {
+            "local": "Ra",
+            "file": "chunk-vh9qcyhh.js",
+            "name": "Ra"
+          },
+          {
+            "local": "Uv",
+            "file": "chunk-hxm6t6gq.js",
+            "name": "Uv"
+          },
+          {
+            "local": "bo",
+            "file": "chunk-qem4069p.js",
+            "name": "bo"
+          },
+          {
+            "local": "TG",
+            "file": "chunk-qem4069p.js",
+            "name": "TG"
+          },
+          {
+            "local": "L",
+            "file": "chunk-hcvb1rq6.js",
+            "name": "L"
+          }
+        ],
+        "read": "pe",
+        "capture": "JWo",
+        "isCapturedNonAuto": "Qzr"
+      },
+      "eligibility": {
+        "rows": [
+          {
+            "file": "chunk-gakypdfc.js",
+            "name": "dJ",
+            "start": 1340445,
+            "end": 1340529,
+            "source": "function dJ(){if(ah().length>0&&Ee())return!1;if(Ee()&&!nMt(yO()))return!1;return!0}",
+            "sha256": "70badc353990e507d31d79c5c869b68aa889048929189716ea7730be20f9a053",
+            "variable": false
+          },
+          {
+            "file": "chunk-gakypdfc.js",
+            "name": "nMt",
+            "start": 1340399,
+            "end": 1340445,
+            "source": "function nMt(e){return e!==void 0&&e!==\"none\"}",
+            "sha256": "1688407747d130ae8af8bd1f06850116d0a3a4f1191661b0fa7d4a9a5ed42078",
+            "variable": false
+          }
+        ],
+        "read": "dJ",
+        "ports": [
+          {
+            "local": "Ee",
+            "file": "chunk-jx85q2yb.js",
+            "name": "Ee"
+          },
+          {
+            "local": "yO",
+            "file": "chunk-jx85q2yb.js",
+            "name": "yO"
+          },
+          {
+            "local": "ah",
+            "file": "chunk-jx85q2yb.js",
+            "name": "ah"
+          }
+        ]
+      },
+      "cleanup": {
+        "rows": [
+          {
+            "file": "chunk-za08ehv4.js",
+            "name": "Pt",
+            "start": 128747,
+            "end": 128794,
+            "source": "Pt=new Rt(()=>({calls:new Map,hostAttests:!1}))",
+            "sha256": "4cf3fc1f0f3a89b61e00c00bf5a7d70bed502c8f8dd1c25411d8fa416662ecaf",
+            "variable": true
+          },
+          {
+            "file": "chunk-za08ehv4.js",
+            "name": "Cr",
+            "start": 129087,
+            "end": 129123,
+            "source": "Cr=new Rt(()=>({byToolUse:new Map}))",
+            "sha256": "b41fa02b5eeb58aa65f6da22998a6d02ae2db9a325f062973ed2373cee733534",
+            "variable": true
+          },
+          {
+            "file": "chunk-za08ehv4.js",
+            "name": "Gre",
+            "start": 129124,
+            "end": 129288,
+            "source": "function Gre(e,n){if(e!==void 0){Pt.peek(e)?.calls.delete(n);let s=Cr.peek(e)?.byToolUse.get(n);if(s!==void 0){Cr.peek(e)?.byToolUse.delete(n);for(let r of s)r()}}}",
+            "sha256": "29da3ebbbe395dbd9d394074f9b694757e92728d7bc7c222fd2e1e7b2039b311",
+            "variable": false
+          }
+        ],
+        "ports": [
+          {
+            "local": "Rt",
+            "file": "chunk-jx85q2yb.js",
+            "name": "Rt"
+          }
+        ],
+        "finish": "Gre"
+      },
+      "constants": [
+        {
+          "file": "chunk-66214g8w.js",
+          "name": "TWe",
+          "start": 9074,
+          "end": 9134,
+          "source": "TWe=\"tool permission stream closed before response received\"",
+          "sha256": "09b922e93b0d2f09dd6a0bf55b956b53154e799dc316c4c435272db2b29a4d9e",
+          "variable": true
+        },
+        {
+          "file": "chunk-66214g8w.js",
+          "name": "cIe",
+          "start": 9135,
+          "end": 9195,
+          "source": "cIe=\"canUseTool returned a schema-invalid permission result\"",
+          "sha256": "df29382e733c79f2e5a2ddd8b2b8eb25ec064c37a893b977a065af9dd7d60f5d",
+          "variable": true
+        },
+        {
+          "file": "chunk-66214g8w.js",
+          "name": "dIe",
+          "start": 9196,
+          "end": 9232,
+          "source": "dIe=\"tool permission request failed\"",
+          "sha256": "7efb460ce97a544c49d0f8d193f0107cd894d313a43d48bdaec1775a1ad0a5cf",
+          "variable": true
+        },
+        {
+          "file": "chunk-66214g8w.js",
+          "name": "xtr",
+          "start": 9331,
+          "end": 9379,
+          "source": "xtr=\"permission prompt tool no longer connected\"",
+          "sha256": "81cfe964daae067cfe970702351acf4ccdcea7f7652f1fc22995d1971b067ba5",
+          "variable": true
+        }
+      ],
+      "utilities": {
+        "rows": [
+          {
+            "file": "chunk-vh9qcyhh.js",
+            "name": "Ra",
+            "start": 156086,
+            "end": 156146,
+            "source": "function Ra(e,s=!1){return e===\"auto\"||e===\"plan\"&&!s&&mf()}",
+            "sha256": "2fd2567c7e77bb5c6e7d0a8de9966c18daae3df1f8be87f45286082e02c18018",
+            "variable": false
+          },
+          {
+            "file": "chunk-hxm6t6gq.js",
+            "name": "n2r",
+            "start": 662,
+            "end": 809,
+            "source": "function n2r(){if((er()||{}).permissions?.disableBypassPermissionsMode===\"disable\")return\"Bypass permissions mode was disabled by settings\";return}",
+            "sha256": "026cafd163df2e2cc6eaa2afdc5ddc410fda0f64b3338db008935c0bd8a70b70",
+            "variable": false
+          },
+          {
+            "file": "chunk-hxm6t6gq.js",
+            "name": "Uv",
+            "start": 809,
+            "end": 845,
+            "source": "function Uv(){return n2r()!==void 0}",
+            "sha256": "2a976db3e8ccf339f795dd10e2911685a3d2db4fb5ae32f810d0c029d8cfd927",
+            "variable": false
+          },
+          {
+            "file": "chunk-g3c1712m.js",
+            "name": "an",
+            "start": 698,
+            "end": 772,
+            "source": "function an(t){return Sn(e(\"sha256\").update(t).digest(\"hex\").slice(0,12))}",
+            "sha256": "ec69e67c05de93e649789cd57cbba035eca23bb54dc7f7f200f2ae8677bdc09d",
+            "variable": false
+          },
+          {
+            "file": "chunk-p35vdbve.js",
+            "name": "Ptn",
+            "start": 1041,
+            "end": 1116,
+            "source": "function Ptn(e){return e.startsWith(\"localDisplayOnly ask not forwarded:\")}",
+            "sha256": "c4d192796323ac0869441d26a740e829a0d6b958e68b30ad0f430b8091360919",
+            "variable": false
+          }
+        ],
+        "ports": [
+          {
+            "local": "er",
+            "file": "chunk-j624axd2.js",
+            "name": "er"
+          },
+          {
+            "local": "Sn",
+            "file": "chunk-n3azkrt9.js",
+            "name": "Sn"
+          },
+          {
+            "local": "e",
+            "file": "crypto",
+            "name": "createHash"
+          },
+          {
+            "local": "mf",
+            "hostBinding": true,
+            "accessor": {
+              "file": "chunk-vh9qcyhh.js",
+              "name": "mf",
+              "start": 155935,
+              "end": 155968,
+              "source": "function mf(){return R$().active}",
+              "sha256": "70e491ac563c015b66d723b4cf48d561d134cbb2554adf6ee3072318f487f35b",
+              "variable": false
+            }
+          }
+        ],
+        "mode": "Ra",
+        "bypass": "Uv",
+        "hash": "an",
+        "reason": "Ptn"
+      }
+    },
+    {
+      "platform": "linux-x64",
+      "manifestSha256": "ecae5d9ddbf13ef27b6b6a1141953aab4ba311e47dde3ac2a7cc8b5a01c63784",
+      "modules": [
+        {
+          "path": "chunk-3nv439q7.js",
+          "sha256": "6647683d6e929b09fe1b13fcec46adc11aeba75e4fe94de582d2b435bca25df2"
+        },
+        {
+          "path": "chunk-jy1webev.js",
+          "sha256": "d8db66987f28e3f965712752b30f52978306973ce75c963cc446a75e6d5429ad"
+        },
+        {
+          "path": "chunk-jrjyjez0.js",
+          "sha256": "910de0d981a1b620b1866ae5ca44f40dc05f06f1b2205bbb9c8dccf58d5c468e"
+        },
+        {
+          "path": "chunk-6my6hrsh.js",
+          "sha256": "4ad7ea0362c2e04a981fe835ed2cfcaa3bbfc1137c8819abbf058faf857fa4e3"
+        },
+        {
+          "path": "chunk-arccn7z5.js",
+          "sha256": "ed0a21dfa340d9806895ebe305d03e77ffc0639a3238b8dc2b4fd6a6b585fa8e"
+        },
+        {
+          "path": "chunk-g1cpfw9w.js",
+          "sha256": "f7319c6db310bc341a41b8fac6ca7642f40c2c38106f63f5ebad32508a0d55f7"
+        },
+        {
+          "path": "chunk-mw1vp1ye.js",
+          "sha256": "d0396c7a9eab44dbcea047b68d68582e12379a70c2e90d5d89f6d0a29d271881"
+        },
+        {
+          "path": "chunk-bkdpj4rz.js",
+          "sha256": "0155dd4a4d9370f270415233d241058c4bf6e0f485a86a872ac4cb769bf079bf"
+        },
+        {
+          "path": "chunk-23389k9y.js",
+          "sha256": "bae52060d35f8fb0555bc887c5a9612fd3ff398cf5641ba3f59abe6f4c05300d"
+        },
+        {
+          "path": "chunk-p35vdbve.js",
+          "sha256": "0faf3efd8b4f851b2aa29b1cd4668b72d54e0b4ac7cded405e79742899411f0c"
+        }
+      ],
+      "rows": [
+        {
+          "file": "chunk-3nv439q7.js",
+          "name": "pFn",
+          "start": 1300,
+          "end": 1374,
+          "source": "function pFn(e,r){return e===r||e.behavior===\"ask\"&&e.forcedByCaller===!0}",
+          "sha256": "a1d56c010e3d70f28fa492245817515f8a4336b2caccffafd14de2d32245539d",
+          "variable": false
+        },
+        {
+          "file": "chunk-3nv439q7.js",
+          "name": "fFn",
+          "start": 1374,
+          "end": 1440,
+          "source": "function fFn(e){return e===TWe||e===cOe||e===dOe||e===xtr||Ptn(e)}",
+          "sha256": "5733b9c499f6e7dd6d3b30cf06fd27208dec9f580c8b37f1b1f764470e160dd6",
+          "variable": false
+        },
+        {
+          "file": "chunk-3nv439q7.js",
+          "name": "Eit",
+          "start": 1480,
+          "end": 1494,
+          "source": "Eit=\"confirm_\"",
+          "sha256": "e8f34671f82190497a91ff87e2ad9c8729738d107c59cb22f2fe2c6ee4f4b4f5",
+          "variable": true
+        },
+        {
+          "file": "chunk-3nv439q7.js",
+          "name": "mIt",
+          "start": 1495,
+          "end": 1592,
+          "source": "function mIt(e){let r=pe(e);return dJ()&&r.shouldAvoidPermissionPrompts!==!0&&r.mode!==\"dontAsk\"}",
+          "sha256": "bdd445ba140297490183e7d8f58a141e1a72336c46f3b15b8ce13fc544b163f2",
+          "variable": false
+        },
+        {
+          "file": "chunk-3nv439q7.js",
+          "name": "GKe",
+          "start": 1592,
+          "end": 2198,
+          "source": "async function GKe(e){let{toolUseContext:r,source:i}=e;if(!mIt(r))return{kind:\"unanswered\",reason:\"no_one_to_ask\"};let s;try{s=await V(e)}catch(n){if(r.abortController.signal.aborted)t(`confirmWithUser(${i}): ask aborted with the turn: ${l(n)}`),s={kind:\"aborted\"};else d(n),s={kind:\"unanswered\",reason:\"error\"}}let a={source_hash:an(i)};switch(s.kind){case\"chose\":case\"declined\":case\"aborted\":y(\"permission_confirm_with_user\",{...a,answer:c(s.kind)});break;case\"unanswered\":if(s.reason===\"error\")m(\"permission_confirm_with_user\",\"error\",a);else p(\"permission_confirm_with_user\",s.reason,a);break}return s}",
+          "sha256": "2a98cd7f3f71f56f621279835c036489bc7f3538d5d742a6ce1f7e94dfc1bca4",
+          "variable": false
+        },
+        {
+          "file": "chunk-3nv439q7.js",
+          "name": "V",
+          "start": 2198,
+          "end": 3110,
+          "source": "async function V({canUseTool:e,toolUseContext:r,source:i,header:s,question:a,choices:n,personOnly:_}){let h=Z5.inputSchema.safeParse({questions:[{question:a,header:s,options:n.map(({label:g,description:W})=>({label:g,description:W??\"\"})),multiSelect:!1}],metadata:{source:i}});if(!h.success)throw new P(`confirmWithUser(${i}): the question does not satisfy the AskUserQuestion schema: ${h.error.message}`,\"confirmWithUser: the question does not satisfy the AskUserQuestion schema\");let k=await Z5.checkPermissions(h.data,r);if(k.behavior!==\"ask\")throw new P(`confirmWithUser(${i}): AskUserQuestion.checkPermissions answered ${k.behavior}, not ask`,\"confirmWithUser: AskUserQuestion.checkPermissions did not answer ask\");let C={...k,forcedByCaller:!0,..._===!0&&{personOnly:!0}},w=`${Eit}${b()}`,A=await e(Z5,h.data,r,Jc({content:[]}),w,C).finally(()=>Gre(r.session,w));return O(A,C,r.abortController.signal,a,n)}",
+          "sha256": "24b803f7824be7ec28384705c9f27abc456b09d44c2f3fca05a3b331070c1866",
+          "variable": false
+        },
+        {
+          "file": "chunk-3nv439q7.js",
+          "name": "O",
+          "start": 3110,
+          "end": 3829,
+          "source": "function O(e,r,i,s,a){if(pFn(e,r))return{kind:\"unanswered\",reason:\"no_one_to_ask\"};if(i.aborted)return{kind:\"aborted\"};switch(e.behavior){case\"allow\":{let n=T().safeParse(e.updatedInput);if(!n.success)return{kind:\"unanswered\",reason:\"no_selection\"};if(n.data.followUp===!0)return{kind:\"declined\"};let _=E(n.data.answers?.[s]);if(_===\"\")return{kind:\"unanswered\",reason:\"no_selection\"};let h=a.find((k)=>U(k.label)===_);return h!==void 0?{kind:\"chose\",value:h.value}:{kind:\"declined\",typedAnswer:_}}case\"deny\":if(e.decisionReason.type===\"asyncAgent\"||e.decisionReason.type===\"other\"&&fFn(e.decisionReason.reason))return{kind:\"unanswered\",reason:\"no_one_to_ask\"};return{kind:\"declined\"};case\"ask\":return{kind:\"declined\"}}}",
+          "sha256": "3b11bc944d65a9fa6b16b75ebb06f1e813e45341a18b9ef4ff26c2943b9811ba",
+          "variable": false
+        },
+        {
+          "file": "chunk-3nv439q7.js",
+          "name": "T",
+          "start": 3833,
+          "end": 3902,
+          "source": "T=f(()=>u({answers:de(o(),se()).optional(),followUp:M().optional()}))",
+          "sha256": "fe94923c49c5f5e400d2ee70d3472a8d84ac8d580bd58ffa5c811682e089c4e8",
+          "variable": true
+        },
+        {
+          "file": "chunk-3nv439q7.js",
+          "name": "E",
+          "start": 3903,
+          "end": 4037,
+          "source": "function E(e){if(typeof e===\"string\")return U(e);if(Array.isArray(e))return U(e.filter((r)=>typeof r===\"string\").join(\", \"));return\"\"}",
+          "sha256": "1202e009ea53bfa0ffb55f3ba65051b4b11f72ed4b77793898b242e9809dbfeb",
+          "variable": false
+        },
+        {
+          "file": "chunk-3nv439q7.js",
+          "name": "U",
+          "start": 4037,
+          "end": 4087,
+          "source": "function U(e){return e.replace(/\\s+/g,\" \").trim()}",
+          "sha256": "71e2dbe88b5c00c2645993fc5a1f6ffb1ac2c2a3896ed0ea21a8c3cf45240583",
+          "variable": false
+        }
+      ],
+      "ports": [
+        {
+          "local": "TWe",
+          "file": "chunk-arccn7z5.js",
+          "name": "TWe"
+        },
+        {
+          "local": "cOe",
+          "file": "chunk-arccn7z5.js",
+          "name": "cOe"
+        },
+        {
+          "local": "dOe",
+          "file": "chunk-arccn7z5.js",
+          "name": "dOe"
+        },
+        {
+          "local": "xtr",
+          "file": "chunk-arccn7z5.js",
+          "name": "xtr"
+        },
+        {
+          "local": "c",
+          "file": "chunk-kgmch1wd.js",
+          "name": "c"
+        },
+        {
+          "local": "P",
+          "file": "chunk-5pp15f99.js",
+          "name": "P"
+        },
+        {
+          "local": "l",
+          "file": "chunk-5pp15f99.js",
+          "name": "l"
+        },
+        {
+          "local": "y",
+          "file": "chunk-j63xbq4s.js",
+          "name": "y"
+        },
+        {
+          "local": "m",
+          "file": "chunk-j63xbq4s.js",
+          "name": "m"
+        },
+        {
+          "local": "p",
+          "file": "chunk-j63xbq4s.js",
+          "name": "p"
+        },
+        {
+          "local": "t",
+          "file": "chunk-bgzq3rjr.js",
+          "name": "t"
+        },
+        {
+          "local": "d",
+          "file": "chunk-fs7xtb5z.js",
+          "name": "d"
+        },
+        {
+          "local": "f",
+          "file": "chunk-bh1vweff.js",
+          "name": "f"
+        },
+        {
+          "local": "Gre",
+          "file": "chunk-6my6hrsh.js",
+          "name": "Gre"
+        },
+        {
+          "local": "pe",
+          "file": "chunk-jy1webev.js",
+          "name": "pe"
+        },
+        {
+          "local": "Z5",
+          "file": "chunk-vknm1psn.js",
+          "name": "Z5"
+        },
+        {
+          "local": "dJ",
+          "file": "chunk-jrjyjez0.js",
+          "name": "dJ"
+        },
+        {
+          "local": "Jc",
+          "file": "chunk-jrjyjez0.js",
+          "name": "Jc"
+        },
+        {
+          "local": "Ptn",
+          "file": "chunk-p35vdbve.js",
+          "name": "Ptn"
+        },
+        {
+          "local": "an",
+          "file": "chunk-23389k9y.js",
+          "name": "an"
+        },
+        {
+          "local": "o",
+          "file": "chunk-g1cpfw9w.js",
+          "name": "o"
+        },
+        {
+          "local": "M",
+          "file": "chunk-g1cpfw9w.js",
+          "name": "M"
+        },
+        {
+          "local": "se",
+          "file": "chunk-g1cpfw9w.js",
+          "name": "se"
+        },
+        {
+          "local": "u",
+          "file": "chunk-g1cpfw9w.js",
+          "name": "u"
+        },
+        {
+          "local": "de",
+          "file": "chunk-g1cpfw9w.js",
+          "name": "de"
+        },
+        {
+          "local": "b",
+          "file": "crypto",
+          "name": "randomUUID"
+        }
+      ],
+      "exports": {
+        "pFn": "pFn",
+        "fFn": "fFn",
+        "Eit": "Eit",
+        "mIt": "mIt",
+        "GKe": "GKe"
+      },
+      "allowed": "mIt",
+      "confirm": "GKe",
+      "context": {
+        "rows": [
+          {
+            "file": "chunk-jy1webev.js",
+            "name": "d",
+            "start": 899,
+            "end": 1046,
+            "source": "function d(e,o){if(o.length===0)return e;return{...e,alwaysAllowRules:{...e.alwaysAllowRules,command:L([...e.alwaysAllowRules.command||[],...o])}}}",
+            "sha256": "4516c6a5324ddbc9804dd96644039e75748ebc99a1df867309622e561a67d6ae",
+            "variable": false
+          },
+          {
+            "file": "chunk-jy1webev.js",
+            "name": "u",
+            "start": 1046,
+            "end": 1190,
+            "source": "function u(e,o){if(o.length===0)return e;return{...e,alwaysDenyRules:{...e.alwaysDenyRules,command:L([...e.alwaysDenyRules.command||[],...o])}}}",
+            "sha256": "e2025c0b101993ad98a02c3e32cbb8c13b98039f361bf5ae2c602bd2217a4607",
+            "variable": false
+          },
+          {
+            "file": "chunk-jy1webev.js",
+            "name": "f",
+            "start": 1861,
+            "end": 1969,
+            "source": "class f{mode;autoClassifierActive;constructor(e,o){this.mode=e,this.autoClassifierActive=o}toJSON(){return}}",
+            "sha256": "ac50b235352e9564895f2c41b6d8c4ee27b40d35ab960b29eb3785d9b80f767b",
+            "variable": false
+          },
+          {
+            "file": "chunk-jy1webev.js",
+            "name": "JWo",
+            "start": 1969,
+            "end": 2007,
+            "source": "function JWo(e){return new f(e,Aa(e))}",
+            "sha256": "84c60e30f8c271576f4daf06bcc21536003f949bce5453aebab65002458bf656",
+            "variable": false
+          },
+          {
+            "file": "chunk-jy1webev.js",
+            "name": "Qzr",
+            "start": 2007,
+            "end": 2070,
+            "source": "function Qzr(e){return e instanceof f&&!e.autoClassifierActive}",
+            "sha256": "3ff95fac6780844e3df5179e267bad41d57d22a039fc123bc6a03ea0f973973c",
+            "variable": false
+          },
+          {
+            "file": "chunk-jy1webev.js",
+            "name": "c",
+            "start": 2070,
+            "end": 2288,
+            "source": "function c(e){if(!Qzr(e))return;let o=e.mode;switch(o){case\"default\":case\"acceptEdits\":case\"dontAsk\":case\"bubble\":return o;case\"plan\":case\"bypassPermissions\":return\"default\";case\"auto\":return;default:{let n=o;return}}}",
+            "sha256": "60393c5e41eb4b8f1f0d756c4fdbef487f0d7e0bb38ea3b63161199cc3150e82",
+            "variable": false
+          },
+          {
+            "file": "chunk-jy1webev.js",
+            "name": "y",
+            "start": 2646,
+            "end": 2716,
+            "source": "function y(e){return e===bo||e.startsWith(`${bo}(`)||e.startsWith(T2)}",
+            "sha256": "8195a75a77fb66787199c8191c462563bbd0bef8e1b5fdd5e75ad560fff6a8eb",
+            "variable": false
+          },
+          {
+            "file": "chunk-jy1webev.js",
+            "name": "x",
+            "start": 2716,
+            "end": 3117,
+            "source": "function x(e){let o=y,n=!1,s={},r={};for(let[t,i]of Object.entries(e.strippedDangerousRules??{}))if(i!==void 0)r[t]=[...i];for(let[t,i]of Object.entries(e.alwaysAllowRules)){if(i===void 0)continue;let a=i.filter((l)=>!o(l));if(a.length!==i.length){n=!0;for(let l of i)if(o(l)){let p=r[t]??=[];if(!p.includes(l))p.push(l)}}s[t]=a}if(!n)return e;return{...e,alwaysAllowRules:s,strippedDangerousRules:r}}",
+            "sha256": "2c6457ee4100b97744cdc976fa761691b199b12b67e00018fd4254c84ceabc33",
+            "variable": false
+          },
+          {
+            "file": "chunk-jy1webev.js",
+            "name": "pe",
+            "start": 3471,
+            "end": 4585,
+            "source": "function pe(e){let o=e.getAppState().toolPermissionContext,n=o!==void 0&&o.pollEventDeliveryGuard===!0;if(n)o=x(o);let s=e.permissionLayers;if(!s)return g(e,o);let r=s.findLast((t)=>t.kind===\"working_directory\");for(let t of s)switch(t.kind){case\"allowed_tools\":if(!n)o=d(o,[...t.allowedTools]);break;case\"disallowed_tools\":o=u(o,[...t.disallowedTools]);break;case\"bash_command_clamp\":o={...o,bashCommandClamps:[...o.bashCommandClamps??[],t.rules]};break;case\"avoid_prompts\":if(!o.shouldAvoidPermissionPrompts)o={...o,shouldAvoidPermissionPrompts:!0};break;case\"sandbox_auto_allow_suspended\":if(!o.sandboxAutoAllowSuspended)o={...o,sandboxAutoAllowSuspended:!0};break;case\"permission_mode\":{if(t.mode===\"bypassPermissions\"&&(Fv()||!o.isBypassPermissionsModeAvailable))break;o={...o,mode:t.mode};break}case\"working_directory\":if(t===r&&!o.additionalWorkingDirectories.has(t.directory))o={...o,additionalWorkingDirectories:new Map([...o.additionalWorkingDirectories,[t.directory,{path:t.directory,source:\"session\"}]])};break;case\"effort\":case\"model\":case\"max_thinking_tokens\":case\"flag_settings\":break}return g(e,o)}",
+            "sha256": "77f4460528c42d0bace3f7e12c1f9a1c8797a0c585d10a51f80b53a3aa458847",
+            "variable": false
+          },
+          {
+            "file": "chunk-jy1webev.js",
+            "name": "g",
+            "start": 4585,
+            "end": 4625,
+            "source": "function g(e,o){return b(e,k(e,h(e,o)))}",
+            "sha256": "5aca9a66c297f49bcd4b13063a7885bb45127d3c3e355f6b95d6c99a8d8f9322",
+            "variable": false
+          },
+          {
+            "file": "chunk-jy1webev.js",
+            "name": "h",
+            "start": 4625,
+            "end": 4800,
+            "source": "function h(e,o){if(o===void 0||o.mode!==\"auto\"||e.forPromptShellCommand===!0||e.forRemoteExecution===!0)return o;let n=c(e.permissionModeAtRequest);return n===void 0?o:m(n,o)}",
+            "sha256": "d58d23c7552bf39853a9968a01658ef666632f2daa23b7371f03940106e7ad2e",
+            "variable": false
+          },
+          {
+            "file": "chunk-jy1webev.js",
+            "name": "b",
+            "start": 5021,
+            "end": 5130,
+            "source": "function b(e,o){if(e.forPromptShellCommand!==!0||o===void 0)return o;return o.mode===\"auto\"?m(\"default\",o):o}",
+            "sha256": "e14e10e26d7e75d16c672360301d5c18326ad4d0232105f51a5eafb9990764a3",
+            "variable": false
+          },
+          {
+            "file": "chunk-jy1webev.js",
+            "name": "m",
+            "start": 5130,
+            "end": 5212,
+            "source": "function m(e,o){return{...o,mode:e,modeBeforeRewrite:o.modeBeforeRewrite??o.mode}}",
+            "sha256": "5a4d4634b3f6ca804b5e2f2d7759a65b400ca81c3bc67886ae5a545dc0b08905",
+            "variable": false
+          },
+          {
+            "file": "chunk-jy1webev.js",
+            "name": "k",
+            "start": 5212,
+            "end": 5405,
+            "source": "function k(e,o){if(e.forRemoteExecution!==!0||o===void 0)return o;let{blockReadsOutsideWorkingDirectories:n,...s}=o;return o.mode===\"acceptEdits\"||o.mode===\"bypassPermissions\"?m(\"default\",s):s}",
+            "sha256": "1c5c245e01d75bc01d0fc47619932be43e231fff318cc30c39abb2f03b2b9e3d",
+            "variable": false
+          }
+        ],
+        "ports": [
+          {
+            "local": "Aa",
+            "file": "chunk-mw1vp1ye.js",
+            "name": "Aa"
+          },
+          {
+            "local": "Fv",
+            "file": "chunk-bkdpj4rz.js",
+            "name": "Fv"
+          },
+          {
+            "local": "bo",
+            "file": "chunk-b69ha9se.js",
+            "name": "bo"
+          },
+          {
+            "local": "T2",
+            "file": "chunk-b69ha9se.js",
+            "name": "T2"
+          },
+          {
+            "local": "L",
+            "file": "chunk-62stp5my.js",
+            "name": "L"
+          }
+        ],
+        "read": "pe",
+        "capture": "JWo",
+        "isCapturedNonAuto": "Qzr"
+      },
+      "eligibility": {
+        "rows": [
+          {
+            "file": "chunk-jrjyjez0.js",
+            "name": "dJ",
+            "start": 1340735,
+            "end": 1340819,
+            "source": "function dJ(){if(ah().length>0&&ke())return!1;if(ke()&&!nHt(yI()))return!1;return!0}",
+            "sha256": "e4c990d584567df7a1e316decbe88d9e2bf8d8a1ab444230104faeb28f7e9dc6",
+            "variable": false
+          },
+          {
+            "file": "chunk-jrjyjez0.js",
+            "name": "nHt",
+            "start": 1340689,
+            "end": 1340735,
+            "source": "function nHt(e){return e!==void 0&&e!==\"none\"}",
+            "sha256": "452a9e9995f8a061fa8fd69925a8882d326b89cc627960966012d546ed6e4a81",
+            "variable": false
+          }
+        ],
+        "read": "dJ",
+        "ports": [
+          {
+            "local": "ke",
+            "file": "chunk-8e9587qc.js",
+            "name": "ke"
+          },
+          {
+            "local": "yI",
+            "file": "chunk-8e9587qc.js",
+            "name": "yI"
+          },
+          {
+            "local": "ah",
+            "file": "chunk-8e9587qc.js",
+            "name": "ah"
+          }
+        ]
+      },
+      "cleanup": {
+        "rows": [
+          {
+            "file": "chunk-6my6hrsh.js",
+            "name": "Pt",
+            "start": 128805,
+            "end": 128852,
+            "source": "Pt=new At(()=>({calls:new Map,hostAttests:!1}))",
+            "sha256": "8128d5dfc564141148576693edea0b7b2d41a07562537699986161def8feb623",
+            "variable": true
+          },
+          {
+            "file": "chunk-6my6hrsh.js",
+            "name": "Cr",
+            "start": 129145,
+            "end": 129181,
+            "source": "Cr=new At(()=>({byToolUse:new Map}))",
+            "sha256": "bb933f005a7a51f504643ad980ceede09998efed72989cf0b961c1c5ec0fc1b0",
+            "variable": true
+          },
+          {
+            "file": "chunk-6my6hrsh.js",
+            "name": "Gre",
+            "start": 129182,
+            "end": 129346,
+            "source": "function Gre(e,n){if(e!==void 0){Pt.peek(e)?.calls.delete(n);let s=Cr.peek(e)?.byToolUse.get(n);if(s!==void 0){Cr.peek(e)?.byToolUse.delete(n);for(let r of s)r()}}}",
+            "sha256": "29da3ebbbe395dbd9d394074f9b694757e92728d7bc7c222fd2e1e7b2039b311",
+            "variable": false
+          }
+        ],
+        "ports": [
+          {
+            "local": "At",
+            "file": "chunk-8e9587qc.js",
+            "name": "At"
+          }
+        ],
+        "finish": "Gre"
+      },
+      "constants": [
+        {
+          "file": "chunk-arccn7z5.js",
+          "name": "TWe",
+          "start": 9074,
+          "end": 9134,
+          "source": "TWe=\"tool permission stream closed before response received\"",
+          "sha256": "09b922e93b0d2f09dd6a0bf55b956b53154e799dc316c4c435272db2b29a4d9e",
+          "variable": true
+        },
+        {
+          "file": "chunk-arccn7z5.js",
+          "name": "cOe",
+          "start": 9135,
+          "end": 9195,
+          "source": "cOe=\"canUseTool returned a schema-invalid permission result\"",
+          "sha256": "2340634da9d70b20e9db1785cb1a86530b123bd8747363e0e334f01765c0c28c",
+          "variable": true
+        },
+        {
+          "file": "chunk-arccn7z5.js",
+          "name": "dOe",
+          "start": 9196,
+          "end": 9232,
+          "source": "dOe=\"tool permission request failed\"",
+          "sha256": "36bf27439e8abe81510ed072c7a650a2e7ec6ae2f3d67d5e257e7285c9fd3eb0",
+          "variable": true
+        },
+        {
+          "file": "chunk-arccn7z5.js",
+          "name": "xtr",
+          "start": 9331,
+          "end": 9379,
+          "source": "xtr=\"permission prompt tool no longer connected\"",
+          "sha256": "81cfe964daae067cfe970702351acf4ccdcea7f7652f1fc22995d1971b067ba5",
+          "variable": true
+        }
+      ],
+      "utilities": {
+        "rows": [
+          {
+            "file": "chunk-mw1vp1ye.js",
+            "name": "Aa",
+            "start": 156086,
+            "end": 156146,
+            "source": "function Aa(e,s=!1){return e===\"auto\"||e===\"plan\"&&!s&&mf()}",
+            "sha256": "c2be69038f61609bc8998e4cfbd831b26f0a80eed17d293c41059a53ed0e46f4",
+            "variable": false
+          },
+          {
+            "file": "chunk-bkdpj4rz.js",
+            "name": "nGr",
+            "start": 662,
+            "end": 809,
+            "source": "function nGr(){if((er()||{}).permissions?.disableBypassPermissionsMode===\"disable\")return\"Bypass permissions mode was disabled by settings\";return}",
+            "sha256": "195978668cf6e77fd7cdbf00dd26984a43628864ab199ec64225a8354a2b5238",
+            "variable": false
+          },
+          {
+            "file": "chunk-bkdpj4rz.js",
+            "name": "Fv",
+            "start": 809,
+            "end": 845,
+            "source": "function Fv(){return nGr()!==void 0}",
+            "sha256": "fa1c6be8d898508caf2b33082a0019b7ac7daf94d2d00e05fec582e8917debf6",
+            "variable": false
+          },
+          {
+            "file": "chunk-23389k9y.js",
+            "name": "an",
+            "start": 698,
+            "end": 772,
+            "source": "function an(t){return Sn(e(\"sha256\").update(t).digest(\"hex\").slice(0,12))}",
+            "sha256": "ec69e67c05de93e649789cd57cbba035eca23bb54dc7f7f200f2ae8677bdc09d",
+            "variable": false
+          },
+          {
+            "file": "chunk-p35vdbve.js",
+            "name": "Ptn",
+            "start": 1041,
+            "end": 1116,
+            "source": "function Ptn(e){return e.startsWith(\"localDisplayOnly ask not forwarded:\")}",
+            "sha256": "c4d192796323ac0869441d26a740e829a0d6b958e68b30ad0f430b8091360919",
+            "variable": false
+          }
+        ],
+        "ports": [
+          {
+            "local": "er",
+            "file": "chunk-hqnt8197.js",
+            "name": "er"
+          },
+          {
+            "local": "Sn",
+            "file": "chunk-kgmch1wd.js",
+            "name": "Sn"
+          },
+          {
+            "local": "e",
+            "file": "crypto",
+            "name": "createHash"
+          },
+          {
+            "local": "mf",
+            "hostBinding": true,
+            "accessor": {
+              "file": "chunk-mw1vp1ye.js",
+              "name": "mf",
+              "start": 155935,
+              "end": 155968,
+              "source": "function mf(){return A$().active}",
+              "sha256": "ce4fc8567434681850ae1b42efb6426cb47cb8df63a3a2d599018030c31323c5",
+              "variable": false
+            }
+          }
+        ],
+        "mode": "Aa",
+        "bypass": "Fv",
+        "hash": "an",
+        "reason": "Ptn"
+      }
+    },
+    {
+      "platform": "win32-arm64",
+      "manifestSha256": "d0d8b3b882ba61ba321ab072b5cbc28a1a4089cfb4c5dce0698311aae10c739e",
+      "modules": [
+        {
+          "path": "chunk-he7tj7z9.js",
+          "sha256": "b300a96cec87403f7b75425eab8c01d982c310d9f9fff1a177ba98dd662aa67a"
+        },
+        {
+          "path": "chunk-e5zjd7z7.js",
+          "sha256": "80f235d78f100056340f4959ae39bf44644cf687849f420dc16d8c824e73e1fc"
+        },
+        {
+          "path": "chunk-2ta2c3j5.js",
+          "sha256": "32e092a685dc008cceed15b87d7d176136d31fb5bfef7914adbcab1a5f152cba"
+        },
+        {
+          "path": "chunk-z28s9wvx.js",
+          "sha256": "0d2c546dbc0ff9e5263bdafff0c9542a426554de5b16c08664ebee467680b23d"
+        },
+        {
+          "path": "chunk-ybk8ky4n.js",
+          "sha256": "a961c53d9507de2b3f51eb0b934b756c5df5de8706d7f91adaf5371d18a6fb67"
+        },
+        {
+          "path": "chunk-bpexv6zt.js",
+          "sha256": "73078a52b082dfd40ffbc0e527450e533ca2e348de69884a3cc20f6340e8d09a"
+        },
+        {
+          "path": "chunk-ga85rfgd.js",
+          "sha256": "261c59d627aa643cce6cfcafcb18d489871b9c2a343aa8b9922b899aa8632088"
+        },
+        {
+          "path": "chunk-ja1vb28z.js",
+          "sha256": "f7752f26bf5e2f1a7b31f3bb70fff6f41bef0f78d1ad96be81b041a69cce4803"
+        },
+        {
+          "path": "chunk-knz4h6zw.js",
+          "sha256": "e6ff3fb9af7b0efecf84b7366855c21f08ff22a51db8c89d055a3886bed77da0"
+        },
+        {
+          "path": "chunk-nvvj8rcy.js",
+          "sha256": "a356b9156a97b4ca906b1c644eb6d62c64d58762e016523f217b2d1e10d1fc7a"
+        }
+      ],
+      "rows": [
+        {
+          "file": "chunk-he7tj7z9.js",
+          "name": "yUn",
+          "start": 1300,
+          "end": 1374,
+          "source": "function yUn(e,r){return e===r||e.behavior===\"ask\"&&e.forcedByCaller===!0}",
+          "sha256": "b62253ea5537e606e1e2e97f8641ddc8c3db8b8ae68edab9d94399e3c85c0807",
+          "variable": false
+        },
+        {
+          "file": "chunk-he7tj7z9.js",
+          "name": "_Un",
+          "start": 1374,
+          "end": 1440,
+          "source": "function _Un(e){return e===OWe||e===pOe||e===fOe||e===nnr||Ntn(e)}",
+          "sha256": "a07a877197387304d6ab522acd34c15591ce6eaeb9aabf8cd397818b82d2c7f6",
+          "variable": false
+        },
+        {
+          "file": "chunk-he7tj7z9.js",
+          "name": "Tit",
+          "start": 1480,
+          "end": 1494,
+          "source": "Tit=\"confirm_\"",
+          "sha256": "55c1d53f714e5ee54c4725e6d3b2d9e8212b0026a9776f5dd21a21badf7fccc8",
+          "variable": true
+        },
+        {
+          "file": "chunk-he7tj7z9.js",
+          "name": "yIt",
+          "start": 1495,
+          "end": 1592,
+          "source": "function yIt(e){let r=pe(e);return fJ()&&r.shouldAvoidPermissionPrompts!==!0&&r.mode!==\"dontAsk\"}",
+          "sha256": "5d4d09bc34c0cbddeabddf692b02d62d11c63027cd89cab181d482312d957fd7",
+          "variable": false
+        },
+        {
+          "file": "chunk-he7tj7z9.js",
+          "name": "qKe",
+          "start": 1592,
+          "end": 2198,
+          "source": "async function qKe(e){let{toolUseContext:r,source:i}=e;if(!yIt(r))return{kind:\"unanswered\",reason:\"no_one_to_ask\"};let s;try{s=await V(e)}catch(n){if(r.abortController.signal.aborted)t(`confirmWithUser(${i}): ask aborted with the turn: ${l(n)}`),s={kind:\"aborted\"};else d(n),s={kind:\"unanswered\",reason:\"error\"}}let a={source_hash:an(i)};switch(s.kind){case\"chose\":case\"declined\":case\"aborted\":y(\"permission_confirm_with_user\",{...a,answer:c(s.kind)});break;case\"unanswered\":if(s.reason===\"error\")m(\"permission_confirm_with_user\",\"error\",a);else p(\"permission_confirm_with_user\",s.reason,a);break}return s}",
+          "sha256": "30d28695456bcbd4c3caa1406b0915253d3ca26a87269531ffd6fa608950713f",
+          "variable": false
+        },
+        {
+          "file": "chunk-he7tj7z9.js",
+          "name": "V",
+          "start": 2198,
+          "end": 3110,
+          "source": "async function V({canUseTool:e,toolUseContext:r,source:i,header:s,question:a,choices:n,personOnly:_}){let h=e5.inputSchema.safeParse({questions:[{question:a,header:s,options:n.map(({label:g,description:W})=>({label:g,description:W??\"\"})),multiSelect:!1}],metadata:{source:i}});if(!h.success)throw new P(`confirmWithUser(${i}): the question does not satisfy the AskUserQuestion schema: ${h.error.message}`,\"confirmWithUser: the question does not satisfy the AskUserQuestion schema\");let k=await e5.checkPermissions(h.data,r);if(k.behavior!==\"ask\")throw new P(`confirmWithUser(${i}): AskUserQuestion.checkPermissions answered ${k.behavior}, not ask`,\"confirmWithUser: AskUserQuestion.checkPermissions did not answer ask\");let C={...k,forcedByCaller:!0,..._===!0&&{personOnly:!0}},w=`${Tit}${b()}`,A=await e(e5,h.data,r,Jc({content:[]}),w,C).finally(()=>Xre(r.session,w));return O(A,C,r.abortController.signal,a,n)}",
+          "sha256": "6de53fb5932970a6464b41a0552c9b04cf6249afddf2c4bb965f48b4494800a1",
+          "variable": false
+        },
+        {
+          "file": "chunk-he7tj7z9.js",
+          "name": "O",
+          "start": 3110,
+          "end": 3829,
+          "source": "function O(e,r,i,s,a){if(yUn(e,r))return{kind:\"unanswered\",reason:\"no_one_to_ask\"};if(i.aborted)return{kind:\"aborted\"};switch(e.behavior){case\"allow\":{let n=T().safeParse(e.updatedInput);if(!n.success)return{kind:\"unanswered\",reason:\"no_selection\"};if(n.data.followUp===!0)return{kind:\"declined\"};let _=E(n.data.answers?.[s]);if(_===\"\")return{kind:\"unanswered\",reason:\"no_selection\"};let h=a.find((k)=>U(k.label)===_);return h!==void 0?{kind:\"chose\",value:h.value}:{kind:\"declined\",typedAnswer:_}}case\"deny\":if(e.decisionReason.type===\"asyncAgent\"||e.decisionReason.type===\"other\"&&_Un(e.decisionReason.reason))return{kind:\"unanswered\",reason:\"no_one_to_ask\"};return{kind:\"declined\"};case\"ask\":return{kind:\"declined\"}}}",
+          "sha256": "00357e8a0229608759b0ce0f7b30e30352fb91490c8757908dd261563b08f0ec",
+          "variable": false
+        },
+        {
+          "file": "chunk-he7tj7z9.js",
+          "name": "T",
+          "start": 3833,
+          "end": 3902,
+          "source": "T=f(()=>u({answers:de(o(),se()).optional(),followUp:M().optional()}))",
+          "sha256": "fe94923c49c5f5e400d2ee70d3472a8d84ac8d580bd58ffa5c811682e089c4e8",
+          "variable": true
+        },
+        {
+          "file": "chunk-he7tj7z9.js",
+          "name": "E",
+          "start": 3903,
+          "end": 4037,
+          "source": "function E(e){if(typeof e===\"string\")return U(e);if(Array.isArray(e))return U(e.filter((r)=>typeof r===\"string\").join(\", \"));return\"\"}",
+          "sha256": "1202e009ea53bfa0ffb55f3ba65051b4b11f72ed4b77793898b242e9809dbfeb",
+          "variable": false
+        },
+        {
+          "file": "chunk-he7tj7z9.js",
+          "name": "U",
+          "start": 4037,
+          "end": 4087,
+          "source": "function U(e){return e.replace(/\\s+/g,\" \").trim()}",
+          "sha256": "71e2dbe88b5c00c2645993fc5a1f6ffb1ac2c2a3896ed0ea21a8c3cf45240583",
+          "variable": false
+        }
+      ],
+      "ports": [
+        {
+          "local": "OWe",
+          "file": "chunk-ybk8ky4n.js",
+          "name": "OWe"
+        },
+        {
+          "local": "pOe",
+          "file": "chunk-ybk8ky4n.js",
+          "name": "pOe"
+        },
+        {
+          "local": "fOe",
+          "file": "chunk-ybk8ky4n.js",
+          "name": "fOe"
+        },
+        {
+          "local": "nnr",
+          "file": "chunk-ybk8ky4n.js",
+          "name": "nnr"
+        },
+        {
+          "local": "c",
+          "file": "chunk-qwv00mqh.js",
+          "name": "c"
+        },
+        {
+          "local": "P",
+          "file": "chunk-216b0h9x.js",
+          "name": "P"
+        },
+        {
+          "local": "l",
+          "file": "chunk-216b0h9x.js",
+          "name": "l"
+        },
+        {
+          "local": "y",
+          "file": "chunk-ys645ad1.js",
+          "name": "y"
+        },
+        {
+          "local": "m",
+          "file": "chunk-ys645ad1.js",
+          "name": "m"
+        },
+        {
+          "local": "p",
+          "file": "chunk-ys645ad1.js",
+          "name": "p"
+        },
+        {
+          "local": "t",
+          "file": "chunk-afd6vefy.js",
+          "name": "t"
+        },
+        {
+          "local": "d",
+          "file": "chunk-vc0xq0q5.js",
+          "name": "d"
+        },
+        {
+          "local": "f",
+          "file": "chunk-qbn4ejff.js",
+          "name": "f"
+        },
+        {
+          "local": "Xre",
+          "file": "chunk-z28s9wvx.js",
+          "name": "Xre"
+        },
+        {
+          "local": "pe",
+          "file": "chunk-e5zjd7z7.js",
+          "name": "pe"
+        },
+        {
+          "local": "e5",
+          "file": "chunk-shksa5pz.js",
+          "name": "e5"
+        },
+        {
+          "local": "fJ",
+          "file": "chunk-2ta2c3j5.js",
+          "name": "fJ"
+        },
+        {
+          "local": "Jc",
+          "file": "chunk-2ta2c3j5.js",
+          "name": "Jc"
+        },
+        {
+          "local": "Ntn",
+          "file": "chunk-nvvj8rcy.js",
+          "name": "Ntn"
+        },
+        {
+          "local": "an",
+          "file": "chunk-knz4h6zw.js",
+          "name": "an"
+        },
+        {
+          "local": "o",
+          "file": "chunk-bpexv6zt.js",
+          "name": "o"
+        },
+        {
+          "local": "M",
+          "file": "chunk-bpexv6zt.js",
+          "name": "M"
+        },
+        {
+          "local": "se",
+          "file": "chunk-bpexv6zt.js",
+          "name": "se"
+        },
+        {
+          "local": "u",
+          "file": "chunk-bpexv6zt.js",
+          "name": "u"
+        },
+        {
+          "local": "de",
+          "file": "chunk-bpexv6zt.js",
+          "name": "de"
+        },
+        {
+          "local": "b",
+          "file": "crypto",
+          "name": "randomUUID"
+        }
+      ],
+      "exports": {
+        "yUn": "yUn",
+        "_Un": "_Un",
+        "Tit": "Tit",
+        "yIt": "yIt",
+        "qKe": "qKe"
+      },
+      "allowed": "yIt",
+      "confirm": "qKe",
+      "context": {
+        "rows": [
+          {
+            "file": "chunk-e5zjd7z7.js",
+            "name": "d",
+            "start": 899,
+            "end": 1046,
+            "source": "function d(e,o){if(o.length===0)return e;return{...e,alwaysAllowRules:{...e.alwaysAllowRules,command:L([...e.alwaysAllowRules.command||[],...o])}}}",
+            "sha256": "4516c6a5324ddbc9804dd96644039e75748ebc99a1df867309622e561a67d6ae",
+            "variable": false
+          },
+          {
+            "file": "chunk-e5zjd7z7.js",
+            "name": "u",
+            "start": 1046,
+            "end": 1190,
+            "source": "function u(e,o){if(o.length===0)return e;return{...e,alwaysDenyRules:{...e.alwaysDenyRules,command:L([...e.alwaysDenyRules.command||[],...o])}}}",
+            "sha256": "e2025c0b101993ad98a02c3e32cbb8c13b98039f361bf5ae2c602bd2217a4607",
+            "variable": false
+          },
+          {
+            "file": "chunk-e5zjd7z7.js",
+            "name": "f",
+            "start": 1861,
+            "end": 1969,
+            "source": "class f{mode;autoClassifierActive;constructor(e,o){this.mode=e,this.autoClassifierActive=o}toJSON(){return}}",
+            "sha256": "ac50b235352e9564895f2c41b6d8c4ee27b40d35ab960b29eb3785d9b80f767b",
+            "variable": false
+          },
+          {
+            "file": "chunk-e5zjd7z7.js",
+            "name": "tzo",
+            "start": 1969,
+            "end": 2007,
+            "source": "function tzo(e){return new f(e,Ta(e))}",
+            "sha256": "791b48a291a3d69500357235aeefaebf88317e2349732a6cae6999bd6acb7d12",
+            "variable": false
+          },
+          {
+            "file": "chunk-e5zjd7z7.js",
+            "name": "s2r",
+            "start": 2007,
+            "end": 2070,
+            "source": "function s2r(e){return e instanceof f&&!e.autoClassifierActive}",
+            "sha256": "ce82b612a1af0004af988f44be6f7f15deea429ac1358ff76fa2c7d06646704f",
+            "variable": false
+          },
+          {
+            "file": "chunk-e5zjd7z7.js",
+            "name": "c",
+            "start": 2070,
+            "end": 2288,
+            "source": "function c(e){if(!s2r(e))return;let o=e.mode;switch(o){case\"default\":case\"acceptEdits\":case\"dontAsk\":case\"bubble\":return o;case\"plan\":case\"bypassPermissions\":return\"default\";case\"auto\":return;default:{let n=o;return}}}",
+            "sha256": "5f66f322c0e91d39ba0e2249c150416e0e0bc0b932c21e5b2b76e270ae5e37ce",
+            "variable": false
+          },
+          {
+            "file": "chunk-e5zjd7z7.js",
+            "name": "y",
+            "start": 2646,
+            "end": 2716,
+            "source": "function y(e){return e===bo||e.startsWith(`${bo}(`)||e.startsWith(RG)}",
+            "sha256": "5c426eaa52bd596f5211613f6d3b3af9f808acfcd45321a29686a637fe8bcf34",
+            "variable": false
+          },
+          {
+            "file": "chunk-e5zjd7z7.js",
+            "name": "x",
+            "start": 2716,
+            "end": 3117,
+            "source": "function x(e){let o=y,n=!1,s={},r={};for(let[t,i]of Object.entries(e.strippedDangerousRules??{}))if(i!==void 0)r[t]=[...i];for(let[t,i]of Object.entries(e.alwaysAllowRules)){if(i===void 0)continue;let a=i.filter((l)=>!o(l));if(a.length!==i.length){n=!0;for(let l of i)if(o(l)){let p=r[t]??=[];if(!p.includes(l))p.push(l)}}s[t]=a}if(!n)return e;return{...e,alwaysAllowRules:s,strippedDangerousRules:r}}",
+            "sha256": "2c6457ee4100b97744cdc976fa761691b199b12b67e00018fd4254c84ceabc33",
+            "variable": false
+          },
+          {
+            "file": "chunk-e5zjd7z7.js",
+            "name": "pe",
+            "start": 3471,
+            "end": 4585,
+            "source": "function pe(e){let o=e.getAppState().toolPermissionContext,n=o!==void 0&&o.pollEventDeliveryGuard===!0;if(n)o=x(o);let s=e.permissionLayers;if(!s)return g(e,o);let r=s.findLast((t)=>t.kind===\"working_directory\");for(let t of s)switch(t.kind){case\"allowed_tools\":if(!n)o=d(o,[...t.allowedTools]);break;case\"disallowed_tools\":o=u(o,[...t.disallowedTools]);break;case\"bash_command_clamp\":o={...o,bashCommandClamps:[...o.bashCommandClamps??[],t.rules]};break;case\"avoid_prompts\":if(!o.shouldAvoidPermissionPrompts)o={...o,shouldAvoidPermissionPrompts:!0};break;case\"sandbox_auto_allow_suspended\":if(!o.sandboxAutoAllowSuspended)o={...o,sandboxAutoAllowSuspended:!0};break;case\"permission_mode\":{if(t.mode===\"bypassPermissions\"&&(Uv()||!o.isBypassPermissionsModeAvailable))break;o={...o,mode:t.mode};break}case\"working_directory\":if(t===r&&!o.additionalWorkingDirectories.has(t.directory))o={...o,additionalWorkingDirectories:new Map([...o.additionalWorkingDirectories,[t.directory,{path:t.directory,source:\"session\"}]])};break;case\"effort\":case\"model\":case\"max_thinking_tokens\":case\"flag_settings\":break}return g(e,o)}",
+            "sha256": "d8694dea98758125d74f493d04b067531eb2386aa464f6a29cebde594147c6e3",
+            "variable": false
+          },
+          {
+            "file": "chunk-e5zjd7z7.js",
+            "name": "g",
+            "start": 4585,
+            "end": 4625,
+            "source": "function g(e,o){return b(e,k(e,h(e,o)))}",
+            "sha256": "5aca9a66c297f49bcd4b13063a7885bb45127d3c3e355f6b95d6c99a8d8f9322",
+            "variable": false
+          },
+          {
+            "file": "chunk-e5zjd7z7.js",
+            "name": "h",
+            "start": 4625,
+            "end": 4800,
+            "source": "function h(e,o){if(o===void 0||o.mode!==\"auto\"||e.forPromptShellCommand===!0||e.forRemoteExecution===!0)return o;let n=c(e.permissionModeAtRequest);return n===void 0?o:m(n,o)}",
+            "sha256": "d58d23c7552bf39853a9968a01658ef666632f2daa23b7371f03940106e7ad2e",
+            "variable": false
+          },
+          {
+            "file": "chunk-e5zjd7z7.js",
+            "name": "b",
+            "start": 5021,
+            "end": 5130,
+            "source": "function b(e,o){if(e.forPromptShellCommand!==!0||o===void 0)return o;return o.mode===\"auto\"?m(\"default\",o):o}",
+            "sha256": "e14e10e26d7e75d16c672360301d5c18326ad4d0232105f51a5eafb9990764a3",
+            "variable": false
+          },
+          {
+            "file": "chunk-e5zjd7z7.js",
+            "name": "m",
+            "start": 5130,
+            "end": 5212,
+            "source": "function m(e,o){return{...o,mode:e,modeBeforeRewrite:o.modeBeforeRewrite??o.mode}}",
+            "sha256": "5a4d4634b3f6ca804b5e2f2d7759a65b400ca81c3bc67886ae5a545dc0b08905",
+            "variable": false
+          },
+          {
+            "file": "chunk-e5zjd7z7.js",
+            "name": "k",
+            "start": 5212,
+            "end": 5405,
+            "source": "function k(e,o){if(e.forRemoteExecution!==!0||o===void 0)return o;let{blockReadsOutsideWorkingDirectories:n,...s}=o;return o.mode===\"acceptEdits\"||o.mode===\"bypassPermissions\"?m(\"default\",s):s}",
+            "sha256": "1c5c245e01d75bc01d0fc47619932be43e231fff318cc30c39abb2f03b2b9e3d",
+            "variable": false
+          }
+        ],
+        "ports": [
+          {
+            "local": "Ta",
+            "file": "chunk-ga85rfgd.js",
+            "name": "Ta"
+          },
+          {
+            "local": "Uv",
+            "file": "chunk-ja1vb28z.js",
+            "name": "Uv"
+          },
+          {
+            "local": "bo",
+            "file": "chunk-e5h5vmn0.js",
+            "name": "bo"
+          },
+          {
+            "local": "RG",
+            "file": "chunk-e5h5vmn0.js",
+            "name": "RG"
+          },
+          {
+            "local": "L",
+            "file": "chunk-0mtv3td9.js",
+            "name": "L"
+          }
+        ],
+        "read": "pe",
+        "capture": "tzo",
+        "isCapturedNonAuto": "s2r"
+      },
+      "eligibility": {
+        "rows": [
+          {
+            "file": "chunk-2ta2c3j5.js",
+            "name": "fJ",
+            "start": 1340187,
+            "end": 1340271,
+            "source": "function fJ(){if(ah().length>0&&Ee())return!1;if(Ee()&&!i0t(_I()))return!1;return!0}",
+            "sha256": "779e44a6118f99ddf36be1727c5643aead463b18e2ef90cb74999e2370a71721",
+            "variable": false
+          },
+          {
+            "file": "chunk-2ta2c3j5.js",
+            "name": "i0t",
+            "start": 1340141,
+            "end": 1340187,
+            "source": "function i0t(e){return e!==void 0&&e!==\"none\"}",
+            "sha256": "fc1d03e44d2b97b3ee80233eec7103c39668ec07a50667c5f0b9bdf5ddbc2648",
+            "variable": false
+          }
+        ],
+        "read": "fJ",
+        "ports": [
+          {
+            "local": "Ee",
+            "file": "chunk-ce0nkjpw.js",
+            "name": "Ee"
+          },
+          {
+            "local": "_I",
+            "file": "chunk-ce0nkjpw.js",
+            "name": "_I"
+          },
+          {
+            "local": "ah",
+            "file": "chunk-ce0nkjpw.js",
+            "name": "ah"
+          }
+        ]
+      },
+      "cleanup": {
+        "rows": [
+          {
+            "file": "chunk-z28s9wvx.js",
+            "name": "Pt",
+            "start": 128747,
+            "end": 128794,
+            "source": "Pt=new Ct(()=>({calls:new Map,hostAttests:!1}))",
+            "sha256": "9c3d9bffc13721349301c6c97c6998599a870e986914db7e87e047ce69622be2",
+            "variable": true
+          },
+          {
+            "file": "chunk-z28s9wvx.js",
+            "name": "Cr",
+            "start": 129087,
+            "end": 129123,
+            "source": "Cr=new Ct(()=>({byToolUse:new Map}))",
+            "sha256": "bdda80b53db1b2361a6b5abbf7f332a26e3360ced068183b5c29297a443c13e8",
+            "variable": true
+          },
+          {
+            "file": "chunk-z28s9wvx.js",
+            "name": "Xre",
+            "start": 129124,
+            "end": 129288,
+            "source": "function Xre(e,n){if(e!==void 0){Pt.peek(e)?.calls.delete(n);let s=Cr.peek(e)?.byToolUse.get(n);if(s!==void 0){Cr.peek(e)?.byToolUse.delete(n);for(let r of s)r()}}}",
+            "sha256": "dc0d28f5d99efb2ebd295f14b97b7b57032935b511522091e3e0b12ac78aa3a1",
+            "variable": false
+          }
+        ],
+        "ports": [
+          {
+            "local": "Ct",
+            "file": "chunk-ce0nkjpw.js",
+            "name": "Ct"
+          }
+        ],
+        "finish": "Xre"
+      },
+      "constants": [
+        {
+          "file": "chunk-ybk8ky4n.js",
+          "name": "OWe",
+          "start": 9075,
+          "end": 9135,
+          "source": "OWe=\"tool permission stream closed before response received\"",
+          "sha256": "2d48e545ddaaf5d19e0e33274b14e390d69aa44f21f90eeeb0a364f4ed2a5bb5",
+          "variable": true
+        },
+        {
+          "file": "chunk-ybk8ky4n.js",
+          "name": "pOe",
+          "start": 9136,
+          "end": 9196,
+          "source": "pOe=\"canUseTool returned a schema-invalid permission result\"",
+          "sha256": "407c9b04d502ca7400c90be07da83dc96e479399b5656ed4e731cae753edc024",
+          "variable": true
+        },
+        {
+          "file": "chunk-ybk8ky4n.js",
+          "name": "fOe",
+          "start": 9197,
+          "end": 9233,
+          "source": "fOe=\"tool permission request failed\"",
+          "sha256": "bdddfb15042358ea563c3e293cae9c70fee012fe690ed5f3446aacfd8974c4f1",
+          "variable": true
+        },
+        {
+          "file": "chunk-ybk8ky4n.js",
+          "name": "nnr",
+          "start": 9332,
+          "end": 9380,
+          "source": "nnr=\"permission prompt tool no longer connected\"",
+          "sha256": "bba4bc57a650dc26744494f7ec24f0b52ee0d3757eeca950040979df8585c05e",
+          "variable": true
+        }
+      ],
+      "utilities": {
+        "rows": [
+          {
+            "file": "chunk-ga85rfgd.js",
+            "name": "Ta",
+            "start": 155779,
+            "end": 155839,
+            "source": "function Ta(e,s=!1){return e===\"auto\"||e===\"plan\"&&!s&&mf()}",
+            "sha256": "5ed7e123688a0f5152dc80b540f4726f4cf48f69e5e87ef095202c8f7f895be8",
+            "variable": false
+          },
+          {
+            "file": "chunk-ja1vb28z.js",
+            "name": "c2r",
+            "start": 662,
+            "end": 809,
+            "source": "function c2r(){if((er()||{}).permissions?.disableBypassPermissionsMode===\"disable\")return\"Bypass permissions mode was disabled by settings\";return}",
+            "sha256": "bf716f4278aab5e0c7276b58403271a2a9553aa35b92244db13bf836f3307f4b",
+            "variable": false
+          },
+          {
+            "file": "chunk-ja1vb28z.js",
+            "name": "Uv",
+            "start": 809,
+            "end": 845,
+            "source": "function Uv(){return c2r()!==void 0}",
+            "sha256": "d8df81acdd2b141bbcfd76824455b76dd5c46d7179976460d63ce7b83dce7c00",
+            "variable": false
+          },
+          {
+            "file": "chunk-knz4h6zw.js",
+            "name": "an",
+            "start": 698,
+            "end": 772,
+            "source": "function an(t){return Sn(e(\"sha256\").update(t).digest(\"hex\").slice(0,12))}",
+            "sha256": "ec69e67c05de93e649789cd57cbba035eca23bb54dc7f7f200f2ae8677bdc09d",
+            "variable": false
+          },
+          {
+            "file": "chunk-nvvj8rcy.js",
+            "name": "Ntn",
+            "start": 1041,
+            "end": 1116,
+            "source": "function Ntn(e){return e.startsWith(\"localDisplayOnly ask not forwarded:\")}",
+            "sha256": "48fb4e4e09cde383a49ad6931dbeec6a02e72bf01532548c66ef8f38f93f7c05",
+            "variable": false
+          }
+        ],
+        "ports": [
+          {
+            "local": "er",
+            "file": "chunk-8wtem9wj.js",
+            "name": "er"
+          },
+          {
+            "local": "Sn",
+            "file": "chunk-qwv00mqh.js",
+            "name": "Sn"
+          },
+          {
+            "local": "e",
+            "file": "crypto",
+            "name": "createHash"
+          },
+          {
+            "local": "mf",
+            "hostBinding": true,
+            "accessor": {
+              "file": "chunk-ga85rfgd.js",
+              "name": "mf",
+              "start": 155628,
+              "end": 155661,
+              "source": "function mf(){return P$().active}",
+              "sha256": "eb6facecac06754b1af05cfb23ec39e3f8b6d94527e3c1c8fd65c374cc552a0f",
+              "variable": false
+            }
+          }
+        ],
+        "mode": "Ta",
+        "bypass": "Uv",
+        "hash": "an",
+        "reason": "Ntn"
+      }
+    },
+    {
+      "platform": "win32-x64",
+      "manifestSha256": "c71e85888df3301fd3c4cb158744538810418e2d67591debe8e4f7c771fcdddc",
+      "modules": [
+        {
+          "path": "chunk-f01b7p3n.js",
+          "sha256": "6f49a81c00aa413b29154b4cd4131cb5ff3e0b566b85f3176bf6d86fb59a96ca"
+        },
+        {
+          "path": "chunk-kj8fds5e.js",
+          "sha256": "edf7ba6fac1a66b9e34b2ea9c209694327665750a821ab0c723ef2cb35ddab7f"
+        },
+        {
+          "path": "chunk-5hdtkwdb.js",
+          "sha256": "f0ee6d6caace627b5824e6197fe2474a196c0b59e36f19c725a9a4d1a7b1eda0"
+        },
+        {
+          "path": "chunk-0wcwzvpa.js",
+          "sha256": "8cddd9d5bc380564db043dd3a05457c7906c476334600bb7b576a493df26f2ef"
+        },
+        {
+          "path": "chunk-9w0h7x84.js",
+          "sha256": "09945b200fb3147c000f6aa6b8f64828a2384c2e8a0acca5d60abae53dd826cc"
+        },
+        {
+          "path": "chunk-zw3pe4ym.js",
+          "sha256": "f96cde8809cde117826fe92f9d4b1b47602c5ab445a3b9206571ab12b5c12290"
+        },
+        {
+          "path": "chunk-pqmgzeq0.js",
+          "sha256": "8e6e4d08aa045e532530139d720e3964a607c20523822b1b91bcd0afc62b709f"
+        },
+        {
+          "path": "chunk-46nktg5s.js",
+          "sha256": "bb68ac3146b9559cae30e0a326707f9d0caf35ee8a33894e5d22f42436425899"
+        },
+        {
+          "path": "chunk-8s65wdf6.js",
+          "sha256": "58991a4c2159f263da41ec11ad49de503816a5967f1eb19f03f66f37750e408a"
+        },
+        {
+          "path": "chunk-tqsbkgxe.js",
+          "sha256": "305354ae7a8ca9c2fdbd907eab05b59e758cea2be5e8f7eae43df7caed718801"
+        }
+      ],
+      "rows": [
+        {
+          "file": "chunk-f01b7p3n.js",
+          "name": "y$n",
+          "start": 1300,
+          "end": 1374,
+          "source": "function y$n(e,r){return e===r||e.behavior===\"ask\"&&e.forcedByCaller===!0}",
+          "sha256": "beb46e3c6aa01f29d7390b709d8ce3f12b151e2b8fcbc19ee64d0d1b5aa26fb4",
+          "variable": false
+        },
+        {
+          "file": "chunk-f01b7p3n.js",
+          "name": "_$n",
+          "start": 1374,
+          "end": 1440,
+          "source": "function _$n(e){return e===OWe||e===pOe||e===fOe||e===nnr||Ltn(e)}",
+          "sha256": "2f294f21ebd292aac2e601181eb7ae627dee75a52a5e1b00ec2e0bc0c876e40a",
+          "variable": false
+        },
+        {
+          "file": "chunk-f01b7p3n.js",
+          "name": "Tit",
+          "start": 1480,
+          "end": 1494,
+          "source": "Tit=\"confirm_\"",
+          "sha256": "55c1d53f714e5ee54c4725e6d3b2d9e8212b0026a9776f5dd21a21badf7fccc8",
+          "variable": true
+        },
+        {
+          "file": "chunk-f01b7p3n.js",
+          "name": "yIt",
+          "start": 1495,
+          "end": 1592,
+          "source": "function yIt(e){let r=pe(e);return fJ()&&r.shouldAvoidPermissionPrompts!==!0&&r.mode!==\"dontAsk\"}",
+          "sha256": "5d4d09bc34c0cbddeabddf692b02d62d11c63027cd89cab181d482312d957fd7",
+          "variable": false
+        },
+        {
+          "file": "chunk-f01b7p3n.js",
+          "name": "VKe",
+          "start": 1592,
+          "end": 2198,
+          "source": "async function VKe(e){let{toolUseContext:r,source:i}=e;if(!yIt(r))return{kind:\"unanswered\",reason:\"no_one_to_ask\"};let s;try{s=await V(e)}catch(n){if(r.abortController.signal.aborted)t(`confirmWithUser(${i}): ask aborted with the turn: ${l(n)}`),s={kind:\"aborted\"};else d(n),s={kind:\"unanswered\",reason:\"error\"}}let a={source_hash:an(i)};switch(s.kind){case\"chose\":case\"declined\":case\"aborted\":y(\"permission_confirm_with_user\",{...a,answer:c(s.kind)});break;case\"unanswered\":if(s.reason===\"error\")m(\"permission_confirm_with_user\",\"error\",a);else p(\"permission_confirm_with_user\",s.reason,a);break}return s}",
+          "sha256": "3158a6b686da5f5188c87a0086e2e0b61484c37c736eebb3ad4ffb4370646df7",
+          "variable": false
+        },
+        {
+          "file": "chunk-f01b7p3n.js",
+          "name": "V",
+          "start": 2198,
+          "end": 3110,
+          "source": "async function V({canUseTool:e,toolUseContext:r,source:i,header:s,question:a,choices:n,personOnly:_}){let h=eY.inputSchema.safeParse({questions:[{question:a,header:s,options:n.map(({label:g,description:W})=>({label:g,description:W??\"\"})),multiSelect:!1}],metadata:{source:i}});if(!h.success)throw new P(`confirmWithUser(${i}): the question does not satisfy the AskUserQuestion schema: ${h.error.message}`,\"confirmWithUser: the question does not satisfy the AskUserQuestion schema\");let k=await eY.checkPermissions(h.data,r);if(k.behavior!==\"ask\")throw new P(`confirmWithUser(${i}): AskUserQuestion.checkPermissions answered ${k.behavior}, not ask`,\"confirmWithUser: AskUserQuestion.checkPermissions did not answer ask\");let C={...k,forcedByCaller:!0,..._===!0&&{personOnly:!0}},w=`${Tit}${b()}`,A=await e(eY,h.data,r,Jc({content:[]}),w,C).finally(()=>Xre(r.session,w));return O(A,C,r.abortController.signal,a,n)}",
+          "sha256": "2722ff28e3c1be5854e84f446c2e8e5ae321ea0faf8afc63b73f31107c4a605f",
+          "variable": false
+        },
+        {
+          "file": "chunk-f01b7p3n.js",
+          "name": "O",
+          "start": 3110,
+          "end": 3829,
+          "source": "function O(e,r,i,s,a){if(y$n(e,r))return{kind:\"unanswered\",reason:\"no_one_to_ask\"};if(i.aborted)return{kind:\"aborted\"};switch(e.behavior){case\"allow\":{let n=T().safeParse(e.updatedInput);if(!n.success)return{kind:\"unanswered\",reason:\"no_selection\"};if(n.data.followUp===!0)return{kind:\"declined\"};let _=E(n.data.answers?.[s]);if(_===\"\")return{kind:\"unanswered\",reason:\"no_selection\"};let h=a.find((k)=>U(k.label)===_);return h!==void 0?{kind:\"chose\",value:h.value}:{kind:\"declined\",typedAnswer:_}}case\"deny\":if(e.decisionReason.type===\"asyncAgent\"||e.decisionReason.type===\"other\"&&_$n(e.decisionReason.reason))return{kind:\"unanswered\",reason:\"no_one_to_ask\"};return{kind:\"declined\"};case\"ask\":return{kind:\"declined\"}}}",
+          "sha256": "4c39f1810cf85ac0c27ba476386607b3263d7a64950d989acb02c4c1fe548af5",
+          "variable": false
+        },
+        {
+          "file": "chunk-f01b7p3n.js",
+          "name": "T",
+          "start": 3833,
+          "end": 3902,
+          "source": "T=f(()=>u({answers:de(o(),se()).optional(),followUp:M().optional()}))",
+          "sha256": "fe94923c49c5f5e400d2ee70d3472a8d84ac8d580bd58ffa5c811682e089c4e8",
+          "variable": true
+        },
+        {
+          "file": "chunk-f01b7p3n.js",
+          "name": "E",
+          "start": 3903,
+          "end": 4037,
+          "source": "function E(e){if(typeof e===\"string\")return U(e);if(Array.isArray(e))return U(e.filter((r)=>typeof r===\"string\").join(\", \"));return\"\"}",
+          "sha256": "1202e009ea53bfa0ffb55f3ba65051b4b11f72ed4b77793898b242e9809dbfeb",
+          "variable": false
+        },
+        {
+          "file": "chunk-f01b7p3n.js",
+          "name": "U",
+          "start": 4037,
+          "end": 4087,
+          "source": "function U(e){return e.replace(/\\s+/g,\" \").trim()}",
+          "sha256": "71e2dbe88b5c00c2645993fc5a1f6ffb1ac2c2a3896ed0ea21a8c3cf45240583",
+          "variable": false
+        }
+      ],
+      "ports": [
+        {
+          "local": "OWe",
+          "file": "chunk-9w0h7x84.js",
+          "name": "OWe"
+        },
+        {
+          "local": "pOe",
+          "file": "chunk-9w0h7x84.js",
+          "name": "pOe"
+        },
+        {
+          "local": "fOe",
+          "file": "chunk-9w0h7x84.js",
+          "name": "fOe"
+        },
+        {
+          "local": "nnr",
+          "file": "chunk-9w0h7x84.js",
+          "name": "nnr"
+        },
+        {
+          "local": "c",
+          "file": "chunk-yjcwd6hp.js",
+          "name": "c"
+        },
+        {
+          "local": "P",
+          "file": "chunk-dtespbs4.js",
+          "name": "P"
+        },
+        {
+          "local": "l",
+          "file": "chunk-dtespbs4.js",
+          "name": "l"
+        },
+        {
+          "local": "y",
+          "file": "chunk-wytsjfv7.js",
+          "name": "y"
+        },
+        {
+          "local": "m",
+          "file": "chunk-wytsjfv7.js",
+          "name": "m"
+        },
+        {
+          "local": "p",
+          "file": "chunk-wytsjfv7.js",
+          "name": "p"
+        },
+        {
+          "local": "t",
+          "file": "chunk-18x8g08z.js",
+          "name": "t"
+        },
+        {
+          "local": "d",
+          "file": "chunk-eg7cx7jg.js",
+          "name": "d"
+        },
+        {
+          "local": "f",
+          "file": "chunk-qbn4ejff.js",
+          "name": "f"
+        },
+        {
+          "local": "Xre",
+          "file": "chunk-0wcwzvpa.js",
+          "name": "Xre"
+        },
+        {
+          "local": "pe",
+          "file": "chunk-kj8fds5e.js",
+          "name": "pe"
+        },
+        {
+          "local": "eY",
+          "file": "chunk-r4392r37.js",
+          "name": "eY"
+        },
+        {
+          "local": "fJ",
+          "file": "chunk-5hdtkwdb.js",
+          "name": "fJ"
+        },
+        {
+          "local": "Jc",
+          "file": "chunk-5hdtkwdb.js",
+          "name": "Jc"
+        },
+        {
+          "local": "Ltn",
+          "file": "chunk-tqsbkgxe.js",
+          "name": "Ltn"
+        },
+        {
+          "local": "an",
+          "file": "chunk-8s65wdf6.js",
+          "name": "an"
+        },
+        {
+          "local": "o",
+          "file": "chunk-zw3pe4ym.js",
+          "name": "o"
+        },
+        {
+          "local": "M",
+          "file": "chunk-zw3pe4ym.js",
+          "name": "M"
+        },
+        {
+          "local": "se",
+          "file": "chunk-zw3pe4ym.js",
+          "name": "se"
+        },
+        {
+          "local": "u",
+          "file": "chunk-zw3pe4ym.js",
+          "name": "u"
+        },
+        {
+          "local": "de",
+          "file": "chunk-zw3pe4ym.js",
+          "name": "de"
+        },
+        {
+          "local": "b",
+          "file": "crypto",
+          "name": "randomUUID"
+        }
+      ],
+      "exports": {
+        "y$n": "y$n",
+        "_$n": "_$n",
+        "Tit": "Tit",
+        "yIt": "yIt",
+        "VKe": "VKe"
+      },
+      "allowed": "yIt",
+      "confirm": "VKe",
+      "context": {
+        "rows": [
+          {
+            "file": "chunk-kj8fds5e.js",
+            "name": "d",
+            "start": 899,
+            "end": 1046,
+            "source": "function d(e,o){if(o.length===0)return e;return{...e,alwaysAllowRules:{...e.alwaysAllowRules,command:N([...e.alwaysAllowRules.command||[],...o])}}}",
+            "sha256": "917ded4a1f0db2d4ccba2249a2b2d1fbd347a87b68161b20d072e7bf688227fe",
+            "variable": false
+          },
+          {
+            "file": "chunk-kj8fds5e.js",
+            "name": "u",
+            "start": 1046,
+            "end": 1190,
+            "source": "function u(e,o){if(o.length===0)return e;return{...e,alwaysDenyRules:{...e.alwaysDenyRules,command:N([...e.alwaysDenyRules.command||[],...o])}}}",
+            "sha256": "00431734173315565e3f2a01d13b292b9375a4f1f3406c62b98a921e6565fed3",
+            "variable": false
+          },
+          {
+            "file": "chunk-kj8fds5e.js",
+            "name": "f",
+            "start": 1861,
+            "end": 1969,
+            "source": "class f{mode;autoClassifierActive;constructor(e,o){this.mode=e,this.autoClassifierActive=o}toJSON(){return}}",
+            "sha256": "ac50b235352e9564895f2c41b6d8c4ee27b40d35ab960b29eb3785d9b80f767b",
+            "variable": false
+          },
+          {
+            "file": "chunk-kj8fds5e.js",
+            "name": "tzo",
+            "start": 1969,
+            "end": 2007,
+            "source": "function tzo(e){return new f(e,Ta(e))}",
+            "sha256": "791b48a291a3d69500357235aeefaebf88317e2349732a6cae6999bd6acb7d12",
+            "variable": false
+          },
+          {
+            "file": "chunk-kj8fds5e.js",
+            "name": "s2r",
+            "start": 2007,
+            "end": 2070,
+            "source": "function s2r(e){return e instanceof f&&!e.autoClassifierActive}",
+            "sha256": "ce82b612a1af0004af988f44be6f7f15deea429ac1358ff76fa2c7d06646704f",
+            "variable": false
+          },
+          {
+            "file": "chunk-kj8fds5e.js",
+            "name": "c",
+            "start": 2070,
+            "end": 2288,
+            "source": "function c(e){if(!s2r(e))return;let o=e.mode;switch(o){case\"default\":case\"acceptEdits\":case\"dontAsk\":case\"bubble\":return o;case\"plan\":case\"bypassPermissions\":return\"default\";case\"auto\":return;default:{let n=o;return}}}",
+            "sha256": "5f66f322c0e91d39ba0e2249c150416e0e0bc0b932c21e5b2b76e270ae5e37ce",
+            "variable": false
+          },
+          {
+            "file": "chunk-kj8fds5e.js",
+            "name": "y",
+            "start": 2646,
+            "end": 2716,
+            "source": "function y(e){return e===bo||e.startsWith(`${bo}(`)||e.startsWith(RG)}",
+            "sha256": "5c426eaa52bd596f5211613f6d3b3af9f808acfcd45321a29686a637fe8bcf34",
+            "variable": false
+          },
+          {
+            "file": "chunk-kj8fds5e.js",
+            "name": "x",
+            "start": 2716,
+            "end": 3117,
+            "source": "function x(e){let o=y,n=!1,s={},r={};for(let[t,i]of Object.entries(e.strippedDangerousRules??{}))if(i!==void 0)r[t]=[...i];for(let[t,i]of Object.entries(e.alwaysAllowRules)){if(i===void 0)continue;let a=i.filter((l)=>!o(l));if(a.length!==i.length){n=!0;for(let l of i)if(o(l)){let p=r[t]??=[];if(!p.includes(l))p.push(l)}}s[t]=a}if(!n)return e;return{...e,alwaysAllowRules:s,strippedDangerousRules:r}}",
+            "sha256": "2c6457ee4100b97744cdc976fa761691b199b12b67e00018fd4254c84ceabc33",
+            "variable": false
+          },
+          {
+            "file": "chunk-kj8fds5e.js",
+            "name": "pe",
+            "start": 3471,
+            "end": 4585,
+            "source": "function pe(e){let o=e.getAppState().toolPermissionContext,n=o!==void 0&&o.pollEventDeliveryGuard===!0;if(n)o=x(o);let s=e.permissionLayers;if(!s)return g(e,o);let r=s.findLast((t)=>t.kind===\"working_directory\");for(let t of s)switch(t.kind){case\"allowed_tools\":if(!n)o=d(o,[...t.allowedTools]);break;case\"disallowed_tools\":o=u(o,[...t.disallowedTools]);break;case\"bash_command_clamp\":o={...o,bashCommandClamps:[...o.bashCommandClamps??[],t.rules]};break;case\"avoid_prompts\":if(!o.shouldAvoidPermissionPrompts)o={...o,shouldAvoidPermissionPrompts:!0};break;case\"sandbox_auto_allow_suspended\":if(!o.sandboxAutoAllowSuspended)o={...o,sandboxAutoAllowSuspended:!0};break;case\"permission_mode\":{if(t.mode===\"bypassPermissions\"&&($v()||!o.isBypassPermissionsModeAvailable))break;o={...o,mode:t.mode};break}case\"working_directory\":if(t===r&&!o.additionalWorkingDirectories.has(t.directory))o={...o,additionalWorkingDirectories:new Map([...o.additionalWorkingDirectories,[t.directory,{path:t.directory,source:\"session\"}]])};break;case\"effort\":case\"model\":case\"max_thinking_tokens\":case\"flag_settings\":break}return g(e,o)}",
+            "sha256": "5188f17536fe99e18696c4b814928164e32fdf64d28fcf2f0aaa70db46d74db5",
+            "variable": false
+          },
+          {
+            "file": "chunk-kj8fds5e.js",
+            "name": "g",
+            "start": 4585,
+            "end": 4625,
+            "source": "function g(e,o){return b(e,k(e,h(e,o)))}",
+            "sha256": "5aca9a66c297f49bcd4b13063a7885bb45127d3c3e355f6b95d6c99a8d8f9322",
+            "variable": false
+          },
+          {
+            "file": "chunk-kj8fds5e.js",
+            "name": "h",
+            "start": 4625,
+            "end": 4800,
+            "source": "function h(e,o){if(o===void 0||o.mode!==\"auto\"||e.forPromptShellCommand===!0||e.forRemoteExecution===!0)return o;let n=c(e.permissionModeAtRequest);return n===void 0?o:m(n,o)}",
+            "sha256": "d58d23c7552bf39853a9968a01658ef666632f2daa23b7371f03940106e7ad2e",
+            "variable": false
+          },
+          {
+            "file": "chunk-kj8fds5e.js",
+            "name": "b",
+            "start": 5021,
+            "end": 5130,
+            "source": "function b(e,o){if(e.forPromptShellCommand!==!0||o===void 0)return o;return o.mode===\"auto\"?m(\"default\",o):o}",
+            "sha256": "e14e10e26d7e75d16c672360301d5c18326ad4d0232105f51a5eafb9990764a3",
+            "variable": false
+          },
+          {
+            "file": "chunk-kj8fds5e.js",
+            "name": "m",
+            "start": 5130,
+            "end": 5212,
+            "source": "function m(e,o){return{...o,mode:e,modeBeforeRewrite:o.modeBeforeRewrite??o.mode}}",
+            "sha256": "5a4d4634b3f6ca804b5e2f2d7759a65b400ca81c3bc67886ae5a545dc0b08905",
+            "variable": false
+          },
+          {
+            "file": "chunk-kj8fds5e.js",
+            "name": "k",
+            "start": 5212,
+            "end": 5405,
+            "source": "function k(e,o){if(e.forRemoteExecution!==!0||o===void 0)return o;let{blockReadsOutsideWorkingDirectories:n,...s}=o;return o.mode===\"acceptEdits\"||o.mode===\"bypassPermissions\"?m(\"default\",s):s}",
+            "sha256": "1c5c245e01d75bc01d0fc47619932be43e231fff318cc30c39abb2f03b2b9e3d",
+            "variable": false
+          }
+        ],
+        "ports": [
+          {
+            "local": "Ta",
+            "file": "chunk-pqmgzeq0.js",
+            "name": "Ta"
+          },
+          {
+            "local": "bo",
+            "file": "chunk-2ypdzmem.js",
+            "name": "bo"
+          },
+          {
+            "local": "RG",
+            "file": "chunk-2ypdzmem.js",
+            "name": "RG"
+          },
+          {
+            "local": "N",
+            "file": "chunk-vqm57kwc.js",
+            "name": "N"
+          }
+        ],
+        "read": "pe",
+        "capture": "tzo",
+        "isCapturedNonAuto": "s2r"
+      },
+      "eligibility": {
+        "rows": [
+          {
+            "file": "chunk-5hdtkwdb.js",
+            "name": "fJ",
+            "start": 1340457,
+            "end": 1340541,
+            "source": "function fJ(){if(ah().length>0&&ke())return!1;if(ke()&&!i0t(_I()))return!1;return!0}",
+            "sha256": "6e01b42dc43eb4680974c64d33c0a39bad93cf4bf3e886c55e66495f7931ebc9",
+            "variable": false
+          },
+          {
+            "file": "chunk-5hdtkwdb.js",
+            "name": "i0t",
+            "start": 1340411,
+            "end": 1340457,
+            "source": "function i0t(e){return e!==void 0&&e!==\"none\"}",
+            "sha256": "fc1d03e44d2b97b3ee80233eec7103c39668ec07a50667c5f0b9bdf5ddbc2648",
+            "variable": false
+          }
+        ],
+        "read": "fJ",
+        "ports": [
+          {
+            "local": "ke",
+            "file": "chunk-q2pbxf3c.js",
+            "name": "ke"
+          },
+          {
+            "local": "_I",
+            "file": "chunk-q2pbxf3c.js",
+            "name": "_I"
+          },
+          {
+            "local": "ah",
+            "file": "chunk-q2pbxf3c.js",
+            "name": "ah"
+          }
+        ]
+      },
+      "cleanup": {
+        "rows": [
+          {
+            "file": "chunk-0wcwzvpa.js",
+            "name": "Pt",
+            "start": 128801,
+            "end": 128848,
+            "source": "Pt=new Ct(()=>({calls:new Map,hostAttests:!1}))",
+            "sha256": "9c3d9bffc13721349301c6c97c6998599a870e986914db7e87e047ce69622be2",
+            "variable": true
+          },
+          {
+            "file": "chunk-0wcwzvpa.js",
+            "name": "Cr",
+            "start": 129141,
+            "end": 129177,
+            "source": "Cr=new Ct(()=>({byToolUse:new Map}))",
+            "sha256": "bdda80b53db1b2361a6b5abbf7f332a26e3360ced068183b5c29297a443c13e8",
+            "variable": true
+          },
+          {
+            "file": "chunk-0wcwzvpa.js",
+            "name": "Xre",
+            "start": 129178,
+            "end": 129342,
+            "source": "function Xre(e,n){if(e!==void 0){Pt.peek(e)?.calls.delete(n);let s=Cr.peek(e)?.byToolUse.get(n);if(s!==void 0){Cr.peek(e)?.byToolUse.delete(n);for(let r of s)r()}}}",
+            "sha256": "dc0d28f5d99efb2ebd295f14b97b7b57032935b511522091e3e0b12ac78aa3a1",
+            "variable": false
+          }
+        ],
+        "ports": [
+          {
+            "local": "Ct",
+            "file": "chunk-q2pbxf3c.js",
+            "name": "Ct"
+          }
+        ],
+        "finish": "Xre"
+      },
+      "constants": [
+        {
+          "file": "chunk-9w0h7x84.js",
+          "name": "OWe",
+          "start": 9075,
+          "end": 9135,
+          "source": "OWe=\"tool permission stream closed before response received\"",
+          "sha256": "2d48e545ddaaf5d19e0e33274b14e390d69aa44f21f90eeeb0a364f4ed2a5bb5",
+          "variable": true
+        },
+        {
+          "file": "chunk-9w0h7x84.js",
+          "name": "pOe",
+          "start": 9136,
+          "end": 9196,
+          "source": "pOe=\"canUseTool returned a schema-invalid permission result\"",
+          "sha256": "407c9b04d502ca7400c90be07da83dc96e479399b5656ed4e731cae753edc024",
+          "variable": true
+        },
+        {
+          "file": "chunk-9w0h7x84.js",
+          "name": "fOe",
+          "start": 9197,
+          "end": 9233,
+          "source": "fOe=\"tool permission request failed\"",
+          "sha256": "bdddfb15042358ea563c3e293cae9c70fee012fe690ed5f3446aacfd8974c4f1",
+          "variable": true
+        },
+        {
+          "file": "chunk-9w0h7x84.js",
+          "name": "nnr",
+          "start": 9332,
+          "end": 9380,
+          "source": "nnr=\"permission prompt tool no longer connected\"",
+          "sha256": "bba4bc57a650dc26744494f7ec24f0b52ee0d3757eeca950040979df8585c05e",
+          "variable": true
+        }
+      ],
+      "utilities": {
+        "rows": [
+          {
+            "file": "chunk-pqmgzeq0.js",
+            "name": "Ta",
+            "start": 155779,
+            "end": 155839,
+            "source": "function Ta(e,s=!1){return e===\"auto\"||e===\"plan\"&&!s&&mf()}",
+            "sha256": "5ed7e123688a0f5152dc80b540f4726f4cf48f69e5e87ef095202c8f7f895be8",
+            "variable": false
+          },
+          {
+            "file": "chunk-46nktg5s.js",
+            "name": "c2r",
+            "start": 662,
+            "end": 809,
+            "source": "function c2r(){if((er()||{}).permissions?.disableBypassPermissionsMode===\"disable\")return\"Bypass permissions mode was disabled by settings\";return}",
+            "sha256": "bf716f4278aab5e0c7276b58403271a2a9553aa35b92244db13bf836f3307f4b",
+            "variable": false
+          },
+          {
+            "file": "chunk-46nktg5s.js",
+            "name": "$v",
+            "start": 809,
+            "end": 845,
+            "source": "function $v(){return c2r()!==void 0}",
+            "sha256": "cf9dab69e467cea8b881f81f0cf80c15c91a6bd544846aa5c1d56cfa2a4ac91b",
+            "variable": false
+          },
+          {
+            "file": "chunk-8s65wdf6.js",
+            "name": "an",
+            "start": 698,
+            "end": 772,
+            "source": "function an(t){return Sn(e(\"sha256\").update(t).digest(\"hex\").slice(0,12))}",
+            "sha256": "ec69e67c05de93e649789cd57cbba035eca23bb54dc7f7f200f2ae8677bdc09d",
+            "variable": false
+          },
+          {
+            "file": "chunk-tqsbkgxe.js",
+            "name": "Ltn",
+            "start": 1041,
+            "end": 1116,
+            "source": "function Ltn(e){return e.startsWith(\"localDisplayOnly ask not forwarded:\")}",
+            "sha256": "fcb7b5e4331a4bcac1ed673bc2b3881d7aa8460ab6c2d62034795b6e3746c215",
+            "variable": false
+          }
+        ],
+        "ports": [
+          {
+            "local": "er",
+            "file": "chunk-h9d2c83b.js",
+            "name": "er"
+          },
+          {
+            "local": "Sn",
+            "file": "chunk-yjcwd6hp.js",
+            "name": "Sn"
+          },
+          {
+            "local": "e",
+            "file": "crypto",
+            "name": "createHash"
+          },
+          {
+            "local": "mf",
+            "hostBinding": true,
+            "accessor": {
+              "file": "chunk-pqmgzeq0.js",
+              "name": "mf",
+              "start": 155628,
+              "end": 155661,
+              "source": "function mf(){return PF().active}",
+              "sha256": "798e5db228a4f6be09e83d43a3305cfeeea5e06295347fa167e25d07de5e0486",
+              "variable": false
+            }
+          }
+        ],
+        "mode": "Ta",
+        "bypass": "$v",
+        "hash": "an",
+        "reason": "Ltn"
+      }
+    }
+  ]
+}

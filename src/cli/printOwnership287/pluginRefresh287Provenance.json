@@ -1,0 +1,624 @@
+{
+  "version": "2.1.287",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16 end-exclusive",
+  "rows": [
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Ga",
+      "start": 423073,
+      "end": 423342,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "484798681405deb11ffd3407c5e08693f21bf862ccede412afbe89659a918a52",
+      "source": "async function Ga(b={}){let D=++cf,{agentDefinitions:K}=await NO(_e,I.storageV5,I.credentials,b);Ne=!0,Ro=bce(await yp(bp(),I.storageV5)),Gi=!0,Dd(K.allAgents),oi(),xi(I.storageV5,I.credentials).then((ce)=>bI({plugin_count:ce.enabled.length}),()=>{}),Tu=Math.max(Tu,D)}"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "ea",
+      "start": 426123,
+      "end": 427093,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "7bf89ccaa8f7562b0f1c50e766c64d71a356e6b6c1b923b1263c20ff63c71cc0",
+      "source": "async function ea(b,D){let{servers:K}=await oH({storageV5:I.storageV5,credentials:I.credentials,admits:rte()});R((Oe)=>{let Ke=Oe.mcp.suppressedPluginMcpServers;if(!Ke||Ke.length===0)return Oe;let $e=Ke.filter((Qe)=>(Qe in K));return $e.length===Ke.length?Oe:{...Oe,mcp:{...Oe.mcp,suppressedPluginMcpServers:$e}}}),bI({mcp_server_count:Object.keys(K).length});let ce=uj(),ke=Object.create(null);for(let[Oe,Ke]of Object.entries(K)){if(ce&&(Ke.scope===\"project\"||Ke.scope===\"local\"))continue;if(b?.has(Oe)&&!Object.hasOwn(Lt.configs,Oe))continue;if(CT()&&$6e(Oe,Ke))continue;let $e=Ke.type;if($e===void 0||$e===\"stdio\"||$e===\"sse\"||$e===\"http\"||$e===\"sdk\")ke[Oe]=Ke}for(let[Oe,Ke]of Object.entries(M))if(Ke.type===\"sdk\"&&(!Object.hasOwn(ke,Oe)||K[Oe]?.scope===\"dynamic\"))ke[Oe]=Ke;let{response:Ie,sdkServersChanged:Ye}=await jp(ke,{authoritative:!1,caller:D,deferConnect:aee()});if(Ye)ze();t(`Headless MCP refresh: added=${Ie.added.length}, removed=${Ie.removed.length}`)}"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "jp",
+      "start": 410489,
+      "end": 411906,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "525d3149158968e1a38c60c47e10b0f89e263e371174e88b6415d0751507b155",
+      "source": "function jp(b,{authoritative:D,caller:K,deferConnect:ce=!1}){let ke=async()=>{let Ye=b;if(!D&&Object.keys(Yn).length>0){let mt=Object.create(null);for(let[A,nt]of Object.entries(Yn)){if(Object.hasOwn(b,A))continue;let{scope:sr,...fr}=nt;if(GOt(fr))mt[A]=zdt(nt,fr)}Ye={...mt,...b}}if(Object.keys(zr).length>0)Ye={...zr,...Ye};if(Object.keys(Ye).length>0||Lt.clients.length>0||Qt.length>0)Dn();for(let mt of Xi())mt.suspendAllowsForApply(Ye);let Oe=Qt,Ke=await jso(qp,{payload:b,desired:Ye},{authoritative:D,caller:K,deferConnect:ce}),$e=new Set(Qt.map((mt)=>mt.name)),Qe=Kv({configs:M,clients:Qt,tools:Un,commands:Ln},Oe,Ke);if(Qe.state.configs!==M){for(let mt of Object.keys(M))if(!Object.hasOwn(Qe.state.configs,mt))delete M[mt];Object.assign(M,Qe.state.configs)}if(Qt=Qe.state.clients,Un=Qe.state.tools,Ln=Qe.state.commands,Ke.sdkServersChanged){let mt=new Set(Qt.map((sr)=>sr.name)),A=L([...$e,...mt]),nt=A.map((sr)=>[sr,Ds(sr)]);R((sr)=>({...sr,mcp:{...sr.mcp,tools:[...sr.mcp.tools.filter((fr)=>!nt.some(([Us,Ls])=>zc(fr,Us,Ls))),...Un],commands:[...sr.mcp.commands.filter((fr)=>!A.some((Us)=>fy(fr,Us))),...Ln]}}))}for(let mt of Qe.clientsToCleanUp)await mt.cleanup();for(let mt of Ke.sdkServersRemoved)await Wo.closeFor(mt);return{response:Ke.response,sdkServersChanged:Ke.sdkServersChanged}},Ie=async()=>{try{return await ke()}finally{for(let Ye of Xi())Ye.reassertAfterApply()}};return Cs=Cs.then(Ie,Ie),Cs}"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Xi",
+      "start": 410394,
+      "end": 410489,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "afc0901fb544d47558f6855f6d94bc120c4c869ab2e40e9735e75a0d4783fe4d",
+      "source": "function Xi(){let b=[];if(Wa)b.push(Wa);let D=Ir?.projectsReplyMount();if(D)b.push(D);return b}"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Dn",
+      "start": 398376,
+      "end": 398453,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "43b7206afbcb56ceeb341d57f075d5365d566f8cd2a1ab1bd08648e4a07f4c9d",
+      "source": "function Dn(){if(dle(),!Ca())return;if(!co)co=!0,yn().seedMcpIdentityCheck()}"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "et",
+      "start": 376233,
+      "end": 376235,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "f056b8cae37dc3ed60ee52da9a2951f8a6c531fe3222a3ad6835dbdd905c7d2a",
+      "source": "et"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "lu",
+      "start": 410386,
+      "end": 410393,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "cef67928177e8b22e7182a5aa57242b169630fa4e5bf9a6aa7d905af18013ab9",
+      "source": "lu=null"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Bp",
+      "start": 409811,
+      "end": 409818,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "c5c801bb6817ea18ceda41c6d35d118f46bf2b5a19914bd4bcfbdce6fdecae03",
+      "source": "Bp=Eh()"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Hn",
+      "start": 447073,
+      "end": 447131,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "d8caf109eaa26e44b7ba9beed0c5629b0d3eee0036a4e90434b5ffb2c030b74e",
+      "source": "Hn=function(b,D){if(qm(e))t(`${b}: ${D}`,{level:\"error\"})}"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "nr",
+      "start": 447185,
+      "end": 447240,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "7dc0d8a2687f88ab696f0a5291d432b23dea80a6f5d2741d240558d0db93c806",
+      "source": "nr=function(b,D,K,ce={}){We(b,pme(qm(e),D,K,ce).error)}"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Ep",
+      "start": 402664,
+      "end": 402671,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "c5a12f0af4f9193ef0219e2db4926c42f3ca7b82cc3e997499e1021bfa9225ff",
+      "source": "Ep=sw()"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Ap",
+      "start": 402672,
+      "end": 402866,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "a662b3da2224fc1f0bb0555628b9d8ec87c6e10e92366579313a5855e1e042c3",
+      "source": "Ap=(b)=>{let D=ly()??{},K=Ep.retract(D);if(K===null)return;RL(K),Ki.notifyChange(\"flagSettings\"),ne(\"info\",\"plugin_forwarding_retracted\",{at:b,keys:Object.keys(D).length-Object.keys(K).length})}"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "cf",
+      "start": 419995,
+      "end": 419999,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "da9f013bf45ba1853061ba153cb48e4f4f5b37f889827b3e47a24169a975164c",
+      "source": "cf=0"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Tu",
+      "start": 420000,
+      "end": 420004,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "5fe549953806301887c1b971c47ca8c45d84d0b36e67efab9a3d85439efaa7c7",
+      "source": "Tu=0"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Ne",
+      "start": 376227,
+      "end": 376232,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "6a95b763565ef9a65eda3897deaa60a53ba8b5c521d9835003a677eb816ff8d8",
+      "source": "Ne=!1"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Gi",
+      "start": 402298,
+      "end": 402303,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "01e98d883bafe0009afded4dfdefdbc48116eb98bd5a3790aa4ad3c33c15d2e7",
+      "source": "Gi=!1"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Dd",
+      "start": 402586,
+      "end": 402663,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "33f0c5890f78a6a43596daa2eeef12172a248d3adaab6e070e2191aac6c26950",
+      "source": "Dd=(b)=>{let D=pr.filter((K)=>K.source===\"flagSettings\");pr=QKe([...b,...D])}"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Fs",
+      "start": 431271,
+      "end": 431278,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "16da0ef43e0ebe36c186ac41313dd2182f877da80c9e59879cd89dfa4247ac11",
+      "source": "Fs=null"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Iu",
+      "start": 431279,
+      "end": 431284,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "af95b07ed03a0dd721981daf7bd05da64465b9fdcd47b639a5ca91283f473d42",
+      "source": "Iu=!1"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "zd",
+      "start": 431285,
+      "end": 431290,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "019afcf86868d4188d9dce18a8f8e78a1bf829cc3384de89073c20dbb9ab3da2",
+      "source": "zd=!1"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "oi",
+      "start": 431291,
+      "end": 431503,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "f61dcb5681fd1c90b73869205cb47c220723904ca4c1e63019c84797091593d8",
+      "source": "oi=()=>{if(ya)$o(\"state_change\");if(!ya||I.outputFormat!==\"stream-json\")return;if(Iu){zd=!0;return}let b=yq(cn()),D=_(b);if(Fs===null||D===Fs)return;Fs=D,Wi({type:\"system\",subtype:\"commands_changed\",commands:b})}"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "_f",
+      "start": 431504,
+      "end": 431556,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "89a9c7bd844c77057e4e59d67d69f16198abc3e1349c64208a82075da5c51f70",
+      "source": "_f=()=>{if(Iu=!1,zd){zd=!1;try{oi()}catch(b){d(b)}}}"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Yd",
+      "start": 431557,
+      "end": 431621,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "03c1ba009145e9145b932c6fd543db31e9cb7ef41efc9087368b4fbeec2d5b0e",
+      "source": "Yd=async()=>{f0(),Ro=bce(await yp(Ee(),I.storageV5)),Gi=!0,oi()}"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Jd",
+      "start": 431622,
+      "end": 431624,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "760a5a164106c27c83223f50a0d28b4667dbd50a8ab3f035af5cf0281a1d460f",
+      "source": "Jd"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Du",
+      "start": 431625,
+      "end": 431693,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "8f2d2aa8a1de684d4cf5d544ea2c7736a234a1488e43657bf72027f90c164a88",
+      "source": "Du=()=>{let b=Yd().catch(d).finally(()=>{if(Jd===b)Jd=void 0});Jd=b}"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Yn",
+      "start": 402005,
+      "end": 402194,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "27043b18190b1de11b79b2c3a02e7106d1904b1ce0e2cf2aefb029e3833c14e5",
+      "source": "Yn=a.CLAUDE_CODE_REMOTE?Object.fromEntries(v().mcp.clients.filter((b)=>b.config.scope===\"dynamic\"&&!(\"pluginSource\"in b.config)&&GOt(b.config)&&!sde(b.name)).map((b)=>[b.name,b.config])):{}"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "qp",
+      "start": 409909,
+      "end": 410377,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "83bac54715b6063f4273d0bdc1bb78f540506df53bcc37ab310d0b81e82c04b0",
+      "source": "qp={stores:fn,getOwnedConfigs:()=>Yn,setOwnedConfigs:(b)=>{Yn=b},sdkState:()=>({configs:M,clients:Qt,tools:Un,commands:Ln}),storageV5:I.storageV5,credentials:I.credentials,enqueueSettleMerge:(b)=>{let D=(K)=>(b(),K);Cs=Cs.then(D,D)},redactsPersistedLane:()=>qm(e),appliesModeDrop:!0,wantsDial:(b,D)=>{if(!Np)return!0;let K=v().mcp.clients.find((ce)=>ce.name===b);return K!==void 0&&yn().areMcpConfigsEqual(K.config,sGe(D))},closeReplacedSdkClients:(b)=>Wo.closeFor(b)}"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Wa",
+      "start": 410378,
+      "end": 410385,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "82932c6dbf3c8e0374a0167e5f438e56bea5c6f1e2b74f96fdc883ee1b929e20",
+      "source": "Wa=null"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Ir",
+      "start": 379673,
+      "end": 379675,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "460edadffdaf99dec268cd94c097b5bacb1016eee60e2a4a385260e085980b9b",
+      "source": "Ir"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Np",
+      "start": 409819,
+      "end": 409824,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "5d58334acae7be08585022714f937a668c74f574b3a80af1be32abf239ee7ad8",
+      "source": "Np=!1"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Wo",
+      "start": 393310,
+      "end": 393319,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "0b3c2794f36903c66326ba65e0a731e616a34f5d81abfe019fd43a674f6ae92e",
+      "source": "Wo=new Xm"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "fn",
+      "start": 394166,
+      "end": 394255,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "14d39e10a634500de26e36286ffddfd1b1e0294567138a2637ff424b0d12823c",
+      "source": "fn={getAppState:v,setAppState:R,getDynamicMcpState:()=>Lt,setDynamicMcpState:(b)=>{Lt=b}}"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "co",
+      "start": 398370,
+      "end": 398375,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "b86f22fe9562a5dc369562da12a3fb98677ec7e141cf6d57d35e7960db2bd586",
+      "source": "co=!1"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "mcp_set_servers.thenStatement",
+      "start": 491450,
+      "end": 492182,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "3a977d2f8e7dbd6c705fc756ecea948f998204cef91416c83b08c22509f0d9c4",
+      "source": "{let j=A.request.servers;if(typeof j!==\"object\"||j===null||Array.isArray(j)||Object.values(j).some((pt)=>pt===null||typeof pt!==\"object\"||Array.isArray(pt))){We(A,Uso);continue}if(lu!==null&&A.request.hint===lu){if(Wa?.sync(\"binding_changed\"),Object.keys(A.request.servers).length===0){Ze(A,{added:[],removed:[],errors:{}});continue}}let ue=performance.now(),J=Mh(ri),ie=J===\"on\";Np||=ie;let{response:be,sdkServersChanged:ve}=await jp(A.request.servers,{authoritative:!0,caller:\"mcp_set_servers\",deferConnect:ie});if(Object.keys(be.errors).length>0)Hn(\"mcp_set_servers\",_(be.errors));if(Ze(A,{...be,errors:Bso(qm(e),be.errors)}),Ih(Bp,{startMs:ue,answeredMs:performance.now(),gate:J,deferred:ie,relayMarked:ri,response:be}),ve)ze()}"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "reload_plugins.thenStatement",
+      "start": 492227,
+      "end": 494140,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "a509ac15156fc8e38d6b3380c3f24bf0b878e7b7fa623b93e9829cfc79636df8",
+      "source": "try{let j=()=>s2(pr).map((it)=>({name:it.agentType,description:it.whenToUse,model:it.model}));if(A.request.hold_on_cache_impact&&!Ne&&et===void 0)et=await xi(I.storageV5,I.credentials);let ue=jon(e)?Jat():void 0;Nn=ue,await Promise.all([lw({admission:I.pluginForwardingAdmission,readFlag:Jht,flagWaitCapMs:wp,install:(it)=>vX().then(()=>jl(it,I.storageV5,I.credentials)),installTimeoutMs:Jat(),onLateEnd:(it)=>{uw(it),ni.noteLateForwardedInstall()},now:()=>performance.now()}).then((it)=>{if(cw(it),!it.ran&&it.reason===\"flag_off\")Ap(\"reload\")}),ue===void 0?void 0:lt(Promise.allSettled([vRr(e,I.credentials)]),ue).then((it)=>{Xn=it===void 0})]);let J;if(A.request.hold_on_cache_impact){let it=await mV({model:qo()??rt(),mcpClients:v().mcp.clients,storageV5:I.storageV5,credentials:I.credentials});if(tRt(it,{warned:it.wouldInvalidateCache,forced:!1}),it.wouldInvalidateCache){let Bt=Ne?v().plugins:et??{enabled:[],errors:[]};Ze(A,{commands:yq(cn()),agents:j(),plugins:K$r(e,Bt.enabled.map(Exn)),mcpServers:V$r(e,b5t($a.mcpConnections())),error_count:Bt.errors.length,held:!0,cache_impact:{mcp_servers_added:it.mcpServersAdded,mcp_servers_removed:it.mcpServersRemoved,lsp_tool_change:it.lspToolChange}});continue}J=!1}RIr();let ie=await NO(_e,I.storageV5,I.credentials);Ne=!0,Dd(ie.agentDefinitions.allAgents);let be=[],[ve,pt,St]=await Promise.allSettled([yp(bp(),I.storageV5),ea(Wd(),\"reload_plugins\"),xi(I.storageV5,I.credentials)]);if(ve.status===\"fulfilled\")Ro=bce(ve.value);else d(ve.reason);if(pt.status===\"rejected\")t(`reload_plugins: applyPluginMcpDiff failed: ${l(pt.reason)}`,{level:\"error\"});if(St.status===\"fulfilled\")be=K$r(e,St.value.enabled.map(Exn));else d(st(Z(St.reason),\"reload_plugins: loadAllPlugins failed\"));oi(),Ze(A,{commands:yq(cn()),agents:j(),plugins:be,mcpServers:V$r(e,b5t($a.mcpConnections())),error_count:ie.error_count,...J!==void 0&&{held:J}})}catch(j){nr(A,\"reload_plugins\",j)}"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "reload_plugins.request.Nn",
+      "start": 456809,
+      "end": 456811,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "e049982be32ef4ca9706fd37ae7dbc2c8dd1e595e0eb403e8adf3e3697b9565f",
+      "source": "Nn"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "reload_plugins.request.Xn",
+      "start": 456812,
+      "end": 456817,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "2a8bab7c8e3265be7c6b4d710227a420cd7438edef8e274832a8922948de94b7",
+      "source": "Xn=!1"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "initializeCommandPublication",
+      "start": 461900,
+      "end": 461943,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "1a69842b412d583c7502ab97abffa50c29ca35d8b918ccfb29048dcfb641be50",
+      "source": "Fs=_(Bt.publishedCommands),_(yq(cn()))!==Fs"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "beginCommandPublicationTurn",
+      "start": 438917,
+      "end": 438922,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "13469582f7a19468b56e175579fe2a65db3fc45ada99c3d5a618e8e061fdcb69",
+      "source": "Iu=!0"
+    }
+  ],
+  "bindings": {
+    "NO": {
+      "file": "chunk-7pnv5sqm.js",
+      "name": "NO"
+    },
+    "bce": {
+      "file": "chunk-mphp7acd.js",
+      "name": "bce"
+    },
+    "yp": {
+      "file": "chunk-mphp7acd.js",
+      "name": "yp"
+    },
+    "QKe": {
+      "file": "chunk-mphp7acd.js",
+      "name": "QKe"
+    },
+    "xi": {
+      "file": "chunk-mphp7acd.js",
+      "name": "xi"
+    },
+    "bI": {
+      "file": "chunk-5m30we7w.js",
+      "name": "bI"
+    },
+    "oH": {
+      "file": "chunk-mphp7acd.js",
+      "name": "oH"
+    },
+    "rte": {
+      "file": "chunk-7pnv5sqm.js",
+      "name": "rte"
+    },
+    "uj": {
+      "file": "chunk-vhpv944z.js",
+      "name": "uj"
+    },
+    "CT": {
+      "file": "chunk-bn3p37gv.js",
+      "name": "CT"
+    },
+    "$6e": {
+      "file": "chunk-g3pxfk8s.js",
+      "name": "$6e"
+    },
+    "aee": {
+      "file": "chunk-bn3p37gv.js",
+      "name": "aee"
+    },
+    "jso": {
+      "file": "chunk-1b45yw62.js",
+      "name": "jso"
+    },
+    "Kv": {
+      "file": "chunk-xapeakym.js",
+      "name": "Kv"
+    },
+    "GOt": {
+      "file": "chunk-mphp7acd.js",
+      "name": "GOt"
+    },
+    "zdt": {
+      "file": "chunk-mphp7acd.js",
+      "name": "zdt"
+    },
+    "L": {
+      "file": "chunk-h3rrxdgy.js",
+      "name": "L"
+    },
+    "Ds": {
+      "file": "chunk-x695d2rs.js",
+      "name": "Ds"
+    },
+    "zc": {
+      "file": "chunk-x695d2rs.js",
+      "name": "zc"
+    },
+    "fy": {
+      "file": "chunk-mphp7acd.js",
+      "name": "fy"
+    },
+    "yq": {
+      "file": "chunk-mphp7acd.js",
+      "name": "yq"
+    },
+    "_": {
+      "file": "chunk-q80zaav8.js",
+      "name": "_"
+    },
+    "qm": {
+      "file": "chunk-x5mcrns6.js",
+      "name": "qm"
+    },
+    "sGe": {
+      "file": "chunk-1b45yw62.js",
+      "name": "sGe"
+    },
+    "yn": {
+      "file": "chunk-xapeakym.js",
+      "name": "yn"
+    },
+    "sde": {
+      "file": "chunk-mphp7acd.js",
+      "name": "sde"
+    },
+    "Xm": {
+      "file": "chunk-xapeakym.js",
+      "name": "Xm"
+    },
+    "dle": {
+      "file": "chunk-43v15e84.js",
+      "name": "dle"
+    },
+    "Ca": {
+      "file": "chunk-mphp7acd.js",
+      "name": "Ca"
+    },
+    "Eh": {
+      "file": "chunk-xapeakym.js",
+      "name": "Eh"
+    },
+    "sw": {
+      "file": "chunk-xapeakym.js",
+      "name": "sw"
+    },
+    "ly": {
+      "file": "chunk-bn3p37gv.js",
+      "name": "ly"
+    },
+    "RL": {
+      "file": "chunk-bn3p37gv.js",
+      "name": "RL"
+    },
+    "ne": {
+      "file": "chunk-h7xaj2fc.js",
+      "name": "ne"
+    },
+    "pme": {
+      "file": "chunk-n2zepamy.js",
+      "name": "pme"
+    },
+    "Uso": {
+      "file": "chunk-1b45yw62.js",
+      "name": "Uso"
+    },
+    "Mh": {
+      "file": "chunk-xapeakym.js",
+      "name": "Mh"
+    },
+    "Ih": {
+      "file": "chunk-xapeakym.js",
+      "name": "Ih"
+    },
+    "Bso": {
+      "file": "chunk-1b45yw62.js",
+      "name": "Bso"
+    },
+    "s2": {
+      "file": "chunk-mphp7acd.js",
+      "name": "s2"
+    },
+    "jon": {
+      "file": "chunk-mphp7acd.js",
+      "name": "jon"
+    },
+    "Jat": {
+      "file": "chunk-mphp7acd.js",
+      "name": "Jat"
+    },
+    "lw": {
+      "file": "chunk-xapeakym.js",
+      "name": "lw"
+    },
+    "Jht": {
+      "file": "chunk-0snr1bvc.js",
+      "name": "Jht"
+    },
+    "wp": {
+      "file": "chunk-xapeakym.js",
+      "name": "wp"
+    },
+    "vX": {
+      "file": "chunk-p03a4z7b.js",
+      "name": "vX"
+    },
+    "jl": {
+      "file": "chunk-xapeakym.js",
+      "name": "jl"
+    },
+    "uw": {
+      "file": "chunk-xapeakym.js",
+      "name": "uw"
+    },
+    "cw": {
+      "file": "chunk-xapeakym.js",
+      "name": "cw"
+    },
+    "lt": {
+      "file": "chunk-f2n7vgt8.js",
+      "name": "lt"
+    },
+    "vRr": {
+      "file": "chunk-mphp7acd.js",
+      "name": "vRr"
+    },
+    "mV": {
+      "file": "chunk-7pnv5sqm.js",
+      "name": "mV"
+    },
+    "tRt": {
+      "file": "chunk-7pnv5sqm.js",
+      "name": "tRt"
+    },
+    "qo": {
+      "file": "chunk-xapeakym.js",
+      "name": "qo"
+    },
+    "rt": {
+      "file": "chunk-nankzm0s.js",
+      "name": "rt"
+    },
+    "K$r": {
+      "file": "chunk-x5mcrns6.js",
+      "name": "K$r"
+    },
+    "V$r": {
+      "file": "chunk-x5mcrns6.js",
+      "name": "V$r"
+    },
+    "Exn": {
+      "file": "chunk-904yhcr0.js",
+      "name": "Exn"
+    },
+    "RIr": {
+      "file": "chunk-mphp7acd.js",
+      "name": "RIr"
+    },
+    "b5t": {
+      "file": "chunk-1b45yw62.js",
+      "name": "b5t"
+    },
+    "l": {
+      "file": "chunk-c9me9cp7.js",
+      "name": "l"
+    },
+    "st": {
+      "file": "chunk-c9me9cp7.js",
+      "name": "st"
+    },
+    "Z": {
+      "file": "chunk-c9me9cp7.js",
+      "name": "Z"
+    }
+  },
+  "nativeSha256": "89e95fce34986dbdca1a1bbe9544055074965a8982f258bf68c5786823a9f256",
+  "transportCuts": [
+    "Ne uses the original requester cell through the caller accessor; its raw declaration remains evidence, not a duplicate initialization",
+    "Cs/Qt/Un/Ln/M/Lt/zr live descriptors target the existing print pools/serialized apply promise",
+    "NO existing refreshActivePlugins facade passes same actual writer/storage/credentials/options",
+    "yp existing getCommands retains accepted C non-Ink command adapters",
+    "fn same actual AppStore/MCP presentation view, not a second store",
+    "Yd/Jd/Du original command rescan cells own one plugin publication/rescan promise; requester borrows live descriptors, never another Jd",
+    "Original control thenStatements use single-iteration do/while wrapper for outer continue; no branch body rewriting",
+    "Initialize consumer receives actually published ACK commands; no second build or empty baseline",
+    "ni/Wd/ri borrowed from original existing plugin join; Ep is the original applied-forwarding ledger, not a plugin cache"
+  ]
+}

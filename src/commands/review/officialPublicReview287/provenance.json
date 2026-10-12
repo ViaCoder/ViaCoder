@@ -1,0 +1,1116 @@
+{
+  "version": "2.1.287",
+  "rangeConvention": "UTF-16 end-exclusive",
+  "modules": [
+    {
+      "file": "chunk-1mj5vjep.js",
+      "moduleSha256": "4e5114456806562bbe68047aa7ad787f96a4800aca3e36ae09f34947dab78b42",
+      "rows": [
+        {
+          "names": [
+            "de"
+          ],
+          "start": 2495,
+          "end": 2800,
+          "source": "de=f(()=>mt({action:Ql([\"proceed\",\"confirm\",\"blocked\"]),billing_note:ue().nullable().optional(),github_login:ue().nullable().optional(),confirm:mt({title:ue().optional(),body:ue()}).nullable().optional(),blocked:mt({message:ue(),action_url:ue().nullable(),reason:ue().optional()}).nullable().optional()}))",
+          "variable": true,
+          "moduleSha256": "4e5114456806562bbe68047aa7ad787f96a4800aca3e36ae09f34947dab78b42",
+          "sha256": "85d02b013234c136068bcd31777705f819ebd64b52b743645994f4f3f489fba4"
+        },
+        {
+          "names": [
+            "le"
+          ],
+          "start": 2801,
+          "end": 2888,
+          "source": "function le(o,e){return{action:\"blocked\",blocked:{message:o,action_url:null,reason:e}}}",
+          "variable": false,
+          "moduleSha256": "4e5114456806562bbe68047aa7ad787f96a4800aca3e36ae09f34947dab78b42",
+          "sha256": "8e0feb276244271b0c8607e01db14f9890c7e6229c7f621327f475e678f12f70"
+        },
+        {
+          "names": [
+            "fe"
+          ],
+          "start": 2888,
+          "end": 3891,
+          "source": "async function fe(o){let e=a.CLAUDE_CODE_ULTRAREVIEW_PREFLIGHT_FIXTURE;if(e){let u=de().safeParse(Y(e));return u.success?u.data:null}try{let u=await Gt.get(\"/v1/ultrareview/preflight\",{auth:\"teleport-org\",timeout:5000,credentials:o,headers:{[jyt]:q()}});if(!u.ok)switch(u.reason){case\"essential-traffic-only\":return le(\"Ultrareview runs in a cloud session and is unavailable when essential-traffic-only mode is active.\",\"zdr\");case\"data-residency\":return le(\"Ultrareview runs in a cloud session and is unavailable on third-party providers.\",\"data_residency\");case\"no-auth\":return le(\"Ultrareview requires a Claude.ai account. Run /login to authenticate.\",\"no_oauth_token\")}let r=de().safeParse(u.data);if(!r.success)return t(`fetchUltrareviewPreflight schema mismatch: ${r.error.message}`),p(\"api_ultrareview_preflight\",\"schema_mismatch\"),null;return y(\"api_ultrareview_preflight\"),r.data}catch(u){return t(`fetchUltrareviewPreflight failed: ${u}`),p(\"api_ultrareview_preflight\",\"request_failed\"),null}}",
+          "variable": false,
+          "moduleSha256": "4e5114456806562bbe68047aa7ad787f96a4800aca3e36ae09f34947dab78b42",
+          "sha256": "dc34a27d4eb70de10e2cf6e7cf264d5f5dc4a1574059afccb8ec969ad9e09af2"
+        },
+        {
+          "names": [
+            "we"
+          ],
+          "start": 3895,
+          "end": 3902,
+          "source": "we=3000",
+          "variable": true,
+          "moduleSha256": "4e5114456806562bbe68047aa7ad787f96a4800aca3e36ae09f34947dab78b42",
+          "sha256": "a19be972d8e7198e3272862fbcc9e6e014599334abd62dce3707af974988036e"
+        },
+        {
+          "names": [
+            "ve"
+          ],
+          "start": 3903,
+          "end": 4278,
+          "source": "function ve(o,e){if(!o||!M5e(o)||!he(o.currency))return null;if(o.is_enabled!==!0)return 0;if(e===null||!he(e.currency))return null;let{monthly_limit:u,used_credits:r}=o,s;if(u===null)s=1/0;else if(typeof u===\"number\"&&typeof r===\"number\")s=u-r;else return null;let l=Math.min(s,e.auto_reload_settings?.enabled===!0?1/0:e.amount);return Number.isFinite(l)?Math.max(0,l):null}",
+          "variable": false,
+          "moduleSha256": "4e5114456806562bbe68047aa7ad787f96a4800aca3e36ae09f34947dab78b42",
+          "sha256": "a6dee0e681cde148f8a33d4a5b0a392147e26ed351285cc24f91690bf23f2798"
+        },
+        {
+          "names": [
+            "he"
+          ],
+          "start": 4278,
+          "end": 4345,
+          "source": "function he(o){return typeof o===\"string\"&&o.toUpperCase()===\"USD\"}",
+          "variable": false,
+          "moduleSha256": "4e5114456806562bbe68047aa7ad787f96a4800aca3e36ae09f34947dab78b42",
+          "sha256": "6f71d9465f470cdbcf4af3ffcbde31f62a36c63f95a7af35e5ae1200ad3369a6"
+        },
+        {
+          "names": [
+            "_e"
+          ],
+          "start": 4345,
+          "end": 4869,
+          "source": "async function _e(o){try{let e=ODo();if(e===null||Ewn()||Ipe())return null;let[u,r]=await Dt(Promise.all([g0(o),Qhe(o)]),we,\"ultrareview: usage credits read timed out\"),s=ve(u?.extra_usage,r);if(s===null||s>=e*100)return null;let l=s<100?\"Less than $1\":`About ${gi(Math.floor(s/100)*100,\"USD\",\"whole\")}`,v=gi(e*100,\"USD\",\"whole\");return`${l} of usage credits left. A review usually uses about ${v} and stops if credits run out.`}catch{return t(\"ultrareview: could not read usage credits left, so no low-credits line\"),null}}",
+          "variable": false,
+          "moduleSha256": "4e5114456806562bbe68047aa7ad787f96a4800aca3e36ae09f34947dab78b42",
+          "sha256": "8f7251f8ca675ca946682ceb6bc142de9ee533369c8ce7d7919c67ed95f25ccd"
+        },
+        {
+          "names": [
+            "pe"
+          ],
+          "start": 4873,
+          "end": 4918,
+          "source": "pe=\"4b825dc642cb6eb9a060e54bf8d69288fbee4904\"",
+          "variable": true,
+          "moduleSha256": "4e5114456806562bbe68047aa7ad787f96a4800aca3e36ae09f34947dab78b42",
+          "sha256": "1e067c1167d852b0ee871fa0cbebd970a66d30d40519207946e4ac553c0ecb8d"
+        },
+        {
+          "names": [
+            "sMn"
+          ],
+          "start": 4923,
+          "end": 5018,
+          "source": "sMn=`\nNote: --post was ignored \\u2014 posting applies only to GitHub.com pull request reviews.`",
+          "variable": true,
+          "moduleSha256": "4e5114456806562bbe68047aa7ad787f96a4800aca3e36ae09f34947dab78b42",
+          "sha256": "adabec92fb736161937661a423533b1adf15c64efaa2f0f5c51522650badfe20"
+        },
+        {
+          "names": [
+            "iMn"
+          ],
+          "start": 5019,
+          "end": 5109,
+          "source": "iMn=`\nNote: --post was ignored \\u2014 posting findings to the PR is currently turned off.`",
+          "variable": true,
+          "moduleSha256": "4e5114456806562bbe68047aa7ad787f96a4800aca3e36ae09f34947dab78b42",
+          "sha256": "6777e0b71bba490159ede1ffafea683b8438648f6bf32a75f3451c9602ca1ea8"
+        },
+        {
+          "names": [
+            "oRt"
+          ],
+          "start": 5110,
+          "end": 5509,
+          "source": "function oRt(o){let e=/^(--fix|--comment|--post|--no-post)(?:\\s+|$)/,u=/(?:^|\\s+)(--fix|--comment|--post|--no-post)$/,r=new Set,s=o.trim();for(;;){let l=s.match(e);if(!l)break;r.add(l[1]),s=s.slice(l[0].length)}for(;;){let l=s.match(u);if(!l)break;r.add(l[1]),s=s.slice(0,s.length-l[0].length)}return{scopeArgs:s,applyFixes:r.has(\"--fix\"),postReview:r.has(\"--no-post\")?!1:r.has(\"--post\")?!0:void 0}}",
+          "variable": false,
+          "moduleSha256": "4e5114456806562bbe68047aa7ad787f96a4800aca3e36ae09f34947dab78b42",
+          "sha256": "66a5ea7db98e3295872a71f4f1bac554ceb287ffa6a4baa0bb721205b171e62d"
+        },
+        {
+          "names": [
+            "aMn"
+          ],
+          "start": 5509,
+          "end": 21489,
+          "source": "async function aMn(o,e=\"/code-review ultra\",u){if(!await GMt())return i(\"tengu_review_remote_precondition_failed\",{reason:S(\"not_git_repo\"),cwd_is_home:A()}),{ok:!1,reason:\"not_git_repo\",error:be(e,u?.confirmsBeforeLaunch!==!0)};let r=o.trim(),s=sun(r),l=s?.num.toString()??r.match(/^(?:#|PR[\\s#]*)(\\d+)$/i)?.[1]??r;if(/^\\d+$/.test(l)){let n=(B)=>{if(B===\"succeeded\"&&u?.suppressSucceededRecoveryEvent)return;if(l!==r)i(\"tengu_review_remote_precondition_recovery\",{reason:S(\"base_ref_not_found\"),method:S(\"pr_arg_normalization\"),outcome:c(B)})},h=await hT(),d=h&&dD(h)?null:h,k=KZ(s?.host,d?.host)||!!s&&!!d&&oo(s.host)&&oo(d.host);if(s&&(!k||s.owner.toLowerCase()!==d?.owner.toLowerCase()||s.repo.toLowerCase()!==d?.name.toLowerCase())){i(\"tengu_review_remote_precondition_failed\",{reason:S(\"pr_url_wrong_repo\"),has_remote:!!d,cwd_is_home:A()}),n(\"failed\");let B=`${s.owner}/${s.repo} on ${s.host}`,M=d?`you're in ${d.owner}/${d.name} on ${d.host}`:\"this directory has no GitHub remote\";return{ok:!1,reason:\"pr_url_wrong_repo\",error:`That link is for ${B}, but ${M}. cd into a checkout of that repo and run ${e} ${s.num} from there.`}}if(!d)return i(\"tengu_review_remote_precondition_failed\",{reason:S(\"no_github_remote\"),cwd_is_home:A()}),n(\"failed\"),{ok:!1,reason:\"no_github_remote\",error:`${e} <PR#> needs a GitHub remote so it knows which repository the PR is in. If this project is not on GitHub yet, run \"gh repo create --source=. --push\" to create one; if a GitHub repo already exists, run \"git remote add origin REPO_URL\". Or run ${e} with no argument to review your current branch instead.`};if(uhn(d))return i(\"tengu_review_remote_precondition_failed\",{reason:S(\"monorepo_blocked\"),cwd_is_home:A()}),n(\"failed\"),{ok:!1,reason:\"monorepo_blocked\",error:`${e} doesn't support pull requests in this repository. Run /code-review ${l}${e.startsWith(\"/\")?\"\":\" in Claude Code\"} for a local review instead.`};let O,b,[{stdout:H,code:F},C]=await Promise.all([Ke(\"gh\",[\"pr\",\"view\",l,\"--repo\",`${d.host}/${d.owner}/${d.name}`,\"--json\",\"additions,deletions,changedFiles\"],{timeout:5000,preserveOutputOnError:!1}),oo(d.host)&&DDo()&&!At()?Z7t(d.owner,d.name,u?.accessProbeBudgetMs):null]);if(C&&!u?.suppressOfferedRecoveryEvent)i(\"tengu_review_remote_github_access_probe\",{verdict:c(C.verdict),http_status:C.httpStatus??void 0});if(C?.verdict===\"github_not_connected\"||C?.verdict===\"github_repo_not_found\"){i(\"tengu_review_remote_precondition_failed\",{reason:c(C.verdict),cwd_is_home:A()}),n(\"failed\");let B=cre()?`run /web-setup${e.startsWith(\"/\")?\"\":\" in Claude Code\"} to reuse your GitHub CLI login`:\"\",M=`then re-run ${e} ${l}`;return{ok:!1,reason:C.verdict,error:C.verdict===\"github_not_connected\"?J7t({subject:`Ultrareview clones ${d.owner}/${d.name} in the cloud`,webSetupHint:B,rerun:M}):Q7t({owner:d.owner,name:d.name,webSetupHint:B,rerun:M,leadWithWebSetup:F===0})}}if(F===0&&H.trim())try{let B=Y(H),{maxFiles:M,maxLines:V}=Gqn(),ee=B.additions+B.deletions;if(Number.isFinite(B.changedFiles)&&Number.isFinite(ee))O=B.changedFiles,b=ee;if(B.changedFiles>M||ee>V)return i(\"tengu_review_remote_precondition_failed\",{reason:S(\"pr_diff_too_large\"),files:B.changedFiles,lines:ee,max_files:M,max_lines:V,cwd_is_home:A()}),n(\"failed\"),{ok:!1,reason:\"pr_diff_too_large\",error:`PR #${l} is too large for ultrareview (${B.changedFiles} files, ${ee.toLocaleString()} lines). Split it into smaller PRs, or run \\`${e}\\` on a narrower local diff.`}}catch{}return n(\"succeeded\"),{ok:!0,scope:{mode:\"pr\",prNumber:l,repo:`${d.owner}/${d.name}`,host:d.host,hadArg:!0,diffFiles:O,diffLines:b}}}let v=await RIo();if(v.tooLarge)return i(\"tengu_review_remote_precondition_failed\",{reason:S(\"repo_too_large_to_bundle\"),pack_bytes:v.sizeBytes??void 0,pack_objects:v.inPackCount??void 0,cwd_is_home:A()}),{ok:!1,reason:\"repo_too_large_to_bundle\",error:`Repo is too large to bundle. Push a PR and use \\`${e} <PR#>\\` instead.`};let E=async(n)=>(await Ke(vt(),[...yn,\"rev-parse\",\"--verify\",\"--quiet\",\"--end-of-options\",n],{preserveOutputOnError:!1})).code===0,_=/\\s/.test(r),L=_&&(await E(`origin/${r}`)||await E(r)),D=_&&!L?r.match(/https:\\/\\/\\S*\\/pull\\/\\d+\\b/):null,T=_&&!L&&!D?r.match(/(?<![\\w/#-])(?:#|PR)[-\\s#]*(\\d+)\\b/i)??r.match(/(?<![\\w/#-])pull[\\s-]+request[-\\s#]*(\\d+)\\b/i)??r.match(/\\/pull\\/(\\d+)\\b/i)??r.match(/^(\\d+)\\b/):null;if(D||T){let n=D?D[0]:`#${T[1]}`,h=D?D[0]:T[1];return i(\"tengu_review_remote_precondition_recovery\",{reason:S(\"base_ref_not_found\"),method:S(\"embedded_pr_hint\"),outcome:S(\"offered\")}),i(\"tengu_review_remote_precondition_failed\",{reason:S(\"base_ref_not_found\"),looks_like_url:/^https?:/i.test(r),looks_like_sha:!1,starts_with_hash:r.startsWith(\"#\"),has_slash:r.includes(\"/\"),has_whitespace:!0,has_pr_ref:!0,has_remote:await ce(),cwd_is_home:A()}),{ok:!1,reason:\"base_ref_not_found\",error:`Your request mentions what looks like a PR reference (${n}). To review that PR, run \\`${e} ${h}\\`. To review your current branch instead, rerun without the PR-style reference.`}}let U=_&&!L&&!r.startsWith(\"-\"),te=U?r:void 0,g=U?\"\":r,X=!1;if(g){if(!await E(`origin/${g}`)&&!await E(g)){let n=await Ee(g);if(n===\"recovered\"&&await E(`origin/${g}`))X=!0;else{if(n!==\"not_found\")i(\"tengu_review_remote_precondition_recovery\",{reason:S(\"base_ref_not_found\"),method:S(\"fetch_retry\"),outcome:S(\"failed\")});if(n===\"fetch_failed\")return i(\"tengu_review_remote_precondition_failed\",{reason:S(\"base_ref_not_found\"),looks_like_url:/^https?:/i.test(g),looks_like_sha:/^[0-9a-f]{7,40}$/i.test(g),starts_with_hash:g.startsWith(\"#\"),has_slash:g.includes(\"/\"),has_whitespace:/\\s/.test(g),has_remote:await ce(),cwd_is_home:A()}),{ok:!1,reason:\"base_ref_not_found\",error:`\"${g}\" exists on origin but couldn't be fetched. Run \\`git fetch origin ${g}\\` and try ${e} again.`};let h=await Se(g);if(h)i(\"tengu_review_remote_precondition_recovery\",{reason:S(\"base_ref_not_found\"),method:S(\"branch_suggestion\"),outcome:S(\"offered\")});i(\"tengu_review_remote_precondition_failed\",{reason:S(\"base_ref_not_found\"),looks_like_url:/^https?:/i.test(g),looks_like_sha:/^[0-9a-f]{7,40}$/i.test(g),starts_with_hash:g.startsWith(\"#\"),has_slash:g.includes(\"/\"),has_whitespace:/\\s/.test(g),has_remote:await ce(),cwd_is_home:A()});let d=h?` Did you mean \\`${h}\\`?`:\"\";return{ok:!1,reason:\"base_ref_not_found\",error:`\"${g}\" is not a branch or commit in this repo.${d} ${e} takes a PR number, a base branch or commit, or no argument (reviews your current branch). Try ${e} by itself.`}}}}let j=(n)=>{if(X)i(\"tengu_review_remote_precondition_recovery\",{reason:S(\"base_ref_not_found\"),method:S(\"fetch_retry\"),outcome:c(n)});if(U){if(n===\"succeeded\"&&u?.suppressSucceededRecoveryEvent)return;i(\"tengu_review_remote_precondition_recovery\",{reason:S(\"base_ref_not_found\"),method:S(\"prose_instructions\"),outcome:c(n)})}},w=g||await _T()||\"main\",Z=await sd()||\"HEAD\",J=async(n)=>Ke(vt(),[...yn,\"merge-base\",n,\"HEAD\"],{preserveOutputOnError:!1,env:Qo()}),W=`origin/${w}`,{stdout:Q,code:ne}=await J(W);if(ne!==0)W=w,{stdout:Q,code:ne}=await J(W);let K=Q.trim(),z=(n)=>Ke(vt(),[...yn,...n],{preserveOutputOnError:!1,env:Qo()}),ie=`Your checkout has no branches (detached HEAD only), which cloud review can't bundle. Create one first \\u2014 \\`git checkout -b <name>\\` \\u2014 then rerun ${e}.`,se=async()=>g.length>0||(await z([\"rev-parse\",\"--verify\",\"--quiet\",`origin/${w}`])).code===0||(await z([\"rev-parse\",\"--verify\",\"--quiet\",w])).code===0,R=async(n,h=Z)=>{let d=n||await se(),{stdout:k,code:O}=await Ke(vt(),[...yn,\"diff\",\"--no-ext-diff\",\"--no-textconv\",$S,\"--shortstat\",pe],{preserveOutputOnError:!1,env:Qo({LC_ALL:\"C\"})});if(O===0){if(n&&!k.trim())return null;if(!k.trim())return i(\"tengu_review_remote_precondition_failed\",{reason:S(\"empty_diff\"),cwd_is_home:A()}),j(\"failed\"),{ok:!1,reason:\"empty_diff\",error:d?`It doesn't look like you have any new commits or changes to review against your ${w} branch. Stage or commit them first?`:\"It doesn't look like you have any changes to review. Stage or commit them first?\"};let b=npn(k),H=b?b.linesAdded+b.linesRemoved:0,{maxFiles:F,maxLines:C}=Gqn();if(b&&(b.filesCount>F||H>C)){i(\"tengu_review_remote_precondition_failed\",{reason:S(\"local_diff_too_large\"),files:b.filesCount,lines:H,max_files:F,max_lines:C,after_fallback:!0,cwd_is_home:A(),first_commit:n||void 0}),j(\"failed\");let B=n?`Your first commit is the base from here on: make your changes and rerun ${e} to review only those.`:d?`Review a smaller subset by committing it on a branch off an empty base, or push a PR and use \\`${e} <PR#>\\`.`:`This repo has no ${w} branch \\u2014 if another branch is your base, pass it explicitly (\\`${e} <branch>\\`). Otherwise review a smaller subset by committing it on a branch off an empty base, or push a PR and use \\`${e} <PR#>\\`.`;return{ok:!1,reason:\"local_diff_too_large\",error:`This looks like a first review of the entire repository (${k.trim()}), which exceeds ultrareview's limit. ${B}`}}if(!u?.suppressOfferedRecoveryEvent)i(\"tengu_review_remote_precondition_recovery\",{reason:S(\"no_merge_base\"),method:S(\"empty_tree_bundle\"),outcome:S(\"offered\"),files:b?.filesCount,lines:b?H:void 0,is_shallow:!1,first_commit:n||void 0});return j(\"succeeded\"),{ok:!0,scope:{mode:\"branch\",headBranch:h,baseBranch:w,mergeBaseSha:pe,diffStat:k.trim(),hadArg:g.length>0,diffFiles:b?.filesCount,diffLines:b?H:void 0,noMergeBase:n?\"first_commit\":d?\"unrelated_history\":\"base_ref_missing\",instructions:te}}}return null};if(ne!==0||!K){let n=(await z([\"rev-parse\",\"--verify\",\"--quiet\",\"HEAD\"])).code===0,h=(await z([\"rev-parse\",\"--is-shallow-repository\"])).stdout.trim(),d=h===\"true\",k=h===\"false\",O=n&&k&&LLr(),b=O?await z([\"for-each-ref\",\"--count=1\",\"refs/\"]):null,H=b!==null&&b.stdout.trim()!==\"\",F=b!==null&&b.code===0&&b.stdout.trim()===\"\",C=!1;if(O&&H)if(u?.confirmsBeforeLaunch===!0||u?.personRanTheCommand===!0){let M=await R(!1);if(M)return M}else C=!0;if(i(\"tengu_review_remote_precondition_failed\",{reason:S(\"no_merge_base\"),cwd_is_home:A(),is_shallow:d,head_resolves:n,arg_was_explicit:g.length>0,has_refs:H?!0:F?!1:void 0,whole_repository_held_back:C||void 0}),j(\"failed\"),C)return{ok:!1,reason:\"no_merge_base\",error:`${await se()?`${w} shares no history with your checkout`:`This repository has no ${w} branch to compare with`}, so a review here would cover every file. To review it whole, a person can run /ultrareview in an interactive Claude Code session, which asks before it spends anything.`};if(!n)return{ok:!1,reason:\"no_merge_base\",error:!u?.confirmsBeforeLaunch?`Your current branch has no commits yet, so there is nothing to review. Commit a starting point first. ${e} then reviews the changes you make on top of that commit.`:`Your current branch has no commits yet, so there is nothing to review. Commit your work first, then rerun ${e}.`};if(d)return i(\"tengu_review_remote_precondition_recovery\",{reason:S(\"no_merge_base\"),method:S(\"deepen_hint\"),outcome:S(\"offered\"),is_shallow:!0}),{ok:!1,reason:\"no_merge_base\",error:g?`Your clone is shallow and doesn't contain the point where your branch forked from ${w}. Run \\`git fetch --deepen=100 origin ${w}\\` (or \\`git fetch --unshallow origin\\`) and rerun ${e}.`:`Your clone is shallow and doesn't contain the point where your branch forked from ${w}. Run \\`git fetch --unshallow origin\\` and rerun ${e}. If your base branch isn't ${w}, pass it explicitly (\\`${e} <branch>\\`).`};if(F)return{ok:!1,reason:\"no_refs\",error:ie};let B=X?k?`${w} was fetched from origin but shares no history with HEAD. If another branch is your real base, pass it explicitly (\\`${e} <branch>\\`).`:`${w} was fetched from origin but shares no history with HEAD. Try \\`git fetch --unshallow origin\\` (or deepen the clone) and rerun.`:g?`Make sure ${w} exists locally or on origin (try \\`git fetch origin ${w}\\`).`:`Pass the base branch explicitly (e.g. \\`${e} develop\\`) or make sure you're in a git repo with a ${w} branch.`;return{ok:!1,reason:\"no_merge_base\",error:`Could not find merge-base with ${w}. ${B}`}}if(g.length>0){let n=await z([\"for-each-ref\",\"--count=1\",\"refs/\"]);if(n.code===0&&n.stdout.trim()===\"\")return i(\"tengu_review_remote_precondition_failed\",{reason:S(\"no_refs\"),cwd_is_home:A(),arg_was_explicit:!0}),j(\"failed\"),{ok:!1,reason:\"no_refs\",error:ie}}let{stdout:P,code:x}=await Yun(ae().cwd(),[...yn,\"diff\",\"--no-ext-diff\",\"--no-textconv\",$S,\"--shortstat\",K],{LC_ALL:\"C\"},{preserveOutputOnError:!1});if(x===0&&!P.trim()){let n=await $e(K,w),h=n.headBranch,d=n.headAtMergeBase===!0&&n.headIsRoot===!0&&n.untrackedCount===0&&LLr()&&(await z([\"rev-parse\",\"--is-shallow-repository\"])).stdout.trim()===\"false\"&&(await z([\"rev-parse\",\"--verify\",\"--quiet\",\"--end-of-options\",`${W}^{commit}`])).stdout.trim()===K,k=d&&u?.confirmsBeforeLaunch!==!0;if(d&&!k){let V=await R(!0,h);if(V)return V}i(\"tengu_review_remote_precondition_failed\",{reason:S(\"empty_diff\"),used_origin_ref:W!==w,had_explicit_base:g.length>0,cwd_is_home:A(),on_base_branch:n.onBaseBranch,head_at_merge_base:n.headAtMergeBase,first_commit_held_back:k||void 0,has_untracked:n.untrackedCount===void 0?void 0:n.untrackedCount>0}),j(\"failed\");let O=g?`try a different base, e.g. \\`${e} <branch>\\``:`pass one explicitly, e.g. \\`${e} <branch>\\``,b=`${W} (merge-base ${K.slice(0,7)})`,H=\"no staged or unstaged edits to tracked files\",F,C;if(n.headAtMergeBase&&h&&n.onBaseBranch){let V=`If your work is on another branch, switch to it, or if the base should be something else, ${O}.`;if(W===h)F=`you're on ${h}, which is also the base of this review, and it has ${H}`,C=`Everything already committed on ${h} counts as the base here, so only edits you haven't committed yet would be reviewed. ${V}`;else F=`you're on ${h}, which is also the base of this review, and it has no commits beyond ${b} and ${H}`,C=V}else if(n.headAtMergeBase&&h===\"HEAD\")F=`the commit you have checked out is already part of ${b}, and there are ${H}`,C=`If your work is on a branch, switch to it. If you meant a different base, ${O}.`;else if(n.headAtMergeBase&&h)F=`${h} has no commits beyond ${b} and ${H}`,C=`If your work is on another branch, switch to it. If this branch was already merged or you meant a different base, ${O}.`;else F=`the diff against ${b} is empty`,C=`If you have local edits, stage or commit them first. If your branch was already merged or you meant a different base, ${O}.`;let B=\"\";if(n.headAtMergeBase&&n.parentSha){let V=n.parentSha.slice(0,12),ee=/^\\d+$/.test(V)?n.parentSha:V;i(\"tengu_review_remote_precondition_recovery\",{reason:S(\"empty_diff\"),method:S(\"last_commit_hint\"),outcome:S(\"offered\")}),B=` To review your latest commit anyway, run \\`${e} ${ee}\\`. That id is the commit before it, and any earlier commit id or tag works the same way.`}let M=k?\" To review this first commit whole, run /ultrareview in an interactive Claude Code session, which asks before it spends anything.\":\"\";return{ok:!1,reason:\"empty_diff\",error:`No changes to review: ${F}.${Re(n.untrackedCount,e)} ${C}${B}${M}`}}let N=npn(P);if(N){let{maxFiles:n,maxLines:h}=Gqn(),d=N.linesAdded+N.linesRemoved;if(N.filesCount>n||d>h){i(\"tengu_review_remote_precondition_failed\",{reason:S(\"local_diff_too_large\"),files:N.filesCount,lines:d,max_files:n,max_lines:h,cwd_is_home:A()}),j(\"failed\");let{stdout:k,code:O}=await Yun(ae().cwd(),[...yn,\"-c\",\"core.quotepath=false\",\"diff\",\"--no-ext-diff\",\"--no-textconv\",$S,\"--numstat\",K],{},{preserveOutputOnError:!1,timeout:1e4,maxBuffer:10485760}),b=O===0?ke(k):\"\";return{ok:!1,reason:\"local_diff_too_large\",error:`Diff is too large for ultrareview: ${N.filesCount.toLocaleString()} ${I(N.filesCount,\"file\")}, ${d.toLocaleString()} ${I(d,\"line\")} changed (limits: ${n.toLocaleString()} ${I(n,\"file\")}, ${h.toLocaleString()} ${I(h,\"line\")}).${b} Pass a closer base branch (\\`${e} <branch>\\`) to narrow the scope, or split the change.`}}}return j(\"succeeded\"),{ok:!0,scope:{mode:\"branch\",headBranch:Z,baseBranch:w,mergeBaseSha:K,diffStat:P.trim(),hadArg:g.length>0,diffFiles:N?.filesCount,diffLines:N?N.linesAdded+N.linesRemoved:void 0,instructions:te}}}",
+          "variable": false,
+          "moduleSha256": "4e5114456806562bbe68047aa7ad787f96a4800aca3e36ae09f34947dab78b42",
+          "sha256": "1a1fde11d06eb0dc0a9d4ccff98ec754ac813b9ccd89da2eb72628dae26ef36e"
+        },
+        {
+          "names": [
+            "$e"
+          ],
+          "start": 21489,
+          "end": 22339,
+          "source": "async function $e(o,e){let[u,r,s]=await Promise.all([Ke(vt(),[...yn,\"rev-list\",\"--parents\",\"--max-count=1\",\"HEAD\",\"--\"],{preserveOutputOnError:!1,env:Qo()}),Ke(vt(),[...yn,\"symbolic-ref\",\"--quiet\",\"HEAD\"],{preserveOutputOnError:!1,env:Qo()}),Ke(vt(),[...yn,\"ls-files\",\"--others\",\"--exclude-standard\",\"--directory\",\"--no-empty-directory\",\"-z\",\"--\",\":/\"],{preserveOutputOnError:!1,timeout:5000,maxBuffer:1048576,env:Qo({GIT_LITERAL_PATHSPECS:\"\"})})]),[l,v,...E]=u.code===0?u.stdout.trim().split(/\\s+/):[],_=r.exitCode===0?r.stdout.trim().replace(/^refs\\/heads\\//,\"\")||void 0:r.exitCode===1?\"HEAD\":void 0;return{headBranch:_,onBaseBranch:_===void 0?void 0:_!==\"HEAD\"&&(_===e||`origin/${_}`===e),headAtMergeBase:l?l===o:void 0,parentSha:E.length?void 0:v||void 0,headIsRoot:l?!v:void 0,untrackedCount:s.code===0?G(s.stdout.split(\"\\x00\"),Boolean):void 0}}",
+          "variable": false,
+          "moduleSha256": "4e5114456806562bbe68047aa7ad787f96a4800aca3e36ae09f34947dab78b42",
+          "sha256": "0cb8155aa718fc78c6607a8c6d28f6eaec2503b80143e1c225c047f18c2f0ee9"
+        },
+        {
+          "names": [
+            "Re"
+          ],
+          "start": 22339,
+          "end": 22597,
+          "source": "function Re(o,e){if(!o)return\"\";return` Git also sees ${o.toLocaleString()} untracked ${I(o,\"file or folder\",\"files or folders\")} here. New files aren't part of a review until git tracks them: run \\`git add\\` on the ones you want reviewed, then rerun ${e}.`}",
+          "variable": false,
+          "moduleSha256": "4e5114456806562bbe68047aa7ad787f96a4800aca3e36ae09f34947dab78b42",
+          "sha256": "78c0280130ff054da0485f3a60c870b12145e9d6a2f00f9d7300de48a99ce4e1"
+        },
+        {
+          "names": [
+            "ke"
+          ],
+          "start": 22597,
+          "end": 22938,
+          "source": "function ke(o,e=3){let{perFileStats:u}=xpt(o,Number.POSITIVE_INFINITY),r=[...u.entries()].map(([l,v])=>({path:l,lines:v.added+v.removed})).filter((l)=>l.lines>0);if(r.length===0)return\"\";return` Largest files: ${r.sort((l,v)=>v.lines-l.lines).slice(0,e).map((l)=>`${l.path} (${l.lines.toLocaleString()} ${I(l.lines,\"line\")})`).join(\", \")}.`}",
+          "variable": false,
+          "moduleSha256": "4e5114456806562bbe68047aa7ad787f96a4800aca3e36ae09f34947dab78b42",
+          "sha256": "2f42a3520716faef07d9c323417bde9b8ec1b35d4f65b5b133fb49bb5c57f825"
+        },
+        {
+          "names": [
+            "sRt"
+          ],
+          "start": 22938,
+          "end": 23001,
+          "source": "function sRt(o,e=80){return nt(o.replace(/\\s+/g,\" \").trim(),e)}",
+          "variable": false,
+          "moduleSha256": "4e5114456806562bbe68047aa7ad787f96a4800aca3e36ae09f34947dab78b42",
+          "sha256": "1076582e5b54cff98b298d3d12666f1317e4a70d3ce05a88430f3f4fae6b5a21"
+        },
+        {
+          "names": [
+            "Ee"
+          ],
+          "start": 23001,
+          "end": 23844,
+          "source": "async function Ee(o){if(o.startsWith(\"-\")||o.includes(\":\")||/\\s/.test(o))return\"not_found\";let e={...cqt(),GIT_SSH_COMMAND:`${a.GIT_SSH_COMMAND||\"ssh\"} -o BatchMode=yes -o StrictHostKeyChecking=yes`,GIT_ALLOW_PROTOCOL:\"https:http:ssh\"},u=await Ke(vt(),[...yn,...oOe,\"-c\",\"credential.helper=\",\"-c\",\"core.askPass=\",\"ls-remote\",\"--heads\",\"--exit-code\",\"--end-of-options\",\"origin\",o],{timeout:4000,preserveOutputOnError:!1,env:e});if(u.code!==0)return u.code===2?\"not_found\":\"probe_failed\";if(!u.stdout.split(`\n`).some((l)=>l.split(\"\\t\")[1]?.trim()===`refs/heads/${o}`))return\"not_found\";return(await Ke(vt(),[...yn,...oOe,\"-c\",\"credential.helper=\",\"-c\",\"core.askPass=\",\"fetch\",\"--no-tags\",\"--end-of-options\",\"origin\",`refs/heads/${o}:refs/remotes/origin/${o}`],{timeout:15000,preserveOutputOnError:!1,env:e})).code===0?\"recovered\":\"fetch_failed\"}",
+          "variable": false,
+          "moduleSha256": "4e5114456806562bbe68047aa7ad787f96a4800aca3e36ae09f34947dab78b42",
+          "sha256": "1c4bd940ac745024bebcade9fa4fa54b4649c36d24132a72b23ea764dfd6b68a"
+        },
+        {
+          "names": [
+            "Se"
+          ],
+          "start": 23844,
+          "end": 24467,
+          "source": "async function Se(o){let{stdout:e,code:u}=await Ke(vt(),[...yn,\"for-each-ref\",\"--format=%(refname:short)\",\"--count=2000\",\"refs/heads\",\"refs/remotes/origin\"],{preserveOutputOnError:!1,env:Qo()});if(u!==0)return null;let r=new Map;for(let E of e.split(`\n`)){let _=E.trim();if(!_||_===\"origin\"||_===\"origin/HEAD\")continue;let L=_.startsWith(\"origin/\")?_.slice(7):_;if(_.startsWith(\"origin/\")||!r.has(L))r.set(L,_)}let s=o===\"main\"?\"master\":o===\"master\"?\"main\":null;if(s!==null){let E=r.get(s);if(E)return E}let l=null,v=3;for(let[E,_]of r){if(Math.abs(E.length-o.length)>=v)continue;let L=X8(o,E);if(L>0&&L<v)v=L,l=_}return l}",
+          "variable": false,
+          "moduleSha256": "4e5114456806562bbe68047aa7ad787f96a4800aca3e36ae09f34947dab78b42",
+          "sha256": "fb3885f4ede07743917ac28a73361dee42d282c91ebb98dc816a50b675e55146"
+        },
+        {
+          "names": [
+            "lMn"
+          ],
+          "start": 24467,
+          "end": 25193,
+          "source": "async function lMn({overageConfirmed:o,credentials:e,skipLowCreditsNote:u=!1}){let r=await fe(e);if(!r)return{kind:\"proceed\",billingNote:\"\",preflightUnavailable:!0};let s=r.billing_note??\"\",l=r.github_login??null;switch(r.action){case\"proceed\":return{kind:\"proceed\",billingNote:s,githubLogin:l};case\"blocked\":return{kind:\"blocked\",reason:r.blocked?.reason??\"server\",message:r.blocked?.message??\"Ultrareview is unavailable for your organization.\",actionUrl:r.blocked?.action_url??null};case\"confirm\":{if(o)return{kind:\"proceed\",billingNote:s,githubLogin:l};let v=u?null:await _e(e);return{kind:\"needs-confirm\",body:`This review bills as usage credits (${yde()}).${v?`\n${v}`:\"\"}`,lowCreditsNote:v,billingNote:s,githubLogin:l}}}}",
+          "variable": false,
+          "moduleSha256": "4e5114456806562bbe68047aa7ad787f96a4800aca3e36ae09f34947dab78b42",
+          "sha256": "2d79d1fa25b82aa2832285d322bc17b4d2d1e77dec9a982422fb66b376b257d3"
+        },
+        {
+          "names": [
+            "Ce"
+          ],
+          "start": 25197,
+          "end": 25201,
+          "source": "Ce=3",
+          "variable": true,
+          "moduleSha256": "4e5114456806562bbe68047aa7ad787f96a4800aca3e36ae09f34947dab78b42",
+          "sha256": "bf8d1eacc7d0c9e7ca39792dcb2561bc24d40df48a8b81897a0ebc9addf90b37"
+        },
+        {
+          "names": [
+            "cMn"
+          ],
+          "start": 25202,
+          "end": 31191,
+          "source": "async function cMn(o,e,u,r){let s=r?.invocation??\"/code-review ultra\",l=(R)=>({launched:!1,blocks:[{type:\"text\",text:R}]}),v=await Dye({allowBundle:!0,storageV5:e.storageV5,credentials:e.credentials});if(!v.eligible){let R=v.errors;if(R.length>0){i(\"tengu_review_remote_precondition_failed\",{reason:S(\"remote_agent_ineligible\"),precondition_errors:Oa(R.map((x)=>x.type)),cwd_is_home:A()});let P=R.map((x)=>{if(x.type===\"not_in_git_repo\")return be(s);if(x.type===\"no_git_remote\")return`${s} needs a GitHub remote so it can clone this repository into the cloud. If this project is not on GitHub yet, run \"gh repo create --source=. --push\" to create one; if a GitHub repo already exists, run \"git remote add origin REPO_URL && git push -u origin HEAD\".`;return Xce(x)}).join(`\n`);if(o.mode===\"branch\"&&o.noMergeBase)i(\"tengu_review_remote_precondition_recovery\",{reason:S(\"no_merge_base\"),method:S(\"empty_tree_bundle\"),outcome:S(\"failed\")});return m(\"ultrareview_launch\",\"remote_agent_ineligible\"),l(`Ultrareview cannot launch:\n${P}`)}}let E=\"env_011111111111111111111113\",_=b_e(),L=(R,P,x)=>{if(typeof R!==\"number\"||!Number.isFinite(R))return P;let N=Math.floor(R);if(N<=0)return P;return N>x?P:N},D=HDo(),T={BUGHUNTER_DRY_RUN:\"1\",AUTOPATCH_ENABLE_ASIMOV:\"1\",..._?.code_quality!==!1&&{BUGHUNTER_CODE_QUALITY:\"1\"},BUGHUNTER_FLEET_SIZE:String(L(_?.fleet_size,5,20)),BUGHUNTER_MAX_DURATION:String(L(_?.max_duration_minutes,10,25)),BUGHUNTER_AGENT_TIMEOUT:String(L(_?.agent_timeout_seconds,600,1800)),BUGHUNTER_TOTAL_WALLCLOCK:String(L(_?.total_wallclock_minutes,22,27)),BUGHUNTER_RESULT_RELAY_MAX_SEC:String((Q5e()-Ce)*60),...D&&{BUGHUNTER_MODEL:D},...process.env.BUGHUNTER_DEV_BUNDLE_B64&&{BUGHUNTER_DEV_BUNDLE_B64:process.env.BUGHUNTER_DEV_BUNDLE_B64}},U,te,g,X=\"\",j=[],w,Z,J,W,Q;if(o.mode===\"pr\"){let R=await hT(),P=R&&dD(R)?null:R;if(!P)return i(\"tengu_review_remote_precondition_failed\",{reason:S(\"no_github_remote_post_confirm\"),cwd_is_home:A()}),m(\"ultrareview_launch\",\"no_github_remote\"),null;let x=`ultrareview: ${P.owner}/${P.name}#${o.prNumber}`;U=await p0({initialMessage:null,source:\"ultrareview\",description:x,title:x,signal:e.abortController.signal,storageV5:e.storageV5,credentials:e.credentials,branchName:`refs/pull/${o.prNumber}/head`,environmentId:E,tags:[\"ultrareview\"],environmentVariables:{BUGHUNTER_PR_NUMBER:o.prNumber,BUGHUNTER_REPOSITORY:`${P.owner}/${P.name}`,...T},onCreateFail:(N,n,h)=>{w=N,Z=c(n),J=h?.status,W=me(h?.serverType),Q=me(h?.serverReason)}}),te=`/ultrareview ${o.prNumber}`,g=`${P.owner}/${P.name}#${o.prNumber}`}else{let{headBranch:R,baseBranch:P,mergeBaseSha:x,diffStat:N,noMergeBase:n}=o;X=N;let h,d;if(U=await p0({initialMessage:null,source:\"ultrareview\",description:`ultrareview: ${R}`,signal:e.abortController.signal,storageV5:e.storageV5,credentials:e.credentials,useBundle:!0,bundleBaseRef:x,bundleForceScope:n?\"squashed\":void 0,environmentId:E,tags:[\"ultrareview\"],environmentVariables:{BUGHUNTER_BASE_BRANCH:x,...T},onBundleFail:(k,O)=>{h=k,d=c(O)},onBundleNotice:(k)=>{j.push(k)},onCreateFail:(k,O,b)=>{w=k,Z=c(O),J=b?.status,W=me(b?.serverType),Q=me(b?.serverReason)}}),!U){i(\"tengu_review_remote_teleport_failed\",{mode:S(\"branch\"),reason:Z,bundle_fail_kind:d,status_code:J,server_type:W,server_reason:Q});let k=e.abortController.signal.aborted;if(n&&!k)i(\"tengu_review_remote_precondition_recovery\",{reason:S(\"no_merge_base\"),method:S(\"empty_tree_bundle\"),outcome:S(\"failed\")});if(!k)m(\"ultrareview_launch\",\"teleport_failed\");return l(h??(w?`Ultrareview could not start the cloud session: ${w}`:`Repo is too large. Push a PR and use \\`${s} <PR#>\\` instead.`))}te=\"/ultrareview\",g=n===\"unrelated_history\"?`${R} (all files \\u2014 no common history with ${P})`:n===\"base_ref_missing\"?`${R} (all files)`:n===\"first_commit\"?`${R} (every file in the first commit)`:R===P?R:`${R} \\u2192 ${P}`}if(!U){if(i(\"tengu_review_remote_teleport_failed\",{mode:S(\"pr\"),reason:Z,status_code:J,server_type:W,server_reason:Q}),!e.abortController.signal.aborted)m(\"ultrareview_launch\",\"teleport_failed\");if(w)return l(`Ultrareview could not start the cloud session: ${w}`);return null}let ne;if(!r?.skipTaskRegistration)ne=QTe({remoteTaskType:\"ultrareview\",session:U,command:te,context:e,isRemoteReview:!0,applyFixesOnComplete:r?.applyFixesOnComplete,reviewInstructions:o.mode===\"branch\"?o.instructions:void 0,postReviewTo:r?.postReviewToPR&&o.mode===\"pr\"&&!r?.signal?.aborted?{repo:o.repo,prNumber:o.prNumber}:void 0}).taskId;if(i(\"tengu_review_remote_launched\",{mode:c(o.mode),had_arg:o.hadArg,post_armed:r?.postReviewToPR===!0&&o.mode===\"pr\"&&!r?.signal?.aborted,had_instructions:o.mode===\"branch\"&&!!o.instructions,diff_files:o.diffFiles,diff_lines:o.diffLines}),o.mode===\"branch\"&&o.noMergeBase)if(i(\"tengu_review_remote_precondition_recovery\",{reason:S(\"no_merge_base\"),method:S(\"empty_tree_bundle\"),outcome:S(\"succeeded\")}),o.noMergeBase===\"first_commit\")y(\"ultrareview_launch\");else p(\"ultrareview_launch\",\"no_merge_base_empty_tree_fallback\");else y(\"ultrareview_launch\");mgo(e.storageV5);let K=Jce(U.id),z=u.trim()?`${u.trim()}\n`:\"\",ie=X?`\nScope: ${X}`:\"\",se=o.mode===\"branch\"&&o.instructions?r?.skipTaskRegistration?`\nYour text was read as a note, not a base branch \\u2014 the standard review runs on the diff above.`:`\nYour text was read as a note, not a base branch \\u2014 the standard review runs on the diff above, and the findings will be related to your note when they arrive.`:\"\";return{launched:!0,sessionId:U.id,sessionUrl:K,taskId:ne,title:U.title,blocks:[{type:\"text\",text:`${z}Ultrareview launched for ${g} (${Iq()}, runs in the cloud).${r?.findingsArriveInSession?\" The findings arrive here when it finishes.\":\"\"}${r?.postReviewToPR&&o.mode===\"pr\"?`\nWhen it finishes, the findings will be posted to the PR as a comment from your GitHub account. (Keep this session open: the consent lives only here, so if it ends before the review finishes, nothing will be posted \\u2014 even on resume.)`:\"\"}${ie}${se}${j.map((R)=>`\n${R}`).join(\"\")}`}]}}",
+          "variable": false,
+          "moduleSha256": "4e5114456806562bbe68047aa7ad787f96a4800aca3e36ae09f34947dab78b42",
+          "sha256": "e1878248c3f2a61a38c77d3486e39b5c1cf3700d5b7967158f9e9f01aa07c849"
+        },
+        {
+          "names": [
+            "iRt"
+          ],
+          "start": 31191,
+          "end": 31739,
+          "source": "function iRt(o,e){return`The output above is already visible to the user. Briefly acknowledge it without repeating the target or billing note. Findings will arrive via task-notification.${o?\" The user passed --fix: when the findings arrive, apply them to the local working tree.\":\"\"}${e?` The user's argument was interpreted as a review note, not a base branch: \"${re(e,Gln)}\". The cloud review runs its standard pass over the branch diff and does not see the note; when the findings arrive, prioritize and relate them to the user's request.`:\"\"}`}",
+          "variable": false,
+          "moduleSha256": "4e5114456806562bbe68047aa7ad787f96a4800aca3e36ae09f34947dab78b42",
+          "sha256": "3b6bb5974fac50f87e61940f56ce28d9d377e65e7dcfafa5c0772db08edf1f88"
+        },
+        {
+          "names": [
+            "Be"
+          ],
+          "start": 31743,
+          "end": 31770,
+          "source": "Be=/^[a-z][a-z0-9_]{0,63}$/",
+          "variable": true,
+          "moduleSha256": "4e5114456806562bbe68047aa7ad787f96a4800aca3e36ae09f34947dab78b42",
+          "sha256": "2c9c4ea840b75d7e363a6efdd6187b02825fe2a030c3b632a6a94e33e1ccd113"
+        },
+        {
+          "names": [
+            "TMe"
+          ],
+          "start": 31771,
+          "end": 35629,
+          "source": "async function TMe(o,e){if(!_0()){let T=MDo(),U=T===\"entitlement\"?_1t():null;return i(\"tengu_review_remote_gate_blocked\",{reason:me(T)??S(\"unknown\"),entitlement_blocker:me(U)}),{status:\"error\",message:\"Ultrareview is currently unavailable.\",...T!==null&&{gate_blocker:T},...U!==null&&{entitlement_blocker:U}}}await zb();let u=op(\"allow_remote_sessions\",\"Cloud sessions\",\"are\");if(u)return $C(\"allow_remote_sessions\",\"slash_command\"),{status:\"error\",message:u};let r=await aMn(o,e.invocation,{suppressSucceededRecoveryEvent:!e.confirm,suppressOfferedRecoveryEvent:e.confirm&&!e.singlePass,confirmsBeforeLaunch:e.confirmsBeforeLaunch===!0,personRanTheCommand:e.personRanTheCommand===!0});if(!r.ok)return{status:\"error\",message:r.error,reason:r.reason};let s=await lMn({overageConfirmed:e.overageConfirmed,credentials:e.context.credentials,skipLowCreditsNote:e.confirm&&!e.singlePass});if(s.kind===\"blocked\")return i(\"tengu_review_overage_blocked\",{reason:pS(s.reason)}),{status:\"blocked\",message:s.message,actionUrl:s.actionUrl,...Be.test(s.reason)&&{reason:s.reason}};let l=()=>{let T=r.scope.mode===\"pr\"?`Reviewing PR ${r.scope.repo}#${r.scope.prNumber}.`:r.scope.noMergeBase?\"Reviewing all files on the current branch.\":`Reviewing current branch against ${r.scope.baseBranch}.`,U=r.scope.mode===\"branch\"&&r.scope.instructions?` Note for findings (not a base branch): \"${sRt(r.scope.instructions)}\"`:\"\";return`\n${T}${U}`};if(s.kind===\"proceed\"&&s.preflightUnavailable&&e.withholdOverageConsent&&!e.overageConfirmed)return{status:\"needs-confirm\",body:`Couldn't verify your review quota right now, so this review may bill as usage credits (${yde()}).${l()}`,billingNote:\"\"};if(s.kind===\"needs-confirm\"){if(e.withholdOverageConsent)return{status:\"needs-confirm\",body:`${s.body}${l()}`,billingNote:s.billingNote};if(i(\"tengu_review_overage_dialog_shown\",{}),!e.confirm)return{status:\"needs-confirm\",body:`${s.body}${l()}`,billingNote:s.billingNote};e.markOverageConfirmed()}if(e.confirm&&r.scope.mode===\"branch\"&&r.scope.noMergeBase)i(\"tengu_review_remote_precondition_recovery\",{reason:S(\"no_merge_base\"),method:S(\"empty_tree_bundle\"),outcome:S(\"accepted\")});if(!e.confirm){let T=r.scope.mode===\"pr\"?`Reviewing PR ${r.scope.repo}#${r.scope.prNumber}`:r.scope.noMergeBase===\"unrelated_history\"?`Reviewing all files (no common history with ${r.scope.baseBranch})\nScope: ${r.scope.diffStat}`:r.scope.noMergeBase===\"base_ref_missing\"?`Reviewing all files (no ${r.scope.baseBranch} branch to compare against)\nScope: ${r.scope.diffStat}`:r.scope.noMergeBase===\"first_commit\"?`Reviewing every file in the first commit (there is nothing earlier to compare with)\nScope: ${r.scope.diffStat}`:`Reviewing current branch against ${r.scope.baseBranch}\nScope: ${r.scope.diffStat}`,U=r.scope.mode===\"branch\"&&r.scope.instructions?`\nNote for findings (not a base branch): \"${sRt(r.scope.instructions)}\"`:\"\";return{status:\"needs-confirm\",body:`${T}${U}\n${Iq()} \\xB7 Est. cost ${yde()} USD`,billingNote:s.billingNote}}let v=e.postReview===!0&&!Z5e(),E=e.postReview===!0&&!v&&r.scope.mode===\"pr\"&&oo(r.scope.host),_=await cMn(r.scope,e.context,s.billingNote,{skipTaskRegistration:e.skipTaskRegistration,invocation:e.invocation,applyFixesOnComplete:e.applyFixes,postReviewToPR:E});if(!_?.launched)return{status:\"error\",message:_?.blocks.map((T)=>T.type===\"text\"?T.text:\"\").join(\"\").trim()||\"Failed to launch cloud review session.\"};let L=e.postReview===!0&&!E,D=_.blocks.map((T)=>T.type===\"text\"?T.text:\"\").join(\"\").trim();return{status:\"launched\",sessionId:_.sessionId,sessionUrl:_.sessionUrl,taskId:_.taskId,title:_.title,message:v?`${D}${iMn}`:L?`${D}${sMn}`:D,billingNote:s.billingNote,postReviewTo:E&&r.scope.mode===\"pr\"?{repo:r.scope.repo,prNumber:r.scope.prNumber}:void 0,postIgnored:L||void 0,lowCreditsNote:e.singlePass&&s.kind===\"needs-confirm\"&&s.lowCreditsNote||void 0}}",
+          "variable": false,
+          "moduleSha256": "4e5114456806562bbe68047aa7ad787f96a4800aca3e36ae09f34947dab78b42",
+          "sha256": "90bfaa85e183c2e0df72110bc4c43542712080cba7bcaca0a150aca47425a5cf"
+        },
+        {
+          "names": [
+            "ce"
+          ],
+          "start": 35629,
+          "end": 35684,
+          "source": "async function ce(){let o=await hT();return!!o&&!dD(o)}",
+          "variable": false,
+          "moduleSha256": "4e5114456806562bbe68047aa7ad787f96a4800aca3e36ae09f34947dab78b42",
+          "sha256": "8fe3794ff461ab33b1ccff95c65fa693eab9d424a943cf41833726117c735b37"
+        },
+        {
+          "names": [
+            "be"
+          ],
+          "start": 35684,
+          "end": 36289,
+          "source": "function be(o,e=!1){let u=e?`run \"git init\" and commit a starting point. ${o} then reviews the changes you make on top of that commit.`:`run \"git init\" and commit your work. ${o} then reviews that first commit whole if it is small enough, and after that the changes you make on top of it.`,r=yd()?\"Open a folder that is a git repository with at least one commit, then try again.\":`If your project already uses git, cd into its folder and rerun ${o}. If it doesn't yet, ${u}`;return`${o} reviews the changes a git branch makes on top of an earlier commit, but ${oe()} is not inside a git repository. ${r}`}",
+          "variable": false,
+          "moduleSha256": "4e5114456806562bbe68047aa7ad787f96a4800aca3e36ae09f34947dab78b42",
+          "sha256": "d8433737e108e858a6fbf52940b555533021d06400bff53dbdc9da317c469c85"
+        },
+        {
+          "names": [
+            "A"
+          ],
+          "start": 36289,
+          "end": 36382,
+          "source": "function A(){try{let o=ye();if(!o)return!1;return pO(Mn(ge(oe())),Mn(ge(o)))}catch{return!1}}",
+          "variable": false,
+          "moduleSha256": "4e5114456806562bbe68047aa7ad787f96a4800aca3e36ae09f34947dab78b42",
+          "sha256": "d90ed9a1dc6a91f46d6cb8920438deb81ccf66b5a916a4660db0a7a3a3bc0ef3"
+        }
+      ],
+      "bindings": {
+        "q": {
+          "file": "chunk-bn3p37gv.js",
+          "name": "q",
+          "exported": "q"
+        },
+        "S": {
+          "file": "chunk-n4qghq20.js",
+          "name": "S",
+          "exported": "S"
+        },
+        "c": {
+          "file": "chunk-n4qghq20.js",
+          "name": "c",
+          "exported": "c"
+        },
+        "me": {
+          "file": "chunk-n4qghq20.js",
+          "name": "me",
+          "exported": "me"
+        },
+        "Oa": {
+          "file": "chunk-n4qghq20.js",
+          "name": "Oa",
+          "exported": "Oa"
+        },
+        "pS": {
+          "file": "chunk-c9me9cp7.js",
+          "name": "pS",
+          "exported": "pS"
+        },
+        "Dt": {
+          "file": "chunk-f2n7vgt8.js",
+          "name": "Dt",
+          "exported": "Dt"
+        },
+        "Mn": {
+          "file": "chunk-x954y317.js",
+          "name": "Mn",
+          "exported": "Mn"
+        },
+        "jyt": {
+          "file": "chunk-nankzm0s.js",
+          "name": "jyt",
+          "exported": "jyt"
+        },
+        "Ewn": {
+          "file": "chunk-nankzm0s.js",
+          "name": "Ewn",
+          "exported": "Ewn"
+        },
+        "Ipe": {
+          "file": "chunk-nankzm0s.js",
+          "name": "Ipe",
+          "exported": "Ipe"
+        },
+        "Gt": {
+          "file": "chunk-nankzm0s.js",
+          "name": "Gt",
+          "exported": "Gt"
+        },
+        "a": {
+          "file": "chunk-mbfze585.js",
+          "name": "a",
+          "exported": "a"
+        },
+        "Y": {
+          "file": "chunk-q80zaav8.js",
+          "name": "Y",
+          "exported": "Y"
+        },
+        "ae": {
+          "file": "chunk-q80zaav8.js",
+          "name": "ae",
+          "exported": "ae"
+        },
+        "t": {
+          "file": "chunk-q80zaav8.js",
+          "name": "t",
+          "exported": "t"
+        },
+        "I": {
+          "file": "chunk-eske5nfz.js",
+          "name": "I",
+          "exported": "I"
+        },
+        "re": {
+          "file": "chunk-eske5nfz.js",
+          "name": "re",
+          "exported": "re"
+        },
+        "At": {
+          "file": "chunk-amhtwhch.js",
+          "name": "At",
+          "exported": "At"
+        },
+        "vt": {
+          "file": "chunk-2ynta9xc.js",
+          "name": "vt",
+          "exported": "vt"
+        },
+        "sd": {
+          "file": "chunk-2ynta9xc.js",
+          "name": "sd",
+          "exported": "sd"
+        },
+        "_T": {
+          "file": "chunk-2ynta9xc.js",
+          "name": "_T",
+          "exported": "_T"
+        },
+        "i": {
+          "file": "chunk-6hnyhakg.js",
+          "name": "i",
+          "exported": "i"
+        },
+        "y": {
+          "file": "chunk-9d2ykxmy.js",
+          "name": "y",
+          "exported": "y"
+        },
+        "m": {
+          "file": "chunk-9d2ykxmy.js",
+          "name": "m",
+          "exported": "m"
+        },
+        "p": {
+          "file": "chunk-9d2ykxmy.js",
+          "name": "p",
+          "exported": "p"
+        },
+        "oe": {
+          "file": "chunk-s354e3rr.js",
+          "name": "oe",
+          "exported": "oe"
+        },
+        "yn": {
+          "file": "chunk-fmv8bhm3.js",
+          "name": "yn",
+          "exported": "yn"
+        },
+        "$S": {
+          "file": "chunk-fmv8bhm3.js",
+          "name": "$S",
+          "exported": "$S"
+        },
+        "Qo": {
+          "file": "chunk-fmv8bhm3.js",
+          "name": "Qo",
+          "exported": "Qo"
+        },
+        "cqt": {
+          "file": "chunk-fmv8bhm3.js",
+          "name": "cqt",
+          "exported": "cqt"
+        },
+        "oOe": {
+          "file": "chunk-fmv8bhm3.js",
+          "name": "oOe",
+          "exported": "oOe"
+        },
+        "Ke": {
+          "file": "chunk-fmv8bhm3.js",
+          "name": "Ke",
+          "exported": "Ke"
+        },
+        "oo": {
+          "file": "chunk-zacgfc38.js",
+          "name": "oo",
+          "exported": "oo"
+        },
+        "KZ": {
+          "file": "chunk-zacgfc38.js",
+          "name": "KZ",
+          "exported": "KZ"
+        },
+        "nt": {
+          "file": "chunk-m59srz4k.js",
+          "name": "nt",
+          "exported": "nt"
+        },
+        "f": {
+          "file": "chunk-5qqrzb2c.js",
+          "name": "f",
+          "exported": "f"
+        },
+        "yd": {
+          "file": "chunk-0a47xg8f.js",
+          "name": "yd",
+          "exported": "yd"
+        },
+        "X8": {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "X8",
+          "exported": "X8"
+        },
+        "pO": {
+          "file": "chunk-0pprbvtw.js",
+          "name": "pO",
+          "exported": "pO"
+        },
+        "M5e": {
+          "file": "chunk-09m4fzsj.js",
+          "name": "M5e",
+          "exported": "M5e"
+        },
+        "g0": {
+          "file": "chunk-09m4fzsj.js",
+          "name": "g0",
+          "exported": "g0"
+        },
+        "b_e": {
+          "file": "chunk-09m4fzsj.js",
+          "name": "b_e",
+          "exported": "b_e"
+        },
+        "yde": {
+          "file": "chunk-09m4fzsj.js",
+          "name": "yde",
+          "exported": "yde"
+        },
+        "ODo": {
+          "file": "chunk-09m4fzsj.js",
+          "name": "ODo",
+          "exported": "ODo"
+        },
+        "Iq": {
+          "file": "chunk-09m4fzsj.js",
+          "name": "Iq",
+          "exported": "Iq"
+        },
+        "HDo": {
+          "file": "chunk-09m4fzsj.js",
+          "name": "HDo",
+          "exported": "HDo"
+        },
+        "Q5e": {
+          "file": "chunk-09m4fzsj.js",
+          "name": "Q5e",
+          "exported": "Q5e"
+        },
+        "Gqn": {
+          "file": "chunk-09m4fzsj.js",
+          "name": "Gqn",
+          "exported": "Gqn"
+        },
+        "LLr": {
+          "file": "chunk-09m4fzsj.js",
+          "name": "LLr",
+          "exported": "LLr"
+        },
+        "DDo": {
+          "file": "chunk-09m4fzsj.js",
+          "name": "DDo",
+          "exported": "DDo"
+        },
+        "_0": {
+          "file": "chunk-09m4fzsj.js",
+          "name": "_0",
+          "exported": "_0"
+        },
+        "MDo": {
+          "file": "chunk-09m4fzsj.js",
+          "name": "MDo",
+          "exported": "MDo"
+        },
+        "Z5e": {
+          "file": "chunk-09m4fzsj.js",
+          "name": "Z5e",
+          "exported": "Z5e"
+        },
+        "sun": {
+          "file": "chunk-09m4fzsj.js",
+          "name": "sun",
+          "exported": "sun"
+        },
+        "gi": {
+          "file": "chunk-09m4fzsj.js",
+          "name": "gi",
+          "exported": "gi"
+        },
+        "dD": {
+          "file": "chunk-9hktajv8.js",
+          "name": "dD",
+          "exported": "dD"
+        },
+        "hT": {
+          "file": "chunk-9hktajv8.js",
+          "name": "hT",
+          "exported": "hT"
+        },
+        "op": {
+          "file": "chunk-b5kmgz2n.js",
+          "name": "op",
+          "exported": "op"
+        },
+        "_1t": {
+          "file": "chunk-cwq90agc.js",
+          "name": "_1t",
+          "exported": "_1t"
+        },
+        "cre": {
+          "file": "chunk-hhbs19e8.js",
+          "name": "cre",
+          "exported": "cre"
+        },
+        "zb": {
+          "file": "chunk-b7yc4zs1.js",
+          "name": "zb",
+          "exported": "zb"
+        },
+        "$C": {
+          "file": "chunk-eh4x73e7.js",
+          "name": "$C",
+          "exported": "$C"
+        },
+        "Qhe": {
+          "file": "chunk-mphp7acd.js",
+          "name": "Qhe",
+          "exported": "Qhe"
+        },
+        "Gln": {
+          "file": "chunk-mphp7acd.js",
+          "name": "Gln",
+          "exported": "Gln"
+        },
+        "GMt": {
+          "file": "chunk-mphp7acd.js",
+          "name": "GMt",
+          "exported": "GMt"
+        },
+        "Dye": {
+          "file": "chunk-mphp7acd.js",
+          "name": "Dye",
+          "exported": "Dye"
+        },
+        "Xce": {
+          "file": "chunk-mphp7acd.js",
+          "name": "Xce",
+          "exported": "Xce"
+        },
+        "QTe": {
+          "file": "chunk-mphp7acd.js",
+          "name": "QTe",
+          "exported": "QTe"
+        },
+        "Jce": {
+          "file": "chunk-mphp7acd.js",
+          "name": "Jce",
+          "exported": "Jce"
+        },
+        "RIo": {
+          "file": "chunk-mphp7acd.js",
+          "name": "RIo",
+          "exported": "RIo"
+        },
+        "p0": {
+          "file": "chunk-mphp7acd.js",
+          "name": "p0",
+          "exported": "p0"
+        },
+        "uhn": {
+          "file": "chunk-6xrs6gmd.js",
+          "name": "uhn",
+          "exported": "uhn"
+        },
+        "Yun": {
+          "file": "chunk-w7hy7pqe.js",
+          "name": "Yun",
+          "exported": "Yun"
+        },
+        "xpt": {
+          "file": "chunk-w7hy7pqe.js",
+          "name": "xpt",
+          "exported": "xpt"
+        },
+        "npn": {
+          "file": "chunk-w7hy7pqe.js",
+          "name": "npn",
+          "exported": "npn"
+        },
+        "mgo": {
+          "file": "chunk-arcwjf3z.js",
+          "name": "mgo",
+          "exported": "mgo"
+        },
+        "J7t": {
+          "file": "chunk-gyxdx74f.js",
+          "name": "J7t",
+          "exported": "J7t"
+        },
+        "Q7t": {
+          "file": "chunk-gyxdx74f.js",
+          "name": "Q7t",
+          "exported": "Q7t"
+        },
+        "Z7t": {
+          "file": "chunk-gyxdx74f.js",
+          "name": "Z7t",
+          "exported": "Z7t"
+        },
+        "ue": {
+          "file": "chunk-pjkhrw0g.js",
+          "name": "ue",
+          "exported": "ue"
+        },
+        "mt": {
+          "file": "chunk-pjkhrw0g.js",
+          "name": "mt",
+          "exported": "mt"
+        },
+        "Ql": {
+          "file": "chunk-pjkhrw0g.js",
+          "name": "Ql",
+          "exported": "Ql"
+        },
+        "G": {
+          "file": "chunk-h3rrxdgy.js",
+          "name": "G",
+          "exported": "G"
+        },
+        "ye": {
+          "file": "os",
+          "name": "homedir",
+          "exported": "homedir"
+        },
+        "ge": {
+          "file": "path",
+          "name": "resolve",
+          "exported": "resolve"
+        }
+      }
+    },
+    {
+      "file": "chunk-7pxk58nz.js",
+      "moduleSha256": "284c4759a7d093b1ec123568b149b34d989db2e89aee0f58e3c937dd1a18e33e",
+      "rows": [
+        {
+          "names": [],
+          "start": 15220,
+          "end": 15224,
+          "source": "M();",
+          "statement": true,
+          "moduleSha256": "284c4759a7d093b1ec123568b149b34d989db2e89aee0f58e3c937dd1a18e33e",
+          "sha256": "1880d9b7661218855215fda375bff1025200e8a2a51895d0a75069beae28c209"
+        },
+        {
+          "names": [
+            "Ee"
+          ],
+          "start": 15224,
+          "end": 15274,
+          "source": "function Ee(){return!le().hasSeenUltrareviewTerms}",
+          "variable": false,
+          "moduleSha256": "284c4759a7d093b1ec123568b149b34d989db2e89aee0f58e3c937dd1a18e33e",
+          "sha256": "daf49192bdaa3be6cefe0568f858e080639481c356a2a9e347734e769fd8adcb"
+        },
+        {
+          "names": [
+            "He"
+          ],
+          "start": 15274,
+          "end": 15358,
+          "source": "function He(x){return x.hasSeenUltrareviewTerms?x:{...x,hasSeenUltrareviewTerms:!0}}",
+          "variable": false,
+          "moduleSha256": "284c4759a7d093b1ec123568b149b34d989db2e89aee0f58e3c937dd1a18e33e",
+          "sha256": "e190d1ee6c4ea7e67a7f6ba582ab3f13c254f9552151f3310b7ee26e37fd49da"
+        },
+        {
+          "names": [
+            "se"
+          ],
+          "start": 15362,
+          "end": 15532,
+          "source": "se=\"This will upload your repository to a cloud session for the review, which may include staged and unstaged changes you haven't committed yet, but not untracked files.\"",
+          "variable": true,
+          "moduleSha256": "284c4759a7d093b1ec123568b149b34d989db2e89aee0f58e3c937dd1a18e33e",
+          "sha256": "9710ff183c2d80e3401be9a035578a4ae95b8c6e33fc7f9291c74d58bc4ddc6c"
+        },
+        {
+          "names": [
+            "te"
+          ],
+          "start": 15533,
+          "end": 16732,
+          "source": "function te(h){let f=w(23),{subtitle:l,body:v,scope:o,postOption:u,onProceed:L,onCancel:m}=h;ua(\"ultrareview-launch\");let{storageV5:y}=Te(),[t]=g(Ee),[a,R]=g(!1),[O,p]=g(null),_;if(f[0]===b)_=new AbortController,f[0]=_;else _=f[0];let C=A(_),T=A(!1),ie;if(f[1]!==m||f[2]!==L||f[3]!==t||f[4]!==y)ie=(N)=>{if(T.current){return}if(T.current=!0,N===\"proceed\"||N===\"proceed-post\"){if(t)Ae(He,y);p(N),R(!0),L(C.current.signal,{postToPR:N===\"proceed-post\"}).catch(()=>{T.current=!1,R(!1)})}else C.current.abort(),m()},f[1]=m,f[2]=L,f[3]=t,f[4]=y,f[5]=ie;else ie=f[5];let U=ie,B;if(f[6]!==m)B=()=>{T.current=!0,C.current.abort(),m()},f[6]=m,f[7]=B;else B=f[7];let P=B,D;if(f[8]!==l)D=l??`${Iq()} \\xB7 Est. cost ${yde()} USD`,f[8]=l,f[9]=D;else D=f[9];let k;if(f[10]!==v||f[11]!==P||f[12]!==U||f[13]!==a||f[14]!==O||f[15]!==u||f[16]!==o||f[17]!==t)k=e(oe,{showTerms:t,body:v,scope:o,postOption:u,retryFocus:O,isLaunching:a,onSelect:U,onCancel:P}),f[10]=v,f[11]=P,f[12]=U,f[13]=a,f[14]=O,f[15]=u,f[16]=o,f[17]=t,f[18]=k;else k=f[18];let F;if(f[19]!==P||f[20]!==D||f[21]!==k)F=e(he,{title:\"Run ultrareview in the cloud?\",subtitle:D,onCancel:P,children:k}),f[19]=P,f[20]=D,f[21]=k,f[22]=F;else F=f[22];return F}",
+          "variable": false,
+          "moduleSha256": "284c4759a7d093b1ec123568b149b34d989db2e89aee0f58e3c937dd1a18e33e",
+          "sha256": "ad2d3ced5fe77f14eba5ab264d3392fdb37323e7338aef7cdbeab7235fe28adf"
+        },
+        {
+          "names": [
+            "oe"
+          ],
+          "start": 16732,
+          "end": 20307,
+          "source": "function oe(h){let f=w(30),{showTerms:l,body:v,scope:o,postOption:u,retryFocus:L,isLaunching:m,onSelect:y,onCancel:t}=h,a=u?`When it finishes, Claude can post the findings to the PR as a single comment from your GitHub account${u.githubLogin?` (@${u.githubLogin})`:\"\"} \\u2014 one plain comment, not a review or an approval, and it carries a \"Generated by Claude Code\" note.`:null,R=ha(),{refusedWithin:O,noteRefused:p}=es(),_;if(f[0]!==R||f[1]!==p||f[2]!==O)_=function C(){if(R()||O()){return p(),!0}return!1},f[0]=R,f[1]=p,f[2]=O,f[3]=_;else _=f[3];let C=_,T;if(f[4]!==y||f[5]!==C)T=(ie)=>{if(C()){return}y(ie)},f[4]=y,f[5]=C,f[6]=T;else T=f[6];let N=T,U=o.mode===\"pr\"?`Reviewing ${o.repo}#${o.prNumber} fetched from GitHub.`:o.noMergeBase===\"unrelated_history\"?`Reviewing all files (no common history with ${o.baseBranch}).`:o.noMergeBase===\"base_ref_missing\"?`Reviewing all files (no ${o.baseBranch} branch to compare against).`:o.noMergeBase===\"first_commit\"?\"Reviewing every file in the first commit (there is nothing earlier to compare with).\":o.headBranch===o.baseBranch?`Reviewing local changes on ${o.baseBranch}.`:`Reviewing ${o.headBranch} against ${o.baseBranch}.`,B=o.mode===\"branch\"&&o.diffStat?o.diffStat:null,P=o.mode===\"branch\"?se:null,D;if(f[7]!==o.instructions||f[8]!==o.mode)D=o.mode===\"branch\"&&o.instructions?`Note for findings (not a base branch): \"${sRt(o.instructions)}\"`:null,f[7]=o.instructions,f[8]=o.mode,f[9]=D;else D=f[9];let k=D,F=o.mode===\"pr\"?\"Tip: run /code-review ultra (no number) to review your current branch instead.\":\"Tip: run /code-review ultra <PR number> to fetch and review a specific GitHub PR instead.\",x;if(f[10]!==v||f[11]!==B||f[12]!==k||f[13]!==a||f[14]!==U||f[15]!==l||f[16]!==P||f[17]!==F)x=l?r(K,{children:[r(s,{flexDirection:\"column\",children:[e(n,{dimColor:!0,children:U}),B&&r(n,{dimColor:!0,children:[\"Scope: \",B]}),P&&e(n,{dimColor:!0,children:P}),k&&e(n,{dimColor:!0,children:k}),e(n,{dimColor:!0,children:\"Finds and verifies bugs using a multi-agent review fleet.\"}),e(n,{dimColor:!0,children:F}),v&&e(n,{dimColor:!0,children:v}),a&&e(n,{dimColor:!0,children:a}),r(n,{dimColor:!0,children:[\"More information: \",e(It,{url:xne,children:xne})]})]}),e(n,{children:\"Proceed?\"})]}):r(s,{flexDirection:\"column\",children:[e(n,{dimColor:!0,children:U}),B&&r(n,{dimColor:!0,children:[\"Scope: \",B]}),P&&e(n,{dimColor:!0,children:P}),k&&e(n,{dimColor:!0,children:k}),e(n,{dimColor:!0,children:\"Finds and verifies bugs using a multi-agent review fleet.\"}),e(n,{dimColor:!0,children:F}),v&&e(n,{dimColor:!0,children:v}),a&&e(n,{dimColor:!0,children:a})]}),f[10]=v,f[11]=B,f[12]=k,f[13]=a,f[14]=U,f[15]=l,f[16]=P,f[17]=F,f[18]=x;else x=f[18];let j;if(f[19]!==N||f[20]!==m||f[21]!==t||f[22]!==u||f[23]!==C||f[24]!==L||f[25]!==l)j=m?e(ne,{}):u?e($e,{options:[{label:\"Run and only show findings here\",value:\"proceed\",description:\"launch in a cloud session\"},{label:\"Cancel\",value:\"cancel\"},{label:\"Run and post the findings to the PR as me\",value:\"proceed-post\",description:\"launch in a cloud session\"}],defaultFocusValue:L??(u.preferPost?\"proceed-post\":\"proceed\"),refuseInput:C,selectedValue:Ci,onChange:N,onCancel:t}):e($e,{options:[{label:l?\"Yes\":\"Run ultrareview\",value:\"proceed\",description:\"launch in a cloud session\"},{label:l?\"No\":\"Not now\",value:\"cancel\"}],refuseInput:C,selectedValue:Ci,onChange:N,onCancel:t}),f[19]=N,f[20]=m,f[21]=t,f[22]=u,f[23]=C,f[24]=L,f[25]=l,f[26]=j;else j=f[26];let ge;if(f[27]!==x||f[28]!==j)ge=r(s,{flexDirection:\"column\",gap:1,children:[x,j]}),f[27]=x,f[28]=j,f[29]=ge;else ge=f[29];return ge}",
+          "variable": false,
+          "moduleSha256": "284c4759a7d093b1ec123568b149b34d989db2e89aee0f58e3c937dd1a18e33e",
+          "sha256": "1059df634b7957f263dae2115a99bdda78dfdcb939bd996359487ad797ce35cc"
+        },
+        {
+          "names": [
+            "ne"
+          ],
+          "start": 20307,
+          "end": 20994,
+          "source": "function ne(){let l=w(12),h=al(),v;if(l[0]!==h.prefersReducedMotion)v=hm(h.prefersReducedMotion),l[0]=h.prefersReducedMotion,l[1]=v;else v=l[1];let o=v,[u,L]=ya(o?null:50),m=o?-100:19-Math.floor(L/200)%29,y=Math.floor(L/120),t;if(l[2]!==y||l[3]!==o||l[4]!==L)t=e(Nee,{frame:y,messageColor:\"inactive\",reducedMotion:o,time:L}),l[2]=y,l[3]=o,l[4]=L,l[5]=t;else t=l[5];let a;if(l[6]!==m)a=e(aAt,{message:\"Launching\",mode:\"responding\",messageColor:\"inactive\",glimmerIndex:m,flashOpacity:0,shimmerColor:\"subtle\"}),l[6]=m,l[7]=a;else a=l[7];let R;if(l[8]!==u||l[9]!==t||l[10]!==a)R=r(s,{ref:u,flexDirection:\"row\",columnGap:1,children:[t,a]}),l[8]=u,l[9]=t,l[10]=a,l[11]=R;else R=l[11];return R}",
+          "variable": false,
+          "moduleSha256": "284c4759a7d093b1ec123568b149b34d989db2e89aee0f58e3c937dd1a18e33e",
+          "sha256": "f940724c4368dbb8c694c471bbda83e15c7c4afbd5e1b0089a937208d7fb77c7"
+        },
+        {
+          "names": [
+            "Ve"
+          ],
+          "start": 20994,
+          "end": 21686,
+          "source": "async function Ve({scope:h,context:l,onDone:v,billingNote:o,applyFixes:u,postToPR:L,postDropped:m,signal:y}){let t=await cMn(h,l,o,{applyFixesOnComplete:u,postReviewToPR:L,findingsArriveInSession:!0,signal:y});if(y?.aborted){if(t?.launched&&t.taskId&&h.mode===\"pr\")l.taskRegistry.update(t.taskId,(a)=>({...a,postReviewTo:void 0}));return}if(t){let a=m&&t.launched?m===\"disabled\"?iMn:sMn:\"\",R=t.blocks.map((O)=>O.type===\"text\"?O.text:\"\").filter(Boolean).join(`\n`)+a;v(R,{shouldQuery:!0,metaMessages:t.launched?[iRt(u,h.mode===\"branch\"?h.instructions:void 0)]:void 0})}else v(\"Ultrareview failed to launch the cloud session. Check that this is a GitHub repo and try again.\",{display:\"system\"})}",
+          "variable": false,
+          "moduleSha256": "284c4759a7d093b1ec123568b149b34d989db2e89aee0f58e3c937dd1a18e33e",
+          "sha256": "8c4b6ce96719c9c693c83d596e836b34fda30147d0c25167afae48489b7be01a"
+        },
+        {
+          "names": [
+            "Oo"
+          ],
+          "start": 21690,
+          "end": 23337,
+          "source": "Oo=async(h,l,v,o)=>{let u=op(\"allow_remote_sessions\",\"Cloud sessions\",\"are\");if(u)return $C(\"allow_remote_sessions\",\"slash_command\"),h(u,{display:\"system\"}),null;let{scopeArgs:L,applyFixes:m,postReview:y}=oRt(v),t=await aMn(L,o?`/${o}`:\"/ultrareview\",{confirmsBeforeLaunch:!0});if(!t.ok)return h(t.error,{display:\"system\"}),null;let a=t.scope,R=!1,O=(f)=>{if(a.mode===\"branch\"&&a.noMergeBase)i(\"tengu_review_remote_precondition_recovery\",{reason:S(\"no_merge_base\"),method:S(\"empty_tree_bundle\"),outcome:c(f)})},p=await lMn({overageConfirmed:l.isUltrareviewOverageConfirmed(),credentials:l.credentials});switch(p.kind){case\"blocked\":{i(\"tengu_review_overage_blocked\",{reason:pS(p.reason)});let C=p.actionUrl?`\n  \\u2192 ${p.actionUrl}`:\"\",T=p.actionUrl?.includes(\"/admin-settings/\")&&kx()&&!SS()?`\n  Run /usage-credits to request this from your admin.`:\"\";return h(`${p.message}${C}${T}`,{display:\"system\"}),null}case\"needs-confirm\":case\"proceed\":if(p.kind===\"needs-confirm\")i(\"tengu_review_overage_dialog_shown\",{});let f=!Z5e(),_=a.mode===\"pr\"&&oo(a.host)&&y!==!1&&!f?{githubLogin:p.githubLogin??null,preferPost:y===!0}:null;return e(te,{subtitle:p.kind===\"needs-confirm\"?Iq():p.billingNote||null,body:p.kind===\"needs-confirm\"?p.body:void 0,scope:a,postOption:_,onProceed:async(C,T)=>{if(!R)R=!0,O(\"accepted\");if(await Ve({scope:a,context:l,onDone:h,billingNote:p.billingNote,applyFixes:m,postToPR:_!==null&&T.postToPR,postDropped:y===!0&&_===null?f?\"disabled\":\"target\":void 0,signal:C}),!C.aborted&&p.kind===\"needs-confirm\")l.markUltrareviewOverageConfirmed()},onCancel:()=>{if(!R)O(\"declined\");h(\"Ultrareview cancelled.\",{display:\"system\"})}})}}",
+          "variable": true,
+          "moduleSha256": "284c4759a7d093b1ec123568b149b34d989db2e89aee0f58e3c937dd1a18e33e",
+          "sha256": "8575a0756b8a64c7d13f917d55df7b0b41dc3b072d51b3a06729b022bf802beb"
+        }
+      ],
+      "bindings": {
+        "S": {
+          "file": "chunk-n4qghq20.js",
+          "name": "S",
+          "exported": "S"
+        },
+        "c": {
+          "file": "chunk-n4qghq20.js",
+          "name": "c",
+          "exported": "c"
+        },
+        "pS": {
+          "file": "chunk-c9me9cp7.js",
+          "name": "pS",
+          "exported": "pS"
+        },
+        "i": {
+          "file": "chunk-6hnyhakg.js",
+          "name": "i",
+          "exported": "i"
+        },
+        "kx": {
+          "file": "chunk-nankzm0s.js",
+          "name": "kx",
+          "exported": "kx"
+        },
+        "Ae": {
+          "file": "chunk-nankzm0s.js",
+          "name": "Ae",
+          "exported": "Ae"
+        },
+        "le": {
+          "file": "chunk-nankzm0s.js",
+          "name": "le",
+          "exported": "le"
+        },
+        "oo": {
+          "file": "chunk-zacgfc38.js",
+          "name": "oo",
+          "exported": "oo"
+        },
+        "SS": {
+          "file": "chunk-09m4fzsj.js",
+          "name": "SS",
+          "exported": "SS"
+        },
+        "yde": {
+          "file": "chunk-09m4fzsj.js",
+          "name": "yde",
+          "exported": "yde"
+        },
+        "Iq": {
+          "file": "chunk-09m4fzsj.js",
+          "name": "Iq",
+          "exported": "Iq"
+        },
+        "Z5e": {
+          "file": "chunk-09m4fzsj.js",
+          "name": "Z5e",
+          "exported": "Z5e"
+        },
+        "op": {
+          "file": "chunk-b5kmgz2n.js",
+          "name": "op",
+          "exported": "op"
+        },
+        "$C": {
+          "file": "chunk-eh4x73e7.js",
+          "name": "$C",
+          "exported": "$C"
+        },
+        "sMn": {
+          "file": "chunk-1mj5vjep.js",
+          "name": "sMn",
+          "exported": "sMn"
+        },
+        "iMn": {
+          "file": "chunk-1mj5vjep.js",
+          "name": "iMn",
+          "exported": "iMn"
+        },
+        "oRt": {
+          "file": "chunk-1mj5vjep.js",
+          "name": "oRt",
+          "exported": "oRt"
+        },
+        "aMn": {
+          "file": "chunk-1mj5vjep.js",
+          "name": "aMn",
+          "exported": "aMn"
+        },
+        "sRt": {
+          "file": "chunk-1mj5vjep.js",
+          "name": "sRt",
+          "exported": "sRt"
+        },
+        "lMn": {
+          "file": "chunk-1mj5vjep.js",
+          "name": "lMn",
+          "exported": "lMn"
+        },
+        "cMn": {
+          "file": "chunk-1mj5vjep.js",
+          "name": "cMn",
+          "exported": "cMn"
+        },
+        "iRt": {
+          "file": "chunk-1mj5vjep.js",
+          "name": "iRt",
+          "exported": "iRt"
+        },
+        "xne": {
+          "file": "chunk-mphp7acd.js",
+          "name": "xne",
+          "exported": "xne"
+        },
+        "A": {
+          "file": "chunk-1y575bx8.js",
+          "name": "A",
+          "exported": "A"
+        },
+        "g": {
+          "file": "chunk-1y575bx8.js",
+          "name": "g",
+          "exported": "g"
+        },
+        "M": {
+          "file": "chunk-1y575bx8.js",
+          "name": "M",
+          "exported": "M"
+        },
+        "w": {
+          "file": "chunk-bgj860b4.js",
+          "name": "w",
+          "exported": "w"
+        },
+        "s": {
+          "file": "chunk-jkt292h5.js",
+          "name": "s",
+          "exported": "s"
+        },
+        "n": {
+          "file": "chunk-jkt292h5.js",
+          "name": "n",
+          "exported": "n"
+        },
+        "It": {
+          "file": "chunk-jkt292h5.js",
+          "name": "It",
+          "exported": "It"
+        },
+        "ya": {
+          "file": "chunk-jkt292h5.js",
+          "name": "ya",
+          "exported": "ya"
+        },
+        "Te": {
+          "file": "chunk-038c023k.js",
+          "name": "Te",
+          "exported": "Te"
+        },
+        "ha": {
+          "file": "chunk-6zne1pwx.js",
+          "name": "ha",
+          "exported": "ha"
+        },
+        "es": {
+          "file": "chunk-6zne1pwx.js",
+          "name": "es",
+          "exported": "es"
+        },
+        "Ci": {
+          "file": "chunk-6zne1pwx.js",
+          "name": "Ci",
+          "exported": "Ci"
+        },
+        "$e": {
+          "file": "chunk-6zne1pwx.js",
+          "name": "$e",
+          "exported": "$e"
+        },
+        "ua": {
+          "file": "chunk-ynchm1e0.js",
+          "name": "ua",
+          "exported": "ua"
+        },
+        "he": {
+          "file": "chunk-0smna178.js",
+          "name": "he",
+          "exported": "he"
+        },
+        "aAt": {
+          "file": "chunk-f3vd025c.js",
+          "name": "aAt",
+          "exported": "aAt"
+        },
+        "Nee": {
+          "file": "chunk-g9h7a1nc.js",
+          "name": "Nee",
+          "exported": "Nee"
+        },
+        "al": {
+          "file": "chunk-dha6f9pr.js",
+          "name": "al",
+          "exported": "al"
+        },
+        "hm": {
+          "file": "chunk-98g4347z.js",
+          "name": "hm",
+          "exported": "hm"
+        },
+        "K": {
+          "file": "chunk-ysm7k028.js",
+          "name": "K",
+          "exported": "K"
+        },
+        "e": {
+          "file": "chunk-ysm7k028.js",
+          "name": "e",
+          "exported": "e"
+        },
+        "r": {
+          "file": "chunk-ysm7k028.js",
+          "name": "r",
+          "exported": "r"
+        },
+        "b": {
+          "file": "chunk-870yz02b.js",
+          "name": "b",
+          "exported": "b"
+        }
+      }
+    },
+    {
+      "file": "chunk-9z79mp7p.js",
+      "moduleSha256": "c44b82789b2b1e3b966346654ce3453b70dcbc8c217e57d3edecf423cb1c2ae2",
+      "rows": [
+        {
+          "names": [
+            "m"
+          ],
+          "start": 12500,
+          "end": 13382,
+          "source": "m=async(o,r,t)=>{let a=t?`/${t}`:\"/ultrareview\",{scopeArgs:s,applyFixes:n,postReview:i}=oRt(o),e=await TMe(s,{confirm:!0,singlePass:!0,withholdOverageConsent:!0,applyFixes:n,postReview:i===!0,overageConfirmed:r.isUltrareviewOverageConfirmed(),markOverageConfirmed:()=>r.markUltrareviewOverageConfirmed(),context:r,invocation:a});switch(e.status){case\"launched\":return{type:\"query\",value:e.message,prompt:iRt(n)};case\"needs-confirm\":{let l=yd()?\"Run /ultrareview to confirm and launch the cloud review.\":'Run \"claude ultrareview\" from your terminal to consent and launch, or use /ultrareview in an interactive Claude Code session.';return{type:\"text\",value:`${e.body} ${a} can't show the billing confirmation in this session. ${l}`}}case\"blocked\":return{type:\"text\",value:e.actionUrl?`${e.message}\n  \\u2192 ${e.actionUrl}`:e.message};case\"error\":return{type:\"text\",value:e.message}}}",
+          "variable": true,
+          "moduleSha256": "c44b82789b2b1e3b966346654ce3453b70dcbc8c217e57d3edecf423cb1c2ae2",
+          "sha256": "405a12c1abc6a1419cf99ca0f038a44937693c8745fb5ac39da125c46e0a9752"
+        }
+      ],
+      "bindings": {
+        "yd": {
+          "file": "chunk-0a47xg8f.js",
+          "name": "yd",
+          "exported": "yd"
+        },
+        "oRt": {
+          "file": "chunk-1mj5vjep.js",
+          "name": "oRt",
+          "exported": "oRt"
+        },
+        "iRt": {
+          "file": "chunk-1mj5vjep.js",
+          "name": "iRt",
+          "exported": "iRt"
+        },
+        "TMe": {
+          "file": "chunk-1mj5vjep.js",
+          "name": "TMe",
+          "exported": "TMe"
+        }
+      }
+    }
+  ],
+  "adaptations": "Only fixed named-import transportation. Complete bodies unchanged; no backend, Query/session/credentials/task registry constructed."
+}

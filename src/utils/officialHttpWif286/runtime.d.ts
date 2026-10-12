@@ -1,0 +1,7 @@
+export type HttpWifCredentials = { extraHeaders: Record<string,string>; baseURL?: string; provider: (options?: {forceRefresh:true})=>Promise<{token:string;expiresAt:number|null}> }
+export type HttpWif286 = { getWIFTokenCache: () => Promise<{getToken():Promise<string>} | null>; getWIFCredentials: () => Promise<HttpWifCredentials | null>; resetWIFCredentialState: () => void; invalidateWIFToken: (token?:string) => Promise<void>; getResolvedWIFBaseUrlSnapshot: () => string | null | undefined; isWIFTransientExchangeError: (error: unknown) => boolean }
+export declare function createHttpWif286(): HttpWif286
+export declare function getWifAttribution286(): {kb(): 'profile-explicit' | 'profile-implicit' | 'env-quad' | null; MSe(dir:string): string; SM(): string | null; V2t(): void; XUe(): {organizationUuid?:string; organizationName?:string; accountEmail?:string; workspaceId?:string; workspaceName?:string} | undefined; Yzr(dir:string): string; I6o(): boolean; q2t(): boolean; H6o(): boolean; O6o(value:boolean): void; FXe(): 'user_oauth' | 'oidc_federation' | null; $Xe(): string | undefined; readProtectionState287(): {profileStoreDenyPaths:{filled:boolean;value?:{dirs:string[];files:string[]}|null};primedFiles?:Map<string,string|null>}}
+/** Original j() context shares the existing secure-storage execution host. */
+export declare function getOAuthResetExecutionContext286(): any
+export declare function withWifCredentialLock286<T>(directory:string,operation:()=>Promise<T>,mode:'fail-closed'|'fail-open'):Promise<T>

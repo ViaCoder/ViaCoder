@@ -1,0 +1,6 @@
+import type {PastedContent} from '../../../../utils/config.js'
+import type {ImagePasteMetadata287} from '../../../CustomSelect/officialImageConsumer287/native.js'
+export type AskImages287=Record<string,Record<number,PastedContent>>
+export function createAskImageConsumer287(ports:{X:()=>boolean;PC(text:string|undefined,pasted:Record<number,PastedContent>|undefined):number;Wt:AskImages287;nU(setter:unknown,key:string):unknown;qt:unknown;Sme(content:PastedContent,setter:unknown):unknown;bme(content:PastedContent,setter:unknown):unknown;Yt:import('react').Dispatch<import('react').SetStateAction<AskImages287>>}):{No(question:string,base64:string,metadata?:ImagePasteMetadata287):void;Uo(question:string,imageId:number):void|false}
+
+export function createAskQuestionSelection287(ports:{v:()=>boolean;bn:{current:{question:string;value:string}|null};gn:string;Ne:(question:string,updates:Partial<import('../use-multiple-choice-state.js').QuestionState>,multi:boolean)=>void;D:{multiSelect?:boolean};_e:Record<string,import('../use-multiple-choice-state.js').QuestionState>;Ve:(question:string,answer:string[],textInput:undefined,advance:boolean)=>void}):{inputChanged(value:string):void|false;multiChanged(values:string[]):void|false}

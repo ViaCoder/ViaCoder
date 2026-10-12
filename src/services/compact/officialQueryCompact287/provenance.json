@@ -1,0 +1,157 @@
+{
+  "version": "2.1.287",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "moduleSha256": "03ec7fc7d8b2fcac6ab6f740bf667791aab768677052f0761732ea2e943e76f5",
+  "offsetUnit": "UTF-16 end-exclusive",
+  "scope": "bounded complete original LI caller stages; stateless ABI locals, no copy of LI/refusal/retry engine",
+  "rows": [
+    {
+      "name": "observerLifetime",
+      "file": "chunk-w8a1w7ad.js",
+      "start": 111345,
+      "end": 111425,
+      "sha256": "0432ec75dcf3e924c483c4e3fa537256295ce7e61d7bee2f4c0976c5fd4c43c7",
+      "source": "vs=St&&xc()&&b.startsWith(\"repl_main_thread\")&&!f.agentId?$i(()=>no(f,b)):void 0"
+    },
+    {
+      "name": "markTurnActive",
+      "file": "chunk-w8a1w7ad.js",
+      "start": 111426,
+      "end": 111704,
+      "sha256": "846fd5ee99c520a9a091c435c20d0ebac9c2de23c9e252306b1cd9b260a37636",
+      "source": "if(St&&vs){let h=w.findLast((v)=>v.type===\"user\"&&!v.isMeta&&typeof v.message.content===\"string\");St().markTurnActive(go(f),of(),{userText:h?.type===\"user\"&&typeof h.message.content===\"string\"&&!KM(h.message.content)?h.message.content:void 0,isTurnStart:N.transition===void 0})}"
+    },
+    {
+      "name": "disposable",
+      "file": "chunk-w8a1w7ad.js",
+      "start": 39932,
+      "end": 40040,
+      "sha256": "c44581013e3daf7ad2205e5a5bf125affc05171a7f393ced9eb537320346d0ad",
+      "source": "function $i(e){let o=!0;return{disarm(){o=!1},[Symbol.dispose](){if(!o)return;o=!1;try{e()}catch(n){d(n)}}}}"
+    },
+    {
+      "name": "stickyBetas",
+      "file": "chunk-w8a1w7ad.js",
+      "start": 109083,
+      "end": 109164,
+      "sha256": "bedd9a5f04d82d1f0082f152dd5f51f27c94c5d51dd810d50f61b3c1b987ced7",
+      "source": "lt=e.stickyBetas??(po===\"main\"||po===void 0?void 0:po===\"subagent\"?EY():mR(Ei()))"
+    },
+    {
+      "name": "fork",
+      "file": "chunk-w8a1w7ad.js",
+      "start": 111276,
+      "end": 111338,
+      "sha256": "926b176403bfe4b12ed8d3277ebb4bd72420c2c1ad547c5295ac601176d3b99c",
+      "source": "ur=f.precomputeSourceKey!==void 0&&Ve?.compacted!==!0&&!Lan(b)"
+    },
+    {
+      "name": "estimate",
+      "file": "chunk-w8a1w7ad.js",
+      "start": 115591,
+      "end": 116188,
+      "source": "if(UIr({autocompactRan:ws,hasAttemptedReactiveCompact:No,lastTransitionReason:N.transition?.reason,isPreFirstCompactFork:ur,querySource:b,contextTokens:jm(w,qt.bytesPerToken)-In,messagesCounted:w,facts:qt,autoCompactWindow:f.options.autoCompactWindow}))if(po===\"subagent\")FIr(f.session.precompute,f.agentId,\"subagent_estimate\",rs(b));else BIr({querySource:b,messages:w,facts:qt,cacheSafeParams:{systemPrompt:u,userContext:s,systemContext:g,toolUseContext:f,forkContextMessages:w,advisorModel:f.getAppState().advisorModel,stickyBetas:lt,agentCacheTtlOverride:W},...b===\"sdk\"&&{promptScan:EOr(w)}});",
+      "sha256": "2aae9e1b95ed86d4f02a6ba5b1721f6dedda33e0aeee8bd27864237404bda05e"
+    },
+    {
+      "name": "response",
+      "file": "chunk-w8a1w7ad.js",
+      "start": 149004,
+      "end": 149786,
+      "source": "if(UIr({autocompactRan:ws,hasAttemptedReactiveCompact:No,lastTransitionReason:N.transition?.reason,isPreFirstCompactFork:ur,querySource:b,contextTokens:to,messagesCounted:Q,facts:qt,autoCompactWindow:f.options.autoCompactWindow}))if(po===\"subagent\"&&vt.length===0)FIr(f.session.precompute,f.agentId,\"subagent_final_turn\",rs(b));else{let wt=Nue(be),fo=wt.input_tokens+wt.cache_creation_input_tokens+wt.cache_read_input_tokens,yt=jm(w,qt.bytesPerToken)-In;BIr({querySource:b,messages:[...w,...Q],facts:qt,cacheSafeParams:{systemPrompt:u,userContext:s,systemContext:g,toolUseContext:f,forkContextMessages:w,advisorModel:f.getAppState().advisorModel,stickyBetas:lt,agentCacheTtlOverride:W},armTrigger:\"api_response\",estimateGapTokens:fo-yt,...b===\"sdk\"&&{promptScan:EOr([...w,...Q])}})}",
+      "sha256": "fdb4df2ecbb823199ef01fb2768fe115e7cf4a84251cae5be87b0e1221cbd665"
+    },
+    {
+      "name": "retryGate",
+      "file": "chunk-w8a1w7ad.js",
+      "start": 155888,
+      "end": 156097,
+      "sha256": "a6b9cc62c6b8cb0ee282cb2e9dc9f0b4aa93be78b6d98422d0531e256e12590e",
+      "source": "let ue=v&&No&&on===\"available\"&&N.transition?.reason===\"reactive_compact_retry\",ne=No&&!ue,J=ue?{action:\"proceed\",consecutiveRapidRefills:Ve?.consecutiveRapidRefills??0}:kjn(Ve),{consecutiveRapidRefills:Me}=J;"
+    },
+    {
+      "name": "retryDeeper",
+      "file": "chunk-w8a1w7ad.js",
+      "start": 158655,
+      "end": 158735,
+      "sha256": "042d8d0d8f3c81bd609694fc5fbbdfcd5c0c9f991e6fe87a7f311ca21bf1cba4",
+      "source": "let Kt=ue?\"spent\":At===void 0&&v&&on===\"none\"&&FDt(ut).length>=3?\"available\":on;"
+    },
+    {
+      "name": "retryState",
+      "file": "chunk-w8a1w7ad.js",
+      "start": 158735,
+      "end": 158973,
+      "sha256": "3a584b7544eab273975384b132e7265a29f69c549c07fd99daa4e9e095249db1",
+      "source": "N={guards:{...Ae,hasAttemptedReactiveCompact:At===void 0,reactiveCompactDeeperPass:Kt},messages:ut,toolUseContext:f,compactTracking:Ve,resumeIncompleteThinking:qe,transition:{reason:At?\"precomputed_compact_swap\":\"reactive_compact_retry\"}}"
+    },
+    {
+      "name": "impossibleConversation",
+      "file": "chunk-w8a1w7ad.js",
+      "start": 156670,
+      "end": 157333,
+      "sha256": "962a3f7bdaaa3c4e5cbf9d5fc18d5de2a87387ac017af03f27a507c8b317b34d",
+      "source": "if(h&&OIr({hasAttempted:ne,querySource:b,aborted:f.abortController.signal.aborted})&&Uxo(w)){let ot=FDt(w),ut=ot.length,Kt=H?\"image_error\":\"prompt_too_long\",{actualTokens:Zt,limitTokens:Gn}=Hlt(h.errorDetails??\"\"),Hn=ug(ot.flat()),Sn=Zt!==void 0?Math.max(0,Zt-Hn):void 0;i(\"tengu_ptl_surfaced_to_user\",{reason:c(Kt),querySource:rs(b),wasGatedByPriorAttempt:ne,deeperPass:c(on),reactiveUnsupported:!C6(),precomputedKind:S(\"not_consulted\"),compactionImpossible:!0,totalGroups:ut,overheadTokensEstimate:Sn});let bn=Kt===\"prompt_too_long\"?Fxr(h,nko({actualTokens:Zt,limitTokens:Gn,conversationTokensEstimate:Hn}),I):h;return yield bn,pFe(bn,f),uo(f,b,bn),{reason:Kt}}"
+    },
+    {
+      "name": "surfaceFailure",
+      "file": "chunk-w8a1w7ad.js",
+      "start": 159460,
+      "end": 159513,
+      "sha256": "998b332c17324f54693802189877857c6a7be21f45086511a032b2f8d6b890dd",
+      "source": "let hn=v?IIr(Uo):void 0,Co=hn!==void 0?Fxr(h,hn,I):h;"
+    },
+    {
+      "name": "automaticCacheSafeParams",
+      "file": "chunk-w8a1w7ad.js",
+      "start": 113142,
+      "end": 113308,
+      "sha256": "fb066b1498b91f601ff19f44631ddd326d48b4b609424c768df97cfbfb843eda",
+      "source": "{systemPrompt:u,userContext:s,systemContext:g,toolUseContext:f,forkContextMessages:w,advisorModel:f.getAppState().advisorModel,stickyBetas:lt,agentCacheTtlOverride:W}"
+    },
+    {
+      "name": "reactiveCacheSafeParams",
+      "file": "chunk-w8a1w7ad.js",
+      "start": 157770,
+      "end": 157937,
+      "sha256": "5da0b9133e1cca9f8256ac035b70240c35fca0a58e24f58e349928d1dcc84b1a",
+      "source": "{systemPrompt:u,userContext:s,systemContext:g,toolUseContext:ot,forkContextMessages:w,advisorModel:f.getAppState().advisorModel,stickyBetas:lt,agentCacheTtlOverride:W}"
+    }
+  ],
+  "ports": [
+    "Lan",
+    "UIr",
+    "BIr",
+    "FIr",
+    "rs",
+    "jm",
+    "EOr",
+    "Nue",
+    "kjn",
+    "FDt",
+    "St",
+    "xc",
+    "go",
+    "no",
+    "of",
+    "KM",
+    "d",
+    "EY",
+    "mR",
+    "Ei",
+    "OIr",
+    "Uxo",
+    "Hlt",
+    "ug",
+    "i",
+    "c",
+    "C6",
+    "S",
+    "Fxr",
+    "nko",
+    "pFe",
+    "uo",
+    "IIr"
+  ],
+  "nativeSha256": "4dfd84b53fc56596fc6e609ce677253ece06a9902fbf9f28638f3fb5a5225357"
+}

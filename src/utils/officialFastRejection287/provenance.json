@@ -1,0 +1,307 @@
+{
+  "bindings": {
+    "Xl": "one original r_ at getExecutionSession287().host.fastModeRuntime287; Proxy read AND write forwarded; no business fields on adapter",
+    "Be": "getModelBehaviorName287 (identity:true) actual canonical owner",
+    "JU": "canonical modelSelection.refusalFallbackModelLatch()",
+    "Kc": "canonical modelSelection.mainLoopModelOverride()",
+    "xt": "actual @anthropic-ai/sdk/error APIError",
+    "Rt": "existing parseUserSpecifiedModel",
+    "Py": "existing getDefaultMainLoopModelSetting",
+    "Ft": "executionRecommendationGates287.Ft() (lazy)",
+    "Ry": "existing isFastModeSupportedByModel, explicit local Opus4-6 C",
+    "To": "existing isFastModeEnabled",
+    "a8": "existing getFastModeUnavailableReason, unchanged qualification body",
+    "tt": "existing getInitialSettings",
+    "ge": "existing getSettingsForSource policySettings/flagSettings",
+    "pr": "canonical surfaceCapabilities.caps().remote; whole original Ia retained",
+    "i": "existing logEvent disabled analytics owner; no transport restored",
+    "t": "existing logForDebugging",
+    "d": "existing logForDebugging diagnostic",
+    "Z": "identity diagnostic adapter",
+    "c": "existing closed-enum identity adapter"
+  },
+  "version": "2.1.287",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16 code units; end-exclusive",
+  "declarations": [
+    {
+      "module": "chunk-4s38z9x2.js",
+      "moduleSha256": "eb46628147f83403bbcd57ca88b3370e05c6631bf027a80117844f770b276b2d",
+      "name": "s",
+      "start": 1098,
+      "end": 1153,
+      "sha256": "8b79e9ad51e95ede56e4385a196d4187b05a3d78fde643acd8c68658ff8e8521",
+      "source": "s=globalThis.process?.getBuiltinModule?.(\"async_hooks\")"
+    },
+    {
+      "module": "chunk-4s38z9x2.js",
+      "moduleSha256": "eb46628147f83403bbcd57ca88b3370e05c6631bf027a80117844f770b276b2d",
+      "name": "wKt",
+      "start": 1154,
+      "end": 1195,
+      "sha256": "d871ff458e10c6c5509c5b70f7944fba032e2a42697e09aec182aaaac06d05b4",
+      "source": "wKt=s?(e)=>s.AsyncResource.bind(e):(e)=>e"
+    },
+    {
+      "module": "chunk-4s38z9x2.js",
+      "moduleSha256": "eb46628147f83403bbcd57ca88b3370e05c6631bf027a80117844f770b276b2d",
+      "name": "Me",
+      "start": 1196,
+      "end": 1457,
+      "sha256": "08c491676ef2243b475f885c45f1163b2f0abed6075a2e5fa3a32cdd2afb308a",
+      "source": "function Me(){let e=new Set;return{subscribe(n){let r=wKt(n);return e.add(r),()=>{e.delete(r)}},emit(...n){let r;for(let o of e)try{o(...n)}catch(i){(r??=[]).push(i)}if(r)throw r.length===1?r[0]:AggregateError(r,\"Signal listener(s) threw\")},clear(){e.clear()}}}"
+    },
+    {
+      "module": "chunk-nankzm0s.js",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "name": "r_",
+      "start": 260763,
+      "end": 262147,
+      "sha256": "0dac353c88dfd5bf044c772a0877c478ad0ef853696401d0e6103f4ccdeef747",
+      "source": "class r_{runtimeState={status:\"active\"};hasLoggedCooldownExpiry=!1;creditsExhaustedNotifiedThisTurn=!1;orgStatus={status:\"pending\"};lastPrefetchAt=0;inflightPrefetch=null;cooldownTriggered=Me();cooldownExpired=Me();overageRejection=Me();orgFastModeChange=Me();fastRejectedFallbackModels=new Set;everFastRejectedModels=new Set;fallbackModelFastRejected=Me();fastRejectedFallbackModelsChanged=Me();reset(){this.runtimeState={status:\"active\"},this.hasLoggedCooldownExpiry=!1,this.creditsExhaustedNotifiedThisTurn=!1,this.orgStatus={status:\"pending\"},this.fastRejectedFallbackModels.clear(),this.everFastRejectedModels.clear(),this.lastPrefetchAt=0,this.inflightPrefetch=null}enterCooldown(e,n){this.runtimeState={status:\"cooldown\",resetAt:e,reason:n},this.hasLoggedCooldownExpiry=!1}clearCooldown(){this.runtimeState={status:\"active\"}}markCooldownExpiryLogged(){this.hasLoggedCooldownExpiry=!0}replaceOrgStatus(e){let n=this.orgStatus;return this.orgStatus=e,n}claimCreditsExhaustedNotice(){if(this.creditsExhaustedNotifiedThisTurn)return!1;return this.creditsExhaustedNotifiedThisTurn=!0,!0}rearmCreditsExhaustedNotice(){this.creditsExhaustedNotifiedThisTurn=!1}beginPrefetchWindow(e,n){if(e-this.lastPrefetchAt<n)return!1;return this.lastPrefetchAt=e,!0}trackInflightPrefetch(e){this.inflightPrefetch=e}clearInflightPrefetch(e){if(this.inflightPrefetch===e)this.inflightPrefetch=null}}"
+    },
+    {
+      "module": "chunk-aer2x4hk.js",
+      "moduleSha256": "2329bc1120dc1b6eac6b5d5d0adf1f4af2aacebcc960b4716b5a50a1ca5a9a02",
+      "name": "Ct",
+      "start": 1338,
+      "end": 1385,
+      "sha256": "4d004cd2974adb8190cb452c8cad994ce692a3683f35f0ad16e5b39ebc8aadc8",
+      "source": "function Ct(e){return e.replace(/\\[1m\\]$/i,\"\")}"
+    },
+    {
+      "module": "chunk-nankzm0s.js",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "name": "Jm",
+      "start": 363916,
+      "end": 363962,
+      "sha256": "cb3a5f07e4eca1361215319c7a448cafc7466e6bc44558a418db9536b3fd3ebf",
+      "source": "function Jm(e){return Ct(Be(e,{identity:!0}))}"
+    },
+    {
+      "module": "chunk-nankzm0s.js",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "name": "mVo",
+      "start": 263211,
+      "end": 263527,
+      "sha256": "6481270d31791dd375fcc035a4354d94e78d1aa97a56b32fdf5ef1070c2a5b10",
+      "source": "function mVo(e){let n=Jm(e);if(Xl.everFastRejectedModels.add(n),Xl.fastRejectedFallbackModels.has(n))return;Xl.fastRejectedFallbackModels.add(n),t(`Fast mode rejected for fallback model ${e}; using standard speed for it this session`),Xl.fallbackModelFastRejected.emit(e),Xl.fastRejectedFallbackModelsChanged.emit()}"
+    },
+    {
+      "module": "chunk-nankzm0s.js",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "name": "$7e",
+      "start": 263527,
+      "end": 263673,
+      "sha256": "81d528d36a6464673d3f5e86bbf770f7771d1da6157c37d4b477c4bf63c13b23",
+      "source": "function $7e(){if(Xl.fastRejectedFallbackModels.size===0)return;Xl.fastRejectedFallbackModels.clear(),Xl.fastRejectedFallbackModelsChanged.emit()}"
+    },
+    {
+      "module": "chunk-nankzm0s.js",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "name": "zPe",
+      "start": 263673,
+      "end": 263746,
+      "sha256": "cab1844028753853f1a9791393df4774d4e7dc14060040f80d33e0423eaa24b5",
+      "source": "function zPe(e){return Xl.fastRejectedFallbackModelsChanged.subscribe(e)}"
+    },
+    {
+      "module": "chunk-nankzm0s.js",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "name": "sWt",
+      "start": 263746,
+      "end": 263842,
+      "sha256": "9143f49f179156f8306940017199182d363d21e5b149096ebd84019b3eebd086",
+      "source": "function sWt(e){try{return Xl.fastRejectedFallbackModels.has(Jm(e))}catch(n){return d(Z(n)),!1}}"
+    },
+    {
+      "module": "chunk-nankzm0s.js",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "name": "QJn",
+      "start": 263914,
+      "end": 264052,
+      "sha256": "c9d12409c73eb40e524a547fc8d9eb2af7529bbb6e24f8f8254a048f54583260",
+      "source": "function QJn(e){try{let n=Jm(e);return Xl.fastRejectedFallbackModels.has(n)||Xl.everFastRejectedModels.has(n)}catch(n){return d(Z(n)),!1}}"
+    },
+    {
+      "module": "chunk-nankzm0s.js",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "name": "$yt",
+      "start": 263842,
+      "end": 263914,
+      "sha256": "40bb463d3671c423e7a08923ba0442393e4f29d45b2c91ea57d9efecb22efe8a",
+      "source": "function $yt(e){try{return sWt(Rt(e??Py()))}catch(n){return d(Z(n)),!1}}"
+    },
+    {
+      "module": "chunk-nankzm0s.js",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "name": "kbe",
+      "start": 264052,
+      "end": 264089,
+      "sha256": "8c7b4dd7dd99a223a2048878fbe6b097f7c257e09a1531b322e78f8691ef482b",
+      "source": "function kbe(e,n){return!!e&&!$yt(n)}"
+    },
+    {
+      "module": "chunk-nankzm0s.js",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "name": "fU",
+      "start": 262834,
+      "end": 262867,
+      "sha256": "fd6586a846c1062fd4e1932c7cb384d4677fb63da30f1449dfc428be1430bac8",
+      "source": "function fU(){Xl.clearCooldown()}"
+    },
+    {
+      "module": "chunk-nankzm0s.js",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "name": "Lk",
+      "start": 260513,
+      "end": 260615,
+      "sha256": "59b75e5d736c2d488d72126424b8d1eb7afe6629191df8121a18e5478b5e2815",
+      "source": "function Lk(e,n){if(Ft()){if(e===null)return!!n;return!!n&&Ry(e)}if(!Ry(e))return!1;return!!n||Cbn(e)}"
+    },
+    {
+      "module": "chunk-nankzm0s.js",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "name": "Nk",
+      "start": 260615,
+      "end": 260763,
+      "sha256": "1105fd34c7799ef4128e2fb632c0e88da9249e572de932657679475d83017375",
+      "source": "function Nk(e,n){if(!!e===n)return;i(\"tengu_fast_mode_toggled\",{enabled:n,source:c(n?\"model_switch_restore\":\"model_switch_downgrade\"),remote:Ia()})}"
+    },
+    {
+      "module": "chunk-nankzm0s.js",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "name": "Cbn",
+      "start": 259669,
+      "end": 259758,
+      "sha256": "e6d88958856ed17e3803186ecd86fdd987eae8335c14bed7a4429116ab274852",
+      "source": "function Cbn(e){if(!To())return!1;if(!tT(e))return!1;if(!Ry(e))return!1;return Abn(tt())}"
+    },
+    {
+      "module": "chunk-nankzm0s.js",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "name": "Abn",
+      "start": 259758,
+      "end": 259945,
+      "sha256": "fc704740582daf4ca31f6760e4a3aea8fb3d8f8605567f1fa92770be4f85d028",
+      "source": "function Abn(e){if(e.fastMode!==!0)return!1;if(!e.fastModePerSessionOptIn)return!0;if(ge(\"policySettings\")?.fastModePerSessionOptIn===!0)return!1;return ge(\"flagSettings\")?.fastMode===!0}"
+    },
+    {
+      "module": "chunk-nankzm0s.js",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "name": "tT",
+      "start": 257312,
+      "end": 257365,
+      "sha256": "70a3071d73417d847af139faba8bb434c82be4b0752a4466fd2d848395eba188",
+      "source": "function tT(e){if(!To())return!1;return a8(e)===null}"
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "QDe",
+      "start": 2030049,
+      "end": 2030259,
+      "sha256": "de30cf53df2f8d399738b6f1da7bc003ca93444ab36775e9c5689d6e06483de8",
+      "source": "function QDe(e,n){if(!(e instanceof xt)||e.status!==400)return!1;try{let r=e.message?.match(/'([^']+)' does not support the `speed` parameter/)?.[1];return r!==void 0&&Jm(r)===Jm(n)}catch(r){return d(Z(r)),!1}}"
+    },
+    {
+      "module": "chunk-2ynta9xc.js",
+      "moduleSha256": "f3e239a22bc356ef2664a104850f816b164d4874821637ec72f203620c439e1d",
+      "name": "Ia",
+      "start": 40014,
+      "end": 40090,
+      "sha256": "45566818d242dc08c7bcb30d1ac9647849c06a360b9b1f787340b8d2de731fa8",
+      "source": "function Ia(){let e=pr();return e?.caps?.controlChannel===!0&&!e.viewerOnly}"
+    },
+    {
+      "module": "chunk-09m4fzsj.js",
+      "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+      "name": "c$e",
+      "start": 584632,
+      "end": 584779,
+      "sha256": "f30672f549899e82e074fea8b0797da7299c597396c5643822ed3553e501e73d",
+      "source": "function c$e(){let e=JU();if(e===void 0||Kc()!==e.fallbackModel)return;return{previousModel:e.previousAppStateModel,fallbackModel:e.fallbackModel}}"
+    },
+    {
+      "module": "chunk-09m4fzsj.js",
+      "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+      "name": "ZOo",
+      "start": 584779,
+      "end": 585011,
+      "sha256": "c4ab4cb27479a3ba5023f42e70cb03471af471ecae8300ce541a1169a6ee092c",
+      "source": "function ZOo({requestModel:e,turnRefusalOverride:n,chainStepModel:r,userModel:s}){try{let h=Jm(e),b=Jm(s)!==h&&[n,r].some((R)=>R!==void 0&&Jm(R)===h),w=c$e();return b||w!==void 0&&Jm(w.fallbackModel)===h}catch(h){return d(Z(h)),!1}}"
+    }
+  ],
+  "evidence": [
+    {
+      "module": "chunk-nankzm0s.js",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "name": "Xl original global initialization; bound to actual canonical-host r_ instead",
+      "start": 262151,
+      "end": 262179,
+      "sha256": "98d5c7241d9db3475543f0919aa0b03fecbb6ad18318d2e6cf020b9aab6c95de",
+      "source": "Xl=ct(new r_,(e)=>e.reset())"
+    },
+    {
+      "module": "chunk-x954y317.js",
+      "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+      "name": "ct original public identity shim",
+      "start": 5356,
+      "end": 5382,
+      "sha256": "5da0f7703a355ff03a7692122a7882ea1749f0801ed8f38d6b64ce727d2cd856",
+      "source": "function ct(t,e){return t}"
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "iae qualified speed rejection exact caller",
+      "start": 2023543,
+      "end": 2023662,
+      "sha256": "35354dd9b8cc30ba8ed51eee802eec5695c06b8130dc147ebc65f5b88762ab93",
+      "source": "if(un&&QDe(Yt,h.model)&&(r.modelIsRefusalFallbackTarget||QJn(h.model))){if(mVo(h.model),h.fastMode=!1,Jn)jt--;continue}"
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "iae next-attempt sWt admission exact caller",
+      "start": 2017816,
+      "end": 2017864,
+      "sha256": "63e8d2cf1e37fb3f37eb1c89943d7f3a29b66991c34413553d656f403656b97a",
+      "source": "if(Ze=!1,h.fastMode&&sWt(h.model))h.fastMode=!1;"
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "omn request speed exact caller",
+      "start": 2092107,
+      "end": 2092194,
+      "sha256": "cf33931f59c2219690332210fa5759e993c7fe79d304462d670d54329cdfbfec",
+      "source": "if(To()&&he(()=>tT())&&!VPe()&&he(()=>Ry($t))&&!!Gn.fastMode&&!sWt(Gn.model))np=\"fast\";"
+    },
+    {
+      "module": "chunk-w8a1w7ad.js",
+      "moduleSha256": "03ec7fc7d8b2fcac6ab6f740bf667791aab768677052f0761732ea2e943e76f5",
+      "name": "runTurns ZOo Fast qualification input",
+      "start": 130195,
+      "end": 130316,
+      "sha256": "081e040460788936c2c774f3e377ba2e5038c38b8a225ac214d1834a3caee751",
+      "source": "modelIsRefusalFallbackTarget:ZOo({requestModel:de,turnRefusalOverride:Wt,chainStepModel:tt>0?Je[tt]:void 0,userModel:Qe})"
+    },
+    {
+      "module": "chunk-42psf9na.js",
+      "moduleSha256": "6c31f3e3b99f2b27b902eacb234a7891a50e24ada9a73af0c28ea2a87214181a",
+      "name": "Jxt full original Fast toggle caller, evidence only (existing command checks retained)",
+      "start": 2723,
+      "end": 3733,
+      "sha256": "7a2aeb8b46e03ffa1984b350f97b8610f3e8f9a9bc7468af444c45764ffb1b5f",
+      "source": "function Jxt(r,e,n,m=!0,f,u=Yxt){if(fU(),e)$7e();let S=()=>{if(m&&!Ce())return;RL({...ly()??{},fastMode:e})},g=()=>{if(kqe({fastMode:e},n),e){let s=!1,a=null;if(n((o)=>{let d=Yae(o);if(d===void 0)return o;if(!(\"unvetted\"in u)&&u.target!==d)return o;return B_(r,o,d,\"command\"),s=!0,a=d,{...o,mainLoopModel:d,mainLoopModelForSession:null}}),s&&YBe())Jp(a)}if(!m)if(!MF()&&YBe())Ki.notifyChange(\"flagSettings\");else Ro()};if(Ia()){S();let s=pr()?.sendControlRequest({subtype:\"apply_flag_settings\",settings:{fastMode:e?!0:null,...e&&{model:Roe()}}});if(!s)return g(),Promise.resolve(void 0);return s.then(()=>{g();return},(a)=>(t(`fast mode: workspace did not accept apply_flag_settings: ${l(a)}`,{level:\"error\"}),a instanceof IP?{kind:\"timeout\"}:{kind:\"refused\",reason:Ld(l(a))}))}if(e&&!(\"unvetted\"in u)){let s=!1;if(n((a)=>{let o=Yae(a);return s=o!==void 0&&o!==u.target,a}),s)return Promise.resolve({kind:\"stale\"})}if(S(),m)hn(\"userSettings\",{fastMode:e?!0:void 0},void 0,f);return g(),Promise.resolve(void 0)}"
+    }
+  ],
+  "adaptations": [
+    "Xl source ct identity/new r_ initialization attached once to getExecutionSession287().host.fastModeRuntime287; every existing runtime/org/prefetch/signal field uses that same owner",
+    "qualified predicate and mVo -> h.fastMode=false effects kept verbatim; loop continue remains at existing withRetry callsite; general retry/fallback/refusal policies not replaced",
+    "Jxt source clears transient fastRejectedFallbackModels only on enable; everFastRejectedModels persists"
+  ],
+  "telemetry": "Nk uses existing disabled analytics owner; no transport or consent/default changes",
+  "publicModelCompatibility": "Ry binds existing isFastModeSupportedByModel (local Opus4-6 C); original Ry 4-8/5 switch is not restored or claimed; a8 binds existing getFastModeUnavailableReason; Ft uses canonical executionRecommendationGates287"
+}

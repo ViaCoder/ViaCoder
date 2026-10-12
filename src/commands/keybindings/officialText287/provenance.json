@@ -1,0 +1,145 @@
+{
+  "version": "2.1.287",
+  "platform": "darwin-arm64",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "module": "chunk-tkbw54pj.js",
+  "moduleSha256": "9dc6c4fdd84e59ff524210815722bc2e87c93304af48a133e56326ed7e65a489",
+  "rangeConvention": "UTF-16 code units; end-exclusive",
+  "declarations": [
+    {
+      "name": "m",
+      "module": "chunk-tkbw54pj.js",
+      "moduleSha256": "9dc6c4fdd84e59ff524210815722bc2e87c93304af48a133e56326ed7e65a489",
+      "range": [
+        4699,
+        4933
+      ],
+      "sha256": "a8c52a1f2b26d16c19c0b0e8d08e832c8b2fa715da3d8099505fac67ced23ec0",
+      "source": "function m(s){let r=new Set(mRe.map((e)=>R1e(e.key)));return s.map((e)=>{let t={};for(let[n,o]of Object.entries(e.bindings))if(!r.has(R1e(n)))t[n]=o;return{context:e.context,bindings:t}}).filter((e)=>Object.keys(e.bindings).length>0)}"
+    },
+    {
+      "name": "a",
+      "module": "chunk-tkbw54pj.js",
+      "moduleSha256": "9dc6c4fdd84e59ff524210815722bc2e87c93304af48a133e56326ed7e65a489",
+      "range": [
+        4933,
+        5111
+      ],
+      "sha256": "629fdbf5e08ee96a101d8b6bd38d34def24ba1d439223c27526b2a79473d36f2",
+      "source": "function a(){let r={$schema:\"https://www.schemastore.org/claude-code-keybindings.json\",$docs:\"https://code.claude.com/docs/en/keybindings\",bindings:m(C0)};return _(r,null,2)+`\n`}"
+    },
+    {
+      "name": "K",
+      "module": "chunk-tkbw54pj.js",
+      "moduleSha256": "9dc6c4fdd84e59ff524210815722bc2e87c93304af48a133e56326ed7e65a489",
+      "range": [
+        5111,
+        5943
+      ],
+      "sha256": "784564221ad7bdc11a485872fca5b7a8e0388d6e81aafa812f656bfa9adb17e0",
+      "source": "async function K(s,r){if(!Vq())return{type:\"text\",value:\"Keybinding customization is disabled in this environment.\"};let e=i$t(),t=!1,n=r.storageV5;if(n){let i=await n.write(i1r,a(),{precondition:{type:\"ifAbsent\"}});if(!i.ok)if(i.error.code===\"AlreadyExists\")t=!0;else throw new P(`keybindings template write failed: ${it(i.error)}`,\"keybindings template write failed\")}else{await ae().mkdir(f(e));try{await c(e,a(),{encoding:\"utf-8\",flag:\"wx\"})}catch(i){if(E(i)===\"EEXIST\")t=!0;else throw i}}let o=await ate(e);if(o.error)return{type:\"text\",value:`${t?\"Opened\":\"Created\"} ${e}. ${o.error}`};let d=yr()?` (Safe mode: custom keybindings are disabled this session \\u2014 changes take effect after you ${Mg()}.)`:\"\";return{type:\"text\",value:t?`Opened ${e} in your editor.${d}`:`Created ${e} with template. Opened in your editor.${d}`}}"
+    }
+  ],
+  "imports": [
+    {
+      "name": "P",
+      "module": "chunk-c9me9cp7.js",
+      "imported": "P",
+      "kind": "canonical"
+    },
+    {
+      "name": "E",
+      "module": "chunk-c9me9cp7.js",
+      "imported": "E",
+      "kind": "canonical"
+    },
+    {
+      "name": "yr",
+      "module": "chunk-brnn4zwp.js",
+      "imported": "yr",
+      "kind": "canonical"
+    },
+    {
+      "name": "Mg",
+      "module": "chunk-brnn4zwp.js",
+      "imported": "Mg",
+      "kind": "canonical"
+    },
+    {
+      "name": "_",
+      "module": "chunk-q80zaav8.js",
+      "imported": "_",
+      "kind": "canonical"
+    },
+    {
+      "name": "ae",
+      "module": "chunk-q80zaav8.js",
+      "imported": "ae",
+      "kind": "canonical"
+    },
+    {
+      "name": "C0",
+      "module": "chunk-tf0wpqry.js",
+      "imported": "C0",
+      "kind": "canonical"
+    },
+    {
+      "name": "mRe",
+      "module": "chunk-tf0wpqry.js",
+      "imported": "mRe",
+      "kind": "canonical"
+    },
+    {
+      "name": "R1e",
+      "module": "chunk-tf0wpqry.js",
+      "imported": "R1e",
+      "kind": "canonical"
+    },
+    {
+      "name": "Vq",
+      "module": "chunk-tf0wpqry.js",
+      "imported": "Vq",
+      "kind": "canonical"
+    },
+    {
+      "name": "i$t",
+      "module": "chunk-tf0wpqry.js",
+      "imported": "i$t",
+      "kind": "canonical"
+    },
+    {
+      "name": "i1r",
+      "module": "chunk-tf0wpqry.js",
+      "imported": "i1r",
+      "kind": "canonical"
+    },
+    {
+      "name": "ate",
+      "module": "chunk-mbgqmt6p.js",
+      "imported": "ate",
+      "kind": "canonical"
+    },
+    {
+      "name": "it",
+      "module": "chunk-eetz002h.js",
+      "imported": "it",
+      "kind": "canonical"
+    },
+    {
+      "name": "c",
+      "module": "fs/promises",
+      "imported": "writeFile",
+      "kind": "builtin"
+    },
+    {
+      "name": "f",
+      "module": "path",
+      "imported": "dirname",
+      "kind": "builtin"
+    }
+  ],
+  "generatedSha256": "4114749317e539a666973edb4d29588733c5a018eed986ab352df1b46bb9381a",
+  "declarationSha256": "46f6395dc292baad4ef903723a48fdb6dff913a7806b310fb25b190c93760472",
+  "newStateOwners": 0,
+  "contract": "Complete original m/a/K. Defaults, reserved keys, rollout gate, fs/editor/error and key identity borrowed live from canonical owner. StorageV5 injected client write(i1r,a(),{precondition:{type:ifAbsent}}) preserved. No backend implementation, cache or new error class."
+}

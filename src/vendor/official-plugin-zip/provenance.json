@@ -1,0 +1,42 @@
+{
+  "version": "2.1.283",
+  "platform": "darwin-arm64",
+  "writer": {
+    "module": "chunk-zaywha1d.js",
+    "sha256": "41bfff2f84d91d7217905da220a6daa32730cd6df8a3614acddddc36d868c06d",
+    "output": "write.js",
+    "transformation": "none; entire module copied byte-for-byte"
+  },
+  "callers": {
+    "module": "chunk-wyjbafrm.js",
+    "sha256": "d768dbd60e9a07343bfb239ca0dbd56ce06b575e0ee046112bf8b51b5f5ede4b",
+    "evidence": [
+      {
+        "symbol": "Gq",
+        "sha256": "2bbe2c80fdbf31716bed465835cc361a490dd4c134c8ce3cece25b857e9b515d",
+        "declaration": "function Gq(){return a.CLAUDE_CODE_PLUGIN_USE_ZIP_CACHE}"
+      },
+      {
+        "symbol": "h7t",
+        "sha256": "b3dda52ccbc118ab2124cfcdc1c2529c2814b37631a193fc080e5e54d89ffe0f",
+        "declaration": "function h7t(){if(!Gq())return;let e=a.CLAUDE_CODE_PLUGIN_CACHE_DIR;return e?rd(e):void 0}"
+      },
+      {
+        "symbol": "Fan",
+        "sha256": "4e5334e356bbe2db3196d4ec3a945cb2b8d39ed13bd825bce4f1f4ce2c8536f7",
+        "declaration": "async function Fan(e){let n={};await s6e(e,\"\",n,new Set);let{zipSync:s}=await import(\"/$bunfs/root/chunk-zaywha1d.js\"),g=s(n,{level:6});return t(`Created ZIP from ${e}: ${Object.keys(n).length} files, ${g.length} bytes`),g}"
+      },
+      {
+        "symbol": "s6e",
+        "sha256": "02b64088abfafda931ea57bd2a409a713128848e35c31b77a5b2af26337fdf49",
+        "declaration": "async function s6e(e,n,r,s){let g=n?dw(e,n):e,h;try{h=await Man(g)}catch{return}try{let b=await Dan(g,{bigint:!0});if(b.dev!==0n||b.ino!==0n){let w=`${b.dev}:${b.ino}`;if(s.has(w)){t(`Skipping symlink cycle at ${g}`);return}s.add(w)}}catch{return}for(let b of h){if(b===\".git\")continue;let w=dw(g,b),D=n?`${n}/${b}`:b,F;try{F=await Pan(w)}catch{continue}if(F.isSymbolicLink())continue;if(F.isDirectory())await s6e(e,D,r,s);else if(F.isFile())try{let W=await Ian(w);r[D]=[new Uint8Array(W),{os:3,attrs:(F.mode&65535)<<16}]}catch(W){t(`Failed to read file for zip: ${D}: ${W}`)}}}"
+      },
+      {
+        "symbol": "x6",
+        "sha256": "1eb5950e94cb93ab4ff048ac1a93419d2036af31939ec8b5c5a832252e7ce03a",
+        "declaration": "async function x6(e,n){let r=await Fan(e);await UHn(n,r),await Ka(e).catch((s)=>{t(`Failed to remove ${e} after publishing its zip archive: ${l(s)}`,{level:\"warn\"})})}"
+      }
+    ]
+  },
+  "integration": "Fan level 6 and Unix attrs; s6e skips every symlink; x6 warns on post-publication directory removal failure. Existing local atomic publication and extraction validation retained."
+}

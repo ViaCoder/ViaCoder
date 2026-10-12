@@ -1,0 +1,1155 @@
+{
+  "version": "2.1.287",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16 end-exclusive",
+  "groups": {
+    "chunk-d4reyqpd.js": {
+      "factory": "module0",
+      "moduleSha256": "6e95eb7479231479d052bc18961d7ea1128ede7477575149e1167451b941399b",
+      "rows": [
+        {
+          "name": "re",
+          "file": "chunk-d4reyqpd.js",
+          "start": 8211,
+          "end": 11008,
+          "source": "function re(G){let o=w(41),{chromeClient:u,onDone:E}=G,[i,I]=g(null),[v,T]=g(null),[Y,ce]=g(!1),x=A(!1),ve;if(o[0]===b)ve=le().chromeExtension?.pairedDeviceId,o[0]=ve;else ve=o[0];let j=ve,ae,k;if(o[1]!==u)ae=()=>(x.current=!1,FIn(u).then((je)=>{if(!x.current)I(je)}).catch((J)=>{if(Hnt(J)){if(p(\"chrome_browser_picker\",\"bridge_unreachable\"),!x.current)I([]);return}if(m(\"chrome_browser_picker\",\"list_failed\"),!x.current)T(Z(J).message)}),()=>{x.current=!0}),k=[u],o[1]=u,o[2]=ae,o[3]=k;else ae=o[2],k=o[3];R(ae,k);let de;if(o[4]!==E)de=function C(c){if(x.current){return}x.current=!0,E(c)},o[4]=E,o[5]=de;else de=o[5];let C=de,O;if(o[6]!==i||o[7]!==u||o[8]!==C||o[9]!==Y)O=function X(_){if(Y){return}ce(!0);let me=i?.find((xe)=>xe.deviceId===_);u8t(u,\"select_browser\",{deviceId:_}).then(()=>{y(\"chrome_browser_picker\"),C(me?`Now using browser \"${me.name}\" for Chrome actions.`:void 0)}).catch((Q)=>{m(\"chrome_browser_picker\",Hnt(Q)?\"bridge_unreachable\":\"select_failed\"),t(`claude-in-chrome select_browser failed: ${Z(Q).message}`,{level:\"error\"}),C(`Couldn't switch browser: ${Z(Q).message}`)})},o[6]=i,o[7]=u,o[8]=C,o[9]=Y,o[10]=O;else O=o[10];let X=O;if(v){const f=`Couldn't list connected browsers: ${v}`;let h;if(o[11]!==f)h=e(n,{color:\"error\",children:f}),o[11]=f,o[12]=h;else h=o[12];let U;if(o[13]!==C||o[14]!==h)U=e(V,{onDone:C,children:h}),o[13]=C,o[14]=h,o[15]=U;else U=o[15];return U}if(i===null){let f;if(o[16]===b)f=e(n,{dimColor:!0,children:\"Looking for connected browsers\\u2026\"}),o[16]=f;else f=o[16];let h;if(o[17]!==C)h=e(V,{onDone:C,children:f}),o[17]=C,o[18]=h;else h=o[18];return h}if(i.length===0){let f;if(o[19]===b)f=e(n,{children:d8t}),o[19]=f;else f=o[19];let h;if(o[20]!==C)h=e(V,{onDone:C,children:f}),o[20]=C,o[21]=h;else h=o[21];return h}const f=i.length===1?\"One browser is connected:\":`Choose which browser to use (${i.length} connected):`;let h;if(o[22]!==f)h=e(n,{children:f}),o[22]=f,o[23]=h;else h=o[23];const U=Math.min(i.length,5);let ze;if(o[24]!==i){let H;if(o[26]===b)H=(Ie)=>Ie.deviceId===j,o[26]=H;else H=o[26];ze=i.findIndex(H);o[24]=i,o[25]=ze}else ze=o[25];const H=Math.max(0,ze);let ee;if(o[27]!==i||o[28]!==X)ee=(oe)=>{let B=i[oe];if(B)X(B.deviceId)},o[27]=i,o[28]=X,o[29]=ee;else ee=o[29];let D;if(o[30]!==i){let l;if(o[32]===b)l=(N)=>e(rn.Item,{label:N.name,icon:N.deviceId===j?e(Qe,{status:\"success\",\"aria-label\":\"current:\"}):void 0,meta:[N.osPlatform??\"unknown OS\"]},N.deviceId),o[32]=l;else l=o[32];D=i.map(l);o[30]=i,o[31]=D}else D=o[31];let l;if(o[33]!==H||o[34]!==ee||o[35]!==D||o[36]!==U)l=e(rn,{visibleCount:U,defaultFocusIndex:H,onSelect:ee,children:D}),o[33]=H,o[34]=ee,o[35]=D,o[36]=U,o[37]=l;else l=o[37];let P;if(o[38]!==l||o[39]!==h)P=r(s,{flexDirection:\"column\",gap:1,children:[h,l]}),o[38]=l,o[39]=h,o[40]=P;else P=o[40];return P}",
+          "sha256": "ce249b961cfc5d7d962da5ef979a493dcbd84021c68d02d0e3efc2bcb46362c4",
+          "moduleSha256": "6e95eb7479231479d052bc18961d7ea1128ede7477575149e1167451b941399b",
+          "variable": false
+        },
+        {
+          "name": "V",
+          "file": "chunk-d4reyqpd.js",
+          "start": 11008,
+          "end": 11365,
+          "source": "function V(G){let i=w(6),{onDone:u,children:E}=G,I;if(i[0]===b)I=[{value:\"back\",label:\"\\u2039 Back\"}],i[0]=I;else I=i[0];let v;if(i[1]!==u)v=e($e,{options:I,onChange:()=>u(),onCancel:()=>u(),hideIndexes:!0}),i[1]=u,i[2]=v;else v=i[2];let T;if(i[3]!==E||i[4]!==v)T=r(s,{flexDirection:\"column\",gap:1,children:[E,v]}),i[3]=E,i[4]=v,i[5]=T;else T=i[5];return T}",
+          "sha256": "4ff70386d6d9ea485f6c6e18ff4eea72e40630c612dac393c7222cc22ea4a566",
+          "moduleSha256": "6e95eb7479231479d052bc18961d7ea1128ede7477575149e1167451b941399b",
+          "variable": false
+        },
+        {
+          "name": "No",
+          "file": "chunk-d4reyqpd.js",
+          "start": 11365,
+          "end": 11403,
+          "source": "function No(Lo){return Lo.mcp.clients}",
+          "sha256": "1a052433747130a73f635680264979f0a245f9a8d914a17ac9490eacd92e0650",
+          "moduleSha256": "6e95eb7479231479d052bc18961d7ea1128ede7477575149e1167451b941399b",
+          "variable": false
+        },
+        {
+          "name": "Po",
+          "file": "chunk-d4reyqpd.js",
+          "start": 11403,
+          "end": 11462,
+          "source": "function Po(Ze){return Ze.name===ac&&Ze.type===\"connected\"}",
+          "sha256": "62a62135fd77518b3137a33c4212af2af422b6c88c64ed241979994df36bbcc2",
+          "moduleSha256": "6e95eb7479231479d052bc18961d7ea1128ede7477575149e1167451b941399b",
+          "variable": false
+        },
+        {
+          "name": "Ao",
+          "file": "chunk-d4reyqpd.js",
+          "start": 11462,
+          "end": 11490,
+          "source": "function Ao(Vo){return Vo+1}",
+          "sha256": "a46ef2a47ab29efdb4c62d6d27fe738870956b91b7af9e8ddc206e117325d627",
+          "moduleSha256": "6e95eb7479231479d052bc18961d7ea1128ede7477575149e1167451b941399b",
+          "variable": false
+        },
+        {
+          "name": "Ho",
+          "file": "chunk-d4reyqpd.js",
+          "start": 11490,
+          "end": 11518,
+          "source": "function Ho(Ko){return Ko+1}",
+          "sha256": "71725b7ff3ccecf91a2517ca858ad8ef53d69b09b83d5f4906b0c931e7f94f06",
+          "moduleSha256": "6e95eb7479231479d052bc18961d7ea1128ede7477575149e1167451b941399b",
+          "variable": false
+        },
+        {
+          "name": "Mo",
+          "file": "chunk-d4reyqpd.js",
+          "start": 11518,
+          "end": 11546,
+          "source": "function Mo(Oo){return Oo+1}",
+          "sha256": "65d71d8a2da79bfa2b9d0d7c4f099d20195327065970d4a14e14978192e031da",
+          "moduleSha256": "6e95eb7479231479d052bc18961d7ea1128ede7477575149e1167451b941399b",
+          "variable": false
+        },
+        {
+          "name": "Wo",
+          "file": "chunk-d4reyqpd.js",
+          "start": 11546,
+          "end": 11574,
+          "source": "function Wo(Uo){return Uo+1}",
+          "sha256": "7781ea2ce34b8ea01f19f7c35786011c6c76b31915f6ef815e8d2be256cdf319",
+          "moduleSha256": "6e95eb7479231479d052bc18961d7ea1128ede7477575149e1167451b941399b",
+          "variable": false
+        },
+        {
+          "name": "Ge",
+          "file": "chunk-d4reyqpd.js",
+          "start": 11574,
+          "end": 15628,
+          "source": "function Ge(G){let c=w(47),{onDone:u,isExtensionInstalled:E,configEnabled:i,isClaudeAISubscriber:I,isWSL:v}=G,T=z(No),{storageV5:Y}=Te(),[ce,x]=g(0),[o,ve]=g(i??!1),[j,ae]=g(!1),[k,je]=g(E),[J,de]=g(\"menu\"),C;if(c[0]!==T)C=T.find(Po),c[0]=T,c[1]=C;else C=c[1];let O=C,_=O!==void 0,xe;if(c[2]===b)xe=le().chromeExtension?.pairedDeviceName,c[2]=xe;else xe=c[2];let me=xe,Q;if(c[3]===b)Q=function f(X){gSe(X).catch(d)},c[3]=Q;else Q=c[3];let f=Q,h;if(c[4]!==o||c[5]!==Y)h=function oe(U){ze:switch(U){case\"install-extension\":{x(Ao),ae(!0),f(lH);break ze}case\"reconnect\":{x(Ho),cH().then((H)=>{if(je(H),H)ae(!1)}).catch(d),f(g_e);break ze}case\"manage-permissions\":{x(Mo),f(c8t);break ze}case\"toggle-default\":{let Ie=!o;Ae((ee)=>({...ee,claudeInChromeDefaultEnabled:Ie}),Y),ve(Ie);break ze}case\"select-browser\":{de(\"select-browser\")}}},c[4]=o,c[5]=Y,c[6]=h;else h=c[6];let oe=h,B;if(c[7]!==o||c[8]!==_||c[9]!==k){B=[];let D=k?\"\":\" (requires extension)\";if(!k){let l;if(c[11]===b)l={label:\"Install Chrome extension\",value:\"install-extension\"},c[11]=l;else l=c[11];B.push(l)}if(_){let l;if(c[12]===b)l={label:\"Select browser\\u2026\",value:\"select-browser\"},c[12]=l;else l=c[12];B.push(l)}let l;if(c[13]===b)l=e(n,{children:\"Manage permissions\"}),c[13]=l;else l=c[13];let N;if(c[14]!==D)N={label:r(K,{children:[l,e(n,{dimColor:!0,children:D})]}),value:\"manage-permissions\"},c[14]=D,c[15]=N;else N=c[15];let P;if(c[16]===b)P=e(n,{children:\"Reconnect extension\"}),c[16]=P;else P=c[16];let q;if(c[17]!==D)q={label:r(K,{children:[P,e(n,{dimColor:!0,children:D})]}),value:\"reconnect\"},c[17]=D,c[18]=q;else q=c[18];const W=`Enabled by default: ${o?\"Yes\":\"No\"}`;let ne;if(c[19]!==W)ne={label:W,value:\"toggle-default\"},c[19]=W,c[20]=ne;else ne=c[20];B.push(N,q,ne);c[7]=o,c[8]=_,c[9]=k,c[10]=B}else B=c[10];let De=v||!I,l;if(c[21]!==u)l=()=>u(),c[21]=u,c[22]=l;else l=c[22];let N;if(c[23]===b)N=e(n,{children:\"Claude in Chrome works with the Chrome extension to let you control your browser directly from Claude Code. Navigate websites, fill forms, capture screenshots, record GIFs, and debug with console logs and network requests.\"}),c[23]=N;else N=c[23];let P;if(c[24]!==v)P=v&&e(n,{color:\"error\",children:\"Claude in Chrome is not supported in WSL at this time.\"}),c[24]=v,c[25]=P;else P=c[25];let q;if(c[26]!==I)q=!I&&e(n,{color:\"error\",children:\"Claude in Chrome requires a claude.ai subscription.\"}),c[26]=I,c[27]=q;else q=c[27];let W;if(c[28]!==O||c[29]!==oe||c[30]!==_||c[31]!==De||c[32]!==k||c[33]!==u||c[34]!==B||c[35]!==ce||c[36]!==j||c[37]!==J)W=!De&&r(K,{children:[r(s,{flexDirection:\"column\",children:[r(n,{children:[\"Status:\",\" \",_?e(n,{color:\"success\",children:\"Enabled\"}):e(n,{color:\"inactive\",children:\"Disabled\"})]}),r(n,{children:[\"Extension:\",\" \",k?e(n,{color:\"success\",children:\"Installed\"}):e(n,{color:\"warning\",children:\"Not detected\"})]}),_&&me?r(n,{children:[\"Browser: \",e(n,{color:\"success\",children:me})]}):null]}),J===\"select-browser\"&&O?e(re,{chromeClient:O,onDone:(Je)=>{if(de(\"menu\"),x(Wo),Je)u(Je)}}):e($e,{options:B,onChange:oe,hideIndexes:!0},ce),j&&r(n,{color:\"warning\",children:[\"Once installed, select \",'\"Reconnect extension\"',\" to connect.\"]}),r(n,{children:[e(n,{dimColor:!0,children:\"Usage: \"}),e(n,{children:\"claude --chrome\"}),e(n,{dimColor:!0,children:\" or \"}),e(n,{children:\"claude --no-chrome\"})]}),e(n,{dimColor:!0,children:\"Site-level permissions are inherited from the Chrome extension. Manage permissions in the Chrome extension settings to control which sites Claude can browse, click, and type on.\"})]}),c[28]=O,c[29]=oe,c[30]=_,c[31]=De,c[32]=k,c[33]=u,c[34]=B,c[35]=ce,c[36]=j,c[37]=J,c[38]=W;else W=c[38];let ne;if(c[39]===b)ne=e(mS,{url:\"https://code.claude.com/docs/en/chrome\"}),c[39]=ne;else ne=c[39];let ue;if(c[40]!==P||c[41]!==q||c[42]!==W)ue=r(s,{flexDirection:\"column\",gap:1,children:[N,P,q,W,ne]}),c[40]=P,c[41]=q,c[42]=W,c[43]=ue;else ue=c[43];let Xe;if(c[44]!==ue||c[45]!==l)Xe=e(he,{title:\"Claude in Chrome\",onCancel:l,color:\"chromeYellow\",children:ue}),c[44]=ue,c[45]=l,c[46]=Xe;else Xe=c[46];return Xe}",
+          "sha256": "1bec596aff4ca2d5cf3b1bcd73c470b56016936df21308f5e03f64a57bfe7554",
+          "moduleSha256": "6e95eb7479231479d052bc18961d7ea1128ede7477575149e1167451b941399b",
+          "variable": false
+        },
+        {
+          "name": "yn",
+          "file": "chunk-d4reyqpd.js",
+          "start": 15632,
+          "end": 15957,
+          "source": "yn=async function(G){let u=await cH().catch((v)=>(t(`[Claude in Chrome] Extension detection failed: ${v instanceof Error?v.message:String(v)}`,{level:\"error\"}),!1)),E=le(),i=ft(),I=a.isWslEnvironment();return e(Ge,{onDone:G,isExtensionInstalled:u,configEnabled:E.claudeInChromeDefaultEnabled,isClaudeAISubscriber:i,isWSL:I})}",
+          "sha256": "ec87bcd45aea78ea7d149ca6543c5a5adf661c6fefab4191f058e4ff64a38038",
+          "moduleSha256": "6e95eb7479231479d052bc18961d7ea1128ede7477575149e1167451b941399b",
+          "variable": true
+        }
+      ],
+      "dependencies": {
+        "w": {
+          "file": "chunk-bgj860b4.js",
+          "name": "w"
+        },
+        "s": {
+          "file": "chunk-jkt292h5.js",
+          "name": "s"
+        },
+        "n": {
+          "file": "chunk-jkt292h5.js",
+          "name": "n"
+        },
+        "Z": {
+          "file": "chunk-c9me9cp7.js",
+          "name": "Z"
+        },
+        "a": {
+          "file": "chunk-mbfze585.js",
+          "name": "a"
+        },
+        "t": {
+          "file": "chunk-q80zaav8.js",
+          "name": "t"
+        },
+        "d": {
+          "file": "chunk-amhtwhch.js",
+          "name": "d"
+        },
+        "ft": {
+          "file": "chunk-nankzm0s.js",
+          "name": "ft"
+        },
+        "Ae": {
+          "file": "chunk-nankzm0s.js",
+          "name": "Ae"
+        },
+        "le": {
+          "file": "chunk-nankzm0s.js",
+          "name": "le"
+        },
+        "Te": {
+          "file": "chunk-038c023k.js",
+          "name": "Te"
+        },
+        "y": {
+          "file": "chunk-9d2ykxmy.js",
+          "name": "y"
+        },
+        "m": {
+          "file": "chunk-9d2ykxmy.js",
+          "name": "m"
+        },
+        "p": {
+          "file": "chunk-9d2ykxmy.js",
+          "name": "p"
+        },
+        "lH": {
+          "file": "chunk-09m4fzsj.js",
+          "name": "lH"
+        },
+        "g_e": {
+          "file": "chunk-09m4fzsj.js",
+          "name": "g_e"
+        },
+        "cH": {
+          "file": "chunk-09m4fzsj.js",
+          "name": "cH"
+        },
+        "R": {
+          "file": "chunk-1y575bx8.js",
+          "name": "R"
+        },
+        "A": {
+          "file": "chunk-1y575bx8.js",
+          "name": "A"
+        },
+        "g": {
+          "file": "chunk-1y575bx8.js",
+          "name": "g"
+        },
+        "$e": {
+          "file": "chunk-6zne1pwx.js",
+          "name": "$e"
+        },
+        "Qe": {
+          "file": "chunk-ma5mhf2j.js",
+          "name": "Qe"
+        },
+        "z": {
+          "file": "chunk-t1n6x7q0.js",
+          "name": "z"
+        },
+        "he": {
+          "file": "chunk-0smna178.js",
+          "name": "he"
+        },
+        "gSe": {
+          "file": "chunk-df0597gf.js",
+          "name": "gSe"
+        },
+        "rn": {
+          "file": "chunk-fqrx4sq8.js",
+          "name": "rn"
+        },
+        "d8t": {
+          "file": "chunk-g45mcjt4.js",
+          "name": "d8t"
+        },
+        "Hnt": {
+          "file": "chunk-g45mcjt4.js",
+          "name": "Hnt"
+        },
+        "FIn": {
+          "file": "chunk-g45mcjt4.js",
+          "name": "FIn"
+        },
+        "u8t": {
+          "file": "chunk-g45mcjt4.js",
+          "name": "u8t"
+        },
+        "c8t": {
+          "file": "chunk-8447apg8.js",
+          "name": "c8t"
+        },
+        "mS": {
+          "file": "chunk-ewha1f47.js",
+          "name": "mS"
+        },
+        "K": {
+          "file": "chunk-ysm7k028.js",
+          "name": "K"
+        },
+        "e": {
+          "file": "chunk-ysm7k028.js",
+          "name": "e"
+        },
+        "r": {
+          "file": "chunk-ysm7k028.js",
+          "name": "r"
+        },
+        "ac": {
+          "file": "chunk-ag87p919.js",
+          "name": "ac"
+        },
+        "b": {
+          "file": "chunk-870yz02b.js",
+          "name": "b"
+        }
+      }
+    },
+    "chunk-g45mcjt4.js": {
+      "factory": "module1",
+      "moduleSha256": "4c12507e839a27e95ace82979a9fd92d0f62a394ceb7ef0c2b82977187b2c137",
+      "rows": [
+        {
+          "name": "d",
+          "file": "chunk-g45mcjt4.js",
+          "start": 908,
+          "end": 988,
+          "source": "d=f(()=>u({deviceId:o(),name:o().default(\"Browser\"),osPlatform:o().optional()}))",
+          "sha256": "e80fb68fb4880dcac6685acdc92a09b55343b3014ec3f0c42d66170040bb7aba",
+          "moduleSha256": "4c12507e839a27e95ace82979a9fd92d0f62a394ceb7ef0c2b82977187b2c137",
+          "variable": true
+        },
+        {
+          "name": "d8t",
+          "file": "chunk-g45mcjt4.js",
+          "start": 989,
+          "end": 1121,
+          "source": "d8t=\"No browsers are connected. Open Chrome with the Claude extension and make sure you're signed in to the same claude.ai account.\"",
+          "sha256": "39ffef0ef5d8a653323e33f99c88446221db123c8adb213d051f94742e3cea77",
+          "moduleSha256": "4c12507e839a27e95ace82979a9fd92d0f62a394ceb7ef0c2b82977187b2c137",
+          "variable": true
+        },
+        {
+          "name": "Wur",
+          "file": "chunk-g45mcjt4.js",
+          "start": 1122,
+          "end": 1208,
+          "source": "class Wur extends P{constructor(){super(d8t,\"claude-in-chrome bridge not reachable\")}}",
+          "sha256": "cf941b12ec5d31da5a853d47de165771c549892ea2ffed783539e27b82d4bf34",
+          "moduleSha256": "4c12507e839a27e95ace82979a9fd92d0f62a394ceb7ef0c2b82977187b2c137",
+          "variable": false
+        },
+        {
+          "name": "Hnt",
+          "file": "chunk-g45mcjt4.js",
+          "start": 1208,
+          "end": 1248,
+          "source": "function Hnt(e){return e instanceof Wur}",
+          "sha256": "e0efc329c62483b83f86e4bca2864cf53beb6499a56e85395bc281a3efa10733",
+          "moduleSha256": "4c12507e839a27e95ace82979a9fd92d0f62a394ceb7ef0c2b82977187b2c137",
+          "variable": false
+        },
+        {
+          "name": "Ros",
+          "file": "chunk-g45mcjt4.js",
+          "start": 1248,
+          "end": 1291,
+          "source": "function Ros(e){if(Hnt(e))return[];throw e}",
+          "sha256": "623b9e22984377ac5978a730a108ad34d44ede13bbac12268deedef3e17d261f",
+          "moduleSha256": "4c12507e839a27e95ace82979a9fd92d0f62a394ceb7ef0c2b82977187b2c137",
+          "variable": false
+        },
+        {
+          "name": "FIn",
+          "file": "chunk-g45mcjt4.js",
+          "start": 1291,
+          "end": 1432,
+          "source": "async function FIn(e){let r=await u8t(e,\"list_connected_browsers\",{});if(!r)return[];let c=T(d()).safeParse(Y(r));return c.success?c.data:[]}",
+          "sha256": "e7b7d440e574ba15ccc63dbb580f0b1067a5858b7265b45ef904384d26c0dfa0",
+          "moduleSha256": "4c12507e839a27e95ace82979a9fd92d0f62a394ceb7ef0c2b82977187b2c137",
+          "variable": false
+        },
+        {
+          "name": "u8t",
+          "file": "chunk-g45mcjt4.js",
+          "start": 1432,
+          "end": 1829,
+          "source": "async function u8t(e,r,c){let a=fCr(),i=await GN(e,{name:r,arguments:c}),n=Array.isArray(i.content)?i.content[0]:void 0,s=n&&typeof n===\"object\"&&\"text\"in n&&typeof n.text===\"string\"?n.text:void 0;if(fCr()!==a&&s!==void 0&&zwo(s))throw t(`claude-in-chrome bridge not reachable: ${s}`,{level:\"error\"}),new Wur;if(i.isError)throw new P(s||`${r} failed`,\"claude-in-chrome tool call failed\");return s}",
+          "sha256": "7b6cafeed0c7fea8d013a2d1d950a9b1944834dc5b5ce909490322a24b3bf264",
+          "moduleSha256": "4c12507e839a27e95ace82979a9fd92d0f62a394ceb7ef0c2b82977187b2c137",
+          "variable": false
+        }
+      ],
+      "dependencies": {
+        "GN": {
+          "file": "chunk-rgcp4trk.js",
+          "name": "GN"
+        },
+        "P": {
+          "file": "chunk-c9me9cp7.js",
+          "name": "P"
+        },
+        "f": {
+          "file": "chunk-5qqrzb2c.js",
+          "name": "f"
+        },
+        "Y": {
+          "file": "chunk-q80zaav8.js",
+          "name": "Y"
+        },
+        "t": {
+          "file": "chunk-q80zaav8.js",
+          "name": "t"
+        },
+        "fCr": {
+          "file": "chunk-9qznrr8y.js",
+          "name": "fCr"
+        },
+        "zwo": {
+          "file": "chunk-9qznrr8y.js",
+          "name": "zwo"
+        },
+        "o": {
+          "file": "chunk-aybmj3t4.js",
+          "name": "o"
+        },
+        "T": {
+          "file": "chunk-aybmj3t4.js",
+          "name": "T"
+        },
+        "u": {
+          "file": "chunk-aybmj3t4.js",
+          "name": "u"
+        }
+      }
+    },
+    "chunk-9qznrr8y.js": {
+      "factory": "module2",
+      "moduleSha256": "e8c61df1fd8ff6568371b08362df538a8ba300d71df0512628af3a019bb07f8f",
+      "rows": [
+        {
+          "name": "fCr",
+          "file": "chunk-9qznrr8y.js",
+          "start": 777,
+          "end": 828,
+          "source": "function fCr(){return Zc().disconnectedAnswerCount}",
+          "sha256": "e9be29d8d463d14e3d92967649737227002630016d8cd998d1f7a0f5c6f0917c",
+          "moduleSha256": "e8c61df1fd8ff6568371b08362df538a8ba300d71df0512628af3a019bb07f8f",
+          "variable": false
+        },
+        {
+          "name": "zwo",
+          "file": "chunk-9qznrr8y.js",
+          "start": 828,
+          "end": 887,
+          "source": "function zwo(n){return Zc().disconnectedAnswerTexts.has(n)}",
+          "sha256": "a5276e995d8061af57268ef9a164f738d49185113f66ced13765a464461a3e0d",
+          "moduleSha256": "e8c61df1fd8ff6568371b08362df538a8ba300d71df0512628af3a019bb07f8f",
+          "variable": false
+        }
+      ],
+      "dependencies": {
+        "Zc": {
+          "file": "chunk-df0597gf.js",
+          "name": "Zc"
+        }
+      }
+    },
+    "chunk-rgcp4trk.js": {
+      "factory": "module3",
+      "moduleSha256": "2f598eb6a1a6ebf6f6b525e282e2da90a66bef1c8aeed62eaf31b76bd8924dd4",
+      "rows": [
+        {
+          "name": "GN",
+          "file": "chunk-rgcp4trk.js",
+          "start": 662,
+          "end": 788,
+          "source": "function GN(e,o,t){return import.meta.require(\"/$bunfs/root/chunk-3xgd8dv8.js\").mcpClientModule().invokeToolRaw(e.client,o,t)}",
+          "sha256": "d5b13be9cea914746670bbbd386e1c89487978ebac59328dddb40a2c5d8f4c23",
+          "moduleSha256": "2f598eb6a1a6ebf6f6b525e282e2da90a66bef1c8aeed62eaf31b76bd8924dd4",
+          "variable": false
+        }
+      ],
+      "dependencies": {}
+    },
+    "chunk-ewha1f47.js": {
+      "factory": "module4",
+      "moduleSha256": "94e1638b408a0be7b7c128faa3a76a962b988a9f371df7e16a6b8eb7ba46d7ea",
+      "rows": [
+        {
+          "name": "mS",
+          "file": "chunk-ewha1f47.js",
+          "start": 758,
+          "end": 904,
+          "source": "function mS(a){let l=w(2),{url:o}=a,t;if(l[0]!==o)t=r(n,{dimColor:!0,children:[\"Learn more: \",e(It,{url:o})]}),l[0]=o,l[1]=t;else t=l[1];return t}",
+          "sha256": "0cece3222516b65ad4133f6abcdfbc7240b644d40a066e0d817938a82e064dcd",
+          "moduleSha256": "94e1638b408a0be7b7c128faa3a76a962b988a9f371df7e16a6b8eb7ba46d7ea",
+          "variable": false
+        }
+      ],
+      "dependencies": {
+        "w": {
+          "file": "chunk-bgj860b4.js",
+          "name": "w"
+        },
+        "n": {
+          "file": "chunk-jkt292h5.js",
+          "name": "n"
+        },
+        "It": {
+          "file": "chunk-jkt292h5.js",
+          "name": "It"
+        },
+        "e": {
+          "file": "chunk-ysm7k028.js",
+          "name": "e"
+        },
+        "r": {
+          "file": "chunk-ysm7k028.js",
+          "name": "r"
+        }
+      }
+    },
+    "chunk-09m4fzsj.js": {
+      "factory": "module5",
+      "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+      "rows": [
+        {
+          "name": "vqn",
+          "file": "chunk-09m4fzsj.js",
+          "start": 395880,
+          "end": 395958,
+          "source": "function vqn(){return a.CLAUDE_CODE_BRIDGE_CHILD_MACHINE_SETTINGS===!0&&!r4()}",
+          "sha256": "f3b00a5d4b2cf29d6fbd53a24671a8cbf34e26b78957d4276b6f3e34d02351cf",
+          "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+          "variable": false
+        },
+        {
+          "name": "LW",
+          "file": "chunk-09m4fzsj.js",
+          "start": 396096,
+          "end": 396128,
+          "source": "LW=KT+IW(\"claude\",\"versions\")+KT",
+          "sha256": "6dd27794ce2fd72588e949a4ee836bdf5d01e95047748b0f648cff06511b3291",
+          "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+          "variable": true
+        },
+        {
+          "name": "qT",
+          "file": "chunk-09m4fzsj.js",
+          "start": 396236,
+          "end": 396341,
+          "source": "async function qT(e,n){if(!n.isSymbolicLink())return!1;let r=await CW(e);return DW(MW(e),r).includes(LW)}",
+          "sha256": "4a2b9a296b565bbd8fbc52a2bed8cbeae85a263136af47cbe0fc5b45fe3cc862",
+          "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+          "variable": false
+        },
+        {
+          "name": "u$e",
+          "file": "chunk-09m4fzsj.js",
+          "start": 396341,
+          "end": 396434,
+          "source": "async function u$e(e){let n=await OW(e);return n.endsWith(\".js\")||n.includes(\"node_modules\")}",
+          "sha256": "c1b0ffa5b7702f0aa1b4e0f0246d93ac22bef28cc61f657c30a1816210050299",
+          "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+          "variable": false
+        },
+        {
+          "name": "YT",
+          "file": "chunk-09m4fzsj.js",
+          "start": 396434,
+          "end": 396616,
+          "source": "async function YT(e){if(O()===\"windows\")return!0;try{let n=await VT(e);if(!n.isSymbolicLink())return!1;return await qT(e,n)||await u$e(e)}catch(n){if(E(n)!==void 0)return!1;throw n}}",
+          "sha256": "35c5bb696774755564ea1e02b5af82fdab4d896975fe7c501536e88b73ff7884",
+          "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+          "variable": false
+        },
+        {
+          "name": "NW",
+          "file": "chunk-09m4fzsj.js",
+          "start": 396620,
+          "end": 397397,
+          "source": "NW=`## Loading deferred tools\n\nIf the mcp__claude-in-chrome__* tools are deferred (must be loaded via ToolSearch before use), load every tool you expect to need in ONE ToolSearch call \\u2014 the select query accepts a comma-separated list \\u2014 never one call per tool. Start with the core set:\n\n${'ToolSearch with query \"select:mcp__claude-in-chrome__tabs_context_mcp,mcp__claude-in-chrome__navigate,mcp__claude-in-chrome__computer,mcp__claude-in-chrome__read_page,mcp__claude-in-chrome__tabs_create_mcp,mcp__claude-in-chrome__tabs_close_mcp\"'}\n\n${\"Add task-specific tools to the same call when the task obviously needs them: read_console_messages / read_network_requests for debugging, form_input for forms, gif_creator for recordings, javascript_tool for page scripting.\"}`",
+          "sha256": "233d5438e53acdeb1ef1daf499f78074887e2afa2b10599b09f2c4073063ff54",
+          "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+          "variable": true
+        },
+        {
+          "name": "FW",
+          "file": "chunk-09m4fzsj.js",
+          "start": 397402,
+          "end": 400767,
+          "source": "FW=`# Claude in Chrome browser automation\n\nYou have access to browser automation tools (mcp__claude-in-chrome__*) for interacting with web pages in Chrome. Follow these guidelines for effective browser automation.\n\n${NW}\n\n## GIF recording\n\nWhen performing multi-step browser interactions that the user may want to review or share, use mcp__claude-in-chrome__gif_creator to record them.\n\nYou must ALWAYS:\n* Capture extra frames before and after taking actions to ensure smooth playback\n* Name the file meaningfully to help the user identify it later (e.g., \"login_process.gif\")\n\n## Console log debugging\n\nYou can use mcp__claude-in-chrome__read_console_messages to read console output. Console output may be verbose. If you are looking for specific log entries, use the 'pattern' parameter with a regex-compatible pattern. This filters results efficiently and avoids overwhelming output. For example, use pattern: \"[MyApp]\" to filter for application-specific logs rather than reading all console output.\n\n## Alerts and dialogs\n\nIMPORTANT: Do not trigger JavaScript alerts, confirms, prompts, or browser modal dialogs through your actions. These browser dialogs block all further browser events and will prevent the extension from receiving any subsequent commands. Instead, when possible, use console.log for debugging and then use the mcp__claude-in-chrome__read_console_messages tool to read those log messages. If a page has dialog-triggering elements:\n1. Avoid clicking buttons or links that may trigger alerts (e.g., \"Delete\" buttons with confirmation dialogs)\n2. If you must interact with such elements, warn the user first that this may interrupt the session\n3. Use mcp__claude-in-chrome__javascript_tool to check for and dismiss any existing dialogs before proceeding\n\nIf you accidentally trigger a dialog and lose responsiveness, inform the user they need to manually dismiss it in the browser.\n\n## Avoid rabbit holes and loops\n\nWhen using browser automation tools, stay focused on the specific task. If you encounter any of the following, stop and ask the user for guidance:\n- Unexpected complexity or tangential browser exploration\n- Browser tool calls failing or returning errors after 2-3 attempts\n- No response from the browser extension\n- Page elements not responding to clicks or input\n- Pages not loading or timing out\n- Unable to complete the browser task despite multiple approaches\n\nExplain what you attempted, what went wrong, and ask how the user would like to proceed. Do not keep retrying the same failing browser action or explore unrelated pages without checking in first.\n\n## Tab context and session startup\n\nIMPORTANT: At the start of each browser automation session, call mcp__claude-in-chrome__tabs_context_mcp first to get information about the user's current browser tabs. Use this context to understand what the user might want to work with before creating new tabs.\n\nNever reuse tab IDs from a previous/other session. Follow these guidelines:\n1. Only reuse an existing tab if the user explicitly asks to work with it\n2. Otherwise, create a new tab with mcp__claude-in-chrome__tabs_create_mcp\n3. If a tool returns an error indicating the tab doesn't exist or is invalid, call tabs_context_mcp to get fresh tab IDs\n4. When a tab is closed by the user or a navigation error occurs, call tabs_context_mcp to see what tabs are available`",
+          "sha256": "00d6af6f2445f9d2251f145387f9247cb5e974497afddba07c2c1a79abcede37",
+          "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+          "variable": true
+        },
+        {
+          "name": "G5e",
+          "file": "chunk-09m4fzsj.js",
+          "start": 401781,
+          "end": 405165,
+          "source": "function G5e(e){return e?FW:`# Claude in Chrome browser automation\n\nYou have access to browser automation tools (mcp__claude-in-chrome__*) for interacting with web pages in Chrome. Follow these guidelines for effective browser automation.\n\n## GIF recording\n\nWhen performing multi-step browser interactions that the user may want to review or share, use mcp__claude-in-chrome__gif_creator to record them.\n\nYou must ALWAYS:\n* Capture extra frames before and after taking actions to ensure smooth playback\n* Name the file meaningfully to help the user identify it later (e.g., \"login_process.gif\")\n\n## Console log debugging\n\nYou can use mcp__claude-in-chrome__read_console_messages to read console output. Console output may be verbose. If you are looking for specific log entries, use the 'pattern' parameter with a regex-compatible pattern. This filters results efficiently and avoids overwhelming output. For example, use pattern: \"[MyApp]\" to filter for application-specific logs rather than reading all console output.\n\n## Alerts and dialogs\n\nIMPORTANT: Do not trigger JavaScript alerts, confirms, prompts, or browser modal dialogs through your actions. These browser dialogs block all further browser events and will prevent the extension from receiving any subsequent commands. Instead, when possible, use console.log for debugging and then use the mcp__claude-in-chrome__read_console_messages tool to read those log messages. If a page has dialog-triggering elements:\n1. Avoid clicking buttons or links that may trigger alerts (e.g., \"Delete\" buttons with confirmation dialogs)\n2. If you must interact with such elements, warn the user first that this may interrupt the session\n3. Use mcp__claude-in-chrome__javascript_tool to check for and dismiss any existing dialogs before proceeding\n\nIf you accidentally trigger a dialog and lose responsiveness, inform the user they need to manually dismiss it in the browser.\n\n## Avoid rabbit holes and loops\n\nWhen using browser automation tools, stay focused on the specific task. If you encounter any of the following, stop and ask the user for guidance:\n- Unexpected complexity or tangential browser exploration\n- Browser tool calls failing or returning errors after 2-3 attempts\n- No response from the browser extension\n- Page elements not responding to clicks or input\n- Pages not loading or timing out\n- Unable to complete the browser task despite multiple approaches\n\nExplain what you attempted, what went wrong, and ask how the user would like to proceed. Do not keep retrying the same failing browser action or explore unrelated pages without checking in first.\n\n## Tab context and session startup\n\nIMPORTANT: At the start of each browser automation session, call mcp__claude-in-chrome__tabs_context_mcp first to get information about the user's current browser tabs. Use this context to understand what the user might want to work with before creating new tabs.\n\nNever reuse tab IDs from a previous/other session. Follow these guidelines:\n1. Only reuse an existing tab if the user explicitly asks to work with it\n2. Otherwise, create a new tab with mcp__claude-in-chrome__tabs_create_mcp\n3. If a tool returns an error indicating the tab doesn't exist or is invalid, call tabs_context_mcp to get fresh tab IDs\n4. When a tab is closed by the user or a navigation error occurs, call tabs_context_mcp to see what tabs are available`}",
+          "sha256": "72287fbe68221baa02eefa5b5e49e47061f3e60cd3d2cc395a5477ed0951c7e3",
+          "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+          "variable": false
+        },
+        {
+          "name": "lH",
+          "file": "chunk-09m4fzsj.js",
+          "start": 405267,
+          "end": 405296,
+          "source": "lH=\"https://claude.ai/chrome\"",
+          "sha256": "a86450c67ea5457414c31b20cd51e2748efb76ee0175d7b895074405c176c3fd",
+          "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+          "variable": true
+        },
+        {
+          "name": "BW",
+          "file": "chunk-09m4fzsj.js",
+          "start": 405297,
+          "end": 405334,
+          "source": "BW=\"fcoeoabgfenejglbffodgkkbkcdhcgfn\"",
+          "sha256": "a506474aa9f1822b266418f4e71dc0dda0a76838297ece43baf3a50b015a61ec",
+          "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+          "variable": true
+        },
+        {
+          "name": "$W",
+          "file": "chunk-09m4fzsj.js",
+          "start": 405335,
+          "end": 405360,
+          "source": "function $W(){return[BW]}",
+          "sha256": "bd23e7cd776356f11d5bb373e2e25e4ac7e536abe1fe5e0ea9dfc498fc912791",
+          "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+          "variable": false
+        },
+        {
+          "name": "zW",
+          "file": "chunk-09m4fzsj.js",
+          "start": 406822,
+          "end": 407544,
+          "source": "async function zW(e,n){if(e.length===0)return n?.(\"[Claude in Chrome] No browser paths to check\"),{isInstalled:!1,browser:null};let r=$W();for(let{browser:s,path:h}of e){let g=[];try{g=await XT(h,{withFileTypes:!0})}catch(w){if(Ht(w))continue;throw w}let b=g.filter((w)=>w.isDirectory()).filter((w)=>w.name===\"Default\"||w.name.startsWith(\"Profile \")).map((w)=>w.name);if(b.length>0)n?.(`[Claude in Chrome] Found ${s} profiles: ${b.join(\", \")}`);for(let w of b)for(let R of r){let A=Lu(h,w,\"Extensions\",R);try{return await XT(A),n?.(`[Claude in Chrome] Extension ${R} found in ${s} ${w}`),{isInstalled:!0,browser:s}}catch{}}}return n?.(\"[Claude in Chrome] Extension not found in any browser\"),{isInstalled:!1,browser:null}}",
+          "sha256": "5e1f4b6d03e764f3aa04914761f37e19419b055c966b94dffb439430fbcb995e",
+          "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+          "variable": false
+        },
+        {
+          "name": "QT",
+          "file": "chunk-09m4fzsj.js",
+          "start": 407544,
+          "end": 407601,
+          "source": "async function QT(e,n){return(await zW(e,n)).isInstalled}",
+          "sha256": "5313f095dbc4dadc689c40e2554e104408db82850dac1dfa6db5c03ee8f593b4",
+          "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+          "variable": false
+        },
+        {
+          "name": "g_e",
+          "file": "chunk-09m4fzsj.js",
+          "start": 407605,
+          "end": 407643,
+          "source": "g_e=\"https://clau.de/chrome/reconnect\"",
+          "sha256": "3952ac3e1f013afe9ecc04653d8c93715767022e47761131851b4b998572edba",
+          "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+          "variable": true
+        },
+        {
+          "name": "Db",
+          "file": "chunk-09m4fzsj.js",
+          "start": 407644,
+          "end": 407692,
+          "source": "Db=\"com.anthropic.claude_code_browser_extension\"",
+          "sha256": "77937501b5db5eeae4dbbe8e8b6dd99ede2894525212adc5fb63d3e98a129aa3",
+          "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+          "variable": true
+        },
+        {
+          "name": "eP",
+          "file": "chunk-09m4fzsj.js",
+          "start": 407693,
+          "end": 407708,
+          "source": "eP=`${Db}.json`",
+          "sha256": "99a626d1f5b92ae3ce751f8bf1ff0dd23ad86ff42f65df2c57b12654817f096b",
+          "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+          "variable": true
+        },
+        {
+          "name": "sk",
+          "file": "chunk-09m4fzsj.js",
+          "start": 407709,
+          "end": 407767,
+          "source": "function sk(){return on(\"allow_claude_browser_extension\")}",
+          "sha256": "2f8df423c68b0450e3ee94738f0f43bdbf47c3320376bfe87bcc31b97decbae0",
+          "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+          "variable": false
+        },
+        {
+          "name": "pNt",
+          "file": "chunk-09m4fzsj.js",
+          "start": 407767,
+          "end": 408299,
+          "source": "function pNt(e){if(!sk())return!1;if(!iJe())return t(\"[Claude in Chrome] Disabled: OAuth token has no scope accepted by /api/oauth/validate (needs user:profile, user:office, or user:ccr_inference; env-var and setup-token sessions default to user:inference only)\"),!1;if(e===!0)return!0;if(e===!1)return!1;if(xr())return!1;if(a.CLAUDE_CODE_ENABLE_CFC===!0)return!0;if(a.CLAUDE_CODE_ENABLE_CFC===!1)return!1;if(Ce()&&!vqn())return!1;let n=le();if(n.claudeInChromeDefaultEnabled!==void 0)return n.claudeInChromeDefaultEnabled;return!1}",
+          "sha256": "2444fd269c6289133d67e4472a4c8aee1af9d3fb93c5629a81925833c6c3bfbe",
+          "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+          "variable": false
+        },
+        {
+          "name": "Cqn",
+          "file": "chunk-09m4fzsj.js",
+          "start": 408299,
+          "end": 408426,
+          "source": "function Cqn(){return A6e()!==!1&&a.CLAUDE_CODE_ENABLE_CFC!==!1&&le().claudeInChromeDefaultEnabled===void 0&&Wu()&&ft()&&iJe()}",
+          "sha256": "17d2bec1ac9788c4e99eb695f2a4465c9e962fcd514e6296d4417f2d2b78a252",
+          "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+          "variable": false
+        },
+        {
+          "name": "Aqn",
+          "file": "chunk-09m4fzsj.js",
+          "start": 408426,
+          "end": 408541,
+          "source": "function Aqn(){let e=le();return e.cachedChromeExtensionInstalled===!0||Boolean(e.chromeExtension?.pairedDeviceId)}",
+          "sha256": "32be48e4c4c6c8b85a72c6d0f8452bdc63e8c205066ba533e74c552f578d383a",
+          "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+          "variable": false
+        },
+        {
+          "name": "sLr",
+          "file": "chunk-09m4fzsj.js",
+          "start": 408541,
+          "end": 408744,
+          "source": "function sLr(e){if(!sk())return!1;let n=Zc();if(n.shouldAutoEnable!==void 0)return n.shouldAutoEnable;return n.shouldAutoEnable=Cqn()&&(YW(e)||Aqn())&&k(\"tengu_chrome_auto_enable\",!1),n.shouldAutoEnable}",
+          "sha256": "6530218bdcf9d2e6d6c95b6de2694ac50f483af3a84fb9fe8a3fdbb168f26d53",
+          "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+          "variable": false
+        },
+        {
+          "name": "b$e",
+          "file": "chunk-09m4fzsj.js",
+          "start": 409113,
+          "end": 409636,
+          "source": "function b$e(e){let n=[],r={};if(r4())r.CLAUDE_CHROME_PERMISSION_MODE=\"skip_all_permission_checks\";let s=Object.keys(r).length>0;return(async()=>{let h=dmt()&&!await YT(iUe()),{cmd:g,prefixArgs:b}=QRe({pinToCurrentBinary:h}),w=await qW([g,...b,\"--chrome-native-host\"]);await KW(w,e)})().catch((h)=>t(`[Claude in Chrome] Failed to install native host: ${h}`,{level:\"error\"})),Zc().wiredThisSession=!0,{mcpConfig:{[ac]:{...lfe(),...s&&{env:r}}},allowedTools:n,systemPrompt:a.CLAUDE_CODE_DISABLE_CFC_PROMPT===!0?\"\":G5e(Vh())}}",
+          "sha256": "a5c476ca749798332dd62ea41c5a5f53c43f179b2972a7a53f8769165352f8f6",
+          "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+          "variable": false
+        },
+        {
+          "name": "lLr",
+          "file": "chunk-09m4fzsj.js",
+          "start": 409636,
+          "end": 409710,
+          "source": "function lLr(e){let n=e[ac];return n!==void 0&&n.scope===\"dynamic\"&&aZ(n)}",
+          "sha256": "dead0b2be749f34ac511dba147acc256541434d57bad853bcc4ffb3c3a79191d",
+          "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+          "variable": false
+        },
+        {
+          "name": "cLr",
+          "file": "chunk-09m4fzsj.js",
+          "start": 409710,
+          "end": 409823,
+          "source": "function cLr(){return Zc().wiredThisSession=!0,{systemPrompt:a.CLAUDE_CODE_DISABLE_CFC_PROMPT===!0?\"\":G5e(Vh())}}",
+          "sha256": "68a61dc715182140746f7d0cad242c07b28b946942c9572b1bc8f7e2bc107b12",
+          "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+          "variable": false
+        },
+        {
+          "name": "WW",
+          "file": "chunk-09m4fzsj.js",
+          "start": 409823,
+          "end": 409984,
+          "source": "function WW(){if(O()===\"windows\"){let n=GW(),r=a.APPDATA||bi(n,\"AppData\",\"Local\");return[bi(r,\"Claude Code\",\"ChromeNativeHost\")]}return JBr().map(({path:n})=>n)}",
+          "sha256": "9e5cdff41f8f7eb2b547365abf1ba7a331c61451ace273699d069b34dff6986a",
+          "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+          "variable": false
+        },
+        {
+          "name": "KW",
+          "file": "chunk-09m4fzsj.js",
+          "start": 409984,
+          "end": 411097,
+          "source": "async function KW(e,n){return Br(\"chrome_native_host_install\",async()=>{let r=WW();if(r.length===0)throw Error(\"Claude in Chrome Native Host not supported on this platform\");let s={name:Db,description:\"Claude Code Browser Extension Native Host\",path:e,type:\"stdio\",allowed_origins:[\"chrome-extension://fcoeoabgfenejglbffodgkkbkcdhcgfn/\",...[]]},h=_(s,null,2),g=!1,b=!1;for(let w of r){let R=bi(w,eP),A=!1,M=await nP(R,\"utf-8\").catch((D)=>(A=W(D),null));if(!A)g=!0;if(M===h)continue;try{if(await tP(w,{recursive:!0}),await rP(R,h),t(`[Claude in Chrome] Installed native host manifest at: ${R}`),A)b=!0}catch(D){t(`[Claude in Chrome] Failed to install manifest at ${R}: ${D}`)}}if(O()===\"windows\"){let w=bi(r[0],eP);VW(w)}if(b&&!g&&!n?.skipReconnectAutoOpen)cH().then((w)=>{if(w)t(\"[Claude in Chrome] First-time install detected, opening reconnect page in browser\"),gSe(g_e).catch(d);else t(\"[Claude in Chrome] First-time install detected, but extension not installed, skipping reconnect\")}).catch((w)=>t(`[Claude in Chrome] Failed to check extension installation during manifest install: ${w}`,{level:\"error\"}))})}",
+          "sha256": "280e6a27c6db80c24d64cf077ed87c9fb67c933273acaf36f3fb3628a6c5037f",
+          "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+          "variable": false
+        },
+        {
+          "name": "VW",
+          "file": "chunk-09m4fzsj.js",
+          "start": 411097,
+          "end": 411438,
+          "source": "function VW(e){let n=QBr();for(let{browser:r,key:s}of n){let h=`${s}\\\\${Db}`;Je(\"reg\",[\"add\",h,\"/ve\",\"/t\",\"REG_SZ\",\"/d\",e,\"/f\"]).then((g)=>{if(g.code===0)t(`[Claude in Chrome] Registered native host for ${r} in Windows registry: ${h}`);else t(`[Claude in Chrome] Failed to register native host for ${r} in Windows registry: ${g.stderr}`)})}}",
+          "sha256": "67960bbfafc1ffa9af44a1671ffd95e464da80e5ea8b8ed2190c18cdd391fab0",
+          "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+          "variable": false
+        },
+        {
+          "name": "qW",
+          "file": "chunk-09m4fzsj.js",
+          "start": 411438,
+          "end": 412183,
+          "source": "async function qW(e){let n=O(),r=bi(we(),\"chrome\"),s=n===\"windows\"?bi(r,\"chrome-native-host.bat\"):bi(r,\"chrome-native-host\"),h=n===\"windows\"?`@echo off\nREM Chrome native host wrapper script\nREM Generated by Claude Code - do not edit manually\n${e.map((b)=>`\"${b.replaceAll(\"%\",\"%%\")}\"`).join(\" \")}\n`:`#!/bin/sh\n# Chrome native host wrapper script\n# Generated by Claude Code - do not edit manually\nexec ${Ur(e)}\n`;if(await nP(s,\"utf-8\").catch(()=>null)===h){if(n!==\"windows\")await ZT(s,493).catch((b)=>t(`[Claude in Chrome] Could not repair wrapper exec bit: ${b}`,{level:\"error\"}));return s}if(await tP(r,{recursive:!0}),await rP(s,h),n!==\"windows\")await ZT(s,493);return t(`[Claude in Chrome] Created Chrome native host wrapper script: ${s}`),s}",
+          "sha256": "2834f51c1ac94be0fb450ea040ec6ed7425af51b2d16997e3f7183a157b7b787",
+          "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+          "variable": false
+        },
+        {
+          "name": "YW",
+          "file": "chunk-09m4fzsj.js",
+          "start": 412183,
+          "end": 412490,
+          "source": "function YW(e){return cH().then((r)=>{if(!r)return;if(le().cachedChromeExtensionInstalled!==r)Ae((h)=>({...h,cachedChromeExtensionInstalled:r}),e)}).catch((r)=>t(`[Claude in Chrome] Failed to check extension installation during cache refresh: ${r}`,{level:\"error\"})),le().cachedChromeExtensionInstalled??!1}",
+          "sha256": "8b58549d0b7d44eac0ad9f43cdbc407be7525f950e0cd817de951c72c54d463d",
+          "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+          "variable": false
+        },
+        {
+          "name": "cH",
+          "file": "chunk-09m4fzsj.js",
+          "start": 412490,
+          "end": 412639,
+          "source": "async function cH(){let e=JT();if(e.length===0)return t(`[Claude in Chrome] Unsupported platform for extension detection: ${O()}`),!1;return QT(e,t)}",
+          "sha256": "24d93a6e8c09170f17fa20b2acc40b7bebab92e8ef58cd5c4b392e5ba0995c5c",
+          "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+          "variable": false
+        }
+      ],
+      "dependencies": {
+        "Ce": {
+          "file": "chunk-bn3p37gv.js",
+          "name": "Ce"
+        },
+        "Wu": {
+          "file": "chunk-bn3p37gv.js",
+          "name": "Wu"
+        },
+        "A6e": {
+          "file": "chunk-bn3p37gv.js",
+          "name": "A6e"
+        },
+        "r4": {
+          "file": "chunk-bn3p37gv.js",
+          "name": "r4"
+        },
+        "E": {
+          "file": "chunk-c9me9cp7.js",
+          "name": "E"
+        },
+        "W": {
+          "file": "chunk-c9me9cp7.js",
+          "name": "W"
+        },
+        "Ht": {
+          "file": "chunk-c9me9cp7.js",
+          "name": "Ht"
+        },
+        "we": {
+          "file": "chunk-brnn4zwp.js",
+          "name": "we"
+        },
+        "xr": {
+          "file": "chunk-brnn4zwp.js",
+          "name": "xr"
+        },
+        "a": {
+          "file": "chunk-mbfze585.js",
+          "name": "a"
+        },
+        "_": {
+          "file": "chunk-q80zaav8.js",
+          "name": "_"
+        },
+        "t": {
+          "file": "chunk-q80zaav8.js",
+          "name": "t"
+        },
+        "d": {
+          "file": "chunk-amhtwhch.js",
+          "name": "d"
+        },
+        "O": {
+          "file": "chunk-amhtwhch.js",
+          "name": "O"
+        },
+        "ft": {
+          "file": "chunk-nankzm0s.js",
+          "name": "ft"
+        },
+        "iJe": {
+          "file": "chunk-nankzm0s.js",
+          "name": "iJe"
+        },
+        "aZ": {
+          "file": "chunk-nankzm0s.js",
+          "name": "aZ"
+        },
+        "k": {
+          "file": "chunk-nankzm0s.js",
+          "name": "k"
+        },
+        "Ae": {
+          "file": "chunk-nankzm0s.js",
+          "name": "Ae"
+        },
+        "le": {
+          "file": "chunk-nankzm0s.js",
+          "name": "le"
+        },
+        "Br": {
+          "file": "chunk-9d2ykxmy.js",
+          "name": "Br"
+        },
+        "Je": {
+          "file": "chunk-fmv8bhm3.js",
+          "name": "Je"
+        },
+        "on": {
+          "file": "chunk-b5kmgz2n.js",
+          "name": "on"
+        },
+        "dmt": {
+          "file": "chunk-ejqjra50.js",
+          "name": "dmt"
+        },
+        "QRe": {
+          "file": "chunk-ejqjra50.js",
+          "name": "QRe"
+        },
+        "iUe": {
+          "file": "chunk-ejqjra50.js",
+          "name": "iUe"
+        },
+        "Zc": {
+          "file": "chunk-df0597gf.js",
+          "name": "Zc"
+        },
+        "JBr": {
+          "file": "chunk-df0597gf.js",
+          "name": "JBr"
+        },
+        "QBr": {
+          "file": "chunk-df0597gf.js",
+          "name": "QBr"
+        },
+        "gSe": {
+          "file": "chunk-df0597gf.js",
+          "name": "gSe"
+        },
+        "Vh": {
+          "file": "chunk-7qtw821h.js",
+          "name": "Vh"
+        },
+        "ac": {
+          "file": "chunk-ag87p919.js",
+          "name": "ac"
+        },
+        "lfe": {
+          "file": "chunk-ag87p919.js",
+          "name": "lfe"
+        },
+        "Ur": {
+          "file": "chunk-kby37ryb.js",
+          "name": "Ur"
+        },
+        "ZT": {
+          "file": "promises",
+          "name": "chmod"
+        },
+        "tP": {
+          "file": "promises",
+          "name": "mkdir"
+        },
+        "nP": {
+          "file": "promises",
+          "name": "readFile"
+        },
+        "rP": {
+          "file": "promises",
+          "name": "writeFile"
+        },
+        "GW": {
+          "file": "os",
+          "name": "homedir"
+        },
+        "bi": {
+          "file": "path",
+          "name": "join"
+        },
+        "VT": {
+          "file": "promises",
+          "name": "lstat"
+        },
+        "CW": {
+          "file": "promises",
+          "name": "readlink"
+        },
+        "OW": {
+          "file": "promises",
+          "name": "realpath"
+        },
+        "MW": {
+          "file": "path",
+          "name": "dirname"
+        },
+        "IW": {
+          "file": "path",
+          "name": "join"
+        },
+        "DW": {
+          "file": "path",
+          "name": "resolve"
+        },
+        "KT": {
+          "file": "path",
+          "name": "sep"
+        },
+        "XT": {
+          "file": "promises",
+          "name": "readdir"
+        },
+        "Lu": {
+          "file": "path",
+          "name": "join"
+        },
+        "JT": {
+          "file": "chunk-09m4fzsj.js",
+          "name": "JT"
+        }
+      }
+    },
+    "chunk-nankzm0s.js": {
+      "factory": "module6",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "rows": [
+        {
+          "name": "iJe",
+          "file": "chunk-nankzm0s.js",
+          "start": 666046,
+          "end": 666085,
+          "source": "function iJe(){return tA(fn()?.scopes)}",
+          "sha256": "59fe00ebd93fb7eee8fef21cf9ff207b90cace516830cade46769f5dc988563c",
+          "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+          "variable": false
+        },
+        {
+          "name": "tA",
+          "file": "chunk-nankzm0s.js",
+          "start": 666085,
+          "end": 666203,
+          "source": "function tA(e){return Array.isArray(e)&&(e.includes(WK)||e.includes(\"user:office\")||e.includes(\"user:ccr_inference\"))}",
+          "sha256": "2823bbc34c1d028e1dff46b4c82c4b8f383b70662bb0fadd9086ae196ce802a3",
+          "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+          "variable": false
+        }
+      ],
+      "dependencies": {
+        "WK": {
+          "file": "chunk-a5b8yq96.js",
+          "name": "WK"
+        },
+        "fn": {
+          "file": "chunk-nankzm0s.js",
+          "name": "fn"
+        }
+      }
+    },
+    "chunk-a5b8yq96.js": {
+      "factory": "module7",
+      "moduleSha256": "41b71aa8a1e0ec0722f5ba9d53326e629588c7095f483569f018d6a4c7ba5b1c",
+      "rows": [
+        {
+          "name": "WK",
+          "file": "chunk-a5b8yq96.js",
+          "start": 995,
+          "end": 1012,
+          "source": "WK=\"user:profile\"",
+          "sha256": "21744ffddf7c639140255ffe94ec2f701ab5cfb5398e09371b3c056bfbcdc2c2",
+          "moduleSha256": "41b71aa8a1e0ec0722f5ba9d53326e629588c7095f483569f018d6a4c7ba5b1c",
+          "variable": true
+        }
+      ],
+      "dependencies": {}
+    },
+    "chunk-8447apg8.js": {
+      "factory": "module8",
+      "moduleSha256": "3c8e05c40890a21a67b11e8a9628a1893b5d5f829ebb8ac4c7829b2f6b586c95",
+      "rows": [
+        {
+          "name": "c8t",
+          "file": "chunk-8447apg8.js",
+          "start": 865,
+          "end": 905,
+          "source": "c8t=\"https://clau.de/chrome/permissions\"",
+          "sha256": "9673c1852a6109024ea29432a4912da0f14a468d6aceffbb677146b48119131b",
+          "moduleSha256": "3c8e05c40890a21a67b11e8a9628a1893b5d5f829ebb8ac4c7829b2f6b586c95",
+          "variable": true
+        }
+      ],
+      "dependencies": {}
+    },
+    "chunk-mphp7acd.js": {
+      "factory": "module9",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "rows": [
+        {
+          "name": "Ker",
+          "file": "chunk-mphp7acd.js",
+          "start": 3240636,
+          "end": 3240823,
+          "source": "Ker={name:\"chrome\",description:\"Open Claude in Chrome settings\",availability:[\"claude-ai\"],isEnabled:()=>!Ce()&&sk(),policyGate:{policy:\"allow_claude_browser_extension\"},type:\"local-jsx\"}",
+          "sha256": "0977534ba8c813438c1944fefbbd01d527efbc764984e04b07ac944fe6d3c8f4",
+          "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+          "variable": true
+        },
+        {
+          "name": "L8t",
+          "file": "chunk-mphp7acd.js",
+          "start": 3240824,
+          "end": 3240831,
+          "source": "L8t=Ker",
+          "sha256": "421e6185b2c9a1534dea0eb0d35e642153a426695c923217762ffa8769a6e73a",
+          "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+          "variable": true
+        }
+      ],
+      "dependencies": {
+        "Ce": {
+          "file": "chunk-bn3p37gv.js",
+          "name": "Ce"
+        },
+        "sk": {
+          "file": "chunk-09m4fzsj.js",
+          "name": "sk"
+        }
+      }
+    },
+    "chunk-ag87p919.js": {
+      "factory": "module10",
+      "moduleSha256": "e51f0caaaafdea4672ca46d11e18b7f617b617f5319cf0b7d214cab31c35fdfb",
+      "rows": [
+        {
+          "name": "ac",
+          "file": "chunk-ag87p919.js",
+          "start": 666,
+          "end": 687,
+          "source": "ac=\"claude-in-chrome\"",
+          "sha256": "ac777cd21e8a8967df9f9d20dd79d6192af3e76d7e9a286d5a17a77570f4ffea",
+          "moduleSha256": "e51f0caaaafdea4672ca46d11e18b7f617b617f5319cf0b7d214cab31c35fdfb",
+          "variable": true
+        },
+        {
+          "name": "t",
+          "file": "chunk-ag87p919.js",
+          "start": 747,
+          "end": 773,
+          "source": "t=\"--claude-in-chrome-mcp\"",
+          "sha256": "dac1eb2c2ed22bc6165d7159088a9ded911fc1a99ce3c1fb9f96657b67c754e2",
+          "moduleSha256": "e51f0caaaafdea4672ca46d11e18b7f617b617f5319cf0b7d214cab31c35fdfb",
+          "variable": true
+        },
+        {
+          "name": "lfe",
+          "file": "chunk-ag87p919.js",
+          "start": 1479,
+          "end": 1565,
+          "source": "function lfe(){return{type:\"stdio\",command:process.execPath,args:[t],scope:\"dynamic\"}}",
+          "sha256": "102588887fdf00bcd3084ad5b0703acecaec512593855e1ccf41ea869a3e60ec",
+          "moduleSha256": "e51f0caaaafdea4672ca46d11e18b7f617b617f5319cf0b7d214cab31c35fdfb",
+          "variable": false
+        }
+      ],
+      "dependencies": {}
+    },
+    "chunk-9d2ykxmy.js": {
+      "factory": "module11",
+      "moduleSha256": "bfd24b568576517815372ff12b0cace8dd73dadc60ddf90aeed702a5b7b4242c",
+      "rows": [
+        {
+          "name": "Br",
+          "file": "chunk-9d2ykxmy.js",
+          "start": 5965,
+          "end": 6063,
+          "source": "async function Br(e,r,u){try{let o=await r();return y(e),o}catch(o){throw m(e,u?.(o)??\"error\"),o}}",
+          "sha256": "ff76496dd89df94c1f6401037d4cbbb59541ef505651b8f69c8543b71b01f522",
+          "moduleSha256": "bfd24b568576517815372ff12b0cace8dd73dadc60ddf90aeed702a5b7b4242c",
+          "variable": false
+        }
+      ],
+      "dependencies": {
+        "y": {
+          "file": "chunk-9d2ykxmy.js",
+          "name": "y"
+        },
+        "m": {
+          "file": "chunk-9d2ykxmy.js",
+          "name": "m"
+        }
+      }
+    }
+  },
+  "nativeSha256": "6af0ef064bf1703000c76fd722ab71f744319ba42c60b96b17ef86c624da5c16",
+  "adaptations": [
+    "GN import.meta.require resolves the existing raw SDK invocation owner; no SDK/transport allocated",
+    "React host imports use actual Ink/AppState and existing canonical list/Select/Dialog namespaces; original M React module initialization is performed by actual React import",
+    "JT uses existing cross-platform browser paths C instead of pinned Darwin-only literal",
+    "telemetry publications remain canceled by existing analytics owner",
+    "lfe args:[t] becomes args:ports.sourceEntryArgs(t) preserving accepted C source preload/CLI path; bundled same flag",
+    "b$e launcher dmt/iUe/QRe bind accepted C current executable/sourceEntrypoint rather than installing or preferring official claude; original YT body retained",
+    "WW/JT/JBr/QBr use existing cross-platform browser paths/registry producers C"
+  ]
+}

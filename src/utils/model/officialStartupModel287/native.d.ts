@@ -1,0 +1,5 @@
+import type {ToolUseContext} from '../../../Tool.js'
+export interface StartupModelInput287 {userSpecifiedModel?:string;agentModel?:string;agentModelSource?:'agent'|'routine';routineModelTransientlySkipped?:boolean;storageV5?:ToolUseContext['storageV5'];credentials?:ToolUseContext['credentials']}
+export interface StartupModelResult287 {effectiveModel:string|undefined;initialMainLoopModel:string|null;resolvedInitialModel:string;rawModelRequest:string|null;restrictedModel:string|undefined;unservedModelSpelling:string|undefined;settingLayer:string|null;modelWithoutStartupOverride:string|undefined}
+export interface StartupModelRuntime287 {prepare(input:StartupModelInput287):Promise<StartupModelResult287>;resolve(input:{cli:{model?:string;isNonInteractiveSession?:boolean};env:NodeJS.ProcessEnv;settings:{model?:string};agentFrontmatter?:{model:string;modelSource?:'agent'|'routine'}},storage?:ToolUseContext['storageV5']):StartupModelResult287}
+export function createStartupModel287(ports:Record<string,unknown>):StartupModelRuntime287

@@ -1,0 +1,93 @@
+{
+  "version": "2.1.287",
+  "platform": "darwin-arm64",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "binarySha256": "6eab8333fe2121553100d8f40bfada384a3e989b94f947e18ba6677a6fcb41ea",
+  "offsetUnit": "UTF-16 code units",
+  "scope": "Original source-qualified policy/engine state cells only; no Mods controller, worker, host, lifecycle, production entrypoint, or registry owner wiring.",
+  "declarations": [
+    {
+      "file": "chunk-x954y317.js",
+      "name": "ct",
+      "start": 5356,
+      "end": 5382,
+      "moduleLength": 23029,
+      "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+      "sourceSha256": "5da0f7703a355ff03a7692122a7882ea1749f0801ed8f38d6b64ce727d2cd856",
+      "source": "function ct(t,e){return t}",
+      "variable": false
+    },
+    {
+      "file": "chunk-3v9xv49a.js",
+      "name": "Ys",
+      "start": 615,
+      "end": 668,
+      "moduleLength": 723,
+      "moduleSha256": "3e545c0842cab150ffc61f890c606560934053ba18333bed97b6a5241466148d",
+      "sourceSha256": "d9357bae5e268c41d25339e696890aad492cb56a6d6ac6c19b74841ca09e6574",
+      "source": "function Ys(){let t;return{set:(e)=>{t=e},get:()=>t}}",
+      "variable": false
+    },
+    {
+      "file": "chunk-3v9xv49a.js",
+      "name": "kJn",
+      "start": 672,
+      "end": 680,
+      "moduleLength": 723,
+      "moduleSha256": "3e545c0842cab150ffc61f890c606560934053ba18333bed97b6a5241466148d",
+      "sourceSha256": "2323b3345635c98683947da97577b98d95b6c7b985278c9e5aff6197928d1954",
+      "source": "kJn=Ys()",
+      "variable": true
+    },
+    {
+      "file": "chunk-3v9xv49a.js",
+      "name": "byt",
+      "start": 685,
+      "end": 702,
+      "moduleLength": 723,
+      "moduleSha256": "3e545c0842cab150ffc61f890c606560934053ba18333bed97b6a5241466148d",
+      "sourceSha256": "7fce45ab6060ce88d5485eda9ba289773f4f661b2f84842fca6e91f422eea0f7",
+      "source": "byt=()=>kJn.get()",
+      "variable": true
+    },
+    {
+      "file": "chunk-hhxhpvxp.js",
+      "name": "J7n",
+      "start": 132922,
+      "end": 132953,
+      "moduleLength": 207923,
+      "moduleSha256": "ecdb6abdb941b1a990d5cda13d161a77996b7e2b4a07fef88c4f1c0d0afa9ca5",
+      "sourceSha256": "c1af14d0218e37dfc13c3c50e25e7f9ad90a69f312252b25e2912ece52bb730d",
+      "source": "J7n=ct(Ys(),(e)=>e.set(void 0))",
+      "variable": true
+    },
+    {
+      "file": "chunk-hhxhpvxp.js",
+      "name": "Q7n",
+      "start": 132958,
+      "end": 132975,
+      "moduleLength": 207923,
+      "moduleSha256": "ecdb6abdb941b1a990d5cda13d161a77996b7e2b4a07fef88c4f1c0d0afa9ca5",
+      "sourceSha256": "4167badc33bd3710af2261449c6c7458f437005308d06ac585d1fbd9e579d12e",
+      "source": "Q7n=()=>J7n.get()",
+      "variable": true
+    },
+    {
+      "file": "chunk-hhxhpvxp.js",
+      "name": "dyt",
+      "start": 132980,
+      "end": 133002,
+      "moduleLength": 207923,
+      "moduleSha256": "ecdb6abdb941b1a990d5cda13d161a77996b7e2b4a07fef88c4f1c0d0afa9ca5",
+      "sourceSha256": "9f20c1ab8f5e95e1d2ab364b4265085193fcf7ba183ee6e95039ae2cbdeb2ac2",
+      "source": "dyt=()=>Q7n()!==void 0",
+      "variable": true
+    }
+  ],
+  "semantics": {
+    "policyCell": "chunk-3v9xv49a.js:kJn is Ys(); byt() reads the same state and preserves unset.",
+    "engineCell": "chunk-hhxhpvxp.js:J7n is ct(Ys(), e => e.set(undefined)); Q7n() reads it and dyt() is Q7n() !== undefined.",
+    "admission": "The complete provider/admission implementation remains the official full availability closure; this module exposes the exact cells consumed by that policy, not a replacement policy.",
+    "personalOAuthStartup": "No independently source-qualified personalOAuth startup predicate was identified among these cell roots. Production startup gate remains unbound; do not infer eligibility from dyt()."
+  }
+}

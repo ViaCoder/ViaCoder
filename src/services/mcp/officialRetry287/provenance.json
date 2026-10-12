@@ -1,0 +1,21 @@
+{
+  "offsetUnit": "UTF16 end-exclusive",
+  "wholeOnclose": {
+    "file": "chunk-f2cpzzp9.js",
+    "start": 1461400,
+    "end": 1463788,
+    "sha256": "228edfb77b7f58e85659506d27a089c031b3df95443c317ff5eba7ce684e438d",
+    "moduleSha256": "ecf059605929abc2d38c30fc6d3b5b0b69ef05c9d344e934443f320a48256dae",
+    "source": "()=>{if(Ai())return;let dr=Zt.config.type??\"stdio\";if(Ql().clearServerCache(Zt.name,Zt.config).catch(()=>{t(`Failed to invalidate the server cache: ${Zt.name}`)}),Io(Zt.name)){te(Zt.name,\"Server is disabled, skipping automatic reconnection\");return}if(dr!==\"stdio\"&&dr!==\"sdk\"){let Jr=dfo(dr);te(Zt.name,`${Jr} transport closed/disconnected, attempting automatic reconnection`);let Mn=Ct.current.get(Zt.name);if(Mn)Mn(),Ct.current.delete(Zt.name);let zn=gr(),Ln=()=>gr()===zn||!ww(Zt.config),ps=()=>{if(Zt.name===ttr||Io(Zt.name))return;No({key:`mcp-reconnect-failed-${Zt.name}`,kind:\"warning\",priority:\"high\",text:`MCP server \"${Wr(Zt.name)}\" disconnected \\xB7 open /mcp to reconnect`,color:\"warning\",timeoutMs:12000})};(async()=>{for(let jn=1;jn<=mJ;jn++){if(Io(Zt.name)){te(Zt.name,\"Server disabled during reconnection, stopping retry\"),Ct.current.delete(Zt.name),Do({...Zt});return}if(!Ln()){te(Zt.name,\"Identity changed during reconnection, stopping retry\");return}let Rr=If(Zt.name,Zt.config);if(Rr){Ike(Zt.name),te(Zt.name,\"Server blocked by managed policy during reconnection, stopping retry\"),Ct.current.delete(Zt.name),Do({name:Zt.name,type:\"failed\",config:Zt.config,...qI(Rr)});return}Do({...Zt,type:\"pending\",reconnectAttempt:jn,maxReconnectAttempts:mJ});let Ur=Ut.now();try{let Dr=await Ql().reconnectMcpServerImpl(Zt.name,Zt.config,Se,_e),Br=Math.round(Ut.now()-Ur);if(!Ln()){te(Zt.name,`Identity changed during reconnection attempt ${jn}, discarding result`);return}if(Dr.client.type===\"connected\"){te(Zt.name,`${Jr} reconnection successful after ${Br}ms (attempt ${jn})`),Ct.current.delete(Zt.name),qo(Dr);return}if(te(Zt.name,`${Jr} reconnection attempt ${jn} completed with status: ${Dr.client.type}`),jn===mJ){if(te(Zt.name,`Max reconnection attempts (${mJ}) reached, giving up`),Ct.current.delete(Zt.name),qo(Dr),Dr.client.type===\"failed\")ps();return}}catch(Dr){let Br=Math.round(Ut.now()-Ur);if(Go(Zt.name,`${Jr} reconnection attempt ${jn} failed after ${Br}ms: ${$o(Dr,Zt.config)}`),!Ln())return;if(jn===mJ){te(Zt.name,`Max reconnection attempts (${mJ}) reached, giving up`),Ct.current.delete(Zt.name),Do({...Zt,type:\"failed\"}),ps();return}}let nr=eft(jn);te(Zt.name,`Scheduling reconnection attempt ${jn+1} in ${nr}ms`),await new Promise((Dr)=>{let Br=Ut.setTimeout(Dr,nr);Ct.current.set(Zt.name,Br)})}})()}else Ro.current.delete(Zt.name),Do({...Zt,type:\"failed\"})}"
+  },
+  "wholeInitialCase": {
+    "name": "initial-failed-connect-retry",
+    "start": 1470033,
+    "end": 1470997,
+    "sha256": "7c8a91e22f8068f5a909770e0ccced59874215e6a7b4ce199d28c97e8441b074",
+    "source": "case\"failed\":{let Zo=(to.current.get(Zt.name)??0)+1;if(rTe(Zt)&&Zo<=TX){to.current.set(Zt.name,Zo);let Rn=eft(Zo);te(Zt.name,`Transient ${Zt.errorCode??\"<sse-no-code>\"} on initial connect \\u2014 retry ${Zo}/${TX} in ${Rn}ms`),Do({name:Zt.name,config:Zt.config,type:\"pending\",reconnectAttempt:Zo,maxReconnectAttempts:TX});let ar=Ct.current.get(Zt.name);if(ar)ar();let er=gr(),Gn=Ut.setTimeout(()=>{if(Ct.current.delete(Zt.name),Io(Zt.name)){Do({...Zt});return}if(gr()!==er)return;let Xo=If(Zt.name,Zt.config);if(Xo){Ike(Zt.name),te(Zt.name,\"Server blocked by managed policy during initial-connect retry, stopping retry\"),Do({name:Zt.name,type:\"failed\",config:Zt.config,...qI(Xo)});return}Ql().reconnectMcpServerImpl(Zt.name,Zt.config,Se,_e).then((An)=>{if(gr()!==er)return;qo(An)},(An)=>{if(Go(Zt.name,`Initial-connect retry ${Zo} threw: ${$o(An,Zt.config)}`),gr()!==er)return;Do({...Zt})})},Rn);Ct.current.set(Zt.name,Gn)}else if($Ht(Zt,lHt,aHt))yN(\"MCP\",1);break}"
+  },
+  "sourceContract": "provenance-reference://not-bundled/cf13cddf850a4e8b4b69ec3b43866e3fe10ec4ac3e451cd44a9a8e5ea7643762",
+  "transport": "free bindings only; refs owned by existing reconnectSupervisor; no SDK/cache/store",
+  "clock": "existing UI ClockProvider for mounted; existing ExecutionSession.host.clock for headless; cancellation settles waits C"
+}

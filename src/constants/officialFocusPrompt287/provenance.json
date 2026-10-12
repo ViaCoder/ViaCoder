@@ -1,0 +1,382 @@
+{
+  "version": "2.1.287",
+  "platform": "darwin-arm64",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16 / end-exclusive",
+  "roots": {
+    "guidance": [
+      "chunk-mphp7acd.js",
+      "nlo"
+    ],
+    "enabled": [
+      "chunk-6xrs6gmd.js",
+      "kSe"
+    ],
+    "invalidate": [
+      "chunk-6xrs6gmd.js",
+      "egt"
+    ],
+    "override": [
+      "chunk-6xrs6gmd.js",
+      "_hn"
+    ],
+    "signal": [
+      "chunk-6xrs6gmd.js",
+      "Zi"
+    ]
+  },
+  "modules": [
+    {
+      "file": "chunk-bn3p37gv.js",
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "rows": [
+        {
+          "file": "chunk-bn3p37gv.js",
+          "name": "V",
+          "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+          "moduleLength": 117054,
+          "start": 10007,
+          "end": 10151,
+          "sha256": "3b223ad86a79e9969e8241054c03d04d80d046aab19dd519973e4aed1e79e9e9",
+          "source": "class V{#e;#t=new WeakMap;constructor(e){this.#e=e}of(e){let t=this.#t.get(e);if(t!==void 0)return t;let o=this.#e();return this.#t.set(e,o),o}}",
+          "variable": false
+        }
+      ],
+      "bindings": {}
+    },
+    {
+      "file": "chunk-4s38z9x2.js",
+      "moduleSha256": "eb46628147f83403bbcd57ca88b3370e05c6631bf027a80117844f770b276b2d",
+      "rows": [
+        {
+          "file": "chunk-4s38z9x2.js",
+          "name": "s",
+          "moduleSha256": "eb46628147f83403bbcd57ca88b3370e05c6631bf027a80117844f770b276b2d",
+          "moduleLength": 2740,
+          "start": 1098,
+          "end": 1153,
+          "sha256": "8b79e9ad51e95ede56e4385a196d4187b05a3d78fde643acd8c68658ff8e8521",
+          "source": "s=globalThis.process?.getBuiltinModule?.(\"async_hooks\")",
+          "variable": true
+        },
+        {
+          "file": "chunk-4s38z9x2.js",
+          "name": "wKt",
+          "moduleSha256": "eb46628147f83403bbcd57ca88b3370e05c6631bf027a80117844f770b276b2d",
+          "moduleLength": 2740,
+          "start": 1154,
+          "end": 1195,
+          "sha256": "d871ff458e10c6c5509c5b70f7944fba032e2a42697e09aec182aaaac06d05b4",
+          "source": "wKt=s?(e)=>s.AsyncResource.bind(e):(e)=>e",
+          "variable": true
+        },
+        {
+          "file": "chunk-4s38z9x2.js",
+          "name": "Me",
+          "moduleSha256": "eb46628147f83403bbcd57ca88b3370e05c6631bf027a80117844f770b276b2d",
+          "moduleLength": 2740,
+          "start": 1196,
+          "end": 1457,
+          "sha256": "08c491676ef2243b475f885c45f1163b2f0abed6075a2e5fa3a32cdd2afb308a",
+          "source": "function Me(){let e=new Set;return{subscribe(n){let r=wKt(n);return e.add(r),()=>{e.delete(r)}},emit(...n){let r;for(let o of e)try{o(...n)}catch(i){(r??=[]).push(i)}if(r)throw r.length===1?r[0]:AggregateError(r,\"Signal listener(s) threw\")},clear(){e.clear()}}}",
+          "variable": false
+        }
+      ],
+      "bindings": {}
+    },
+    {
+      "file": "chunk-6xrs6gmd.js",
+      "moduleSha256": "f9dd0da1e467d32595bc9af036ebe3d18edca89a87e6204bf2519aeb61615e17",
+      "rows": [
+        {
+          "file": "chunk-6xrs6gmd.js",
+          "name": "vu",
+          "moduleSha256": "f9dd0da1e467d32595bc9af036ebe3d18edca89a87e6204bf2519aeb61615e17",
+          "moduleLength": 253011,
+          "start": 46631,
+          "end": 46649,
+          "sha256": "a23d681bf8740c6973e28e15ab7a457d2a132471e56de84d6583d3d3cc544646",
+          "source": "vu=new V(()=>Me())",
+          "variable": true
+        },
+        {
+          "file": "chunk-6xrs6gmd.js",
+          "name": "Zi",
+          "moduleSha256": "f9dd0da1e467d32595bc9af036ebe3d18edca89a87e6204bf2519aeb61615e17",
+          "moduleLength": 253011,
+          "start": 46650,
+          "end": 46687,
+          "sha256": "0399768e9894a1177325f1ce783e1a510b3ee5653b0222b49ec39e9c5000fdf0",
+          "source": "function Zi(){return vu.of(U().host)}",
+          "variable": false
+        },
+        {
+          "file": "chunk-6xrs6gmd.js",
+          "name": "kSe",
+          "moduleSha256": "f9dd0da1e467d32595bc9af036ebe3d18edca89a87e6204bf2519aeb61615e17",
+          "moduleLength": 253011,
+          "start": 46687,
+          "end": 46768,
+          "sha256": "b18a1912884aedd7a0e4bb48d4207852f20b0fc384c44eab17a232d5930f1263",
+          "source": "function kSe(){let e=tt().viewMode;return e?e===\"focus\":le().briefTranscript??!1}",
+          "variable": false
+        },
+        {
+          "file": "chunk-6xrs6gmd.js",
+          "name": "_hn",
+          "moduleSha256": "f9dd0da1e467d32595bc9af036ebe3d18edca89a87e6204bf2519aeb61615e17",
+          "moduleLength": 253011,
+          "start": 46896,
+          "end": 47027,
+          "sha256": "1a31959d53992b3eba5a0e211cf3d2743b5a2f74c6f55550f7ee66a61a14fdf3",
+          "source": "function _hn(e){let{viewMode:n=null,...r}=ly()??{};if(n===e)return;RL(e?{...r,viewMode:e}:r),Ki.notifyChange(\"flagSettings\"),egt()}",
+          "variable": false
+        },
+        {
+          "file": "chunk-6xrs6gmd.js",
+          "name": "Ji",
+          "moduleSha256": "f9dd0da1e467d32595bc9af036ebe3d18edca89a87e6204bf2519aeb61615e17",
+          "moduleLength": 253011,
+          "start": 47072,
+          "end": 47084,
+          "sha256": "39026562a50cf02483eebb2bbc074364a30713aab7a28317a8715811837d960d",
+          "source": "Ji=[\"\",\":L\"]",
+          "variable": true
+        },
+        {
+          "file": "chunk-6xrs6gmd.js",
+          "name": "egt",
+          "moduleSha256": "f9dd0da1e467d32595bc9af036ebe3d18edca89a87e6204bf2519aeb61615e17",
+          "moduleLength": 253011,
+          "start": 47085,
+          "end": 47176,
+          "sha256": "cc95883b32c68f350a1b031f753e96c0ff8e015c3e59c4601fcc1c8452cac952",
+          "source": "function egt(){for(let e of Ji)Fet().delete(`focus_mode${e}`);yR(\"focus_mode\"),Zi().emit()}",
+          "variable": false
+        }
+      ],
+      "bindings": {
+        "tt": {
+          "port": "settings",
+          "origin": "chunk-f1vb7bx7.js:tt"
+        },
+        "le": {
+          "port": "globalConfig",
+          "origin": "chunk-nankzm0s.js:le"
+        },
+        "Fet": {
+          "port": "sections",
+          "origin": "chunk-bn3p37gv.js:Fet"
+        },
+        "yR": {
+          "port": "noteInvalidation",
+          "origin": "chunk-bn3p37gv.js:yR"
+        },
+        "V": {
+          "file": "chunk-bn3p37gv.js",
+          "name": "V"
+        },
+        "Me": {
+          "file": "chunk-4s38z9x2.js",
+          "name": "Me"
+        },
+        "U": {
+          "port": "execution",
+          "origin": "chunk-bn3p37gv.js:U"
+        },
+        "ly": {
+          "port": "flagSettings",
+          "origin": "chunk-bn3p37gv.js:ly"
+        },
+        "RL": {
+          "port": "setFlagSettings",
+          "origin": "chunk-bn3p37gv.js:RL"
+        },
+        "Ki": {
+          "port": "settingsChangeDetector",
+          "origin": "chunk-6xrs6gmd.js:Ki"
+        }
+      }
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "rows": [
+        {
+          "file": "chunk-mphp7acd.js",
+          "name": "elo",
+          "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+          "moduleLength": 4409957,
+          "start": 1453795,
+          "end": 1454223,
+          "sha256": "7da710621b46a590058fb559f7408ab3561a2eb0af0b57da9b5a016e9a43d955",
+          "source": "elo=`# Focus mode\nThe user has focus mode enabled. In focus mode, the user only sees your final text message in each response. They do not see tool calls, tool results, or any text you emit between tool calls. This overrides earlier guidance about giving short updates between tool calls \\u2014 skip those updates and put everything the user needs to know in your final message. Do not assume they saw earlier progress updates.`",
+          "variable": true
+        },
+        {
+          "file": "chunk-mphp7acd.js",
+          "name": "tlo",
+          "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+          "moduleLength": 4409957,
+          "start": 1454224,
+          "end": 1454682,
+          "sha256": "20b547b7c21bf9c6283f3a9a7b4925d5b1c0928218bb820ff9fac66ad4ec9ea6",
+          "source": "tlo=`# Focus mode\nThe user has focus mode enabled. They only see your final text message in each response \\u2014 not tool calls, tool results, or any text you write between tool calls. Anything you say mid-turn is not seen, so don't narrate progress between tool calls. Put everything the user needs into your final message: what you investigated, what you found, what you changed, decisions you made, and what's next. Do not assume they saw earlier output.`",
+          "variable": true
+        },
+        {
+          "file": "chunk-mphp7acd.js",
+          "name": "nlo",
+          "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+          "moduleLength": 4409957,
+          "start": 1454683,
+          "end": 1454810,
+          "sha256": "4a9cedd63b05ff31403f8641015b6ba9281275a5388ba20b5460db781ce8e623",
+          "source": "function nlo(e){if(Ce()){if(ge(\"flagSettings\")?.viewMode!==\"focus\")return null}else if(!kSe())return null;return AG(e)?tlo:elo}",
+          "variable": false
+        }
+      ],
+      "bindings": {
+        "Ce": {
+          "port": "nonInteractive",
+          "origin": "chunk-bn3p37gv.js:Ce"
+        },
+        "ge": {
+          "port": "settingsForSource",
+          "origin": "chunk-f1vb7bx7.js:ge"
+        },
+        "kSe": {
+          "file": "chunk-6xrs6gmd.js",
+          "name": "kSe"
+        },
+        "AG": {
+          "port": "lean",
+          "origin": "chunk-1b21she7.js:AG"
+        }
+      }
+    }
+  ],
+  "ports": {
+    "nonInteractive": {
+      "file": "chunk-bn3p37gv.js",
+      "name": "Ce",
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "moduleLength": 117054,
+      "start": 87572,
+      "end": 87632,
+      "sha256": "c5962d665b6699f61261e7a0bccf7d54659c6deee200a6725eeb6402707056f1",
+      "source": "function Ce(){return!n().host.launchOptions.isInteractive()}",
+      "variable": false
+    },
+    "settingsForSource": {
+      "file": "chunk-f1vb7bx7.js",
+      "name": "ge",
+      "moduleSha256": "2f76d1800a2202fe6717904ab677e2509d0b124302d3d31e325353b307f795d1",
+      "moduleLength": 111323,
+      "start": 87897,
+      "end": 87961,
+      "sha256": "944522b950e26a01530949b297fc04635325dc5e421062a2de5c37495cc5ae3a",
+      "source": "function ge(e){if(rP()&&Hm.has(e))return null;return Xje(e,M())}",
+      "variable": false
+    },
+    "settings": {
+      "file": "chunk-f1vb7bx7.js",
+      "name": "tt",
+      "moduleSha256": "2f76d1800a2202fe6717904ab677e2509d0b124302d3d31e325353b307f795d1",
+      "moduleLength": 111323,
+      "start": 96077,
+      "end": 96116,
+      "sha256": "cb0eea131668b15485573d4295e2c108739a650bccde39826b0b062971af898f",
+      "source": "function tt(){return R_().settings||{}}",
+      "variable": false
+    },
+    "globalConfig": {
+      "file": "chunk-nankzm0s.js",
+      "name": "le",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "moduleLength": 706979,
+      "start": 543653,
+      "end": 543829,
+      "sha256": "6108ac9cf541c4dcedea5680be2b67edf05503eb3f21b33d836e695257121edb",
+      "source": "function le(){let e=oe();if(pn())return e.testGlobalConfig;let n=e.readCache();if(n)return n;if(!e.enableSettled)throw Error(\"Config accessed before allowed.\");return ii(qe())}",
+      "variable": false
+    },
+    "lean": {
+      "file": "chunk-1b21she7.js",
+      "name": "AG",
+      "moduleSha256": "66df76fe31929f24554fa368a67b8d85a0844736314e2c2d69c6dddfc57099f8",
+      "moduleLength": 136928,
+      "start": 8211,
+      "end": 8293,
+      "sha256": "783df659e1b97502aed70089a6cd1be3b77d49f1aabff8d02ade23351ef10e9a",
+      "source": "function AG(e){let n=Ae();return XQ()?n.leanPromptCompiledOnly(e):n.leanPrompt(e)}",
+      "variable": false
+    },
+    "sections": {
+      "file": "chunk-bn3p37gv.js",
+      "name": "Fet",
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "moduleLength": 117054,
+      "start": 109024,
+      "end": 109076,
+      "sha256": "35b86945de78742e9e81732536ff945c93973fa6afa004519d820a6c2ede997e",
+      "source": "function Fet(){return n().promptAssembly.sections()}",
+      "variable": false
+    },
+    "noteInvalidation": {
+      "file": "chunk-bn3p37gv.js",
+      "name": "yR",
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "moduleLength": 117054,
+      "start": 109193,
+      "end": 109247,
+      "sha256": "9497593b54eeb013c2a830d42c4b29012e67dea597b26f30a8dffae470d4428f",
+      "source": "function yR(e){n().promptAssembly.noteInvalidation(e)}",
+      "variable": false
+    },
+    "execution": {
+      "file": "chunk-bn3p37gv.js",
+      "name": "U",
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "moduleLength": 117054,
+      "start": 71979,
+      "end": 72003,
+      "sha256": "d5765c805efa91af7bd3d31fd797817dc842807e44caf735c5f45538eada7a7c",
+      "source": "function U(){return n()}",
+      "variable": false
+    },
+    "flagSettings": {
+      "file": "chunk-bn3p37gv.js",
+      "name": "ly",
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "moduleLength": 117054,
+      "start": 94177,
+      "end": 94243,
+      "sha256": "c5b0841fe539b280bf77a1f1ebd37f375d5a8ee5fcd1670c51866a3885c54cd0",
+      "source": "function ly(){return n().host.settingsSource.flagSettingsInline()}",
+      "variable": false
+    },
+    "setFlagSettings": {
+      "file": "chunk-bn3p37gv.js",
+      "name": "RL",
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "moduleLength": 117054,
+      "start": 94243,
+      "end": 94311,
+      "sha256": "6c21ac9ebf9bd841df350d842fd6eacb6143b8c9c6965f80763b0528f46a80d1",
+      "source": "function RL(e){n().host.settingsSource.replaceFlagSettingsInline(e)}",
+      "variable": false
+    },
+    "settingsChangeDetector": {
+      "file": "chunk-6xrs6gmd.js",
+      "name": "Ki",
+      "moduleSha256": "f9dd0da1e467d32595bc9af036ebe3d18edca89a87e6204bf2519aeb61615e17",
+      "moduleLength": 253011,
+      "start": 43958,
+      "end": 43966,
+      "sha256": "bc04f58de3ab01a763fef924f1c8e9c7ca3d00856f5f0c5ac6b44507d36db2d1",
+      "source": "Ki=jjr()",
+      "variable": true
+    }
+  }
+}

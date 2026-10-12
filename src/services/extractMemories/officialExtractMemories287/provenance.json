@@ -1,0 +1,1422 @@
+{
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16 end-exclusive",
+  "core": {
+    "module": "chunk-w6trbbmn.js",
+    "moduleSha256": "7f4063945b575619cd877f8c218f1a4eaa126756e608ec91db6e9d0738fcbaf9",
+    "roots": [
+      "Zmr",
+      "Xos",
+      "Jos",
+      "Qos",
+      "Zos",
+      "Ee",
+      "Ie",
+      "tt",
+      "rt"
+    ],
+    "rows": [
+      {
+        "name": "Me",
+        "start": 2643,
+        "end": 2687,
+        "sha256": "19ba7b31bf158a965cf19869daa7bf9ac787c2849f11d619de523afaaeffa444",
+        "source": "class Me{extractor=null;drainer=async()=>{}}",
+        "variable": false
+      },
+      {
+        "name": "re",
+        "start": 2691,
+        "end": 2711,
+        "sha256": "3274002155278f3c21acf241e328cc74391944f97f55169a5da4ffed9520632b",
+        "source": "re=new V(()=>new Me)",
+        "variable": true
+      },
+      {
+        "name": "Ee",
+        "start": 2712,
+        "end": 5092,
+        "sha256": "47b3bfdf57a12edc0e98a8e70b971ff0ac5949b306d8e172ee74425076bdd34e",
+        "source": "function Ee(e,r,n,s,o){let u=$a(),g=u?Ue:wt,f=u?\"ls/find/cat/stat/wc/head/tail and similar\":\"Get-ChildItem/Get-Content/Select-Object -First/-Last and similar\",h=u?\"rm\":\"Remove-Item\",R=r.length>0?`\n\n## Existing memory files\n\n${r}\n\nCheck this list before writing \\u2014 update an existing file rather than creating a duplicate.`:\"\",M=n?\"scope guidance, \":\"\",S=`Available tools: ${dt}, ${Jr}, ${co}, read-only ${g} (${f}), and ${Ot}/${Sn} for paths inside the memory directory only, and ${g} ${h} of .md files inside the memory directory only (outside protected subdirectories like .git or agents${u?\"; rm takes no flags except -f\":\"\"}). All other tools \\u2014 MCP, Agent, write-capable ${g}, etc \\u2014 will be denied.`,w=`You have a limited turn budget. ${Ot} requires a prior ${dt} of the same file, so the efficient strategy is: turn 1 \\u2014 issue all ${dt} calls in parallel for every file you might update; turn 2 \\u2014 issue all ${Sn}/${Ot} calls in parallel. Do not interleave reads and writes across multiple turns.`;return[`You are now acting as the memory extraction subagent. Analyze the most recent ~${e} messages above and use them to update your persistent memory systems.`,\"\",S,\"\",w,\"\",`You MUST only use content from the last ~${e} messages to update your persistent memories. Do not waste any turns attempting to investigate or verify that content further \\u2014 no grepping source files, no reading code to confirm a pattern exists, no git commands.`+R,\"\",\"If nothing is worth saving, output only 'Nothing to save.' Do not explain why.\",\"\",\"If the user explicitly asks you to remember something, save it immediately as whichever type fits best. If they ask you to forget something, find and remove the relevant entry.\",\"\",`Apply the memory types, ${M}what-not-to-save criteria, and frontmatter format from the Memory section of your system prompt \\u2014 it is already in your context above.`,...agt()?[\"\",\"Skip the project-skill upkeep step here: your writes are restricted to the memory directory, so record the correction as a feedback memory only.\"]:[],...s?[\"\",`The ${p_} / ${Nf} / ${kc} tools are unavailable here, so skip anything the scope guidance marks as shared with the project \\u2014 the main conversation saves those; never file them in the personal directory instead. Save only what belongs in your personal memory directory.`]:[],...[]].join(`\n`)}",
+        "variable": false
+      },
+      {
+        "name": "ue",
+        "start": 5092,
+        "end": 5152,
+        "sha256": "554ad53eb3f55978d5a0b25b2465cedffd36bbabbb07ef9b8a812469c537a275",
+        "source": "function ue(e){return e.type===\"user\"||e.type===\"assistant\"}",
+        "variable": false
+      },
+      {
+        "name": "Te",
+        "start": 5152,
+        "end": 5315,
+        "sha256": "808afb319df844a5a82680dcd6153aff3f2a292dc5750b372f00509a11b78b8a",
+        "source": "function Te(e,r){if(r===null||r===void 0)return G(e,ue);let n=!1,s=0;for(let o of e){if(!n){if(o.uuid===r)n=!0;continue}if(ue(o))s++}if(!n)return G(e,ue);return s}",
+        "variable": false
+      },
+      {
+        "name": "ke",
+        "start": 5319,
+        "end": 5323,
+        "sha256": "61117926245034a610a280cdac8cdf903284f3ec2ce678c08df4bf3057e6bb01",
+        "source": "ke=3",
+        "variable": true
+      },
+      {
+        "name": "Oe",
+        "start": 5324,
+        "end": 5412,
+        "sha256": "6a05f65eaaf9f3c47b0611448314d5a63f66171e234ef21aa7f7e1dfb8fcb002",
+        "source": "function Oe(e,r){let n=new Set(r.map((s)=>s.uuid));return e.filter((s)=>!n.has(s.uuid))}",
+        "variable": false
+      },
+      {
+        "name": "Se",
+        "start": 5412,
+        "end": 5510,
+        "sha256": "4f23b1ff1c25e09f8a0a09377a66a4464ff5b9f7593b66bc0a9f9c7430134a44",
+        "source": "function Se(e){return e.some((r)=>r.type===\"attachment\"&&r.attachment.type===\"max_turns_reached\")}",
+        "variable": false
+      },
+      {
+        "name": "we",
+        "start": 5510,
+        "end": 5594,
+        "sha256": "8885fa2b335ca7eaf78a5633d96649be8acd0ef036899fd0429c6b6f74caca45",
+        "source": "function we(e){return e.findLast((r)=>r.type===\"assistant\")?.isApiErrorMessage===!0}",
+        "variable": false
+      },
+      {
+        "name": "ce",
+        "start": 5594,
+        "end": 6135,
+        "sha256": "59b1144ac89cc72e8f79cb135d0523a84e397c8e31e8217a376decbd347f05fe",
+        "source": "function ce(e,r,n){let s=r===void 0,o=new Set;for(let u of e){if(!s){if(u.uuid===r)s=!0;continue}if(u.type===\"user\"){let f=u.message.content;if(Array.isArray(f)&&f.some((h)=>h.type===\"tool_result\"&&h.is_error!==!0&&o.has(h.tool_use_id)))return!0;continue}if(u.type!==\"assistant\")continue;let g=u.message.content;if(!Array.isArray(g))continue;for(let f of g){if(n&&f.type===\"tool_use\"&&sEn.has(f.name))return!0;if(f.type===\"tool_use\"&&f.name===kc){o.add(f.id);continue}let h=de(f);if(h!==void 0&&X0(h))return!0}}return n&&!s&&ce(e,void 0,!0)}",
+        "variable": false
+      },
+      {
+        "name": "xe",
+        "start": 6139,
+        "end": 6143,
+        "sha256": "0ca4bbe4533308803150f2bc91889182d00d8a1aaec7e9db8a523380d1571cc9",
+        "source": "xe=3",
+        "variable": true
+      },
+      {
+        "name": "Ae",
+        "start": 6144,
+        "end": 6192,
+        "sha256": "538d05b558a9066949888e2ccd1eda66093bc7377e6bd1ad71257b41018f5384",
+        "source": "function Ae(e){return G(e.split(/\\s+/),Boolean)}",
+        "variable": false
+      },
+      {
+        "name": "Pe",
+        "start": 6192,
+        "end": 6391,
+        "sha256": "4d2459c4a5dab6fed6b320c67b121c76e04902a50c809ddc7d8ca4d4b92c585b",
+        "source": "function Pe(e){if(e.type!==\"user\"||e.isMeta)return!1;let r=e.message.content;if(typeof r===\"string\")return Ae(r)>=xe;if(!Array.isArray(r))return!1;return r.some((n)=>n.type===\"text\"&&Ae(n.text)>=xe)}",
+        "variable": false
+      },
+      {
+        "name": "ve",
+        "start": 6391,
+        "end": 6527,
+        "sha256": "7be29c2bfc47217f06abc5622458b39262b8c1b973774021a5a78c271e734731",
+        "source": "function ve(e,r){let n=r===void 0;for(let s of e){if(!n){if(s.uuid===r)n=!0;continue}if(Pe(s))return!0}if(!n)return e.some(Pe);return!1}",
+        "variable": false
+      },
+      {
+        "name": "de",
+        "start": 6527,
+        "end": 6724,
+        "sha256": "e9e420e9a98c1d391ea5b5cb1936d39b76d841f806aed566a60a7816b063586f",
+        "source": "function de(e){if(e.type!==\"tool_use\"||e.name!==Ot&&e.name!==Sn)return;let r=e.input;if(typeof r===\"object\"&&r!==null&&\"file_path\"in r){let n=r.file_path;return typeof n===\"string\"?n:void 0}return}",
+        "variable": false
+      },
+      {
+        "name": "J",
+        "start": 6728,
+        "end": 6734,
+        "sha256": "dbb0368f95ea9db10c5275967d3794c3a56c0333d138674b06b35453884d6b32",
+        "source": "J=null",
+        "variable": true
+      },
+      {
+        "name": "W",
+        "start": 6743,
+        "end": 6749,
+        "sha256": "ea14dd24e410434d5523891111d115275153a82ebb919c0ed2e29295d85ea5e6",
+        "source": "W=null",
+        "variable": true
+      },
+      {
+        "name": "C",
+        "start": 6818,
+        "end": 7001,
+        "sha256": "6f914a2023b0fc7922b9694b84ace206ce900aba9af4b112ceb6e50fe844b062",
+        "source": "function C(e,r){return t(`[autoMem] denied ${e.name}: ${r}`),i(\"tengu_auto_mem_tool_denied\",{tool_name:Nn(e.name)}),{behavior:\"deny\",message:r,decisionReason:{type:\"other\",reason:r}}}",
+        "variable": false
+      },
+      {
+        "name": "et",
+        "start": 9498,
+        "end": 10182,
+        "sha256": "e9ef10ff9365c8d7e26172d4c8449d7f4a38f6c6eeea923c56210953ec12af59",
+        "source": "function et(e,r){return async(n,s,o)=>{if(hA())return C(n,JQe);if(n.name===Qa||n.name===ic)return{behavior:\"allow\",updatedInput:s};if(!b6t(CKr(o.options.mcpClients)))return C(n,\"the session has no CCR memory server; this background memory pass cannot run\");let u=o.getAppState().toolPermissionContext;if([...Su(u),...zh(u)].some((g)=>Z2(u,n,g)))return C(n,`${n.name} is blocked by a permission rule for this session`);if(!vKr.has(n.name))return C(n,`this background memory pass may only call ${[...vKr].join(\", \")}`);if(sEn.has(n.name)&&a4()!==e)return r(),C(n,\"a newer user turn has started; this background memory pass may no longer write\");return{behavior:\"allow\",updatedInput:s}}}",
+        "variable": false
+      },
+      {
+        "name": "$e",
+        "start": 10182,
+        "end": 10397,
+        "sha256": "b87dcf30205ebe5f168a5f81834d2add2fec5425c6ef85a82629dbbd2518a8b3",
+        "source": "function $e(e){let r=new Set;for(let n of e){if(n.type!==\"user\")continue;let s=n.message.content;if(!Array.isArray(s))continue;for(let o of s)if(o.type===\"tool_result\"&&o.is_error===!0)r.add(o.tool_use_id)}return r}",
+        "variable": false
+      },
+      {
+        "name": "We",
+        "start": 10397,
+        "end": 10503,
+        "sha256": "64ac9669bf5ef4f4306ba3985032609942abccf02189b59502e3305e9c3bc59f",
+        "source": "function We(e,r){let n=de(e);if(n===void 0)return;let s;try{s=Xe(n)}catch{return}return Grt(s,r)?s:void 0}",
+        "variable": false
+      },
+      {
+        "name": "tt",
+        "start": 10503,
+        "end": 10752,
+        "sha256": "61764297e7b144593bbad3ea79a86c76d1972d50fdfd9d4db3240ec02c7c053a",
+        "source": "function tt(e,r){let n=$e(e),s=[];for(let o of e){if(o.type!==\"assistant\")continue;let u=o.message.content;if(!Array.isArray(u))continue;for(let g of u){if(g.type===\"tool_use\"&&n.has(g.id))continue;let f=We(g,r);if(f!==void 0)s.push(f)}}return L(s)}",
+        "variable": false
+      },
+      {
+        "name": "Ie",
+        "start": 10752,
+        "end": 10907,
+        "sha256": "440aa4d09bb9282160f2d87bd6392b3f58644e0ebf1977b6590544e4ef4dfcca",
+        "source": "function Ie(e){let r=G(e,(n)=>Ne(n)!==Wd);return{source:\"extract\",summary:r>0?`saved ${r} ${I(r,\"memory\",\"memories\")}`:\"updated the memory index\",paths:e}}",
+        "variable": false
+      },
+      {
+        "name": "rt",
+        "start": 10907,
+        "end": 11439,
+        "sha256": "0829695109e159c50258bc18e58291c2d33ad53b782d0dec83b83b04fb958a02",
+        "source": "function rt(e,r){let n=new Map,s=[];return{onMessage:(u)=>{if(u.type===\"assistant\"){let f=u.message.content;if(!Array.isArray(f))return;for(let h of f){let R=We(h,r);if(h.type===\"tool_use\"&&R!==void 0)n.set(h.id,R)}return}if(u.type!==\"user\")return;let g=u.message.content;if(!Array.isArray(g))return;for(let f of g){if(f.type!==\"tool_result\")continue;let h=n.get(f.tool_use_id);if(h===void 0)continue;if(n.delete(f.tool_use_id),f.is_error===!0)continue;s.push(h),pDt(e,h,{requireReadBeforeWrite:!0})}},completedWritePaths:()=>L(s)}}",
+        "variable": false
+      },
+      {
+        "name": "Zmr",
+        "start": 11439,
+        "end": 18603,
+        "sha256": "7971f2e0a885ad484a5ea98dbdf2ba0b9dd89a2df6ceda81f25e7ec30920b691",
+        "source": "function Zmr(e){if(a.CLAUDE_CODE_POST_TURN_MEMORY&&v2e()===null)t(\"[extractMemories] CLAUDE_CODE_POST_TURN_MEMORY is set but CLAUDE_CODE_POST_TURN_MEMORY_CONFIG is missing or invalid; the pass is off\"),p(\"ccr_memory_extract\",\"config_invalid\");let r=new Set,n,s,o=0;function u(d){if(d)n=d,s=void 0,o=0}function g(d,E){if(!d){if(o++,o>=ke){t(`[extractMemories] (mcp) stopped early ${o} passes in a row; the cursor moves on and these turns are not reviewed again`),u(E);return}}s=q(),t(`[extractMemories] (mcp) ${d?\"writes refused after a newer prompt\":\"the pass stopped early (an API error, the turn cap with nothing saved, or a throw)\"}; the cursor stays and the next pass reviews these turns again`)}let f=!1,h=!1,R=0,M,S;function w(d){return r.add(d),d.finally(()=>r.delete(d))}let b=J?.createLaptopExtractRunner(e,w);function Y(){let d=S;if(S=void 0,d)clearTimeout(d.timer);return d}function Q(d,E,x=a4()){if(Y(),d.idleFlushSeconds===0)return;S={timer:setTimeout(F,d.idleFlushSeconds*1000).unref(),promptIndex:x,context:E}}function F(){let d=Y();if(!d||h||Kue()||a4()!==d.promptIndex)return;w(j({context:d.context,trigger:\"idle_flush\",promptIndex:d.promptIndex}))}async function j({context:d,appendSystemMessage:E,trigger:x,promptIndex:B=a4()}){let{messages:P}=d,O=v2e(),D=Te(P,n);if(s!==void 0&&s!==q())s=void 0,o=0;if(s===void 0&&ce(P,n,!!O)){t(\"[extractMemories] skipping \\u2014 conversation already wrote to memory in this range\"),u(P.at(-1)?.uuid),i(\"tengu_extract_memories_skipped_direct_write\",{message_count:D});return}if(!ve(P,n)){t(\"[extractMemories] skipping \\u2014 no user prose since last extraction\"),u(P.at(-1)?.uuid),i(\"tengu_extract_memories_skipped_no_prose\",{message_count:D});return}let ne=O?.everyNTurns??k(\"tengu_bramble_lintel\",null)??1,pe=aq(d);if(x===void 0){if(R++,R<ne){if(O)Q(O,d,B);return}}R=0,h=!0;let oe=Date.now(),se;try{if(O){if(a4()!==B){t(\"[extractMemories] skipping (mcp) \\u2014 a newer turn started\");return}t(`[extractMemories] starting (mcp, ${x??\"cadence\"}) \\u2014 ${D} new messages`);let v=O.staleNote?xHo(e):void 0,he=v?zMr(v,ai(P),IHo):\"\",me=0,z=await IC({promptMessages:[Re({content:O.instruction+he})],cacheSafeParams:pe,canUseTool:et(B,()=>{me++}),querySource:\"extract_memories\",forkLabel:\"extract_memories\",overrides:{mcpRequestMeta:lKo()},skipTranscript:!0,maxTurns:O.maxTurns,skipCacheWrite:!0}),H=Oe(z.messages,P);if(v)PHo(e,v,H);let Ke=$e(H),ee=G(H.flatMap((N)=>N.type===\"assistant\"&&Array.isArray(N.message.content)?N.message.content:[]),(N)=>N.type===\"tool_use\"&&sEn.has(N.name)&&!Ke.has(N.id)),ye=Se(H),te=we(H)||ee===0&&ye,ze=te&&ee===0?o+1:0;if(ee>0||me===0&&!te)u(P.at(-1)?.uuid);else g(!te,P.at(-1)?.uuid);i(\"tengu_extract_memories_extraction\",{mode:c(\"mcp\"),trigger:c(x??\"cadence\"),account_memory_line_rendered:!1,every_n_turns:ne,input_tokens:z.totalUsage.input_tokens,output_tokens:z.totalUsage.output_tokens,cache_read_input_tokens:z.totalUsage.cache_read_input_tokens,cache_creation_input_tokens:z.totalUsage.cache_creation_input_tokens,message_count:D,parent_context_tokens:jm(P),compacted_in_fork:H.some(Bi),turn_count:G(H,(N)=>N.type===\"assistant\"),written:ee,superseded_writes:me,stale_note_rendered:he!==\"\",review_unfinished:te,unfinished_in_a_row:ze,reached_cap:ye,duration_ms:Date.now()-oe}),y(\"ccr_memory_extract\");return}let A=Xs();t(`[extractMemories] starting \\u2014 ${D} new messages, memoryDir=${A}`);let K=vhn(),ie=z1()||K,Ye=PHn(A,void 0,{fork:\"extraction\"}),je=aNt(await _$e(A,Bn().signal,d.toolUseContext.storageV5)),le=!1,ae=W?.isPromoterExtractorOn()===!0?W.typedTurnsInWindow(e,d.toolUseContext.session.id,P,n):[],Ge=Ee(D,je,ie,K,le)+(W?.typedTurnsPromptBlock(ae)??\"\"),Z=W!==null&&ae.length>0?Dg(\"extract_memories\"):void 0,Be=Z===void 0?void 0:W?.registerExtractorFork(e,Z,ae);se=rt(d.toolUseContext.readFileState,A);let T=await IC({promptMessages:[Re({content:Ge})],cacheSafeParams:pe,canUseTool:Ye,querySource:\"extract_memories\",forkLabel:\"extract_memories\",...Z!==void 0&&{overrides:{agentId:Z}},skipTranscript:!0,maxTurns:5,skipCacheWrite:Uct(),onMessage:se.onMessage}).finally(()=>Be?.());u(P.at(-1)?.uuid);let U=tt(T.messages,A),qe=G(T.messages,(v)=>v.type===\"assistant\"),ge=T.totalUsage.input_tokens+T.totalUsage.cache_creation_input_tokens+T.totalUsage.cache_read_input_tokens,Ve=ge>0?(T.totalUsage.cache_read_input_tokens/ge*100).toFixed(1):\"0.0\";if(t(`[extractMemories] finished \\u2014 ${U.length} files written, cache: read=${T.totalUsage.cache_read_input_tokens} create=${T.totalUsage.cache_creation_input_tokens} input=${T.totalUsage.input_tokens} (${Ve}% hit)`),U.length>0)t(`[extractMemories] memories saved: ${U.join(\", \")}`);else t(\"[extractMemories] no memories saved this run\");let X=U.filter((v)=>Ne(v)!==Wd),_e=G(X,QN);if(i(\"tengu_extract_memories_extraction\",{mode:c(\"file\"),input_tokens:T.totalUsage.input_tokens,output_tokens:T.totalUsage.output_tokens,cache_read_input_tokens:T.totalUsage.cache_read_input_tokens,cache_creation_input_tokens:T.totalUsage.cache_creation_input_tokens,message_count:D,parent_context_tokens:jm(P),compacted_in_fork:T.messages.some(Bi),turn_count:qe,files_written:U.length,memories_saved:X.length,team_memories_saved:_e,account_memory_line_rendered:le,duration_ms:Date.now()-oe}),t(`[extractMemories] writtenPaths=${U.length} memoryPaths=${X.length} appendSystemMessage defined=${E!=null}`),X.length>0){let v=Aln(X);v.teamCount=_e,E?.(v)}if(U.length>0)await OXt(d.toolUseContext,Ie(U));y(\"memory_extract\")}catch(A){if(t(`[extractMemories] error: ${A}`),i(\"tengu_extract_memories_error\",{duration_ms:Date.now()-oe,mode:c(O?\"mcp\":\"file\")}),m(O?\"ccr_memory_extract\":\"memory_extract\",\"agent_error\"),O)g(!1,P.at(-1)?.uuid);let K=se?.completedWritePaths()??[];if(K.length>0)try{await OXt(d.toolUseContext,Ie(K))}catch(ie){t(`[extractMemories] could not queue the notice for writes that landed before the error: ${l(ie)}`)}}finally{h=!1;let A=M;if(M=void 0,A&&ne<=1)t(\"[extractMemories] running trailing extraction for stashed context\"),await j({context:A.context,appendSystemMessage:A.appendSystemMessage,trigger:\"trailing\",promptIndex:A.promptIndex});else if(A&&O)Q(O,A.context,A.promptIndex)}}async function De(d,E){if(d.toolUseContext.agentId)return;let x=b?.onTurnEnd(d,E);try{if(A2e()||be())await He(d,E)}finally{await x}}async function He(d,E){Y();let x=v2e()!==null;if(x&&(hA()||yr()||AT()))return;if(x&&!(b6t(CKr(d.toolUseContext.options.mcpClients))&&d.toolUseContext.options.tools.some((B)=>Mt(B,EKr)))){t(\"[extractMemories] skipping (mcp) \\u2014 CCR memory server not mounted\");return}if(!x&&!k(\"tengu_passport_quail\",!1)&&!be())return;if(!x&&!qd()){if(oz())n=d.messages.at(-1)?.uuid??n;return}if(!x&&a3())return;if(pr()!==null)return;if(h){t(\"[extractMemories] extraction in progress \\u2014 stashing for trailing run\"),i(\"tengu_extract_memories_coalesced\",{}),M={context:d,appendSystemMessage:E,promptIndex:a4()};return}await j({context:d,appendSystemMessage:E})}let fe=re.of(e);fe.extractor=(d,E)=>w(De(d,E)),fe.drainer=async(d=60000)=>{let E=Date.now()+d;F(),b?.disarmIdleFlush();while(r.size>0&&Date.now()<E)await Promise.race([Promise.all(r).catch(()=>{}),new Promise((x)=>setTimeout(x,E-Date.now()).unref())]),F()}}",
+        "variable": false
+      },
+      {
+        "name": "be",
+        "start": 18603,
+        "end": 18691,
+        "sha256": "adf9d911f9bb2d81f52384580376767a2b5ccc338926d848fb376ab60591ded5",
+        "source": "function be(){return W!==null&&W.EXTRACTOR_RUNS_FOR_PROMOTER&&W.isPromoterExtractorOn()}",
+        "variable": false
+      },
+      {
+        "name": "Xos",
+        "start": 18691,
+        "end": 18755,
+        "sha256": "ec6e6db6468bc49fe119eaccd5d22c4239a013ac4db856b44cc6ae868796262e",
+        "source": "function Xos(e){return J!==null&&J.isLaptopExtractDispatched(e)}",
+        "variable": false
+      },
+      {
+        "name": "Jos",
+        "start": 18755,
+        "end": 18813,
+        "sha256": "8ec6530616c80b75b620cb22d9ca000bf6e21e04a8964b9c2e4d92e6b3f6af08",
+        "source": "function Jos(e){return J!==null&&J.isLaptopExtractSync(e)}",
+        "variable": false
+      },
+      {
+        "name": "Qos",
+        "start": 18813,
+        "end": 18897,
+        "sha256": "a4dc17a581509c69bda29b9631fe9866d99a8b806dddfbbb8f8ddf96bf2686db",
+        "source": "async function Qos(e,r){await re.of(e.toolUseContext.session.host).extractor?.(e,r)}",
+        "variable": false
+      },
+      {
+        "name": "Zos",
+        "start": 18897,
+        "end": 18947,
+        "sha256": "71d9982f81c1012bf9ae3bf26620bf8a0da1bc0aaa1e270cfa4354cf212e1936",
+        "source": "async function Zos(e,r){await re.of(e).drainer(r)}",
+        "variable": false
+      }
+    ],
+    "ports": [
+      {
+        "name": "pDt",
+        "imported": "pDt",
+        "module": "/$bunfs/root/chunk-mphp7acd.js"
+      },
+      {
+        "name": "L",
+        "imported": "L",
+        "module": "/$bunfs/root/chunk-h3rrxdgy.js"
+      },
+      {
+        "name": "Xe",
+        "imported": "Xe",
+        "module": "/$bunfs/root/chunk-2ejbgdvw.js"
+      },
+      {
+        "name": "Grt",
+        "module": "canonical-owner"
+      },
+      {
+        "name": "Ot",
+        "imported": "Ot",
+        "module": "/$bunfs/root/chunk-xep95vq1.js"
+      },
+      {
+        "name": "Sn",
+        "imported": "Sn",
+        "module": "/$bunfs/root/chunk-xep95vq1.js"
+      },
+      {
+        "name": "G",
+        "imported": "G",
+        "module": "/$bunfs/root/chunk-h3rrxdgy.js"
+      },
+      {
+        "name": "Ne",
+        "imported": "basename",
+        "module": "path"
+      },
+      {
+        "name": "Wd",
+        "imported": "Wd",
+        "module": "/$bunfs/root/chunk-x02yxv10.js"
+      },
+      {
+        "name": "I",
+        "imported": "I",
+        "module": "/$bunfs/root/chunk-eske5nfz.js"
+      },
+      {
+        "name": "$a",
+        "imported": "$a",
+        "module": "/$bunfs/root/chunk-1b21she7.js"
+      },
+      {
+        "name": "Ue",
+        "imported": "Ue",
+        "module": "/$bunfs/root/chunk-xep95vq1.js"
+      },
+      {
+        "name": "wt",
+        "imported": "wt",
+        "module": "/$bunfs/root/chunk-xep95vq1.js"
+      },
+      {
+        "name": "dt",
+        "imported": "dt",
+        "module": "/$bunfs/root/chunk-z82saar5.js"
+      },
+      {
+        "name": "Jr",
+        "imported": "Jr",
+        "module": "/$bunfs/root/chunk-nankzm0s.js"
+      },
+      {
+        "name": "co",
+        "imported": "co",
+        "module": "/$bunfs/root/chunk-nankzm0s.js"
+      },
+      {
+        "name": "agt",
+        "imported": "agt",
+        "module": "/$bunfs/root/chunk-6xrs6gmd.js"
+      },
+      {
+        "name": "p_",
+        "imported": "p_",
+        "module": "/$bunfs/root/chunk-a6fqs976.js"
+      },
+      {
+        "name": "Nf",
+        "imported": "Nf",
+        "module": "/$bunfs/root/chunk-a6fqs976.js"
+      },
+      {
+        "name": "kc",
+        "imported": "kc",
+        "module": "/$bunfs/root/chunk-a6fqs976.js"
+      },
+      {
+        "name": "V",
+        "imported": "V",
+        "module": "/$bunfs/root/chunk-bn3p37gv.js"
+      },
+      {
+        "name": "a",
+        "imported": "a",
+        "module": "/$bunfs/root/chunk-mbfze585.js"
+      },
+      {
+        "name": "v2e",
+        "imported": "v2e",
+        "module": "/$bunfs/root/chunk-nankzm0s.js"
+      },
+      {
+        "name": "t",
+        "imported": "t",
+        "module": "/$bunfs/root/chunk-q80zaav8.js"
+      },
+      {
+        "name": "p",
+        "imported": "p",
+        "module": "/$bunfs/root/chunk-9d2ykxmy.js"
+      },
+      {
+        "name": "q",
+        "imported": "q",
+        "module": "/$bunfs/root/chunk-bn3p37gv.js"
+      },
+      {
+        "name": "a4",
+        "imported": "a4",
+        "module": "/$bunfs/root/chunk-bn3p37gv.js"
+      },
+      {
+        "name": "Kue",
+        "imported": "Kue",
+        "module": "/$bunfs/root/chunk-35ny7gy3.js"
+      },
+      {
+        "name": "i",
+        "imported": "i",
+        "module": "/$bunfs/root/chunk-6hnyhakg.js"
+      },
+      {
+        "name": "k",
+        "imported": "k",
+        "module": "/$bunfs/root/chunk-nankzm0s.js"
+      },
+      {
+        "name": "aq",
+        "imported": "aq",
+        "module": "/$bunfs/root/chunk-mphp7acd.js"
+      },
+      {
+        "name": "xHo",
+        "imported": "xHo",
+        "module": "/$bunfs/root/chunk-09m4fzsj.js"
+      },
+      {
+        "name": "zMr",
+        "imported": "zMr",
+        "module": "/$bunfs/root/chunk-09m4fzsj.js"
+      },
+      {
+        "name": "ai",
+        "imported": "ai",
+        "module": "/$bunfs/root/chunk-mphp7acd.js"
+      },
+      {
+        "name": "IHo",
+        "imported": "IHo",
+        "module": "/$bunfs/root/chunk-09m4fzsj.js"
+      },
+      {
+        "name": "IC",
+        "imported": "IC",
+        "module": "/$bunfs/root/chunk-mphp7acd.js"
+      },
+      {
+        "name": "Re",
+        "imported": "Re",
+        "module": "/$bunfs/root/chunk-mphp7acd.js"
+      },
+      {
+        "name": "lKo",
+        "imported": "lKo",
+        "module": "/$bunfs/root/chunk-nankzm0s.js"
+      },
+      {
+        "name": "PHo",
+        "imported": "PHo",
+        "module": "/$bunfs/root/chunk-09m4fzsj.js"
+      },
+      {
+        "name": "sEn",
+        "imported": "sEn",
+        "module": "/$bunfs/root/chunk-nankzm0s.js"
+      },
+      {
+        "name": "c",
+        "imported": "c",
+        "module": "/$bunfs/root/chunk-n4qghq20.js"
+      },
+      {
+        "name": "jm",
+        "imported": "jm",
+        "module": "/$bunfs/root/chunk-mphp7acd.js"
+      },
+      {
+        "name": "Bi",
+        "imported": "Bi",
+        "module": "/$bunfs/root/chunk-mphp7acd.js"
+      },
+      {
+        "name": "y",
+        "imported": "y",
+        "module": "/$bunfs/root/chunk-9d2ykxmy.js"
+      },
+      {
+        "name": "Xs",
+        "imported": "Xs",
+        "module": "/$bunfs/root/chunk-nankzm0s.js"
+      },
+      {
+        "name": "vhn",
+        "imported": "vhn",
+        "module": "/$bunfs/root/chunk-6xrs6gmd.js"
+      },
+      {
+        "name": "z1",
+        "imported": "z1",
+        "module": "/$bunfs/root/chunk-6xrs6gmd.js"
+      },
+      {
+        "name": "aNt",
+        "imported": "aNt",
+        "module": "/$bunfs/root/chunk-09m4fzsj.js"
+      },
+      {
+        "name": "_$e",
+        "imported": "_$e",
+        "module": "/$bunfs/root/chunk-09m4fzsj.js"
+      },
+      {
+        "name": "Bn",
+        "imported": "Bn",
+        "module": "/$bunfs/root/chunk-k35krsdc.js"
+      },
+      {
+        "name": "Dg",
+        "imported": "Dg",
+        "module": "/$bunfs/root/chunk-yptq0vrd.js"
+      },
+      {
+        "name": "Uct",
+        "imported": "Uct",
+        "module": "/$bunfs/root/chunk-mphp7acd.js"
+      },
+      {
+        "name": "QN",
+        "imported": "QN",
+        "module": "/$bunfs/root/chunk-6xrs6gmd.js"
+      },
+      {
+        "name": "Aln",
+        "imported": "Aln",
+        "module": "/$bunfs/root/chunk-mphp7acd.js"
+      },
+      {
+        "name": "m",
+        "imported": "m",
+        "module": "/$bunfs/root/chunk-9d2ykxmy.js"
+      },
+      {
+        "name": "l",
+        "imported": "l",
+        "module": "/$bunfs/root/chunk-c9me9cp7.js"
+      },
+      {
+        "name": "A2e",
+        "imported": "A2e",
+        "module": "/$bunfs/root/chunk-nankzm0s.js"
+      },
+      {
+        "name": "hA",
+        "imported": "hA",
+        "module": "/$bunfs/root/chunk-bn3p37gv.js"
+      },
+      {
+        "name": "yr",
+        "imported": "yr",
+        "module": "/$bunfs/root/chunk-brnn4zwp.js"
+      },
+      {
+        "name": "AT",
+        "imported": "AT",
+        "module": "/$bunfs/root/chunk-bn3p37gv.js"
+      },
+      {
+        "name": "b6t",
+        "imported": "b6t",
+        "module": "/$bunfs/root/chunk-nankzm0s.js"
+      },
+      {
+        "name": "CKr",
+        "imported": "CKr",
+        "module": "/$bunfs/root/chunk-nankzm0s.js"
+      },
+      {
+        "name": "Mt",
+        "imported": "Mt",
+        "module": "/$bunfs/root/chunk-1b21she7.js"
+      },
+      {
+        "name": "EKr",
+        "imported": "EKr",
+        "module": "/$bunfs/root/chunk-nankzm0s.js"
+      },
+      {
+        "name": "qd",
+        "imported": "qd",
+        "module": "/$bunfs/root/chunk-nankzm0s.js"
+      },
+      {
+        "name": "oz",
+        "imported": "oz",
+        "module": "/$bunfs/root/chunk-nankzm0s.js"
+      },
+      {
+        "name": "a3",
+        "imported": "a3",
+        "module": "/$bunfs/root/chunk-6xrs6gmd.js"
+      },
+      {
+        "name": "pr",
+        "imported": "pr",
+        "module": "/$bunfs/root/chunk-2ynta9xc.js"
+      },
+      {
+        "name": "OXt",
+        "module": "canonical-owner"
+      },
+      {
+        "name": "PHn",
+        "module": "canonical-owner"
+      },
+      {
+        "name": "JQe",
+        "imported": "JQe",
+        "module": "/$bunfs/root/chunk-hrhfcbdv.js"
+      },
+      {
+        "name": "Qa",
+        "imported": "Qa",
+        "module": "/$bunfs/root/chunk-tec7csgr.js"
+      },
+      {
+        "name": "ic",
+        "imported": "ic",
+        "module": "/$bunfs/root/chunk-a6fqs976.js"
+      },
+      {
+        "name": "Su",
+        "imported": "Su",
+        "module": "/$bunfs/root/chunk-6xrs6gmd.js"
+      },
+      {
+        "name": "zh",
+        "imported": "zh",
+        "module": "/$bunfs/root/chunk-6xrs6gmd.js"
+      },
+      {
+        "name": "Z2",
+        "imported": "Z2",
+        "module": "/$bunfs/root/chunk-6xrs6gmd.js"
+      },
+      {
+        "name": "vKr",
+        "imported": "vKr",
+        "module": "/$bunfs/root/chunk-nankzm0s.js"
+      },
+      {
+        "name": "Nn",
+        "imported": "Nn",
+        "module": "/$bunfs/root/chunk-nankzm0s.js"
+      },
+      {
+        "name": "X0",
+        "imported": "X0",
+        "module": "/$bunfs/root/chunk-nankzm0s.js"
+      }
+    ]
+  },
+  "helpers": {
+    "manifest": {
+      "module": "chunk-09m4fzsj.js",
+      "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+      "roots": [
+        "_$e",
+        "aNt"
+      ],
+      "rows": [
+        {
+          "name": "_W",
+          "start": 390397,
+          "end": 390403,
+          "sha256": "af88bd8bdf8d2e322029e13765c0ed54e1a6035b5f56f24bdcbc3539bc3a5222",
+          "source": "_W=200",
+          "variable": true
+        },
+        {
+          "name": "_$e",
+          "start": 392696,
+          "end": 392912,
+          "sha256": "db8e938e775c7bee41fe0fb8786c1c80f9b91ca396ea5e76a376dc167dffe3e5",
+          "source": "async function _$e(e,n,r,s={}){try{let h=(await bqn(e,n,s,r)).slice(0,_W);return y(\"memory_scan\"),h}catch(h){return p(\"memory_scan\",h instanceof Ib?\"memory_scan_storage_list_failed\":\"memory_scan_readdir_failed\"),[]}}",
+          "variable": false
+        },
+        {
+          "name": "aNt",
+          "start": 395548,
+          "end": 395741,
+          "sha256": "becedc40518dba2174ad682996d2a8cc7de3feed443af4f69613adedbe4072c1",
+          "source": "function aNt(e){return e.map((n)=>{let r=n.type?`[${n.type}] `:\"\",s=new Date(n.mtimeMs).toISOString(),h=`- ${r}${n.filename} (${s})`;return n.description?`${h}: ${n.description}`:h}).join(`\n`)}",
+          "variable": false
+        }
+      ],
+      "ports": [
+        {
+          "name": "y",
+          "imported": "y",
+          "module": "/$bunfs/root/chunk-9d2ykxmy.js"
+        },
+        {
+          "name": "p",
+          "imported": "p",
+          "module": "/$bunfs/root/chunk-9d2ykxmy.js"
+        },
+        {
+          "name": "Ib",
+          "module": "canonical-owner"
+        },
+        {
+          "name": "bqn",
+          "module": "canonical-owner"
+        }
+      ]
+    },
+    "gates": {
+      "module": "chunk-nankzm0s.js",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "roots": [
+        "v2e",
+        "A2e",
+        "CKr",
+        "b6t",
+        "sEn",
+        "vKr",
+        "lKo",
+        "EKr"
+      ],
+      "rows": [
+        {
+          "name": "QS",
+          "start": 506845,
+          "end": 506933,
+          "sha256": "4d767f01060323e7164f35b4e62ad1930bb05a702c5a0e1bbb6ea40fee6640c9",
+          "source": "function QS(e){return e===\"cited_turn\"?\"cited_turn\":e===\"contiguous\"?\"contiguous\":\"off\"}",
+          "variable": false
+        },
+        {
+          "name": "ni",
+          "start": 507101,
+          "end": 507107,
+          "sha256": "d843a56a43c42f86c1de1c0a3038d88c6ba12f6670691296ae8c96622ce15877",
+          "source": "ni=cje",
+          "variable": true
+        },
+        {
+          "name": "SJe",
+          "start": 507108,
+          "end": 507115,
+          "sha256": "b0f5db865fee4b2fdc34d07303ecc68e7057f21391d25eefd06cf9e22cb3eb90",
+          "source": "SJe=Pvn",
+          "variable": true
+        },
+        {
+          "name": "qU",
+          "start": 507116,
+          "end": 507170,
+          "sha256": "a4ffc99e71172170738eaf2059ffda8df09b4357674e8c0ec706a61dbbfe1e2b",
+          "source": "qU=/^\\/v2\\/ccr-sessions\\/[A-Za-z0-9_-]+\\/memory\\/mcp$/",
+          "variable": true
+        },
+        {
+          "name": "wKr",
+          "start": 507171,
+          "end": 507213,
+          "sha256": "2be50f1972dffef989d83cf7f5a6a9f7a7f11d964b97d0845bf0c6a37b24b445",
+          "source": "wKr=\"a471caf9-e559-5ad8-836c-4e5972877185\"",
+          "variable": true
+        },
+        {
+          "name": "EKr",
+          "start": 507214,
+          "end": 507231,
+          "sha256": "fe96496dc036f37bfc144424695e4d068651ea820f4446edba290f181f8d95fa",
+          "source": "EKr=`${SJe}write`",
+          "variable": true
+        },
+        {
+          "name": "vKr",
+          "start": 507292,
+          "end": 507367,
+          "sha256": "6fa0cc28ba0ced825d6022452b5d8b8267b8bd9c43bc7759baf26c07ed1c83fa",
+          "source": "vKr=new Set([\"read\",\"write\",\"str_replace\",\"append\"].map((e)=>`${SJe}${e}`))",
+          "variable": true
+        },
+        {
+          "name": "sEn",
+          "start": 507368,
+          "end": 507445,
+          "sha256": "82eafa87873c2d02d48044122ef649413da89e8a2443c7ec0955f0efbb1b9c27",
+          "source": "sEn=new Set([\"write\",\"str_replace\",\"append\",\"delete\"].map((e)=>`${SJe}${e}`))",
+          "variable": true
+        },
+        {
+          "name": "eE",
+          "start": 507544,
+          "end": 507690,
+          "sha256": "5bfd9bce98b394eb58c19ec523ff5def2ad363ea2e7f7a1fc4cbe6e526444f55",
+          "source": "eE=f(()=>({attachments:H().default(!0),instruction_files:H().default(!0),first_window:B([\"full\",\"ignore_session_start_blocks\"]).default(\"full\")}))",
+          "variable": true
+        },
+        {
+          "name": "tE",
+          "start": 507691,
+          "end": 507751,
+          "sha256": "84255ad2b6cc7f9eab50f1aa9715da105bc223eec1d834f4488f9ae5f7457325",
+          "source": "tE={attachments:!0,instruction_files:!0,first_window:\"full\"}",
+          "variable": true
+        },
+        {
+          "name": "nE",
+          "start": 507752,
+          "end": 507808,
+          "sha256": "0486f0cd936c17350052ccb2616e3e8121ccf1b16ae7d59b96a75684bc985a4f",
+          "source": "nE=f(()=>B([\"window\",\"last5\",\"none\"]).default(\"window\"))",
+          "variable": true
+        },
+        {
+          "name": "QU",
+          "start": 507809,
+          "end": 507817,
+          "sha256": "a86124b0e3113f5b79319f43dc9b6a1f76195986dbb7f8c11ecc26181a5edce9",
+          "source": "QU=49152",
+          "variable": true
+        },
+        {
+          "name": "rE",
+          "start": 507818,
+          "end": 508388,
+          "sha256": "3135aa4564b94daf658501aaf1d53b0248a452ad52d71f8b105749eaac2c4789",
+          "source": "rE=f(()=>u({instruction:o().min(1).max(QU),every_n_turns:aS().min(1).max(100).default(5),max_turns:aS().min(1).max(8).default(4),idle_flush_s:aS().min(0).max(86400).default(120),extract_transport:B([\"tools\",\"text\",\"tools_cached\"]).default(\"tools\"),thinking_strip:nE().catch(\"window\"),stale_note:H().catch(!1),role_line_scan:u(eE()).default(tE),person_files_writable:H().default(!1),person_files_typed_evidence:B([\"cited_turn\",\"contiguous\"]).optional(),typed_origin:B([\"presume\"]).optional(),cited_shared_word:B([\"refuse\"]).optional(),cite_span:B([\"floor\"]).optional()}))",
+          "variable": true
+        },
+        {
+          "name": "e0",
+          "start": 508389,
+          "end": 508469,
+          "sha256": "dca9c098260f9b595fe70cc92b0b5b5ff8ba390bf27e5b2a002e6ca53bac78ff",
+          "source": "e0=f(()=>rE().extend({role_line_scan:Ve(eE()).default(tE),thinking_strip:nE()}))",
+          "variable": true
+        },
+        {
+          "name": "v2e",
+          "start": 508470,
+          "end": 508552,
+          "sha256": "701ec529f0caa29886c6b7133cb07f53df7d7701a99c7f8d468b143127779b6b",
+          "source": "function v2e(){if(!a.CLAUDE_CODE_POST_TURN_MEMORY)return null;return t0(\"hosted\")}",
+          "variable": false
+        },
+        {
+          "name": "t0",
+          "start": 508552,
+          "end": 509457,
+          "sha256": "61fcede5a3b5f01c50936148b674442a26bc921e8c543ad0a3959ed4fdacd932",
+          "source": "function t0(e=\"dry_run_harness\"){let r=(e===\"hosted\"?rE():e0()).safeParse(gt(a.CLAUDE_CODE_POST_TURN_MEMORY_CONFIG,!1));if(!r.success)return null;let s=a.CLAUDE_CODE_POST_TURN_MEMORY_SYNC;return{instruction:r.data.instruction,everyNTurns:s?1:r.data.every_n_turns,maxTurns:r.data.max_turns,idleFlushSeconds:s?0:r.data.idle_flush_s,staleNote:r.data.stale_note,sync:s,extractTransport:r.data.extract_transport,thinkingStrip:r.data.thinking_strip,roleLineScan:{attachments:r.data.role_line_scan.attachments,instructionFiles:r.data.role_line_scan.instruction_files,firstWindow:r.data.role_line_scan.first_window},personFilesWritable:r.data.person_files_writable,personFilesTypedEvidence:QS(r.data.person_files_typed_evidence),personFilesTypedStampedOnly:r.data.typed_origin!==\"presume\",personFilesCitedSharedWordRefused:r.data.cited_shared_word===\"refuse\",personFilesCiteSinceFloor:r.data.cite_span===\"floor\"}}",
+          "variable": false
+        },
+        {
+          "name": "b6t",
+          "start": 509457,
+          "end": 509870,
+          "sha256": "5c488cc236fa8217b2011ade48e58f58a2611bcc9a87b63b071e7f03841efbac",
+          "source": "function b6t(e){if(e?.name!==ni||e.config.scope!==\"dynamic\"||Vp(e.config)||!(\"url\"in e.config)||typeof e.config.url!==\"string\"||!sS(e.config.url))return!1;let n;try{n=new URL(e.config.url)}catch{return!1}if(n.username!==\"\"||n.password!==\"\"||n.hash!==\"\")return!1;if(qU.test(n.pathname))return n.search===\"\";let r=n.searchParams.getAll(\"toolbox_mcp_server_id\");return XIe.test(n.pathname)&&r.length===1&&r[0]===wKr}",
+          "variable": false
+        },
+        {
+          "name": "CKr",
+          "start": 510727,
+          "end": 510776,
+          "sha256": "4c869ad9470e8b4909e021c0d4b75359ff8373b24653782023b5c00454d08f79",
+          "source": "function CKr(e){return e?.find((n)=>n.name===ni)}",
+          "variable": false
+        },
+        {
+          "name": "dZ",
+          "start": 510780,
+          "end": 510808,
+          "sha256": "54080f690fa380ec089b3e4e1569cf20d8040bb9f9960464360de730bf360ae2",
+          "source": "dZ=\"anthropic/memory.caller\"",
+          "variable": true
+        },
+        {
+          "name": "sE",
+          "start": 510809,
+          "end": 510838,
+          "sha256": "0a4cc020c1b4b9c5451bb0e2f94272bd037a38360c7b8f6fa17d8ddbea5a851a",
+          "source": "sE=\"anthropic/memory.pass_id\"",
+          "variable": true
+        },
+        {
+          "name": "AKr",
+          "start": 510929,
+          "end": 510945,
+          "sha256": "1a01a80bf6284a14ddc3e76177977979829d472d31967508693f3f143d34840f",
+          "source": "AKr=\"memextract\"",
+          "variable": true
+        },
+        {
+          "name": "lKo",
+          "start": 510946,
+          "end": 510991,
+          "sha256": "d42770361b0b9600b03cde3149080b1d4199f8491a2b5675ea8f59c03be8353b",
+          "source": "function lKo(e=YU()){return{[dZ]:AKr,[sE]:e}}",
+          "variable": false
+        },
+        {
+          "name": "A2e",
+          "start": 512420,
+          "end": 512543,
+          "sha256": "75bea6c27f74c91e1a7100da8d719fff9d9b60ff85734fe5f438a219ab2f69eb",
+          "source": "function A2e(){if(v2e()!==null)return!0;if(!k(\"tengu_passport_quail\",!1))return!1;return!Ce()||k(\"tengu_slate_thimble\",!1)}",
+          "variable": false
+        }
+      ],
+      "ports": [
+        {
+          "name": "Pvn",
+          "imported": "Pvn",
+          "module": "/$bunfs/root/chunk-758hjhx1.js"
+        },
+        {
+          "name": "YU",
+          "imported": "randomUUID",
+          "module": "crypto"
+        },
+        {
+          "name": "Vp",
+          "imported": "Vp",
+          "module": "/$bunfs/root/chunk-758hjhx1.js"
+        },
+        {
+          "name": "sS",
+          "imported": "sS",
+          "module": "/$bunfs/root/chunk-758hjhx1.js"
+        },
+        {
+          "name": "XIe",
+          "imported": "XIe",
+          "module": "/$bunfs/root/chunk-758hjhx1.js"
+        },
+        {
+          "name": "cje",
+          "imported": "cje",
+          "module": "/$bunfs/root/chunk-758hjhx1.js"
+        },
+        {
+          "name": "Ce",
+          "imported": "Ce",
+          "module": "/$bunfs/root/chunk-bn3p37gv.js"
+        },
+        {
+          "name": "k",
+          "module": "canonical-owner"
+        },
+        {
+          "name": "a",
+          "imported": "a",
+          "module": "/$bunfs/root/chunk-mbfze585.js"
+        },
+        {
+          "name": "gt",
+          "imported": "gt",
+          "module": "/$bunfs/root/chunk-1cedw4af.js"
+        },
+        {
+          "name": "f",
+          "imported": "f",
+          "module": "/$bunfs/root/chunk-5qqrzb2c.js"
+        },
+        {
+          "name": "Ve",
+          "imported": "Ve",
+          "module": "/$bunfs/root/chunk-aybmj3t4.js"
+        },
+        {
+          "name": "B",
+          "imported": "B",
+          "module": "/$bunfs/root/chunk-aybmj3t4.js"
+        },
+        {
+          "name": "H",
+          "imported": "H",
+          "module": "/$bunfs/root/chunk-aybmj3t4.js"
+        },
+        {
+          "name": "u",
+          "imported": "u",
+          "module": "/$bunfs/root/chunk-aybmj3t4.js"
+        },
+        {
+          "name": "o",
+          "imported": "o",
+          "module": "/$bunfs/root/chunk-aybmj3t4.js"
+        },
+        {
+          "name": "aS",
+          "imported": "aS",
+          "module": "/$bunfs/root/chunk-aybmj3t4.js"
+        }
+      ]
+    },
+    "skipCache": {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "roots": [
+        "Uct"
+      ],
+      "rows": [
+        {
+          "name": "Uct",
+          "start": 1946959,
+          "end": 1947013,
+          "sha256": "7231acf535640fb34bf0805efcda398c3152fb5935c8045401d0bc9feddcf824",
+          "source": "function Uct(){return Im()&&k(\"tengu_basalt_spur\",!1)}",
+          "variable": false
+        }
+      ],
+      "ports": [
+        {
+          "name": "Im",
+          "imported": "Im",
+          "module": "/$bunfs/root/chunk-xep95vq1.js"
+        },
+        {
+          "name": "k",
+          "imported": "k",
+          "module": "/$bunfs/root/chunk-nankzm0s.js"
+        }
+      ]
+    },
+    "mcpConstants": {
+      "module": "chunk-758hjhx1.js",
+      "moduleSha256": "72224705799165b7da0c7ff2ba977a36c128dedcc6a4ceb5d705ee560ab41d79",
+      "roots": [
+        "Pvn",
+        "cje",
+        "XIe"
+      ],
+      "rows": [
+        {
+          "name": "cje",
+          "start": 7393,
+          "end": 7405,
+          "sha256": "994ded517b855f363b860c9ff590977794aac18a50edfb713918445953fa1529",
+          "source": "cje=\"memory\"",
+          "variable": true
+        },
+        {
+          "name": "Pvn",
+          "start": 7406,
+          "end": 7432,
+          "sha256": "bca46d50434bb2cea95413d945fb5bc0124a9204255753da2e04b6998de6baf5",
+          "source": "Pvn=`mcp__${cje}__memory_`",
+          "variable": true
+        },
+        {
+          "name": "XIe",
+          "start": 11691,
+          "end": 11740,
+          "sha256": "d282bbd379609b867aadccc97989fd4ab41208b3f4335d50d72251f503524d99",
+          "source": "XIe=/^\\/v2\\/ccr-sessions\\/([A-Za-z0-9_-]+)\\/mcp$/",
+          "variable": true
+        }
+      ],
+      "ports": []
+    },
+    "matching": {
+      "module": "chunk-1b21she7.js",
+      "moduleSha256": "66df76fe31929f24554fa368a67b8d85a0844736314e2c2d69c6dddfc57099f8",
+      "roots": [
+        "Mt"
+      ],
+      "rows": [
+        {
+          "name": "Mt",
+          "start": 132117,
+          "end": 132182,
+          "sha256": "e15c5f0a4575fcf9b110c8a9fb990d54691bd37a5d962bca26a1045705a57e3c",
+          "source": "function Mt(e,n){return e.name===n||(e.aliases?.includes(n)??!1)}",
+          "variable": false
+        }
+      ],
+      "ports": []
+    },
+    "context": {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "roots": [
+        "Bi",
+        "ai"
+      ],
+      "rows": [
+        {
+          "name": "Bi",
+          "start": 4153002,
+          "end": 4153075,
+          "sha256": "c6fd4b34a2c20322f2a47e176f6cb6ac63198fb5673fc4d0cb38c393abc4afd0",
+          "source": "function Bi(e){return e?.type===\"system\"&&e.subtype===\"compact_boundary\"}",
+          "variable": false
+        },
+        {
+          "name": "ai",
+          "start": 4153234,
+          "end": 4153291,
+          "sha256": "5b2477082f0e7bf0d8eec9882d623deac5300bd4c0e4dc32027c384b1f8031a0",
+          "source": "function ai(e,n){let r=hdt(e);return r===-1?e:e.slice(r)}",
+          "variable": false
+        }
+      ],
+      "ports": [
+        {
+          "name": "hdt",
+          "module": "canonical-owner"
+        }
+      ]
+    },
+    "versions": {
+      "module": "chunk-09m4fzsj.js",
+      "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+      "roots": [
+        "xHo",
+        "zMr",
+        "IHo",
+        "PHo"
+      ],
+      "rows": [
+        {
+          "name": "Cke",
+          "start": 624787,
+          "end": 624840,
+          "sha256": "88cf20b10cf5bfaca5260428e9eebc67d0d897744c6d74ce0e908c0d3f47da08",
+          "source": "function Cke(e){return(\"/\"+e).replace(/\\/{2,}/g,\"/\")}",
+          "variable": false
+        },
+        {
+          "name": "xHo",
+          "start": 639346,
+          "end": 639393,
+          "sha256": "8542bcbc9eeab2c61d6bfc73b2d605309a4a67ef942ef079abac8d547d27e651",
+          "source": "function xHo(e){return Pn.of(e).held?.versions}",
+          "variable": false
+        },
+        {
+          "name": "PHo",
+          "start": 639393,
+          "end": 639640,
+          "sha256": "3488f6c189a6bc841c29ca0ded2b3549f853d9bf440693d898b57bd2a9edacd0",
+          "source": "function PHo(e,n,r){let s=Pn.of(e),h=s.held;if(h?.versions!==n)return;let g;try{g=Aw(r).last}catch{ne(\"warn\",\"cowork_memory_context_pass_versions_failed\");return}if(g.size===0)return;s.held={...h,versions:{...h.versions,...Object.fromEntries(g)}}}",
+          "variable": false
+        },
+        {
+          "name": "zMr",
+          "start": 639640,
+          "end": 639766,
+          "sha256": "b7ca4cf5fa4538b79a51939ebbd588c593a1788e05d3f9cacc47838b66f5214a",
+          "source": "function zMr(e,n,r=YI){if(!e)return\"\";try{return fJ(r(e,n))}catch{return ne(\"warn\",\"cowork_memory_context_notice_failed\"),\"\"}}",
+          "variable": false
+        },
+        {
+          "name": "Z9",
+          "start": 639770,
+          "end": 639826,
+          "sha256": "04d423242b569483258ecb7e4bd208e9962d8762861537509aa591d93625eaee",
+          "source": "Z9=new RegExp(`^${SJe}(read|write|str_replace|append)$`)",
+          "variable": true
+        },
+        {
+          "name": "qI",
+          "start": 639827,
+          "end": 639867,
+          "sha256": "15fcc76a3f2f4939cf8db18140a8f94682143621620c58bb5bac57554d93e520",
+          "source": "qI=/^[^\\n]*?\\[version: ([0-9a-f]{12})\\]/",
+          "variable": true
+        },
+        {
+          "name": "iJ",
+          "start": 639868,
+          "end": 639889,
+          "sha256": "a2472917648804f3d939add8eb6c8cc8fdb4cbeff3c2a11d2d929a2ccd304103",
+          "source": "iJ=/^=== (.+) ===$/gm",
+          "variable": true
+        },
+        {
+          "name": "MI",
+          "start": 639890,
+          "end": 640051,
+          "sha256": "aec421035e229b0f9e09d4507a22cb609817e24c512a569fb9f5cb6001ac9bb1",
+          "source": "function MI(e,n){if(typeof e!==\"object\"||e===null||II.isProxy(e))return;let r=Object.getOwnPropertyDescriptor(e,n);return r!==void 0&&\"value\"in r?r.value:void 0}",
+          "variable": false
+        },
+        {
+          "name": "lJ",
+          "start": 640051,
+          "end": 640343,
+          "sha256": "7f737f93fd908f269cea1ce94647b8a2a4b496f031c6d7fc6506cced4132771a",
+          "source": "function lJ(e){if(typeof e!==\"object\"||e===null||II.isProxy(e)||!Array.isArray(e))return[];let n=e.length;if(!Number.isSafeInteger(n)||n>JA)return[];let r=[];for(let s=0;s<n;s++){let h=Object.getOwnPropertyDescriptor(e,s);if(h&&\"value\"in h&&typeof h.value===\"string\")r.push(h.value)}return r}",
+          "variable": false
+        },
+        {
+          "name": "cJ",
+          "start": 640343,
+          "end": 640522,
+          "sha256": "92c0ff9ca0469ac8d42ec15b64f7cdf679b7c9996c7b8ff41c4938458187272d",
+          "source": "function cJ(e){let n=[...e.matchAll(iJ)];return n.flatMap((r,s)=>{let h=r.index+r[0].length+1,g=n[s+1]?.index??e.length,b=qI.exec(e.slice(h,g))?.[1];return b?[[Cke(r[1]),b]]:[]})}",
+          "variable": false
+        },
+        {
+          "name": "YI",
+          "start": 640522,
+          "end": 640691,
+          "sha256": "cac6ca2c72385571442dc788c2ec2a025ac79aa8738968c5926091034aa57e0b",
+          "source": "function YI(e,n){let{read:r,written:s}=Aw(n);return[...r].filter(([h,g])=>{let b=e[h],w=s.get(h);return b!==void 0&&b!==g&&!w?.has(g)&&!w?.has(b)}).map(([h])=>h).sort()}",
+          "variable": false
+        },
+        {
+          "name": "IHo",
+          "start": 640691,
+          "end": 640823,
+          "sha256": "a31e16d0fa18e7e1d4c5f3e223fcc52b78e6cc513ceeedcd192ac2ba6cb3dad6",
+          "source": "function IHo(e,n){let{carried:r}=Aw(n);return[...r].filter(([s,h])=>{let g=e[s];return g!==void 0&&!h.has(g)}).map(([s])=>s).sort()}",
+          "variable": false
+        },
+        {
+          "name": "Aw",
+          "start": 640823,
+          "end": 642506,
+          "sha256": "5cf23dc7cd746801401b2599c3d1f2a1711896d53eade746c638a6aa13e9af02",
+          "source": "function Aw(e){let n=new Map,r=new Map,s=new Map,h=new Map,g=new Map,b=(R,A)=>{h.set(R,A),g.set(R,(g.get(R)??new Set).add(A))},w=new Map;for(let R of e)if(R.type===\"assistant\")for(let A of R.message.content){if(A.type!==\"tool_use\")continue;let M=Z9.exec(A.name);if(!M)continue;let D=MI(A.input,\"path\");if(typeof D===\"string\"){let z=MI(A.input,\"if_version\");n.set(A.id,{path:Cke(D),write:M[1]!==\"read\",ifVersion:M[1]!==\"read\"&&typeof z===\"string\"?z:void 0})}else if(M[1]===\"read\"){let z=lJ(D);if(z.length===1)n.set(A.id,{path:Cke(z[0]),write:!1,ifVersion:void 0});else if(z.length>1)n.set(A.id,{multi:!0,listed:new Set(z.map(Cke))})}}else if(R.type===\"user\"&&Array.isArray(R.message.content))for(let A of R.message.content){let M=A.type===\"tool_result\"&&!A.is_error&&n.get(A.tool_use_id);if(!M)continue;let D=typeof A.content===\"string\"?A.content:(A.content??[]).map((j)=>j.type===\"text\"?j.text:\"\").join(\"\");if(\"multi\"in M){for(let[j,K]of cJ(D))if(M.listed.has(j))r.set(j,K),w.delete(j),b(j,K);continue}let z=qI.exec(D)?.[1];if(!z)continue;if(b(M.path,z),M.write){if(s.set(M.path,(s.get(M.path)??new Set).add(z)),M.ifVersion!==void 0)g.get(M.path).add(M.ifVersion)}else r.set(M.path,z),w.delete(M.path)}else if(R.type===\"attachment\"){if(R.attachment.type===\"account_memory_recall\")for(let A of R.attachment.files){let M=Cke(A.path);r.set(M,A.version),w.set(M,A.version),b(M,A.version)}else if(R.attachment.type===\"cowork_memory_context\"&&R.attachment.content===null&&R.attachment.leg===\"laptop\"&&!R.attachment.anchor){for(let[A,M]of w){r.delete(A);let D=g.get(A);if(D?.delete(M)&&D.size===0)g.delete(A);if(h.get(A)===M)h.delete(A)}w.clear()}}return{read:r,written:s,last:h,carried:g}}",
+          "variable": false
+        },
+        {
+          "name": "uJ",
+          "start": 642510,
+          "end": 642811,
+          "sha256": "4d3e7d917b7667d55f6f9662080ae4d9b886c690e5ddf39d3e327a8d1ba593f8",
+          "source": "uJ=`[This memory_read result is stale \\u2014 the file has been modified since this read. After you re-read, the fresh content is the only source: anything you said earlier that is not in the new read was removed and is no longer true.\nCall memory_read again on the same path for the current content.]`",
+          "variable": true
+        },
+        {
+          "name": "dJ",
+          "start": 642812,
+          "end": 643600,
+          "sha256": "c82a9f3728973baf37bf43e7952a62d790d1e9368c654e733bb480de55993e5a",
+          "source": "dJ=`<memory_updates>\nThe memory files below changed since your reads in earlier turns; those earlier-turn reads are outdated. The state as of this turn's start is shown below \\u2014 any memory_read or memory_write you make this turn supersedes it.\nThis block is machine-generated bookkeeping from the memory system, not part of the user's message, and the user cannot see it \\u2014 text repeated from it reaches them as confusing system output. Never quote, paraphrase, summarize, or otherwise reproduce this block, its markers, its tags, or its diff lines in your reply, even when asked what changed. If the user asks about their memory, answer from the memory files' contents in your own words \\u2014 at most, say in plain language that your view of their memory files was refreshed.\n\n`",
+          "variable": true
+        },
+        {
+          "name": "fJ",
+          "start": 643601,
+          "end": 643730,
+          "sha256": "63049427908aeaaa5de22029f2ee26d61fcad5ac41efc429e4bdbe480ba3de4f",
+          "source": "function fJ(e){return e.length===0?\"\":`\n`+dJ+e.map((n)=>`## ${DM(n).replaceAll(`\n`,\" \")}\n${uJ}`).join(`\n\n`)+`\n</memory_updates>`}",
+          "variable": false
+        }
+      ],
+      "ports": [
+        {
+          "name": "ne",
+          "imported": "ne",
+          "module": "/$bunfs/root/chunk-h7xaj2fc.js"
+        },
+        {
+          "name": "II",
+          "imported": "types",
+          "module": "util"
+        },
+        {
+          "name": "JA",
+          "imported": "JA",
+          "module": "/$bunfs/root/chunk-gw79k08y.js"
+        },
+        {
+          "name": "SJe",
+          "imported": "SJe",
+          "module": "/$bunfs/root/chunk-nankzm0s.js"
+        },
+        {
+          "name": "Pn",
+          "module": "canonical-owner"
+        },
+        {
+          "name": "DM",
+          "imported": "DM",
+          "module": "/$bunfs/root/chunk-x02yxv10.js"
+        }
+      ]
+    },
+    "versionSanitize": {
+      "module": "chunk-x02yxv10.js",
+      "moduleSha256": "818c05f06488c5359aef96e3e53becba09e46889c1ce260e123faed404e5e356",
+      "roots": [
+        "DM"
+      ],
+      "rows": [
+        {
+          "name": "DM",
+          "start": 1418,
+          "end": 1592,
+          "sha256": "c5797cc5f5969513335f69bcedc9916e18ca39c5095f229fdcc3f1f3c35a7ff9",
+          "source": "function DM(t){let r=\"\";for(let n of M2e(bf(t.replace(/\\r\\n?|[\\u2028\\u2029]/g,`\n`)))){let e=n.codePointAt(0),o=e!==9&&e!==10&&(e<32||e>=127&&e<=159);r+=o?\"\\uFFFD\":n}return r}",
+          "variable": false
+        }
+      ],
+      "ports": [
+        {
+          "name": "M2e",
+          "imported": "M2e",
+          "module": "/$bunfs/root/chunk-xep95vq1.js"
+        },
+        {
+          "name": "bf",
+          "imported": "bf",
+          "module": "/$bunfs/root/chunk-6re9qmwv.js"
+        }
+      ]
+    },
+    "versionStripSequences": {
+      "module": "chunk-6re9qmwv.js",
+      "moduleSha256": "89b7556409d64bf3bc0e80e8839bf49353b98081d576dd4b8f44281c4ba7d7b1",
+      "roots": [
+        "bf"
+      ],
+      "rows": [
+        {
+          "name": "_",
+          "start": 1749,
+          "end": 1969,
+          "sha256": "40b8443f3fe530bcbd2e2ef23f1576ffeff0b89586b6d4d8cc4132655321bd39",
+          "source": "function _(e){let n=e.replace(/[\\p{Cf}\\p{Co}\\p{Cn}]/gu,\"\");return n=n.replace(/[\\u200B-\\u200F]/g,\"\").replace(/[\\u202A-\\u202E]/g,\"\").replace(/[\\u2066-\\u2069]/g,\"\").replace(/[\\uFEFF]/g,\"\").replace(/[\\uE000-\\uF8FF]/g,\"\"),n}",
+          "variable": false
+        },
+        {
+          "name": "bf",
+          "start": 1969,
+          "end": 2060,
+          "sha256": "9de69d4ab5592c8085b9f87f88c4682a3c765dff21a7124e4e6ce527bdf3fed6",
+          "source": "function bf(e){let n=Nz(e);for(let r=0;r<10;r++){let t=_(n);if(t===n)return n;n=t}return n}",
+          "variable": false
+        }
+      ],
+      "ports": [
+        {
+          "name": "Nz",
+          "imported": "Nz",
+          "module": "/$bunfs/root/chunk-eske5nfz.js"
+        }
+      ]
+    },
+    "versionInvisible": {
+      "module": "chunk-xep95vq1.js",
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "roots": [
+        "M2e"
+      ],
+      "rows": [
+        {
+          "name": "pR",
+          "start": 153400,
+          "end": 153413,
+          "sha256": "60a2726b7d5f9e2528bdb00ec1a31890a33da4e002419822d5d95600ae771688",
+          "source": "pR=/\\p{DI}/gu",
+          "variable": true
+        },
+        {
+          "name": "M2e",
+          "start": 153414,
+          "end": 153454,
+          "sha256": "0bafb35df3cb96005de08cd9b77c64419280bc329ac8768c6569d0ae2d668f6c",
+          "source": "function M2e(e){return e.replace(pR,\"\")}",
+          "variable": false
+        }
+      ],
+      "ports": []
+    },
+    "versionConstants": {
+      "module": "chunk-gw79k08y.js",
+      "moduleSha256": "a3604e3c6e096f257fda8a591130505c54ae4a3fd07b9dd96b3e3db3dde3a99d",
+      "roots": [
+        "JA"
+      ],
+      "rows": [
+        {
+          "name": "JA",
+          "start": 619,
+          "end": 626,
+          "sha256": "6fc08654826397d0fac6f4a5fd9e6f235bb5782b564a03fc4644d0af7154d221",
+          "source": "JA=4096",
+          "variable": true
+        }
+      ],
+      "ports": []
+    },
+    "versionWellFormed": {
+      "module": "chunk-eske5nfz.js",
+      "moduleSha256": "0ab96d3fc2e14f26d13bba42a3f5583f805c2f100c56befce938b7b723d405a5",
+      "roots": [
+        "Nz"
+      ],
+      "rows": [
+        {
+          "name": "a",
+          "start": 1924,
+          "end": 1999,
+          "sha256": "29f537bab0272c5aa5830d64ccf09932718a5f88aea55ea2184d8c3114c99e76",
+          "source": "a=/[\\uD800-\\uDBFF](?![\\uDC00-\\uDFFF])|(?<![\\uD800-\\uDBFF])[\\uDC00-\\uDFFF]/g",
+          "variable": true
+        },
+        {
+          "name": "l",
+          "start": 2000,
+          "end": 2118,
+          "sha256": "b69fa87705b72d32cac071f1228c00f597373c4238be81d3b5e52efc05efa16a",
+          "source": "l=typeof String.prototype.isWellFormed===\"function\"?Function.prototype.call.bind(String.prototype.isWellFormed):void 0",
+          "variable": true
+        },
+        {
+          "name": "Nz",
+          "start": 2348,
+          "end": 2406,
+          "sha256": "994e7ac957293718f08fefc60ed9879b5d379063fa357cc2bbf94a8416c82b52",
+          "source": "function Nz(t){if(l&&l(t))return t;return t.replace(a,\"\")}",
+          "variable": false
+        }
+      ],
+      "ports": []
+    }
+  }
+}

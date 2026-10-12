@@ -1,0 +1,276 @@
+{
+  "version": "2.1.287",
+  "platform": "darwin-arm64",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16 code units; end-exclusive",
+  "callerEvidence": [
+    {
+      "module": "chunk-q1842b1c.js",
+      "moduleSha256": "53011f90e32203bb47d179b337e6d65e0caf63a2ca681545b60f9c3c388c212f",
+      "kind": "public --file registration",
+      "start": 58133,
+      "end": 75503,
+      "source": "e.name(\"claude\").description(\"Claude Code - starts an interactive session by default, use -p/--print for non-interactive output\").argument(\"[prompt]\",\"Your prompt\",String).helpOption(\"-h, --help\",\"Display help for command\").option(\"-d, --debug [filter]\",'Enable debug mode with optional category filtering (e.g., \"api,hooks\" or \"!1p,!file\")',(w)=>!0).addOption(new Zo(\"-d2e, --debug-to-stderr\",\"(deprecated) Enable debug mode (to stderr)\").argParser(Boolean).hideHelp().implies({debug:!0})).option(\"--debug-file <path>\",\"Write debug logs to a specific file path (implicitly enables debug mode)\",()=>!0).option(\"--verbose\",\"Override verbose mode setting from config\",()=>!0).option(\"-p, --print\",\"Print response and exit (useful for pipes). Note: The workspace trust dialog is skipped when Claude is run in non-interactive mode (via -p, or when stdout is not a TTY, e.g. piped or redirected output). Only use this in directories you trust. Settings files that fail validation are silently ignored in this mode (no error dialog is shown).\",()=>!0).option(\"--bare\",\"Minimal mode: skip hooks (those defined in settings and by installed plugins; features built into Claude Code are unaffected), LSP, plugin sync, attribution, auto-memory, background prefetches, keychain reads, and CLAUDE.md auto-discovery. Sets CLAUDE_CODE_SIMPLE=1. Anthropic auth is strictly ANTHROPIC_API_KEY or apiKeyHelper via --settings (OAuth and keychain are never read). 3P providers (Bedrock/Vertex/Foundry) use their own credentials. Skills still resolve via /skill-name. Explicitly provide context via: --system-prompt[-file], --append-system-prompt[-file], --add-dir (CLAUDE.md dirs), --mcp-config, --settings, --agents, --plugin-dir.\",()=>!0).option(\"--safe-mode\",\"Start with all customizations (CLAUDE.md, skills, installed plugins, hooks, MCP servers, custom commands and agents, output styles, workflows, custom themes, keybindings, and more) disabled \"+\"\\u2014 useful for troubleshooting a broken configuration. \"+\"Admin-managed (policy) settings still apply. Auth, model selection, built-in tools and plugins, and permissions work normally. Sets CLAUDE_CODE_SAFE_MODE=1.\",()=>!0).addOption(new Zo(\"--init\",\"Run Setup hooks with init trigger, then continue\").hideHelp()).addOption(new Zo(\"--init-only\",\"Run Setup and SessionStart:startup hooks, then exit\").hideHelp()).addOption(new Zo(\"--maintenance\",\"Run Setup hooks with maintenance trigger, then continue\").hideHelp()).addOption(new Zo(\"--output-format <format>\",'Output format (only works with --print): \"text\" (default), \"json\" (single result), or \"stream-json\" (realtime streaming)').choices([\"text\",\"json\",\"stream-json\"])).addOption(new Zo(\"--json-schema <schema>\",'JSON Schema for structured output validation. Example: {\"type\":\"object\",\"properties\":{\"name\":{\"type\":\"string\"}},\"required\":[\"name\"]}').argParser(String)).option(\"--include-hook-events\",\"Include all hook lifecycle events in the output stream (only works with --output-format=stream-json)\",()=>!0).option(\"--include-partial-messages\",\"Include partial message chunks as they arrive (only works with --print and --output-format=stream-json)\",()=>!0).option(\"--forward-subagent-text\",\"Forward subagent text and thinking blocks as assistant/user messages with parent_tool_use_id set (only works with --print and --output-format=stream-json)\",()=>!0).addOption(new Zo(\"--session-mirror\",\"Emit transcript_mirror frames on stdout (SDK-internal; set by ProcessTransport when sessionStore is configured)\").hideHelp()).addOption(new Zo(\"--await-claim\",\"Start as a pre-warmed spare for an SDK host: boot with host-level options in a neutral directory, skip session-scoped start-up work, and wait for a claim_session control request that binds the process to its session (SDK-internal; requires --print with stream-json input and output)\").hideHelp()).addOption(new Zo(\"--input-format <format>\",'Input format (only works with --print): \"text\" (default), or \"stream-json\" (realtime streaming input)').choices([\"text\",\"stream-json\"])).addOption(new Zo(\"--await-initialize\",\"Read the initialize control request from stdin during startup so its launch-scoped fields (plugins) apply exactly like their command-line flags. Pass it only from the process that writes that request as the first stdin line at spawn (only works with --input-format=stream-json)\").hideHelp()).option(\"--dangerously-skip-permissions\",\"Bypass all permission checks. Recommended only for sandboxes with no internet access.\",()=>!0).option(\"--allow-dangerously-skip-permissions\",\"Enable bypassing all permission checks as an option, without it being enabled by default. Recommended only for sandboxes with no internet access.\",()=>!0).addOption(new Zo(\"--thinking <mode>\",\"Thinking mode: enabled (equivalent to adaptive), disabled\").choices([\"enabled\",\"adaptive\",\"disabled\"]).hideHelp()).addOption(new Zo(\"--thinking-display <display>\",\"How thinking content appears in the response\").choices(N2e).hideHelp()).addOption(new Zo(\"--max-thinking-tokens <tokens>\",\"[DEPRECATED. Use --thinking instead for newer models] Maximum number of thinking tokens (only works with --print)\").argParser(cr).hideHelp()).addOption(new Zo(\"--max-turns <turns>\",\"Maximum number of agentic turns in non-interactive mode. This will early exit the conversation after the specified number of turns. (only works with --print)\").argParser(cr).hideHelp()).addOption(new Zo(\"--max-budget-usd <amount>\",\"Maximum dollar amount to spend on API calls (only works with --print)\").argParser((w)=>{let C=W7o(w);if(C===void 0)throw new dHe(\"--max-budget-usd must be a positive number greater than 0\");return C})).addOption(new Zo(\"--task-budget <tokens>\",\"API-side task budget in tokens (output_config.task_budget)\").argParser((w)=>{let C=PL(w);if(isNaN(C)||C<=0||!Number.isInteger(C))throw new dHe(\"--task-budget must be a positive integer\");return C}).hideHelp()).option(\"--replay-user-messages\",\"Re-emit user messages from stdin back on stdout for acknowledgment (only works with --input-format=stream-json and --output-format=stream-json)\",()=>!0).addOption(new Zo(\"--prompt-suggestions [value]\",\"Enable prompt suggestions. In print/SDK mode, emits a prompt_suggestion message after each turn with a predicted next user prompt\").choices([\"true\",\"false\",\"1\",\"0\",\"yes\",\"no\",\"on\",\"off\"]).preset(\"true\").argParser((w)=>{if(!Le(w)&&!gs(w))throw new dHe(\"Allowed choices are true, false, 1, 0, yes, no, on, off.\");return!gs(w)})).addOption(new Zo(\"--enable-auth-status\",\"Enable auth status messages in SDK mode\").default(!1).hideHelp()).option(\"--allowedTools, --allowed-tools <tools...>\",'Comma or space-separated list of tool names to allow (e.g. \"Bash(git *) Edit\")').option(\"--tools <tools...>\",'Specify the list of available tools from the built-in set. Use \"\" to disable all tools, \"default\" to use all tools, or specify tool names (e.g. \"Bash,Edit,Read\").').option(\"--restricted\",\"Restricted mode: removes the built-in tools that run commands or code (Bash, PowerShell, REPL and the other code-running tools) and WebFetch unless --tools names them, and ignores user, project and local settings files (managed settings and --settings still apply; add --strict-mcp-config to skip MCP servers too). Also confines the file tools to the working directories (--add-dir included), refuses bypassPermissions, and lets only a person or the configured permission handler approve writes to settings, git and tool-configuration files.\").option(\"--disallowedTools, --disallowed-tools <tools...>\",'Comma or space-separated list of tool names to deny (e.g. \"Bash(git *) Edit\")').option(\"--mcp-config <configs...>\",\"Load MCP servers from JSON files or strings (space-separated)\").addOption(new Zo(\"--permission-prompt-tool <tool>\",\"MCP tool to use for permission prompts (only works with --print)\").argParser(String).hideHelp()).addOption(new Zo(\"--permission-prompts <target>\",'Who answers permission prompts with --print: \"host\" (the SDK host or --permission-prompt-tool) or \"none\" (nobody: anything that would prompt is denied automatically; the permission mode still decides everything else)').choices(eko).default(\"host\")).addOption(new Zo(\"--system-prompt <prompt>\",\"System prompt to use for the session\").argParser(String)).addOption(new Zo(\"--system-prompt-file <file>\",\"Read system prompt from a file\").argParser(String).hideHelp()).addOption(new Zo(\"--append-system-prompt <prompt>\",\"Append a system prompt to the default system prompt\").argParser(String)).addOption(new Zo(\"--append-system-prompt-file <file>\",\"Read system prompt from a file and append to the default system prompt\").argParser(String).hideHelp()).addOption(new Zo(\"--system-prompt-snapshot <on|off>\",\"Record the system prompt once per conversation and reuse it verbatim on every request and resume. on (the default): the prompt is rendered on the conversation's first request \\u2014 a --system-prompt or --append-system-prompt included \\u2014 sent, and recorded; every later request and resume sends the record as-is, even when a later launch passes different text, until the conversation is compacted. off: never record; the prompt is rendered fresh every request (for iterating on prompt text). No effect where system-prompt recording is not yet enabled.\").choices([\"on\",\"off\"]).argParser((w)=>{if(w!==\"on\"&&w!==\"off\")throw new dHe(\"Allowed choices are on, off.\");return w===\"on\"})).addOption(new Zo(\"--append-subagent-system-prompt <prompt>\",\"Append a system prompt to every Task-tool subagent's system prompt, propagated to nested subagents (only works with --print). Implies CLAUDE_CODE_ENABLE_APPEND_SUBAGENT_PROMPT=1.\").argParser(String).hideHelp()).addOption(new Zo(\"--append-subagent-system-prompt-file <file>\",\"Read a system prompt from a file and append it to every Task-tool subagent's system prompt (only works with --print)\").argParser(String).hideHelp()).addOption(new Zo(\"--plan-mode-instructions <instructions>\",\"Custom workflow body for plan mode. Replaces the default code-implementation phases in the plan-mode system reminder; the read-only enforcement preamble and ExitPlanMode protocol footer are always kept.\").argParser(String).hideHelp()).addOption(new Zo(\"--exclude-dynamic-system-prompt-sections\",\"Move per-machine sections (cwd, env info, memory paths, git status) from the system prompt into the first user message. Improves cross-user prompt-cache reuse. Only applies with the default system prompt (ignored with --system-prompt).\").default(!1)).addOption(new Zo(\"--permission-mode <mode>\",\"Permission mode to use for the session\").choices(dn).argParser(cn)).addOption(new Zo(\"--inherit-permission-mode <mode>\",\"Permission mode carried from a parent session, used only when nothing else configures one\").argParser(cn).hideHelp()).option(\"-c, --continue\",\"Continue the most recent conversation in the current directory\",()=>!0).option(\"-r, --resume [value]\",\"Resume a conversation by session ID, or open interactive picker with optional search term\",(w)=>w||!0).option(\"--fork-session\",\"When resuming, create a new session ID instead of reusing the original (use with --resume or --continue)\",()=>!0).addOption(new Zo(\"--watch-artifact <artifact>\",\"Watch a Claude artifact (id or URL) in this session and hear about new versions and comments\").hideHelp()).addOption(new Zo(\"--watch-artifact-no-autoreact <artifact>\").hideHelp()).addOption(new Zo(\"--prefill <text>\",\"Pre-fill the prompt input with text without submitting it\").hideHelp()).addOption(new Zo(\"--deep-link-origin\",\"Signal that this session was launched from a deep link\").hideHelp()).addOption(new Zo(\"--deep-link-repo <slug>\",\"Repo slug the deep link ?repo= parameter resolved to the current cwd\").hideHelp()).addOption(new Zo(\"--deep-link-last-fetch <ms>\",\"FETCH_HEAD mtime in epoch ms, precomputed by the deep link trampoline\").argParser((w)=>{let C=Number(w);return Number.isFinite(C)?C:void 0}).hideHelp()).addOption(new Zo(\"--prefill-b64 <b64>\",\"Base64url-encoded --prefill value (deep-link shell-safe launch paths)\").argParser((w)=>Buffer.from(w,\"base64url\").toString(\"utf8\")).hideHelp()).addOption(new Zo(\"--deep-link-cwd-b64 <b64>\",\"Base64url-encoded working directory (deep-link shell-safe launch paths)\").argParser((w)=>Buffer.from(w,\"base64url\").toString(\"utf8\")).hideHelp()).option(\"--from-pr [value]\",\"Resume a session linked to a PR by PR number/URL, or open interactive picker with optional search term\",(w)=>w||!0).option(\"--no-session-persistence\",\"Disable session persistence - sessions will not be saved to disk and cannot be resumed (only works with --print)\").addOption(new Zo(\"--resume-session-at <message id>\",\"When resuming, only messages up to and including the chain entry with <message.id> \\u2014 any chain-entry UUID, typically the kept turn's last entry (use with --resume in print mode)\").argParser(String).hideHelp()).addOption(new Zo(\"--resume-drops-turn <message id>\",\"With --resume-session-at in print mode: declare the prompt uuid of the turn the truncating resume intends to discard; the resume is refused if the discarded range contains anything not attributable to that turn (absorbed queued messages, task notifications, content from other turns). Ignored outside print mode, like --resume-session-at.\").argParser(String).hideHelp()).addOption(new Zo(\"--reply-on-resume\",\"When resuming, immediately query if the loaded transcript ends in a user-role message (set by /background mid-turn so the fork continues the in-flight turn).\").hideHelp()).addOption(new Zo(\"--rewind-files <user-message-id>\",\"Restore files to state at the specified user message and exit (requires --resume)\").hideHelp()).option(\"--model <model>\",\"Model for the current session. Provide an alias for the latest model (e.g. 'fable', 'opus', or 'sonnet') or a model's full name.\").addOption(new Zo(\"--effort <level>\",`Effort level for the current session (${nu.join(\", \")})`).argParser((w)=>{let{level:C,warning:W}=IXe(w);if(W!==void 0)process.stderr.write(`Warning: ${W}\n`);return C})).option(\"--agent <agent>\",\"Agent for the current session. Overrides the 'agent' setting.\").option(\"--betas <betas...>\",\"Beta headers to include in API requests (API key users only)\").option(\"--fallback-model <model>\",\"Enable automatic fallback to specified model(s) when the default model is overloaded or not available. Accepts a comma-separated list to try each in order. Re-tries the primary at the start of each user turn.\").addOption(new Zo(\"--workload <tag>\",\"Workload tag for billing-header attribution (cc_workload). Process-scoped; set by SDK daemon callers that spawn subprocesses for cron work. (only works with --print)\").hideHelp()).option(\"--settings <file-or-json>\",\"Path to a settings JSON file or a JSON string to load additional settings from\").addOption(new Zo(\"--client-data-url <url>\",\"URL for a signed configuration document. Claude Code exits if it cannot load it or it does not cover the selected model. Setting CLAUDE_CODE_CLIENT_DATA_URL instead keeps the URL out of the process list\").hideHelp()).addOption(new Zo(\"--managed-settings <json>\",\"Policy-tier settings JSON from a spawning parent process (SDK use only)\").hideHelp()).option(\"--add-dir <directories...>\",\"Additional directories to allow tool access to\").addOption(new Zo(\"--project-config-root <dir>\",\"Read project settings, .mcp.json and the .claude config trees (commands, agents, skills, workflows, routines, output-styles; --routine is refused with this flag) from this directory rather than the working directory (for a session a host starts in a worktree of it)\").hideHelp()).option(\"--ide\",\"Automatically connect to IDE on startup if exactly one valid IDE is available\",()=>!0).option(\"--desktop\",\"Open in the Claude Desktop app instead of the terminal (with --continue or --resume <id> to pick the session)\",()=>!0).option(\"--strict-mcp-config\",\"Only use MCP servers from --mcp-config, ignoring all other MCP configurations\",()=>!0).option(\"--session-id <uuid>\",\"Use a specific session ID for the conversation (must be a valid UUID)\").option(\"-n, --name <name>\",\"Set a display name for this session (shown in the prompt box, /resume picker, and terminal title)\").option(\"--agents <json-or-file>\",`JSON object defining custom agents, or with --print the path to a file that holds one (e.g. '{\"reviewer\": {\"description\": \"Reviews code\", \"prompt\": \"You are a code reviewer\"}}')`).option(\"--setting-sources <sources>\",\"Comma-separated list of setting sources to load (user, project, local).\").option(\"--plugin-dir <path>\",\"Load a plugin from a directory or .zip for this session only; a folder of plugins loads each child (repeatable: --plugin-dir A --plugin-dir B.zip)\",(w,C)=>[...C,w],[]).addOption(new Zo(\"--plugin-dir-no-mcp <path>\",\"Like --plugin-dir but the engine will not read this plugin's .mcp.json (caller owns its MCP connections)\").argParser((w,C)=>[...C,w]).default([]).hideHelp()).option(\"--plugin-url <url>\",\"Fetch a plugin .zip from a URL for this session only (repeatable: --plugin-url A --plugin-url B)\",(w,C)=>[...C,...w.split(/\\s+/).filter(Boolean)],[]).option(\"--disable-slash-commands\",\"Disable all skills\",()=>!0).option(\"--chrome\",\"Enable Claude in Chrome integration\").option(\"--no-chrome\",\"Disable Claude in Chrome integration\").option(\"--file <specs...>\",\"File resources to download at startup. Format: file_id:relative_path (e.g., --file file_abc:doc.txt file_def:img.png)\")",
+      "sha256": "8584d6e89d298ee17697a4868b2a1ee923e1734ddd583aeb769f663de668ae55"
+    },
+    {
+      "module": "chunk-dgp2yyqt.js",
+      "moduleSha256": "0ac39806e4b50d15e5b1de301d8553a870917c87ef024d423bc9476e0ced21da",
+      "kind": "public ingress token admission/config/download caller",
+      "start": 105771,
+      "end": 106099,
+      "source": "if(Rn&&Rn.length>0){let g=lc();if(!g)return Yt(\"Error: Session token required for file downloads. CLAUDE_CODE_SESSION_ACCESS_TOKEN must be set.\");let w=process.env.CLAUDE_CODE_REMOTE_SESSION_ID||q(),R=kIo(Rn);if(R.length>0){let N={baseUrl:process.env.ANTHROPIC_BASE_URL||dn().BASE_API_URL,oauthToken:g,sessionId:w};bt=TIo(R,N)}}",
+      "sha256": "1990c627be9921d15fdeb05f05004da3f1bb2130eeacb9dc4421ce9530db2180"
+    }
+  ],
+  "modules": [
+    {
+      "module": "chunk-a5b8yq96.js",
+      "moduleSha256": "41b71aa8a1e0ec0722f5ba9d53326e629588c7095f483569f018d6a4c7ba5b1c",
+      "declarations": [
+        {
+          "name": "cp",
+          "start": 1166,
+          "end": 1187,
+          "sha256": "978271aadebd2bdbf36ae69bfb8ba2cde34d0c14187ce0864713c58aa068e480",
+          "source": "cp=\"oauth-2025-04-20\"",
+          "executable": "var cp=\"oauth-2025-04-20\";"
+        }
+      ]
+    },
+    {
+      "module": "chunk-xep95vq1.js",
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "declarations": [
+        {
+          "name": "R",
+          "start": 158017,
+          "end": 158073,
+          "sha256": "6fd8283e57ef06495a2151d1a1f9534a040b0034be37f957b3c24f74eec65658",
+          "source": "function R(e,s){return Object.freeze({name:e,header:s})}",
+          "executable": "function R(e,s){return Object.freeze({name:e,header:s})};"
+        },
+        {
+          "name": "ewe",
+          "start": 158121,
+          "end": 158143,
+          "sha256": "ca1e5691f3dd15e0cdb4a81b534ff5e57ca41099431397c80386fc1aaa82246d",
+          "source": "ewe=R(\"oauth_auth\",cp)",
+          "executable": "var ewe=R(\"oauth_auth\",cp);"
+        },
+        {
+          "name": "ZKr",
+          "start": 159297,
+          "end": 159338,
+          "sha256": "8e81532de1f610fe0297b89e0234302d392a28f38d766e86d165039b80c03904",
+          "source": "ZKr=R(\"files_api\",\"files-api-2025-04-14\")",
+          "executable": "var ZKr=R(\"files_api\",\"files-api-2025-04-14\");"
+        }
+      ]
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "declarations": [
+        {
+          "name": "gXo",
+          "start": 2994627,
+          "end": 2994660,
+          "sha256": "8d2fedd0181108e7b155d34d19ae6f9fdf364fbb9264d34881c3cb7d35e11ab1",
+          "source": "gXo=`${ZKr.header},${ewe.header}`",
+          "executable": "var gXo=`${ZKr.header},${ewe.header}`;"
+        },
+        {
+          "name": "hXo",
+          "start": 2994661,
+          "end": 2994677,
+          "sha256": "c56c87a7685d462f6d5a9cb051de3c3c8486b3278c278e5706d91d8df1d2bb40",
+          "source": "hXo=\"2023-06-01\"",
+          "executable": "var hXo=\"2023-06-01\";"
+        },
+        {
+          "name": "H5t",
+          "start": 2995129,
+          "end": 2995255,
+          "sha256": "f7dd103249ae6efc57a33053283e1485af1588b1011bdeed5408a1553c951dcf",
+          "source": "function H5t(e){return{\"User-Agent\":Mo(),Authorization:`Bearer ${e.oauthToken}`,\"anthropic-version\":hXo,\"anthropic-beta\":gXo}}",
+          "executable": "function H5t(e){return{\"User-Agent\":Mo(),Authorization:`Bearer ${e.oauthToken}`,\"anthropic-version\":hXo,\"anthropic-beta\":gXo}};"
+        }
+      ]
+    }
+  ],
+  "evidenceOnly": [
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "declarations": [
+        {
+          "name": "_He",
+          "start": 2994798,
+          "end": 2995038,
+          "sha256": "e5b114ae74fe749f52b5f196ff509840233a45b29b9c36e8bae6415dd08e0581",
+          "source": "function _He(e=Yde()){if(He()!==\"firstParty\")throw Error(\"Files API is unavailable on third-party providers (data-residency)\");if(D7e(\"firstParty\",e,\"files\"),ol(\"hipaa\"))throw Error(\"File upload is disabled by your organization's policy.\")}",
+          "executable": "function _He(e=Yde()){if(He()!==\"firstParty\")throw Error(\"Files API is unavailable on third-party providers (data-residency)\");if(D7e(\"firstParty\",e,\"files\"),ol(\"hipaa\"))throw Error(\"File upload is disabled by your organization's policy.\")};"
+        },
+        {
+          "name": "Yde",
+          "start": 2994678,
+          "end": 2994798,
+          "sha256": "176d56c9b86cc67ae5b0861594213be367c6e9ea9e6a5c634d86e94ecbd8982c",
+          "source": "function Yde(){return process.env.ANTHROPIC_BASE_URL||process.env.CLAUDE_CODE_API_BASE_URL||\"https://api.anthropic.com\"}",
+          "executable": "function Yde(){return process.env.ANTHROPIC_BASE_URL||process.env.CLAUDE_CODE_API_BASE_URL||\"https://api.anthropic.com\"};"
+        },
+        {
+          "name": "RE",
+          "start": 2995092,
+          "end": 2995129,
+          "sha256": "6c5003a2716828cab00beb0857907580c426f05b33b27c84f5680eeabcb0afa1",
+          "source": "function RE(e){t(`[files-api] ${e}`)}",
+          "executable": "function RE(e){t(`[files-api] ${e}`)};"
+        },
+        {
+          "name": "uU",
+          "start": 2995259,
+          "end": 2995263,
+          "sha256": "98504d536c4bcab7e87373e8284a5d4dec00ecaeb7a70819f4ccc7ac92856473",
+          "source": "uU=3",
+          "executable": "var uU=3;"
+        },
+        {
+          "name": "_Xo",
+          "start": 2995264,
+          "end": 2995271,
+          "sha256": "cd8eb07c5a17a05b222b6d6cb6eea0c6561f1408837144e2eab749d66bc3487e",
+          "source": "_Xo=500",
+          "executable": "var _Xo=500;"
+        },
+        {
+          "name": "kXo",
+          "start": 2995272,
+          "end": 2995282,
+          "sha256": "7fb8b46e5716ae6aa1418a122382ec900f583a85e0c846031ddca72a7b79cd21",
+          "source": "kXo=120000",
+          "executable": "var kXo=120000;"
+        },
+        {
+          "name": "U5t",
+          "start": 2995283,
+          "end": 2995296,
+          "sha256": "40c2eae38a65c5d54a5662cb14205cf1845c42ad49503b09930ab0a4345a8394",
+          "source": "U5t=524288000",
+          "executable": "var U5t=524288000;"
+        },
+        {
+          "name": "j5t",
+          "start": 2995297,
+          "end": 2995585,
+          "sha256": "a89f37f33847e30fbf2dd9a27a7ba6eaa6aeb13a9e5a6a9bd49fad16ee0fc71c",
+          "source": "async function j5t(e,n){let r=\"\";for(let s=1;s<=uU;s++){let g=await n(s);if(g.done)return g.value;if(r=g.error||`${e} failed`,RE(`${e} attempt ${s}/${uU} failed: ${r}`),s<uU){let h=_Xo*Math.pow(2,s-1);RE(`Retrying ${e} in ${h}ms...`),await ee(h)}}throw Error(`${r} after ${uU} attempts`)}",
+          "executable": "async function j5t(e,n){let r=\"\";for(let s=1;s<=uU;s++){let g=await n(s);if(g.done)return g.value;if(r=g.error||`${e} failed`,RE(`${e} attempt ${s}/${uU} failed: ${r}`),s<uU){let h=_Xo*Math.pow(2,s-1);RE(`Retrying ${e} in ${h}ms...`),await ee(h)}}throw Error(`${r} after ${uU} attempts`)};"
+        },
+        {
+          "name": "wXo",
+          "start": 2995585,
+          "end": 2996297,
+          "sha256": "1534eb8adcc6dfff3638e458910d37969c8fe2595131a3c4349df114ad2aa081",
+          "source": "async function wXo(e,n){let r=n.baseUrl||Yde();_He(r);let s=`${r}/v1/files/${e}/content`,g=H5t(n);return RE(`Downloading file ${e} from ${s}`),j5t(`Download file ${e}`,async()=>{try{let h=await St.get(s,{headers:g,responseType:\"arraybuffer\",timeout:60000,validateStatus:(b)=>b<500});if(h.status===200)return RE(`Downloaded file ${e} (${h.data.length} bytes)`),{done:!0,value:Buffer.from(h.data)};if(h.status===404)throw Error(`File not found: ${e}`);if(h.status===401)throw Error(\"Authentication failed: invalid or missing API key\");if(h.status===403)throw Error(`Access denied to file: ${e}`);return{done:!1,error:`status ${h.status}`}}catch(h){if(!St.isAxiosError(h))throw h;return{done:!1,error:h.message}}})}",
+          "executable": "async function wXo(e,n){let r=n.baseUrl||Yde();_He(r);let s=`${r}/v1/files/${e}/content`,g=H5t(n);return RE(`Downloading file ${e} from ${s}`),j5t(`Download file ${e}`,async()=>{try{let h=await St.get(s,{headers:g,responseType:\"arraybuffer\",timeout:60000,validateStatus:(b)=>b<500});if(h.status===200)return RE(`Downloaded file ${e} (${h.data.length} bytes)`),{done:!0,value:Buffer.from(h.data)};if(h.status===404)throw Error(`File not found: ${e}`);if(h.status===401)throw Error(\"Authentication failed: invalid or missing API key\");if(h.status===403)throw Error(`Access denied to file: ${e}`);return{done:!1,error:`status ${h.status}`}}catch(h){if(!St.isAxiosError(h))throw h;return{done:!1,error:h.message}}})};"
+        },
+        {
+          "name": "vXo",
+          "start": 2996297,
+          "end": 2996602,
+          "sha256": "e36cd8ab2b3780e752c3b8f2a78bb263fb41938f59ea8ab25bd0a69550bcfefd",
+          "source": "function vXo(e,n,r){let s=uy.normalize(r);if(s.startsWith(\"..\"))return kHe(`Invalid file path: ${r}. Path must not traverse above workspace`),null;let g=uy.join(e,n,\"uploads\"),b=[uy.join(e,n,\"uploads\")+uy.sep,uy.sep+\"uploads\"+uy.sep].find((D)=>s.startsWith(D)),w=b?s.slice(b.length):s;return uy.join(g,w)}",
+          "executable": "function vXo(e,n,r){let s=uy.normalize(r);if(s.startsWith(\"..\"))return kHe(`Invalid file path: ${r}. Path must not traverse above workspace`),null;let g=uy.join(e,n,\"uploads\"),b=[uy.join(e,n,\"uploads\")+uy.sep,uy.sep+\"uploads\"+uy.sep].find((D)=>s.startsWith(D)),w=b?s.slice(b.length):s;return uy.join(g,w)};"
+        },
+        {
+          "name": "TXo",
+          "start": 2996602,
+          "end": 2997065,
+          "sha256": "d61a5043c161817846163f302871538b48ee2e5e3189bf7e702974b8e17e9bde",
+          "source": "async function TXo(e,n){let{fileId:r,relativePath:s}=e,g=vXo(oe(),n.sessionId,s);if(!g)return{fileId:r,path:\"\",success:!1,error:`Invalid file path: ${s}`};try{let h=await wXo(r,n),b=uy.dirname(g);return await fU.mkdir(b,{recursive:!0}),await fU.writeFile(g,h),RE(`Saved file ${r} to ${g} (${h.length} bytes)`),{fileId:r,path:g,success:!0,bytesWritten:h.length}}catch(h){return kHe(`Failed to download file ${r}: ${l(h)}`),{fileId:r,path:g,success:!1,error:l(h)}}}",
+          "executable": "async function TXo(e,n){let{fileId:r,relativePath:s}=e,g=vXo(oe(),n.sessionId,s);if(!g)return{fileId:r,path:\"\",success:!1,error:`Invalid file path: ${s}`};try{let h=await wXo(r,n),b=uy.dirname(g);return await fU.mkdir(b,{recursive:!0}),await fU.writeFile(g,h),RE(`Saved file ${r} to ${g} (${h.length} bytes)`),{fileId:r,path:g,success:!0,bytesWritten:h.length}}catch(h){return kHe(`Failed to download file ${r}: ${l(h)}`),{fileId:r,path:g,success:!1,error:l(h)}}};"
+        },
+        {
+          "name": "W5t",
+          "start": 2997493,
+          "end": 2997766,
+          "sha256": "4d66177e8ee82e7c83f9ab37aed12733a838293e8b08c70180bc5d9ab3ff704e",
+          "source": "async function W5t(e,n,r,s){_He(r.baseUrl||Yde()),RE(`Uploading file ${e} as ${n}`);let g;try{g=s?.content??await fU.readFile(e)}catch(h){return i(\"tengu_file_upload_failed\",{error_type:S(\"file_read\")}),{path:n,error:l(h),success:!1,reason:\"file_read\"}}return CXo(g,n,r,s)}",
+          "executable": "async function W5t(e,n,r,s){_He(r.baseUrl||Yde()),RE(`Uploading file ${e} as ${n}`);let g;try{g=s?.content??await fU.readFile(e)}catch(h){return i(\"tengu_file_upload_failed\",{error_type:S(\"file_read\")}),{path:n,error:l(h),success:!1,reason:\"file_read\"}}return CXo(g,n,r,s)};"
+        },
+        {
+          "name": "CXo",
+          "start": 2997766,
+          "end": 3000418,
+          "sha256": "358377685f1680daed124ff37833cd05333bb14c3dff49d6103bde3b250653a6",
+          "source": "async function CXo(e,n,r,s){let g=r.baseUrl||Yde();_He(g);let h=`${g}/v1/files`,b=H5t(r),w=e.length;if(w>U5t)return i(\"tengu_file_upload_failed\",{error_type:S(\"file_too_large\")}),{path:n,error:`File exceeds maximum size of ${U5t} bytes (actual: ${w})`,success:!1,reason:\"too_large\"};let D=`----FormBoundary${mXo()}`,j=RXo(uy.basename(n)),z=[];if(z.push(Buffer.from(`--${D}\\r\nContent-Disposition: form-data; name=\"file\"; filename=\"${j}\"\\r\nContent-Type: application/octet-stream\\r\n\\r\n`)),z.push(e),z.push(Buffer.from(`\\r\n`)),z.push(Buffer.from(`--${D}\\r\nContent-Disposition: form-data; name=\"purpose\"\\r\n\\r\nuser_data\\r\n`)),s?.expiresInSeconds!==void 0)z.push(Buffer.from(`--${D}\\r\nContent-Disposition: form-data; name=\"expires_in_seconds\"\\r\n\\r\n${s.expiresInSeconds}\\r\n`));z.push(Buffer.from(`--${D}--\\r\n`));let K=Buffer.concat(z);try{return await j5t(`Upload file ${n}`,async(he)=>{if(s?.signal?.aborted)throw new ib(\"Upload canceled\",\"canceled\");let _e=(ke)=>{if(he>=uU)throw i(\"tengu_file_upload_failed\",{error_type:S(\"server\")}),new ib(`${ke} after ${uU} attempts`,\"server\");return{done:!1,error:ke}};try{let ke=await St.post(h,K,{headers:{...b,\"Content-Type\":`multipart/form-data; boundary=${D}`,\"Content-Length\":K.length.toString()},timeout:s?.timeoutMs??kXo,signal:s?.signal,validateStatus:(be)=>be<500});if(ke.status===200||ke.status===201){let be=ke.data?.id;if(!be)return _e(\"Upload succeeded but no file ID returned\");return RE(`Uploaded ${n} -> ${be} (${w} bytes)`),{done:!0,value:{path:n,fileId:be,size:w,success:!0}}}if(ke.status===401)throw i(\"tengu_file_upload_failed\",{error_type:S(\"auth\")}),new ib(\"Authentication failed: invalid or missing API key\",\"auth\");if(ke.status===403)throw i(\"tengu_file_upload_failed\",{error_type:S(\"forbidden\")}),new ib(\"Access denied for upload\",\"forbidden\");if(ke.status===413)throw i(\"tengu_file_upload_failed\",{error_type:S(\"size\")}),new ib(\"File too large for upload\",\"too_large\");if(ke.status===400||ke.status===404||ke.status===422)throw i(\"tengu_file_upload_failed\",{error_type:S(\"server\")}),new ib(`status ${ke.status}`,\"server\");return _e(`status ${ke.status}`)}catch(ke){if(ke instanceof ib)throw ke;if(St.isCancel(ke))throw new ib(\"Upload canceled\",\"canceled\");if(St.isAxiosError(ke)){if(s?.retryAfterTimeout===!1&&ke.code===\"ECONNABORTED\"&&ke.cause===void 0)throw i(\"tengu_file_upload_failed\",{error_type:S(\"network\")}),new ib(ke.message,\"network\");return{done:!1,error:ke.message}}throw ke}})}catch(he){if(he instanceof ib)return{path:n,error:he.message,success:!1,reason:he.reason};return i(\"tengu_file_upload_failed\",{error_type:S(\"network\")}),{path:n,error:l(he),success:!1,reason:\"network\"}}}",
+          "executable": "async function CXo(e,n,r,s){let g=r.baseUrl||Yde();_He(g);let h=`${g}/v1/files`,b=H5t(r),w=e.length;if(w>U5t)return i(\"tengu_file_upload_failed\",{error_type:S(\"file_too_large\")}),{path:n,error:`File exceeds maximum size of ${U5t} bytes (actual: ${w})`,success:!1,reason:\"too_large\"};let D=`----FormBoundary${mXo()}`,j=RXo(uy.basename(n)),z=[];if(z.push(Buffer.from(`--${D}\\r\nContent-Disposition: form-data; name=\"file\"; filename=\"${j}\"\\r\nContent-Type: application/octet-stream\\r\n\\r\n`)),z.push(e),z.push(Buffer.from(`\\r\n`)),z.push(Buffer.from(`--${D}\\r\nContent-Disposition: form-data; name=\"purpose\"\\r\n\\r\nuser_data\\r\n`)),s?.expiresInSeconds!==void 0)z.push(Buffer.from(`--${D}\\r\nContent-Disposition: form-data; name=\"expires_in_seconds\"\\r\n\\r\n${s.expiresInSeconds}\\r\n`));z.push(Buffer.from(`--${D}--\\r\n`));let K=Buffer.concat(z);try{return await j5t(`Upload file ${n}`,async(he)=>{if(s?.signal?.aborted)throw new ib(\"Upload canceled\",\"canceled\");let _e=(ke)=>{if(he>=uU)throw i(\"tengu_file_upload_failed\",{error_type:S(\"server\")}),new ib(`${ke} after ${uU} attempts`,\"server\");return{done:!1,error:ke}};try{let ke=await St.post(h,K,{headers:{...b,\"Content-Type\":`multipart/form-data; boundary=${D}`,\"Content-Length\":K.length.toString()},timeout:s?.timeoutMs??kXo,signal:s?.signal,validateStatus:(be)=>be<500});if(ke.status===200||ke.status===201){let be=ke.data?.id;if(!be)return _e(\"Upload succeeded but no file ID returned\");return RE(`Uploaded ${n} -> ${be} (${w} bytes)`),{done:!0,value:{path:n,fileId:be,size:w,success:!0}}}if(ke.status===401)throw i(\"tengu_file_upload_failed\",{error_type:S(\"auth\")}),new ib(\"Authentication failed: invalid or missing API key\",\"auth\");if(ke.status===403)throw i(\"tengu_file_upload_failed\",{error_type:S(\"forbidden\")}),new ib(\"Access denied for upload\",\"forbidden\");if(ke.status===413)throw i(\"tengu_file_upload_failed\",{error_type:S(\"size\")}),new ib(\"File too large for upload\",\"too_large\");if(ke.status===400||ke.status===404||ke.status===422)throw i(\"tengu_file_upload_failed\",{error_type:S(\"server\")}),new ib(`status ${ke.status}`,\"server\");return _e(`status ${ke.status}`)}catch(ke){if(ke instanceof ib)throw ke;if(St.isCancel(ke))throw new ib(\"Upload canceled\",\"canceled\");if(St.isAxiosError(ke)){if(s?.retryAfterTimeout===!1&&ke.code===\"ECONNABORTED\"&&ke.cause===void 0)throw i(\"tengu_file_upload_failed\",{error_type:S(\"network\")}),new ib(ke.message,\"network\");return{done:!1,error:ke.message}}throw ke}})}catch(he){if(he instanceof ib)return{path:n,error:he.message,success:!1,reason:he.reason};return i(\"tengu_file_upload_failed\",{error_type:S(\"network\")}),{path:n,error:l(he),success:!1,reason:\"network\"}}};"
+        },
+        {
+          "name": "RXo",
+          "start": 3000418,
+          "end": 3000503,
+          "sha256": "b4cb6a4a5bd476431d6ee9d54213ffb38aec21fd124033348df004d967f04bd9",
+          "source": "function RXo(e){return e.replace(/[\"\\r\\n]/g,(n)=>n==='\"'?\"%22\":n===\"\\r\"?\"%0D\":\"%0A\")}",
+          "executable": "function RXo(e){return e.replace(/[\"\\r\\n]/g,(n)=>n==='\"'?\"%22\":n===\"\\r\"?\"%0D\":\"%0A\")};"
+        },
+        {
+          "name": "ib",
+          "start": 3000503,
+          "end": 3000610,
+          "sha256": "be2eb3a8590f3ac4edc5375028d7f99ca898bf485afddca6742e3f58d5829a40",
+          "source": "class ib extends Error{reason;constructor(e,n){super(e);this.reason=n;this.name=\"UploadNonRetriableError\"}}",
+          "executable": "class ib extends Error{reason;constructor(e,n){super(e);this.reason=n;this.name=\"UploadNonRetriableError\"}};"
+        },
+        {
+          "name": "kIo",
+          "start": 3000610,
+          "end": 3000910,
+          "sha256": "93ee723873fd68aa7df4a5e1f8219c445addf072d695eaa76ea3bb52e9d21a25",
+          "source": "function kIo(e){let n=[],r=e.flatMap((s)=>s.split(\" \").filter(Boolean));for(let s of r){let g=s.indexOf(\":\");if(g===-1)continue;let h=s.substring(0,g),b=s.substring(g+1);if(!h||!b){kHe(`Invalid file spec: ${s}. Both file_id and path are required`);continue}n.push({fileId:h,relativePath:b})}return n}",
+          "executable": "function kIo(e){let n=[],r=e.flatMap((s)=>s.split(\" \").filter(Boolean));for(let s of r){let g=s.indexOf(\":\");if(g===-1)continue;let h=s.substring(0,g),b=s.substring(g+1);if(!h||!b){kHe(`Invalid file spec: ${s}. Both file_id and path are required`);continue}n.push({fileId:h,relativePath:b})}return n};"
+        },
+        {
+          "name": "TIo",
+          "start": 2997075,
+          "end": 2997493,
+          "sha256": "b80c914f03721c281d22c3108778e9a46cdbca7053f2d84a64cd2585500c9364",
+          "source": "async function TIo(e,n,r=EXo){if(e.length===0)return[];RE(`Downloading ${e.length} file(s) for session ${n.sessionId}`);let s=Date.now(),g=await Promise.all(e.map($d(r,(w)=>TXo(w,n)))),h=Date.now()-s,b=G(g,(w)=>w.success);if(RE(`Downloaded ${b}/${e.length} file(s) in ${h}ms`),b===e.length)y(\"api_files_download\");else if(b>0)p(\"api_files_download\",\"partial_failed\");else m(\"api_files_download\",\"all_failed\");return g}",
+          "executable": "async function TIo(e,n,r=EXo){if(e.length===0)return[];RE(`Downloading ${e.length} file(s) for session ${n.sessionId}`);let s=Date.now(),g=await Promise.all(e.map($d(r,(w)=>TXo(w,n)))),h=Date.now()-s,b=G(g,(w)=>w.success);if(RE(`Downloaded ${b}/${e.length} file(s) in ${h}ms`),b===e.length)y(\"api_files_download\");else if(b>0)p(\"api_files_download\",\"partial_failed\");else m(\"api_files_download\",\"all_failed\");return g};"
+        }
+      ]
+    },
+    {
+      "module": "chunk-nankzm0s.js",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "declarations": [
+        {
+          "name": "D7e",
+          "start": 41182,
+          "end": 41301,
+          "sha256": "d9870bef0ec1011aaf600b105d2747903dd021ca03ebc6acf534af028bd16369",
+          "source": "function D7e(e,n,r=\"inference\"){if(j8()&&Fl())throw new O7e(hp);let s=qQ(e,n,r);if(s!==void 0)throw new O7e(s.message)}",
+          "executable": "function D7e(e,n,r=\"inference\"){if(j8()&&Fl())throw new O7e(hp);let s=qQ(e,n,r);if(s!==void 0)throw new O7e(s.message)};"
+        }
+      ]
+    },
+    {
+      "module": "chunk-q6t47sex.js",
+      "moduleSha256": "c26fd4e26f9f50f9a2b58cdc33c4165a4bcf75e16a05f3beaa42c25e2ab4dc7c",
+      "declarations": [
+        {
+          "name": "Mo",
+          "start": 615,
+          "end": 1130,
+          "sha256": "6490c096273e011ec982f74c367d927f0fe3e77b90db67b64a5b7420b9c25f80",
+          "source": "function Mo(){return`claude-code/${{ISSUES_EXPLAINER:\"report the issue at https://github.com/anthropics/claude-code/issues\",PACKAGE_URL:\"@anthropic-ai/claude-code\",README_URL:\"https://code.claude.com/docs/en/overview\",VERSION:\"2.1.287\",FEEDBACK_CHANNEL:\"https://github.com/anthropics/claude-code/issues\",BUILD_TIME:\"2026-10-01T16:02:06Z\",GIT_SHA:\"3c446a1b98aceb99a6cdee0f84a8bea42f4a8937\",HOOKS_WORKER_URL:\"/$bunfs/root/src/plugins/functionHooks/hooks-worker/hooks-worker.js\",DD_SOURCEMAP_GROUP:\"darwin\"}.VERSION}`}",
+          "executable": "function Mo(){return`claude-code/${{ISSUES_EXPLAINER:\"report the issue at https://github.com/anthropics/claude-code/issues\",PACKAGE_URL:\"@anthropic-ai/claude-code\",README_URL:\"https://code.claude.com/docs/en/overview\",VERSION:\"2.1.287\",FEEDBACK_CHANNEL:\"https://github.com/anthropics/claude-code/issues\",BUILD_TIME:\"2026-10-01T16:02:06Z\",GIT_SHA:\"3c446a1b98aceb99a6cdee0f84a8bea42f4a8937\",HOOKS_WORKER_URL:\"/$bunfs/root/src/plugins/functionHooks/hooks-worker/hooks-worker.js\",DD_SOURCEMAP_GROUP:\"darwin\"}.VERSION}`};"
+        }
+      ]
+    }
+  ],
+  "production": "Existing Files upload/download zP header port; same ingress-token input, getClaudeCodeUserAgent owner. Not normal OAuth/API-key selection or refresh.",
+  "pending": "Whole _He/D7e now in officialFilesPolicy287 and actual files.js uses full 287 data functions. Native source cut binds existing ModelUsage/settings/verified-remote owners; machine-file/MDM reader metadata/native invalid-provider validation gap remains explicitly pending (FILES_POLICY_PRODUCTION_287_20261004.md)."
+}

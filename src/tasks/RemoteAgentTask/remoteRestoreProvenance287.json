@@ -1,0 +1,26 @@
+{
+  "version": "2.1.287",
+  "offsetUnit": "UTF16 end-exclusive",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "rows": [
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "qMt",
+      "start": 2875532,
+      "end": 2875667,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "38b7e39b15d1a4d4c5b1cfca9d71b23f0c92a38ad08177716493207bfd750f72",
+      "source": "async function qMt(e){try{await Br(\"task_remote_agent_restore\",()=>V6o(e))}catch(n){t(`restoreRemoteAgentTasks failed: ${String(n)}`)}}"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "V6o",
+      "start": 2875667,
+      "end": 2876731,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "928e468459b953022cbc0869d19cb5dd83900c48320500ddd9a811120447b229",
+      "source": "async function V6o(e){let n=await dPo(e.storageV5);if(n.length===0)return;for(let r of n){let s;try{s=(await Rx(r.sessionId,void 0,e.credentials)).session_status}catch(b){if(b instanceof Error&&b.message.startsWith(\"Session not found:\"))t(`restoreRemoteAgentTasks: dropping ${r.taskId} (404: ${String(b)})`),O7(r.taskId,e.storageV5);else t(`restoreRemoteAgentTasks: skipping ${r.taskId} (recoverable: ${String(b)})`);continue}if(s===\"archived\"){O7(r.taskId,e.storageV5);continue}let g=O5(r.title)??\"(remote task)\",h={...em(r.taskId,\"remote_agent\",g,ZRe(r.toolUseId)),type:\"remote_agent\",remoteTaskType:$6o(r.remoteTaskType)?r.remoteTaskType:\"remote-agent\",status:\"running\",sessionId:r.sessionId,command:r.command,title:g,todoList:[],isRemoteReview:r.isRemoteReview,applyFixesOnComplete:r.applyFixesOnComplete===!0,reviewInstructions:O5(r.reviewInstructions,Gln),isUltraplan:r.isUltraplan,isLongRunning:r.isLongRunning,startTime:r.spawnedAt,pollStartedAt:Date.now(),remoteTaskMetadata:r.remoteTaskMetadata};e.taskRegistry.register(h),TYe(r.taskId),y4t(r.taskId,e)}}"
+    }
+  ],
+  "transport": "whole original bodies unchanged; borrow canonical metadata/API/base/text/UUID owners. Existing C poll and log projection explicit at host ports."
+}

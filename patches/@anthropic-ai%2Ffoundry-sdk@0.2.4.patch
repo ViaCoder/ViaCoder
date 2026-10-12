@@ -1,0 +1,28 @@
+diff --git a/client.d.mts b/client.d.mts
+index 5564c98640d6abaee4f90e2dea8d4a35b263fa8e..825d11d00bff43925ba0e66119c9d47cba6e098f 100644
+--- a/client.d.mts
++++ b/client.d.mts
+@@ -21,7 +21,8 @@ export interface FoundryClientOptions extends ClientOptions {
+     azureADTokenProvider?: (() => Promise<string>) | undefined;
+ }
+ /** API Client for interfacing with the Anthropic Foundry API. */
+-export declare class AnthropicFoundry extends Anthropic {
++export interface AnthropicFoundry extends Omit<Anthropic, 'messages' | 'beta' | 'models'> {}
++export declare class AnthropicFoundry {
+     resource: string | null;
+     messages: MessagesResource;
+     beta: BetaResource;
+diff --git a/client.d.ts b/client.d.ts
+index f5f0207e85a6037547e651f9da53c5236259a35f..9ceaa5f3c829ee2166824e29c75460f0b50b4812 100644
+--- a/client.d.ts
++++ b/client.d.ts
+@@ -21,7 +21,8 @@ export interface FoundryClientOptions extends ClientOptions {
+     azureADTokenProvider?: (() => Promise<string>) | undefined;
+ }
+ /** API Client for interfacing with the Anthropic Foundry API. */
+-export declare class AnthropicFoundry extends Anthropic {
++export interface AnthropicFoundry extends Omit<Anthropic, 'messages' | 'beta' | 'models'> {}
++export declare class AnthropicFoundry {
+     resource: string | null;
+     messages: MessagesResource;
+     beta: BetaResource;

@@ -1,0 +1,2096 @@
+{
+  "version": "2.1.287",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16 end-exclusive",
+  "bodyRewrites": [],
+  "scope": "Whole engine/401/lease/client control; reader/persistence and platform primitives remain canonical owners",
+  "jobs": {
+    "engine": {
+      "domain": "Engine",
+      "group": "engine",
+      "factory": "createOAuthRefreshEngine287",
+      "roots": [
+        "$i",
+        "m8",
+        "gl",
+        "gi",
+        "ons",
+        "gf",
+        "ak",
+        "zk"
+      ],
+      "body": {
+        "module": "chunk-nankzm0s.js",
+        "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+        "roots": [
+          "$i",
+          "m8",
+          "gl",
+          "gi",
+          "ons",
+          "gf",
+          "ak",
+          "zk"
+        ],
+        "rows": [
+          {
+            "name": "Jl",
+            "start": 610651,
+            "end": 610711,
+            "sha256": "d84dde7f637cd709fc793177cad886d879bcaff383aaef9ae1963d3fee7bd6aa",
+            "source": "function Jl(){return a.CLAUDE_CODE_PROVIDER_MANAGED_BY_HOST}",
+            "variable": false
+          },
+          {
+            "name": "gi",
+            "start": 646564,
+            "end": 646593,
+            "sha256": "4cc3fbd9690730001d0efdd73afdd650b3b63ce6f5b1b0be7bfd77e9cfa03cef",
+            "source": "gi=ct(new Map,(e)=>e.clear())",
+            "variable": true
+          },
+          {
+            "name": "fl",
+            "start": 651835,
+            "end": 651864,
+            "sha256": "adcba554093dec8ea0d2a2d021a3e22516eafaf9aa176fc06e2c4f4ea700b1e6",
+            "source": "fl=[\"bare\",\"store\",\"backend\"]",
+            "variable": true
+          },
+          {
+            "name": "Gk",
+            "start": 651865,
+            "end": 651896,
+            "sha256": "4a022b71a0ea26380bc3577afec9b13dc0a7721af6f5d5a37374a761ee7c57d9",
+            "source": "function Gk(e){return e&&!Vn()}",
+            "variable": false
+          },
+          {
+            "name": "zk",
+            "start": 651952,
+            "end": 652109,
+            "sha256": "2e52de696040acb04035f81cddf36a3b21de66b637b7710adf9a67a7c953c7fd",
+            "source": "function zk(e,n){if(!(F()&&e!==void 0)||f8()||a.CLAUDE_CODE_OAUTH_TOKEN)return\"bare\";if(sO()&&(!Uz()||Jl()))return\"bare\";return n!==void 0?\"backend\":\"store\"}",
+            "variable": false
+          },
+          {
+            "name": "Vk",
+            "start": 652109,
+            "end": 652196,
+            "sha256": "78d994be31b92f20bfb5b44610537a99a135a47f2609dfa14b57f69b67355152",
+            "source": "function Vk(e,n){for(let r of fl.slice(fl.indexOf(n))){let s=e(r);if(s)return s}return}",
+            "variable": false
+          },
+          {
+            "name": "Yk",
+            "start": 652196,
+            "end": 652307,
+            "sha256": "0675d1392d06295fed9b3014b943a1fd5d3910b2c082285c56cdf65d99435e38",
+            "source": "function Yk(e,n){for(let r=fl.indexOf(n)-1;r>=0;r--){let s=fl[r],g=s===void 0?void 0:e(s);if(g)return g}return}",
+            "variable": false
+          },
+          {
+            "name": "gf",
+            "start": 657687,
+            "end": 658023,
+            "sha256": "c96fe625cc7e687eba9c65b4d3b84f014b939529f824868b667fe3c7ffd679bf",
+            "source": "async function gf(e,n){let r=typeof e===\"object\"&&e!==null&&\"file\"in e&&typeof e.file===\"string\"?e.file:void 0,s=r===void 0||mf(r)===mf(n),g=s?Swn(n).lockfilePath:r,h,b;try{let v=await Ef(g);b=v.mtimeMs,h=Math.max(0,Math.round(Date.now()-v.mtimeMs))}catch{h=void 0}return{contendedLock:s?S(\"current\"):S(\"legacy\"),lockAgeMs:h,mtimeMs:b}}",
+            "variable": false
+          },
+          {
+            "name": "sk",
+            "start": 658027,
+            "end": 658034,
+            "sha256": "2527903cc70c074b638fea595026ce232681fdc378b7cd5096e172b9082c0ad1",
+            "source": "sk=7500",
+            "variable": true
+          },
+          {
+            "name": "ak",
+            "start": 658035,
+            "end": 658156,
+            "sha256": "eafc58a0deb1c5365d0cada13565c48fd2aa05987a1e0260bb30befc409f0cf8",
+            "source": "function ak(e,n){return e.mtimeMs!==void 0&&n.mtimeMs!==void 0&&e.contendedLock===n.contendedLock&&e.mtimeMs===n.mtimeMs}",
+            "variable": false
+          },
+          {
+            "name": "$i",
+            "start": 660486,
+            "end": 660544,
+            "sha256": "a4504a3bb465f2cd36c5238a6147b43ee4c4816e1002d624b10906ef3df660ab",
+            "source": "function $i(e={}){return m8(e).then((n)=>n===\"refreshed\")}",
+            "variable": false
+          },
+          {
+            "name": "m8",
+            "start": 660544,
+            "end": 661007,
+            "sha256": "ee8d1cd03c63d3d75e894701541c3c3dce712ef43074b9ccbefceb94ff9006e9",
+            "source": "function m8({retryCount:e=0,force:n=!1,entryAccessToken:r,credentials:s,storageV5:g,usesLoginOffFirstParty:h=!1}={}){let b=Rpe.of(U().host);if(e===0&&!n){let v=Gk(h)?\"pendingOptedInRefreshChecks\":\"pendingRefreshChecks\",w=zk(s,g),A=(G)=>b[v][G],R=Vk(A,w);if(R)return R;let M=()=>gl(b,e,0,void 0,n,void 0,s,g,h),D=Yk(A,w),K=(D?D.catch(()=>{return}).then(M):M()).finally(()=>{b[v]={...b[v],[w]:null}});return b[v]={...b[v],[w]:K},K}return gl(b,e,0,void 0,n,r,s,g,h)}",
+            "variable": false
+          },
+          {
+            "name": "ons",
+            "start": 661007,
+            "end": 661094,
+            "sha256": "944a171548bd00e63cec22ae745d29e42f7e0483628ef83ce3a83f869891f5ed",
+            "source": "function ons(e,{isDefaultFirstPartyClient:n}){return ape(e)||jJn(e)||!n&&Qzo(e)||Pu(e)}",
+            "variable": false
+          },
+          {
+            "name": "gl",
+            "start": 661094,
+            "end": 665453,
+            "sha256": "618485c6c8756f08e40360f97045d93476a9163d4ae1071b33a0c4cc10f9e615",
+            "source": "async function gl(e,n,r,s,g,h,b,v,w=!1,A=!1){await Kk(e,b);let M=await tl(b);if(!g){if(M&&!_F(M.expiresAt))return\"not_needed\";if(!M?.refreshToken)return\"no_refresh_token\"}if(!M?.refreshToken)return\"no_refresh_token\";if(hi.has(M.refreshToken))return\"known_dead_refresh_token\";if(gi.has(M.refreshToken))return\"account_on_hold\";if(!uU(M.scopes)&&!M.subscriptionType)return\"not_refreshable\";if(!Vn()&&!w)return\"not_needed\";let D=h??M.accessToken;Uk();let K=await tl(b);if(!K?.refreshToken)return\"no_refresh_token\";if(K.accessToken!==D)return _n(),i(\"tengu_oauth_token_refresh_race_resolved\",{}),\"refreshed\";if(!g&&!_F(K.expiresAt))return\"not_needed\";let G=yb();await ae().mkdir(G);let z;try{i(\"tengu_oauth_token_refresh_lock_acquiring\",{}),z=await Fqo(G)}catch(J){if(J.code===\"ELOCKED\"){let Q=s??await gf(J,G);if(n<5){i(\"tengu_oauth_token_refresh_lock_retry\",{retryCount:n+1});let be=1000+Math.random()*1000;return await ee(be),gl(e,n+1,r+be,Q,g,D,b,v,w,A)}let te=K.expiresAt!==null&&Date.now()>=K.expiresAt,pe=await gf(J,G);if(ak(Q,pe)&&r<sk)await ee(sk-r),pe=await gf(J,G);let{contendedLock:ce,lockAgeMs:he}=pe,_e=!ak(Q,pe);if(!_e&&!A&&String(ce)===\"current\"&&pe.mtimeMs!==void 0){let be=await Ap({claudeDir:G,lockfilePath:Swn(G).lockfilePath,legacyLockfilePath:await Qk(G),watchedMtimeMs:pe.mtimeMs});if(i(\"tengu_oauth_token_refresh_lock_dead_holder_takeover\",{outcome:c(be),lockAgeMs:he}),be===\"taken_over\"||be===\"lock_changed\")return gl(e,0,0,void 0,g,D,b,v,w,!0)}return i(\"tengu_oauth_token_refresh_lock_retry_limit_reached\",{maxRetries:5,tokenPastExpiry:te,contendedLock:ce,lockAgeMs:he,holderAlive:_e}),p(\"oauth_token_refresh\",\"oauth_refresh_lock_timeout\",{token_past_expiry:te,contended_lock:ce,holder_alive:_e,...he!==void 0&&{lock_age_ms:he}}),_e?\"lock_busy\":\"lock_timeout\"}return d(J),i(\"tengu_oauth_token_refresh_lock_error\",{...pu(J)}),m(\"oauth_token_refresh\",\"oauth_refresh_lock_error\"),\"lock_error\"}let j=null,X=!0;try{if(i(\"tengu_oauth_token_refresh_lock_acquired\",{}),Uk(),await zn().readAsyncStrict?.(b)===Ka)return i(\"tengu_oauth_token_refresh_locked_read_failed\",{}),p(\"oauth_token_refresh\",\"oauth_refresh_locked_read_failed\"),\"lock_error\";let Q=await tl(b);if(!Q?.refreshToken)return\"no_refresh_token\";if(j=Q.refreshToken,Q.accessToken!==D)return _n(),i(\"tengu_oauth_token_refresh_race_resolved\",{}),\"refreshed\";if(!g&&!_F(Q.expiresAt))return\"not_needed\";if(hi.has(Q.refreshToken))return\"known_dead_refresh_token\";if(gi.has(Q.refreshToken))return\"account_on_hold\";if(z.isCompromised())return i(\"tengu_oauth_token_refresh_lock_compromised_pre_post\",{}),p(\"oauth_token_refresh\",\"oauth_refresh_lock_compromised\"),\"lock_compromised\";i(\"tengu_oauth_token_refresh_starting\",{}),X=Boolean((uU(Q.scopes)||Q.subscriptionType)&&!Q.clientId);let te=X?KJr(Q.scopes):Q.scopes,pe=X&&HTn(Q.scopes),ce;try{ce=await ipe(Q.refreshToken,{scopes:te,clientId:Q.clientId,signal:z.signal,invalidScopeRetried:pe,storageV5:v})}catch(he){if(!pe||!fqr(he))throw he;i(\"tengu_oauth_refresh_invalid_scope_fallback\",{}),ce=await ipe(Q.refreshToken,{scopes:Q.scopes,clientId:Q.clientId,signal:z.signal,storageV5:v})}return await WQn({isCompromised:z.isCompromised,postedRefreshToken:j,refreshedTokens:ce,credentials:b}),\"refreshed\"}catch(J){if(z.isCompromised()){t(`OAuth refresh failed while lock compromised: ${l(J)}`,{level:\"error\"}),i(\"tengu_oauth_token_refresh_lock_compromised_in_catch\",{}),Uk();let te=await tl(b);if(te&&te.accessToken!==D)return _n(),i(\"tengu_oauth_token_refresh_race_recovered\",{}),\"refreshed\";return p(\"oauth_token_refresh\",\"oauth_refresh_lock_compromised\"),\"lock_compromised\"}if(ons(J,{isDefaultFirstPartyClient:X}))t(`OAuth refresh failed (expected): ${l(J)}`,{level:\"error\"});else d(J);Uk();let Q=await tl(b);if(Q&&Q.accessToken!==D)return _n(),i(\"tengu_oauth_token_refresh_race_recovered\",{}),\"refreshed\";if(ape(J)&&j)await VQn(j,b);if(jJn(J)&&j)return gi.set(j,Jzo(J)),i(\"tengu_oauth_refresh_token_account_on_hold\",{}),\"account_on_hold\";return ape(J)?\"known_dead_refresh_token\":\"refresh_failed\"}finally{try{i(\"tengu_oauth_token_refresh_lock_releasing\",{})}catch(J){t(`OAuth refresh lock-releasing event failed: ${J}`,{level:\"error\"})}try{await z.release(),i(\"tengu_oauth_token_refresh_lock_released\",{})}catch(J){t(`OAuth refresh lock release failed: ${J}`,{level:\"error\"});try{i(\"tengu_oauth_token_refresh_lock_release_error\",{})}catch{}}}}",
+            "variable": false
+          },
+          {
+            "name": "_F",
+            "start": 696095,
+            "end": 696163,
+            "sha256": "4e1fda63f7b17b312a5980a6533299377a637207badbdddf13084bc2f34a66f1",
+            "source": "function _F(e,n=Date.now()){if(e===null)return!1;return n+300000>=e}",
+            "variable": false
+          },
+          {
+            "name": "yl",
+            "start": 700466,
+            "end": 700669,
+            "sha256": "d89edd3775401ebebc8439d85a54bf4d22285e9aa7d580af7b333fcbd9275555",
+            "source": "function yl(e){if(!e||typeof e!==\"object\")return{code:void 0,description:void 0};let n=e,r=n.error;return{code:typeof r===\"string\"?r:r&&typeof r===\"object\"?r.type:void 0,description:n.error_description}}",
+            "variable": false
+          },
+          {
+            "name": "jJn",
+            "start": 700669,
+            "end": 700827,
+            "sha256": "8f7c13e225190274347691bbeacfd51f5b313285fa9c48635aaa03a1528b9321",
+            "source": "function jJn(e){if(!St.isAxiosError(e)||!e.response)return!1;let n=e.response.status;if(n!==400&&n!==401&&n!==403)return!1;return OGt(e.response.data)!==null}",
+            "variable": false
+          },
+          {
+            "name": "Jzo",
+            "start": 700827,
+            "end": 700907,
+            "sha256": "9100f18a86af3d4130c28be16ba38b5601c4cd2f215fbd525e2c31003bfeab60",
+            "source": "function Jzo(e){return(St.isAxiosError(e)?OGt(e.response?.data):null)?.url??gSt}",
+            "variable": false
+          },
+          {
+            "name": "ape",
+            "start": 700907,
+            "end": 701100,
+            "sha256": "d031fe37aa0bc9f5f86f1def32e1a9df80ae0b1effb72b4f9202def9d415e4c8",
+            "source": "function ape(e){if(!St.isAxiosError(e)||!e.response)return!1;let n=e.response.status;if(n!==400&&n!==401)return!1;return yl(e.response.data).code===\"invalid_grant\"&&OGt(e.response.data)===null}",
+            "variable": false
+          },
+          {
+            "name": "fqr",
+            "start": 701100,
+            "end": 701224,
+            "sha256": "925fab5cd3ceac27c1c18ede8019b4961707462628f03017faccac39075ce96a",
+            "source": "function fqr(e){if(!St.isAxiosError(e)||e.response?.status!==400)return!1;return yl(e.response.data).code===\"invalid_scope\"}",
+            "variable": false
+          },
+          {
+            "name": "KK",
+            "start": 701228,
+            "end": 701296,
+            "sha256": "5a3186647eda977542d4db2fcabbb411214431cae0eff78d1754f692bf8b9c3e",
+            "source": "KK=new Set([\"invalid_client\",\"invalid_scope\",\"unauthorized_client\"])",
+            "variable": true
+          },
+          {
+            "name": "Qzo",
+            "start": 701297,
+            "end": 701441,
+            "sha256": "9bf799bc762c96960df91685feee04d3b3f15aa0b0d5c5c889190b66fc0cacf6",
+            "source": "function Qzo(e){if(!St.isAxiosError(e)||e.response?.status!==400)return!1;let{code:n}=yl(e.response.data);return typeof n===\"string\"&&KK.has(n)}",
+            "variable": false
+          }
+        ],
+        "ports": [
+          {
+            "name": "F",
+            "imported": "F",
+            "module": "/$bunfs/root/chunk-ky674g9x.js"
+          },
+          {
+            "name": "a",
+            "imported": "a",
+            "module": "/$bunfs/root/chunk-mbfze585.js"
+          },
+          {
+            "name": "sO",
+            "imported": "sO",
+            "module": "/$bunfs/root/chunk-mnp9k227.js"
+          },
+          {
+            "name": "Uz",
+            "imported": "Uz",
+            "module": "/$bunfs/root/chunk-bn3p37gv.js"
+          },
+          {
+            "name": "f8",
+            "module": "canonical-owner"
+          },
+          {
+            "name": "mf",
+            "imported": "resolve",
+            "module": "path"
+          },
+          {
+            "name": "Ef",
+            "imported": "stat",
+            "module": "fs/promises"
+          },
+          {
+            "name": "S",
+            "imported": "S",
+            "module": "/$bunfs/root/chunk-n4qghq20.js"
+          },
+          {
+            "name": "Swn",
+            "module": "canonical-owner"
+          },
+          {
+            "name": "Pu",
+            "imported": "Pu",
+            "module": "/$bunfs/root/chunk-c9me9cp7.js"
+          },
+          {
+            "name": "St",
+            "imported": "St",
+            "module": "/$bunfs/root/chunk-e6m248dn.js"
+          },
+          {
+            "name": "OGt",
+            "imported": "OGt",
+            "module": "/$bunfs/root/chunk-8ptzhr8g.js"
+          },
+          {
+            "name": "ct",
+            "imported": "ct",
+            "module": "/$bunfs/root/chunk-x954y317.js"
+          },
+          {
+            "name": "Vn",
+            "imported": "Vn",
+            "module": "/$bunfs/root/chunk-wz6xag6e.js"
+          },
+          {
+            "name": "i",
+            "imported": "i",
+            "module": "/$bunfs/root/chunk-6hnyhakg.js"
+          },
+          {
+            "name": "yb",
+            "imported": "yb",
+            "module": "/$bunfs/root/chunk-fge68w3a.js"
+          },
+          {
+            "name": "ae",
+            "imported": "ae",
+            "module": "/$bunfs/root/chunk-q80zaav8.js"
+          },
+          {
+            "name": "ee",
+            "imported": "ee",
+            "module": "/$bunfs/root/chunk-f2n7vgt8.js"
+          },
+          {
+            "name": "c",
+            "imported": "c",
+            "module": "/$bunfs/root/chunk-n4qghq20.js"
+          },
+          {
+            "name": "p",
+            "imported": "p",
+            "module": "/$bunfs/root/chunk-9d2ykxmy.js"
+          },
+          {
+            "name": "d",
+            "imported": "d",
+            "module": "/$bunfs/root/chunk-amhtwhch.js"
+          },
+          {
+            "name": "pu",
+            "imported": "pu",
+            "module": "/$bunfs/root/chunk-3bsqc8dr.js"
+          },
+          {
+            "name": "m",
+            "imported": "m",
+            "module": "/$bunfs/root/chunk-9d2ykxmy.js"
+          },
+          {
+            "name": "zn",
+            "imported": "zn",
+            "module": "/$bunfs/root/chunk-wgt53hn2.js"
+          },
+          {
+            "name": "Ka",
+            "imported": "Ka",
+            "module": "/$bunfs/root/chunk-wgt53hn2.js"
+          },
+          {
+            "name": "KJr",
+            "imported": "KJr",
+            "module": "/$bunfs/root/chunk-a5b8yq96.js"
+          },
+          {
+            "name": "HTn",
+            "imported": "HTn",
+            "module": "/$bunfs/root/chunk-a5b8yq96.js"
+          },
+          {
+            "name": "t",
+            "imported": "t",
+            "module": "/$bunfs/root/chunk-q80zaav8.js"
+          },
+          {
+            "name": "l",
+            "imported": "l",
+            "module": "/$bunfs/root/chunk-c9me9cp7.js"
+          },
+          {
+            "name": "gSt",
+            "imported": "gSt",
+            "module": "/$bunfs/root/chunk-8ptzhr8g.js"
+          },
+          {
+            "name": "VQn",
+            "module": "canonical-owner"
+          },
+          {
+            "name": "_n",
+            "module": "canonical-owner"
+          },
+          {
+            "name": "tl",
+            "module": "canonical-owner"
+          },
+          {
+            "name": "Uk",
+            "module": "canonical-owner"
+          },
+          {
+            "name": "WQn",
+            "module": "canonical-owner"
+          },
+          {
+            "name": "ipe",
+            "module": "canonical-owner"
+          },
+          {
+            "name": "uU",
+            "module": "canonical-owner"
+          },
+          {
+            "name": "hi",
+            "module": "canonical-owner"
+          },
+          {
+            "name": "Qk",
+            "module": "canonical-owner"
+          },
+          {
+            "name": "Ap",
+            "module": "canonical-owner"
+          },
+          {
+            "name": "Fqo",
+            "module": "canonical-owner"
+          },
+          {
+            "name": "Kk",
+            "module": "canonical-owner"
+          },
+          {
+            "name": "U",
+            "imported": "U",
+            "module": "/$bunfs/root/chunk-bn3p37gv.js"
+          },
+          {
+            "name": "Rpe",
+            "module": "canonical-owner"
+          }
+        ]
+      },
+      "auxiliaries": [],
+      "bindings": {
+        "F": "F",
+        "a": "a",
+        "sO": "d0",
+        "Uz": "GG",
+        "f8": "r9",
+        "mf": "hf",
+        "Ef": "Tf",
+        "S": "_",
+        "Swn": "Jhn",
+        "Pu": "cu",
+        "St": "ht",
+        "OGt": "G2t",
+        "ct": "it",
+        "Vn": "Bn",
+        "i": "i",
+        "yb": "zS",
+        "ae": "ae",
+        "ee": "Z",
+        "c": "c",
+        "p": "p",
+        "d": "d",
+        "pu": "Vd",
+        "m": "m",
+        "zn": "zn",
+        "Ka": "Wa",
+        "KJr": "N5r",
+        "HTn": "hEn",
+        "t": "t",
+        "l": "l",
+        "gSt": "_ht",
+        "VQn": "D8n",
+        "_n": "_n",
+        "tl": "Fa",
+        "Uk": "KT",
+        "WQn": "I8n",
+        "ipe": "Pde",
+        "uU": "h1",
+        "hi": "bi",
+        "Qk": "Yk",
+        "Ap": "Kp",
+        "Fqo": "f2o",
+        "Kk": "$k",
+        "U": "j",
+        "Rpe": "Jde"
+      },
+      "returns": "{outcome:m8,refresh:$i,direct:gl,holdTokens:gi,classify:{invalidGrant:ape,onHold:jJn,invalidScope:fqr,expected:ons},observeLock:gf,sameObservation:ak,lane:zk}",
+      "legacyPublicPortTypes": "../officialOAuthEngine/runtime.js"
+    },
+    "lease": {
+      "domain": "Lease",
+      "group": "lease",
+      "factory": "createOAuthRefreshLease287",
+      "roots": [
+        "Fqo",
+        "Swn",
+        "Qk",
+        "Ap",
+        "Bl",
+        "$qo",
+        "vp"
+      ],
+      "body": {
+        "module": "chunk-nankzm0s.js",
+        "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+        "roots": [
+          "Fqo",
+          "Swn",
+          "Qk",
+          "Ap",
+          "Bl",
+          "$qo",
+          "vp"
+        ],
+        "rows": [
+          {
+            "name": "kC",
+            "start": 62026,
+            "end": 62049,
+            "sha256": "e01fdaf6b4d154db501881450c6805cfe1918e19a4c1d1ffdfe1b253b8ba0005",
+            "source": "kC=\"tengu_quiet_marten\"",
+            "variable": true
+          },
+          {
+            "name": "AC",
+            "start": 62050,
+            "end": 62080,
+            "sha256": "aea079f6578f68c2bdc4ed52d90ff89764c0abed87d9c85445a9c1b0f377dc67",
+            "source": "AC=\".oauth_refresh.lock.owner\"",
+            "variable": true
+          },
+          {
+            "name": "CC",
+            "start": 62081,
+            "end": 62088,
+            "sha256": "7d301ea8943d391a86b8da88c0f83f621b98c25d112a27c8eb22b7e4cbd7603c",
+            "source": "CC=4096",
+            "variable": true
+          },
+          {
+            "name": "TC",
+            "start": 62089,
+            "end": 62274,
+            "sha256": "21db9a4bab7df5c44d1cc982b84e33624180183a221c8f6cc63373b333c1784d",
+            "source": "TC=f(()=>u({pid:C().int(),procStart:o().max(64).optional(),pidDomain:o().max(512),pidSpace:o().max(512),lockBirthtimeMs:C().positive(),legacyLockBirthtimeMs:C().positive().optional()}))",
+            "variable": true
+          },
+          {
+            "name": "bp",
+            "start": 62275,
+            "end": 62350,
+            "sha256": "3965bbf5468055d1c6fb563df6ae8fab07abd216d462c1fc6289311dcbed4d29",
+            "source": "class bp{reader=null;register(e){let n=this.reader;return this.reader=e,n}}",
+            "variable": false
+          },
+          {
+            "name": "vp",
+            "start": 62354,
+            "end": 62363,
+            "sha256": "8711fc451b3e778056c1c06b3d4cfa6b70e5567b0490ac3946c811d9e55b2c7d",
+            "source": "vp=new bp",
+            "variable": true
+          },
+          {
+            "name": "Ep",
+            "start": 62401,
+            "end": 62878,
+            "sha256": "66884b37fa1ff23f9ed8b7f92bec65b9eb5a5cbdddc3a57fc2099447d1c1f547",
+            "source": "async function Ep({claudeDir:e,lockfilePath:n,legacyLockfilePath:r}){try{let[s,g,h,b]=await Promise.all([mr(n),r===null?null:mr(r),A_(),eC()]);if(!(s.birthtimeMs>0))return null;let v={pid:process.pid,...h!==void 0&&{procStart:h},pidDomain:b,pidSpace:nse(),lockBirthtimeMs:s.birthtimeMs,...g!==null&&g.birthtimeMs>0&&{legacyLockBirthtimeMs:g.birthtimeMs}};return await Tn(Hl(e),_(v)),s.birthtimeMs}catch(s){return t(`OAuth refresh lock owner record not written: ${l(s)}`),null}}",
+            "variable": false
+          },
+          {
+            "name": "wp",
+            "start": 62878,
+            "end": 62994,
+            "sha256": "798d91a4b423199858e064d437a72b79612ccd70150affc5c332cc6a3c90169f",
+            "source": "async function wp(e,n){let r=await Bl(e);if(r===null||r.pid!==process.pid||r.lockBirthtimeMs!==n)return;await Cp(e)}",
+            "variable": false
+          },
+          {
+            "name": "Ap",
+            "start": 62994,
+            "end": 63229,
+            "sha256": "8589598261bd9aaddc013f1f6fa0b71c2c2eea35f1d116d969465adc950d48dc",
+            "source": "async function Ap(e){let n=await RC(e);if(n===\"taken_over\"||n===\"lock_changed\"||n===\"disabled\")return n;try{return(await mr(e.lockfilePath)).mtimeMs===e.watchedMtimeMs?n:\"lock_changed\"}catch(r){return E(r)===\"ENOENT\"?\"lock_changed\":n}}",
+            "variable": false
+          },
+          {
+            "name": "RC",
+            "start": 63229,
+            "end": 64399,
+            "sha256": "e3f4c85e260658dae91e09e2a5f374f2ceee6a18be8537270dcb75ef15bcbcb1",
+            "source": "async function RC({claudeDir:e,lockfilePath:n,legacyLockfilePath:r,watchedMtimeMs:s}){let g=!1;try{let h=!0;try{h=vp.reader?.(kC,!0)!==!1}catch{h=!0}if(!h)return\"disabled\";let b=await Bl(e);if(b===null)return(await mr(n)).mtimeMs===s?\"no_owner_record\":\"lock_changed\";let v=async()=>{let z=await mr(n);if(z.mtimeMs!==s)return\"lock_changed\";return z.birthtimeMs===b.lockBirthtimeMs?null:\"record_mismatch\"},w=await v();if(w!==null)return w;if(b.pidDomain!==await eC()||b.pidSpace!==nse())return\"foreign_pid_space\";if(!await WIe())return\"pid_view_untrusted\";let{pid:A,procStart:R}=b;if(!(jIe(A)&&(Uf(A)||await tje(A)||R!==void 0&&await HS(A,R)===!1)))return\"holder_not_proven_gone\";let D=await mr(r).catch((z)=>{if(E(z)===\"ENOENT\")return null;throw z});if(D!==null&&D.birthtimeMs!==b.legacyLockBirthtimeMs)return\"legacy_lock_held\";if(g=!0,D!==null)await yp(r);g=!1;let K=await v();if(K!==null)return K;g=!0,await yp(n);let G=await Bl(e);if(G!==null&&G.pid===b.pid&&G.lockBirthtimeMs===b.lockBirthtimeMs)await Cp(e);return\"taken_over\"}catch(h){if(t(`OAuth refresh lock takeover skipped: ${l(h)}`),g)return\"remove_failed\";return E(h)===\"ENOENT\"?\"lock_changed\":\"probe_failed\"}}",
+            "variable": false
+          },
+          {
+            "name": "Hl",
+            "start": 64399,
+            "end": 64430,
+            "sha256": "b855e6b26d3daea2dfb8e755f59611444cc7210ae2fc3462fc18adc348a56c6f",
+            "source": "function Hl(e){return wC(e,AC)}",
+            "variable": false
+          },
+          {
+            "name": "Bl",
+            "start": 64430,
+            "end": 64588,
+            "sha256": "fa6d324636baafbf8958097af5513a6723732844d949437687b6527b23cf049c",
+            "source": "async function Bl(e){let n=await Ol(Hl(e),CC);if(n===null)return null;let r;try{r=Y(n)}catch{return null}let s=TC().safeParse(r);return s.success?s.data:null}",
+            "variable": false
+          },
+          {
+            "name": "Cp",
+            "start": 64588,
+            "end": 64716,
+            "sha256": "9506f539a5acd3a03924f201bab86cf9b98aabaa6b349941628149570c606fda",
+            "source": "async function Cp(e){try{await EC(Hl(e))}catch(n){if(E(n)!==\"ENOENT\")t(`OAuth refresh lock owner record not removed: ${l(n)}`)}}",
+            "variable": false
+          },
+          {
+            "name": "yp",
+            "start": 64716,
+            "end": 64790,
+            "sha256": "9ac52ff6ef6eb052cb1fbe034128c3c2172272abdb83b771743fee15cec7ed26",
+            "source": "async function yp(e){try{await SC(e)}catch(n){if(E(n)!==\"ENOENT\")throw n}}",
+            "variable": false
+          },
+          {
+            "name": "Swn",
+            "start": 658156,
+            "end": 658353,
+            "sha256": "449e8702c71e9675cc351fdd2524f5feadff74cf669e2ce154861e45e6780010",
+            "source": "function Swn(e,n){return{lockfilePath:wf(e,\".oauth_refresh.lock\"),realpath:!1,stale:60000,update:5000,onCompromised:(r)=>{t(`OAuth refresh lock compromised: ${r.message}`,{level:\"error\"}),n?.(r)}}}",
+            "variable": false
+          },
+          {
+            "name": "Qk",
+            "start": 658353,
+            "end": 658415,
+            "sha256": "1eb3d0711509a57b6ed3991ab5df3e545746ecd51cb2ba9ef1139b8e00a8f403",
+            "source": "async function Qk(e){return`${await SH(e).catch(()=>e)}.lock`}",
+            "variable": false
+          },
+          {
+            "name": "Fqo",
+            "start": 658582,
+            "end": 659302,
+            "sha256": "4585b2990371e5d558aed154e28f723deb04e09f1e98bf3c3b5f124f6d310598",
+            "source": "async function Fqo(e){let n=!1,r=new AbortController,s=()=>{n=!0,r.abort()},g=await oa(e,Swn(e,s)),h=await Qk(e),b=null;try{b=await oa(h,{...Swn(e,s),lockfilePath:h})}catch(A){if(A.code===\"ELOCKED\")throw i(\"tengu_oauth_refresh_legacy_lock_contended\",{}),await g().catch((R)=>Ht(R)||n?t(`OAuth refresh new-lock release failed: ${R}`):d(R)),A;if(Ht(A))t(`OAuth refresh legacy-lock acquire failed: ${A}`);else d(A)}let v=qQn(),w=await Ep({claudeDir:e,lockfilePath:Swn(e).lockfilePath,legacyLockfilePath:b?h:null});return{isCompromised:()=>n,signal:r.signal,release:async()=>{try{if(w!==null)await wp(e,w);if(b)await b().catch((A)=>Ht(A)||n?t(`OAuth refresh legacy-lock release failed: ${A}`):d(A));await g()}finally{v()}}}}",
+            "variable": false
+          },
+          {
+            "name": "Zk",
+            "start": 659302,
+            "end": 659332,
+            "sha256": "366337dbc74b076027cbd34635d76e3e6c6f0fc2707af3ffc9efea0d14395a8a",
+            "source": "class Zk{held=0;released=null}",
+            "variable": false
+          },
+          {
+            "name": "$qo",
+            "start": 659336,
+            "end": 659357,
+            "sha256": "d08c9ae927bc049317834b6848db901a99319084a9a2c3eb07f1c9af74c98ba3",
+            "source": "$qo=new V(()=>new Zk)",
+            "variable": true
+          },
+          {
+            "name": "qQn",
+            "start": 659358,
+            "end": 659489,
+            "sha256": "ffd4dd4d723c8736df952798bce5b71215146e539f942fb68802a2693684e2c1",
+            "source": "function qQn(){let e=Rs($qo);e.held++;let n=!0;return()=>{if(!n)return;if(n=!1,--e.held===0)e.released?.resolve(),e.released=null}}",
+            "variable": false
+          }
+        ],
+        "ports": [
+          {
+            "name": "V",
+            "imported": "V",
+            "module": "/$bunfs/root/chunk-bn3p37gv.js"
+          },
+          {
+            "name": "Ol",
+            "imported": "Ol",
+            "module": "/$bunfs/root/chunk-mky26gaw.js"
+          },
+          {
+            "name": "Y",
+            "imported": "Y",
+            "module": "/$bunfs/root/chunk-q80zaav8.js"
+          },
+          {
+            "name": "f",
+            "imported": "f",
+            "module": "/$bunfs/root/chunk-5qqrzb2c.js"
+          },
+          {
+            "name": "u",
+            "imported": "u",
+            "module": "/$bunfs/root/chunk-aybmj3t4.js"
+          },
+          {
+            "name": "C",
+            "imported": "C",
+            "module": "/$bunfs/root/chunk-aybmj3t4.js"
+          },
+          {
+            "name": "o",
+            "imported": "o",
+            "module": "/$bunfs/root/chunk-aybmj3t4.js"
+          },
+          {
+            "name": "wC",
+            "imported": "join",
+            "module": "path"
+          },
+          {
+            "name": "mr",
+            "imported": "lstat",
+            "module": "fs/promises"
+          },
+          {
+            "name": "E",
+            "imported": "E",
+            "module": "/$bunfs/root/chunk-c9me9cp7.js"
+          },
+          {
+            "name": "eC",
+            "imported": "eC",
+            "module": "/$bunfs/root/chunk-ez1bv1jr.js"
+          },
+          {
+            "name": "nse",
+            "imported": "nse",
+            "module": "/$bunfs/root/chunk-ez1bv1jr.js"
+          },
+          {
+            "name": "WIe",
+            "imported": "WIe",
+            "module": "/$bunfs/root/chunk-qn9v5406.js"
+          },
+          {
+            "name": "jIe",
+            "imported": "jIe",
+            "module": "/$bunfs/root/chunk-qn9v5406.js"
+          },
+          {
+            "name": "Uf",
+            "imported": "Uf",
+            "module": "/$bunfs/root/chunk-qn9v5406.js"
+          },
+          {
+            "name": "tje",
+            "imported": "tje",
+            "module": "/$bunfs/root/chunk-qn9v5406.js"
+          },
+          {
+            "name": "HS",
+            "imported": "HS",
+            "module": "/$bunfs/root/chunk-qn9v5406.js"
+          },
+          {
+            "name": "t",
+            "imported": "t",
+            "module": "/$bunfs/root/chunk-q80zaav8.js"
+          },
+          {
+            "name": "l",
+            "imported": "l",
+            "module": "/$bunfs/root/chunk-c9me9cp7.js"
+          },
+          {
+            "name": "EC",
+            "imported": "unlink",
+            "module": "fs/promises"
+          },
+          {
+            "name": "SC",
+            "imported": "rmdir",
+            "module": "fs/promises"
+          },
+          {
+            "name": "SH",
+            "imported": "realpath",
+            "module": "fs/promises"
+          },
+          {
+            "name": "wf",
+            "imported": "join",
+            "module": "path"
+          },
+          {
+            "name": "oa",
+            "imported": "oa",
+            "module": "/$bunfs/root/chunk-py9z7ygk.js"
+          },
+          {
+            "name": "i",
+            "imported": "i",
+            "module": "/$bunfs/root/chunk-6hnyhakg.js"
+          },
+          {
+            "name": "Ht",
+            "imported": "Ht",
+            "module": "/$bunfs/root/chunk-c9me9cp7.js"
+          },
+          {
+            "name": "d",
+            "imported": "d",
+            "module": "/$bunfs/root/chunk-amhtwhch.js"
+          },
+          {
+            "name": "A_",
+            "imported": "A_",
+            "module": "/$bunfs/root/chunk-qn9v5406.js"
+          },
+          {
+            "name": "Tn",
+            "imported": "Tn",
+            "module": "/$bunfs/root/chunk-31g8tfvj.js"
+          },
+          {
+            "name": "_",
+            "imported": "_",
+            "module": "/$bunfs/root/chunk-q80zaav8.js"
+          },
+          {
+            "name": "Rs",
+            "imported": "Rs",
+            "module": "/$bunfs/root/chunk-bn3p37gv.js"
+          }
+        ]
+      },
+      "auxiliaries": [
+        {
+          "module": "chunk-bn3p37gv.js",
+          "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+          "roots": [
+            "V"
+          ],
+          "rows": [
+            {
+              "name": "V",
+              "start": 10007,
+              "end": 10151,
+              "sha256": "3b223ad86a79e9969e8241054c03d04d80d046aab19dd519973e4aed1e79e9e9",
+              "source": "class V{#e;#t=new WeakMap;constructor(e){this.#e=e}of(e){let t=this.#t.get(e);if(t!==void 0)return t;let o=this.#e();return this.#t.set(e,o),o}}",
+              "variable": false
+            }
+          ],
+          "ports": []
+        },
+        {
+          "module": "chunk-mky26gaw.js",
+          "moduleSha256": "18e1cb6eece5251380198c3954ec5aee2e9e1f9a4c406361ad889739b6226d40",
+          "roots": [
+            "Ol"
+          ],
+          "rows": [
+            {
+              "name": "Ol",
+              "start": 1005,
+              "end": 1130,
+              "sha256": "bad84cf17f7c4d67b4204ad384deea0d79a8b55f3fe5415e398600d551893d13",
+              "source": "async function Ol(e,n){try{let r=await F(e);if(!r.isFile()||r.size>n)return null;return await U(e,\"utf8\")}catch{return null}}",
+              "variable": false
+            }
+          ],
+          "ports": [
+            {
+              "name": "F",
+              "imported": "lstat",
+              "module": "fs/promises"
+            },
+            {
+              "name": "U",
+              "imported": "readFile",
+              "module": "fs/promises"
+            }
+          ]
+        }
+      ],
+      "bindings": {
+        "Y": "J",
+        "f": "f",
+        "u": "u",
+        "C": "C",
+        "o": "o",
+        "wC": "EC",
+        "mr": "gr",
+        "E": "v",
+        "eC": "rk",
+        "nse": "Gxe",
+        "WIe": "mht",
+        "jIe": "zxe",
+        "Uf": "Xm",
+        "tje": "qUe",
+        "HS": "wE",
+        "t": "t",
+        "l": "l",
+        "EC": "SC",
+        "SC": "pC",
+        "SH": "pH",
+        "wf": "Rf",
+        "oa": "Qi",
+        "i": "i",
+        "Ht": "Dt",
+        "d": "d",
+        "A_": "Tb",
+        "Tn": "Dn",
+        "_": "S",
+        "Rs": "vs",
+        "F": "F",
+        "U": "U"
+      },
+      "returns": "{acquire:Fqo,options:Swn,legacyPath:Qk,takeover:Ap,record:Bl,held:$qo,featureReader:vp}",
+      "legacyPublicPortTypes": "../officialOAuthLease/runtime.js"
+    },
+    "recovery": {
+      "domain": "Recovery",
+      "group": "recovery",
+      "factory": "createOAuth401Recovery287",
+      "roots": [
+        "nS",
+        "wK",
+        "rns",
+        "EK",
+        "ywn",
+        "hl",
+        "Nqo"
+      ],
+      "body": {
+        "module": "chunk-nankzm0s.js",
+        "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+        "roots": [
+          "nS",
+          "wK",
+          "rns",
+          "EK",
+          "ywn",
+          "hl",
+          "Nqo"
+        ],
+        "rows": [
+          {
+            "name": "Jl",
+            "start": 610651,
+            "end": 610711,
+            "sha256": "d84dde7f637cd709fc793177cad886d879bcaff383aaef9ae1963d3fee7bd6aa",
+            "source": "function Jl(){return a.CLAUDE_CODE_PROVIDER_MANAGED_BY_HOST}",
+            "variable": false
+          },
+          {
+            "name": "fl",
+            "start": 651835,
+            "end": 651864,
+            "sha256": "adcba554093dec8ea0d2a2d021a3e22516eafaf9aa176fc06e2c4f4ea700b1e6",
+            "source": "fl=[\"bare\",\"store\",\"backend\"]",
+            "variable": true
+          },
+          {
+            "name": "Gk",
+            "start": 651865,
+            "end": 651896,
+            "sha256": "4a022b71a0ea26380bc3577afec9b13dc0a7721af6f5d5a37374a761ee7c57d9",
+            "source": "function Gk(e){return e&&!Vn()}",
+            "variable": false
+          },
+          {
+            "name": "ik",
+            "start": 651896,
+            "end": 651952,
+            "sha256": "ac0e568812e8dc1b2b5a8363742c2ccab37a2e7bf31ba192e5528f6496fabff8",
+            "source": "function ik(e,n,r){return`${e}|${n}${r?\"|opted-in\":\"\"}`}",
+            "variable": false
+          },
+          {
+            "name": "zk",
+            "start": 651952,
+            "end": 652109,
+            "sha256": "2e52de696040acb04035f81cddf36a3b21de66b637b7710adf9a67a7c953c7fd",
+            "source": "function zk(e,n){if(!(F()&&e!==void 0)||f8()||a.CLAUDE_CODE_OAUTH_TOKEN)return\"bare\";if(sO()&&(!Uz()||Jl()))return\"bare\";return n!==void 0?\"backend\":\"store\"}",
+            "variable": false
+          },
+          {
+            "name": "Vk",
+            "start": 652109,
+            "end": 652196,
+            "sha256": "78d994be31b92f20bfb5b44610537a99a135a47f2609dfa14b57f69b67355152",
+            "source": "function Vk(e,n){for(let r of fl.slice(fl.indexOf(n))){let s=e(r);if(s)return s}return}",
+            "variable": false
+          },
+          {
+            "name": "Yk",
+            "start": 652196,
+            "end": 652307,
+            "sha256": "0675d1392d06295fed9b3014b943a1fd5d3910b2c082285c56cdf65d99435e38",
+            "source": "function Yk(e,n){for(let r=fl.indexOf(n)-1;r>=0;r--){let s=fl[r],g=s===void 0?void 0:e(s);if(g)return g}return}",
+            "variable": false
+          },
+          {
+            "name": "nS",
+            "start": 652307,
+            "end": 652844,
+            "sha256": "d75f2935f3e1f3fd09a6b3c630947e5143b3442cf0f085c5587f8321cc1ef5b7",
+            "source": "function nS(e,n,r,{usesLoginOffFirstParty:s=!1,onForcedRefreshOutcome:g}={}){let h=Rpe.of(U().host),b=zk(n,r),v=Gk(s),w=(G)=>h.pending401Handlers.get(ik(e,G,v)),A=Vk(w,b);if(A){if(!g)return A.promise;return A.promise.then((G)=>{if(A.forcedOutcome!==void 0)g(A.forcedOutcome);return G})}let R=ik(e,b,v),M={promise:Promise.resolve(!1)},D=()=>wK(e,n,r,s,(G)=>{M.forcedOutcome=G,g?.(G)}),K=Yk(w,b);return M.promise=(K?K.promise.catch(()=>!1).then(D):D()).finally(()=>{h.pending401Handlers.delete(R)}),h.pending401Handlers.set(R,M),M.promise}",
+            "variable": false
+          },
+          {
+            "name": "rns",
+            "start": 652844,
+            "end": 653167,
+            "sha256": "e83ee34078c656316adadd3111713839691a270ad4ae69e74f12696d431dfdb6",
+            "source": "async function rns(e){let n=e.pollMs??2000,r=e.readToken??(()=>a.CLAUDE_CODE_OAUTH_TOKEN??sO()??void 0),s=e.sleeper??((b)=>ee(b)),g=Date.now()+e.timeoutMs;while(Date.now()<g){let b=r();if(b&&b!==e.failedAccessToken)return!0;await s(Math.min(n,Math.max(1,g-Date.now())))}let h=r();return Boolean(h&&h!==e.failedAccessToken)}",
+            "variable": false
+          },
+          {
+            "name": "hl",
+            "start": 653167,
+            "end": 653229,
+            "sha256": "ad2ebef0fe91afed4667dcce28771aad3606b739e26d410099b8db2644e153fc",
+            "source": "function hl(){return Boolean(a.CLAUDE_CODE_REMOTE_SESSION_ID)}",
+            "variable": false
+          },
+          {
+            "name": "Lqo",
+            "start": 653229,
+            "end": 653319,
+            "sha256": "99a2d3d5c030d42cd8dea479bbc046574443a15f1d8bfb285acb9988cd4de830",
+            "source": "function Lqo(){return Boolean(a.CLAUDE_CODE_OAUTH_TOKEN)&&!hl()&&!a.ANTHROPIC_UNIX_SOCKET}",
+            "variable": false
+          },
+          {
+            "name": "EK",
+            "start": 653441,
+            "end": 653536,
+            "sha256": "3bde1020dfcff294619abe3a1fd777d30ed04570f51343f1553e0b1101e458bb",
+            "source": "function EK(){let e=a.CLAUDE_CODE_OAUTH_401_WAIT_MS;if(e!==void 0)return e;return hl()?60000:0}",
+            "variable": false
+          },
+          {
+            "name": "qk",
+            "start": 653536,
+            "end": 653571,
+            "sha256": "f2c9a9413bf596b2aed07ea5c67d81f6a130b55215354d9480132fb0a341f98a",
+            "source": "class qk{firstUnrecoveredAtMs=null}",
+            "variable": false
+          },
+          {
+            "name": "Nqo",
+            "start": 653575,
+            "end": 653596,
+            "sha256": "6b6f1ce98feef9af7ab2b18dbf024875f53e4b9569831c9d4ec8d9420905c926",
+            "source": "Nqo=new V(()=>new qk)",
+            "variable": true
+          },
+          {
+            "name": "ywn",
+            "start": 653597,
+            "end": 653987,
+            "sha256": "1d532c2347d6b0866ba4dd1885f28ecc668d769ddc6ddc31a81024e92e49c782",
+            "source": "function ywn(e){let n=e.nowMs??Date.now(),r=Nqo.of(U().host);if(e.recovered)return r.firstUnrecoveredAtMs=null,\"continue\";if(!(e.isRemoteChild??hl()))return\"continue\";let g=e.thresholdMs??a.CLAUDE_CODE_AUTH_FAIL_EXIT_MS??600000;if(g<=0)return\"continue\";if(r.firstUnrecoveredAtMs===null)return r.firstUnrecoveredAtMs=n,\"continue\";if(n-r.firstUnrecoveredAtMs>=g)return\"exit\";return\"continue\"}",
+            "variable": false
+          },
+          {
+            "name": "wK",
+            "start": 654069,
+            "end": 656527,
+            "sha256": "2f8b3eb68673a0c880ec53832b45b48bf5a49e179a7f3b341658907044573083",
+            "source": "async function wK(e,n,r,s=!1,g){Uk();let h=await tl(n);if(!h?.refreshToken){let w=Gfe();if(w)try{let M=await w();if(M&&M!==e)return process.env.CLAUDE_CODE_OAUTH_TOKEN=M,Uk(),_n(),i(\"tengu_oauth_401_sdk_callback_refreshed\",{}),y(\"oauth_401_recovery\"),ywn({recovered:!0}),!0;t(M===null?\"SDK getOAuthToken callback returned null (no token available)\":\"SDK getOAuthToken callback returned the same expired token; treating as no refresh\",{level:M===null?\"debug\":\"error\"})}catch(M){m(\"oauth_401_recovery\",\"oauth_401_sdk_callback_failed\"),t(`SDK getOAuthToken callback failed: ${M instanceof Error?M.message:String(M)}`,{level:\"error\"})}let A=!1;if(!Jl()){if(A=Lqo(),A)t(\"OAuth 401: keeping the user-supplied CLAUDE_CODE_OAUTH_TOKEN instead of adopting the stored credential. Mint a fresh token with `claude setup-token` and restart with it, or unset the variable and run /login.\",{level:\"error\"});else if(a.CLAUDE_CODE_OAUTH_TOKEN||sO())try{let M=(await zn().readAsync(n))?.claudeAiOauth;if(M?.accessToken&&M.accessToken!==e&&!_F(M.expiresAt)){if(a.CLAUDE_CODE_OAUTH_TOKEN)process.env.CLAUDE_CODE_OAUTH_TOKEN=M.accessToken;if(F()&&n!==void 0?await Ctr(n):sO())ZU(M.accessToken),Gwt(M.scopes);return Uk(),_n(),i(\"tengu_oauth_401_recovered_from_disk\",{}),y(\"oauth_401_recovery\"),ywn({recovered:!0}),!0}}catch(M){m(\"oauth_401_recovery\",\"oauth_401_disk_read_failed\"),d(M)}}let R=Boolean(process.env.CLAUDE_CODE_OAUTH_TOKEN)||Boolean(sO());if(R){let M=EK();if(M>0){if(t(`OAuth 401 recovery: waiting up to ${M}ms for a rotated env token`),await rns({failedAccessToken:e,timeoutMs:M})){if(F()&&n!==void 0?await Ctr(n):sO()){let D=a.CLAUDE_CODE_OAUTH_TOKEN;if(D)ZU(D)}return Uk(),_n(),i(\"tengu_oauth_401_recovered_from_rotation\",{}),y(\"oauth_401_recovery\"),ywn({recovered:!0}),!0}}}if(m(\"oauth_401_recovery\",A?\"oauth_401_skipped_user_env_token\":R?\"oauth_401_no_refresh_token_bg_worker\":\"oauth_401_no_refresh_token_interactive\"),ywn({recovered:!1})===\"exit\")i(\"tengu_oauth_401_zombie_exit\",{}),t(\"OAuth 401 unrecovered past CLAUDE_CODE_AUTH_FAIL_EXIT_MS \\u2014 exiting so the runner recycles this session with fresh credentials\",{level:\"error\"}),setTimeout(()=>process.exit(1),2000);return!1}if(h.accessToken!==e)return _n(),i(\"tengu_oauth_401_recovered_from_keychain\",{}),y(\"oauth_401_recovery\"),ywn({recovered:!0}),!0;let b={force:!0,entryAccessToken:e,credentials:n,storageV5:r,usesLoginOffFirstParty:s};if(!g)return $i(b);let v=await m8(b);return g(v),v===\"refreshed\"}",
+            "variable": false
+          },
+          {
+            "name": "_F",
+            "start": 696095,
+            "end": 696163,
+            "sha256": "4e1fda63f7b17b312a5980a6533299377a637207badbdddf13084bc2f34a66f1",
+            "source": "function _F(e,n=Date.now()){if(e===null)return!1;return n+300000>=e}",
+            "variable": false
+          }
+        ],
+        "ports": [
+          {
+            "name": "V",
+            "imported": "V",
+            "module": "/$bunfs/root/chunk-bn3p37gv.js"
+          },
+          {
+            "name": "a",
+            "imported": "a",
+            "module": "/$bunfs/root/chunk-mbfze585.js"
+          },
+          {
+            "name": "U",
+            "imported": "U",
+            "module": "/$bunfs/root/chunk-bn3p37gv.js"
+          },
+          {
+            "name": "sO",
+            "imported": "sO",
+            "module": "/$bunfs/root/chunk-mnp9k227.js"
+          },
+          {
+            "name": "ee",
+            "imported": "ee",
+            "module": "/$bunfs/root/chunk-f2n7vgt8.js"
+          },
+          {
+            "name": "Gfe",
+            "imported": "Gfe",
+            "module": "/$bunfs/root/chunk-bn3p37gv.js"
+          },
+          {
+            "name": "i",
+            "imported": "i",
+            "module": "/$bunfs/root/chunk-6hnyhakg.js"
+          },
+          {
+            "name": "y",
+            "imported": "y",
+            "module": "/$bunfs/root/chunk-9d2ykxmy.js"
+          },
+          {
+            "name": "t",
+            "imported": "t",
+            "module": "/$bunfs/root/chunk-q80zaav8.js"
+          },
+          {
+            "name": "m",
+            "imported": "m",
+            "module": "/$bunfs/root/chunk-9d2ykxmy.js"
+          },
+          {
+            "name": "zn",
+            "imported": "zn",
+            "module": "/$bunfs/root/chunk-wgt53hn2.js"
+          },
+          {
+            "name": "F",
+            "imported": "F",
+            "module": "/$bunfs/root/chunk-ky674g9x.js"
+          },
+          {
+            "name": "Ctr",
+            "imported": "Ctr",
+            "module": "/$bunfs/root/chunk-mnp9k227.js"
+          },
+          {
+            "name": "ZU",
+            "imported": "ZU",
+            "module": "/$bunfs/root/chunk-bn3p37gv.js"
+          },
+          {
+            "name": "Gwt",
+            "imported": "Gwt",
+            "module": "/$bunfs/root/chunk-bn3p37gv.js"
+          },
+          {
+            "name": "d",
+            "imported": "d",
+            "module": "/$bunfs/root/chunk-amhtwhch.js"
+          },
+          {
+            "name": "m8",
+            "module": "canonical-owner"
+          },
+          {
+            "name": "$i",
+            "module": "canonical-owner"
+          },
+          {
+            "name": "_n",
+            "module": "canonical-owner"
+          },
+          {
+            "name": "Uk",
+            "module": "canonical-owner"
+          },
+          {
+            "name": "tl",
+            "module": "canonical-owner"
+          },
+          {
+            "name": "Vn",
+            "imported": "Vn",
+            "module": "/$bunfs/root/chunk-wz6xag6e.js"
+          },
+          {
+            "name": "Uz",
+            "imported": "Uz",
+            "module": "/$bunfs/root/chunk-bn3p37gv.js"
+          },
+          {
+            "name": "f8",
+            "module": "canonical-owner"
+          },
+          {
+            "name": "Rpe",
+            "module": "canonical-owner"
+          }
+        ]
+      },
+      "auxiliaries": [
+        {
+          "module": "chunk-bn3p37gv.js",
+          "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+          "roots": [
+            "V"
+          ],
+          "rows": [
+            {
+              "name": "V",
+              "start": 10007,
+              "end": 10151,
+              "sha256": "3b223ad86a79e9969e8241054c03d04d80d046aab19dd519973e4aed1e79e9e9",
+              "source": "class V{#e;#t=new WeakMap;constructor(e){this.#e=e}of(e){let t=this.#t.get(e);if(t!==void 0)return t;let o=this.#e();return this.#t.set(e,o),o}}",
+              "variable": false
+            }
+          ],
+          "ports": []
+        }
+      ],
+      "bindings": {
+        "a": "a",
+        "U": "j",
+        "sO": "d0",
+        "ee": "Z",
+        "Gfe": "Spe",
+        "i": "i",
+        "y": "y",
+        "t": "t",
+        "m": "m",
+        "zn": "zn",
+        "F": "F",
+        "Ctr": "m7n",
+        "ZU": "iU",
+        "Gwt": "G_t",
+        "d": "d",
+        "m8": "o9",
+        "$i": "Hi",
+        "_n": "_n",
+        "Uk": "KT",
+        "tl": "Fa",
+        "Vn": "Bn",
+        "Uz": "GG",
+        "f8": "r9",
+        "Rpe": "Jde"
+      },
+      "returns": "{recover:nS,direct:wK,waitForRotation:rns,waitBudget:EK,failureDecision:ywn,remote:hl,state:Nqo}",
+      "legacyPublicPortTypes": "../officialOAuthRecovery/runtime.js"
+    },
+    "client": {
+      "domain": "Client",
+      "group": "client",
+      "factory": "createOAuthClient287",
+      "roots": [
+        "UJn",
+        "dqr",
+        "ipe",
+        "eWt",
+        "BJn",
+        "KBe",
+        "Xzo",
+        "FJn",
+        "_A",
+        "wbn",
+        "$Jn",
+        "fqr"
+      ],
+      "body": {
+        "module": "chunk-nankzm0s.js",
+        "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+        "roots": [
+          "UJn",
+          "dqr",
+          "ipe",
+          "eWt",
+          "BJn",
+          "KBe",
+          "Xzo",
+          "FJn",
+          "_A",
+          "wbn",
+          "$Jn",
+          "fqr"
+        ],
+        "rows": [
+          {
+            "name": "iB",
+            "start": 576491,
+            "end": 576612,
+            "sha256": "3d94a7263035ce63044cc726cf49a01c2b45fbbd3c6862e488534a108d0c3447",
+            "source": "iB=f(()=>mt({account:mt({uuid:ue(),email:ue()}).passthrough(),organization:mt({uuid:ue()}).passthrough()}).passthrough())",
+            "variable": true
+          },
+          {
+            "name": "dw",
+            "start": 576613,
+            "end": 576859,
+            "sha256": "ec9dec87a33f10374894b2c4baee2006e39afd37af42ad9f0c4e23486a0cc89b",
+            "source": "function dw(e){let n=iB().safeParse(e);if(!n.success){m(\"oauth_profile_fetch\",\"malformed_response_body\"),t(`OAuth profile: response body failed shape validation \\u2014 ${n.error.message}`,{level:\"error\"});return}return y(\"oauth_profile_fetch\"),e}",
+            "variable": false
+          },
+          {
+            "name": "fw",
+            "start": 576859,
+            "end": 577018,
+            "sha256": "fc89263618c88059d47bae85793036e1d49a2c54f7b6c823cd588bddc44e741d",
+            "source": "function fw(e){let{kind:n,status:r}=Ws(e);if(n===\"auth\")return\"no_auth\";if(r===429)return\"rate_limited\";if(n===\"timeout\")return\"timeout\";return\"network_error\"}",
+            "variable": false
+          },
+          {
+            "name": "pw",
+            "start": 577018,
+            "end": 577122,
+            "sha256": "89632080fbbae3a41f1a941f3e31bec9489dc63223665b56f27bc7dbaa8ce859",
+            "source": "function pw(e){let{kind:n,status:r}=Ws(e);return n===\"other\"||r===void 0?\"unexpected_error\":`http_${r}`}",
+            "variable": false
+          },
+          {
+            "name": "Xzo",
+            "start": 577122,
+            "end": 577614,
+            "sha256": "bedb7d25d782779a4c5abad76b2b2609ec2e6e3e1ca534a8e97c432c9ebf48d5",
+            "source": "async function Xzo(){let n=le().oauthAccount?.accountUuid,r=nZ();if(!n||!r)return;let s=`${dn().BASE_API_URL}/api/claude_cli_profile`;try{let g=await St.get(s,{headers:{\"User-Agent\":Mo(),\"x-api-key\":r,\"anthropic-beta\":cp,\"Cache-Control\":\"no-cache\"},params:{account_uuid:n},timeout:1e4});return dw(g.data)}catch(g){if(Pu(g))p(\"oauth_profile_fetch\",`api_key_${fw(g)}`),t(`Failed to fetch oauth profile from API key: ${g}`,{level:\"error\"});else m(\"oauth_profile_fetch\",`api_key_${pw(g)}`),d(g)}}",
+            "variable": false
+          },
+          {
+            "name": "KBe",
+            "start": 577614,
+            "end": 578045,
+            "sha256": "b764a6f943e55cd49501fa91dc9fa949f3ca59c4795cf718aa6cd3b36df3bb7a",
+            "source": "async function KBe(e){let n=`${dn().BASE_API_URL}/api/oauth/profile`;try{let r=await St.get(n,{headers:{\"User-Agent\":Mo(),Authorization:`Bearer ${e}`,\"Content-Type\":\"application/json\",\"Cache-Control\":\"no-cache\"},timeout:1e4});return dw(r.data)}catch(r){if(Pu(r))p(\"oauth_profile_fetch\",`token_${fw(r)}`),t(`Failed to fetch oauth profile from OAuth token: ${r}`,{level:\"error\"});else m(\"oauth_profile_fetch\",`token_${pw(r)}`),d(r)}}",
+            "variable": false
+          },
+          {
+            "name": "gw",
+            "start": 578049,
+            "end": 578128,
+            "sha256": "182cf8142ec4c4589dcbd0bf6a8c8d755628841c32b6bf63bc8912cc3eb33246",
+            "source": "gw=f(()=>ue().regex(/^[\\p{L}\\p{N}](?:[\\p{L}\\p{N} .+-]{0,38}[\\p{L}\\p{N}+])?$/u))",
+            "variable": true
+          },
+          {
+            "name": "FJn",
+            "start": 578177,
+            "end": 578388,
+            "sha256": "4150224516c958a344945dfe5ce95121143a3de428d704775c33bb8f5cb8dfd3",
+            "source": "function FJn(e){let n=e?.organization?.plan_display_name;if(n===void 0||n===null)return null;let r=gw().safeParse(n);if(!r.success)return p(\"oauth_profile_fetch\",\"plan_display_name_rejected\"),null;return r.data}",
+            "variable": false
+          },
+          {
+            "name": "Jl",
+            "start": 610651,
+            "end": 610711,
+            "sha256": "d84dde7f637cd709fc793177cad886d879bcaff383aaef9ae1963d3fee7bd6aa",
+            "source": "function Jl(){return a.CLAUDE_CODE_PROVIDER_MANAGED_BY_HOST}",
+            "variable": false
+          },
+          {
+            "name": "zWt",
+            "start": 668937,
+            "end": 669023,
+            "sha256": "7eb67d9de659a383c4bb694110082a65f8d288f766acc918c3b18213a04d1c16",
+            "source": "function zWt(){if(f8()||a.CLAUDE_CODE_OAUTH_TOKEN||Jl())return!1;return!(EW()&&!Uz())}",
+            "variable": false
+          },
+          {
+            "name": "BK",
+            "start": 689691,
+            "end": 689704,
+            "sha256": "70ff0bbce426ef6a25e90402793a4f7869fcf3db80121fe4891e9cc64ce6b5b8",
+            "source": "BK=2592000000",
+            "variable": true
+          },
+          {
+            "name": "$Jn",
+            "start": 689705,
+            "end": 689801,
+            "sha256": "bd9b41fabac527c5be395028aa4870f71daabcdf13b786248973493354e15ef3",
+            "source": "function $Jn(e,n){if(typeof e===\"number\")return Date.now()+e*1000;return n?Date.now()+BK:void 0}",
+            "variable": false
+          },
+          {
+            "name": "wbn",
+            "start": 689830,
+            "end": 689914,
+            "sha256": "144b0bffebc43c1c842b867072f6c0d749140531011316781c607dfeaa41f370",
+            "source": "function wbn(e){if(typeof e!==\"string\")return[];return e.split(\" \").filter(Boolean)}",
+            "variable": false
+          },
+          {
+            "name": "UJn",
+            "start": 689914,
+            "end": 690729,
+            "sha256": "4fab2619880057248a622629ee273cca4eb5b121fb4fc5170c24ab686edb7d18",
+            "source": "function UJn({codeChallenge:e,state:n,port:r,isManual:s,loginWithClaudeAi:g,inferenceOnly:h,orgUUID:b,loginHint:v,loginMethod:w,oauthClient:A}){let R=g?dn().CLAUDE_AI_AUTHORIZE_URL:dn().CONSOLE_AUTHORIZE_URL,M=new URL(R);M.searchParams.append(\"code\",\"true\"),M.searchParams.append(\"client_id\",A?.clientId??dn().CLIENT_ID),M.searchParams.append(\"response_type\",\"code\"),M.searchParams.append(\"redirect_uri\",s?dn().MANUAL_REDIRECT_URL:`http://localhost:${r}/callback`);let D=A?A.scopes:h?[fA]:qJr();if(M.searchParams.append(\"scope\",D.join(\" \")),M.searchParams.append(\"code_challenge\",e),M.searchParams.append(\"code_challenge_method\",\"S256\"),M.searchParams.append(\"state\",n),b)M.searchParams.append(\"orgUUID\",b);if(v)M.searchParams.append(\"login_hint\",v);if(w)M.searchParams.append(\"login_method\",w);return M.toString()}",
+            "variable": false
+          },
+          {
+            "name": "dqr",
+            "start": 690729,
+            "end": 691463,
+            "sha256": "e1a37c486653c0fb2ff3a3681eb9e48dc8d4c3667b18e9a123402867b3b1d9cb",
+            "source": "async function dqr(e,{state:n,codeVerifier:r,port:s,useManualRedirect:g=!1,expiresIn:h,clientId:b}){let v={grant_type:\"authorization_code\",code:e,redirect_uri:g?dn().MANUAL_REDIRECT_URL:`http://localhost:${s}/callback`,client_id:b??dn().CLIENT_ID,code_verifier:r,state:n};if(h!==void 0)v.expires_in=h;let w=await St.post(dn().TOKEN_URL,v,{headers:{\"Content-Type\":\"application/json\"},timeout:30000});if(w.status!==200)throw m(\"oauth_token_exchange\",w.status===401?\"oauth_exchange_invalid_code\":\"oauth_exchange_http_error\"),Error(w.status===401?\"Authentication failed: Invalid authorization code\":`Token exchange failed (${w.status}): ${w.statusText}`);return i(\"tengu_oauth_token_exchange_success\",{}),y(\"oauth_token_exchange\"),w.data}",
+            "variable": false
+          },
+          {
+            "name": "ipe",
+            "start": 691463,
+            "end": 694103,
+            "sha256": "a79deda9032e6e2a02f6e87a4ef79654b48db7d93b1d89e5b7f64289e064d8d1",
+            "source": "async function ipe(e,{scopes:n,expiresIn:r,clientId:s,skipProfileFetch:g,signal:h,telemetryContext:b,invalidScopeRetried:v,storageV5:w}={}){let A=Array.isArray(n)&&n.length?n:tet(),R={grant_type:\"refresh_token\",refresh_token:e,client_id:s??dn().CLIENT_ID,scope:A.join(\" \")};if(r!==void 0)R.expires_in=r;try{let M=await St.post(dn().TOKEN_URL,R,{headers:{\"Content-Type\":\"application/json\"},timeout:30000,signal:h});if(M.status!==200)throw Error(`Token refresh failed: ${M.statusText}`);let D=M.data,{access_token:K,refresh_token:G=e,expires_in:z}=D,j=Date.now()+z*1000,X=$Jn(D.refresh_token_expires_in,!1),J=wbn(D.scope);i(\"tengu_oauth_token_refresh_success\",{plugins_scope_requested:A.includes(eet),plugins_scope_granted:J.includes(eet)}),y(\"oauth_token_refresh\");let Q=le(),te=g?null:fn(),pe=Q.oauthAccount?.billingType!==void 0&&Q.oauthAccount?.accountCreatedAt!==void 0&&Q.oauthAccount?.subscriptionCreatedAt!==void 0&&Q.oauthAccount?.ccOnboardingFlags!==void 0&&te?.subscriptionType!=null&&te?.rateLimitTier!=null,ce=g||pe?null:await BJn(K);if(ce&&Q.oauthAccount){let he={};if(ce.displayName!==void 0)he.displayName=ce.displayName;if(ce.fullName!==void 0)he.fullName=ce.fullName;if(typeof ce.hasExtraUsageEnabled===\"boolean\")he.hasExtraUsageEnabled=ce.hasExtraUsageEnabled;if(ce.billingType!==null)he.billingType=ce.billingType;if(ce.accountCreatedAt!==void 0)he.accountCreatedAt=ce.accountCreatedAt;if(ce.subscriptionCreatedAt!==void 0)he.subscriptionCreatedAt=ce.subscriptionCreatedAt;if(ce.rawProfile)he.ccOnboardingFlags=ce.ccOnboardingFlags,he.claudeCodeTrialEndsAt=ce.claudeCodeTrialEndsAt,he.claudeCodeTrialDurationDays=ce.claudeCodeTrialDurationDays,he.seatTier=ce.seatTier,he.planDisplayName=_A(ce.rawProfile)??void 0,he.profileFetchedAt=Date.now();if(Object.keys(he).length>0)await Ae((_e)=>({..._e,oauthAccount:_e.oauthAccount?{..._e.oauthAccount,...he}:_e.oauthAccount}),w)}return{accessToken:K,refreshToken:G,expiresAt:j,refreshTokenExpiresAt:X,scopes:J,clientId:s,subscriptionType:ce?.subscriptionType??te?.subscriptionType??null,rateLimitTier:ce?.rateLimitTier??te?.rateLimitTier??null,profile:ce?.rawProfile,tokenAccount:D.account?{uuid:D.account.uuid,emailAddress:D.account.email_address,organizationUuid:D.organization?.uuid}:void 0}}catch(M){let D=v===!0&&fqr(M);if(i(\"tengu_oauth_token_refresh_failure\",{...pu(M),...Gts(M),...b&&{context:c(b)},...D&&{context:S(\"invalid_scope_retried\")}}),jJn(M))m(\"oauth_token_refresh\",\"oauth_refresh_account_on_hold\");else if(ape(M))m(\"oauth_token_refresh\",\"oauth_refresh_invalid_grant\");else if(!h?.aborted&&!b&&!D)p(\"oauth_token_refresh\",\"oauth_refresh_request_failed\");throw M}}",
+            "variable": false
+          },
+          {
+            "name": "eWt",
+            "start": 694520,
+            "end": 695265,
+            "sha256": "969260d9277d366f6aab237af888086d89bfb29f26c31a41ac4926a616280a42",
+            "source": "async function eWt(e,n){let r=await St.get(dn().ROLES_URL,{headers:{\"User-Agent\":Mo(),Authorization:`Bearer ${e}`},timeout:1e4,signal:AbortSignal.timeout(1e4)});if(r.status!==200)throw m(\"oauth_fetch_roles\",\"oauth_roles_http_error\"),Error(`Failed to fetch user roles: ${r.statusText}`);let s=r.data;if(!le().oauthAccount)throw m(\"oauth_fetch_roles\",\"oauth_roles_no_account\"),Error(\"OAuth account information not found in config\");await Ae((h)=>({...h,oauthAccount:h.oauthAccount?{...h.oauthAccount,organizationRole:s.organization_role,workspaceRole:s.workspace_role,organizationName:s.organization_name}:h.oauthAccount}),n),i(\"tengu_oauth_roles_stored\",{org_role:s.organization_role==null?void 0:pS(s.organization_role)}),y(\"oauth_fetch_roles\")}",
+            "variable": false
+          },
+          {
+            "name": "HK",
+            "start": 696167,
+            "end": 696280,
+            "sha256": "06326a0db4e1ccd48fdac34986b79484ead0ff6181e35ee37df8cfdcd82cd3c8",
+            "source": "HK=new Map([[\"claude_max\",\"max\"],[\"claude_pro\",\"pro\"],[\"claude_enterprise\",\"enterprise\"],[\"claude_team\",\"team\"]])",
+            "variable": true
+          },
+          {
+            "name": "BJn",
+            "start": 696281,
+            "end": 697203,
+            "sha256": "36e86ef9afcbcdc6453c5fc89769b39bd622f5db53b85ccb61c7a95d9c391db5",
+            "source": "async function BJn(e){let n=await KBe(e),r=n?.organization?.organization_type,g={subscriptionType:(r!==void 0?HK.get(r):void 0)??null,rateLimitTier:n?.organization?.rate_limit_tier??null,seatTier:n?.organization?.seat_tier??null,hasExtraUsageEnabled:n?.organization?.has_extra_usage_enabled??null,billingType:n?.organization?.billing_type??null,ccOnboardingFlags:n?.organization?.cc_onboarding_flags??{},claudeCodeTrialEndsAt:n?.organization?.claude_code_trial_ends_at??null,claudeCodeTrialDurationDays:n?.organization?.claude_code_trial_duration_days??null};if(n?.account?.display_name)g.displayName=n.account.display_name;if(n?.account?.full_name)g.fullName=n.account.full_name;if(n?.account?.created_at)g.accountCreatedAt=n.account.created_at;if(n?.organization?.subscription_created_at)g.subscriptionCreatedAt=n.organization.subscription_created_at;return i(\"tengu_oauth_profile_fetch_success\",{}),{...g,rawProfile:n}}",
+            "variable": false
+          },
+          {
+            "name": "_A",
+            "start": 698907,
+            "end": 698983,
+            "sha256": "8ada22c7813c934be25019bc9213c398eede79a3495e0814bd182cdb48ee8be1",
+            "source": "function _A(e){return zWt()?FJn(e):le().oauthAccount?.planDisplayName??null}",
+            "variable": false
+          },
+          {
+            "name": "yl",
+            "start": 700466,
+            "end": 700669,
+            "sha256": "d89edd3775401ebebc8439d85a54bf4d22285e9aa7d580af7b333fcbd9275555",
+            "source": "function yl(e){if(!e||typeof e!==\"object\")return{code:void 0,description:void 0};let n=e,r=n.error;return{code:typeof r===\"string\"?r:r&&typeof r===\"object\"?r.type:void 0,description:n.error_description}}",
+            "variable": false
+          },
+          {
+            "name": "jJn",
+            "start": 700669,
+            "end": 700827,
+            "sha256": "8f7c13e225190274347691bbeacfd51f5b313285fa9c48635aaa03a1528b9321",
+            "source": "function jJn(e){if(!St.isAxiosError(e)||!e.response)return!1;let n=e.response.status;if(n!==400&&n!==401&&n!==403)return!1;return OGt(e.response.data)!==null}",
+            "variable": false
+          },
+          {
+            "name": "ape",
+            "start": 700907,
+            "end": 701100,
+            "sha256": "d031fe37aa0bc9f5f86f1def32e1a9df80ae0b1effb72b4f9202def9d415e4c8",
+            "source": "function ape(e){if(!St.isAxiosError(e)||!e.response)return!1;let n=e.response.status;if(n!==400&&n!==401)return!1;return yl(e.response.data).code===\"invalid_grant\"&&OGt(e.response.data)===null}",
+            "variable": false
+          },
+          {
+            "name": "fqr",
+            "start": 701100,
+            "end": 701224,
+            "sha256": "925fab5cd3ceac27c1c18ede8019b4961707462628f03017faccac39075ce96a",
+            "source": "function fqr(e){if(!St.isAxiosError(e)||e.response?.status!==400)return!1;return yl(e.response.data).code===\"invalid_scope\"}",
+            "variable": false
+          },
+          {
+            "name": "$K",
+            "start": 701445,
+            "end": 701599,
+            "sha256": "0b721a33d97472c7a4bb9f5ef21dd69d29cc09a1856a13285b2f39df98464b86",
+            "source": "$K=[\"Refresh token expired\",\"Refresh token not found or invalid\",\"No organization associated with this token\",\"No account associated with this token\",mQe]",
+            "variable": true
+          },
+          {
+            "name": "Gts",
+            "start": 701600,
+            "end": 701828,
+            "sha256": "8a4d9a4d3afff6a8f33c40ec7689c85c0baa592888383c9d2d97a78d2a152879",
+            "source": "function Gts(e){if(!St.isAxiosError(e)||!e.response)return{};let{code:n,description:r}=yl(e.response.data);return{oauth_error_status:Er(e.response.status),oauth_error_type:SKt(n),oauth_error_description:me($K.find((s)=>s===r))}}",
+            "variable": false
+          }
+        ],
+        "ports": [
+          {
+            "name": "St",
+            "imported": "St",
+            "module": "/$bunfs/root/chunk-e6m248dn.js"
+          },
+          {
+            "name": "le",
+            "module": "canonical-owner"
+          },
+          {
+            "name": "p",
+            "imported": "p",
+            "module": "/$bunfs/root/chunk-9d2ykxmy.js"
+          },
+          {
+            "name": "f",
+            "imported": "f",
+            "module": "/$bunfs/root/chunk-5qqrzb2c.js"
+          },
+          {
+            "name": "ue",
+            "imported": "ue",
+            "module": "/$bunfs/root/chunk-pjkhrw0g.js"
+          },
+          {
+            "name": "a",
+            "imported": "a",
+            "module": "/$bunfs/root/chunk-mbfze585.js"
+          },
+          {
+            "name": "EW",
+            "imported": "EW",
+            "module": "/$bunfs/root/chunk-bn3p37gv.js"
+          },
+          {
+            "name": "Uz",
+            "imported": "Uz",
+            "module": "/$bunfs/root/chunk-bn3p37gv.js"
+          },
+          {
+            "name": "f8",
+            "module": "canonical-owner"
+          },
+          {
+            "name": "dn",
+            "imported": "dn",
+            "module": "/$bunfs/root/chunk-a5b8yq96.js"
+          },
+          {
+            "name": "Mo",
+            "imported": "Mo",
+            "module": "/$bunfs/root/chunk-q6t47sex.js"
+          },
+          {
+            "name": "cp",
+            "imported": "cp",
+            "module": "/$bunfs/root/chunk-a5b8yq96.js"
+          },
+          {
+            "name": "Pu",
+            "imported": "Pu",
+            "module": "/$bunfs/root/chunk-c9me9cp7.js"
+          },
+          {
+            "name": "t",
+            "imported": "t",
+            "module": "/$bunfs/root/chunk-q80zaav8.js"
+          },
+          {
+            "name": "m",
+            "imported": "m",
+            "module": "/$bunfs/root/chunk-9d2ykxmy.js"
+          },
+          {
+            "name": "d",
+            "imported": "d",
+            "module": "/$bunfs/root/chunk-amhtwhch.js"
+          },
+          {
+            "name": "Ws",
+            "imported": "Ws",
+            "module": "/$bunfs/root/chunk-c9me9cp7.js"
+          },
+          {
+            "name": "y",
+            "imported": "y",
+            "module": "/$bunfs/root/chunk-9d2ykxmy.js"
+          },
+          {
+            "name": "mt",
+            "imported": "mt",
+            "module": "/$bunfs/root/chunk-pjkhrw0g.js"
+          },
+          {
+            "name": "nZ",
+            "module": "canonical-owner"
+          },
+          {
+            "name": "i",
+            "imported": "i",
+            "module": "/$bunfs/root/chunk-6hnyhakg.js"
+          },
+          {
+            "name": "pS",
+            "imported": "pS",
+            "module": "/$bunfs/root/chunk-c9me9cp7.js"
+          },
+          {
+            "name": "Ae",
+            "module": "canonical-owner"
+          },
+          {
+            "name": "tet",
+            "imported": "tet",
+            "module": "/$bunfs/root/chunk-a5b8yq96.js"
+          },
+          {
+            "name": "eet",
+            "imported": "eet",
+            "module": "/$bunfs/root/chunk-a5b8yq96.js"
+          },
+          {
+            "name": "pu",
+            "imported": "pu",
+            "module": "/$bunfs/root/chunk-3bsqc8dr.js"
+          },
+          {
+            "name": "c",
+            "imported": "c",
+            "module": "/$bunfs/root/chunk-n4qghq20.js"
+          },
+          {
+            "name": "S",
+            "imported": "S",
+            "module": "/$bunfs/root/chunk-n4qghq20.js"
+          },
+          {
+            "name": "OGt",
+            "imported": "OGt",
+            "module": "/$bunfs/root/chunk-8ptzhr8g.js"
+          },
+          {
+            "name": "Er",
+            "imported": "Er",
+            "module": "/$bunfs/root/chunk-n4qghq20.js"
+          },
+          {
+            "name": "SKt",
+            "imported": "SKt",
+            "module": "/$bunfs/root/chunk-c9me9cp7.js"
+          },
+          {
+            "name": "me",
+            "imported": "me",
+            "module": "/$bunfs/root/chunk-n4qghq20.js"
+          },
+          {
+            "name": "mQe",
+            "imported": "mQe",
+            "module": "/$bunfs/root/chunk-8ptzhr8g.js"
+          },
+          {
+            "name": "fn",
+            "module": "canonical-owner"
+          },
+          {
+            "name": "fA",
+            "imported": "fA",
+            "module": "/$bunfs/root/chunk-a5b8yq96.js"
+          },
+          {
+            "name": "qJr",
+            "imported": "qJr",
+            "module": "/$bunfs/root/chunk-a5b8yq96.js"
+          }
+        ]
+      },
+      "auxiliaries": [],
+      "bindings": {
+        "St": "ht",
+        "le": "ce",
+        "p": "p",
+        "f": "f",
+        "ue": "de",
+        "a": "a",
+        "EW": "bj",
+        "Uz": "GG",
+        "f8": "r9",
+        "dn": "cn",
+        "Mo": "Po",
+        "cp": "Uu",
+        "Pu": "cu",
+        "t": "t",
+        "m": "m",
+        "d": "d",
+        "Ws": "Xs",
+        "y": "y",
+        "mt": "ut",
+        "nZ": "AJ",
+        "i": "i",
+        "pS": "$_",
+        "Ae": "Te",
+        "tet": "yJe",
+        "eet": "hJe",
+        "pu": "Vd",
+        "c": "c",
+        "S": "_",
+        "OGt": "G2t",
+        "Er": "Sr",
+        "SKt": "kzt",
+        "me": "me",
+        "mQe": "MXe",
+        "fn": "pn",
+        "fA": "PC",
+        "qJr": "L5r"
+      },
+      "returns": "{authorize:UJn,exchange:dqr,refresh:ipe,roles:eWt,profile:BJn,tokenProfile:KBe,keyProfile:Xzo,planLabel:_A,validatePlan:FJn,scopes:wbn,refreshExpiry:$Jn,invalidScope:fqr}",
+      "legacyPublicPortTypes": "../officialOAuthClient/runtime.js"
+    },
+    "handoff": {
+      "domain": "Recovery",
+      "group": "handoff",
+      "factory": "createOAuthHandoff287",
+      "body": {
+        "module": "chunk-mnp9k227.js",
+        "moduleSha256": "2f11c6d0d8f20cd85c2d48a1f61d72e7492b8db8550c0d114e479906c38e541c",
+        "roots": [
+          "Ctr"
+        ],
+        "rows": [
+          {
+            "name": "mz",
+            "start": 1044,
+            "end": 1112,
+            "sha256": "73df37a8a0e99df0c4c8ae8215ab9198a031544c3b68fc76ed281368a2c4b6f7",
+            "source": "function mz(){return a.CLAUDE_CODE_REMOTE_SESSION_ORIGIN===\"review\"}",
+            "variable": false
+          },
+          {
+            "name": "D",
+            "start": 1203,
+            "end": 1234,
+            "sha256": "fa485011eaa9e010fae6f1a3fa9ebe8b6ff797a0344068b182b0308ea903531f",
+            "source": "D=\"/home/claude/.claude/remote\"",
+            "variable": true
+          },
+          {
+            "name": "TSt",
+            "start": 1235,
+            "end": 1258,
+            "sha256": "0c394eb2c3ff7d647dca6bdb50b9aca8d6e3c1c40a05e8d1dccedf0253c7ca31",
+            "source": "TSt=`${D}/.oauth_token`",
+            "variable": true
+          },
+          {
+            "name": "Ewe",
+            "start": 1313,
+            "end": 1320,
+            "sha256": "e9fb16a812e92f421eb130364a2c06740a8a8ff946bc8342ddb804024caadf76",
+            "source": "Ewe=nzt",
+            "variable": true
+          },
+          {
+            "name": "v",
+            "start": 2059,
+            "end": 2441,
+            "sha256": "3674a6174adf4618e7c2491056b06f5d1beb36f311e6401ea8a691eeed38c22c",
+            "source": "async function v(e,n,r,o,{skipInReviewOrigin:s=!1}={}){if(!a.CLAUDE_CODE_REMOTE)return;if(s&&mz()){t(`Skipping ${r} disk persistence in review-origin session`);return}let p=await o.writeHandoffCredential(e,n);if(p.state===\"written\"){t(`Persisted ${r} to ${e} for subprocess access`);return}t(`Failed to persist ${r} to disk (non-fatal): ${p.code??\"unknown error\"}`,{level:\"error\"})}",
+            "variable": false
+          },
+          {
+            "name": "I",
+            "start": 2441,
+            "end": 2787,
+            "sha256": "f4fa9c254e18df172e3e8005a769a0ac70b9dea4a16c2dddfabdf18dd321459e",
+            "source": "async function I(e,n,r){let o=await r.readHandoffCredential(e,{symlinkAtPath:\"follow\"});switch(o.state){case\"present\":{let s=o.contents.trim();if(!s)return null;return t(`Read ${n} from well-known file ${e}`),s}case\"absent\":return null;case\"read-failed\":return t(`Failed to read ${n} from ${e}: ${o.code??\"unknown error\"}`,{level:\"debug\"}),null}}",
+            "variable": false
+          },
+          {
+            "name": "T",
+            "start": 3883,
+            "end": 4280,
+            "sha256": "1c0cefa37c03e013749b6a9f958aa6f03688d271540b8c56f1d5d6a391eb45e4",
+            "source": "function T(e,n){try{t(`Reading ${n} from inherited descriptor ${e} (until newline or end-of-stream)`);let r=$8o(e,{maxBytes:Ewe}).trim();if(!r)return t(`File descriptor ${e} contained empty ${n}`,{level:\"error\"}),null;return t(`Successfully read ${n} directly from inherited descriptor ${e}`),r}catch(r){return t(`Failed to read ${n} directly from descriptor ${e}: ${l(r)}`,{level:\"error\"}),null}}",
+            "variable": false
+          },
+          {
+            "name": "F",
+            "start": 4280,
+            "end": 5403,
+            "sha256": "46db9743d06438648ca0a40b8f3f79752e1615061d26bb837ecb0e671cd4e964",
+            "source": "async function F({envVar:e,wellKnownPath:n,readPath:r=n,label:o,fileLabel:s=o,getCached:p,setCached:c,credentials:_,skipInReviewOrigin:g=!1}){let A=p();if(A!==void 0)return A;let f=process.env[e];if(!f){let d=await I(r,s,_);return y(p,c,d)}let i=parseInt(f,10);if(Number.isNaN(i))return t(`${e} must be a valid file descriptor number, got: ${f}`,{level:\"error\"}),c(null),null;let u=!a.CLAUDE_CODE_REMOTE&&typeof process.send!==\"function\",S=()=>{delete process.env[e],dkn(e)};if(frr(i)){if(!u){let m=await I(r,s,_);return y(p,c,m)}let d=T(i,o);if(S(),c(d),d)await v(n,d,s,_,{skipInReviewOrigin:g});return d}try{let d=`/dev/fd/${i}`,m=iWe(d,{maxBytes:Ewe}).trim();if(!m)return t(`File descriptor contained empty ${o}`,{level:\"error\"}),c(null),null;return t(`Successfully read ${o} from file descriptor ${i}`),c(m),await v(n,m,s,_,{skipInReviewOrigin:g}),m}catch(d){t(`Failed to read ${o} from file descriptor ${i}: ${l(d)}`,{level:\"error\"});let m=await I(r,s,_);if(m)return y(p,c,m);let R=E(d);if((R===\"EACCES\"||R===\"EPERM\")&&u){let C=T(i,o);if(S(),C)return c(C),await v(n,C,s,_,{skipInReviewOrigin:g}),C}return y(p,c,null)}}",
+            "variable": false
+          },
+          {
+            "name": "y",
+            "start": 5403,
+            "end": 5468,
+            "sha256": "b2260709519e175bcfc3b69739457702c3066445d0840496201e9bd56d3e4580",
+            "source": "function y(e,n,r){let o=e();if(o!==void 0)return o;return n(r),r}",
+            "variable": false
+          },
+          {
+            "name": "k9r",
+            "start": 6648,
+            "end": 7957,
+            "sha256": "24fb36454d9bc19f154f8bc6c8a50dff3a93a37f5255270c18a968656ecf85c1",
+            "source": "async function k9r(e){let n=process.env.CLAUDE_BG_AUTH_SNAPSHOT_PATH;if(!n)return;let r=await e.readHandoffCredential(n,{symlinkAtPath:a.CLAUDE_CODE_PROVIDER_MANAGED_BY_HOST?\"follow\":\"refuse\"});if(process.env.CLAUDE_BG_AUTH_SNAPSHOT_PATH!==n)return;switch(r.state){case\"absent\":a.unset(\"CLAUDE_BG_AUTH_SNAPSHOT_PATH\");return;case\"read-failed\":if(r.code!==\"EBUSY\"&&r.code!==\"EPERM\"&&!(r.code===\"EACCES\"&&O()===\"windows\"))a.unset(\"CLAUDE_BG_AUTH_SNAPSHOT_PATH\");t(`Failed to consume bg auth snapshot: ${r.code??\"unknown error\"}`,{level:\"warn\"});return;case\"present\":break}a.unset(\"CLAUDE_BG_AUTH_SNAPSHOT_PATH\"),e.discardSpentCredentialFile(n).catch(()=>{});try{let o=JSON.parse(r.contents);if(typeof o?.gatewayToken===\"string\"&&o.gatewayToken){ukn(o.gatewayToken),t(\"Consumed gateway token from bg auth snapshot\");return}if(typeof o?.accessToken!==\"string\"||!o.accessToken){t(\"bg auth snapshot missing accessToken\",{level:\"warn\"});return}if(ZU(o.accessToken),Wwt(!0),Array.isArray(o.scopes)&&o.scopes.length>0)Gwt(o.scopes);if(o.subscriptionType)a.set(\"CLAUDE_CODE_SUBSCRIPTION_TYPE\",String(o.subscriptionType));if(o.rateLimitTier)a.set(\"CLAUDE_CODE_RATE_LIMIT_TIER\",String(o.rateLimitTier));t(\"Consumed bg auth snapshot from sockDir\")}catch(o){t(`Failed to consume bg auth snapshot: ${l(o)}`,{level:\"warn\"})}}",
+            "variable": false
+          },
+          {
+            "name": "Ctr",
+            "start": 8185,
+            "end": 8234,
+            "sha256": "03d6324b48de0ad7ad8b8408ab97cfbfa9ff8cc4e5f125360dee4c0adfbe8ad2",
+            "source": "async function Ctr(e){return await k9r(e),R9r(e)}",
+            "variable": false
+          },
+          {
+            "name": "R9r",
+            "start": 8234,
+            "end": 8417,
+            "sha256": "d7b6d6fc3e462a1e029bb7acd225d5d99884ddefe8b2842c3bff2271e0a547bd",
+            "source": "async function R9r(e){return F({envVar:\"CLAUDE_CODE_OAUTH_TOKEN_FILE_DESCRIPTOR\",wellKnownPath:TSt,label:\"OAuth token\",getCached:EW,setCached:ZU,credentials:e,skipInReviewOrigin:!0})}",
+            "variable": false
+          }
+        ],
+        "ports": [
+          {
+            "name": "EW",
+            "imported": "EW",
+            "module": "/$bunfs/root/chunk-bn3p37gv.js"
+          },
+          {
+            "name": "ZU",
+            "imported": "ZU",
+            "module": "/$bunfs/root/chunk-bn3p37gv.js"
+          },
+          {
+            "name": "t",
+            "imported": "t",
+            "module": "/$bunfs/root/chunk-q80zaav8.js"
+          },
+          {
+            "name": "a",
+            "imported": "a",
+            "module": "/$bunfs/root/chunk-mbfze585.js"
+          },
+          {
+            "name": "dkn",
+            "imported": "dkn",
+            "module": "/$bunfs/root/chunk-bn3p37gv.js"
+          },
+          {
+            "name": "frr",
+            "imported": "frr",
+            "module": "/$bunfs/root/chunk-0pprbvtw.js"
+          },
+          {
+            "name": "iWe",
+            "imported": "iWe",
+            "module": "/$bunfs/root/chunk-0pprbvtw.js"
+          },
+          {
+            "name": "l",
+            "imported": "l",
+            "module": "/$bunfs/root/chunk-c9me9cp7.js"
+          },
+          {
+            "name": "E",
+            "imported": "E",
+            "module": "/$bunfs/root/chunk-c9me9cp7.js"
+          },
+          {
+            "name": "$8o",
+            "imported": "$8o",
+            "module": "/$bunfs/root/chunk-0pprbvtw.js"
+          },
+          {
+            "name": "nzt",
+            "imported": "nzt",
+            "module": "/$bunfs/root/chunk-yswarygp.js"
+          },
+          {
+            "name": "O",
+            "imported": "O",
+            "module": "/$bunfs/root/chunk-amhtwhch.js"
+          },
+          {
+            "name": "ukn",
+            "imported": "ukn",
+            "module": "/$bunfs/root/chunk-bn3p37gv.js"
+          },
+          {
+            "name": "Wwt",
+            "imported": "Wwt",
+            "module": "/$bunfs/root/chunk-bn3p37gv.js"
+          },
+          {
+            "name": "Gwt",
+            "imported": "Gwt",
+            "module": "/$bunfs/root/chunk-bn3p37gv.js"
+          }
+        ]
+      },
+      "auxiliaries": [
+        {
+          "module": "chunk-yswarygp.js",
+          "moduleSha256": "455f289b5f99d86d30bd74286167f6514604d1f7a4ef4eba041553a3a352036e",
+          "roots": [
+            "nzt"
+          ],
+          "rows": [
+            {
+              "name": "nzt",
+              "start": 619,
+              "end": 628,
+              "sha256": "ed6bbfd263dc8629312ab487d23df52c12bcef9e9046c018f6a5d23a2b0c46c0",
+              "source": "nzt=65536",
+              "variable": true
+            }
+          ],
+          "ports": []
+        }
+      ],
+      "bindings": {
+        "EW": "bj",
+        "ZU": "iU",
+        "t": "t",
+        "a": "a",
+        "dkn": "KEn",
+        "frr": "JJn",
+        "iWe": "t2e",
+        "l": "l",
+        "E": "v",
+        "$8o": "fVo",
+        "O": "O",
+        "ukn": "YEn",
+        "Wwt": "W_t",
+        "Gwt": "G_t"
+      },
+      "returns": "{oauth:Ctr,consume:k9r,descriptor:R9r,read:F}",
+      "legacyPublicPortTypes": "../officialOAuthRecovery/runtime.js"
+    },
+    "descriptor": {
+      "domain": "Recovery",
+      "group": "descriptor",
+      "factory": "createOAuthDescriptorReaders287",
+      "body": {
+        "module": "chunk-0pprbvtw.js",
+        "moduleSha256": "ac21ef5f4681286c979e56a099405d29d52d2c119a6379365c57c316890afc3f",
+        "roots": [
+          "iWe",
+          "$8o",
+          "frr"
+        ],
+        "rows": [
+          {
+            "name": "iWe",
+            "start": 5269,
+            "end": 5653,
+            "sha256": "e8dfeff1b7716ea50161a33ae7b6e33139e4cb527aa2e3819b86c10227d8d3d6",
+            "source": "function iWe(e,{maxBytes:n,symlinkAtPath:r=\"follow\",regularFileOnly:o=r===\"refuse\"}){using f=ng`fs.readBoundedSync(${e}, max ${n} bytes)`;let i=\"r\";if(r===\"refuse\")i=w.O_RDONLY|w.O_NOFOLLOW|w.O_NONBLOCK;else if(o)i=w.O_RDONLY|w.O_NONBLOCK;let s=k(e,i);try{if(o){if(!D(s).isFile())throw Object.assign(Error(\"EINVAL: not a regular file\"),{code:\"EINVAL\"})}return ie(s,e,n)}finally{x(s)}}",
+            "variable": false
+          },
+          {
+            "name": "$8o",
+            "start": 5653,
+            "end": 5918,
+            "sha256": "cb0dcc3e62b83a0a73e9ba966c3e40bed803de00882d7459a8c96acad5f9afad",
+            "source": "function $8o(e,{maxBytes:n}){using r=ng`fs.readInheritedFdSync(fd ${e}, max ${n} bytes)`;let o=D(e);if(!o.isSocket()&&!o.isFIFO())throw new P(`refusing to read fd ${e}: not a pipe or socket`,\"readInheritedFdSync: descriptor is not a pipe or socket\");return he(e,n)}",
+            "variable": false
+          },
+          {
+            "name": "frr",
+            "start": 5918,
+            "end": 5977,
+            "sha256": "310fd18d1dd2907ad769c32d5a67ab6bc4d07e53efc81c2cb614e19bacfb6149",
+            "source": "function frr(e){try{return D(e).isSocket()}catch{return!1}}",
+            "variable": false
+          },
+          {
+            "name": "he",
+            "start": 5977,
+            "end": 6055,
+            "sha256": "4faa559108081acf721d287e08330145ed24eb4292d47042730e203a2c95789c",
+            "source": "function he(e,n){try{return ie(e,`fd ${e}`,n,{untilNewline:!0})}finally{x(e)}}",
+            "variable": false
+          },
+          {
+            "name": "ie",
+            "start": 6055,
+            "end": 6488,
+            "sha256": "becd0f2270077ccea73dd83a43eccbcf1aa849ef93b35ce58878ff3e7730df6a",
+            "source": "function ie(e,n,r,{untilNewline:o=!1}={}){let f=[],i=0,s=Buffer.alloc(8192);while(!0){let u=de(e,s,0,s.length,null);if(u===0)return Buffer.concat(f).toString(\"utf8\");if(i+=u,i>r)throw new P(`refusing to read ${n}: content exceeds ${r} byte limit`,\"readBoundedSync: content exceeds byte limit\");let y=o?s.subarray(0,u).indexOf(10):-1;if(f.push(Buffer.from(s.subarray(0,y===-1?u:y+1))),y!==-1)return Buffer.concat(f).toString(\"utf8\")}}",
+            "variable": false
+          }
+        ],
+        "ports": [
+          {
+            "name": "D",
+            "imported": "fstatSync",
+            "module": "fs"
+          },
+          {
+            "name": "ng",
+            "imported": "ng",
+            "module": "/$bunfs/root/chunk-q80zaav8.js"
+          },
+          {
+            "name": "P",
+            "imported": "P",
+            "module": "/$bunfs/root/chunk-c9me9cp7.js"
+          },
+          {
+            "name": "x",
+            "imported": "closeSync",
+            "module": "fs"
+          },
+          {
+            "name": "de",
+            "imported": "readSync",
+            "module": "fs"
+          },
+          {
+            "name": "w",
+            "imported": "constants",
+            "module": "fs"
+          },
+          {
+            "name": "k",
+            "imported": "openSync",
+            "module": "fs"
+          }
+        ]
+      },
+      "auxiliaries": [],
+      "bindings": {
+        "D": "D",
+        "ng": "Hm",
+        "P": "P",
+        "x": "L",
+        "de": "de",
+        "w": "w",
+        "k": "R"
+      },
+      "returns": "{bounded:iWe,inherited:$8o,isSocket:frr}",
+      "legacyPublicPortTypes": "../officialOAuthRecovery/runtime.js"
+    },
+    "deadCredential": {
+      "domain": "Reader",
+      "group": "deadCredential",
+      "factory": "createOAuthDeadCredential287",
+      "body": {
+        "module": "chunk-nankzm0s.js",
+        "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+        "roots": [
+          "V3",
+          "LWt"
+        ],
+        "rows": [
+          {
+            "name": "LWt",
+            "start": 647235,
+            "end": 647331,
+            "sha256": "4a0467df9945c258804510b4f58c37a910c3f4cae76d1531b15025d608eea9fa",
+            "source": "function LWt(){let e=Af(fn());if(e!==void 0)return e;try{return Ok(zn().read())}catch{return!1}}",
+            "variable": false
+          },
+          {
+            "name": "V3",
+            "start": 647331,
+            "end": 647452,
+            "sha256": "f16bd914934e98d9dada8a487455093b492f12f4232018c7ddd20e1088f897ac",
+            "source": "async function V3(e){let n=Af(await tl(e));if(n!==void 0)return n;try{return Ok(await zn().readAsync(e))}catch{return!1}}",
+            "variable": false
+          },
+          {
+            "name": "Ok",
+            "start": 647548,
+            "end": 647606,
+            "sha256": "d8fac749fedd631d7289f4ac71da804177de029407383ddd48eefb037c32cf9a",
+            "source": "function Ok(e){return e?.claudeAiOauth?.refreshToken===\"\"}",
+            "variable": false
+          }
+        ],
+        "ports": [
+          {
+            "name": "zn",
+            "imported": "zn",
+            "module": "/$bunfs/root/chunk-wgt53hn2.js"
+          },
+          {
+            "name": "fn",
+            "module": "canonical-owner"
+          },
+          {
+            "name": "Af",
+            "module": "canonical-owner"
+          },
+          {
+            "name": "tl",
+            "module": "canonical-owner"
+          }
+        ]
+      },
+      "auxiliaries": [],
+      "bindings": {
+        "Af": "Af",
+        "tl": "tl",
+        "fn": "fn",
+        "zn": "zn"
+      },
+      "returns": "{readAsync:V3,readSync:LWt}"
+    }
+  }
+}

@@ -1,0 +1,323 @@
+{
+  "version": "2.1.287",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16 code units; end-exclusive",
+  "rows": [
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Nl",
+      "start": 285772,
+      "end": 285966,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "ee40030ae8ba7a40865e5f171a56e54036339a5224349854c339f1e5baf4f5db",
+      "source": "function Nl(e){let r=RTe(e.decisionReason),n=r!==void 0&&!e.message.includes(r)?`${e.message} ${r}`:e.message;return{behavior:\"deny\",message:PPo(n),decisionReason:X8r,decideLocation:\"ask-path\"}}"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Ew",
+      "start": 537003,
+      "end": 539451,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "c81e077f1e5ac45a92ee3d15aa334f5084e689787c14bb51204600fe35dbb8ea",
+      "source": "function Ew(e,r=()=>!1){let n=async(s,g,w,h,M,v)=>{let R=v??await kf(s,g,w,h,M);if(R.behavior===\"allow\"||R.behavior===\"deny\")return R;if(e===null||r())return{behavior:\"deny\",message:\"The permission prompt tool is no longer available \\u2014 its MCP server is not connected in this session.\",decisionReason:Z8r};if(R.localDisplayOnly)return tAe(s.name,\"the configured --permission-prompt-tool (a tool_name+input wire)\");let U=R.updatedInput??g,{signal:H,cleanup:I}=_s(w.abortController.signal);if(H.aborted)return I(),{behavior:\"deny\",message:\"Permission prompt was aborted.\",decisionReason:Dje};let de=new Promise((_e)=>{H.addEventListener(\"abort\",()=>_e(\"aborted\"),{once:!0})}),z=!1,he=w.forRemoteExecution===!0||R.personOnly===!0?new Promise(()=>{}):MEt(k6,s,M,U,w,R.suggestions,R.suppressAlwaysAllowRule===!0,()=>z||H.aborted).then((_e)=>_e?{hookOutcome:_e}:new Promise(()=>{}),(_e)=>{if(at(_e))t(\"permission prompt tool hook race aborted\");else d(Z(_e));return new Promise(()=>{})}),ge=new jpe(w.abortController),fe=e.call({tool_name:s.name,input:U,tool_use_id:M},{...w,abortController:ge,permissionRound:void 0},n,h).then((_e)=>(z=!0,{toolResult:_e}));fe.catch(()=>{z=!0});let Se=await Promise.race([fe,de,he]);if(I(),ge.abort(),Se===\"aborted\"||H.aborted)return{behavior:\"deny\",message:\"Permission prompt was aborted.\",decisionReason:Dje};if(\"hookOutcome\"in Se){let{decision:_e,interrupt:Ne}=Se.hookOutcome;if(Ne)t(`Hook interrupt: tool=${s.name} hookMessage=${_e.message}`),XM(w.abortController).abort();return _e}let Pe=Se.toolResult,Q=e.mapToolResultToToolResultBlockParam(Pe.data,\"1\");if(!Q.content||!Array.isArray(Q.content)||!Q.content[0]||Q.content[0].type!==\"text\"||typeof Q.content[0].text!==\"string\")throw Error('Permission prompt tool returned an invalid result. Expected a single text block param with type=\"text\" and a string text value.');let Te=vie().safeParse(gt(Q.content[0].text));if(!Te.success)return t(`Permission prompt tool returned a schema-invalid result for ${s.name}: ${Te.error.message.slice(0,2000)}`,{level:\"error\"}),{behavior:\"deny\",message:`The permission prompt tool returned an invalid permission result. ${ARn}`,decisionReason:Bzt};let Ue=Te.data;if(Ue.behavior===\"allow\"&&ES(s)&&s.requiresUserInteraction?.())return{behavior:\"deny\",message:\"MCP tool requires user interaction; not supported via --permission-prompt-tool\",decisionReason:J8r};return ott(k6,Ue,e,U,w,s,R.suppressAlwaysAllowRule===!0)};return n}"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "_I",
+      "start": 539451,
+      "end": 539574,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "dd7c54435d94290fd60a21db4f4f1cee3380937c80af09f6ce240163287abf5f",
+      "source": "function _I(e,r){let n=e?.message?.content;if(!Array.isArray(n))return!1;return n.some((s)=>s.type===\"tool_use\"&&s.id===r)}"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "SI",
+      "start": 539578,
+      "end": 539690,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "ad5d2c6f8e0e9c7f02eb256d7772f2b09445fd61ef467459637d97566d76df2e",
+      "source": "SI=\"Error: MCP tool <redacted> (passed via --permission-prompt-tool) not found. Available MCP tools: <redacted>\""
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "vI",
+      "start": 539691,
+      "end": 539797,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "2f1fb1cf93026908ef7bb8e378d0742d3df584692483bfffad4496de5ab8fc68",
+      "source": "vI=\"Error: MCP tool <redacted> (passed via --permission-prompt-tool) not found. Available MCP tools: none\""
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "wI",
+      "start": 539798,
+      "end": 539883,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "c1ad3375b3d9d47ca07831c44570e010011e1f69f48a467c201bbcf1aaeede74",
+      "source": "wI=\"Error: tool <redacted> (passed via --permission-prompt-tool) must be an MCP tool\""
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "PI",
+      "start": 539884,
+      "end": 540895,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "2646721843f13e37ee17816661a68ba9cdd390c1dbd0ea2a35cfc9ef0d9d5765",
+      "source": "function PI(e,r,n,s,g,w){let h=qhe(w);if(!h&&e===\"stdio\"){let v=r.createCanUseTool(k6,s);return oE()||mEe()?ext(v):v}if(h||!e)return async(v,R,U,H,I,de)=>{let z=de??await kf(v,R,U,H,I),he=z.behavior===\"ask\"&&(h||!de)?(z.personOnly===!0?null:await SWn(k6,v,R,z,I,U))??(h?Nl(z):z):z;if(he.behavior!==\"allow\"&&_I(H,I)&&!R8(U.abortController.signal))r.emitPermissionDenied(v.name,I,U.agentId,he);return he};let M=null;return async(v,R,U,H,I,de)=>{let z=g?.isPromptToolServerSwept()===!0;if(!M&&z)M=Ew(null);if(!M){let he=n(),ge=he.find((fe)=>Mt(fe,e));if(!ge){let fe=he.map((Pe)=>Pe.name).join(\", \"),Se=`Error: MCP tool ${e} (passed via --permission-prompt-tool) not found. Available MCP tools: ${fe||\"none\"}`;throw process.stderr.write(`${Se}\n`),cs(1),st(Error(Se),fe?SI:vI)}if(!ge.inputJSONSchema){let fe=`Error: tool ${e} (passed via --permission-prompt-tool) must be an MCP tool`;throw process.stderr.write(`${fe}\n`),cs(1),st(Error(fe),wI)}M=Ew(ge,()=>g?.isPromptToolServerSwept()===!0)}return M(v,R,U,H,I,de)}}"
+    }
+  ],
+  "bindings": {
+    "qhe": {
+      "file": "chunk-mphp7acd.js",
+      "name": "qhe",
+      "start": 1340615,
+      "end": 1340649,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "ccddc99d79b22a1aa289c8ccdd5b68c2b016f2fe09be450bde7b27d148159e97",
+      "source": "function qhe(e){return e===\"none\"}"
+    },
+    "k6": {
+      "file": "chunk-mphp7acd.js",
+      "name": "k6",
+      "start": 2339913,
+      "end": 2339948,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "b6cebfe3f2efa53f545f99d69f39e165fa3b7fdc684a8a503892427dc1ed9594",
+      "source": "k6=Object.freeze({kind:\"launcher\"})"
+    },
+    "oE": {
+      "file": "chunk-0a47xg8f.js",
+      "name": "oE",
+      "start": 6410,
+      "end": 6504,
+      "moduleSha256": "56b1137e8e2fc0767cae6db3cc88a8a2e15de689a3f58cdc37ee6cdd94c4adbb",
+      "sha256": "87069043ad02276989b865060b69eba6eab4041e9d36b565fba886af554ddfa5",
+      "source": "function oE(){let e=n();return e.entrypoint===\"claude-vscode\"&&!e.childSession&&!e.claudecode}"
+    },
+    "mEe": {
+      "file": "chunk-0a47xg8f.js",
+      "name": "mEe",
+      "start": 2669,
+      "end": 2704,
+      "moduleSha256": "56b1137e8e2fc0767cae6db3cc88a8a2e15de689a3f58cdc37ee6cdd94c4adbb",
+      "sha256": "8bcc1d86360f336e57a3f174867b0494ca3e606114ac8f83a84efe6752b1e43d",
+      "source": "function mEe(){return rwt()&&!Iz()}"
+    },
+    "ext": {
+      "file": "chunk-8f02nerv.js",
+      "name": "ext",
+      "start": 25757,
+      "end": 25790,
+      "moduleSha256": "055d4696910d6dc270f6bdec7f2f3b1baeafd95bd1cf2d53bc2292de1f91e9ac",
+      "sha256": "cbf81a01a67d68c92d28f7206bc14399d79175d4e23a6dc42abd0e9ba8183d60",
+      "source": "function ext(e){return dr.fn=e,e}"
+    },
+    "SWn": {
+      "file": "chunk-mphp7acd.js",
+      "name": "SWn",
+      "start": 2683018,
+      "end": 2683223,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "defb7b3f9720f7ca07aa7ef89174718c2cf98b41f2ea48f765c5b3ee7401527f",
+      "source": "async function SWn(e,n,r,s,g,h){if(h.forRemoteExecution===!0)return null;return eVo(e,n,s.updatedInput??r,g,h,sD(n,pe(h)),s.suggestions,s.suppressAlwaysAllowRule===!0,()=>h.abortController.signal.aborted)}"
+    },
+    "RTe": {
+      "file": "chunk-mphp7acd.js",
+      "name": "RTe",
+      "start": 1564229,
+      "end": 1564586,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "5d9afad979b98c6b4a134213c870ece00c7b4f17b6b1d72e343cce680920d055",
+      "source": "function RTe(e){if(!e)return;switch(e.type){case\"rule\":case\"mode\":case\"subcommandResults\":case\"permissionPromptTool\":return;case\"safetyCheck\":return e.circuitBreaker===\"outsideReadsBlocked\"?void 0:e.reason;case\"classifier\":case\"hook\":case\"asyncAgent\":case\"sandboxOverride\":case\"workingDir\":return e.reason;case\"other\":return e.reason===Mzt?void 0:e.reason}}"
+    },
+    "PPo": {
+      "file": "chunk-mphp7acd.js",
+      "name": "PPo",
+      "start": 4021145,
+      "end": 4021710,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "0f4aa157da020babc2c0adb42ae32a28fe087815c482f01e4bb0d8fe4f7e82a0",
+      "source": "function PPo(e){return\"Permission for this tool use was denied. It requires approval, and this session has no approval surface \\u2014 nobody can answer a permission prompt here \\u2014 so it was denied automatically. The action was NOT performed; do not claim it succeeded, and do not retry it: this action, and anything else that requires approval, will be denied the same way for the rest of this session. \"+`Tell the user what was blocked and why you needed it, then continue with the parts of the task that do not require approval. What required approval: ${e}`}"
+    },
+    "X8r": {
+      "file": "chunk-hrhfcbdv.js",
+      "name": "X8r",
+      "start": 8933,
+      "end": 8967,
+      "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+      "sha256": "369c3b09563db491429c0d4e8c8ab9904d1954d63a6026b2228c3cb8b878952d",
+      "source": "X8r={type:\"asyncAgent\",reason:anr}"
+    },
+    "R8": {
+      "file": "chunk-k35krsdc.js",
+      "name": "R8",
+      "start": 3105,
+      "end": 3155,
+      "moduleSha256": "4bdedb0dcb7dee6a20f04802ab9ed001bb8e405332be73c4b92b2dcb387432fd",
+      "sha256": "a8d2daee5c4fe95dfb4d28333a8c571602d810d340ed83faf19bda781da43d78",
+      "source": "function R8(e){return e.aborted&&Oi(e.reason)===i}"
+    },
+    "Z8r": {
+      "file": "chunk-hrhfcbdv.js",
+      "name": "Z8r",
+      "start": 9381,
+      "end": 9410,
+      "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+      "sha256": "f80fed998ac5dc07842627de1ccfd55b140b8c1a79d84b9457ab1fdb4bf11470",
+      "source": "Z8r={type:\"other\",reason:lnr}"
+    },
+    "tAe": {
+      "file": "chunk-sz5yqzkb.js",
+      "name": "tAe",
+      "start": 615,
+      "end": 1041,
+      "moduleSha256": "dd813614586c8bd57ae3b63efacd7f4ea28391c9ecd159ab0a2afcb9822542f8",
+      "sha256": "270a7a4198983dfdec3243ccf613ab2511789f4ed32dec33a7d3c30ec1ca217f",
+      "source": "function tAe(e,s){return{behavior:\"deny\",message:`Permission for ${e} requires the user to read a consent disclosure before approving, and ${s} cannot display it. The user can run this from an interactive Claude Code session, where the permission dialog renders the full disclosure.`,decisionReason:{type:\"other\",reason:`localDisplayOnly ask not forwarded: ${s} cannot render the consent disclosure the approval depends on`}}}"
+    },
+    "_s": {
+      "file": "chunk-bdmqmby8.js",
+      "name": "_s",
+      "start": 662,
+      "end": 1117,
+      "moduleSha256": "a0e30bbfb4ec25178765afa8bc7b3bd77bd083d00bbcfcbf923fc7b1eb1a23b7",
+      "sha256": "0cf7ae84d76ebfc82bb6e7bdbe3a3f9d07356e7a2936491093d5746357e76346",
+      "source": "function _s(r,a){let{signalB:o,timeoutMs:i,refTimer:d}=a??{},n=Bn();if(r?.aborted||o?.aborted)return n.abort(),{signal:n.signal,cleanup:()=>{}};let e,t=()=>{if(e!==void 0)clearTimeout(e);n.abort()};if(i!==void 0){if(e=setTimeout(t,i),!d)e.unref?.()}r?.addEventListener(\"abort\",t),o?.addEventListener(\"abort\",t);let u=()=>{if(e!==void 0)clearTimeout(e);r?.removeEventListener(\"abort\",t),o?.removeEventListener(\"abort\",t)};return{signal:n.signal,cleanup:u}}"
+    },
+    "Dje": {
+      "file": "chunk-hrhfcbdv.js",
+      "name": "Dje",
+      "start": 9441,
+      "end": 9470,
+      "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+      "sha256": "838595952dfbca3e2d27c03e9448646c60346f8c30452a29fa14f10f727834b3",
+      "source": "Dje={type:\"other\",reason:Uzt}"
+    },
+    "MEt": {
+      "file": "chunk-64z3xwk8.js",
+      "name": "MEt",
+      "start": 13778,
+      "end": 15217,
+      "moduleSha256": "63b72939ef879fd6a6be0186e4c7fa1f334e1e6195c2da9c9e5e3fa5e3ea7d1f",
+      "sha256": "a59f733759e3694a1c084abd9dbed801ac1c5f6b82b93dc3d4f494422ecb0141",
+      "source": "async function MEt(s,e,n,r,p,m,h,y){if(p.forRemoteExecution===!0)return;let v=pe(p).mode,g=rFe(e.name,n,r,p,v,m,p.abortController.signal);for await(let R of g)if(R.permissionRequestResult&&(R.permissionRequestResult.behavior===\"allow\"||R.permissionRequestResult.behavior===\"deny\")){let b=R.permissionRequestResult;if(b.behavior===\"allow\"){let P=b.updatedInput;switch(s.kind){case\"launcher\":break;case\"strict\":if(!rye(P,r))return{decision:sne(e.name,n),interrupt:!1,permanent:!1};P=void 0;break}if(ane(e,r,P,!0))return{decision:lne(e,\"PermissionRequest\"),interrupt:!1,permanent:!1};let w=P||r;if(P){let A=a4e(await bP(e,w,{...p,toolUseId:n,permissionRound:void 0},{hookUpdatedInput:P}),e.name);if(A)return{decision:A.behavior===\"ask\"?{behavior:\"deny\",message:A.message,decisionReason:A.decisionReason??$zt,decideLocation:\"ask-path\"}:{...A,decideLocation:\"ask-path\"},interrupt:!1,permanent:!1}}if(!CWn(e,P)&&e.requiresUserInteraction?.())return;let D=y()?[]:G(s,b.updatedPermissions&&jhn(b.updatedPermissions,pe(p)),e,r,p,h);return{decision:{behavior:\"allow\",updatedInput:w,userModified:!1,decisionReason:{type:\"hook\",hookName:\"PermissionRequest\"}},interrupt:!1,permanent:D.some((A)=>FUe(A.destination))}}else return{decision:{behavior:\"deny\",message:b.message||\"Permission denied by PermissionRequest hook\",decisionReason:{type:\"hook\",hookName:\"PermissionRequest\"},decideLocation:\"ask-path\"},interrupt:b.interrupt===!0,permanent:!1}}return}"
+    },
+    "at": {
+      "file": "chunk-c9me9cp7.js",
+      "name": "at",
+      "start": 3000,
+      "end": 3163,
+      "moduleSha256": "db81856ee883c31a0be18c305014a0d82d3bd698a459223b9de754b934b084ae",
+      "sha256": "245edd68601bf9864b0bc0e3db2a643e074009546a949fdbf9dc2e4b1646e288",
+      "source": "function at(n){try{return n instanceof Ye||n instanceof Dd||n instanceof Error&&(n.name===\"AbortError\"||(\"__CANCEL__\"in n)&&Boolean(n.__CANCEL__))}catch{return!1}}"
+    },
+    "Z": {
+      "file": "chunk-c9me9cp7.js",
+      "name": "Z",
+      "start": 4695,
+      "end": 4754,
+      "moduleSha256": "db81856ee883c31a0be18c305014a0d82d3bd698a459223b9de754b934b084ae",
+      "sha256": "bb991efe186bd4b3cf95fb76a2ec5ebb6ab8aaa85fea0d3b6cc9f70a86344b06",
+      "source": "function Z(n){return n instanceof Error?n:Error(String(n))}"
+    },
+    "jpe": {
+      "file": "chunk-k35krsdc.js",
+      "name": "jpe",
+      "start": 1343,
+      "end": 1467,
+      "moduleSha256": "4bdedb0dcb7dee6a20f04802ab9ed001bb8e405332be73c4b92b2dcb387432fd",
+      "sha256": "de771d9f29763da61a7eaba3f37778b9fca36e4b5652a3b03a3a9e182c46d042",
+      "source": "class jpe extends AbortController{turnController;constructor(e){super();this.turnController=e;b(A,this.signal),s(e,this,d)}}"
+    },
+    "XM": {
+      "file": "chunk-k35krsdc.js",
+      "name": "XM",
+      "start": 1819,
+      "end": 1893,
+      "moduleSha256": "4bdedb0dcb7dee6a20f04802ab9ed001bb8e405332be73c4b92b2dcb387432fd",
+      "sha256": "76907f4cb34af0a5933f4e7aeaa9e351d2d8d8596ca3781b65c64d15965cecff",
+      "source": "function XM(e){let r=e;while(r instanceof jpe)r=r.turnController;return r}"
+    },
+    "vie": {
+      "file": "chunk-64z3xwk8.js",
+      "name": "vie",
+      "start": 4058,
+      "end": 4084,
+      "moduleSha256": "63b72939ef879fd6a6be0186e4c7fa1f334e1e6195c2da9c9e5e3fa5e3ea7d1f",
+      "sha256": "e13a8824f46583111243a54d2ead12887338f7e2ab6a3fad0d9e88a5c09087c8",
+      "source": "vie=f(()=>Fe([Ae(),De()]))"
+    },
+    "gt": {
+      "file": "chunk-1cedw4af.js",
+      "name": "gt",
+      "start": 19061,
+      "end": 19196,
+      "moduleSha256": "49006209e7e007b9075560f496ac9bf3a5426f9c35a99c811134053076c8df0c",
+      "sha256": "fb7e16a172ae300d9177332fb31ae5770940f89baba013d0ba43254fee071532",
+      "source": "gt=Object.assign(function(i,r=!0){if(!i)return null;let n=i.length>be?se(i,r):le.parse(i,r);return n.ok?n.value:null},{cache:le.cache})"
+    },
+    "ARn": {
+      "file": "chunk-64z3xwk8.js",
+      "name": "ARn",
+      "start": 4085,
+      "end": 4182,
+      "moduleSha256": "63b72939ef879fd6a6be0186e4c7fa1f334e1e6195c2da9c9e5e3fa5e3ea7d1f",
+      "sha256": "697103f30532d6a8984047931b7424ab182a916133bb8ef10555c0a8f88b36a4",
+      "source": "ARn=\"Expected {behavior: 'allow', updatedInput?: object} or {behavior: 'deny', message: string}.\""
+    },
+    "Bzt": {
+      "file": "chunk-hrhfcbdv.js",
+      "name": "Bzt",
+      "start": 9302,
+      "end": 9331,
+      "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+      "sha256": "054dc08f7e568d0c010c2c4368b610bcf7b136bcc25ac4664a75d4969732fb6f",
+      "source": "Bzt={type:\"other\",reason:h0e}"
+    },
+    "ES": {
+      "file": "chunk-710jgjjk.js",
+      "name": "ES",
+      "start": 2178,
+      "end": 2242,
+      "moduleSha256": "7d925d4f9a944e843bbc1da51383ec9e5ef6dccd9493246ab023d306323584db",
+      "sha256": "3f71e9a5303229ac178b6d559dc3078d6fbdd9a61160d0e96f3add779c1d1bc8",
+      "source": "function ES(e){return e.name?.startsWith(\"mcp__\")||e.isMcp===!0}"
+    },
+    "J8r": {
+      "file": "chunk-hrhfcbdv.js",
+      "name": "J8r",
+      "start": 8968,
+      "end": 9074,
+      "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+      "sha256": "f3277fd35f029d30f90f6049425a6b7cf8b11aa6085b67dd3be589914290d4f7",
+      "source": "J8r={type:\"other\",reason:\"MCP tool requires user interaction; not supported via --permission-prompt-tool\"}"
+    },
+    "ott": {
+      "file": "chunk-64z3xwk8.js",
+      "name": "ott",
+      "start": 4793,
+      "end": 5782,
+      "moduleSha256": "63b72939ef879fd6a6be0186e4c7fa1f334e1e6195c2da9c9e5e3fa5e3ea7d1f",
+      "sha256": "4b7b34e472b3d75f06ac7e0495e8a50f316970ad6d41120180eeeb902d01f1b9",
+      "source": "function ott(s,e,n,r,p,m=n,h=!1){let y={type:\"permissionPromptTool\",permissionPromptToolName:n.name,toolResult:e};if(e.behavior===\"allow\"){let v=e.updatedPermissions?.findLast((g)=>g.type===\"setMode\")?.mode;if(v===\"default\"||v===\"acceptEdits\")L2e(v);switch(s.kind){case\"launcher\":{G(s,e.updatedPermissions,m,r,p,h);let g=e.updatedInput&&Object.keys(e.updatedInput).length>0?e.updatedInput:n2(m.name,r);return{...e,updatedInput:g,decisionReason:y}}case\"strict\":{let g=Wko(e.updatedInput,r,m),R=g===void 0?Gko(s,e.updatedInput,r,m):void 0,b=g??R?.input;if(b===void 0)return sne(m.name,e.toolUseID);if(b!==r&&_g(pe(p),m,b,\"deny\")!==null)return R?.onRefused(\"deny_rule\"),sne(m.name,e.toolUseID);return G(s,e.updatedPermissions,m,R?.input??r,p,h),{...e,updatedInput:b,decisionReason:y}}}}else if(e.behavior===\"deny\"&&e.interrupt)t(`SDK permission prompt deny+interrupt: tool=${n.name} message=${e.message}`),XM(p.abortController).abort();return{...e,decisionReason:y,decideLocation:\"ask-path\"}}"
+    },
+    "st": {
+      "file": "chunk-c9me9cp7.js",
+      "name": "st",
+      "start": 3893,
+      "end": 4046,
+      "moduleSha256": "db81856ee883c31a0be18c305014a0d82d3bd698a459223b9de754b934b084ae",
+      "sha256": "de1b282895b7dbcecff698ea854c13e16c517ec221c5594b2bd59e07b30e47e7",
+      "source": "st=(n,e)=>{try{if(n!==null&&typeof n===\"object\"&&!(\"telemetryMessage\"in n)&&Object.isExtensible(n))Object.assign(n,{telemetryMessage:e})}catch{}return n}"
+    }
+  },
+  "hostPorts": [
+    "kf",
+    "t",
+    "d",
+    "cs",
+    "Mt"
+  ],
+  "nativeSha256": "fb118d613be174ff703910041bef388e9d5d3547db02af85b173c255f43af5ff"
+}

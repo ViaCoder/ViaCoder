@@ -1,0 +1,324 @@
+{
+  "sourceVersion": "2.1.287",
+  "sourceRoot": "../.work/official-modules-2.1.287",
+  "oraclePlatform": "linux-x64",
+  "oracleModule": "chunk-ydbv64xy.js",
+  "oracleFunction": "LHe",
+  "oracleFile": "tests/fixtures/official-oauth-save-outcome-287/linux-x64.full-function.js",
+  "oracleFunctionSha256": "6e0834bb22e24e8cb969ac2deed764746f78a87d1cdcfcbc3e8a4dc1bf2a4542",
+  "originalStatements": [
+    "if($C(),process.env.CLAUDE_CODE_OAUTH_TOKEN)if(s.success)delete process.env.CLAUDE_CODE_OAUTH_TOKEN;else process.env.CLAUDE_CODE_OAUTH_TOKEN=e.accessToken;",
+    "if(pz())FB(s.success?null:e.accessToken),Iwt(!1);",
+    "if(\"transient\"in s&&s.transient===!0&&!a.CLAUDE_CODE_OAUTH_TOKEN&&!pz())throw new Mr(O()===\"macos\"?k:T);"
+  ],
+  "nativeSemanticPortMap": {
+    "$C": "clearTokenCache()",
+    "process": "process port; original process.env.CLAUDE_CODE_OAUTH_TOKEN reads/deletes/sets preserved",
+    "pz": "fdToken()",
+    "FB": "replaceFdToken(success ? null : accessToken)",
+    "Iwt": "replaceBgSnapshot(false)",
+    "a.CLAUDE_CODE_OAUTH_TOKEN": "environment.CLAUDE_CODE_OAUTH_TOKEN",
+    "O": "platform()",
+    "Mr": "OAuthLoginStorageError287"
+  },
+  "errorConstructor": {
+    "exportedName": "OAuthLoginStorageError287",
+    "nativeClassByPlatform": [
+      {
+        "platform": "linux-x64",
+        "className": "Mr",
+        "importedFromRawModule": "chunk-5pp15f99.js",
+        "rawModuleSha256": "d304d5ac5154290e1285e5876ad74d63e3a972b7c811ce7671dcda052020f448",
+        "declaration": "class Mr extends P{}",
+        "parentDeclaration": "class P extends Error{telemetryMessage;errorClass;constructor(n,e,t){super(n);this.name=\"TelemetrySafeError\",this.telemetryMessage=e??n,this.errorClass=t}}"
+      },
+      {
+        "platform": "linux-arm64",
+        "className": "Mr",
+        "importedFromRawModule": "chunk-gwr1he3z.js",
+        "rawModuleSha256": "013d1bf1d328fd90a53b3188caacf31ef0b54140e783c094cccb6bec6f1ac424",
+        "declaration": "class Mr extends P{}",
+        "parentDeclaration": "class P extends Error{telemetryMessage;errorClass;constructor(n,e,t){super(n);this.name=\"TelemetrySafeError\",this.telemetryMessage=e??n,this.errorClass=t}}"
+      },
+      {
+        "platform": "darwin-x64",
+        "className": "Or",
+        "importedFromRawModule": "chunk-sbek65a7.js",
+        "rawModuleSha256": "ea7cfffb45ba6720135b9540897917beddcaa994f57691602f9d28c5563affd0",
+        "declaration": "class Or extends H{}",
+        "parentDeclaration": "class H extends Error{telemetryMessage;errorClass;constructor(n,e,t){super(n);this.name=\"TelemetrySafeError\",this.telemetryMessage=e??n,this.errorClass=t}}"
+      },
+      {
+        "platform": "darwin-arm64",
+        "className": "Hr",
+        "importedFromRawModule": "chunk-c9me9cp7.js",
+        "rawModuleSha256": "db81856ee883c31a0be18c305014a0d82d3bd698a459223b9de754b934b084ae",
+        "declaration": "class Hr extends P{}",
+        "parentDeclaration": "class P extends Error{telemetryMessage;errorClass;constructor(n,e,t){super(n);this.name=\"TelemetrySafeError\",this.telemetryMessage=e??n,this.errorClass=t}}"
+      },
+      {
+        "platform": "win32-x64",
+        "className": "Mr",
+        "importedFromRawModule": "chunk-dtespbs4.js",
+        "rawModuleSha256": "f7767d0c0924847be79dfeaade788dc4d97d5f99a5e91e36d3e9ce23946a432a",
+        "declaration": "class Mr extends P{}",
+        "parentDeclaration": "class P extends Error{telemetryMessage;errorClass;constructor(n,e,t){super(n);this.name=\"TelemetrySafeError\",this.telemetryMessage=e??n,this.errorClass=t}}"
+      },
+      {
+        "platform": "win32-arm64",
+        "className": "Mr",
+        "importedFromRawModule": "chunk-216b0h9x.js",
+        "rawModuleSha256": "9cc92ff38922e454a2bebcfbef8a955253134bca9881fea24ddfba31d87c3d7c",
+        "declaration": "class Mr extends P{}",
+        "parentDeclaration": "class P extends Error{telemetryMessage;errorClass;constructor(n,e,t){super(n);this.name=\"TelemetrySafeError\",this.telemetryMessage=e??n,this.errorClass=t}}"
+      }
+    ],
+    "generatedClass": "class TelemetrySafeError287 extends Error{telemetryMessage;errorClass;constructor(n,e,t){super(n);this.name=\"TelemetrySafeError\",this.telemetryMessage=e??n,this.errorClass=t}} class OAuthLoginStorageError287 extends TelemetrySafeError287{}"
+  },
+  "platforms": [
+    {
+      "platform": "linux-x64",
+      "manifest": "linux-x64/manifest.json",
+      "manifestSha256": "ecae5d9ddbf13ef27b6b6a1141953aab4ba311e47dde3ac2a7cc8b5a01c63784",
+      "version": "2.1.287",
+      "manifestPlatform": "linux-x64",
+      "binarySha256": "3920489a5109cff5786a1a392c25277408ff22bc796d5edb9c16a60e5a1718f0",
+      "module": "chunk-ydbv64xy.js",
+      "moduleLength": 5050,
+      "moduleSha256": "de6135412c9a77fe81390a8dadf24ae87967428f8b5efb064c5eec8b19df6f3b",
+      "manifestModuleLength": 5050,
+      "manifestModuleSha256": "de6135412c9a77fe81390a8dadf24ae87967428f8b5efb064c5eec8b19df6f3b",
+      "functionName": "LHe",
+      "functionLength": 870,
+      "functionSha256": "6e0834bb22e24e8cb969ac2deed764746f78a87d1cdcfcbc3e8a4dc1bf2a4542",
+      "nativeAliases": {
+        "clearTokenCache": "$C",
+        "fdToken": "pz",
+        "replaceFdToken": "FB",
+        "replaceBgSnapshot": "Iwt",
+        "environment": "a",
+        "transientFdToken": "pz",
+        "errorClass": "Mr",
+        "platform": "O",
+        "macMessage": "k",
+        "genericMessage": "T"
+      },
+      "originalStatements": [
+        "if($C(),process.env.CLAUDE_CODE_OAUTH_TOKEN)if(s.success)delete process.env.CLAUDE_CODE_OAUTH_TOKEN;else process.env.CLAUDE_CODE_OAUTH_TOKEN=e.accessToken;",
+        "if(pz())FB(s.success?null:e.accessToken),Iwt(!1);",
+        "if(\"transient\"in s&&s.transient===!0&&!a.CLAUDE_CODE_OAUTH_TOKEN&&!pz())throw new Mr(O()===\"macos\"?k:T);"
+      ],
+      "errorImport": "/$bunfs/root/chunk-5pp15f99.js",
+      "errorModule": "chunk-5pp15f99.js",
+      "errorModuleLength": 10330,
+      "errorModuleSha256": "d304d5ac5154290e1285e5876ad74d63e3a972b7c811ce7671dcda052020f448",
+      "errorClassDeclaration": "class Mr extends P{}",
+      "parentClassDeclaration": "class P extends Error{telemetryMessage;errorClass;constructor(n,e,t){super(n);this.name=\"TelemetrySafeError\",this.telemetryMessage=e??n,this.errorClass=t}}"
+    },
+    {
+      "platform": "linux-arm64",
+      "manifest": "linux-arm64/manifest.json",
+      "manifestSha256": "f3be5b23f9cbb909555fe028143b9a3a40c1e3e49961e09c49d8e5a6b61ae83b",
+      "version": "2.1.287",
+      "manifestPlatform": "linux-arm64",
+      "binarySha256": "e4daf793d1e74fb0d9874dd09e98690bbfd7be515f78a87fd05b9e2b4bb33b03",
+      "module": "chunk-4z0v3gv5.js",
+      "moduleLength": 5050,
+      "moduleSha256": "3ff22da8bfa5707ea67f7374b962d03f4a2f948b0e40e58006d97be044a9c263",
+      "manifestModuleLength": 5050,
+      "manifestModuleSha256": "3ff22da8bfa5707ea67f7374b962d03f4a2f948b0e40e58006d97be044a9c263",
+      "functionName": "LMe",
+      "functionLength": 870,
+      "functionSha256": "30ba8720655858917fbe7a3cc681cbede99c6473cd2470be750d778221e3001a",
+      "nativeAliases": {
+        "clearTokenCache": "$C",
+        "fdToken": "pz",
+        "replaceFdToken": "UH",
+        "replaceBgSnapshot": "Owt",
+        "environment": "a",
+        "transientFdToken": "pz",
+        "errorClass": "Mr",
+        "platform": "I",
+        "macMessage": "T",
+        "genericMessage": "O"
+      },
+      "originalStatements": [
+        "if($C(),process.env.CLAUDE_CODE_OAUTH_TOKEN)if(s.success)delete process.env.CLAUDE_CODE_OAUTH_TOKEN;else process.env.CLAUDE_CODE_OAUTH_TOKEN=e.accessToken;",
+        "if(pz())UH(s.success?null:e.accessToken),Owt(!1);",
+        "if(\"transient\"in s&&s.transient===!0&&!a.CLAUDE_CODE_OAUTH_TOKEN&&!pz())throw new Mr(I()===\"macos\"?T:O);"
+      ],
+      "errorImport": "/$bunfs/root/chunk-gwr1he3z.js",
+      "errorModule": "chunk-gwr1he3z.js",
+      "errorModuleLength": 10330,
+      "errorModuleSha256": "013d1bf1d328fd90a53b3188caacf31ef0b54140e783c094cccb6bec6f1ac424",
+      "errorClassDeclaration": "class Mr extends P{}",
+      "parentClassDeclaration": "class P extends Error{telemetryMessage;errorClass;constructor(n,e,t){super(n);this.name=\"TelemetrySafeError\",this.telemetryMessage=e??n,this.errorClass=t}}"
+    },
+    {
+      "platform": "darwin-x64",
+      "manifest": "darwin-x64/manifest.json",
+      "manifestSha256": "ba9e122d28e8a42927eb23c7c86b62295f24a223546ee5476e761837579a709b",
+      "version": "2.1.287",
+      "manifestPlatform": "darwin-x64",
+      "binarySha256": "f1863213e4f55aaadc2e6ee617f934ada29930e5de4c5e5f8f9e34a0d594fdd7",
+      "module": "chunk-6szq75nd.js",
+      "moduleLength": 5050,
+      "moduleSha256": "37faed8607dcdf710b0b29f129caa42d6d2b5f87ac61ce80045919b6400aa022",
+      "manifestModuleLength": 5050,
+      "manifestModuleSha256": "37faed8607dcdf710b0b29f129caa42d6d2b5f87ac61ce80045919b6400aa022",
+      "functionName": "YOe",
+      "functionLength": 870,
+      "functionSha256": "f3ce35c00fd7276694e8198722391072e0f3b1ce157d012154549e271d9fc8bc",
+      "nativeAliases": {
+        "clearTokenCache": "UT",
+        "fdToken": "EW",
+        "replaceFdToken": "ZU",
+        "replaceBgSnapshot": "Wwt",
+        "environment": "a",
+        "transientFdToken": "EW",
+        "errorClass": "Or",
+        "platform": "P",
+        "macMessage": "T",
+        "genericMessage": "O"
+      },
+      "originalStatements": [
+        "if(UT(),process.env.CLAUDE_CODE_OAUTH_TOKEN)if(s.success)delete process.env.CLAUDE_CODE_OAUTH_TOKEN;else process.env.CLAUDE_CODE_OAUTH_TOKEN=e.accessToken;",
+        "if(EW())ZU(s.success?null:e.accessToken),Wwt(!1);",
+        "if(\"transient\"in s&&s.transient===!0&&!a.CLAUDE_CODE_OAUTH_TOKEN&&!EW())throw new Or(P()===\"macos\"?T:O);"
+      ],
+      "errorImport": "/$bunfs/root/chunk-sbek65a7.js",
+      "errorModule": "chunk-sbek65a7.js",
+      "errorModuleLength": 10331,
+      "errorModuleSha256": "ea7cfffb45ba6720135b9540897917beddcaa994f57691602f9d28c5563affd0",
+      "errorClassDeclaration": "class Or extends H{}",
+      "parentClassDeclaration": "class H extends Error{telemetryMessage;errorClass;constructor(n,e,t){super(n);this.name=\"TelemetrySafeError\",this.telemetryMessage=e??n,this.errorClass=t}}"
+    },
+    {
+      "platform": "darwin-arm64",
+      "manifest": "darwin-arm64/manifest.json",
+      "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+      "version": "2.1.287",
+      "manifestPlatform": "darwin-arm64",
+      "binarySha256": "6eab8333fe2121553100d8f40bfada384a3e989b94f947e18ba6677a6fcb41ea",
+      "module": "chunk-8j1q755t.js",
+      "moduleLength": 5050,
+      "moduleSha256": "218698a2eb10f3b8825c2d8c7917f8a69e7eaabf547a2a8b2de7943e45675aa4",
+      "manifestModuleLength": 5050,
+      "manifestModuleSha256": "218698a2eb10f3b8825c2d8c7917f8a69e7eaabf547a2a8b2de7943e45675aa4",
+      "functionName": "YHe",
+      "functionLength": 870,
+      "functionSha256": "fc644a8a5f30df2181a67b4fb31a8849b10efc278367e3331b5dadee8dc49c09",
+      "nativeAliases": {
+        "clearTokenCache": "Uk",
+        "fdToken": "EW",
+        "replaceFdToken": "ZU",
+        "replaceBgSnapshot": "Wwt",
+        "environment": "a",
+        "transientFdToken": "EW",
+        "errorClass": "Hr",
+        "platform": "O",
+        "macMessage": "k",
+        "genericMessage": "T"
+      },
+      "originalStatements": [
+        "if(Uk(),process.env.CLAUDE_CODE_OAUTH_TOKEN)if(s.success)delete process.env.CLAUDE_CODE_OAUTH_TOKEN;else process.env.CLAUDE_CODE_OAUTH_TOKEN=e.accessToken;",
+        "if(EW())ZU(s.success?null:e.accessToken),Wwt(!1);",
+        "if(\"transient\"in s&&s.transient===!0&&!a.CLAUDE_CODE_OAUTH_TOKEN&&!EW())throw new Hr(O()===\"macos\"?k:T);"
+      ],
+      "errorImport": "/$bunfs/root/chunk-c9me9cp7.js",
+      "errorModule": "chunk-c9me9cp7.js",
+      "errorModuleLength": 10331,
+      "errorModuleSha256": "db81856ee883c31a0be18c305014a0d82d3bd698a459223b9de754b934b084ae",
+      "errorClassDeclaration": "class Hr extends P{}",
+      "parentClassDeclaration": "class P extends Error{telemetryMessage;errorClass;constructor(n,e,t){super(n);this.name=\"TelemetrySafeError\",this.telemetryMessage=e??n,this.errorClass=t}}"
+    },
+    {
+      "platform": "win32-x64",
+      "manifest": "win32-x64/manifest.json",
+      "manifestSha256": "c71e85888df3301fd3c4cb158744538810418e2d67591debe8e4f7c771fcdddc",
+      "version": "2.1.287",
+      "manifestPlatform": "win32-x64",
+      "binarySha256": "6d5be51f0edfe3429cd1a9885950db31c1e59eb9a2c9a30a47e64179d2ff98b4",
+      "module": "chunk-g0txcnna.js",
+      "moduleLength": 5050,
+      "moduleSha256": "13693821a58f56f468aba87d618182cd2149641cb6bec9c875eba7fcea614493",
+      "manifestModuleLength": 5050,
+      "manifestModuleSha256": "13693821a58f56f468aba87d618182cd2149641cb6bec9c875eba7fcea614493",
+      "functionName": "L0e",
+      "functionLength": 870,
+      "functionSha256": "58a3b91aa1748570c31192c16c37d29e49788915f7c2d19877cece17e8e90b86",
+      "nativeAliases": {
+        "clearTokenCache": "FR",
+        "fdToken": "mz",
+        "replaceFdToken": "jB",
+        "replaceBgSnapshot": "Nwt",
+        "environment": "a",
+        "transientFdToken": "mz",
+        "errorClass": "Mr",
+        "platform": "O",
+        "macMessage": "k",
+        "genericMessage": "T"
+      },
+      "originalStatements": [
+        "if(FR(),process.env.CLAUDE_CODE_OAUTH_TOKEN)if(s.success)delete process.env.CLAUDE_CODE_OAUTH_TOKEN;else process.env.CLAUDE_CODE_OAUTH_TOKEN=e.accessToken;",
+        "if(mz())jB(s.success?null:e.accessToken),Nwt(!1);",
+        "if(\"transient\"in s&&s.transient===!0&&!a.CLAUDE_CODE_OAUTH_TOKEN&&!mz())throw new Mr(O()===\"macos\"?k:T);"
+      ],
+      "errorImport": "B:/~BUN/root/chunk-dtespbs4.js",
+      "errorModule": "chunk-dtespbs4.js",
+      "errorModuleLength": 10330,
+      "errorModuleSha256": "f7767d0c0924847be79dfeaade788dc4d97d5f99a5e91e36d3e9ce23946a432a",
+      "errorClassDeclaration": "class Mr extends P{}",
+      "parentClassDeclaration": "class P extends Error{telemetryMessage;errorClass;constructor(n,e,t){super(n);this.name=\"TelemetrySafeError\",this.telemetryMessage=e??n,this.errorClass=t}}"
+    },
+    {
+      "platform": "win32-arm64",
+      "manifest": "win32-arm64/manifest.json",
+      "manifestSha256": "d0d8b3b882ba61ba321ab072b5cbc28a1a4089cfb4c5dce0698311aae10c739e",
+      "version": "2.1.287",
+      "manifestPlatform": "win32-arm64",
+      "binarySha256": "11438981154e99af8f9aeabe193871c92b8b550b35354686a140fc056f1bfe54",
+      "module": "chunk-5v7cgaf6.js",
+      "moduleLength": 5050,
+      "moduleSha256": "8e9d2f8720b427e75d17658c1d2aff07a537444bed73c900593bbdfd073fcf3c",
+      "manifestModuleLength": 5050,
+      "manifestModuleSha256": "8e9d2f8720b427e75d17658c1d2aff07a537444bed73c900593bbdfd073fcf3c",
+      "functionName": "N0e",
+      "functionLength": 870,
+      "functionSha256": "9747e93bc4e354d6213f5a651f04a28f9d7f7d96d7febbc4da09f7ddd7bc266d",
+      "nativeAliases": {
+        "clearTokenCache": "$R",
+        "fdToken": "mz",
+        "replaceFdToken": "jH",
+        "replaceBgSnapshot": "Lwt",
+        "environment": "a",
+        "transientFdToken": "mz",
+        "errorClass": "Mr",
+        "platform": "O",
+        "macMessage": "k",
+        "genericMessage": "T"
+      },
+      "originalStatements": [
+        "if($R(),process.env.CLAUDE_CODE_OAUTH_TOKEN)if(s.success)delete process.env.CLAUDE_CODE_OAUTH_TOKEN;else process.env.CLAUDE_CODE_OAUTH_TOKEN=e.accessToken;",
+        "if(mz())jH(s.success?null:e.accessToken),Lwt(!1);",
+        "if(\"transient\"in s&&s.transient===!0&&!a.CLAUDE_CODE_OAUTH_TOKEN&&!mz())throw new Mr(O()===\"macos\"?k:T);"
+      ],
+      "errorImport": "B:/~BUN/root/chunk-216b0h9x.js",
+      "errorModule": "chunk-216b0h9x.js",
+      "errorModuleLength": 10330,
+      "errorModuleSha256": "9cc92ff38922e454a2bebcfbef8a955253134bca9881fea24ddfba31d87c3d7c",
+      "errorClassDeclaration": "class Mr extends P{}",
+      "parentClassDeclaration": "class P extends Error{telemetryMessage;errorClass;constructor(n,e,t){super(n);this.name=\"TelemetrySafeError\",this.telemetryMessage=e??n,this.errorClass=t}}"
+    }
+  ],
+  "generated": {
+    "src/utils/officialOAuthSaveOutcome287/runtime.js": {
+      "length": 1411,
+      "sha256": "2ebace9b4d7a840e6671cc3a30f423299464a0b059b5aa68e8b26a72de6225a2"
+    },
+    "src/utils/officialOAuthSaveOutcome287/runtime.d.ts": {
+      "length": 1009,
+      "sha256": "ed4fa4648e5ddd1542b15330ee530cf4c15f6493d5cf317e1f83d98e03b38832"
+    }
+  }
+}

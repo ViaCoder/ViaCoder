@@ -1,0 +1,4 @@
+import type {DesktopCommand287,DesktopLaunchOptions287} from './native.js'
+export function registerDesktop287<T extends {option(flags:string,description:string,parser:()=>boolean):T}>(root:T):T
+export function desktopPreAction287(w:DesktopCommand287,C:DesktopCommand287,e:DesktopCommand287,Yt:(message:string)=>unknown):unknown
+export function desktopRootAction287(w:string|undefined,W:{desktop?:boolean;continue?:boolean;resume?:string|true},e:DesktopCommand287,n:{pendingConnect?:{url?:string};pendingSSH?:{host?:string}},r:DesktopLaunchOptions287['storageV5'],ports:{process:Pick<NodeJS.Process,'stdin'>;nonInteractive():boolean;suppliedOptions(command:DesktopCommand287):DesktopLaunchOptions287['suppliedOptions'];exit(code:number):Promise<void>;load():Promise<{launchDesktopFromCli(options:DesktopLaunchOptions287):Promise<number>}>}):Promise<void>

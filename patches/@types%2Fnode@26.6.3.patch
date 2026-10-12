@@ -1,0 +1,16 @@
+diff --git a/web-globals/console.d.ts b/web-globals/console.d.ts
+index 5492de33e4d6c2f0d5b76cfa9d0b1b13a92251a8..7dcd6993ef8070a155569650c78573e09addb6b2 100644
+--- a/web-globals/console.d.ts
++++ b/web-globals/console.d.ts
+@@ -1,9 +1,5 @@
+ export {};
+ 
+-import * as console from "node:console";
++// Bun and the default DOM lib already provide the global Console type.
++// The Node augmentation assumes node:console exports Console in this host.
+ 
+-declare global {
+-    interface Console extends console.Console {}
+-
+-    var console: Console;
+-}

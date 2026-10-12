@@ -1,0 +1,234 @@
+--- a/src/abs_pointer.rs
++++ b/src/abs_pointer.rs
+@@ -146,14 +146,53 @@
+         // values explicitly so their intentional omission stays visible.
+         let _start_landing = self.move_to(start.0, start.1)?;
+         sleep(Duration::from_millis(30));
+-        self.device
+-            .emit(&[InputEvent::new_now(EventType::KEY.0, code, 1)])?;
+-        sleep(Duration::from_millis(40));
+-        let _end_landing = self.move_to(end.0, end.1)?;
+-        sleep(Duration::from_millis(40));
+-        self.device
+-            .emit(&[InputEvent::new_now(EventType::KEY.0, code, 0)])?;
+-        Ok(())
++        // Arm before press: emit may fail after a partial device write.
++        let mut release = DragButtonRelease { pointer: self, code, armed: true };
++        let action = (|| -> Result<()> {
++            release.pointer.device
++                .emit(&[InputEvent::new_now(EventType::KEY.0, code, 1)])
++                .context("failed to emit uinput drag button press")?;
++            sleep(Duration::from_millis(40));
++            let _end_landing = release.pointer.move_to(end.0, end.1)?;
++            sleep(Duration::from_millis(40));
++            Ok(())
++        })();
++        // Always release on the originating VirtualDevice, including motion
++        // and partial-press errors. Preserve both failures; never replay input.
++        let released = release.release();
++        match (action, released) {
++            (Ok(()), Ok(())) => Ok(()),
++            (Err(error), Ok(())) | (Ok(()), Err(error)) => Err(error),
++            (Err(error), Err(release_error)) => Err(anyhow::anyhow!(
++                "{error:#}; uinput drag button release also failed: {release_error:#}"
++            )),
++        }
++    }
++}
++
++/// Borrow the same absolute pointer until release has completed. Normal
++/// errors use explicit release so its error is returned; Drop covers unwinding.
++struct DragButtonRelease<'a> {
++    pointer: &'a mut AbsPointer,
++    code: u16,
++    armed: bool,
++}
++
++impl DragButtonRelease<'_> {
++    fn release(&mut self) -> Result<()> {
++        // One release attempt even on failure, not an implicit input retry.
++        self.armed = false;
++        self.pointer.device
++            .emit(&[InputEvent::new_now(EventType::KEY.0, self.code, 0)])
++            .context("failed to emit uinput drag button release")
++    }
++}
++
++impl Drop for DragButtonRelease<'_> {
++    fn drop(&mut self) {
++        if self.armed {
++            let _ = self.release();
++        }
+     }
+ }
+ 
+--- a/src/server.rs
++++ b/src/server.rs
+@@ -1402,34 +1402,66 @@
+     async fn drag(&self, Parameters(params): Parameters<DragParams>) -> Json<ActionOutput> {
+         let received = Some(serde_json::json!(params));
+         let input_guard = Arc::clone(&self.input_operation_lock).lock_owned().await;
++        let server = self.clone();
++        // Reuse upstream's detached task owner for the entire drag. In
++        // particular spawn_blocking must finish its same-device release
++        // before another input operation acquires this guard on cancellation.
++        let (input_guard, result) = run_cancellation_safe_input(input_guard, async move {
++            Ok(server.drag_locked(params).await)
++        }).await;
++        let _input_guard = input_guard;
++        Json(match result {
++            Ok(output) => output,
++            Err(message) => ActionOutput {
++                ok: false,
++                implemented: true,
++                action: "drag".to_string(),
++                message,
++                received,
++            },
++        })
++    }
++
++    /// Only called by drag's cancellation-safe owner with input_operation_lock.
++    async fn drag_locked(&self, params: DragParams) -> ActionOutput {
++        let received = Some(serde_json::json!(params));
+         // Preferred backend: the uinput absolute pointer (accurate landing).
+         if self.ensure_abs_pointer().await {
+             let abs_pointer = Arc::clone(&self.abs_pointer);
+             let dragged = tokio::task::spawn_blocking(move || {
+-                if let Ok(mut guard) = abs_pointer.lock() {
+-                    guard.as_mut().map(|p| {
+-                        p.drag(
+-                            (params.start_x, params.start_y),
+-                            (params.end_x, params.end_y),
+-                            crate::abs_pointer::PointerButton::Left,
+-                        )
+-                        .is_ok()
+-                    })
+-                } else {
+-                    None
+-                }
+-            })
+-            .await
+-            .ok()
+-            .flatten();
+-            if dragged == Some(true) {
+-                return Json(ActionOutput {
++                let mut guard = abs_pointer.lock()
++                    .map_err(|_| "uinput absolute pointer lock poisoned; input was not replayed".to_string())?;
++                let Some(pointer) = guard.as_mut() else {
++                    // No action started: only this case may try another backend.
++                    return Ok(None);
++                };
++                pointer.drag(
++                    (params.start_x, params.start_y),
++                    (params.end_x, params.end_y),
++                    crate::abs_pointer::PointerButton::Left,
++                ).map_err(|error| format!("uinput drag failed; input was not replayed: {error:#}"))?;
++                Ok(Some(()))
++            }).await;
++            let result = match dragged {
++                Ok(result) => result,
++                Err(error) => Err(format!("uinput drag task failed; input was not replayed: {error}")),
++            };
++            match result {
++                Ok(Some(())) => return ActionOutput {
+                     ok: true,
+                     implemented: true,
+                     action: "drag".to_string(),
+                     message: "Action sent through the uinput absolute pointer.".to_string(),
+                     received,
+-                });
++                },
++                Err(message) => return ActionOutput {
++                    ok: false,
++                    implemented: true,
++                    action: "drag".to_string(),
++                    message,
++                    received,
++                },
++                Ok(None) => {},
+             }
+         }
+         if let Some(session) = self.cached_portal_pointer_session() {
+@@ -1438,27 +1470,27 @@
+                 self.logical_portal_point(&session, params.start_x, params.start_y)
+             else {
+                 self.clear_portal_pointer_session(&session);
+-                return Json(portal_coordinate_error("drag", received));
++                return portal_coordinate_error("drag", received);
+             };
+             let Some((end_x, end_y)) =
+                 self.logical_portal_point(&session, params.end_x, params.end_y)
+             else {
+                 self.clear_portal_pointer_session(&session);
+-                return Json(portal_coordinate_error("drag", received));
++                return portal_coordinate_error("drag", received);
+             };
+             match portal_drag(&session, start_x, start_y, end_x, end_y).await {
+                 Ok(()) => {
+-                    return Json(ActionOutput {
++                    return ActionOutput {
+                         ok: true,
+                         implemented: true,
+                         action: "drag".to_string(),
+                         message: "Action sent through the remote desktop portal.".to_string(),
+                         received,
+-                    });
++                    };
+                 }
+                 Err(error) => {
+                     self.clear_portal_pointer_session(&session);
+-                    return Json(portal_action_error("drag", error, received));
++                    return portal_action_error("drag", error, received);
+                 }
+             }
+         } else if self.should_prefer_portal_pointer_backend().await {
+@@ -1469,28 +1501,28 @@
+                         self.logical_portal_point(&session, params.start_x, params.start_y)
+                     else {
+                         self.clear_portal_pointer_session(&session);
+-                        return Json(portal_coordinate_error("drag", received));
++                        return portal_coordinate_error("drag", received);
+                     };
+                     let Some((end_x, end_y)) =
+                         self.logical_portal_point(&session, params.end_x, params.end_y)
+                     else {
+                         self.clear_portal_pointer_session(&session);
+-                        return Json(portal_coordinate_error("drag", received));
++                        return portal_coordinate_error("drag", received);
+                     };
+                     match portal_drag(&session, start_x, start_y, end_x, end_y).await {
+                         Ok(()) => {
+-                            return Json(ActionOutput {
++                            return ActionOutput {
+                                 ok: true,
+                                 implemented: true,
+                                 action: "drag".to_string(),
+                                 message: "Action sent through the remote desktop portal."
+                                     .to_string(),
+                                 received,
+-                            });
++                            };
+                         }
+                         Err(error) => {
+                             self.clear_portal_pointer_session(&session);
+-                            return Json(portal_action_error("drag", error, received));
++                            return portal_action_error("drag", error, received);
+                         }
+                     }
+                 }
+@@ -1498,12 +1530,8 @@
+                 Err(_) => {}
+             }
+         }
+-        let (input_guard, result) = run_cancellation_safe_input(input_guard, async move {
+-            run_ydotool_drag(params.start_x, params.start_y, params.end_x, params.end_y).await
+-        })
+-        .await;
+-        let _input_guard = input_guard;
+-        Json(action_result("drag", result, received))
++        let result = run_ydotool_drag(params.start_x, params.start_y, params.end_x, params.end_y).await;
++        action_result("drag", result, received)
+     }
+ 
+     #[tool(

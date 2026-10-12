@@ -1,0 +1,223 @@
+{
+  "version": "2.1.286",
+  "platform": "darwin-arm64",
+  "declarations": [
+    {
+      "file": "chunk-2nscfgw9.js",
+      "fileSha256": "5f2e79dc208fa1829ae1b7e8862ea500c7b40b8a9bb26b51b9706852f7f79f92",
+      "symbol": "qLt",
+      "start": 2016153,
+      "end": 2016249,
+      "source": "qLt={retries:0,overloaded:0,stalls:0,truncations:0,afterThinkingOnly:0,triedWithoutStreaming:!1}",
+      "sha256": "d85dd8ed3a4b7b2094f8917453062545749d2265bcb7209e34c0a41100e085b7"
+    },
+    {
+      "file": "chunk-2nscfgw9.js",
+      "fileSha256": "5f2e79dc208fa1829ae1b7e8862ea500c7b40b8a9bb26b51b9706852f7f79f92",
+      "symbol": "kMo",
+      "start": 2018623,
+      "end": 2018628,
+      "source": "kMo=2",
+      "sha256": "4fac18b3ee567b201a0b7f0869b8280f35d406cf1e334d5ee67973660ac356cc"
+    },
+    {
+      "file": "chunk-2nscfgw9.js",
+      "fileSha256": "5f2e79dc208fa1829ae1b7e8862ea500c7b40b8a9bb26b51b9706852f7f79f92",
+      "symbol": "Aq",
+      "start": 1996669,
+      "end": 1996673,
+      "source": "Aq=3",
+      "sha256": "71f6c638835d3780dd5e92582c7dddbaf974f57ea38eb6529a34ca657eec5b63"
+    },
+    {
+      "file": "chunk-2nscfgw9.js",
+      "fileSha256": "5f2e79dc208fa1829ae1b7e8862ea500c7b40b8a9bb26b51b9706852f7f79f92",
+      "symbol": "OPo",
+      "start": 1996638,
+      "end": 1996644,
+      "source": "OPo=10",
+      "sha256": "905ceca8024be2e7ade3bf8b3d56d58668a0910af558a99e97a18e24e03338af"
+    },
+    {
+      "file": "chunk-2nscfgw9.js",
+      "fileSha256": "5f2e79dc208fa1829ae1b7e8862ea500c7b40b8a9bb26b51b9706852f7f79f92",
+      "symbol": "DPo",
+      "start": 1996645,
+      "end": 1996652,
+      "source": "DPo=300",
+      "sha256": "3a70886d396c9b59571a6d90679f10f3f3cf85965364187bcc073bd5dbc071b8"
+    },
+    {
+      "file": "chunk-2nscfgw9.js",
+      "fileSha256": "5f2e79dc208fa1829ae1b7e8862ea500c7b40b8a9bb26b51b9706852f7f79f92",
+      "symbol": "OOe",
+      "start": 1996653,
+      "end": 1996659,
+      "source": "OOe=15",
+      "sha256": "ac12805ade966d9a6ba7b892909d85ffc5873e8182d621ad234ae4a308d85f68"
+    },
+    {
+      "file": "chunk-2nscfgw9.js",
+      "fileSha256": "5f2e79dc208fa1829ae1b7e8862ea500c7b40b8a9bb26b51b9706852f7f79f92",
+      "symbol": "v4",
+      "start": 1996798,
+      "end": 1996848,
+      "source": "function v4(){return a.CLAUDE_CODE_RETRY_WATCHDOG}",
+      "sha256": "c0c382d6959eb9c725d2456b9329ecb27bf0e39cf19552d7cc39f008a94a4009"
+    },
+    {
+      "file": "chunk-2nscfgw9.js",
+      "fileSha256": "5f2e79dc208fa1829ae1b7e8862ea500c7b40b8a9bb26b51b9706852f7f79f92",
+      "symbol": "qOe",
+      "start": 2015516,
+      "end": 2015751,
+      "source": "function qOe(){let e=v4(),n=a.CLAUDE_CODE_MAX_RETRIES;if(n!==void 0&&n>=0){if(n>OOe&&!e){if(wi().once(\"max_retries_clamp_warning\"))t(`CLAUDE_CODE_MAX_RETRIES=${n} clamped to ${OOe}`,{level:\"warn\"});return OOe}return n}return e?DPo:OPo}",
+      "sha256": "80c7403bb3dee18a47c562a21fc2aa534096b69acfd3ce52d14ddfaa90ad26bb"
+    },
+    {
+      "file": "chunk-2nscfgw9.js",
+      "fileSha256": "5f2e79dc208fa1829ae1b7e8862ea500c7b40b8a9bb26b51b9706852f7f79f92",
+      "symbol": "YOe",
+      "start": 2016266,
+      "end": 2016409,
+      "source": "function YOe(e,n,r,s){switch(e.kind){case\"noResponse\":return U0(n,r);case\"httpError\":return yMo(e,n,r);case\"streamFailed\":return _Mo(e,n,r,s)}}",
+      "sha256": "735a71b381e11dafb44d78ba16845b510380bd066adf26420c2d0a302a750e65"
+    },
+    {
+      "file": "chunk-2nscfgw9.js",
+      "fileSha256": "5f2e79dc208fa1829ae1b7e8862ea500c7b40b8a9bb26b51b9706852f7f79f92",
+      "symbol": "U0",
+      "start": 2018156,
+      "end": 2018287,
+      "source": "function U0(e,n,r={decision:\"fail\",counts:e}){return e.retries<n.maxRetries?{decision:\"retry\",counts:{...e,retries:e.retries+1}}:r}",
+      "sha256": "4f53f73fe50d3208dc9bb32df48e1438183b74c92a949f394ddd065ae4ecfb1b"
+    },
+    {
+      "file": "chunk-2nscfgw9.js",
+      "fileSha256": "5f2e79dc208fa1829ae1b7e8862ea500c7b40b8a9bb26b51b9706852f7f79f92",
+      "symbol": "yMo",
+      "start": 2016409,
+      "end": 2016767,
+      "source": "function yMo({status:e,fallbackModelCouldHelp:n},r,s){if(e===529)return KOe(r,s,void 0);if(e===429&&s.persistent)return{decision:\"retry\",counts:r};if(n&&s.hasFallbackModel)return{decision:\"useFallbackModel\",counts:r};if(e===408||e===409||e===429||e>=500)return U0(r,s);if(e===404&&!r.triedWithoutStreaming)return Rse(r,s,!0);return{decision:\"fail\",counts:r}}",
+      "sha256": "fb592d89cd6f07c25e0609e4fd969e8c84634b01adc8cf17139eb258080c78dd"
+    },
+    {
+      "file": "chunk-2nscfgw9.js",
+      "fileSha256": "5f2e79dc208fa1829ae1b7e8862ea500c7b40b8a9bb26b51b9706852f7f79f92",
+      "symbol": "_Mo",
+      "start": 2016767,
+      "end": 2017736,
+      "source": "function _Mo({cause:e,progress:n,stopReasonReceived:r},s,g,h){let b={decision:\"fail\",counts:s},w={decision:\"keepPartial\",counts:s},D=Rse(s,g,h);if(e===\"denied\")return b;if(n===\"output\")return e===\"badRequest\"||e===\"unknown\"?b:w;if(n===\"thinkingOnly\")switch(e){case\"stalled\":return r?w:Pq(\"stalls\",1,s,g,w);case\"connectionLost\":case\"truncated\":case\"malformed\":return r?w:Pq(\"afterThinkingOnly\",2,s,g,w);case\"serverError\":if(r)return b;if(g.hasFallbackModel&&!g.persistent)return{decision:\"useFallbackModel\",counts:s};return Pq(\"afterThinkingOnly\",2,s,g,b);case\"overloaded\":return r?b:KOe(s,g,h);case\"badRequest\":case\"unknown\":return b}switch(e){case\"overloaded\":return n===\"partialOutput\"?Rse({...s,overloaded:s.overloaded+1},g,h):KOe(s,g,h);case\"stalled\":return n===\"nothing\"?Pq(\"stalls\",1,s,g,D):D;case\"truncated\":return r?D:Pq(\"truncations\",1,s,g,D);case\"connectionLost\":return r?D:U0(s,g,D);case\"serverError\":case\"malformed\":case\"badRequest\":case\"unknown\":return D}}",
+      "sha256": "efe1cdba6cead804a93a3a5633d8107d93f9eec55613342787b26c9be447c092"
+    },
+    {
+      "file": "chunk-2nscfgw9.js",
+      "fileSha256": "5f2e79dc208fa1829ae1b7e8862ea500c7b40b8a9bb26b51b9706852f7f79f92",
+      "symbol": "KOe",
+      "start": 2017736,
+      "end": 2018156,
+      "source": "function KOe(e,n,r){let s={...e,overloaded:e.overloaded+1},g=r!==void 0,h=g?Rse(s,n,r):{decision:\"fail\",counts:s},b={decision:\"retry\",counts:s};if(n.background&&!n.persistent)return g&&n.hasFallbackModel?{decision:\"useFallbackModel\",counts:s}:h;if(s.overloaded<n.maxOverloaded)return n.persistent?b:U0(s,n,h);if(n.hasFallbackModel)return{decision:\"useFallbackModel\",counts:s};if(g)return h;return n.persistent?b:U0(s,n)}",
+      "sha256": "e0ee7dd1fa0b64291ca32103de78ea17749ac017d61c7739b6aa6e2c1027fc89"
+    },
+    {
+      "file": "chunk-2nscfgw9.js",
+      "fileSha256": "5f2e79dc208fa1829ae1b7e8862ea500c7b40b8a9bb26b51b9706852f7f79f92",
+      "symbol": "Pq",
+      "start": 2018287,
+      "end": 2018352,
+      "source": "function Pq(e,n,r,s,g){return r[e]<n?U0({...r,[e]:r[e]+1},s,g):g}",
+      "sha256": "a01e6eba5dc4215f6efea2bc676e25d83338f4a8c8f5ae9635557e638a1873a1"
+    },
+    {
+      "file": "chunk-2nscfgw9.js",
+      "fileSha256": "5f2e79dc208fa1829ae1b7e8862ea500c7b40b8a9bb26b51b9706852f7f79f92",
+      "symbol": "Rse",
+      "start": 2018352,
+      "end": 2018619,
+      "source": "function Rse(e,n,r){if(!r)return{decision:\"fail\",counts:e};if(e.triedWithoutStreaming&&e.retries>=n.maxRetries)return{decision:\"fail\",counts:e};return{decision:\"retryWithoutStreaming\",counts:{...e,retries:Math.min(e.retries+1,n.maxRetries),triedWithoutStreaming:!0}}}",
+      "sha256": "65742ae1d1d10a7d3a475e41749928968a61cee412b428d9042fe7eab8a4702a"
+    },
+    {
+      "file": "chunk-2nscfgw9.js",
+      "fileSha256": "5f2e79dc208fa1829ae1b7e8862ea500c7b40b8a9bb26b51b9706852f7f79f92",
+      "symbol": "SMo",
+      "start": 2020136,
+      "end": 2020407,
+      "source": "function SMo(e,n){if(e instanceof lu)return{kind:\"noResponse\"};let r=e instanceof Pt?e:e instanceof Error&&e.cause instanceof Pt?e.cause:void 0;if(r?.status===void 0||r.status===401||r.status===403)return;return{kind:\"httpError\",status:r.status,fallbackModelCouldHelp:n}}",
+      "sha256": "6667a635eef679c6a2b8c33c8517c2825b734d514ea89292f34882508e8e4b77"
+    },
+    {
+      "file": "chunk-2nscfgw9.js",
+      "fileSha256": "5f2e79dc208fa1829ae1b7e8862ea500c7b40b8a9bb26b51b9706852f7f79f92",
+      "symbol": "VLt",
+      "start": 2018629,
+      "end": 2020136,
+      "source": "function VLt(e,n){let r=R(\"tengu_attempt_decision_shadow\",!1),s=qLt,g=s,h=kMo,b=!1,w=!1,D=()=>n!==void 0&&n.count<=0;function B(he){return he===\"keepPartial\"||!D()?he:\"fail\"}function W(he,_e){if(w)return;try{let ke=SMo(he,_e);if(ke===void 0)return;let be=YOe(ke,s,e,!0);return s=be.counts,{failure:ke,decision:be.decision}}catch(ke){d(ke);return}}function K(he,_e){if(he===void 0||he.decision===_e||b||!r)return;b=!0,i(\"tengu_attempt_decision_mismatch\",{end:c(he.failure.kind),status:he.failure.kind===\"httpError\"?he.failure.status:void 0,decided:c(he.decision),did:c(_e),spent:s.retries,limit:e.maxRetries})}return{onStreamFailed(he,_e){g=s;let ke;try{let be=YOe(he,s,e,_e);s=be.counts,ke=be.decision}catch(be){d(be),ke=he.progress===\"thinkingOnly\"||he.progress===\"output\"?\"keepPartial\":_e?\"retryWithoutStreaming\":\"fail\"}return ke=B(ke),w=ke===\"fail\"||ke===\"useFallbackModel\",ke},undoLastCount(){s=g,w=!1},counts:()=>s,retriesLeft:()=>Math.max(0,e.maxRetries-s.retries),takeCredentialRenewal(){if(h<=0)return!1;return h--,!0},takeApiAttempt(){if(n===void 0)return!0;if(n.count<=0)return!1;return n.count--,!0},outOfApiAttempts:D,onWithRetryGaveUp(he){if(D())return\"fail\";let _e=W(he,!1),ke=_e?.decision===\"retryWithoutStreaming\"?\"retryWithoutStreaming\":\"fail\";return K(_e,ke),ke},reportHttpFailure(he,_e,ke){let{triedWithoutStreaming:be}=s,Ee=W(he,ke?.fallbackModelCouldHelp??!1);if(s={...s,triedWithoutStreaming:be},Ee===void 0&&_e===\"retry\")s={...s,retries:Math.min(s.retries+1,e.maxRetries)};K(Ee,_e)}}}",
+      "sha256": "6ebb984fc06f1af82f5221e4016e36bc1aa3088b777ad421cebdf62afceeaec5"
+    },
+    {
+      "file": "chunk-2nscfgw9.js",
+      "fileSha256": "5f2e79dc208fa1829ae1b7e8862ea500c7b40b8a9bb26b51b9706852f7f79f92",
+      "symbol": "QLt",
+      "start": 2020407,
+      "end": 2020780,
+      "source": "function QLt(e){let n=e.anyBlockFinished?e.anyOutputShown?\"output\":\"thinkingOnly\":e.anyOutputShown?\"partialOutput\":e.anyEvent?\"started\":\"nothing\",r=bMo(e);if(e.complete){if(r===\"connectionLost\"||r===\"truncated\"||r===\"stalled\"||(r===\"overloaded\"||r===\"serverError\")&&n===\"output\")return}return{kind:\"streamFailed\",cause:r,progress:n,stopReasonReceived:e.stopReasonReceived}}",
+      "sha256": "6291e325f4a5cb24d6d8248c75dbdd9985f6d51985640dc67638fb023a0d48fd"
+    },
+    {
+      "file": "chunk-2nscfgw9.js",
+      "fileSha256": "5f2e79dc208fa1829ae1b7e8862ea500c7b40b8a9bb26b51b9706852f7f79f92",
+      "symbol": "bMo",
+      "start": 2020780,
+      "end": 2021133,
+      "source": "function bMo(e){if(e.denied)return\"denied\";if(O1(e.error))return\"overloaded\";if(e.isServerError)return\"serverError\";if(e.stalled)return\"stalled\";if(e.isConnectionError)return e.truncated?\"truncated\":\"connectionLost\";if(e.malformed)return\"malformed\";return e.error instanceof Pt&&!(e.error instanceof lu)&&!(e.error instanceof dd)?\"badRequest\":\"unknown\"}",
+      "sha256": "0c9794f3384a4c9058ac0647ec97bea9444a2d7b5098e262852f85e171e0d798"
+    },
+    {
+      "file": "chunk-2nscfgw9.js",
+      "fileSha256": "5f2e79dc208fa1829ae1b7e8862ea500c7b40b8a9bb26b51b9706852f7f79f92",
+      "symbol": "gZ",
+      "start": 1072384,
+      "end": 1072462,
+      "source": "class gZ extends Error{constructor(){super(\"Not sent: no API attempts left\")}}",
+      "sha256": "53fbf7732e75279162f067dd903496f622127eaf36b41e2cd5ce89fd6bc5f6f0"
+    },
+    {
+      "file": "chunk-majxx0zh.js",
+      "fileSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+      "symbol": "Sjr",
+      "start": 245350,
+      "end": 245598,
+      "source": "Sjr={repl_main_thread:!0,\"repl_main_thread:outputStyle:custom\":!0,\"repl_main_thread:outputStyle:Concise\":!0,\"repl_main_thread:outputStyle:Proactive\":!0,\"repl_main_thread:outputStyle:Explanatory\":!0,\"repl_main_thread:outputStyle:Learning\":!0,sdk:!0}",
+      "sha256": "ef681d46473d555ed7e12bfeac383353352fc70361a8384b66f4689c63f14a4b"
+    },
+    {
+      "file": "chunk-majxx0zh.js",
+      "fileSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+      "symbol": "Xh",
+      "start": 245599,
+      "end": 245901,
+      "source": "Xh=new Set([...Object.keys(Sjr),\"agent:custom\",\"agent:default\",\"agent:builtin\",\"compact\",\"hook_agent\",\"hook_prompt\",\"side_question\",\"web_search_tool\",\"web_fetch_apply\",\"repl_sampling\",\"auto_mode\",\"compact_fab_check\",\"auto_mode_critique\",\"auto_mode_setup_propose\",\"chrome_mcp\",\"artifact_comment_reply\"])",
+      "sha256": "1ee788f175917fc21649c8702a8e913ab731fe3096f1a5f7abdef1857bb01196"
+    },
+    {
+      "file": "chunk-majxx0zh.js",
+      "fileSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+      "symbol": "Ode",
+      "start": 245902,
+      "end": 245993,
+      "source": "function Ode(e){if(e===void 0)return!0;if(e.startsWith(\"agent:\"))return!0;return Xh.has(e)}",
+      "sha256": "70273d6d6c7e773f215edc239e56a5c5c01117fc16da4e727f4ccc40d063488c"
+    },
+    {
+      "file": "chunk-x5pmvzy7.js",
+      "fileSha256": "e2619b0ede36954507fde08f39a28a9050eadc627fad4e9c39e4746c0e139b95",
+      "symbol": "O1",
+      "start": 12233,
+      "end": 12357,
+      "source": "function O1(e){if(!(e instanceof Pt))return!1;return e.status===529||(e.message?.includes('\"type\":\"overloaded_error\"')??!1)}",
+      "sha256": "bc4644157fa54807d3bd96beb4f00352b2f7736c08eae1fccc8f04b39c0ee648"
+    }
+  ],
+  "bodyRewrites": []
+}

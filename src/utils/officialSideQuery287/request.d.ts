@@ -1,0 +1,1 @@
+export declare function createSideQueryRequest287(ports:Record<string,any>):{t2(options:import('../sideQuery.js').SideQueryOptions):Promise<import('@anthropic-ai/sdk/resources/beta/messages.js').BetaMessage>};

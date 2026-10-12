@@ -1,0 +1,6 @@
+// Complete fixed official287 terminal notification hook.
+export function createTerminalNotification287({ke,ce,Q,zW,ox,$h,zm,dW,bze,Jpt,Qpt}){
+function m(r){let n="";for(let o=0;o<r.length;o++){let u=r.charCodeAt(o);n+=u<32||u>=127&&u<=159?" ":r[o]}return n};
+function dP(){let r=ke(zW);if(!r)throw Error("useTerminalNotification must be used within TerminalWriteProvider");let n=ce(({message:s,title:d})=>{let c=d?`${d}: ${s}`:s;r(ox($h(zm.ITERM2,m(c))))},[r]),o=ce(({message:s,title:d,id:c})=>{r(ox($h(zm.KITTY,`i=${c}:d=0:p=title`,m(d)))),r(ox($h(zm.KITTY,`i=${c}:p=body`,m(s)))),r(ox($h(zm.KITTY,`i=${c}:d=1:a=focus`,"")))},[r]),u=ce(({message:s,title:d})=>{r(ox($h(zm.GHOSTTY,"notify",m(d),m(s))))},[r]),i=ce(()=>{r(dW)},[r]),p=ce((s,d)=>{if(!bze())return;if(!s){r(ox($h(zm.ITERM2,Jpt.PROGRESS,Qpt.CLEAR,"")));return}let c=Math.max(0,Math.min(100,Math.round(d??0)));switch(s){case"completed":r(ox($h(zm.ITERM2,Jpt.PROGRESS,Qpt.CLEAR,"")));break;case"error":r(ox($h(zm.ITERM2,Jpt.PROGRESS,Qpt.ERROR,c)));break;case"indeterminate":r(ox($h(zm.ITERM2,Jpt.PROGRESS,Qpt.INDETERMINATE,"")));break;case"running":r(ox($h(zm.ITERM2,Jpt.PROGRESS,Qpt.SET,c)));break;case null:break}},[r]);return Q(()=>({notifyITerm2:n,notifyKitty:o,notifyGhostty:u,notifyBell:i,progress:p}),[n,o,u,i,p])};
+return dP;
+}

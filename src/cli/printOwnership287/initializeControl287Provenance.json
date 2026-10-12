@@ -1,0 +1,1295 @@
+{
+  "version": "2.1.287",
+  "platform": "darwin-arm64",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "rangeConvention": "UTF-16 end-exclusive",
+  "roots": {
+    "initialize": [
+      "chunk-xapeakym.js",
+      "RI"
+    ],
+    "buildResponse": [
+      "chunk-xapeakym.js",
+      "Cp"
+    ],
+    "seatAgent": [
+      "chunk-xapeakym.js",
+      "Ww"
+    ],
+    "isSingleEmptyPrompt": [
+      "chunk-xapeakym.js",
+      "qw"
+    ]
+  },
+  "rows": [
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "RI",
+      "start": 541630,
+      "end": 545419,
+      "sha256": "2cd95dd2d2a4b230cca8ec8189c81dea1a1d4815f9207a4edd4c0c8e32febae5",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "source": "async function RI(e,r,n,s,g,w,h,M,v,R,U,H,I,de,z){let he;if(n){let _e=vk(e,h),Ne=0;if(_e)Ne=h.retireSdkHostHookCallbacks(Sk),Ym(_e,(Sr,Ar)=>h.createHookCallback(Sr,Ar));let et=e.promptSuggestions===!0,bt=et&&!v.promptSuggestions&&k(\"tengu_gleaming_rivest\",!1);if(bt)v.promptSuggestions=!0;let Xt=z();if(Xt!==void 0)await Xt;let dr=w(),ir=await Cp(g,s2(R()),dr.models,dr.unavailable,U,I(),()=>h.sessionState.getState(),e.hooks?_e!==void 0:void 0,Mar(e.plugins),void 0,de,v.storageV5,h.isRemoteTransport()),qe=h.getPendingPermissionRequests(),Ur=h.getPendingUserDialogRequests();return i(\"tengu_reinit_pending_redelivery\",{n_pending_permissions:Er(qe.length),n_pending_dialogs:Er(Ur.length),host_hooks_resent:e.hooks!==void 0,host_hooks_applied:_e!==void 0,n_settled_hook_callbacks:Er(Ne),prompt_suggestions_requested:et,prompt_suggestions_opt_in_applied:bt}),s.enqueue({type:\"control_response\",response:{subtype:\"success\",request_id:r,response:ir,pending_permission_requests:qe,pending_user_dialog_requests:Ur}}),ovt(U()),{publishedCommands:ir.commands}}if(e.systemPrompt!==void 0)v.systemPrompt=qw(e.systemPrompt)?\"\":e.systemPrompt;if(e.supportedDialogKinds!==void 0)__(e.supportedDialogKinds,Bw(a.CLAUDE_CODE_WORKER_EPOCH),h.sessionState);if(e.perTaskStopAffordance===!0)LZr(!0);if(e.rapidFollowupPreempt===!0)NZr(!0);if(e.appendSystemPrompt!==void 0)v.appendSystemPrompt=e.appendSystemPrompt;if(e.planModeInstructions!==void 0)v.planModeInstructions=e.planModeInstructions;if(typeof e.systemPromptSnapshot===\"boolean\")v.systemPromptSnapshot=e.systemPromptSnapshot;if(e.appendSubagentSystemPrompt!==void 0)v.appendSubagentSystemPrompt=e.appendSubagentSystemPrompt;if(e.toolAliases!==void 0)v.toolAliases=e.toolAliases,H((_e)=>({..._e,toolPermissionContext:{..._e.toolPermissionContext,toolAliases:e.toolAliases}}));if(typeof e.excludeDynamicSections===\"boolean\")v.excludeDynamicSections=e.excludeDynamicSections,zA(h.sessionState,e.excludeDynamicSections);if(e.promptSuggestions!==void 0)v.promptSuggestions=e.promptSuggestions;if(e.forwardSubagentText!==void 0)v.forwardSubagentText=e.forwardSubagentText;if(e.skills!==void 0)Yto(e.skills);let ge;if(e.agents)ge=qlt(e.agents,\"flagSettings\");let fe=()=>s2(ge?[...R(),...ge]:R());if(v.agent){let _e=CT(),Ne=!_e&&Fwt()!==\"none\",et=Ww(fe(),v,h,{deferInitialPrompt:_e});if(he=et.restrictedAgentModel,!et.seatedNow&&et.agent?.initialPrompt&&!_e&&!Ne)h.prependUserMessage(et.agent.initialPrompt)}if(e.hooks)Ym(e.hooks,(_e,Ne)=>h.createHookCallback(_e,Ne));if(e.jsonSchema)Ito(e.jsonSchema);if(CT()&&e.workspaceTrust!==void 0)t(\"initialize: workspaceTrust ignored on a parked spare (--await-claim) \\u2014 send workspace_trust with claim_session\",{level:\"warn\"});let Se=await fp(h.hostOwnsStdinOrigin&&!CT()?e.workspaceTrust:void 0,{cwd:oe(),trustedNetworkDirectories:U().toolPermissionContext.trustedNetworkDirectories,storageV5:v.storageV5}),Pe=z();if(Pe!==void 0)await Pe;let Q=w(),Te=await Cp(g,fe(),Q.models,Q.unavailable,U,I(),()=>h.sessionState.getState(),e.hooks?!0:void 0,Mar(e.plugins),Se,de,v.storageV5,h.isRemoteTransport());s.enqueue({type:\"control_response\",response:{subtype:\"success\",request_id:r,response:Te,pending_permission_requests:h.getPendingPermissionRequests(),pending_user_dialog_requests:h.getPendingUserDialogRequests()}});let Ue=U().mcp;if(i(\"tengu_sdk_init_handshake\",{uptime_ms:Math.round(process.uptime()*1000),mcp_client_count:Ue.clients.length,mcp_pending_count:G(Ue.clients,(_e)=>_e.type===\"pending\"),mcpNonBlocking:aee(),session_mirror:!!v.sessionMirror}),M){let Ne=yj.getInstance().getStatus();if(Ne)s.enqueue({type:\"auth_status\",isAuthenticating:Ne.isAuthenticating,output:Ne.output,error:Ne.error,uuid:eo(),session_id:q()})}return{restrictedAgentModel:he,mergedStdinAgents:ge,publishedCommands:Te.commands}}",
+      "variable": false
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Cp",
+      "start": 545419,
+      "end": 547045,
+      "sha256": "98c9fa454d2614e8589cae2c0586f3f68f509e339a16c2571785163a0173c966",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "source": "async function Cp(e,r,n,s,g,w,h,M,v,R,U,H,I){let z=er()?.outputStyle||SP,he=await u1(oe(),H),ge=Ube(),fe=g().toolPermissionContext.mode,Se=oE()&&Zyn()?ucr(g().toolPermissionContext,{requireOnboarding:!1}):null,Pe={commands:yq(e()),agents:r.map((Ne)=>({name:Ne.agentType,description:Ne.whenToUse,model:Ne.model})),output_style:z,available_output_styles:Object.keys(he),user_output_styles_dir:Mko(),models:n,...s.length>0&&{unavailable_models:s},account:{email:ge?.email,organization:ge?.organization,subscriptionType:ge?.subscription,tokenSource:ge?.tokenSource,apiKeySource:ge?.apiKeySource,apiProvider:He()},pid:process.pid,current_permission_mode:Ic(fe),...I&&MF()&&dYe()&&{inbound_read_receipts:!0},hooks_applied:M,plugins_applied:v,workspace_trust_recorded:R,sdk_mcp_manifests_parked:U,...oE()&&{permission_mode_from_default_fallback:Ij()&&fe===\"auto\",...Se&&{auto_default_nudge:Ic(Se)}},feedback_survey_config:Hk(),feedback_mode:hso(),analytics_disabled:Ch(),proactivity:dl(g()),footer_indicator:wxn()},Q=x2e(),Te=!R0()&&(Q??uYe());if(Pe.remote_control_auto_enable=Te,Pe.remote_control_auto_connect_default=!R0()&&uYe(),Pe.remote_control_available=aBr(),oE())Pe.claude_in_chrome_at_startup=await import(\"/$bunfs/root/chunk-9pwdyydg.js\").then(({claudeInChromeDefaultForHost:Ne})=>Ne(),(Ne)=>(d(Ne),!1));Pe.remote_control_auto_on_by_default=Te&&Q===void 0,Pe.ide_rc_auto_enable_gate=k(\"tengu_ide_rc_auto_enable\",!1);let Ue=g();Pe.fast_mode_state=F3(w??null,Ue.fastMode),Pe.fast_mode_disabled_reason=SF(w??null)??N3(w??null,Ue.fastMode)??void 0,Pe.session_state=h();let _e=TRn(I);if(_e.length>0)Pe.capabilities=_e;return Pe}",
+      "variable": false
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Ww",
+      "start": 540959,
+      "end": 541630,
+      "sha256": "779d28f51890d39444e51b0c0281e06f3451b9e8e271065d9419742f97970fc1",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "source": "function Ww(e,r,n,{deferInitialPrompt:s=!1,reapplySystemPromptIfSeated:g=!1}={}){if(!r.agent)return{agent:void 0,seatedNow:!1,restrictedAgentModel:void 0};let w=dC()===r.agent,h=T6(e,r.agent);if(!h||w){if(h&&g&&!r.systemPrompt&&!Sl(h)){let v=h.getSystemPrompt();if(v)r.systemPrompt=v}return{agent:h,seatedNow:!1,restrictedAgentModel:void 0}}let M;if(uee(h.agentType),xHe(h),!r.systemPrompt&&!Sl(h)){let v=h.getSystemPrompt();if(v)r.systemPrompt=v}if(!r.userSpecifiedModel&&h.model&&h.model!==\"inherit\"){let v=Rt(h.model);if(Iy(v)||$r(v))Jp(v);else M=h.model}if(h.initialPrompt&&!s)n.prependUserMessage(h.initialPrompt);return{agent:h,seatedNow:!0,restrictedAgentModel:M}}",
+      "variable": false
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "qw",
+      "start": 540895,
+      "end": 540959,
+      "sha256": "46d786f70a58b5b93e212826ac75371e3add3f582bc3f12114acf7cf70ffc61b",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "source": "function qw(e){return Array.isArray(e)&&e.length===1&&e[0]===\"\"}",
+      "variable": false
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Bg",
+      "start": 48268,
+      "end": 48437,
+      "sha256": "948f5a1e5dc217b033b573d95acf9f06099d73c89124214d048cc55fb0f0a025",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "source": "function Bg(e){try{let r=iV()??e.rescan();return r!==void 0&&gP()?hP(r,e).catch(d):void 0}catch(r){t(\"initialize: the reply does not wait\",{level:\"error\"}),d(r);return}}",
+      "variable": false
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Dy",
+      "start": 148747,
+      "end": 149961,
+      "sha256": "4e274ea9998ecbf95c48a848522d40971f1498a9787f85d497d05a236bf981fd",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "source": "function Dy({session:e,storageV5:r,messages:n,appendToConversation:s,enqueue:g,isLaunchModelPick:w}){function h(I){try{return pso({messages:n(),queriedInProcess:e.requestJournal.mainThreadRequestedInProcess(),activeModel:I})}catch(de){d(de);return}}function M(I,de){if(ITe(e.precompute,void 0,\"model_switch\",void 0,r),w?.())return;let z=HPo(I,UH(de));if(s(z),a.CLAUDE_CODE_REMOTE){let he=UH(de);s([Re({content:`<system-reminder>The model for this session has been changed to ${he}. You are now running as ${he}.</system-reminder>`,isMeta:!0})])}for(let he of z)if(typeof he.message.content===\"string\"&&he.message.content.includes(`<${id}>`))g({type:\"user\",message:he.message,session_id:q(),parent_tool_use_id:null,uuid:he.uuid,timestamp:he.timestamp,isReplay:!0})}let v;function R(I,de){if(I===v)return;v=I;let z=Nt(tS(I,de??rt()),\"warning\");s([z]),g({...z,session_id:q()})}function U(){v=void 0}function H({defaultPickRefused:I,model:de,rejected:z,stepDown:he,effectiveModel:ge}){if(I)R(El(),ge());else if(de==null)U();else if(z)R(de,ge());else if(he!==null)R(de,he);else U()}return{conversationModel:h,injectModelSwitchBreadcrumbs:M,noticeRestrictedModel:R,recordAllowedModelApplied:U,noticeFlagSettingsModel:H}}",
+      "variable": false
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Ci",
+      "start": 389879,
+      "end": 389968,
+      "sha256": "78189d435ca78247bb6eda73274781b0867842d3e2d4e58c4be89bdcea6bb67d",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "source": "Ci=()=>{let b=s_e();return{models:Z7(b.filter((D)=>!D.disabled)),unavailable:Z7(mMr(b))}}",
+      "variable": true
+    }
+  ],
+  "edges": [
+    {
+      "from": "chunk-xapeakym.js:RI",
+      "lexical": "vk",
+      "to": "chunk-xapeakym.js:vk"
+    },
+    {
+      "from": "chunk-xapeakym.js:RI",
+      "lexical": "Sk",
+      "to": "chunk-xapeakym.js:Sk"
+    },
+    {
+      "from": "chunk-xapeakym.js:RI",
+      "lexical": "Ym",
+      "to": "chunk-xapeakym.js:Ym"
+    },
+    {
+      "from": "chunk-xapeakym.js:RI",
+      "lexical": "k",
+      "to": "chunk-nankzm0s.js:k"
+    },
+    {
+      "from": "chunk-xapeakym.js:RI",
+      "lexical": "s2",
+      "to": "chunk-mphp7acd.js:s2"
+    },
+    {
+      "from": "chunk-xapeakym.js:RI",
+      "lexical": "Mar",
+      "to": "chunk-dgp2yyqt.js:Mar"
+    },
+    {
+      "from": "chunk-xapeakym.js:RI",
+      "lexical": "i",
+      "to": "chunk-6hnyhakg.js:i"
+    },
+    {
+      "from": "chunk-xapeakym.js:RI",
+      "lexical": "Er",
+      "to": "chunk-n4qghq20.js:Er"
+    },
+    {
+      "from": "chunk-xapeakym.js:RI",
+      "lexical": "ovt",
+      "to": "chunk-jy72vtns.js:ovt"
+    },
+    {
+      "from": "chunk-xapeakym.js:RI",
+      "lexical": "__",
+      "to": "chunk-xapeakym.js:__"
+    },
+    {
+      "from": "chunk-xapeakym.js:RI",
+      "lexical": "Bw",
+      "to": "chunk-xapeakym.js:Bw"
+    },
+    {
+      "from": "chunk-xapeakym.js:RI",
+      "lexical": "a",
+      "to": "chunk-mbfze585.js:a"
+    },
+    {
+      "from": "chunk-xapeakym.js:RI",
+      "lexical": "LZr",
+      "to": "chunk-bn3p37gv.js:LZr"
+    },
+    {
+      "from": "chunk-xapeakym.js:RI",
+      "lexical": "NZr",
+      "to": "chunk-bn3p37gv.js:NZr"
+    },
+    {
+      "from": "chunk-xapeakym.js:RI",
+      "lexical": "zA",
+      "to": "chunk-xapeakym.js:zA"
+    },
+    {
+      "from": "chunk-xapeakym.js:RI",
+      "lexical": "Yto",
+      "to": "chunk-bn3p37gv.js:Yto"
+    },
+    {
+      "from": "chunk-xapeakym.js:RI",
+      "lexical": "qlt",
+      "to": "chunk-mphp7acd.js:qlt"
+    },
+    {
+      "from": "chunk-xapeakym.js:RI",
+      "lexical": "CT",
+      "to": "chunk-bn3p37gv.js:CT"
+    },
+    {
+      "from": "chunk-xapeakym.js:RI",
+      "lexical": "Fwt",
+      "to": "chunk-bn3p37gv.js:Fwt"
+    },
+    {
+      "from": "chunk-xapeakym.js:RI",
+      "lexical": "Ito",
+      "to": "chunk-bn3p37gv.js:Ito"
+    },
+    {
+      "from": "chunk-xapeakym.js:RI",
+      "lexical": "t",
+      "to": "chunk-q80zaav8.js:t"
+    },
+    {
+      "from": "chunk-xapeakym.js:RI",
+      "lexical": "fp",
+      "to": "chunk-xapeakym.js:fp"
+    },
+    {
+      "from": "chunk-xapeakym.js:RI",
+      "lexical": "oe",
+      "to": "chunk-s354e3rr.js:oe"
+    },
+    {
+      "from": "chunk-xapeakym.js:RI",
+      "lexical": "G",
+      "to": "chunk-h3rrxdgy.js:G"
+    },
+    {
+      "from": "chunk-xapeakym.js:RI",
+      "lexical": "aee",
+      "to": "chunk-bn3p37gv.js:aee"
+    },
+    {
+      "from": "chunk-xapeakym.js:RI",
+      "lexical": "yj",
+      "to": "chunk-nankzm0s.js:yj"
+    },
+    {
+      "from": "chunk-xapeakym.js:RI",
+      "lexical": "q",
+      "to": "chunk-bn3p37gv.js:q"
+    },
+    {
+      "from": "chunk-xapeakym.js:Cp",
+      "lexical": "er",
+      "to": "chunk-f1vb7bx7.js:er"
+    },
+    {
+      "from": "chunk-xapeakym.js:Cp",
+      "lexical": "SP",
+      "to": "chunk-mphp7acd.js:SP"
+    },
+    {
+      "from": "chunk-xapeakym.js:Cp",
+      "lexical": "u1",
+      "to": "chunk-mphp7acd.js:u1"
+    },
+    {
+      "from": "chunk-xapeakym.js:Cp",
+      "lexical": "oe",
+      "to": "chunk-s354e3rr.js:oe"
+    },
+    {
+      "from": "chunk-xapeakym.js:Cp",
+      "lexical": "Ube",
+      "to": "chunk-nankzm0s.js:Ube"
+    },
+    {
+      "from": "chunk-xapeakym.js:Cp",
+      "lexical": "oE",
+      "to": "chunk-0a47xg8f.js:oE"
+    },
+    {
+      "from": "chunk-xapeakym.js:Cp",
+      "lexical": "Zyn",
+      "to": "chunk-5rsp1jx3.js:Zyn"
+    },
+    {
+      "from": "chunk-xapeakym.js:Cp",
+      "lexical": "ucr",
+      "to": "chunk-ce86av7y.js:ucr"
+    },
+    {
+      "from": "chunk-xapeakym.js:Cp",
+      "lexical": "yq",
+      "to": "chunk-mphp7acd.js:yq"
+    },
+    {
+      "from": "chunk-xapeakym.js:Cp",
+      "lexical": "Mko",
+      "to": "chunk-mphp7acd.js:Mko"
+    },
+    {
+      "from": "chunk-xapeakym.js:Cp",
+      "lexical": "He",
+      "to": "chunk-wz6xag6e.js:He"
+    },
+    {
+      "from": "chunk-xapeakym.js:Cp",
+      "lexical": "Ic",
+      "to": "chunk-hrhfcbdv.js:Ic"
+    },
+    {
+      "from": "chunk-xapeakym.js:Cp",
+      "lexical": "MF",
+      "to": "chunk-xep95vq1.js:MF"
+    },
+    {
+      "from": "chunk-xapeakym.js:Cp",
+      "lexical": "dYe",
+      "to": "chunk-cwq90agc.js:dYe"
+    },
+    {
+      "from": "chunk-xapeakym.js:Cp",
+      "lexical": "Ij",
+      "to": "chunk-xep95vq1.js:Ij"
+    },
+    {
+      "from": "chunk-xapeakym.js:Cp",
+      "lexical": "Hk",
+      "to": "chunk-xapeakym.js:Hk"
+    },
+    {
+      "from": "chunk-xapeakym.js:Cp",
+      "lexical": "hso",
+      "to": "chunk-tf63hv0k.js:hso"
+    },
+    {
+      "from": "chunk-xapeakym.js:Cp",
+      "lexical": "Ch",
+      "to": "chunk-3pvpzycx.js:Ch"
+    },
+    {
+      "from": "chunk-xapeakym.js:Cp",
+      "lexical": "dl",
+      "to": "chunk-xapeakym.js:dl"
+    },
+    {
+      "from": "chunk-xapeakym.js:Cp",
+      "lexical": "wxn",
+      "to": "chunk-904yhcr0.js:wxn"
+    },
+    {
+      "from": "chunk-xapeakym.js:Cp",
+      "lexical": "x2e",
+      "to": "chunk-nankzm0s.js:x2e"
+    },
+    {
+      "from": "chunk-xapeakym.js:Cp",
+      "lexical": "R0",
+      "to": "chunk-cwq90agc.js:R0"
+    },
+    {
+      "from": "chunk-xapeakym.js:Cp",
+      "lexical": "uYe",
+      "to": "chunk-cwq90agc.js:uYe"
+    },
+    {
+      "from": "chunk-xapeakym.js:Cp",
+      "lexical": "aBr",
+      "to": "chunk-cwq90agc.js:aBr"
+    },
+    {
+      "from": "chunk-xapeakym.js:Cp",
+      "lexical": "d",
+      "to": "chunk-amhtwhch.js:d"
+    },
+    {
+      "from": "chunk-xapeakym.js:Cp",
+      "lexical": "k",
+      "to": "chunk-nankzm0s.js:k"
+    },
+    {
+      "from": "chunk-xapeakym.js:Cp",
+      "lexical": "F3",
+      "to": "chunk-nankzm0s.js:F3"
+    },
+    {
+      "from": "chunk-xapeakym.js:Cp",
+      "lexical": "SF",
+      "to": "chunk-nankzm0s.js:SF"
+    },
+    {
+      "from": "chunk-xapeakym.js:Cp",
+      "lexical": "N3",
+      "to": "chunk-nankzm0s.js:N3"
+    },
+    {
+      "from": "chunk-xapeakym.js:Cp",
+      "lexical": "TRn",
+      "to": "chunk-64z3xwk8.js:TRn"
+    },
+    {
+      "from": "chunk-xapeakym.js:Ww",
+      "lexical": "dC",
+      "to": "chunk-bn3p37gv.js:dC"
+    },
+    {
+      "from": "chunk-xapeakym.js:Ww",
+      "lexical": "T6",
+      "to": "chunk-mphp7acd.js:T6"
+    },
+    {
+      "from": "chunk-xapeakym.js:Ww",
+      "lexical": "Sl",
+      "to": "chunk-mphp7acd.js:Sl"
+    },
+    {
+      "from": "chunk-xapeakym.js:Ww",
+      "lexical": "uee",
+      "to": "chunk-bn3p37gv.js:uee"
+    },
+    {
+      "from": "chunk-xapeakym.js:Ww",
+      "lexical": "xHe",
+      "to": "chunk-8tppeqgy.js:xHe"
+    },
+    {
+      "from": "chunk-xapeakym.js:Ww",
+      "lexical": "Rt",
+      "to": "chunk-nankzm0s.js:Rt"
+    },
+    {
+      "from": "chunk-xapeakym.js:Ww",
+      "lexical": "Iy",
+      "to": "chunk-nankzm0s.js:Iy"
+    },
+    {
+      "from": "chunk-xapeakym.js:Ww",
+      "lexical": "$r",
+      "to": "chunk-nankzm0s.js:$r"
+    },
+    {
+      "from": "chunk-xapeakym.js:Ww",
+      "lexical": "Jp",
+      "to": "chunk-bn3p37gv.js:Jp"
+    },
+    {
+      "from": "chunk-xapeakym.js:Bg",
+      "lexical": "iV",
+      "to": "chunk-w8a1w7ad.js:iV"
+    },
+    {
+      "from": "chunk-xapeakym.js:Bg",
+      "lexical": "gP",
+      "to": "chunk-xapeakym.js:gP"
+    },
+    {
+      "from": "chunk-xapeakym.js:Bg",
+      "lexical": "hP",
+      "to": "chunk-xapeakym.js:hP"
+    },
+    {
+      "from": "chunk-xapeakym.js:Bg",
+      "lexical": "d",
+      "to": "chunk-amhtwhch.js:d"
+    },
+    {
+      "from": "chunk-xapeakym.js:Bg",
+      "lexical": "t",
+      "to": "chunk-q80zaav8.js:t"
+    },
+    {
+      "from": "chunk-xapeakym.js:Dy",
+      "lexical": "pso",
+      "to": "chunk-n2zepamy.js:pso"
+    },
+    {
+      "from": "chunk-xapeakym.js:Dy",
+      "lexical": "d",
+      "to": "chunk-amhtwhch.js:d"
+    },
+    {
+      "from": "chunk-xapeakym.js:Dy",
+      "lexical": "ITe",
+      "to": "chunk-mphp7acd.js:ITe"
+    },
+    {
+      "from": "chunk-xapeakym.js:Dy",
+      "lexical": "HPo",
+      "to": "chunk-mphp7acd.js:HPo"
+    },
+    {
+      "from": "chunk-xapeakym.js:Dy",
+      "lexical": "UH",
+      "to": "chunk-nankzm0s.js:UH"
+    },
+    {
+      "from": "chunk-xapeakym.js:Dy",
+      "lexical": "a",
+      "to": "chunk-mbfze585.js:a"
+    },
+    {
+      "from": "chunk-xapeakym.js:Dy",
+      "lexical": "Re",
+      "to": "chunk-mphp7acd.js:Re"
+    },
+    {
+      "from": "chunk-xapeakym.js:Dy",
+      "lexical": "id",
+      "to": "chunk-amhtwhch.js:id"
+    },
+    {
+      "from": "chunk-xapeakym.js:Dy",
+      "lexical": "q",
+      "to": "chunk-bn3p37gv.js:q"
+    },
+    {
+      "from": "chunk-xapeakym.js:Dy",
+      "lexical": "Nt",
+      "to": "chunk-mphp7acd.js:Nt"
+    },
+    {
+      "from": "chunk-xapeakym.js:Dy",
+      "lexical": "tS",
+      "to": "chunk-nankzm0s.js:tS"
+    },
+    {
+      "from": "chunk-xapeakym.js:Dy",
+      "lexical": "rt",
+      "to": "chunk-nankzm0s.js:rt"
+    },
+    {
+      "from": "chunk-xapeakym.js:Dy",
+      "lexical": "El",
+      "to": "chunk-nankzm0s.js:El"
+    },
+    {
+      "from": "chunk-xapeakym.js:Ci",
+      "lexical": "s_e",
+      "to": "chunk-09m4fzsj.js:s_e"
+    },
+    {
+      "from": "chunk-xapeakym.js:Ci",
+      "lexical": "Z7",
+      "to": "chunk-09m4fzsj.js:Z7"
+    },
+    {
+      "from": "chunk-xapeakym.js:Ci",
+      "lexical": "mMr",
+      "to": "chunk-09m4fzsj.js:mMr"
+    }
+  ],
+  "bindings": {
+    "vk": {
+      "file": "chunk-xapeakym.js",
+      "name": "vk",
+      "start": 291275,
+      "end": 291336,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "88578085c544a0f80c55f77a228e02df5a4d7fb892a063ae2ec1e5ef421d7e3e",
+      "canonicalPresent": true
+    },
+    "Sk": {
+      "file": "chunk-xapeakym.js",
+      "name": "Sk",
+      "start": 290099,
+      "end": 290702,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "bff66f9c518c20f64911e510211bd46cf4452c231dff793170f7db2f2049d06f",
+      "canonicalPresent": true
+    },
+    "Ym": {
+      "file": "chunk-xapeakym.js",
+      "name": "Ym",
+      "start": 290702,
+      "end": 291150,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "e55de3e741cfbbbdf20a44e6b25c6f0b725802af9e934d70ad75701dff56a84f",
+      "canonicalPresent": true
+    },
+    "k": {
+      "file": "chunk-nankzm0s.js",
+      "name": "k",
+      "start": 499245,
+      "end": 499282,
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "sha256": "e8033436eedf5cf3582462f61d565185a549bf32f07c4169d8a8ec54026b4e6a",
+      "canonicalPresent": true
+    },
+    "s2": {
+      "file": "chunk-mphp7acd.js",
+      "name": "s2",
+      "start": 1507887,
+      "end": 1508434,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "0f52c1bb121fa70363b1aa52316f7084dda167e7d81f044b1649197479a0c04e",
+      "canonicalPresent": true
+    },
+    "Mar": {
+      "file": "chunk-dgp2yyqt.js",
+      "name": "Mar",
+      "start": 14983,
+      "end": 15268,
+      "moduleSha256": "0ac39806e4b50d15e5b1de301d8553a870917c87ef024d423bc9476e0ced21da",
+      "sha256": "b18059c6228453ee22d492792ac6e7b4217bee1f00e27a259ec41d9d97db96b2",
+      "canonicalPresent": true
+    },
+    "i": {
+      "file": "chunk-6hnyhakg.js",
+      "name": "i",
+      "start": 1280,
+      "end": 1397,
+      "moduleSha256": "b2c8cad6d46be86d5715172f94bfc8b9ddbe5f28c2e068ee53ebebb35b9948de",
+      "sha256": "7f2df95e7a21ebb980f33de170d716031fa6e71b459046f55a71def4a55e662f",
+      "canonicalPresent": true
+    },
+    "Er": {
+      "file": "chunk-n4qghq20.js",
+      "name": "Er",
+      "start": 732,
+      "end": 767,
+      "moduleSha256": "39fd2d5d055aa0449210ddff4a5907753c0460a10b43931920c5796a088aabbb",
+      "sha256": "3f0335a6ed9653afe919286dc886705b476f6a7b337acb9ddeac9793e5997034",
+      "canonicalPresent": true
+    },
+    "ovt": {
+      "file": "chunk-jy72vtns.js",
+      "name": "ovt",
+      "start": 9794,
+      "end": 9876,
+      "moduleSha256": "0c39326c5c8c402b6608627970144a02ad69be66a755358a5fa509c4c57b2984",
+      "sha256": "7fe6ad109c923cdc9fa90d00c70c67a4e4ff44ce6f3659c4978eced4a19b7c26",
+      "canonicalPresent": true
+    },
+    "__": {
+      "file": "chunk-xapeakym.js",
+      "name": "__",
+      "start": 206830,
+      "end": 206957,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "93fc9f083875b51d703cfbbc72ff64ca033eb00684f28c28ca636650b2e5b95b",
+      "canonicalPresent": true
+    },
+    "Bw": {
+      "file": "chunk-xapeakym.js",
+      "name": "Bw",
+      "start": 351696,
+      "end": 351726,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "87053107f6393412df778a44366e310b99de5401326a5bf0b44906e2b6a355e5",
+      "canonicalPresent": true
+    },
+    "a": {
+      "file": "chunk-mbfze585.js",
+      "name": "a",
+      "start": 65484,
+      "end": 65495,
+      "moduleSha256": "2e40ea5244009e4c37b57879f34c96cc3e3bc7d3c5468f9e65d63fe5ce13287a",
+      "sha256": "44ef2e88407080f40da65be8f6c06357952a012f91c7fbf90982c130cc9ac988",
+      "canonicalPresent": true
+    },
+    "NZr": {
+      "file": "chunk-bn3p37gv.js",
+      "name": "NZr",
+      "start": 83470,
+      "end": 83541,
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "sha256": "a6badba3bb2b67c3b8f23e5c6352d026fd8187ffd2d8362b279b6ae488d3d97f",
+      "canonicalPresent": true
+    },
+    "zA": {
+      "file": "chunk-xapeakym.js",
+      "name": "zA",
+      "start": 352302,
+      "end": 352389,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "02e37ffb44257e8273c802cb91f14addfcc3415e71d17413a813d97ee771d6a0",
+      "canonicalPresent": true
+    },
+    "Yto": {
+      "file": "chunk-bn3p37gv.js",
+      "name": "Yto",
+      "start": 108717,
+      "end": 108791,
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "sha256": "e47c019baf94372a945dd29fafd4154c5118a8c57930ca7a6a0b651a33de3600",
+      "canonicalPresent": true
+    },
+    "qlt": {
+      "file": "chunk-mphp7acd.js",
+      "name": "qlt",
+      "start": 1513853,
+      "end": 1514106,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "20bdceda92538f4a1233a93e053403d67296bd2013bb5a44b86ff9f9b7227370",
+      "canonicalPresent": true
+    },
+    "CT": {
+      "file": "chunk-bn3p37gv.js",
+      "name": "CT",
+      "start": 87695,
+      "end": 87768,
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "sha256": "f6304507081b04e6e44a93c8d443cf5c311532242a375603179a6360d50cc1c0",
+      "canonicalPresent": true
+    },
+    "Fwt": {
+      "file": "chunk-bn3p37gv.js",
+      "name": "Fwt",
+      "start": 87632,
+      "end": 87695,
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "sha256": "bbd191916525189458d4f9294a76f9b078560b13924787bcfa3582b5cf0e7657",
+      "canonicalPresent": true
+    },
+    "Ito": {
+      "file": "chunk-bn3p37gv.js",
+      "name": "Ito",
+      "start": 103575,
+      "end": 103639,
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "sha256": "0f48fb4957c700259de7122a6dea9d74ff204d14ab5f4a53ee3786a6924f0d18",
+      "canonicalPresent": true
+    },
+    "t": {
+      "file": "chunk-q80zaav8.js",
+      "name": "t",
+      "start": 46026,
+      "end": 46071,
+      "moduleSha256": "f9503296591b825624caf5932b9c5973cde96b859259266a506b616dca5cd41e",
+      "sha256": "da9e0b5e590a43c6f7cf46f3cfcd93d97f399db1017ff8dae938bdbd15e13790",
+      "canonicalPresent": true
+    },
+    "fp": {
+      "file": "chunk-xapeakym.js",
+      "name": "fp",
+      "start": 324844,
+      "end": 326066,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "f9cb7dbc3394f2f06bf87be4282feada8604e09db557a86fec0f2f1066ce1489",
+      "canonicalPresent": true
+    },
+    "oe": {
+      "file": "chunk-s354e3rr.js",
+      "name": "oe",
+      "start": 1098,
+      "end": 1148,
+      "moduleSha256": "567ef3371f57fc1378c9e923c39f428683b7d791b1528bad0b34cefa35a4f70e",
+      "sha256": "77b60cc78e0aeaa08693fcca0da77379aceefeffc334fcd583e5b4537167ad76",
+      "canonicalPresent": true
+    },
+    "G": {
+      "file": "chunk-h3rrxdgy.js",
+      "name": "G",
+      "start": 673,
+      "end": 732,
+      "moduleSha256": "4012f37687d6f056e0a15ff409aeac2a1192a31d4ae1687c29d0332c634c4876",
+      "sha256": "9c397ccb93b3adbdafea0ab6db7fc8369fc1dbadbff1ea3948e5839625563ea8",
+      "canonicalPresent": true
+    },
+    "aee": {
+      "file": "chunk-bn3p37gv.js",
+      "name": "aee",
+      "start": 75739,
+      "end": 75808,
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "sha256": "a83ac79d236d6e1c4ba4c7d52359b5a75be7955029898193116e6a75bd0b559a",
+      "canonicalPresent": true
+    },
+    "yj": {
+      "file": "chunk-nankzm0s.js",
+      "name": "yj",
+      "start": 583166,
+      "end": 584179,
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "sha256": "ceef36fc50479ce80e7f3cac2fc201806e7b5a555ec293eb1d20ae19daf0745f",
+      "canonicalPresent": true
+    },
+    "q": {
+      "file": "chunk-bn3p37gv.js",
+      "name": "q",
+      "start": 72163,
+      "end": 72206,
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "sha256": "c97c65b960702de78a29321dc48a8f38574d9574e30daa210d5edfeaf4b37cf5",
+      "canonicalPresent": true
+    },
+    "er": {
+      "file": "chunk-f1vb7bx7.js",
+      "name": "er",
+      "start": 96120,
+      "end": 96125,
+      "moduleSha256": "2f76d1800a2202fe6717904ab677e2509d0b124302d3d31e325353b307f795d1",
+      "sha256": "2b65391503408a01319d1722cab749e99d7550bc01727cb8af9b8ab71933f292",
+      "canonicalPresent": true
+    },
+    "SP": {
+      "file": "chunk-mphp7acd.js",
+      "name": "SP",
+      "start": 1133326,
+      "end": 1133338,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "b85d7094d8b52fa0e8626d746bf2bc4465a715665de5de945201b32f39015310",
+      "canonicalPresent": true
+    },
+    "u1": {
+      "file": "chunk-mphp7acd.js",
+      "name": "u1",
+      "start": 1139437,
+      "end": 1139505,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "bbb9f787d9101c10d25cc01ebf4a583683ca718ee23d7637a7bbb059c5833c7c",
+      "canonicalPresent": true
+    },
+    "Ube": {
+      "file": "chunk-nankzm0s.js",
+      "name": "Ube",
+      "start": 673378,
+      "end": 673853,
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "sha256": "c3cc30bf7b3c5a8eab28f0954da2cbd1e94b60e71c2f60763ea46e48fd60c912",
+      "canonicalPresent": true
+    },
+    "oE": {
+      "file": "chunk-0a47xg8f.js",
+      "name": "oE",
+      "start": 6410,
+      "end": 6504,
+      "moduleSha256": "56b1137e8e2fc0767cae6db3cc88a8a2e15de689a3f58cdc37ee6cdd94c4adbb",
+      "sha256": "87069043ad02276989b865060b69eba6eab4041e9d36b565fba886af554ddfa5",
+      "canonicalPresent": true
+    },
+    "Zyn": {
+      "file": "chunk-5rsp1jx3.js",
+      "name": "Zyn",
+      "start": 23779,
+      "end": 23857,
+      "moduleSha256": "97e7e4a284d00040d2c2c7e8bfaf8a9c382301b59dc0a3ec7c9e03d503b38342",
+      "sha256": "ae14814e6e701909e285ea9ad72b9be3dd420ce1bd612dda6b3a76a5e32d4a86",
+      "canonicalPresent": true
+    },
+    "ucr": {
+      "file": "chunk-ce86av7y.js",
+      "name": "ucr",
+      "start": 906,
+      "end": 1272,
+      "moduleSha256": "a5f77f817b784867426a6eb035b025f251e38484c5ef0c7dfcbb63f77b677ad6",
+      "sha256": "e42bd2f17eced82e42056bbac48cfa288d7f23b55d37833ea9ca15f9c2c42ed3",
+      "canonicalPresent": true
+    },
+    "yq": {
+      "file": "chunk-mphp7acd.js",
+      "name": "yq",
+      "start": 3260922,
+      "end": 3260960,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "2897dfcf5578907a38db301815d3b252fcbb6855a6e3f055645c81b7732a3dd8",
+      "canonicalPresent": true
+    },
+    "Mko": {
+      "file": "chunk-mphp7acd.js",
+      "name": "Mko",
+      "start": 1125571,
+      "end": 1125612,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "263ef2fb79d14b47c8bb34911594ef7aaf3b2371b1673bd201d7d0b635190921",
+      "canonicalPresent": true
+    },
+    "He": {
+      "file": "chunk-wz6xag6e.js",
+      "name": "He",
+      "start": 26564,
+      "end": 26887,
+      "moduleSha256": "24c4b2f916cc12257edf0008fa8d98838ac2f5cb0ae35bdc3b5447f963347d58",
+      "sha256": "e1c7679b6d98301be1c2d7529de7ab3e1fc0cb15736679770886f6ae5c461d76",
+      "canonicalPresent": true
+    },
+    "Ic": {
+      "file": "chunk-hrhfcbdv.js",
+      "name": "Ic",
+      "start": 74643,
+      "end": 74680,
+      "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+      "sha256": "686f225f2f55ae121606182e5e471253d9228528180f0ee61253f60ec4aea205",
+      "canonicalPresent": true
+    },
+    "MF": {
+      "file": "chunk-xep95vq1.js",
+      "name": "MF",
+      "start": 164835,
+      "end": 164898,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "ebae2e97e32ed8a9e22a8e8c01becb7fdf835c23078280379ea4fe45300cf829",
+      "canonicalPresent": true
+    },
+    "dYe": {
+      "file": "chunk-cwq90agc.js",
+      "name": "dYe",
+      "start": 13911,
+      "end": 13960,
+      "moduleSha256": "9551ddf90e68fbd2b9784bf8bacf9832fdc152b1f18d89ac13dde115ea7fe2b3",
+      "sha256": "df094fcef53f466f0300f52b044a332deffcb2df5e4e815c5d8f6a061baa6788",
+      "canonicalPresent": true
+    },
+    "Ij": {
+      "file": "chunk-xep95vq1.js",
+      "name": "Ij",
+      "start": 156234,
+      "end": 156273,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "d6f551ef1ab8aa8f5b749c15800056f43eaba184512e9deb40d53f702effbb14",
+      "canonicalPresent": true
+    },
+    "Hk": {
+      "file": "chunk-xapeakym.js",
+      "name": "Hk",
+      "start": 301011,
+      "end": 301373,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "3219509a1a6de11ac9f4995272bb25c3165b5351e4c38f4e3b2f4c58b9bf39e9",
+      "canonicalPresent": true
+    },
+    "hso": {
+      "file": "chunk-tf63hv0k.js",
+      "name": "hso",
+      "start": 16519,
+      "end": 16604,
+      "moduleSha256": "9c22890c55ab8a364468eb704017e20d809028ff4a5cb400d0826c0912c8ef19",
+      "sha256": "c9df3b582c30586e8a1c67b8f691a3ed24d497f1d8c9d5661f1c6a88eafbc473",
+      "canonicalPresent": true
+    },
+    "Ch": {
+      "file": "chunk-3pvpzycx.js",
+      "name": "Ch",
+      "start": 1036,
+      "end": 1085,
+      "moduleSha256": "5bcedabc42d63dbcebd9ff21adfd813f9b408b72991a610652ae223d326ca782",
+      "sha256": "8323dc595ecc0b5cf320a10a87945a627a352ed411a93a4cafca54c47689080c",
+      "canonicalPresent": true
+    },
+    "dl": {
+      "file": "chunk-xapeakym.js",
+      "name": "dl",
+      "start": 49126,
+      "end": 49191,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "f07405c21c0896747e5966ea00ca968fa56423d2b422048e938f908ff78319ad",
+      "canonicalPresent": true
+    },
+    "wxn": {
+      "file": "chunk-904yhcr0.js",
+      "name": "wxn",
+      "start": 2010,
+      "end": 2127,
+      "moduleSha256": "e3e9a0ebed883926237f3645d0c6bd02af02f0623ca5fbb8292f723071964ed3",
+      "sha256": "42bce167153fa14b0c4e23ef7335da17dfe04c74ceaf7ab2b46a5dd85aac578a",
+      "canonicalPresent": true
+    },
+    "x2e": {
+      "file": "chunk-nankzm0s.js",
+      "name": "x2e",
+      "start": 544669,
+      "end": 544703,
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "sha256": "31e1d3bd47d63b51d75cc8deed98b793bf08492f83886bae9bedd05245421767",
+      "canonicalPresent": true
+    },
+    "R0": {
+      "file": "chunk-cwq90agc.js",
+      "name": "R0",
+      "start": 13463,
+      "end": 13525,
+      "moduleSha256": "9551ddf90e68fbd2b9784bf8bacf9832fdc152b1f18d89ac13dde115ea7fe2b3",
+      "sha256": "be21784d36b0ead0098dc2adac941b5bc225b93c2ffc847798e2cb2b087ed975",
+      "canonicalPresent": true
+    },
+    "uYe": {
+      "file": "chunk-cwq90agc.js",
+      "name": "uYe",
+      "start": 14700,
+      "end": 14734,
+      "moduleSha256": "9551ddf90e68fbd2b9784bf8bacf9832fdc152b1f18d89ac13dde115ea7fe2b3",
+      "sha256": "420c1621929bb69bedac24e78383d6bf1aa14480e89f8fdad7aba65c84095e09",
+      "canonicalPresent": true
+    },
+    "aBr": {
+      "file": "chunk-cwq90agc.js",
+      "name": "aBr",
+      "start": 2362,
+      "end": 2418,
+      "moduleSha256": "9551ddf90e68fbd2b9784bf8bacf9832fdc152b1f18d89ac13dde115ea7fe2b3",
+      "sha256": "e8599f0b317f38096125a8eea3b1db890348e42888795506efef9899fd042538",
+      "canonicalPresent": true
+    },
+    "d": {
+      "file": "chunk-amhtwhch.js",
+      "name": "d",
+      "start": 14780,
+      "end": 15243,
+      "moduleSha256": "5fb2fb2d3d66c7ec04ce0fac39ed9f665b410441ebae71d3f893920600949ecb",
+      "sha256": "9534213567783130a8ed63f0d81fdabb654a8fc557790510fdbd170a8df0805c",
+      "canonicalPresent": true
+    },
+    "F3": {
+      "file": "chunk-nankzm0s.js",
+      "name": "F3",
+      "start": 265933,
+      "end": 266041,
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "sha256": "80e574a0d5823aab818f0acae669812376c933c8e783934c430afae5042e28c6",
+      "canonicalPresent": true
+    },
+    "SF": {
+      "file": "chunk-nankzm0s.js",
+      "name": "SF",
+      "start": 257997,
+      "end": 258795,
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "sha256": "99df5b37cf784d317088f128cde6cc73f94280cc9fa82eeaab222e3404616851",
+      "canonicalPresent": true
+    },
+    "N3": {
+      "file": "chunk-nankzm0s.js",
+      "name": "N3",
+      "start": 264089,
+      "end": 264148,
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "sha256": "abee5e2e0eb99653b3c9c7595472cf91fc7f13638c2c07e09996ca85abc7270f",
+      "canonicalPresent": true
+    },
+    "TRn": {
+      "file": "chunk-64z3xwk8.js",
+      "name": "TRn",
+      "start": 15357,
+      "end": 15427,
+      "moduleSha256": "63b72939ef879fd6a6be0186e4c7fa1f334e1e6195c2da9c9e5e3fa5e3ea7d1f",
+      "sha256": "369214fce6a3708cf8fa44aff179627eac6bc457707ae3519cb67e907cd3f499",
+      "canonicalPresent": true
+    },
+    "dC": {
+      "file": "chunk-bn3p37gv.js",
+      "name": "dC",
+      "start": 108174,
+      "end": 108268,
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "sha256": "389384f7d6db039072f348726b6b4c9f13339914da1f048d44005972fe63ccfb",
+      "canonicalPresent": true
+    },
+    "T6": {
+      "file": "chunk-mphp7acd.js",
+      "name": "T6",
+      "start": 241570,
+      "end": 241631,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "a07ebb0b157d2cb4b9a14f4b5c13862ab315571f3922d85aa8f9c66a1a8f71ea",
+      "canonicalPresent": true
+    },
+    "Sl": {
+      "file": "chunk-mphp7acd.js",
+      "name": "Sl",
+      "start": 1507734,
+      "end": 1507778,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "6f807032211ee64526b7587ebb8186b5e3fd4a5dab4abd105da0587fbdad51d4",
+      "canonicalPresent": true
+    },
+    "uee": {
+      "file": "chunk-bn3p37gv.js",
+      "name": "uee",
+      "start": 108268,
+      "end": 108375,
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "sha256": "050ca6f9760a11365d0ca602038024d5d5ff90f5495a5c20fd1ebb5717b1d1b1",
+      "canonicalPresent": true
+    },
+    "xHe": {
+      "file": "chunk-8tppeqgy.js",
+      "name": "xHe",
+      "start": 6451,
+      "end": 6620,
+      "moduleSha256": "1936ac23419dfc18ae3bd82f1ab54724335e6f261ca7563ef41f61e34b726450",
+      "sha256": "a1dc5191591886721ac6b7d748af0cfaa7eb2f1d87087c542a5253f7c4369838",
+      "canonicalPresent": true
+    },
+    "Rt": {
+      "file": "chunk-nankzm0s.js",
+      "name": "Rt",
+      "start": 367975,
+      "end": 368519,
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "sha256": "ef2e0d86108874c6e0c79fb3b69af380ffd226cb84312c49841d76d6e5567a64",
+      "canonicalPresent": true
+    },
+    "Iy": {
+      "file": "chunk-nankzm0s.js",
+      "name": "Iy",
+      "start": 358580,
+      "end": 358700,
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "sha256": "55a58f69c6f7ea213393ff8f47a30eafb60b2e1646ca104d88748cba17a37b70",
+      "canonicalPresent": true
+    },
+    "$r": {
+      "file": "chunk-nankzm0s.js",
+      "name": "$r",
+      "start": 323240,
+      "end": 324554,
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "sha256": "b87361efef699578dff4c554a0bb5ac1bc344d19a2369cf9f8708d029ad3b64d",
+      "canonicalPresent": true
+    },
+    "Jp": {
+      "file": "chunk-bn3p37gv.js",
+      "name": "Jp",
+      "start": 81308,
+      "end": 81367,
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "sha256": "70553f1d731f63666bac62d98519d9254a157933554499fb359a6cbad33988fe",
+      "canonicalPresent": true
+    },
+    "iV": {
+      "file": "chunk-w8a1w7ad.js",
+      "name": "iV",
+      "start": 9825,
+      "end": 9856,
+      "moduleSha256": "03ec7fc7d8b2fcac6ab6f740bf667791aab768677052f0761732ea2e943e76f5",
+      "sha256": "9ea76091a73c35ec99c55476814b1a0c4eae8e815f1c71444cba04e876ac6c12",
+      "canonicalPresent": true
+    },
+    "gP": {
+      "file": "chunk-xapeakym.js",
+      "name": "gP",
+      "start": 48234,
+      "end": 48267,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "9d1236d5d8bb20870a54286c9c3a3d676162e43611d9605d3ea0a28b16c28fec",
+      "canonicalPresent": true
+    },
+    "hP": {
+      "file": "chunk-xapeakym.js",
+      "name": "hP",
+      "start": 48437,
+      "end": 48945,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "5d108063643a0b22474d51fa1b156ffa75b829fb449e8019a7b6d53e241bfd25",
+      "canonicalPresent": true
+    },
+    "pso": {
+      "file": "chunk-n2zepamy.js",
+      "name": "pso",
+      "start": 67233,
+      "end": 67593,
+      "moduleSha256": "0b25d8e1138a155f83fd1f53d768fa0cfbd759a2177359108d03295616148a24",
+      "sha256": "15c00e2848a22adf7a9d6dcf1784edc91afb9ccba720f5ac8a63c31e7afdbeff",
+      "canonicalPresent": true
+    },
+    "ITe": {
+      "file": "chunk-mphp7acd.js",
+      "name": "ITe",
+      "start": 1921198,
+      "end": 1921526,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "ad6929781be194e79a92de5c37a8d8b35959835a146ccf40d5fc873470a664f7",
+      "canonicalPresent": true
+    },
+    "HPo": {
+      "file": "chunk-mphp7acd.js",
+      "name": "HPo",
+      "start": 4038122,
+      "end": 4038221,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "092f653796b231a94253334f845ffc285da630e11aac851476cf229fe70293dc",
+      "canonicalPresent": true
+    },
+    "UH": {
+      "file": "chunk-nankzm0s.js",
+      "name": "UH",
+      "start": 369066,
+      "end": 369217,
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "sha256": "3a72ba727482d7854fd67c5c0395b72047f2ec5257154703d97f5567faaa0c54",
+      "canonicalPresent": true
+    },
+    "Re": {
+      "file": "chunk-mphp7acd.js",
+      "name": "Re",
+      "start": 4035873,
+      "end": 4037389,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "85a35f3b3c712d0af29fe73388237c8e15351ef73c5438a42a67cb453d861f3f",
+      "canonicalPresent": true
+    },
+    "id": {
+      "file": "chunk-amhtwhch.js",
+      "name": "id",
+      "start": 8878,
+      "end": 8903,
+      "moduleSha256": "5fb2fb2d3d66c7ec04ce0fac39ed9f665b410441ebae71d3f893920600949ecb",
+      "sha256": "308b6ef9964e90eaf28b8307fb7951c79dc80b6714963c37260dd16e3236e796",
+      "canonicalPresent": true
+    },
+    "Nt": {
+      "file": "chunk-mphp7acd.js",
+      "name": "Nt",
+      "start": 4150000,
+      "end": 4150082,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "11108ee286e26af4ea212430d8e0cb631d2d83cbc256480e289e5b7954be0a41",
+      "canonicalPresent": true
+    },
+    "tS": {
+      "file": "chunk-nankzm0s.js",
+      "name": "tS",
+      "start": 314797,
+      "end": 314910,
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "sha256": "422c1577e929c3355ef02eb57262edf8c03d15d42be82a9dd9ef4ee34834c425",
+      "canonicalPresent": true
+    },
+    "rt": {
+      "file": "chunk-nankzm0s.js",
+      "name": "rt",
+      "start": 338784,
+      "end": 338858,
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "sha256": "b531e0388de20ab7aa047f0b217a8329f6ae22ead3bfbdb7e902dcc69f714324",
+      "canonicalPresent": true
+    },
+    "El": {
+      "file": "chunk-nankzm0s.js",
+      "name": "El",
+      "start": 359602,
+      "end": 359632,
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "sha256": "3ed82dbcbab053050c81d12d46da3ba998b04cefb70723557e3a81bce811fe7c",
+      "canonicalPresent": true
+    },
+    "s_e": {
+      "file": "chunk-09m4fzsj.js",
+      "name": "s_e",
+      "start": 562010,
+      "end": 562969,
+      "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+      "sha256": "eb5c2615d5be50e5fdeebff60d97ea45c6ce2dec2a52b91f17b338c8c59f923f",
+      "canonicalPresent": true
+    },
+    "Z7": {
+      "file": "chunk-09m4fzsj.js",
+      "name": "Z7",
+      "start": 568414,
+      "end": 568957,
+      "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+      "sha256": "b8a8e3d880818e9ac05e6143bada47ab1b92962446c60e8a1b49a07b113f99e4",
+      "canonicalPresent": true
+    },
+    "mMr": {
+      "file": "chunk-09m4fzsj.js",
+      "name": "mMr",
+      "start": 560815,
+      "end": 561276,
+      "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+      "sha256": "47213fa9aaa3ca0fccd7e64daa6a02a7a8ea4121fa955e2af62a2cb47ca99781",
+      "canonicalPresent": true
+    }
+  },
+  "builtins": {
+    "eo": {
+      "file": "crypto",
+      "name": "randomUUID"
+    }
+  },
+  "callerCuts": {
+    "LZr": {
+      "owner": "existing printInterruptSweep287.native",
+      "member": "declarePerTaskStopAffordance",
+      "original": "chunk-xapeakym.js:LZr",
+      "receipt": {
+        "file": "chunk-bn3p37gv.js",
+        "name": "LZr",
+        "start": 83320,
+        "end": 83392,
+        "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+        "sha256": "f0e3025d176fd172e3c55c4ab8183345399da33d190d233c587eb3c2bbbf4ac9",
+        "canonicalPresent": false
+      }
+    }
+  },
+  "missingCanonicalRoots": [],
+  "canonicalNative": {
+    "path": "provenance-reference://not-bundled/3dc220d20f0add5cdf8a0a2695b261f2af40009af969283f8335f097631fe3e7",
+    "sha256": "eee4e777c77f4386b69cb3a4b597a5a2643448a5811af2028ee0739ed2f200d2"
+  },
+  "matureReadAndFree": {
+    "path": "provenance-reference://not-bundled/5adcdb4c28c2e4ba0bdb751ea86b2bb8563abf01dc564c45cde8018049ef30b7",
+    "sha256": "e24d84cd2c3cce2b117d5e5b7e7cfd14a04648376aa792d323c2d97679f909e7"
+  },
+  "dynamicTransport": {
+    "receipt": {
+      "file": "chunk-9pwdyydg.js",
+      "name": "E",
+      "start": 12349,
+      "end": 12467,
+      "moduleSha256": "ea664ffb2e0d28c78b27737cd76bb4ea319a708dea7e109fef308c4e96536394",
+      "sha256": "eddbf978800d351c7fffd695e7298a57989b56ed5a8ab947e957f9c8b56a75b6",
+      "canonicalPresent": true
+    },
+    "from": "import(\"/$bunfs/root/chunk-9pwdyydg.js\")",
+    "to": "loadInitializeModule287(\"chunk-9pwdyydg.js\")",
+    "count": 1,
+    "owner": "existing canonical namespace; dependency module getPrintHostSource287; no eager import"
+  },
+  "bodySha256": "32cadbbe80bc253fd0fca75b740f5a45d5954b803c1a664ae196936f58f08209",
+  "generatedSha256": "07f8dbc97f49324077a54d6d97e6368c574aba3a5b51ccc1291ea8d41a54bfd9",
+  "scope": "Source-prepared whole closure, same borrowed canonical owners. Missing canonical exports require external patch before runtime. No fixtures/providers/native factory executed."
+}

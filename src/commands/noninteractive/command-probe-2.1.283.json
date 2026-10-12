@@ -1,0 +1,679 @@
+{
+  "scope": "Handler import smoke test only. No handler execution, model call, or authenticated availability test.",
+  "flags": {
+    "BRIDGE_MODE": false,
+    "VOICE_MODE": false,
+    "FORK_SUBAGENT": false,
+    "CHICAGO_MCP": false,
+    "CACHED_MICROCOMPACT": false,
+    "ULTRAPLAN": false,
+    "BUILDING_CLAUDE_APPS": false
+  },
+  "registeredNames": [
+    "add-dir",
+    "advisor",
+    "agents",
+    "allowed-tools",
+    "android",
+    "app",
+    "autocompact",
+    "bashes",
+    "branch",
+    "btw",
+    "bug",
+    "checkpoint",
+    "chrome",
+    "clear",
+    "color",
+    "compact",
+    "config",
+    "context",
+    "continue",
+    "copy",
+    "cost",
+    "desktop",
+    "diff",
+    "doctor",
+    "effort",
+    "exit",
+    "export",
+    "extra-usage",
+    "fast",
+    "feedback",
+    "files",
+    "fork",
+    "goal",
+    "heapdump",
+    "help",
+    "hooks",
+    "ide",
+    "init",
+    "insights",
+    "install-github-app",
+    "install-slack-app",
+    "ios",
+    "keybindings",
+    "login",
+    "logout",
+    "low-priority",
+    "marketplace",
+    "mcp",
+    "memory",
+    "mobile",
+    "model",
+    "name",
+    "new",
+    "output-style",
+    "passes",
+    "permissions",
+    "plan",
+    "plugin",
+    "plugin-types",
+    "plugins",
+    "pr-comments",
+    "privacy-settings",
+    "quit",
+    "rate-limit-options",
+    "release-notes",
+    "reload-plugins",
+    "reload-skills",
+    "remote",
+    "remote-env",
+    "rename",
+    "reset",
+    "resume",
+    "review",
+    "rewind",
+    "sandbox",
+    "security-review",
+    "session",
+    "settings",
+    "skill-doctor",
+    "skills",
+    "stats",
+    "status",
+    "statusline",
+    "stickers",
+    "tag",
+    "tasks",
+    "terminal-setup",
+    "theme",
+    "think-back",
+    "thinkback-play",
+    "ultrareview",
+    "upgrade",
+    "usage",
+    "vim"
+  ],
+  "modes": [
+    {
+      "interactive": true,
+      "commands": [
+        {
+          "name": "autocompact",
+          "type": "local",
+          "supportsNonInteractive": true,
+          "handler": "function"
+        },
+        {
+          "name": "add-dir",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "agents",
+          "type": "local",
+          "supportsNonInteractive": true,
+          "handler": "function"
+        },
+        {
+          "name": "branch",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "btw",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "clear",
+          "type": "local",
+          "supportsNonInteractive": true,
+          "handler": "function"
+        },
+        {
+          "name": "color",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "compact",
+          "type": "local",
+          "supportsNonInteractive": true,
+          "handler": "function"
+        },
+        {
+          "name": "config",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "copy",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "context",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "cost",
+          "type": "local",
+          "supportsNonInteractive": true,
+          "handler": "function"
+        },
+        {
+          "name": "diff",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "doctor",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "effort",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "exit",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "heapdump",
+          "type": "local",
+          "supportsNonInteractive": true,
+          "handler": "function"
+        },
+        {
+          "name": "help",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "ide",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "init",
+          "type": "prompt"
+        },
+        {
+          "name": "mcp",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "memory",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "mobile",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "model",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "output-style",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "plugin",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "pr-comments",
+          "type": "prompt"
+        },
+        {
+          "name": "release-notes",
+          "type": "local",
+          "supportsNonInteractive": true,
+          "handler": "function"
+        },
+        {
+          "name": "reload-plugins",
+          "type": "local",
+          "supportsNonInteractive": true,
+          "handler": "function"
+        },
+        {
+          "name": "reload-skills",
+          "type": "local",
+          "supportsNonInteractive": true,
+          "handler": "function"
+        },
+        {
+          "name": "rename",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "resume",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "skills",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "stats",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "status",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "statusline",
+          "type": "prompt"
+        },
+        {
+          "name": "stickers",
+          "type": "local",
+          "supportsNonInteractive": false,
+          "handler": "function"
+        },
+        {
+          "name": "theme",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "review",
+          "type": "prompt"
+        },
+        {
+          "name": "rewind",
+          "type": "local",
+          "supportsNonInteractive": false,
+          "handler": "function"
+        },
+        {
+          "name": "security-review",
+          "type": "prompt"
+        },
+        {
+          "name": "terminal-setup",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "insights",
+          "type": "prompt"
+        },
+        {
+          "name": "vim",
+          "type": "local",
+          "supportsNonInteractive": false,
+          "handler": "function"
+        },
+        {
+          "name": "permissions",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "plan",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "goal",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "hooks",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "export",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "sandbox",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "logout",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "login",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "passes",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "tasks",
+          "type": "local-jsx",
+          "handler": "function"
+        }
+      ]
+    },
+    {
+      "interactive": false,
+      "commands": [
+        {
+          "name": "autocompact",
+          "type": "local",
+          "supportsNonInteractive": true,
+          "handler": "function"
+        },
+        {
+          "name": "agents",
+          "type": "local",
+          "supportsNonInteractive": true,
+          "handler": "function"
+        },
+        {
+          "name": "branch",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "btw",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "clear",
+          "type": "local",
+          "supportsNonInteractive": true,
+          "handler": "function"
+        },
+        {
+          "name": "color",
+          "type": "local",
+          "supportsNonInteractive": true,
+          "handler": "function"
+        },
+        {
+          "name": "compact",
+          "type": "local",
+          "supportsNonInteractive": true,
+          "handler": "function"
+        },
+        {
+          "name": "config",
+          "type": "local",
+          "supportsNonInteractive": true,
+          "handler": "function"
+        },
+        {
+          "name": "copy",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "context",
+          "type": "local",
+          "supportsNonInteractive": true,
+          "handler": "function"
+        },
+        {
+          "name": "usage",
+          "type": "local",
+          "supportsNonInteractive": true,
+          "handler": "function"
+        },
+        {
+          "name": "diff",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "doctor",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "effort",
+          "type": "local",
+          "supportsNonInteractive": true,
+          "handler": "function"
+        },
+        {
+          "name": "exit",
+          "type": "local",
+          "supportsNonInteractive": true,
+          "handler": "function"
+        },
+        {
+          "name": "fast",
+          "type": "local",
+          "supportsNonInteractive": true,
+          "handler": "function"
+        },
+        {
+          "name": "heapdump",
+          "type": "local",
+          "supportsNonInteractive": true,
+          "handler": "function"
+        },
+        {
+          "name": "help",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "ide",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "init",
+          "type": "prompt"
+        },
+        {
+          "name": "mcp",
+          "type": "local",
+          "supportsNonInteractive": true,
+          "handler": "function"
+        },
+        {
+          "name": "memory",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "mobile",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "model",
+          "type": "local",
+          "supportsNonInteractive": true,
+          "handler": "function"
+        },
+        {
+          "name": "output-style",
+          "type": "local",
+          "supportsNonInteractive": true,
+          "handler": "function"
+        },
+        {
+          "name": "plugin",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "pr-comments",
+          "type": "prompt"
+        },
+        {
+          "name": "release-notes",
+          "type": "local",
+          "supportsNonInteractive": true,
+          "handler": "function"
+        },
+        {
+          "name": "reload-plugins",
+          "type": "local",
+          "supportsNonInteractive": true,
+          "handler": "function"
+        },
+        {
+          "name": "reload-skills",
+          "type": "local",
+          "supportsNonInteractive": true,
+          "handler": "function"
+        },
+        {
+          "name": "rename",
+          "type": "local",
+          "supportsNonInteractive": true,
+          "handler": "function"
+        },
+        {
+          "name": "resume",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "skills",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "status",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "statusline",
+          "type": "prompt"
+        },
+        {
+          "name": "stickers",
+          "type": "local",
+          "supportsNonInteractive": false,
+          "handler": "function"
+        },
+        {
+          "name": "theme",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "review",
+          "type": "prompt"
+        },
+        {
+          "name": "rewind",
+          "type": "local",
+          "supportsNonInteractive": false,
+          "handler": "function"
+        },
+        {
+          "name": "security-review",
+          "type": "prompt"
+        },
+        {
+          "name": "terminal-setup",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "insights",
+          "type": "prompt"
+        },
+        {
+          "name": "vim",
+          "type": "local",
+          "supportsNonInteractive": false,
+          "handler": "function"
+        },
+        {
+          "name": "permissions",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "plan",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "goal",
+          "type": "local",
+          "supportsNonInteractive": true,
+          "handler": "function"
+        },
+        {
+          "name": "hooks",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "export",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "sandbox",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "logout",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "login",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "passes",
+          "type": "local-jsx",
+          "handler": "function"
+        },
+        {
+          "name": "tasks",
+          "type": "local-jsx",
+          "handler": "function"
+        }
+      ]
+    }
+  ],
+  "networkAttempts": []
+}

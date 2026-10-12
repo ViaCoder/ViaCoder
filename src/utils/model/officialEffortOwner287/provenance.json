@@ -1,0 +1,105 @@
+{
+  "version": "2.1.287",
+  "platform": "darwin-arm64",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16 code units",
+  "sourceRows": {
+    "inherit": {
+      "file": "chunk-5rsp1jx3.js",
+      "name": "X",
+      "start": 8760,
+      "end": 8793,
+      "source": "X=Object.freeze({kind:\"inherit\"})",
+      "moduleSha256": "97e7e4a284d00040d2c2c7e8bfaf8a9c382301b59dc0a3ec7c9e03d503b38342",
+      "moduleLength": 26200
+    },
+    "sessionEquality": {
+      "file": "chunk-5rsp1jx3.js",
+      "name": "fQ",
+      "start": 9018,
+      "end": 9122,
+      "source": "function fQ(e,n){return e===n||e.kind===n.kind&&(e.kind!==\"level\"||n.kind===\"level\"&&e.value===n.value)}",
+      "moduleSha256": "97e7e4a284d00040d2c2c7e8bfaf8a9c382301b59dc0a3ec7c9e03d503b38342",
+      "moduleLength": 26200
+    },
+    "emptySettings": {
+      "file": "chunk-5rsp1jx3.js",
+      "name": "he",
+      "start": 11511,
+      "end": 11607,
+      "source": "function he(e){if(e.legacyUserEffort!==void 0)return!1;for(let n in e.byModel)return!1;return!0}",
+      "moduleSha256": "97e7e4a284d00040d2c2c7e8bfaf8a9c382301b59dc0a3ec7c9e03d503b38342",
+      "moduleLength": 26200
+    },
+    "sessionResolver": {
+      "file": "chunk-5rsp1jx3.js",
+      "name": "kd",
+      "start": 11800,
+      "end": 12112,
+      "source": "function kd(e,n){let r=e.sessionEffort??X;switch(r.kind){case\"level\":return r.value;case\"default\":return;case\"inherit\":if(e.settingsEffortTable===void 0)return;if(he(e.settingsEffortTable))return e.settingsEffortTable.default;return ee(e.settingsEffortTable,n??e.mainLoopModelForSession??e.mainLoopModel??El())}}",
+      "moduleSha256": "97e7e4a284d00040d2c2c7e8bfaf8a9c382301b59dc0a3ec7c9e03d503b38342",
+      "moduleLength": 26200
+    },
+    "startupEffortWriter": {
+      "file": "chunk-5rsp1jx3.js",
+      "name": "aht",
+      "start": 13334,
+      "end": 13423,
+      "source": "function aht(e){let n={sessionEffort:Ee(YYn(e)),settingsEffortTable:Q()};return y3t(n),n}",
+      "moduleSha256": "97e7e4a284d00040d2c2c7e8bfaf8a9c382301b59dc0a3ec7c9e03d503b38342",
+      "moduleLength": 26200
+    },
+    "appStateEffortProducer": {
+      "file": "chunk-jy72vtns.js",
+      "name": "J4t",
+      "start": 4397,
+      "end": 8585,
+      "source": "function J4t({newState:e,oldState:n},s,i,p,g){let c=n.toolPermissionContext.mode,f=e.toolPermissionContext.mode,S=e.proactivityLevel!==n.proactivityLevel;if(c!==f){let r=Ic(c),a=Ic(f);if(r!==a){let l=o8o({rule:\"first-entry\",prevMode:c,newMode:f,prevUltraplan:n.isUltraplanMode,newUltraplan:e.isUltraplanMode}),m=l.is_ultraplan_mode;if(i?.notifyMetadataChanged(l),i?.isWorkerPermissionModeRecordEnabled)i.notifyInternalMetadataChanged({worker_permission_mode:a});if(oxe(f,m),!i)Z6e({status:null,permissionMode:a})}i?.notifyPermissionModeChanged(f)}if(c!==f)fH(\"--permission-mode\",[\"--inherit-permission-mode\"],T5(f,e.proactivityLevel),void 0,p);if(e.toolPermissionContext!==n.toolPermissionContext)XBo();if(e.toolPermissionContext.additionalWorkingDirectories!==n.toolPermissionContext.additionalWorkingDirectories&&Vtn(e.toolPermissionContext))import(\"/$bunfs/root/chunk-3xgd8dv8.js\").then((r)=>r.mcpClientModule().notifyMcpRootsListChanged()).catch((r)=>{t(`Failed to notify MCP servers of roots change: ${Z(r).message}`)});if(e.tasks!==n.tasks){if(i){let l=E(n),m=E(e);if(l.length!==m.length||m.some((h,A)=>h.task_id!==l[A]?.task_id))i.notifyInternalMetadataChanged({running_background_tasks:m})}let r=y(n),a=y(e);if(r.length!==a.length||a.some((l,m)=>l.task_id!==r[m]?.task_id||l.description!==r[m]?.description||l.ambient!==r[m]?.ambient))Wi({type:\"system\",subtype:\"background_tasks_changed\",tasks:a})}let C=n.toolPermissionContext.alwaysAllowRules.session,_=e.toolPermissionContext.alwaysAllowRules.session;if(C!==_){let r=_?.filter((a)=>!a.startsWith(\"mcp__\"));i?.notifyInternalMetadataChanged({session_allow_rules:r?.length?r:null})}if(e.mainLoopModel!==n.mainLoopModel||e.mainLoopModelForSession!==n.mainLoopModelForSession||e.toolPermissionContext.mode!==n.toolPermissionContext.mode){let r=kRo(s);try{let a=YD(n),l=YD(e);if(a!==l){if(bKe([\"seven_day_overage_included\"]),!Wn())$Pr(s,{fromModel:a,toModel:l,requestedModel:r.requestedModel,source:r.source});BWo(l)}}catch(a){d(Z(a))}}if(e.mainLoopModel!==n.mainLoopModel){let r=e.mainLoopModel,a=uxn(()=>Jp(r)),l=rt();try{Hre(l)}catch(m){d(Z(m))}gX(l,e),sLe(),ITe(s.precompute,void 0,\"model_switch\",void 0,p),pxn(p,g,a),i?.notifyMetadataChanged({model:r??El()}),fH(\"--model\",[\"-m\"],r,void 0,p)}if(e.fotwClaim?.phase===\"granted\"&&n.fotwClaim?.phase!==\"granted\")sLe();if(!fQ(e.sessionEffort,n.sessionEffort)||e.settingsEffortTable!==n.settingsEffortTable)y3t({sessionEffort:e.sessionEffort,settingsEffortTable:e.settingsEffortTable});if(!fQ(e.sessionEffort,n.sessionEffort)){r_n(),i?.notifyMetadataChanged({effort_level:zWo(e.sessionEffort)}),gX(rt(),e);let r=e.sessionEffort;if(r.kind!==\"level\")fH(\"--effort\",[],null,void 0,p);else if(typeof r.value===\"string\"&&$v(r.value))fH(\"--effort\",[],r.value,void 0,p)}if(e.mainLoopModelForSession!==n.mainLoopModelForSession){let r=rt();try{Hre(r)}catch(a){d(Z(a))}if(gX(r,e),YBe()&&(e.mainLoopModelForSession===null||e.mainLoopModelForSession===void 0)&&n.mainLoopModelForSession!==null&&n.mainLoopModelForSession!==void 0&&e.mainLoopModel===n.mainLoopModel)Jp(e.mainLoopModel),i?.notifyMetadataChanged({model:e.mainLoopModel??El()})}if(e.advisorModel!==n.advisorModel)fH(\"--advisor\",[],e.advisorModel??null,void 0,p);if(i&&e.frameUrls!==n.frameUrls&&yue()){let r=MP(e.frameUrls).map(([,a])=>a);if(r.length>0||MP(n.frameUrls).length>0)i.notifyMetadataChanged({artifacts:r.length===0?null:r.map(Tpn)})}if(i&&!R(e.activeGoal,n.activeGoal)){let r=e.activeGoal;if(i.notifyActiveGoalChanged(r),r){let{tokens_at_start:a,...l}=Rlr(r);i.notifyMetadataChanged({goal:{...l,last_reason:l.last_reason??null,met:!1}})}else i.notifyMetadataChanged({goal:null})}if(i&&(e.autoCompactWindow!==n.autoCompactWindow||e.mainLoopModel!==n.mainLoopModel||e.mainLoopModelForSession!==n.mainLoopModelForSession||e.settings!==n.settings))i.notifyAutocompactInputsChanged();if(e.verbose!==n.verbose)cj(\"verbose\",e.verbose,p);if(e.settings!==n.settings){try{if(tJe(),rZ(),rJe(),a_t(),e.settings.env!==n.settings.env&&ds())qP(),HMn()}catch(r){t(`Failed to apply settings change (clear auth caches / re-apply env): ${Z(r).message}`,{level:\"error\"})}if(e.settings.outputStyle!==n.settings.outputStyle)yR(\"output_style\")}}",
+      "moduleSha256": "0c39326c5c8c402b6608627970144a02ad69be66a755358a5fa509c4c57b2984",
+      "moduleLength": 9930
+    },
+    "appStateWriterCondition": {
+      "file": "chunk-jy72vtns.js",
+      "name": "effort writer guard",
+      "start": 6720,
+      "end": 6885,
+      "source": "if(!fQ(e.sessionEffort,n.sessionEffort)||e.settingsEffortTable!==n.settingsEffortTable)y3t({sessionEffort:e.sessionEffort,settingsEffortTable:e.settingsEffortTable})",
+      "moduleSha256": "0c39326c5c8c402b6608627970144a02ad69be66a755358a5fa509c4c57b2984",
+      "moduleLength": 9930
+    },
+    "startupCallsites": [
+      {
+        "file": "chunk-q1842b1c.js",
+        "name": "session state effort publication",
+        "start": 48429,
+        "end": 48469,
+        "source": "...aht(e.effort),ultracode:eXn(e.effort)",
+        "moduleSha256": "53011f90e32203bb47d179b337e6d65e0caf63a2ca681545b60f9c3c388c212f",
+        "moduleLength": 134295
+      },
+      {
+        "file": "chunk-q1842b1c.js",
+        "name": "session state effort publication",
+        "start": 111799,
+        "end": 111839,
+        "source": "...aht(e.effort),ultracode:eXn(e.effort)",
+        "moduleSha256": "53011f90e32203bb47d179b337e6d65e0caf63a2ca681545b60f9c3c388c212f",
+        "moduleLength": 134295
+      },
+      {
+        "file": "chunk-dgp2yyqt.js",
+        "name": "startup effort publication and resolver input",
+        "start": 128400,
+        "end": 128445,
+        "source": "let g=kd({...aht(o.effort),mainLoopModel:We})",
+        "moduleSha256": "0ac39806e4b50d15e5b1de301d8553a870917c87ef024d423bc9476e0ced21da",
+        "moduleLength": 139899
+      }
+    ]
+  },
+  "bindings": {
+    "ee": "required resolveSettingsEffort port bound to src/utils/model/effortSettings.ts",
+    "El": "required sourceDefaultModel port; no default/fallback injected"
+  },
+  "scope": "Exact original kd, fQ, X, he source rows. Original ee and El remain explicit required runtime bindings; writer update guard is preserved."
+}

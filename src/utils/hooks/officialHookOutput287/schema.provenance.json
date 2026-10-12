@@ -1,0 +1,49 @@
+{
+  "version": "2.1.287",
+  "platform": "darwin-arm64",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16 end-exclusive",
+  "replacements": {
+    "f": "lazySchema",
+    "u": "z.object",
+    "H": "z.boolean",
+    "o": "z.string",
+    "B": "z.enum",
+    "Fe": "z.union",
+    "x": "z.literal",
+    "de": "z.record",
+    "se": "z.unknown",
+    "T": "z.array",
+    "C": "z.number",
+    "aM": "permissionUpdateSchema"
+  },
+  "rows": [
+    {
+      "file": "chunk-09m4fzsj.js",
+      "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+      "name": "AJ",
+      "start": 651308,
+      "end": 651351,
+      "sha256": "e82d59b5591a97a172dc5db90662d9109bef7509cb59226e14af1739418759b1",
+      "source": "AJ=f(()=>B([\"allow\",\"deny\",\"ask\",\"defer\"]))"
+    },
+    {
+      "file": "chunk-09m4fzsj.js",
+      "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+      "name": "TJ",
+      "start": 651352,
+      "end": 657334,
+      "sha256": "2ce08859aade20499cde9bec34778f15a4a1af32b90e5fd8f54813ea0c2413b3",
+      "source": "TJ=f(()=>u({continue:H().describe(\"Whether Claude should continue after hook (default: true)\").optional(),suppressOutput:H().describe(\"Hide stdout from transcript (default: false)\").optional(),stopReason:o().describe(\"Message shown when continue is false\").optional(),decision:B([\"approve\",\"block\"]).optional(),reason:o().describe(\"Explanation for the decision\").optional(),systemMessage:o().describe(\"Warning message shown to the user\").optional(),terminalSequence:o().describe(\"A terminal escape sequence (e.g. OSC 9 / OSC 777 desktop-notification) for Claude Code to emit on your behalf. Only notification/title OSCs (0, 1, 2, 9, 99, 777) and BEL are permitted; anything else is dropped.\").optional(),hookSpecificOutput:Fe([u({hookEventName:x(\"PreToolUse\"),permissionDecision:AJ().optional(),permissionDecisionReason:o().optional(),updatedInput:de(o(),se()).optional(),additionalContext:o().optional()}),u({hookEventName:x(\"UserPromptSubmit\"),additionalContext:o().optional(),sessionTitle:o().describe(\"Set the session title\").optional(),suppressOriginalPrompt:H().describe('When decision is \"block\", omit the original prompt from the block message').optional()}),u({hookEventName:x(\"UserPromptExpansion\"),additionalContext:o().optional(),suppressOriginalPrompt:H().describe('When decision is \"block\", omit the original prompt from the block message').optional()}),u({hookEventName:x(\"SessionStart\"),additionalContext:o().optional(),initialUserMessage:o().optional(),sessionTitle:o().describe(\"Set the session title\").optional(),watchPaths:T(o()).describe(\"Absolute paths to watch for FileChanged hooks\").optional(),reloadSkills:H().describe(\"Re-scan skill and command directories after SessionStart hooks complete, so skills installed by the hook are available in the same session\").optional()}),u({hookEventName:x(\"Setup\"),additionalContext:o().optional()}),u({hookEventName:x(\"PreModelSwitch\"),permissionDecision:B([\"allow\",\"deny\",\"ask\"]).optional(),permissionDecisionReason:o().optional()}),u({hookEventName:x(\"PostModelSwitch\"),additionalContext:o().optional()}),u({hookEventName:x(\"SubagentStart\"),additionalContext:o().optional()}),u({hookEventName:x(\"PostToolUse\"),additionalContext:o().optional(),classifierContext:o().describe(\"Host-asserted context shown to the auto-mode permission classifier alongside this tool call's result. In the live session the classifier may weigh a user statement relayed here as user intent (it can satisfy a consent bar a user turn would satisfy, never a hard boundary); values restored from saved session state are treated as unverified context only. Relay discipline is the host's obligation: put ONLY genuine user statements in intent-bearing positions \\u2014 never tool output or model text dressed as one. Capped at 2000 UTF-16 code units, a budget shared across all hooks that contribute to one call (surrogate-pair-safe; emoji and other astral characters count as two). Honored on synchronous hook responses only: an async hook's late response arrives after the result message is frozen and this field in it is silently ignored. Security note: do not copy untrusted tool output or third-party text into it blindly \\u2014 content placed here reaches the permission classifier with host-application framing. Applies only to calls the classifier transcript shows: read-only lookups the transcript omits (file reads, searches), \"+\"and remote-engine shells produce no per-result line, and context attached to them is silently unused. Not a delivery channel: it is bound to a single call id and sized for a short assertion, not for relaying messages or events. Rewrite integrity: if this assertion describes output you are rewriting, return it in the SAME hook result as the rewrite \\u2014 it is then dropped automatically if your rewrite is rejected or superseded by a later hook's rewrite; assertions returned without a rewrite are never invalidated by other hooks' rewrites, so a non-rewriting hook should assert only what holds regardless of other hooks' rewrites \\u2014 hosts that need an assertion bound to exact output bytes should make it in the hook that produces those bytes. (Do NOT return an identity rewrite just to pair an assertion: hooks run in parallel on the ORIGINAL output, so an identity rewrite competes last-write-wins with sibling rewrites and can clobber a real redaction.)\").optional(),updatedToolOutput:se().describe(\"Replaces the tool output before it is sent to the model\").optional(),updatedMCPToolOutput:se().describe(\"Replaces the output for MCP tools only. Prefer updatedToolOutput, which works for all tools\").optional()}),u({hookEventName:x(\"PostToolUseFailure\"),additionalContext:o().optional()}),u({hookEventName:x(\"PostToolBatch\"),additionalContext:o().optional()}),u({hookEventName:x(\"Stop\"),additionalContext:o().optional()}),u({hookEventName:x(\"SubagentStop\"),additionalContext:o().optional()}),u({hookEventName:x(\"PermissionDenied\"),retry:H().optional()}),u({hookEventName:x(\"Notification\"),additionalContext:o().optional()}),u({hookEventName:x(\"PermissionRequest\"),decision:Fe([u({behavior:x(\"allow\"),updatedInput:de(o(),se()).optional(),updatedPermissions:T(aM()).optional()}),u({behavior:x(\"deny\"),message:o().optional(),interrupt:H().optional()})])}),u({hookEventName:x(\"Elicitation\"),action:B([\"accept\",\"decline\",\"cancel\"]).optional(),content:de(o(),se()).optional()}),u({hookEventName:x(\"ElicitationResult\"),action:B([\"accept\",\"decline\",\"cancel\"]).optional(),content:de(o(),se()).optional()}),u({hookEventName:x(\"CwdChanged\"),watchPaths:T(o()).describe(\"Absolute paths to watch for FileChanged hooks\").optional()}),u({hookEventName:x(\"FileChanged\"),watchPaths:T(o()).describe(\"Absolute paths to watch for FileChanged hooks\").optional()}),u({hookEventName:x(\"WorktreeCreate\"),worktreePath:o()}),u({hookEventName:x(\"MessageDisplay\"),displayContent:o().describe(\"Text displayed in place of the delta. Omit (or return the delta unchanged) to display the original.\").optional()})]).optional()}))"
+    },
+    {
+      "file": "chunk-09m4fzsj.js",
+      "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+      "name": "rJ",
+      "start": 657335,
+      "end": 657417,
+      "sha256": "0f22e8ace62f52a36c47ac94e9fbca2b5c7115afaa3987fca95d3961e7ea5e21",
+      "source": "rJ=f(()=>{let e=u({async:x(!0),asyncTimeout:C().optional()});return Fe([e,TJ()])})"
+    }
+  ]
+}

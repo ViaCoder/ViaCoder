@@ -1,0 +1,57 @@
+{
+  "version": "2.1.286",
+  "platform": "darwin-arm64",
+  "manifestPath": "../.work/official-modules-2.1.286/darwin-arm64/manifest.json",
+  "officialSource": {
+    "file": "chunk-x5pmvzy7.js",
+    "sha256": "e2619b0ede36954507fde08f39a28a9050eadc627fad4e9c39e4746c0e139b95"
+  },
+  "dependencySource": {
+    "file": "chunk-52qbm57h.js",
+    "sha256": "a481d621d143a6f4a8189656940cdb28cf5f7c300c0e646eb6036f5dddecc350"
+  },
+  "declarations": [
+    {
+      "symbol": "pe",
+      "file": "chunk-x5pmvzy7.js",
+      "kind": "variable",
+      "start": 11061,
+      "end": 11067,
+      "sourceSha256": "d827f4d51793384253217311ce0904809e1a6c6ec160f5d497522131df4c81f5",
+      "moduleSha256": "e2619b0ede36954507fde08f39a28a9050eadc627fad4e9c39e4746c0e139b95",
+      "source": "pe=500"
+    },
+    {
+      "symbol": "Ik",
+      "file": "chunk-52qbm57h.js",
+      "kind": "function",
+      "start": 615,
+      "end": 940,
+      "sourceSha256": "92d5e5726c4a16ddf55f5d89093e2c682e5f26ad4507b9579598eed43c48f7f5",
+      "moduleSha256": "a481d621d143a6f4a8189656940cdb28cf5f7c300c0e646eb6036f5dddecc350",
+      "source": "function Ik({attempt:t,baseMs:r,capMs:e=1/0,factor:o=2,jitter:n={kind:\"none\"},random:m=Math.random}){let i=Math.min(e,r*o**(t-1));switch(n.kind){case\"none\":return i;case\"proportional\":return i+m()*n.ratio*i;case\"symmetric\":return Math.max(0,i+i*n.ratio*(2*m()-1));case\"full\":{let a=Math.min(n.floorMs,i);return a+m()*(i-a)}}}"
+    },
+    {
+      "symbol": "EM",
+      "file": "chunk-x5pmvzy7.js",
+      "kind": "function",
+      "start": 11068,
+      "end": 11283,
+      "sourceSha256": "26bb66a2247410fb0767be8bb30ca86dfba12e678a60027e27bdc3a29ea0429d",
+      "moduleSha256": "e2619b0ede36954507fde08f39a28a9050eadc627fad4e9c39e4746c0e139b95",
+      "source": "function EM(e,r,n=32000,s=Math.random){let a=Math.round(Ik({attempt:e,baseMs:pe,capMs:n,jitter:{kind:\"proportional\",ratio:0.25},random:s}));if(r){let o=parseInt(r,10);if(!isNaN(o))return Math.max(o*1000,a)}return a}"
+    }
+  ],
+  "ports": [
+    "Math",
+    "parseInt",
+    "isNaN"
+  ],
+  "bodyRewrites": [],
+  "behaviorNotes": [
+    "EM is emitted verbatim from chunk-x5pmvzy7.js and returned directly.",
+    "Ik is emitted verbatim from chunk-52qbm57h.js; pe is the original var pe=500 declaration.",
+    "The default cap is 32000 and the fourth argument supplies deterministic jitter in tests.",
+    "Retry-After is parsed with original parseInt semantics and can override the jittered delay only when its seconds value is larger."
+  ]
+}

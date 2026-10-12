@@ -1,0 +1,237 @@
+{
+  "version": "2.1.287",
+  "platform": "darwin-arm64",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16 end-exclusive",
+  "records": [
+    {
+      "file": "chunk-z8368gas.js",
+      "moduleSha256": "66aa7b682863b3e026ae65a335e3ac046aa82de80295d22972af31c23ed1a7eb",
+      "symbol": "v",
+      "start": 1497,
+      "end": 2091,
+      "sha256": "ae41383a5b7cf693a6125e64e8069845af884d52956367dcf2596bc950ec530f",
+      "source": "function v(c){let r=new Map,t=null,n=c,l=performance.now(),i=0;function s(){i=performance.now()-l;for(let o of r.keys())o()}function a(){if([...r.values()].some(Boolean)){if(t!==null)clearInterval(t);else i=performance.now()-l;t=setInterval(s,n)}else if(t!==null)clearInterval(t),t=null}function f(o,m){return r.set(o,m),a(),()=>{r.delete(o),a()}}return{subscribeKeepAlive(o){return f(o,!0)},subscribeFollower(o){return f(o,!1)},now(){if(t!==null)return i;return performance.now()-l},setTickInterval(o){if(o===n)return;n=o,a()},setTimeout(o,m){let b=setTimeout(o,m);return()=>clearTimeout(b)}}}"
+    },
+    {
+      "file": "chunk-z8368gas.js",
+      "moduleSha256": "66aa7b682863b3e026ae65a335e3ac046aa82de80295d22972af31c23ed1a7eb",
+      "symbol": "I",
+      "start": 1379,
+      "end": 1405,
+      "sha256": "20ea8d69973958f6ce2d2b6e03690a0fc70fcec14d9af043b853b262cc6ec5b9",
+      "source": "function I(){return v(Nh)}"
+    },
+    {
+      "file": "chunk-z8368gas.js",
+      "moduleSha256": "66aa7b682863b3e026ae65a335e3ac046aa82de80295d22972af31c23ed1a7eb",
+      "symbol": "T",
+      "start": 2107,
+      "end": 2113,
+      "sha256": "05c422480c7d43ab8c764d4c35a3da24ea2825f11175e45c255df93c907f8386",
+      "source": "T=Nh*2"
+    },
+    {
+      "file": "chunk-z8368gas.js",
+      "moduleSha256": "66aa7b682863b3e026ae65a335e3ac046aa82de80295d22972af31c23ed1a7eb",
+      "symbol": "pfr",
+      "start": 2114,
+      "end": 2402,
+      "sha256": "d1c8cf2a796c3f2c85bbe1b7cebe269cba7382e729e7c0d877d1c8b41a3bb7f0",
+      "source": "function pfr(c){let l=w(7),{children:r}=c,[t]=g(I),n=nc(),i,s;if(l[0]!==t||l[1]!==n)i=()=>{t.setTickInterval(n?Nh:T)},s=[t,n],l[0]=t,l[1]=n,l[2]=i,l[3]=s;else i=l[2],s=l[3];R(i,s);let a;if(l[4]!==r||l[5]!==t)a=e(xb.Provider,{value:t,children:r}),l[4]=r,l[5]=t,l[6]=a;else a=l[6];return a}"
+    },
+    {
+      "file": "chunk-z8368gas.js",
+      "moduleSha256": "66aa7b682863b3e026ae65a335e3ac046aa82de80295d22972af31c23ed1a7eb",
+      "symbol": "xb",
+      "start": 2095,
+      "end": 2106,
+      "sha256": "df91d629fc3b0174acba566b732d67921274754e171395a76843138c5cd24f5b",
+      "source": "xb=jt(null)"
+    },
+    {
+      "file": "chunk-p50qybax.js",
+      "moduleSha256": "a5c603d3b6de009ebb273372a871ca694b0dbfd3e4fc1f2682eae668c0c643a2",
+      "symbol": "V0n",
+      "start": 227314,
+      "end": 227326,
+      "sha256": "f34b49e7a06cc3849fbd96f2c24f3425cd438df7721c9311cf8f26ef19d27ab6",
+      "source": "V0n=jt(null)"
+    },
+    {
+      "file": "chunk-bb01wgvp.js",
+      "moduleSha256": "a881b619c9ae069f2fc697cf5a3d075f83fcc2b92ec57640ca6e4b165bac7a92",
+      "symbol": "Nh",
+      "start": 619,
+      "end": 624,
+      "sha256": "5cfb275ea0a30d823d82dee711776966d4cb23249f51987795800fa93a1627b1",
+      "source": "Nh=16"
+    },
+    {
+      "file": "chunk-p50qybax.js",
+      "moduleSha256": "a5c603d3b6de009ebb273372a871ca694b0dbfd3e4fc1f2682eae668c0c643a2",
+      "symbol": "NAt",
+      "start": 246534,
+      "end": 246874,
+      "sha256": "7025d0f09cd0eb9493c67905979ec16a81153ee62760e86090817f773e81be2f",
+      "source": "class NAt extends Zme{key;name;sequence;ctrl;shift;meta;superKey;fn;soloKeypress;constructor(n,u){super(\"keydown\",{bubbles:!0,cancelable:!0});this.key=yx(n),this.name=n.name??\"\",this.sequence=n.sequence??\"\",this.ctrl=n.ctrl,this.shift=n.shift,this.meta=n.meta||n.option,this.superKey=n.super,this.fn=n.fn,this.soloKeypress=u?.soloKeypress}}"
+    },
+    {
+      "file": "chunk-p50qybax.js",
+      "moduleSha256": "a5c603d3b6de009ebb273372a871ca694b0dbfd3e4fc1f2682eae668c0c643a2",
+      "symbol": "yx",
+      "start": 246874,
+      "end": 247250,
+      "sha256": "bafb704662f0adcc8da081854fe657b87a52b108c5550a0804c427f03fa44963",
+      "source": "function yx(n){let u=n.sequence??\"\",f=n.name??\"\";if(f===\"space\")return\" \";if(n.ctrl)return f;if(u.length===1){let m=u.charCodeAt(0);if(m>=32&&m!==127)return u}if(f){if(n.shift&&f.length===1){let m=Gy(u);if(m!==void 0)return m;let y=f.toUpperCase();if(y!==f&&y.length===1)return y}return f}if(u.charCodeAt(0)===27)return\"\";if(/^(\\[<\\d[\\d;-]*[Mm]?)+$/.test(u))return\"\";return u}"
+    },
+    {
+      "file": "chunk-p50qybax.js",
+      "moduleSha256": "a5c603d3b6de009ebb273372a871ca694b0dbfd3e4fc1f2682eae668c0c643a2",
+      "symbol": "Gy",
+      "start": 194429,
+      "end": 194527,
+      "sha256": "c6b27e89c9f69ca6f7750f9373362423204d8da636358f6b183ea8ab72c9b173",
+      "source": "function Gy(n){let u=parseInt(ds.exec(n)?.[2]??\"\",10);return Uy(u)?String.fromCodePoint(u):void 0}"
+    },
+    {
+      "file": "chunk-p50qybax.js",
+      "moduleSha256": "a5c603d3b6de009ebb273372a871ca694b0dbfd3e4fc1f2682eae668c0c643a2",
+      "symbol": "Uy",
+      "start": 188769,
+      "end": 188820,
+      "sha256": "17e25c80456827a4b9afa1d63d87a946e6b31cc0e79312a8a6fafeb6d95377c4",
+      "source": "function Uy(n){return n>32&&n<127||n>=160&&n<55296}"
+    },
+    {
+      "file": "chunk-p50qybax.js",
+      "moduleSha256": "a5c603d3b6de009ebb273372a871ca694b0dbfd3e4fc1f2682eae668c0c643a2",
+      "symbol": "ds",
+      "start": 186259,
+      "end": 186310,
+      "sha256": "1d8884a82a4e15d0a8447c22624b54c82afaa5e969e8cac09ce3f6f3d8f93fbe",
+      "source": "ds=/^\\x1b\\[(\\d+)(?::(\\d*)(?::(\\d+))?)?(?:;(\\d+))?u/"
+    },
+    {
+      "file": "chunk-p50qybax.js",
+      "moduleSha256": "a5c603d3b6de009ebb273372a871ca694b0dbfd3e4fc1f2682eae668c0c643a2",
+      "symbol": "Ld",
+      "start": 240559,
+      "end": 240602,
+      "sha256": "9c8355e2c5cf7cd843bed2361e0daf296fff718ee5c2d446c89675ffd98f758b",
+      "source": "function Ld(n){return(n&32)!==0&&(n&3)===3}"
+    },
+    {
+      "file": "chunk-p50qybax.js",
+      "moduleSha256": "a5c603d3b6de009ebb273372a871ca694b0dbfd3e4fc1f2682eae668c0c643a2",
+      "symbol": "Dd",
+      "start": 238619,
+      "end": 238773,
+      "sha256": "9c8909a5f441c78caf7ce6f978b41d138e66b9f7dadce18227ad8fd7b4437ef7",
+      "source": "function Dd(n){switch(n.kind){case\"response\":case\"focus\":return!1;case\"paste\":return!0;case\"mouse\":return!Ld(n.button);case\"key\":return n.name!==\"mouse\"}}"
+    },
+    {
+      "file": "chunk-h3rrxdgy.js",
+      "moduleSha256": "4012f37687d6f056e0a15ff409aeac2a1192a31d4ae1687c29d0332c634c4876",
+      "symbol": "G",
+      "start": 673,
+      "end": 732,
+      "sha256": "9c397ccb93b3adbdafea0ab6db7fc8369fc1dbadbff1ea3948e5839625563ea8",
+      "source": "function G(n,e){let r=0;for(let t of n)r+=+!!e(t);return r}"
+    },
+    {
+      "file": "chunk-p50qybax.js",
+      "moduleSha256": "a5c603d3b6de009ebb273372a871ca694b0dbfd3e4fc1f2682eae668c0c643a2",
+      "symbol": "sx",
+      "start": 238999,
+      "end": 240559,
+      "sha256": "cddc0a744c54e5ac70da86f11cd8e71f75f0fe7d0b13122a30d950d1d6d83a2a",
+      "source": "function sx(n,u,f,m){let y=akt(Date.now());if(!y&&u.some(Dd))lie(),her();let g=Mco(n.jediTermInput,u,performance.now(),n.emitJediTermScrollBug);px(n,g);let C=G(g,Dd)===1,T=G(g,ax)>1,N=!1;for(let A of g){if(y&&Dd(A)&&!(A.kind===\"key\"&&A.name===\"left\")){t(`attachQuietDrain: dropped ${A.kind} (ms_since_stamp=${Date.now()-rMe()})`,{level:\"debug\"});continue}if(A.kind===\"response\"){if(!(n.querier?.onResponse(A.response)??!1)&&A.response.type===\"kittyGraphics\")n.props.terminalImages.refused(A.response.id,A.response.message);continue}if(A.kind===\"mouse\"){if(b$r(),A.action===\"press\"&&!Ld(A.button)&&!zve())n.handleTerminalFocus(!0);if(n.props.getMouseMode?.()===\"scroll\"&&(A.button&3)===0){n.pendingPastePress=null;continue}if(Yg(A)){if(T&&N)Ut.flushSyncWork();N=!0}fx(n,ux(n,A));continue}if(A.kind===\"focus\"){if(T&&N)Ut.flushSyncWork();if(n.handleTerminalFocus(A.focused),T)Ut.flushSyncWork();if(N=!0,!A.focused&&n.props.selection.isDragging)kl(n.props.selection),n.props.onSelectionChange();continue}if(A.kind===\"paste\"||A.name!==\"wheelup\"&&A.name!==\"wheeldown\"&&A.name!==\"mouse\"){if(!zve())pmr(!0),Ut.flushSyncWork();n.consumeWindowActivationLatch(Date.now())}if(Hd(A)){if(T&&N)Ut.flushSyncWork();N=!0}if(A.kind===\"paste\"){n.props.dispatchPasteEvent(A.text);continue}if(A.name===\"z\"&&A.ctrl&&q0n()){n.handleSuspend();continue}if(n.handleInput(A.sequence),A.name===\"wheelup\"||A.name===\"wheeldown\"||A.name===\"mouse\"){if(A.name!==\"mouse\")b$r(),n.props.dispatchWheelEvent(cx(n,A))}else n.props.dispatchKeyboardEvent(A,{soloKeypress:C})}if(T&&N)Ut.flushSyncWork()}"
+    },
+    {
+      "file": "chunk-p50qybax.js",
+      "moduleSha256": "a5c603d3b6de009ebb273372a871ca694b0dbfd3e4fc1f2682eae668c0c643a2",
+      "symbol": "sx.soloKeypress",
+      "start": 239157,
+      "end": 239168,
+      "sha256": "d7e81d3161a2fafd36cee9e4e7dc435d363a7d916e67e433e5474473c9928f37",
+      "source": "G(g,Dd)===1"
+    },
+    {
+      "file": "chunk-p50qybax.js",
+      "moduleSha256": "a5c603d3b6de009ebb273372a871ca694b0dbfd3e4fc1f2682eae668c0c643a2",
+      "symbol": "App.inputNow",
+      "start": 236232,
+      "end": 236276,
+      "sha256": "67823ac725646012f8855f497bdd619d59f1f1258035988d9b9ea174ea92219b",
+      "source": "inputNow=()=>this.readArrivedAt??Date.now();"
+    },
+    {
+      "file": "chunk-p50qybax.js",
+      "moduleSha256": "a5c603d3b6de009ebb273372a871ca694b0dbfd3e4fc1f2682eae668c0c643a2",
+      "symbol": "App.readArrivedAt",
+      "start": 230364,
+      "end": 230383,
+      "sha256": "4c069b9114fc9a8388dfc630504c26f293ab406c6efcde34f0fbfa6e5fc7cafc",
+      "source": "readArrivedAt=null;"
+    },
+    {
+      "file": "chunk-p50qybax.js",
+      "moduleSha256": "a5c603d3b6de009ebb273372a871ca694b0dbfd3e4fc1f2682eae668c0c643a2",
+      "symbol": "App.lastStdinTime",
+      "start": 230773,
+      "end": 230805,
+      "sha256": "b13dfa60ce10218244dd3e3f212705023318c1ceb6f8aac4ee00e6c05a5e9f62",
+      "source": "lastStdinTime=performance.now();"
+    },
+    {
+      "file": "chunk-p50qybax.js",
+      "moduleSha256": "a5c603d3b6de009ebb273372a871ca694b0dbfd3e4fc1f2682eae668c0c643a2",
+      "symbol": "App.inputDispatchScope",
+      "start": 236098,
+      "end": 236123,
+      "sha256": "a12b346f69610ec5b3b8d28f17852044e67c2f2909a23fc1858d135b35a4e510",
+      "source": "let y=this.readArrivedAt;"
+    },
+    {
+      "file": "chunk-p50qybax.js",
+      "moduleSha256": "a5c603d3b6de009ebb273372a871ca694b0dbfd3e4fc1f2682eae668c0c643a2",
+      "symbol": "App.inputDispatchScope",
+      "start": 236123,
+      "end": 236153,
+      "sha256": "bc41959f7680f15ef1b39f641a068d9e9658330c2dfac0cf8d7798fbb23058be",
+      "source": "this.readArrivedAt=Date.now();"
+    },
+    {
+      "file": "chunk-p50qybax.js",
+      "moduleSha256": "a5c603d3b6de009ebb273372a871ca694b0dbfd3e4fc1f2682eae668c0c643a2",
+      "symbol": "App.inputDispatchScope",
+      "start": 236153,
+      "end": 236230,
+      "sha256": "53f002bb769cb760c6eab5cc5b3d40a8e14b2955ba5a81df8d226f65e3d61020",
+      "source": "try{Ut.discreteUpdates(sx,this,n,void 0,void 0)}finally{this.readArrivedAt=y}"
+    },
+    {
+      "file": "chunk-p50qybax.js",
+      "moduleSha256": "a5c603d3b6de009ebb273372a871ca694b0dbfd3e4fc1f2682eae668c0c643a2",
+      "symbol": "App.V0n.Provider",
+      "start": 231940,
+      "end": 232054,
+      "sha256": "a900155eaa1cadda120534365ef9c4edcc4c5869b292a6be01a72d2086048cb1",
+      "source": "e(V0n.Provider,{value:this.inputNow,children:this.state.error?e(Cs,{error:this.state.error}):this.props.children})"
+    }
+  ],
+  "ports": {
+    "clock": [
+      "React compiler/jsx/state/effect",
+      "same ClockContext",
+      "same terminal-focus hook",
+      "frame interval"
+    ],
+    "input": [
+      "same App receiver",
+      "existing reconciler.discreteUpdates",
+      "existing processKeysInBatch"
+    ]
+  }
+}

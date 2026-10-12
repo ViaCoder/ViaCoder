@@ -1,0 +1,97 @@
+{
+  "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+  "offsetUnit": "UTF-16",
+  "rows": [
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "xC",
+      "start": 241379,
+      "end": 241393,
+      "source": "xC=\"web-fetch\"",
+      "sha256": "cf36a0729e0775c2fe801dc6e7b44c83a8b5c97813df23018d30658a8bf4f515",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "variable": true
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "YM",
+      "start": 241631,
+      "end": 241717,
+      "source": "function YM(e){return e.agentType===\"subagent\"&&e.isBuiltIn===!0&&e.subagentName===xC}",
+      "sha256": "ffeb522e4e4d5f77f0c7ee9c49fda63b65bb0678c36e7899c85cf6a6b970745d",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "variable": false
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "DMe",
+      "start": 1555403,
+      "end": 1555504,
+      "source": "DMe=new Set([\"PreToolUse\",\"PostToolUse\",\"PostToolUseFailure\",\"PermissionRequest\",\"PermissionDenied\"])",
+      "sha256": "18bc37140a0901441c4d114c7497d83bda06a8ca619130e67b7b0e557711c998",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "variable": true
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "Cdo",
+      "start": 1555505,
+      "end": 1555542,
+      "source": "Cdo=new Set([...DMe,\"PostToolBatch\"])",
+      "sha256": "58966e051d44f16e1e93aaa766f41efefce5c504be35b71a7329fdd2221b7dd8",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "variable": true
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "pne",
+      "start": 1555543,
+      "end": 1555665,
+      "source": "function pne(e,n,r){let s=e?.agentId??r,g=e?.agentContext;return g!==void 0&&YM(g)&&Cdo.has(n)?[s,g.parentAgentId??r]:[s]}",
+      "sha256": "60345483670b73b471781ebd709a8bfc9ddde154ba78c9ca9347400670b6fccb",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "variable": false
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "yl",
+      "start": 2195322,
+      "end": 2195331,
+      "source": "yl=600000",
+      "sha256": "7f7a43cd6516b8b6ae3c7bea94809bcf7d8a1fedd441a31e616578ea172e8233",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "variable": true
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "QR",
+      "start": 2275242,
+      "end": 2275286,
+      "source": "function QR(e,n,r){return mFe(e,n,r)||MQ(e)}",
+      "sha256": "48d0288c5a59a1a4b845076a88b9a57cfc7e6e1871c35ae43f332ea32a69f1dc",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "variable": false
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "mFe",
+      "start": 2275488,
+      "end": 2275724,
+      "source": "function mFe(e,n,r){let s=V9()?.[e];if(s&&s.length>0)return!0;if(!Ty()){let b=LEe()?.[e];if(b&&b.length>0)return!0}let g=S$()?.[e];if(g&&g.length>0)return!0;if(n===void 0)return!1;return(typeof r===\"string\"?[r]:r).some((b)=>n.has(b,e))}",
+      "sha256": "db8bab0a1a4dd979b42ee4ad67a4b96700232995b47622fc30ee3831c0f25936",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "variable": false
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "Kin",
+      "start": 2328324,
+      "end": 2328657,
+      "source": "async function*Kin(e,n,r,s,g,h=yl){if(r.options.settingsHooksOff)return;if(!QR(\"PostToolBatch\",r.sessionHooksRegistry,pne(r,\"PostToolBatch\",r.session.id)))return;let b={...Xc(r.session,oe(),s,r),hook_event_name:\"PostToolBatch\",tool_calls:e};yield*PA({session:r.session,hookInput:b,toolUseID:n,signal:g,timeoutMs:h,toolUseContext:r})}",
+      "sha256": "afd82099d9f928620788eca426e2c643ade85317daf9854ba104b2db8a199bce",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "variable": false
+    }
+  ],
+  "nativeSha256": "1730f8343abe8adfe5f57f5924f87001e5b2dd204dec11ffe87922fd1229abf0"
+}

@@ -1,0 +1,887 @@
+{
+  "sourceVersion": "2.1.287",
+  "canonicalPlatform": "linux-x64",
+  "bodyRewriting": false,
+  "platforms": [
+    {
+      "platform": "linux-x64",
+      "module": "chunk-ydbv64xy.js",
+      "moduleSha256": "de6135412c9a77fe81390a8dadf24ae87967428f8b5efb064c5eec8b19df6f3b",
+      "moduleLength": 5050,
+      "manifestSha256": "ecae5d9ddbf13ef27b6b6a1141953aab4ba311e47dde3ac2a7cc8b5a01c63784",
+      "binarySha256": "3920489a5109cff5786a1a392c25277408ff22bc796d5edb9c16a60e5a1718f0",
+      "prepare": {
+        "symbol": "Hcr",
+        "start": 3202,
+        "end": 4758,
+        "source": "async function Hcr(e,{storageV5:r,credentials:o}){let f=In(),s={accountUuid:e.profile?.account?.uuid??e.tokenAccount?.uuid,organizationUuid:e.profile?.organization?.uuid??e.tokenAccount?.organizationUuid},u=S_(f,s),p=S_($H(),s),g=await Zg(o),A=p&&(g===\"env\"||g===\"fd\"||g===\"store\"&&u)?\"same_account\":\"account_switch\";await Qee({clearOnboarding:!1,preserveInProcessTokens:!0,preserveNonAnthropicAuth:!0,storageV5:r,preserveQuotaAutoResume:u,artifactAccount:A,incomingIdentity:s,credentials:o}),Bfe(null);let n=e.profile??await j1e(e.accessToken);if(n?.account&&n.organization)FWt({accountUuid:n.account.uuid,emailAddress:n.account.email,organizationUuid:n.organization.uuid,displayName:n.account.display_name||void 0,fullName:n.account.full_name||void 0,hasExtraUsageEnabled:n.organization.has_extra_usage_enabled??void 0,billingType:n.organization.billing_type??void 0,subscriptionCreatedAt:n.organization.subscription_created_at??void 0,accountCreatedAt:n.account.created_at,ccOnboardingFlags:n.organization.cc_onboarding_flags??{},claudeCodeTrialEndsAt:n.organization.claude_code_trial_ends_at??null,claudeCodeTrialDurationDays:n.organization.claude_code_trial_duration_days??null,seatTier:n.organization.seat_tier??null,planDisplayName:y7n(n),profileFetchedAt:Date.now()},r);else if(e.tokenAccount)FWt({accountUuid:e.tokenAccount.uuid,emailAddress:e.tokenAccount.emailAddress,organizationUuid:e.tokenAccount.organizationUuid},r);return F_e({action:\"login\",success:!0,authMethod:\"oauth\"}),{preserveQuotaAutoResume:u,artifactAccount:A,incomingIdentity:s}}",
+        "sha256": "fb9ac59b648ca9f3e0eaaf503dde7525b240c858661217e2352efef83540354a"
+      },
+      "aliases": {
+        "storedIdentity": "In",
+        "sameIdentity": "S_",
+        "authenticatedIdentity": "$H",
+        "credentialBackend": "Zg",
+        "reset": "Qee",
+        "stampAccount": "Bfe",
+        "fetchProfile": "j1e",
+        "storeProfile": "FWt",
+        "validatePlan": "y7n",
+        "recordLogin": "F_e"
+      },
+      "portOrigins": {
+        "storedIdentity": {
+          "module": "/$bunfs/root/chunk-k985080f.js",
+          "file": "chunk-k985080f.js",
+          "symbol": "In"
+        },
+        "sameIdentity": {
+          "module": "/$bunfs/root/chunk-k985080f.js",
+          "file": "chunk-k985080f.js",
+          "symbol": "S_"
+        },
+        "authenticatedIdentity": {
+          "module": "/$bunfs/root/chunk-k985080f.js",
+          "file": "chunk-k985080f.js",
+          "symbol": "$H"
+        },
+        "credentialBackend": {
+          "module": "/$bunfs/root/chunk-k985080f.js",
+          "file": "chunk-k985080f.js",
+          "symbol": "Zg"
+        },
+        "reset": {
+          "module": "/$bunfs/root/chunk-6d2kw0hk.js",
+          "file": "chunk-6d2kw0hk.js",
+          "symbol": "Qee"
+        },
+        "stampAccount": {
+          "module": "/$bunfs/root/chunk-8e9587qc.js",
+          "file": "chunk-8e9587qc.js",
+          "symbol": "Bfe"
+        },
+        "fetchProfile": {
+          "module": "/$bunfs/root/chunk-k985080f.js",
+          "file": "chunk-k985080f.js",
+          "symbol": "j1e"
+        },
+        "storeProfile": {
+          "module": "/$bunfs/root/chunk-k985080f.js",
+          "file": "chunk-k985080f.js",
+          "symbol": "FWt"
+        },
+        "validatePlan": {
+          "module": "/$bunfs/root/chunk-k985080f.js",
+          "file": "chunk-k985080f.js",
+          "symbol": "y7n"
+        },
+        "recordLogin": {
+          "module": "/$bunfs/root/chunk-aksshxv7.js",
+          "file": "chunk-aksshxv7.js",
+          "symbol": "F_e"
+        }
+      },
+      "credentialsModule": "chunk-k985080f.js",
+      "credentialsModuleSha256": "d6199404b28747162a26ebad430cd2da54bba9f337d9f6326241b38e313cf917",
+      "credentialsModuleLength": 706187,
+      "credentials": [
+        {
+          "symbol": "Zg",
+          "start": 648858,
+          "end": 648997,
+          "source": "async function Zg(e){let n=Nk();if(typeof n===\"string\")return n;let r=(await Gn().readAsync(e))?.claudeAiOauth?.accessToken;return Fk(n,r)}",
+          "sha256": "572f21723f313fc27849699c32b5167d1a612670d59d65486c97fbcbc26b9a5e"
+        },
+        {
+          "symbol": "Nk",
+          "start": 648997,
+          "end": 649176,
+          "source": "function Nk(){let e=fn();if(!e?.accessToken)return\"none\";if(a.CLAUDE_CODE_OAUTH_TOKEN)return\"env\";let n=eM();if(n&&(!OV()||Xl()))return\"fd\";return{bearer:e.accessToken,fdToken:n}}",
+          "sha256": "41b11ea33d59707d80940c11114261015e6445389ada9d5b825c1f512f7d4e96"
+        },
+        {
+          "symbol": "Fk",
+          "start": 649176,
+          "end": 649274,
+          "source": "function Fk({bearer:e,fdToken:n},r){if(r&&r===e)return\"store\";if(n&&e===n)return\"fd\";return\"none\"}",
+          "sha256": "c18b3938676d6a4db5ced6619c69ce70c7a307d6c95c70d41f1439a7f47d0ae5"
+        },
+        {
+          "symbol": "S_",
+          "start": 656785,
+          "end": 656929,
+          "source": "function S_(e,n){return Boolean(e?.accountUuid)&&e?.accountUuid===n?.accountUuid&&(e?.organizationUuid||void 0)===(n?.organizationUuid||void 0)}",
+          "sha256": "d50c270a2fbe46f2e4b0b991ac45bd787d8a66b61dd9a807239d160130be0f86"
+        },
+        {
+          "symbol": "In",
+          "start": 667124,
+          "end": 667175,
+          "source": "function In(){return wl()?le().oauthAccount:void 0}",
+          "sha256": "ccdc8634d19d1c54c255fceea9dcae7389cf8e5631389a3a7277bc470a7299d9"
+        },
+        {
+          "symbol": "$H",
+          "start": 667175,
+          "end": 667226,
+          "source": "function $H(){if(!wl())return;return Peo()??void 0}",
+          "sha256": "b35febfffab16a45ef6fd339753df96fe00976d61b3ec3e720db1d877f2c1dcd"
+        }
+      ],
+      "credentialPorts": {
+        "oauthToken": "fn",
+        "environment": "a",
+        "fdToken": "eM",
+        "backgroundSnapshot": "OV",
+        "providerManaged": "Xl",
+        "storage": "Gn",
+        "authEnabled": "wl",
+        "config": "le",
+        "authenticatedAccount": "Peo"
+      },
+      "accountWriter": {
+        "symbol": "FWt",
+        "start": 698190,
+        "end": 699673,
+        "source": "function FWt({accountUuid:e,emailAddress:n,organizationUuid:r,displayName:s,fullName:g,hasExtraUsageEnabled:h,billingType:v,accountCreatedAt:S,subscriptionCreatedAt:w,ccOnboardingFlags:T,claudeCodeTrialEndsAt:R,claudeCodeTrialDurationDays:D,seatTier:H,planDisplayName:K,profileFetchedAt:G},z){let j={accountUuid:e,emailAddress:n,organizationUuid:r,hasExtraUsageEnabled:h,billingType:v,accountCreatedAt:S,subscriptionCreatedAt:w,ccOnboardingFlags:T,claudeCodeTrialEndsAt:R,claudeCodeTrialDurationDays:D,seatTier:H,planDisplayName:K??void 0};if(s)j.displayName=s;if(g)j.fullName=g;if(G!==void 0)j.profileFetchedAt=G;Te((Y)=>{if(G===void 0&&Y.oauthAccount?.accountUuid===j.accountUuid&&Y.oauthAccount?.emailAddress===j.emailAddress&&Y.oauthAccount?.organizationUuid===j.organizationUuid&&Y.oauthAccount?.displayName===j.displayName&&Y.oauthAccount?.fullName===j.fullName&&Y.oauthAccount?.hasExtraUsageEnabled===j.hasExtraUsageEnabled&&Y.oauthAccount?.billingType===j.billingType&&Y.oauthAccount?.accountCreatedAt===j.accountCreatedAt&&Y.oauthAccount?.subscriptionCreatedAt===j.subscriptionCreatedAt&&Y.oauthAccount?.claudeCodeTrialEndsAt===j.claudeCodeTrialEndsAt&&Y.oauthAccount?.claudeCodeTrialDurationDays===j.claudeCodeTrialDurationDays&&Y.oauthAccount?.seatTier===j.seatTier&&Y.oauthAccount?.planDisplayName===j.planDisplayName&&JSON.stringify(Y.oauthAccount?.ccOnboardingFlags)===JSON.stringify(j.ccOnboardingFlags))return Y;return{...Y,oauthAccount:{...Y.oauthAccount,...j}}},z)}",
+        "sha256": "15877c73a867d3c2321434b5fa7d5cd45e1dc1a77817ffd9f6171c1726aaa3cc"
+      },
+      "writerPort": "Te"
+    },
+    {
+      "platform": "linux-arm64",
+      "module": "chunk-4z0v3gv5.js",
+      "moduleSha256": "3ff22da8bfa5707ea67f7374b962d03f4a2f948b0e40e58006d97be044a9c263",
+      "moduleLength": 5050,
+      "manifestSha256": "f3be5b23f9cbb909555fe028143b9a3a40c1e3e49961e09c49d8e5a6b61ae83b",
+      "binarySha256": "e4daf793d1e74fb0d9874dd09e98690bbfd7be515f78a87fd05b9e2b4bb33b03",
+      "prepare": {
+        "symbol": "Dcr",
+        "start": 3202,
+        "end": 4758,
+        "source": "async function Dcr(e,{storageV5:r,credentials:o}){let f=On(),s={accountUuid:e.profile?.account?.uuid??e.tokenAccount?.uuid,organizationUuid:e.profile?.organization?.uuid??e.tokenAccount?.organizationUuid},u=S_(f,s),p=S_($M(),s),g=await Zg(o),A=p&&(g===\"env\"||g===\"fd\"||g===\"store\"&&u)?\"same_account\":\"account_switch\";await Qee({clearOnboarding:!1,preserveInProcessTokens:!0,preserveNonAnthropicAuth:!0,storageV5:r,preserveQuotaAutoResume:u,artifactAccount:A,incomingIdentity:s,credentials:o}),Hfe(null);let n=e.profile??await j1e(e.accessToken);if(n?.account&&n.organization)UWt({accountUuid:n.account.uuid,emailAddress:n.account.email,organizationUuid:n.organization.uuid,displayName:n.account.display_name||void 0,fullName:n.account.full_name||void 0,hasExtraUsageEnabled:n.organization.has_extra_usage_enabled??void 0,billingType:n.organization.billing_type??void 0,subscriptionCreatedAt:n.organization.subscription_created_at??void 0,accountCreatedAt:n.account.created_at,ccOnboardingFlags:n.organization.cc_onboarding_flags??{},claudeCodeTrialEndsAt:n.organization.claude_code_trial_ends_at??null,claudeCodeTrialDurationDays:n.organization.claude_code_trial_duration_days??null,seatTier:n.organization.seat_tier??null,planDisplayName:y7n(n),profileFetchedAt:Date.now()},r);else if(e.tokenAccount)UWt({accountUuid:e.tokenAccount.uuid,emailAddress:e.tokenAccount.emailAddress,organizationUuid:e.tokenAccount.organizationUuid},r);return U_e({action:\"login\",success:!0,authMethod:\"oauth\"}),{preserveQuotaAutoResume:u,artifactAccount:A,incomingIdentity:s}}",
+        "sha256": "ef50997d81a3140356ece2138533308cd41846c486ca7e3e5d7cd810f2e8c34a"
+      },
+      "aliases": {
+        "storedIdentity": "On",
+        "sameIdentity": "S_",
+        "authenticatedIdentity": "$M",
+        "credentialBackend": "Zg",
+        "reset": "Qee",
+        "stampAccount": "Hfe",
+        "fetchProfile": "j1e",
+        "storeProfile": "UWt",
+        "validatePlan": "y7n",
+        "recordLogin": "U_e"
+      },
+      "portOrigins": {
+        "storedIdentity": {
+          "module": "/$bunfs/root/chunk-g77csgy5.js",
+          "file": "chunk-g77csgy5.js",
+          "symbol": "On"
+        },
+        "sameIdentity": {
+          "module": "/$bunfs/root/chunk-g77csgy5.js",
+          "file": "chunk-g77csgy5.js",
+          "symbol": "S_"
+        },
+        "authenticatedIdentity": {
+          "module": "/$bunfs/root/chunk-g77csgy5.js",
+          "file": "chunk-g77csgy5.js",
+          "symbol": "$M"
+        },
+        "credentialBackend": {
+          "module": "/$bunfs/root/chunk-g77csgy5.js",
+          "file": "chunk-g77csgy5.js",
+          "symbol": "Zg"
+        },
+        "reset": {
+          "module": "/$bunfs/root/chunk-b3jrqn71.js",
+          "file": "chunk-b3jrqn71.js",
+          "symbol": "Qee"
+        },
+        "stampAccount": {
+          "module": "/$bunfs/root/chunk-jx85q2yb.js",
+          "file": "chunk-jx85q2yb.js",
+          "symbol": "Hfe"
+        },
+        "fetchProfile": {
+          "module": "/$bunfs/root/chunk-g77csgy5.js",
+          "file": "chunk-g77csgy5.js",
+          "symbol": "j1e"
+        },
+        "storeProfile": {
+          "module": "/$bunfs/root/chunk-g77csgy5.js",
+          "file": "chunk-g77csgy5.js",
+          "symbol": "UWt"
+        },
+        "validatePlan": {
+          "module": "/$bunfs/root/chunk-g77csgy5.js",
+          "file": "chunk-g77csgy5.js",
+          "symbol": "y7n"
+        },
+        "recordLogin": {
+          "module": "/$bunfs/root/chunk-v5x56bnb.js",
+          "file": "chunk-v5x56bnb.js",
+          "symbol": "U_e"
+        }
+      },
+      "credentialsModule": "chunk-g77csgy5.js",
+      "credentialsModuleSha256": "4835e14445bc039be98296d558b8319aa9783d4ce2e83ad50b153d5717f6d306",
+      "credentialsModuleLength": 705753,
+      "credentials": [
+        {
+          "symbol": "Zg",
+          "start": 648424,
+          "end": 648563,
+          "source": "async function Zg(e){let n=Lk();if(typeof n===\"string\")return n;let r=(await Gn().readAsync(e))?.claudeAiOauth?.accessToken;return Uk(n,r)}",
+          "sha256": "d4a3a80ed0ee4f1af8596445d259632118159acfdc9ed13ed8a624faf4028fd4"
+        },
+        {
+          "symbol": "Lk",
+          "start": 648563,
+          "end": 648742,
+          "source": "function Lk(){let e=fn();if(!e?.accessToken)return\"none\";if(a.CLAUDE_CODE_OAUTH_TOKEN)return\"env\";let n=e0();if(n&&(!Iq()||Xl()))return\"fd\";return{bearer:e.accessToken,fdToken:n}}",
+          "sha256": "bf64dd381b78fe838b8be2cd0c7a333f01d055b75ae807879bd1d3695f7511a9"
+        },
+        {
+          "symbol": "Uk",
+          "start": 648742,
+          "end": 648840,
+          "source": "function Uk({bearer:e,fdToken:n},r){if(r&&r===e)return\"store\";if(n&&e===n)return\"fd\";return\"none\"}",
+          "sha256": "76ba7813c12df417c015f26874cfcf38cca09925649cc30d639bf2805c740286"
+        },
+        {
+          "symbol": "S_",
+          "start": 656351,
+          "end": 656495,
+          "source": "function S_(e,n){return Boolean(e?.accountUuid)&&e?.accountUuid===n?.accountUuid&&(e?.organizationUuid||void 0)===(n?.organizationUuid||void 0)}",
+          "sha256": "d50c270a2fbe46f2e4b0b991ac45bd787d8a66b61dd9a807239d160130be0f86"
+        },
+        {
+          "symbol": "On",
+          "start": 666690,
+          "end": 666741,
+          "source": "function On(){return wl()?le().oauthAccount:void 0}",
+          "sha256": "a4cd6410c1f3329505e31776d1dd1f17dcf0bcaa0e1160be3ef271b9e12117c9"
+        },
+        {
+          "symbol": "$M",
+          "start": 666741,
+          "end": 666792,
+          "source": "function $M(){if(!wl())return;return Peo()??void 0}",
+          "sha256": "03711d85c4a67693f79ea2c79da4dbab2b83ea1fa990bf96999bf409b89c123a"
+        }
+      ],
+      "credentialPorts": {
+        "oauthToken": "fn",
+        "environment": "a",
+        "fdToken": "e0",
+        "backgroundSnapshot": "Iq",
+        "providerManaged": "Xl",
+        "storage": "Gn",
+        "authEnabled": "wl",
+        "config": "le",
+        "authenticatedAccount": "Peo"
+      },
+      "accountWriter": {
+        "symbol": "UWt",
+        "start": 697756,
+        "end": 699239,
+        "source": "function UWt({accountUuid:e,emailAddress:n,organizationUuid:r,displayName:s,fullName:g,hasExtraUsageEnabled:h,billingType:v,accountCreatedAt:S,subscriptionCreatedAt:w,ccOnboardingFlags:A,claudeCodeTrialEndsAt:T,claudeCodeTrialDurationDays:D,seatTier:N,planDisplayName:G,profileFetchedAt:j},V){let z={accountUuid:e,emailAddress:n,organizationUuid:r,hasExtraUsageEnabled:h,billingType:v,accountCreatedAt:S,subscriptionCreatedAt:w,ccOnboardingFlags:A,claudeCodeTrialEndsAt:T,claudeCodeTrialDurationDays:D,seatTier:N,planDisplayName:G??void 0};if(s)z.displayName=s;if(g)z.fullName=g;if(j!==void 0)z.profileFetchedAt=j;Te((Y)=>{if(j===void 0&&Y.oauthAccount?.accountUuid===z.accountUuid&&Y.oauthAccount?.emailAddress===z.emailAddress&&Y.oauthAccount?.organizationUuid===z.organizationUuid&&Y.oauthAccount?.displayName===z.displayName&&Y.oauthAccount?.fullName===z.fullName&&Y.oauthAccount?.hasExtraUsageEnabled===z.hasExtraUsageEnabled&&Y.oauthAccount?.billingType===z.billingType&&Y.oauthAccount?.accountCreatedAt===z.accountCreatedAt&&Y.oauthAccount?.subscriptionCreatedAt===z.subscriptionCreatedAt&&Y.oauthAccount?.claudeCodeTrialEndsAt===z.claudeCodeTrialEndsAt&&Y.oauthAccount?.claudeCodeTrialDurationDays===z.claudeCodeTrialDurationDays&&Y.oauthAccount?.seatTier===z.seatTier&&Y.oauthAccount?.planDisplayName===z.planDisplayName&&JSON.stringify(Y.oauthAccount?.ccOnboardingFlags)===JSON.stringify(z.ccOnboardingFlags))return Y;return{...Y,oauthAccount:{...Y.oauthAccount,...z}}},V)}",
+        "sha256": "d9d79b69d938a50eeb8ddddcdf3600f023ca90ad2a7ac78651f4b069f728df20"
+      },
+      "writerPort": "Te"
+    },
+    {
+      "platform": "darwin-x64",
+      "module": "chunk-6szq75nd.js",
+      "moduleSha256": "37faed8607dcdf710b0b29f129caa42d6d2b5f87ac61ce80045919b6400aa022",
+      "moduleLength": 5050,
+      "manifestSha256": "ba9e122d28e8a42927eb23c7c86b62295f24a223546ee5476e761837579a709b",
+      "binarySha256": "f1863213e4f55aaadc2e6ee617f934ada29930e5de4c5e5f8f9e34a0d594fdd7",
+      "prepare": {
+        "symbol": "wdr",
+        "start": 3202,
+        "end": 4758,
+        "source": "async function wdr(e,{storageV5:r,credentials:o}){let f=In(),s={accountUuid:e.profile?.account?.uuid??e.tokenAccount?.uuid,organizationUuid:e.profile?.organization?.uuid??e.tokenAccount?.organizationUuid},u=w_(f,s),p=w_(jO(),s),g=await Zg(o),A=p&&(g===\"env\"||g===\"fd\"||g===\"store\"&&u)?\"same_account\":\"account_switch\";await ite({clearOnboarding:!1,preserveInProcessTokens:!0,preserveNonAnthropicAuth:!0,storageV5:r,preserveQuotaAutoResume:u,artifactAccount:A,incomingIdentity:s,credentials:o}),Kfe(null);let n=e.profile??await qBe(e.accessToken);if(n?.account&&n.organization)tWt({accountUuid:n.account.uuid,emailAddress:n.account.email,organizationUuid:n.organization.uuid,displayName:n.account.display_name||void 0,fullName:n.account.full_name||void 0,hasExtraUsageEnabled:n.organization.has_extra_usage_enabled??void 0,billingType:n.organization.billing_type??void 0,subscriptionCreatedAt:n.organization.subscription_created_at??void 0,accountCreatedAt:n.account.created_at,ccOnboardingFlags:n.organization.cc_onboarding_flags??{},claudeCodeTrialEndsAt:n.organization.claude_code_trial_ends_at??null,claudeCodeTrialDurationDays:n.organization.claude_code_trial_duration_days??null,seatTier:n.organization.seat_tier??null,planDisplayName:FJn(n),profileFetchedAt:Date.now()},r);else if(e.tokenAccount)tWt({accountUuid:e.tokenAccount.uuid,emailAddress:e.tokenAccount.emailAddress,organizationUuid:e.tokenAccount.organizationUuid},r);return z_e({action:\"login\",success:!0,authMethod:\"oauth\"}),{preserveQuotaAutoResume:u,artifactAccount:A,incomingIdentity:s}}",
+        "sha256": "bdf13e8254e8418f0ea0fc95dfca54d2eb39d313e65b092a8725546c9c3cd1b6"
+      },
+      "aliases": {
+        "storedIdentity": "In",
+        "sameIdentity": "w_",
+        "authenticatedIdentity": "jO",
+        "credentialBackend": "Zg",
+        "reset": "ite",
+        "stampAccount": "Kfe",
+        "fetchProfile": "qBe",
+        "storeProfile": "tWt",
+        "validatePlan": "FJn",
+        "recordLogin": "z_e"
+      },
+      "portOrigins": {
+        "storedIdentity": {
+          "module": "/$bunfs/root/chunk-j825n4z9.js",
+          "file": "chunk-j825n4z9.js",
+          "symbol": "In"
+        },
+        "sameIdentity": {
+          "module": "/$bunfs/root/chunk-j825n4z9.js",
+          "file": "chunk-j825n4z9.js",
+          "symbol": "w_"
+        },
+        "authenticatedIdentity": {
+          "module": "/$bunfs/root/chunk-j825n4z9.js",
+          "file": "chunk-j825n4z9.js",
+          "symbol": "jO"
+        },
+        "credentialBackend": {
+          "module": "/$bunfs/root/chunk-j825n4z9.js",
+          "file": "chunk-j825n4z9.js",
+          "symbol": "Zg"
+        },
+        "reset": {
+          "module": "/$bunfs/root/chunk-53sc2ee8.js",
+          "file": "chunk-53sc2ee8.js",
+          "symbol": "ite"
+        },
+        "stampAccount": {
+          "module": "/$bunfs/root/chunk-ascjmg0h.js",
+          "file": "chunk-ascjmg0h.js",
+          "symbol": "Kfe"
+        },
+        "fetchProfile": {
+          "module": "/$bunfs/root/chunk-j825n4z9.js",
+          "file": "chunk-j825n4z9.js",
+          "symbol": "qBe"
+        },
+        "storeProfile": {
+          "module": "/$bunfs/root/chunk-j825n4z9.js",
+          "file": "chunk-j825n4z9.js",
+          "symbol": "tWt"
+        },
+        "validatePlan": {
+          "module": "/$bunfs/root/chunk-j825n4z9.js",
+          "file": "chunk-j825n4z9.js",
+          "symbol": "FJn"
+        },
+        "recordLogin": {
+          "module": "/$bunfs/root/chunk-kvnkf7ps.js",
+          "file": "chunk-kvnkf7ps.js",
+          "symbol": "z_e"
+        }
+      },
+      "credentialsModule": "chunk-j825n4z9.js",
+      "credentialsModuleSha256": "44acfb339cd1323b1a59ae7dcbd3efbcacb183bc5f4043b0e2d52e1511ac113f",
+      "credentialsModuleLength": 706559,
+      "credentials": [
+        {
+          "symbol": "Zg",
+          "start": 648912,
+          "end": 649051,
+          "source": "async function Zg(e){let n=Gk();if(typeof n===\"string\")return n;let r=(await zn().readAsync(e))?.claudeAiOauth?.accessToken;return Wk(n,r)}",
+          "sha256": "79451cc42d20378cffa23da4f24966c4eb54a4e9335853860e128d6de7c0504c"
+        },
+        {
+          "symbol": "Gk",
+          "start": 649051,
+          "end": 649230,
+          "source": "function Gk(){let e=fn();if(!e?.accessToken)return\"none\";if(a.CLAUDE_CODE_OAUTH_TOKEN)return\"env\";let n=s0();if(n&&(!Uz()||Jl()))return\"fd\";return{bearer:e.accessToken,fdToken:n}}",
+          "sha256": "1690343f04eed4f4a16fa4704eb3d6f9d5c80773a1bbe52323b684a4035f42bf"
+        },
+        {
+          "symbol": "Wk",
+          "start": 649230,
+          "end": 649328,
+          "source": "function Wk({bearer:e,fdToken:n},r){if(r&&r===e)return\"store\";if(n&&e===n)return\"fd\";return\"none\"}",
+          "sha256": "8214a1055ec9ec514cc291a7dd6c558fbe0e486a93b586cb133b615365611226"
+        },
+        {
+          "symbol": "w_",
+          "start": 656839,
+          "end": 656983,
+          "source": "function w_(e,n){return Boolean(e?.accountUuid)&&e?.accountUuid===n?.accountUuid&&(e?.organizationUuid||void 0)===(n?.organizationUuid||void 0)}",
+          "sha256": "b33ccb7ad83ab627da660959d458aff49f7705153eb3412008303ee644e76b5d"
+        },
+        {
+          "symbol": "In",
+          "start": 667178,
+          "end": 667229,
+          "source": "function In(){return vl()?le().oauthAccount:void 0}",
+          "sha256": "b61320fdc6e7c9a316cd8414d46385077827ba78164e713a3b08e373c172ac9b"
+        },
+        {
+          "symbol": "jO",
+          "start": 667229,
+          "end": 667280,
+          "source": "function jO(){if(!vl())return;return sto()??void 0}",
+          "sha256": "2629e64b471ea4aca079846190c2f01e2238d551be5c175dd92962979d49919d"
+        }
+      ],
+      "credentialPorts": {
+        "oauthToken": "fn",
+        "environment": "a",
+        "fdToken": "s0",
+        "backgroundSnapshot": "Uz",
+        "providerManaged": "Jl",
+        "storage": "zn",
+        "authEnabled": "vl",
+        "config": "le",
+        "authenticatedAccount": "sto"
+      },
+      "accountWriter": {
+        "symbol": "tWt",
+        "start": 698563,
+        "end": 700046,
+        "source": "function tWt({accountUuid:e,emailAddress:n,organizationUuid:r,displayName:s,fullName:g,hasExtraUsageEnabled:h,billingType:b,accountCreatedAt:v,subscriptionCreatedAt:w,ccOnboardingFlags:C,claudeCodeTrialEndsAt:R,claudeCodeTrialDurationDays:M,seatTier:L,planDisplayName:G,profileFetchedAt:j},q){let z={accountUuid:e,emailAddress:n,organizationUuid:r,hasExtraUsageEnabled:h,billingType:b,accountCreatedAt:v,subscriptionCreatedAt:w,ccOnboardingFlags:C,claudeCodeTrialEndsAt:R,claudeCodeTrialDurationDays:M,seatTier:L,planDisplayName:G??void 0};if(s)z.displayName=s;if(g)z.fullName=g;if(j!==void 0)z.profileFetchedAt=j;Ce((X)=>{if(j===void 0&&X.oauthAccount?.accountUuid===z.accountUuid&&X.oauthAccount?.emailAddress===z.emailAddress&&X.oauthAccount?.organizationUuid===z.organizationUuid&&X.oauthAccount?.displayName===z.displayName&&X.oauthAccount?.fullName===z.fullName&&X.oauthAccount?.hasExtraUsageEnabled===z.hasExtraUsageEnabled&&X.oauthAccount?.billingType===z.billingType&&X.oauthAccount?.accountCreatedAt===z.accountCreatedAt&&X.oauthAccount?.subscriptionCreatedAt===z.subscriptionCreatedAt&&X.oauthAccount?.claudeCodeTrialEndsAt===z.claudeCodeTrialEndsAt&&X.oauthAccount?.claudeCodeTrialDurationDays===z.claudeCodeTrialDurationDays&&X.oauthAccount?.seatTier===z.seatTier&&X.oauthAccount?.planDisplayName===z.planDisplayName&&JSON.stringify(X.oauthAccount?.ccOnboardingFlags)===JSON.stringify(z.ccOnboardingFlags))return X;return{...X,oauthAccount:{...X.oauthAccount,...z}}},q)}",
+        "sha256": "4f3ec24269aca5fd36aeb881963f64addb3514957ea3124919046439a72bd739"
+      },
+      "writerPort": "Ce"
+    },
+    {
+      "platform": "darwin-arm64",
+      "module": "chunk-8j1q755t.js",
+      "moduleSha256": "218698a2eb10f3b8825c2d8c7917f8a69e7eaabf547a2a8b2de7943e45675aa4",
+      "moduleLength": 5050,
+      "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+      "binarySha256": "6eab8333fe2121553100d8f40bfada384a3e989b94f947e18ba6677a6fcb41ea",
+      "prepare": {
+        "symbol": "wdr",
+        "start": 3202,
+        "end": 4758,
+        "source": "async function wdr(e,{storageV5:r,credentials:o}){let f=In(),s={accountUuid:e.profile?.account?.uuid??e.tokenAccount?.uuid,organizationUuid:e.profile?.organization?.uuid??e.tokenAccount?.organizationUuid},u=w_(f,s),p=w_(jH(),s),g=await Zg(o),A=p&&(g===\"env\"||g===\"fd\"||g===\"store\"&&u)?\"same_account\":\"account_switch\";await ite({clearOnboarding:!1,preserveInProcessTokens:!0,preserveNonAnthropicAuth:!0,storageV5:r,preserveQuotaAutoResume:u,artifactAccount:A,incomingIdentity:s,credentials:o}),qfe(null);let n=e.profile??await KBe(e.accessToken);if(n?.account&&n.organization)tWt({accountUuid:n.account.uuid,emailAddress:n.account.email,organizationUuid:n.organization.uuid,displayName:n.account.display_name||void 0,fullName:n.account.full_name||void 0,hasExtraUsageEnabled:n.organization.has_extra_usage_enabled??void 0,billingType:n.organization.billing_type??void 0,subscriptionCreatedAt:n.organization.subscription_created_at??void 0,accountCreatedAt:n.account.created_at,ccOnboardingFlags:n.organization.cc_onboarding_flags??{},claudeCodeTrialEndsAt:n.organization.claude_code_trial_ends_at??null,claudeCodeTrialDurationDays:n.organization.claude_code_trial_duration_days??null,seatTier:n.organization.seat_tier??null,planDisplayName:FJn(n),profileFetchedAt:Date.now()},r);else if(e.tokenAccount)tWt({accountUuid:e.tokenAccount.uuid,emailAddress:e.tokenAccount.emailAddress,organizationUuid:e.tokenAccount.organizationUuid},r);return z_e({action:\"login\",success:!0,authMethod:\"oauth\"}),{preserveQuotaAutoResume:u,artifactAccount:A,incomingIdentity:s}}",
+        "sha256": "22cc54146e190c58b0469b19b92ce8e796a060efc69b8ae80ec848fd949ac4cf"
+      },
+      "aliases": {
+        "storedIdentity": "In",
+        "sameIdentity": "w_",
+        "authenticatedIdentity": "jH",
+        "credentialBackend": "Zg",
+        "reset": "ite",
+        "stampAccount": "qfe",
+        "fetchProfile": "KBe",
+        "storeProfile": "tWt",
+        "validatePlan": "FJn",
+        "recordLogin": "z_e"
+      },
+      "portOrigins": {
+        "storedIdentity": {
+          "module": "/$bunfs/root/chunk-nankzm0s.js",
+          "file": "chunk-nankzm0s.js",
+          "symbol": "In"
+        },
+        "sameIdentity": {
+          "module": "/$bunfs/root/chunk-nankzm0s.js",
+          "file": "chunk-nankzm0s.js",
+          "symbol": "w_"
+        },
+        "authenticatedIdentity": {
+          "module": "/$bunfs/root/chunk-nankzm0s.js",
+          "file": "chunk-nankzm0s.js",
+          "symbol": "jH"
+        },
+        "credentialBackend": {
+          "module": "/$bunfs/root/chunk-nankzm0s.js",
+          "file": "chunk-nankzm0s.js",
+          "symbol": "Zg"
+        },
+        "reset": {
+          "module": "/$bunfs/root/chunk-kjjppes5.js",
+          "file": "chunk-kjjppes5.js",
+          "symbol": "ite"
+        },
+        "stampAccount": {
+          "module": "/$bunfs/root/chunk-bn3p37gv.js",
+          "file": "chunk-bn3p37gv.js",
+          "symbol": "qfe"
+        },
+        "fetchProfile": {
+          "module": "/$bunfs/root/chunk-nankzm0s.js",
+          "file": "chunk-nankzm0s.js",
+          "symbol": "KBe"
+        },
+        "storeProfile": {
+          "module": "/$bunfs/root/chunk-nankzm0s.js",
+          "file": "chunk-nankzm0s.js",
+          "symbol": "tWt"
+        },
+        "validatePlan": {
+          "module": "/$bunfs/root/chunk-nankzm0s.js",
+          "file": "chunk-nankzm0s.js",
+          "symbol": "FJn"
+        },
+        "recordLogin": {
+          "module": "/$bunfs/root/chunk-qyc5w2q1.js",
+          "file": "chunk-qyc5w2q1.js",
+          "symbol": "z_e"
+        }
+      },
+      "credentialsModule": "chunk-nankzm0s.js",
+      "credentialsModuleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "credentialsModuleLength": 706979,
+      "credentials": [
+        {
+          "symbol": "Zg",
+          "start": 649332,
+          "end": 649471,
+          "source": "async function Zg(e){let n=Mk();if(typeof n===\"string\")return n;let r=(await zn().readAsync(e))?.claudeAiOauth?.accessToken;return Dk(n,r)}",
+          "sha256": "49dac2d36109cf350d4f18dd513fc95323c2e062fc5b8011f836c2a2c0b03193"
+        },
+        {
+          "symbol": "Mk",
+          "start": 649471,
+          "end": 649650,
+          "source": "function Mk(){let e=fn();if(!e?.accessToken)return\"none\";if(a.CLAUDE_CODE_OAUTH_TOKEN)return\"env\";let n=sO();if(n&&(!Uz()||Jl()))return\"fd\";return{bearer:e.accessToken,fdToken:n}}",
+          "sha256": "ab6e165d7bff9b5bb6ec6c05f5c5439635b543b80b22862507df809a7b4cac34"
+        },
+        {
+          "symbol": "Dk",
+          "start": 649650,
+          "end": 649748,
+          "source": "function Dk({bearer:e,fdToken:n},r){if(r&&r===e)return\"store\";if(n&&e===n)return\"fd\";return\"none\"}",
+          "sha256": "862be6dd3923025a4fe941b24cc0aa1502053ef5d7eedd68d7745d48c8c2fd0a"
+        },
+        {
+          "symbol": "w_",
+          "start": 657259,
+          "end": 657403,
+          "source": "function w_(e,n){return Boolean(e?.accountUuid)&&e?.accountUuid===n?.accountUuid&&(e?.organizationUuid||void 0)===(n?.organizationUuid||void 0)}",
+          "sha256": "b33ccb7ad83ab627da660959d458aff49f7705153eb3412008303ee644e76b5d"
+        },
+        {
+          "symbol": "In",
+          "start": 667598,
+          "end": 667649,
+          "source": "function In(){return vl()?le().oauthAccount:void 0}",
+          "sha256": "b61320fdc6e7c9a316cd8414d46385077827ba78164e713a3b08e373c172ac9b"
+        },
+        {
+          "symbol": "jH",
+          "start": 667649,
+          "end": 667700,
+          "source": "function jH(){if(!vl())return;return sto()??void 0}",
+          "sha256": "59cb548e0bb07a7937d13ce117932c5f5325925961ca7297255cfd411d4f62e9"
+        }
+      ],
+      "credentialPorts": {
+        "oauthToken": "fn",
+        "environment": "a",
+        "fdToken": "sO",
+        "backgroundSnapshot": "Uz",
+        "providerManaged": "Jl",
+        "storage": "zn",
+        "authEnabled": "vl",
+        "config": "le",
+        "authenticatedAccount": "sto"
+      },
+      "accountWriter": {
+        "symbol": "tWt",
+        "start": 698983,
+        "end": 700466,
+        "source": "function tWt({accountUuid:e,emailAddress:n,organizationUuid:r,displayName:s,fullName:g,hasExtraUsageEnabled:h,billingType:b,accountCreatedAt:v,subscriptionCreatedAt:w,ccOnboardingFlags:A,claudeCodeTrialEndsAt:R,claudeCodeTrialDurationDays:M,seatTier:D,planDisplayName:K,profileFetchedAt:G},z){let j={accountUuid:e,emailAddress:n,organizationUuid:r,hasExtraUsageEnabled:h,billingType:b,accountCreatedAt:v,subscriptionCreatedAt:w,ccOnboardingFlags:A,claudeCodeTrialEndsAt:R,claudeCodeTrialDurationDays:M,seatTier:D,planDisplayName:K??void 0};if(s)j.displayName=s;if(g)j.fullName=g;if(G!==void 0)j.profileFetchedAt=G;Ae((X)=>{if(G===void 0&&X.oauthAccount?.accountUuid===j.accountUuid&&X.oauthAccount?.emailAddress===j.emailAddress&&X.oauthAccount?.organizationUuid===j.organizationUuid&&X.oauthAccount?.displayName===j.displayName&&X.oauthAccount?.fullName===j.fullName&&X.oauthAccount?.hasExtraUsageEnabled===j.hasExtraUsageEnabled&&X.oauthAccount?.billingType===j.billingType&&X.oauthAccount?.accountCreatedAt===j.accountCreatedAt&&X.oauthAccount?.subscriptionCreatedAt===j.subscriptionCreatedAt&&X.oauthAccount?.claudeCodeTrialEndsAt===j.claudeCodeTrialEndsAt&&X.oauthAccount?.claudeCodeTrialDurationDays===j.claudeCodeTrialDurationDays&&X.oauthAccount?.seatTier===j.seatTier&&X.oauthAccount?.planDisplayName===j.planDisplayName&&JSON.stringify(X.oauthAccount?.ccOnboardingFlags)===JSON.stringify(j.ccOnboardingFlags))return X;return{...X,oauthAccount:{...X.oauthAccount,...j}}},z)}",
+        "sha256": "b42003e1ee8abbd6b2a33337fc7f58bb93c1ef810d0086473b2a77d332f11799"
+      },
+      "writerPort": "Ae"
+    },
+    {
+      "platform": "win32-x64",
+      "module": "chunk-g0txcnna.js",
+      "moduleSha256": "13693821a58f56f468aba87d618182cd2149641cb6bec9c875eba7fcea614493",
+      "moduleLength": 5050,
+      "manifestSha256": "c71e85888df3301fd3c4cb158744538810418e2d67591debe8e4f7c771fcdddc",
+      "binarySha256": "6d5be51f0edfe3429cd1a9885950db31c1e59eb9a2c9a30a47e64179d2ff98b4",
+      "prepare": {
+        "symbol": "Bcr",
+        "start": 3202,
+        "end": 4758,
+        "source": "async function Bcr(e,{storageV5:r,credentials:o}){let f=In(),s={accountUuid:e.profile?.account?.uuid??e.tokenAccount?.uuid,organizationUuid:e.profile?.organization?.uuid??e.tokenAccount?.organizationUuid},u=E_(f,s),p=E_(U0(),s),g=await Qg(o),A=p&&(g===\"env\"||g===\"fd\"||g===\"store\"&&u)?\"same_account\":\"account_switch\";await rte({clearOnboarding:!1,preserveInProcessTokens:!0,preserveNonAnthropicAuth:!0,storageV5:r,preserveQuotaAutoResume:u,artifactAccount:A,incomingIdentity:s,credentials:o}),jfe(null);let n=e.profile??await W1e(e.accessToken);if(n?.account&&n.organization)BWt({accountUuid:n.account.uuid,emailAddress:n.account.email,organizationUuid:n.organization.uuid,displayName:n.account.display_name||void 0,fullName:n.account.full_name||void 0,hasExtraUsageEnabled:n.organization.has_extra_usage_enabled??void 0,billingType:n.organization.billing_type??void 0,subscriptionCreatedAt:n.organization.subscription_created_at??void 0,accountCreatedAt:n.account.created_at,ccOnboardingFlags:n.organization.cc_onboarding_flags??{},claudeCodeTrialEndsAt:n.organization.claude_code_trial_ends_at??null,claudeCodeTrialDurationDays:n.organization.claude_code_trial_duration_days??null,seatTier:n.organization.seat_tier??null,planDisplayName:T7n(n),profileFetchedAt:Date.now()},r);else if(e.tokenAccount)BWt({accountUuid:e.tokenAccount.uuid,emailAddress:e.tokenAccount.emailAddress,organizationUuid:e.tokenAccount.organizationUuid},r);return U_e({action:\"login\",success:!0,authMethod:\"oauth\"}),{preserveQuotaAutoResume:u,artifactAccount:A,incomingIdentity:s}}",
+        "sha256": "5d2e11c89932ac60fd11fb92aea97a59cad58c9d14edd0f045b59240f0280e10"
+      },
+      "aliases": {
+        "storedIdentity": "In",
+        "sameIdentity": "E_",
+        "authenticatedIdentity": "U0",
+        "credentialBackend": "Qg",
+        "reset": "rte",
+        "stampAccount": "jfe",
+        "fetchProfile": "W1e",
+        "storeProfile": "BWt",
+        "validatePlan": "T7n",
+        "recordLogin": "U_e"
+      },
+      "portOrigins": {
+        "storedIdentity": {
+          "module": "B:/~BUN/root/chunk-xybe1vrh.js",
+          "file": "chunk-xybe1vrh.js",
+          "symbol": "In"
+        },
+        "sameIdentity": {
+          "module": "B:/~BUN/root/chunk-xybe1vrh.js",
+          "file": "chunk-xybe1vrh.js",
+          "symbol": "E_"
+        },
+        "authenticatedIdentity": {
+          "module": "B:/~BUN/root/chunk-xybe1vrh.js",
+          "file": "chunk-xybe1vrh.js",
+          "symbol": "U0"
+        },
+        "credentialBackend": {
+          "module": "B:/~BUN/root/chunk-xybe1vrh.js",
+          "file": "chunk-xybe1vrh.js",
+          "symbol": "Qg"
+        },
+        "reset": {
+          "module": "B:/~BUN/root/chunk-9xbcz4jc.js",
+          "file": "chunk-9xbcz4jc.js",
+          "symbol": "rte"
+        },
+        "stampAccount": {
+          "module": "B:/~BUN/root/chunk-q2pbxf3c.js",
+          "file": "chunk-q2pbxf3c.js",
+          "symbol": "jfe"
+        },
+        "fetchProfile": {
+          "module": "B:/~BUN/root/chunk-xybe1vrh.js",
+          "file": "chunk-xybe1vrh.js",
+          "symbol": "W1e"
+        },
+        "storeProfile": {
+          "module": "B:/~BUN/root/chunk-xybe1vrh.js",
+          "file": "chunk-xybe1vrh.js",
+          "symbol": "BWt"
+        },
+        "validatePlan": {
+          "module": "B:/~BUN/root/chunk-xybe1vrh.js",
+          "file": "chunk-xybe1vrh.js",
+          "symbol": "T7n"
+        },
+        "recordLogin": {
+          "module": "B:/~BUN/root/chunk-921cp325.js",
+          "file": "chunk-921cp325.js",
+          "symbol": "U_e"
+        }
+      },
+      "credentialsModule": "chunk-xybe1vrh.js",
+      "credentialsModuleSha256": "f6bcd764f28c2767881941459fcd034e465882afc68abf977d197c0e3b9cfd27",
+      "credentialsModuleLength": 705986,
+      "credentials": [
+        {
+          "symbol": "Qg",
+          "start": 648729,
+          "end": 648868,
+          "source": "async function Qg(e){let n=Ik();if(typeof n===\"string\")return n;let r=(await Gn().readAsync(e))?.claudeAiOauth?.accessToken;return Nk(n,r)}",
+          "sha256": "8a378aa1b784edc2972d0ccc9260345d43de9523f54f4df37d60ad21c9355269"
+        },
+        {
+          "symbol": "Ik",
+          "start": 648868,
+          "end": 649047,
+          "source": "function Ik(){let e=fn();if(!e?.accessToken)return\"none\";if(a.CLAUDE_CODE_OAUTH_TOKEN)return\"env\";let n=tM();if(n&&(!OV()||Xl()))return\"fd\";return{bearer:e.accessToken,fdToken:n}}",
+          "sha256": "b90f5399f212c7957e85993df1968b68e96487ce9ca339807056cb583535e088"
+        },
+        {
+          "symbol": "Nk",
+          "start": 649047,
+          "end": 649145,
+          "source": "function Nk({bearer:e,fdToken:n},r){if(r&&r===e)return\"store\";if(n&&e===n)return\"fd\";return\"none\"}",
+          "sha256": "8d5fdfd79054438a50a406da9cff94c065892cf4070947d53830ffe38091d22b"
+        },
+        {
+          "symbol": "E_",
+          "start": 656656,
+          "end": 656800,
+          "source": "function E_(e,n){return Boolean(e?.accountUuid)&&e?.accountUuid===n?.accountUuid&&(e?.organizationUuid||void 0)===(n?.organizationUuid||void 0)}",
+          "sha256": "ae43fbf2cf10340854df2e544778d50e81b78421ead8a76254cdffc50a264194"
+        },
+        {
+          "symbol": "In",
+          "start": 666995,
+          "end": 667046,
+          "source": "function In(){return vl()?le().oauthAccount:void 0}",
+          "sha256": "b61320fdc6e7c9a316cd8414d46385077827ba78164e713a3b08e373c172ac9b"
+        },
+        {
+          "symbol": "U0",
+          "start": 667046,
+          "end": 667097,
+          "source": "function U0(){if(!vl())return;return Neo()??void 0}",
+          "sha256": "f648705340e5fd5dde36325f6da8c142a242b4070dc87ee18261db0e10f7ac25"
+        }
+      ],
+      "credentialPorts": {
+        "oauthToken": "fn",
+        "environment": "a",
+        "fdToken": "tM",
+        "backgroundSnapshot": "OV",
+        "providerManaged": "Xl",
+        "storage": "Gn",
+        "authEnabled": "vl",
+        "config": "le",
+        "authenticatedAccount": "Neo"
+      },
+      "accountWriter": {
+        "symbol": "BWt",
+        "start": 697989,
+        "end": 699472,
+        "source": "function BWt({accountUuid:e,emailAddress:n,organizationUuid:r,displayName:s,fullName:g,hasExtraUsageEnabled:h,billingType:S,accountCreatedAt:E,subscriptionCreatedAt:w,ccOnboardingFlags:A,claudeCodeTrialEndsAt:T,claudeCodeTrialDurationDays:D,seatTier:L,planDisplayName:K,profileFetchedAt:G},z){let j={accountUuid:e,emailAddress:n,organizationUuid:r,hasExtraUsageEnabled:h,billingType:S,accountCreatedAt:E,subscriptionCreatedAt:w,ccOnboardingFlags:A,claudeCodeTrialEndsAt:T,claudeCodeTrialDurationDays:D,seatTier:L,planDisplayName:K??void 0};if(s)j.displayName=s;if(g)j.fullName=g;if(G!==void 0)j.profileFetchedAt=G;Te((Y)=>{if(G===void 0&&Y.oauthAccount?.accountUuid===j.accountUuid&&Y.oauthAccount?.emailAddress===j.emailAddress&&Y.oauthAccount?.organizationUuid===j.organizationUuid&&Y.oauthAccount?.displayName===j.displayName&&Y.oauthAccount?.fullName===j.fullName&&Y.oauthAccount?.hasExtraUsageEnabled===j.hasExtraUsageEnabled&&Y.oauthAccount?.billingType===j.billingType&&Y.oauthAccount?.accountCreatedAt===j.accountCreatedAt&&Y.oauthAccount?.subscriptionCreatedAt===j.subscriptionCreatedAt&&Y.oauthAccount?.claudeCodeTrialEndsAt===j.claudeCodeTrialEndsAt&&Y.oauthAccount?.claudeCodeTrialDurationDays===j.claudeCodeTrialDurationDays&&Y.oauthAccount?.seatTier===j.seatTier&&Y.oauthAccount?.planDisplayName===j.planDisplayName&&JSON.stringify(Y.oauthAccount?.ccOnboardingFlags)===JSON.stringify(j.ccOnboardingFlags))return Y;return{...Y,oauthAccount:{...Y.oauthAccount,...j}}},z)}",
+        "sha256": "efa86ed7abb915a063f716f22d773789319d2186296c25de911b532d77395cc3"
+      },
+      "writerPort": "Te"
+    },
+    {
+      "platform": "win32-arm64",
+      "module": "chunk-5v7cgaf6.js",
+      "moduleSha256": "8e9d2f8720b427e75d17658c1d2aff07a537444bed73c900593bbdfd073fcf3c",
+      "moduleLength": 5050,
+      "manifestSha256": "d0d8b3b882ba61ba321ab072b5cbc28a1a4089cfb4c5dce0698311aae10c739e",
+      "binarySha256": "11438981154e99af8f9aeabe193871c92b8b550b35354686a140fc056f1bfe54",
+      "prepare": {
+        "symbol": "Hcr",
+        "start": 3202,
+        "end": 4758,
+        "source": "async function Hcr(e,{storageV5:r,credentials:o}){let f=In(),s={accountUuid:e.profile?.account?.uuid??e.tokenAccount?.uuid,organizationUuid:e.profile?.organization?.uuid??e.tokenAccount?.organizationUuid},u=k_(f,s),p=k_(B0(),s),g=await Qg(o),A=p&&(g===\"env\"||g===\"fd\"||g===\"store\"&&u)?\"same_account\":\"account_switch\";await rte({clearOnboarding:!1,preserveInProcessTokens:!0,preserveNonAnthropicAuth:!0,storageV5:r,preserveQuotaAutoResume:u,artifactAccount:A,incomingIdentity:s,credentials:o}),jfe(null);let n=e.profile??await W1e(e.accessToken);if(n?.account&&n.organization)HWt({accountUuid:n.account.uuid,emailAddress:n.account.email,organizationUuid:n.organization.uuid,displayName:n.account.display_name||void 0,fullName:n.account.full_name||void 0,hasExtraUsageEnabled:n.organization.has_extra_usage_enabled??void 0,billingType:n.organization.billing_type??void 0,subscriptionCreatedAt:n.organization.subscription_created_at??void 0,accountCreatedAt:n.account.created_at,ccOnboardingFlags:n.organization.cc_onboarding_flags??{},claudeCodeTrialEndsAt:n.organization.claude_code_trial_ends_at??null,claudeCodeTrialDurationDays:n.organization.claude_code_trial_duration_days??null,seatTier:n.organization.seat_tier??null,planDisplayName:T7n(n),profileFetchedAt:Date.now()},r);else if(e.tokenAccount)HWt({accountUuid:e.tokenAccount.uuid,emailAddress:e.tokenAccount.emailAddress,organizationUuid:e.tokenAccount.organizationUuid},r);return B_e({action:\"login\",success:!0,authMethod:\"oauth\"}),{preserveQuotaAutoResume:u,artifactAccount:A,incomingIdentity:s}}",
+        "sha256": "a5a88cc0e967149bc90f81b8a952ea2cda6a86de767ca24c60eb4f7355bffaa3"
+      },
+      "aliases": {
+        "storedIdentity": "In",
+        "sameIdentity": "k_",
+        "authenticatedIdentity": "B0",
+        "credentialBackend": "Qg",
+        "reset": "rte",
+        "stampAccount": "jfe",
+        "fetchProfile": "W1e",
+        "storeProfile": "HWt",
+        "validatePlan": "T7n",
+        "recordLogin": "B_e"
+      },
+      "portOrigins": {
+        "storedIdentity": {
+          "module": "B:/~BUN/root/chunk-jzrab299.js",
+          "file": "chunk-jzrab299.js",
+          "symbol": "In"
+        },
+        "sameIdentity": {
+          "module": "B:/~BUN/root/chunk-jzrab299.js",
+          "file": "chunk-jzrab299.js",
+          "symbol": "k_"
+        },
+        "authenticatedIdentity": {
+          "module": "B:/~BUN/root/chunk-jzrab299.js",
+          "file": "chunk-jzrab299.js",
+          "symbol": "B0"
+        },
+        "credentialBackend": {
+          "module": "B:/~BUN/root/chunk-jzrab299.js",
+          "file": "chunk-jzrab299.js",
+          "symbol": "Qg"
+        },
+        "reset": {
+          "module": "B:/~BUN/root/chunk-g6rfqq5z.js",
+          "file": "chunk-g6rfqq5z.js",
+          "symbol": "rte"
+        },
+        "stampAccount": {
+          "module": "B:/~BUN/root/chunk-ce0nkjpw.js",
+          "file": "chunk-ce0nkjpw.js",
+          "symbol": "jfe"
+        },
+        "fetchProfile": {
+          "module": "B:/~BUN/root/chunk-jzrab299.js",
+          "file": "chunk-jzrab299.js",
+          "symbol": "W1e"
+        },
+        "storeProfile": {
+          "module": "B:/~BUN/root/chunk-jzrab299.js",
+          "file": "chunk-jzrab299.js",
+          "symbol": "HWt"
+        },
+        "validatePlan": {
+          "module": "B:/~BUN/root/chunk-jzrab299.js",
+          "file": "chunk-jzrab299.js",
+          "symbol": "T7n"
+        },
+        "recordLogin": {
+          "module": "B:/~BUN/root/chunk-b6mfqh8b.js",
+          "file": "chunk-b6mfqh8b.js",
+          "symbol": "B_e"
+        }
+      },
+      "credentialsModule": "chunk-jzrab299.js",
+      "credentialsModuleSha256": "9363128c17a7aa7a3eea09d61cd42d6a8773c0c2c0d563037ba1aa9152513549",
+      "credentialsModuleLength": 705581,
+      "credentials": [
+        {
+          "symbol": "Qg",
+          "start": 648324,
+          "end": 648463,
+          "source": "async function Qg(e){let n=Fk();if(typeof n===\"string\")return n;let r=(await Gn().readAsync(e))?.claudeAiOauth?.accessToken;return Lk(n,r)}",
+          "sha256": "c57f0e6d895bcc0fb53032aecb5fc797b27696fe471afe21c0ad2b51d331e73f"
+        },
+        {
+          "symbol": "Fk",
+          "start": 648463,
+          "end": 648642,
+          "source": "function Fk(){let e=fn();if(!e?.accessToken)return\"none\";if(a.CLAUDE_CODE_OAUTH_TOKEN)return\"env\";let n=tM();if(n&&(!Oq()||Xl()))return\"fd\";return{bearer:e.accessToken,fdToken:n}}",
+          "sha256": "39541a3308c6982ecc5526b4bef9807247fc22de29506fea4c5b9fdb8932bb6d"
+        },
+        {
+          "symbol": "Lk",
+          "start": 648642,
+          "end": 648740,
+          "source": "function Lk({bearer:e,fdToken:n},r){if(r&&r===e)return\"store\";if(n&&e===n)return\"fd\";return\"none\"}",
+          "sha256": "90952f524fde965c0ac46a41b07a0c60a85ee3d767c46c54b882ab42c244192a"
+        },
+        {
+          "symbol": "k_",
+          "start": 656251,
+          "end": 656395,
+          "source": "function k_(e,n){return Boolean(e?.accountUuid)&&e?.accountUuid===n?.accountUuid&&(e?.organizationUuid||void 0)===(n?.organizationUuid||void 0)}",
+          "sha256": "56942fac30ea8bdcae9ab18646af6c21f5150236edbb7dd6830766014ddf79ea"
+        },
+        {
+          "symbol": "In",
+          "start": 666590,
+          "end": 666641,
+          "source": "function In(){return vl()?le().oauthAccount:void 0}",
+          "sha256": "b61320fdc6e7c9a316cd8414d46385077827ba78164e713a3b08e373c172ac9b"
+        },
+        {
+          "symbol": "B0",
+          "start": 666641,
+          "end": 666692,
+          "source": "function B0(){if(!vl())return;return Leo()??void 0}",
+          "sha256": "289311a156e6efd9a1acd94ba659377d4e77bdbaa325138976096d99e77b56ac"
+        }
+      ],
+      "credentialPorts": {
+        "oauthToken": "fn",
+        "environment": "a",
+        "fdToken": "tM",
+        "backgroundSnapshot": "Oq",
+        "providerManaged": "Xl",
+        "storage": "Gn",
+        "authEnabled": "vl",
+        "config": "le",
+        "authenticatedAccount": "Leo"
+      },
+      "accountWriter": {
+        "symbol": "HWt",
+        "start": 697584,
+        "end": 699067,
+        "source": "function HWt({accountUuid:e,emailAddress:n,organizationUuid:r,displayName:s,fullName:g,hasExtraUsageEnabled:h,billingType:S,accountCreatedAt:w,subscriptionCreatedAt:k,ccOnboardingFlags:A,claudeCodeTrialEndsAt:T,claudeCodeTrialDurationDays:D,seatTier:N,planDisplayName:K,profileFetchedAt:G},z){let j={accountUuid:e,emailAddress:n,organizationUuid:r,hasExtraUsageEnabled:h,billingType:S,accountCreatedAt:w,subscriptionCreatedAt:k,ccOnboardingFlags:A,claudeCodeTrialEndsAt:T,claudeCodeTrialDurationDays:D,seatTier:N,planDisplayName:K??void 0};if(s)j.displayName=s;if(g)j.fullName=g;if(G!==void 0)j.profileFetchedAt=G;Te((Y)=>{if(G===void 0&&Y.oauthAccount?.accountUuid===j.accountUuid&&Y.oauthAccount?.emailAddress===j.emailAddress&&Y.oauthAccount?.organizationUuid===j.organizationUuid&&Y.oauthAccount?.displayName===j.displayName&&Y.oauthAccount?.fullName===j.fullName&&Y.oauthAccount?.hasExtraUsageEnabled===j.hasExtraUsageEnabled&&Y.oauthAccount?.billingType===j.billingType&&Y.oauthAccount?.accountCreatedAt===j.accountCreatedAt&&Y.oauthAccount?.subscriptionCreatedAt===j.subscriptionCreatedAt&&Y.oauthAccount?.claudeCodeTrialEndsAt===j.claudeCodeTrialEndsAt&&Y.oauthAccount?.claudeCodeTrialDurationDays===j.claudeCodeTrialDurationDays&&Y.oauthAccount?.seatTier===j.seatTier&&Y.oauthAccount?.planDisplayName===j.planDisplayName&&JSON.stringify(Y.oauthAccount?.ccOnboardingFlags)===JSON.stringify(j.ccOnboardingFlags))return Y;return{...Y,oauthAccount:{...Y.oauthAccount,...j}}},z)}",
+        "sha256": "398cf0f13e2faa9c1e2054a4d82f384c18711b9c1d5750bf022e398b1bcca230"
+      },
+      "writerPort": "Te"
+    }
+  ],
+  "generated": {
+    "src/utils/officialOAuthPreparation287/runtime.js": {
+      "bytes": 4680,
+      "sha256": "1db817fc85efed23ecc2600171d7fdad67b16dc8740e5eca2504eee3accf285d"
+    },
+    "src/utils/officialOAuthPreparation287/runtime.d.ts": {
+      "bytes": 2614,
+      "sha256": "b470902c4c7e0917da5e659bcd86a813c9b71b72457816dea9621465d9bc0763"
+    }
+  }
+}

@@ -1,0 +1,294 @@
+{
+  "version": "2.1.287",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "rangeConvention": "UTF-16 end-exclusive",
+  "methods": [
+    "initialize",
+    "buildInitializeRequest",
+    "captureSdkMcpServerManifests",
+    "connectSdkMcpServer",
+    "sendMcpServerMessageToCli"
+  ],
+  "rows": [
+    {
+      "file": "chunk-j0381q8k.js",
+      "moduleSha256": "887177b815dd0cd1d4d91f9ba6f45c7d571f0e3e5851187904ec96311642b89d",
+      "label": "Ue.initialize",
+      "start": 37562,
+      "end": 38674,
+      "sha256": "1b12c983ed4ae0d39ecf9335d499a5ba3b596c0c5eb798a186914bff5d8c8a50",
+      "text": "async initialize({first:e}={first:!1}){if(!e&&!this.initializeHasBeenWritten)await this.initializeWritten;let s,n;try{if(e&&this.initConfig?.captureSdkMcpManifests===!0&&this.sdkMcpServers.size>0){s=await this.captureSdkMcpServerManifests();for(let m of this.sdkMcpToolsChangedDuringCapture){let g=s!==void 0&&Object.hasOwn(s,m)?s[m]:void 0;if(g?.toolsListResult!==void 0)s[m]={initializeResult:g.initializeResult}}}this.sdkMcpToolsChangedDuringCapture.clear();let d=this.buildInitializeRequest(s);if(this.cleanupPerformed)throw this.cleanupCause??Error(\"Query closed before initialize was sent\");this.writingFirstInitialize=e;try{n=this.request(d)}finally{this.writingFirstInitialize=!1}}finally{if(e)this.markInitializeWritten()}let a=(await n).response;if(this.initConfig?.plugins!==void 0&&this.initConfig.plugins.length>0&&a.plugins_applied!==!0)t(`[Query.initialize] Claude Code reported plugins_applied=${String(a.plugins_applied)} for ${this.initConfig.plugins.length} plugins sent with pluginDelivery 'initialize'; the process is running with the plugins it was launched with.`,{level:\"warn\"});return a}"
+    },
+    {
+      "file": "chunk-j0381q8k.js",
+      "moduleSha256": "887177b815dd0cd1d4d91f9ba6f45c7d571f0e3e5851187904ec96311642b89d",
+      "label": "Ue.buildInitializeRequest",
+      "start": 38674,
+      "end": 40511,
+      "sha256": "37eeea6e641dae546380c6559abf7905d3b433a33ff3f3302611c49c42684692",
+      "text": "buildInitializeRequest(e){if(this.hooks&&!this.initHooksPayload){this.initHooksPayload={};for(let[d,m]of Object.entries(this.hooks))if(m.length>0)this.initHooksPayload[d]=m.map((g)=>{let h=[];for(let b of g.hooks){let S=`hook_${this.nextCallbackId++}`;this.hookCallbacks.set(S,b),h.push(S)}return{matcher:g.matcher,hookCallbackIds:h,timeout:g.timeout}})}let s=this.sdkMcpServers.size>0?Array.from(this.sdkMcpServers.keys()):void 0,n=Array.from(this.sdkMcpServers).flatMap(([d,{timeout:m}])=>m!==void 0?[[d,{timeout:m}]]:[]),r=n.length>0?Object.fromEntries(n):void 0;return{subtype:\"initialize\",hooks:this.initHooksPayload,sdkMcpServers:s,sdkMcpServerConfigs:r,sdkMcpServerManifests:e,jsonSchema:this.jsonSchema,systemPrompt:typeof this.initConfig?.systemPrompt===\"string\"?[this.initConfig.systemPrompt]:this.initConfig?.systemPrompt,appendSystemPrompt:this.initConfig?.appendSystemPrompt,planModeInstructions:this.initConfig?.planModeInstructions,systemPromptSnapshot:this.initConfig?.systemPromptSnapshot,appendSubagentSystemPrompt:this.initConfig?.appendSubagentSystemPrompt,toolAliases:this.initConfig?.toolAliases,excludeDynamicSections:this.initConfig?.excludeDynamicSections,agents:this.initConfig?.agents,title:this.initConfig?.title,skills:Array.isArray(this.initConfig?.skills)?this.initConfig.skills:void 0,webSearchIsolationExemptMcpServers:this.initConfig?.webSearchIsolationExemptMcpServers,promptSuggestions:this.initConfig?.promptSuggestions,agentProgressSummaries:this.initConfig?.agentProgressSummaries,forwardSubagentText:this.initConfig?.forwardSubagentText,supportedDialogKinds:this.initConfig?.supportedDialogKinds,perTaskStopAffordance:this.initConfig?.perTaskStopAffordance,rapidFollowupPreempt:this.initConfig?.rapidFollowupPreempt,workspaceTrust:this.initConfig?.workspaceTrust,plugins:this.initConfig?.plugins}}"
+    },
+    {
+      "file": "chunk-j0381q8k.js",
+      "moduleSha256": "887177b815dd0cd1d4d91f9ba6f45c7d571f0e3e5851187904ec96311642b89d",
+      "label": "Ue.captureSdkMcpServerManifests",
+      "start": 40511,
+      "end": 43366,
+      "sha256": "38ccb984f4054fee0fd70fb4323986d2faec09d26fc093ac58f4a161eb9572c7",
+      "text": "async captureSdkMcpServerManifests(){let e=performance.now(),s=new Map,n=!1,r=async(k,M)=>{try{if(await this.sdkMcpServers.get(k)?.connection,n)return;let C=await this.handleMcpControlRequest(k,{server_name:k,message:{jsonrpc:\"2.0\",id:Ae+\"initialize\",method:\"initialize\",params:{protocolVersion:Ide,capabilities:Qqe,clientInfo:{...Zqe,version:{ISSUES_EXPLAINER:\"report the issue at https://github.com/anthropics/claude-code/issues\",PACKAGE_URL:\"@anthropic-ai/claude-code\",README_URL:\"https://code.claude.com/docs/en/overview\",VERSION:\"2.1.287\",FEEDBACK_CHANNEL:\"https://github.com/anthropics/claude-code/issues\",BUILD_TIME:\"2026-10-01T16:02:06Z\",GIT_SHA:\"3c446a1b98aceb99a6cdee0f84a8bea42f4a8937\",HOOKS_WORKER_URL:\"/$bunfs/root/src/plugins/functionHooks/hooks-worker/hooks-worker.js\",DD_SOURCEMAP_GROUP:\"darwin\"}.VERSION??\"unknown\"}}}},M);if(n)return;if(!(\"result\"in C)){t(`[Query.captureSdkMcpServerManifests] '${k}' answered initialize with an error; leaving it to the CLI: ${_(C)}`,{level:\"warn\"});return}let v=C.result;M.onmessage?.({jsonrpc:\"2.0\",method:\"notifications/initialized\"});let T=v.capabilities,D=typeof T===\"object\"&&T!==null&&\"tools\"in T&&T.tools!==void 0&&T.tools!==null,K;if(D){let B=await this.handleMcpControlRequest(k,{server_name:k,message:{jsonrpc:\"2.0\",id:Ae+\"tools-list\",method:\"tools/list\"}},M);if(n)return;if(!(\"result\"in B)){t(`[Query.captureSdkMcpServerManifests] '${k}' answered tools/list with an error; leaving it to the CLI: ${_(B)}`,{level:\"warn\"});return}if(B.result.nextCursor===void 0)K=B.result}let G=Y(_(K===void 0?{initializeResult:v}:{initializeResult:v,toolsListResult:K}));s.set(k,{transport:M,manifest:G})}catch(C){if(!n)t(`[Query.captureSdkMcpServerManifests] '${k}': ${C}; the CLI will handshake it over the control channel`,{level:\"warn\"})}},a=Array.from(this.sdkMcpServers,([k,{transport:M}])=>r(k,M)),d=Promise.all(a).then(()=>\"settled\"),m=new Promise((k)=>{this.stopSdkMcpManifestCapture=()=>k(\"closed\")}),g=await lt(Promise.race([d,m]),Nt);n=!0,this.stopSdkMcpManifestCapture=void 0;let h=Math.round(performance.now()-e),b={servers:a.length,captured:s.size,elapsed_ms:h};if(g===\"closed\"){p(\"sdk_mcp_manifest_capture\",\"closed\",b);return}if(g===void 0)t(`[Query.captureSdkMcpServerManifests] ${s.size}/${a.length} in-process MCP servers captured within ${Nt} ms; the rest will handshake over the control channel`,{level:\"warn\"}),p(\"sdk_mcp_manifest_capture\",\"deadline\",b);else if(s.size<a.length)p(\"sdk_mcp_manifest_capture\",\"partial\",b);else y(\"sdk_mcp_manifest_capture\",b);if(s.size===0)return;let S=Object.fromEntries(Array.from(this.sdkMcpServers).flatMap(([k,M])=>{let C=s.get(k);return C!==void 0&&C.transport===M.transport?[[k,C.manifest]]:[]}));if(Object.keys(S).length===0)return;return t(`[Query.captureSdkMcpServerManifests] manifests for [${Object.keys(S).join(\", \")}] captured in ${h} ms`),S}"
+    },
+    {
+      "file": "chunk-j0381q8k.js",
+      "moduleSha256": "887177b815dd0cd1d4d91f9ba6f45c7d571f0e3e5851187904ec96311642b89d",
+      "label": "Ue.connectSdkMcpServer",
+      "start": 57263,
+      "end": 57622,
+      "sha256": "c9d9164d8a240912a9f39eda2875e6ad9389d8a93a3bc805ea2568e2e5249bd8",
+      "text": "connectSdkMcpServer(e,s){let n=new SCr((a)=>this.sendMcpServerMessageToCli(e,a)),r=s.instance.connect(n).catch((a)=>{if(this.sdkMcpServers.get(e)?.transport===n)this.sdkMcpServers.delete(e);t(`[Query.connectSdkMcpServer] Failed to connect MCP server '${e}': ${a}`,{level:\"error\"})});this.sdkMcpServers.set(e,{transport:n,timeout:frt(s.timeout),connection:r})}"
+    },
+    {
+      "file": "chunk-j0381q8k.js",
+      "moduleSha256": "887177b815dd0cd1d4d91f9ba6f45c7d571f0e3e5851187904ec96311642b89d",
+      "label": "Ue.sendMcpServerMessageToCli",
+      "start": 57964,
+      "end": 58630,
+      "sha256": "7e6d5d6330c2569f4ff04f0d11f47e77941fb8591052bb4d6e3c27ffa4d0e7b3",
+      "text": "sendMcpServerMessageToCli(e,s){if(\"id\"in s&&s.id!==null&&s.id!==void 0){let r=`${e}:${s.id}`,a=this.pendingMcpResponses.get(r);if(a){a.resolve(s),this.pendingMcpResponses.delete(r);return}if(typeof s.id===\"string\"&&s.id.startsWith(Ae)){t(`[Query.sendMcpServerMessageToCli] Dropping late manifest-capture reply from '${e}' (${s.id})`);return}}let n={type:\"control_request\",request_id:$fe(),request:{subtype:\"mcp_message\",server_name:e,message:s}};if(!this.initializeHasBeenWritten&&AYt(s))this.sdkMcpToolsChangedDuringCapture.add(e);this.writeAfterInitialize(_(n)+`\n`).catch((r)=>{t(`[Query.sendMcpServerMessageToCli] Transport write failed: ${r}`,{level:\"error\"})})}"
+    },
+    {
+      "file": "chunk-j0381q8k.js",
+      "moduleSha256": "887177b815dd0cd1d4d91f9ba6f45c7d571f0e3e5851187904ec96311642b89d",
+      "label": "Ae",
+      "start": 24385,
+      "end": 24411,
+      "sha256": "cb49a2fa67f63ef286bfaf148384373976c5d54b2f942378d43ce6d08aaf97e0",
+      "text": "Ae=\"sdk-manifest-capture:\""
+    },
+    {
+      "file": "chunk-j0381q8k.js",
+      "moduleSha256": "887177b815dd0cd1d4d91f9ba6f45c7d571f0e3e5851187904ec96311642b89d",
+      "label": "Nt",
+      "start": 24378,
+      "end": 24384,
+      "sha256": "e8626adffe14bb0cf692fa54027265bcb7b0f58b18513ba4ae19d187365ff26f",
+      "text": "Nt=250"
+    },
+    {
+      "file": "chunk-j0381q8k.js",
+      "moduleSha256": "887177b815dd0cd1d4d91f9ba6f45c7d571f0e3e5851187904ec96311642b89d",
+      "label": "_n",
+      "start": 65343,
+      "end": 65638,
+      "sha256": "934415d6a38b09b6b9609a65061ec6272d93757292d57498b8ae0c00f4c87ac2",
+      "text": "function _n(e){let s=e?.accepted===!0&&(typeof e.directory!==\"string\"||!(mn.isAbsolute(e.directory)||hn.isAbsolute(e.directory)))?void 0:e;if(e!==void 0&&s===void 0)t(\"workspaceTrust ignored: accepted requires an absolute directory, as it exists where Claude Code runs\",{level:\"warn\"});return s}"
+    },
+    {
+      "file": "chunk-j0381q8k.js",
+      "moduleSha256": "887177b815dd0cd1d4d91f9ba6f45c7d571f0e3e5851187904ec96311642b89d",
+      "label": "en",
+      "start": 60877,
+      "end": 61581,
+      "sha256": "c4b08fd1d5cfd7a9734f024bd868b1f26c6f209a56936ff622f47b39602a8e58",
+      "text": "function en(e,s){if(e===\"bypassPermissions\")return\"canUseTool will not be invoked: permissionMode 'bypassPermissions' auto-approves every tool call (except explicit deny rules) before the callback is consulted. To gate every tool call, use a PreToolUse hook instead.\";let n=s.filter((r)=>r.length>0&&!r.includes(\"(\"));if(n.length===0)return;return`canUseTool will not be invoked for: ${n.join(\", \")}. Bare allowedTools entries auto-approve the whole tool before the callback is consulted. To gate every tool call, use a PreToolUse hook; or remove the bare names from allowedTools so they fall through to canUseTool. Allow rules from settings files can also shadow the callback but are not visible here.`}"
+    },
+    {
+      "file": "chunk-j0381q8k.js",
+      "moduleSha256": "887177b815dd0cd1d4d91f9ba6f45c7d571f0e3e5851187904ec96311642b89d",
+      "label": "Qt",
+      "start": 61581,
+      "end": 61713,
+      "sha256": "dbf95c55af3b2da80c9ae33519806af6a0f5577de15a70ee9abd71ee73a1f1d9",
+      "text": "function Qt(e,s,n){if(!e)return;let r=en(s,n);if(r===void 0)return;process.emitWarning(r,{code:\"CLAUDE_SDK_CAN_USE_TOOL_SHADOWED\"})}"
+    },
+    {
+      "file": "chunk-49evd8xc.js",
+      "moduleSha256": "58e3b19004e892e85e45faaeddd1c2db1d33f2c93155f9af27720f1be227bd00",
+      "label": "frt",
+      "start": 661,
+      "end": 739,
+      "sha256": "37295f166dc8f6065a533dc07bdeb8317f7602319802e52bda16bbc13c466c82",
+      "text": "function frt(e){return typeof e===\"number\"&&Number.isInteger(e)&&e>0?e:void 0}"
+    },
+    {
+      "file": "chunk-49evd8xc.js",
+      "moduleSha256": "58e3b19004e892e85e45faaeddd1c2db1d33f2c93155f9af27720f1be227bd00",
+      "label": "AYt",
+      "start": 1306,
+      "end": 1361,
+      "sha256": "f907a1efba7aad25444d7cfa9cec54ac5817690d04df11261f24b2a6cb851aa0",
+      "text": "function AYt(e){return N(e)&&!(\"id\"in e)&&e.method===l}"
+    },
+    {
+      "file": "chunk-49evd8xc.js",
+      "moduleSha256": "58e3b19004e892e85e45faaeddd1c2db1d33f2c93155f9af27720f1be227bd00",
+      "label": "l",
+      "start": 1269,
+      "end": 1305,
+      "sha256": "7eb831a008f13a654a82c4656b6d6c84dc1b89e296934c9c42efa0ff39fd9a57",
+      "text": "l=\"notifications/tools/list_changed\""
+    },
+    {
+      "file": "chunk-hrhfcbdv.js",
+      "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+      "label": "N",
+      "start": 9863,
+      "end": 9933,
+      "sha256": "e8cd0937338eafdfe29a7806d93ead49d398955341ab127a671cba569dc3008a",
+      "text": "function N(e){return typeof e===\"object\"&&e!==null&&!Array.isArray(e)}"
+    },
+    {
+      "file": "chunk-0p2fqac8.js",
+      "moduleSha256": "ddcccc2df45f8403ae739e997aa058ccf9737d01b38b69d270ee2d9f559e1748",
+      "label": "Qqe",
+      "start": 723,
+      "end": 744,
+      "sha256": "03c5de76c232bdac069e5ed8d747da135cec4dfe5f2c35d807219ddc92ee9408",
+      "text": "Qqe=Object.freeze({})"
+    },
+    {
+      "file": "chunk-0p2fqac8.js",
+      "moduleSha256": "ddcccc2df45f8403ae739e997aa058ccf9737d01b38b69d270ee2d9f559e1748",
+      "label": "Zqe",
+      "start": 745,
+      "end": 894,
+      "sha256": "ec80dd81a08e9aca57677c03509668ba2e9afe263d4ba37c6798d2fecd62cd28",
+      "text": "Zqe=Object.freeze({name:\"claude-code\",title:\"Claude Code\",description:\"Anthropic's agentic coding tool\",websiteUrl:\"https://claude.com/claude-code\"})"
+    },
+    {
+      "file": "chunk-0p2fqac8.js",
+      "moduleSha256": "ddcccc2df45f8403ae739e997aa058ccf9737d01b38b69d270ee2d9f559e1748",
+      "label": "SCr",
+      "start": 3505,
+      "end": 3782,
+      "sha256": "72c50cd8261cc4cf1fb7da99152d47264f091760b216117335db321ad4df88aa",
+      "text": "class SCr{sendMcpMessage;isClosed=!1;constructor(e){this.sendMcpMessage=e}onclose;onerror;onmessage;async start(){}async send(e){if(this.isClosed)throw Error(\"Transport is closed\");this.sendMcpMessage(e)}async close(){if(this.isClosed)return;this.isClosed=!0,this.onclose?.()}}"
+    },
+    {
+      "file": "chunk-0rn4hgq0.js",
+      "moduleSha256": "6c56696352ea678dfcefde2a0f01ae03e8d94163ddfd149c95477aae83e463b7",
+      "label": "Ide",
+      "start": 1153,
+      "end": 1169,
+      "sha256": "3403d5cc3674617eb49eb7f370bd0defc1d66f94d0bf6ff32b2a2d38e584d941",
+      "text": "Ide=\"2025-11-25\""
+    },
+    {
+      "file": "chunk-f2n7vgt8.js",
+      "moduleSha256": "d5f5cbf26110e86d1eab22e59072276597718b0d07654b6b0bc9e0d4aa3032ee",
+      "label": "s",
+      "start": 1874,
+      "end": 1932,
+      "sha256": "ff5dd6958c6a7f44771c37458f90d65deef8c1d0438f46b29f60948cad8d842e",
+      "text": "s=(t,r)=>{let e=setTimeout(t,r);return()=>clearTimeout(e)}"
+    },
+    {
+      "file": "chunk-f2n7vgt8.js",
+      "moduleSha256": "d5f5cbf26110e86d1eab22e59072276597718b0d07654b6b0bc9e0d4aa3032ee",
+      "label": "lt",
+      "start": 1933,
+      "end": 2048,
+      "sha256": "fbbcc785f186872b88a4b2377c68905e19119339861ebae0f07e3593e0342f0c",
+      "text": "function lt(t,r,e=s){let o=()=>{},n=new Promise((m)=>{o=e(()=>m(void 0),r)});return Promise.race([t,n]).finally(o)}"
+    },
+    {
+      "file": "chunk-4s38z9x2.js",
+      "moduleSha256": "eb46628147f83403bbcd57ca88b3370e05c6631bf027a80117844f770b276b2d",
+      "label": "Le",
+      "start": 615,
+      "end": 757,
+      "sha256": "c7c851b23895c896ce38865f13ecbb54e11e83018c8ced9cae422c41298e6dfd",
+      "text": "function Le(e){if(!e)return!1;if(typeof e===\"boolean\")return e;let n=String(e).toLowerCase().trim();return[\"1\",\"true\",\"yes\",\"on\"].includes(n)}"
+    },
+    {
+      "file": "chunk-brnn4zwp.js",
+      "moduleSha256": "6fc81e7fe2a8a0809d0901a28e8bd5487b116b245931c3ac30fcf9b6655400c7",
+      "label": "Air",
+      "start": 2604,
+      "end": 2646,
+      "sha256": "7a58f990995060e9034adc9ac6554578a2aef6a028fcc9b0ad8028cb7f71365f",
+      "text": "function Air(e){return Le(process.env[e])}"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "label": "qw",
+      "start": 540895,
+      "end": 540959,
+      "sha256": "46d786f70a58b5b93e212826ac75371e3add3f582bc3f12114acf7cf70ffc61b",
+      "text": "function qw(e){return Array.isArray(e)&&e.length===1&&e[0]===\"\"}"
+    },
+    {
+      "file": "chunk-j0381q8k.js",
+      "moduleSha256": "887177b815dd0cd1d4d91f9ba6f45c7d571f0e3e5851187904ec96311642b89d",
+      "label": "es.statement.0",
+      "start": 65655,
+      "end": 65804,
+      "sha256": "6b45ab985137c6a368910e7399bc31e7df83b3c21a7992b9ee51c5e14e7712be",
+      "text": "let{isSingleUserTurn:n,resumeConfigDir:r,deferSpawn:a}=s,{systemPrompt:d,settings:m,managedSettings:g,settingSources:h,sandbox:b,...S}=e??{},k,M,C,v;"
+    },
+    {
+      "file": "chunk-j0381q8k.js",
+      "moduleSha256": "887177b815dd0cd1d4d91f9ba6f45c7d571f0e3e5851187904ec96311642b89d",
+      "label": "es.statement.1",
+      "start": 65804,
+      "end": 66011,
+      "sha256": "5aa0578ef9f6bc99dc839905b4c9e8c9a84b8b9cb34d955395b2adae61e1c6aa",
+      "text": "if(d===void 0)k=\"\";else if(typeof d===\"string\")k=d;else if(Array.isArray(d))k=d;else if(d.type===\"custom\")k=d.prompt,v=d.snapshot;else if(d.type===\"preset\")M=d.append,C=d.excludeDynamicSections,v=d.snapshot;"
+    },
+    {
+      "file": "chunk-j0381q8k.js",
+      "moduleSha256": "887177b815dd0cd1d4d91f9ba6f45c7d571f0e3e5851187904ec96311642b89d",
+      "label": "es.statement.3",
+      "start": 66096,
+      "end": 67143,
+      "sha256": "40ac26f72eccf996825a38d95b15893952b011a4dad10973326b23442c066911",
+      "text": "let{abortController:T=Bn(),additionalDirectories:D=[],projectConfigRoot:K,agent:q,agents:G,allowedTools:B=[],betas:Fe,canUseTool:X,continue:ae,cwd:le,debug:ve,debugFile:J,disallowedTools:ce=[],tools:$e,env:Q,executable:Ne=fO()?\"bun\":\"node\",executableArgs:de=[],extraArgs:_e={},fallbackModel:Ke,enableFileCheckpointing:z,toolConfig:w,forkSession:Ce,hooks:Ee,includeHookEvents:ue,includePartialMessages:pe,forwardSubagentText:fe,verbatimPrompts:me=!1,onElicitation:te,onUserDialog:R,supportedDialogKinds:F,perTaskStopAffordance:j,rapidFollowupPreempt:se,workspaceTrust:qe,persistSession:Te,sessionStore:N,sessionStoreFlush:ns,thinking:ge,effort:rs,maxThinkingTokens:Be,maxTurns:is,maxBudgetUsd:os,taskBudget:as,mcpServers:ut,model:ls,outputFormat:pt,permissionMode:cs,allowDangerouslySkipPermissions:ds=!1,permissionPromptToolName:us,permissionPrompts:ps,plugins:Re,pluginDelivery:He=\"argv\",getOAuthToken:ft,getHostAuthToken:mt,workload:gt,resume:ht,resumeSessionAt:fs,resumeDropsTurn:ms,sessionId:gs,skills:St,stderr:hs,strictMcpConfig:Ss}=S,yt=cs;"
+    },
+    {
+      "file": "chunk-j0381q8k.js",
+      "moduleSha256": "887177b815dd0cd1d4d91f9ba6f45c7d571f0e3e5851187904ec96311642b89d",
+      "label": "es.statement.5",
+      "start": 67367,
+      "end": 67602,
+      "sha256": "ed8a3061feccee70c8d4b61f0f1463c60fcb0b671d5c0ffe5f5568a73608d10d",
+      "text": "if(F!==void 0&&F.length>0&&!R)throw Error(\"supportedDialogKinds requires an onUserDialog callback -- declaring dialog kinds without a handler would park dialogs nothing can answer. Provide onUserDialog, or omit supportedDialogKinds.\");"
+    },
+    {
+      "file": "chunk-j0381q8k.js",
+      "moduleSha256": "887177b815dd0cd1d4d91f9ba6f45c7d571f0e3e5851187904ec96311642b89d",
+      "label": "es.statement.6",
+      "start": 67602,
+      "end": 67616,
+      "sha256": "c821607d6b02e4315d7e857d18428d8c681814a838ffd1b7b87ef2f46678e219",
+      "text": "let ys=_n(qe);"
+    },
+    {
+      "file": "chunk-j0381q8k.js",
+      "moduleSha256": "887177b815dd0cd1d4d91f9ba6f45c7d571f0e3e5851187904ec96311642b89d",
+      "label": "es.statement.10",
+      "start": 68147,
+      "end": 68277,
+      "sha256": "8c6b631644a8fa7dede137e10448aa92c1296a0ce98110ef0ae2de4d5de14597",
+      "text": "if(Qt(!!X,yt??\"default\",B),He!==\"argv\"&&He!==\"initialize\")throw Error(\"Invalid pluginDelivery. Expected 'argv' or 'initialize'.\");"
+    },
+    {
+      "file": "chunk-j0381q8k.js",
+      "moduleSha256": "887177b815dd0cd1d4d91f9ba6f45c7d571f0e3e5851187904ec96311642b89d",
+      "label": "es.statement.11",
+      "start": 68277,
+      "end": 68360,
+      "sha256": "c4782f06f3bea989de7baa69f97f76229c1a5de4e140477e317c9412280d0737",
+      "text": "let wt=He===\"initialize\"&&Re!==void 0&&Re.length>0,ze=S.pathToClaudeCodeExecutable;"
+    },
+    {
+      "file": "chunk-j0381q8k.js",
+      "moduleSha256": "887177b815dd0cd1d4d91f9ba6f45c7d571f0e3e5851187904ec96311642b89d",
+      "label": "es.bs",
+      "start": 71239,
+      "end": 71847,
+      "sha256": "1c6a8796cd37de3b9d94337c808ebd1bb3ccf83e11f7af7b423b96f39b125f2c",
+      "text": "bs={systemPrompt:k,appendSystemPrompt:M,planModeInstructions:S.planModeInstructions,systemPromptSnapshot:v,appendSubagentSystemPrompt:S.appendSubagentSystemPrompt,toolAliases:S.toolAliases,excludeDynamicSections:C,agents:G,title:S.title,skills:St,webSearchIsolationExemptMcpServers:S.webSearchIsolationExemptMcpServers,promptSuggestions:S.promptSuggestions,agentProgressSummaries:S.agentProgressSummaries,forwardSubagentText:fe,supportedDialogKinds:F,perTaskStopAffordance:j,rapidFollowupPreempt:se,workspaceTrust:ys,plugins:wt?Re:void 0,captureSdkMcpManifests:!Air(\"CLAUDE_AGENT_SDK_DISABLE_MCP_MANIFESTS\")}"
+    }
+  ],
+  "adaptation": "Complete original Ue methods on the existing QueryRuntime owner/maps and complete SCr transport. es prompt/config projection statements and bs declaration preserved verbatim; process transport/session-store setup remains separate. Native JSON ports omit profiling wrappers only; existing telemetry-disabled C sink receives original y/p calls. No new state owner, token source, model request or provider eligibility."
+}

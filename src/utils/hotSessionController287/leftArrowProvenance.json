@@ -1,0 +1,45 @@
+{
+  "version": "2.1.287",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "rangeConvention": "UTF-16 end-exclusive",
+  "scope": "complete original left branch plus complete note/disarm methods only; other C editing/history paths retained",
+  "records": [
+    {
+      "file": "chunk-069hbd8x.js",
+      "moduleSha256": "ae00846833b0bf6b1991c8f96ab1297c3f7a448f756516ea34be12013b508fd4",
+      "name": "EAt.Zt.left",
+      "start": 46032,
+      "end": 46577,
+      "sha256": "08594783cbfa9c7dd74c0cf609af3126fded1c302541aa8da1aef387e6abaa8a",
+      "source": "case\"left\":if(u.superKey)return b.startOfLine();if(u.ctrl||u.meta||u.fn)return b.backwardWord();if(f&&!u.shift&&b.text===F){let I=Date.now(),ee=R0n(he,I,u.soloKeypress);switch(x0n(he,ee,I),P0n(ee,I,he),ee){case\"fire\":return Ze(Me),f(),b;case\"arm\":return Pe({key:Me,kind:\"feedback\",text:x??\"Press \\u2190 again\",priority:\"immediate\",timeoutMs:z8t}),b;case\"absorb\":return b;case\"attach-arm\":return Pe({key:Me,kind:\"feedback\",text:A0n,priority:\"immediate\",timeoutMs:z8t}),b;case\"attach-absorb\":return b;case\"reject\":return b.left()}}return b.left();"
+    },
+    {
+      "file": "chunk-069hbd8x.js",
+      "moduleSha256": "ae00846833b0bf6b1991c8f96ab1297c3f7a448f756516ea34be12013b508fd4",
+      "name": "EAt.Ie",
+      "start": 45107,
+      "end": 45151,
+      "sha256": "09c790ae0301cf94ca0a01ec3d7473784dc38fda0fb2c7a6339108cb03b47708",
+      "source": "function Ie(){he.editedEmptyAtMs=Date.now()}"
+    },
+    {
+      "file": "chunk-069hbd8x.js",
+      "moduleSha256": "ae00846833b0bf6b1991c8f96ab1297c3f7a448f756516ea34be12013b508fd4",
+      "name": "EAt.mt",
+      "start": 45151,
+      "end": 45214,
+      "sha256": "3fda8378bf0b302383382ddcb8014363ac5ea2244ebf6e375a615368427ccbc8",
+      "source": "function mt(){if(he.armedAtMs===0)return;he.armedAtMs=0,Ze(Me)}"
+    }
+  ],
+  "cuts": [
+    {
+      "start": 46111,
+      "end": 46127,
+      "before": "b.backwardWord()",
+      "after": "b.prevWord()",
+      "reason": "existing C Cursor method ABI; same word boundary owner"
+    }
+  ],
+  "dependencies": "canonical chunk-069hbd8x k0n/R0n/x0n/P0n/z8t/A0n; no second dispatcher or clock"
+}

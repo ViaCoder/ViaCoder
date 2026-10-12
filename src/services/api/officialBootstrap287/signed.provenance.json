@@ -1,0 +1,768 @@
+{
+  "version": "2.1.287",
+  "platform": "darwin-arm64",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16 code units; end-exclusive",
+  "startupEvidence": {
+    "module": "chunk-dgp2yyqt.js",
+    "moduleSha256": "0ac39806e4b50d15e5b1de301d8553a870917c87ef024d423bc9476e0ced21da",
+    "moduleLength": 139899,
+    "statements": [
+      {
+        "callee": "Ebo",
+        "kind": "original caller variable statement, not restored main body",
+        "start": 127713,
+        "end": 127757,
+        "source": "let Oi=await Ebo({runsOnAnotherMachine:Wr});",
+        "sha256": "210eacb1632e28d62ae7a908cca1fce734251dd6599dc73caa41ff742252eb49"
+      },
+      {
+        "callee": "vbo",
+        "kind": "original caller variable statement, not restored main body",
+        "start": 128234,
+        "end": 128247,
+        "source": "let Di=vbo();",
+        "sha256": "4e82705550631d5fab51a27105412a37dbe983aa192d577487e442e5c508e494"
+      }
+    ],
+    "localWiring": "main.tsx public hidden option/env apply/await Ebo before resolution/vbo after resolution; CLI evidence in bootstrap-client-data-main-287 tests"
+  },
+  "modules": [
+    {
+      "module": "chunk-cvfe0dkq.js",
+      "moduleSha256": "2e5af170221eb3d725a28ec24c92ae68df931261d4f2bca5cf33f7ed11c21398",
+      "moduleLength": 6796,
+      "declarations": [
+        {
+          "name": "R",
+          "start": 1307,
+          "end": 1341,
+          "sha256": "173f74210368f29e2c8903a5d8d4d173e3427b636fa9e8a5e4616fccc121e9d8",
+          "source": "R=\"claude-code-client-data-v1\\x00\""
+        },
+        {
+          "name": "y",
+          "start": 1342,
+          "end": 1372,
+          "sha256": "471d5cd8053185accc31db21900bf4fb340ba5640bf10229fc849f83875d9630",
+          "source": "y=/^\\/[A-Za-z0-9_./-]{1,300}$/"
+        },
+        {
+          "name": "v",
+          "start": 1373,
+          "end": 1408,
+          "sha256": "2d2fc29eb59cd95872f0dea115df1b98ce578c2d5b063e4400d9e44ac96bc0c2",
+          "source": "function v(e){return`${R}${e}\\x00`}"
+        },
+        {
+          "name": "k",
+          "start": 1412,
+          "end": 1415,
+          "sha256": "9b19467654aed1a261602ee60a4b124c5705be464c4fe4f2c71f651fe15fac97",
+          "source": "k=1"
+        },
+        {
+          "name": "P",
+          "start": 1416,
+          "end": 1580,
+          "sha256": "ed59f509698805021fd3b40bfe7e754945a0bfd6e6642ab0ad4fe64cfa83899f",
+          "source": "P=f(()=>u({schema_version:x(k),version:C().int().nonnegative(),configs:T(u({model_pattern:o().min(1).max(200),client_data:de(o(),se())}).loose()).max(50)}).loose())"
+        },
+        {
+          "name": "w",
+          "start": 1581,
+          "end": 2135,
+          "sha256": "7c2c2bb2abcc53b1594ea7fe30d69ce52f30c883e83e0fa3da20a29945867b5d",
+          "source": "function w(e){let n=gt(Buffer.from(e).toString(\"utf8\"),!1);if(n===null||typeof n!==\"object\"||!(\"schema_version\"in n))return{ok:!1,reason:\"parse_failed\"};if(n.schema_version!==k)return{ok:!1,reason:typeof n.schema_version===\"number\"?\"unsupported_schema\":\"parse_failed\"};let r=P().safeParse(n);if(!r.success)return{ok:!1,reason:\"parse_failed\"};let i=[];for(let c of r.data.configs)try{i.push({pattern:new RegExp(c.model_pattern),clientData:c.client_data})}catch{return{ok:!1,reason:\"parse_failed\"}}return{ok:!0,document:{version:r.data.version,entries:i}}}"
+        },
+        {
+          "name": "l",
+          "start": 2135,
+          "end": 2215,
+          "sha256": "221eedf01f8490d4897831f85828c8bcad4869628f1d498705fd2d9756bf94e6",
+          "source": "function l(e,n){return e.entries.find((r)=>r.pattern.test(n))?.clientData??null}"
+        },
+        {
+          "name": "m",
+          "start": 2263,
+          "end": 2495,
+          "sha256": "d733d1fc162a4202ecf88ddd5abc3c0a73183641aa85fc4a89f18ba16bad9ea7",
+          "source": "function m(e){return`Error: --client-data-url: ${e}. Claude Code does not start without the configuration it was given; to start without it, remove the flag, or remove CLAUDE_CODE_CLIENT_DATA_URL from your environment or settings.`}"
+        },
+        {
+          "name": "_",
+          "start": 2495,
+          "end": 4163,
+          "sha256": "61b98d39f453d7a86f954a76a0f0857acf106efc8e8ed41b5472bfe19dc767c9",
+          "source": "function _(e,n){switch(e){case\"invalid_url\":return\"the URL must be the https://downloads.claude.ai/ address Anthropic gave you, exactly as given\";case\"remote_session\":return\"it cannot be used in a cloud, remote-environment or ssh session, which runs Claude Code on another machine\";case\"third_party_provider\":return\"it only works when Claude Code talks to the Anthropic API directly, not through a cloud provider such as Bedrock, Vertex or Foundry, or a cloud gateway\";case\"policy_denied\":return\"your organization's policy does not allow it\";case\"not_found\":return\"there is nothing at that URL; it may have been withdrawn, so ask Anthropic for a new one\";case\"http_status\":case\"timeout\":case\"network\":case\"read_failed\":return`Claude Code could not fetch the document from downloads.claude.ai (${e===\"http_status\"?`HTTP ${n??\"error\"}`:e}); check that your network or proxy allows https://downloads.claude.ai`;case\"too_large\":return\"the server returned something too large to be a configuration document; try again, and if it keeps happening ask Anthropic\";case\"unsigned\":case\"sidecar_invalid\":case\"bad_signature\":case\"parse_failed\":return`the document or its signature is not valid (${e}); ask Anthropic for a new URL`;case\"unknown_key\":case\"key_unusable\":case\"unsupported_schema\":return`this version of Claude Code cannot read the document (${e}); update Claude Code`;case\"replayed_version\":return\"the server returned an older document than one already accepted on this machine; a proxy on your network may be serving an old copy; if not, ask Anthropic for a new URL\";case\"exception\":return\"Claude Code hit an internal error loading it; run with --debug for details\"}}"
+        },
+        {
+          "name": "A",
+          "start": 4163,
+          "end": 4387,
+          "sha256": "be26b02d1984c30b3af28d692c4ad4cdd21ac58e58866a27c0717120a0f2a996",
+          "source": "function A(e,n){if(l(e,n)!==null)return;let r=U(e);return r===\"\"?\"the document covers no models; it has been switched off\":`the document covers models matching ${r}, and this session runs ${p(n)}; pass the matching --model`}"
+        },
+        {
+          "name": "b",
+          "start": 4387,
+          "end": 4538,
+          "sha256": "7d5b638c89959613462c3b8b1d482c718fa34125a0638a1c755f61479b109944",
+          "source": "function b(e,n){return l(e,n)!==null?`applied to ${p(n)} (document v${e.version})`:`loaded, not applied to ${p(n)}: it covers models matching ${U(e)}`}"
+        },
+        {
+          "name": "U",
+          "start": 4538,
+          "end": 4610,
+          "sha256": "c69e4d8e1705adcc4097b08e8f2f156b927b312008a80bf3a692b60965ab870a",
+          "source": "function U(e){return p(e.entries.map((n)=>n.pattern.source).join(\", \"))}"
+        },
+        {
+          "name": "p",
+          "start": 4610,
+          "end": 4640,
+          "sha256": "2cf8ea1578ebd7a880f02d04639b47f86aeb488e6d9f8f2ed8cf13d2156f7fd5",
+          "source": "function p(e){return Hn(L(e))}"
+        },
+        {
+          "name": "S",
+          "start": 4640,
+          "end": 5041,
+          "sha256": "fa7d302dd1c2a9c00930c1fdcd139b473ca05ade15da7adbd25f9dad5ba96d60",
+          "source": "function S(){let e=a.CLAUDE_CODE_CLIENT_DATA_URL?.trim();if(!e)return{kind:\"unset\"};let n;try{n=new URL(e)}catch{return{kind:\"invalid_url\"}}if(n.protocol!==\"https:\"||n.username!==\"\"||n.password!==\"\"||n.port!==\"\"||!n$(n.hostname)||/[?#]/.test(e)||!y.test(n.pathname))return{kind:\"invalid_url\"};return{kind:\"ok\",source:{url:n.toString(),signingContext:v(n.pathname),cacheKey:TEr(n.pathname),roots:dPt}}}"
+        },
+        {
+          "name": "h",
+          "start": 5041,
+          "end": 5080,
+          "sha256": "6551dd71ab03942874c25f4f3e38e6a3575fdfba07e672b3d3703d84a9bd2a04",
+          "source": "function h(){return Xr().clientDataUrl}"
+        },
+        {
+          "name": "Ebo",
+          "start": 5080,
+          "end": 5430,
+          "sha256": "c24552a441c22665066050e66c90279605bde6d0504d4c3ba2cf8421ee115ce2",
+          "source": "async function Ebo({runsOnAnotherMachine:e=!1}={}){try{let n=S();if(n.kind===\"unset\")return;let r=await E(n,e);if(\"failure\"in r)return m(_(r.failure,r.httpStatus));h().document=r.document,t(`[clientDataUrl] loaded document v${r.document.version} covering ${r.document.entries.length} model pattern(s)`);return}catch(n){return d(n),m(_(\"exception\"))}}"
+        },
+        {
+          "name": "vbo",
+          "start": 5430,
+          "end": 5536,
+          "sha256": "4f86328ec57d3be853e55aa598791f67dc125d11d3ba0498eccc40137364cf57",
+          "source": "function vbo(){let{document:e}=h();if(e===void 0)return;let n=A(e,Fn(rt()));return n===void 0?void 0:m(n)}"
+        },
+        {
+          "name": "Cbo",
+          "start": 5536,
+          "end": 5650,
+          "sha256": "b898d08c13502a1b6eab193612401df3321b7b8d9f1a4046acd8aae20eb07f9e",
+          "source": "function Cbo(e,n){let{document:r}=h();if(r===void 0)return e;let i=l(r,Fn(n??rt()));return i===null?e:{...e,...i}}"
+        },
+        {
+          "name": "Abo",
+          "start": 5650,
+          "end": 5724,
+          "sha256": "7429f580dec99a6725cdcd14f73b84d8b1ea0635b7543dc998181d440bbfb7b4",
+          "source": "function Abo(){let{document:e}=h();return e===void 0?void 0:b(e,Fn(rt()))}"
+        },
+        {
+          "name": "E",
+          "start": 5724,
+          "end": 6770,
+          "sha256": "d015160b6baa58359fe32f51ac31e82bc20f8c8cf573ed6fb653e0e11dfc5b99",
+          "source": "async function E(e,n){if(e.kind===\"invalid_url\")return{failure:\"invalid_url\"};if(n)return{failure:\"remote_session\"};if(He()!==\"firstParty\")return{failure:\"third_party_provider\"};if(!on(\"allow_model_catalog\"))return{failure:\"policy_denied\"};let{source:r}=e,i=await ien({kind:\"hosted\",url:r.url,trust:{kind:\"compiled_roots\",roots:r.roots},cacheKey:r.cacheKey},{noCache:!0});if(i.status!==\"ok\"){let{httpStatus:s}=i;if(s===404||s===410)return{failure:\"not_found\"};return{failure:i.status===\"error\"?i.reason:\"http_status\",httpStatus:s}}if(!i.hasSidecar){let{sidecarHttpStatus:s}=i;if(s===void 0||s===404||s===410)return{failure:\"unsigned\"};return s>=200&&s<300?{failure:\"too_large\"}:{failure:\"http_status\",httpStatus:s}}let c=await Kst({documentBytes:i.documentBytes,sidecar:i.sidecar,roots:r.roots,context:r.signingContext});if(!c.ok)return{failure:c.reason};let g=w(i.documentBytes);if(!g.ok)return{failure:g.reason};let{document:D}=g;if(D.version<await aen(r.cacheKey))return{failure:\"replayed_version\"};return await Yst(r.cacheKey,D),{document:D}}"
+        }
+      ]
+    },
+    {
+      "module": "chunk-wrxh9xyj.js",
+      "moduleSha256": "3be60028014c3b11e3f60eb2c41a0c255c7678db8d8e34b3cf3a2093ac7d4ab4",
+      "moduleLength": 4078,
+      "declarations": [
+        {
+          "name": "l",
+          "start": 763,
+          "end": 814,
+          "sha256": "b1cb6af457942d5c07115322070c3db3d1d8ec993e5d5adbcf7e1a88217c9fc8",
+          "source": "l=/(^|\\.)(anthropic\\.com|claude\\.ai|claude\\.com)$/i"
+        },
+        {
+          "name": "_",
+          "start": 815,
+          "end": 848,
+          "sha256": "5fd2d4513ede1b9707a17d6a2da8e5e290e87c120ddf185cc8b82ddfc18593f6",
+          "source": "_=/(^|\\.)downloads\\.claude\\.ai$/i"
+        },
+        {
+          "name": "E",
+          "start": 849,
+          "end": 1005,
+          "sha256": "4a03a9b8e3f0e8838a574367fe6ca45faee14dfd7f970d21aff43b8a6385fce5",
+          "source": "function E(e){let t,r=e.startsWith(\"//\")?`https:${e}`:e;try{t=new URL(r).hostname}catch{t=e.match(/^[^/:]+/)?.[0]??e}return t.endsWith(\".\")?t.slice(0,-1):t}"
+        },
+        {
+          "name": "$0e",
+          "start": 1005,
+          "end": 1041,
+          "sha256": "9a083a5ddc9fe4da1bc2b1b5fabe6553f968cf2d21ef060d4cc897f6d50d94a4",
+          "source": "function $0e(e){return l.test(E(e))}"
+        },
+        {
+          "name": "n$",
+          "start": 1041,
+          "end": 1076,
+          "sha256": "dba2b9ac6f9286a1a65d3d5e2e7f925540eda4164580a0576c78efc96111a347",
+          "source": "function n$(e){return _.test(E(e))}"
+        },
+        {
+          "name": "Cfe",
+          "start": 2546,
+          "end": 2568,
+          "sha256": "b1975f0ef57b319148eea9d1afb5797d5bcdd45c62d0283d63f2782fa71af02b",
+          "source": "function Cfe(){return}"
+        },
+        {
+          "name": "c",
+          "start": 3528,
+          "end": 3743,
+          "sha256": "38e2860157a3f8c18dbb9476006ae21d84e8de30b8fa7e623f76e92c3827eabf",
+          "source": "function c(e,t){for(let r of[e,t?.baseURL])if(r&&$0e(r))throw Error(`externalHttp: ${r} is Anthropic-operated. Use firstPartyApi from `+\"src/services/http/firstParty \\u2014 it enforces the 3P data-residency gate.\")}"
+        },
+        {
+          "name": "sa",
+          "start": 3747,
+          "end": 4029,
+          "sha256": "0d1b3cbd1cfbef7063b0468612ad02d9f17ebea0fa950429c07354aa7ed49c20",
+          "source": "sa={get(e,t){return c(e,t),Cfe(),St.get(e,t)},head(e,t){return c(e,t),Cfe(),St.head(e,t)},post(e,t,r){return c(e,r),Cfe(),St.post(e,t,r)},put(e,t,r){return c(e,r),Cfe(),St.put(e,t,r)},patch(e,t,r){return c(e,r),Cfe(),St.patch(e,t,r)},delete(e,t){return c(e,t),Cfe(),St.delete(e,t)}}"
+        }
+      ]
+    },
+    {
+      "module": "chunk-59c5x2dv.js",
+      "moduleSha256": "7f0d69a69f874d6897c48f15235edd53db82e0e089b8580655b9d38464398fed",
+      "moduleLength": 2670,
+      "declarations": [
+        {
+          "name": "m",
+          "start": 2196,
+          "end": 2227,
+          "sha256": "43b8f54c94d607615931501ce8ae209966280734239a36cfbcb4b48af0205c2c",
+          "source": "m=/^([a-z][a-z\\d+\\-.]*:)?\\/\\//i"
+        },
+        {
+          "name": "f",
+          "start": 2228,
+          "end": 2600,
+          "sha256": "ed061a6c9bf54524751be81c7211bb91fa4452ca9b1b41536946272c18a35fe1",
+          "source": "function f(t,e){let o=e?.baseURL,r=m.test(t),n=null;if(r&&!n$(t))n=t;else if(o!=null&&!n$(o))n=o;else if(!r&&o==null)n=t;if(n!==null)throw Error(`downloads: request (url=\"${t}\"`+(o!=null?`, baseURL=\"${o}\"`:\"\")+\") does not resolve to the public CDN (downloads.claude.ai). Use firstPartyApi for api.anthropic.com (residency-gated) or externalHttp for non-Anthropic hosts.\")}"
+        },
+        {
+          "name": "N2",
+          "start": 2604,
+          "end": 2650,
+          "sha256": "f967f68e964a72225fdcca4374e296905c9a091f10f065dc388edb86be10058b",
+          "source": "N2={get(t,e){return f(t,e),Cfe(),St.get(t,e)}}"
+        }
+      ]
+    },
+    {
+      "module": "chunk-c9me9cp7.js",
+      "moduleSha256": "db81856ee883c31a0be18c305014a0d82d3bd698a459223b9de754b934b084ae",
+      "moduleLength": 10331,
+      "declarations": [
+        {
+          "name": "E",
+          "start": 4814,
+          "end": 4913,
+          "sha256": "a84ab0a2488aed5689416393c679dde4e7f4b29aa980e121bd56b25ab3e7b5e4",
+          "source": "function E(n){if(n&&typeof n===\"object\"&&\"code\"in n&&typeof n.code===\"string\")return n.code;return}"
+        },
+        {
+          "name": "W",
+          "start": 7491,
+          "end": 7528,
+          "sha256": "8439c063340ce5b84a3647299d7b288005264d912e9522120edf677792960d6f",
+          "source": "function W(n){return E(n)===\"ENOENT\"}"
+        },
+        {
+          "name": "l",
+          "start": 4754,
+          "end": 4814,
+          "sha256": "2f921ed78ffeed39032d7e9c4783e05c294cba2ce61cc5ac20466ece27a81075",
+          "source": "function l(n){return n instanceof Error?n.message:String(n)}"
+        },
+        {
+          "name": "Ws",
+          "start": 9558,
+          "end": 9969,
+          "sha256": "1e2ab21aff9ce018bfd3aeba5920a76383814a9dd1a249ef31832f3723d48493",
+          "source": "function Ws(n){let e=l(n);if(!n||typeof n!==\"object\"||!(\"isAxiosError\"in n)||!n.isAxiosError)return{kind:\"other\",message:e};let t=n,r=t.response?.status;if(r===401||r===403)return{kind:\"auth\",status:r,message:e};if(t.code===\"ECONNABORTED\")return{kind:\"timeout\",status:r,message:e};if(t.code===\"ECONNREFUSED\"||t.code===\"ENOTFOUND\")return{kind:\"network\",status:r,message:e};return{kind:\"http\",status:r,message:e}}"
+        }
+      ]
+    },
+    {
+      "module": "chunk-hrhfcbdv.js",
+      "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+      "moduleLength": 433955,
+      "declarations": [
+        {
+          "name": "Ou",
+          "start": 75536,
+          "end": 75781,
+          "sha256": "3ca378a84eeebfaf86b8e6942621b59ee724bb795373e08647a9707425be0e69",
+          "source": "Ou=new Set([\"metadata.google.internal\",\"metadata.goog\",\"metadata\",\"instance-data\",\"instance-data.ec2.internal\",\"ip6-localhost\",\"ip6-loopback\",\"localhost.localdomain\",\"localhost4\",\"localhost4.localdomain4\",\"localhost6\",\"localhost6.localdomain6\"])"
+        },
+        {
+          "name": "Rr",
+          "start": 75782,
+          "end": 75843,
+          "sha256": "8d2af515f5aa343bfedc6612a76d9f393ce99ad40d07dbe754281da028f65d5a",
+          "source": "Rr=new Set([\"100.100.100.200\",\"168.63.129.16\",\"192.0.0.192\"])"
+        },
+        {
+          "name": "vr",
+          "start": 75844,
+          "end": 75905,
+          "sha256": "4e770b6bb4f0b5154990f366c2b5d1918f7c0951bff2aa9548a76fe86bd5fb8e",
+          "source": "function vr(e,n,s,r){return e===127||e===169&&n===254||e===0}"
+        },
+        {
+          "name": "Ao",
+          "start": 76613,
+          "end": 76680,
+          "sha256": "26aabed84e5257e76fafb19f727c6e10e7d2a9c286f79fc90f84d567e0fe2fde",
+          "source": "function Ao(e){return e[0]===0&&e[1]===100&&e[2]===255&&e[3]===155}"
+        },
+        {
+          "name": "Tr",
+          "start": 75905,
+          "end": 76565,
+          "sha256": "8ab7e5fc8d0d9237189b9f47a746ffb42f30fea96d925493c553f4cd5746d7a8",
+          "source": "function Tr(e){let n=e.indexOf(\"%\"),r=(n>=0?e.slice(0,n):e).toLowerCase().split(\"::\");if(r.length>2)return;let i=r[0]?r[0].split(\":\"):[],d=r.length===2&&r[1]?r[1].split(\":\"):[],c=r.length===2?d:i,p=[],g=c.at(-1);if(g!==void 0&&g.includes(\".\")){let b=g.split(\".\").map(Number);if(b.length!==4||b.some((A)=>!Number.isInteger(A)||A<0||A>255))return;p=b,c.pop()}let h=(b)=>{let A=[];for(let D of b){if(!/^[0-9a-f]{1,4}$/.test(D))return;let v=parseInt(D,16);A.push(v>>8,v&255)}return A},m=h(r.length===2?i:[]),y=h(c);if(m===void 0||y===void 0)return;let S=m.length+y.length+p.length;if(S>16||r.length===1&&S!==16)return;return[...m,...Array(16-S).fill(0),...y,...p]}"
+        },
+        {
+          "name": "Dr",
+          "start": 76565,
+          "end": 76613,
+          "sha256": "9ba7bce1e1adc5c9ba7638679e01cc87d44ce57ed430554b9eec8c9b989d92be",
+          "source": "function Dr(e){return Ao(e)&&e[4]===0&&e[5]===1}"
+        },
+        {
+          "name": "Cu",
+          "start": 76874,
+          "end": 77181,
+          "sha256": "3e627bb5b8aca2f7ff7c8efe5532ee949ae3aaf086eaf30240718336af2f4098",
+          "source": "function Cu(e){let n=[];if(e[0]===32&&e[1]===2)n.push(e.slice(2,6));let s=e.slice(0,10).every((p)=>p===0),r=s&&e[10]===255&&e[11]===255,i=s&&e[10]===0&&e[11]===0,d=Ao(e)&&e.slice(4,12).every((p)=>p===0),c=(e[8]===0||e[8]===2)&&e[9]===0&&e[10]===94&&e[11]===254;if(r||i||d||c)n.push(e.slice(12,16));return n}"
+        },
+        {
+          "name": "z8",
+          "start": 77181,
+          "end": 77878,
+          "sha256": "72d1a02021b75cb0f46b9bb5b42c063395e2c6cf308f3249a1c80a64f67f9283",
+          "source": "function z8(e){let n=e.toLowerCase().replace(/^\\[|\\]$/g,\"\");if(n.endsWith(\".\"))n=n.slice(0,-1);if(n===\"\"||n===\"localhost\"||n.endsWith(\".localhost\"))return!0;if(Ou.has(n))return!0;if(n.startsWith(\"instance-data.\")&&n.endsWith(\".compute.internal\"))return!0;if(Ru(n)){if(Rr.has(n))return!0;let[r=0,i=0,d=0,c=0]=n.split(\".\").map(Number);return vr(r,i,d,c)}if(!Pr(n))return!1;let s=Tr(n);if(s===void 0)return!0;if(Dr(s))return!0;if(s.every((r)=>r===0))return!0;if(s.slice(0,15).every((r)=>r===0)&&s[15]===1)return!0;if(n===\"fd00:ec2::254\")return!0;if(s[0]===254&&(s[1]??0)>=128&&(s[1]??0)<=191)return!0;return Cu(s).some((r)=>{let[i=0,d=0,c=0,p=0]=r;return vr(i,d,c,p)||Rr.has(`${i}.${d}.${c}.${p}`)})}"
+        },
+        {
+          "name": "KSt",
+          "start": 77878,
+          "end": 78102,
+          "sha256": "845961e8fb3c53693251a3c61eccf19ddeb88a2752b48e160519352a584c5ba6",
+          "source": "function KSt(e){if(e.href)return e.href;let n=e.host??(e.hostname&&(e.hostname.includes(\":\")&&!e.hostname.startsWith(\"[\")?`[${e.hostname}]`:e.hostname)+(e.port?`:${e.port}`:\"\"));return e.protocol&&n?`${e.protocol}//${n}`:\"\"}"
+        }
+      ]
+    },
+    {
+      "module": "chunk-09m4fzsj.js",
+      "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+      "moduleLength": 950788,
+      "declarations": [
+        {
+          "name": "y5e",
+          "start": 921448,
+          "end": 921459,
+          "sha256": "514337d8b58504c7bd4e035e77f3956c42c381c51a192a1dd4d4d26a75c5186a",
+          "source": "y5e=2097152"
+        },
+        {
+          "name": "Yse",
+          "start": 921495,
+          "end": 921502,
+          "sha256": "fe64c9dd07e37554919218d61e11b21ee566225007ef90e6c57ab262d46faa1a",
+          "source": "Yse=256"
+        },
+        {
+          "name": "qse",
+          "start": 921460,
+          "end": 921494,
+          "sha256": "58f23897e0617b11cc5a83c116901123c07eed573a3680111a286ea87c18a6ee",
+          "source": "qse=/^(?:W\\/)?\"[!#-~\\x80-\\xff]*\"$/"
+        },
+        {
+          "name": "w2",
+          "start": 921503,
+          "end": 921585,
+          "sha256": "34932eb53712519a87e8cda06e8ede0e0826692a667a345e1838332b18495d5d",
+          "source": "function w2(e){return typeof e===\"string\"&&e.length>0&&e.length<=Yse&&qse.test(e)}"
+        }
+      ]
+    },
+    {
+      "module": "chunk-cvjq66rn.js",
+      "moduleSha256": "604af36b0bc18abe20e4bbb8b302b904c215592b63f3d09c452cf827d8c04720",
+      "moduleLength": 11185,
+      "declarations": [
+        {
+          "name": "H",
+          "start": 1288,
+          "end": 2078,
+          "sha256": "4de53abf8ec53683b63708afcbf47612010c943cdf33f3d8f475adc05bee7fca",
+          "source": "H={id:\"claude-code-release-signing-key\",spkiBase64:\"MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAp28rSV5I8HmK8CK9GixBUZR/gtJxeOCsRXO4EJiej40jzBmQA3cWXGosVO82ZfFsRKVTtMC5iB/HH9sxjncrmYNWGroJNbx29m/FgYQBgkCXT4AfFl6rnnXqRGLZOerj/4AqE4yQ1GZbhBgR55Z7ro0ieKK8RHYUspBKAFHyWRhCCz6THW6YRbf0p/hG/08TOY6Sj3cJ7/AEoTRf9ZmVNX1k0KvbUSiVGpGY9OIHWgxRJUF2pArU4o/hk+sqGAgEUh8Bjvjwvz6+quLXPg+y0Y8Ugb1Fg6BUppam/zydYY/Q/+yNjnuF154gD1jEeeir8R5czs6zUHSbo2yXUpAsIdWYo5End8vGsluVmFExnUWm/fTVMGoM5Wm3v1VRepMydEnJ+atz4oQdmPQcKNAip5GJO2uyk++xFr9CpKvlR5jral92toYV/m+mur3va8ydamWBo/qG7/wt0sdS81IwH6lcu0SQ39rgKD+bdoPLv05EqVMYTFRI2QZEsWGYTMs0DOrfCIJFH50qyD0x4sWw1gEWeG3jDgY8cj2StZz+zjqzUd05CibcCzEAGm1EQg5y9D40tIsAU1OI7bpgQ9V0lC8lrqE7zJY66UK9Z1daA8jrdDi6migNjHFrXfT3V4QvMthCIO05q05SS3x2G3ZpIgmI+CePUPB1pDf+lhPkU1MCAwEAAQ==\"}"
+        },
+        {
+          "name": "dPt",
+          "start": 2079,
+          "end": 2086,
+          "sha256": "4d93208b94249e3e84befab59d745401e1281a3b105cf072c670e180edacc05d",
+          "source": "dPt=[H]"
+        },
+        {
+          "name": "R",
+          "start": 2907,
+          "end": 2979,
+          "sha256": "a731c87c81f833d115809effc847e7c8581f37bb4c8362d1a3a6a401cfbc422b",
+          "source": "function R(e){return new Uint8Array(Buffer.from(e.spkiBase64,\"base64\"))}"
+        },
+        {
+          "name": "b",
+          "start": 3045,
+          "end": 3062,
+          "sha256": "dc6db6fac8e92cad92d68112db29974e87ab594390905ab2e7f881344e165ded",
+          "source": "b=\".raw-sig.json\""
+        },
+        {
+          "name": "TEr",
+          "start": 5355,
+          "end": 5426,
+          "sha256": "75a660a29a2b290935cae4a02b1ed09d1c650dd179a937f48a183b1c64ab4357",
+          "source": "function TEr(e){return M(\"sha256\").update(e).digest(\"hex\").slice(0,32)}"
+        },
+        {
+          "name": "T",
+          "start": 5426,
+          "end": 5456,
+          "sha256": "b741edcf0c91c3b824dff8f179edf0e86bd3d3c009b7e34a7ac0e578e902b2d9",
+          "source": "function T(e){return G(e.url)}"
+        },
+        {
+          "name": "Jge",
+          "start": 5466,
+          "end": 5473,
+          "sha256": "fb83d4b92cc5afe7cebbff6283a6a3071543aa03e556f1f4401140e4d09b623d",
+          "source": "Jge=y5e"
+        },
+        {
+          "name": "Hqe",
+          "start": 5474,
+          "end": 5483,
+          "sha256": "a57b2713895674034afd080e4333c02c40ee5bc00eb12b30fa6f5896bc3ddb8b",
+          "source": "Hqe=16384"
+        },
+        {
+          "name": "N",
+          "start": 5484,
+          "end": 5487,
+          "sha256": "f6c32662bc4c85f8452555544150ee3b595c168fa9041132f79ec703495ed886",
+          "source": "N=1"
+        },
+        {
+          "name": "j",
+          "start": 5488,
+          "end": 5516,
+          "sha256": "a3084b67457bab9f850fbaa32fa2714c080b6dde774f6c3d08072bb78137bef0",
+          "source": "j=\"RSASSA-PKCS1-v1_5-SHA512\""
+        },
+        {
+          "name": "L",
+          "start": 5517,
+          "end": 5630,
+          "sha256": "3e08d25d73ed531c6fc149b83526bbd8703476d78fecf9438356da5703689800",
+          "source": "L=f(()=>u({schema:x(N),algorithm:x(j),signature:o().min(1),publicKeySha256:o().regex(/^[0-9a-f]{64}$/)}).loose())"
+        },
+        {
+          "name": "B",
+          "start": 6467,
+          "end": 6472,
+          "sha256": "03e40fb70f0113305438087fda4343219ea27c3b3a20ce6e450f48787e0dcd8d",
+          "source": "B=1e4"
+        },
+        {
+          "name": "ien",
+          "start": 6473,
+          "end": 7008,
+          "sha256": "9efb1c7d405b69dda0d241e169d755317fc027d4ef09b3b8969415f9cf048a29",
+          "source": "async function ien(e,{etag:n,noCache:r=!1}={}){try{return e.kind===\"file\"?await q(e):await X(e,{etag:n,noCache:r})}catch(i){let{kind:s,status:l}=Ws(i);switch(t(`[publishedCatalog] fetch failed: ${s}${l!==void 0?` ${l}`:\"\"}`),s){case\"timeout\":return{status:\"error\",reason:\"timeout\"};case\"network\":return{status:\"error\",reason:\"network\"};case\"auth\":case\"http\":return l===void 0?{status:\"error\",reason:te(i)?\"too_large\":\"network\"}:{status:\"error\",reason:\"http_status\",httpStatus:l};case\"other\":return{status:\"error\",reason:\"exception\"}}}}"
+        },
+        {
+          "name": "X",
+          "start": 7008,
+          "end": 8225,
+          "sha256": "9bdc84a4c9d2d7887352c614b8f5464380c424c5b35d3ad9072067221321a25f",
+          "source": "async function X(e,{etag:n,noCache:r}){let i=Q(e.url),s=r?{\"Cache-Control\":\"no-cache\",Pragma:\"no-cache\"}:void 0,l=await O(e.url,{responseType:\"arraybuffer\",timeout:B,maxContentLength:Jge,maxBodyLength:Jge,validateStatus:()=>!0,beforeRedirect:i,...(n!==void 0||s!==void 0)&&{headers:{...s,...n!==void 0&&{\"If-None-Match\":n}}}}),d=l.status;if(d===304&&n!==void 0)return t(\"[publishedCatalog] fetch: not modified\"),{status:\"not_modified\",httpStatus:d};if(d<200||d>=300)return t(`[publishedCatalog] fetch: HTTP ${d}`),{status:\"error\",reason:\"http_status\",httpStatus:d};let c=w(l.data);if(c.length>Jge)return{status:\"error\",reason:\"too_large\",httpStatus:d};let h=void 0,g=!1,p=await O(ee(e.url),{responseType:\"arraybuffer\",timeout:B,maxContentLength:Hqe,maxBodyLength:Hqe,validateStatus:()=>!0,beforeRedirect:i,...s!==void 0&&{headers:s}});if(p.status>=200&&p.status<300){let m=w(p.data);if(m.length<=Hqe)g=!0,h=gt(Buffer.from(m).toString(\"utf8\"),!1)}else t(`[publishedCatalog] sidecar fetch: HTTP ${p.status}`);return t(`[publishedCatalog] fetch ok: ${c.length} bytes${g?\", sidecar present\":\", no sidecar\"}`),{status:\"ok\",documentBytes:c,sidecar:h,hasSidecar:g,sidecarHttpStatus:p.status,etag:ne(l.headers),httpStatus:d}}"
+        },
+        {
+          "name": "q",
+          "start": 8225,
+          "end": 8889,
+          "sha256": "52ce7ff3aa682263ff9c3ddb43a6ca07a82a5e8488073072cf584d7f8a57be8a",
+          "source": "async function q(e){let n=T(e),r=ae(),i;try{i=await r.readFileBytes(n,Jge+1)}catch(d){return t(`[publishedCatalog] file read failed${W(d)?\" (no such file)\":\"\"}`),{status:\"error\",reason:\"read_failed\"}}if(i.length>Jge)return{status:\"error\",reason:\"too_large\"};let s=void 0,l=!1;try{let d=await r.readFileBytes(`${n}${b}`,Hqe+1);if(d.length<=Hqe)l=!0,s=gt(d.toString(\"utf8\"),!1)}catch(d){if(!W(d))t(\"[publishedCatalog] sidecar read failed\")}return t(`[publishedCatalog] file read ok: ${i.length} bytes${l?\", sidecar present\":\", no sidecar\"}`),{status:\"ok\",documentBytes:new Uint8Array(i),sidecar:s,hasSidecar:l,sidecarHttpStatus:void 0,etag:void 0,httpStatus:void 0}}"
+        },
+        {
+          "name": "O",
+          "start": 8889,
+          "end": 8942,
+          "sha256": "c6ce5eb2e39bd48c646383378de985b7c7830a6cdcf0b37ff1fdd570acfeac13",
+          "source": "function O(e,n){return n$(e)?N2.get(e,n):sa.get(e,n)}"
+        },
+        {
+          "name": "Q",
+          "start": 8942,
+          "end": 9252,
+          "sha256": "abcd3b367c5f2380d9906a67c967a8a132e66327c980c17906d03579d80caead",
+          "source": "function Q(e){let n=n$(e),r=D(e),i=e.toLowerCase().startsWith(\"https:\");return(s)=>{let l=KSt(s),d=Z(l),c=J(l),h=r!==\"\"&&D(l)===r,g=i?c===\"https:\":h||c===\"https:\";if(!(d!==\"\"&&(n?n$(d):!$0e(d))&&g&&(h||!z8(d))))throw Error(\"[publishedCatalog] redirect refused: a hop left the host the request was pinned to\")}}"
+        },
+        {
+          "name": "Z",
+          "start": 9252,
+          "end": 9327,
+          "sha256": "7196cf6dfebacfed96ebeeb258513ccfc12ce0866e8f30d9feb2ec63822c488e",
+          "source": "function Z(e){try{return new URL(e).hostname.toLowerCase()}catch{return\"\"}}"
+        },
+        {
+          "name": "D",
+          "start": 9327,
+          "end": 9408,
+          "sha256": "38fcc6ae8f987f2d6eefeb060291da5e3fafb5ed5a695bd79256f8d6361ca197",
+          "source": "function D(e){try{let n=new URL(e).origin;return n===\"null\"?\"\":n}catch{return\"\"}}"
+        },
+        {
+          "name": "J",
+          "start": 9408,
+          "end": 9483,
+          "sha256": "1ec690a409e3f40ab78cad335313b3fffb7a24c1fd196d1a91bc7370f67b3279",
+          "source": "function J(e){try{return new URL(e).protocol.toLowerCase()}catch{return\"\"}}"
+        },
+        {
+          "name": "ee",
+          "start": 9483,
+          "end": 9549,
+          "sha256": "f5147ad9854a337dfa3d214e9ece75d341acad14f942cea065e440288539ac5f",
+          "source": "function ee(e){let n=new URL(e);return n.pathname+=b,n.toString()}"
+        },
+        {
+          "name": "w",
+          "start": 9549,
+          "end": 9735,
+          "sha256": "0e600d305a52fd892687e5788d4f3963decc708da8816d58fc03b07873d351ea",
+          "source": "function w(e){if(e instanceof Uint8Array)return e;if(e instanceof ArrayBuffer)return new Uint8Array(e);if(typeof e===\"string\")return new TextEncoder().encode(e);return new Uint8Array(0)}"
+        },
+        {
+          "name": "te",
+          "start": 9735,
+          "end": 9874,
+          "sha256": "4254a345d994d96cd3fd5fcc24542d453f80d29191b63ace773e0cfc436a2551",
+          "source": "function te(e){return typeof e===\"object\"&&e!==null&&\"code\"in e&&(e.code===\"ERR_FR_MAX_BODY_LENGTH_EXCEEDED\"||e.code===\"ERR_BAD_RESPONSE\")}"
+        },
+        {
+          "name": "ne",
+          "start": 9874,
+          "end": 9925,
+          "sha256": "20afa8133130238459059596d021bcacd4ebcbb97dfc61005c6141040e0be814",
+          "source": "function ne(e){let n=e?.etag;return w2(n)?n:void 0}"
+        },
+        {
+          "name": "I",
+          "start": 9929,
+          "end": 9965,
+          "sha256": "cc1b95eb79a1a8e0a64660a5269b102c4c395fc450c4e2d09d5c32533e09086c",
+          "source": "I=\"claude-code-model-catalog-v1\\x00\""
+        },
+        {
+          "name": "K",
+          "start": 9966,
+          "end": 10009,
+          "sha256": "d4a7f0733a0a0e232117f3d7b41f9d320162d1691dea2312169078552b315754",
+          "source": "K={name:\"RSASSA-PKCS1-v1_5\",hash:\"SHA-512\"}"
+        },
+        {
+          "name": "Kst",
+          "start": 10010,
+          "end": 10807,
+          "sha256": "989224bbef8da2983f8b621d747bde9a35c7515c93ff559fb3e2bf92898e0b6c",
+          "source": "async function Kst({documentBytes:e,sidecar:n,roots:r,context:i=I}){let s=L().safeParse(n);if(!s.success)return{ok:!1,reason:\"sidecar_invalid\"};let l=Buffer.from(s.data.signature,\"base64\");if(l.length===0||l.toString(\"base64\")!==s.data.signature)return{ok:!1,reason:\"sidecar_invalid\"};let d,c;for(let p of r){let m=A(R(p));if(await oe(m)===s.data.publicKeySha256){d=p,c=m;break}}if(d===void 0||c===void 0)return{ok:!1,reason:\"unknown_key\"};let h;try{h=await crypto.subtle.importKey(\"spki\",c,K,!1,[\"verify\"])}catch(p){return t(`[publishedCatalog] trust root ${d.id} is not an importable RSA key: ${p instanceof Error?p.name:\"error\"}`),{ok:!1,reason:\"key_unusable\"}}let g;try{g=await crypto.subtle.verify(K.name,h,A(l),re(e,i))}catch{g=!1}return g?{ok:!0,rootId:d.id}:{ok:!1,reason:\"bad_signature\"}}"
+        },
+        {
+          "name": "re",
+          "start": 10807,
+          "end": 10932,
+          "sha256": "53e340868b730ae6ddb1401934178281486f022480faeaa1e5121aeec53846f0",
+          "source": "function re(e,n=I){let r=new TextEncoder().encode(n),i=new Uint8Array(r.length+e.length);return i.set(r),i.set(e,r.length),i}"
+        },
+        {
+          "name": "oe",
+          "start": 10932,
+          "end": 11040,
+          "sha256": "11c0527be6535c5848235d7a13fde4440cc10898096eb2d1c8353967e7daee1d",
+          "source": "async function oe(e){let n=await crypto.subtle.digest(\"SHA-256\",A(e));return Buffer.from(n).toString(\"hex\")}"
+        },
+        {
+          "name": "A",
+          "start": 11040,
+          "end": 11107,
+          "sha256": "56bf3dc3a4c9d6cf7ed8c1fa38c9887ddcce2258e3da8e36c7e973cee2bb5029",
+          "source": "function A(e){let n=new Uint8Array(e.byteLength);return n.set(e),n}"
+        }
+      ]
+    },
+    {
+      "module": "chunk-yz74hae4.js",
+      "moduleSha256": "f7d0117e9e01073a4f26ff6be9d543cc6b0cbf21f2aa4626be86723304703014",
+      "moduleLength": 2636,
+      "declarations": [
+        {
+          "name": "kEr",
+          "start": 988,
+          "end": 1014,
+          "sha256": "a3127a83cac01ed8fe550d0d15a45124c09e128af346cf0684940e15365b749e",
+          "source": "kEr=\"published-floor.json\""
+        },
+        {
+          "name": "l",
+          "start": 1015,
+          "end": 1018,
+          "sha256": "5187d6d62d49656a56a419e4bd833c575f96d6930ea664655cde36f3802f9e58",
+          "source": "l=1"
+        },
+        {
+          "name": "h",
+          "start": 1019,
+          "end": 1023,
+          "sha256": "9d4c52bbf79d1051271cd8be40a1ea4819a10a9a4e8e0dd66e66c28b70fa343c",
+          "source": "h=32"
+        },
+        {
+          "name": "a",
+          "start": 1024,
+          "end": 1031,
+          "sha256": "4cecceea1568bc436a2d73956d972e957021e7f31d5234c318c044e5548aeb8a",
+          "source": "a=65536"
+        },
+        {
+          "name": "v",
+          "start": 1032,
+          "end": 1182,
+          "sha256": "61310270519f524dbe6d2282edba382673b9a4d0d22f995b4b5a1f9db3cf699e",
+          "source": "v=f(()=>u({version:x(l),sources:de(o().min(1).max(64),u({version:C().int().nonnegative(),issuedAt:o().max(64),recordedAt:C().int().nonnegative()}))}))"
+        },
+        {
+          "name": "c",
+          "start": 1183,
+          "end": 1215,
+          "sha256": "e68e6c9eb180f7e7c3c7074df710334d3a4d4f61a6edac7a3fe7dacd3f1393e9",
+          "source": "function c(){return b(ZP(),kEr)}"
+        },
+        {
+          "name": "s",
+          "start": 1215,
+          "end": 1267,
+          "sha256": "5df396cd7a238ee37db305b21a50f3d95473a80a4b5889c45c5bac9483a369a9",
+          "source": "function s(){return Xr().publishedCatalogFloorMarks}"
+        },
+        {
+          "name": "aen",
+          "start": 1267,
+          "end": 1329,
+          "sha256": "c47283c2f24888ae4d62f55ee35d86a0e13d54883612c0f97d5ae31e9d11759d",
+          "source": "async function aen(e){return await m(),s().get(e)?.version??0}"
+        },
+        {
+          "name": "Yst",
+          "start": 1329,
+          "end": 1529,
+          "sha256": "293a732391385bf109f8fcdd4f7f2607fef2ca813b51df47524e03525b65c167",
+          "source": "async function Yst(e,r,i=Date.now()){await m();let n=s().get(e);if(n!==void 0&&n.version>=r.version)return;s().set(e,{version:r.version,issuedAt:(r.issued_at??\"\").slice(0,64),recordedAt:i}),await F()}"
+        },
+        {
+          "name": "m",
+          "start": 1529,
+          "end": 1630,
+          "sha256": "ff069f05bf6bea70c13bac5f3f82f68a58924aa0f997ac618e7ee012803f435f",
+          "source": "function m(){let e=Xr();return e.publishedCatalogFloorRead??=p().then(g),e.publishedCatalogFloorRead}"
+        },
+        {
+          "name": "g",
+          "start": 1630,
+          "end": 1749,
+          "sha256": "cda0a54e2b9db0b731c01104de0cf5de06bad79230e0c15462934a02a28e5e28",
+          "source": "function g(e){if(e===void 0)return;for(let[r,i]of e){let n=s().get(r);if(n===void 0||i.version>n.version)s().set(r,i)}}"
+        },
+        {
+          "name": "p",
+          "start": 1749,
+          "end": 2192,
+          "sha256": "056966150f87f2d11d338a7e10ddebe9c4aeea8a68de0187b417e76d889aa21c",
+          "source": "async function p(){let e;try{e=await Bt().readRange(c(),0,a+1)}catch(i){if(!W(i))t(`[publishedCatalog] floor file read failed: ${E(i)??\"unknown\"}; no persisted version marks this session`);return}let r=e.length>a?void 0:v().safeParse(gt(e.toString(\"utf8\"),!1));if(!r?.success){t(`[publishedCatalog] floor file ${r===void 0?\"oversized\":\"invalid\"}; no persisted version marks this session`);return}return new Map(Object.entries(r.data.sources))}"
+        },
+        {
+          "name": "F",
+          "start": 2192,
+          "end": 2318,
+          "sha256": "9493fe21e878f3b9e283d111d502344a49177063cb003b94f3f560144513a9be",
+          "source": "function F(){let e=Xr(),r=(e.publishedCatalogFloorWrite??Promise.resolve()).then(d,d);return e.publishedCatalogFloorWrite=r,r}"
+        },
+        {
+          "name": "d",
+          "start": 2318,
+          "end": 2614,
+          "sha256": "6dd90754975f9239afbed072bfb22ad42218b9040dd75bbd5799fecac1282f20",
+          "source": "async function d(){try{g(await p());let e=[...s().entries()].sort(([,i],[,n])=>n.recordedAt-i.recordedAt).slice(0,h),r=Bt();await r.mkdir(ZP()),await r.atomicWrite(c(),_({version:l,sources:Object.fromEntries(e)}),384)}catch(e){t(`[publishedCatalog] floor file write failed: ${E(e)??\"unknown\"}`)}}"
+        }
+      ]
+    },
+    {
+      "module": "chunk-nankzm0s.js",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "moduleLength": 706979,
+      "declarations": [
+        {
+          "name": "ZP",
+          "start": 388135,
+          "end": 388189,
+          "sha256": "ec8c81a8d033b292cde0e5d32d4807194f461361bfd2af7e118ce8cf041db85b",
+          "source": "function ZP(){return Qd(we(),\"cache\",\"model-catalog\")}"
+        }
+      ]
+    },
+    {
+      "module": "chunk-6re9qmwv.js",
+      "moduleSha256": "89b7556409d64bf3bc0e80e8839bf49353b98081d576dd4b8f44281c4ba7d7b1",
+      "moduleLength": 3765,
+      "declarations": [
+        {
+          "name": "Hn",
+          "start": 2683,
+          "end": 2752,
+          "sha256": "ec0255f276f3758483ff0dfd70b4f38db869724f165ee7e8965a33d064e04088",
+          "source": "function Hn(e){return e.replace(/[\\p{Cc}\\p{Cf}\\u2028\\u2029]+/gu,\" \")}"
+        }
+      ]
+    }
+  ],
+  "ports": {
+    "Xr": "same getBootstrapModelCacheOwner287/model-state object",
+    "Bt": "existing original host filesystem Bt()",
+    "St": "existing axios instance, credential-free downloads transport",
+    "on": "isPublishedClientDataPolicyAllowed287; complete raw verdict helpers on existing accepted restrictions, taints, hints/config owners; no constant allow injection",
+    "crypto": "actual WebCrypto RSA/SHA-512 signature verification",
+    "startupCaller": "raw chunk-dgp2yyqt.js Ebo before model resolution/vbo afterwards; main adapter remains controller-owned"
+  }
+}

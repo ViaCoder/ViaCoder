@@ -1,0 +1,86 @@
+{
+  "version": "2.1.287",
+  "platform": "darwin-arm64",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF16 end-exclusive",
+  "declarations": [
+    {
+      "file": "chunk-n43shgga.js",
+      "name": "h",
+      "start": 1146,
+      "end": 1184,
+      "moduleSha256": "6d81b2d4f234d0275c4ba0e1aab104dcf54745c932d7b31b61c9133901b3ab99",
+      "sha256": "a39f64aa6adaeeb2b29d753232d1218ec7bae268aee415e64329018d926027ea",
+      "source": "h=/^[A-Za-z0-9][A-Za-z0-9._+-]{0,63}$/"
+    },
+    {
+      "file": "chunk-n43shgga.js",
+      "name": "wCt",
+      "start": 1185,
+      "end": 1271,
+      "moduleSha256": "6d81b2d4f234d0275c4ba0e1aab104dcf54745c932d7b31b61c9133901b3ab99",
+      "sha256": "f908e1e6be16463b3dca49e82baceb1cc5f21e549add0a1d31e22452ed1691f8",
+      "source": "function wCt(e){if(e==null)return;if(h.test(e))return bn(e);return S(\"nonconforming\")}"
+    },
+    {
+      "file": "chunk-n43shgga.js",
+      "name": "kD",
+      "start": 2366,
+      "end": 2812,
+      "moduleSha256": "6d81b2d4f234d0275c4ba0e1aab104dcf54745c932d7b31b61c9133901b3ab99",
+      "sha256": "9e967cfe1020c1bf22f9a59ce307186eb9e7242e64dc1484c4dc8afcd8d67de0",
+      "source": "async function kD(e,n,{storageV5:r,credentials:o}={}){let s=Vo(\"preferredNotifChannel\",\"auto\").value;await ZO(i1(),e,{storageV5:r,credentials:o});let l=await E(s,e,n);if(l===\"error\")m(\"notification_show\",\"send_failed\");else y(\"notification_show\");i(\"tengu_notification_method_used\",{configured_channel:c(MZ.includes(s)?s:\"invalid\"),notification_type:c(e.notificationType),method_used:c(l),term:wCt(a.terminal),attacher_term:wCt(Xd()?.terminal)})}"
+    },
+    {
+      "file": "chunk-n43shgga.js",
+      "name": "p",
+      "start": 2816,
+      "end": 2831,
+      "moduleSha256": "6d81b2d4f234d0275c4ba0e1aab104dcf54745c932d7b31b61c9133901b3ab99",
+      "sha256": "3c339e4e6118087a3b2c00ca89fa369a635a04d2400be870eadad74217837beb",
+      "source": "p=\"Claude Code\""
+    },
+    {
+      "file": "chunk-n43shgga.js",
+      "name": "E",
+      "start": 2832,
+      "end": 3121,
+      "moduleSha256": "6d81b2d4f234d0275c4ba0e1aab104dcf54745c932d7b31b61c9133901b3ab99",
+      "sha256": "44125bd0dcc4c0873e9f8d6898c2168d1644c571001b5cabb88c0c23a7d94905",
+      "source": "async function E(e,n,r){if(e===\"auto\"){let s=await I();return _(s,n,r),s}let o;switch(e){case\"iterm2\":case\"iterm2_with_bell\":case\"kitty\":case\"ghostty\":case\"terminal_bell\":o=e;break;case\"notifications_disabled\":o=\"disabled\";break;default:o=\"none\"}try{return _(o,n,r),o}catch{return\"error\"}}"
+    },
+    {
+      "file": "chunk-n43shgga.js",
+      "name": "I",
+      "start": 3121,
+      "end": 3375,
+      "moduleSha256": "6d81b2d4f234d0275c4ba0e1aab104dcf54745c932d7b31b61c9133901b3ab99",
+      "sha256": "94446aa31da5a201699bc5a6287493c1fc962ee08bb2758c842394ee5dc5aef3",
+      "source": "async function I(){switch(Xd()?.terminal??a.terminal){case\"Apple_Terminal\":return await w()?\"terminal_bell\":\"no_method_available\";case\"iTerm.app\":return\"iterm2\";case\"kitty\":return\"kitty\";case\"ghostty\":return\"ghostty\";default:return\"no_method_available\"}}"
+    },
+    {
+      "file": "chunk-n43shgga.js",
+      "name": "_",
+      "start": 3375,
+      "end": 3733,
+      "moduleSha256": "6d81b2d4f234d0275c4ba0e1aab104dcf54745c932d7b31b61c9133901b3ab99",
+      "sha256": "b15d5634d6eb9e13bdd83d3902c53ee094d0b958e38e66f47b2f09c0db9982ea",
+      "source": "function _(e,n,r){switch(e){case\"iterm2\":r.notifyITerm2(n);return;case\"iterm2_with_bell\":r.notifyITerm2(n),r.notifyBell();return;case\"kitty\":r.notifyKitty({...n,title:n.title||p,id:O()});return;case\"ghostty\":r.notifyGhostty({...n,title:n.title||p});return;case\"terminal_bell\":r.notifyBell();return;case\"disabled\":case\"none\":case\"no_method_available\":return}}"
+    },
+    {
+      "file": "chunk-n43shgga.js",
+      "name": "O",
+      "start": 3733,
+      "end": 3783,
+      "moduleSha256": "6d81b2d4f234d0275c4ba0e1aab104dcf54745c932d7b31b61c9133901b3ab99",
+      "sha256": "782da7a823a6b7959f2eba1367b9976bd2c1e73a48c6ca75b9e5ccc58af81e66",
+      "source": "function O(){return Math.floor(Math.random()*1e4)}"
+    }
+  ],
+  "nativeSha256": "d81b112807fb454661105baadb14a82c9c74a25c1738f3a64e280638a5fb34c5",
+  "boundaries": [
+    "ZO/i1/Vo/Xd use the existing canonical owner, no new hook/session/config state",
+    "w is the already restored complete original Apple Terminal bell reader",
+    "First-party telemetry suppression remains a local C port, not a source rewrite"
+  ]
+}

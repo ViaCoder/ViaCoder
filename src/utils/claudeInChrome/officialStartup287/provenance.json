@@ -1,0 +1,271 @@
+{
+  "version": "2.1.287",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16 end-exclusive",
+  "rows": [
+    {
+      "name": "mainChromeStartup",
+      "file": "chunk-dgp2yyqt.js",
+      "start": 111902,
+      "end": 113783,
+      "source": "let Ht=lLr(de),Gt=!Ht&&pNt($t.chrome)&&ft();if(!Ht&&$t.chrome!==!1&&($t.chrome===!0||a.CLAUDE_CODE_ENABLE_CFC===!0)&&!sk()){let g=op(\"allow_claude_browser_extension\",\"Claude in Chrome\",\"is\")??\"Claude in Chrome is disabled by your organization\";if(K)t(`[Claude in Chrome] ${g}`,{level:\"warn\"});else zC(`Warning: ${g}`)}let No=Vye(ac,lfe()),si=mke()||No,tl=!Gt&&!Ht&&!si&&sLr(b),ai=Gt&&$t.chrome!==!0&&a.CLAUDE_CODE_ENABLE_CFC!==!0&&si,ol=Gt&&$t.chrome!==!0&&(a.CLAUDE_CODE_ENABLE_CFC!==!0&&yr()||ce);if(Ht&&No)t(\"[Claude in Chrome] Served by the remote session host over --mcp-config, but a deniedMcpServers policy entry denies Claude in Chrome; dropping the entry and not starting the built-in server\"),de=zr(de,(g,w)=>w!==ac);else if(Ht&&!sk())t(\"[Claude in Chrome] Served by the remote session host over --mcp-config, but the org policy denies the browser extension; not adopting it and not starting the built-in server\");else if(Ht){t(\"[Claude in Chrome] Served by the remote session host over --mcp-config; not starting the built-in server\");let{systemPrompt:g}=cLr();if(g)Ie=Ie?`${g}\n\n${Ie}`:g}else if(ai)t(\"[Claude in Chrome] Skipping chrome wiring: blocked by enterprise MCP config or managed deniedMcpServers policy\");else if(ol)t(\"[Claude in Chrome] Skipping chrome wiring: --safe-mode or --restricted\");else if(Gt&&(No||Fo!==null))if(K)t(`[Claude in Chrome] MCP server blocked by enterprise policy: ${ac}`,{level:\"warn\"});else zC(`Warning: MCP server blocked by enterprise policy: ${ac}`);else if(Gt){let g=O();try{i(\"tengu_claude_in_chrome_setup\",{platform:SU(g)});let{mcpConfig:w,allowedTools:R,systemPrompt:N}=b$e({skipReconnectAutoOpen:vqn()});if(de={...de,...w},te.push(...R),N)Ie=Ie?`${N}\n\n${Ie}`:N}catch(w){return i(\"tengu_claude_in_chrome_setup_failed\",{platform:SU(g)}),t(`[Claude in Chrome] Error: ${w}`),d(w),Yt(\"Error: Failed to run with Claude in Chrome.\")}}",
+      "moduleSha256": "0ac39806e4b50d15e5b1de301d8553a870917c87ef024d423bc9476e0ced21da",
+      "sha256": "79b640dc9495cdeefe6e3e86f0fa8508921b40e6701e68986740acc2be0f1456"
+    },
+    {
+      "name": "acceptedChromeOffer",
+      "file": "chunk-q1842b1c.js",
+      "start": 103148,
+      "end": 103651,
+      "source": "if(ue&&!sk())t(\"[Claude in Chrome] Skipping accepted offer: denied by organization policy (allow_claude_browser_extension)\");else if(ue){try{i(\"tengu_claude_in_chrome_setup\",{platform:SU(O())});let{mcpConfig:I,systemPrompt:Ye}=b$e();if(Xe={...Xe,...I},Ye)_e=_e?`${Ye}\n\n${_e}`:Ye}catch(I){i(\"tengu_claude_in_chrome_setup_failed\",{platform:SU(O())}),d(I),t(`[Claude in Chrome] Error (startup offer): ${I}`)}try{Ue=await yp(P,Se)}catch(I){t(`[Claude in Chrome] command refresh after accept failed: ${I}`)}}",
+      "sha256": "c52629f62341dc52c36e344e40f6a47959011807c90c5279c10b51b7eda1175a",
+      "moduleSha256": "53011f90e32203bb47d179b337e6d65e0caf63a2ca681545b60f9c3c388c212f"
+    },
+    {
+      "name": "deferredChromeOffer",
+      "file": "chunk-f5w4pbxy.js",
+      "start": 12644,
+      "end": 13990,
+      "source": "async(u)=>{if(!v)return null;let{isChromeExtensionInstalled:f}=await import(\"/$bunfs/root/chunk-19f3z1s7.js\"),D=await Dt(f(),1500,\"chrome extension scan timed out before offer\").catch(()=>!0),G=Boolean(le().chromeExtension?.pairedDeviceId);if(!D&&!G)return t(\"[Claude in Chrome] Skipping offer: extension not present locally (stale cache)\"),null;await Dt(Vd().catch(()=>{}),1500,\"GrowthBook init timed out before chrome offer\").catch(()=>{});let F=k(\"tengu_chrome_auto_enable\",!1),K=le().claudeInChromeDefaultEnabled!==void 0,{isChromeServerPolicyDenied:N}=await import(\"/$bunfs/root/chunk-1mrdqce6.js\"),{isClaudeInChromeAllowed:Y}=await import(\"/$bunfs/root/chunk-19f3z1s7.js\");if(N()||!Y())return t(\"[Claude in Chrome] Skipping offer: blocked by enterprise MCP config, managed deniedMcpServers policy, or organization policy (allow_claude_browser_extension)\"),null;if(K)return t(\"[Claude in Chrome] Skipping offer: decision already recorded (another instance answered)\"),P.claudeInChromeAccepted=le().claudeInChromeDefaultEnabled===!0,null;if(!F)return t(\"[Claude in Chrome] Skipping offer: tengu_chrome_auto_enable no longer set (stale GB cache)\"),null;let{ChromeAutoEnableDialog:ne}=await import(\"/$bunfs/root/chunk-0r035vkf.js\");return e(ne,{onDone:(ae)=>{P.claudeInChromeAccepted=ae,u()},isDontAskMode:l===\"dontAsk\",isAutoMode:l===\"auto\"})}",
+      "sha256": "9fc0161fd8eaf7ede5a93c86251c5b924aec59876a8f368f984830a3083a36a1",
+      "moduleSha256": "0913c7f4c8738c828fdcbe63c0ede168389eb703b929d9a48b1ed4c749dcf965"
+    },
+    {
+      "name": "Tnt",
+      "file": "chunk-mphp7acd.js",
+      "start": 471355,
+      "end": 471472,
+      "source": "Tnt=\"only your organization's managed MCP servers can load until it is fixed or removed and Claude Code is restarted\"",
+      "sha256": "1363f09bce3c8f918f8df7c336f222a047aaa7943b8af6eac5ef9c733d7788f1",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384"
+    },
+    {
+      "name": "Yye",
+      "file": "chunk-mphp7acd.js",
+      "start": 506134,
+      "end": 506385,
+      "source": "function Yye(){let e=Unt().fatalErrors();if(e.length===0)return null;let n=e.map((r)=>r.path?`${r.path}: ${r.message}`:r.message).join(\"; \");return`Enterprise MCP config ${Hcn()} cannot be read or parsed (${n}), so it keeps exclusive control: ${Tnt}`}",
+      "sha256": "307e79187f00e60d04527d66919b35094cc141922e99efcdebe4283f1364aa78",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384"
+    },
+    {
+      "name": "Hnt",
+      "file": "chunk-mphp7acd.js",
+      "start": 506483,
+      "end": 506551,
+      "source": "function Hnt(){return OSt()?.allowClaudeInChromeWithManagedMcp===!0}",
+      "sha256": "547d73bdfbcd4ff54da6d1c0b2418984d60831cf519df41a2fc7b9f31287e4ba",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384"
+    },
+    {
+      "name": "mke",
+      "file": "chunk-mphp7acd.js",
+      "start": 506794,
+      "end": 506845,
+      "source": "function mke(){return _y()&&(Yye()!==null||!Hnt())}",
+      "sha256": "b51a390827182b7e7fb0fa68d117d9628e012bcd5c1ea071585eb9bf2710b037",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384"
+    },
+    {
+      "name": "CLt",
+      "file": "chunk-mphp7acd.js",
+      "start": 462370,
+      "end": 462455,
+      "source": "function CLt(e){return typeof e===\"object\"&&e!==null&&qt().ccrInjectedConfigs.has(e)}",
+      "sha256": "24d5fc29f2dcc7eb2377f422468cac92d0a23ca9c8fb8102c2e0489ef2f99271",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384"
+    },
+    {
+      "name": "Wnt",
+      "file": "chunk-mphp7acd.js",
+      "start": 507223,
+      "end": 507264,
+      "source": "function Wnt(e,n){return Zw(e)&&RZn(e,n)}",
+      "sha256": "c87cf2d1c1751dc80793bc75dd59568850b5daa9cf116f33ba1fac8c68e79900",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384"
+    },
+    {
+      "name": "Cwe",
+      "file": "chunk-mphp7acd.js",
+      "start": 507131,
+      "end": 507223,
+      "source": "function Cwe(e,n){return n.type===\"sdk\"&&n.name===\"claude-vscode\"||CLt(n)||Wnt(e,n)&&!mke()}",
+      "sha256": "e544493d151c3911ad90c8163ac40ce8141ecae252521611f9b584826a0001cd",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384"
+    },
+    {
+      "name": "yge",
+      "file": "chunk-fc9hv8nn.js",
+      "start": 773,
+      "end": 816,
+      "source": "function yge(){return mke()||Vye(ac,lfe())}",
+      "sha256": "57e6df4b61ccfd9252aa016864462cf37b3c2069223106d3d068b9bbf9dff1f9",
+      "moduleSha256": "d452047ab33f5a2de4e9ef917c48441752adcd55e00dfd24cf9eb6b927ca807b"
+    },
+    {
+      "name": "aLr",
+      "file": "chunk-09m4fzsj.js",
+      "start": 408900,
+      "end": 409113,
+      "source": "function aLr({isSSHPending:e,isRemoteMode:n,hasTeleport:r,isSafeMode:s,permissionMode:h,isBypassPermissionsModeAvailable:g,teammateAgentId:b}){return e||n||r||s||h===\"bypassPermissions\"||h===\"plan\"&&g||b!==void 0}",
+      "sha256": "30b910e57f88d186dc277cedf7e49282a0c45741d43bf90a49f2439172cc0395",
+      "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f"
+    },
+    {
+      "name": "c",
+      "file": "chunk-f2n7vgt8.js",
+      "start": 1699,
+      "end": 1727,
+      "source": "function c(t,r){t(Error(r))}",
+      "sha256": "6823c1cd49646f9f1236a5e0537cbdefcd6376b5da20b130ba9eba2aa4fb85fa",
+      "moduleSha256": "d5f5cbf26110e86d1eab22e59072276597718b0d07654b6b0bc9e0d4aa3032ee"
+    },
+    {
+      "name": "Dt",
+      "file": "chunk-f2n7vgt8.js",
+      "start": 1727,
+      "end": 1870,
+      "source": "function Dt(t,r,e){let o,n=new Promise((m,i)=>{o=setTimeout(c,r,i,e)});return Promise.race([t,n]).finally(()=>{if(o!==void 0)clearTimeout(o)})}",
+      "sha256": "c3cb3c95a529544a62b92966b9818b5bfaa85c09df16e998eac5b0238f0691e6",
+      "moduleSha256": "d5f5cbf26110e86d1eab22e59072276597718b0d07654b6b0bc9e0d4aa3032ee"
+    },
+    {
+      "name": "$L",
+      "file": "chunk-nankzm0s.js",
+      "start": 466039,
+      "end": 466369,
+      "source": "$L=new Set([\"darwin\",\"linux\",\"win32\",\"freebsd\",\"openbsd\",\"netbsd\",\"android\",\"aix\",\"sunos\",\"cygwin\",\"haiku\",\"macos\",\"windows\",\"wsl\",\"unknown\",\"darwin-x64\",\"darwin-arm64\",\"win32-x64\",\"win32-arm64\",\"linux-x64\",\"linux-arm64\",\"linux-x64-musl\",\"linux-arm64-musl\",\"linux-x64-android\",\"linux-arm64-android\",\"freebsd-x64\",\"freebsd-arm64\"])",
+      "sha256": "e2b5a35da6c2973332fe7d938db898b82e10f17eab4e965577bbdd5feaa05b47",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa"
+    },
+    {
+      "name": "SU",
+      "file": "chunk-nankzm0s.js",
+      "start": 466370,
+      "end": 466457,
+      "source": "function SU(e){if(e==null)return S(\"none\");if($L.has(e))return bn(e);return S(\"other\")}",
+      "sha256": "674a33d5c27b3636989b9a669cfbe0ff3323185a6faf59b31ed2056d6d0ecb8c",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa"
+    },
+    {
+      "name": "te",
+      "file": "chunk-0r035vkf.js",
+      "start": 7661,
+      "end": 7721,
+      "source": "function te(){i(\"tengu_chrome_auto_enable_prompt_shown\",{})}",
+      "sha256": "8a66bdadd7c8b616303eb9aff549c480305414a68114de45227f5936d11f3b4a",
+      "moduleSha256": "01ada4da67567ab29834659057632224ccda3eb9d3ca3ca16a3eff56043c24a9"
+    },
+    {
+      "name": "re",
+      "file": "chunk-0r035vkf.js",
+      "start": 7721,
+      "end": 10194,
+      "source": "function re(ne){let o=w(29),{onDone:C,isDontAskMode:L,isAutoMode:N}=ne,se=L===void 0?!1:L,ie=N===void 0?!1:N,{storageV5:D}=Te(),P;if(o[0]===b)P=[],o[0]=P;else P=o[0];R(te,P);let T=A(!1),k=ha(mo),{refusedWithin:x,noteRefused:v,epoch:ae}=es(),V;if(o[1]!==k||o[2]!==v||o[3]!==x)V=function a(){if(k()||x(mo)){return v(),!0}return!1},o[1]=k,o[2]=v,o[3]=x,o[4]=V;else V=o[4];let a=V,I=Vy(),O=vc(ae,mo),q;if(o[5]!==C||o[6]!==a||o[7]!==D)q=function t(d){if(T.current){return}if(a()){return}if(T.current=!0,Ae((ce)=>({...ce,claudeInChromeDefaultEnabled:d,...d&&{hasCompletedClaudeInChromeOnboarding:!0}}),D),d)y(\"chrome_auto_enable_prompt\");else p(\"chrome_auto_enable_prompt\",\"declined\");C(d)},o[5]=C,o[6]=a,o[7]=D,o[8]=q;else q=o[8];let t=q,u;if(o[9]!==t)u=()=>t(!1),o[9]=t,o[10]=u;else u=o[10];let K;if(o[11]===b)K=r(be,{children:[e(j,{chord:\"enter\",action:\"confirm\"}),e(et,{action:\"confirm:no\",context:\"Confirmation\",fallback:\"Esc\",description:\"keep browser tools off\"})]}),o[11]=K;else K=o[11];let Y;if(o[12]===b)Y=e(n,{children:\"Claude will use your Chrome browser by default \\u2014 navigating sites, filling forms, and capturing screenshots in your existing session.\"}),o[12]=Y;else Y=o[12];const _=se?\"This session is in Don't Ask mode, so browser actions that need approval are skipped rather than prompted.\":ie?\"This session is in Auto mode, so an AI classifier approves routine browser actions \\u2014 you are only prompted when it is unsure.\":\"Browser actions still go through Claude's regular permission prompts before they run.\";let z;if(o[13]===b)z=e(n,{bold:!0,color:\"permission\",children:\"/chrome\"}),o[13]=z;else z=o[13];let f;if(o[14]!==_)f=r(s,{flexDirection:\"column\",gap:1,children:[Y,r(n,{dimColor:!0,children:[_,\" \",\"Turn browser tools off for future sessions with\",\" \",z,\".\"]})]}),o[14]=_,o[15]=f;else f=o[15];let l,m;if(o[16]!==t)l=()=>t(!0),m=()=>t(!1),o[16]=t,o[17]=l,o[18]=m;else l=o[17],m=o[18];let h;if(o[19]!==O.remountKey||o[20]!==a||o[21]!==I||o[22]!==l||o[23]!==m)h=e(qn,{refuseInput:a,openedAt:I,hideIndexes:!0,cancelFirst:!0,focus:\"cancel\",confirmLabel:\"Yes, use my browser\",cancelLabel:\"No, keep browser tools off\",onConfirm:l,onCancel:m},O.remountKey),o[19]=O.remountKey,o[20]=a,o[21]=I,o[22]=l,o[23]=m,o[24]=h;else h=o[24];let H;if(o[25]!==f||o[26]!==h||o[27]!==u)H=r(he,{title:\"Claude in Chrome extension detected\",color:\"permission\",onCancel:u,exitOnCtrlCD:!0,inputGuide:K,children:[f,h]}),o[25]=f,o[26]=h,o[27]=u,o[28]=H;else H=o[28];return H}",
+      "sha256": "92996661360601d7936a62955fe7300300b4cf02054a795c03a8d3336472bd1d",
+      "moduleSha256": "01ada4da67567ab29834659057632224ccda3eb9d3ca3ca16a3eff56043c24a9"
+    }
+  ],
+  "dialogBindings": {
+    "i": {
+      "file": "chunk-6hnyhakg.js",
+      "name": "i"
+    },
+    "Ae": {
+      "file": "chunk-nankzm0s.js",
+      "name": "Ae"
+    },
+    "Te": {
+      "file": "chunk-038c023k.js",
+      "name": "Te"
+    },
+    "w": {
+      "file": "chunk-bgj860b4.js",
+      "name": "w"
+    },
+    "y": {
+      "file": "chunk-9d2ykxmy.js",
+      "name": "y"
+    },
+    "p": {
+      "file": "chunk-9d2ykxmy.js",
+      "name": "p"
+    },
+    "s": {
+      "file": "chunk-jkt292h5.js",
+      "name": "s"
+    },
+    "n": {
+      "file": "chunk-jkt292h5.js",
+      "name": "n"
+    },
+    "R": {
+      "file": "chunk-1y575bx8.js",
+      "name": "R"
+    },
+    "A": {
+      "file": "chunk-1y575bx8.js",
+      "name": "A"
+    },
+    "j": {
+      "file": "chunk-vbsw5qhh.js",
+      "name": "j"
+    },
+    "be": {
+      "file": "chunk-134t0awf.js",
+      "name": "be"
+    },
+    "mo": {
+      "file": "chunk-jed7c28t.js",
+      "name": "mo"
+    },
+    "ha": {
+      "file": "chunk-6zne1pwx.js",
+      "name": "ha"
+    },
+    "Vy": {
+      "file": "chunk-6zne1pwx.js",
+      "name": "Vy"
+    },
+    "vc": {
+      "file": "chunk-6zne1pwx.js",
+      "name": "vc"
+    },
+    "es": {
+      "file": "chunk-6zne1pwx.js",
+      "name": "es"
+    },
+    "qn": {
+      "file": "chunk-n1ecg86x.js",
+      "name": "qn"
+    },
+    "he": {
+      "file": "chunk-0smna178.js",
+      "name": "he"
+    },
+    "et": {
+      "file": "chunk-t1v6esq6.js",
+      "name": "et"
+    },
+    "e": {
+      "file": "chunk-ysm7k028.js",
+      "name": "e"
+    },
+    "r": {
+      "file": "chunk-ysm7k028.js",
+      "name": "r"
+    },
+    "b": {
+      "file": "chunk-870yz02b.js",
+      "name": "b"
+    }
+  },
+  "nativeSha256": "e746add7c73e809b2a4232397445971a09d6420aa1ffd48443930d90ff9998a3",
+  "adaptations": [
+    "Only static source import literals in deferred offer relocated to same existing owners through ports.import; no import-only barrel initialized",
+    "Full main lexical predicates and conditional extracted contiguously; main frame supplies current configuration and existing host inputs",
+    "Full accepted-offer conditional includes setup and same owner command refresh; configuration returned to actual main consumer",
+    "React M module initializer fulfilled by real host React import; no mock rendering",
+    "R04 unsupported safe/restricted entry remains blocked by current CLI guard; no account qualification fabricated"
+  ]
+}

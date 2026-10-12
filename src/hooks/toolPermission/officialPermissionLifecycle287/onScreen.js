@@ -1,0 +1,3 @@
+// Original complete h9/j8t + uMr/pMr/dvo; same Hpr/ta.
+const factory=new Function("ports","const ta=ports.ta,Np=ports.Np,WL=ports.WL,kt=ports.kt,_f=ports._f,jRe=ports.jRe;\nfunction uMr(e){ta.onScreenBlockingDialog.setState((n)=>n.surfaceMounted&&n.kind===e?n:{surfaceMounted:!0,kind:e})};\nfunction pMr(){ta.onScreenBlockingDialog.setState((e)=>e.surfaceMounted||e.kind!==null?{surfaceMounted:!1,kind:null}:e)};\nfunction h9(){let h=j8t(),v=_f(),D=jRe();return v!==null||D?void 0:h};\nfunction dvo(){return pMr()};\nfunction j8t(){let n=Np(),e=()=>WL(n.getState())?.kind;return kt(n.subscribe,e,e)};\nreturn {h9,uMr,pMr,dvo};");
+export const createOnScreenPermissionHost287=factory;

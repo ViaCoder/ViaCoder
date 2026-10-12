@@ -1,0 +1,3 @@
+export interface InlineExtensionsConfig287 {inlinePlugins():string[];replaceInlinePlugins(value:string[]):void;inlinePluginsNoMcp():string[];replaceInlinePluginsNoMcp(value:string[]):void;inlinePluginUrls():string[];replaceInlinePluginUrls(value:string[]):void;reset():void}
+export interface ExtensionsConfigAccessors287 {setInlinePlugins(value:string[]):void;getInlinePlugins():string[];setInlinePluginsNoMcp(value:string[]):void;getInlinePluginsNoMcp():string[];setInlinePluginUrls(value:string[]):void;getInlinePluginUrls():string[]}
+export function createExtensionsConfigAccessors287(ports:{execution():{host:{extensionsConfig:InlineExtensionsConfig287}}}):ExtensionsConfigAccessors287

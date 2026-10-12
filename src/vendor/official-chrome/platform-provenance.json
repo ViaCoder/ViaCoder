@@ -1,0 +1,42 @@
+{
+  "version": "2.1.283",
+  "transformation": "Full raw OS-specific dependency closures; only absolute import/export paths rewritten. Generated runtime selector chooses one matching client/server/catalog/selection cache.",
+  "platforms": {
+    "darwin": {
+      "source": "darwin-arm64",
+      "equivalentSource": "darwin-x64",
+      "entry": "chunk-ck2pm2pp.js",
+      "provenance": "provenance.json",
+      "provenanceSha256": "159b4e844805a49a7283b7e309911751bc42ae9dc2d7a5db5536341e8282e0df"
+    },
+    "linux": {
+      "source": "linux-arm64",
+      "equivalentSource": "linux-x64",
+      "entry": "linux/chunk-krvt0maq.js",
+      "provenance": "linux/provenance.json",
+      "provenanceSha256": "72d5c5232e28e5f4cf4caab23a6c273eb267abfd273309d44aa3fb93f33abe71"
+    }
+  },
+  "selector": {
+    "path": "platform.js",
+    "sha256": "bea59a61ab1c9f805f054903c68c1ae36789fb7b8d69a68cf8486da2af8186ab"
+  },
+  "audit": {
+    "path": "platform-audit.json",
+    "sha256": "0c2f33e3275578e0f0c5a086c1a272d3724f24669969931d8539a47efd0d2cd3"
+  },
+  "generators": [
+    {
+      "path": "scripts/official/vendor.mjs",
+      "sha256": "368c854db0417721ea7887a5ec7932db5d243e23c86f50e6f57d368c2fdd862f"
+    },
+    {
+      "path": "scripts/official/audit-chrome-platforms.mjs",
+      "sha256": "c5fd44446a532c464d8878d649d4d82f74f41b9c6001f2095c5cc1b8a8accb6d"
+    },
+    {
+      "path": "scripts/official/vendor-chrome-platforms.mjs",
+      "sha256": "7246f8c82fe8bf4a39a5e31178503f5febb5b8c534a6a0be12188ecc143448e2"
+    }
+  ]
+}

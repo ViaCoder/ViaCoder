@@ -1,0 +1,45 @@
+{
+  "version": "2.1.287",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16 code units; end-exclusive",
+  "declarations": [
+    {
+      "file": "chunk-x7a54jgp.js",
+      "name": "qe",
+      "start": 24702,
+      "end": 25667,
+      "moduleSha256": "7ef96810a3b6d16312a78b7491b002c583c75482e866bf4541e6a7eb8e41cf35",
+      "sha256": "498042620ec5e21e1476bd0d0a8f2a50ab640ee695b29490cefb25fbd54d8cd0",
+      "source": "function qe(i){let k=w(19),{frame:c,retry:m}=i;if(!m){let C;if(k[0]!==c)C=e(Nee,{frame:c,messageColor:\"warning\"}),k[0]=c,k[1]=C;else C=k[1];let h;if(k[2]===b)h=e(n,{color:\"warning\",children:\"Answering\\u2026\"}),k[2]=h;else h=k[2];let v;if(k[3]!==C)v=r(s,{children:[C,h]}),k[3]=C,k[4]=v;else v=k[4];return v}let S=Math.max(0,Math.ceil((m.retryAt-Date.now())/1000)),C;if(k[5]!==c)C=e(Nee,{frame:c,messageColor:\"warning\"}),k[5]=c,k[6]=C;else C=k[6];let h;if(k[7]!==m.status)h=Oe(m.status),k[7]=m.status,k[8]=h;else h=k[8];let v;if(k[9]!==h)v=e(n,{color:\"warning\",children:h}),k[9]=h,k[10]=v;else v=k[10];let _;if(k[11]!==S||k[12]!==m.maxRetries||k[13]!==m.retryAttempt)_=r(n,{dimColor:!0,children:[\" \\xB7 retrying in \",S,\"s \\xB7 attempt \",m.retryAttempt,\"/\",m.maxRetries]}),k[11]=S,k[12]=m.maxRetries,k[13]=m.retryAttempt,k[14]=_;else _=k[14];let oe;if(k[15]!==C||k[16]!==v||k[17]!==_)oe=r(s,{children:[C,v,_]}),k[15]=C,k[16]=v,k[17]=_,k[18]=oe;else oe=k[18];return oe}"
+    },
+    {
+      "file": "chunk-x7a54jgp.js",
+      "name": "Oe",
+      "start": 25667,
+      "end": 25829,
+      "moduleSha256": "7ef96810a3b6d16312a78b7491b002c583c75482e866bf4541e6a7eb8e41cf35",
+      "sha256": "247c04a66b91e3c1e97bb61460a1e06047599366e142b5aab358b0f0257b0138",
+      "source": "function Oe(i){switch(i){case 429:return\"Rate limited\";case 529:return\"API overloaded\";case 401:case 403:return\"Authentication failed\";default:return\"API error\"}}"
+    },
+    {
+      "file": "chunk-x7a54jgp.js",
+      "name": "Ue",
+      "start": 23128,
+      "end": 23214,
+      "moduleSha256": "7ef96810a3b6d16312a78b7491b002c583c75482e866bf4541e6a7eb8e41cf35",
+      "sha256": "4e8a2ae12ea96d2e0309bb03d80f3df992d4bc17a4baeaac15d6dafe3b043e33",
+      "source": "function Ue(i,c){let m={...c,retryAt:Date.now()+c.retryInMs};i.retry=m,i.onRetry?.(m)}"
+    },
+    {
+      "file": "chunk-x7a54jgp.js",
+      "name": "mt",
+      "start": 24402,
+      "end": 24702,
+      "moduleSha256": "7ef96810a3b6d16312a78b7491b002c583c75482e866bf4541e6a7eb8e41cf35",
+      "sha256": "44afd49d27fe1fc203b70f0eaa443b7ce5c6d203f93e8475ce8b1f5ef9e071b4",
+      "source": "function mt(i){if(i.status!==\"api_retry\"||typeof i.attempt!==\"number\"||typeof i.max_retries!==\"number\"||typeof i.retry_delay_ms!==\"number\")return null;return{retryAttempt:i.attempt,maxRetries:i.max_retries,retryInMs:i.retry_delay_ms,status:i.error_status??void 0,retryAt:Date.now()+i.retry_delay_ms}}"
+    }
+  ],
+  "cuts": [],
+  "scope": "complete retry state projection and Ink renderer; producer and cancellation remain the existing same-owner lifecycle"
+}

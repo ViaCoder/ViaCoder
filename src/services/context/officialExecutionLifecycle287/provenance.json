@@ -1,0 +1,393 @@
+{
+  "version": "2.1.287",
+  "platform": "darwin-arm64",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "binarySha256": "6eab8333fe2121553100d8f40bfada384a3e989b94f947e18ba6677a6fcb41ea",
+  "offsetUnit": "UTF-16 code units",
+  "roots": {
+    "NoProjectDirectoryError": [
+      "chunk-bn3p37gv.js",
+      "gR"
+    ],
+    "switchSession": [
+      "chunk-bn3p37gv.js",
+      "ay"
+    ],
+    "clearSession": [
+      "chunk-bn3p37gv.js",
+      "zQr"
+    ],
+    "subscribeSessionSwitch": [
+      "chunk-bn3p37gv.js",
+      "Od"
+    ],
+    "subscribeOriginalCwdChange": [
+      "chunk-bn3p37gv.js",
+      "qQr"
+    ],
+    "requireProject": [
+      "chunk-bn3p37gv.js",
+      "Es"
+    ],
+    "updateProject": [
+      "chunk-bn3p37gv.js",
+      "l3t"
+    ]
+  },
+  "modules": [
+    {
+      "file": "chunk-x954y317.js",
+      "rows": [
+        {
+          "file": "chunk-x954y317.js",
+          "name": "Mn",
+          "start": 7186,
+          "end": 7227,
+          "moduleLength": 23029,
+          "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+          "sha256": "466851f97e57869bea6d65e6540ce17e469a42c4368dd2fd8c943d0ef2fd39a0",
+          "source": "function Mn(t){return t.normalize(\"NFC\")}",
+          "variable": false,
+          "exportNames": [
+            "Mn"
+          ]
+        }
+      ],
+      "bindings": {},
+      "initializers": []
+    },
+    {
+      "file": "chunk-4s38z9x2.js",
+      "rows": [
+        {
+          "file": "chunk-4s38z9x2.js",
+          "name": "s",
+          "start": 1098,
+          "end": 1153,
+          "moduleLength": 2740,
+          "moduleSha256": "eb46628147f83403bbcd57ca88b3370e05c6631bf027a80117844f770b276b2d",
+          "sha256": "8b79e9ad51e95ede56e4385a196d4187b05a3d78fde643acd8c68658ff8e8521",
+          "source": "s=globalThis.process?.getBuiltinModule?.(\"async_hooks\")",
+          "variable": true,
+          "exportNames": [
+            "s"
+          ]
+        },
+        {
+          "file": "chunk-4s38z9x2.js",
+          "name": "wKt",
+          "start": 1154,
+          "end": 1195,
+          "moduleLength": 2740,
+          "moduleSha256": "eb46628147f83403bbcd57ca88b3370e05c6631bf027a80117844f770b276b2d",
+          "sha256": "d871ff458e10c6c5509c5b70f7944fba032e2a42697e09aec182aaaac06d05b4",
+          "source": "wKt=s?(e)=>s.AsyncResource.bind(e):(e)=>e",
+          "variable": true,
+          "exportNames": [
+            "wKt"
+          ]
+        },
+        {
+          "file": "chunk-4s38z9x2.js",
+          "name": "Me",
+          "start": 1196,
+          "end": 1457,
+          "moduleLength": 2740,
+          "moduleSha256": "eb46628147f83403bbcd57ca88b3370e05c6631bf027a80117844f770b276b2d",
+          "sha256": "08c491676ef2243b475f885c45f1163b2f0abed6075a2e5fa3a32cdd2afb308a",
+          "source": "function Me(){let e=new Set;return{subscribe(n){let r=wKt(n);return e.add(r),()=>{e.delete(r)}},emit(...n){let r;for(let o of e)try{o(...n)}catch(i){(r??=[]).push(i)}if(r)throw r.length===1?r[0]:AggregateError(r,\"Signal listener(s) threw\")},clear(){e.clear()}}}",
+          "variable": false,
+          "exportNames": [
+            "Me"
+          ]
+        }
+      ],
+      "bindings": {},
+      "initializers": []
+    },
+    {
+      "file": "chunk-bn3p37gv.js",
+      "rows": [
+        {
+          "file": "chunk-bn3p37gv.js",
+          "name": "an",
+          "start": 49162,
+          "end": 49190,
+          "moduleLength": 117054,
+          "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+          "sha256": "195aaf86be7db683cd1a631b71ff54c497e86fb606983a5a1811f9ff53e09845",
+          "source": "an=\"NoProjectDirectoryError\"",
+          "variable": true,
+          "exportNames": [
+            "an"
+          ]
+        },
+        {
+          "file": "chunk-bn3p37gv.js",
+          "name": "gR",
+          "start": 49191,
+          "end": 49285,
+          "moduleLength": 117054,
+          "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+          "sha256": "746f3c4e121a8e434dc38083fbfb940ed07d39a704cce8963f5f17965a6c984b",
+          "source": "class gR extends Error{name=an;constructor(){super(\"This session has no working directory.\")}}",
+          "variable": false,
+          "exportNames": [
+            "gR"
+          ]
+        },
+        {
+          "file": "chunk-bn3p37gv.js",
+          "name": "Es",
+          "start": 49360,
+          "end": 49426,
+          "moduleLength": 117054,
+          "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+          "sha256": "17796eb823d708a7080483a9178ff43a99279ff625e84c59ed84d7f75953e42b",
+          "source": "function Es(e){let{project:t}=e;if(t===null)throw new gR;return t}",
+          "variable": false,
+          "exportNames": [
+            "Es"
+          ]
+        },
+        {
+          "file": "chunk-bn3p37gv.js",
+          "name": "O",
+          "start": 49517,
+          "end": 49772,
+          "moduleLength": 117054,
+          "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+          "sha256": "bd2badb4b9143dc41ac16ccb70e6cf34ece7fd2ecf777483e176637b7f5a34dc",
+          "source": "function O(e,t){let o=t.originalCwd??e?.originalCwd,r=t.projectRoot??e?.projectRoot,i=t.cwd??e?.cwd;if(o===void 0&&r===void 0&&i===void 0)return null;if(o===void 0||r===void 0||i===void 0)throw new gR;return{originalCwd:Mn(o),projectRoot:Mn(r),cwd:Mn(i)}}",
+          "variable": false,
+          "exportNames": [
+            "O"
+          ]
+        },
+        {
+          "file": "chunk-bn3p37gv.js",
+          "name": "Tt",
+          "start": 52826,
+          "end": 53046,
+          "moduleLength": 117054,
+          "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+          "sha256": "1ec3030a1cdd33af0798eb5282f6c9c85fa2281d5d2186741378c3e496864cb5",
+          "source": "class Tt{#e;#t=new WeakMap;constructor(e){this.#e=e}peek(e){return this.#t.get(e.root)}of(e){let t=e.root,o=this.#t.get(t);if(o!==void 0)return o;let r=this.#e();return this.#t.set(t,r),r}drop(e){this.#t.delete(e.root)}}",
+          "variable": false,
+          "exportNames": [
+            "Tt"
+          ]
+        },
+        {
+          "file": "chunk-bn3p37gv.js",
+          "name": "gn",
+          "start": 72305,
+          "end": 72427,
+          "moduleLength": 117054,
+          "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+          "sha256": "e890425e8d974008cad28d124ec70010268cb39aa8bd67cf6d28e9109c89c51f",
+          "source": "function gn(){let e=n();return e.requestJournal.promptIndex()>0||e.sessionScratch.chromeAvailabilityStagesLogged().size>0}",
+          "variable": false,
+          "exportNames": [
+            "gn"
+          ]
+        },
+        {
+          "file": "chunk-bn3p37gv.js",
+          "name": "zQr",
+          "start": 72427,
+          "end": 73060,
+          "moduleLength": 117054,
+          "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+          "sha256": "15813a4a1e0de7a489fea8e3d74e664ab321fc9d187312b89f2ebdcf21a3b521",
+          "source": "function zQr(e={}){let t=n(),o=t.id;t.sessionScratch.forgetPlanSlug(o),t.identity.replaceProjectDir(null);let r=gn();t.requestJournal.replacePromptIndex(0),t.requestJournal.replaceLastCancelledAPIMessageId(null),t.requestJournal.clearLastMainThreadRequest(),t.requestJournal.replaceLastMainRequestId(void 0),t.modelSelection.forgetRefusalFallbackOccurred(),t.sessionFlags.forgetPendingContextCompacted(),t.sessionScratch.replacePendingBranchLinks(),t.sessionScratch.replaceChromeAvailabilityStagesLogged(r);let i=vn(),s=$fe();return t.costLedger.scopeTo(s),t.update({id:s,...e.setCurrentAsParent&&{parentId:o}}),mn(t,\"clear\",i),t.id}",
+          "variable": false,
+          "exportNames": [
+            "zQr"
+          ]
+        },
+        {
+          "file": "chunk-bn3p37gv.js",
+          "name": "mn",
+          "start": 73060,
+          "end": 73136,
+          "moduleLength": 117054,
+          "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+          "sha256": "3bbe07956ee3ec2fa4f64ad187ec121b88e640ea3fddee07eb9f56b6116d3386",
+          "source": "function mn(e,t,o){let r=yn.of(e);if(o)r.emit(e.id,t,o);else r.emit(e.id,t)}",
+          "variable": false,
+          "exportNames": [
+            "mn"
+          ]
+        },
+        {
+          "file": "chunk-bn3p37gv.js",
+          "name": "Sn",
+          "start": 73136,
+          "end": 73184,
+          "moduleLength": 117054,
+          "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+          "sha256": "bb47113baca8c5fd4d9c2c056b3ed3f6b8d804c23722b215df1053101c10ec28",
+          "source": "function Sn(e){kn.of(e).emit(Es(e).originalCwd)}",
+          "variable": false,
+          "exportNames": [
+            "Sn"
+          ]
+        },
+        {
+          "file": "chunk-bn3p37gv.js",
+          "name": "ay",
+          "start": 73249,
+          "end": 73891,
+          "moduleLength": 117054,
+          "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+          "sha256": "b6018a40ce3bdac98675503dd73fe87dcfb0dab9c102b9d4c87e69fa807f3fea",
+          "source": "function ay(e,t,o=null,r){let i=n(),s=r?O(i.project,bn(r)):r,a,u=i.parentId;if(i.id!==e){if(i.sessionScratch.forgetPlanSlug(i.id),i.requestJournal.replaceLastCancelledAPIMessageId(null),i.requestJournal.clearLastMainThreadRequest(e),t!==\"fork\")i.requestJournal.replaceLastMainRequestId(void 0);i.modelSelection.forgetRefusalFallbackOccurred(),i.sessionFlags.forgetPendingContextCompacted(),i.sessionScratch.replacePendingBranchLinks(),i.sessionScratch.replaceChromeAvailabilityStagesLogged(gn()),a=vn(),u=void 0}if(i.identity.replaceProjectDir(o),i.update({id:e,parentId:u,...s!==void 0&&{project:s}}),mn(i,t,a),r?.originalCwd!==void 0)Sn(i)}",
+          "variable": false,
+          "exportNames": [
+            "ay"
+          ]
+        },
+        {
+          "file": "chunk-bn3p37gv.js",
+          "name": "vn",
+          "start": 73891,
+          "end": 74368,
+          "moduleLength": 117054,
+          "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+          "sha256": "2cc1ba9f2074b2f2189456376cdcdbe6a24bc06d78ae8804b219a1c3d14f045d",
+          "source": "function vn(){let e=n(),t=e.modelSelection.refusalFallbackModelLatch();if(e.modelSelection.unlatchRefusalFallbackModel(\"session_transition\"),!t||e.modelSelection.mainLoopModelOverride()!==t.fallbackModel)return;return e.modelSelection.overrideMainLoopModel(t.previousOverride),{appStateModel:t.previousAppStateModel,forSessionValue:t.previousModelForSession,overrideValue:t.previousOverride,restoredToExplicitOverride:t.previousOverride!==void 0,fallbackModel:t.fallbackModel}}",
+          "variable": false,
+          "exportNames": [
+            "vn"
+          ]
+        },
+        {
+          "file": "chunk-bn3p37gv.js",
+          "name": "yn",
+          "start": 74372,
+          "end": 74391,
+          "moduleLength": 117054,
+          "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+          "sha256": "56fde06df9547ddbdcc96c2f8c50d8729fb155b3cb86cfd47fe0f5fb2a6e9c3f",
+          "source": "yn=new Tt(()=>Me())",
+          "variable": true,
+          "exportNames": [
+            "yn"
+          ]
+        },
+        {
+          "file": "chunk-bn3p37gv.js",
+          "name": "Od",
+          "start": 74392,
+          "end": 74438,
+          "moduleLength": 117054,
+          "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+          "sha256": "81f4cd45eef9c4a0246314a886dcb94c0ce65e55438ddde2e9e3f338af910735",
+          "source": "function Od(e){return yn.of(n()).subscribe(e)}",
+          "variable": false,
+          "exportNames": [
+            "Od"
+          ]
+        },
+        {
+          "file": "chunk-bn3p37gv.js",
+          "name": "bn",
+          "start": 75136,
+          "end": 75275,
+          "moduleLength": 117054,
+          "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+          "sha256": "4e930ec54a47758c2be3c43c674cd614fadefa3bc15969f37ec05192c8a5b8d1",
+          "source": "function bn(e){return{originalCwd:e.originalCwd?.normalize(\"NFC\"),projectRoot:e.projectRoot?.normalize(\"NFC\"),cwd:e.cwd?.normalize(\"NFC\")}}",
+          "variable": false,
+          "exportNames": [
+            "bn"
+          ]
+        },
+        {
+          "file": "chunk-bn3p37gv.js",
+          "name": "l3t",
+          "start": 75275,
+          "end": 75359,
+          "moduleLength": 117054,
+          "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+          "sha256": "b79dfe0ae30bbbeef4fcdef580b9bb45ef01067b3e5d88c17407628f42542d2f",
+          "source": "function l3t(e){let t=n();if(t.update({project:bn(e)}),e.originalCwd!==void 0)Sn(t)}",
+          "variable": false,
+          "exportNames": [
+            "l3t"
+          ]
+        },
+        {
+          "file": "chunk-bn3p37gv.js",
+          "name": "kn",
+          "start": 75399,
+          "end": 75418,
+          "moduleLength": 117054,
+          "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+          "sha256": "83d5db435a18e5c0dd7e74280be0f80bbc175085d6e9a5b0f1c009807c4a4c3d",
+          "source": "kn=new Tt(()=>Me())",
+          "variable": true,
+          "exportNames": [
+            "kn"
+          ]
+        },
+        {
+          "file": "chunk-bn3p37gv.js",
+          "name": "qQr",
+          "start": 75419,
+          "end": 75466,
+          "moduleLength": 117054,
+          "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+          "sha256": "c29d43c3c708b28ba45f4e077b112853c4d2c1ad9a338630fc31ae4a7febf7cc",
+          "source": "function qQr(e){return kn.of(n()).subscribe(e)}",
+          "variable": false,
+          "exportNames": [
+            "qQr"
+          ]
+        }
+      ],
+      "bindings": {
+        "n": {
+          "port": "executionContext",
+          "identity": "chunk-bn3p37gv.js:n"
+        },
+        "Mn": {
+          "file": "chunk-x954y317.js",
+          "name": "Mn"
+        },
+        "Me": {
+          "file": "chunk-4s38z9x2.js",
+          "name": "Me"
+        },
+        "$fe": {
+          "builtin": "randomUUID",
+          "builtinModule": "crypto"
+        }
+      },
+      "initializers": []
+    }
+  ],
+  "ports": [
+    {
+      "port": "executionContext",
+      "file": "chunk-bn3p37gv.js",
+      "name": "n",
+      "start": 72003,
+      "end": 72039,
+      "moduleLength": 117054,
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "sha256": "978cd2c3f63837daaca9fb6af09f4f31f6e43355664c1904948a985d835f0e39",
+      "source": "function n(){return b()?.session??v}",
+      "variable": false
+    }
+  ],
+  "builtins": [
+    {
+      "builtin": "randomUUID",
+      "builtinModule": "crypto",
+      "alias": "builtin0"
+    }
+  ],
+  "scope": "Complete raw ay/zQr/Od/qQr closures, including full dependencies and ordered mutations. Runtime execution/legacy contexts and source helpers explicitly listed as typed source-qualified ports."
+}

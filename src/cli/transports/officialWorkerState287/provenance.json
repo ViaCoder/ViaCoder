@@ -1,0 +1,877 @@
+{
+  "version": "2.1.287",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "file": "chunk-bvq78v2j.js",
+  "moduleSha256": "144ddbfcb3f9a7ba3dc594cf90d911e218c9512824871f11bbc84ad46ad4efb0",
+  "rangeConvention": "UTF-16 code units; end-exclusive",
+  "classSha256": "c5b0b8638ce5a1a5069f2bbe86178b62346b63a2bd5d65d68f1078dc414794ea",
+  "methods": [
+    {
+      "name": "initialize",
+      "start": 21054,
+      "end": 23579,
+      "sha256": "2fe718dfad7acac599162a8424e4fbb2e68be7b49be2dd9145fd5eb1782fe089",
+      "source": "async initialize(e){let n=Date.now();if(Object.keys(this.getAuthHeaders()).length===0)throw new tCe(\"no_auth_headers\");if(e===void 0)e=tyr();if(isNaN(e))throw new tCe(\"missing_epoch\");this.workerEpoch=e;let r=this.getWorkerState(),s=await Promise.race([r.then((O)=>O.metadata,()=>({external:null,internal:null,readFailed:!0})),ee(this.initStateGetOrderingBoundMs).then(()=>\"pending\")]),h=this.reportParkAtInit?Wt(s):void 0,v={worker_status:\"idle\",worker_epoch:this.workerEpoch,external_metadata:{...this.initExternalMetadata,task_summary:null}},b=h===void 0?{worker_status:this.initialWorkerStatus,worker_epoch:this.workerEpoch,external_metadata:{...this.initExternalMetadata,pending_action:null,pending_actions:null,task_summary:null}}:h.status===\"requires_action\"?{...v,worker_status:\"requires_action\",requires_action_details:h.details}:v,g={ok:!1},w=new Set,k=10,P=0;for(let O=1;O<=k;O++){if(this.closed)break;if(P=O,g=await this.request(\"put\",\"/worker\",b,\"PUT worker (init)\"),g.ok||this.closed)break;if(g.reason)w.add(g.reason);if(this.onDiagnostic?.(`PUT /worker failed (${g.reason??\"unknown\"}) attempt=${O}/${k}, ${Math.round((Date.now()-n)/1000)}s elapsed`,\"warn\"),V(g.status)){if(h?.status===\"requires_action\"){h={status:\"idle\",reason:\"park_rejected\"},b=v,O--;continue}break}if(O<k){let U=Math.min(500*2**(O-1),30000)+Math.random()*500;await ee(U)}}if(!g.ok){if(!this.closed)ne(\"error\",\"cli_worker_init_put_retries_exhausted\"),this.onDiagnostic?.(`PUT /worker retries exhausted: ${P} attempts over ${Math.round((Date.now()-n)/1000)}s, errors=[${[...w].join(\",\")||\"unknown\"}]`,\"warn\");throw new tCe(\"worker_register_failed\",g.status)}if(this.currentState=h?.status??this.initialWorkerStatus,this.applyUploadHold(\"idle\"),this.parkReportedAtInitRequestId=h?.status===\"requires_action\"?h.requestId:void 0,this.startHeartbeat(),!this.closed){if(eGo(()=>{this.writeEvent({type:\"keep_alive\"})}),this.gatesToolCalls)this.stopToolCallGate=r$o((O)=>this.gateToolCall(O))}if(t(`CCRClient: initialized, epoch=${this.workerEpoch}`),ne(\"info\",\"cli_worker_lifecycle_initialized\",{epoch:this.workerEpoch,duration_ms:Date.now()-n,reported_status:this.currentState}),wr(\"worker_init_ms\",Date.now()-n,n-performance.timeOrigin),h)i(\"tengu_ccr_init_park_report\",{reported:c(h.status),reason:c(h.reason)});let{metadata:R,durationMs:F}=await r;if(!this.closed)ne(\"info\",\"cli_worker_state_restored\",{duration_ms:F,had_state:R.external!==null||R.internal!==null,read_failed:R.readFailed===!0});return h?{...R,initParkReport:qt(h.status,R)}:R}"
+    },
+    {
+      "name": "getWorkerState",
+      "start": 23579,
+      "end": 24111,
+      "sha256": "17f3d95d2d4b829a61483ac9145ea1c8cc8f07bf42aa3cd5ebbea640f25fba8a",
+      "source": "async getWorkerState(e=\"worker_state\",n=!1){let r=Date.now(),s=this.getAuthHeaders();if(Object.keys(s).length===0)return{metadata:{external:null,internal:null,readFailed:!0},projectsAssertion:void 0,durationMs:0};let h=await F$.getWithRetry(this.readSource,`${this.sessionBaseUrl}/worker${We(n)}`,s,e,void 0,void 0,{signal:this.closeAbort.signal});return{metadata:{external:h?.worker?.external_metadata??null,internal:h?.worker?.internal_metadata??null,...h===null&&{readFailed:!0}},projectsAssertion:qe(h),durationMs:Date.now()-r}}"
+    },
+    {
+      "name": "applyUploadHold",
+      "start": 49319,
+      "end": 49738,
+      "sha256": "07af97d401beee56438face44813ede15c522f57622d35a86c52bbc398c628d4",
+      "source": "applyUploadHold(e){if(this.holdSwitchedOff=this.eventHoldEnabled!==void 0&&this.eventHoldEnabled()!==!0,this.holdSwitchedOff&&!this.loggedHoldSwitchedOff)this.loggedHoldSwitchedOff=!0,ne(\"warn\",\"cli_ccr_event_hold_switched_off\");let n=this.decideHoldRule();this.holdRule=n,this.eventUploader.setHold(n&&this.laneHold(n,this.seesModelCallBoundaries?on:De),e),this.internalEventUploader.setHold(n&&this.laneHold(n,De),e)}"
+    },
+    {
+      "name": "decideHoldRule",
+      "start": 49067,
+      "end": 49319,
+      "sha256": "fb8ee83760c8f28660fd15de02f05e596b1d1eb0515608db3fc8875bb3c8ea32",
+      "source": "decideHoldRule(){if(this.currentState!==\"running\"||this.shutdownReleased)return;if(this.servedPolicyHolds()&&(this.seesModelCallBoundaries||this.lastReportedHasSubscribers===!1))return\"served_policy\";return this.unwatched()?\"no_subscriber_flag\":void 0}"
+    },
+    {
+      "name": "servedPolicyHolds",
+      "start": 48951,
+      "end": 49067,
+      "sha256": "93eca4b0068fb2ddec484e4a9586f1b75b855d6f99596ca5dbc0a13f6a04bd0e",
+      "source": "servedPolicyHolds(){return(this.flushPolicy?.maxEvents??0)>1&&this.eventHoldEnabled!==void 0&&!this.holdSwitchedOff}"
+    },
+    {
+      "name": "unwatched",
+      "start": 48784,
+      "end": 48869,
+      "sha256": "a1214838b7fc2efbae9085893f0230ee68b463a76187f58224d5ad5e29867168",
+      "source": "unwatched(){return this.noSubscriberHoldMs()>0&&this.lastReportedHasSubscribers===!1}"
+    },
+    {
+      "name": "noSubscriberHoldMs",
+      "start": 48699,
+      "end": 48784,
+      "sha256": "c7b697d03878d520d942a522650e8856ff5b0ea21b6f8dbca2b75aed2987f615",
+      "source": "noSubscriberHoldMs(){return rn&&this.holdSwitchedOff?0:this.noSubscriberUploadHoldMs}"
+    },
+    {
+      "name": "laneHold",
+      "start": 49738,
+      "end": 50000,
+      "sha256": "9cd99176cbff5d2f9877787f2714fa4982b134cc2d257b540e96def13b5e5358",
+      "source": "laneHold(e,n){let r=this.flushPolicy;if(e===\"served_policy\"&&r)return{rule:e,maxAgeMs:Math.min(r.maxAgeMs,this.seesModelCallBoundaries?Je:zt),maxItems:r.maxEvents,maxBytes:r.maxBytes,passes:n};return{rule:\"no_subscriber_flag\",maxAgeMs:this.noSubscriberHoldMs()}}"
+    },
+    {
+      "name": "gateToolCall",
+      "start": 43316,
+      "end": 43928,
+      "sha256": "a3afb1fb0d7a9ce843559415dd4397ea66a5b3ef56b2a511f521d02fb6e3deaa",
+      "source": "gateToolCall(e){let n=this.flushPolicy;if(!n||n.flushAfterTools!==\"write\"&&n.flushBeforeToolsWaitMs<=0||e.agentId!==void 0||this.closed||this.eventHoldEnabled===void 0||this.holdSwitchedOff||!e.mayWrite())return;if(n.flushAfterTools===\"write\")this.gatedWriteToolCalls.add(e.toolUseId),Ne(this.gatedWriteToolCalls);let r=this.transcriptLaneInUse?[\"client_events\",\"internal_events\"]:[\"client_events\"];if(n.flushBeforeToolsWaitMs<=0||this.lanesNotAnswering.size>0||e.signal.aborted||r.every((s)=>this.toolCallRows[s].get(e.toolUseId)===\"stored\"))return;return this.awaitToolCallStored(e,r,n.flushBeforeToolsWaitMs)}"
+    },
+    {
+      "name": "awaitToolCallStored",
+      "start": 43928,
+      "end": 45275,
+      "sha256": "a37b7374cd6af8b27567745e28a3869816cf366c1a4d8af43261993cd742f4f7",
+      "source": "async awaitToolCallStored(e,n,r){let s=e.toolUseId,h=Date.now(),v=_s(e.signal,{timeoutMs:r,refTimer:!0}),b=_s(v.signal,{timeoutMs:this.toolCallRowGraceMs,refTimer:!0}),g=!1,w=!1;this.awaitedToolCalls.add(s);try{if(this.eventUploader.release(\"tool_call\"),this.internalEventUploader.release(\"tool_call\"),await Promise.race([this.toolCallRowReaches(\"client_events\",s,\"queued\"),He(b.signal)]),g=this.toolCallRows.client_events.has(s),w=b.signal.aborted&&!v.signal.aborted,g&&!this.closed)await Promise.race([Promise.all(n.map((R)=>this.toolCallRowReaches(R,s,\"settled\"))),He(v.signal)])}finally{b.cleanup(),v.cleanup(),this.awaitedToolCalls.delete(s);for(let R of n)this.toolCallRowWaiters.delete(`${R} ${s}`)}let P=n.every((R)=>this.toolCallRows[R].get(s)===\"stored\")?\"stored\":this.closed?\"closed\":e.signal.aborted?\"aborted\":n.some((R)=>this.toolCallRows[R].get(s)===\"dropped\")?\"dropped\":w&&!g?\"row_never_queued\":\"timeout\";if(P===\"timeout\"||P===\"dropped\"){for(let R of n)if(this.toolCallRows[R].get(s)===\"queued\")this.lanesNotAnswering.add(R)}ne(P===\"stored\"||P===\"closed\"||P===\"aborted\"?\"info\":\"warn\",\"cli_ccr_tool_call_upload_wait\",{outcome:P,waited_ms:Date.now()-h,limit_ms:r,live_view_row:this.toolCallRows.client_events.get(s)??\"none\",transcript_row:n.includes(\"internal_events\")?this.toolCallRows.internal_events.get(s)??\"none\":\"lane_unused\"})}"
+    },
+    {
+      "name": "toolCallRowReaches",
+      "start": 45275,
+      "end": 45559,
+      "sha256": "bc233f447dced0cb6ac4544d473d1a67799ae3309ad1b99d827c6c6eb7849fe6",
+      "source": "toolCallRowReaches(e,n,r){let s=this.toolCallRows[e].get(n);if(s!==void 0&&(s!==\"queued\"||r===\"queued\"))return Promise.resolve();return new Promise((h)=>{let v=`${e} ${n}`,b={until:r,reached:h},g=this.toolCallRowWaiters.get(v);if(g)g.push(b);else this.toolCallRowWaiters.set(v,[b])})}"
+    },
+    {
+      "name": "reportState",
+      "start": 28768,
+      "end": 29182,
+      "sha256": "232fef499fee629cd23c8357bc0c17d634eca2b094bac81487c047a85441fee4",
+      "source": "reportState(e,n){if(e===this.currentState&&!n)return;let r=this.parkReportedAtInitRequestId;if(this.parkReportedAtInitRequestId=void 0,r!==void 0&&e===\"requires_action\"&&this.currentState===\"requires_action\"&&U_e(n)===r)return;this.currentState=e,this.workerState.enqueue({worker_status:e,requires_action_details:n?Xe(n):null,internal_metadata:{reply_degraded:Jwo()}}),this.applyUploadHold(e===\"running\"?\"idle\":e)}"
+    },
+    {
+      "name": "reportInternalMetadata",
+      "start": 29252,
+      "end": 29326,
+      "sha256": "e2ea2c8b76c1d439d43346aac981a5934a92686a1d12d9ed55f4b56953eefdb6",
+      "source": "reportInternalMetadata(e){this.workerState.enqueue({internal_metadata:e})}"
+    },
+    {
+      "name": "flushWorkerState",
+      "start": 63965,
+      "end": 64022,
+      "sha256": "5661e046faeb0dbe30bbef39b8730b9f47801c3eb19d5b70925eec674f8d4dbe",
+      "source": "async flushWorkerState(){return this.workerState.flush()}"
+    },
+    {
+      "name": "droppedWorkerStatePatches",
+      "start": 64053,
+      "end": 64126,
+      "sha256": "400c82e5fc7885492ee55db2d51e4b9376b7bf490593556d2b71d560e4f0a6fc",
+      "source": "get droppedWorkerStatePatches(){return this.droppedWorkerStatePatchCount}"
+    },
+    {
+      "name": "takeUpFlushPolicy",
+      "start": 50000,
+      "end": 50804,
+      "sha256": "3db0a4baf2121988faba57f78c5b3f69b21cdcf83e429953a9aedc2293f34a1c",
+      "source": "takeUpFlushPolicy(e){let n=e==null?void 0:un(e);if(e!=null&&!n&&!this.loggedUnreadableFlushPolicy)this.loggedUnreadableFlushPolicy=!0,ne(\"warn\",\"cli_ccr_flush_policy_unreadable\");let r=this.flushPolicy;if(!hn(r,n))this.flushPolicy=n,ne(\"info\",n?r?\"cli_ccr_flush_policy_changed\":\"cli_ccr_flush_policy_adopted\":\"cli_ccr_flush_policy_cleared\",{...n&&{max_events:n.maxEvents,max_age_ms:n.maxAgeMs,max_bytes:n.maxBytes??0,flush_on_sampling_end:n.flushOnSamplingEnd,flush_on_assistant:n.flushOnAssistant,flush_before_tools_wait_ms:n.flushBeforeToolsWaitMs,flush_after_tools:n.flushAfterTools,must_flush_types:n.mustFlushTypes.size,live_twin_types:n.liveTwinTypes.size,policy_version:n.policyVersion??\"\"},hold_enabled:this.eventHoldEnabled!==void 0&&this.eventHoldEnabled()===!0});this.applyUploadHold(\"reset\")}"
+    },
+    {
+      "name": "releaseFor",
+      "start": 42676,
+      "end": 43085,
+      "sha256": "b02700df948d57b24c534adcbf84362155ff20d91e3eb4b851cbfa68142ccece",
+      "source": "releaseFor(e){if(e.type===\"system\"&&\"subtype\"in e&&e.subtype===\"status\"&&\"status\"in e&&e.status===\"requesting\"){if(!this.seesModelCallBoundaries)this.seesModelCallBoundaries=!0,this.applyUploadHold(\"reset\");if(this.holdRule===\"served_policy\")return\"round_trip\"}if(e.type===\"user\"&&this.toolResultReleases(e.message))return\"tool_result\";if(this.holdRule===void 0||this.mayWaitUnderHold(e))return;return\"event\"}"
+    },
+    {
+      "name": "toolResultReleases",
+      "start": 43085,
+      "end": 43316,
+      "sha256": "de917dfa62d40752ea9e4b4c486744525df779f3716335d0f25bad783470579c",
+      "source": "toolResultReleases(e){let n=this.holdRule===\"served_policy\"?this.flushPolicy?.flushAfterTools:void 0;if(n!==\"write\"&&n!==\"all\")return!1;return Qe(e,\"tool_result\",\"tool_use_id\").some((r)=>n===\"all\"||this.gatedWriteToolCalls.has(r))}"
+    },
+    {
+      "name": "mayWaitUnderHold",
+      "start": 46649,
+      "end": 47067,
+      "sha256": "fb5e0f86e6dc87c964d0bb2cd99cecc0e86ba3586e4000952dc473a3f1977896",
+      "source": "mayWaitUnderHold(e){if(e.type===\"keep_alive\"&&this.holdRule===\"served_policy\")return this.seesModelCallBoundaries&&!this.flushPolicy?.mustFlushTypes.has(e.type);if(!nyr(e))return!1;if(this.holdRule===\"no_subscriber_flag\"&&!sn)return!0;if(e.type===\"user\"&&\"isReplay\"in e&&e.isReplay)return!1;let n=this.flushPolicy;if(!n)return!0;if(e.type===\"assistant\"&&n.flushOnAssistant)return!1;return!n.mustFlushTypes.has(e.type)}"
+    },
+    {
+      "name": "noteToolCallRows",
+      "start": 45559,
+      "end": 45940,
+      "sha256": "00aace5504003e4a3a0f73df7fa5bbce1e2959888bbf0059744550be29018be0",
+      "source": "noteToolCallRows(e,n,r){let s=this.toolCallRows[e];for(let h of n){if(r===\"queued\"&&s.has(h)||r===\"dropped\"&&s.get(h)===\"stored\")continue;s.set(h,r),Ne(s);let v=`${e} ${h}`,b=(this.toolCallRowWaiters.get(v)??[]).filter((g)=>{if(g.until===\"queued\"||r!==\"queued\")return g.reached(),!1;return!0});if(b.length>0)this.toolCallRowWaiters.set(v,b);else this.toolCallRowWaiters.delete(v)}}"
+    },
+    {
+      "name": "noteToolCallRowsSettled",
+      "start": 45940,
+      "end": 46188,
+      "sha256": "7efca80c0c8f52f27021bc4c4192a63f459d05cdaa7f56972a6bb3321ec3a118",
+      "source": "noteToolCallRowsSettled(e,n,r){if(!this.gatesToolCalls)return;if(n===\"stored\")this.lanesNotAnswering.delete(e);this.noteToolCallRows(e,r.flatMap((s)=>(\"session_agent_id\"in s)&&s.session_agent_id||(\"ephemeral\"in s)&&s.ephemeral?[]:me(s.payload)),n)}"
+    },
+    {
+      "name": "queueInternalEvents",
+      "start": 57812,
+      "end": 58017,
+      "sha256": "7bda2488ffe5541921c43997bac001bbfafd1f51756d9d58c6eb9cdf562a513f",
+      "source": "async queueInternalEvents(e,n){let r=e[0]?.is_compaction===!0&&this.holdRule!==void 0;if(r)this.eventUploader.release(\"event\");await this.internalEventUploader.enqueue(e,{together:!0,release:r?\"event\":n})}"
+    },
+    {
+      "name": "writeInternalEvent",
+      "start": 56227,
+      "end": 57812,
+      "sha256": "332d40752b0500c5ccf0dd41d6573b5fef59b67fbefd4e1bb812de590807c08e",
+      "source": "async writeInternalEvent(e,n,{isCompaction:r=!1,agentId:s,preservedEventIds:h}={}){let v=h,b=Te(n);if(v&&v.length>J)i(\"tengu_ccr_preserved_event_ids_clamped\",{originalCount:v.length,cap:J,payloadClamped:b!==null}),v=v.slice(-J);let g=b??n;if(this.currentUploadTrim().envelope===!0){let U=QFo(g);if(U!==g&&!this.loggedTranscriptEnvelopeStrip)this.loggedTranscriptEnvelopeStrip=!0,y(\"ccr_worker_envelope_strip\");g=U}if(e===\"transcript\"&&g.type===\"user\"&&g.isVirtual!==!0){let U=this.uploadedToolResult(g.toolUseResult,g.message);if(U!==g.toolUseResult)g={...g,toolUseResult:U}}let w={payload:{type:e,...g,uuid:typeof g.uuid===\"string\"?g.uuid:Ce()},...r&&{is_compaction:!0},...s&&{session_agent_id:s},...v?.length&&{preserved_event_ids:v}},k=[w],P=s||\"\",R=this.rowsAwaitingCompactSummary.get(P);if(e===\"transcript\"&&(R!==void 0||r&&this.rowsAwaitingCompactSummaryAtClose===void 0)){if(R===void 0)R={rows:[],timer:this.startCompactSummaryWaitTimer(P)},this.rowsAwaitingCompactSummary.set(P,R);R.rows.push(w);let U=g.isCompactSummary===!0?\"summary\":g.type===\"user\"||g.type===\"assistant\"?\"user_or_assistant_row\":R.rows.length>=tn?\"row_cap\":void 0;if(U===void 0)return;k=this.takeRowsAwaitingCompactSummary(P,U)}let F=e===\"transcript\"&&g.type===\"user\"&&this.toolResultReleases(g.message),O=this.gatesToolCalls&&e===\"transcript\"&&!s?me(g):[];if(await this.queueInternalEvents(k,F?\"tool_result\":O.some((U)=>this.awaitedToolCalls.has(U))?\"tool_call\":!this.transcriptRowMayWait(e,g)?\"event\":void 0),e===\"transcript\")this.transcriptLaneInUse=!0;this.noteToolCallRows(\"internal_events\",O,\"queued\")}"
+    },
+    {
+      "name": "currentUploadTrim",
+      "start": 56166,
+      "end": 56227,
+      "sha256": "d9d1beac76ac88365a291b6bf94dac6176a46949dd11cf07ca50b8329f1c8be1",
+      "source": "currentUploadTrim(){let e=this.uploadTrim();return N(e)?e:Ie}"
+    },
+    {
+      "name": "uploadedToolResult",
+      "start": 47382,
+      "end": 47658,
+      "sha256": "228c4d0321810fe6974f3363c2accd16b177da445563583f05b08ac102d546d9",
+      "source": "uploadedToolResult(e,n){let r=this.currentUploadTrim(),s=XFo(e,r);if(s!==e&&!this.loggedToolResultBlank)this.loggedToolResultBlank=!0,y(\"ccr_tool_result_blank\");let h=JFo(s,n,r);if(h!==s&&!this.loggedMcpImageBlank)this.loggedMcpImageBlank=!0,y(\"ccr_mcp_image_blank\");return h}"
+    },
+    {
+      "name": "startCompactSummaryWaitTimer",
+      "start": 58017,
+      "end": 58357,
+      "sha256": "3aab82e7bd57b0d76a46580ce0c07a2161a21e5518e5c10ded40234066752ce0",
+      "source": "startCompactSummaryWaitTimer(e){let n=setTimeout((r,s)=>{let h=r.rowsAwaitingCompactSummary.get(s);if(r.closed||h===void 0)return;if(!r.internalEventUploader.hasRoomFor(1)){h.timer=r.startCompactSummaryWaitTimer(s);return}r.queueInternalEvents(r.takeRowsAwaitingCompactSummary(s,\"timeout\"),void 0).catch(d)},nn,this,e);return n.unref?.(),n}"
+    },
+    {
+      "name": "takeRowsAwaitingCompactSummary",
+      "start": 58357,
+      "end": 58669,
+      "sha256": "0a3600ae67f9be00fb8eec8905081e95066ceff7d45a283cd1a302e7c79a1eb1",
+      "source": "takeRowsAwaitingCompactSummary(e,n){let r=this.rowsAwaitingCompactSummary.get(e);this.rowsAwaitingCompactSummary.delete(e),clearTimeout(r?.timer);let s=r?.rows??[];if(n!==\"summary\"&&n!==\"close\")ne(\"info\",\"cli_worker_compaction_marker_uploaded_without_summary\",{reason:n,count:s.length,subagent:e!==\"\"});return s}"
+    },
+    {
+      "name": "transcriptRowMayWait",
+      "start": 58669,
+      "end": 59019,
+      "sha256": "9c87bf2cb9e1512e3b6ac57692c9284a19f2b4cbcec3c93b308a1f21f7597d99",
+      "source": "transcriptRowMayWait(e,n){let r=this.flushPolicy;if(this.holdRule!==\"served_policy\"||!r)return!0;let s=e===\"transcript\"?n.type:e;if(typeof s!==\"string\"||r.mustFlushTypes.has(s))return!1;if(s===\"user\")return n.toolUseResult!==void 0||cn(n.message)||n.isMeta===!0||n.isVirtual===!0||n.isCompactSummary===!0;return!(s===\"assistant\"&&r.flushOnAssistant)}"
+    },
+    {
+      "name": "flushInternalEvents",
+      "start": 59019,
+      "end": 59085,
+      "sha256": "611fbfc9869605a259a48af1ecfa7b279d173ebb47e9fed1fe33d7ea5031f09a",
+      "source": "flushInternalEvents(e){return this.internalEventUploader.flush(e)}"
+    },
+    {
+      "name": "internalEventsPending",
+      "start": 68080,
+      "end": 68238,
+      "sha256": "c6e9c8e5f9ab06bfb085d14ff1b435000563b2ac3a92948ea2bfef0d9127540f",
+      "source": "get internalEventsPending(){return this.internalEventUploader.pendingCount+this.countRowsAwaitingCompactSummary()+(this.rowsAwaitingCompactSummaryAtClose??0)}"
+    },
+    {
+      "name": "countRowsAwaitingCompactSummary",
+      "start": 68238,
+      "end": 68360,
+      "sha256": "eb9ae0dcec25561f85e8845e9d0ac54bf5713613961a11a78592ed63e2701de8",
+      "source": "countRowsAwaitingCompactSummary(){let e=0;for(let n of this.rowsAwaitingCompactSummary.values())e+=n.rows.length;return e}"
+    },
+    {
+      "name": "enqueueClientEvents",
+      "start": 54569,
+      "end": 55081,
+      "sha256": "9a865b0f0828208270b24f2744b265a65d95c7e48d1a547a86f6baa88d465a09",
+      "source": "enqueueClientEvents(e,n){for(let r of this.trackedFrameUploads(\"enqueuedAtMs\")){let s=e.find((b)=>b.payload.uuid===r.uuid);if(!s)continue;let h=this.eventUploader.inFlightBatch(),v;if(n.release===void 0&&this.eventUploader.holdsOnArrival(s))v=\"hold\";else if(h!==void 0)v=h.some((b)=>!b.ephemeral)?\"durable_post\":\"ephemeral_post\";else if(this.eventUploader.backlog().backingOff)v=\"retry_backoff\";else v=\"none\";r.timing.enqueuedAtMs=performance.now(),r.timing.queuedBehind=v}return this.eventUploader.enqueue(e,n)}"
+    },
+    {
+      "name": "trackedFrameUploads",
+      "start": 39689,
+      "end": 39856,
+      "sha256": "22e9e8d266172f98fce6d578142ef4b02b4896d37a9402bb8f021dd1846d143a",
+      "source": "trackedFrameUploads(e){let n=[];for(let r of[this.firstFrameUpload,this.firstTextFrameUpload,this.firstBlockFrameUpload])if(r&&r.timing[e]===void 0)n.push(r);return n}"
+    },
+    {
+      "name": "logUndeliveredAtClose",
+      "start": 51747,
+      "end": 52131,
+      "sha256": "af9afa5872d77a957d8709ac388f4761467cfbe40a29215c8f33083fb5cc2dac",
+      "source": "logUndeliveredAtClose(e,n){if(n<=0)return;if(this.noSubscriberHoldMs()>0&&this.viewerAbsentReported)p(\"ccr_no_subscriber_hold\",this.closingForSuccessor?\"undelivered_at_rebuild\":\"undelivered_at_close\",{lane:c(e),undelivered_events:n});if(this.servedPolicyHolds())ne(\"warn\",\"cli_ccr_event_hold_undelivered_at_close\",{lane:e,undelivered_events:n,for_successor:this.closingForSuccessor})}"
+    },
+    {
+      "name": "reportDurableUpload",
+      "start": 39100,
+      "end": 39379,
+      "sha256": "0a8574afec1c07009d50ff81f3677144ca399eca12318ae7751fb0993e43bfc2",
+      "source": "reportDurableUpload(e,n){if(this.onDurableEventsUpload===void 0)return;let r=e.filter((s)=>!s.ephemeral);if(r.length===0)return;try{this.onDurableEventsUpload(r,n)}catch(s){t(`CCRClient: onDurableEventsUpload(${n}) threw; the batch's fate is unchanged: ${l(s)}`,{level:\"warn\"})}}"
+    },
+    {
+      "name": "uploadBody",
+      "start": 51026,
+      "end": 51405,
+      "sha256": "0bf0bcd8cbe9470c3359b40a65d4c70d10006c5f9a756207ec25ccfb7839975a",
+      "source": "uploadBody(e,n){let r={worker_epoch:this.workerEpoch,events:e};if(this.uploadHoldMarker())r.upload_hold={held:n.held,flush_reason:n.reason,held_count:re(n.heldCount),hold_age_ms:re(n.holdAgeMs),inflight_retry_count:re(n.retryCount),hold_rule:n.rule,post_index:re(n.postIndex),...this.flushPolicy?.policyVersion!==void 0&&{policy_version:this.flushPolicy.policyVersion}};return r}"
+    },
+    {
+      "name": "noteBeatingEventsPostOk",
+      "start": 30690,
+      "end": 30790,
+      "sha256": "616952abc6a7018dc574001dbfc3d5caf14f1f53784cccb71c4d5d043f1ffed8",
+      "source": "noteBeatingEventsPostOk(e){if(e.some((n)=>!n.ephemeral))this.lastBeatingEventsPostOkAtMs=Date.now()}"
+    },
+    {
+      "name": "setHasSubscribers",
+      "start": 53517,
+      "end": 54338,
+      "sha256": "6a653586f765dec64ce196c9d73983d189a27dac31c9038010a1513e4898ba54",
+      "source": "setHasSubscribers(e,n){this.hasSubscribersReports++;let r=Date.now()-this.lastInboundEventAtMs<an,s=typeof e===\"boolean\"&&(e||!r)?e:void 0,h=this.lastReportedHasSubscribers;if(this.lastReportedHasSubscribers=s,this.dropUnwatchedStreamEvents&&h===!1!==(s===!1))t(s===!1?\"CCRClient: no subscribers reported; dropping stream deltas until one is\":`CCRClient: resuming stream deltas (${s===!0?\"watcher\":n})`);if(h===!1&&s!==!1&&this.streamEventTimer)this.flushStreamEventBuffer();let v=s===!0?\"watcher\":n;if(s===!1)this.viewerAbsentReported=!0;else if(this.viewerAbsentReported&&v===\"watcher\"){if(this.viewerAbsentReported=!1,this.holdRule===\"served_policy\"){if(this.parkedRows.length>0)this.flushStreamEventBuffer();this.eventUploader.release(\"watcher\"),this.internalEventUploader.release(\"watcher\")}}this.applyUploadHold(v)}"
+    },
+    {
+      "name": "logUploadHoldEnd",
+      "start": 50804,
+      "end": 51026,
+      "sha256": "3454fb80cd2d00890874628b7dce761cd12b2e5c0a1a23d4e52788bd762bcdc7",
+      "source": "logUploadHoldEnd(e,n,r,s,h){if(h===\"no_subscriber_flag\"){y(\"ccr_no_subscriber_hold\",{lane:c(e),reason:c(n),held_events:r,held_ms:s});return}ne(\"info\",\"cli_ccr_event_hold_release\",{lane:e,reason:n,held_events:r,held_ms:s})}"
+    },
+    {
+      "name": "logUploadDrain",
+      "start": 51405,
+      "end": 51747,
+      "sha256": "0abdc89f61402ebfd73e7e34ac43504113324cf8ca154b66689268a9dd1115bb",
+      "source": "logUploadDrain(e,n){if(!this.uploadHoldMarker())return;y(\"ccr_upload_drain\",{lane:c(e),trigger:c(n.trigger),rule:c(n.rule),held_events:n.heldEvents,held_ms:n.heldMs,posts:n.posts,rows:n.rows,max_rows_post:n.maxRowsPost,failed_posts:n.failedPosts,dropped_rows:n.droppedRows,other_posts:n.otherPosts,other_rows:n.otherRows,drain_ms:n.drainMs})}"
+    }
+  ],
+  "fields": [
+    {
+      "name": "workerEpoch",
+      "start": 10129,
+      "end": 10143,
+      "sha256": "de0ebeece1bdc12b4c1e4260fa0c8427322e9d4000e9eae4ae1b46ebee1b255e",
+      "source": "workerEpoch=0;"
+    },
+    {
+      "name": "readSource",
+      "start": 11738,
+      "end": 11749,
+      "sha256": "12c7b3f6dd533dcfaff3c3182d29e3659ed3dfba25abb5a6748355e243565aca",
+      "source": "readSource;"
+    },
+    {
+      "name": "sessionBaseUrl",
+      "start": 11713,
+      "end": 11728,
+      "sha256": "be86f8645b7ebd45c52bcf4c1522471f6beb870ffd15743240554ca264aaae4a",
+      "source": "sessionBaseUrl;"
+    },
+    {
+      "name": "closeAbort",
+      "start": 11338,
+      "end": 11369,
+      "sha256": "5b3717fb22b140031ad54c56e0d76768f3b88d89423e4bbc110c5d4140333bd3",
+      "source": "closeAbort=new AbortController;"
+    },
+    {
+      "name": "initStateGetOrderingBoundMs",
+      "start": 11650,
+      "end": 11678,
+      "sha256": "652a8051ea790291a547566c78f60258c74880812dec76ae1487776734ff9933",
+      "source": "initStateGetOrderingBoundMs;"
+    },
+    {
+      "name": "reportParkAtInit",
+      "start": 11592,
+      "end": 11609,
+      "sha256": "65d93e696bfc36f2844c96b4d372e50e588807ec5c7f2e699e1069164db3a651",
+      "source": "reportParkAtInit;"
+    },
+    {
+      "name": "initExternalMetadata",
+      "start": 11609,
+      "end": 11630,
+      "sha256": "264ecbc216ce03eb4d33f810b848d3d8fd6859ea37edc43fb8eeab16e702b41f",
+      "source": "initExternalMetadata;"
+    },
+    {
+      "name": "initialWorkerStatus",
+      "start": 11630,
+      "end": 11650,
+      "sha256": "916121e4c1130e3c29c6455209ce5284a216a6ea4b5a979d550441df49482004",
+      "source": "initialWorkerStatus;"
+    },
+    {
+      "name": "closed",
+      "start": 11328,
+      "end": 11338,
+      "sha256": "e9c6f947c781d4baa4b583602f768bc98d07fd79101356f5fff656471248cf33",
+      "source": "closed=!1;"
+    },
+    {
+      "name": "onDiagnostic",
+      "start": 12640,
+      "end": 12653,
+      "sha256": "612146cf4b5cab4a273478652683df53440e0f22421a34d536b886104f308865",
+      "source": "onDiagnostic;"
+    },
+    {
+      "name": "currentState",
+      "start": 11574,
+      "end": 11592,
+      "sha256": "20217e2d3c1501de53cdc842a9fdc927b7545065339d91743dee604810096733",
+      "source": "currentState=null;"
+    },
+    {
+      "name": "holdSwitchedOff",
+      "start": 10437,
+      "end": 10456,
+      "sha256": "0376019b942252297e4b05f27469807cbdf778d368ad7ed3a065d13ef0838720",
+      "source": "holdSwitchedOff=!1;"
+    },
+    {
+      "name": "eventHoldEnabled",
+      "start": 10323,
+      "end": 10340,
+      "sha256": "c336725f917426c71404e66782e3d1c75b25f4d4da9033e76042ed72ce416e01",
+      "source": "eventHoldEnabled;"
+    },
+    {
+      "name": "loggedHoldSwitchedOff",
+      "start": 10767,
+      "end": 10792,
+      "sha256": "6edc00facde781422d1322a5975c7a1618945246a0edddc60d73c175369f071d",
+      "source": "loggedHoldSwitchedOff=!1;"
+    },
+    {
+      "name": "shutdownReleased",
+      "start": 10456,
+      "end": 10476,
+      "sha256": "1310ca54b9f8043eb1611261c31a060b139af6a2e83c97bfb286af6ab3899b85",
+      "source": "shutdownReleased=!1;"
+    },
+    {
+      "name": "flushPolicy",
+      "start": 10389,
+      "end": 10401,
+      "sha256": "19fc4c2f2a7c8e1ae7630c95052a23cc5a8136ccd2b02cb7ab1b6fb3ff79c41b",
+      "source": "flushPolicy;"
+    },
+    {
+      "name": "seesModelCallBoundaries",
+      "start": 10410,
+      "end": 10437,
+      "sha256": "ec0611644eb0949d1009d2e747d74bf843c9968e24951929d0e4ba01a2409295",
+      "source": "seesModelCallBoundaries=!1;"
+    },
+    {
+      "name": "lastReportedHasSubscribers",
+      "start": 12177,
+      "end": 12204,
+      "sha256": "056106c87940e4923e2a4e71e0edf700fce87de452607edfcab4458f4bea80e3",
+      "source": "lastReportedHasSubscribers;"
+    },
+    {
+      "name": "noSubscriberUploadHoldMs",
+      "start": 12098,
+      "end": 12125,
+      "sha256": "266326b23d276b74a0796fe8cc6a93d2b3b99dbed362934949147954aeef2a5f",
+      "source": "noSubscriberUploadHoldMs=0;"
+    },
+    {
+      "name": "holdRule",
+      "start": 10401,
+      "end": 10410,
+      "sha256": "45f5280fce6c9fc985f3d5fba1ada7c6ddf14850bcc720b93a9efae9f78f2851",
+      "source": "holdRule;"
+    },
+    {
+      "name": "eventUploader",
+      "start": 12356,
+      "end": 12370,
+      "sha256": "ab6d57282a181a4ca9a7de0b805b799166b1c773a542939efc704df26bf1e00e",
+      "source": "eventUploader;"
+    },
+    {
+      "name": "internalEventUploader",
+      "start": 12370,
+      "end": 12392,
+      "sha256": "af9f5b5bb9004a59241067deac902bad102e2c5fc671e4ee2dbb4e0f10d6da47",
+      "source": "internalEventUploader;"
+    },
+    {
+      "name": "parkReportedAtInitRequestId",
+      "start": 11678,
+      "end": 11713,
+      "sha256": "25a144cdafebf915139b5efad02c01ef6da58d45804a54ce426de0f1065bac2f",
+      "source": "parkReportedAtInitRequestId=void 0;"
+    },
+    {
+      "name": "gatesToolCalls",
+      "start": 10355,
+      "end": 10370,
+      "sha256": "ce0d8a755023f7590cbbd0453238bbf274aef16f24dc9100695ecc921be7dc7d",
+      "source": "gatesToolCalls;"
+    },
+    {
+      "name": "stopToolCallGate",
+      "start": 10529,
+      "end": 10546,
+      "sha256": "4bf3a5c178db537ba3d54509f4f2baa36501083b649578180fb5b116755f2f17",
+      "source": "stopToolCallGate;"
+    },
+    {
+      "name": "gatedWriteToolCalls",
+      "start": 10682,
+      "end": 10710,
+      "sha256": "04eb09933ed1b0400a1bd16a9549c4bec4f713c19ddfb0056ee08f0c41e6f1a4",
+      "source": "gatedWriteToolCalls=new Set;"
+    },
+    {
+      "name": "transcriptLaneInUse",
+      "start": 10659,
+      "end": 10682,
+      "sha256": "b18b53200d647f42dffa4b26088b2cedddcf7b4e8a73523962ad64d96e2de71f",
+      "source": "transcriptLaneInUse=!1;"
+    },
+    {
+      "name": "lanesNotAnswering",
+      "start": 10710,
+      "end": 10736,
+      "sha256": "9ae0c147cc431a0ac3bf316eae1d425fdcdedd894d2de43efd5b07d66582caf5",
+      "source": "lanesNotAnswering=new Set;"
+    },
+    {
+      "name": "toolCallRows",
+      "start": 10546,
+      "end": 10607,
+      "sha256": "2bb29961b43310c274dca681d863400c3325351a7e5b6f839f98c6177bec13ec",
+      "source": "toolCallRows={client_events:new Map,internal_events:new Map};"
+    },
+    {
+      "name": "toolCallRowGraceMs",
+      "start": 10370,
+      "end": 10389,
+      "sha256": "317179277a76133e8d41cb725758e59d59728575f7e0b055827e5c63695a7e40",
+      "source": "toolCallRowGraceMs;"
+    },
+    {
+      "name": "awaitedToolCalls",
+      "start": 10634,
+      "end": 10659,
+      "sha256": "b341c5ef21359b2bb94638c281ccd52afbabfb7ae2af73822a597bc6968b9b09",
+      "source": "awaitedToolCalls=new Set;"
+    },
+    {
+      "name": "toolCallRowWaiters",
+      "start": 10607,
+      "end": 10634,
+      "sha256": "8eb667de85d85b0bc0ddf364df2afe3a776d08f56989a069117c2ed622871a26",
+      "source": "toolCallRowWaiters=new Map;"
+    },
+    {
+      "name": "workerState",
+      "start": 12344,
+      "end": 12356,
+      "sha256": "c6b2aa21032158f7793899460f18ba3a54077e27ea5c94c1a4a6331795d39cfe",
+      "source": "workerState;"
+    },
+    {
+      "name": "droppedWorkerStatePatchCount",
+      "start": 64022,
+      "end": 64053,
+      "sha256": "a4aabb2d793a5b80a8605029861a447b0b48dab278a95339ac782732187f58b2",
+      "source": "droppedWorkerStatePatchCount=0;"
+    },
+    {
+      "name": "loggedUnreadableFlushPolicy",
+      "start": 10736,
+      "end": 10767,
+      "sha256": "8d10d132a21ef35726bea52044f899ba45e02665371e9f91885780bc99bdef49",
+      "source": "loggedUnreadableFlushPolicy=!1;"
+    },
+    {
+      "name": "uploadTrim",
+      "start": 10242,
+      "end": 10253,
+      "sha256": "df10a6ae5a01108b2dc786b50cb028d9f0ca804ddf626d43a771f091bc7363ee",
+      "source": "uploadTrim;"
+    },
+    {
+      "name": "loggedTranscriptEnvelopeStrip",
+      "start": 10792,
+      "end": 10825,
+      "sha256": "5e169aeb6d25e3054ddaeace31bfc4ac94924fc98c5345a5823ace4de23338dd",
+      "source": "loggedTranscriptEnvelopeStrip=!1;"
+    },
+    {
+      "name": "loggedToolResultBlank",
+      "start": 10825,
+      "end": 10850,
+      "sha256": "250974fbfba842d0a5471078e898c393e8f473a27670c36007a725047f37536e",
+      "source": "loggedToolResultBlank=!1;"
+    },
+    {
+      "name": "loggedMcpImageBlank",
+      "start": 10850,
+      "end": 10873,
+      "sha256": "677c0c135569c80169fcc0ef01d335dea517392b3532990fd8b7343d69b50657",
+      "source": "loggedMcpImageBlank=!1;"
+    },
+    {
+      "name": "rowsAwaitingCompactSummary",
+      "start": 12392,
+      "end": 12427,
+      "sha256": "1d79a2dbf6840b296b5781f68f8712da3e55c9acb0f47b2010f9f3bbf78d5337",
+      "source": "rowsAwaitingCompactSummary=new Map;"
+    },
+    {
+      "name": "rowsAwaitingCompactSummaryAtClose",
+      "start": 12427,
+      "end": 12461,
+      "sha256": "4ef8ac0042fbfd586864c573de4bb77664edf3afe5874e5318ba229fcd371979",
+      "source": "rowsAwaitingCompactSummaryAtClose;"
+    },
+    {
+      "name": "firstFrameUpload",
+      "start": 11792,
+      "end": 11809,
+      "sha256": "622cbdcf4bbb9266c7011e66a58f84bdba5aeea0fdd56e22bb6807807d11695d",
+      "source": "firstFrameUpload;"
+    },
+    {
+      "name": "firstTextFrameUpload",
+      "start": 11809,
+      "end": 11830,
+      "sha256": "4a92f9032700f39d2fe4050fdc5d7d7df4e253ae906d1be933bd9b24ad334b93",
+      "source": "firstTextFrameUpload;"
+    },
+    {
+      "name": "firstBlockFrameUpload",
+      "start": 11830,
+      "end": 11852,
+      "sha256": "de9092584f5ead2c84cf46355198b62913a6d8efa07dc4e32db7ac2bc09ad5e0",
+      "source": "firstBlockFrameUpload;"
+    },
+    {
+      "name": "viewerAbsentReported",
+      "start": 10505,
+      "end": 10529,
+      "sha256": "40f5ef296abda11e45d8a76613e051e2d9d2bc2f3341468a639880316294e3d0",
+      "source": "viewerAbsentReported=!1;"
+    },
+    {
+      "name": "closingForSuccessor",
+      "start": 12125,
+      "end": 12148,
+      "sha256": "ee3ccbac288b9d7e463d696923c0a7da2a7d3589216b2c6b5fe6b135024b7f95",
+      "source": "closingForSuccessor=!1;"
+    },
+    {
+      "name": "onDurableEventsUpload",
+      "start": 12596,
+      "end": 12625,
+      "sha256": "5fc759f75fa7ceeb9ee118e9ada8e20fc380d25aa7c6ded5ead2ace92ed766d9",
+      "source": "onDurableEventsUpload=void 0;"
+    },
+    {
+      "name": "noSubscriberStreamEventFlushIntervalMs",
+      "start": 12057,
+      "end": 12098,
+      "sha256": "f2923642a2eda8aa6d81e4a463ea14f9d8846b2c204414dc981aec737de0ad5c",
+      "source": "noSubscriberStreamEventFlushIntervalMs=0;"
+    },
+    {
+      "name": "dropUnwatchedStreamEvents",
+      "start": 12148,
+      "end": 12177,
+      "sha256": "40bb22c9acb2394b1fb82cb255514a38058531c1f0d5e523b647aef36da2aae7",
+      "source": "dropUnwatchedStreamEvents=!1;"
+    },
+    {
+      "name": "onSubscribersReported",
+      "start": 48614,
+      "end": 48636,
+      "sha256": "17c77758c751627c47fb2de027b2454260ebd95aab627fb27fbbe6c8e1d1e464",
+      "source": "onSubscribersReported;"
+    },
+    {
+      "name": "hasSubscribersReports",
+      "start": 12250,
+      "end": 12274,
+      "sha256": "61a2a9bae0e50145b3f8c0dde803fc1abb29f3e00ae0a32605f9e957ff6f54dd",
+      "source": "hasSubscribersReports=0;"
+    },
+    {
+      "name": "uploadHoldMarker",
+      "start": 10253,
+      "end": 10270,
+      "sha256": "bf51d6b6253de9e6b49181b28698283ff884e92b79019377b565087d20ad4078",
+      "source": "uploadHoldMarker;"
+    },
+    {
+      "name": "lastBeatingEventsPostOkAtMs",
+      "start": 11099,
+      "end": 11129,
+      "sha256": "dda77ba174b027f2a3dfba4553fa6f7bab0d7c65b929cbe8fe8a53bb1ac9a4b2",
+      "source": "lastBeatingEventsPostOkAtMs=0;"
+    },
+    {
+      "name": "lastInboundEventAtMs",
+      "start": 12204,
+      "end": 12250,
+      "sha256": "6d61a4b1a697b165b0e3e0e901f8f5c04beaf2f098a71afac6bb1b517a456784",
+      "source": "lastInboundEventAtMs=Number.NEGATIVE_INFINITY;"
+    },
+    {
+      "name": "streamEventTimer",
+      "start": 11770,
+      "end": 11792,
+      "sha256": "17cd965133f56ba0e29d3f271f5b82449995352ae1a5633387dff6b870c102b7",
+      "source": "streamEventTimer=null;"
+    },
+    {
+      "name": "parkedRows",
+      "start": 12043,
+      "end": 12057,
+      "sha256": "a8254c731665b0dffdcfa2b6ccdf4c26fd2c6efd80a06b111a9429bd6f325d6a",
+      "source": "parkedRows=[];"
+    },
+    {
+      "name": "droppedDurableEventBatches",
+      "start": 63544,
+      "end": 63573,
+      "sha256": "b2151795e16d4ef63253cd90733f260a1bb0a881044c29ebb4ccf24ae5faa35e",
+      "source": "droppedDurableEventBatches=0;"
+    },
+    {
+      "name": "onDurableEventsDropped",
+      "start": 12566,
+      "end": 12596,
+      "sha256": "a933fe15b49cbc8cbc96af836b6a0ff5536a85fe4faa0e3243b69c0a7a1daee2",
+      "source": "onDurableEventsDropped=void 0;"
+    },
+    {
+      "name": "droppedInternalEventBatches",
+      "start": 62874,
+      "end": 62904,
+      "sha256": "50a41e20469c84f8731742d4e964be06b3827bf2dc1f2fce58eda6805bb015d2",
+      "source": "droppedInternalEventBatches=0;"
+    },
+    {
+      "name": "onInternalBatchAcked",
+      "start": 12461,
+      "end": 12482,
+      "sha256": "575901cfc8950ab2332427abf8b9939515ceabeab29105d4f32db0e23cd88a73",
+      "source": "onInternalBatchAcked;"
+    },
+    {
+      "name": "droppedDeliveryAckBatches",
+      "start": 62973,
+      "end": 63001,
+      "sha256": "2dc74965f08a2f7c78d3f763d928cf20f8dcc97ded01465f82830bb308b8e58b",
+      "source": "droppedDeliveryAckBatches=0;"
+    }
+  ],
+  "durableAdapterOriginalGate": {
+    "start": 41826,
+    "end": 41936,
+    "sha256": "af7d78b91c21dafdb6eb86cbf828b04a6849331137ea6497c79e0f3073bffaca",
+    "source": "if(this.gatesToolCalls){let R=me(w);if(R.some((F)=>this.awaitedToolCalls.has(F)))h??=\"tool_call\";b.push(...R)}"
+  },
+  "durableAdapterOriginalEnqueue": {
+    "start": 42295,
+    "end": 42474,
+    "sha256": "6df5e71b82650a04365ba09fe0453162219066009c61e7d953c5994e922ffc05",
+    "source": "{if(h)this.internalEventUploader.release(h);else if(v)h=\"sampling_end\";await this.enqueueClientEvents(n,h?{release:h}:{since:s}),this.noteToolCallRows(\"client_events\",b,\"queued\")}"
+  },
+  "originalClose": {
+    "start": 68533,
+    "end": 68846,
+    "sha256": "585f06b834847a2a5204a137c968cb0d83265e7004bb3a2fe89f1c004cfcdbe7",
+    "source": "close(e){this.closeExceptInternalEvents(e);let n=this.countRowsAwaitingCompactSummary();for(let r of this.rowsAwaitingCompactSummary.keys())this.takeRowsAwaitingCompactSummary(r,\"close\");this.rowsAwaitingCompactSummaryAtClose??=n,this.logUndeliveredAtClose(\"internal_events\",this.internalEventUploader.close()+n)}"
+  },
+  "originalCloseExceptInternal": {
+    "start": 68888,
+    "end": 69823,
+    "sha256": "489657f788d785f1c130aac52dbcfc76f4aa1df3f20c20ad17d7c2672a48898a",
+    "source": "closeExceptInternalEvents(e){let n=this.closed;this.closed=!0,this.closeAbort.abort(),this.closingForSuccessor=e?.retainUndeliveredClientEvents===!0;let r=this.takeParkedRows();if(r.length>0)this.eventUploader.enqueue(r);if(!n&&e?.goodbye!==!1)this.sendGoodbye();this.stopHeartbeat(),this.clearProbeBeatTimer(),this.unsubscribeIdleTracker?.(),tGo(),this.stopToolCallGate?.();for(let s of this.toolCallRowWaiters.values())for(let h of s)h.reached();if(this.toolCallRowWaiters.clear(),this.streamEventTimer)clearTimeout(this.streamEventTimer),this.streamEventTimer=null;if(this.firstDeltaFlushTimer)clearTimeout(this.firstDeltaFlushTimer),this.firstDeltaFlushTimer=null;if(this.streamEventBuffer=[],this.pendingProcessingAcks=[],this.workerState.close(),e?.keepClientEvents!==!0)this.logUndeliveredAtClose(\"client_events\",this.eventUploader.close({retainUndelivered:e?.retainUndeliveredClientEvents===!0}));this.deliveryUploader.close()}"
+  },
+  "constructorAssignments": [
+    {
+      "start": 13224,
+      "end": 13263,
+      "sha256": "2148880cdd6cdaf686ed2cf9ef6c7a3494dfc3907c2c90c54006945d49a41d62",
+      "source": "this.uploadTrim=r?.uploadTrim??(()=>Ie)"
+    },
+    {
+      "start": 13264,
+      "end": 13318,
+      "sha256": "98d5a5a5e8f1eaa00d4fde8fa2f3ab0a083a8469f6462801cf9ff01bed5ccc69",
+      "source": "this.uploadHoldMarker=()=>r?.uploadHoldMarker?.()===!0"
+    },
+    {
+      "start": 13396,
+      "end": 13437,
+      "sha256": "4334184ab4f1788b6700b7eca3a51c505a25a26c4bbedc885314dc5ff5c1b750",
+      "source": "this.eventHoldEnabled=r?.eventHoldEnabled"
+    },
+    {
+      "start": 13486,
+      "end": 13528,
+      "sha256": "e4296f8ded680661b987cb535a3da80e5d26ca0eb068188c800fdd773c3cc917",
+      "source": "this.gatesToolCalls=r?.gatesToolCalls===!0"
+    },
+    {
+      "start": 13529,
+      "end": 13578,
+      "sha256": "19054191eb3c71ca1e06427b95d42fb59e6088d9f80d2742fe888643fa52a2ff",
+      "source": "this.toolCallRowGraceMs=r?.toolCallRowGraceMs??Qt"
+    },
+    {
+      "start": 14045,
+      "end": 14078,
+      "sha256": "3fbb38d32c59ffc254d3f9d5ca61b3fc552fe9880b7fa8699021c449c243f0ed",
+      "source": "this.onDiagnostic=r?.onDiagnostic"
+    },
+    {
+      "start": 14215,
+      "end": 14260,
+      "sha256": "fe9e085cad4cca8a45b75f6e93e4b42493052aa6001b18153bb3a24638cf9287",
+      "source": "this.reportParkAtInit=r?.reportParkAtInit??!1"
+    },
+    {
+      "start": 14261,
+      "end": 14314,
+      "sha256": "506259020d955d52860e909290f4a46317d91287ee4102f758f0453713bd3a68",
+      "source": "this.initExternalMetadata=r?.initExternalMetadata??{}"
+    },
+    {
+      "start": 14315,
+      "end": 14370,
+      "sha256": "f6048bb75439cf6ee5e929909e47628470801a1c2150aac0523e76f7372df8ae",
+      "source": "this.initialWorkerStatus=r?.initialWorkerStatus??\"idle\""
+    },
+    {
+      "start": 14371,
+      "end": 14438,
+      "sha256": "a76a184d6479faad69327134fe6921b443f76040895b29f6a95e0ebcc4d86b27",
+      "source": "this.initStateGetOrderingBoundMs=r?.initStateGetOrderingBoundMs??Bt"
+    },
+    {
+      "start": 14439,
+      "end": 14555,
+      "sha256": "c22d8a4a877038c97d1c3122cd956997b69fc221177a56a887d0551a58c5a39b",
+      "source": "this.readSource={...kDn(n,this.getAuthHeaders),isClosed:()=>this.closed,onConflict:(h)=>this.handleEpochMismatch(h)}"
+    },
+    {
+      "start": 14556,
+      "end": 14606,
+      "sha256": "33a62db6d8b8880315f18ce79ed143da27a260409ac448b08850bdc431684b95",
+      "source": "this.sessionBaseUrl=this.readSource.sessionBaseUrl"
+    }
+  ],
+  "completeQueueInitializers": [
+    {
+      "start": 14672,
+      "end": 15137,
+      "sha256": "a6f995662b268f7d0a51f34eab06597832310cd212dfabc1c7e8cc850cbe2ce3",
+      "source": "this.workerState=new ce({send:async(h)=>{let v=await this.request(\"put\",\"/worker\",{worker_epoch:this.workerEpoch,...h},\"PUT worker\");if(v.ok){if(h.worker_status!==void 0)y(\"ccr_worker_state_publish\");return!0}if(V(v.status)){if(ne(\"warn\",\"cli_worker_state_4xx_dropped\",{status:v.status}),this.droppedWorkerStatePatchCount++,h.worker_status!==void 0)p(\"ccr_worker_state_publish\",\"state_4xx_dropped\");return!0}return!1},baseDelayMs:500,maxDelayMs:30000,jitterMs:500})"
+    },
+    {
+      "start": 15138,
+      "end": 17886,
+      "sha256": "f0ca3dfc2e824740513d5e90b1820b9ecd5bf15f43b127a09d4ea7894e0df368",
+      "source": "this.eventUploader=new b_t({maxBatchSize:100,maxBatchBytes:10485760,maxQueueSize:1e5,send:async(h,v)=>{let b=SZn(h);if(b>0)t(`CCRClient: dropped ${b} repeated-uuid durable event(s) from one /worker/events POST`);let g=h.some(At)||v.followsUrgent?Tt:void 0;this.reportDurableUpload(h,\"sending\");let w=this.noSubscriberStreamEventFlushIntervalMs>0||this.noSubscriberUploadHoldMs>0||this.dropUnwatchedStreamEvents||this.servedPolicyHolds(),k=w||this.onSubscribersReported!==void 0,P=this.hasSubscribersReports,R=[];for(let O of this.trackedFrameUploads(\"ackedAtMs\"))if(h.some((U)=>U.payload.uuid===O.uuid))R.push(O.timing);for(let O of R)if(O.postedAtMs===void 0)O.postedAtMs=performance.now(),O.postedWallMs=Date.now();let F=await this.request(\"post\",\"/worker/events\",this.uploadBody(h,v),\"client events\",{timeout:g,parseBody:k});if(F.ok){for(let x of R)if(x.ackedAtMs===void 0)x.ackedAtMs=performance.now();let O=he(h);if(O)y(\"ccr_task_status_publish\",O);if(this.noteBeatingEventsPostOk(h),this.reportDurableUpload(h,\"accepted\"),this.noteToolCallRowsSettled(\"client_events\",\"stored\",h),w&&P===this.hasSubscribersReports)this.setHasSubscribers(F.data?.has_subscribers,\"no_report\");let U=F.data?.has_subscribers;if(typeof U===\"boolean\")this.onSubscribersReported?.(U);return}if(this.reportDurableUpload(h,Ue(F.status)),V(F.status)){let O=h.filter((D)=>!D.ephemeral),U=h.length-O.length,x=F.status;if(U>0){if(t(`CCRClient: client event POST rejected (${F.status}) \\u2014 dropping ${U} ephemeral event(s), retrying ${O.length} durable event(s)`,{level:\"warn\"}),p(\"ccr_partial_messages\",\"ephemeral_dropped_on_4xx\"),h.splice(0,h.length,...O),O.length===0)return;this.reportDurableUpload(O,\"sending\");let D=await this.request(\"post\",\"/worker/events\",this.uploadBody(O,v),\"client events (durable retry)\",{timeout:g});if(D.ok){let A=he(O);if(A)y(\"ccr_task_status_publish\",A);this.noteBeatingEventsPostOk(O),this.reportDurableUpload(O,\"accepted\"),this.noteToolCallRowsSettled(\"client_events\",\"stored\",O);return}if(this.reportDurableUpload(O,Ue(D.status)),!V(D.status))throw new g2e(\"client event POST failed\",D.retryAfterMs);x=D.status}if(O.length>0){this.droppedDurableEventBatches++,this.noteToolCallRowsSettled(\"client_events\",\"dropped\",O);try{this.onDurableEventsDropped?.(O,x)}catch(D){t(`CCRClient: onDurableEventsDropped threw; batch still dropped: ${l(D)}`,{level:\"warn\"})}}ne(\"warn\",\"cli_worker_events_4xx_dropped\",{status:x,count:O.length});let L=he(O);if(L)m(\"ccr_task_status_publish\",\"status_events_4xx_dropped\",L);return}throw new g2e(\"client event POST failed\",F.retryAfterMs)},baseDelayMs:500,maxDelayMs:30000,jitterMs:500,onHoldRelease:this.logUploadHoldEnd.bind(this,\"client_events\"),onDrained:this.logUploadDrain.bind(this,\"client_events\")})"
+    },
+    {
+      "start": 17918,
+      "end": 19169,
+      "sha256": "8fd852dee898ef179dcf9399dd7a69f355c110b5f8075e04eadcd5dc918b5da5",
+      "source": "this.internalEventUploader=new b_t({maxBatchSize:100,maxBatchBytes:s?.maxBatchBytes??10485760,maxQueueSize:200,maxConsecutiveFailures:s?.maxConsecutiveFailures,onBatchDropped:(h,v)=>{this.droppedInternalEventBatches++,ne(\"warn\",\"cli_worker_internal_events_give_up_dropped\",{count:h,consecutive_failures:v}),i(\"tengu_ccr_internal_events_dropped\",{reason:S(\"give_up\"),count:h,consecutive_failures:v})},send:async(h,v)=>{let b=await this.request(\"post\",\"/worker/internal-events\",this.uploadBody(h,v),\"internal events\",{timeout:s?.requestTimeoutMs});if(b.ok){this.noteToolCallRowsSettled(\"internal_events\",\"stored\",h),Promise.resolve().then(()=>this.onInternalBatchAcked?.(h)).catch(()=>{});return}if(V(b.status)){this.droppedInternalEventBatches++,this.noteToolCallRowsSettled(\"internal_events\",\"dropped\",h),ne(\"warn\",\"cli_worker_internal_events_4xx_dropped\",{status:b.status,count:h.length}),i(\"tengu_ccr_internal_events_dropped\",{reason:S(\"4xx\"),count:h.length,status:b.status});return}throw new g2e(\"internal event POST failed\",b.nonOriginRefusal?Oe:b.retryAfterMs)},baseDelayMs:500,maxDelayMs:Oe,jitterMs:500,holdMaxItems:50,onHoldRelease:this.logUploadHoldEnd.bind(this,\"internal_events\"),onDrained:this.logUploadDrain.bind(this,\"internal_events\")})"
+    },
+    {
+      "start": 19170,
+      "end": 19666,
+      "sha256": "37291de12e640585124724a4e38921eabba683c9b973b039924a8dc2a009693a",
+      "source": "this.deliveryUploader=new b_t({maxBatchSize:64,maxQueueSize:64,send:async(h)=>{let v=await this.request(\"post\",\"/worker/events/delivery\",{worker_epoch:this.workerEpoch,updates:h.map((b)=>({event_id:b.eventId,status:b.status}))},\"delivery batch\");if(v.ok)return;if(V(v.status)){ne(\"warn\",\"cli_worker_delivery_4xx_dropped\",{status:v.status,count:h.length}),this.droppedDeliveryAckBatches++;return}throw new g2e(\"delivery POST failed\",v.retryAfterMs)},baseDelayMs:500,maxDelayMs:30000,jitterMs:500})"
+    }
+  ],
+  "internalUploaderOptions": {
+    "start": 17887,
+    "end": 17918,
+    "sha256": "acc40f79a69b72deb88b11af28fea63f4cc5d0d2425a85858d124630e729cf54",
+    "source": "let s=r?.internalEventUploader;"
+  },
+  "originalWorkerUploader": {
+    "start": 4805,
+    "end": 5705,
+    "sha256": "79374e31bd042dbd7504653fd6ac6150d2b5a87db99d08fb06b3d7a8f526f75f",
+    "source": "class ce{inflight=null;pending=null;closed=!1;config;constructor(e){this.config=e}enqueue(e){if(this.closed)return;this.pending=this.pending?Ae(this.pending,e):e,this.drain()}close(){this.closed=!0,this.pending=null}async flush(){while(!this.closed)if(this.inflight)await this.inflight;else if(this.pending)await this.drain();else return!0;return!1}async drain(){if(this.inflight||this.closed)return;if(!this.pending)return;let e=this.pending;this.pending=null,this.inflight=this.sendWithRetry(e).then(()=>{if(this.inflight=null,this.pending&&!this.closed)this.drain()})}async sendWithRetry(e){let n=e,r=0;while(!this.closed){if(await this.config.send(n))return;if(r++,await ee(this.retryDelay(r)),this.pending&&!this.closed)n=Ae(n,this.pending),this.pending=null}}retryDelay(e){let n=Math.min(this.config.baseDelayMs*2**(e-1),this.config.maxDelayMs),r=Math.random()*this.config.jitterMs;return n+r}}"
+  },
+  "originalCoalesce": {
+    "start": 5705,
+    "end": 5924,
+    "sha256": "8dd18496f14e84ba1178ba5d0a74d35d5c3b87ca31ca87b12df58bfe7f8a79f0",
+    "source": "function Ae(e,n){let r={...e};for(let[s,h]of Object.entries(n))if((s===\"external_metadata\"||s===\"internal_metadata\")&&r[s]&&typeof r[s]===\"object\"&&typeof h===\"object\"&&h!==null)r[s]={...r[s],...h};else r[s]=h;return r}"
+  },
+  "originalBatchUploader": {
+    "file": "chunk-nankzm0s.js",
+    "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+    "start": 394929,
+    "end": 404714,
+    "sha256": "c38664c1185554b1308b6fe3e79df2f3b97904b16c6ad44751f758d2288496ea",
+    "source": "class b_t{pending=[];urgent=[];pendingAtClose=0;inFlight;inFlightSince=0;undelivered=[];retaining=!1;draining=!1;closed=!1;backpressureResolvers=[];backoff=null;retryNowOwed=!1;backoffOwedUntil=0;flushResolvers=[];droppedBatches=0;holdSpec;holdTimer=null;heldSince=0;heldRule=\"no_subscriber_flag\";heldCount=0;heldBytes=0;owed=0;flushing=!1;released;counts={...ec};tiedToNext=new WeakSet;config;constructor(e){this.config=e}get droppedBatchCount(){return this.droppedBatches}get pendingCount(){return this.closed?this.pendingAtClose:this.urgent.length+this.pending.length}hasRoomFor(e){return!this.closed&&this.pending.length+e<=this.config.maxQueueSize}setHold(e,n){let r=this.holdSpec;if(e?.rule===r?.rule&&e?.maxAgeMs===r?.maxAgeMs&&e?.maxItems===r?.maxItems&&e?.maxBytes===r?.maxBytes&&e?.passes===r?.passes)return;if(this.holdSpec=e,!e){this.release(n);return}if(this.closed||this.flushing)return;this.rejudgeHeld()}rejudgeHeld(){let e=this.holdTimer?this.heldSince:Date.now();this.cancelHold(),this.countHeld(),this.applyHoldLimits(e),this.drain()}release(e){this.endHold(e),this.owed=this.pending.length,this.drain()}takeUndelivered(){let e=this.undelivered;return this.undelivered=[],e}peekUndelivered(){return this.undelivered}discardUndelivered(){let e=this.undelivered.length;return this.undelivered=[],this.retaining=!1,e}async enqueue(e,n){let r=Array.isArray(e)?e:[e];if(r.length===0)return;if(this.closed){this.retainUndelivered(r);return}if(n?.urgent){if(this.urgent.push(...r),this.backoff?.until!==void 0)this.backoffOwedUntil=this.backoff.until,this.endBackoff();this.drain();return}if(r.length>this.config.maxQueueSize&&!n?.together){for(let h=0;h<r.length;h+=this.config.maxQueueSize)await this.enqueue(r.slice(h,h+this.config.maxQueueSize),n);return}let s=n?.together?1:r.length;if(this.holdTimer&&this.pending.length+s>this.config.maxQueueSize)this.release(\"cap\");while(this.pending.length+s>this.config.maxQueueSize&&!this.closed)await new Promise((h)=>{this.backpressureResolvers.push(h)});if(this.closed){this.retainUndelivered(r);return}if(n?.together){for(let h of r.slice(0,-1))if(typeof h===\"object\"&&h!==null)this.tiedToNext.add(h)}if(this.pending.push(...r),n?.release){this.release(n.release);return}let g=this.holdOnArrivals();if(g&&this.countInto(g,r)>0)this.applyHoldLimits(n?.since??Date.now());this.drain()}countInto(e,n){let r=0;for(let s of n)if(!e.passes?.(s)){if(r++,e.maxBytes!==void 0)this.heldBytes+=Vo(s)??0}return this.heldCount+=r,r}holdOnArrivals(){let e=this.holdSpec;return e&&!this.flushing&&(e.passes||!this.draining)?e:void 0}sendableCount(){let e=this.holdSpec;if(!e||this.flushing)return this.pending.length;if(!e.passes)return this.holdTimer?0:this.pending.length;let n=this.owed;while(n<this.pending.length&&e.passes(this.pending[n]))n++;return n}takePassing(e){let{maxBatchSize:n,maxBatchBytes:r}=this.config,s=[],g=[],h=0,b=!1;for(let v of this.pending){if(b||!e(v)){g.push(v);continue}let w=r===void 0?0:Vo(v);if(w===void 0)continue;if(s.length>0&&h+w>(r??0)){b=!0,g.push(v);continue}h+=w,s.push(v),b=s.length>=n}return this.pending=g,s}countHeld(){this.heldCount=0,this.heldBytes=0;let e=this.holdOnArrivals();if(e)this.countInto(e,this.pending.slice(this.owed))}applyHoldLimits(e){let n=this.holdSpec;if(!n||this.heldCount===0){this.cancelHold();return}let r=n.maxItems!==void 0&&this.heldCount>=n.maxItems?\"max_events\":n.maxBytes!==void 0&&this.heldBytes>=n.maxBytes?\"max_bytes\":void 0;if(r)this.hold(e),this.release(r);else if(this.pending.length-this.owed>=(this.config.holdMaxItems??this.config.maxBatchSize))this.release(\"cap\");else this.hold(e)}hold(e){let n=this.holdSpec;if(!n)return;if(this.holdTimer){if(e>=this.heldSince)return;clearTimeout(this.holdTimer)}this.heldSince=e,this.heldRule=n.rule,this.holdTimer=setTimeout(()=>this.release(\"max_age\"),Math.min(n.maxAgeMs,Math.max(0,e+n.maxAgeMs-Date.now())))}cancelHold(){if(this.holdTimer)clearTimeout(this.holdTimer),this.holdTimer=null;this.heldCount=0,this.heldBytes=0}endHold(e){let n=this.holdTimer!==null;if(this.cancelHold(),!n)return;let r=Date.now(),s=Math.min(Math.max(0,Math.round(r-this.heldSince)),MN),g=this.pending.length,h=this.heldRule;if(this.released)this.reportDrained();this.released={reason:e,rule:h,count:g,ageMs:s,at:r,unsent:g},this.config.onHoldRelease?.(e,g,s,h)}retainUndelivered(e){if(!this.retaining)return;let n=this.config.maxQueueSize-this.undelivered.length;if(n<=0)return;this.undelivered.push(...e.length>n?e.slice(0,n):e)}flush(e){if(this.pending.length===0&&this.urgent.length===0&&!this.draining)return Promise.resolve();if(this.endHold(\"flush\"),this.flushing=!0,e?.retryNow)this.retryNowOwed=this.backoff===null,this.endBackoff();return this.drain(),new Promise((n)=>{this.flushResolvers.push(n)})}withdraw(e){if(this.closed)return 0;let n=this.urgent.filter((b)=>!e(b)),r=this.urgent.length-n.length;this.urgent=n;let s=this.owed,g=this.pending.filter((b,v)=>{if(!e(b))return!0;if(v<this.owed)s--;return!1}),h=this.pending.length-g.length;if(h===0)return r;return this.pending=g,this.owed=s,this.rejudgeHeld(),this.releaseBackpressure(),h+r}close(e){if(this.closed)return 0;this.closed=!0,this.pendingAtClose=this.urgent.length+this.pending.length,this.retaining=e?.retainUndelivered===!0,this.cancelHold(),this.owed=0,this.flushing=!1;let n=(this.inFlight??[]).concat(this.urgent,this.pending);this.undelivered=this.retaining?n:[],this.inFlight=void 0,this.urgent=[],this.pending=[],this.endBackoff();for(let r of this.backpressureResolvers)r();this.backpressureResolvers=[];for(let r of this.flushResolvers)r();if(this.flushResolvers=[],this.released)this.reportDrained(!0);return n.length}async drain(){if(this.draining||this.closed)return;this.draining=!0;let e=0,n=0,r=!1,s=0;try{while(!this.closed){let g=this.urgent.length>0,h=this.backoffOwedUntil-Date.now();if(h<=0||!g)this.backoffOwedUntil=0;if(h>0&&!g){await this.backOff(h,!0);continue}let b=this.holdSpec?.passes,v,w=g&&s>=DN&&h<=0,A=g&&!w;if(A){if(v=this.takeUrgent(),v.length===0)continue}else if(b&&this.owed===0&&!this.flushing){if(v=this.takePassing(b),v.length===0){if(w){s=0;continue}break}}else{let K=this.sendableCount();if(K===0){if(w){s=0;continue}break}if(v=this.takeBatch(K),v.length===0)continue}this.inFlight=v,this.inFlightSince=Date.now();let R=A?void 0:this.released,M=R!==void 0&&R.unsent>0,D=v.length;try{if(await this.config.send(v,{held:M,reason:M?R.reason:\"none\",heldCount:M?R.count:0,holdAgeMs:M?R.ageMs:0,rule:M?R.rule:\"none\",postIndex:this.counts.posts,retryCount:A?n:e,followsUrgent:!A&&r}),A)n=0,s++;else e=0,s=0;if(r=A,this.counts.posts++,this.counts.rows+=D,this.counts.maxRowsPost=Math.max(this.counts.maxRowsPost,D),R)R.unsent-=D}catch(K){let G=A?++n:++e;if(this.counts.failedPosts++,this.closed)break;if(this.config.maxConsecutiveFailures!==void 0&&G>=this.config.maxConsecutiveFailures){if(this.droppedBatches++,this.counts.droppedRows+=D,R)R.unsent-=D;if(this.config.onBatchDropped?.(v.length,G),A)n=0;else e=0;this.releaseBackpressure();continue}if(this.inFlight=void 0,A)this.urgent=v.concat(this.urgent);else this.pending=v.concat(this.pending),this.owed+=v.length;let z=K instanceof g2e?K.retryAfterMs:void 0,j=this.retryDelay(G,z),X=!A&&z===void 0;if(X&&this.urgent.length>0){this.backoffOwedUntil=Date.now()+j;continue}await this.backOff(j,X);continue}finally{this.inFlight=void 0}this.releaseBackpressure()}}finally{if(this.draining=!1,this.retryNowOwed=!1,this.backoffOwedUntil=0,this.pending.length===0&&this.urgent.length===0){this.flushing=!1;for(let g of this.flushResolvers)g();if(this.flushResolvers=[],!this.closed)this.reportDrained()}}}reportDrained(e=!1){let{released:n,counts:r}=this;if(!n){this.counts={...ec,otherPosts:r.otherPosts+r.posts,otherRows:r.otherRows+r.rows};return}this.released=void 0,this.counts={...ec},this.config.onDrained?.({trigger:e?\"close\":n.reason,rule:n.rule,heldEvents:n.count,heldMs:n.ageMs,...r,drainMs:Date.now()-n.at})}takeBatch(e){let{maxBatchSize:n,maxBatchBytes:r}=this.config,s=0,g=0;while(g<e&&g<n){if(r!==void 0){let b=Vo(this.pending[g]);if(b===void 0){if(this.pending.splice(g,1),e--,g<this.owed)this.owed--;continue}if(g>0&&s+b>r)break;s+=b}g++}let h=g;while(g>0&&this.sharesPostWithNext(g-1))g--;if(g===0){g=h;while(g>0&&this.sharesPostWithNext(g-1))if(r!==void 0&&Vo(this.pending[g])===void 0){if(this.pending.splice(g,1),g<this.owed)this.owed--}else g++}return this.owed=Math.max(0,this.owed-g),this.pending.splice(0,g)}sharesPostWithNext(e){let n=this.pending[e];return e+1<this.pending.length&&typeof n===\"object\"&&n!==null&&this.tiedToNext.has(n)}takeUrgent(){let{maxBatchSize:e,maxBatchBytes:n}=this.config,r=0,s=0;while(s<this.urgent.length&&s<e){if(n!==void 0){let g=Vo(this.urgent[s]);if(g===void 0){this.urgent.splice(s,1);continue}if(s>0&&r+g>n)break;r+=g}s++}return this.urgent.splice(0,s)}retryDelay(e,n){let r=Math.random()*this.config.jitterMs;if(n!==void 0&&Number.isFinite(n))return Math.max(this.config.baseDelayMs,Math.min(n,this.config.maxDelayMs))+r;return Math.min(this.config.baseDelayMs*2**(e-1),this.config.maxDelayMs)+r}releaseBackpressure(){let e=this.backpressureResolvers;this.backpressureResolvers=[];for(let n of e)n()}inFlightBatch(){return this.inFlight}holdsOnArrival(e){let n=this.holdOnArrivals();return!this.closed&&n!==void 0&&!n.passes?.(e)}backlog(){return{unsent:(this.inFlight?.length??0)+this.urgent.length+this.pending.length,inFlightMs:this.inFlight?Date.now()-this.inFlightSince:void 0,backingOff:this.backoff!==null}}backOff(e,n=!1){if(this.retryNowOwed)return this.retryNowOwed=!1,Promise.resolve();return new Promise((r)=>{let s={end:r,until:n?Date.now()+e:void 0};this.backoff=s,s.timer=setTimeout((g)=>g.endBackoff(),e,this)})}endBackoff(){let e=this.backoff;if(e)this.backoff=null,clearTimeout(e.timer),e.end()}}"
+  },
+  "canonicalIdentity": "Existing complete F$/ce and dependency closures from same canonical chunk-bvq78v2j.js; canonical b_t queues; no class/queue copies",
+  "transportAdaptations": [
+    "Property declaration initializers -> same-instance assignments only if absent",
+    "Existing lifetime controller aliases original closeAbort",
+    "Current request/auth/header + C stream coalescing retained as real host ports",
+    "Original hold/gate methods installed on same instance; current writes publish into those same queues/row ledger"
+  ],
+  "generatedSha256": "4503dec3ce3fa02d30aa96287de374ca2b167701355dd4b95f96264867cd2b64"
+}

@@ -1,0 +1,691 @@
+{
+  "version": "2.1.287",
+  "platform": "darwin-arm64",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "binarySha256": "6eab8333fe2121553100d8f40bfada384a3e989b94f947e18ba6677a6fcb41ea",
+  "offsetUnit": "UTF-16 code units",
+  "roots": {
+    "owner": [
+      "chunk-75fy7kb3.js",
+      "a"
+    ],
+    "registry": [
+      "chunk-75fy7kb3.js",
+      "ut"
+    ],
+    "registryOwner": [
+      "chunk-75fy7kb3.js",
+      "r"
+    ],
+    "RegistryState": [
+      "chunk-75fy7kb3.js",
+      "n"
+    ],
+    "createRegistry": [
+      "chunk-75fy7kb3.js",
+      "s"
+    ],
+    "RegistryOwner": [
+      "chunk-bn3p37gv.js",
+      "V"
+    ]
+  },
+  "cuts": {
+    "chunk-bn3p37gv.js:n": "executionContext"
+  },
+  "modules": [
+    {
+      "file": "chunk-bn3p37gv.js",
+      "rows": [
+        {
+          "file": "chunk-bn3p37gv.js",
+          "name": "V",
+          "start": 10007,
+          "end": 10151,
+          "moduleLength": 117054,
+          "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+          "sha256": "3b223ad86a79e9969e8241054c03d04d80d046aab19dd519973e4aed1e79e9e9",
+          "source": "class V{#e;#t=new WeakMap;constructor(e){this.#e=e}of(e){let t=this.#t.get(e);if(t!==void 0)return t;let o=this.#e();return this.#t.set(e,o),o}}",
+          "variable": false
+        },
+        {
+          "file": "chunk-bn3p37gv.js",
+          "name": "U",
+          "start": 71979,
+          "end": 72003,
+          "moduleLength": 117054,
+          "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+          "sha256": "d5765c805efa91af7bd3d31fd797817dc842807e44caf735c5f45538eada7a7c",
+          "source": "function U(){return n()}",
+          "variable": false
+        }
+      ],
+      "bindings": {
+        "n": {
+          "port": "executionContext",
+          "identity": "chunk-bn3p37gv.js:n"
+        }
+      },
+      "initializers": []
+    },
+    {
+      "file": "chunk-4s38z9x2.js",
+      "rows": [
+        {
+          "file": "chunk-4s38z9x2.js",
+          "name": "s",
+          "start": 1098,
+          "end": 1153,
+          "moduleLength": 2740,
+          "moduleSha256": "eb46628147f83403bbcd57ca88b3370e05c6631bf027a80117844f770b276b2d",
+          "sha256": "8b79e9ad51e95ede56e4385a196d4187b05a3d78fde643acd8c68658ff8e8521",
+          "source": "s=globalThis.process?.getBuiltinModule?.(\"async_hooks\")",
+          "variable": true
+        },
+        {
+          "file": "chunk-4s38z9x2.js",
+          "name": "wKt",
+          "start": 1154,
+          "end": 1195,
+          "moduleLength": 2740,
+          "moduleSha256": "eb46628147f83403bbcd57ca88b3370e05c6631bf027a80117844f770b276b2d",
+          "sha256": "d871ff458e10c6c5509c5b70f7944fba032e2a42697e09aec182aaaac06d05b4",
+          "source": "wKt=s?(e)=>s.AsyncResource.bind(e):(e)=>e",
+          "variable": true
+        },
+        {
+          "file": "chunk-4s38z9x2.js",
+          "name": "Me",
+          "start": 1196,
+          "end": 1457,
+          "moduleLength": 2740,
+          "moduleSha256": "eb46628147f83403bbcd57ca88b3370e05c6631bf027a80117844f770b276b2d",
+          "sha256": "08c491676ef2243b475f885c45f1163b2f0abed6075a2e5fa3a32cdd2afb308a",
+          "source": "function Me(){let e=new Set;return{subscribe(n){let r=wKt(n);return e.add(r),()=>{e.delete(r)}},emit(...n){let r;for(let o of e)try{o(...n)}catch(i){(r??=[]).push(i)}if(r)throw r.length===1?r[0]:AggregateError(r,\"Signal listener(s) threw\")},clear(){e.clear()}}}",
+          "variable": false
+        }
+      ],
+      "bindings": {},
+      "initializers": []
+    },
+    {
+      "file": "chunk-s1bsd5xr.js",
+      "rows": [
+        {
+          "file": "chunk-s1bsd5xr.js",
+          "name": "Ls",
+          "start": 1141,
+          "end": 1399,
+          "moduleLength": 1491,
+          "moduleSha256": "01026c112b0e184dd3611de7dd5c0d7197ed41d36134a8408972cae12e0b8de6",
+          "sha256": "c733414f44c04f9f81aa9594171ed41ed4ef9169f99d6405308066545eacb99e",
+          "source": "function Ls(t,e){let r=t,S=new Set,a=e&&wKt(e),s=()=>r;return{getSnapshot:s,getState:s,setState:(n)=>{let o=r,i=n(o);if(Object.is(i,o))return;r=i,a?.({newState:i,oldState:o});for(let u of S)u()},subscribe:(n)=>{let o=wKt(n);return S.add(o),()=>S.delete(o)}}}",
+          "variable": false
+        }
+      ],
+      "bindings": {
+        "wKt": {
+          "file": "chunk-4s38z9x2.js",
+          "name": "wKt"
+        }
+      },
+      "initializers": []
+    },
+    {
+      "file": "chunk-75fy7kb3.js",
+      "rows": [
+        {
+          "file": "chunk-75fy7kb3.js",
+          "name": "eyn",
+          "start": 761,
+          "end": 940,
+          "moduleLength": 3920,
+          "moduleSha256": "5b486e8eea10bcd6e09ed3a8eab40afa941961a631ef7cbb8f3aaf8e744807af",
+          "sha256": "9ea930270cacada349be6366c7a8b8049d18087ce7bcd6b52d7ad8d2a5e623a1",
+          "source": "eyn=Object.freeze({open:Object.freeze([]),unplaced:Object.freeze([]),asked:Object.freeze([]),shownId:null,focusedId:null,focusRequest:null,placements:0,closing:Object.freeze([])})",
+          "variable": true
+        },
+        {
+          "file": "chunk-75fy7kb3.js",
+          "name": "HWr",
+          "start": 945,
+          "end": 1217,
+          "moduleLength": 3920,
+          "moduleSha256": "5b486e8eea10bcd6e09ed3a8eab40afa941961a631ef7cbb8f3aaf8e744807af",
+          "sha256": "e0bab70152bca10a4feea1bfc64fba8d83d7f03108403fdcc11fde0b2108ddcd",
+          "source": "HWr=()=>({values:Ls(new Map),readers:new Map,readersOf:new Map,mounted:new Map,folds:{steady:{stale:new Set,lastAt:Number.NEGATIVE_INFINITY,pending:void 0},live:{stale:new Set,lastAt:Number.NEGATIVE_INFINITY,pending:void 0}},staleListeners:new Set,bumps:0,versionFloor:0})",
+          "variable": true
+        },
+        {
+          "file": "chunk-75fy7kb3.js",
+          "name": "DWr",
+          "start": 1222,
+          "end": 1264,
+          "moduleLength": 3920,
+          "moduleSha256": "5b486e8eea10bcd6e09ed3a8eab40afa941961a631ef7cbb8f3aaf8e744807af",
+          "sha256": "161730e70bfcc3e26ae59960b04f1ddb079d22ce4822c83c271c77d26bb331ee",
+          "source": "DWr=()=>({pending:void 0,pausedAt:void 0})",
+          "variable": true
+        },
+        {
+          "file": "chunk-75fy7kb3.js",
+          "name": "s",
+          "start": 1265,
+          "end": 3448,
+          "moduleLength": 3920,
+          "moduleSha256": "5b486e8eea10bcd6e09ed3a8eab40afa941961a631ef7cbb8f3aaf8e744807af",
+          "sha256": "f7d3052ee18bfe0982abd94f4ad40d33a4b539e4d2cf32d077c45db0327a49c9",
+          "source": "function s(){return{pluginLoad:void 0,pluginLoadArm:void 0,pluginLoadCacheOnly:void 0,pluginLoadCacheOnlyArm:void 0,commands:void 0,skills:void 0,skillsV5:void 0,agents:void 0,handedIn:void 0,outputStyles:void 0,workflows:void 0,hookRegistration:void 0,hookModulesAwaitTrust:!1,hookRegistrationInFlight:void 0,hooksUnknownCause:void 0,pluginsWithHooks:new Set,hookRegistrationEpoch:0,hookSwapEpoch:0,unlatchedAbsentManagedIds:new Set,hookRegistrationArgs:void 0,hookHotReloadUnsubscribe:void 0,hookHotReloadSettingsSnapshot:void 0,hookHotReloadTierSnapshot:void 0,loadedModules:[],moduleSeats:new Map,notices:Ls(new Map),openCalls:new Map,spawnProvenance:new Map,registeredAgents:new Map,renderVersions:Ls(new Map),panes:Ls(eyn),pluginState:HWr(),toastClock:DWr(),hoverGroups:Ls(new Map),scrollSites:new Map,focusSites:new Map,focusSiteDraws:Me(),mountedRasters:new Map,mountedImages:new Map,rasterAdmission:void 0,uiLogSink:null,pendingUiLog:[],armedMonitorKeys:new Set,marketplaces:new Map,marketplaceRefreshesInFlight:new Map,marketplaceHelperMemo:new Map,addDirMarketplacesMemo:void 0,headlessInstallPass:void 0,installedPluginsMigrated:!1,installedPluginsFile:null,installedPluginsEpoch:0,installedPluginsSnapshot:null,optionValues:new Map,flaggedPlugins:null,orphanedVersionGlobExclusions:null,recentActivity:[],pluginActivityFeatures:new Map,autoUpdateListener:null,commandSourceReresolve:null,pendingAutoUpdateNotification:null,ownInUseMarkerPaths:new Set,ownInUseMarkerHandles:new Map,commandProducerDirsDenied:new Set,commandProducerDirsScannedAt:0,commandProducerDirsComparable:null,commandProducerDirsNeedCanonicalCandidate:!1,commandProducerDirsWslProviderUndeterminable:!1,commandProducerDirsChanged:Me(),inUseMarkerCleanup:void 0,vouchedManagedPluginIds:new Set,hintedPluginIds:new Set,seenHintPluginIds:new Set,gitAvailable:void 0,operatorDeclaredMemo:void 0,marketplaceResolutionNoticesLogged:new Set,marketplaceAdmissionVerdicts:new Map,hiddenRegistryEntries:{raw:new Map,v5:new Map},releasedRegistryEntries:{raw:new Set,v5:new Set},cacheRootComparableMemo:void 0,provenLocalRoots:new Map,wslProviderOfPluginsRootMemo:void 0,inlinePluginRootsComparableMemo:void 0}}",
+          "variable": false
+        },
+        {
+          "file": "chunk-75fy7kb3.js",
+          "name": "n",
+          "start": 3448,
+          "end": 3469,
+          "moduleLength": 3920,
+          "moduleSha256": "5b486e8eea10bcd6e09ed3a8eab40afa941961a631ef7cbb8f3aaf8e744807af",
+          "sha256": "63464f799b5d48648083d49dc3c27b5c3ed40c32da30e57976547923b949fca5",
+          "source": "class n{registry=s()}",
+          "variable": false
+        },
+        {
+          "file": "chunk-75fy7kb3.js",
+          "name": "r",
+          "start": 3473,
+          "end": 3491,
+          "moduleLength": 3920,
+          "moduleSha256": "5b486e8eea10bcd6e09ed3a8eab40afa941961a631ef7cbb8f3aaf8e744807af",
+          "sha256": "212494e28bf2dd3c2fcabc8c83ab31ab35e5cc68cf0702b1057fa4e70411a98e",
+          "source": "r=new V(()=>new n)",
+          "variable": true
+        },
+        {
+          "file": "chunk-75fy7kb3.js",
+          "name": "a",
+          "start": 3492,
+          "end": 3527,
+          "moduleLength": 3920,
+          "moduleSha256": "5b486e8eea10bcd6e09ed3a8eab40afa941961a631ef7cbb8f3aaf8e744807af",
+          "sha256": "6daf18cf049fc05d6ab5101445e3683ad0d1580af62f1680940445c99014e71a",
+          "source": "function a(){return r.of(U().host)}",
+          "variable": false
+        },
+        {
+          "file": "chunk-75fy7kb3.js",
+          "name": "ut",
+          "start": 3527,
+          "end": 3561,
+          "moduleLength": 3920,
+          "moduleSha256": "5b486e8eea10bcd6e09ed3a8eab40afa941961a631ef7cbb8f3aaf8e744807af",
+          "sha256": "4a19f24da60ac435933113bdd56e3921a2566a40bb8ba31965e9ea765e0a36a1",
+          "source": "function ut(){return a().registry}",
+          "variable": false
+        }
+      ],
+      "bindings": {
+        "V": {
+          "file": "chunk-bn3p37gv.js",
+          "name": "V"
+        },
+        "Ls": {
+          "file": "chunk-s1bsd5xr.js",
+          "name": "Ls"
+        },
+        "Me": {
+          "file": "chunk-4s38z9x2.js",
+          "name": "Me"
+        },
+        "U": {
+          "file": "chunk-bn3p37gv.js",
+          "name": "U"
+        }
+      },
+      "initializers": []
+    }
+  ],
+  "ports": [
+    {
+      "port": "executionContext",
+      "file": "chunk-bn3p37gv.js",
+      "name": "n",
+      "start": 72003,
+      "end": 72039,
+      "moduleLength": 117054,
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "sha256": "978cd2c3f63837daaca9fb6af09f4f31f6e43355664c1904948a985d835f0e39",
+      "source": "function n(){return b()?.session??v}",
+      "variable": false
+    }
+  ],
+  "stateFields": [
+    {
+      "name": "pluginLoad",
+      "source": "void 0"
+    },
+    {
+      "name": "pluginLoadArm",
+      "source": "void 0"
+    },
+    {
+      "name": "pluginLoadCacheOnly",
+      "source": "void 0"
+    },
+    {
+      "name": "pluginLoadCacheOnlyArm",
+      "source": "void 0"
+    },
+    {
+      "name": "commands",
+      "source": "void 0"
+    },
+    {
+      "name": "skills",
+      "source": "void 0"
+    },
+    {
+      "name": "skillsV5",
+      "source": "void 0"
+    },
+    {
+      "name": "agents",
+      "source": "void 0"
+    },
+    {
+      "name": "handedIn",
+      "source": "void 0"
+    },
+    {
+      "name": "outputStyles",
+      "source": "void 0"
+    },
+    {
+      "name": "workflows",
+      "source": "void 0"
+    },
+    {
+      "name": "hookRegistration",
+      "source": "void 0"
+    },
+    {
+      "name": "hookModulesAwaitTrust",
+      "source": "!1"
+    },
+    {
+      "name": "hookRegistrationInFlight",
+      "source": "void 0"
+    },
+    {
+      "name": "hooksUnknownCause",
+      "source": "void 0"
+    },
+    {
+      "name": "pluginsWithHooks",
+      "source": "new Set"
+    },
+    {
+      "name": "hookRegistrationEpoch",
+      "source": "0"
+    },
+    {
+      "name": "hookSwapEpoch",
+      "source": "0"
+    },
+    {
+      "name": "unlatchedAbsentManagedIds",
+      "source": "new Set"
+    },
+    {
+      "name": "hookRegistrationArgs",
+      "source": "void 0"
+    },
+    {
+      "name": "hookHotReloadUnsubscribe",
+      "source": "void 0"
+    },
+    {
+      "name": "hookHotReloadSettingsSnapshot",
+      "source": "void 0"
+    },
+    {
+      "name": "hookHotReloadTierSnapshot",
+      "source": "void 0"
+    },
+    {
+      "name": "loadedModules",
+      "source": "[]"
+    },
+    {
+      "name": "moduleSeats",
+      "source": "new Map"
+    },
+    {
+      "name": "notices",
+      "source": "Ls(new Map)"
+    },
+    {
+      "name": "openCalls",
+      "source": "new Map"
+    },
+    {
+      "name": "spawnProvenance",
+      "source": "new Map"
+    },
+    {
+      "name": "registeredAgents",
+      "source": "new Map"
+    },
+    {
+      "name": "renderVersions",
+      "source": "Ls(new Map)"
+    },
+    {
+      "name": "panes",
+      "source": "Ls(eyn)"
+    },
+    {
+      "name": "pluginState",
+      "source": "HWr()"
+    },
+    {
+      "name": "toastClock",
+      "source": "DWr()"
+    },
+    {
+      "name": "hoverGroups",
+      "source": "Ls(new Map)"
+    },
+    {
+      "name": "scrollSites",
+      "source": "new Map"
+    },
+    {
+      "name": "focusSites",
+      "source": "new Map"
+    },
+    {
+      "name": "focusSiteDraws",
+      "source": "Me()"
+    },
+    {
+      "name": "mountedRasters",
+      "source": "new Map"
+    },
+    {
+      "name": "mountedImages",
+      "source": "new Map"
+    },
+    {
+      "name": "rasterAdmission",
+      "source": "void 0"
+    },
+    {
+      "name": "uiLogSink",
+      "source": "null"
+    },
+    {
+      "name": "pendingUiLog",
+      "source": "[]"
+    },
+    {
+      "name": "armedMonitorKeys",
+      "source": "new Set"
+    },
+    {
+      "name": "marketplaces",
+      "source": "new Map"
+    },
+    {
+      "name": "marketplaceRefreshesInFlight",
+      "source": "new Map"
+    },
+    {
+      "name": "marketplaceHelperMemo",
+      "source": "new Map"
+    },
+    {
+      "name": "addDirMarketplacesMemo",
+      "source": "void 0"
+    },
+    {
+      "name": "headlessInstallPass",
+      "source": "void 0"
+    },
+    {
+      "name": "installedPluginsMigrated",
+      "source": "!1"
+    },
+    {
+      "name": "installedPluginsFile",
+      "source": "null"
+    },
+    {
+      "name": "installedPluginsEpoch",
+      "source": "0"
+    },
+    {
+      "name": "installedPluginsSnapshot",
+      "source": "null"
+    },
+    {
+      "name": "optionValues",
+      "source": "new Map"
+    },
+    {
+      "name": "flaggedPlugins",
+      "source": "null"
+    },
+    {
+      "name": "orphanedVersionGlobExclusions",
+      "source": "null"
+    },
+    {
+      "name": "recentActivity",
+      "source": "[]"
+    },
+    {
+      "name": "pluginActivityFeatures",
+      "source": "new Map"
+    },
+    {
+      "name": "autoUpdateListener",
+      "source": "null"
+    },
+    {
+      "name": "commandSourceReresolve",
+      "source": "null"
+    },
+    {
+      "name": "pendingAutoUpdateNotification",
+      "source": "null"
+    },
+    {
+      "name": "ownInUseMarkerPaths",
+      "source": "new Set"
+    },
+    {
+      "name": "ownInUseMarkerHandles",
+      "source": "new Map"
+    },
+    {
+      "name": "commandProducerDirsDenied",
+      "source": "new Set"
+    },
+    {
+      "name": "commandProducerDirsScannedAt",
+      "source": "0"
+    },
+    {
+      "name": "commandProducerDirsComparable",
+      "source": "null"
+    },
+    {
+      "name": "commandProducerDirsNeedCanonicalCandidate",
+      "source": "!1"
+    },
+    {
+      "name": "commandProducerDirsWslProviderUndeterminable",
+      "source": "!1"
+    },
+    {
+      "name": "commandProducerDirsChanged",
+      "source": "Me()"
+    },
+    {
+      "name": "inUseMarkerCleanup",
+      "source": "void 0"
+    },
+    {
+      "name": "vouchedManagedPluginIds",
+      "source": "new Set"
+    },
+    {
+      "name": "hintedPluginIds",
+      "source": "new Set"
+    },
+    {
+      "name": "seenHintPluginIds",
+      "source": "new Set"
+    },
+    {
+      "name": "gitAvailable",
+      "source": "void 0"
+    },
+    {
+      "name": "operatorDeclaredMemo",
+      "source": "void 0"
+    },
+    {
+      "name": "marketplaceResolutionNoticesLogged",
+      "source": "new Set"
+    },
+    {
+      "name": "marketplaceAdmissionVerdicts",
+      "source": "new Map"
+    },
+    {
+      "name": "hiddenRegistryEntries",
+      "source": "{raw:new Map,v5:new Map}"
+    },
+    {
+      "name": "releasedRegistryEntries",
+      "source": "{raw:new Set,v5:new Set}"
+    },
+    {
+      "name": "cacheRootComparableMemo",
+      "source": "void 0"
+    },
+    {
+      "name": "provenLocalRoots",
+      "source": "new Map"
+    },
+    {
+      "name": "wslProviderOfPluginsRootMemo",
+      "source": "void 0"
+    },
+    {
+      "name": "inlinePluginRootsComparableMemo",
+      "source": "void 0"
+    }
+  ],
+  "executionEvidence": [
+    {
+      "file": "chunk-bn3p37gv.js",
+      "name": "n",
+      "start": 72003,
+      "end": 72039,
+      "moduleLength": 117054,
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "sha256": "978cd2c3f63837daaca9fb6af09f4f31f6e43355664c1904948a985d835f0e39",
+      "source": "function n(){return b()?.session??v}",
+      "variable": false
+    },
+    {
+      "file": "chunk-bn3p37gv.js",
+      "name": "U",
+      "start": 71979,
+      "end": 72003,
+      "moduleLength": 117054,
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "sha256": "d5765c805efa91af7bd3d31fd797817dc842807e44caf735c5f45538eada7a7c",
+      "source": "function U(){return n()}",
+      "variable": false
+    },
+    {
+      "file": "chunk-bn3p37gv.js",
+      "name": "V",
+      "start": 10007,
+      "end": 10151,
+      "moduleLength": 117054,
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "sha256": "3b223ad86a79e9969e8241054c03d04d80d046aab19dd519973e4aed1e79e9e9",
+      "source": "class V{#e;#t=new WeakMap;constructor(e){this.#e=e}of(e){let t=this.#t.get(e);if(t!==void 0)return t;let o=this.#e();return this.#t.set(e,o),o}}",
+      "variable": false
+    }
+  ],
+  "producerEvidence": [
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "PPt",
+      "start": 1713331,
+      "end": 1717866,
+      "moduleLength": 4409957,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "422e5db4b2d6eb410422f58b718ebf50b5fd0d4a9c0390a9dbeadcf58a34fab9",
+      "source": "async function PPt(e,n,r){let s=ut(),g=s.loadedModules,h=new Map,b=[],w=new Map,D=new Set(e.state.knownArgs.keys()),j=new Set;e.state.unattributedCrashes=0;let z=new Set(n.map((It)=>It.name));for(let It of n){if(It.modulePath===void 0)continue;h.set(It.name,It);try{let jt=await TSt(It,It.modulePath),Xt=xPt(e,jt,It);if(Xt!==void 0)w.set(Xt.name,Xt);b.push(Xt?.args??jt)}catch(jt){m(\"plugin_function_hooks_load\",\"declaration_failed\",_de({pluginStorageId:rf(It),pluginRoot:It.path})),t(`hooks module ${lFr(It)} failed to load: `+Qxe(jt),{level:\"error\"}),CPt(e,It,jt),Mse(It.name,jt,It)}}r.scans=b.map((It)=>It.scan),r.read.resolve(),e.state.loadingRead.emit();let K=b.map((It)=>It.pluginName),he=new Set(K),_e=new Set(b.flatMap((It)=>{let jt=e.state.unloadedSteps.get(It.pluginName);return jt!==void 0&&v2(jt,It,h.get(It.pluginName))&&sgo(jt.order,K.filter((un)=>jt.order.includes(un)))?[It.pluginName]:[]})),ke=(It)=>w.get(It.name)===It,be=[...e.state.crashedWithholders.keys()].filter((It)=>!z.has(It));for(let It of be)e.state.crashedWithholders.delete(It),e.state.withholdings.delete(It);function ve(){let It=new Set([...D].filter((Xt)=>!e.state.knownArgs.has(Xt)));e.state.knownPlugins.clear();for(let[Xt,un]of h)e.state.knownPlugins.set(Xt,un);for(let Xt of b)if(!It.has(Xt.pluginName)&&!j.has(Xt.pluginName))PIe(e.state,Xt);let jt=new Set([...[...e.state.crashedWithholders.keys()].filter((Xt)=>!z.has(Xt)),...[...e.state.knownArgs.keys()].filter((Xt)=>j.has(Xt)||!he.has(Xt))]);for(let Xt of jt)cB(Xt,e);if(jt.size>0)dB(e.state,jt)}function Te(It){for(let jt of It)if(!ke(jt))jt.discard();ve()}function xe(It){let jt=s.loadedModules,Xt=new Set(It),un=new Set(It.map((rn)=>rn.name));s.loadedModules=It;for(let rn of It)e.state.crashedWithholders.delete(rn.name);ve();for(let rn of jt){if(!Xt.has(rn))rn.retire();if(!un.has(rn.name))Hun(rn.name),Nne(rn.name),eK(rn.name),KT(rn.name)}if(Sse(e),Dse(e,It),jt.length!==0||It.length!==0)Rse();Fne(It),e.state.isSetRecord=!0}if(h.size===0){Gpo(e.state),xe([]);return}let Pe=b.filter((It)=>!_e.has(It.pluginName)),$e=g.filter((It)=>!_e.has(It.name)),Ne=be.length===0&&[...e.state.knownArgs.keys()].every((It)=>he.has(It))&&Pe.length===$e.length&&Pe.every((It,jt)=>w.get(It.pluginName)===$e[jt]);if(!Ne)_e.clear();if(e.state.isSetRecord&&Ne&&$e.length===g.length){ve();let It=g.map((jt)=>jt.name).join(\", \");t(`hooks modules unchanged, kept as loaded: ${It}`);return}let Qe=w.size===0?void 0:TPt(e,{live:g,declaring:b,kept:w,leaving:be,unloaded:_e});if(Qe!==void 0)w.clear(),t(`hooks modules reloaded in full: ${Qe}`);let Ze=b.flatMap((It)=>w.get(It.pluginName)??[]),et=new Set(Ze.map((It)=>It.name)),bt=new Set([...g.map((It)=>It.name),...D,...K].filter((It)=>!et.has(It))),ht=new Set,kt=new Set(et),$t=new Map;e.state.isSetRecord=!1;try{for(;;){let It=[];for(let nn of b){if(et.has(nn.pluginName)||j.has(nn.pluginName)||ht.has(nn.pluginName)||_e.has(nn.pluginName))continue;D.add(nn.pluginName),PIe(e.state,nn);try{let $n=await OAe(e,nn);$n.shown=Dw(nn,h.get(nn.pluginName)),It.push($n),e.state.unadmitted.add($n.environmentId),$t.set($n.environmentId,$n),xIe(nn.pluginName,e),y(\"plugin_function_hooks_load\",_de(nn)),t(`hooks module ${$n.label} loaded (${$n.hopKey.kind}, environment ${$n.environmentId}, tier ${$n.tier}); events: `+NMo($n.patterns))}catch($n){if(ht.add(nn.pluginName),m(\"plugin_function_hooks_load\",\"module_load_failed\",_de(nn)),t(`hooks module ${XNt(nn)} failed to load: `+Qxe($n),{level:\"error\"}),pB(e,It,\"the load\")){ve();return}Mse(nn.pluginName,$n,h.get(nn.pluginName))}}if(et.size>0){let nn=[...et].join(\", \");t(`hooks modules kept as loaded, unchanged: ${nn}`)}let jt=et.size===0,Xt=await mB(e,It,jt?dPt(e,It.map((nn)=>nn.name)):MIe(e.state,bt,K));if(e.state.environmentHost?.died!==void 0){Te(Xt);return}let un=new Map([...Xt,...Ze].map((nn)=>[nn.name,nn])),{admitted:rn,refused:Yt}=await OIe(e,{built:K.flatMap((nn)=>un.get(nn)??[]),plugins:h,seated:kt});for(let nn of Yt)j.add(nn.name);if(e.state.environmentHost?.died!==void 0){Te(rn);return}let Qt=Yt.filter((nn)=>nn.hooks(\"engine.create\"));if(Qt.length!==0){t(`hooks modules ${F3n(Qt)} refused after the engine.create fold ran with them; the set folds again without`);for(let nn of rn)if(kt.add(nn.name),!ke(nn))nn.discard();continue}for(let nn of It)if(!Xt.includes(nn))Mse(nn.name,kPt(nn.name,e.state.buildFailures.get(nn.name)),h.get(nn.name));if(await jse(rn),e.state.environmentHost?.died!==void 0){Te(rn);return}xe(rn);return}}finally{for(let[It,jt]of $t)if(e.state.unadmitted.has(It))jt.discard()}}",
+      "variable": false
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "hB",
+      "start": 1718158,
+      "end": 1718601,
+      "moduleLength": 4409957,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "7718570ad64accf3e44205219c1ee321197794b3637c9121f7ccca1aa2c69569",
+      "source": "async function hB(e,n,r){let s=ut(),g=s.loadedModules.filter((w)=>n.has(w.name)),h=s.loadedModules.filter((w)=>!n.has(w.name)),b=[...n].some((w)=>Wse(w,e,g.find((D)=>D.name===w)));if(s.loadedModules=h,b)e.state.isSetRecord=!1;for(let w of n)cB(w,e);dB(e.state,n);for(let w of g)w.retire();Sse(e),Rse(),Fne(s.loadedModules),t(`hooks modules unloaded: ${[...n].map((w)=>g.find((D)=>D.name===w)?.label??w).join(\", \")} (${r})`),await jse(h),mun()}",
+      "variable": false
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "WIe",
+      "start": 1718798,
+      "end": 1720961,
+      "moduleLength": 4409957,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "6f75c891208188531778fb745c638a5626b65ab112ace6aa2b1909949779f5b0",
+      "source": "async function WIe(e,n){let r=ut(),s=r.loadedModules.find((Ze)=>Ze.name===e),g=n.state.knownPlugins.get(e),h=s?.args??n.state.knownArgs.get(e)??await yPt(n,g);if(!h)throw new Oe(`no hooks module named ${e} is loaded or declared`);let b=h,w=(Ze)=>`${e}: the hooks worker died during the reload (${Ze}); the respawn reloads the declared set`;function D(Ze){if(!n.state.knownArgs.has(e))throw new Oe(`${e}: unloaded while its reload ${Ze} (`+(n.state.environmentHost?.died??\"it left the declared set\")+\"); not reloaded\")}let j=await seo(h,g);D(\"read its args\");let z=performance.now(),K=r.loadedModules,he=Wse(e,n,s)||gB({live:void 0,scans:[j.scan]})!==void 0;n.state.isSetRecord=n.state.isSetRecord&&!he;let _e={rank:cgo,isBeneath:ago(e,n)},ke=s?K.indexOf(s):jIe(K,HIe(j.pluginStorageId),_e),be=await pPt({args:j,plugin:g,judges:mPt({before:K.slice(0,ke),after:K.slice(s?ke+1:ke),isNative:Boolean(RO(j)),tier:j.tier})});if(be){let Ze=xse(be)+(s?\"; the version loaded before is unloaded\":\"\"),et=new Set([e]);if(s)await hB(n,et,Ze);else cB(e,n),dB(n.state,et);return{refused:Ze,ms:performance.now()-z}}D(\"was admitted\"),n.state.knownArgs.set(e,j);let ve,Te,xe=imo(n.state,e),Pe=lmo(n.state),$e=n.state.withholdings.get(e);function Ne(){if(n.state.knownArgs.has(e))n.state.knownArgs.set(e,b);$e?n.state.withholdings.set(e,$e):n.state.withholdings.delete(e),amo(n.state,Pe)}try{ve=await OAe(n,j),ve.shown=Dw(j,g),[Te]=await mB(n,[ve],xe)}catch(Ze){throw Ne(),Ze}if(!Te){Ne();let Ze=n.state.environmentHost?.died,et=n.state.buildFailures.get(e);throw new Oe(Ze===void 0?`${e}: ${et?.stage??\"engine.create\"} failed on reload`+(et?` (${et.reason})`:\"\")+\"; the previous version stays loaded\":w(Ze))}let We=s?r.loadedModules.map((Ze)=>Ze===s?ve:Ze):ggo(r.loadedModules,ve,_e);await jse(We);let qe=n.state.environmentHost?.died;if(qe!==void 0)throw Ne(),new Oe(w(qe));r.loadedModules=We,n.state.unloadedSteps.clear(),s?.retire(),n.state.crashedWithholders.delete(e),xIe(e,n),Sse(n),Dse(n,[ve]),Rse(),Fne(r.loadedModules);let Qe=performance.now()-z;return t(`hooks module ${ve.label} reloaded in ${Qe.toFixed(1)}ms; events: `+NMo(ve.patterns)),{events:[...ve.patterns],ms:Qe}}",
+      "variable": false
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "FPt",
+      "start": 1724099,
+      "end": 1726151,
+      "moduleLength": 4409957,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "c3b04c980f78f3d4adc645bb5ee7584b07bb4a3ae824c262ed5c72a87a6b4a85",
+      "source": "FPt=(e,n,r)=>e.state.queue(async()=>{Igo(e),e.state.isSetRecord=!1;let s=ut();if(!r&&++e.state.unattributedCrashes>=zes){let z=aPt(e.state),K=z.filter((_e)=>RO(_e)===void 0).map((_e)=>_e.pluginName),he=K.every((_e)=>lB(e.state,_e).length===0);for(let _e of K)cB(_e,e);_se(e.state,new Set(K)),Xye(\"hooks\",`mods that run in the hooks worker are off for this session: it crashed ${e.state.unattributedCrashes} times`+(he?\"\":\"; what they withheld stays withheld until they reload or are disabled\")),NPt(e,z)}t(`hooks worker: respawning for ${[...e.state.knownArgs.keys()].join(\", \")||\"nobody\"} (${n})`);let h,b=new Map,w=new Set,D=new Set;try{for(;;){let z=aPt(e.state).filter((ve)=>{let Te=e.state.knownPlugins.get(ve.pluginName),xe=e.state.unloadedSteps.get(ve.pluginName),Pe=xe!==void 0&&v2(xe,ve,Te);return!w.has(ve.pluginName)&&!Pe}),K=[];for(let ve of z)try{let Te=await OAe(e,ve);Te.shown=Dw(ve,e.state.knownPlugins.get(ve.pluginName)),K.push(Te),e.state.unadmitted.add(Te.environmentId),b.set(Te.environmentId,Te),xIe(ve.pluginName,e)}catch(Te){if(w.add(ve.pluginName),t(`hooks module ${XNt(ve)} failed to load after the respawn: ${Qxe(Te)}`,{level:\"error\"}),pB(e,K,\"the respawn\"))return;Hun(ve.pluginName),Nne(ve.pluginName),eK(ve.pluginName),KT(ve.pluginName),x9e({plugin:ve.pluginName,event:\"*\",reason:l(Te),effect:WMo,hasOverrun:!1})}let he=await mB(e,K,{...dPt(e,K.map((ve)=>ve.name)),carried:e.state.lastTable});if(z.length>0&&e.state.environmentHost?.died!==void 0)return;let{admitted:_e,refused:ke}=await OIe(e,{built:he,plugins:e.state.knownPlugins,seated:D});if(z.length>0&&e.state.environmentHost?.died!==void 0){for(let ve of _e)ve.discard();return}for(let ve of ke)cB(ve.name,e);if(ke.length>0)dB(e.state,new Set(ke.map((ve)=>ve.name)));if(!ke.some((ve)=>ve.hooks(\"engine.create\"))){h=_e;break}for(let ve of _e)D.add(ve.name),ve.discard()}}finally{for(let[z,K]of b)if(e.state.unadmitted.has(z))K.discard()}let j=s.loadedModules;s.loadedModules=h,e.state.isSetRecord=!0;for(let z of j)z.retire();Sse(e),Rse(),Fne(h),await jse(h),mun()})",
+      "variable": true
+    },
+    {
+      "file": "chunk-bzvz9rsz.js",
+      "name": "XNo",
+      "start": 2213,
+      "end": 3578,
+      "moduleLength": 5061,
+      "moduleSha256": "a27caaf67fe1f2e152bf71765f70cc6517a9a3d109fa5af71818580af6aab9e9",
+      "sha256": "fd1f9107640b639f0aa2f7f647725985688207d6dca1bc81a351fa89aa116634",
+      "source": "function XNo(e){let n=new Set([...I1()??[]].map(Nr)),o=e.filter((r)=>n.has(Nr(r.source))),a=o.filter((r)=>Bl(r.source)!==_i&&!P(r));for(let r of a){if(r.modulePath===void 0)continue;t(r.readInPlace===!0?`${ze(r.source)} is enabled by managed settings, but managed settings do not name the source its marketplace is registered from, so it is not treated as the organization's: its hooks module runs in the user tier. It is seated when the marketplace is registered from the source that managed settings declare for it under extraKnownMarketplaces.`:`${ze(r.source)} is enabled by managed settings, but it is not read in place from a local folder its marketplace is registered from: it loads from a copy (the plugin cache, an archive or a seed directory), or that marketplace has no folder of its own. Nothing yet records which source a copy was taken from, so it is not treated as the organization's: its hooks module runs in the user tier, and does not load where only managed hooks may. It is seated when managed settings declare its marketplace under extraKnownMarketplaces as a local directory and that marketplace lists it by a relative path. A plugin delivered from a remote source gains the tier in a later release.`,{level:\"warn\"})}let i=new Set(a.map((r)=>Nr(r.source)));ut().vouchedManagedPluginIds=new Set(o.map((r)=>Nr(r.source)).filter((r)=>!i.has(r)))}",
+      "variable": false
+    }
+  ],
+  "canonicalConsumerBoundary": {
+    "file": "chunk-75fy7kb3.js",
+    "name": "a",
+    "source": "function a(){return r.of(U().host)}",
+    "port": "modsOwner"
+  },
+  "rawModulesHashChecked": 2404,
+  "bindingStatus": "Create one canonical owner instance per real runtime and supply its ORIGINAL a getter to BOTH consumer factories. Genuine executionContext is caller-owned and not production-bound here. No Mods startup/controller/registry mirroring."
+}

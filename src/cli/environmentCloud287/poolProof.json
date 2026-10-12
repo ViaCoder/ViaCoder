@@ -1,0 +1,594 @@
+{
+  "mode": "pool",
+  "literalNamespaces": [],
+  "requiredSameOwnerPorts": [],
+  "version": "2.1.287",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "rangeConvention": "UTF-16 end-exclusive",
+  "roots": {
+    "poolHeadlessArm": [
+      "chunk-q1842b1c.js",
+      "poolHeadlessArm"
+    ]
+  },
+  "modules": [
+    {
+      "file": "chunk-mphp7acd.js",
+      "rows": [
+        {
+          "file": "chunk-mphp7acd.js",
+          "name": "ZPo",
+          "start": 239929,
+          "end": 240082,
+          "moduleLength": 4409957,
+          "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+          "sha256": "87dbf869691124882cc0606fa616443fde7749cc92be3f80799fcfa31a26ba18",
+          "source": "function ZPo(e){let n=tQe();if(n.installed)return n.queue;let r=n.queue,s=e(r.getCommandQueue());return r.resetCommandQueue(),n.queue=s,n.installed=!0,s}",
+          "variable": false,
+          "exportNames": [
+            "ZPo"
+          ]
+        }
+      ],
+      "initializers": [],
+      "bindings": {
+        "tQe": {
+          "port": "source:chunk-mphp7acd.js:tQe",
+          "identity": "chunk-mphp7acd.js:tQe"
+        }
+      }
+    },
+    {
+      "file": "chunk-kag39xng.js",
+      "rows": [
+        {
+          "file": "chunk-kag39xng.js",
+          "name": "N6e",
+          "start": 771,
+          "end": 872,
+          "moduleLength": 961,
+          "moduleSha256": "dded5dcfbba5bb3ad6972a382f4eb8e342fe015cfc66610ce1081a11a175cae9",
+          "sha256": "b7853439ace0f2385cbaaa0e382794fcfed4f5e609c0e3c4de53c1cfed6c53c6",
+          "source": "function N6e(e){return F()&&e!==void 0?ZPo((t)=>zOr({recordOperation:(o)=>{rln(o,e)},adopt:t})):hy()}",
+          "variable": false,
+          "exportNames": [
+            "N6e"
+          ]
+        }
+      ],
+      "initializers": [],
+      "bindings": {
+        "F": {
+          "port": "source:chunk-ky674g9x.js:F",
+          "identity": "chunk-ky674g9x.js:F"
+        },
+        "ZPo": {
+          "file": "chunk-mphp7acd.js",
+          "name": "ZPo"
+        },
+        "zOr": {
+          "port": "source:chunk-mphp7acd.js:zOr",
+          "identity": "chunk-mphp7acd.js:zOr"
+        },
+        "rln": {
+          "port": "source:chunk-mphp7acd.js:rln",
+          "identity": "chunk-mphp7acd.js:rln"
+        },
+        "hy": {
+          "port": "source:chunk-mphp7acd.js:hy",
+          "identity": "chunk-mphp7acd.js:hy"
+        }
+      }
+    },
+    {
+      "file": "chunk-dgp2yyqt.js",
+      "rows": [
+        {
+          "file": "chunk-dgp2yyqt.js",
+          "name": "GY",
+          "start": 98066,
+          "end": 98125,
+          "moduleLength": 139899,
+          "moduleSha256": "0ac39806e4b50d15e5b1de301d8553a870917c87ef024d423bc9476e0ced21da",
+          "sha256": "17682afc9ba087394d32a719091cabdf85df5fd39333de3217336473970d7f00",
+          "source": "function GY(e,o){return c(e?\"on_branch\":o?\"ref\":\"default\")}",
+          "variable": false,
+          "exportNames": [
+            "GY"
+          ]
+        }
+      ],
+      "initializers": [],
+      "bindings": {
+        "c": {
+          "port": "source:chunk-n4qghq20.js:c",
+          "identity": "chunk-n4qghq20.js:c"
+        }
+      }
+    },
+    {
+      "file": "chunk-q1842b1c.js",
+      "rows": [
+        {
+          "file": "chunk-q1842b1c.js",
+          "name": "poolHeadlessArm",
+          "start": 45147,
+          "end": 47440,
+          "moduleLength": 134295,
+          "moduleSha256": "53011f90e32203bb47d179b337e6d65e0caf63a2ca681545b60f9c3c388c212f",
+          "sha256": "2c4b5bf65d6775cf236b8e81129dfbf82f0e18e00152b1cda5c88b3f9d89b326",
+          "source": "if(et!==null){ime(U().host,\"not_applicable\");let H=await TF(n.credentials);if(!H.valid)return await pHe(H),Vs(H.message);await zb();let K=j_e();if(K)return await V2(\"allow_remote_sessions\",\"cli_flag\"),Vs(`Error: ${K}`);let dt=typeof Be===\"string\"&&Be.trim()!==\"\"?Be:null;if(dt===null)return Yt(\"Error: non-interactive --environment requires a prompt (positional or stdin). Run from a TTY for an interactive cloud session.\");let xe=void 0,kt=xe?.kind===\"rules\"?xe.rules:void 0;if(i(\"tengu_remote_create_session\",{has_initial_prompt:S(\"true\"),entry_point:c(\"pool_headless\"),branch_mode:GY(Me,ue),disallowed_tools_count:kt?.length??0}),xe?.kind===\"unclosed\")return await js(\"tengu_remote_create_session_error\",{error:S(\"deny_rule_unclosed\"),entry_point:c(\"pool_headless\"),branch_mode:GY(Me,ue)}),Vs(hbt(xe.rule));let Pe=fHe($t),Ht=Me??ue??await sd(),ct,Ke,ht,ut=await p0({initialMessage:dt,signal:new AbortController().signal,source:\"remote\",branchName:Ht||void 0,branchFromHead:(Me??ue)==null,title:Wo||void 0,reuseOutcomeBranch:Me??void 0,explicitRef:Me??ue??void 0,poolId:et,noMonorepo:re,correlationId:Fe??void 0,permissionMode:Pe,proactivityLevel:e.proactivity,disallowedTools:kt,onCreateFail:(Ot,J,ae)=>{ct=Ot,Ke=J,ht=ae,process.stderr.write(`Error: ${Ot}\n`)},storageV5:n.storageV5,credentials:bx(n.storageV5)});if(!ut){if(await js(\"tengu_remote_create_session_error\",{error:me(Ke),entry_point:c(\"pool_headless\"),branch_mode:GY(Me,ue),...ht?.endpoint&&{create_endpoint:c(ht.endpoint)},...ht?.serverReason&&{server_reason:c(ht.serverReason)},...ht?.preflightTransient!==void 0&&{deny_transient:S(ht.preflightTransient?\"true\":\"false\")}}),ie===\"json\")process.stdout.write(_({ok:!1,error:ct??\"Unable to create cloud session\"})+`\n`);return Vs(ct?void 0:\"Error: Unable to create cloud session\")}await js(\"tengu_remote_create_session_success\",{session_id:an(ut.id),entry_point:c(\"pool_headless\"),branch_mode:GY(Me,ue)});let Bt=oc(ut.id,void 0,{from:\"cli\",m:\"0\"});if(ie===\"json\")process.stdout.write(_({ok:!0,session_id:ut.id,title:ut.title,url:Bt,pool_id:et})+`\n`);else process.stdout.write(`Created cloud session: ${ut.title}\n`),process.stdout.write(`Session ID: ${ut.id}\n`),process.stdout.write(`View: ${Bt}\n`),process.stdout.write(`Resume with: claude --teleport ${ut.id}\n`);await Kn(0);return}",
+          "variable": false,
+          "exportNames": [
+            "poolHeadlessArm"
+          ],
+          "emittedSource": "async function poolHeadlessArm(n,e,s){let r=N6e(n.storageV5),{autoCompactWindow:g,claudeaiConfigPromise:h,jsonSchema:b,allowedTools:T,thinkingConfig:V,thinkingConfigExplicit:w,systemPrompt:C,appendSystemPrompt:W,appendSystemPromptHead:ne,sdkUrl:Je,sessionMirror:it,advisorModel:A,agentCli:v,agentDefinitions:R,cliAgents:P,cloudAttachId:B,commands:he,correlationId:Fe,deferredCommandsPromise:Ne,disableSlashCommands:Se,effectiveForwardSubagentText:be,effectiveIncludePartialMessages:Ue,effectiveModel:at,effectiveReplayUserMessages:Xe,headlessCloud:_e,initialMainLoopModel:mt,inputPrompt:Be,mcpClients:Qe,mcpCommands:Ze,mcpConfigFlagServers:M,mcpTools:X,noMonorepo:re,outputFormat:ie,permissionModeCli:$t,poolId:et,poolOnBranch:Me,poolRef:ue,rawModelRequest:Gt,regularMcpConfigs:Oe,resolvedInitialModel:I,resolvedMaxTurns:Ye,restrictedModel:Ut,sdkBetas:ho,sdkMcpConfigs:jo,session:Ve,sessionNameArg:Wo,sessionTeamContext:qt,setupTrigger:Kt,strictMcpConfig:eo,teleport:N,toolPermissionContext:ee,tools:$o,userSpecifiedFallbackModel:zt,verbose:Go}=n;\nif(et!==null){ime(U().host,\"not_applicable\");let H=await TF(n.credentials);if(!H.valid)return await pHe(H),Vs(H.message);await zb();let K=j_e();if(K)return await V2(\"allow_remote_sessions\",\"cli_flag\"),Vs(`Error: ${K}`);let dt=typeof Be===\"string\"&&Be.trim()!==\"\"?Be:null;if(dt===null)return Yt(\"Error: non-interactive --environment requires a prompt (positional or stdin). Run from a TTY for an interactive cloud session.\");let xe=void 0,kt=xe?.kind===\"rules\"?xe.rules:void 0;if(i(\"tengu_remote_create_session\",{has_initial_prompt:S(\"true\"),entry_point:c(\"pool_headless\"),branch_mode:GY(Me,ue),disallowed_tools_count:kt?.length??0}),xe?.kind===\"unclosed\")return await js(\"tengu_remote_create_session_error\",{error:S(\"deny_rule_unclosed\"),entry_point:c(\"pool_headless\"),branch_mode:GY(Me,ue)}),Vs(hbt(xe.rule));let Pe=fHe($t),Ht=Me??ue??await sd(),ct,Ke,ht,ut=await p0({initialMessage:dt,signal:new AbortController().signal,source:\"remote\",branchName:Ht||void 0,branchFromHead:(Me??ue)==null,title:Wo||void 0,reuseOutcomeBranch:Me??void 0,explicitRef:Me??ue??void 0,poolId:et,noMonorepo:re,correlationId:Fe??void 0,permissionMode:Pe,proactivityLevel:e.proactivity,disallowedTools:kt,onCreateFail:(Ot,J,ae)=>{ct=Ot,Ke=J,ht=ae,process.stderr.write(`Error: ${Ot}\n`)},storageV5:n.storageV5,credentials:bx(n.storageV5)});if(!ut){if(await js(\"tengu_remote_create_session_error\",{error:me(Ke),entry_point:c(\"pool_headless\"),branch_mode:GY(Me,ue),...ht?.endpoint&&{create_endpoint:c(ht.endpoint)},...ht?.serverReason&&{server_reason:c(ht.serverReason)},...ht?.preflightTransient!==void 0&&{deny_transient:S(ht.preflightTransient?\"true\":\"false\")}}),ie===\"json\")process.stdout.write(_({ok:!1,error:ct??\"Unable to create cloud session\"})+`\n`);return Vs(ct?void 0:\"Error: Unable to create cloud session\")}await js(\"tengu_remote_create_session_success\",{session_id:an(ut.id),entry_point:c(\"pool_headless\"),branch_mode:GY(Me,ue)});let Bt=oc(ut.id,void 0,{from:\"cli\",m:\"0\"});if(ie===\"json\")process.stdout.write(_({ok:!0,session_id:ut.id,title:ut.title,url:Bt,pool_id:et})+`\n`);else process.stdout.write(`Created cloud session: ${ut.title}\n`),process.stdout.write(`Session ID: ${ut.id}\n`),process.stdout.write(`View: ${Bt}\n`),process.stdout.write(`Resume with: claude --teleport ${ut.id}\n`);await Kn(0);return}}",
+          "poolFrameDestructure": {
+            "file": "chunk-q1842b1c.js",
+            "name": "lrPreparedFrame",
+            "start": 41655,
+            "end": 42664,
+            "moduleLength": 134295,
+            "moduleSha256": "53011f90e32203bb47d179b337e6d65e0caf63a2ca681545b60f9c3c388c212f",
+            "sha256": "a6fcdab7d1f26721e8d3d99e7e3368c8be83cf9dddc0ab837ccb9b518a143006",
+            "source": "let r=N6e(n.storageV5),{autoCompactWindow:g,claudeaiConfigPromise:h,jsonSchema:b,allowedTools:T,thinkingConfig:V,thinkingConfigExplicit:w,systemPrompt:C,appendSystemPrompt:W,appendSystemPromptHead:ne,sdkUrl:Je,sessionMirror:it,advisorModel:A,agentCli:v,agentDefinitions:R,cliAgents:P,cloudAttachId:B,commands:he,correlationId:Fe,deferredCommandsPromise:Ne,disableSlashCommands:Se,effectiveForwardSubagentText:be,effectiveIncludePartialMessages:Ue,effectiveModel:at,effectiveReplayUserMessages:Xe,headlessCloud:_e,initialMainLoopModel:mt,inputPrompt:Be,mcpClients:Qe,mcpCommands:Ze,mcpConfigFlagServers:M,mcpTools:X,noMonorepo:re,outputFormat:ie,permissionModeCli:$t,poolId:et,poolOnBranch:Me,poolRef:ue,rawModelRequest:Gt,regularMcpConfigs:Oe,resolvedInitialModel:I,resolvedMaxTurns:Ye,restrictedModel:Ut,sdkBetas:ho,sdkMcpConfigs:jo,session:Ve,sessionNameArg:Wo,sessionTeamContext:qt,setupTrigger:Kt,strictMcpConfig:eo,teleport:N,toolPermissionContext:ee,tools:$o,userSpecifiedFallbackModel:zt,verbose:Go}=n;",
+            "variable": false
+          }
+        }
+      ],
+      "initializers": [],
+      "bindings": {
+        "N6e": {
+          "file": "chunk-kag39xng.js",
+          "name": "N6e"
+        },
+        "ime": {
+          "port": "source:chunk-dgp2yyqt.js:ime",
+          "identity": "chunk-dgp2yyqt.js:ime"
+        },
+        "U": {
+          "port": "sharedPort:execution",
+          "identity": "chunk-bn3p37gv.js:U"
+        },
+        "TF": {
+          "port": "source:chunk-nankzm0s.js:TF",
+          "identity": "chunk-nankzm0s.js:TF"
+        },
+        "pHe": {
+          "port": "source:chunk-4gbrna1q.js:pHe",
+          "identity": "chunk-4gbrna1q.js:pHe"
+        },
+        "Vs": {
+          "port": "source:chunk-z6bxsds6.js:Vs",
+          "identity": "chunk-z6bxsds6.js:Vs"
+        },
+        "zb": {
+          "port": "source:chunk-b7yc4zs1.js:zb",
+          "identity": "chunk-b7yc4zs1.js:zb"
+        },
+        "j_e": {
+          "port": "source:chunk-hhbs19e8.js:j_e",
+          "identity": "chunk-hhbs19e8.js:j_e"
+        },
+        "V2": {
+          "port": "source:chunk-eh4x73e7.js:V2",
+          "identity": "chunk-eh4x73e7.js:V2"
+        },
+        "Yt": {
+          "port": "source:chunk-z6bxsds6.js:Yt",
+          "identity": "chunk-z6bxsds6.js:Yt"
+        },
+        "i": {
+          "port": "source:chunk-6hnyhakg.js:i",
+          "identity": "chunk-6hnyhakg.js:i"
+        },
+        "S": {
+          "port": "source:chunk-n4qghq20.js:S",
+          "identity": "chunk-n4qghq20.js:S"
+        },
+        "c": {
+          "port": "source:chunk-n4qghq20.js:c",
+          "identity": "chunk-n4qghq20.js:c"
+        },
+        "GY": {
+          "file": "chunk-dgp2yyqt.js",
+          "name": "GY"
+        },
+        "js": {
+          "port": "source:chunk-6hnyhakg.js:js",
+          "identity": "chunk-6hnyhakg.js:js"
+        },
+        "hbt": {
+          "port": "source:chunk-db6pdgvs.js:hbt",
+          "identity": "chunk-db6pdgvs.js:hbt"
+        },
+        "fHe": {
+          "port": "source:chunk-dgp2yyqt.js:fHe",
+          "identity": "chunk-dgp2yyqt.js:fHe"
+        },
+        "sd": {
+          "port": "source:chunk-2ynta9xc.js:sd",
+          "identity": "chunk-2ynta9xc.js:sd"
+        },
+        "p0": {
+          "port": "source:chunk-mphp7acd.js:p0",
+          "identity": "chunk-mphp7acd.js:p0"
+        },
+        "bx": {
+          "port": "source:chunk-4cfspby6.js:bx",
+          "identity": "chunk-4cfspby6.js:bx"
+        },
+        "me": {
+          "port": "source:chunk-n4qghq20.js:me",
+          "identity": "chunk-n4qghq20.js:me"
+        },
+        "_": {
+          "port": "source:chunk-q80zaav8.js:_",
+          "identity": "chunk-q80zaav8.js:_"
+        },
+        "an": {
+          "port": "source:chunk-vh4tv488.js:an",
+          "identity": "chunk-vh4tv488.js:an"
+        },
+        "oc": {
+          "port": "source:chunk-fpcnpvs9.js:oc",
+          "identity": "chunk-fpcnpvs9.js:oc"
+        },
+        "Kn": {
+          "port": "sharedPort:publicGracefulShutdown287",
+          "identity": "chunk-mphp7acd.js:Kn"
+        }
+      }
+    }
+  ],
+  "ports": [
+    {
+      "port": "source:chunk-ky674g9x.js:F",
+      "file": "chunk-ky674g9x.js",
+      "name": "F",
+      "start": 1154,
+      "end": 1181,
+      "moduleLength": 1308,
+      "moduleSha256": "ac954af928cbc90fe1e16072facf98491ba2f5252bcf4e493ce24fdbded71e3c",
+      "sha256": "8c6e6b5568be322ed740bb6c9f394f262ea19548f19eaa5b29cbbf10701f844d",
+      "source": "function F(){return t===!0}",
+      "variable": false
+    },
+    {
+      "port": "source:chunk-mphp7acd.js:tQe",
+      "file": "chunk-mphp7acd.js",
+      "name": "tQe",
+      "start": 239895,
+      "end": 239929,
+      "moduleLength": 4409957,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "f43592fdf38ffcf6e1c5d5a721b841b28751c8042c704cd1c8408a8ce749d3c0",
+      "source": "function tQe(){return Dbn.of(U())}",
+      "variable": false
+    },
+    {
+      "port": "source:chunk-mphp7acd.js:zOr",
+      "file": "chunk-mphp7acd.js",
+      "name": "zOr",
+      "start": 223743,
+      "end": 239846,
+      "moduleLength": 4409957,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "5d7972d0a3c2b3b826f2e983510dd0de2027a039720bbf78842acf0a72cf2484",
+      "source": "function zOr(e){let n=e?.recordOperation??Rbn,r=z_e();function s(Yo,qr,Lr,Kr,vr){let nr={type:\"queue-operation\",operation:Yo,timestamp:new Date().toISOString(),sessionId:q(),...qr!==void 0&&{content:qr},...Lr!==void 0&&{reason:Lr},...Kr!==void 0&&{commandUuid:Kr},...vr!==void 0&&{deliveryId:vr}};n(nr)}let g=[...e?.adopt??[]],h=Object.freeze([...g]),b=Me(),w=Me();eq(()=>g.filter(tf).map(Dln));let D=new Set,j=new Set,z=256;function K(){h=Object.freeze([...g]),b.emit()}function he(Yo,qr){if(D.delete(Yo))D.add(Yo);else{if(qr?.terminalEmitted!==!0&&D.size>=z){let Lr;for(let Kr of D)if(!j.has(Kr)){Lr=Kr;break}if(Lr!==void 0)D.delete(Lr)}D.add(Yo)}if(qr?.terminalEmitted!==!0)return!1;if(j.has(Yo))return!1;return j.add(Yo),!0}function _e(Yo){return D.delete(Yo)}function ke(Yo){return j.delete(Yo)}function be(Yo){return j.has(Yo)}let ve=new Set;function Te(Yo){for(let qr of Yo)if(qr.uuid!==void 0)ve.add(qr.uuid)}function xe(Yo){for(let qr of Yo)if(qr.uuid!==void 0)ve.delete(qr.uuid)}function Pe(Yo){return ve.has(Yo)}let $e=new Map;function Ne(Yo){if(Yo===void 0)return{withdrawn:()=>!1,[Symbol.dispose]:()=>{}};let qr={withdrawn:!1};return $e.set(Yo,qr),{withdrawn:()=>qr.withdrawn,[Symbol.dispose]:()=>{if($e.get(Yo)===qr)$e.delete(Yo)}}}function We(Yo){let qr=$e.get(Yo);if(qr===void 0||qr.withdrawn)return!1;return qr.withdrawn=!0,!0}let qe=!1;function Qe(){if(qe)return;qe=!0,K()}function Ze(Yo,qr){return bt(g.find((Lr)=>Lr.uuid===Yo&&Lr.screeningPending===!0),qr)}function et(Yo,qr){return bt(g.includes(Yo)?Yo:void 0,qr)}function bt(Yo,qr){if(Yo===void 0)return!1;if(\"dropped\"in qr)return mr([Yo],{reason:\"dropped_by_hook\"}),!0;return delete Yo.screeningPending,Yo.promptSubmitted=qr.promptSubmitted,Yo.drainOnly=qr.drainOnly,K(),!0}function ht(Yo){let qr=g.find((Lr)=>Lr.uuid===Yo);if(qr===void 0||qr.priority===\"now\"||ve.has(Yo))return!1;return qr.priority=\"now\",K(),!0}function kt(Yo,qr){let Lr=g.find((Kr)=>Kr.uuid===Yo);if(Lr===void 0||Lr.priority!==\"now\")return!1;return Lr.priority=qr,K(),!0}function $t(){return qe||Dr()}let It=null,jt;function Xt(Yo){It=Yo,jt=void 0}function un(Yo){if(Yo===void 0||It===Yo)It=null,jt=void 0}function rn(Yo){return It!==null&&It.some(Yo)}let Yt=new Set;function Qt(Yo){return Yt.add(Yo),{[Symbol.dispose]:()=>{Yt.delete(Yo)}}}function nn(Yo){for(let qr of Yt)if(Yo(qr))return!0;return!1}function Pn(Yo){let qr=new Set(Yo.map((Kr)=>Kr.uuid));for(let Kr of Yt)if(Kr.uuid!==void 0&&qr.has(Kr.uuid))Yt.delete(Kr);let Lr=(It??[]).flatMap((Kr)=>Kr.uuid===void 0?[]:[Kr.uuid]);if(Lr.length>0&&jt!==\"appended\")jt=Lr.some((Kr)=>qr.has(Kr))?\"appended\":\"passed-over\"}function $n(){return jt}let qn=Promise.resolve();function En(){let Yo=qn,qr;return qn=new Promise((Lr)=>{qr=Lr}),{prior:Yo,release:qr}}function zn(){return h}function xn(){return[...g]}function Jn(){return g.length}function wn(){return G(g,B7)}function eo(){return wn()}function to(){return g.length>0}function ao(){return g.some((Yo)=>!tb(Yo)&&Yo.passive!==!0)}function mo(){if(g.length>0)K()}let $o=A1r({},C$t),Ao=e?.dropReceiptTrailMs===void 0?{}:{trailMs:e.dropReceiptTrailMs},Po=x1r(Ao);function ur(){$o=A1r({},C$t),Po.dispose(),Po=x1r(Ao)}function kr(Yo){return Po.flushPendingReceipts(Yo)}function po(){return G(g,(Yo)=>W_e(Yo.origin))}function Tr(Yo,qr=\"coalesced\"){let Lr=Yo.origin;if(!W_e(Lr))return H_e;let Kr=Yo.admissionExempt===\"resurrected\";if(!Kr&&!X7e(Lr)){let vr=$o.checkHopChain(Lr.hopChain,R1r());if(vr&&!vr.admitted){if(Po.report({reason:vr.reason,from:Lr.from,...Lr.name!==void 0&&{name:Lr.name}}),qr===\"coalesced\")Yr(Yo,vr.reason);return{admitted:!1,reason:vr.reason}}}if(!Kr&&X7e(Lr)){let vr=typeof Yo.value===\"string\"?Yo.value:fo(Yo.value),nr=$o.admit({senderKey:Lr.from!==\"unknown\"?`from:${Lr.from}`:`pid:${Lr.verifiedPeerPid}`,body:vr,hopChain:Lr.hopChain,ownTokens:R1r()});if(!nr.admitted){if(Po.report({reason:nr.reason,from:Lr.from,...Lr.name!==void 0&&{name:Lr.name}}),qr===\"coalesced\")Yr(Yo,nr.reason);return{admitted:!1,reason:nr.reason}}}if(po()>=C$t().maxQueuedPeerMessages){if(Po.report({reason:\"queue-full\",from:Lr.from,...Lr.name!==void 0&&{name:Lr.name}}),qr===\"coalesced\")Yr(Yo,\"queue-full\");return{admitted:!1,reason:\"queue-full\"}}return y(\"peer_loop_guard\"),H_e}function Yr(Yo,qr){let Lr=Yo.origin;if(Lr?.kind!==\"peer\"||ty(Lr.from).scheme!==\"uds\"||!hi().inbound.sendPeerReceipt)return;Po.noteDropForReceipt(`${Lr.from}\\x00${Lr.verifiedPeerPid??\"\"}\\x00${qr}`,Lr.msg_id,(Kr)=>hi().inbound.sendPeerReceipt?.(Yo,\"dropped\",{dropReason:qr,droppedMsgIds:Kr}))}function gr(Yo,{receipt:qr=\"coalesced\",ahead:Lr=!1}={}){let Kr=Tr(Yo,qr);if(!Kr.admitted)return Kr;let vr={...V7e(Yo),priority:Yo.priority??\"next\",timestamp:Yo.timestamp??new Date().toISOString()};if(Lr)g.unshift(vr);else g.push(vr);if(Yo.origin?.kind===\"peer\"&&Yo.origin.handback===!0&&Yo.origin.senderTaskId!==void 0&&Yo.admissionExempt!==\"resurrected\")_9n({sender:Yo.origin.senderTaskId,recipient:Yo.agentId,senderName:Yo.origin.from,flagged:Yo.origin.flagged===!0});if(zFo(Yo.uuid),K(),!Yo.unlogged)s(\"enqueue\",typeof Yo.value===\"string\"?Yo.value:void 0);return H_e}function _o(Yo){gr(Yo)}function wo(Yo,{turnAttribution:qr=\"none\"}={}){if(!Tr(Yo).admitted)return;let Lr=Yo;if(Yo.mode===\"task-notification\"&&typeof Yo.value===\"string\"){let nr=md(Yo.value,rSt);if(nr!==Yo.value)t(`enqueuePendingNotification: task-notification capped from ${Yo.value.length} to ${nr.length} chars`,{level:\"warn\"}),Lr={...Yo,value:nr}}let Kr=Yo.inheritedTurnAttributionKey??(qr===\"inherit\"&&Yo.mode===\"task-notification\"?Gwn():void 0);if(qr===\"inherit\"&&Yo.mode===\"task-notification\"&&(Lr.origin===void 0||Lr.origin.kind===\"task-notification\"))Lr={...Lr,origin:{...Lr.origin??{kind:\"task-notification\"},producer:\"session-task\"}};let vr=Yo.stampThreadState??(Yo.mode===\"task-notification\"&&Yo.handbackPointer!==!0&&Xf(Yo)&&LMt({isPeer:!1}));if(g.push({...V7e(Lr),priority:Yo.priority??\"later\",timestamp:Yo.timestamp??new Date().toISOString(),...Kr&&{inheritedTurnAttributionKey:Kr},...vr&&{stampThreadState:!0}}),K(),!Yo.unlogged)s(\"enqueue\",typeof Lr.value===\"string\"?Lr.value:void 0)}async function br(Yo){dr(1);let{command:qr,delivered:Lr}=or(Yo,void 0);return g.push(qr),K(),s(\"enqueue\",qr.pollEvent?.envelope),Lr}async function xo(Yo){if(dr(Yo.length),Yo.length===0||Yo.length>X1e||Yo.some((nr)=>nr.wake===!1))throw m(\"poll_event_delivery\",\"group_refused\"),new P(`poll event rejected: a group holds 1 to ${X1e} events, none of them wake: false`,\"poll event rejected: group shape\");let qr=j_e(),Lr=Yo.map((nr)=>or(nr,qr)),Kr=Lr.reduce((nr,{command:hs})=>nr+Buffer.byteLength(hs.pollEvent?.envelope??\"\",\"utf8\"),0);if(Kr>oue)throw m(\"poll_event_delivery\",\"group_too_large\"),new P(`poll event rejected: the group is ${Kr} bytes after nonce stamping (cap ${oue})`,\"poll event rejected: group too large\");let vr=Yo.reduce((nr,hs)=>nr+(hs.declared===void 0?0:Q8e(hs.declared.fields)),0);if(vr>oue)throw m(\"poll_event_delivery\",\"group_too_large\"),new P(`poll event rejected: the group's fields are ${vr} bytes as sent (cap ${oue})`,\"poll event rejected: group too large\");g.push(...Lr.map(({command:nr})=>nr)),K();for(let{command:nr}of Lr)s(\"enqueue\",nr.pollEvent?.envelope);await Promise.all(Lr.map(({delivered:nr})=>nr))}function dr(Yo){let qr=G(g,tb);if(qr+Yo>lSe)throw m(\"poll_event_delivery\",\"queue_cap\"),new P(Yo===1?`poll event rejected: ${lSe} events already queued`:`poll event rejected: the queue holds at most ${lSe} events (${qr} queued, ${Yo} arriving)`,\"poll event rejected: queue depth cap\")}function or(Yo,qr){if(!q8e(Yo.kind))throw m(\"poll_event_delivery\",\"invalid_kind\"),new P(\"poll event rejected: invalid kind (a lowercase letter, then lowercase letters, digits and hyphens, at most 64 characters)\",\"poll event rejected: invalid kind\");if(Y8e(Yo.kind)&&Yo.allowReservedKind!==!0)throw m(\"poll_event_delivery\",\"reserved_kind\"),new P(`poll event rejected: kind \"${Yo.kind}\" is reserved for a trusted in-process producer`,\"poll event rejected: reserved kind\");let Lr,Kr=\"element\",vr;if(Yo.element!==void 0){if(Yo.content!==void 0||Yo.declared!==void 0)throw Error(\"poll event: pass one of content, element, declared\");let ua=Buffer.byteLength(Yo.element,\"utf8\");if(ua>Nmn(Yo.kind))throw m(\"poll_event_delivery\",\"envelope_too_large\"),new P(`poll event rejected: envelope is ${ua} bytes (cap ${Nmn(Yo.kind)})`,\"poll event rejected: envelope too large\");let Tl=Bmn(Yo.element);if(!Tl.ok)throw m(\"poll_event_delivery\",\"validation_failed\"),new P(`poll event rejected: ${Tl.reason}`,\"poll event rejected: element failed validation\");if(Tl.kind!==Yo.kind)throw m(\"poll_event_delivery\",\"kind_mismatch\"),new P(`poll event rejected: element kind \"${Tl.kind}\" does not match declared kind \"${Yo.kind}\"`,\"poll event rejected: kind mismatch\");Lr=Yo.element}else if(Yo.declared!==void 0){if(Yo.content!==void 0)throw Error(\"poll event: pass one of content, element, declared\");let ua=R2n(Yo.declared);if(!ua.ok||Yo.declared.declaration.kind!==Yo.kind)throw m(\"poll_event_delivery\",\"fields_invalid\"),new P(`poll event rejected: ${ua.ok?\"declaration is for another kind\":ua.reason}`,\"poll event rejected: fields failed validation\");Lr=ua.envelope,Kr=\"json\",vr={at:Yo.declared.at,fields:ua.fields}}else if(Yo.content!==void 0)Lr=$mn({kind:Yo.kind,at:new Date().toISOString(),content:Yo.content});else throw Error(\"poll event: content, element or declared is required\");let nr=eUo();Lr=jmn(Lr,nr,Kr);let hs=Buffer.byteLength(Lr,\"utf8\");if(hs>Nmn(Yo.kind))throw m(\"poll_event_delivery\",\"envelope_too_large\"),new P(`poll event rejected: envelope is ${hs} bytes after nonce stamping (cap ${Nmn(Yo.kind)})`,\"poll event rejected: envelope too large\");let Rr=Yo.wake??!0,Vr,ti,oi=new Promise((ua,Tl)=>{Vr=ua,ti=Tl});return{command:{value:Lr,mode:\"poll-event\",agentId:Ge(),priority:Rr?\"next\":\"later\",uuid:j_e(),isMeta:!0,...!1,timestamp:new Date().toISOString(),pollEvent:{kind:Yo.kind,envelope:Lr,...!1,...Yo.media!==void 0&&Yo.media.length>0&&{media:Yo.media},...!1,...!1,...!1,wake:Rr,...!1,...!1,settleDelivered:Vr,settleDropped:ti,provenance:Yo.provenance,...vr!==void 0&&{declared:vr},...qr!==void 0&&{group:qr}}},delivered:oi}}function Wr(){let Yo=g.filter(J1e);if(Yo.length===0)return{commands:[],remainingWakeCount:0};let qr=YUr(Yo),Lr=new Set(qr),Kr=g.filter((vr)=>!Lr.has(vr));g.length=0,g.push(...Kr),K();for(let vr of Lr)if(!vr.unlogged)s(\"dequeue\");return{commands:qr,remainingWakeCount:gi()}}let _r=!1;function Fr(){if(_r)return!1;return _r=!0,!0}function es(){_r=!1}let qs=0;function Vs(){qs++}function fs(){if(qs===0)return;if(qs--,qs===0)try{b.emit()}catch(Yo){if(at(Yo))t(`queueChanged listener aborted: ${Yo}`);else d(Yo)}}function Qi(){return qs}function xs(Yo){let qr=G(Yo,(Lr)=>Lr.pollEvent?.wake===!0);return Math.max(0,gi()-qr)}function gi(){return G(g,(Yo)=>J1e(Yo)&&Yo.pollEvent?.wake===!0)}function ar(Yo){if(g.length===0)return;let qr=-1,Lr=1/0;for(let vr=0;vr<g.length;vr++){let nr=g[vr];if(Yo&&!Yo(nr))continue;let hs=R9[nr.priority??\"next\"];if(hs<Lr)qr=vr,Lr=hs}if(qr===-1)return;let[Kr]=g.splice(qr,1);if(K(),!Kr.unlogged)s(\"dequeue\");return Kr}function Go(){if(g.length===0)return[];let Yo=[...g];g.length=0,K();for(let qr of Yo)if(!qr.unlogged)s(\"dequeue\");return Yo}function Hr(Yo){if(g.length===0)return;let qr=-1,Lr=1/0;for(let Kr=0;Kr<g.length;Kr++){let vr=g[Kr];if(Yo&&!Yo(vr))continue;let nr=R9[vr.priority??\"next\"];if(nr<Lr)qr=Kr,Lr=nr}if(qr===-1)return;return g[qr]}function os(Yo){let qr=[],Lr=[];for(let Kr of g)if(Yo(Kr))qr.push(Kr);else Lr.push(Kr);if(qr.length===0)return[];g.length=0,g.push(...Lr),K();for(let Kr of qr)if(!Kr.unlogged)s(\"dequeue\");return qr}function mr(Yo,qr){vi((Lr)=>Yo.includes(Lr),r.commandsDiscarded,qr?.reason)}function ls(Yo,qr){vi((Lr)=>Yo.includes(Lr),r.commandsConsumed,qr.reason)}function ts(Yo,qr){return vi(Yo,r.commandsDiscarded,qr?.reason)}function Zs(Yo){VFo(Yo),r.commandsDiscarded.emit(Yo)}function vi(Yo,qr,Lr){let Kr=[];for(let vr=g.length-1;vr>=0;vr--)if(Yo(g[vr]))Kr.unshift(g.splice(vr,1)[0]);if(Kr.length>0){K();try{w.emit()}catch(vr){if(at(vr))t(`commandsRemoved listener aborted: ${vr}`);else d(vr)}for(let vr of Kr){if(vr.unlogged)continue;s(\"remove\",typeof vr.value===\"string\"?vr.value:void 0,Lr,vr.attachmentSourceUuid??vr.uuid,vr.deliveryId)}if(qr===r.commandsDiscarded)Zs(Kr);else qr.emit(Kr)}return Kr}function Ui(Yo){if(g.length===0)return[];let qr=Yo?.keep,Lr=qr?g.filter((vr)=>!qr(vr)):g;if(Lr.length===0)return[];let Kr=F7e(Lr,(vr)=>vr.mode);return t(`[clearCommandQueue] dropping ${Lr.length} queued command(s): ${Object.entries(Kr).map(([vr,nr])=>`${vr}=${nr.length}`).join(\" \")}`,{level:\"warn\"}),vre(Lr.filter(tb),\"queue cleared\"),ts(qr?(vr)=>!qr(vr):()=>!0,Yo)}function Zo(){g.length=0,h=Object.freeze([]),_r=!1,D.clear(),j.clear(),ve.clear(),qe=!1,ur(),un(),Yt.clear()}function ri(Yo,qr,Lr){let Kr=Yo.map((hs)=>({text:Dln(hs),entries:BOr(hs)}));function vr(hs,Rr){let Vr=new Set;for(let ti of wd(hs))if(OLt(ti.id)&&!Rr.has(ti.id))Vr.add(ti.id);return Vr}let nr=[vr(qr,new Set(Object.keys(Lr).map(Number))),...Kr.map((hs)=>vr(hs.text,new Set(hs.entries.map((Rr)=>Rr.id))))];return Kr.map((hs,Rr)=>{let Vr=new Set;nr.forEach((Ci,ua)=>{if(ua!==Rr+1)for(let Tl of Ci)Vr.add(Tl)});let ti=hs.text,oi=hs.entries.map((Ci)=>{if(Ci.type!==\"text\"||!Vr.has(Ci.id))return Ci;let ua=PC(qr,Lr);return ti=U_e(ti,Ci.id,ua,\"text\"),{...Ci,id:ua}});return{text:ti,entries:oi}})}function Wa(Yo,qr,Lr={}){if(g.length===0)return;let Kr=Yo===\"\",vr=g.filter((Pl)=>YTe(Pl,Kr));if(vr.length===0)return;let nr=vr.every((Pl)=>Pl.mode===\"bash\")?\"bash\":\"prompt\",hs=nr===\"bash\"?vr:vr.filter((Pl)=>Pl.mode!==\"bash\"),Rr=ri(hs,Yo,Lr),Vr=Rr.map((Pl,Eu)=>Q7e(Pl.text,hs[Eu].value,Yo,Lr)),{text:ti,cursorOffset:oi}=J7e(Vr.map((Pl)=>Pl.text).filter(Boolean).join(`\n`),Yo,qr),Ci=[];for(let[Pl,Eu]of Rr.entries())Ci.push(...Eu.entries,...Vr[Pl].images);for(let Pl of hs){if(Pl.unlogged)continue;s(\"popAll\",typeof Pl.value===\"string\"?Pl.value:void 0)}let ua=new Set(hs),Tl=g.filter((Pl)=>!ua.has(Pl));return g.length=0,g.push(...Tl),K(),Zs(hs),{text:ti,cursorOffset:oi,images:Ci,mode:nr,ideSelection:hs.find((Pl)=>Pl.ideSelection?.text)?.ideSelection??hs.find((Pl)=>Pl.ideSelection!==void 0)?.ideSelection}}function ss(Yo,qr,Lr,Kr={}){let nr=g.filter(tf)[Yo];if(!nr)return;if(!YTe(nr,qr===\"\"))return;let[hs]=ri([nr],qr,Kr),{text:Rr,entries:Vr}=hs,ti=Q7e(Rr,nr.value,qr,Kr),{text:oi,cursorOffset:Ci}=J7e(ti.text,qr,Lr),ua=Vr;if(ua.push(...ti.images),!nr.unlogged)s(\"popOne\",typeof nr.value===\"string\"?nr.value:void 0);let Tl=g.indexOf(nr);if(Tl!==-1)g.splice(Tl,1),K(),Zs([nr]);return{text:oi,cursorOffset:Ci,images:ua,mode:nr.mode===\"bash\"?\"bash\":\"prompt\",ideSelection:nr.ideSelection}}function ii(Yo){let qr=R9[Yo];return g.filter((Lr)=>R9[Lr.priority??\"next\"]<=qr)}return{subscribe:b.subscribe,subscribeToRemovals:w.subscribe,getCommandQueueSnapshot:zn,getCommandQueue:xn,getCommandQueueLength:Jn,getMainThreadQueueLength:wn,getDrainableMainThreadQueueLength:eo,...!1,getQueuedPeerMessageCount:po,hasCommandsInQueue:to,recheckCommandQueue:mo,enqueue:_o,enqueueReportingAdmission:gr,flushPeerDropReceipts:kr,enqueuePendingNotification:wo,enqueuePollEvent:br,enqueuePollEventGroup:xo,drainPollEventChunk:Wr,countPendingWakePollEvents:gi,countRemainingWakePollEventsAfter:xs,hasUserIntentCommandsInQueue:ao,tryBeginPollCall:Fr,endPollCall:es,beginPollEventAdmission:Vs,endPollEventAdmission:fs,pollEventAdmissionsPending:Qi,dequeue:ar,dequeueAll:Go,peek:Hr,dequeueAllMatching:os,remove:mr,consume:ls,removeByFilter:ts,clearCommandQueue:Ui,resetCommandQueue:Zo,popAllEditable:Wa,popEditableAt:ss,getCommandsByMaxPriority:ii,markCancelPending:he,consumeCancelPending:_e,consumeCancelPendingAcked:ke,hasCancelPendingAcked:be,registerFoldInFlight:Te,unregisterFoldInFlight:xe,isFoldInFlight:Pe,beginInboundIngest:Ne,withdrawInboundIngest:We,suspendMidTurnFold:Qe,isMidTurnFoldSuspended:$t,settleScreening:Ze,settleSurfaced:et,promoteToNow:ht,demoteFromNow:kt,setInFlightDrainBatch:Xt,clearInFlightDrainBatch:un,someInFlightDrainCommand:rn,trackSubmission:Qt,someSubmissionInFlight:nn,noteTurnAppended:Pn,getInFlightDrainBatchStanding:$n,takeInboundEnqueueTurn:En}}",
+      "variable": false
+    },
+    {
+      "port": "source:chunk-mphp7acd.js:rln",
+      "file": "chunk-mphp7acd.js",
+      "name": "rln",
+      "start": 4255689,
+      "end": 4255750,
+      "moduleLength": 4409957,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "64650f5c8d5d3378bf0c8dcbfa1218ca76368acfa97cd735ad813eeaf0bbdd1d",
+      "source": "async function rln(e,n){await js().insertQueueOperation(e,n)}",
+      "variable": false
+    },
+    {
+      "port": "source:chunk-mphp7acd.js:hy",
+      "file": "chunk-mphp7acd.js",
+      "name": "hy",
+      "start": 240082,
+      "end": 240115,
+      "moduleLength": 4409957,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "c889119483f9de1927371655405b27e6eeb0fb9ff71af38fa7913f5c8ceca921",
+      "source": "function hy(){return tQe().queue}",
+      "variable": false
+    },
+    {
+      "port": "source:chunk-dgp2yyqt.js:ime",
+      "file": "chunk-dgp2yyqt.js",
+      "name": "ime",
+      "start": 12638,
+      "end": 12676,
+      "moduleLength": 139899,
+      "moduleSha256": "0ac39806e4b50d15e5b1de301d8553a870917c87ef024d423bc9476e0ced21da",
+      "sha256": "4b1d1b35d5fff33f9d61ef923c44fdbc7f7c676e66df31599bbc4143fa47acb1",
+      "source": "function ime(e,o){fo.of(e).release(o)}",
+      "variable": false
+    },
+    {
+      "port": "sharedPort:execution",
+      "file": "chunk-bn3p37gv.js",
+      "name": "U",
+      "start": 71979,
+      "end": 72003,
+      "moduleLength": 117054,
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "sha256": "d5765c805efa91af7bd3d31fd797817dc842807e44caf735c5f45538eada7a7c",
+      "source": "function U(){return n()}",
+      "variable": false
+    },
+    {
+      "port": "source:chunk-nankzm0s.js:TF",
+      "file": "chunk-nankzm0s.js",
+      "name": "TF",
+      "start": 684105,
+      "end": 686854,
+      "moduleLength": 706979,
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "sha256": "fe8cf36a10905e2693c6d63f0a15d696e0159fb3fff0f037f6a455d17d8ee72a",
+      "source": "async function TF(e){let n=ge(\"policySettings\"),r=n?.forceLoginOrgUUID,s=r!==void 0||n?.forceLoginMethod!==void 0;if(hCn()&&!j8()){let D=vf.find((K)=>K===ufe()[0]?.errno);p(\"auth_force_login_org\",\"policy_denied_passthrough\",{errno:me(D)??S(\"other\"),api_provider:c(He())})}else if(hCn()){let D=ufe()[0];if(D){let K=D.errorClass===\"unreadable\",G=D.message.match(NK),z=vf.find((J)=>J===G?.[1]),j=K?me(z)??S(\"other\"):S(\"malformed\");return await Xt(\"auth_force_login_org\",\"policy_unreadable_fail_close\",{errno:j}),{valid:!1,reason:\"managed_settings_invalid\",policyUnreadable:!0,message:`Unable to read managed policy settings.\nThis machine may require organization login enforcement, but the policy file failed to load.\nContact your administrator.\n\nDetail: ${D.file?`${D.file}: ${D.message}`:D.message}`}}}let g=await Twn();if(g)return g;if(a.CLAUDE_CODE_PROVIDER_MANAGED_BY_HOST){if(s)p(\"auth_force_login_org\",\"managed_by_host_under_pin\");return{valid:!0}}if(a.ANTHROPIC_UNIX_SOCKET){let D={api_provider:c(He()),auth_token_source:c(Rc().source)};if(!vl()&&s)p(\"auth_force_login_org\",\"unix_socket_3p_under_pin\",D);else if(vl()&&r!==void 0)p(\"auth_force_login_org\",\"unix_socket_ssh_under_pin\",D);else if(j8())p(\"auth_force_login_org\",\"unix_socket_unreadable_policy\",D);else y(\"auth_force_login_org\");return{valid:!0}}if(!vl()){if(s&&IK())return{valid:!1,reason:\"org_pin_api_key_conflict\",message:xK({orgPinned:r!==void 0})};return{valid:!0}}if(r===void 0)return{valid:!0};let h=typeof r===\"string\"?[r]:r;if(h.length===0)return{valid:!1,reason:\"managed_settings_invalid\",message:`forceLoginOrgUUID in managed settings is set to an empty array.\nNo organizations are permitted. This is almost certainly a misconfiguration.\nContact your administrator.`};let b=h.length===1?`organization ${h[0]}`:`one of these organizations: ${h.join(\", \")}`;await $i({credentials:e});let v=fn();if(!v)return{valid:!0};let{source:w}=Rc(),A=w===\"CLAUDE_CODE_OAUTH_TOKEN\"||w===\"CLAUDE_CODE_OAUTH_TOKEN_FILE_DESCRIPTOR\",R=await Hyt(v.accessToken);if(!R)return{valid:!1,reason:\"org_verify_failed\",message:pns(b)};let M=R.organization_uuid;if(h.includes(M))return{valid:!0};if(A)return{valid:!1,reason:\"org_pin_mismatch\",message:`The ${w===\"CLAUDE_CODE_OAUTH_TOKEN\"?\"CLAUDE_CODE_OAUTH_TOKEN\":\"CLAUDE_CODE_OAUTH_TOKEN_FILE_DESCRIPTOR\"} environment variable provides a token for a\ndifferent organization than required by this machine's managed settings.\n\nRequired: ${b}\nToken organization: ${M}\n\nRemove the environment variable or obtain a token for a permitted organization.`};return{valid:!1,reason:\"org_pin_mismatch\",message:`Your authentication token belongs to organization ${M},\nbut this machine requires ${b}.\n\nPlease log in with a permitted organization: claude auth login`}}",
+      "variable": false
+    },
+    {
+      "port": "source:chunk-4gbrna1q.js:pHe",
+      "file": "chunk-4gbrna1q.js",
+      "name": "pHe",
+      "start": 9992,
+      "end": 10140,
+      "moduleLength": 12865,
+      "moduleSha256": "42d1934eb49e97b34d9c7f03d18a8e0adf4c48e48d0b62043deb9134da27ac71",
+      "sha256": "8aa7f3262e366e3aab8da0d147cb33a9f2a660628ab66ae99b18dee3769bb43b",
+      "source": "async function pHe(o){if(o.policyUnreadable)await Qet(\"policy_invalid\");else if(o.reason===\"provider_not_allowed\")await Qet(\"provider_not_allowed\")}",
+      "variable": false
+    },
+    {
+      "port": "source:chunk-z6bxsds6.js:Vs",
+      "file": "chunk-z6bxsds6.js",
+      "name": "Vs",
+      "start": 1283,
+      "end": 1328,
+      "moduleLength": 1446,
+      "moduleSha256": "d61c217d40821968f7024fd18a54b936163654848271023cd293a87f11059698",
+      "sha256": "754df1df8c326ed27c635aabc1fdaad5dfb1d100dd9d78653cbc89be7ff92390",
+      "source": "async function Vs(r){return await K9(),Yt(r)}",
+      "variable": false
+    },
+    {
+      "port": "source:chunk-b7yc4zs1.js:zb",
+      "file": "chunk-b7yc4zs1.js",
+      "name": "zb",
+      "start": 44301,
+      "end": 44340,
+      "moduleLength": 45063,
+      "moduleSha256": "e8dbbc612181438bc16dcd53cbd6b4dc84da107add9a4f8e24f9881fa529ff20",
+      "sha256": "7889ebce66aa1c010c9f7a49bf0393193f7d1b9fdea164039b04137beb38b610",
+      "source": "function zb(){return A().waitForLoad()}",
+      "variable": false
+    },
+    {
+      "port": "source:chunk-hhbs19e8.js:j_e",
+      "file": "chunk-hhbs19e8.js",
+      "name": "j_e",
+      "start": 902,
+      "end": 1142,
+      "moduleLength": 1931,
+      "moduleSha256": "a6904b853c780788e7fcda043b6688f83417fed39af10c76ba034cea31c21ca7",
+      "sha256": "4806a12756d1136ac32c77ab58cc6348e58d325d8914a97db510cedcea1f2596",
+      "source": "function j_e(){let o=He();if(o!==\"firstParty\")return`Cloud sessions aren't available with ${_b[o]}. They run on Anthropic's infrastructure and require an Anthropic account.`;let{featureLabel:e,verb:t}=x3(SJ.policy);return op(SJ.policy,e,t)}",
+      "variable": false
+    },
+    {
+      "port": "source:chunk-eh4x73e7.js:V2",
+      "file": "chunk-eh4x73e7.js",
+      "name": "V2",
+      "start": 1063,
+      "end": 1118,
+      "moduleLength": 1134,
+      "moduleSha256": "52d9346c15b4e6cfa63e733d81df73bce706440c2a6316039513a0cfcb6bb913",
+      "sha256": "822a79246b00c40014fe8003d14f0f7f05e458084bc4dc4a113533b4093ae135",
+      "source": "async function V2(o,n){let e=l(o,n);if(e)await js(r,e)}",
+      "variable": false
+    },
+    {
+      "port": "source:chunk-z6bxsds6.js:Yt",
+      "file": "chunk-z6bxsds6.js",
+      "name": "Yt",
+      "start": 796,
+      "end": 865,
+      "moduleLength": 1446,
+      "moduleSha256": "d61c217d40821968f7024fd18a54b936163654848271023cd293a87f11059698",
+      "sha256": "17ce9a78816fc49c381710f94dbc52f51010de74bd9795feefebe1444ef0c5f4",
+      "source": "function Yt(r,e=\"cli_error\"){if(r)Gb(r);iy(e),process.exit(1);return}",
+      "variable": false
+    },
+    {
+      "port": "source:chunk-6hnyhakg.js:i",
+      "file": "chunk-6hnyhakg.js",
+      "name": "i",
+      "start": 1280,
+      "end": 1397,
+      "moduleLength": 1555,
+      "moduleSha256": "b2c8cad6d46be86d5715172f94bfc8b9ddbe5f28c2e068ee53ebebb35b9948de",
+      "sha256": "7f2df95e7a21ebb980f33de170d716031fa6e71b459046f55a71def4a55e662f",
+      "source": "function i(t,e){let n=a().state;if(n.sink===null){s(n,{eventName:t,metadata:e,async:!1});return}n.sink.logEvent(t,e)}",
+      "variable": false
+    },
+    {
+      "port": "source:chunk-n4qghq20.js:S",
+      "file": "chunk-n4qghq20.js",
+      "name": "S",
+      "start": 638,
+      "end": 664,
+      "moduleLength": 1262,
+      "moduleSha256": "39fd2d5d055aa0449210ddff4a5907753c0460a10b43931920c5796a088aabbb",
+      "sha256": "65a65776e268960bd5cc11c861e76e3529375e2df46f70130ed18e27f72b5593",
+      "source": "function S(n){return r(n)}",
+      "variable": false
+    },
+    {
+      "port": "source:chunk-n4qghq20.js:c",
+      "file": "chunk-n4qghq20.js",
+      "name": "c",
+      "start": 664,
+      "end": 690,
+      "moduleLength": 1262,
+      "moduleSha256": "39fd2d5d055aa0449210ddff4a5907753c0460a10b43931920c5796a088aabbb",
+      "sha256": "d4c7342609cd0a7749fcf57a4e4890c3b5ec3da022d6e17789baa2ccb91c1a46",
+      "source": "function c(n){return r(n)}",
+      "variable": false
+    },
+    {
+      "port": "source:chunk-6hnyhakg.js:js",
+      "file": "chunk-6hnyhakg.js",
+      "name": "js",
+      "start": 1397,
+      "end": 1532,
+      "moduleLength": 1555,
+      "moduleSha256": "b2c8cad6d46be86d5715172f94bfc8b9ddbe5f28c2e068ee53ebebb35b9948de",
+      "sha256": "9ade9881c1525e92b994b0b5c4dd7d05a6ad45067fbe7a933362f496916f8784",
+      "source": "async function js(t,e){let n=a().state;if(n.sink===null){s(n,{eventName:t,metadata:e,async:!0});return}await n.sink.logEventAsync(t,e)}",
+      "variable": false
+    },
+    {
+      "port": "source:chunk-db6pdgvs.js:hbt",
+      "file": "chunk-db6pdgvs.js",
+      "name": "hbt",
+      "start": 5260,
+      "end": 5465,
+      "moduleLength": 6205,
+      "moduleSha256": "27247d248a56b7dfc83942ad8f278f0fee36b26c995d5382ded1e7d3d36266ed",
+      "sha256": "94cc3b9431b8357dd471d97ffe4039609addf4174993e775be9471f41f07da0f",
+      "source": "function hbt(e){return`Error: the --disallowed-tools rule \"${ze(e,64)}\" has an opening parenthesis that is never closed, so a cloud session would drop it. Close the parenthesis and run the command again.`}",
+      "variable": false
+    },
+    {
+      "port": "source:chunk-dgp2yyqt.js:fHe",
+      "file": "chunk-dgp2yyqt.js",
+      "name": "fHe",
+      "start": 42120,
+      "end": 42207,
+      "moduleLength": 139899,
+      "moduleSha256": "0ac39806e4b50d15e5b1de301d8553a870917c87ef024d423bc9476e0ced21da",
+      "sha256": "20fe10938963edd91efbd9669827d4d93209a9a1939b595d90e6e5f64e26d521",
+      "source": "function fHe(e){let o=e?rA(e):void 0;return o&&gz(o)&&o!==\"bypassPermissions\"?o:void 0}",
+      "variable": false
+    },
+    {
+      "port": "source:chunk-2ynta9xc.js:sd",
+      "file": "chunk-2ynta9xc.js",
+      "name": "sd",
+      "start": 54508,
+      "end": 54715,
+      "moduleLength": 77871,
+      "moduleSha256": "f3e239a22bc356ef2664a104850f816b164d4874821637ec72f203620c439e1d",
+      "sha256": "974310703f8fd89f510ccc91eee605018330dc135a0c2fdd37b00a4f6b61f4d1",
+      "source": "sd=async(e,n={env:Qo()})=>{if(e===void 0)return LYo();let{stdout:r,code:o}=await Je(vt(),[...yn,\"rev-parse\",\"--abbrev-ref\",\"HEAD\"],{cwd:e,preserveOutputOnError:!1,...n});return o===0?r.trim()||\"HEAD\":\"HEAD\"}",
+      "variable": true
+    },
+    {
+      "port": "source:chunk-mphp7acd.js:p0",
+      "file": "chunk-mphp7acd.js",
+      "name": "p0",
+      "start": 3187761,
+      "end": 3215210,
+      "moduleLength": 4409957,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "808a8dfcc991d1b0d6d10d52574a00e05633cca8a0f87c35597bd7329c17ec1e",
+      "source": "async function p0(e){let{initialMessage:n,signal:r}=e,s=e.cwd??oe(),g=e.connectedSession===void 0?void 0:Promise.resolve(e.connectedSession),h=()=>g??=o9e(),b,w=()=>b??=h().then((_e)=>W9t(_e,void 0)),D,j=()=>D??=XA().catch(()=>!1).then(async(_e)=>_e||await h()),z=op(\"allow_remote_sessions\",\"Cloud sessions\",\"are\");if(z)return $C(\"allow_remote_sessions\",\"cloud_session\"),e.onCreateFail?.(z,\"policy_denied\"),null;if(AT())return e.onCreateFail?.(xzn,\"restricted_session\"),null;if(e.builtinTools?.length===0)return e.onCreateFail?.(m6t,\"builtin_tools_empty\"),null;if(a.CLAUDE_CODE_EVAL_CONFINED)return e.onCreateFail?.(UV,\"eval_confined\"),null;if(!Vn())return e.onCreateFail?.(\"Cloud sessions are only available on the first-party Anthropic API provider.\",\"not_first_party\"),null;let K=null,he=!1;try{e.onProgress?.({kind:\"checking\",...lr(s)===null&&{folder:!0}});let _e=m1r(e)&&(Object.keys(e.environmentVariables??{}).length===0&&await h()||(e.source===\"ultrareview\"||e.source===\"ultraplan\")&&await v_(o$o))?\"v1alpha2\":\"v1\";if(e.sessionGroupingId&&_e!==\"v1alpha2\")return e.onCreateFail?.(m1r(e)?\"--project requires the new session-create endpoint, which isn't enabled for your account yet \\u2014 no session was created.\":\"--project cannot be used on a GitHub-PR-bound create; it has no Project input \\u2014 no session was created.\",\"project_not_enabled\",{endpoint:_e}),null;if(e.agentId&&_e!==\"v1alpha2\")return e.onCreateFail?.(\"Dispatching into a Kindling project requires the new session-create endpoint, which isn't enabled for your account yet \\u2014 no session was created.\",\"agent_not_enabled\",{endpoint:_e}),null;if(e.deviceBinding&&e.sessionGroupingId)return e.onCreateFail?.(\"--project cannot be combined with a device-bound session yet \\u2014 no session was created.\",\"device_bind_project_unsupported\",{endpoint:_e}),null;if(e.deviceBinding&&e.agentId)return e.onCreateFail?.(\"An agent-owned session cannot be combined with a device-bound session yet \\u2014 no session was created.\",\"device_bind_agent_unsupported\",{endpoint:_e}),null;if(e.deviceBinding&&e.deferInitialMessage!==!0&&Eje(e,n)!==void 0)return e.onCreateFail?.(g6t,\"device_bind_tools_prompt_unsupported\",{endpoint:_e}),null;await $i({credentials:e.credentials,storageV5:e.storageV5});let ke=_2e();if(!ke){let ta=\"Cloud sessions require a claude.ai login. Run /login to authenticate.\"+(a.CLAUDE_CODE_REMOTE?` (in CCR: env=${a.CLAUDE_CODE_OAUTH_TOKEN?\"set\":\"unset\"}, fd=${a.CLAUDE_CODE_OAUTH_TOKEN_FILE_DESCRIPTOR?\"set\":\"unset\"})`:\"\");return d(Error(ta)),e.onCreateFail?.(ta,\"no_access_token\"),null}let be=await hj();if(!be){let ta=\"Unable to get organization UUID for cloud session creation\"+(a.CLAUDE_CODE_REMOTE?` (in CCR: CLAUDE_CODE_ORGANIZATION_UUID=${a.CLAUDE_CODE_ORGANIZATION_UUID?\"set\":\"unset\"})`:\"\");return d(Error(ta)),e.onCreateFail?.(ta,\"no_org_uuid\"),null}let ve={...e.environmentVariables};if(delete ve.CLAUDE_CODE_OAUTH_TOKEN,e.environmentId){let{url:ta,headers:xl}=Z9t(_e,ke,be),Xa=null,bd=null;if(e.useBundle){let fp=await j(),wl=await s8t({oauthToken:ke,sessionId:q(),baseUrl:dn().BASE_API_URL},{signal:r,baseRef:e.bundleBaseRef,forceScope:e.bundleForceScope,...fp&&{hardenForDeviceSessions:!0},...r8t(fp,e.onBundleNotice)},e.onBundleNotice);if(r.aborted)throw new Ye;if(!wl.success){if(t(`Bundle upload failed: ${wl.error}`,{level:\"error\"}),wl.failReason!==\"too_large\")e.onBundleFail?.(wl.error,\"bundle\");return null}if(bd=wl.fileId,wl.leftOut?.length)e.onBundleNotice?.(kje(wl.leftOut,{readRules:fp}));if(wl.deletedHere?.length)e.onBundleNotice?.(_je(wl.deletedHere));i(\"tengu_teleport_bundle_mode\",{size_bytes:wl.bundleSizeBytes,scope:c(wl.scope),has_wip:wl.hasWip,reason:S(\"explicit_env_bundle\")})}else if(e.sourceUrl)Xa={type:\"git_repository\",url:e.sourceUrl,revision:e.branchName};else if(!e.agentId){let fp=await hT();if(fp&&!dD(fp))Xa={type:\"git_repository\",url:`https://${fp.host}/${fp.owner}/${fp.name}`,revision:e.branchName}}let Ml=e.title||e.description||\"Remote task\",gf=Eje(e,n),Qf=V9t({initialMessage:gf?null:n,initialMessageUuid:e.initialMessageUuid,permissionMode:e.permissionMode,proactivityLevel:e.proactivityLevel,ultraplan:e.ultraplan,title:e.title,thinking:e.thinking}),Gu=await e8t(e.deviceBinding,_e,e.environmentId,void 0,e.correlationId,e.credentials,h()),Am=f$t(e.environmentId),Cb=(fp,wl,xb)=>_e===\"v1alpha2\"?Efn({title:Ml,worker:Am,events:Qf,sources:Xa?[Xa]:[],outcomes:[],model:e.model,seedBundleFileId:bd??void 0,environmentVariables:ve,appendSystemPrompt:e.appendSystemPrompt,customSystemPrompt:e.customSystemPrompt,appendSubagentSystemPrompt:e.appendSubagentSystemPrompt,fallbackModel:e.fallbackModel,maxTurns:e.maxTurns,maxBudgetUsd:e.maxBudgetUsd,allowedTools:e.allowedTools,disallowedTools:e.disallowedTools,builtinTools:e.builtinTools,outputSchema:e.outputSchema,tags:e.tags,sessionGroupingId:e.sessionGroupingId,agentId:e.agentId,correlationId:e.correlationId,deviceBinding:fp,requestElevatedTier:wl,deferFirstPrompt:xb}):{title:Ml,events:Qf,session_context:{sources:Xa?[Xa]:[],...bd&&{seed_bundle_file_id:bd},outcomes:[],environment_variables:ve,...e.model&&{model:e.model},...e.appendSystemPrompt&&{append_system_prompt:e.appendSystemPrompt},...Y9t(e),...e.outputSchema&&{output_schema:e.outputSchema},...e.correlationId&&{correlation_id:e.correlationId}},...Am,...e.tags&&{tags:e.tags}};if(t(`[teleportToRemote] explicit env ${e.environmentId}, ${Object.keys(ve).length} env vars, ${bd?`bundle=${bd}`:`source=${Xa?.url??\"none\"}@${e.branchName??\"default\"}`}`),r.aborted)throw new Ye;let{response:zu,bind:Ny,held:By,attested:xp,firstPromptDeferred:Nv}=await n8t({prepared:Gu,buildBody:Cb,drops:g1r({events:Qf,environmentVariables:ve}),callerSendsFirstPrompt:e.deferInitialMessage===!0,attaches:{anything:Xa!==null||bd!==null,launchCheckout:null},post:(fp,wl)=>St.post(ta,fp,{headers:wl?{...xl,...wl}:xl,signal:r,validateStatus:(xb)=>xb<500})});if(zu.status!==200&&zu.status!==201){let fp=`CreateSession ${zu.status}: ${_(zu.data)}`,wl=zu.data;if([401,403,429].includes(zu.status)||wl?.error?.reason===\"github_repo_access_denied\"||vA(wl))t(`[teleportToRemote] ${fp}`,{level:\"error\"});else{let xb=(NP)=>NP&&/^[a-z][a-z0-9_]*$/.test(NP)?NP:void 0;d(Error(`[type=${xb(wl?.error?.type)},reason=${xb(wl?.error?.reason)}] ${fp}`))}return e.onCreateFail?.(vA(wl)&&RUe||e.sessionGroupingId&&_1r(e.sessionGroupingId,wl?.error)||y1r(zu.status,wl?.error?.message)||wl?.error?.message||`${zu.status} ${zu.statusText||\"\"}`.trim(),\"create_request_failed\",{status:zu.status,serverType:q9t(wl?.error?.type),serverReason:K9t(wl?.error?.reason),endpoint:_e}),null}let Zf=vfn(_e,zu.data);if(!Zf||typeof Zf.id!==\"string\")return d(st(Error(`No session id in response: ${_(zu.data)}`),\"CreateSession response missing session id\")),e.onCreateFail?.(\"Server returned a malformed session response (no session id)\",\"malformed_response\"),null;e.onProgress?.({kind:\"session_exists\",sessionId:Zf.id});let jy=await Q9t({options:e,createEndpoint:_e,responseData:zu.data,sessionId:Zf.id,held:gf,bound:Ny?.ok===!0,firstPromptDeferred:Nv,followsUploads:!1,signal:r});if(!jy.ok)return null;if(z9t(Zf.id,e.source,{project:!1,global:!1},{endpoint:_e,grouped:e.sessionGroupingId!=null},e.storageV5),t8t(e.deviceBinding,Ny,Zf.id,e.storageV5),xp&&e.title)J9t(Zf.id,e.title,Ny?.ok?Ny.value:void 0,e.credentials,Ny?.ok?By:void 0);let Rb=gf?jy.withheld:Nv?X9t(Qf,n):void 0;return{id:Zf.id,title:Zf.title||Ml,...Rb&&{withheldInitialMessage:Rb},...e.maxTurns!==void 0&&{maxTurnsConfirmed:AUe(_e,Zf,e.maxTurns)}}}let Te=!1,xe=e.poolId!==void 0?{id:e.poolId,source:void 0,ignoredUntrustedPool:void 0}:Te?{id:void 0,source:void 0,ignoredUntrustedPool:void 0}:zde();if(xe.ignoredUntrustedPool)t(`Ignoring self-hosted environment default ${xe.ignoredUntrustedPool.id} from ${xe.ignoredUntrustedPool.source} \\u2014 environment placement is only honoured from user/policy/flag settings. Run /remote-env to set your environment.`,{level:\"warn\"});let Pe=xe.id,$e=Gde(Pe);if($e&&e.poolId===void 0)Cfn(ke,e.credentials).then((ta)=>{if(ta.length>0&&!ta.some((xl)=>xl.pool_id===Pe))t(`Configured default environment ${Pe} is not in the org's environment list \\u2014 sending it anyway; server validates at CreateSession`,{level:\"warn\"})},(ta)=>t(`fetchSelfHostedPools rejected: ${l(ta)}`,{level:\"warn\"}));let Ne=e.description||qJo(n),We=!Ne&&await h(),qe=e.title&&e.reuseOutcomeBranch?Promise.resolve({title:e.title,branchName:e.reuseOutcomeBranch}):We?Promise.resolve(G9t):HJo(Ne||G9t.title,r,e.credentials);t(\"[teleport] phase: env-select\");let Qe=$e?[]:await m9(ke,e.storageV5,e.credentials);if(r.aborted)throw new Ye;if(!$e&&Qe.length===0&&!Te)try{Qe=[await D1e(void 0,r,ke)],t(\"[teleportToRemote] Auto-created default cloud env\")}catch(ta){if(r.aborted)throw new Ye;return t(`[teleportToRemote] auto-create env failed: ${l(ta)}`,{level:\"warn\"}),e.onBundleFail?.(\"Could not create a cloud environment. Set one up at https://claude.ai/code/onboarding?magic=env-setup\",\"env_create\"),null}t(`Available environments: ${Qe.map((ta)=>`${ta.environment_id} (${ta.name}, ${ta.kind})`).join(\", \")}`);let Ze=Pe,et=Ze?Qe.find((ta)=>ta.environment_id===Ze):void 0,bt=Qe.find((ta)=>ta.kind===\"anthropic_cloud\");if(!$e&&e.useDefaultEnvironment&&!et&&!bt){if(t(`No configured default or anthropic_cloud in env list (${Qe.length} envs); retrying fetchEnvironments`),Qe=await m9(ke,e.storageV5,e.credentials),r.aborted)throw new Ye;if(et=Ze?Qe.find((ta)=>ta.environment_id===Ze):void 0,bt=Qe.find((ta)=>ta.kind===\"anthropic_cloud\"),!et&&!bt){let ta=`No configured default or anthropic_cloud environment available after retry (got: ${Qe.map((xl)=>`${xl.name} (${xl.kind})`).join(\", \")}${Ze?`; configured default ${Ze} not in list`:\"\"})`;return t(`[teleportToRemote] ${ta}. Silent byoc fallthrough would launch into a dead env \\u2014 fail fast instead.`,{level:\"error\"}),e.onCreateFail?.(ta,\"no_default_env\"),null}}let kt=$e?void 0:et||bt||Qe.find((ta)=>ta.kind!==\"bridge\")||Qe[0];if(!kt&&!$e)return d(Error(\"No environments available for session creation\")),e.onCreateFail?.(\"No environments available for session creation\",\"no_environments\"),null;if(Ze&&kt){let ta=kt.environment_id===Ze;t(ta?`Using configured default environment: ${Ze}`:`Configured default environment ${Ze} not found, using first available`)}let $t=$e?Ze:kt.environment_id;t(kt?`Selected environment: ${$t} (${kt.name}, ${kt.kind})`:`Selected environment: ${$t}`);let It=null,jt=null,Xt=null,un=\"all\",rn=null,Yt=null;if(e.sourceUrl)It={type:\"git_repository\",url:e.sourceUrl,revision:e.branchName};t(\"[teleport] phase: branch-detect\");let Qt=It||e.agentId||Te?null:await hT(e.cwd),nn=Qt&&dD(Qt)?null:Qt;if(Qt&&!nn)t(\"[teleportToRemote] nested GitLab project \\u2014 not sent as a git source\");let Pn=!1,$n=null,qn=!1,En=!1,zn=e.sourceUrl?\"explicit_source_url\":e.agentId?\"agent_defaults\":\"no_git_at_all\",xn=lr(s),Jn=$e||kt?.kind===\"byoc\",wn=e.reuseOutcomeBranch?\"--on-branch\":\"--ref\",eo=null,to=e.allowBundle&&!Jn&&!e.agentId&&a.CCR_FORCE_BUNDLE,ao=e.allowBundle&&!Jn&&!e.agentId&&xn!==null&&(a.CCR_ENABLE_BUNDLE||await v_(\"tengu_ccr_bundle_seed_enabled\")),mo=e.allowBundle&&!Jn&&!e.agentId&&xn!==null?L9t():[];if(mo.length>0)e.onBundleNotice?.(`${mo.join(\", \")} in this repository\\u2019s .claude/settings files ${mo.length===1?\"is\":\"are\"} ignored there: how a cloud start is seeded from this machine is the machine owner\\u2019s setting (shell environment or ~/.claude/settings.json), never a repository\\u2019s.`);let $o=null,Ao={folderRoot:null,optedIn:!1,insideAnotherCheckout:!1},{folderRoot:Po,optedIn:ur}=Ao,kr,po=e.branchFromHead===!0&&e.branchName!==void 0&&e.explicitRef===void 0,Tr=xn!==null&&await j()?await Kde(xn,r):void 0,Yr=xn!==null&&nn&&!Jn&&!to&&(ur||po)?await Orr(xn,Tr===void 0?void 0:await D5t(Tr,xn,r)):null,gr=po&&e.branchName!==void 0&&xn!==null&&Yr!==null?await N5t({gitRoot:xn,remoteName:Yr.name,branch:e.branchName,nameContaining:nn?!oo(nn.host):!1,sessionRoot:Tr===void 0?void 0:xn,sessionReach:Tr,signal:r}):null,_o=po&&Yr===null&&Tr!==void 0&&!!nn&&!Jn&&!to;if(_o)t(\"[teleportToRemote] the screened remote look-up answered nothing, so the start was not resolved. One possible cause: its git applies no personal git file, so a checkout that git takes for another account\\u2019s counts as safe only when the system file says so (git config --system --add safe.directory <path>).\",{level:\"warn\"});let wo=gr?.kind===\"pushed_ancestor\"&&(!nn||oo(nn.host)||gr.branch!==null||gr.containedIn!==void 0)?gr:null;if(r.aborted)throw new Ye;let br=null;if(r.aborted)throw new Ye;if(nn&&!to)if(Jn)Pn=!0,zn=\"byoc_env_skip_preflight\";else if(oo(nn.host)){let ta=await G4e(nn.owner,nn.name,r);Pn=ta.appInstalled,$n=ta.defaultBranch,qn=ta.transient,En=ta.linkedAccountAccess===\"github_not_connected\",zn=Pn?\"github_preflight_ok\":\"github_preflight_failed\"}else Pn=!0,zn=\"ghes_optimistic\";else if(to)zn=\"forced_bundle\";else if(xn&&!e.agentId)zn=\"no_github_remote\";if(r.aborted)throw new Ye;let xo={engine:\"none\",reason:\"not_opted_in\"},dr=null,or=null,Wr=null,_r=null,Fr=null,es=null,qs=null,Vs=(ta,xl)=>{},fs=nn&&!oo(nn.host)?{reason:\"other_host\"}:e.explicitRef!==void 0?{reason:\"explicit_ref\",flag:wn}:null;if(!Pn&&!ao&&nn)Pn=!0;let Qi=null,xs=null,gi=null;if(gr?.kind===\"none\"&&Pn&&nn&&ao&&or===null&&dr===null)Pn=!1,zn=\"branch_not_on_remote\";if(Pn&&nn){let{host:ta,owner:xl,name:Xa}=nn;kr??=e.branchName??await _T();let bd=kr;if(wo!==null&&Yr!==null){let Ml=oo(ta)?null:wo.branch??wo.containedIn??null;bd=Ml??wo.commit,xs=Ml!==null?Dh(Ml):wo.branch!==null?`${Yr.name}/${Dh(wo.branch)}`:`commit ${wo.commit.slice(0,12)}`,gi=B5t({branch:kr,start:wo,remoteName:Yr.name,host:ta,byName:Ml,carried:ur&&Ml===null}),Qi=gi}else if(gr?.kind===\"none\"){bd=$n??gr.defaultBranch??await _T();let Ml=Dh(bd);xs=Ml,Qi=`${kr===\"HEAD\"?\"This detached HEAD\":`Branch ${Dh(kr)}`} shares no history with ${Yr?.name??\"the remote\"} as last fetched here, so the cloud session starts from ${Ml} instead; commits and changes that exist only on this machine are not in it.`}else if(_o&&!ur){let Ml=oo(ta)?\"GitHub\":ta;Qi=`${kr===\"HEAD\"?`This checkout is on a detached HEAD, and no remote of it could be read, so its commit could not be looked for on ${Ml}. The cloud session was asked to start from HEAD as ${Ml} has it, its default branch. To start from your work, push it`:`Whether branch ${Dh(kr)} is on ${Ml} could not be checked, because no remote of this checkout could be read. The cloud session was asked to start from it by name. If it is not there, push your work`} to a branch and start a new session from that branch.`}if(e.reuseOutcomeBranch){let Ml=process.env.CCR_ON_BRANCH_DEFAULT_GUARD,gf=a.CCR_ON_BRANCH_DEFAULT_GUARD??(Ml!=null&&String(Ml).trim()?\"enforce\":await v_(\"tengu_on_branch_default_guard_observe\").catch(()=>!1)?\"observe\":\"enforce\");if(gf!==\"off\"){let Qf=$n??await Yrr(e.cwd);if(Qf===null)t(\"[teleportToRemote] reuse-outcome-branch collision guard: default branch unknown (no preflight answer, origin/HEAD \"+`unresolved) \\u2014 failing open for '${e.reuseOutcomeBranch}'`);else if(e.reuseOutcomeBranch===Qf){let Gu=e.explicitRef===e.reuseOutcomeBranch,Am=e.source===\"autofix_pr\";if(i(\"tengu_teleport_on_branch_default_guard\",{mode:c(gf),source:c(e.source),evidence:c($n!==null?\"preflight\":\"local_symref\"),arm:c(Jn?\"pool\":\"managed\")}),Jn)t(`[teleportToRemote] reuse-outcome-branch collision guard (pool arm): '${e.reuseOutcomeBranch}' is the `+\"repository's default branch \\u2014 allowed on self-hosted \"+\"pools; emitted for policy telemetry only\");else if(gf===\"observe\")t(`[teleportToRemote] reuse-outcome-branch collision guard (observe): '${e.reuseOutcomeBranch}' is the `+\"repository's default branch \\u2014 would deny; proceeding \"+\"(CCR_ON_BRANCH_DEFAULT_GUARD=observe)\");else return e.onCreateFail?.((Gu?`--on-branch ${e.reuseOutcomeBranch} targets `:Am?`This pull request's head branch '${e.reuseOutcomeBranch}' is `:`The requested outcome branch '${e.reuseOutcomeBranch}' is `)+\"the repository's default branch, which this environment's runner cannot reuse as its work branch (its git checkout -b fails on a name the clone already has). \"+(Gu?`Use --ref ${e.reuseOutcomeBranch} to base the `+\"session on it and let it push to a fresh claude/\\u2026 branch.\":Am?\"Autofix can monitor this PR from a self-hosted (BYOC) default environment, whose runner tolerates reusing the default branch.\":\"Use a non-default branch.\"),\"outcome_branch_is_default\"),null}}}t(`[teleportToRemote] Git source: ${ta}/${xl}/${Xa}, revision: ${bd??\"none\"}${Wr===null?\"\":` pinned at ${Wr}`}`),It={type:\"git_repository\",url:`https://${ta}/${xl}/${Xa}`,revision:Wr??bd,...e.reuseOutcomeBranch&&{allow_unrestricted_git_push:!0}},jt=`${xl}/${Xa}`}let ar=null,Go=null,Hr=Qt?oR(Qt.host):null,os=Hr===\"gitlab\"?\"GitLab\":Hr===\"bitbucket\"?\"Bitbucket\":null;if(!It&&!Jn&&e.explicitRef){let ta=to?\"CCR_FORCE_BUNDLE is set\":nn?qn?\"the GitHub App preflight failed transiently (network or service hiccup)\":\"the GitHub App is not set up for this repository\":\"no GitHub remote was detected in this directory\",xl=ao?\"be seeded from your local working tree\":\"start with an empty sandbox\",Xa=ao?`drop ${wn} to seed from local HEAD`:`drop ${wn} to start with an empty sandbox`;return e.onCreateFail?.(En?`${wn} ${e.explicitRef} cannot be honored: ${f8e()} \\u2014 or ${Xa} instead.`:`${wn} ${e.explicitRef} cannot be honored: ${ta}, so the session would ${xl} instead. `+(!Qt?\"\":qn?\"Retry in a moment, or \":os?`Cloud sessions can't clone from ${os} yet \\u2014 `:\"Set up the GitHub integration at https://claude.ai/code, or \")+`${Xa}.`,e.reuseOutcomeBranch?\"on_branch_no_git_source\":\"explicit_ref_no_git_source\",{preflightTransient:qn}),null}if(r.aborted)throw new Ye;let mr=!0,ls=e.firstUpload,ts=!1,Zs=!It&&ao;if(!1)switch(Xa.kind){case\"failed\":case\"bundle\":case\"clone_fallback\":case\"created_empty\":}if(Zs){t(\"[teleport] phase: bundle-upload\"),t(`[teleportToRemote] Bundling (reason: ${zn})`),i(\"tengu_teleport_bundle_started\",{reason:c(zn)}),e.onProgress?.({kind:\"bundling\",rerouted:!1}),rn=Date.now();let xl=await j(),Xa=await s8t({oauthToken:ke,sessionId:q(),baseUrl:dn().BASE_API_URL},{signal:r,currentBranchOnly:ur,...xl&&{hardenForDeviceSessions:!0},...r8t(xl,e.onBundleNotice),onBundled:(bd)=>e.onProgress?.({kind:\"bundled\",...bd})},ar===null?e.onBundleNotice:null,os?{kind:\"other_forge\",forge:os}:to?{kind:\"forced_bundle\"}:null);if(r.aborted)throw new Ye;if(!Xa.success){let{failReason:bd,error:Ml}=Xa,gf=\"advice\"in Xa?Xa.advice:void 0;if(bd===\"uncommitted_credentials\"||bd===\"git_dir_tampered\")return t(`Bundle refused: ${Ml}`,{level:\"error\"}),e.onBundleFail?.(Ml,\"bundle\"),null;{t(`Bundle upload failed: ${Ml}`,{level:\"error\"});let Qf=!Qt?\"\":zn===\"branch_not_on_remote\"?\". This branch shares no history with the remote as last fetched here; push it (or fetch) to start from GitHub instead\":qn?\". The GitHub App preflight failed transiently (network or service hiccup) \\u2014 retry in a moment to start from GitHub instead\":os?`. Cloud sessions can't clone from ${os} yet, so the bundle is the only way to start one from this repository`:\". Please set up GitHub on https://claude.ai/code\",Gu;switch(bd){case\"empty_repo\":Gu=`${Ml} \\u2014 run \\`git add . && git commit -m \"initial\"\\` then retry`;break;case\"too_large\":Gu=`Repo is too large to teleport${Qf}`;break;case\"git_error\":Gu=`Failed to create git bundle (${Ml})${Qf}`;break;case\"stash_failed\":case\"no_changes\":case\"unsupported_layout\":case\"refused\":Gu=Ml;break;case\"not_a_repo\":Gu=Ml;break;case\"upload_failed\":Gu=`Could not upload repo bundle (${Ml})${Qf}`;break;case void 0:Gu=`Bundle upload failed: ${Ml}${Qf}`;break;default:{let Am=bd;Gu=`Bundle upload failed: ${Ml}`}}return e.onBundleFail?.(Gu,\"bundle\"),null}}else{if(Xt=Xa.fileId,un=Xa.scope,Xa.leftOut?.length)e.onBundleNotice?.(kje(Xa.leftOut,{readRules:xl}));if(Xa.deletedHere?.length)e.onBundleNotice?.(_je(Xa.deletedHere));i(\"tengu_teleport_bundle_mode\",{size_bytes:Xa.bundleSizeBytes,scope:c(Xa.scope),has_wip:Xa.hasWip,current_branch_only:ur,reason:c(zn)})}}let vi=null,Ui=br===null?null:await br;if(r.aborted)throw new Ye;let Zo=It!==null&&xs!==null?xs:kr,ri=Wr!==null,Wa=null,ss=Fr,ii=es,Yo=gr?.kind??null;if(i(\"tengu_teleport_source_decision\",{reason:c(zn),path:S(It?\"github\":Xt?\"bundle\":\"empty\"),...{},...Yo!==null&&{checkout_start:c(Yo)},..._o&&{checkout_start:S(\"remote_unresolved\")},...wo!==null&&{checkout_start_ahead:wo.aheadCount},...{},...{},...{},...{},...{},...{},...{}}),!It&&!Xt){if(Jn&&!e.agentId){let ta=e.explicitRef?` \\u2014 so ${wn} ${e.explicitRef} cannot be honored`:\"\",Xa=`${`The selected environment \"${kt?.name??$t}\"`} requires a git source, but no GitHub remote was detected${ta}. Check that \\`git remote get-url origin\\` returns a GitHub URL.`;return t(`[teleportToRemote] ${Xa} (byoc env, sourceReason=${zn})`,{level:\"error\"}),e.onCreateFail?.(Xa,\"byoc_no_git_source\"),null}if(K===null&&vi===null)t(\"[teleportToRemote] No repository detected \\u2014 session will have an empty sandbox\")}t(\"[teleport] phase: title-await\");let qr=await qe;if(r.aborted)throw new Ye;let Lr=e.title||qr.title,Kr=e.reuseOutcomeBranch||qr.branchName,vr=jt===null?null:{type:\"git_repository\",git_info:{type:\"github\",repo:jt,branches:[Kr]}},{url:nr,headers:hs}=Z9t(_e,ke,be),Rr=!1;if(Qi!==null&&It!==null&&!0)e.onBundleNotice?.(Qi);let ti=Rr&&_e===\"v1alpha2\",oi=!1,Ci=e.ultraplan?`ultraplan: ${Lr}`:Lr,ua=Eje(e,n),Tl=ur||Po!==null||eo!==null,Pl=ua??(e.deferInitialMessage===!0&&n!==null&&Tl?{content:n,uuid:e.initialMessageUuid??DE()}:void 0),Eu=V9t({initialMessage:Pl?null:n,initialMessageUuid:e.initialMessageUuid,permissionMode:e.permissionMode,proactivityLevel:e.proactivityLevel,ultraplan:e.ultraplan,title:e.title,thinking:e.thinking}),Ps=e.model??rt(),Ul=a_n(Ps,e.effort);e.onProgress?.({kind:\"creating\"});let Cp=$o!==null?$o.binder:await e8t(e.deviceBinding,_e,$t,kt?.kind,e.correlationId,e.credentials,h()),ma=(ta,xl,Xa,bd)=>{let Ml=e.deviceBinding!==void 0&&ta===void 0,gf=_e===\"v1alpha2\"?Efn({title:Ci,worker:f$t($t),events:Eu,sources:It?[It]:[],outcomes:vr?[vr]:[],model:Ps,effortLevel:Ul,seedBundleFileId:Xt??void 0,reuseOutcomeBranches:Boolean(e.reuseOutcomeBranch),environmentVariables:ve,appendSystemPrompt:e.appendSystemPrompt,customSystemPrompt:e.customSystemPrompt,appendSubagentSystemPrompt:e.appendSubagentSystemPrompt,fallbackModel:e.fallbackModel,maxTurns:e.maxTurns,maxBudgetUsd:e.maxBudgetUsd,allowedTools:e.allowedTools,disallowedTools:e.disallowedTools,builtinTools:e.builtinTools,outputSchema:e.outputSchema,tags:e.tags,sessionGroupingId:e.sessionGroupingId,agentId:e.agentId,correlationId:e.correlationId,persistentVolume:e.persistentVolume,deviceBinding:ta,requestElevatedTier:xl,deferFirstPrompt:Xa,repositoriesTrusted:bd}):{title:Ci,events:Eu,session_context:{sources:It?[It]:[],...Xt&&{seed_bundle_file_id:Xt},outcomes:vr?[vr]:[],model:Ps,...Ul&&{effort_level:Ul},...e.reuseOutcomeBranch&&{reuse_outcome_branches:!0},...e.githubPr&&{github_pr:e.githubPr},...Object.keys(ve).length>0&&{environment_variables:ve},...e.appendSystemPrompt&&{append_system_prompt:e.appendSystemPrompt},...Y9t(e),...e.outputSchema&&{output_schema:e.outputSchema},...e.correlationId&&{correlation_id:e.correlationId}},...f$t($t),...h1r(e.persistentVolume),...e.tags&&{tags:e.tags}};return t(`Creating session with payload: ${_(s$o(gf),null,2)}`),gf};if(r.aborted)throw new Ye;e.onProgress?.({kind:\"request_sent\"}),t(\"[teleport] phase: POST-sent\");let{response:Wc,bind:Yd,held:bg,attested:yC,firstPromptDeferred:jL}=await n8t({prepared:Cp,buildBody:ma,drops:g1r({events:Eu,environmentVariables:ve}),callerSendsFirstPrompt:e.deferInitialMessage===!0,attaches:{anything:It!==null||Xt!==null||ur||Po!==null,launchCheckout:It!==null&&nn!==null&&Xt===null?xn:null},post:(ta,xl)=>St.post(nr,ta,{headers:xl?{...hs,...xl}:hs,signal:r,validateStatus:(Xa)=>Xa<500})});t(`[teleport] phase: POST-response status=${Wc.status}`);let WL=Yd?.ok===!0?bg:void 0,Qc=ti&&(e.deviceBinding===void 0||yC);if(!(Wc.status===200||Wc.status===201)){let ta=`API request failed with status ${Wc.status}: ${Wc.statusText}\n\nResponse data: ${_(Wc.data,null,2)}`,xl=Wc.data,Xa=xl?.error?.type,bd=xl?.error?.reason,Ml=xl?.error?.message,gf=It?Gx(It.url):null,Qf=gf?`${gf.owner}/${gf.name}`:Xt?\"a seed bundle (no git source)\":It?.url??\"no source\",Gu=gf!==null&&uhn(gf),Am=K9t(bd),Cb=typeof Ml===\"string\"&&Ml.includes(\"source repository configuration is not permitted for this environment\")||Am===\"monorepo_source_required\"||Am===\"monorepo_env_required\"||Wc.status===400&&!bd&&Xa===\"invalid_request_error\"&&!Jn&&It!==null&&!Xt&&Gu&&typeof Ml===\"string\"&&/^the request was invalid\\.?$/i.test(Ml);if([401,403,429].includes(Wc.status)||bd===\"github_repo_access_denied\"||vA(xl)||Cb||PUe(bd)!==void 0)t(ta,{level:\"error\"});else{let xp=(Zf)=>Zf&&/^[a-z][a-z0-9_]*$/.test(Zf)?Zf:void 0,Nv=\"\";d(Error(`[type=${xp(Xa)},reason=${xp(bd)},isByocEnv=${Jn}] ${ta}`))}let zu=y1r(Wc.status,Ml)||Ml||`${Wc.status} ${Wc.statusText||\"\"}`.trim();if(Cb)zu=zJo(Gu,kt?.name??$t,Qf);let Ny=e.sessionGroupingId&&_1r(e.sessionGroupingId,xl?.error),By=vA(xl)&&RUe||Ny||zu;return e.onCreateFail?.(By,\"create_request_failed\",{status:Wc.status,serverType:q9t(Xa),serverReason:Am,endpoint:_e}),null}let Kf=vfn(_e,Wc.data);if(!Kf||typeof Kf.id!==\"string\")return d(st(Error(`Cannot determine session ID from API response: ${_(Wc.data)}`),\"CreateSession response missing session id\")),e.onCreateFail?.(\"Server returned a malformed session response (no session id)\",\"malformed_response\"),null;e.onProgress?.({kind:\"session_exists\",sessionId:Kf.id});let Xpn=Qc&&!0&&!(Yd!==void 0&&!Yd.ok),Iv=null;if(Iv!==null)e.onBundleNotice?.(Iv);let vVe=oi&&yC,Ov=async(ta,xl=null)=>{},cge=(ta)=>Iu(Ov(!1,ta),r,()=>new Ye).catch((xl)=>{if(!at(xl))d(xl)}),Rm=await Q9t({options:e,createEndpoint:_e,responseData:Wc.data,sessionId:Kf.id,held:ua,bound:Yd?.ok===!0,firstPromptDeferred:jL,followsUploads:Tl,signal:r});if(!Rm.ok)return null;if(t(`Successfully created remote session: ${Kf.id}`),K===null)e.onProgress?.({kind:\"created\"});let y_=()=>z9t(Kf.id,e.source,{project:It!==null&&zn!==\"github_preflight_failed\"&&zn!==\"monorepo_env_no_checkout\"&&zn!==\"monorepo_flag\",global:Xt===null&&K===null},{endpoint:_e,grouped:e.sessionGroupingId!=null,effortLevel:Ul},e.storageV5);if(Wa?.kind!==\"seed\"||Wa.cloudCheckoutOrigin.kind!==\"created_empty\")y_();let Fg=null,tS=(ta)=>Fg??=Wk(Kf.id,ta);if(!1)switch(Wa.kind){case\"seed\":if(Gu!==null&&Am!==null)switch(By.kind){case\"cancelled\":case\"unfilled\":case\"armed\":}case\"not_armed\":default:}if(t8t(e.deviceBinding,Yd,Kf.id,e.storageV5),yC&&e.title)J9t(Kf.id,e.title,Yd?.ok?Yd.value:void 0,e.credentials,WL);let LP=eo===null?void 0:await eZo({sessionId:Kf.id,planning:eo,boundDeviceUuid:Yd?.ok?Yd.value:void 0,held:WL,consentMode:e.homeSettingsConsent,signal:r,credentials:e.credentials,storageV5:e.storageV5}),yj=ua?Rm.withheld:jL?Pl?{...Pl,followsPermissionMode:!0}:X9t(Eu,n):Pl;return{id:Kf.id,title:Kf.title||Ci,...yj&&{withheldInitialMessage:yj},...LP&&{homeSeed:LP},...e.maxTurns!==void 0&&{maxTurnsConfirmed:AUe(_e,Kf,e.maxTurns)}}}catch(_e){let ke=Z(_e);if(at(_e)||St.isCancel(_e))return t(`Remote session create aborted: ${ke.message}`),null;let be=Pu(_e);if(be)t(`Remote session create failed (network): ${ke.message}`,{level:\"error\"});else d(st(Z(ke),\"Remote session create failed\"));return e.onCreateFail?.(`Cloud session create failed: ${ke.message}`,be?\"network_error\":\"exception\"),null}finally{if(K!==null&&!he)e.firstUpload?.discard(K).catch((_e)=>d(_e))}}",
+      "variable": false,
+      "dependencyOnlyLiteralFalseBranches": [
+        {
+          "start": 3205468,
+          "end": 3205552,
+          "sha256": "1f7ef2634953828fa9151d43ac83dc2d238d229bd0657d2dbca2d89e0085054c"
+        },
+        {
+          "start": 3214094,
+          "end": 3214230,
+          "sha256": "af3bd4d3dde391058c584351673e54d69379a363dd12e2b36c49d5e99f2ceb6d"
+        }
+      ]
+    },
+    {
+      "port": "source:chunk-4cfspby6.js:bx",
+      "file": "chunk-4cfspby6.js",
+      "name": "bx",
+      "start": 5158,
+      "end": 5212,
+      "moduleLength": 5341,
+      "moduleSha256": "e41d744b233fec9f09bdaabb1301868f80fc7769fa85b302b742f7755db58d85",
+      "sha256": "668d7764d9be5a1d8cf34b652214c2955a19171290100cc602e90ae0cce699ed",
+      "source": "function bx(e,r=y){return F()&&e!==void 0?W(r):void 0}",
+      "variable": false
+    },
+    {
+      "port": "source:chunk-n4qghq20.js:me",
+      "file": "chunk-n4qghq20.js",
+      "name": "me",
+      "start": 690,
+      "end": 732,
+      "moduleLength": 1262,
+      "moduleSha256": "39fd2d5d055aa0449210ddff4a5907753c0460a10b43931920c5796a088aabbb",
+      "sha256": "7fb88bff89a37b9c76ef92a4e33c10798d6b2067430eac4eb72489fef8854d56",
+      "source": "function me(n){return n==null?void 0:r(n)}",
+      "variable": false
+    },
+    {
+      "port": "source:chunk-q80zaav8.js:_",
+      "file": "chunk-q80zaav8.js",
+      "name": "_",
+      "start": 46397,
+      "end": 46481,
+      "moduleLength": 67079,
+      "moduleSha256": "f9503296591b825624caf5932b9c5973cde96b859259266a506b616dca5cd41e",
+      "sha256": "ca5ac7454a94324e4d26454cf5387e3b8f94be3d19d5a7c1f2cacac02549891d",
+      "source": "function _(e,n,r){using s=ng`JSON.stringify(${Se(e)})`;return JSON.stringify(e,n,r)}",
+      "variable": false
+    },
+    {
+      "port": "source:chunk-vh4tv488.js:an",
+      "file": "chunk-vh4tv488.js",
+      "name": "an",
+      "start": 698,
+      "end": 772,
+      "moduleLength": 858,
+      "moduleSha256": "6926945a42c325349bade787e1053a574789f4dac5bd0bd54f23f897d1364bf5",
+      "sha256": "803c47b63d6e5480565087919b8caef1b84253e01649f58f1b046ea1d2fa5e35",
+      "source": "function an(t){return bn(e(\"sha256\").update(t).digest(\"hex\").slice(0,12))}",
+      "variable": false
+    },
+    {
+      "port": "source:chunk-fpcnpvs9.js:oc",
+      "file": "chunk-fpcnpvs9.js",
+      "name": "oc",
+      "start": 12914,
+      "end": 13089,
+      "moduleLength": 13212,
+      "moduleSha256": "52143cbc07d1fa809ecbd1d6a90724348245a449385e60fdcce2886d432b32c0",
+      "sha256": "b51a1688ecfe9617e9db38fe88aa8a602ac72273f9cdf0e50a582bb220ee9be1",
+      "source": "function oc(e,n,r){let{toCompatSessionId:s}=import.meta.require(\"/$bunfs/root/chunk-3qbtnva4.js\"),a=s(e),l=`${oft(a,n)}/code/${a}`;return r?`${l}?${new URLSearchParams(r)}`:l}",
+      "variable": false
+    },
+    {
+      "port": "sharedPort:publicGracefulShutdown287",
+      "file": "chunk-mphp7acd.js",
+      "name": "Kn",
+      "start": 120742,
+      "end": 120805,
+      "moduleLength": 4409957,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "b630a52bd327b3e057098f4ae4329560b0d33ff9e03651734790bf9377c2b7cc",
+      "source": "async function Kn(e=0,n=\"other\",r){return $_().shutdown(e,n,r)}",
+      "variable": false
+    }
+  ]
+}

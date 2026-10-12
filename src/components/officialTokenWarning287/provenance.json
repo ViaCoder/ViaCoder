@@ -1,0 +1,62 @@
+{
+  "version": "2.1.287",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16 code units; end-exclusive",
+  "declarations": [
+    {
+      "file": "chunk-f2cpzzp9.js",
+      "name": "xDt",
+      "start": 666006,
+      "end": 666051,
+      "moduleSha256": "ecf059605929abc2d38c30fc6d3b5b0b69ef05c9d344e934443f320a48256dae",
+      "sha256": "a04b313de448178ad6ac74e10ad76418394cfad9c47e270038533878e4a49fd5",
+      "source": "function xDt(Ut){return Ut.autoCompactWindow}"
+    },
+    {
+      "file": "chunk-f2cpzzp9.js",
+      "name": "RDt",
+      "start": 666051,
+      "end": 666101,
+      "moduleSha256": "ecf059605929abc2d38c30fc6d3b5b0b69ef05c9d344e934443f320a48256dae",
+      "sha256": "1233807ca5d70a1d5f9e18c57e6db364acd039d7678816c6f0ee3a3e233d259e",
+      "source": "function RDt(Ct){return Ct.remoteAutocompactState}"
+    },
+    {
+      "file": "chunk-f2cpzzp9.js",
+      "name": "iK",
+      "start": 666101,
+      "end": 667315,
+      "moduleSha256": "ecf059605929abc2d38c30fc6d3b5b0b69ef05c9d344e934443f320a48256dae",
+      "sha256": "e3dd0622a01e1dafa7e1a21e367c38da77d3d639c7642c94ac7bd49a9d5a9ba6",
+      "source": "function iK(h){let Se=w(17),{tokenUsage:v,model:D}=h,N=z(xDt),X=z(RDt),_e;if(Se[0]!==N||Se[1]!==D||Se[2]!==X||Se[3]!==v)_e=ice(v,Vu(D),N,X),Se[0]=N,Se[1]=D,Se[2]=X,Se[3]=v,Se[4]=_e;else _e=Se[4];let Pe=_e,Ie=vM();if(Pe.level===\"ok\"||Ie){return null}let Oe=Pe.pctLeft,Ne=X?X.enabled:bm(),Ve;if(Se[5]===b)Ve=ole(\"warning\"),Se[5]=Ve;else Ve=Se[5];let qe=Ve,ze=Oe,pt=X?!X.enforced:!nne(Vu(D),N);if(pt){let St;if(Se[6]!==N||Se[7]!==D||Se[8]!==X)St=X?X.effectiveWindow:YV(Vu(D),N),Se[6]=N,Se[7]=D,Se[8]=X,Se[9]=St;else St=Se[9];let ht=St;let yt;if(Se[10]!==ht||Se[11]!==v)yt=Math.round((ht-v)/ht*100),Se[10]=ht,Se[11]=v,Se[12]=yt;else yt=Se[12];ze=Math.max(0,yt)}let bt=pt?`${100-ze}% context used`:`${ze}% until auto-compact`;if(Ne){const St=qe?`${bt} \\xB7 ${qe}`:bt;let yt;if(Se[13]!==St)yt=e(n,{dimColor:!0,wrap:\"truncate\",children:St}),Se[13]=St,Se[14]=yt;else yt=Se[14];return yt}let xt=X!==void 0||Le(process.env.DISABLE_COMPACT);const St=qe?`Context low (${Oe}% remaining) \\xB7 ${qe}`:xt?`Context low (${Oe}% remaining)`:`Context low (${Oe}% remaining) \\xB7 Run /compact to compact & continue`;let yt;if(Se[15]!==St)yt=e(n,{color:\"error\",wrap:\"truncate\",children:St}),Se[15]=St,Se[16]=yt;else yt=Se[16];return yt}"
+    },
+    {
+      "file": "chunk-f2cpzzp9.js",
+      "name": "vM",
+      "start": 660614,
+      "end": 660647,
+      "moduleSha256": "ecf059605929abc2d38c30fc6d3b5b0b69ef05c9d344e934443f320a48256dae",
+      "sha256": "e1e03d7d7803f489154522b29f077966c3cea614bc93a4b459b77d39a0fcada0",
+      "source": "function vM(){return kt(fWo,pWo)}"
+    },
+    {
+      "file": "chunk-4162en39.js",
+      "name": "n",
+      "start": 677,
+      "end": 892,
+      "moduleSha256": "59671414b71ab4ecbe969107dd04da0189e3082bf61b976afc74b9aeefaabeef",
+      "sha256": "13bcc4e8c07870582e061f72c5857dcc72ab6b5a81486ad7d3b393136d3ca32f",
+      "source": "function n(){let e=Xh();if(e===\"opus\"&&wF()&&!Kb(Bu()))return{alias:\"opus[1m]\",name:\"Opus 1M\",multiplier:5};else if(e===\"sonnet\"&&EF()&&!Kb(xm()))return{alias:\"sonnet[1m]\",name:\"Sonnet 1M\",multiplier:5};return null}"
+    },
+    {
+      "file": "chunk-4162en39.js",
+      "name": "ole",
+      "start": 892,
+      "end": 1094,
+      "moduleSha256": "59671414b71ab4ecbe969107dd04da0189e3082bf61b976afc74b9aeefaabeef",
+      "sha256": "79449f4b326fe27b24c3deb4e9cfd14c17caa4f6f8d8200179a878fbe324e16f",
+      "source": "function ole(e){let t=n();if(!t)return null;switch(e){case\"warning\":return`/model ${t.alias}`;case\"tip\":return`Tip: You have access to ${t.name} with ${t.multiplier}x more context`;default:return null}}"
+    }
+  ],
+  "scope": "complete public iK selectors/suppression hook and context upgrade; ports resolve existing AppState/model/suppression/Ink owners, not a remote-state producer"
+}

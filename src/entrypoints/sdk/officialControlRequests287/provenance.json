@@ -1,0 +1,772 @@
+{
+  "version": "2.1.287",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF16 end-exclusive",
+  "rows": [
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "Io",
+      "subtype": "get_status",
+      "start": 452425,
+      "endExclusive": 452688,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "d6d1ccd960fed4edbb57f48da6002cd27727e8d3f3e8714c1ad24ecf0e93be79",
+      "source": "Io=f(()=>u({subtype:x(\"get_status\")}).describe(\"@internal Requests the rows of the terminal's /status screen (version, session, account, provider, model, servers, settings), every value already rendered as text, for a host that shows them with its own widgets.\"))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "Do",
+      "subtype": "export_conversation",
+      "start": 453064,
+      "endExclusive": 453310,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "896076440356ea862fd6b290c0eeb962d962c220c21775c76fc116a75ca9789b",
+      "source": "Do=f(()=>u({subtype:x(\"export_conversation\")}).describe(\"@internal Requests the conversation as the plain text the terminal's /export writes, with the file name that command would offer, for a host that copies or saves it with its own widgets.\"))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "xo",
+      "subtype": "get_memory_dialog",
+      "start": 453588,
+      "endExclusive": 453894,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "8ed23bc1be98b6d62f235442ae4c6b0fd86afff4f58a34fe2f6fcd3b9186e57d",
+      "source": "xo=f(()=>u({subtype:x(\"get_memory_dialog\")}).describe(\"@internal Requests the rows and toggle states of the session's /memory dialog, for a host that draws the dialog with its own widgets and opens the files and folders itself. Clears the session's memory-file cache first, as the terminal /memory does.\"))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "Uo",
+      "subtype": "get_chrome_dialog",
+      "start": 459253,
+      "endExclusive": 459668,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "28b7f08fcc7eae1390ad0edb5fea0c378a55b2b58dc3c7d51ec94990782213f3",
+      "source": "Uo=f(()=>u({subtype:x(\"get_chrome_dialog\")}).describe(\"@internal Requests the state the terminal's /chrome dialog shows (Claude in Chrome: whether it is allowed, the extension's install and connection state, the enabled-by-default setting, and the pages its rows open), for a host that draws the dialog with its own widgets. Read-only; a host writes the setting through the CLI's edit-chrome-settings subcommand.\"))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "Vo",
+      "subtype": "get_chrome_browsers",
+      "start": 461033,
+      "endExclusive": 461269,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "cc9103164e6b920af772a3c1be3478c98211453bc020600df6bff0c5073b26b8",
+      "source": "Vo=f(()=>u({subtype:x(\"get_chrome_browsers\")}).describe(\"@internal Requests the browsers connected to the session's Claude in Chrome server, as the terminal's /chrome browser picker lists them. Fails when the server is not connected.\"))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "jo",
+      "subtype": "select_chrome_browser",
+      "start": 461474,
+      "endExclusive": 461776,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "ed7fd22f01deb04827864e9bdd069f7bef17f171e5ef9b697d850c0bba31665d",
+      "source": "jo=f(()=>u({subtype:x(\"select_chrome_browser\"),device_id:o().describe(\"The browser to use for Chrome actions, from get_chrome_browsers.\")}).describe(\"@internal Switches the session's Claude in Chrome server to the given browser, as the terminal's picker does. Fails when the server is not connected.\"))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "Fo",
+      "subtype": "list_directory",
+      "start": 477887,
+      "endExclusive": 480917,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "542fd9da43a906cdca882f728d6a57fa6676041931141081bc1bf45de9e89ba8",
+      "source": "Fo=f(()=>u({subtype:x(\"list_directory\"),path:o().describe('Directory to list, relative to the workspace root: the project root of the session, which is the directory the session was started in or, for a worker started ahead of its session, claimed for. A `cd` in the shell, entering a worktree, or a set_cwd after the first turn does not move it. \"\" or \".\" lists the root itself. \"/\" is the only separator and 1024 UTF-16 code units the most. Absolute, drive, UNC and \"..\" paths are refused as invalid_path, and so is a path with a backslash: a name that contains one cannot be listed. Some other names are refused as unsupported_name, for example one that ends in a dot or a space.')}).describe(\"@internal List the direct children (names and kinds) of one directory below the workspace root of a remote session on Linux (every cloud session; a self-hosted runner on Linux). One level per request, no file contents. No symlink is followed: a path through or to a symlink is refused. A directory that a Read deny rule or a Read ask rule covers is refused, and such children are left out: the request cannot ask anyone. A directory whose every child is left out answers an empty listing, as an empty directory does. A refusal is the control error `list denied: <code>`, with code one of invalid_path, unsupported_name, symlink_in_path (a symlink at the workspace root or below it), path_not_canonical (a symlink above it, or a directory of the path was moved or removed while it was read; after either of these two codes the same request can succeed when it is sent again, if the tree changed), read_rule, not_found, not_a_directory, os_permission_denied, workspace_moved (the session works in a worktree or another directory now; this can last until the worker is restarted), unexpected_error. A rule for the whole Read tool refuses every listing as read_rule. Any other error text means the request was not served at all: the unsupported-subtype error below, `not_claimed` from a worker that is started but not yet claimed for a session, or the refusal of a client in between that does not know the request. Any other session, and a remote session on macOS, on Windows or under WSL, refuses the request as an unsupported subtype, as an older CLI does (the wording differs between a headless session and the Remote Control bridge). A remote session on Linux answers the same way while the request is switched off remotely; the switch is read for each request, so that answer can change within a session. To open a listed entry, send read_file an absolute path: the `cwd` of the first system/init message of the session, then the listed path, then the entry name. When the `absPath` of the listing starts with \\\"/\\\", that `absPath`, then \\\"/\\\", then the entry name is such a path too. read_file resolves a relative path against the live cwd, which a `cd` in the shell moves, and every later system/init carries that live cwd, not the root. A session whose system/init carries an empty `cwd` names no root to build that path from.\"))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "HJe",
+      "subtype": "turn_handoff",
+      "start": 508381,
+      "endExclusive": 514802,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "0e35522a92f9c68e7d4fcdbe96d826e4b72a60b609e842b0c0834bc7d4592588",
+      "source": "HJe=f(()=>u({subtype:x(\"turn_handoff\"),messages:T(Fe([rr(),nr()])).min(1).max(200).describe(\"@internal The turn so far, in conversation order: the user's message, any [assistant, tool_result] rounds already answered elsewhere, and last an assistant message (thinking blocks with their signatures, text, and the tool_use blocks to run). Every message carries a uuid, kept as the transcript line's; none of the messages, and none of the tool_use ids they hold, may already be in the conversation \\u2014 the turn is appended once, whole, never merged with lines already there (except as tool_use_ids describes for a turn that runs nothing).\"),tool_use_ids:T(o()).max(16).describe(\"@internal The tool_use blocks of the last message to run, each of a tool named in the turn_handoff entry of the worker external_metadata; all run in one batch, then the model continues once. May be empty, and then nothing runs and no model turn follows: with every call the turn carries answered within it (the last message holding none), the worker appends the turn as history and, once the lines are stored, echoes the last assistant message that holds a call; with stopped, the user stopped the turn before its calls ran. In both cases, when a leading part of the turn is already in the conversation from an earlier delivery, only the rest is appended.\"),stopped:x(!0).optional().describe(\"@internal Only true, and only with an empty tool_use_ids: the user stopped this turn while its last message, an assistant message holding calls that have not run, was being handed over. The worker appends the turn, closes those calls and marks the turn exactly as when a turn of its own is stopped before a call runs, and ends it with the result a stopped turn ends with; when an earlier delivery already appended the turn, the calls are closed in place.\"),relay_marker:u({type:x(\"system\"),subtype:x(\"upgrade_relay_marker\"),uuid:o(),content:o()}).optional().describe(\"@internal The system line that starts the prompt-cache relay for this conversation: uuid is the line's uuid, and content is the marker, a JSON string whose anchor_line_uuid is the uuid of the first of messages; other fields of the line are ignored. Only a worker that advertises relay_marker: true in turn_handoff_available uses it, and only on a request that names calls to run. It is never a reason to refuse the turn: when the member is not such a line, or the worker does not use the marker, the request is answered and its calls still run.\"),memory_context:u({uuid:o(),version:o().nullable(),content:o().nullable()}).optional().describe(\"@internal The snapshot of the user's claude.ai memory that the client showed its model with the turn's user message. Used only on a request that names calls to run: the worker writes it ahead of the first of messages, with uuid as the line's uuid, as a cowork_memory_context attachment line like those it writes for snapshots it fetches itself, and then adds no copy of that version. version and content are both strings for a snapshot, both null to withdraw an earlier one. The member is never a reason to refuse the request: one that is malformed, that has a version without content or the reverse, or whose uuid is also that of one of messages, of relay_marker or of a line the session's transcript holds, is ignored, and the turn runs without the line.\"),message_client_platform:o().optional().describe(\"@internal The `anthropic-client-platform` value of the app a person sent the first of messages from. Left out when no person sent that message, as in a scheduled run. When it names one of the Remote Control apps (isRemoteControlAppPlatform) and that message is not one from another session, the worker marks the message as sent by a person, as it marks a user message that arrives with that value, so the turn counts as started by a person for the calls it runs and for those the model makes afterwards. The member is never a reason to refuse the request: without it, or with any other value, the message is appended unmarked.\"),file_names:T(u({file_uuid:o(),name:o()})).max(16).optional().describe(\"@internal Files a person attached to the conversation, each with the name the client showed its model for it, the most wanted first; at most 16. file_uuid is that of a file_attachments entry on a user message sent to this worker before the request. Only a worker that advertises file_names: true in turn_handoff_available uses the member, only on a request that names calls to run, and only when those calls run in the session's home directory: before they run, it copies each listed file it has downloaded into that directory, under that name, until a limit on time or on total size is reached, taking first the names that occur in the calls' own input. It replaces nothing, skips a name it refuses or that the list holds twice, and, within one request, skips the further names of a file once it has found or placed one of them. The member is never a reason to refuse the request: a malformed one (a longer list included) is ignored whole, and the calls run whatever became of the copies.\")}).describe('@internal Sent by the session client to a worker that advertises turn_handoff in its external_metadata: hand over a turn whose final assistant message holds tool calls that have not run. The worker answers at once \\u2014 success {status: \"accepted\"} (validated and queued; the messages are appended at the start of the turn that runs the calls, the last one echoed back as an assistant event before any call runs; a request that runs nothing (see tool_use_ids) for the same turn as one still queued to run replaces it), success {status: \"duplicate\"} (every named call is already taken by an earlier delivery or answered; nothing runs \\u2014 taken, not necessarily ran; or, for a turn that runs nothing, its calls are already answered by other lines, or the same turn is already pending in that shape or running), or an error whose message starts with its code and a colon: turn_handoff_disabled, invalid_handoff, unsupported_tool, unknown_tool, recovered_by_restart (this worker restarted after the turn was appended and its recovery set the turn\\'s unrun calls aside; this request will not run or close them). Accepted calls get the permission evaluation of the worker (rules, the permission mode, can_use_tool to the client); their tool_result messages and the model continuation follow on the event stream as in any turn.'))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "ai",
+      "subtype": "register_repo_root",
+      "start": 518665,
+      "endExclusive": 519271,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "6e6c1d0f273feb5899697ab29b5708e047cb8ca8d085b49173f706714a135ab7",
+      "source": "ai=f(()=>u({subtype:x(\"register_repo_root\"),directory:o(),reload_claude_md:H().optional(),reload_plugins:H().optional(),reload_skills:H().optional()}).describe(\"Add a directory as a working-directory root and optionally reload CLAUDE.md, skills, and plugins. The directory must resolve to a strict subdirectory of cwd, or of a directory passed at launch via --add-dir / the SDK additionalDirectories option. A directory that is already a registered working directory (including a duplicate of an earlier request) is denied with an error; the registration pipeline and DirectoryAdded hooks do not re-run.\"))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "li",
+      "subtype": "set_cwd",
+      "start": 519610,
+      "endExclusive": 521378,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "712ee7c6fa33b910fa4a1517e397da2cd27cdea217fd412cfee57c6f6ee832d2",
+      "source": "li=f(()=>u({subtype:x(\"set_cwd\"),path:o().describe(\"Target directory. Tilde-expanded and realpath-canonicalized by the CLI, exactly like an interactive /cd argument.\"),trust_accepted:H().optional().describe(\"Host attestation that the user explicitly accepted a trust dialog for this directory. Only send true after showing one \\u2014 the CLI records the directory as trusted (the same latch /cd's own prompt writes) before relocating. Requires trusted_directory.\"),trusted_directory:o().optional().describe(\"Required whenever trust_accepted is true: the exact directory string from the needs_trust response being answered. This pins the attestation to the canonical path the user was shown \\u2014 if the raw path canonicalizes differently by the time the re-send arrives (e.g. a symlink component changed during the dialog), nothing is latched and a fresh needs_trust carries the new canonical directory.\")}).describe(\"@internal Moves the session to a new working directory \\u2014 the headless twin of /cd, for SDK hosts like Claude Desktop. Runs the same validation, Cd(...) permission rules, and relocation path as the interactive command, with the trust prompt delegated to the host via the needs_trust response arm. Before the first turn the move re-anchors start-of-session state (the first request is built as for a start in the new directory, no move notice); after a turn the prefix is preserved and the move arrives as an appended notice. SessionStart hooks are never re-run by set_cwd (those of the launch directory already ran and their output stays in the session); a host that starts the process before its directory is known should use --await-claim and claim_session, which run them in the bound directory instead. Rejected while a turn is in flight.\"))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "wi",
+      "subtype": "submit_feedback",
+      "start": 548790,
+      "endExclusive": 551237,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "95469b81caed2c5563e30d20762df3605a98af42efec3b0981cc5b2fd80fbd23",
+      "source": "wi=f(()=>u({subtype:x(\"submit_feedback\"),description:o(),surface:B([\"cli\",\"ccd\",\"ccr\",\"ide\",\"sdk\",\"cowork\"]).optional().describe(\"Where the feedback flow was initiated. Stamped into the POST body and tengu_bug_report_* analytics so the triage pipeline can distinguish CCD/CCR/IDE/Cowork reports from terminal reports landing in the same claude_cli_feedback table. Defaults to 'sdk'.\"),draft_id:o().optional().describe(\"UUID of a local SendFeedback draft under ~/.claude/feedback/drafts/. When set, the handler reads the stored draft, rebuilds the description via buildDraftDescription() (so the upload matches the consent form the user reviewed; the cwd is neither uploaded nor named on the form's consent line \\u2014 it never uploads as metadata, though a transcript attachment, separately consented, still carries real paths), bundles the draft's own transcript per attach_transcript, and deletes the draft file on success. The caller's description/type/title/area override the stored draft when provided (user edits on the review form).\"),type:B([\"bug\",\"idea\",\"missing_capability\"]).optional(),title:o().optional(),area:o().optional(),attach_transcript:H().optional().describe(\"Whether to bundle the draft's source-session transcript with the upload. Only meaningful alongside draft_id \\u2014 the non-draft path always bundles the current session (unchanged). Defaults to true.\"),save_locally:H().optional().describe(\"The host told the user this report is saved on this machine and nothing is sent (feedback_mode 'bundle' when it read the mode). Honored even if the mode has since become 'post' or 'share' (a mid-session sign-in): the report is bundled, never sent; a mode of 'disabled' still refuses it. Ignored with draft_id.\")}).describe(\"@internal Submits a /feedback report (description + current session transcript + sanitized error log) to api.anthropic.com/api/claude_cli_feedback using the CLI's auth and redaction. Runs the same getFeedbackUnavailableReason() policy checks as the terminal /feedback command \\u2014 when feedback is disabled (org policy, env kill-switch) or cannot be sent (3P provider, no Anthropic credentials) the response carries unavailable_reason instead of an error. A request carrying save_locally gets the terminal's local save instead: the report is written to a redacted zip on this machine and the response carries bundle_path, nothing sent \\u2014 except where feedback is disabled, which still refuses.\"))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "IEn",
+      "subtype": "message_rated",
+      "start": 554508,
+      "endExclusive": 555217,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "f9243d68cb40474d7c2eb8dfd6f80b2ad31ab40eacb0d5a4567d30e6d52c28d9",
+      "source": "IEn=f(()=>u({subtype:x(\"message_rated\"),messageUuid:o().describe(\"UUID of the assistant message being rated.\"),sentiment:B([\"positive\",\"negative\"]).describe(\"User rating: positive (thumbs up) or negative (thumbs down).\"),surface:B([\"tool_use\",\"assistant_text\"]).optional().describe(\"Which in-conversation surface the rating came from. If omitted, logged as tool_use.\"),cleared:H().optional().describe(\"True when the caller is un-rating a message (clicking the same control a second time).\")}).describe(\"@internal Records a per-message thumbs up/down rating. Logs tengu_message_rated with the same shape as the in-conversation rating controls so Desktop / IDE callers can surface their own native thumbs UI.\"))"
+    }
+  ],
+  "enumRows": [
+    {
+      "file": "chunk-a56phknn.js",
+      "name": "r4o",
+      "start": 11448,
+      "endExclusive": 11724,
+      "moduleSha256": "1d15840a97cc73ad852dc0e2079625f2b4192e871b29b4a27fcc8533bc5ddae1",
+      "sha256": "feaae0c2c88b8db79c4883ec1bd21364f5dc25f89642d602facd1ae102e4375a",
+      "source": "r4o=[\"mcp_needs_auth\",\"mcp_disabled\",\"mcp_required_missing\",\"auth_expired\",\"auth_overridden\",\"auth_missing_scope\",\"design_needs_authorization\",\"sandbox_violation\",\"outside_reads_blocked\",\"memory_paused\",\"feature_disabled\",\"policy_denied\",\"spawn_arg_limit\",\"staged_for_review\"]"
+    },
+    {
+      "file": "chunk-a56phknn.js",
+      "name": "o4o",
+      "start": 11725,
+      "endExclusive": 11758,
+      "moduleSha256": "1d15840a97cc73ad852dc0e2079625f2b4192e871b29b4a27fcc8533bc5ddae1",
+      "sha256": "de1bb4be41956e1c904442c8c2e8088ac8c09a7c2b3366e2dfd2f3a2e6b8eca3",
+      "source": "o4o=[\"claude_ai\",\"claude_design\"]"
+    },
+    {
+      "file": "chunk-a56phknn.js",
+      "name": "s4o",
+      "start": 11759,
+      "endExclusive": 11788,
+      "moduleSha256": "1d15840a97cc73ad852dc0e2079625f2b4192e871b29b4a27fcc8533bc5ddae1",
+      "sha256": "4f984542381e9c3570472cc394620b9962336e7b6773fa296e7a166b26bde8bc",
+      "source": "s4o=[\"workflows\",\"artifacts\"]"
+    },
+    {
+      "file": "chunk-a56phknn.js",
+      "name": "i4o",
+      "start": 11789,
+      "endExclusive": 11855,
+      "moduleSha256": "1d15840a97cc73ad852dc0e2079625f2b4192e871b29b4a27fcc8533bc5ddae1",
+      "sha256": "001e120cc58b848b285cf3e5f8bf59e4ba9a6c658c39df7c410c03738af27576",
+      "source": "i4o=[\"managed_settings\",\"org_policy\",\"unavailable\",\"user_setting\"]"
+    },
+    {
+      "file": "chunk-a56phknn.js",
+      "name": "a4o",
+      "start": 11856,
+      "endExclusive": 11884,
+      "moduleSha256": "1d15840a97cc73ad852dc0e2079625f2b4192e871b29b4a27fcc8533bc5ddae1",
+      "sha256": "1f26a91d4a1c75f2b0360da10a7e6d3c6cebfdce33b99528d70b95af739fce0b",
+      "source": "a4o=[\"org_denied\",\"latched\"]"
+    }
+  ],
+  "typeRows": [
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "$H",
+      "start": 172658,
+      "endExclusive": 172722,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "121723cb8bb1b318674813d8eaa599d32ad1e8df4475e003a46751b658db0a75",
+      "source": "$H=f(()=>u({type:x(\"ephemeral\"),ttl:B([\"5m\",\"1h\"]).optional()}))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "lt",
+      "start": 172723,
+      "endExclusive": 172800,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "65e9e7f19cd3e4ada031b3c3a0616ff361895a17e2c16bd41fecfde7345fa34a",
+      "source": "lt=()=>$H().nullable().optional().describe(\"Cache breakpoint at this block.\")"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "QH",
+      "start": 172801,
+      "endExclusive": 172916,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "0fa63e4844ded3b26fccd3441ca2cce41f210a59ff3d804e6ae81824fd04fe57",
+      "source": "QH=f(()=>u({type:x(\"base64\"),media_type:o().describe(\"image/jpeg, image/png, image/gif or image/webp.\"),data:o()}))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "JH",
+      "start": 172917,
+      "endExclusive": 172953,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "5f359c888b8a326d5e4c6c355f1ca595f2494fbcfd6451450f2356c6f2363f0a",
+      "source": "JH=f(()=>u({type:x(\"url\"),url:o()}))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "ZH",
+      "start": 172954,
+      "endExclusive": 173042,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "28f6bfebc4176bb8a4b74508d3ae4e410bc5909058f381a501bd72e8bfe50b74",
+      "source": "ZH=f(()=>u({type:x(\"file\"),file_id:o()}).describe(\"A Files API upload (beta surface).\"))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "e0",
+      "start": 173043,
+      "endExclusive": 173159,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "5354e0feeeda4839ce65092df3abfa8e21eb2677a2b3d589441a61badf15a19f",
+      "source": "e0=f(()=>Fe([QH(),JH(),ZH()]).describe(\"Where the image bytes come from (inline base64, a URL, or a file upload).\"))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "Fn",
+      "start": 173160,
+      "endExclusive": 173221,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "763316ae400a95de98670f5db4791345e4864cb43534380b144ebfe2adccefd8",
+      "source": "Fn=f(()=>u({type:x(\"image\"),source:e0(),cache_control:lt()}))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "t0",
+      "start": 173222,
+      "endExclusive": 173306,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "80800da225b2be72fb94c0b8c296e891bc2b1100dbee0b41c0067d857103c644",
+      "source": "t0=f(()=>u({type:x(\"base64\"),media_type:o().describe(\"application/pdf.\"),data:o()}))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "s0",
+      "start": 173307,
+      "endExclusive": 173384,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "01710cddc1a0b4979ce26403858fbd17dec53f2aa3390df096a84115b6b7b85d",
+      "source": "s0=f(()=>u({type:x(\"text\"),media_type:o().describe(\"text/plain.\"),data:o()}))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "r0",
+      "start": 173385,
+      "endExclusive": 173421,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "f29eb3d6128aa900c3aeda8a65540a2196c25cb5b6dd328924603015dbf7ec4f",
+      "source": "r0=f(()=>u({type:x(\"url\"),url:o()}))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "n0",
+      "start": 173422,
+      "endExclusive": 173510,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "17c4f64d91a3f7b547b653ceb7aec15cbe0bcd789628fdec0e95d74cb31344f2",
+      "source": "n0=f(()=>u({type:x(\"file\"),file_id:o()}).describe(\"A Files API upload (beta surface).\"))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "o0",
+      "start": 173511,
+      "endExclusive": 173536,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "ef80f109a8d343691b515e2b9e320f40e4d3875d5413132c8f3e922bfea7b3f0",
+      "source": "o0=f(()=>Fe([er(),Fn()]))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "i0",
+      "start": 173537,
+      "endExclusive": 173554,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "92282f311ba10f451868e30ee5bd9026691ff38c77669d2970b37f3ed0019199",
+      "source": "i0=f(()=>T(o0()))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "a0",
+      "start": 173555,
+      "endExclusive": 173678,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "0b110313eb36d38677e69512b914e8eab2db82b05057b7c48d5ce5b14e8e32f6",
+      "source": "a0=f(()=>u({type:x(\"content\"),content:Fe([o(),i0()])}).describe(\"Document content given inline as text and image blocks.\"))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "l0",
+      "start": 173679,
+      "endExclusive": 173835,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "39744e022a11770a2808bb130ba5404934896a444e1079eb015789fb4fd6b546",
+      "source": "l0=f(()=>Fe([t0(),s0(),a0(),r0(),n0()]).describe(\"Where the document comes from (inline base64 PDF, inline text, inline blocks, a URL, or a file upload).\"))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "$y",
+      "start": 173836,
+      "endExclusive": 173873,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "7dc1c2686eb3b1f064d539a154b0a13d64bc7e95e47164ce76eba138b87fe896",
+      "source": "$y=f(()=>u({enabled:H().optional()}))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "Xy",
+      "start": 173874,
+      "endExclusive": 174041,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "1ffdac3be1de2f84685a1f33052a011482bf3ce3230b992bba6e1e9ac60cf4d0",
+      "source": "Xy=f(()=>u({type:x(\"document\"),source:l0(),title:o().nullable().optional(),context:o().nullable().optional(),citations:$y().nullable().optional(),cache_control:lt()}))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "er",
+      "start": 174042,
+      "endExclusive": 174303,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "3f4f36c772796feeb130d0927bce00504ac4ed3e627e2506a8f8e6b29be05c3e",
+      "source": "er=f(()=>u({type:x(\"text\"),text:o(),citations:T(se()).nullable().optional().describe(\"Citation locations (char_location, page_location, content_block_location, web_search_result_location, search_result_location), as the API defines them.\"),cache_control:lt()}))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "Qy",
+      "start": 174304,
+      "endExclusive": 174424,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "17385d61ce714db2a18d7543b041c373e1c89bffa2924c875687eb1a7dbea8ff",
+      "source": "Qy=f(()=>u({type:x(\"search_result\"),source:o(),title:o(),content:T(er()),citations:$y().optional(),cache_control:lt()}))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "c0",
+      "start": 174425,
+      "endExclusive": 174593,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "144e3487468c6268ec0bbed5052b35da77c85d7e4a992feab7b4cb556c75917f",
+      "source": "c0=f(()=>u({type:x(\"tool_use\"),id:o(),name:o(),input:de(o(),se()).describe(\"The tool's input object; its shape is the named tool's input schema.\"),cache_control:lt()}))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "d0",
+      "start": 174594,
+      "endExclusive": 174647,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "87ff1c3dfdc19380119fecbe0e3b8bbd83062d48112c2a089841158c5835b831",
+      "source": "d0=f(()=>u({type:x(\"tool_reference\"),tool_name:o()}))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "u0",
+      "start": 174648,
+      "endExclusive": 174688,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "97fb239cfb5272ae4f42069709374a24d051f79d5462b4dd198a002fcd0605bd",
+      "source": "u0=f(()=>Fe([er(),Fn(),Qy(),Xy(),d0()]))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "h0",
+      "start": 174689,
+      "endExclusive": 174706,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "241c492eb417e636d5546e1410e5939da40afbe223131fe58c879a4fe5f4b2a6",
+      "source": "h0=f(()=>T(u0()))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "p0",
+      "start": 174707,
+      "endExclusive": 174926,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "83af8aef4dbc114e11d75d202507ae4501adb36c95e3923741fd0fe9ff6aea1a",
+      "source": "p0=f(()=>u({type:x(\"tool_result\"),tool_use_id:o(),content:Fe([o(),h0()]).optional().describe(\"The tool output: a string, or text / image / search_result / document blocks.\"),is_error:H().optional(),cache_control:lt()}))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "_0",
+      "start": 174927,
+      "endExclusive": 175240,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "0b1ea22fe1accac58f56badf36cba605922d538aa313721f7bae1087fc0353f2",
+      "source": "_0=f(()=>Fe([er(),Fn(),Xy(),Qy(),c0(),p0(),Zy(),ew(),...WH.map(Wy)]).describe(\"A request content block. text, image, document, search_result, tool_use, tool_result and thinking blocks are modelled; the other API block types are accepted by type tag only, and consumers must tolerate types newer than this list.\"))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "m0",
+      "start": 175241,
+      "endExclusive": 175258,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "5161e5d556e966b1e4a57b3c78e631a77bde1cfbba3ddb066782472670810a8b",
+      "source": "m0=f(()=>T(_0()))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "Yn",
+      "start": 175259,
+      "endExclusive": 175369,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "96165af11ae5ec4168e6d67ae48098affb1a67508e938b5fa64ba18b5cbb5551",
+      "source": "Yn=f(()=>Fe([o(),m0()]).describe(\"A bare string (shorthand for one text block) or a list of content blocks.\"))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "Jy",
+      "start": 175370,
+      "endExclusive": 175501,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "98a1f0a53d29ee0405ba3f1a36578b7d0500a111b128d3e60eb80f692fb651ef",
+      "source": "Jy=f(()=>u({role:x(\"user\"),content:Yn()}).describe('A Messages API MessageParam with role \"user\", as SDK user messages carry it.'))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "g0",
+      "start": 175502,
+      "endExclusive": 175654,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "72226afd53bf846621e699999d04285494bef840626ddc352ecdc5e13a8933ca",
+      "source": "g0=f(()=>u({type:x(\"text\"),text:o(),citations:T(se()).nullable().optional().describe(\"Citation locations backing the text, as the API defines them.\")}))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "E0",
+      "start": 175655,
+      "endExclusive": 175912,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "727c7b1d6f81a5d03e7aa606e9fd9cd1179c179e317997d634f708b3ac96f170",
+      "source": "E0=f(()=>u({type:x(\"tool_use\"),id:o(),name:o(),input:de(o(),se()).describe(\"The tool's input object; its shape is the named tool's input schema.\"),caller:se().optional().describe(\"Which caller invoked the tool (direct, or a server tool), when reported.\")}))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "Zy",
+      "start": 175913,
+      "endExclusive": 175973,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "f51bb1d39460b620e622ef8a26e4c9c2ae7e4b4a16852d619d65d11bc9a8f08c",
+      "source": "Zy=f(()=>u({type:x(\"thinking\"),thinking:o(),signature:o()}))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "ew",
+      "start": 175974,
+      "endExclusive": 176025,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "4f285d834ad612d871e91bee93511db3d708cd3184b652b6d6f9d63f518005a9",
+      "source": "ew=f(()=>u({type:x(\"redacted_thinking\"),data:o()}))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "S0",
+      "start": 176026,
+      "endExclusive": 176357,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "3fbb78353f38513993a01a698c5199a50e6c94ae79781d1f5639cec08895e07b",
+      "source": "S0=f(()=>Fe([g0(),E0(),Zy(),ew(),...Yy.map(Wy)]).describe(\"A response content block. text, tool_use and thinking blocks are modelled; the other API block types (server tool use and results, MCP tool blocks, container_upload, compaction, ...) are accepted by type tag only, and consumers must tolerate types newer than this list.\"))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "f0",
+      "start": 176358,
+      "endExclusive": 176444,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "614c22e9d2074c20001d5c6b4a91581c559fa8ea527fc3dac5e193478b0c405b",
+      "source": "f0=f(()=>u({ephemeral_1h_input_tokens:C().int(),ephemeral_5m_input_tokens:C().int()}))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "b0",
+      "start": 176445,
+      "endExclusive": 176518,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "37b65a35971cbc3d2511700c8754e20e5ddb43278f67755f79edd6e58ccc7c8f",
+      "source": "b0=f(()=>u({web_search_requests:C().int(),web_fetch_requests:C().int()}))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "T0",
+      "start": 176519,
+      "endExclusive": 176570,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "c572d082e3374171172122d6fda21a0f324aaff15fc782fc8292046b18b71f70",
+      "source": "T0=f(()=>u({thinking_tokens:C().int().optional()}))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "Wn",
+      "start": 176571,
+      "endExclusive": 177262,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "95046bf13cd02b3faa953fb5eef337031c5cfb31c99bc9255e47352536f2ee18",
+      "source": "Wn=f(()=>u({input_tokens:C().int(),output_tokens:C().int(),cache_creation_input_tokens:C().int().nullable(),cache_read_input_tokens:C().int().nullable(),cache_creation:f0().nullable().describe(\"Cache writes by TTL.\"),server_tool_use:b0().nullable(),service_tier:o().nullable().describe(\"standard, priority or batch.\"),inference_geo:o().nullable().optional(),speed:o().nullable().optional().describe(\"standard or fast.\"),iterations:se().optional().describe(\"Per-iteration usage when the request ran several sampling iterations.\"),output_tokens_details:T0().nullable().optional(),fallback_credit:se().optional().describe(\"Outcome of a fallback-credit token the request presented, or null.\")}))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "tw",
+      "start": 177263,
+      "endExclusive": 178001,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "934b6d400ba2c698aa11d14325747e5def4ad932057c4e47c570f1fe6fdceb23",
+      "source": "tw=f(()=>u({id:o().optional(),type:x(\"message\").optional(),role:x(\"assistant\"),model:o(),content:T(S0()),stop_reason:o().nullable().describe(\"end_turn, max_tokens, stop_sequence, tool_use, pause_turn, refusal, ...; null while the message is still streaming.\"),stop_sequence:o().nullable().optional(),stop_details:se().optional().describe(\"Structured refusal details, when stop_reason is refusal.\"),usage:Wn(),container:se().optional().describe(\"The code-execution container used by the request, if any.\"),context_management:se().optional().describe(\"Context-management edits applied during the request, if any.\")}).describe(\"A Messages API Message (a BetaMessage, possibly one streamed block of it), as SDK assistant messages carry it.\"))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "Ut",
+      "start": 178307,
+      "endExclusive": 179825,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "c828eb24250beeeae8bc47cc8bae6119103421d2764c8b8f54b2df47f29b7719",
+      "source": "Ut=f(()=>u({inputTokens:C().int(),outputTokens:C().int(),thinkingTokens:C().int().optional().describe(\"Thinking tokens, already counted inside outputTokens. Counts only turns run on CLI versions that record this field: absent when none did, and partial for a resumed session that began on an older version.\"),cacheReadInputTokens:C().int(),cacheCreationInputTokens:C().int(),webSearchRequests:C().int(),costUSD:C(),contextWindow:C().int(),maxOutputTokens:C().int(),canonicalModel:o().optional().describe(\"Canonical model id used for the pricing lookup (e.g. 'claude-opus-4-7'). May differ from the raw model string this entry is keyed by (provider-specific ids, aliases).\"),provider:o().optional().describe(\"API provider that served this model (e.g. 'firstParty', 'bedrock', 'vertex', 'foundry', 'anthropicAws', 'mantle', 'gateway').\"),costBasis:B([\"list\",\"managed\",\"unknown\"]).optional().describe(\"Which price table the most recent request for this model was priced at: Claude Code's built-in list prices ('list'), the organization's managed-settings modelPricing rates or multiplier ('managed'), or neither ('unknown' \\u2014 no pricing row and no built-in price matched the model ID, so costUSD is a guess at the default model's rate). Overwritten per request like canonicalModel, so a consumer that differences the cumulative costUSD per turn gets that turn's basis. Absent until this process has priced a request for the model (e.g. right after --resume) and on builds that predate the field; treat as 'list'.\")}))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "ue",
+      "start": 189909,
+      "endExclusive": 190471,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "331dd9c7f46b7039c5926369f1d72b1264ba98caf6f28b455b545c8421e231f9",
+      "source": "ue=f(()=>Gi(Tg,B([\"default\",\"acceptEdits\",\"bypassPermissions\",\"plan\",\"dontAsk\",\"auto\"])).describe(\"Permission mode for controlling how tool executions are handled. 'default' - Standard behavior, prompts for dangerous operations. 'acceptEdits' - Auto-accept file edit operations. 'bypassPermissions' - Bypass all permission checks (requires allowDangerouslySkipPermissions). 'plan' - Planning mode, no actual tool execution. 'dontAsk' - Don't prompt for permissions, deny if not pre-approved. 'auto' - Use a model classifier to approve/deny permission prompts.\"))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "WK",
+      "start": 221253,
+      "endExclusive": 221502,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "37546a87e9684cd5270197494435131255dec97b9482429b7a31a356185c8c3f",
+      "source": "WK=f(()=>Jy().describe('An Anthropic Messages API user message: a MessageParam with role \"user\" whose content is a string or an array of content blocks (text, image, document, tool_result, ...). See the Messages API reference for the block types.'))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "$K",
+      "start": 221503,
+      "endExclusive": 221517,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "293cc93b1978ecb269fc87ad70be8ae7c10c2d09e8bc667f776a38c50f9cf001",
+      "source": "$K=f(()=>Yn())"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "XK",
+      "start": 221518,
+      "endExclusive": 221891,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "9534da9b4871a2e9071d6b8f175a9a90811f41be90c7f24f0bd479c965194142",
+      "source": "XK=f(()=>tw().describe('Shaped like an Anthropic Messages API Message object (role \"assistant\"): id, model, content blocks (text, thinking, tool_use, ...), stop_reason and usage. When streamed, content typically holds the single block this message delivers and stop_reason is still null \\u2014 see SDKAssistantMessage. See the Messages API reference for the block types.'))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "_",
+      "start": 222112,
+      "endExclusive": 222124,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "c198ea0936b500c0372aa93ac830213f7a5d7207c4672cb1363b6b70648d5bc8",
+      "source": "_=f(()=>o())"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "ro",
+      "start": 222332,
+      "endExclusive": 222584,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "1f5512ddebc646f73a1513e992f80c0aa707dfedb1a8dafa5f34cf54e1550953",
+      "source": "ro=f(()=>B([\"authentication_failed\",\"oauth_org_not_allowed\",\"account_on_hold\",\"verification_required\",\"billing_error\",\"rate_limit\",\"overloaded\",\"invalid_request\",\"model_not_found\",\"server_error\",\"unknown\",\"max_output_tokens\",\"cloud_credential_error\"]))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "gw",
+      "start": 222638,
+      "endExclusive": 222797,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "a982bfcd21b8176c16d89c88d04a1c72ddb9b79419220c3ff98faa7cdbcc393d",
+      "source": "gw=f(()=>u({uri:o(),name:o(),title:o().optional(),description:o().optional(),mimeType:o().optional(),size:C().optional(),annotations:de(o(),se()).optional()}))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "ZK",
+      "start": 222798,
+      "endExclusive": 225095,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "c2abbcfa1ef741358bc6bdd880fa1d23bdeae4cadc023a05100ca88df6db129e",
+      "source": "ZK=f(()=>u({kind:B(r4o),servers:T(o()).optional().describe(\"mcp_needs_auth / mcp_disabled: the server names as configured. mcp_required_missing: the name patterns the agent definition requires that no connected server matches.\"),provider:B(o4o).optional().describe(\"auth_expired / auth_overridden / auth_missing_scope / design_needs_authorization: whose login the fix names \\u2014 'claude_ai' (the claude.ai account, /login) or 'claude_design' (Claude Design's own authorization, /design login).\"),path:o().optional().describe(\"outside_reads_blocked: the path the read block refused, when the refusal names one. staged_for_review: the settings file the write was held for.\"),managed:H().optional().describe(\"outside_reads_blocked: an organization policy sets the block, so the user cannot remove it. auth_overridden: the overriding credential was injected by the host environment, so nothing in this session can unset it.\"),feature:B(s4o).optional().describe(\"feature_disabled / policy_denied: the feature that is off.\"),cause:B(i4o).optional().describe(\"feature_disabled: why the feature is off \\u2014 'managed_settings' (CLAUDE_CODE_DISABLE_WORKFLOWS, or disableWorkflows or enableWorkflows: false set by a layer above the user's own settings), 'org_policy', 'unavailable' (not launched for this account), or 'user_setting' (the user's /config setting is off, including a disableWorkflows in their own settings, and nothing the user cannot clear also keeps them off).\"),policy_kind:B(a4o).optional().describe(\"policy_denied: the verdict \\u2014 'org_denied' (the organization's policy turns the feature off) or 'latched' (a HIPAA-regulated organization signed in earlier in this process; restarting clears it).\")}).describe(\"@internal The fix a host can offer for a tool result, stamped from structured producer state (never parsed from the result text). Kinds: mcp_needs_auth, mcp_disabled, mcp_required_missing, auth_expired, auth_overridden, auth_missing_scope, design_needs_authorization, sandbox_violation, outside_reads_blocked, memory_paused, feature_disabled, policy_denied, spawn_arg_limit (the command's exec image exceeded the OS argument limit), staged_for_review (a settings-file write held for the machine owner's review). New kinds are additive; treat an unknown kind as absent.\"))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "no",
+      "start": 225096,
+      "endExclusive": 230773,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "e91ed28e2afa79deec0fdc41ac0faf5f5ae9250f6575d97381ce486d6c8ff39a",
+      "source": "no=f(()=>Wo(\"kind\",[u({kind:x(\"human\")}),u({kind:x(\"channel\"),server:o()}),u({kind:x(\"peer\"),from:o(),fromMode:B([\"bypass\",\"prompting\"]).optional().describe(\"The SENDING session's permission class as declared by the host that injects this message on local stdin ('bypass' for sessions that run tools without asking, 'prompting' otherwise). Lets the recipient deliver a same-class message immediately while a cross-class or undeclared sender is still held at a recipient that runs without asking. Honored only from the injecting host on local stdin; absent when the host does not declare it.\"),name:o().optional().describe(\"Sender display name, normalized by the harness: Unicode control, format, surrogate, and line/paragraph-separator code points stripped (categories Cc/Cf/Cs/Zl/Zp \\u2014 covers bidi controls, zero-width characters, and tag characters), trimmed, at most 64 code points (+ ellipsis, never splitting a surrogate pair). Sender-asserted display text (the addressable identity is `from`) \\u2014 render it as reported speech, but no client-side character sanitization is needed. Absent when the wire is not exactly one harness-formed envelope and on messages from older senders.\"),fromSession:o().optional().describe(\"The sender's host-openable session id (the envelope's `from-session` attribute \\u2014 e.g. a desktop `local_<uuid>` or a cloud session `session_`/`ses_` id), set by the sender's host so a receiving UI can link this message back to the sending session. Sender-asserted like `from`: a navigation target only, never authority. Absent when the sender's host provides none and on messages from older senders.\"),inbound_origin:o().optional().describe(\"@internal Server-asserted ingest path of the demoted delivery, copied at classification from the message-level `inbound_origin`.\"),senderTaskId:o().optional().describe(\"Task id of the in-process background subagent that sent this message, stamped by the harness from the sending loop (never from tool input). Absent for cross-session peers.\"),body:o().optional().describe(\"Decoded message body with the peer envelope stripped \\u2014 byte-exact with what the model sees. Present only when the turn is exactly one harness-formed envelope (or an in-process agent message); render this instead of re-parsing the message text.\"),verifiedPeerPid:C().optional().describe(\"Kernel-verified pid of the process that connected to this session's cross-session messaging socket, read from the connection (SO_PEERCRED / LOCAL_PEERPID) \\u2014 never from the payload. This identifies the CONNECTING process, which for relayed traffic (e.g. a daemon forwarding on another session's behalf) is the relay, not the message's author. Key sender identity on this, never on `from`: `from` is sender-authored and kept only for reply routing, so it is forgeable by any same-user process. Absent when unverifiable (Windows, non-UDS ingress) \\u2014 never a wrong value. Pids are recyclable: provenance, not an authentication token.\")}),u({kind:x(\"task-notification\"),subkind:B([\"scheduled-trigger\",\"peer-send-message\",\"projects-relay\",\"session-inbox\"]).optional().describe(\"Present when the delivery is the fired stored prompt of a scheduled task/routine ('scheduled-trigger', stamped from server-asserted provenance, or declared by a local host for its own scheduled runs; the schedule attests storage, not authorship) or a coordinator co-member SendMessage delivery ('peer-send-message': model-authored text from another of the same user's sessions, verified by the server-stamped receiver co-membership \\u2014 task-notification for prompt authority, but distinguishable so the receive-side crossSessionInbound setting can apply to it). The harness frames a scheduled-trigger delivery as the session's assigned task instead of the generic background-notification frame. Absent on webhook, PR-steward, plugin, and background-event deliveries.\"),fireReason:o().optional().describe(\"On a 'scheduled-trigger' delivery, why it fired: a short lowercase token such as 'scheduled', 'manual', 'retry', 'catch_up' or 'api'. Set by the server for cloud routines, or declared by a local host for its own scheduled runs, which is honored only in a process the host started with CLAUDE_CODE_HOST_SCHEDULED_RUN=1 (a local host's value is kept only if it is 1 to 32 lowercase letters or underscores); absent when neither sent one.\"),producer:x(\"session-task\").optional().describe(\"@internal Present ('session-task') when the notification reports on work this session itself launched: a background agent, shell command, workflow, monitor, MCP or remote task settling, a detached tool call, or a hook rewake or worker check-in following up on such work. Absent on webhook, artifact and other externally-authored deliveries.\")}),u({kind:x(\"coordinator\")}),u({kind:x(\"unclassified\")}).describe(\"Injected turn whose ingress classification found no provenance. Framed by the harness as a non-user source in both drains; never presumed human, never host-replayed.\"),u({kind:x(\"observer\"),from:o(),senderTaskId:o()}).describe(\"Report from a background observer agent to the agent it observes. One-way by construction \\u2014 the observed agent must not reply.\"),u({kind:x(\"auto-continuation\")}),u({kind:x(\"observer-activity\")}).describe(\"Activity digest delivered to an observer agent. The message body is the self-framing digest (envelope + postamble); observed content is data, not instructions.\")]).describe(\"Provenance of a user-role message (peer session, team lead, channel). A host wrapping keyboard input must stamp {kind:'human'} explicitly \\u2014 absent origin is treated as unattributed and fails closed at strict isHuman() trust gates.\"))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "Ew",
+      "start": 230774,
+      "endExclusive": 238027,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "e8566e1bad974f12d78952dabf1e9817d4965c38a9bcdbab1386a00a65e1d91a",
+      "source": "Ew=f(()=>u({type:x(\"user\"),message:WK(),parent_tool_use_id:o().nullable(),isSynthetic:H().optional(),tool_use_result:se().optional().describe(\"Structured tool output \\u2014 the tool's full Output object, not the string content sent to the model. The shape is per-tool, keyed by the matching tool_use block's name (see the *Output types in toolTypes); MCP and dynamic tools carry their own shapes, so the field stays unknown-typed. For the Agent/Task tool the completed shape is the subagent's final report without the model-directed agentId/usage trailer, plus run totals \\u2014 render from it instead of parsing the tool_result text. A call that stepped aside for a message the user sent (today a WebFetch or WebSearch call) carries `{ detachedToolCall: true }` in place of its Output: the call is still running, and its result reaches the model in a later turn.\"),priority:B([\"now\",\"next\",\"later\"]).optional(),origin:no().optional(),client_platform:o().optional().describe(\"@internal The `anthropic-client-platform` value of the client that sent this message (e.g. `ios`, `android`, `web_claude_ai`, `desktop_app`). Injected server-side by CCR ingress from the request header.\"),inbound_origin:o().optional().describe(\"@internal Server-asserted ingest path that produced this message. Not settable by clients.\"),server_received_wall_ms:C().optional().describe(\"@internal Epoch ms on the session server's clock when it received the HTTP request that delivered this message. Written by the session server; the CLI copies it to the turn's result as user_message_server_received_wall_ms.\"),historical:H().optional().describe(\"@internal Replayed history rather than a live message: the Remote Control bridge stamps it on the messages it flushes to the session server, which also stamps it on deliveries it replays.\"),shouldQuery:H().optional().describe(\"When false, the message is appended to the transcript without triggering an assistant turn. It will be merged into the next user message that does query.\"),timestamp:o().optional().describe(\"ISO timestamp when the message was created on the originating process. Older emitters omit it; consumers should fall back to receive time.\"),is_meta:x(!0).optional().describe(\"@internal True when the message was synthesized by the loop (not user keyboard input). From internal UserMessage.isMeta.\"),seeded_summon:x(!0).optional().describe(\"@internal Desktop host only: the host's own seeded summon.\"),client_composed:x(!0).optional().describe(\"The client composed this turn from content the user did not type; the CLI delivers its text as written, with no `@path` file-mention expansion and no slash-command dispatch. On current CLIs the turn-start attachment pass is skipped as a whole: `@server:resource` MCP mentions are not expanded either, and the prompt is sent without the context the CLI normally attaches alongside it (nested `CLAUDE.md` and rules files, skill and tool listings, reminders); the pass the CLI runs between tool calls is unaffected.\"),initiator:o().optional().describe(\"@internal The host's own label for what started this turn (e.g. the desktop app's `scheduled-task`, `sleep-auto-resume`); `user` or absent means a person sent it. Usage attribution only; it does not change how the turn runs.\"),is_visible_in_transcript_only:x(!0).optional().describe(\"@internal True when the message is stored in the transcript but not rendered in the live UI.\"),is_virtual:x(!0).optional().describe(\"@internal Display-only: rendered in the UI but filtered before API send.\"),is_compact_summary:x(!0).optional().describe(\"@internal True when this user message is a compact-summary synthetic message.\"),summarize_metadata:u({messages_summarized:C().int(),user_context:o().optional(),direction:B([\"from\",\"up_to\"]).optional()}).optional().describe('@internal Metadata for \"Summarize from here\" / \"Summarize up to here\" summaries (from internal UserMessage.summarizeMetadata).'),mcp_meta:u({_meta:de(o(),se()).optional(),structured_content:de(o(),se()).optional(),resource_links:T(gw()).optional().describe(\"CLI-owned: the `resource_link` content blocks the MCP tool returned, collected from the raw result before the CLI rewrites each into the `[Resource link: NAME] URI` text line the model reads \\u2014 so a host renders the files without parsing that line. At most 50 links and 64 KiB serialized; absent when the result had none, and absent on a subagent's tool results (parent_tool_use_id set), whose mcpMeta carries `_meta` only. On today's wire this rides the mcpMeta spread as `tool_use_result.resourceLinks`. A sibling of `_meta`, never inside it: a server cannot supply it, and server `_meta` keys under the CLI-reserved `com.anthropic/` prefix are dropped before this message.\")}).optional().describe(\"@internal MCP protocol metadata passed through to SDK consumers, never sent to the model (from internal UserMessage.mcpMeta).\"),tool_result_meta:T(u({id:o(),non_execution_kind:B(sw).optional(),user_feedback:o().optional(),remedy:ZK().optional()})).optional().describe(\"@internal Display metadata for this message's tool_result blocks, keyed by tool_use_id. non_execution_kind is the harness-stamped reason an is_error:true result did not carry the tool's own execution output (user-rejected / permission-rule / automode-* / interrupted / cancelled); absent means the tool ran to completion. remedy is the fix a host can offer for what the result reports (see SDKToolResultRemedy). An entry may carry a remedy alone, on a result that did run (a staged write, a sandbox violation on exit 0), so whether a call ran is read from non_execution_kind, never from an entry's presence. user_feedback is the deny comment a human typed at a permission prompt (the local dialog or a bridge client's deny UI), before the CLI's reject-message framing \\u2014 absent when the deny was resolved by a coordinator, channel relay, or hook rather than a human. A deny answered through the SDK control protocol (can_use_tool / --permission-prompt-tool) currently reports as 'permission-rule' with no user_feedback, because that wire carries no human-provenance signal. Wrapper-level sibling \\u2014 never inside `message.content` \\u2014 so it is not replayed to the model. Clients read this instead of string-matching the result prose.\"),source_tool_use_id:o().optional().describe(\"@internal When this message was generated by a tool via newMessages, links it to that tool_use id.\"),source_tool_assistant_uuid:o().optional().describe(\"@internal For tool_result messages: UUID of the assistant message containing the matching tool_use block. Used for parentUuid assignment in transcript.\"),image_paste_ids:T(C().int()).optional().describe(\"@internal Paste IDs for images in this message, in order of appearance. REPL-local state \\u2014 candidate for surface-side if daemon has no use for it.\"),plan_content:o().optional().describe(\"@internal Plan to implement (cleared-context flow). When set, the message is rendered with plan styling.\"),permission_mode:ue().optional().describe(\"@internal Permission mode active when this message was sent (for rewind restoration).\"),interrupted_message_id:o().optional().describe(\"@internal For [Request interrupted by user] markers only: the API msg_* id that Esc cancelled.\")}))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "rr",
+      "start": 238028,
+      "endExclusive": 239560,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "f9cbf9d4cfeb51b44bf23b16d82366057f47068bd6a70b06ec5792c57b89714f",
+      "source": "rr=f(()=>Ew().extend({uuid:_().optional(),pasted_content:T($K()).optional().describe(\"Content the user pasted into the prompt rather than typed: each entry a string or an array of content blocks. The CLI appends the text of each entry after the typed text, in order, and may wrap it in `<pasted_content>` tags. Blocks other than text are ignored; send images and documents in `message.content`.\"),inline_pastes:T(o()).optional().describe(\"Text the user pasted that is still in `message.content` where they put it: each entry one paste. The prompt is not changed by the host; the CLI may wrap each entry in `<pasted_content>` tags where it still stands in the last text block. For a paste the host took out of `message`, use `pasted_content` instead.\"),session_id:o().optional(),subagent_type:o().optional().describe(\"Subagent type that produced this message.\"),task_description:o().optional().describe(\"Description of the subagent task that produced this message.\"),file_attachments:T(se()).optional().describe(\"@internal Files a remote client attached to this prompt (each {file_uuid, file_name, is_image?, sha256?, file_size?}; src/bridge/inboundAttachmentSchema.ts reads them). Typed like SDKUserMessageReplay.file_attachments so the two message types stay assignable.\")}).describe(\"A user-role message. A client writes one to the CLI to submit a prompt (this starts a turn); the CLI emits them for user-role content it adds to the conversation itself, chiefly the tool_result blocks answering the assistant's tool_use blocks.\"))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "E4r",
+      "start": 244435,
+      "endExclusive": 247163,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "2ab9d1b927473daffff5f9c9a9a2f73e6796b4701c7fe68481e78dc99cd7e6f1",
+      "source": "E4r=f(()=>u({session:u({total_cost_usd:C(),total_api_duration_ms:C().int(),total_duration_ms:C().int(),total_lines_added:C().int(),total_lines_removed:C().int(),model_usage:de(o(),Ut())}).describe(\"Cost and usage accumulated by the current session.\"),rate_limits:u({limits:T(u({kind:o().max(Ge).describe(\"The server's meter kind, e.g. 'session', 'weekly_all' or 'weekly_scoped'. Classify a row on this, never on a label.\"),group:o().max(Ge).describe(\"The server's row group, e.g. 'session' or 'weekly'; rows render grouped under it, in the server's order.\"),percent:C().describe(\"Share of the window used, 0-100.\"),resets_at:o().max(Ge).nullable().describe(\"ISO 8601 timestamp when the window resets.\"),scope:u({model:u({display_name:o().max(Ge)}).nullable().optional(),surface:u({display_name:o().max(Ge)}).nullable().optional()}).nullable().optional().describe(\"What a scoped row is for, a model or a surface, with the server's display label.\"),severity:o().max(Ge).describe(\"The server's reading of the row for a meter's colour, e.g. 'normal', 'warning' or 'critical'. Every row here is the server's, so a client never grades a row itself.\"),is_active:H().describe(\"The server's headline pick: the row a single-value indicator shows.\")})).max(tF).nullable().describe(\"The server's usage rows (the usage endpoint's limits[]), as sent: which meters apply, their scope, labels, severity and order are the server's, so a client renders them verbatim and a new meter needs no client release. Empty when the server reported no meters; null when the body carried no rows at all (a server that predates them). Null too while the usage fetch is failing: the rows here are only ever the server's current reply, so neither the row the CLI builds from rate-limit response headers for its own screen nor its snapshot of an earlier reply appears here.\"),extra_usage:u({is_enabled:H(),monthly_limit:C().nullable(),used_credits:C().nullable(),utilization:C().nullable(),currency:o().max(Ge).nullable().optional()}).nullable().optional().describe(\"Extra-usage (overage) spend for the billing period, when the plan has it. Amounts are in minor units of `currency` (cents for USD); is_enabled is false while extra usage cannot cover sends.\")}).nullable().describe(\"The plan's usage rows and extra-usage spend from the claude.ai usage endpoint; null when the CLI could not fetch them (no plan on this lane, or a token without the profile scope).\")}).describe(\"Structured twin of a /usage result, carried beside its text: the session's totals, the plan's usage rows as the server sent them and the extra-usage spend, and nothing else from the usage body (the get_usage control reply carries the rest). Experimental \\u2014 the shape may change.\"))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "sF",
+      "start": 247204,
+      "endExclusive": 247790,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "014317bf3a418f14007ad232ba83cf2ca59ae5849f9195fc93933bd68aa37c83",
+      "source": "sF=f(()=>u({name:o().describe('Display name of the row as the CLI renders it, e.g. \"Messages\" or \"MCP tools (deferred)\". Use `kind` (not this name) to classify the row.'),tokens:C().int(),kind:B(wEn).describe(\"What the row is: 'used' content occupies the window; 'free' is the remaining window; 'buffer' is the compaction reserve (autocompact or manual); 'deferred' rows are out-of-window tool schemas \\u2014 listed for awareness, excluded from usage math.\")}).describe(\"One row of the /context usage-by-category breakdown. Rows may carry zero tokens; renderers typically hide those.\"))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "rF",
+      "start": 247791,
+      "endExclusive": 249784,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "a0c80f1cdb9bd899e88c61b03c5eda105f475fbff1baf14474f93dfd40a64e86",
+      "source": "rF=f(()=>u({model:o().describe(\"Main-loop model the usage was computed for.\"),total_tokens:C().int().describe(\"Estimated tokens in use, unclamped \\u2014 may exceed raw_max_tokens when over limit.\"),raw_max_tokens:C().int().describe(\"The window usage is measured against: the resolved autocompact window \\u2014 the model's believed limit, or a smaller compaction-policy window (a configured value, or e.g. the 200K boundary on 1M-window models).\"),percentage:C().int().describe(\"Rounded total_tokens / raw_max_tokens, 0-100+.\"),over_limit:u({tokens_over:C().int(),kind:B([\"hard_limit\",\"compaction_window\"])}).optional().describe(\"Present when total_tokens exceeds raw_max_tokens. kind says how the window was resolved, not whether the API will accept the next request: 'hard_limit' means the window is the model's believed limit (the API will refuse past it); 'compaction_window' means a compaction-policy window, which may or may not coincide with the model's hard limit.\"),categories:T(sF()),mcp_tools:T(u({name:o().describe('Wire name, e.g. \"mcp__linear__create_issue\".'),server_name:o(),tokens:C().int()})),memory_files:T(u({path:o(),type:o().describe('Display label of the memory-file source, e.g. \"Project\" or \"User\".'),tokens:C().int()})),agents:T(u({agent_type:o(),source:o().describe(\"Raw source identifier, e.g. 'projectSettings', 'userSettings', 'plugin'. Built-in agents are excluded by the producer. Display labels are the renderer's concern.\"),tokens:C().int()})),skills:T(u({name:o(),source:o().describe(\"Raw source identifier, e.g. 'userSettings', 'plugin', 'syncedSkills'.\"),plugin_name:o().optional(),tokens:C().int()})).optional().describe(\"Omitted when no skills contribute tokens.\")}).describe(\"Structured twin of the /context report \\u2014 the data a client needs to render the context-usage card without parsing the markdown table. Evolves additively (new optional fields); a breaking reshape would ship as a sibling field, so consumers can trust the fields they know.\"))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "nr",
+      "start": 249785,
+      "endExclusive": 270041,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "aecc05f173114c85719337010500692a34037561ae3d663ca37e9f97fbe37f6b",
+      "source": "nr=f(()=>u({type:x(\"assistant\"),message:XK(),parent_tool_use_id:o().nullable(),error:ro().optional(),uuid:_(),historical:H().optional().describe(\"@internal Replayed history rather than a live message (stamped by the Remote Control bridge when it flushes history to the session server).\"),session_id:o(),request_id:o().optional(),user_message_uuid:o().optional().describe(\"Client uuid of the user message this turn is answering (submitMessage options.uuid), stamped on an assistant message each time that send changes \\u2014 the turn's FIRST top-level assistant message (which may carry only a thinking block, or be a synthetic API-error message), and then, for a turn started by a synthetic (meta) prompt, the first assistant message after each queued user message folded in mid-turn (the fold takes the echo over); with --include-partial-messages the turn's first non-ping stream event is stamped too, independently (see SDKPartialAssistantMessage), so the same uuid may appear on both \\u2014 either binds the reply to the send it answers without waiting for the result; the server keeps the first stamp it sees per uuid. A turn started by a typed prompt keeps that uuid for its whole turn, so it stamps once per frame kind. A meta turn's own uuid is stamped only when the host vouches it is the client event's own (on a hosted session, the uuid the session server persisted: delivered content such as a Slack owner ping, a Slack-bot observation or a client-injected synthetic turn), never for a prompt the CLI minted itself \\u2014 except that the boot-time rescue turn re-running a turn a worker restart interrupted mid-way stamps the interrupted turn's own last user prompt (with resume_reason), the send that re-run answers; either way a user message folded into a meta turn takes the echo over from it (the rescue turn absorbing messages sent while the session was down; a bot-observation turn absorbing a human's post), and the first reply frame of each kind after that fold carries the folded message's uuid \\u2014 the first reply that message got. Wrapper-level sibling \\u2014 never inside `message.content` \\u2014 so it is not replayed to the model. Absent on every other frame of the turn, on subagent frames (parent_tool_use_id set), on turns that neither had a client uuid nor folded a user message in, and from older producers.\"),user_message_uuids:T(o()).optional().describe(\"Client uuids of every user message whose prompt this turn has consumed so far, in consumption order \\u2014 all members of a prompt batch the host merged into this one turn (several messages sent close together run as one turn whose user_message_uuid is the LAST member's), then any user message folded into the turn before this frame \\u2014 so a consumer that sent any of them can bind this reply to its own send by finding its uuid anywhere in the list. Always contains user_message_uuid; at most 64 entries. Present exactly when user_message_uuid is, on the same frames; absent from older producers (fall back to user_message_uuid).\"),resume_reason:o().optional().describe(\"Why this frame's turn is the automatic re-run of a turn a worker restart interrupted (CLAUDE_CODE_RESUME_INTERRUPTED_TURN): the host's CLAUDE_CODE_RESUME_REASON when it set one (host_draining, checkpoint_restore, container_recreated, \\u2026), else 'interrupted_turn'. Stamped on the same reply frames as user_message_uuid (which on such a re-run names the interrupted turn's own last user prompt), so a consumer can tell the re-run's first reply from the interrupted attempt's. Absent on every other turn, on thinking_tokens frames, and from older producers.\"),resumed_from_incomplete_thinking:x(!0).optional().describe(\"This turn continued the preceding truncated assistant turn inside its trailing signed thinking block (max-output-tokens recovery). Its thinking signatures are cumulative over that preceding thinking-only turn, so a history replayed through the bridge must carry this flag back for the normalizer to keep the run's prefix on the wire. Wrapper-level sibling \\u2014 never inside `message.content` \\u2014 so it is not replayed to the model.\"),supersedes:T(_()).optional().describe(\"Wire uuids of previously-delivered messages that this message replaces (refusal-fallback supersede). The list can include tombstoned tool_result frames from the refused leg, not only assistant frames. Evict the named messages on arrival and treat this frame as their canonical replacement. Idempotent with the end-of-turn model_refusal_fallback notice, whose retracted_message_uuids remains the complete audit record for the turn.\"),aborted:x(!0).optional().describe(\"True when this assistant message was truncated by an interrupt/abort before the stream completed: stop_reason was never received and the content may end mid-word. Absent on normally completed messages.\"),subagent_type:o().optional().describe(\"Subagent type that produced this message.\"),task_description:o().optional().describe(\"Description of the subagent task that produced this message.\"),tool_use_meta:T(u({id:o(),display_name:o(),server_display_name:o().optional(),icon_url:o().optional()})).optional().describe(\"@internal Display metadata for this message's tool_use blocks, keyed by block id. display_name is the MCP server's `tool.annotations.title` when provided, otherwise a readable transform of the wire name; server_display_name is the MCP server's own display name; icon_url is the MCP server's directory icon URL (claude.ai connectors only). Omitted for blocks whose display label equals the wire name (built-in tools). Wrapper-level sibling \\u2014 never inside `message.content` \\u2014 so it is not replayed to the model.\"),narration_block_indexes:T(C().int().nonnegative()).optional().describe(\"@internal Ascending zero-based indexes into this frame's `message.content` of the thinking blocks whose signature the server tagged block_kind 'narration' (server summaries of the prose between tool calls, not the model's own reasoning), so a renderer can label them as summaries without decoding the signature envelope. Fail-closed: an unparseable or legacy signature is not listed. A listed block can have empty thinking text when the request returned no thinking text; give those ordinary thinking treatment. Omitted when the frame has no such block, and by CLI versions before this field existed; treat unlisted thinking blocks as ordinary thinking. Wrapper-level sibling \\u2014 never inside `message.content` \\u2014 so it is not replayed to the model.\"),narration_hint:B([\"hidden\",\"faint\"]).optional().describe(\"@internal Display-only, for this frame's narration_block_indexes blocks: how to draw their trailing ' \\xB7 summarized' hint, by the same rule Claude Code's terminal UI uses for the model that produced the frame. 'hidden': draw no hint. 'faint': draw ' \\xB7 summary'. Omitted: draw ' \\xB7 summarized'. Sent only to the VS Code extension and only on frames that have such a block; older CLI versions never send it. Wrapper-level sibling \\u2014 never inside `message.content` \\u2014 so it is not replayed to the model.\"),thinking_duration_ms:C().int().positive().optional().catch(void 0).describe(\"@internal How long the thinking block in this frame took to stream, in whole milliseconds (at least 1): from its content_block_start to its content_block_stop, so the wait for the response's first token is not counted. For display only. Sent only on a frame whose one content block is a thinking block that was streamed. Older CLI versions never send it, and a CLI that rebuilt its history from SDK frames does not send it when it replays that history, so be ready to show the block without a duration. Wrapper-level sibling \\u2014 never inside `message.content` \\u2014 so it is not replayed to the model.\"),timestamp:o().optional().describe(\"ISO timestamp of when this content block finished on the originating process. One API assistant turn may produce several assistant messages sharing a message.id, each with its own timestamp. Uses the originating host's clock, so it's for display only; do not order messages by this field. Older emitters omit it; consumers should fall back to receive time.\"),is_meta:x(!0).optional().describe(\"@internal True when the message was synthesized by the loop (not a model response).\"),context_usage:rF().optional().describe(\"Structured twin of the /context report, carried on the synthetic assistant message that delivers the markdown table. Present only on /context results from CLIs new enough to attach it; the markdown in message.content remains the canonical fallback. Wrapper-level sibling \\u2014 never inside `message.content` \\u2014 so it is not replayed to the model.\"),usage_report:E4r().optional().describe(\"Structured twin of the /usage report, carried on the synthetic assistant message that delivers its text: the session totals, the plan's usage rows and extra-usage spend, for remote clients that render a card from data. Present only on /usage results from CLIs new enough to attach it and from claude.ai-subscriber sessions; the text in message.content remains the canonical fallback. Wrapper-level sibling \\u2014 never inside `message.content` \\u2014 so it is not replayed to the model.\"),local_command_source:o().optional().describe(\"@internal The originating system local_command row's wire-form content (escaped frames), carried on the loop-synthesized local-command twin. Round-tripped so toInternalMessages rebuilds the internal system row on a bridge/SDK history replay \\u2014 replay then matches the live session, where that row is model-visible \\u2014 instead of dropping the output or replaying the twin's decoded display text. Wrapper-level sibling \\u2014 never inside `message.content`.\"),local_command_run:u({command:o(),args:o()}).optional().describe(\"@internal On the local-command twin, the run that printed the row: the command's name as `command.run` carried it (no slash) and its arguments as the echo shows them (`***` when the command marks them sensitive). Present when a `local` command's dispatch printed the row or a `command.run` hook answered it, absent on a never-ran notice. A surface that draws the hooks engine's `CommandOutput` site asks ui_render with these, the twin's text and its uuid as instance_id; toInternalMessages round-trips it onto the rebuilt row. Wrapper-level sibling \\u2014 never inside `message.content`.\"),local_command_outcome:u({kind:B(qn),suggestion:o().optional().describe(\"unknown: the registered command closest to the typed name, no slash.\")}).optional().catch(void 0).describe(\"@internal On the local-command twin, what the row reports, so a host can offer a fix instead of relaying the text: 'unavailable_headless' (an interactive-panel command this session cannot open), 'unknown' (no command has the typed name), 'failed' (the command ran and failed), 'restart_required' (the change applies after Claude Code restarts). Absent when the row reports none of these; new kinds are additive, so treat an unknown one as absent. toInternalMessages round-trips it onto the rebuilt row. Wrapper-level sibling \\u2014 never inside `message.content`.\"),is_virtual:x(!0).optional().describe(\"@internal Display-only: rendered in the UI but filtered before API send.\"),batch_tool_uses:T(Ve({id:o(),name:o()})).optional().describe(\"@internal `{id, name}` of the original Batch* tool_use block(s) for a message whose content was decomposed into synthetic v1 tool_use blocks. Round-tripped so a replayed history reassembles the batch block on the wire (not N synthetics). Input is reassembled from the synthetics in `message.content` \\u2014 never carried here. Wrapper-level sibling \\u2014 never inside `message.content` \\u2014 so it is not replayed to the model.\"),wire_tool_inputs:de(o(),se()).optional().describe(\"@internal `tool_use.input` exactly as the API produced it, keyed by tool_use id, for a message whose `message.content` carries the client-normalized input. Round-tripped so a replayed history echoes each earlier tool call back to the API as the API emitted it (the server may hold its own copy of the turn). Wrapper-level sibling \\u2014 never inside `message.content`.\"),wire_ingest_context:de(o(),se()).optional().describe(\"@internal What the client-side input normalization read from process state (the working directory a leading `cd` was stripped against, the stamp applied to a Slack send) for the inputs in `wire_tool_inputs`, keyed by the same tool_use ids. Round-tripped with `wire_tool_inputs` so a replayed history can verify each recorded input against the normalized one exactly. Wrapper-level sibling \\u2014 never inside `message.content`.\"),is_api_error_message:H().optional().describe(\"@internal True when this assistant message wraps an API error (from internal AssistantMessage.isApiErrorMessage).\"),api_error_status:C().int().optional().describe(\"@internal HTTP status code of the API error when is_api_error_message is true.\"),api_error:B([\"max_output_tokens\",\"dlp_request_denied\",\"claude_code_version_too_old\",\"safety_monitor_blocked\",\"effort_requires_thinking\",\"advisor_incompatible\",\"tool_history_mismatch\",\"autocompact_thrashing\",\"pdf_too_large\",\"pdf_password_protected\",\"no_response\",\"tls_untrusted_ca\",\"gateway_content_type\",\"provider_credentials\",\"gateway_signin_required\",\"gateway_session_expired\",\"api_key_auth_disabled\",\"org_disabled_credential\",\"invalid_credential_header\",\"model_requires_usage_credits\",\"long_context_credits_required\",\"consent_unanswered\",\"no_allowed_fallback\",\"model_substitution_disabled\",\"field_not_granted\"]).optional().describe(\"@internal Typed kind of the API error when is_api_error_message is true, for consumers that key on the cause instead of the message text (the text stays the fallback and may change). Absent when the error has no typed kind; new values are added over time, so treat an unknown value as absent. dlp_request_denied: the request was refused by the organization's data-loss-prevention policy \\u2014 terminal for that request body; a consumer replaying history must not re-send it. claude_code_version_too_old: the API refused the request because this Claude Code build is below a required minimum version \\u2014 the selected model's minimum, or an organization-policy floor; only the message text says which and names the versions, and the remedy is updating Claude Code. safety_monitor_blocked: a server-side safety monitor blocked the model's response for this turn; terminal for the turn, so a consumer replaying history must not re-send the prompt that led to it. effort_requires_thinking: the model refuses the requested effort level while thinking is off; api_error_params.effort names the level. advisor_incompatible: the configured advisor model cannot be paired with this request's model. tool_history_mismatch: the API rejected the conversation's tool_use/tool_result pairing (a tool_use without its result, an orphaned tool_result, a duplicate tool_use id); re-sending the same history fails the same way, and rewinding the conversation is the remedy. autocompact_thrashing: the context refilled to the limit right after each automatic compaction, repeatedly, so the turn stopped; something in context is too large for the window. pdf_too_large: a PDF is over the API's page or size limit. pdf_password_protected: a PDF is encrypted. no_response: no response arrived before the first-byte deadline on any attempt, usually a proxy or gateway that holds responses until they complete. tls_untrusted_ca: the API's TLS certificate comes from an authority this process does not trust, usually a TLS-inspecting proxy or a gateway signed by a private CA. gateway_content_type: a proxy between Claude Code and Amazon Bedrock rewrote Bedrock's event-stream response. provider_credentials: a third-party cloud provider (api_error_params.provider) refused the request's credentials or access; api_error_params.remedy says what fixes it. gateway_signin_required: the Cloud gateway provider is configured and nobody is signed in to it; no request was sent. gateway_session_expired: the Cloud gateway session expired; no request was sent; api_error_params.remedy is gateway_token when the token came from the environment, which signing in does not replace. api_key_auth_disabled: the organization turned off API key authentication and the active credential is an API key. org_disabled_credential: the ANTHROPIC_API_KEY environment variable belongs to a disabled organization and overrides the account sign-in. invalid_credential_header: a credential or header value (from the environment, a helper, or the saved sign-in) cannot be sent as an HTTP header; caught before the request was sent. model_requires_usage_credits: the model runs on usage credits for this account, and credits are off or the included allowance is used up. long_context_credits_required: a request over the 200K-token context boundary needs usage credits. consent_unanswered: the model now uses usage credits and the prompt to confirm went unanswered; nothing was sent. no_allowed_fallback: switching off the model was needed (the usage-credits prompt was declined) and the model policy allows no other model. model_substitution_disabled: switching off the model was needed and CLAUDE_CODE_NO_MODEL_FALLBACK forbids it. field_not_granted: the organization is not allowed to send a field in the request, and the message text says what to do.\"),api_error_params:u({effort:o().optional(),provider:B([\"bedrock\",\"anthropicAws\",\"mantle\",\"anthropicGoogleCloud\",\"vertex\",\"foundry\",\"gateway\"]).optional(),remedy:B([\"refresh_command\",\"refresh_credentials\",\"adc\",\"gateway_token\",\"host_managed\",\"model_access\"]).optional()}).optional().describe(\"@internal Parameters of api_error, present only for the kinds that have any. effort: the effort level the API refused (effort_requires_thinking). provider: the API provider whose credentials failed (provider_credentials, gateway_session_expired). remedy (provider_credentials, gateway_session_expired): refresh_command \\u2014 a configured refresh command (awsAuthRefresh / gcpAuthRefresh) refreshes the credentials; refresh_credentials \\u2014 refresh the provider's credentials by hand, no command is configured; adc \\u2014 refresh the Google application default credentials or the GOOGLE_APPLICATION_CREDENTIALS key file; gateway_token \\u2014 replace the gateway token supplied through ANTHROPIC_AUTH_TOKEN or ANTHROPIC_CUSTOM_HEADERS; host_managed \\u2014 the host application owns these credentials; model_access \\u2014 the credentials work but the model is not enabled for this account and region (Amazon Bedrock).\"),api_error_code:o().optional().describe(\"@internal The server's error.details.error_code for this API error, copied through when it is an identifier (^[a-z][a-z0-9_]{0,63}$) and dropped otherwise. Carries server gate codes this build has no api_error value for, so a host can key on a new gate without a Claude Code release. Absent when the response carried no code.\"),error_details:o().optional().describe(\"@internal Raw API error message \\u2014 preserves details (e.g. prompt-too-long token counts) that user-facing content discards.\"),advisor_model:o().optional().describe(\"@internal Advisor model that produced this message, when applicable.\"),attribution_agent:o().optional().describe(\"@internal Attribution stamp: agent name parsed from querySource (see messageAttribution.ts). May overlap with subagent_type.\"),attribution_skill:o().optional().describe(\"@internal Skill that produced this message.\"),attribution_plugin:o().optional().describe(\"@internal Plugin that produced this message.\"),attribution_mcp_server:o().optional().describe(\"@internal MCP server that produced this message.\"),attribution_mcp_tool:o().optional().describe(\"@internal MCP tool that produced this message.\")}).describe(\"An assistant message. While a response streams the CLI emits one assistant message per completed content block, so several consecutive assistant messages can share message.id and each carries just that block in message.content; on those, message.stop_reason is null and message.usage is not final \\u2014 the turn's stop reason and total usage arrive on the result message. parent_tool_use_id is non-null when the message was produced inside a subagent started by that tool_use.\"))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "Io",
+      "start": 452425,
+      "endExclusive": 452688,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "d6d1ccd960fed4edbb57f48da6002cd27727e8d3f3e8714c1ad24ecf0e93be79",
+      "source": "Io=f(()=>u({subtype:x(\"get_status\")}).describe(\"@internal Requests the rows of the terminal's /status screen (version, session, account, provider, model, servers, settings), every value already rendered as text, for a host that shows them with its own widgets.\"))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "Do",
+      "start": 453064,
+      "endExclusive": 453310,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "896076440356ea862fd6b290c0eeb962d962c220c21775c76fc116a75ca9789b",
+      "source": "Do=f(()=>u({subtype:x(\"export_conversation\")}).describe(\"@internal Requests the conversation as the plain text the terminal's /export writes, with the file name that command would offer, for a host that copies or saves it with its own widgets.\"))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "xo",
+      "start": 453588,
+      "endExclusive": 453894,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "8ed23bc1be98b6d62f235442ae4c6b0fd86afff4f58a34fe2f6fcd3b9186e57d",
+      "source": "xo=f(()=>u({subtype:x(\"get_memory_dialog\")}).describe(\"@internal Requests the rows and toggle states of the session's /memory dialog, for a host that draws the dialog with its own widgets and opens the files and folders itself. Clears the session's memory-file cache first, as the terminal /memory does.\"))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "Uo",
+      "start": 459253,
+      "endExclusive": 459668,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "28b7f08fcc7eae1390ad0edb5fea0c378a55b2b58dc3c7d51ec94990782213f3",
+      "source": "Uo=f(()=>u({subtype:x(\"get_chrome_dialog\")}).describe(\"@internal Requests the state the terminal's /chrome dialog shows (Claude in Chrome: whether it is allowed, the extension's install and connection state, the enabled-by-default setting, and the pages its rows open), for a host that draws the dialog with its own widgets. Read-only; a host writes the setting through the CLI's edit-chrome-settings subcommand.\"))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "Vo",
+      "start": 461033,
+      "endExclusive": 461269,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "cc9103164e6b920af772a3c1be3478c98211453bc020600df6bff0c5073b26b8",
+      "source": "Vo=f(()=>u({subtype:x(\"get_chrome_browsers\")}).describe(\"@internal Requests the browsers connected to the session's Claude in Chrome server, as the terminal's /chrome browser picker lists them. Fails when the server is not connected.\"))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "jo",
+      "start": 461474,
+      "endExclusive": 461776,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "ed7fd22f01deb04827864e9bdd069f7bef17f171e5ef9b697d850c0bba31665d",
+      "source": "jo=f(()=>u({subtype:x(\"select_chrome_browser\"),device_id:o().describe(\"The browser to use for Chrome actions, from get_chrome_browsers.\")}).describe(\"@internal Switches the session's Claude in Chrome server to the given browser, as the terminal's picker does. Fails when the server is not connected.\"))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "Fo",
+      "start": 477887,
+      "endExclusive": 480917,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "542fd9da43a906cdca882f728d6a57fa6676041931141081bc1bf45de9e89ba8",
+      "source": "Fo=f(()=>u({subtype:x(\"list_directory\"),path:o().describe('Directory to list, relative to the workspace root: the project root of the session, which is the directory the session was started in or, for a worker started ahead of its session, claimed for. A `cd` in the shell, entering a worktree, or a set_cwd after the first turn does not move it. \"\" or \".\" lists the root itself. \"/\" is the only separator and 1024 UTF-16 code units the most. Absolute, drive, UNC and \"..\" paths are refused as invalid_path, and so is a path with a backslash: a name that contains one cannot be listed. Some other names are refused as unsupported_name, for example one that ends in a dot or a space.')}).describe(\"@internal List the direct children (names and kinds) of one directory below the workspace root of a remote session on Linux (every cloud session; a self-hosted runner on Linux). One level per request, no file contents. No symlink is followed: a path through or to a symlink is refused. A directory that a Read deny rule or a Read ask rule covers is refused, and such children are left out: the request cannot ask anyone. A directory whose every child is left out answers an empty listing, as an empty directory does. A refusal is the control error `list denied: <code>`, with code one of invalid_path, unsupported_name, symlink_in_path (a symlink at the workspace root or below it), path_not_canonical (a symlink above it, or a directory of the path was moved or removed while it was read; after either of these two codes the same request can succeed when it is sent again, if the tree changed), read_rule, not_found, not_a_directory, os_permission_denied, workspace_moved (the session works in a worktree or another directory now; this can last until the worker is restarted), unexpected_error. A rule for the whole Read tool refuses every listing as read_rule. Any other error text means the request was not served at all: the unsupported-subtype error below, `not_claimed` from a worker that is started but not yet claimed for a session, or the refusal of a client in between that does not know the request. Any other session, and a remote session on macOS, on Windows or under WSL, refuses the request as an unsupported subtype, as an older CLI does (the wording differs between a headless session and the Remote Control bridge). A remote session on Linux answers the same way while the request is switched off remotely; the switch is read for each request, so that answer can change within a session. To open a listed entry, send read_file an absolute path: the `cwd` of the first system/init message of the session, then the listed path, then the entry name. When the `absPath` of the listing starts with \\\"/\\\", that `absPath`, then \\\"/\\\", then the entry name is such a path too. read_file resolves a relative path against the live cwd, which a `cd` in the shell moves, and every later system/init carries that live cwd, not the root. A session whose system/init carries an empty `cwd` names no root to build that path from.\"))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "HJe",
+      "start": 508381,
+      "endExclusive": 514802,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "0e35522a92f9c68e7d4fcdbe96d826e4b72a60b609e842b0c0834bc7d4592588",
+      "source": "HJe=f(()=>u({subtype:x(\"turn_handoff\"),messages:T(Fe([rr(),nr()])).min(1).max(200).describe(\"@internal The turn so far, in conversation order: the user's message, any [assistant, tool_result] rounds already answered elsewhere, and last an assistant message (thinking blocks with their signatures, text, and the tool_use blocks to run). Every message carries a uuid, kept as the transcript line's; none of the messages, and none of the tool_use ids they hold, may already be in the conversation \\u2014 the turn is appended once, whole, never merged with lines already there (except as tool_use_ids describes for a turn that runs nothing).\"),tool_use_ids:T(o()).max(16).describe(\"@internal The tool_use blocks of the last message to run, each of a tool named in the turn_handoff entry of the worker external_metadata; all run in one batch, then the model continues once. May be empty, and then nothing runs and no model turn follows: with every call the turn carries answered within it (the last message holding none), the worker appends the turn as history and, once the lines are stored, echoes the last assistant message that holds a call; with stopped, the user stopped the turn before its calls ran. In both cases, when a leading part of the turn is already in the conversation from an earlier delivery, only the rest is appended.\"),stopped:x(!0).optional().describe(\"@internal Only true, and only with an empty tool_use_ids: the user stopped this turn while its last message, an assistant message holding calls that have not run, was being handed over. The worker appends the turn, closes those calls and marks the turn exactly as when a turn of its own is stopped before a call runs, and ends it with the result a stopped turn ends with; when an earlier delivery already appended the turn, the calls are closed in place.\"),relay_marker:u({type:x(\"system\"),subtype:x(\"upgrade_relay_marker\"),uuid:o(),content:o()}).optional().describe(\"@internal The system line that starts the prompt-cache relay for this conversation: uuid is the line's uuid, and content is the marker, a JSON string whose anchor_line_uuid is the uuid of the first of messages; other fields of the line are ignored. Only a worker that advertises relay_marker: true in turn_handoff_available uses it, and only on a request that names calls to run. It is never a reason to refuse the turn: when the member is not such a line, or the worker does not use the marker, the request is answered and its calls still run.\"),memory_context:u({uuid:o(),version:o().nullable(),content:o().nullable()}).optional().describe(\"@internal The snapshot of the user's claude.ai memory that the client showed its model with the turn's user message. Used only on a request that names calls to run: the worker writes it ahead of the first of messages, with uuid as the line's uuid, as a cowork_memory_context attachment line like those it writes for snapshots it fetches itself, and then adds no copy of that version. version and content are both strings for a snapshot, both null to withdraw an earlier one. The member is never a reason to refuse the request: one that is malformed, that has a version without content or the reverse, or whose uuid is also that of one of messages, of relay_marker or of a line the session's transcript holds, is ignored, and the turn runs without the line.\"),message_client_platform:o().optional().describe(\"@internal The `anthropic-client-platform` value of the app a person sent the first of messages from. Left out when no person sent that message, as in a scheduled run. When it names one of the Remote Control apps (isRemoteControlAppPlatform) and that message is not one from another session, the worker marks the message as sent by a person, as it marks a user message that arrives with that value, so the turn counts as started by a person for the calls it runs and for those the model makes afterwards. The member is never a reason to refuse the request: without it, or with any other value, the message is appended unmarked.\"),file_names:T(u({file_uuid:o(),name:o()})).max(16).optional().describe(\"@internal Files a person attached to the conversation, each with the name the client showed its model for it, the most wanted first; at most 16. file_uuid is that of a file_attachments entry on a user message sent to this worker before the request. Only a worker that advertises file_names: true in turn_handoff_available uses the member, only on a request that names calls to run, and only when those calls run in the session's home directory: before they run, it copies each listed file it has downloaded into that directory, under that name, until a limit on time or on total size is reached, taking first the names that occur in the calls' own input. It replaces nothing, skips a name it refuses or that the list holds twice, and, within one request, skips the further names of a file once it has found or placed one of them. The member is never a reason to refuse the request: a malformed one (a longer list included) is ignored whole, and the calls run whatever became of the copies.\")}).describe('@internal Sent by the session client to a worker that advertises turn_handoff in its external_metadata: hand over a turn whose final assistant message holds tool calls that have not run. The worker answers at once \\u2014 success {status: \"accepted\"} (validated and queued; the messages are appended at the start of the turn that runs the calls, the last one echoed back as an assistant event before any call runs; a request that runs nothing (see tool_use_ids) for the same turn as one still queued to run replaces it), success {status: \"duplicate\"} (every named call is already taken by an earlier delivery or answered; nothing runs \\u2014 taken, not necessarily ran; or, for a turn that runs nothing, its calls are already answered by other lines, or the same turn is already pending in that shape or running), or an error whose message starts with its code and a colon: turn_handoff_disabled, invalid_handoff, unsupported_tool, unknown_tool, recovered_by_restart (this worker restarted after the turn was appended and its recovery set the turn\\'s unrun calls aside; this request will not run or close them). Accepted calls get the permission evaluation of the worker (rules, the permission mode, can_use_tool to the client); their tool_result messages and the model continuation follow on the event stream as in any turn.'))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "ai",
+      "start": 518665,
+      "endExclusive": 519271,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "6e6c1d0f273feb5899697ab29b5708e047cb8ca8d085b49173f706714a135ab7",
+      "source": "ai=f(()=>u({subtype:x(\"register_repo_root\"),directory:o(),reload_claude_md:H().optional(),reload_plugins:H().optional(),reload_skills:H().optional()}).describe(\"Add a directory as a working-directory root and optionally reload CLAUDE.md, skills, and plugins. The directory must resolve to a strict subdirectory of cwd, or of a directory passed at launch via --add-dir / the SDK additionalDirectories option. A directory that is already a registered working directory (including a duplicate of an earlier request) is denied with an error; the registration pipeline and DirectoryAdded hooks do not re-run.\"))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "li",
+      "start": 519610,
+      "endExclusive": 521378,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "712ee7c6fa33b910fa4a1517e397da2cd27cdea217fd412cfee57c6f6ee832d2",
+      "source": "li=f(()=>u({subtype:x(\"set_cwd\"),path:o().describe(\"Target directory. Tilde-expanded and realpath-canonicalized by the CLI, exactly like an interactive /cd argument.\"),trust_accepted:H().optional().describe(\"Host attestation that the user explicitly accepted a trust dialog for this directory. Only send true after showing one \\u2014 the CLI records the directory as trusted (the same latch /cd's own prompt writes) before relocating. Requires trusted_directory.\"),trusted_directory:o().optional().describe(\"Required whenever trust_accepted is true: the exact directory string from the needs_trust response being answered. This pins the attestation to the canonical path the user was shown \\u2014 if the raw path canonicalizes differently by the time the re-send arrives (e.g. a symlink component changed during the dialog), nothing is latched and a fresh needs_trust carries the new canonical directory.\")}).describe(\"@internal Moves the session to a new working directory \\u2014 the headless twin of /cd, for SDK hosts like Claude Desktop. Runs the same validation, Cd(...) permission rules, and relocation path as the interactive command, with the trust prompt delegated to the host via the needs_trust response arm. Before the first turn the move re-anchors start-of-session state (the first request is built as for a start in the new directory, no move notice); after a turn the prefix is preserved and the move arrives as an appended notice. SessionStart hooks are never re-run by set_cwd (those of the launch directory already ran and their output stays in the session); a host that starts the process before its directory is known should use --await-claim and claim_session, which run them in the bound directory instead. Rejected while a turn is in flight.\"))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "wi",
+      "start": 548790,
+      "endExclusive": 551237,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "95469b81caed2c5563e30d20762df3605a98af42efec3b0981cc5b2fd80fbd23",
+      "source": "wi=f(()=>u({subtype:x(\"submit_feedback\"),description:o(),surface:B([\"cli\",\"ccd\",\"ccr\",\"ide\",\"sdk\",\"cowork\"]).optional().describe(\"Where the feedback flow was initiated. Stamped into the POST body and tengu_bug_report_* analytics so the triage pipeline can distinguish CCD/CCR/IDE/Cowork reports from terminal reports landing in the same claude_cli_feedback table. Defaults to 'sdk'.\"),draft_id:o().optional().describe(\"UUID of a local SendFeedback draft under ~/.claude/feedback/drafts/. When set, the handler reads the stored draft, rebuilds the description via buildDraftDescription() (so the upload matches the consent form the user reviewed; the cwd is neither uploaded nor named on the form's consent line \\u2014 it never uploads as metadata, though a transcript attachment, separately consented, still carries real paths), bundles the draft's own transcript per attach_transcript, and deletes the draft file on success. The caller's description/type/title/area override the stored draft when provided (user edits on the review form).\"),type:B([\"bug\",\"idea\",\"missing_capability\"]).optional(),title:o().optional(),area:o().optional(),attach_transcript:H().optional().describe(\"Whether to bundle the draft's source-session transcript with the upload. Only meaningful alongside draft_id \\u2014 the non-draft path always bundles the current session (unchanged). Defaults to true.\"),save_locally:H().optional().describe(\"The host told the user this report is saved on this machine and nothing is sent (feedback_mode 'bundle' when it read the mode). Honored even if the mode has since become 'post' or 'share' (a mid-session sign-in): the report is bundled, never sent; a mode of 'disabled' still refuses it. Ignored with draft_id.\")}).describe(\"@internal Submits a /feedback report (description + current session transcript + sanitized error log) to api.anthropic.com/api/claude_cli_feedback using the CLI's auth and redaction. Runs the same getFeedbackUnavailableReason() policy checks as the terminal /feedback command \\u2014 when feedback is disabled (org policy, env kill-switch) or cannot be sent (3P provider, no Anthropic credentials) the response carries unavailable_reason instead of an error. A request carrying save_locally gets the terminal's local save instead: the report is written to a redacted zip on this machine and the response carries bundle_path, nothing sent \\u2014 except where feedback is disabled, which still refuses.\"))"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "IEn",
+      "start": 554508,
+      "endExclusive": 555217,
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sha256": "f9243d68cb40474d7c2eb8dfd6f80b2ad31ab40eacb0d5a4567d30e6d52c28d9",
+      "source": "IEn=f(()=>u({subtype:x(\"message_rated\"),messageUuid:o().describe(\"UUID of the assistant message being rated.\"),sentiment:B([\"positive\",\"negative\"]).describe(\"User rating: positive (thumbs up) or negative (thumbs down).\"),surface:B([\"tool_use\",\"assistant_text\"]).optional().describe(\"Which in-conversation surface the rating came from. If omitted, logged as tool_use.\"),cleared:H().optional().describe(\"True when the caller is un-rating a message (clicking the same control a second time).\")}).describe(\"@internal Records a per-message thumbs up/down rating. Logs tengu_message_rated with the same shape as the in-conversation rating controls so Desktop / IDE callers can surface their own native thumbs UI.\"))"
+    }
+  ],
+  "owner": "existing canonical chunk-xep95vq1 module; no duplicate runtime schemas",
+  "typeTransport": "existing AST translator; OriginalResult prefix renamed for independent type namespace; all dependent declarations retained"
+}

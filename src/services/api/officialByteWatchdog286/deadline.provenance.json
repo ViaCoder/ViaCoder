@@ -1,0 +1,177 @@
+{
+  "version": "2.1.286",
+  "platform": "darwin-arm64",
+  "requests": [
+    {
+      "file": "chunk-tx79xqc5.js",
+      "sha256": "9c1e53986aa126f85e625401314cc5e1ef9e3250f7f7067894f2cb662cc9a069",
+      "declarations": [
+        {
+          "symbol": "mw",
+          "start": 608257,
+          "end": 608263,
+          "source": "mw=1e4",
+          "sha256": "f8804e8aba0b825fd29407699a91d2c793d2113aff7f35e511c87dc841d4a883",
+          "variable": true
+        },
+        {
+          "symbol": "J3",
+          "start": 608792,
+          "end": 608800,
+          "source": "J3=32768",
+          "sha256": "ae7048d3b2d6584ed82b62091218fb8676543783baa4f469f42eb15f46135aa9",
+          "variable": true
+        },
+        {
+          "symbol": "Ako",
+          "start": 608817,
+          "end": 608904,
+          "source": "function Ako(e,{escalated:n}){wi().streamFirstByteArmedRequestIds.set(e,{escalated:n})}",
+          "sha256": "a8815909ca068b62d805611583c545d14d4fa838acb3d5ef91f5a1a4ca397615",
+          "variable": false
+        },
+        {
+          "symbol": "Q3",
+          "start": 608904,
+          "end": 609014,
+          "source": "function Q3(e){if(e===void 0)return;let n=wi().streamFirstByteArmedRequestIds,r=n.get(e);return n.delete(e),r}",
+          "sha256": "021c718acfbc76d43385371af0d13cc0f45ac53f7530bc83ca2cdb338e8222b0",
+          "variable": false
+        },
+        {
+          "symbol": "YM",
+          "start": 609018,
+          "end": 609051,
+          "source": "YM=\"/invoke-with-response-stream\"",
+          "sha256": "dcd5394b14344a121c7c17ff8c5cb6e79443c7501043996e84130259d311a161",
+          "variable": true
+        },
+        {
+          "symbol": "t9",
+          "start": 609052,
+          "end": 609587,
+          "source": "function t9({clientRequestId:e,provider:n,routedProvider:r,method:s,url:h,body:g}){let b=Q3(e),w=b===void 0&&n===\"bedrock\"&&s===\"POST\"&&h.includes(YM);if(b===void 0&&!w||!pWn(r))return;let k=typeof g===\"string\"?Buffer.byteLength(g):0,A=Math.ceil(k/J3)*1000,D=eQe(process.env.API_TIMEOUT_MS,600000),M=D<=0?1/0:D-1000;if(M<mw)return;let W=Y3(n)+A,B=Math.min(W,M);if(b===void 0)return{escalated:!1,firstWindowMs:B,retryWindowMs:B};let K=Number.isFinite(M)?M:Math.max(W,pGo+A);return{escalated:b.escalated,firstWindowMs:B,retryWindowMs:K}}",
+          "sha256": "29c13e4635b7f53c9e2905e3c47daeda9e6c9674621bfcf81269c51208bd6f79",
+          "variable": false
+        },
+        {
+          "symbol": "QM",
+          "start": 613551,
+          "end": 613625,
+          "source": "function QM(e){return e===\"firstParty\"||e===\"gateway\"||e===\"anthropicAws\"}",
+          "sha256": "8aa1b76696c866abcb0441d9ff3990875f4c1014096fc2f51222511336ae26e9",
+          "variable": false
+        },
+        {
+          "symbol": "eI",
+          "start": 613662,
+          "end": 613721,
+          "source": "function eI(){return a.CLAUDE_ENABLE_BYTE_WATCHDOG_BEDROCK}",
+          "sha256": "fa819fc9717a36031d32977ebfe78d5d3b8d1a647ad0cdd0a0b838710f3b990f",
+          "variable": false
+        },
+        {
+          "symbol": "WM",
+          "start": 613721,
+          "end": 613770,
+          "source": "function WM(e){return gw(e)||e===\"bedrock\"&&eI()}",
+          "sha256": "037771a9a049c49a3b6e929f65dd05ea941d2c5fb8c9cb808f0592f0eeff43ae",
+          "variable": false
+        },
+        {
+          "symbol": "pWn",
+          "start": 613770,
+          "end": 613827,
+          "source": "function pWn(e){if(!hw())return!1;return WM(e)&&WM(He())}",
+          "sha256": "d980718144e9bee9799da8c6ca7ffa0c49623f09c7c11a908753ecd33a01224f",
+          "variable": false
+        }
+      ]
+    },
+    {
+      "file": "chunk-x5pmvzy7.js",
+      "sha256": "e2619b0ede36954507fde08f39a28a9050eadc627fad4e9c39e4746c0e139b95",
+      "declarations": [
+        {
+          "symbol": "pGo",
+          "start": 11324,
+          "end": 11334,
+          "source": "pGo=600000",
+          "sha256": "f44ae0a8e289f2c1865127010ca25eb91cc5eb4941e50d588e8ffdd0e4f7daf6",
+          "variable": true
+        }
+      ]
+    }
+  ],
+  "retries": [
+    {
+      "file": "chunk-h730kz80.js",
+      "sha256": "2fd1d1c89c1b8ab482265e429afb8a6163f1d75acd78a6e6476325a79d794f99",
+      "declarations": [
+        {
+          "symbol": "YG",
+          "start": 7374,
+          "end": 7490,
+          "source": "function YG(n,e,t=5){let r=n;for(let o=0;o<t;o++){if(!(r instanceof Error))return;if(e(r))return r;r=r.cause}return}",
+          "sha256": "b434e2d82f7c129c1e3d8d92828d7abb42aff3c8608af5147be50e500bf0c0cb",
+          "variable": false
+        }
+      ]
+    },
+    {
+      "file": "chunk-x5pmvzy7.js",
+      "sha256": "e2619b0ede36954507fde08f39a28a9050eadc627fad4e9c39e4746c0e139b95",
+      "declarations": [
+        {
+          "symbol": "ljt",
+          "start": 11609,
+          "end": 11692,
+          "source": "function ljt(e){let r=YG(e,(n)=>n instanceof ASn);return r instanceof ASn?r:void 0}",
+          "sha256": "f704cb3cb1e17b59ab6a8f53d5a42ff6a16191889af15605c720f4e12799f111",
+          "variable": false
+        }
+      ]
+    },
+    {
+      "file": "chunk-2nscfgw9.js",
+      "sha256": "5f2e79dc208fa1829ae1b7e8862ea500c7b40b8a9bb26b51b9706852f7f79f92",
+      "declarations": [
+        {
+          "symbol": "HLt",
+          "start": 1996713,
+          "end": 1996718,
+          "source": "HLt=1",
+          "sha256": "ff5fd89ae89e393fefcc982f1b2bbd9f47573ba4094442d638455d1dca19a0c3",
+          "variable": true
+        },
+        {
+          "symbol": "v4",
+          "start": 1996798,
+          "end": 1996848,
+          "source": "function v4(){return a.CLAUDE_CODE_RETRY_WATCHDOG}",
+          "sha256": "c0c382d6959eb9c725d2456b9329ecb27bf0e39cf19552d7cc39f008a94a4009",
+          "variable": false
+        },
+        {
+          "symbol": "NLt",
+          "start": 2012892,
+          "end": 2013010,
+          "source": "function NLt(e,n,r,s,g){let h=r;if(e.noResponse&&!v4())h=Math.min(h,n+HLt-s);if(g!==void 0)h=Math.min(h,n+g);return h}",
+          "sha256": "8ba64c02ad31fb4197b07494458c2557086c85299ada66beace972973ba0fa6b",
+          "variable": false
+        }
+      ]
+    }
+  ],
+  "bodyRewrites": [],
+  "ports": {
+    "a": "same lazy typed authEnvironment",
+    "wi": "existing getFetchRequestState286 root owner",
+    "He": "getAPIProvider",
+    "hw": "native config hw",
+    "gw": "native config gw",
+    "Y3": "native config Y3",
+    "eQe": "existing native integer default reader",
+    "ASn": "same actual first-header ASn class; never structural spoofing"
+  }
+}

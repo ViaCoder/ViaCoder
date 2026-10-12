@@ -1,0 +1,415 @@
+{
+  "version": "2.1.287",
+  "offsetUnit": "UTF-16 code units",
+  "scope": "API-key config/keychain getter and native host-cell binding; exact declaration bodies retained",
+  "platforms": [
+    {
+      "platform": "darwin-arm64",
+      "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+      "module": {
+        "file": "chunk-nankzm0s.js",
+        "length": 706979,
+        "sha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa"
+      },
+      "sourceBindings": {
+        "read": "jQn",
+        "keychainReader": "_K",
+        "cellAccessor": "_i",
+        "cellConstructor": "V",
+        "cellClass": "Ak",
+        "hostUsername": "Xk"
+      },
+      "declarations": [
+        {
+          "symbol": "_K",
+          "file": "chunk-nankzm0s.js",
+          "start": 641788,
+          "end": 642219,
+          "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+          "source": "function _K(){if(Jl())return null;{let n=wtr();if(n){if(n.stdout)return{key:n.stdout,source:\"/login managed key\"}}else{let r=jF();try{let s=iEe(`security find-generic-password -a \"${Xk()}\" -w -s \"${r}\"`);if(s)return{key:s,source:\"/login managed key\"}}catch(s){t(`Failed to read API key from macOS keychain: ${s}`,{level:\"error\"})}}}let e=le();if(!e.primaryApiKey)return null;return{key:e.primaryApiKey,source:\"/login managed key\"}}",
+          "sha256": "e518b6da9b53f3f68d4f91e13035cedfb9cd0bc36707a79f406aed9a31d9f648"
+        },
+        {
+          "symbol": "_i",
+          "file": "chunk-nankzm0s.js",
+          "start": 642325,
+          "end": 642363,
+          "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+          "source": "function _i(){return nns.of(U().host)}",
+          "sha256": "f29e7a0643fb5f8b1984b5bdd63fe95ad9a0c604500af0d41ef287999b243628"
+        },
+        {
+          "symbol": "jQn",
+          "file": "chunk-nankzm0s.js",
+          "start": 642363,
+          "end": 642474,
+          "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+          "source": "function jQn(){if(f8())return null;let e=_i();if(e.value!==void 0)return e.value;let n=_K();return e.value=n,n}",
+          "sha256": "dbf1f802862616eeb773fa6f419eaec32d152c4226e66aa5bd3cd3fded02d806"
+        },
+        {
+          "symbol": "Ak",
+          "file": "chunk-nankzm0s.js",
+          "start": 642219,
+          "end": 642299,
+          "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+          "source": "class Ak{value=void 0;promise=null;clear(){this.value=void 0,this.promise=null}}",
+          "sha256": "c6d41f09fe1e36e6e76265976d14fb871135ec8eb06b6362fc1eebe0ee99b793"
+        },
+        {
+          "symbol": "nns",
+          "file": "chunk-nankzm0s.js",
+          "start": 642303,
+          "end": 642324,
+          "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+          "source": "nns=new V(()=>new Ak)",
+          "sha256": "0cec771f737def203c238163426439f6b403f514760e3547c3d72f25250698b5"
+        },
+        {
+          "symbol": "V",
+          "originalSymbol": "V",
+          "file": "chunk-bn3p37gv.js",
+          "start": 10007,
+          "end": 10151,
+          "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+          "source": "class V{#e;#t=new WeakMap;constructor(e){this.#e=e}of(e){let t=this.#t.get(e);if(t!==void 0)return t;let o=this.#e();return this.#t.set(e,o),o}}",
+          "sha256": "3b223ad86a79e9969e8241054c03d04d80d046aab19dd519973e4aed1e79e9e9"
+        }
+      ]
+    },
+    {
+      "platform": "darwin-x64",
+      "manifestSha256": "ba9e122d28e8a42927eb23c7c86b62295f24a223546ee5476e761837579a709b",
+      "module": {
+        "file": "chunk-j825n4z9.js",
+        "length": 706559,
+        "sha256": "44acfb339cd1323b1a59ae7dcbd3efbcacb183bc5f4043b0e2d52e1511ac113f"
+      },
+      "sourceBindings": {
+        "read": "jQn",
+        "keychainReader": "uK",
+        "cellAccessor": "_i",
+        "cellConstructor": "V",
+        "cellClass": "Fk",
+        "hostUsername": "XT"
+      },
+      "declarations": [
+        {
+          "symbol": "uK",
+          "file": "chunk-j825n4z9.js",
+          "start": 641368,
+          "end": 641799,
+          "moduleSha256": "44acfb339cd1323b1a59ae7dcbd3efbcacb183bc5f4043b0e2d52e1511ac113f",
+          "source": "function uK(){if(Jl())return null;{let n=wtr();if(n){if(n.stdout)return{key:n.stdout,source:\"/login managed key\"}}else{let r=jF();try{let s=iEe(`security find-generic-password -a \"${XT()}\" -w -s \"${r}\"`);if(s)return{key:s,source:\"/login managed key\"}}catch(s){t(`Failed to read API key from macOS keychain: ${s}`,{level:\"error\"})}}}let e=le();if(!e.primaryApiKey)return null;return{key:e.primaryApiKey,source:\"/login managed key\"}}",
+          "sha256": "e8ad79b9485c7ed3b19166a181cfdd8586bae8a2b697f448188745b6ec18b69a"
+        },
+        {
+          "symbol": "_i",
+          "file": "chunk-j825n4z9.js",
+          "start": 641905,
+          "end": 641943,
+          "moduleSha256": "44acfb339cd1323b1a59ae7dcbd3efbcacb183bc5f4043b0e2d52e1511ac113f",
+          "source": "function _i(){return nns.of(U().host)}",
+          "sha256": "f29e7a0643fb5f8b1984b5bdd63fe95ad9a0c604500af0d41ef287999b243628"
+        },
+        {
+          "symbol": "jQn",
+          "file": "chunk-j825n4z9.js",
+          "start": 641943,
+          "end": 642054,
+          "moduleSha256": "44acfb339cd1323b1a59ae7dcbd3efbcacb183bc5f4043b0e2d52e1511ac113f",
+          "source": "function jQn(){if(f8())return null;let e=_i();if(e.value!==void 0)return e.value;let n=uK();return e.value=n,n}",
+          "sha256": "8ec39ba0c8827b97c9f78ee39b0e097ad8f36d79e8406371ff96930044d7dd5b"
+        },
+        {
+          "symbol": "Fk",
+          "file": "chunk-j825n4z9.js",
+          "start": 641799,
+          "end": 641879,
+          "moduleSha256": "44acfb339cd1323b1a59ae7dcbd3efbcacb183bc5f4043b0e2d52e1511ac113f",
+          "source": "class Fk{value=void 0;promise=null;clear(){this.value=void 0,this.promise=null}}",
+          "sha256": "e6b0cda23de4770c4808c87619072f4bf07d8b6683d0913a06b1a0ca36c46f06"
+        },
+        {
+          "symbol": "nns",
+          "file": "chunk-j825n4z9.js",
+          "start": 641883,
+          "end": 641904,
+          "moduleSha256": "44acfb339cd1323b1a59ae7dcbd3efbcacb183bc5f4043b0e2d52e1511ac113f",
+          "source": "nns=new V(()=>new Fk)",
+          "sha256": "fa355516970a10a2b8c602bb37ab5de9a1f926346bba62be1b6ac35cbbc8b557"
+        },
+        {
+          "symbol": "V",
+          "originalSymbol": "V",
+          "file": "chunk-ascjmg0h.js",
+          "start": 10007,
+          "end": 10151,
+          "moduleSha256": "d6cf648e81761e2b99976a475da3be111d7dd28a92369820fb72933848b74af3",
+          "source": "class V{#e;#t=new WeakMap;constructor(e){this.#e=e}of(e){let t=this.#t.get(e);if(t!==void 0)return t;let o=this.#e();return this.#t.set(e,o),o}}",
+          "sha256": "3b223ad86a79e9969e8241054c03d04d80d046aab19dd519973e4aed1e79e9e9"
+        }
+      ]
+    },
+    {
+      "platform": "linux-arm64",
+      "manifestSha256": "f3be5b23f9cbb909555fe028143b9a3a40c1e3e49961e09c49d8e5a6b61ae83b",
+      "module": {
+        "file": "chunk-g77csgy5.js",
+        "length": 705753,
+        "sha256": "4835e14445bc039be98296d558b8319aa9783d4ce2e83ad50b153d5717f6d306"
+      },
+      "sourceBindings": {
+        "read": "$H",
+        "keychainReader": null,
+        "cellAccessor": "_i",
+        "cellConstructor": "q",
+        "cellClass": "xk",
+        "hostUsername": null
+      },
+      "declarations": [
+        {
+          "symbol": "$H",
+          "file": "chunk-g77csgy5.js",
+          "start": 641177,
+          "end": 641310,
+          "moduleSha256": "4835e14445bc039be98296d558b8319aa9783d4ce2e83ad50b153d5717f6d306",
+          "source": "function $H(){if(Xl())return null;let e=le();if(!e.primaryApiKey)return null;return{key:e.primaryApiKey,source:\"/login managed key\"}}",
+          "sha256": "c0b1486d75ea9fc8aae53dda41099c88d10c6dbb4348f7435b29ce0b0ae5e206"
+        },
+        {
+          "symbol": "_i",
+          "file": "chunk-g77csgy5.js",
+          "start": 641416,
+          "end": 641454,
+          "moduleSha256": "4835e14445bc039be98296d558b8319aa9783d4ce2e83ad50b153d5717f6d306",
+          "source": "function _i(){return Sts.of(B().host)}",
+          "sha256": "acc9840afddac7d0cc7fc65ad18abed14a6b8cccb06f403fe9b2714a58b4c914"
+        },
+        {
+          "symbol": "Sts",
+          "file": "chunk-g77csgy5.js",
+          "start": 641394,
+          "end": 641415,
+          "moduleSha256": "4835e14445bc039be98296d558b8319aa9783d4ce2e83ad50b153d5717f6d306",
+          "source": "Sts=new q(()=>new xk)",
+          "sha256": "4a4b788142a3e3ff9c17e42efe157e15685938fbf96d0ea50168c31a924c9b3b"
+        },
+        {
+          "symbol": "xk",
+          "file": "chunk-g77csgy5.js",
+          "start": 641310,
+          "end": 641390,
+          "moduleSha256": "4835e14445bc039be98296d558b8319aa9783d4ce2e83ad50b153d5717f6d306",
+          "source": "class xk{value=void 0;promise=null;clear(){this.value=void 0,this.promise=null}}",
+          "sha256": "006856a13e61066c6eeecfb81158a90105594a2955486e8dd1f2b8090415e767"
+        },
+        {
+          "symbol": "q",
+          "originalSymbol": "q",
+          "file": "chunk-jx85q2yb.js",
+          "start": 10007,
+          "end": 10151,
+          "moduleSha256": "8041243c03cf81a5ea9f562db34e00d5a58bf29d69c503ff77cd9801ac1f21da",
+          "source": "class q{#e;#t=new WeakMap;constructor(e){this.#e=e}of(e){let t=this.#t.get(e);if(t!==void 0)return t;let o=this.#e();return this.#t.set(e,o),o}}",
+          "sha256": "6ed6bf109547e3a7e97f913dcd4c3fdfad6122c24dd49230df5dc803386e9165"
+        }
+      ]
+    },
+    {
+      "platform": "linux-x64",
+      "manifestSha256": "ecae5d9ddbf13ef27b6b6a1141953aab4ba311e47dde3ac2a7cc8b5a01c63784",
+      "module": {
+        "file": "chunk-k985080f.js",
+        "length": 706187,
+        "sha256": "d6199404b28747162a26ebad430cd2da54bba9f337d9f6326241b38e313cf917"
+      },
+      "sourceBindings": {
+        "read": "xH",
+        "keychainReader": null,
+        "cellAccessor": "_i",
+        "cellConstructor": "V",
+        "cellClass": "Rk",
+        "hostUsername": null
+      },
+      "declarations": [
+        {
+          "symbol": "xH",
+          "file": "chunk-k985080f.js",
+          "start": 641611,
+          "end": 641744,
+          "moduleSha256": "d6199404b28747162a26ebad430cd2da54bba9f337d9f6326241b38e313cf917",
+          "source": "function xH(){if(Xl())return null;let e=le();if(!e.primaryApiKey)return null;return{key:e.primaryApiKey,source:\"/login managed key\"}}",
+          "sha256": "3e31325244fd62c6cbf2f9a2686f010eb1fde9333252217634f9fdcd02b58a8d"
+        },
+        {
+          "symbol": "_i",
+          "file": "chunk-k985080f.js",
+          "start": 641850,
+          "end": 641888,
+          "moduleSha256": "d6199404b28747162a26ebad430cd2da54bba9f337d9f6326241b38e313cf917",
+          "source": "function _i(){return Sts.of(U().host)}",
+          "sha256": "21443a90520923cf0858077268eb766c4315310d12bba02f79588479aa26407c"
+        },
+        {
+          "symbol": "Sts",
+          "file": "chunk-k985080f.js",
+          "start": 641828,
+          "end": 641849,
+          "moduleSha256": "d6199404b28747162a26ebad430cd2da54bba9f337d9f6326241b38e313cf917",
+          "source": "Sts=new V(()=>new Rk)",
+          "sha256": "fd3c8d8515d45853493c90bb7ca8601b5f37b586d34b26cb6370cbbbf3c5e7b9"
+        },
+        {
+          "symbol": "Rk",
+          "file": "chunk-k985080f.js",
+          "start": 641744,
+          "end": 641824,
+          "moduleSha256": "d6199404b28747162a26ebad430cd2da54bba9f337d9f6326241b38e313cf917",
+          "source": "class Rk{value=void 0;promise=null;clear(){this.value=void 0,this.promise=null}}",
+          "sha256": "cff612cfdcac189e5d7f58d0fa92a9ba63efd374cadcbea957d68f7ec5757cf3"
+        },
+        {
+          "symbol": "V",
+          "originalSymbol": "V",
+          "file": "chunk-8e9587qc.js",
+          "start": 10007,
+          "end": 10151,
+          "moduleSha256": "845c5cd9333e01d7042b4934b489049dea4ccd1428b87d828e028136e3bf4dd3",
+          "source": "class V{#e;#t=new WeakMap;constructor(e){this.#e=e}of(e){let t=this.#t.get(e);if(t!==void 0)return t;let o=this.#e();return this.#t.set(e,o),o}}",
+          "sha256": "3b223ad86a79e9969e8241054c03d04d80d046aab19dd519973e4aed1e79e9e9"
+        }
+      ]
+    },
+    {
+      "platform": "win32-arm64",
+      "manifestSha256": "d0d8b3b882ba61ba321ab072b5cbc28a1a4089cfb4c5dce0698311aae10c739e",
+      "module": {
+        "file": "chunk-jzrab299.js",
+        "length": 705581,
+        "sha256": "9363128c17a7aa7a3eea09d61cd42d6a8773c0c2c0d563037ba1aa9152513549"
+      },
+      "sourceBindings": {
+        "read": "KH",
+        "keychainReader": null,
+        "cellAccessor": "_i",
+        "cellConstructor": "q",
+        "cellClass": "Ok",
+        "hostUsername": null
+      },
+      "declarations": [
+        {
+          "symbol": "KH",
+          "file": "chunk-jzrab299.js",
+          "start": 641078,
+          "end": 641211,
+          "moduleSha256": "9363128c17a7aa7a3eea09d61cd42d6a8773c0c2c0d563037ba1aa9152513549",
+          "source": "function KH(){if(Xl())return null;let e=le();if(!e.primaryApiKey)return null;return{key:e.primaryApiKey,source:\"/login managed key\"}}",
+          "sha256": "0762118a644fbd2a512974080839d8b1440694e0e4a6a427b44f82c15cbaa5b5"
+        },
+        {
+          "symbol": "_i",
+          "file": "chunk-jzrab299.js",
+          "start": 641317,
+          "end": 641355,
+          "moduleSha256": "9363128c17a7aa7a3eea09d61cd42d6a8773c0c2c0d563037ba1aa9152513549",
+          "source": "function _i(){return kts.of(B().host)}",
+          "sha256": "5e81c6ef2f554d8fc797b8bf097b435af90f640edd3087c5744aa55eb4d13634"
+        },
+        {
+          "symbol": "kts",
+          "file": "chunk-jzrab299.js",
+          "start": 641295,
+          "end": 641316,
+          "moduleSha256": "9363128c17a7aa7a3eea09d61cd42d6a8773c0c2c0d563037ba1aa9152513549",
+          "source": "kts=new q(()=>new Ok)",
+          "sha256": "e63ed609c6e1588a01e1b7fd65d363551a1fd70d5c45f50cf20279885e36ce13"
+        },
+        {
+          "symbol": "Ok",
+          "file": "chunk-jzrab299.js",
+          "start": 641211,
+          "end": 641291,
+          "moduleSha256": "9363128c17a7aa7a3eea09d61cd42d6a8773c0c2c0d563037ba1aa9152513549",
+          "source": "class Ok{value=void 0;promise=null;clear(){this.value=void 0,this.promise=null}}",
+          "sha256": "68342e042b205267e66ccbb103644075ae2e8dbbae69f12237bb5027c2615693"
+        },
+        {
+          "symbol": "q",
+          "originalSymbol": "q",
+          "file": "chunk-ce0nkjpw.js",
+          "start": 10007,
+          "end": 10151,
+          "moduleSha256": "53308b4aa66d0d0cfad8da957e35f5b0c7111332c7ec506dd95bd4dc92fa28bf",
+          "source": "class q{#e;#t=new WeakMap;constructor(e){this.#e=e}of(e){let t=this.#t.get(e);if(t!==void 0)return t;let o=this.#e();return this.#t.set(e,o),o}}",
+          "sha256": "6ed6bf109547e3a7e97f913dcd4c3fdfad6122c24dd49230df5dc803386e9165"
+        }
+      ]
+    },
+    {
+      "platform": "win32-x64",
+      "manifestSha256": "c71e85888df3301fd3c4cb158744538810418e2d67591debe8e4f7c771fcdddc",
+      "module": {
+        "file": "chunk-xybe1vrh.js",
+        "length": 705986,
+        "sha256": "f6bcd764f28c2767881941459fcd034e465882afc68abf977d197c0e3b9cfd27"
+      },
+      "sourceBindings": {
+        "read": "sK",
+        "keychainReader": null,
+        "cellAccessor": "_i",
+        "cellConstructor": "V",
+        "cellClass": "Tk",
+        "hostUsername": null
+      },
+      "declarations": [
+        {
+          "symbol": "sK",
+          "file": "chunk-xybe1vrh.js",
+          "start": 641483,
+          "end": 641616,
+          "moduleSha256": "f6bcd764f28c2767881941459fcd034e465882afc68abf977d197c0e3b9cfd27",
+          "source": "function sK(){if(Xl())return null;let e=le();if(!e.primaryApiKey)return null;return{key:e.primaryApiKey,source:\"/login managed key\"}}",
+          "sha256": "c1fb5e40bf8b4ed2e233ab50f2d562dcee5b408d6233517549331318b98b2860"
+        },
+        {
+          "symbol": "_i",
+          "file": "chunk-xybe1vrh.js",
+          "start": 641722,
+          "end": 641760,
+          "moduleSha256": "f6bcd764f28c2767881941459fcd034e465882afc68abf977d197c0e3b9cfd27",
+          "source": "function _i(){return Ets.of(U().host)}",
+          "sha256": "f4e41e848ea258fcbbdc12a683f0071a7f706073f35cecb227a0b8509459675b"
+        },
+        {
+          "symbol": "Ets",
+          "file": "chunk-xybe1vrh.js",
+          "start": 641700,
+          "end": 641721,
+          "moduleSha256": "f6bcd764f28c2767881941459fcd034e465882afc68abf977d197c0e3b9cfd27",
+          "source": "Ets=new V(()=>new Tk)",
+          "sha256": "dced498f30668a4c0ed416d9dc18024614b16c7fef509d6ea6856d4c8b0e4dcd"
+        },
+        {
+          "symbol": "Tk",
+          "file": "chunk-xybe1vrh.js",
+          "start": 641616,
+          "end": 641696,
+          "moduleSha256": "f6bcd764f28c2767881941459fcd034e465882afc68abf977d197c0e3b9cfd27",
+          "source": "class Tk{value=void 0;promise=null;clear(){this.value=void 0,this.promise=null}}",
+          "sha256": "3b3039e9511626caf969f4807af6d64df195912a0da1bf4a613c274bf81dc38d"
+        },
+        {
+          "symbol": "V",
+          "originalSymbol": "V",
+          "file": "chunk-q2pbxf3c.js",
+          "start": 10007,
+          "end": 10151,
+          "moduleSha256": "a20c5e6ea8e977791440c01c89feb244fa3c4ead75b11fe5d81fc6ea9e433f38",
+          "source": "class V{#e;#t=new WeakMap;constructor(e){this.#e=e}of(e){let t=this.#t.get(e);if(t!==void 0)return t;let o=this.#e();return this.#t.set(e,o),o}}",
+          "sha256": "3b223ad86a79e9969e8241054c03d04d80d046aab19dd519973e4aed1e79e9e9"
+        }
+      ]
+    }
+  ]
+}

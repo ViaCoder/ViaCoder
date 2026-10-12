@@ -1,0 +1,66 @@
+{
+  "version": "2.1.286",
+  "platform": "darwin-arm64",
+  "modules": [
+    {
+      "file": "chunk-tx79xqc5.js",
+      "sha256": "9c1e53986aa126f85e625401314cc5e1ef9e3250f7f7067894f2cb662cc9a069",
+      "declarations": [
+        {
+          "symbol": "UM",
+          "start": 608801,
+          "end": 608808,
+          "source": "UM=1000",
+          "sha256": "bb0eaacbe0e0b6a02f614b0013f86e85cb41a10ba24a6b0e9752c51c1a97d33c",
+          "variable": true
+        },
+        {
+          "symbol": "Z3",
+          "start": 608809,
+          "end": 608816,
+          "source": "Z3=5000",
+          "sha256": "e0a1965a7070c55c52fbd34f194d28a2156749aad628ac385e1df26daaef7843",
+          "variable": true
+        },
+        {
+          "symbol": "n9",
+          "start": 609587,
+          "end": 610298,
+          "source": "async function n9(e,n,r,s,h=zQ){let g=o7n(s),b=new AbortController,w=r.signal??void 0,k=w?AbortSignal.any([w,b.signal]):b.signal,A,D=h.now(),M=0,W=()=>{let X=h.now(),ne=X-D;if(D=X,ne>Z3)M+=ne},B=h.setTimeout(K,UM,{unref:!0});function K(){W(),B=h.setTimeout(K,UM,{unref:!0})}let Y=h.setTimeout(()=>{W(),A=M>g/2?new ROt(M):new ASn(s,M),b.abort(A)},g);try{return await e(n,{...r,signal:k})}catch(X){if(A!==void 0&&!w?.aborted)throw t(`[first-byte] no response headers ${g/1000}s after dispatch${M>0?` (slept ${M}ms)`:\"\"} \\u2014 aborting request`,{level:\"error\"}),i(\"tengu_api_no_response_timeout\",{provider:PA(),timeout_ms:g,slept_ms:M,suspended:A instanceof ROt,escalated:s.escalated}),A;throw X}finally{Y(),B()}}",
+          "sha256": "82b74df0260d9e7e6657959af1d8168e9aeaf72b14a283cabb20c332b2d06620",
+          "variable": false
+        }
+      ]
+    },
+    {
+      "file": "chunk-x5pmvzy7.js",
+      "sha256": "e2619b0ede36954507fde08f39a28a9050eadc627fad4e9c39e4746c0e139b95",
+      "declarations": [
+        {
+          "symbol": "o7n",
+          "start": 11335,
+          "end": 11402,
+          "source": "function o7n(e){return e.escalated?e.retryWindowMs:e.firstWindowMs}",
+          "sha256": "4b083f462f6c20d839a2963765715133fc4bf9e7234367d65135bbb2706e6c41",
+          "variable": false
+        },
+        {
+          "symbol": "ASn",
+          "start": 11402,
+          "end": 11609,
+          "source": "class ASn extends Error{deadline;sleptMs;code=\"StreamNoResponse\";constructor(e,r){super(\"No response from API within the first-byte window\");this.deadline=e;this.sleptMs=r;this.name=\"StreamNoResponseError\"}}",
+          "sha256": "d59d4f7b0caf1a85bd331c2686d1fd8d17bcfa1e677ffaf27713bb4d39241342",
+          "variable": false
+        }
+      ]
+    }
+  ],
+  "bodyRewrites": [],
+  "ports": {
+    "ROt": "same existing production byte-watchdog error class",
+    "zQ": "same original byte-watchdog clock",
+    "t": "logForDebugging",
+    "i": "existing local analytics cancellation leaf",
+    "PA": "getAPIProviderForStatsig"
+  }
+}

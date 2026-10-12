@@ -1,0 +1,169 @@
+{
+  "version": "2.1.287",
+  "platform": "darwin-arm64",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "binarySha256": "6eab8333fe2121553100d8f40bfada384a3e989b94f947e18ba6677a6fcb41ea",
+  "offsetUnit": "UTF-16 code units",
+  "endExclusive": true,
+  "modules": {
+    "chunk-nankzm0s.js": {
+      "sha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "length": 706979
+    },
+    "chunk-bn3p37gv.js": {
+      "sha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "length": 117054
+    },
+    "chunk-brnn4zwp.js": {
+      "sha256": "6fc81e7fe2a8a0809d0901a28e8bd5487b116b245931c3ac30fcf9b6655400c7",
+      "length": 5165
+    },
+    "chunk-3svn1vf6.js": {
+      "sha256": "b49242d2e63dca3fb096559a644f710adb027b605123ca5b5dc2218f3f23517f",
+      "length": 10223
+    },
+    "chunk-mbfze585.js": {
+      "sha256": "2e40ea5244009e4c37b57879f34c96cc3e3bc7d3c5468f9e65d63fe5ce13287a",
+      "length": 65738
+    }
+  },
+  "declarations": [
+    {
+      "name": "pqr",
+      "file": "chunk-nankzm0s.js",
+      "start": 697456,
+      "end": 698907,
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "sha256": "c28596cc370dc6f198eb4747677a8ca240a50a92e797771a889d6e341d4ff98e",
+      "source": "async function pqr(e,n){let r=a.CLAUDE_CODE_ACCOUNT_UUID,s=a.CLAUDE_CODE_USER_EMAIL,g=a.CLAUDE_CODE_ORGANIZATION_UUID,h=r&&s&&g?{accountUuid:r,emailAddress:s,organizationUuid:g}:null;if(h&&!le().oauthAccount)tWt(h,n);await $i({credentials:e,storageV5:n});let b=le(),v=b.oauthAccount?.profileFetchedAt,w=v!==void 0&&Date.now()-v<UK;if(b.oauthAccount&&b.oauthAccount.billingType!==void 0&&b.oauthAccount.accountCreatedAt!==void 0&&b.oauthAccount.subscriptionCreatedAt!==void 0&&b.oauthAccount.ccOnboardingFlags!==void 0&&w||!ft()||!zp())return!1;let A=fn();if(!A?.accessToken)return!1;let R=await KBe(A.accessToken);if(!R?.account||!R.organization)return!1;if(h)t(\"OAuth profile fetch succeeded, overriding env var account info\",{level:\"info\"});return tWt({accountUuid:R.account.uuid,emailAddress:R.account.email,organizationUuid:R.organization.uuid,displayName:R.account.display_name||void 0,fullName:R.account.full_name||void 0,hasExtraUsageEnabled:R.organization.has_extra_usage_enabled??!1,billingType:R.organization.billing_type??void 0,accountCreatedAt:R.account.created_at,subscriptionCreatedAt:R.organization.subscription_created_at??void 0,ccOnboardingFlags:R.organization.cc_onboarding_flags??{},claudeCodeTrialEndsAt:R.organization.claude_code_trial_ends_at??null,claudeCodeTrialDurationDays:R.organization.claude_code_trial_duration_days??null,seatTier:R.organization.seat_tier??null,planDisplayName:_A(R),profileFetchedAt:Date.now()},n),!0}"
+    },
+    {
+      "name": "_A",
+      "file": "chunk-nankzm0s.js",
+      "start": 698907,
+      "end": 698983,
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "sha256": "8ada22c7813c934be25019bc9213c398eede79a3495e0814bd182cdb48ee8be1",
+      "source": "function _A(e){return zWt()?FJn(e):le().oauthAccount?.planDisplayName??null}"
+    },
+    {
+      "name": "zWt",
+      "file": "chunk-nankzm0s.js",
+      "start": 668937,
+      "end": 669023,
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "sha256": "7eb67d9de659a383c4bb694110082a65f8d288f766acc918c3b18213a04d1c16",
+      "source": "function zWt(){if(f8()||a.CLAUDE_CODE_OAUTH_TOKEN||Jl())return!1;return!(EW()&&!Uz())}"
+    },
+    {
+      "name": "f8",
+      "file": "chunk-nankzm0s.js",
+      "start": 618866,
+      "end": 618907,
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "sha256": "d894e4e76a3bfa8d10f8362c43875af735393e00afc597943db66943ff6a2747",
+      "source": "function f8(){if(!xr())return!1;return!0}"
+    },
+    {
+      "name": "Jl",
+      "file": "chunk-nankzm0s.js",
+      "start": 610651,
+      "end": 610711,
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "sha256": "d84dde7f637cd709fc793177cad886d879bcaff383aaef9ae1963d3fee7bd6aa",
+      "source": "function Jl(){return a.CLAUDE_CODE_PROVIDER_MANAGED_BY_HOST}"
+    },
+    {
+      "name": "EW",
+      "file": "chunk-bn3p37gv.js",
+      "start": 94843,
+      "end": 94908,
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "sha256": "b12e32488267de88d75ad794328439480d06b626d27b0df19552a62f6444ce71",
+      "source": "function EW(){return n().host.credentialSlots.oauthTokenFromFd()}"
+    },
+    {
+      "name": "Uz",
+      "file": "chunk-bn3p37gv.js",
+      "start": 94975,
+      "end": 95048,
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "sha256": "6cbe2ed0bf4081f6a7a05bc49dc9df3488f945783dcf6678acc20cd1fc257f71",
+      "source": "function Uz(){return n().host.credentialSlots.oauthTokenFromBgSnapshot()}"
+    },
+    {
+      "name": "UK",
+      "file": "chunk-nankzm0s.js",
+      "start": 689679,
+      "end": 689690,
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "sha256": "5c4239c8e5205f4ce3d17c3a84c9afc86d7bfba5d96eec4292c73686029aa0a0",
+      "source": "UK=86400000"
+    },
+    {
+      "name": "xr",
+      "file": "chunk-brnn4zwp.js",
+      "start": 3771,
+      "end": 3840,
+      "moduleSha256": "6fc81e7fe2a8a0809d0901a28e8bd5487b116b245931c3ac30fcf9b6655400c7",
+      "sha256": "a3f086d160c93c949d115d5ad7a30c8e2a5318555097af65f1936281f3946278",
+      "source": "function xr(){return Le(process.env.CLAUDE_CODE_SIMPLE)||i(\"--bare\")}"
+    },
+    {
+      "name": "$i",
+      "file": "chunk-nankzm0s.js",
+      "start": 660486,
+      "end": 660544,
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "sha256": "a4504a3bb465f2cd36c5238a6147b43ee4c4816e1002d624b10906ef3df660ab",
+      "source": "function $i(e={}){return m8(e).then((n)=>n===\"refreshed\")}"
+    },
+    {
+      "name": "B",
+      "file": "chunk-3svn1vf6.js",
+      "start": 4129,
+      "end": 8557,
+      "moduleSha256": "b49242d2e63dca3fb096559a644f710adb027b605123ca5b5dc2218f3f23517f",
+      "sha256": "0d3f824331ad6d77a617b1af33600cdfe9e7b43e8323266ca19531cc9fbe7d9f",
+      "source": "async function B(e={}){let o=Date.now();ne(\"info\",\"init_started\"),Yr(\"init_function_start\");let r=e.storageV5EnvPin;if(r?.backend!==void 0&&!Zfe(r.configHome))t(`CLAUDE_CONFIG_DIR no longer names ${r.configHome}, where the v5 storage backend was built at start-up; init() loads its config without it`,{level:\"warn\"}),r={...r,backend:void 0};r??=Yzr();try{let s=Date.now();if(F()&&r?.backend!==void 0)await kXn(r.backend),await Promise.all([CJe(r.backend),OGr(r.backend,va())]);else await CJe();if(ne(\"info\",\"init_configs_enabled\",{duration_ms:Date.now()-s}),Yr(\"init_configs_enabled\"),F()&&r?.backend!==void 0)w9r(le().cachedGrowthBookFeatures?.tengu_windows_credman===!0);if(F()&&r?.backend!==void 0)await uVt(r.backend),Yr(\"init_remote_settings_primed\");let c=bx(r?.backend);if(F()&&c!==void 0)await vht(c),Yr(\"init_fd_credentials_primed\"),await _3r(c),Yr(\"init_stored_login_primed\");E6e(UPe);let S=Date.now();if(yQ(),await J5r(),ftn(),await Promise.all([U0e(),Nse(),m7o(),BXo()]),await tPo(),f$())G6e();if(await xWt(r?.backend!==void 0&&Zfe(r.configHome)?c:void 0),uo())A3();ne(\"info\",\"init_safe_env_vars_applied\",{duration_ms:Date.now()-S}),Yr(\"init_safe_env_vars_applied\");let n=jD(r),p=bx(n);if(F()&&n!==void 0)await kXn(n);if(await HGr(n,va()),F()&&n!==void 0)await s5o(n);if($Gr({storageV5:n,credentials:p}),g6t(p),h6t(n),F()&&p!==void 0){if(await vht(p),sJe())await hwn(p)}if(await NGr(n),WM(n),WNo(n),pOr({storageV5:n,credentials:p}),Yr(\"init_after_graceful_shutdown\"),Promise.all([import(\"/$bunfs/root/chunk-q3h89ake.js\"),import(\"/$bunfs/root/chunk-tv06v0ct.js\")]).then(([i,m])=>{i.initialize1PEventLogging(n),m.onGrowthBookRefresh(()=>{i.reinitialize1PEventLoggingIfConfigChanged()})}),Yr(\"init_after_1p_event_logging\"),O9o((i)=>k(i,!1)),pqr(p,n).catch(d),Yr(\"init_after_oauth_populate\"),X_(n),import(\"/$bunfs/root/chunk-qn9jt2dg.js\").then((i)=>i.primeUnattendedServingConsent()).catch(()=>{}),BVt({trustProbe:ds}),fWe(),bMn())SMn();if(y_())BGr();if(Yr(\"init_after_remote_settings_check\"),$Kr(n),AJe(n),F()&&n!==void 0)GM(n);let g=Date.now();t(\"[init] configureGlobalMTLS starting\"),f7r(),ne(\"info\",\"init_mtls_configured\",{duration_ms:Date.now()-g}),t(\"[init] configureGlobalMTLS complete\");let f=RK();if(f&&!xK(f.value)){let i=Rbt(f.source,f.value);throw await kz({sessionId:q(),message:i,reason:\"proxy_invalid\"}),new og(i)}let y=Date.now();if(t(\"[init] configureGlobalAgents starting\"),lw(),ne(\"info\",\"init_proxy_configured\",{duration_ms:Date.now()-y}),t(\"[init] configureGlobalAgents complete\"),Yr(\"init_network_configured\"),C(),e.startupGrowthBookKick?.(),Le(process.env.CLAUDE_CODE_REMOTE)){let i=performance.now();try{let{initAgentProxy:m,getAgentProxyEnv:P,getGhStandinDir:b}=await import(\"/$bunfs/root/chunk-3c2bxzw2.js\"),{registerAgentProxyEnvFn:A,registerGhStandinDirFn:L}=await import(\"/$bunfs/root/chunk-5p68khhr.js\");A(P),L(b),await m()}catch(m){t(`[init] agent proxy init failed: ${m instanceof Error?m.message:String(m)}; continuing without proxy`,{level:\"warn\"})}wr(\"agent_proxy_init_ms\",performance.now()-i,i)}if(PAn(),O()===\"windows\"&&!$a()){if(!vS()){let m=`Claude Code on Windows requires a shell tool. Git Bash was not found and the PowerShell tool is disabled (CLAUDE_CODE_USE_POWERSHELL_TOOL=0).\n  - Install Git for Windows: https://git-scm.com/downloads/win, or\n  - Remove CLAUDE_CODE_USE_POWERSHELL_TOOL from your environment or settings.`;console.error(m),await kz({sessionId:q(),message:m,reason:\"shell_tool_missing\"}),process.exit(1)}if(await MA()===null)console.error(T6r),await kz({sessionId:q(),message:T6r,reason:\"shell_tool_missing\"}),process.exit(1)}if(_t(iko),_t(async()=>{let{cleanupSessionTeams:i}=await import(\"/$bunfs/root/chunk-dspzj0fm.js\");await i(n)}),Fw()){let i=Date.now();try{let m=await Vre();ne(\"info\",m===null?\"init_scratchpad_unavailable\":\"init_scratchpad_created\",{duration_ms:Date.now()-i})}catch(m){t(`init: ensureScratchpadDir failed: ${m}`,{level:\"error\"})}}return Od(()=>{if(Fw())Vre().catch((i)=>t(`onSessionSwitch: ensureScratchpadDir failed: ${i}`,{level:\"error\"}))}),b6o(),Vjo(),ePo(),ne(\"info\",\"init_completed\",{duration_ms:Date.now()-o}),Yr(\"init_function_end\"),n}catch(s){if(s instanceof og){process.stderr.write(`${s.message}\n`),cs(1);return}if(s instanceof xT){if(!Ce()&&e.showInvalidConfigDialog){await e.showInvalidConfigDialog({error:s});return}process.stderr.write(`Configuration error in ${s.filePath}: ${s.message}\n`),cs(1);return}else throw s}}"
+    },
+    {
+      "name": "a",
+      "file": "chunk-mbfze585.js",
+      "start": 65484,
+      "end": 65495,
+      "moduleSha256": "2e40ea5244009e4c37b57879f34c96cc3e3bc7d3c5468f9e65d63fe5ce13287a",
+      "sha256": "44ef2e88407080f40da65be8f6c06357952a012f91c7fbf90982c130cc9ac988",
+      "source": "a=ZZe(jU,R)"
+    }
+  ],
+  "emittedDeclarations": [
+    "UK",
+    "Jl",
+    "f8",
+    "EW",
+    "Uz",
+    "zWt",
+    "_A",
+    "pqr"
+  ],
+  "ports": {
+    "a": "authEnvironment: original typed environment owner (host-managed false remains false)",
+    "le": "getGlobalConfig (single config reader)",
+    "$i": "getSharedOAuthEngine().refresh(options): original $i outcome===refreshed boolean; passes credentials/storageV5 unchanged",
+    "t": "logForDebugging; original informational profile-override event",
+    "tWt": "storeOAuthAccountInfo / canonical account writer",
+    "ft": "isClaudeAISubscriber",
+    "zp": "hasProfileScope",
+    "fn": "getClaudeAIOAuthTokens",
+    "KBe": "getSharedOAuthClient().tokenProfile via getOauthProfileFromOauthToken",
+    "xr": "isBareMode: CLAUDE_CODE_SIMPLE truth parsing or --bare argv (raw xr declaration recorded)",
+    "n": "existing filesCredentialSlots: oauthTokenFromFd and oauthTokenFromBgSnapshot (no new state)",
+    "FJn": "getValidatedPlanDisplayName (shared OAuth validation and local telemetry policy)"
+  },
+  "contextContract": {
+    "official": "B obtains storageV5 n=jD(r), credentials p=bx(n), then calls pqr(p,n)",
+    "public": "populateOAuthAccountInfoIfNeeded(credentials?, storageV5?) forwards positional references; standalone init noargs leaves both undefined",
+    "boundary": "Host V5 backend construction/adoption belongs to init/config owners and is not defaulted here"
+  }
+}

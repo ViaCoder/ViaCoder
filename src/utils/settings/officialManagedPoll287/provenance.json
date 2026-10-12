@@ -1,0 +1,52 @@
+{
+  "version": "2.1.287",
+  "platform": "darwin-arm64",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16 code units, end-exclusive",
+  "file": "chunk-6xrs6gmd.js",
+  "moduleSha256": "f9dd0da1e467d32595bc9af036ebe3d18edca89a87e6204bf2519aeb61615e17",
+  "outer": {
+    "name": "jjr",
+    "start": 34930,
+    "end": 43954,
+    "sha256": "bb9143991bf07e8ff7b32ede7257e44508dd4ed810b1cbf96a4b8ec793c9c298"
+  },
+  "rows": [
+    {
+      "file": "chunk-6xrs6gmd.js",
+      "name": "mi",
+      "moduleSha256": "f9dd0da1e467d32595bc9af036ebe3d18edca89a87e6204bf2519aeb61615e17",
+      "start": 42488,
+      "end": 42747,
+      "sha256": "f5ef3dafe1f567a554f23c25400aa7fb7c8700ec765c5138af7135370459a64a",
+      "source": "function mi(D,z,ue,fe){return _({mdm:D.settings,mdmErrors:D.errors,mdmUserWritable:D.userWritable===!0,mdmDocumentHasPolicyContent:D.documentHasPolicyContent===!0,mdmLoadState:D.loadState,hkcu:z.settings,hkcuErrors:z.errors,wslInherits:ue,wslWindowsFile:fe})}"
+    },
+    {
+      "file": "chunk-6xrs6gmd.js",
+      "name": "dc",
+      "moduleSha256": "f9dd0da1e467d32595bc9af036ebe3d18edca89a87e6204bf2519aeb61615e17",
+      "start": 42747,
+      "end": 43131,
+      "sha256": "6bfbc045cdbaa7783cde21b83fde79ee02d6093dc680546c46ada2fd3b0817f7",
+      "source": "async function dc(){if(he=mi(U8(),gje(),IU(),await H9r(Ne)),ce)return;te=setInterval(()=>{if(ce)return;(async()=>{try{let{mdm:D,hkcu:z,wslInherits:ue}=await LQe(Ne);if(ce)return;hje(D,z,ue);let fe=await H9r(Ne);if(ce)return;let _e=mi(D,z,ue,fe);if(_e!==he)he=_e,t(\"Detected MDM settings change via poll\"),Lt(\"policySettings\")}catch(D){t(`MDM poll error: ${l(D)}`)}})()},s),te.unref()}"
+    }
+  ],
+  "ports": [
+    "_",
+    "U8",
+    "gje",
+    "IU",
+    "H9r",
+    "Ne",
+    "ce",
+    "he",
+    "te",
+    "LQe",
+    "hje",
+    "t",
+    "l",
+    "Lt",
+    "s"
+  ],
+  "scope": "Complete nested public mi/dc; mutable he/te/ce/Ne are getters/setters of the existing watcher, not another cache. H9r is the same original MDM owner helper."
+}

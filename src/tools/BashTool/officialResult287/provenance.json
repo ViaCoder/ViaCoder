@@ -1,0 +1,386 @@
+{
+  "version": "2.1.287",
+  "platform": "darwin-arm64",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "binarySha256": "6eab8333fe2121553100d8f40bfada384a3e989b94f947e18ba6677a6fcb41ea",
+  "offsetUnit": "UTF-16 code units",
+  "method": {
+    "file": "chunk-mphp7acd.js",
+    "name": "Bash.mapToolResultToToolResultBlockParam",
+    "start": 3994485,
+    "end": 3995861,
+    "moduleLength": 4409957,
+    "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+    "sha256": "ee5bed65d7d6a204602b86cc059f53f6c3c16526d95b48d2f9d6d91c1f6be3de",
+    "source": "mapToolResultToToolResultBlockParam({interrupted:e,stdout:n,stderr:r,isImage:s,backgroundTaskId:g,backgroundedByUser:h,backgroundedToDeliverMessage:b,backgroundedByTurnAbort:w,timedOutAfterMs:D,backgroundEndsWithFinalResponse:j,backgroundCwdHint:z,structuredContent:K,persistedOutputPath:he,persistedOutputSize:_e,staleReadFileStateHint:ke,ghRateLimitHint:be},ve){if(K&&K.length>0)return{tool_use_id:ve,type:\"tool_result\",content:K};if(s){let $e=r6n(n,ve);if($e){let Ne=typeof r===\"string\"?r.trim():\"\";if(Ne)return{...$e,content:[...Array.isArray($e.content)?$e.content:[],{type:\"text\",text:Ne}]};return $e}}let Te=n;if(n)Te=n.replace(/^(\\s*\\n)+/,\"\"),Te=Te.trimEnd();if(he){let $e=n8e(Te,iRe);Te=L_e({filepath:he,originalSize:_e??0,isJson:!1,preview:$e.preview,hasMore:$e.hasMore,truncatedAtBytes:(_e??0)>=gue?gue:void 0})}let xe=r.trim();if(e){if(r)xe+=r6;xe+=\"<error>Command was aborted before completion</error>\"}let Pe=\"\";if(g){if(Pe=s6n({backgroundTaskId:g,outputPath:Sp(g),backgroundedByUser:h,backgroundedToDeliverMessage:b,backgroundedByTurnAbort:w,timedOutAfterMs:D,reapedAtFinalResponse:j,readToolName:dt}),z)Pe+=`\n${z}`;if(BN())return{tool_use_id:ve,type:\"tool_result\",content:k2n(g,[xe,Pe].filter(Boolean).join(`\n`),{backgroundedByUser:h,ending:dlt(j===!0)})}}return{tool_use_id:ve,type:\"tool_result\",content:[Te,xe,Pe,ke,be].filter(Boolean).join(`\n`),is_error:e}}",
+    "variable": false
+  },
+  "roots": {
+    "r6n": [
+      "chunk-mphp7acd.js",
+      "r6n"
+    ],
+    "n8e": [
+      "chunk-fpcnpvs9.js",
+      "n8e"
+    ],
+    "iRe": [
+      "chunk-fpcnpvs9.js",
+      "iRe"
+    ],
+    "L_e": [
+      "chunk-fpcnpvs9.js",
+      "L_e"
+    ],
+    "gue": [
+      "chunk-p54b66vv.js",
+      "gue"
+    ],
+    "r6": [
+      "chunk-mphp7acd.js",
+      "r6"
+    ],
+    "s6n": [
+      "chunk-mphp7acd.js",
+      "s6n"
+    ],
+    "Sp": [
+      "chunk-p54b66vv.js",
+      "Sp"
+    ],
+    "dt": [
+      "chunk-z82saar5.js",
+      "dt"
+    ],
+    "BN": [
+      "chunk-ebcyvbxn.js",
+      "BN"
+    ],
+    "k2n": [
+      "chunk-mphp7acd.js",
+      "k2n"
+    ],
+    "dlt": [
+      "chunk-mphp7acd.js",
+      "dlt"
+    ]
+  },
+  "modules": [
+    {
+      "file": "chunk-hj4bn3ss.js",
+      "rows": [
+        {
+          "file": "chunk-hj4bn3ss.js",
+          "name": "Bh",
+          "start": 700,
+          "end": 1112,
+          "moduleLength": 5168,
+          "moduleSha256": "06bc54885b92b15f44eb4b86c47b783faf2f4b84fbd7982a5423539003ec2b2d",
+          "sha256": "06523ce02452ca3a9dd236711a1d743fb25e4ffa8ea6a95d2765f6c71d7634df",
+          "source": "function Bh(n){if(n.length<4)return null;if(n[0]===137&&n[1]===80&&n[2]===78&&n[3]===71)return\"image/png\";if(n[0]===255&&n[1]===216&&n[2]===255)return\"image/jpeg\";if(n.length>=6&&n[0]===71&&n[1]===73&&n[2]===70&&n[3]===56&&(n[4]===55||n[4]===57)&&n[5]===97)return\"image/gif\";if(n[0]===82&&n[1]===73&&n[2]===70&&n[3]===70&&n.length>=12&&n[8]===87&&n[9]===69&&n[10]===66&&n[11]===80)return\"image/webp\";return null}",
+          "variable": false,
+          "exportNames": [
+            "Bh"
+          ]
+        }
+      ],
+      "bindings": {},
+      "initializers": []
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "rows": [
+        {
+          "file": "chunk-mphp7acd.js",
+          "name": "dlt",
+          "start": 172867,
+          "end": 172932,
+          "moduleLength": 4409957,
+          "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+          "sha256": "d178235a27aa5dca150f7677dca786d74c4fdaad36088b84b79c7f84715b6495",
+          "source": "function dlt(e){return e?\"final_response\":zfe()?\"session\":void 0}",
+          "variable": false,
+          "exportNames": [
+            "dlt"
+          ]
+        },
+        {
+          "file": "chunk-mphp7acd.js",
+          "name": "Gqn",
+          "start": 879601,
+          "end": 879633,
+          "moduleLength": 4409957,
+          "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+          "sha256": "a57940e67001dbda549c68d701100272562bc5bce13665727a0114cee18e470e",
+          "source": "Gqn=/^data:([^;]+);base64,(.+)$/",
+          "variable": true,
+          "exportNames": [
+            "Gqn"
+          ]
+        },
+        {
+          "file": "chunk-mphp7acd.js",
+          "name": "fgt",
+          "start": 879634,
+          "end": 879741,
+          "moduleLength": 4409957,
+          "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+          "sha256": "9300a6507d72f0039450c7d9e9acb97cd5366c3554a9c4736a7737d7ad9a88dd",
+          "source": "function fgt(e){let n=e.trim().match(Gqn);if(!n||!n[1]||!n[2])return null;return{mediaType:n[1],data:n[2]}}",
+          "variable": false,
+          "exportNames": [
+            "fgt"
+          ]
+        },
+        {
+          "file": "chunk-mphp7acd.js",
+          "name": "r6n",
+          "start": 879741,
+          "end": 879967,
+          "moduleLength": 4409957,
+          "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+          "sha256": "838d586110e6a0c537477e945ca4a0bb3d07427ae76a9ca563c85a4521eefaa2",
+          "source": "function r6n(e,n){let r=fgt(e);if(!r)return null;let s=Bh(Buffer.from(r.data,\"base64\"));if(s===null)return null;return{tool_use_id:n,type:\"tool_result\",content:[{type:\"image\",source:{type:\"base64\",media_type:s,data:r.data}}]}}",
+          "variable": false,
+          "exportNames": [
+            "r6n"
+          ]
+        },
+        {
+          "file": "chunk-mphp7acd.js",
+          "name": "r6",
+          "start": 3981569,
+          "end": 3981575,
+          "moduleLength": 4409957,
+          "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+          "sha256": "5a9aa6fb75fad0d45d79b46bd48943a7201ffd52eb408a035629829deed38df1",
+          "source": "r6=`\n`",
+          "variable": true,
+          "exportNames": [
+            "r6"
+          ]
+        }
+      ],
+      "bindings": {
+        "Bh": {
+          "file": "chunk-hj4bn3ss.js",
+          "name": "Bh"
+        },
+        "zfe": {
+          "port": "singleShotPrintSession",
+          "identity": "chunk-bn3p37gv.js:zfe"
+        }
+      },
+      "initializers": []
+    },
+    {
+      "file": "chunk-k99m10te.js",
+      "rows": [
+        {
+          "file": "chunk-k99m10te.js",
+          "name": "pn",
+          "start": 615,
+          "end": 844,
+          "moduleLength": 857,
+          "moduleSha256": "d7a028aa1d5c254163b7c65e01777ffa71c868f8535fcc265f5207163f928793",
+          "sha256": "22481aa7014e5607bcd059323ce0d0c85a32d5ec7a7b94b4acd497fb68e97e84",
+          "source": "function pn(t){let e=t/1024;if(e<1)return`${t} bytes`;if(e<1024)return`${e.toFixed(1).replace(/\\.0$/,\"\")}KB`;let r=e/1024;if(r<1024)return`${r.toFixed(1).replace(/\\.0$/,\"\")}MB`;return`${(r/1024).toFixed(1).replace(/\\.0$/,\"\")}GB`}",
+          "variable": false,
+          "exportNames": [
+            "pn"
+          ]
+        }
+      ],
+      "bindings": {},
+      "initializers": []
+    },
+    {
+      "file": "chunk-fpcnpvs9.js",
+      "rows": [
+        {
+          "file": "chunk-fpcnpvs9.js",
+          "name": "rre",
+          "start": 1423,
+          "end": 1447,
+          "moduleLength": 13212,
+          "moduleSha256": "52143cbc07d1fa809ecbd1d6a90724348245a449385e60fdcce2886d432b32c0",
+          "sha256": "de89e9cdd4102b3930d652156a5a3496ee9eec051ec0f6f20b8269b2d0a15536",
+          "source": "rre=\"<persisted-output>\"",
+          "variable": true,
+          "exportNames": [
+            "rre"
+          ]
+        },
+        {
+          "file": "chunk-fpcnpvs9.js",
+          "name": "jKn",
+          "start": 1448,
+          "end": 1473,
+          "moduleLength": 13212,
+          "moduleSha256": "52143cbc07d1fa809ecbd1d6a90724348245a449385e60fdcce2886d432b32c0",
+          "sha256": "87b37a879785b51ce7c8590bc9de98aee76a453dc88aa77eb01c74a2cadcebea",
+          "source": "jKn=\"</persisted-output>\"",
+          "variable": true,
+          "exportNames": [
+            "jKn"
+          ]
+        },
+        {
+          "file": "chunk-fpcnpvs9.js",
+          "name": "iRe",
+          "start": 1768,
+          "end": 1776,
+          "moduleLength": 13212,
+          "moduleSha256": "52143cbc07d1fa809ecbd1d6a90724348245a449385e60fdcce2886d432b32c0",
+          "sha256": "f966b374567b96ab6d3aa504c466b78ef43d0b6f366923f308433cf70fd4defa",
+          "source": "iRe=2000",
+          "variable": true,
+          "exportNames": [
+            "iRe"
+          ]
+        },
+        {
+          "file": "chunk-fpcnpvs9.js",
+          "name": "L_e",
+          "start": 3678,
+          "end": 4046,
+          "moduleLength": 13212,
+          "moduleSha256": "52143cbc07d1fa809ecbd1d6a90724348245a449385e60fdcce2886d432b32c0",
+          "sha256": "f0583dca39f160fcafd64c17d37883db5f92508e0ce43d7875c9bebc7230997d",
+          "source": "function L_e(e){let n=`${rre}\n`;return n+=e.truncatedAtBytes===void 0?`Output too large (${pn(e.originalSize)}). Full output saved to: ${e.filepath}\n\n`:`Output exceeded the ${pn(e.truncatedAtBytes)} persist limit; only the first ${pn(e.truncatedAtBytes)} were saved to: ${e.filepath}\n\n`,n+=`Preview (first ${pn(iRe)}):\n`,n+=e.preview,n+=e.hasMore?`\n...\n`:`\n`,n+=jKn,n}",
+          "variable": false,
+          "exportNames": [
+            "L_e"
+          ]
+        },
+        {
+          "file": "chunk-fpcnpvs9.js",
+          "name": "n8e",
+          "start": 6066,
+          "end": 6218,
+          "moduleLength": 13212,
+          "moduleSha256": "52143cbc07d1fa809ecbd1d6a90724348245a449385e60fdcce2886d432b32c0",
+          "sha256": "ff8fd4f2e8c79b8228e183fcf6f1d145547bc5c0b5f11acf7799fd93cfd2d834",
+          "source": "function n8e(e,n){if(e.length<=n)return{preview:e,hasMore:!1};let s=e.slice(0,n).lastIndexOf(`\n`),a=s>n*0.5?s:n;return{preview:e.slice(0,a),hasMore:!0}}",
+          "variable": false,
+          "exportNames": [
+            "n8e"
+          ]
+        }
+      ],
+      "bindings": {
+        "pn": {
+          "file": "chunk-k99m10te.js",
+          "name": "pn"
+        }
+      },
+      "initializers": []
+    },
+    {
+      "file": "chunk-p54b66vv.js",
+      "rows": [
+        {
+          "file": "chunk-p54b66vv.js",
+          "name": "gue",
+          "start": 2250,
+          "end": 2262,
+          "moduleLength": 20850,
+          "moduleSha256": "f3a80925f5efacd866866a5b846b48529ccfea55417fd8a0088d7dbcce946849",
+          "sha256": "b14409769bb9ed99257421225b773d496ccda916063cef3b3c2c3e3e9cb191f6",
+          "source": "gue=67108864",
+          "variable": true,
+          "exportNames": [
+            "gue"
+          ]
+        }
+      ],
+      "bindings": {},
+      "initializers": []
+    },
+    {
+      "file": "chunk-z82saar5.js",
+      "rows": [
+        {
+          "file": "chunk-z82saar5.js",
+          "name": "dt",
+          "start": 639,
+          "end": 648,
+          "moduleLength": 804,
+          "moduleSha256": "e664260818573420edcf2f3ddf740d60c4fb80022c37e4395ca4149564144c89",
+          "sha256": "27f1d287576b018c956d83abf288caeb99d9a700d5025fe6776bd58bc642e8b2",
+          "source": "dt=\"Read\"",
+          "variable": true,
+          "exportNames": [
+            "dt"
+          ]
+        }
+      ],
+      "bindings": {},
+      "initializers": []
+    }
+  ],
+  "ports": [
+    {
+      "port": "backgroundText",
+      "file": "chunk-mphp7acd.js",
+      "name": "s6n",
+      "start": 880896,
+      "end": 882241,
+      "moduleLength": 4409957,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "78dc7070583973b2950ce179c653680aaf3e0cfeffe2707389f4a2546d064eb5",
+      "source": "function s6n({backgroundTaskId:e,outputPath:n,backgroundedByUser:r,backgroundedToDeliverMessage:s,backgroundedByTurnAbort:g,timedOutAfterMs:h,reapedAtFinalResponse:b,readToolName:w}){let D=r?`Command was manually backgrounded by user with ID: ${e}. Output is being written to: ${n}.`:s?`Command was moved to the background (ID: ${e}) so that a message that arrived while it was running can reach you; it was not interrupted. Output is being written to: ${n}.`:h!==void 0?`Command did not complete within its ${Math.max(1,Math.round(h/1000))}s timeout and was moved to the background (ID: ${e}). Output is being written to: ${n}.`:`Command running in background with ID: ${e}. Output is being written to: ${n}.`,j=b?\"If it exits while you are still working you will be notified, but it is terminated when you give your final response and no notification can follow that \\u2014 so do not end your turn to wait for it; if you need its result, wait for it before giving your final response.\":r?void 0:\"You will be notified when it completes.\",K=(h!==void 0||r||s||g)&&!b?Nqn(void 0):void 0,he=K!==void 0?`If it is still running after ${Jt(K,{hideTrailingZeros:!0})} in the background, it will be stopped and you will be notified.`:void 0,_e=r?void 0:`To check interim output, use ${w} on that file path.`;return[D,j,he,_e].filter(Boolean).join(\" \")}",
+      "variable": false
+    },
+    {
+      "port": "outputPath",
+      "file": "chunk-p54b66vv.js",
+      "name": "Sp",
+      "start": 2993,
+      "end": 3166,
+      "moduleLength": 20850,
+      "moduleSha256": "f3a80925f5efacd866866a5b846b48529ccfea55417fd8a0088d7dbcce946849",
+      "sha256": "958930db8c6e00f9453b265fa5b2543b03313db63b148310b450a0bf10e13bcb",
+      "source": "function Sp(e){if(Ut())throw Error(\"Task output has no file in a diskless session\");let n=rr().outputPathBindings.get(e);if(n!==void 0)return n;return b(Ot(),`${e}.output`)}",
+      "variable": false
+    },
+    {
+      "port": "taskEnabled",
+      "file": "chunk-ebcyvbxn.js",
+      "name": "BN",
+      "start": 2020,
+      "end": 2096,
+      "moduleLength": 23620,
+      "moduleSha256": "99852e10c497cdb9980055097cbbb03ff36a3fc0d2a7ed8b29bfa032e7c2e9c8",
+      "sha256": "2fdb1b61ef8aa28f9d1bdbb8b630fa8e727620bb73898ae5963584a680d09ce6",
+      "source": "function BN(){return lo(\"tengu_violin_rosin\",!1)===!0&&!Za()&&!P3t()&&!xr()}",
+      "variable": false
+    },
+    {
+      "port": "backgroundAnnouncement",
+      "file": "chunk-mphp7acd.js",
+      "name": "k2n",
+      "start": 173714,
+      "end": 174368,
+      "moduleLength": 4409957,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "9200cf0afd2c25bc6595c9eb53d6d3314b832ebd0f39a9248119f8c74e40d16f",
+      "source": "function k2n(e,n,{backgroundedByUser:r=!1,ending:s}={}){let g=s===\"final_response\"?T_e():s===\"session\"?`This session takes no further input, though: the command is stopped when your turn ends, so its result reaches you only while you are still working. ${T_e()}`:r?\"Its result is delivered to you automatically when it finishes; carry on without waiting for it.\":`When it finishes, its result is delivered to you automatically \\u2014 ${wXe} \\u2014 so there is no need to check whether it is done or to sleep; if that result is all you are waiting for, end your turn.`,h={resultType:\"task\",taskId:e,status:\"working\",statusMessage:`${n} ${g}`};return _(h)}",
+      "variable": false
+    },
+    {
+      "port": "singleShotPrintSession",
+      "file": "chunk-bn3p37gv.js",
+      "name": "zfe",
+      "start": 89699,
+      "end": 89769,
+      "moduleLength": 117054,
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "sha256": "e6a657e0e25215a89e5d7c3e73713fc6ba32fe3a425bfdd9d14a1d579cc82129",
+      "source": "function zfe(){return n().host.launchOptions.singleShotPrintSession()}",
+      "variable": false
+    }
+  ],
+  "builtins": [],
+  "nativeSha256": "41247f0e7242cc5b3b72147eea95fa49b34cbf10d2a84ee671157de7307a75e9"
+}

@@ -1,0 +1,893 @@
+{
+  "version": "2.1.286",
+  "platform": "darwin-arm64",
+  "binarySha256": "75e3016e9d2570767b08e43a7467d4817a4f149232c169ca295f2c95fef21433",
+  "h": {
+    "file": "chunk-53vgbj96.js",
+    "symbol": "h",
+    "start": 1353,
+    "end": 2182,
+    "moduleSha256": "47525f37bf6f913938b6b201804d576e4d8da88f53778313e397233907732cff",
+    "sha256": "1b26778430649823be95fd8551538cc627d95a9dbd25fed9c788cece85a77dfc",
+    "source": "async function h(e,r){try{if(ce().claudeCodeFirstTokenDate!==void 0){y(\"api_first_token_date_fetch\");return}let f=await Wt.get(\"/api/organization/claude_code_first_token_date\",{auth:\"async\",timeout:1e4,credentials:r});if(!f.ok){if(f.reason===\"no-auth\")t(`Failed to get auth headers for first-token-date fetch: ${f.detail}`,{level:\"error\"}),m(\"api_first_token_date_fetch\",\"request_failed\");return}let s=f.data?.first_token_date??null;if(s!==null){let u=new Date(s).getTime();if(isNaN(u)){d(Error(`Received invalid first_token_date from API: ${s}`)),m(\"api_first_token_date_fetch\",\"invalid_date\");return}}await Te((u)=>({...u,claudeCodeFirstTokenDate:s}),e),y(\"api_first_token_date_fetch\")}catch(o){if(cu(o))t(`Failed to fetch first token date: ${l(o)}`,{level:\"error\"});else d(o);m(\"api_first_token_date_fetch\",\"request_failed\")}}",
+    "variable": false
+  },
+  "errors": [
+    {
+      "file": "chunk-h730kz80.js",
+      "symbol": "cu",
+      "start": 9277,
+      "end": 9459,
+      "moduleSha256": "2fd1d1c89c1b8ab482265e429afb8a6163f1d75acd78a6e6476325a79d794f99",
+      "sha256": "188db5864812b8b8a7f5e60523b7d6cd5b1e71a6b40bfaaa7b6cd885f91a78d8",
+      "source": "function cu(n,e){if(e?.(n))return!0;if(!n||typeof n!==\"object\"||!(\"isAxiosError\"in n)||!n.isAxiosError)return!1;let t=n.response?.status;return t===void 0||t===401||t===403||t===429}",
+      "variable": false
+    },
+    {
+      "file": "chunk-h730kz80.js",
+      "symbol": "l",
+      "start": 4755,
+      "end": 4815,
+      "moduleSha256": "2fd1d1c89c1b8ab482265e429afb8a6163f1d75acd78a6e6476325a79d794f99",
+      "sha256": "2f921ed78ffeed39032d7e9c4783e05c294cba2ce61cc5ac20466ece27a81075",
+      "source": "function l(n){return n instanceof Error?n.message:String(n)}",
+      "variable": false
+    }
+  ],
+  "http": {
+    "roots": [
+      "Wt"
+    ],
+    "declarations": [
+      {
+        "file": "chunk-768af90z.js",
+        "symbol": "cue",
+        "start": 152511,
+        "end": 152533,
+        "moduleSha256": "464d6b791cbfacdf57e4c98a2b54fad35a475e43c9541d8eb2fd1390a8027b2a",
+        "sha256": "10ae7356edac707eb0e94c7553efd3562e1cbd809b96a7da4220ebc759839044",
+        "source": "function cue(){return}",
+        "variable": false
+      },
+      {
+        "file": "chunk-178b5qmp.js",
+        "symbol": "gh",
+        "start": 1130,
+        "end": 1773,
+        "moduleSha256": "91c5969c6dcc930e072031aef30537b06fda9121c220f4c338a3e8f5c9a4b2e5",
+        "sha256": "a7377da859e7f1db3e313032f3c2940e48f1c457c29314adcb2cc7609c232bb3",
+        "source": "function gh(){switch(process.env.CLAUDE_CODE_ENTRYPOINT){case\"claude-vscode\":return\"claude_code_vscode\";case\"remote\":case\"remote_baku\":case\"remote_cowork\":case\"remote_desktop\":case\"remote_mobile\":case\"remote_projects\":return\"claude_code_remote\";case\"claude-in-teams\":return\"claude_code_remote\";case\"sdk-cli\":case\"sdk-ts\":case\"sdk-py\":return\"claude_code_sdk\";case\"mcp\":return\"claude_code_mcp\";case\"claude-code-github-action\":return\"claude_code_github_action\";case\"local-agent\":return\"claude_code_local_agent\";case\"claude_in_slack\":return\"claude_in_slack\";case\"claude-in-slack\":return\"claude-in-slack\";case\"cli\":default:return\"claude_code_cli\"}}",
+        "variable": false
+      },
+      {
+        "file": "chunk-h730kz80.js",
+        "symbol": "nt",
+        "start": 3893,
+        "end": 4046,
+        "moduleSha256": "2fd1d1c89c1b8ab482265e429afb8a6163f1d75acd78a6e6476325a79d794f99",
+        "sha256": "1be90be4d619e19e3d10f3ecd8f777d92f40571a4c14fea532d035186ff57d7a",
+        "source": "nt=(n,e)=>{try{if(n!==null&&typeof n===\"object\"&&!(\"telemetryMessage\"in n)&&Object.isExtensible(n))Object.assign(n,{telemetryMessage:e})}catch{}return n}",
+        "variable": true
+      },
+      {
+        "file": "chunk-h730kz80.js",
+        "symbol": "ee",
+        "start": 4695,
+        "end": 4755,
+        "moduleSha256": "2fd1d1c89c1b8ab482265e429afb8a6163f1d75acd78a6e6476325a79d794f99",
+        "sha256": "a549823933c909f32cfaccb59110ccd780f0c2140c462f6e6d896ff3af4e63c8",
+        "source": "function ee(n){return n instanceof Error?n:Error(String(n))}",
+        "variable": false
+      },
+      {
+        "file": "chunk-9qmnd54c.js",
+        "symbol": "o4r",
+        "start": 32096,
+        "end": 32177,
+        "moduleSha256": "ca1424c44dcb6f60b0b99e2514aa7fc85ae4da7d4226a70b73b66ce0028d1515",
+        "sha256": "1e947287d32caf3d03fc639271a922782bd8ea0cef2d19db0906ea1892f58163",
+        "source": "function o4r(){let e=AC(),n=CO();return new be({...e,...n&&{ca:n},keepAlive:!1})}",
+        "variable": false
+      },
+      {
+        "file": "chunk-majxx0zh.js",
+        "symbol": "qN",
+        "start": 389878,
+        "end": 389909,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "9e36b738c3ed25e2bd962f9e2a0742b99819522ffba63f3418bc7c7dbbc4fee5",
+        "source": "qN=\"Invalid SemVer: <redacted>\"",
+        "variable": true
+      },
+      {
+        "file": "chunk-majxx0zh.js",
+        "symbol": "ha",
+        "start": 389910,
+        "end": 389989,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "50033c7da0cb3f173f211a56204ea617a1c46182df8d4801da7d561503228f68",
+        "source": "function ha(e,n){try{return Bun.semver.order(e,n)}catch(r){throw nt(ee(r),qN)}}",
+        "variable": false
+      },
+      {
+        "file": "chunk-majxx0zh.js",
+        "symbol": "sS",
+        "start": 390025,
+        "end": 390060,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "a1af70517fc798797236c67e3c94a4aa65461a5e73d63eebe5ae7f07a6e75e99",
+        "source": "function sS(e,n){return ha(e,n)>=0}",
+        "variable": false
+      },
+      {
+        "file": "chunk-majxx0zh.js",
+        "symbol": "oc",
+        "start": 390340,
+        "end": 390348,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "1a542237c6e39e9ebbd25259adca7b299f64ceb9c6644674ffcf27a2b9556bb9",
+        "source": "oc=60000",
+        "variable": true
+      },
+      {
+        "file": "chunk-majxx0zh.js",
+        "symbol": "ZN",
+        "start": 390349,
+        "end": 390359,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "3d4ddca2a05fa278917603c0b581668fa40ab9365275023946e5317c2f0f9563",
+        "source": "ZN=8388608",
+        "variable": true
+      },
+      {
+        "file": "chunk-majxx0zh.js",
+        "symbol": "Tv",
+        "start": 390360,
+        "end": 390368,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "06a3110ce158c9595c40912b7a44eb8495104278470c37ed3c4433cf2f4e4166",
+        "source": "Tv=32768",
+        "variable": true
+      },
+      {
+        "file": "chunk-majxx0zh.js",
+        "symbol": "qo",
+        "start": 390369,
+        "end": 390378,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "a4fc9a0910387496ded3efe1159477b421cbe5586f0738eac20de4edff7f1a4a",
+        "source": "qo=262144",
+        "variable": true
+      },
+      {
+        "file": "chunk-majxx0zh.js",
+        "symbol": "tF",
+        "start": 390379,
+        "end": 390457,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "ad80cf6715123a3a95ec535beb98be09289263c70af7ab7797e79636ec0b4fb9",
+        "source": "function tF(e,n){let r=Math.min(e,ZN);return Math.max(n,Math.ceil(r/Tv*1000))}",
+        "variable": false
+      },
+      {
+        "file": "chunk-majxx0zh.js",
+        "symbol": "Rv",
+        "start": 390457,
+        "end": 390514,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "a14cf99f1988dc22b5fc6feb1ad317211aefa7f2ab1cc1f1b45773bd2ce22d8e",
+        "source": "function Rv(e,n){return Math.max(n,Math.ceil(e/Tv*1000))}",
+        "variable": false
+      },
+      {
+        "file": "chunk-majxx0zh.js",
+        "symbol": "Ov",
+        "start": 390514,
+        "end": 390555,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "9a91f0a8c47ff780cf3dbd33cf51deb302cb8ae8d6fa09f23658a4f8b761aa1f",
+        "source": "function Ov(){return sS(\"1.4.3\",\"1.4.0\")}",
+        "variable": false
+      },
+      {
+        "file": "chunk-majxx0zh.js",
+        "symbol": "_a",
+        "start": 390555,
+        "end": 390676,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "f6d15bc232873d2185a071250b672040963742da098d5ebb98253bd8c846d98e",
+        "source": "class _a extends Error{waitedMs;constructor(e){super(\"transfer stalled\");this.waitedMs=e;this.name=\"UploadStalledError\"}}",
+        "variable": false
+      },
+      {
+        "file": "chunk-majxx0zh.js",
+        "symbol": "nF",
+        "start": 390676,
+        "end": 390910,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "264762ac151402c0d2c25680a4aa77d6c23617827b40a7578d8b4a6df9ca4176",
+        "source": "function nF(e,n){let r=!1,s=!1,g=(b,E)=>{r=!0,b.abort(new _a(E))},h=setTimeout(g,n,e,n);return{touch:()=>{if(!s)h.refresh()},relax:(b)=>{if(s)return;clearTimeout(h),h=setTimeout(g,b,e,b)},clear:()=>{s=!0,clearTimeout(h)},fired:()=>r}}",
+        "variable": false
+      },
+      {
+        "file": "chunk-majxx0zh.js",
+        "symbol": "rF",
+        "start": 390910,
+        "end": 391017,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "740293c5cf568434109ad27267a867a32825027ccc83c766f1967db8a3c942e8",
+        "source": "function*rF(e,n){for(let r=0;r<e.length;r+=qo)n(r),yield e.subarray(r,Math.min(r+qo,e.length));n(e.length)}",
+        "variable": false
+      },
+      {
+        "file": "chunk-majxx0zh.js",
+        "symbol": "xv",
+        "start": 391017,
+        "end": 391519,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "0eb6d0c5ee3f58715ea12caca702f092a5ff670082d479ec6fdb18407da1e303",
+        "source": "function xv(e,n={}){let r=n.stallMs??oc,s=Math.max(tF(e.length,r),n.tailFloorMs??0),g=new AbortController,h=()=>g.abort(n.signal?.reason);if(n.signal?.aborted)h();else n.signal?.addEventListener(\"abort\",h,{once:!0});let b=nF(g,r),E=0;return{body:JN.from(rF(e,(w)=>{if(E=w,w===e.length)b.relax(s);else b.touch()}),{objectMode:!1}),signal:g.signal,dispose:()=>{b.clear(),n.signal?.removeEventListener(\"abort\",h)},seen:()=>({body_bytes:e.length,bytes_handed:E,stalled:b.fired()&&n.signal?.aborted!==!0})}}",
+        "variable": false
+      },
+      {
+        "file": "chunk-majxx0zh.js",
+        "symbol": "uv",
+        "start": 406164,
+        "end": 406670,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "ce3001067924588f4b3ac7504da237a3ab9f54dc9ad570659a57119584379cd9",
+        "source": "async function uv(e){if(!Bn())throw Error(\"Cloud sessions are only available on the first-party Anthropic API provider.\");await Hi({credentials:e});let n=pn()?.accessToken;if(n===void 0)throw Error(\"Claude Code cloud sessions require authentication with a Claude.ai account. API key authentication is not sufficient. Please run /login to authenticate, or check your authentication status with /status.\");let r=await h2();if(!r)throw Error(\"Unable to get organization UUID\");return{accessToken:n,orgUUID:r}}",
+        "variable": false
+      },
+      {
+        "file": "chunk-majxx0zh.js",
+        "symbol": "yBt",
+        "start": 407546,
+        "end": 407698,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "474492d4cb1b2d158e3daac25a9c98fed5df5a8211382019ed548cbafe7a9e34",
+        "source": "function yBt(e){return{Authorization:`Bearer ${e}`,\"Content-Type\":\"application/json\",\"anthropic-version\":\"2023-06-01\",\"anthropic-client-platform\":gh()}}",
+        "variable": false
+      },
+      {
+        "file": "chunk-majxx0zh.js",
+        "symbol": "Ayn",
+        "start": 418503,
+        "end": 418525,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "4ce7241d5518894e103a87738b6fcf7dc71341a02ac5b4fe62440319ed6697cd",
+        "source": "function Ayn(){return}",
+        "variable": false
+      },
+      {
+        "file": "chunk-majxx0zh.js",
+        "symbol": "hSe",
+        "start": 418525,
+        "end": 418562,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "8f3169936c0dbf68c6cf96a29a6743fbf3df34b391aa9dd4c88fbc9f8039d1db",
+        "source": "function hSe(){return Ayn()!==void 0}",
+        "variable": false
+      },
+      {
+        "file": "chunk-majxx0zh.js",
+        "symbol": "LYe",
+        "start": 418562,
+        "end": 418772,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "88c7559fe0ccbd960625146d9354f93f0272f04d07bba30ccf95bc5f904fb41a",
+        "source": "function LYe(){if(!hSe())return{host:\"memory\",auth:\"async\",refreshOAuth:!0};let e=kn.CLAUDE_CODE_MEMORY_API_TOKEN;return{host:\"memory\",auth:\"none\",refreshOAuth:!1,...e&&{headers:{Authorization:`Bearer ${e}`}}}}",
+        "variable": false
+      },
+      {
+        "file": "chunk-majxx0zh.js",
+        "symbol": "Uv",
+        "start": 418988,
+        "end": 419019,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "8f20a12f3c5de7e6d95d38a8b658774f1e5494b2a435d1da597ab31a5e4a75f8",
+        "source": "Uv=Symbol(\"uploadWire.freedAt\")",
+        "variable": true
+      },
+      {
+        "file": "chunk-majxx0zh.js",
+        "symbol": "Lv",
+        "start": 419020,
+        "end": 419052,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "1e882494dafb673d3c944957049c4f60317f304a52645f17bfb1accc390c4a9a",
+        "source": "Lv=Symbol(\"uploadWire.stamping\")",
+        "variable": true
+      },
+      {
+        "file": "chunk-majxx0zh.js",
+        "symbol": "CF",
+        "start": 419053,
+        "end": 419180,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "5aebff6b262f37c6c9f11fd15296bbd064e3bdcf878071d14c067f4950b87d63",
+        "source": "function CF(e){if(!(e instanceof lc.Agent))return;let n=e;if(n[Lv])return;n[Lv]=!0,n.on(\"free\",(r)=>{r[Uv]=performance.now()})}",
+        "variable": false
+      },
+      {
+        "file": "chunk-majxx0zh.js",
+        "symbol": "Bv",
+        "start": 419180,
+        "end": 419911,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "8a6bb2d981546be9ab565c87260a377df60a296f0d1668f696cc7d7c6eb65a3a",
+        "source": "function Bv(){let e={},n,r;return{transport:{request(g,h){let b=g.protocol===\"http:\",E=(b?lc:Fv).request(g,h);return CF(g.agent??(b?lc.globalAgent:Fv.globalAgent)),E.once(\"socket\",(w)=>{n=w,r=typeof w.bytesWritten===\"number\"?w.bytesWritten:void 0,e.response_started=!1,e.socket_reused=E.reusedSocket===!0;let k=w[Uv];if(e.socket_reused&&k!==void 0)e.socket_idle_ms=Math.round(performance.now()-k);let A=()=>{let M=w.localFamily??w.remoteFamily;if(M===\"IPv4\")e.local_af=4;else if(M===\"IPv6\")e.local_af=6};if(w.connecting)w.once(\"connect\",A);else A()}),E.once(\"response\",()=>{e.response_started=!0}),E}},seen:(g)=>({...e,...g&&n!==void 0&&r!==void 0&&typeof n.bytesWritten===\"number\"&&{bytes_flushed:Math.max(0,n.bytesWritten-r)}})}}",
+        "variable": false
+      },
+      {
+        "file": "chunk-majxx0zh.js",
+        "symbol": "xF",
+        "start": 419915,
+        "end": 420005,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "c2c9b52a203570ec648771d76602c2bbbcc0d020158d5eda5b17f395576a3de5",
+        "source": "xF=new Set([\"authorization\",\"proxy-authorization\",\"x-authorization\",\"x-api-key\",\"cookie\"])",
+        "variable": true
+      },
+      {
+        "file": "chunk-majxx0zh.js",
+        "symbol": "DF",
+        "start": 420696,
+        "end": 420796,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "8da874a684e0abda8e0f48c29eae944b8a92d71916854275767d208b38811ed9",
+        "source": "function DF(e,n){return n.auth===\"none\"&&n.host!==\"frame\"&&n.host!==\"memory\"&&n.baseUrl?n.baseUrl:e}",
+        "variable": false
+      },
+      {
+        "file": "chunk-majxx0zh.js",
+        "symbol": "Tyn",
+        "start": 420796,
+        "end": 420818,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "ed69f0c0ee299f9750f4ada43246efe482d7fd6d04a783bba3f1018d9342a52d",
+        "source": "function Tyn(){return}",
+        "variable": false
+      },
+      {
+        "file": "chunk-majxx0zh.js",
+        "symbol": "mxe",
+        "start": 421622,
+        "end": 421682,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "d97b1e228a704e79df14f9fe0fa2943b2c9669f73840afdc82ae0fddbd18d502",
+        "source": "function mxe(e){return TF(\"sha256\").update(e).digest(\"hex\")}",
+        "variable": false
+      },
+      {
+        "file": "chunk-majxx0zh.js",
+        "symbol": "jv",
+        "start": 421778,
+        "end": 421920,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "03a2c7f6d42b080c9f09762e63a7b62f9dc846837e6dd4adcb27871cda71db4a",
+        "source": "function jv(e){if(!e.bypassEssentialTrafficOnly&&!0&&xt())return\"essential-traffic-only\";if(He()!==\"firstParty\")return\"data-residency\";return}",
+        "variable": false
+      },
+      {
+        "file": "chunk-majxx0zh.js",
+        "symbol": "zv",
+        "start": 421962,
+        "end": 422036,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "13a5c512938d08fdf2a67771dfd1904703edf8be99eceb8b2a8c85e87d7fc4c4",
+        "source": "zv=\"OAuth refresh token is no longer valid; run /login to re-authenticate\"",
+        "variable": true
+      },
+      {
+        "file": "chunk-majxx0zh.js",
+        "symbol": "Vv",
+        "start": 422037,
+        "end": 422060,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "9064bea4ab9bfb9ac51387b6ea1bf14fa787d7169066aeef20dc742ef8f0f690",
+        "source": "Vv=\"no claude.ai login\"",
+        "variable": true
+      },
+      {
+        "file": "chunk-majxx0zh.js",
+        "symbol": "lr",
+        "start": 422061,
+        "end": 425745,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "79e07cd59df1391ff39d541985b366e6d946e2f90a05734a13f6794ce7ce5e8d",
+        "source": "async function lr(e,n,r,s={},g=!1){cue();let h=jv(s);if(h!==void 0)return{ok:!1,reason:h};if(s.frameTunnel&&(s.host!==\"frame\"||s.auth!==\"session-jwt\"))throw Error(\"frameTunnel requires host 'frame' and auth 'session-jwt'\");let b={},E,w=n,k=null;if(s.auth===\"teleport-org\"){if(await Hi({credentials:s.credentials,storageV5:s.storageV5}),await Gq(s.credentials))return{ok:!1,reason:\"no-auth\",detail:zv};if(!pn()?.accessToken)return{ok:!1,reason:\"no-auth\",detail:\"No OAuth token in keychain\"};let{accessToken:Q,orgUUID:X}=await uv(s.credentials);k=Q,b={...yBt(Q),\"x-organization-uuid\":X},w=n.replace(\":orgUUID\",X)}else if(s.auth===\"session-jwt\"){let Q=Vl();if(!Q)return{ok:!1,reason:\"no-auth\",detail:\"No session access token\"};b={Authorization:`Bearer ${Q}`},E=b.Authorization}else if(s.auth===\"claude-ai-oauth\"){await Kv(s);let Q=pn(),X=Q?.accessToken;if(!QUt(Q)||!X)return{ok:!1,reason:\"no-auth\",detail:Vv};if(b={Authorization:`Bearer ${X}`,\"anthropic-beta\":Uu},s.recoverOAuth401&&(Q?.refreshToken||Spe()))k=X}else if(s.auth!==\"none\"){await Kv(s);let Q=s.auth===\"async\"?await QD():dxe();if(Q.error&&s.auth!==\"optional\")return{ok:!1,reason:\"no-auth\",detail:Q.error};b=Q.headers}if(s.host===\"frame\"&&Tyn()!==void 0){if(a.CLAUDE_CODE_ARTIFACTS_API_TOKEN)b={Authorization:`Bearer ${a.CLAUDE_CODE_ARTIFACTS_API_TOKEN}`};k=null}if(s.host===\"memory\"){let Q=LYe();if(Q.auth===\"none\")b=Q.headers??{},k=null}let A={\"User-Agent\":QI(),...b,...s.headers};if(s.frameTunnel){for(let Q of Object.keys(A))if(xF.has(Q.toLowerCase()))delete A[Q];A.Authorization=E}let M=null;if(s.reportSentAuth){let Q;for(let[X,ne]of Object.entries(A))if(X.toLowerCase()===\"authorization\")Q=ne;M=Q===void 0?null:mxe(Q)}let D=s.maxRedirects??(s.host===\"frame\"?0:void 0),B=r,K=s.timeout??15000,z;if(s.streamUpload!==void 0&&r!==void 0){let Q=NF(r),X=typeof r!==\"string\"&&!Yv(r);if(s.maxBodyLength!==void 0&&Q.length>s.maxBodyLength)throw new i2e(\"Request body larger than maxBodyLength limit\",i2e.ERR_BAD_REQUEST);let ne=s.streamUpload.stallMs??oc,pe=s.streamUpload.tailFloorMs?.(Q.length);if(Ov())z=xv(Q,{stallMs:ne,...pe!==void 0&&{tailFloorMs:pe},signal:s.signal}),B=z.body;else B=Q,K=Math.max(Rv(Q.length,ne),pe??0);if(!FF(A,\"content-type\")&&!X)A[\"Content-Type\"]=typeof r===\"string\"?\"text/plain\":\"application/json\";A[\"Content-Length\"]=String(Q.length)}let W=s.streamUpload!==void 0&&r!==void 0&&D===0?Bv():void 0,Y;try{try{Y=await ht.request({method:e,baseURL:s.frameTunnel?`https://${s.frameTunnel.host}`:DF(Wv(s.host??\"api\"),s),url:w,data:B,timeout:z?0:K,signal:z?z.signal:s.signal,responseType:s.responseType,validateStatus:s.validateStatus,maxContentLength:s.maxContentLength,maxBodyLength:s.maxBodyLength,...D!==void 0&&{maxRedirects:D},...W&&{transport:W.transport},...s.freshConnection&&!s.frameTunnel&&{httpsAgent:o4r(),httpAgent:new RF({keepAlive:!1})},...s.frameTunnel&&{httpsAgent:s.frameTunnel.agent,proxy:!1},headers:A})}catch(Q){throw z?IF(Q,z):Q}finally{if(z)z.dispose(),s.streamUpload?.onSettled?.({...z.seen(),...W?.seen(!0)});else if(s.streamUpload&&Buffer.isBuffer(B))s.streamUpload.onSettled?.({body_bytes:B.length,bytes_handed:B.length,stalled:!1,...W?.seen(!1)})}}catch(Q){if(k!==null&&!g&&!s.isBackground&&ht.isAxiosError(Q)&&Q.response?.status===401&&!s.isRouteOwned401?.(Q.response.data)){let X=await $v(k,s);if(X===\"retry\")return Aa(Q.response.data),lr(e,n,r,s,!0);if(X!==null)return Aa(Q.response.data),X}throw Q}if(k!==null&&Y.status===401&&!g&&!s.isBackground&&!s.isRouteOwned401?.(Y.data)){let Q=await $v(k,s);if(Q===\"retry\")return Aa(Y.data),lr(e,n,r,s,!0);if(Q!==null)return Aa(Y.data),Q}return{ok:!0,data:Y.data,status:Y.status,response:Y,...s.reportSentAuth&&{sentAuthFingerprint:M}}}",
+        "variable": false
+      },
+      {
+        "file": "chunk-majxx0zh.js",
+        "symbol": "Kv",
+        "start": 425745,
+        "end": 425972,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "93adff20bb30806c5f75c331bf1f9c2839f6cb74505f280a4de62665a2be2d63",
+        "source": "async function Kv(e){if(!e.refreshOAuth)return;try{await Hi({credentials:e.credentials,storageV5:e.storageV5})}catch(n){t(`firstPartyApi: refreshOAuth failed (${n instanceof Error?n.message:n}); proceeding with cached token`)}}",
+        "variable": false
+      },
+      {
+        "file": "chunk-majxx0zh.js",
+        "symbol": "IF",
+        "start": 425972,
+        "end": 426309,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "fcd82d4e891828c82907f589e602901375914417f7bf788667aa1be7ed673804",
+        "source": "function IF(e,n){let r=n.seen();if(!(ht.isCancel(e)&&r.stalled))return e;let s=n.signal.reason,g=s instanceof _a?`${Math.round(s.waitedMs/1000)}s`:\"the allowance\";return new i2e(r.bytes_handed===r.body_bytes?`upload stalled: no answer within ${g} of the body being handed over`:`upload stalled: nothing moved for ${g}`,i2e.ECONNABORTED)}",
+        "variable": false
+      },
+      {
+        "file": "chunk-majxx0zh.js",
+        "symbol": "NF",
+        "start": 426309,
+        "end": 426611,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "ec8230b4d5adccd9402bf7bda6df0df602fcedcb9ecfbc7272552c7c27643c39",
+        "source": "function NF(e){if(Buffer.isBuffer(e))return e;if(LF(e))return Buffer.from(e.buffer,e.byteOffset,e.byteLength);if(e instanceof ArrayBuffer)return Buffer.from(e);if(typeof e===\"string\")return Buffer.from(e);if(Yv(e))return Buffer.from(S(e));throw TypeError(\"streamUpload: unsupported request body type\")}",
+        "variable": false
+      },
+      {
+        "file": "chunk-majxx0zh.js",
+        "symbol": "Yv",
+        "start": 426611,
+        "end": 426766,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "15e7f3a4ce534465573273f0214807a1ae455bdffa3d05eb34509ba79190bef9",
+        "source": "function Yv(e){if(Array.isArray(e))return!0;if(typeof e!==\"object\"||e===null)return!1;let n=Object.getPrototypeOf(e);return n===Object.prototype||n===null}",
+        "variable": false
+      },
+      {
+        "file": "chunk-majxx0zh.js",
+        "symbol": "FF",
+        "start": 426766,
+        "end": 426858,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "fcb5ccf38eb0a9c2371e9993f672227c4e16ef702e462301c70679694a21487e",
+        "source": "function FF(e,n){let r=n.toLowerCase();return Object.keys(e).some((s)=>s.toLowerCase()===r)}",
+        "variable": false
+      },
+      {
+        "file": "chunk-majxx0zh.js",
+        "symbol": "LF",
+        "start": 426858,
+        "end": 426902,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "b2d3cca378658c9e25c0a512de73922711b165acdb20fae0e9119504a8729631",
+        "source": "function LF(e){return ArrayBuffer.isView(e)}",
+        "variable": false
+      },
+      {
+        "file": "chunk-majxx0zh.js",
+        "symbol": "Aa",
+        "start": 426902,
+        "end": 426948,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "4f79051cf67a626123eb6c97ea64d1fcf485623940c37a223ca0141429c19098",
+        "source": "function Aa(e){if(e instanceof OF)e.destroy()}",
+        "variable": false
+      },
+      {
+        "file": "chunk-majxx0zh.js",
+        "symbol": "$v",
+        "start": 426948,
+        "end": 427189,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "cb415029819f0e5a307fc098dc4171058059b8153eb4ffef9d37cfca76c5990e",
+        "source": "async function $v(e,n){let r=n.auth===\"claude-ai-oauth\";try{if(await R_(e,n.credentials,n.storageV5))return\"retry\";if(await Gq(n.credentials))return{ok:!1,reason:\"no-auth\",detail:r?Vv:zv};return null}catch(s){if(!r)throw s;return d(s),null}}",
+        "variable": false
+      },
+      {
+        "file": "chunk-majxx0zh.js",
+        "symbol": "Wt",
+        "start": 427193,
+        "end": 427387,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "71f7746d4ef95dc80e13d5a1e75a3451c7f03808b40db3b40b9f9f1a01745933",
+        "source": "Wt={get(e,n){return lr(\"GET\",e,void 0,n)},post(e,n,r){return lr(\"POST\",e,n,r)},put(e,n,r){return lr(\"PUT\",e,n,r)},patch(e,n,r){return lr(\"PATCH\",e,n,r)},delete(e,n,r){return lr(\"DELETE\",e,n,r)}}",
+        "variable": true
+      },
+      {
+        "file": "chunk-majxx0zh.js",
+        "symbol": "cc",
+        "start": 607057,
+        "end": 607117,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "233052afe95e5ff2473b052a5d10240050742b75c2591707474ba28edb0482d8",
+        "source": "function cc(){return a.CLAUDE_CODE_PROVIDER_MANAGED_BY_HOST}",
+        "variable": false
+      },
+      {
+        "file": "chunk-majxx0zh.js",
+        "symbol": "Gq",
+        "start": 643735,
+        "end": 643856,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "edaf9dae625e0976f0bc521a0c619bdd88c408263637bb5866a9fbf49063f7ea",
+        "source": "async function Gq(e){let n=xf(await Fa(e));if(n!==void 0)return n;try{return Nk(await zn().readAsync(e))}catch{return!1}}",
+        "variable": false
+      },
+      {
+        "file": "chunk-majxx0zh.js",
+        "symbol": "xf",
+        "start": 643856,
+        "end": 643952,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "4d1e824223f122d0db7600ebdc39a16c229aa523c8c2a7c4e99c2decb1a11916",
+        "source": "function xf(e){if(e){let n=e.refreshToken;return n===\"\"||!!n&&bi.has(n)}if(cc())return!1;return}",
+        "variable": false
+      },
+      {
+        "file": "chunk-majxx0zh.js",
+        "symbol": "Nk",
+        "start": 643952,
+        "end": 644010,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "d01d7743015dba35ba3d8eb4ce08854add9f69531c51741d14b6e3aee36e3ae1",
+        "source": "function Nk(e){return e?.claudeAiOauth?.refreshToken===\"\"}",
+        "variable": false
+      },
+      {
+        "file": "chunk-majxx0zh.js",
+        "symbol": "QUt",
+        "start": 662001,
+        "end": 662056,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "2dabbc234e40a037e3f46c36ab4d8f736a6dda2c923872cf3cb109485953640d",
+        "source": "function QUt(e){return h1(e?.scopes)&&!!e?.accessToken}",
+        "variable": false
+      }
+    ],
+    "ports": {
+      "xt": {
+        "kind": "import",
+        "file": "chunk-majxx0zh.js",
+        "module": "/$bunfs/root/chunk-j72sz16r.js",
+        "symbol": "xt",
+        "start": 1936,
+        "end": 1938
+      },
+      "He": {
+        "kind": "import",
+        "file": "chunk-majxx0zh.js",
+        "module": "/$bunfs/root/chunk-0sv6vt2c.js",
+        "symbol": "He",
+        "start": 3640,
+        "end": 3642
+      },
+      "Hi": {
+        "kind": "source-boundary",
+        "file": "chunk-majxx0zh.js",
+        "symbol": "Hi",
+        "start": 656888,
+        "end": 656946,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "e3208fc9a00dd5e02a85c2d798c966ea838e0d9550b007ec3931e1e68e577f1a",
+        "source": "function Hi(e={}){return o9(e).then((n)=>n===\"refreshed\")}",
+        "variable": false
+      },
+      "bi": {
+        "kind": "source-boundary",
+        "file": "chunk-majxx0zh.js",
+        "symbol": "bi",
+        "start": 642938,
+        "end": 642967,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "e8935a8bafcb7b43c2b968f0a1e5c970f6116872d5f5b5cc87d72a0b7d4d924e",
+        "source": "bi=it(new Set,(e)=>e.clear())",
+        "variable": true
+      },
+      "a": {
+        "kind": "import",
+        "file": "chunk-majxx0zh.js",
+        "module": "/$bunfs/root/chunk-07mxqtdh.js",
+        "symbol": "a",
+        "start": 1681,
+        "end": 1682
+      },
+      "Fa": {
+        "kind": "source-boundary",
+        "file": "chunk-majxx0zh.js",
+        "symbol": "Fa",
+        "start": 652930,
+        "end": 653115,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "69d459c265aa551c458e6c6c8cc532031f139421f93fccbf10997bd9e4d2a9c1",
+        "source": "function Fa(e){if(r9())return Promise.resolve(null);let n=Jde.of(j().host);if(n.promise)return n.promise;let r=XH(e);return n.promise=r,r.catch(()=>{if(n.promise===r)n.promise=null}),r}",
+        "variable": false
+      },
+      "zn": {
+        "kind": "import",
+        "file": "chunk-majxx0zh.js",
+        "module": "/$bunfs/root/chunk-x5pmvzy7.js",
+        "symbol": "zn",
+        "start": 3843,
+        "end": 3845
+      },
+      "pn": {
+        "kind": "source-boundary",
+        "file": "chunk-majxx0zh.js",
+        "symbol": "pn",
+        "start": 645456,
+        "end": 645578,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "44f4e490bd3b19f3105bca2ee9d272da78b02b9cfa9b110819fe9832388f3c97",
+        "source": "function pn(){if(r9())return null;let e=Jde.of(j().host);if(e.value!==void 0)return e.value;let n=zH();return e.value=n,n}",
+        "variable": false
+      },
+      "Bn": {
+        "kind": "import",
+        "file": "chunk-majxx0zh.js",
+        "module": "/$bunfs/root/chunk-0sv6vt2c.js",
+        "symbol": "Bn",
+        "start": 3643,
+        "end": 3645
+      },
+      "h2": {
+        "kind": "source-boundary",
+        "file": "chunk-majxx0zh.js",
+        "symbol": "h2",
+        "start": 693603,
+        "end": 693856,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "e224926403f45fdbc293a359023966b2453cb9fb0a12f6a6b42cd94a8fac13db",
+        "source": "async function h2(){let e=a.CLAUDE_CODE_ORGANIZATION_UUID;if(e)return e;let r=ce().oauthAccount?.organizationUuid;if(r)return r;let s=pn()?.accessToken;if(s===void 0||!Ep())return null;let h=(await z1e(s))?.organization?.uuid;if(!h)return null;return h}",
+        "variable": false
+      },
+      "Vl": {
+        "kind": "import",
+        "file": "chunk-majxx0zh.js",
+        "module": "/$bunfs/root/chunk-f09yefd8.js",
+        "symbol": "Vl",
+        "start": 4641,
+        "end": 4643
+      },
+      "t": {
+        "kind": "import",
+        "file": "chunk-majxx0zh.js",
+        "module": "/$bunfs/root/chunk-yx145v00.js",
+        "symbol": "t",
+        "start": 1755,
+        "end": 1756
+      },
+      "h1": {
+        "kind": "source-boundary",
+        "file": "chunk-majxx0zh.js",
+        "symbol": "h1",
+        "start": 686201,
+        "end": 686230,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "66b6651a679c27306904f1685fdd5ada4dd706da5397426f317662c59b79775a",
+        "source": "function h1(e){return hEn(e)}",
+        "variable": false
+      },
+      "Uu": {
+        "kind": "import",
+        "file": "chunk-majxx0zh.js",
+        "module": "/$bunfs/root/chunk-0shqxty0.js",
+        "symbol": "Uu",
+        "start": 1550,
+        "end": 1552
+      },
+      "Spe": {
+        "kind": "import",
+        "file": "chunk-majxx0zh.js",
+        "module": "/$bunfs/root/chunk-ar1aj28g.js",
+        "symbol": "Spe",
+        "start": 1018,
+        "end": 1021
+      },
+      "QD": {
+        "kind": "source-boundary",
+        "file": "chunk-majxx0zh.js",
+        "symbol": "QD",
+        "start": 112162,
+        "end": 112654,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "91e9a4fa74cee9cb4dd20416147f6e0885fb7dabfb72c7244d9d67afeab02f48",
+        "source": "async function QD(e={}){if(!wb()&&Wc())try{let{getWIFCredentials:n,getWIFTokenCache:r}=await import(\"/$bunfs/root/chunk-fgmndd58.js\"),[s,g]=await Promise.all([r(),n()]);if(s!==null)return{headers:{...g?.extraHeaders,Authorization:`Bearer ${await s.getToken()}`,\"anthropic-beta\":Uu}}}catch(n){return t(`WIF auth header resolution failed: ${n instanceof Error?n.message:String(n)}`,{level:\"error\"}),{headers:{},error:n instanceof Error?n.message:String(n),reasonCode:\"wif_error\"}}return dxe(e)}",
+        "variable": false
+      },
+      "dxe": {
+        "kind": "source-boundary",
+        "file": "chunk-majxx0zh.js",
+        "symbol": "dxe",
+        "start": 112654,
+        "end": 113348,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "ab370574a35200b819ff2fcdb6d9d7298f350d97495859238b18c2d2a6e05570",
+        "source": "function dxe(e={}){if(i9())return{headers:{},error:\"Anthropic auth not used on third-party providers\",reasonCode:\"third_party\"};if(ct()){let r=pn();if(!r?.accessToken)return{headers:{},error:\"No OAuth token available\",reasonCode:\"no_oauth_token\"};return{headers:{Authorization:`Bearer ${r.accessToken}`,\"anthropic-beta\":Uu}}}if(He()===\"gateway\")return{headers:{},error:\"Not available when using a Cloud gateway\",reasonCode:\"gateway\"};let n=wb();if(!n){let r=e.envBearerFallbackFor,s=r?gE():void 0;if(s&&r&&Ng()&&Mg(r)&&!a.ANTHROPIC_UNIX_SOCKET)return{headers:{Authorization:`Bearer ${s}`}};return{headers:{},error:\"No API key available\",reasonCode:\"no_api_key\"}}return{headers:{\"x-api-key\":n}}}",
+        "variable": false
+      },
+      "kn": {
+        "kind": "import",
+        "file": "chunk-majxx0zh.js",
+        "module": "/$bunfs/root/chunk-07mxqtdh.js",
+        "symbol": "kn",
+        "start": 1683,
+        "end": 1685
+      },
+      "QI": {
+        "kind": "source-boundary",
+        "file": "chunk-majxx0zh.js",
+        "symbol": "QI",
+        "start": 110478,
+        "end": 111267,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "87210568f73b0bde1d6daa265b005508a68ab0c8b173611ff00d1dddfde2840d",
+        "source": "function QI(){let e=process.env.CLAUDE_AGENT_SDK_VERSION?`, agent-sdk/${process.env.CLAUDE_AGENT_SDK_VERSION}`:\"\",n=a.CLAUDE_AGENT_SDK_CLIENT_APP?`, client-app/${a.CLAUDE_AGENT_SDK_CLIENT_APP}`:\"\",r=z8n(),s=r?`, workload/${r}`:\"\";return`claude-cli/${{ISSUES_EXPLAINER:\"report the issue at https://github.com/anthropics/claude-code/issues\",PACKAGE_URL:\"@anthropic-ai/claude-code\",README_URL:\"https://code.claude.com/docs/en/overview\",VERSION:\"2.1.286\",FEEDBACK_CHANNEL:\"https://github.com/anthropics/claude-code/issues\",BUILD_TIME:\"2026-09-30T15:45:16Z\",GIT_SHA:\"f344a08993bbba4fc1ea9b295245324610f02c58\",HOOKS_WORKER_URL:\"/$bunfs/root/src/plugins/functionHooks/hooks-worker/hooks-worker.js\",DD_SOURCEMAP_GROUP:\"darwin\"}.VERSION} (external, ${a.CLAUDE_CODE_ENTRYPOINT??\"cli\"}${e}${n}${s})`}",
+        "variable": false
+      },
+      "TF": {
+        "kind": "import",
+        "file": "chunk-majxx0zh.js",
+        "module": "crypto",
+        "symbol": "createHash",
+        "start": 389761,
+        "end": 389777
+      },
+      "S": {
+        "kind": "import",
+        "file": "chunk-majxx0zh.js",
+        "module": "/$bunfs/root/chunk-yx145v00.js",
+        "symbol": "S",
+        "start": 1745,
+        "end": 1746
+      },
+      "i2e": {
+        "kind": "import",
+        "file": "chunk-majxx0zh.js",
+        "module": "/$bunfs/root/chunk-bkbr91zs.js",
+        "symbol": "i2e",
+        "start": 625,
+        "end": 628
+      },
+      "JN": {
+        "kind": "import",
+        "file": "chunk-majxx0zh.js",
+        "module": "stream",
+        "symbol": "Readable",
+        "start": 389828,
+        "end": 389842
+      },
+      "lc": {
+        "kind": "import",
+        "file": "chunk-majxx0zh.js",
+        "module": "http",
+        "symbol": "default",
+        "start": 418779,
+        "end": 418781
+      },
+      "Fv": {
+        "kind": "import",
+        "file": "chunk-majxx0zh.js",
+        "module": "https",
+        "symbol": "default",
+        "start": 418800,
+        "end": 418802
+      },
+      "ht": {
+        "kind": "import",
+        "file": "chunk-majxx0zh.js",
+        "module": "/$bunfs/root/chunk-bkbr91zs.js",
+        "symbol": "ht",
+        "start": 622,
+        "end": 624
+      },
+      "Wv": {
+        "kind": "source-boundary",
+        "file": "chunk-majxx0zh.js",
+        "symbol": "Wv",
+        "start": 420852,
+        "end": 421177,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "a543bd686c52394addc438aa39f803feb4d2de3685d8b67fa2f2bf675f2add0a",
+        "source": "function Wv(e){let n=cn();switch(e){case\"api\":return n.BASE_API_URL;case\"claude-ai\":return n.CLAUDE_AI_ORIGIN;case\"mcp-proxy\":return n.MCP_PROXY_URL;case\"frame\":return Tyn()??n.BASE_API_URL;case\"memory\":return Ayn()??n.BASE_API_URL;case\"ccr-session\":return Hv(e).href.replace(/\\/$/,\"\");case\"ccr-gateway\":return Hv(e).origin}}",
+        "variable": false
+      },
+      "RF": {
+        "kind": "import",
+        "file": "chunk-majxx0zh.js",
+        "module": "http",
+        "symbol": "Agent",
+        "start": 389798,
+        "end": 389809
+      },
+      "R_": {
+        "kind": "source-boundary",
+        "file": "chunk-majxx0zh.js",
+        "symbol": "R_",
+        "start": 648711,
+        "end": 649248,
+        "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+        "sha256": "cde7ebec1ca567fb001e0a6f435be89f7533a165cc948d27507a57728d342eff",
+        "source": "function R_(e,n,r,{usesLoginOffFirstParty:s=!1,onForcedRefreshOutcome:g}={}){let h=Jde.of(j().host),b=Wk(n,r),E=Gk(s),w=(K)=>h.pending401Handlers.get(dk(e,K,E)),k=jk(w,b);if(k){if(!g)return k.promise;return k.promise.then((K)=>{if(k.forcedOutcome!==void 0)g(k.forcedOutcome);return K})}let A=dk(e,b,E),M={promise:Promise.resolve(!1)},D=()=>qH(e,n,r,s,(K)=>{M.forcedOutcome=K,g?.(K)}),B=zk(w,b);return M.promise=(B?B.promise.catch(()=>!1).then(D):D()).finally(()=>{h.pending401Handlers.delete(A)}),h.pending401Handlers.set(A,M),M.promise}",
+        "variable": false
+      },
+      "d": {
+        "kind": "import",
+        "file": "chunk-majxx0zh.js",
+        "module": "/$bunfs/root/chunk-j72sz16r.js",
+        "symbol": "d",
+        "start": 1946,
+        "end": 1947
+      },
+      "OF": {
+        "kind": "import",
+        "file": "chunk-majxx0zh.js",
+        "module": "stream",
+        "symbol": "Readable",
+        "start": 391526,
+        "end": 391540
+      },
+      "AC": {
+        "kind": "source-boundary",
+        "file": "chunk-9qmnd54c.js",
+        "symbol": "AC",
+        "start": 31214,
+        "end": 31248,
+        "moduleSha256": "ca1424c44dcb6f60b0b99e2514aa7fc85ae4da7d4226a70b73b66ce0028d1515",
+        "sha256": "b2ef142468ec04f1f5c27f5f3d6b530777368cab3759f83434b968929e5377e1",
+        "source": "function AC(){return K().config()}",
+        "variable": false
+      },
+      "CO": {
+        "kind": "source-boundary",
+        "file": "chunk-9qmnd54c.js",
+        "symbol": "CO",
+        "start": 27172,
+        "end": 27213,
+        "moduleSha256": "ca1424c44dcb6f60b0b99e2514aa7fc85ae4da7d4226a70b73b66ce0028d1515",
+        "sha256": "21134d4c68aba69c88ee286e1b6db8bf10148642591ab4dc5f8a4b0573286d2e",
+        "source": "function CO(){return re().certificates()}",
+        "variable": false
+      },
+      "be": {
+        "kind": "import",
+        "file": "chunk-9qmnd54c.js",
+        "module": "https",
+        "symbol": "Agent"
+      }
+    },
+    "failureReasons": [
+      "data-residency",
+      "essential-traffic-only",
+      "no-auth"
+    ],
+    "credentialContract": {
+      "headers": "lr auth async calls QD() with zero arguments; credentials are not a header-parser argument",
+      "refresh": "Kv(s) calls Hi({credentials:s.credentials,storageV5:s.storageV5}) only when refreshOAuth is truthy",
+      "recovery": "$v(token,s) calls R_(token,s.credentials,s.storageV5), then Gq(s.credentials) on false",
+      "h401": "h sets auth async; lr keeps k=null in this branch, so neither thrown nor returned 401 invokes $v"
+    },
+    "bodyRewrites": []
+  },
+  "verifiedModules": [
+    {
+      "file": "chunk-53vgbj96.js",
+      "sha256": "47525f37bf6f913938b6b201804d576e4d8da88f53778313e397233907732cff"
+    },
+    {
+      "file": "chunk-majxx0zh.js",
+      "sha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49"
+    },
+    {
+      "file": "chunk-768af90z.js",
+      "sha256": "464d6b791cbfacdf57e4c98a2b54fad35a475e43c9541d8eb2fd1390a8027b2a"
+    },
+    {
+      "file": "chunk-178b5qmp.js",
+      "sha256": "91c5969c6dcc930e072031aef30537b06fda9121c220f4c338a3e8f5c9a4b2e5"
+    },
+    {
+      "file": "chunk-h730kz80.js",
+      "sha256": "2fd1d1c89c1b8ab482265e429afb8a6163f1d75acd78a6e6476325a79d794f99"
+    },
+    {
+      "file": "chunk-9qmnd54c.js",
+      "sha256": "ca1424c44dcb6f60b0b99e2514aa7fc85ae4da7d4226a70b73b66ce0028d1515"
+    }
+  ]
+}

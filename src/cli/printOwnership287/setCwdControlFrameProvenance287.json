@@ -1,0 +1,189 @@
+{
+  "version": "2.1.287",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF16 end-exclusive",
+  "rows": [
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "hf",
+      "start": 423342,
+      "endExclusive": 424201,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "3e8ad6fac19e5575b19611b9c56c35b550c014d03d26acb59ffed854e6909455",
+      "source": "async function hf(b,D={restartLaunchDirStdioServers:!1}){UVe.of(e.host).directoryChanged();let K=Ee(),ce=I.permissionPromptToolName,ke=[],Ie;R((Ke)=>{let{stale:$e,...Qe}=lxr(Ke.mcp,(mt)=>axr(mt.config,K));if($e.length===0)return Ke;return ke=$e,Ie=ce===void 0||I.permissionPromptToolServerName===void 0?void 0:Ke.mcp.tools.find((mt)=>Mt(mt,ce))?.mcpInfo?.serverName,{...Ke,mcp:{...Ke.mcp,...Qe}}});for(let Ke of ke){if(I.permissionPromptToolBinding!==void 0&&M8o(Ke.name,{listedServer:Ie,parsedServer:I.permissionPromptToolServerName}))I.permissionPromptToolBinding.swept=!0;if(Ts(Ke))await yn().clearServerCache(Ke.name,Ke.config).catch(()=>{})}if(D.restartLaunchDirStdioServers)await pb();await Ga({applyStagedInstalls:!1});let Ye=new Set(Object.keys(Lt.configs)),Oe=new Set(v().mcp.clients.filter((Ke)=>!Ye.has(Ke.name)).map((Ke)=>Ke.name));await ea(Oe,b)}"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "pb",
+      "start": 424201,
+      "endExclusive": 425689,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "7007b15e97eda70583868050654088ffa94e83bf58f6e6761a74e9fe3220d5c3",
+      "source": "async function pb(){let b=new Set(Object.keys(Lt.configs)),D=v().mcp.clients.filter((Oe)=>!b.has(Oe.name)&&Kle(Oe.config)&&!sde(Oe.name)&&(Oe.type===\"connected\"||Oe.type===\"pending\"||Oe.type===\"failed\")&&!If(Oe.name,Oe.config)&&!Io(Oe.name)),K=v().mcp.clients.filter((Oe)=>Oe.type===\"cached\"&&!b.has(Oe.name)&&Kle(Oe.config)&&!sde(Oe.name));for(let Oe of K)yn().clearServerCache(Oe.name,Oe.config).catch(()=>{});if(D.length===0)return;t(`set_cwd: re-dialling ${D.length} stdio MCP server(s) spawned in the launch directory`);let ce=new Set(D.filter((Oe)=>Oe.type===\"pending\").map((Oe)=>Oe.name));if(ce.size>0)await ume({getState:v,subscribe:U},(Oe)=>!Oe.mcp.clients.some((Ke)=>ce.has(Ke.name)&&Ke.type===\"pending\"),{timeoutMs:Math.min(Math.max(Nd??0,Ore),exe())});ni.noteServersStartedSinceKick(D.map((Oe)=>Oe.name));let ke=(Oe)=>{let Ke=!1;return R(($e)=>{let Qe=$e.mcp.clients.find((mt)=>mt.name===Oe.name);if(!Qe||!yn().areMcpConfigsEqual(Qe.config,Oe.config))return $e;if(Ke=!0,Qe.type===\"pending\")return $e;return{...$e,mcp:{...$e.mcp,clients:$e.mcp.clients.map((mt)=>mt===Qe?{name:mt.name,type:\"pending\",config:mt.config}:mt)}}}),Ke},Ie=async(Oe)=>{if(!ke(Oe))return;let Ke=await Ad(Oe.name,Oe.config);te(Oe.name,`re-dialled under the new project root after set_cwd: ${Ke.type}`)},Ye=Promise.all(D.map((Oe)=>Ie(Oe).catch((Ke)=>t(`set_cwd: re-dialling ${Oe.name} failed (continuing): ${l(Ke)}`,{level:\"error\"}))));if(aee())return;await Promise.race([Ye,ee(exe(),void 0,{unref:!0})])}"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Hu",
+      "start": 434456,
+      "endExclusive": 434523,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "ae131156e2b7cebc83035c671ab69e2764a0fc6187fb8b349e0b91abd29267e4",
+      "source": "Hu=()=>qe.dequeueCount===0&&!gf&&!w.some((b)=>b.type===\"assistant\")"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Hn",
+      "start": 447073,
+      "endExclusive": 447131,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "d8caf109eaa26e44b7ba9beed0c5629b0d3eee0036a4e90434b5ffb2c030b74e",
+      "source": "Hn=function(b,D){if(qm(e))t(`${b}: ${D}`,{level:\"error\"})}"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "hI.set_cwd",
+      "start": 463009,
+      "endExclusive": 464713,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "fd6047315485e8b1330ce3b1d1b92d546238c1b2bd32d2d40657429728876e3c",
+      "source": "{let j=A.request;try{let{handleSetCwdControlRequest:ue}=await import(\"/$bunfs/root/chunk-x4sedf8c.js\"),J=qe.dequeueCount>0,ie=await ue(j,{session:e,isBusy:()=>Yt.inheritedPromptPending()||up({running:qe.running,runPhase:qe.runPhase,mainThreadQueueLength:Q.getMainThreadQueueLength()}),toolPermissionContext:pe({getAppState:v}),retireDepartedAdditionalDirectories:(be)=>{R((ve)=>{let pt=sAt(ve.toolPermissionContext,be);return pt===ve.toolPermissionContext?ve:{...ve,toolPermissionContext:pt}})},enqueueMoveNotice:(be)=>{Q.enqueue({value:be,mode:\"prompt\",agentId:Ge(),uuid:eo(),isMeta:!0,shouldQuery:!1,skipSlashCommands:!0,skipAttachments:!0})},storageV5:I.storageV5,credentials:I.credentials,isFreshSession:Hu,requestBuilt:()=>J});if(ie.kind===\"response\"){if(ie.response.status===\"ok\"&&ie.response.changed)try{await hf(\"set_cwd\",{restartLaunchDirStdioServers:ie.freshSession===!0})}catch(pt){t(`set_cwd: re-homing plugins/MCP for the new directory failed (continuing): ${l(pt)}`,{level:\"error\"})}let be=qm(e),ve=ie.response.status===\"rejected\"&&be?{...ie.response,message:\"set_cwd: request rejected\"}:ie.response;Ze(A,ve)}else We(A,ie.message)}catch(ue){let J=null;try{J=(await import(\"/$bunfs/root/chunk-x4sedf8c.js\")).safeWireMessage}catch{J=null}let ie=J?J(l(ue),\"(error detail withheld: it contains control or invisible characters)\"):\"(error detail unavailable)\",be=J?J(`The session's working directory is ${oe()}.`,\"The session stayed in its previous working directory.\"):\"The session stayed in its previous working directory.\";Hn(\"set_cwd\",l(ue)),We(A,`set_cwd: relocation failed \\u2014 ${f9(e,ie,\"(error detail withheld)\")}. ${f9(e,be,\"The session stayed in its previous working directory.\")}`)}}"
+    }
+  ],
+  "bindings": {
+    "l": {
+      "file": "chunk-c9me9cp7.js",
+      "name": "l"
+    },
+    "ee": {
+      "file": "chunk-f2n7vgt8.js",
+      "name": "ee"
+    },
+    "Ge": {
+      "file": "chunk-bn3p37gv.js",
+      "name": "Ge"
+    },
+    "Ee": {
+      "file": "chunk-bn3p37gv.js",
+      "name": "Ee"
+    },
+    "aee": {
+      "file": "chunk-bn3p37gv.js",
+      "name": "aee"
+    },
+    "t": {
+      "file": "chunk-q80zaav8.js",
+      "name": "t"
+    },
+    "te": {
+      "file": "chunk-amhtwhch.js",
+      "name": "te"
+    },
+    "Mt": {
+      "file": "chunk-1b21she7.js",
+      "name": "Mt"
+    },
+    "axr": {
+      "file": "chunk-mphp7acd.js",
+      "name": "axr"
+    },
+    "lxr": {
+      "file": "chunk-mphp7acd.js",
+      "name": "lxr"
+    },
+    "Kle": {
+      "file": "chunk-mphp7acd.js",
+      "name": "Kle"
+    },
+    "sde": {
+      "file": "chunk-mphp7acd.js",
+      "name": "sde"
+    },
+    "If": {
+      "file": "chunk-mphp7acd.js",
+      "name": "If"
+    },
+    "Io": {
+      "file": "chunk-mphp7acd.js",
+      "name": "Io"
+    },
+    "Ts": {
+      "file": "chunk-hrhfcbdv.js",
+      "name": "Ts"
+    },
+    "oe": {
+      "file": "chunk-s354e3rr.js",
+      "name": "oe"
+    },
+    "pe": {
+      "file": "chunk-m4akk3an.js",
+      "name": "pe"
+    },
+    "qm": {
+      "file": "chunk-x5mcrns6.js",
+      "name": "qm"
+    },
+    "f9": {
+      "file": "chunk-x5mcrns6.js",
+      "name": "f9"
+    },
+    "UVe": {
+      "file": "chunk-c41bht4d.js",
+      "name": "UVe"
+    },
+    "ume": {
+      "file": "chunk-n2zepamy.js",
+      "name": "ume"
+    },
+    "sAt": {
+      "file": "chunk-87dncfz9.js",
+      "name": "sAt"
+    },
+    "exe": {
+      "file": "chunk-sbndfme5.js",
+      "name": "exe"
+    },
+    "Ore": {
+      "file": "chunk-sbndfme5.js",
+      "name": "Ore"
+    },
+    "M8o": {
+      "file": "chunk-x695d2rs.js",
+      "name": "M8o"
+    },
+    "eo": {
+      "file": "crypto",
+      "name": "randomUUID"
+    }
+  },
+  "callerPorts": [
+    "Ad",
+    "Ga",
+    "I",
+    "Lt",
+    "Nd",
+    "Q",
+    "R",
+    "U",
+    "We",
+    "Yt",
+    "Ze",
+    "e",
+    "ea",
+    "gf",
+    "load",
+    "ni",
+    "qe",
+    "up",
+    "v",
+    "w",
+    "yn"
+  ],
+  "transport": "Only original dynamic module literals resolve through the same canonical host; lexical properties borrow the actual print owner.",
+  "addedStandaloneUp": {
+    "source": "function up({running:e,runPhase:r,mainThreadQueueLength:n}){return e&&r!==\"waiting_for_agents\"||n>0}",
+    "sha256": "a01616c925fd00226fc06f47001c111c0e4d4330a7ad430d6a19cf9d58b71cd8",
+    "start": 313472,
+    "endExclusive": 313572
+  },
+  "carrier": "returns the same control/hf/pb/Hu/up closure"
+}

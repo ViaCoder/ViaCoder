@@ -1,0 +1,3 @@
+// Original 287 declarations verbatim. Canonical schema/lazy ports supplied by the caller.
+export const createComputerUseApprovalSpec287=new Function('f','Id','r5',"var h=[\"panel\"];function Ho({hideWhile:e=h,...t}){return{...t,hideWhile:e}};var yit=Ho({kind:\"computer_use_approval\",payload:f(()=>Id((e)=>typeof e===\"object\"&&e!==null)),result:f(()=>Id((e)=>typeof e===\"object\"&&e!==null)),default:{granted:[],denied:[],flags:r5}});return yit;");
+export const createComputerUseApprovalCaller287=new Function('p','yit','r5',"async function U(r){let e=p(),o=e.requestDialog;if(!o)return{granted:[],denied:[],flags:r5};return o(yit,r,{signal:e.abortController.signal})};return U;");

@@ -1,0 +1,2 @@
+import type {FetchRequestState286,GzipBlockStore287,NativeRootContextCell286} from './runtime.js'
+export declare function createNativeFetchRequestState287(ports:{LRUCache:typeof import('lru-cache').LRUCache;context():{root:object}}):{get():FetchRequestState286;clearBlockStore(store:GzipBlockStore287):void;cell:NativeRootContextCell286<FetchRequestState286>;RootCell:typeof NativeRootContextCell286}

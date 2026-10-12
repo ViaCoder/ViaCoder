@@ -1,0 +1,198 @@
+{
+  "version": "2.1.287",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16 code units; end-exclusive",
+  "declarations": [
+    {
+      "file": "chunk-rh1dp384.js",
+      "name": "A",
+      "start": 1009,
+      "end": 1023,
+      "moduleSha256": "b4fbff19063ab5d2aa208cec4ace83f9e3076b5508580f82cac5113744471e2a",
+      "sha256": "0e399c1cd07aed36d23a71bc6ffdec8fa1ec04fa3eb1a21c6f7b3dd8b2d34670",
+      "source": "A=/^\\/btw\\b/gi"
+    },
+    {
+      "file": "chunk-rh1dp384.js",
+      "name": "M",
+      "start": 1024,
+      "end": 1197,
+      "moduleSha256": "b4fbff19063ab5d2aa208cec4ace83f9e3076b5508580f82cac5113744471e2a",
+      "sha256": "8b773aeb09a1bc882e394401d72488baf111691beafe5c027f21e1dccb7d6a69",
+      "source": "M=\"_/btw can't run tools: any tool calls or tool output shown above were not executed and may not reflect your actual files or data. Ask in the main conversation to check._\""
+    },
+    {
+      "file": "chunk-rh1dp384.js",
+      "name": "_",
+      "start": 1198,
+      "end": 1286,
+      "moduleSha256": "b4fbff19063ab5d2aa208cec4ace83f9e3076b5508580f82cac5113744471e2a",
+      "sha256": "11b62457cb0e639bb0f5859a744ca9a1f073a2a777f80296047c9e9356e1901f",
+      "source": "_=\"(That answer wrote tool calls as text. Nothing was executed, so it is omitted here.)\""
+    },
+    {
+      "file": "chunk-rh1dp384.js",
+      "name": "b",
+      "start": 1287,
+      "end": 1358,
+      "moduleSha256": "b4fbff19063ab5d2aa208cec4ace83f9e3076b5508580f82cac5113744471e2a",
+      "sha256": "e26b18e940075ad7a2ad7f2cb3a4d4c20577c891919971e799ddbffb04af2cea",
+      "source": "b=\"_(This answer was cut off before it finished. Ask again to retry.)_\""
+    },
+    {
+      "file": "chunk-rh1dp384.js",
+      "name": "E",
+      "start": 1359,
+      "end": 1431,
+      "moduleSha256": "b4fbff19063ab5d2aa208cec4ace83f9e3076b5508580f82cac5113744471e2a",
+      "sha256": "f052de9f1359f859048cbd909b8f933953f3a1f81e048ae6755645b0c0e5e643",
+      "source": "E=\"(That answer was cut off before it finished, so it is omitted here.)\""
+    },
+    {
+      "file": "chunk-rh1dp384.js",
+      "name": "k",
+      "start": 1432,
+      "end": 1554,
+      "moduleSha256": "b4fbff19063ab5d2aa208cec4ace83f9e3076b5508580f82cac5113744471e2a",
+      "sha256": "b375f1cd17f97c08c2cf38d759c7ef84eacc5fa172fe08a4f704e9cee8387e2b",
+      "source": "k=\"[No result yet \\u2014 this call is still in progress in the main conversation (running, awaiting approval, or queued)]\""
+    },
+    {
+      "file": "chunk-rh1dp384.js",
+      "name": "gOn",
+      "start": 1555,
+      "end": 1698,
+      "moduleSha256": "b4fbff19063ab5d2aa208cec4ace83f9e3076b5508580f82cac5113744471e2a",
+      "sha256": "ed89e6acbdcd68672addf67d0c6e2def978e605de342b30f542ee08fca9b6591",
+      "source": "function gOn(o){let n=[],i=o.matchAll(A);for(let s of i)if(s.index!==void 0)n.push({word:s[0],start:s.index,end:s.index+s[0].length});return n}"
+    },
+    {
+      "file": "chunk-rh1dp384.js",
+      "name": "urt",
+      "start": 1698,
+      "end": 4364,
+      "moduleSha256": "b4fbff19063ab5d2aa208cec4ace83f9e3076b5508580f82cac5113744471e2a",
+      "sha256": "1e709188f27347d099ffd7537f2bc565f4bbd7d78f4abe5c4a84cb19c0d73a0c",
+      "source": "async function urt({question:o,cacheSafeParams:n,parentController:i,onRetry:s,threadHistory:l=!0,history:a,turnInProgress:e=!0}){let g=i?th(i):Bn(),p=l?n.toolUseContext.session.btwHistory:null,w=(a??p?.exchanges??[]).flatMap((r)=>{let u=Jfr(r.response)?_:r.response.endsWith(b)?E:r.response;return[Re({content:r.question}),Jc({content:r.fallbackNotice?`\\u26A0 ${r.fallbackNotice}\n\n${u}`:u})]}),h=e?x(n.forkContextMessages):void 0;try{let r=await IC({promptMessages:[...h?[h]:[],...w,Re({content:[{type:\"text\",text:`<system-reminder>This is a side question from the user. You must answer this question directly in a single response.\n\nIMPORTANT CONTEXT:\n- You are a separate, lightweight agent spawned to answer this one question\n- The main agent is NOT interrupted - it continues working independently in the background\n- You share the conversation context but are a completely separate instance\n- Do NOT reference being interrupted or what you were \"previously doing\" - that framing is incorrect\n\nCRITICAL CONSTRAINTS:\n- You have NO tools available - you cannot read files, run commands, search, or take any actions\n- Do NOT write tool calls or tool output as text (for example invoke or function_calls XML blocks) - nothing you write here is executed; if answering would need reading files, running commands, or searching, say that can't be checked from a side question and suggest asking in the main conversation\n- This is a one-off response - there will be no follow-up turns\n- You can ONLY provide information based on what you already know from the conversation context\n- NEVER say things like \"Let me try...\", \"I'll now...\", \"Let me check...\", or promise to take any action\n- If you don't know the answer, say so - do not offer to look it up or investigate\n\nSimply answer the question with the information you have.</system-reminder>\n\n`},{type:\"text\",text:o}]})],cacheSafeParams:n,canUseTool:async()=>({behavior:\"deny\",message:\"Side questions cannot use tools\",decisionReason:{type:\"other\",reason:\"side_question\"}}),querySource:\"side_question\",forkLabel:\"side_question\",maxTurns:1,skipCacheWrite:!0,skipTranscript:!0,overrides:{abortController:g},onMessage:s?(c)=>{if(T(c))s({retryAttempt:c.retryAttempt,maxRetries:c.maxRetries,retryInMs:c.retryInMs,status:c.error.status})}:void 0}),{live:u,notice:d}=cqe(r.messages),{response:f,synthetic:m}=N(u),y=d&&{originalModel:d.originalModel,fallbackModel:d.fallbackModel,content:d.content};if(p&&f&&!m)p.append(o,f,y?.content);return{response:f,synthetic:m,usage:r.totalUsage,...y&&!m&&{refusalFallback:y}}}catch(r){if(r instanceof Dd||g.signal.aborted)return{response:null,synthetic:!1,usage:lp,aborted:!0};throw r}}"
+    },
+    {
+      "file": "chunk-rh1dp384.js",
+      "name": "x",
+      "start": 4364,
+      "end": 4895,
+      "moduleSha256": "b4fbff19063ab5d2aa208cec4ace83f9e3076b5508580f82cac5113744471e2a",
+      "sha256": "e8fa93408768b500efc3f8f919c1541ab7f58c31af545d40f915cb814eb670ea",
+      "source": "function x(o){let n=o.filter((e)=>!Kh(e)),i=n.findLast((e)=>e.type===\"assistant\");if(!i)return;let s=new Set,l=[];for(let e of n)if(e.type===\"user\"&&Array.isArray(e.message.content)){for(let t of e.message.content)if(t.type===\"tool_result\")s.add(t.tool_use_id)}else if(e.type===\"assistant\"&&e.message.id===i.message.id){for(let t of e.message.content)if(t.type===\"tool_use\")l.push(t.id)}let a=l.filter((e)=>!s.has(e));if(a.length===0)return;return Re({content:a.map((e)=>({type:\"tool_result\",tool_use_id:e,content:k})),isMeta:!0})}"
+    },
+    {
+      "file": "chunk-rh1dp384.js",
+      "name": "N",
+      "start": 4895,
+      "end": 5648,
+      "moduleSha256": "b4fbff19063ab5d2aa208cec4ace83f9e3076b5508580f82cac5113744471e2a",
+      "sha256": "a385ac352c6c78adba6aaf15b32d9998e8bc77484791df9c1403fce7a031f7dd",
+      "source": "function N(o){let n=o.flatMap((t)=>t.type===\"assistant\"&&!t.isApiErrorMessage?t.message.content:[]),i=o.find((t)=>t.type===\"assistant\"&&t.isApiErrorMessage===!0),s=fo(n,`\n\n`).trim();if(s){let t=[...Jfr(s)?[M]:[],...i?[b]:[]];return{response:[s,...t].join(`\n\n`),synthetic:!1}}let l=n.find((t)=>t.type===\"tool_use\");if(l)return{response:`(The model tried to call ${\"name\"in l?l.name:\"a tool\"} instead of answering directly. Try rephrasing or ask in the main conversation.)`,synthetic:!0};let a=i?fo(i.message.content,`\n\n`).trim():\"\";if(a)return{response:`(API error: ${a.startsWith(`${Ba}: `)?a.slice(Ba.length+2):a})`,synthetic:!0};let e=o.find(T);if(e)return{response:`(API error: ${e.error.formatted})`,synthetic:!0};return{response:null,synthetic:!1}}"
+    },
+    {
+      "file": "chunk-rh1dp384.js",
+      "name": "T",
+      "start": 5648,
+      "end": 5727,
+      "moduleSha256": "b4fbff19063ab5d2aa208cec4ace83f9e3076b5508580f82cac5113744471e2a",
+      "sha256": "a4955d25257dae690fe42e0ea6a958cf02e450363b381aa6e0f7449f77dd0c88",
+      "source": "function T(o){return o.type===\"system\"&&\"subtype\"in o&&o.subtype===\"api_error\"}"
+    },
+    {
+      "file": "chunk-w8a1w7ad.js",
+      "name": "Fr",
+      "start": 8234,
+      "end": 8245,
+      "moduleSha256": "03ec7fc7d8b2fcac6ab6f740bf667791aab768677052f0761732ea2e943e76f5",
+      "sha256": "452140cf554ec36593ea30e469ed524af5dc6f3d1b53ce608c86531500a283af",
+      "source": "Fr=\"antml:\""
+    },
+    {
+      "file": "chunk-w8a1w7ad.js",
+      "name": "sd",
+      "start": 8280,
+      "end": 8379,
+      "moduleSha256": "03ec7fc7d8b2fcac6ab6f740bf667791aab768677052f0761732ea2e943e76f5",
+      "sha256": "226874279efe281861a6b7817384c0ace522c21a673608b374b5ada1304e9355",
+      "source": "sd=new RegExp(`<(?:${Fr})?(?:function_calls>|invoke name=)|</(?:${Fr})?(?:function_calls|invoke)>`)"
+    },
+    {
+      "file": "chunk-w8a1w7ad.js",
+      "name": "Jfr",
+      "start": 8494,
+      "end": 8528,
+      "moduleSha256": "03ec7fc7d8b2fcac6ab6f740bf667791aab768677052f0761732ea2e943e76f5",
+      "sha256": "80134db34356e89c273be23849c884d6cd46e2325c6731027469c5be16424ef7",
+      "source": "function Jfr(e){return sd.test(e)}"
+    },
+    {
+      "file": "chunk-y6zygpfb.js",
+      "name": "L0",
+      "start": 2486,
+      "end": 2565,
+      "moduleSha256": "e103a7bce2d80b4eaf1e71e33a3e9f96ed4f55a669bba6c7e27e2d4a42ff9fa6",
+      "sha256": "f3f760d84a34e6e2329d13531a9bc2350d5b3b7286acd77919dde6d0a778d49b",
+      "source": "function L0(e){return(e.type===\"user\"||e.type===\"assistant\")&&e.isVirtual===!0}"
+    },
+    {
+      "file": "chunk-y6zygpfb.js",
+      "name": "Zre",
+      "start": 2565,
+      "end": 2658,
+      "moduleSha256": "e103a7bce2d80b4eaf1e71e33a3e9f96ed4f55a669bba6c7e27e2d4a42ff9fa6",
+      "sha256": "57727c0c0fd1d571ed9c29896b8aedd9352de022fac32e565928b49dcc197dee",
+      "source": "function Zre(e){return e.type===\"assistant\"&&e.isApiErrorMessage===!0&&e.message?.model===Ma}"
+    },
+    {
+      "file": "chunk-y6zygpfb.js",
+      "name": "L9",
+      "start": 2658,
+      "end": 2727,
+      "moduleSha256": "e103a7bce2d80b4eaf1e71e33a3e9f96ed4f55a669bba6c7e27e2d4a42ff9fa6",
+      "sha256": "10dc4a65ced453f29e674cc10d37cd0b1e257fab8d2bef42348982142b99045b",
+      "source": "function L9(e){return e.type===\"system\"&&e.subtype===\"local_command\"}"
+    },
+    {
+      "file": "chunk-y6zygpfb.js",
+      "name": "Kh",
+      "start": 2727,
+      "end": 3077,
+      "moduleSha256": "e103a7bce2d80b4eaf1e71e33a3e9f96ed4f55a669bba6c7e27e2d4a42ff9fa6",
+      "sha256": "d4d4921eadeb479467d0e6979aab7dbb8ce792f0d80a2f240424a4ee536e9f14",
+      "source": "function Kh(e){if(e.type===\"api_system\")return!1;return e.type===\"progress\"||e.type===\"system\"&&!L9(e)||L0(e)||Zre(e)||e.type===\"attachment\"&&(e.attachment?.type===\"thinking_drop\"||e.attachment?.type===\"credential_org\"||e.attachment?.type===\"prompt_snapshot\"||e.attachment?.type===\"prompt_render_point\"||e.attachment?.type===\"deferred_tools_record\")}"
+    },
+    {
+      "file": "chunk-nankzm0s.js",
+      "name": "Ma",
+      "start": 121379,
+      "end": 121395,
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "sha256": "5b7ede2d178eca5aa4686944121421f5a13990aafd0a900c6955193515af1c24",
+      "source": "Ma=\"<synthetic>\""
+    },
+    {
+      "file": "chunk-wgt53hn2.js",
+      "name": "Ba",
+      "start": 11728,
+      "end": 11742,
+      "moduleSha256": "54b4f40b9522131bac4b0ac54c37afc637d7a8b2a68dd17b8de774fe91dcb4a0",
+      "sha256": "44d54d6e5436b0be287e8d8881f754603c497fed92b90a1f5aad799b048dd15e",
+      "source": "Ba=\"API Error\""
+    }
+  ],
+  "cuts": [
+    [
+      "p=l?n.toolUseContext.session.btwHistory:null",
+      "p=l?historyOwner(n):null"
+    ],
+    [
+      "{response:f,synthetic:m}=N(u)",
+      "{response:f,synthetic:m}=extract(u,N)"
+    ]
+  ],
+  "scope": "complete /btw request/response/pending/history sanitation and retry callback; existing local history UI owner and refusal projection retained at explicit cuts"
+}

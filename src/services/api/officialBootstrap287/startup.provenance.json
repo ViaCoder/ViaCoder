@@ -1,0 +1,306 @@
+{
+  "version": "2.1.287",
+  "platform": "darwin-arm64",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16 code units; end-exclusive",
+  "registrationGateAncestors": [],
+  "modules": [
+    {
+      "module": "chunk-q1842b1c.js",
+      "moduleSha256": "53011f90e32203bb47d179b337e6d65e0caf63a2ca681545b60f9c3c388c212f",
+      "moduleLength": 134295,
+      "statements": [
+        {
+          "role": "unconditional public hidden option",
+          "start": 72881,
+          "end": 73128,
+          "sha256": "6afabcf361905930f790a8bd9d4929fef1758818d41bd9858bf19f8df6e1d8d2",
+          "source": "new Zo(\"--client-data-url <url>\",\"URL for a signed configuration document. Claude Code exits if it cannot load it or it does not cover the selected model. Setting CLAUDE_CODE_CLIENT_DATA_URL instead keeps the URL out of the process list\").hideHelp"
+        }
+      ]
+    },
+    {
+      "module": "chunk-dgp2yyqt.js",
+      "moduleSha256": "0ac39806e4b50d15e5b1de301d8553a870917c87ef024d423bc9476e0ced21da",
+      "moduleLength": 139899,
+      "statements": [
+        {
+          "role": "whole original public launch option normalizer, source evidence only",
+          "start": 50008,
+          "end": 56206,
+          "sha256": "ca2a48bee7553af9001ed402932cae38b9020f20e63b045d8bab22eae0460075",
+          "source": "async function Is(e,o){let n=e.teleport??null,r=e.cloud??e.remote,s=r===!0?\"\":r??null,h=!1;if(e.attachServe!==void 0){if(r!==void 0)return{ok:!1,error:\"Error: --attach-serve cannot be combined with --cloud/--remote\"};if(ttt(e.attachServe)===null)return{ok:!1,error:`Error: --attach-serve expects a session id (cse_...), got ${Ent(e.attachServe)}`};s=e.attachServe,h=!0}let v=typeof r===\"string\"?ttt(r):h?ttt(e.attachServe??\"\"):null,b=typeof r===\"string\"&&v===null&&!e.initOnly&&/^\\s*\\S+\\s*$/.test(r)?r:void 0,C=null,M=!1,A=null,D=null,H=e.noMonorepo===!0?t2o():void 0;{let z=e.environment??e.pool??H;if(z!==void 0){let je=\"Error: \",Ye=\"--environment\";if(!Gde(z))return{ok:!1,error:`Error: --environment expects a self-hosted environment id (ccpool_...), got ${Ent(z)}`};if(e.resume||e.continue||n)return{ok:!1,error:`${je}${Ye} cannot be combined with --resume, --continue, or --teleport`};if(e.initOnly||o.sessionId)return{ok:!1,error:`${je}${Ye} cannot be combined with ${e.initOnly?\"--init-only\":\"--session-id\"}`};if(v!==null)return{ok:!1,error:\"Error: --environment creates a new session; it cannot be combined with --cloud <session_id|url>\"};if((e.print||o.nonInteractive)&&typeof r===\"string\"&&r.length>0)return{ok:!1,error:`${je}non-interactive ${Ye} reads the prompt from the positional or stdin; drop --cloud/--remote <description>.`};if((e.print||o.nonInteractive)&&o.outputFormat===\"stream-json\")return{ok:!1,error:`${je}${Ye} does not support --output-format stream-json`};if(typeof r===\"string\"&&r.length>0&&typeof o.prompt===\"string\"&&o.prompt.length>0)return{ok:!1,error:`${je}${Ye} with --cloud <description> cannot also take a positional prompt. Pass the task as the description, or drop --cloud.`};if(C=z,s===null||s===\"\"){let bt=typeof o.prompt===\"string\"?o.prompt:\"\";if(!(e.print||o.nonInteractive)&&ttt(bt)!==null)return{ok:!1,error:`${je}${Ye} creates a new session; it cannot be combined with a session id or url`};s=bt,M=!0}}let Ke=e.ref;if(Ke!==void 0){if(C===null&&s===null)return{ok:!1,error:`Error: --ref sets the base branch for a cloud session; pass --cloud or --environment${e.project!==void 0?\" \\u2014 --project no longer starts cloud sessions\":\"\"}`};if(v!==null)return{ok:!1,error:\"Error: --ref sets the base for a new cloud session; it cannot be combined with --cloud <session_id|url>\"};if(Ke===\"\")return{ok:!1,error:\"Error: --ref requires a non-empty branch, tag, or SHA\"};A=Ke}let ze=e.onBranch;if(ze!==void 0){if(C===null&&s===null)return{ok:!1,error:`Error: --on-branch resumes work on a branch in a cloud session; pass --cloud or --environment${e.project!==void 0?\" \\u2014 --project no longer starts cloud sessions\":\"\"}`};if(v!==null)return{ok:!1,error:\"Error: --on-branch resumes a branch in a new cloud session; it cannot be combined with --cloud <session_id|url>\"};if(A!==null)return{ok:!1,error:\"Error: --on-branch and --ref both set the cloud session's base branch; pass one or the other\"};if(ze===\"\")return{ok:!1,error:\"Error: --on-branch requires a non-empty branch name\"};D=ze}}let B=!1,he=null,ce=null,te=null;{let z=e.correlationId;if(z!==void 0){if(C===null)return{ok:!1,error:\"Error: --correlation-id requires --environment\"};if(!/^[\\x21-\\x2C\\x2E-\\x7E][\\x21-\\x7E]{0,511}$/.test(z))return{ok:!1,error:'Error: --correlation-id must be 1-512 printable ASCII characters with no spaces and no leading \"-\"'};te=z}}let ve=s!==null&&C===null&&he===null&&Dlo({print:Boolean(e.print),initOnly:Boolean(e.initOnly),nonInteractive:o.nonInteractive,inputFormat:o.inputFormat,outputFormat:o.outputFormat,hasSdkUrl:o.hasSdkUrl})&&await(h?o.isViolinWoodEnabled:o.isConnectedSessionsEnabled)().catch(()=>!1),Me=o.cloudPrintEnabled&&s!==null&&(typeof r!==\"string\"||r.trim()!==\"\")&&C===null&&he===null&&v===null&&b===void 0&&Mlo({print:Boolean(e.print),initOnly:Boolean(e.initOnly),hasSdkUrl:o.hasSdkUrl,outputFormat:o.outputFormat});if(Me&&typeof r===\"string\"&&r.trim()!==\"\"&&typeof o.prompt===\"string\"&&o.prompt.trim()!==\"\")return{ok:!1,error:`Error: the task was given twice: as --cloud's value (${Ent(r)}) and as the prompt. With --print, give it in one place; to name the session, use -n/--name.`};if(Me&&(Boolean(e.dangerouslySkipPermissions)||e.permissionMode===\"bypassPermissions\"||e.inheritPermissionMode===\"bypassPermissions\"))return{ok:!1,error:_r};if(h&&!ve)return{ok:!1,error:\"Error: --attach-serve requires the serve-only headless launch (non-interactive, --input-format stream-json and --output-format stream-json) and an enabled headless cloud client; it never falls back to a plain attach\"};let Pe=uc(e.forwardHomeSettings);if(Pe===\"invalid\")return{ok:!1,error:`Error: --forward-home-settings takes true or false, not ${Ent(String(e.forwardHomeSettings))}.`};let it=Pe!==!1,Ne=Pe===!0?\"forward\":null;if(Pe!==null&&C===null&&s===null&&v===null)return{ok:!1,error:\"Error: --forward-home-settings says whether this machine's settings go into a cloud session; pass --cloud (a new session, or one to attach to) or --environment\"};let St=!1,jt=!1;if(s!==null){let z=hur({print:e.print,nonInteractive:o.nonInteractive,continue:e.continue,resume:e.resume,fromPr:e.fromPr,hasTeleport:n!==null,hasConnect:o.hasConnect,hasSSH:o.hasSSH,hasAssistant:!1,hasPool:C!==null,isCloudAttach:v!==null,headlessCloud:ve,headlessCloudPrint:Me,loneWordValue:b});if(z)return{ok:!1,error:z}}let Ut=!(o.cloudSessionsByDefault&&s===null&&hur({print:e.print,nonInteractive:o.nonInteractive||Boolean(e.initOnly),continue:e.continue,resume:e.resume,fromPr:e.fromPr,hasTeleport:n!==null,hasConnect:o.hasConnect,hasSSH:o.hasSSH})===null&&!o.sessionId&&ce===null&&!B&&e.remoteControl===void 0&&e.rc===void 0&&!I_e(e)&&e.watchArtifact===void 0&&e.watchArtifactNoAutoreact===void 0&&e.worktree===void 0&&!e.deepLinkOrigin)?\"none\":e.local?\"declined\":await o.cloudSessionsDeniedByOrgPolicy()?\"not_allowed\":\"applied\";if(Ut===\"applied\")s=\"\";return{ok:!0,value:{teleport:n,remote:s,cloudAttachId:v,poolId:C,poolPromotedRemote:M,poolRef:A,poolOnBranch:D,forwardHomeSettings:it,homeSettingsConsent:Ne,projectFlag:he,projectBrowse:ce,projectForRemoteControl:B,correlationId:te,headlessCloud:ve,headlessCloudPrint:Me,serveOnly:h,cloudDefault:Ut,persistentVolume:St,monorepo:jt,noMonorepo:C===H}}}"
+        },
+        {
+          "role": "actual parsed launch-target discriminator",
+          "start": 104137,
+          "end": 104221,
+          "sha256": "6517db677d8548f7bbfdb99e4c8e99183cfdd3ceb0d2243a7c3edff23b0bb2be",
+          "source": "Wr=It!==null||Bt!==null||eo!==null||kn||En!==null||Boolean(s?.url)||Boolean(h?.host)"
+        },
+        {
+          "role": "option env apply",
+          "start": 127660,
+          "end": 127712,
+          "sha256": "5553bf4b193c01dd60822208f9200275518aa95d999d8aadf6aa90b4bcf56e1f",
+          "source": "a.set(\"CLAUDE_CODE_CLIENT_DATA_URL\",o.clientDataUrl)"
+        },
+        {
+          "role": "Ebo fatal before resolution",
+          "start": 127757,
+          "end": 127786,
+          "sha256": "8506afe44c4de1427ec80c4ffbd4ad1c8d372f7fc0e3e7f9a4e2b1e2421b6ec9",
+          "source": "if(Oi!==void 0)return Yt(Oi);"
+        },
+        {
+          "role": "vbo fatal after resolution",
+          "start": 128247,
+          "end": 128276,
+          "sha256": "2a04b5aa8171f1e4c44adb2939c01effda32ea370059dcdf78be0170dc1e2fc8",
+          "source": "if(Di!==void 0)return Yt(Di);"
+        },
+        {
+          "role": "await public producer",
+          "start": 127713,
+          "end": 127757,
+          "sha256": "210eacb1632e28d62ae7a908cca1fce734251dd6599dc73caa41ff742252eb49",
+          "source": "let Oi=await Ebo({runsOnAnotherMachine:Wr});"
+        },
+        {
+          "role": "real model resolver",
+          "start": 127786,
+          "end": 128085,
+          "sha256": "d825b3fae739b036e5bc6863f69a5b4a447ea9ae233bd6ebb3ead7565430acbf",
+          "source": "let{effectiveModel:Ii,initialMainLoopModel:_l,resolvedInitialModel:We,rawModelRequest:yl,restrictedModel:vl,unservedModelSpelling:Ku}=await $s({userSpecifiedModel:ao,agentModel:qn,agentModelSource:Vn!==void 0?\"routine\":\"agent\",routineModelTransientlySkipped:Ti,storageV5:b,credentials:C}),Jn=FH(We);"
+        },
+        {
+          "role": "public coverage producer",
+          "start": 128234,
+          "end": 128247,
+          "sha256": "4e82705550631d5fab51a27105412a37dbe983aa192d577487e442e5c508e494",
+          "source": "let Di=vbo();"
+        }
+      ]
+    },
+    {
+      "module": "chunk-z6bxsds6.js",
+      "moduleSha256": "d61c217d40821968f7024fd18a54b936163654848271023cd293a87f11059698",
+      "moduleLength": 1446,
+      "statements": [
+        {
+          "role": "original fatal; iy telemetry omitted by frozen C",
+          "start": 796,
+          "end": 865,
+          "sha256": "17ce9a78816fc49c381710f94dbc52f51010de74bd9795feefebe1444ef0c5f4",
+          "source": "function Yt(r,e=\"cli_error\"){if(r)Gb(r);iy(e),process.exit(1);return}"
+        }
+      ]
+    },
+    {
+      "module": "chunk-b5kmgz2n.js",
+      "moduleSha256": "3b02f5902f32e22b0bfb68e29d336b5b337a1b02ad226b5c61fe4f3ba83e5df1",
+      "moduleLength": 46233,
+      "statements": [
+        {
+          "role": "independent original on oracle closure, not production policy service restoration on",
+          "start": 40221,
+          "end": 40849,
+          "sha256": "f4c6840f979025e731739623f931d8cfc968e2b947f12a50aef7ab8cdad804e1",
+          "source": "function on(e){let n=Z_();if(CGo(e)){let i=n?.restrictions[e];if(i)return i.allowed;return!(y_()&&p().hintedDeniedKeys.includes(e))}if(!n){if(pts.has(e)){if(y_()&&!(gzr.has(e)&&dbe()&&!mPe()))return!1;if(xn.has(e)&&At()&&!(e===\"allow_product_feedback\"&&T8()))return!1}if(M(e,utr()))return!1;if(ajt(e))return!1;let i=p();if(i.hintedDeniedKeys.length===0&&i.hintedTaints.length===0)return!0;if(!y_())return!0;if(i.hintedDeniedKeys.includes(e))return!1;return ljt({restrictions:{},compliance_taints:[]},e,i.hintedTaints)}if(gzr.has(e)&&rU()&&!(dbe()&&!mPe()))return!1;if(AGo.has(e)&&rU())return!1;if(ajt(e))return!1;return!Ue(e,n)}"
+        },
+        {
+          "role": "independent original on oracle closure, not production policy service restoration Ue",
+          "start": 40849,
+          "end": 41122,
+          "sha256": "a098d39d55e2dba2edf453fb5e3ecc0b561c7c258da83999880015f5f31d35ac",
+          "source": "function Ue(e,n){let i=p();if(n.restrictions[e]===void 0&&i.hintedDeniedKeys.includes(e))return!0;let r=i.sessionFromServerFetch;return!ljt({restrictions:n.restrictions,compliance_taints:r?n.compliance_taints:[]},e,[...utr(),...i.hintedTaints,...r?[]:n.compliance_taints])}"
+        },
+        {
+          "role": "independent original on oracle closure, not production policy service restoration ajt",
+          "start": 39464,
+          "end": 39509,
+          "sha256": "d60638948c5fb36944c521f51c5361de96a244e84384024fb6ad94a0c694faa4",
+          "source": "function ajt(e){let n=In(e);return fts(e)||n}"
+        },
+        {
+          "role": "independent original on oracle closure, not production policy service restoration fts",
+          "start": 39509,
+          "end": 39819,
+          "sha256": "7a08fd56885ae76d370583036ed4528d256cc18838d48bdd9951045328c17776",
+          "source": "function fts(e){if(!Fe.has(e)||y3o()||!y_())return!1;let n=p();if(n.sessionCache!==null&&!n.failOpenVerdict&&!n.sessionVerdictDisowned)return!1;let i;try{R3(),i=n.principalRung}catch{return!0}if(i===\"wif\"&&ft())return!0;if(i===\"none\"&&KE()!==void 0&&e6t())return!1;return i===\"oauth\"||i===\"tunnel\"||i===\"none\"}"
+        },
+        {
+          "role": "independent original on oracle closure, not production policy service restoration In",
+          "start": 39819,
+          "end": 40153,
+          "sha256": "de9eb4e0ff5752371653f0da93a569411831addc5c818d16e4f218bc4df79355",
+          "source": "function In(e){if(!Fe.has(e)||!y_()||h3o())return!1;let n=p();if(n.sessionCache!==null&&n.sessionAttributed){let i=Oe();if(i!==null&&i===n.attributedBearerDigest)return!1;if(n.evidenceRereadForBearer!==i)n.evidenceRereadForBearer=i,n.hipaaEvidenceLoaded=!1;let r=l7n();if(r.seen.length===0&&!r.incomplete||!wn())return!1}return czr()}"
+        },
+        {
+          "role": "independent original on oracle closure, not production policy service restoration Fe",
+          "start": 39412,
+          "end": 39463,
+          "sha256": "deb5df00a859d3ce006dc8f813633ca51cea6f1819af38e3cbfb9c181bc7db89",
+          "source": "Fe=new Set([\"allow_web_fetch\",\"allow_design_sync\"])"
+        },
+        {
+          "role": "independent original on oracle closure, not production policy service restoration pts",
+          "start": 39189,
+          "end": 39248,
+          "sha256": "a8f42f9c961686288cef5a513b2571003d2674bda6dc74e675e453ee285982f8",
+          "source": "pts=new Set(R().filter((e)=>JXe(e)?.onCacheMiss!==\"allow\"))"
+        },
+        {
+          "role": "independent original on oracle closure, not production policy service restoration gzr",
+          "start": 39249,
+          "end": 39307,
+          "sha256": "c6c3b30f94760ca7bea9748d6a8739cdc0418cf3c7cb3303a43a40e36d31f796",
+          "source": "gzr=new Set(R().filter((e)=>JXe(e)?.onCacheMiss===\"hold\"))"
+        },
+        {
+          "role": "independent original on oracle closure, not production policy service restoration AGo",
+          "start": 39308,
+          "end": 39372,
+          "sha256": "c4bc31673c864da27a80e6ba7213a531383999644c52ba02579aca77499d8732",
+          "source": "AGo=new Set(R().filter((e)=>JXe(e)?.onFailOpenVerdict===\"deny\"))"
+        },
+        {
+          "role": "independent original on oracle closure, not production policy service restoration xn",
+          "start": 39373,
+          "end": 39411,
+          "sha256": "45fa4fca76a1ab12aed473a312958137e599306d90b98818fd73e4de91509fff",
+          "source": "xn=new Set([\"allow_product_feedback\"])"
+        },
+        {
+          "role": "independent original on oracle closure, not production policy service restoration y_",
+          "start": 24079,
+          "end": 24114,
+          "sha256": "dccc31be75dd7fe547fe473860077e7bdfe2c57bf87fd5f6481517b382024504",
+          "source": "function y_(){return k3()===void 0}"
+        },
+        {
+          "role": "independent original on oracle closure, not production policy service restoration rU",
+          "start": 42582,
+          "end": 42654,
+          "sha256": "116db932d03c328124ec0bb0285675272b0397b5d7668127dee202dcb36ddbba",
+          "source": "function rU(){if(!y_())return!1;return Z_()===null||p().failOpenVerdict}"
+        },
+        {
+          "role": "complete public verdict helper pzr",
+          "start": 33783,
+          "end": 38691,
+          "sha256": "e5cfa6f81bf5e68456abf25c0ceaa967fd2e32fadb47039dc13e20c14c285039",
+          "source": "pzr={allow_product_feedback:{deniedUnder:[\"hipaa\",\"zdr\"],serverPopulated:!0,onCacheMiss:\"deny\",label:\"Feedback\",verb:\"is\",requirementId:\"HIPAA-R1\"},allow_web_fetch:{deniedUnder:[\"hipaa\"],serverPopulated:!0,onCacheMiss:\"allow\",label:\"Web fetch\",verb:\"is\",requirementId:\"HIPAA-R3\"},allow_memory_sync:{deniedUnder:[\"hipaa\",\"zdr\"],onCacheMiss:\"allow\",label:\"Memory sync\",verb:\"is\",requirementId:\"HIPAA-R5\",hardBlockUnder:[\"hipaa\"]},allow_design_sync:{deniedUnder:[\"hipaa\"],onCacheMiss:\"allow\",label:\"Design sync\",verb:\"is\",requirementId:\"HIPAA-R9\"},allow_projects_tool:{deniedUnder:[\"hipaa\"],onCacheMiss:\"hold\",label:\"Projects\",verb:\"are\",requirementId:\"HIPAA-R17\",hardBlockUnder:[\"hipaa\"]},allow_claude_browser_extension:{deniedUnder:[\"hipaa\"],serverPopulated:!0,onCacheMiss:\"allow\",label:\"Claude in Chrome\",verb:\"is\",requirementId:\"HIPAA-R34\"},allow_remote_sessions:{deniedUnder:[\"hipaa\"],serverPopulated:!0,onCacheMiss:\"deny\",label:\"Cloud sessions\",verb:\"are\",requirementId:\"HIPAA-R6\"},allow_remote_control:{deniedUnder:[\"hipaa\"],serverPopulated:!0,onCacheMiss:\"deny\",label:\"Remote Control\",verb:\"is\",requirementId:\"HIPAA-R6\"},allow_cobalt_plinth:{deniedUnder:[\"hipaa\",\"zdr\"],serverPopulated:!0,onCacheMiss:\"deny\",label:\"Artifacts\",verb:\"are\",requirementId:\"HIPAA-R16\"},allow_team_onboarding:{deniedUnder:[\"hipaa\"],onCacheMiss:\"hold\",label:\"Team onboarding\",verb:\"is\",requirementId:\"HIPAA-R13\",hardBlockUnder:[\"hipaa\"]},allow_error_reporting:{deniedUnder:[\"hipaa\",\"zdr\"],onCacheMiss:\"deny\",label:\"Error reporting\",verb:\"is\",requirementId:\"HIPAA-R19\"},allow_auto_mode_sibling_docs:{deniedUnder:[\"hipaa\"],onCacheMiss:\"deny\",label:\"Repository lookups\",verb:\"are\",requirementId:\"HIPAA-R36\"},allow_repo_visibility_probe:{deniedUnder:[\"hipaa\"],onCacheMiss:\"hold\",label:\"Repository visibility checks\",verb:\"are\",requirementId:\"HIPAA-R36\"},allow_send_file:{deniedUnder:[\"hipaa\",\"zdr\"],onCacheMiss:\"deny\",label:\"File upload\",verb:\"is\",requirementId:\"HIPAA-R37\"},allow_heap_dump:{deniedUnder:[\"hipaa\",\"zdr\"],onCacheMiss:\"deny\",label:\"Heap dumps\",verb:\"are\",requirementId:\"HIPAA-R38\"},allow_local_checkpoint_commit:{deniedUnder:[\"hipaa\",\"zdr\"],onCacheMiss:\"deny\",label:\"Usage-limit checkpoints\",verb:\"are\",requirementId:\"HIPAA-R39\"},...{},allow_plugin_skill_search:{deniedUnder:[\"hipaa\"],onCacheMiss:\"deny\",label:\"Plugin and skill search\",verb:\"is\",requirementId:\"HIPAA-R26\"},allow_plugin_directory_search:{deniedUnder:[\"hipaa\"],onCacheMiss:\"deny\",onFailOpenVerdict:\"deny\",label:\"The plugin directory\",verb:\"is\",requirementId:\"HIPAA-R35\"},allow_connector_suggest:{deniedUnder:[\"hipaa\"],onCacheMiss:\"deny\",onFailOpenVerdict:\"deny\",label:\"Connector suggestions\",verb:\"are\",requirementId:\"HIPAA-R43\"},...{allow_mcp_task_worker_wake:{deniedUnder:[\"hipaa\"],onCacheMiss:\"deny\",label:\"Restarting a worker for a background task\",verb:\"is\",requirementId:\"HIPAA-R57\"}},...{},allow_account_skills_sync:{deniedUnder:[\"hipaa\"],serverPopulated:!0,onCacheMiss:\"deny\",label:\"Account skills sync\",verb:\"is\",requirementId:\"HIPAA-R29\"},allow_account_plugins_sync:{deniedUnder:[\"hipaa\"],serverPopulated:!0,onCacheMiss:\"deny\",label:\"Account plugins sync\",verb:\"is\",requirementId:\"HIPAA-R30\"},allow_bundled_skills:{deniedUnder:[\"hipaa\"],onCacheMiss:\"allow\",label:\"Bundled skills\",verb:\"are\",requirementId:\"HIPAA-R56\"},allow_mycelium:{deniedUnder:[\"hipaa\",\"zdr\"],onCacheMiss:\"deny\",label:\"Peer messaging\",verb:\"is\",requirementId:\"HIPAA-R25\",hardBlockUnder:[\"hipaa\"]},...{},allow_usage_transcript_scan:{deniedUnder:[\"hipaa\"],transcriptScan:!0,onCacheMiss:\"deny\",label:\"Usage patterns\",verb:\"are\",requirementId:\"HIPAA-R31\"},allow_skill_doctor_transcript_scan:{deniedUnder:[\"hipaa\"],transcriptScan:!0,onCacheMiss:\"deny\",label:\"Skill token counts\",verb:\"are\",requirementId:\"HIPAA-R32\"},allow_insights:{deniedUnder:[\"hipaa\"],transcriptScan:!0,onCacheMiss:\"deny\",label:\"Insights\",verb:\"are\",requirementId:\"HIPAA-R40\"},allow_stats_transcript_scan:{deniedUnder:[\"hipaa\"],transcriptScan:!0,onCacheMiss:\"deny\",label:\"Usage stats\",verb:\"are\",requirementId:\"HIPAA-R42\"},...{},allow_model_catalog:{deniedUnder:[\"hipaa\"],onCacheMiss:\"allow\",label:\"The model catalog\",verb:\"is\",requirementId:\"HIPAA-R33\"},allow_container_result_files:{deniedUnder:[\"hipaa\",\"zdr\"],onCacheMiss:\"deny\",label:\"Saving large tool results in the tool container\",verb:\"is\",requirementId:\"HIPAA-R53\"},allow_promo_offers:{deniedUnder:[\"hipaa\"],onCacheMiss:\"deny\",label:\"Promotional offers\",verb:\"are\",requirementId:\"HIPAA-R54\"},allow_previous_conversation_pointer:{deniedUnder:[\"hipaa\"],onCacheMiss:\"deny\",label:\"Linking a new conversation to the one it replaces\",verb:\"is\",requirementId:\"HIPAA-R58\"},allow_api_auth_warm:{deniedUnder:[\"hipaa\"],onCacheMiss:\"deny\",label:\"Warming the API credential cache\",verb:\"is\",requirementId:\"HIPAA-R59\"},allow_cache_keepalive:{deniedUnder:[\"hipaa\"],onCacheMiss:\"deny\",label:\"Renewing the prompt cache lifetime\",verb:\"is\",requirementId:\"HIPAA-R65\"}}"
+        },
+        {
+          "role": "complete public verdict helper fzr",
+          "start": 38692,
+          "end": 38736,
+          "sha256": "da175e5afbac40c255335a6f61a6a1005a69cebcf9b1318e4ae4859ff39f452c",
+          "source": "function fzr(e){return Object.hasOwn(pzr,e)}"
+        },
+        {
+          "role": "complete public verdict helper JXe",
+          "start": 38736,
+          "end": 38780,
+          "sha256": "d81e20cfe90ac9f32c839ff85092460abe9447c6d6b2746c7ccd0cec81c67b9e",
+          "source": "function JXe(e){return fzr(e)?pzr[e]:void 0}"
+        },
+        {
+          "role": "complete public verdict helper R",
+          "start": 38925,
+          "end": 38974,
+          "sha256": "b1a7f9449e8d185ed6b696aafaff73ed9a0860d084e94b9b6cae08d3810458df",
+          "source": "function R(){return Object.keys(pzr).filter(fzr)}"
+        },
+        {
+          "role": "complete public verdict helper mzr",
+          "start": 39058,
+          "end": 39121,
+          "sha256": "63948fa7f396ad7a2cf4323e7b5337a637d59dc6cb6005de84e0da2ee5975f34",
+          "source": "mzr=R().flatMap((e)=>(JXe(e)?.deniedUnder??[]).map((n)=>[n,e]))"
+        },
+        {
+          "role": "complete public verdict helper uts",
+          "start": 39122,
+          "end": 39188,
+          "sha256": "bd7dbdd224d9b29d69eee608d6289b2c93ec681a6c9e62892222606f17b7bbdb",
+          "source": "uts=R().flatMap((e)=>(JXe(e)?.hardBlockUnder??[]).map((n)=>[n,e]))"
+        },
+        {
+          "role": "complete public verdict helper Ie",
+          "start": 38784,
+          "end": 38805,
+          "sha256": "478662c93261ced3508594cd766a7c22d4efbc0039403a8f5037a62c952b87c7",
+          "source": "Ie=new Set([\"hipaa\"])"
+        },
+        {
+          "role": "complete public verdict helper M",
+          "start": 41773,
+          "end": 41875,
+          "sha256": "6efe10fbbc0c8ea7171b5b21a19f50c3b0ab6d9d4fe9258e70a2d9841e0c5cbf",
+          "source": "function M(e,n){if(n.length===0)return!1;for(let[i,r]of mzr)if(r===e&&n.includes(i))return!0;return!1}"
+        },
+        {
+          "role": "complete public verdict helper CGo",
+          "start": 38866,
+          "end": 38925,
+          "sha256": "a848c0730bba4cc69053cbdce94eca6a91fe9684846decde466b3dd14d943254",
+          "source": "function CGo(e){return JXe(e)?.transcriptScan===!0&&!_3o()}"
+        },
+        {
+          "role": "complete public verdict helper dts",
+          "start": 38806,
+          "end": 38866,
+          "sha256": "c8828eb5b9ece6a7d4dcd7841b4c1c0bda5eb610cc9c5a26c7af1a1ec014051c",
+          "source": "function dts(e){return JXe(e)?.serverPopulated===!0&&!g3o()}"
+        },
+        {
+          "role": "complete public verdict helper ljt",
+          "start": 41122,
+          "end": 41421,
+          "sha256": "d8e07f91828a80623d66bc18f487b25e4ca88de4bd11f996af742e4b0b7492ca",
+          "source": "function ljt(e,n,i=[]){let r=e.compliance_taints;if(uts.some(([d,m])=>m===n&&(r.includes(d)||i.includes(d))))return!1;let s=e.restrictions[n];if(s)return s.allowed;if(CGo(n))return!0;let c=dts(n)?[...i.filter((d)=>!(Ie.has(d)&&r.includes(d))),...r.filter((d)=>!Ie.has(d))]:[...i,...r];return!M(n,c)}"
+        }
+      ]
+    },
+    {
+      "module": "chunk-nankzm0s.js",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "moduleLength": 706979,
+      "statements": [
+        {
+          "role": "actual ConfigState served gate g3o",
+          "start": 144179,
+          "end": 144241,
+          "sha256": "ba297d626e509618b1a5fd40b81d365d8257a4ad8c2a0764a19119ba1fd05b64",
+          "source": "function g3o(){return Jt.servedTrue(\"tengu_validated_clover\")}"
+        },
+        {
+          "role": "actual ConfigState served gate _3o",
+          "start": 144421,
+          "end": 144478,
+          "sha256": "3956edace44702f1be442a16e5013d82413ba7341bc686d9a950f2e04e297ac5",
+          "source": "function _3o(){return Jt.servedTrue(\"tengu_hashed_lark\")}"
+        }
+      ]
+    }
+  ],
+  "local": {
+    "file": "src/main.tsx",
+    "blocks": [
+      "public hidden option",
+      "authEnvironment.set / await loadClientDataUrl287 / fatal",
+      "existing model resolution",
+      "validateClientDataUrlModel287 / fatal"
+    ],
+    "remotePort": "remote !== null, from existing parsed remoteOption; original attach/pool/browse/connect/ssh launch options absent here, not injected as false qualifications",
+    "notRemoteDiscriminators": [
+      "CLAUDE_CODE_REMOTE worker environment",
+      "teleport local replay",
+      "sdk-url local stream connection",
+      "remote-control local bridge"
+    ],
+    "fatal": "existing chalk stderr + process.exit(1); frozen telemetry not restored"
+  }
+}

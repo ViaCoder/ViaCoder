@@ -1,0 +1,107 @@
+{
+  "version": "2.1.287",
+  "platform": "darwin-arm64",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "proofs": [
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "startSessionStartHooks",
+      "start": 467470,
+      "end": 468774,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "a3010218023e7e4cda540473c9bd4f37f7b046390b1a63932293904410840427",
+      "source": "()=>{let ie=performance.now(),be=WY(e,{kind:\"session-start\",source:\"startup\",storageV5:I.storageV5,credentials:I.credentials}).then((ve)=>(qr(ve),wr(\"hooks_init_ms\",performance.now()-ie,ie),PIr()),(ve)=>{t(`claim_session: SessionStart hooks failed (continuing without their output): ${l(ve)}`,{level:\"error\"});return}).then(async(ve)=>{let pt=[ve,Lo].filter((Wt)=>Boolean(Wt));if(Lo=void 0,pt.length===0)return;if(wi){let Wt=JO.of(e);if(Wt.pending>0)await Wt.tail;for(let ot of pt)Q.enqueue({mode:\"prompt\",value:ot,agentId:Ge(),...!(r instanceof qz)&&{localStdinOrigin:!0}});Jn();return}let St=[...pt],it=new Promise((Wt)=>{Xo=(ot)=>{if(\"cannotQueue\"in ot){Wt(ot.cannotQueue);return}let Je=typeof ot.queued===\"string\"?St.indexOf(ot.queued):-1;if(Je!==-1)St.splice(Je,1);if(St.length===0)Wt(void 0)}});for(let Wt of pt)r.prependUserMessage(Wt);let Bt=await Promise.race([it,ee(ww,void 0,{unref:!0}).then(()=>`not queued after ${ww}ms`)]);if(Xo=void 0,Bt!==void 0)t(`claim_session: the session's own first-turn messages will not run ahead of the host's messages (${Bt}); releasing the host's messages`,{level:\"warn\"})}).catch((ve)=>{Xo=void 0,t(`claim_session: queueing the session's own first-turn messages failed (continuing): ${l(ve)}`,{level:\"error\"})}).finally(()=>{if($s===be)$s=void 0});$s=be,wu=be}"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "ww",
+      "start": 351521,
+      "end": 351529,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "76cd12e86b4e8bc7c45dbb8e8cf4b3df332f82ce2bbdb56662159972a7bbc75c",
+      "source": "ww=30000"
+    },
+    {
+      "file": "chunk-64z3xwk8.js",
+      "name": "prependUserMessage",
+      "start": 20960,
+      "end": 21117,
+      "moduleSha256": "63b72939ef879fd6a6be0186e4c7fa1f334e1e6195c2da9c9e5e3fa5e3ea7d1f",
+      "sha256": "ea05c2aae548cc6cdb6736549e90b1b1957a4cfc3edef8940363323997ab5520",
+      "source": "prependUserMessage(s){this.prependedLines.push(_({type:\"user\",session_id:\"\",message:{role:\"user\",content:s},parent_tool_use_id:null})),this.prependWaker?.()}"
+    },
+    {
+      "file": "chunk-64z3xwk8.js",
+      "name": "isLocallyPrependedMessage",
+      "start": 21117,
+      "end": 21190,
+      "moduleSha256": "63b72939ef879fd6a6be0186e4c7fa1f334e1e6195c2da9c9e5e3fa5e3ea7d1f",
+      "sha256": "79a7a294e939d64fa1b6119f5926b99d763b3622312aae173924447b68d2e7bb",
+      "source": "isLocallyPrependedMessage(s){return this.locallyPrependedMessages.has(s)}"
+    },
+    {
+      "file": "chunk-64z3xwk8.js",
+      "name": "read",
+      "start": 21228,
+      "end": 23220,
+      "moduleSha256": "63b72939ef879fd6a6be0186e4c7fa1f334e1e6195c2da9c9e5e3fa5e3ea7d1f",
+      "sha256": "1dd52c5e91a6362c62cc7153834606925b0b115c2833c7d4e222939bd920b67f",
+      "source": "async*read(){let s=\"\",e=[],n=0,r=!1,p=0,m=0,h=!1;function y(w){if(p++,m+=w.length,h)return;h=!0,tC().then(()=>{p=0,m=0,h=!1})}let v=async function*(){for(;;){if(p>=Ze||m>=et)await tC(),p=0,m=0;let w=!1;while(this.prependedLines.length>0){let K=this.prependedLines.shift();w=!0,y(K);let L=await this.processLine(K);if(L)this.locallyPrependedMessages.add(L),ne(\"info\",\"cli_stdin_message_parsed\",ke(L)),yield L}if(w)continue;let D=s.indexOf(`\n`);if(D===-1)break;let A=s.slice(0,D);s=s.slice(D+1),y(A);let E=await this.processLine(A);if(E)ne(\"info\",\"cli_stdin_message_parsed\",ke(E)),this.hasUnconsumedInput=s.trim().length>0,yield E}this.hasUnconsumedInput=s.trim().length>0}.bind(this),g=this.input[Symbol.asyncIterator](),R=null,b=!1;try{for(;;){if(r||this.prependedLines.length>0){if(e.length>0)s+=e.join(\"\"),e=[];if(yield*v(),n=s.length,n>this.maxLineChars)ne(\"warn\",\"cli_stream_json_line_budget\",{at:\"tail\"}),await this.exitOnFatalInput(ye(this.maxLineChars));r=!1}R??=g.next();let w=await Promise.race([R.then(()=>!1),new Promise((E)=>{this.prependWaker=()=>E(!0)})]);if(this.prependWaker=null,w)continue;let D=await R;if(R=null,D.done){b=!0;break}n+=D.value.length;let A=D.value.includes(`\n`);if(!A&&n>this.maxLineChars)ne(\"warn\",\"cli_stream_json_line_budget\",{at:\"block\"}),await this.exitOnFatalInput(ye(this.maxLineChars));if(e.push(D.value),A)r=!0;else if(!this.hasUnconsumedInput&&/\\S/.test(D.value))this.hasUnconsumedInput=!0}}finally{if(this.prependWaker=null,!b)await g.return?.()}if(e.length>0)s+=e.join(\"\"),e=[];if(s){let w=await this.processLine(s);if(w)yield w}this.inputClosed=!0;let P=Dr();if(!P&&J()){for(let[w,D]of this.pendingRequests.entries())if(!D.forwarded&&D.request.request.subtype===\"can_use_tool\"&&D.request.request.tool_name===Gs)this.streamCloseInterruptRequestIds.add(w);if(this.streamCloseInterruptRequestIds.size>0)this.onStreamClosedWithParkedQuestion?.()}for(let w of this.pendingRequests.values()){if(P&&this.asksOurHuman(w))continue;w.reject(new Hl(s$r))}}"
+    },
+    {
+      "file": "chunk-hrhfcbdv.js",
+      "name": "tC",
+      "start": 97623,
+      "end": 97887,
+      "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+      "sha256": "bb22c76589ef4c8165e6d01d9df1e851697ebc923ff22657d06b1ec215017f08",
+      "source": "function tC(){if(typeof setImmediate===\"function\")return new Promise((e)=>setImmediate(e));if(typeof MessageChannel===\"function\")return new Promise((e)=>{let n=new MessageChannel;n.port1.onmessage=()=>{n.port1.close(),e()},n.port2.postMessage(null)});return ee(0)}"
+    },
+    {
+      "file": "chunk-64z3xwk8.js",
+      "name": "ye",
+      "start": 17526,
+      "end": 17813,
+      "moduleSha256": "63b72939ef879fd6a6be0186e4c7fa1f334e1e6195c2da9c9e5e3fa5e3ea7d1f",
+      "sha256": "8a6ebe89e70d048f5ab53603bae996b21223f02ddc1adf010590fc202858f43f",
+      "source": "function ye(s){return`Error: stream-json input carried over ${Math.round(s/1024/1024)}M characters with no newline. Each stream-json message must be a single newline-terminated JSON line: either the producer is not newline-terminating its messages, or one message exceeded this budget.`}"
+    },
+    {
+      "file": "chunk-64z3xwk8.js",
+      "name": "Xe",
+      "start": 17513,
+      "end": 17525,
+      "moduleSha256": "63b72939ef879fd6a6be0186e4c7fa1f334e1e6195c2da9c9e5e3fa5e3ea7d1f",
+      "sha256": "6b223a55827181f7a4a70a9f03b4abf3fb038270340ca04a061e75626bb6a297",
+      "source": "Xe=268435456"
+    },
+    {
+      "file": "chunk-64z3xwk8.js",
+      "name": "Ze",
+      "start": 17817,
+      "end": 17822,
+      "moduleSha256": "63b72939ef879fd6a6be0186e4c7fa1f334e1e6195c2da9c9e5e3fa5e3ea7d1f",
+      "sha256": "9796b94d732836337601982f94922128da7ef2abbeddb947eae5e99c8cc6c703",
+      "source": "Ze=64"
+    },
+    {
+      "file": "chunk-64z3xwk8.js",
+      "name": "et",
+      "start": 17823,
+      "end": 17833,
+      "moduleSha256": "63b72939ef879fd6a6be0186e4c7fa1f334e1e6195c2da9c9e5e3fa5e3ea7d1f",
+      "sha256": "1e62f9fc08382f96cf6b23970ab54077d249aeaf3c92fc741e228a6fd0e94001",
+      "source": "et=1048576"
+    }
+  ],
+  "adapters": [
+    {
+      "method": "read",
+      "cut": "qualified terminal EOF tail",
+      "start": 22803,
+      "end": 23220,
+      "consumer": "StructuredIO.onInputClosed (existing local pending request rejection policy)"
+    }
+  ],
+  "nativeSha256": "c49a130878c48344363d3f34f2279f535abe4e9ab149ac0dbf4195f00e500ff1"
+}

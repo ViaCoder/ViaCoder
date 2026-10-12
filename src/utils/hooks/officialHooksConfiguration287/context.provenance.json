@@ -1,0 +1,203 @@
+{
+  "version": "2.1.287",
+  "platform": "darwin-arm64",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16 end-exclusive",
+  "roots": {
+    "baseInput": [
+      "chunk-mphp7acd.js",
+      "Xc"
+    ]
+  },
+  "modules": [
+    {
+      "file": "chunk-m4akk3an.js",
+      "rows": [
+        {
+          "file": "chunk-m4akk3an.js",
+          "name": "Ay",
+          "start": 5405,
+          "end": 5497,
+          "moduleLength": 6620,
+          "moduleSha256": "6569ec7c04f6d3c418b686b9e2a7a757178ffd1b18d50caf80f103d84d38249b",
+          "sha256": "f20ac939fe8d3c69d92727b046fe9be950e6e985941d2d0442490603b4d4d114",
+          "source": "function Ay(e){let o;if(!e)return o;for(let n of e)if(n.kind===\"effort\")o=n.effort;return o}",
+          "variable": false,
+          "exportNames": [
+            "Ay"
+          ]
+        }
+      ],
+      "bindings": {}
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "rows": [
+        {
+          "file": "chunk-mphp7acd.js",
+          "name": "N$o",
+          "start": 2235577,
+          "end": 2235617,
+          "moduleLength": 4409957,
+          "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+          "sha256": "8b5f0c9d9e2d2d765faac62f18886ca4b7dc2a8e167cf3d3a0b240efe70fccc3",
+          "source": "N$o=/^[A-Za-z0-9][A-Za-z0-9_.-]{0,255}$/",
+          "variable": true,
+          "exportNames": [
+            "N$o"
+          ]
+        },
+        {
+          "file": "chunk-mphp7acd.js",
+          "name": "Xc",
+          "start": 2235618,
+          "end": 2236201,
+          "moduleLength": 4409957,
+          "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+          "sha256": "b399f340bd7783a0add93d0d7180b02120545bc1dc1dc870b1beb2a67f3aa4e4",
+          "source": "function Xc(e,n,r,s){let g=s?.agentType??dC(),h=s?.options?.mainLoopModel,b=kd(s?.getAppState?.()??{},h),w=Ay(s?.permissionLayers),D=h&&s?.getAppState&&jw(h)?{level:KA(h,b,w)}:void 0,j=s?.remoteCall;if(j!==void 0)return{session_id:`served:${(N$o.test(j.origin.callerSessionId??\"\")?j.origin.callerSessionId:void 0)??\"unknown\"}`,transcript_path:\"\",cwd:n,permission_mode:r,agent_id:s?.agentId,effort:D};return{session_id:e.id,transcript_path:Yf(e.id),cwd:n,scratchpad_dir:Fw()?NE(e.id)??void 0:void 0,prompt_id:NEe()??void 0,permission_mode:r,agent_id:s?.agentId,agent_type:g,effort:D}}",
+          "variable": false,
+          "exportNames": [
+            "Xc"
+          ]
+        }
+      ],
+      "bindings": {
+        "dC": {
+          "port": "agentType",
+          "identity": "chunk-bn3p37gv.js:dC"
+        },
+        "kd": {
+          "port": "effortState",
+          "identity": "chunk-5rsp1jx3.js:kd"
+        },
+        "Ay": {
+          "file": "chunk-m4akk3an.js",
+          "name": "Ay"
+        },
+        "jw": {
+          "port": "supportsEffort",
+          "identity": "chunk-5rsp1jx3.js:jw"
+        },
+        "KA": {
+          "port": "effortLevel",
+          "identity": "chunk-5rsp1jx3.js:KA"
+        },
+        "Yf": {
+          "port": "transcript",
+          "identity": "chunk-mphp7acd.js:Yf"
+        },
+        "Fw": {
+          "port": "scratchEnabled",
+          "identity": "chunk-6xrs6gmd.js:Fw"
+        },
+        "NE": {
+          "port": "scratchDirectory",
+          "identity": "chunk-6xrs6gmd.js:NE"
+        },
+        "NEe": {
+          "port": "promptId",
+          "identity": "chunk-bn3p37gv.js:NEe"
+        }
+      }
+    }
+  ],
+  "ports": [
+    {
+      "port": "agentType",
+      "file": "chunk-bn3p37gv.js",
+      "name": "dC",
+      "start": 108174,
+      "end": 108268,
+      "moduleLength": 117054,
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "sha256": "389384f7d6db039072f348726b6b4c9f13339914da1f048d44005972fe63ccfb",
+      "source": "function dC(){let e=c();return e?e.mainThreadAgentType:n().hookRegistry.mainThreadAgentType()}",
+      "variable": false
+    },
+    {
+      "port": "effortState",
+      "file": "chunk-5rsp1jx3.js",
+      "name": "kd",
+      "start": 11800,
+      "end": 12112,
+      "moduleLength": 26200,
+      "moduleSha256": "97e7e4a284d00040d2c2c7e8bfaf8a9c382301b59dc0a3ec7c9e03d503b38342",
+      "sha256": "99d309bebdbaea4a512319bd99317f9e76a803453d33868a86c7721fb78a72fb",
+      "source": "function kd(e,n){let r=e.sessionEffort??X;switch(r.kind){case\"level\":return r.value;case\"default\":return;case\"inherit\":if(e.settingsEffortTable===void 0)return;if(he(e.settingsEffortTable))return e.settingsEffortTable.default;return ee(e.settingsEffortTable,n??e.mainLoopModelForSession??e.mainLoopModel??El())}}",
+      "variable": false
+    },
+    {
+      "port": "supportsEffort",
+      "file": "chunk-5rsp1jx3.js",
+      "name": "jw",
+      "start": 3886,
+      "end": 4337,
+      "moduleLength": 26200,
+      "moduleSha256": "97e7e4a284d00040d2c2c7e8bfaf8a9c382301b59dc0a3ec7c9e03d503b38342",
+      "sha256": "8a1967dff77bc3c44a44aad5343f37fe3ea12a68718d3185a5eaf81783c210eb",
+      "source": "function jw(e){if(bkn(e))return!1;let n=Dbe(e,\"effort\");if(n!==void 0)return n;let r=Be(e),s=zQe(\"effort\",r);if(s!==void 0)return s;let u=cQn(e,r);if(u!==void 0)return u.length>0;if(r.includes(\"claude-3-\")||r===\"claude-opus-4-0\"||r===\"claude-opus-4-1\"||r===\"claude-sonnet-4-0\"||r===\"claude-sonnet-4-5\"||r===\"claude-haiku-4-5\")return!1;if(a.CLAUDE_CODE_ALWAYS_ENABLE_EFFORT)return!0;if(ny(r,\"effort\",e)||r===\"claude-mythos-5\")return!0;return zF(cc(e))}",
+      "variable": false
+    },
+    {
+      "port": "effortLevel",
+      "file": "chunk-5rsp1jx3.js",
+      "name": "KA",
+      "start": 13423,
+      "end": 13492,
+      "moduleLength": 26200,
+      "moduleSha256": "97e7e4a284d00040d2c2c7e8bfaf8a9c382301b59dc0a3ec7c9e03d503b38342",
+      "sha256": "aca2df62a025bf2e792a8f8b7b4852fa76e24dd14be45f6d06a3f64abd221992",
+      "source": "function KA(e,n,r){let s=jb(e,n,{turnEffort:r})??\"high\";return aF(s)}",
+      "variable": false
+    },
+    {
+      "port": "transcript",
+      "file": "chunk-mphp7acd.js",
+      "name": "Yf",
+      "start": 4194884,
+      "end": 4194966,
+      "moduleLength": 4409957,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "4db6946ed7abc2a14a4f87cdf4b6046d5b8e700f8555662ad061a3a78621ed38",
+      "source": "function Yf(e){if(e===q())return Dc()??au();let n=Vgt();return Ld(n,`${e}.jsonl`)}",
+      "variable": false
+    },
+    {
+      "port": "scratchEnabled",
+      "file": "chunk-6xrs6gmd.js",
+      "name": "Fw",
+      "start": 213537,
+      "end": 213690,
+      "moduleLength": 253011,
+      "moduleSha256": "f9dd0da1e467d32595bc9af036ebe3d18edca89a87e6204bf2519aeb61615e17",
+      "sha256": "4ec62ee052fd97dd72ff5c91a7ba258f5fcaba21d67cd88d60bec1705ca7d8d0",
+      "source": "function Fw(){if(k(\"tengu_scratch\",!1))return!0;{let{isArtifactToolEligible:e}=import.meta.require(\"/$bunfs/root/chunk-fgp2pfm6.js\");return e()}return!1}",
+      "variable": false
+    },
+    {
+      "port": "scratchDirectory",
+      "file": "chunk-6xrs6gmd.js",
+      "name": "NE",
+      "start": 214364,
+      "end": 214566,
+      "moduleLength": 253011,
+      "moduleSha256": "f9dd0da1e467d32595bc9af036ebe3d18edca89a87e6204bf2519aeb61615e17",
+      "sha256": "1fca1266647e48af6fd8f44a510c94cbb8345401c233d9fdd4f6d3f01717fc82",
+      "source": "function NE(e=q()){let n=TG(),r=n.scratchpadDirBySessionId.get(e);if(r!==void 0&&(r===null||!Ut()))return r;let s;try{s=ve(Ak(),e,\"scratchpad\")}catch{s=null}return n.scratchpadDirBySessionId.set(e,s),s}",
+      "variable": false
+    },
+    {
+      "port": "promptId",
+      "file": "chunk-bn3p37gv.js",
+      "name": "NEe",
+      "start": 114080,
+      "end": 114132,
+      "moduleLength": 117054,
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "sha256": "e31ae03226f0f9826cad1ec58479b04cab06e68aca7854c10addfbe6105f4d4c",
+      "source": "function NEe(){return n().requestJournal.promptId()}",
+      "variable": false
+    }
+  ]
+}

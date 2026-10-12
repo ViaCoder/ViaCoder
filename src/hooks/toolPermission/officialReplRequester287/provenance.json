@@ -1,0 +1,91 @@
+{
+  "package": "@anthropic-ai/claude-code@2.1.287",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "modules": [
+    {
+      "file": "chunk-f2cpzzp9.js",
+      "sha256": "ecf059605929abc2d38c30fc6d3b5b0b69ef05c9d344e934443f320a48256dae"
+    }
+  ],
+  "offsetConvention": "UTF16 end-exclusive",
+  "units": [
+    {
+      "file": "chunk-f2cpzzp9.js",
+      "name": "RW.sessionBinding",
+      "start": 159112,
+      "endExclusive": 162412,
+      "sha256": "1decdda563d845a8936686a87bbed54519573adc77741cd256bb9e000fc0cef1",
+      "source": "{surface:\"terminal\",model:()=>this.requireHost().mainLoopModel,messages:()=>this.requireHost().getMessages(),conversation:(v)=>v===void 0?this.requireHost().conversation:v4e.of(v),tools:()=>this.computeTools(),commands:()=>this.snapshot.commands,mcpServers:()=>this.computeMcpClients().map((v)=>v.name),toolContext:(v)=>{let D=this.requireHost();return D.buildToolUseContext(D.getMessages(),[],v,D.mainLoopModel)},savedAgentMessages:(v)=>_4t(v,this.storageV5),requestMessages:(v)=>y4t(v,this.computeTools()),canUseTool:(...v)=>this.requireHost().canUseTool(...v),toast:(v,D,N)=>{if(this.requireHost().stacksToasts){$xe({plugin:kne(v),text:OFe(D),timeoutMs:N??Ljn}),y(\"plugin_function_hooks_toast_stack\"),t(`$.ui.toast: stacked (${yu().length} up)`);return}this.requireHost().addNotification({key:`plugin-toast-${jmt()}`,kind:\"event\",text:B4e(v,D),priority:_Zo,timeoutMs:N??Ljn});let{current:X,queue:Se}=this.store.getState().notifications;t(`$.ui.toast: shown as ${X?.key??\"nothing\"} (${Se.length} queued)`)},status:(v,D)=>{let N=this.requireHost(),X=`plugin-status-${v}`;if(N.removeNotification(X),D!==void 0)N.addNotification({key:X,kind:\"event\",text:B4e(v,D),priority:\"low\",pinned:!0})},addMcpServer:async(v,D)=>{let N=Symbol(v);if(this.pendingMcpServerAdds.set(v,N),await BI(),this.pendingMcpServerAdds.get(v)!==N)return;this.pendingMcpServerAdds.delete(v),this.updateDynamicMcpConfig((X)=>({...X??{},[v]:D}))},resolveMcpServer:(v)=>h4t({...v,storageV5:this.storageV5,credentials:this.credentials,dynamicServers:this.dynamicMcp??{}}),settledMcpServer:(v)=>SPr({rows:()=>this.store.getState().mcp.clients,subscribe:(D)=>this.store.subscribe(D)},v),connectMcpServer:async(v,D)=>{let N=Symbol(v);if(this.pendingMcpServerAdds.set(v,N),await BI(),this.pendingMcpServerAdds.get(v)!==N)return b7(\"failed\",`The MCP server \"${v}\" left the session before it connected.`);return this.pendingMcpServerAdds.delete(v),AZo({rows:()=>this.store.getState().mcp.clients,subscribe:(X)=>this.store.subscribe(X),add:(X,Se)=>this.updateDynamicMcpConfig((_e)=>({..._e??{},[X]:Se})),drop:(X)=>this.updateDynamicMcpConfig((Se)=>di(Se??{},(_e,Pe)=>Pe===X)),holds:(X)=>Object.hasOwn(this.dynamicMcp??{},X),forget:(X,Se)=>Kxe(X,Se,this.storageV5)},v,D)},removeMcpServer:async(v)=>{this.pendingMcpServerAdds.delete(v),this.updateDynamicMcpConfig((D)=>di(D??{},(N,X)=>X===v))},refreshCommands:()=>void this.rereadCommands(),refreshAgents:()=>this.rereadAgents(),refreshContext:h.refreshContext,compact:(v)=>this.requireHost().compact(v),contextData:async(v)=>{let D=pr();if(D){if(!sC(\"controlChannel\"))throw Error(\"the context breakdown isn't available over this remote connection\");let Se=await ORn(D,{detail:v.detail});if(!Se)throw Error(\"the remote sent a context breakdown this version can't read\");return Se}let N=this.requireHost(),X=N.buildToolUseContext(N.getMessages(),[],new AbortController,N.mainLoopModel);return cte({session:X.session,messages:X.messages,getAppState:()=>this.store.getState(),getMcp:X.getMcp,storageV5:this.storageV5,credentials:this.credentials,options:X.options,...v})},composer:{read:()=>this.requireHost().readDraft(),write:(v,D,N)=>this.requireHost().fillDraft(v,D,N),propose:(v,D)=>this.requireHost().suggestDraft(v,D)},transcript:{reveal:(v,D)=>this.requireHost().revealInTranscript(v,D)}}"
+    },
+    {
+      "file": "chunk-f2cpzzp9.js",
+      "name": "RW.bindHost",
+      "start": 162489,
+      "endExclusive": 162513,
+      "sha256": "f47c607348a801c3a281a0bb367aedcb0a96e0ecc7d084a428c43a08082c57e4",
+      "source": "bindHost(h){this.host=h}"
+    },
+    {
+      "file": "chunk-f2cpzzp9.js",
+      "name": "RW.requireHost",
+      "start": 162513,
+      "endExclusive": 162633,
+      "sha256": "7f23bd62ed213adb83f1f312fa153dd68a944e12ccde25661d38f536af15c04b",
+      "source": "requireHost(){if(this.host===null)throw Error(\"ReplSessionScope: used before its screen bound a host\");return this.host}"
+    },
+    {
+      "file": "chunk-f2cpzzp9.js",
+      "name": "RW.connect",
+      "start": 162633,
+      "endExclusive": 163194,
+      "sha256": "3a3e193bf4fbcffa2d656a3a2d49f8962ca8e9140062e251e1b21f677501b824",
+      "source": "connect(){if(this.connected||this.disposed)return;if(this.connected=!0,JNr(this.sessionBinding),pce.set(this.sessionPlugins),Qxn(),vIr(YYt),this.stops.push(this.store.subscribe(this.refreshOnStoreInputs),this.workerCommands.subscribe(this.refresh),MVn(this.refresh),j0(this.refreshOnNextMicrotask),Xxo(this.refreshOnNextMicrotask)),!this.isThinClient){if(this.stops.push(AX.subscribe(this.reloadCommandsAndAgents),xp(this.refilterCommands),Ki.subscribe(this.refilterCommands),j0(this.refilterCommandsOnPolicyVerdict)),cZo())this.rereadCommands()}this.refresh()}"
+    },
+    {
+      "file": "chunk-f2cpzzp9.js",
+      "name": "RW.dispose",
+      "start": 163194,
+      "endExclusive": 163383,
+      "sha256": "7f26c798fe447f8068c090fed865d450a9ade05ce92ad3eaa8fc7a35a1082550",
+      "source": "dispose(){if(this.disposed)return;if(this.disposed=!0,this.connected=!1,ZNr(this.sessionBinding),pce.get()===this.sessionPlugins)pce.set(void 0);EIr();for(let h of this.stops.splice(0))h()}"
+    },
+    {
+      "file": "chunk-f2cpzzp9.js",
+      "name": "Vve.refreshContextProducer",
+      "start": 1569854,
+      "endExclusive": 1569898,
+      "sha256": "a57d20c0e7e0ed5b06e376cdc25d25cc4b54d0ba8471ce4ee65691c86ba92515",
+      "source": "refreshContext:()=>ZT(Xo,\"hooks_invalidate\")"
+    }
+  ],
+  "ports": [
+    "v4e",
+    "_4t",
+    "y4t",
+    "$xe",
+    "kne",
+    "OFe",
+    "Ljn",
+    "y",
+    "t",
+    "B4e",
+    "_Zo",
+    "jmt",
+    "yu",
+    "BI",
+    "h4t",
+    "SPr",
+    "AZo",
+    "di",
+    "Kxe",
+    "b7",
+    "pr",
+    "sC",
+    "ORn",
+    "cte"
+  ],
+  "adaptations": {
+    "constructor": "Borrow actual mounted REPL readers; do not instantiate RW secondary tool/dialog/Memory/cache fields.",
+    "connectDispose": "Only original requester bind/release axis; RW plugin/toolpool reload subscriptions NOT claimed implemented."
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "version": "2.1.287",
+  "platform": "darwin-arm64",
+  "module": "chunk-j0381q8k.js",
+  "moduleSha256": "887177b815dd0cd1d4d91f9ba6f45c7d571f0e3e5851187904ec96311642b89d",
+  "rangeConvention": "UTF-16 end-exclusive",
+  "method": {
+    "start": 32849,
+    "end": 37426,
+    "sha256": "00e0ba89ab9579ff63868428a4278217c63b933c7b03f5cff6dcb8966bcf0c8a"
+  },
+  "block": {
+    "start": 33119,
+    "end": 34498,
+    "sha256": "53bea9c0ff713f7d3829034273286f8875ee83f60720a45cc8eda4f5890c72bf",
+    "text": "{if(!this.canUseTool)throw Error(\"canUseTool callback is not provided.\");let n=e.request.computer_folder,r=await this.canUseTool(e.request.tool_name,e.request.input,{signal:s,suggestions:e.request.permission_suggestions,blockedPath:e.request.blocked_path,...e.request.mcp_server&&{mcpServer:{name:e.request.mcp_server.name,source:e.request.mcp_server.source}},decisionReason:e.request.decision_reason,title:e.request.title,displayName:e.request.display_name,description:e.request.description,defaultToNo:e.request.default_to_no,suppressAlwaysAllowRule:e.request.suppress_always_allow_rule,toolUseID:e.request.tool_use_id,agentID:e.request.agent_id,requestId:e.request_id,...typeof e.request.requires_user_interaction===\"boolean\"&&{requiresUserInteraction:e.request.requires_user_interaction},...typeof e.request.server_prompt===\"string\"&&{serverPrompt:e.request.server_prompt},...typeof n===\"object\"&&n!==null&&\"path\"in n&&typeof n.path===\"string\"&&\"computer_name\"in n&&typeof n.computer_name===\"string\"&&{computerFolder:{path:n.path,computer_name:n.computer_name}},...e.request.matched_ask_rule&&{matchedAskRule:{source:e.request.matched_ask_rule.source,toolName:e.request.matched_ask_rule.tool_name,...e.request.matched_ask_rule.rule_content!==void 0&&{ruleContent:e.request.matched_ask_rule.rule_content}}}});if(r===null)return ie;return{...r,toolUseID:e.request.tool_use_id}}"
+  },
+  "ignore": {
+    "start": 32882,
+    "end": 33081,
+    "sha256": "13231db2598e6581b322cb877fee6e5537e21891e871eeeed4bee87465a91d0e",
+    "text": "if(Eae.some((n)=>n===e.request.subtype))return t(`[Query.processControlRequest] ${e.request.subtype} ${e.request_id} is for the machine serving this session's tools \\u2014 leaving it unanswered`),ie;"
+  },
+  "oauth": {
+    "start": 35987,
+    "end": 36217,
+    "sha256": "33fd3d4277843f96e405c984904b053f6bea3127d1cf0d98869ae843766e10f4",
+    "text": "{if(!this.getOAuthToken)throw Error(\"getOAuthToken callback is not provided.\");let n,r=await this.getOAuthToken({signal:s,onDecline:(a)=>{if(OKo(a))n=a}})??null;return r===null&&n!==void 0?{accessToken:r,reason:n}:{accessToken:r}}"
+  },
+  "secret": {
+    "start": 36518,
+    "end": 36805,
+    "sha256": "2c3988c44dd578e6bfe3c8be60e3dcca6929ad593ec8727634be94adb1698c96",
+    "text": "{let n=this.workSecretAnswerer;if(!n)throw Error(\"refreshWorkSecret callback is not provided.\");if(!Kt(n.sessionId,e.request.session_id))throw Error(\"remote_control_work_secret names a session this host did not attach.\");return{work_secret:await n.refresh(n.sessionId,{signal:s})||null}}"
+  },
+  "dependencies": [
+    {
+      "module": "chunk-ta5mva11.js",
+      "moduleSha256": "f3b2446f0f3b7b5fb5059d4ff0b8961381691527ec8432e33c5857b58ffb8d88",
+      "name": "Eae",
+      "kind": "var",
+      "declarationListFlags": 524288,
+      "start": 619,
+      "end": 713,
+      "sha256": "ad540af8ac2c5dd5aba12e5f30a65aaa6c8871850414524df3b852ae298e6ad7",
+      "text": "Eae=[\"remote_tool_call\",\"remote_plumbing_call\",\"remote_tools_probe\",\"remote_tools_reannounce\"]"
+    },
+    {
+      "module": "chunk-0p2fqac8.js",
+      "moduleSha256": "ddcccc2df45f8403ae739e997aa058ccf9737d01b38b69d270ee2d9f559e1748",
+      "name": "Gtn",
+      "kind": "function",
+      "start": 661,
+      "end": 719,
+      "sha256": "ee3154622f47858032d7f1cc41163da5eea59d92ce1fed466fa31e81d65e5e11",
+      "text": "function Gtn(e){return\"method\"in e&&\"id\"in e&&e.id!==null}"
+    },
+    {
+      "module": "chunk-xep95vq1.js",
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "name": "Eo",
+      "kind": "var",
+      "declarationListFlags": 524288,
+      "start": 400778,
+      "end": 400843,
+      "sha256": "23db0211c371352b385a911586f049571277e26635f14ef75094fc3863dcb0bb",
+      "text": "Eo=[\"signed_out\",\"identity_changed\",\"transient\",\"refresh_failed\"]"
+    },
+    {
+      "module": "chunk-xep95vq1.js",
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "name": "OKo",
+      "kind": "function",
+      "start": 400844,
+      "end": 400887,
+      "sha256": "fe6a2d20ce94c7d2ac3e7ee008c39abeaf2fc9b64e3e26fdfca9fe8d0711ce5d",
+      "text": "function OKo(e){return Eo.some((s)=>s===e)}"
+    },
+    {
+      "module": "chunk-j0381q8k.js",
+      "moduleSha256": "887177b815dd0cd1d4d91f9ba6f45c7d571f0e3e5851187904ec96311642b89d",
+      "name": "Kt",
+      "kind": "function",
+      "start": 59047,
+      "end": 59176,
+      "sha256": "a68a0ae6ea82fb22697714ad12199a2d9902cda7e775958a42969655143d1c39",
+      "text": "function Kt(e,s){if(e===s)return!0;let n=e.slice(e.lastIndexOf(\"_\")+1),r=s.slice(s.lastIndexOf(\"_\")+1);return n.length>=4&&n===r}"
+    }
+  ],
+  "schema": {
+    "module": "chunk-xep95vq1.js",
+    "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+    "start": 437471,
+    "end": 442575,
+    "sha256": "dad131f831974ef7a740608e239b2bcec2391d56e588ddd676f8c4d717c11f32",
+    "text": "Ao=f(()=>u({subtype:x(\"can_use_tool\"),tool_name:o(),mcp_server:Be().optional(),input:de(o(),se()),permission_suggestions:T(jt()).optional(),blocked_path:o().optional(),decision_reason:o().optional().describe(`Human-readable reason the ask escalated, for the consent line of the host's dialog. For decision_reason_type \"subcommandResults\" (compound bash), this is the NESTED safety check's warning text \\u2014 the wrapper itself has no text \\u2014 preferring a check that requires manual approval (classifier_approvable false); treat it with the same display/policy care as a \"safetyCheck\" reason. May carry ANSI escapes; sanitize before rendering.`),decision_reason_type:B(K8r).optional().describe(`Structured discriminator for why auto-mode escalated. Lets SDK hosts make policy (e.g. auto-deny safetyCheck) without parsing decision_reason text. For compound bash commands this is \"subcommandResults\" even when a safetyCheck is nested inside \\u2014 check classifier_approvable for that case, and see decision_reason: for this variant it carries the nested safety check's warning text.`),decision_reason_code:B(FCn).optional().describe(\"@internal A closed-set code for a reason a host can act on, beside decision_reason_type (whose values are unchanged, so type-keyed host policy decides as before): 'outside_reads_blocked', 'memory_paused', 'classifier_transcript_too_long'. Absent for every other reason; new values are additive.\"),classifier_approvable:H().optional().describe(\"Set when a safetyCheck is present anywhere in the decision reason (including nested inside subcommandResults for compound bash). false = at least one safety check requires manual approval (e.g. Windows path bypass, dangerous rm); true = all safety checks MAY be classifier-approved (e.g. sensitive-file paths). Absent when no safetyCheck is involved.\"),suppress_always_allow_rule:H().optional().describe(`True when the dialog must not offer the persistent \"don't ask again\" row for this ask: accepting it would write a whole-tool allow rule broader than the ask's own verb (PermissionAskDecision.suppressAlwaysAllowRule). Hosts rendering approve options should omit any persistent-rule affordance when set.`),default_to_no:H().optional().describe(\"True when the ask must not be approvable by a single stray keystroke (PermissionAskDecision.defaultToNo): a terminal-style prompt opens on its decline option and takes no digit shortcut. Hosts rendering approve options should not pre-select approve when set.\"),matched_ask_rule:u({source:o(),tool_name:o(),rule_content:o().optional()}).optional().describe(\"Set when a user-configured ask RULE (permissions.ask) forced this prompt but the ask carries the tool's own decision_reason \\u2014 the ask-rule substitution keeps the richer tool-minted ask, so the rule rides here instead of decision_reason_type 'rule'. Hosts making policy on decision_reason_type (e.g. auto-deny safetyCheck) or running host-side auto-approval should treat asks carrying this field as rule-forced: the user's stated intent is a human prompt. Values are producer-authored but render-unsafe like decision_reason; sanitize before display.\"),title:o().optional(),display_name:o().optional(),tool_use_id:o(),agent_id:o().optional(),description:o().optional(),requires_user_interaction:H().optional().describe(\"True when one-tap Approve/Deny must not be offered: the tool's approval card IS the user-interaction surface (Tool.requiresUserInteraction() \\u2014 the user responds on the card itself), OR the pending ask is localDisplayOnly (its consent disclosure cannot ride this wire and only the local dialog renders it). Either way the user has to open the session to answer.\"),server_prompt:o().optional().describe(\"@internal A marker the session service puts on an ask it worded itself, naming which of its prompts this is (an open set). Nothing on this frame proves who wrote it: the marker is the service's word only on a stream served by the service, which removes the key from anything a session's own container wrote; anywhere else it is a claim. A host keeps showing the tool name and input whatever it says.\"),computer_folder:u({path:o(),computer_name:o()}).optional().describe(\"@internal Beside server_prompt, and as trustworthy as it is: a folder on one of the person's computers and that computer's name. Untrusted text; escape before display.\"),tool_kind:B([\"browser\"]).optional().describe(\"@internal Structured tool category so SDK hosts can route to a specialized permission UI without name-matching tool_name. 'browser' = a Claude-in-Chrome MCP tool under any of its registered server names: the mcp__claude-in-chrome__* extension server, the mcp__Claude_in_Chrome__* Cowork desktop server, the Claude Desktop pane under mcp__Claude_Preview__* / mcp__Claude_Browser__* (both pane names are live during its rename rollout), or the mcp__remote-devices__* spellings bridged through Claude Code Remote (the bridged forms of the current names; the retiring Claude_Preview name has no bridged form). Open for future kinds.\")}).describe(\"Requests permission to use a tool with the given input.\"))"
+  },
+  "schemaTypes": [
+    {
+      "name": "ct",
+      "module": "chunk-xep95vq1.js",
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "start": 188445,
+      "end": 188527,
+      "sha256": "b2c30fda36e10c47fc4f6062b2ec0a7de1bd540c0831599e1a48e3a80cef97d7",
+      "text": "ct=f(()=>B([\"userSettings\",\"projectSettings\",\"localSettings\",\"session\",\"cliArg\"]))"
+    },
+    {
+      "name": "Xn",
+      "module": "chunk-xep95vq1.js",
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "start": 188528,
+      "end": 188563,
+      "sha256": "00197518a81ee471b3025a2eed528aa345fbb3fab7f14407ca9db140201e9880",
+      "text": "Xn=f(()=>B([\"allow\",\"deny\",\"ask\"]))"
+    },
+    {
+      "name": "Qn",
+      "module": "chunk-xep95vq1.js",
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "start": 188608,
+      "end": 188662,
+      "sha256": "38a7f5a332f4110ee7de4be7c642f3e01affa762f43b8153fffe08d3b2e9ebf9",
+      "text": "Qn=f(()=>u({toolName:o(),ruleContent:o().optional()}))"
+    },
+    {
+      "name": "jt",
+      "module": "chunk-xep95vq1.js",
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "start": 188663,
+      "end": 189092,
+      "sha256": "49a2e4d260d0511660b210d6ea8e7662605f33edd2d8685e030e7946d5735d74",
+      "text": "jt=f(()=>Wo(\"type\",[u({type:x(\"addRules\"),rules:T(Qn()),behavior:Xn(),destination:ct()}),u({type:x(\"replaceRules\"),rules:T(Qn()),behavior:Xn(),destination:ct()}),u({type:x(\"removeRules\"),rules:T(Qn()),behavior:Xn(),destination:ct()}),u({type:x(\"setMode\"),mode:tE(()=>ue()),destination:ct()}),u({type:x(\"addDirectories\"),directories:T(o()),destination:ct()}),u({type:x(\"removeDirectories\"),directories:T(o()),destination:ct()})]))"
+    },
+    {
+      "name": "ue",
+      "module": "chunk-xep95vq1.js",
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "start": 189909,
+      "end": 190471,
+      "sha256": "331dd9c7f46b7039c5926369f1d72b1264ba98caf6f28b455b545c8421e231f9",
+      "text": "ue=f(()=>Gi(Tg,B([\"default\",\"acceptEdits\",\"bypassPermissions\",\"plan\",\"dontAsk\",\"auto\"])).describe(\"Permission mode for controlling how tool executions are handled. 'default' - Standard behavior, prompts for dangerous operations. 'acceptEdits' - Auto-accept file edit operations. 'bypassPermissions' - Bypass all permission checks (requires allowDangerouslySkipPermissions). 'plan' - Planning mode, no actual tool execution. 'dontAsk' - Don't prompt for permissions, deny if not pre-approved. 'auto' - Use a model classifier to approve/deny permission prompts.\"))"
+    },
+    {
+      "name": "Be",
+      "module": "chunk-xep95vq1.js",
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "start": 191016,
+      "end": 192116,
+      "sha256": "c5c928f5e5f45baa6e69d239f6e731f2cf5910b1cefbdcbbc7f925e5b2e2b25e",
+      "text": "Be=f(()=>u({name:o(),source:o().describe(\"sdk | plugin | user | project | local | dynamic | managed | enterprise | claudeai | agent \\u2014 an open set; treat unknown values as an unrecognized configured source, never as sdk.\")}).describe('The MCP server serving this tool, for `mcp__*` tools: `name` is the server\\'s config key (for `source: \"sdk\"`, exactly the name the SDK host registered in `sdkMcpServers` / `mcp_set_servers`; for any other source, the key as authored in that configuration \\u2014 untrusted text, the same value `mcp_status` and system/init report, to be escaped before display), `source` is where its definition came from \\u2014 `sdk` (an in-process server the SDK host runs; only the host can register one, so a configured server of the same name never reads `sdk`), `plugin` (a server a plugin ships or registers at runtime), or a config scope (`user`, `project`, `local`, `dynamic` for --mcp-config / `mcp_set_servers` process servers, `managed`, `enterprise`, `claudeai`, `agent`). Key trust on `source`, not on the name or the tool-name prefix. Absent for non-MCP tools.'))"
+    },
+    {
+      "name": "Ao",
+      "module": "chunk-xep95vq1.js",
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "start": 437471,
+      "end": 442575,
+      "sha256": "dad131f831974ef7a740608e239b2bcec2391d56e588ddd676f8c4d717c11f32",
+      "text": "Ao=f(()=>u({subtype:x(\"can_use_tool\"),tool_name:o(),mcp_server:Be().optional(),input:de(o(),se()),permission_suggestions:T(jt()).optional(),blocked_path:o().optional(),decision_reason:o().optional().describe(`Human-readable reason the ask escalated, for the consent line of the host's dialog. For decision_reason_type \"subcommandResults\" (compound bash), this is the NESTED safety check's warning text \\u2014 the wrapper itself has no text \\u2014 preferring a check that requires manual approval (classifier_approvable false); treat it with the same display/policy care as a \"safetyCheck\" reason. May carry ANSI escapes; sanitize before rendering.`),decision_reason_type:B(K8r).optional().describe(`Structured discriminator for why auto-mode escalated. Lets SDK hosts make policy (e.g. auto-deny safetyCheck) without parsing decision_reason text. For compound bash commands this is \"subcommandResults\" even when a safetyCheck is nested inside \\u2014 check classifier_approvable for that case, and see decision_reason: for this variant it carries the nested safety check's warning text.`),decision_reason_code:B(FCn).optional().describe(\"@internal A closed-set code for a reason a host can act on, beside decision_reason_type (whose values are unchanged, so type-keyed host policy decides as before): 'outside_reads_blocked', 'memory_paused', 'classifier_transcript_too_long'. Absent for every other reason; new values are additive.\"),classifier_approvable:H().optional().describe(\"Set when a safetyCheck is present anywhere in the decision reason (including nested inside subcommandResults for compound bash). false = at least one safety check requires manual approval (e.g. Windows path bypass, dangerous rm); true = all safety checks MAY be classifier-approved (e.g. sensitive-file paths). Absent when no safetyCheck is involved.\"),suppress_always_allow_rule:H().optional().describe(`True when the dialog must not offer the persistent \"don't ask again\" row for this ask: accepting it would write a whole-tool allow rule broader than the ask's own verb (PermissionAskDecision.suppressAlwaysAllowRule). Hosts rendering approve options should omit any persistent-rule affordance when set.`),default_to_no:H().optional().describe(\"True when the ask must not be approvable by a single stray keystroke (PermissionAskDecision.defaultToNo): a terminal-style prompt opens on its decline option and takes no digit shortcut. Hosts rendering approve options should not pre-select approve when set.\"),matched_ask_rule:u({source:o(),tool_name:o(),rule_content:o().optional()}).optional().describe(\"Set when a user-configured ask RULE (permissions.ask) forced this prompt but the ask carries the tool's own decision_reason \\u2014 the ask-rule substitution keeps the richer tool-minted ask, so the rule rides here instead of decision_reason_type 'rule'. Hosts making policy on decision_reason_type (e.g. auto-deny safetyCheck) or running host-side auto-approval should treat asks carrying this field as rule-forced: the user's stated intent is a human prompt. Values are producer-authored but render-unsafe like decision_reason; sanitize before display.\"),title:o().optional(),display_name:o().optional(),tool_use_id:o(),agent_id:o().optional(),description:o().optional(),requires_user_interaction:H().optional().describe(\"True when one-tap Approve/Deny must not be offered: the tool's approval card IS the user-interaction surface (Tool.requiresUserInteraction() \\u2014 the user responds on the card itself), OR the pending ask is localDisplayOnly (its consent disclosure cannot ride this wire and only the local dialog renders it). Either way the user has to open the session to answer.\"),server_prompt:o().optional().describe(\"@internal A marker the session service puts on an ask it worded itself, naming which of its prompts this is (an open set). Nothing on this frame proves who wrote it: the marker is the service's word only on a stream served by the service, which removes the key from anything a session's own container wrote; anywhere else it is a claim. A host keeps showing the tool name and input whatever it says.\"),computer_folder:u({path:o(),computer_name:o()}).optional().describe(\"@internal Beside server_prompt, and as trustworthy as it is: a folder on one of the person's computers and that computer's name. Untrusted text; escape before display.\"),tool_kind:B([\"browser\"]).optional().describe(\"@internal Structured tool category so SDK hosts can route to a specialized permission UI without name-matching tool_name. 'browser' = a Claude-in-Chrome MCP tool under any of its registered server names: the mcp__claude-in-chrome__* extension server, the mcp__Claude_in_Chrome__* Cowork desktop server, the Claude Desktop pane under mcp__Claude_Preview__* / mcp__Claude_Browser__* (both pane names are live during its rename rollout), or the mcp__remote-devices__* spellings bridged through Claude Code Remote (the bridged forms of the current names; the retiring Claude_Preview name has no bridged form). Open for future kinds.\")}).describe(\"Requests permission to use a tool with the given input.\"))"
+    },
+    {
+      "name": "K8r",
+      "module": "chunk-hrhfcbdv.js",
+      "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+      "start": 4914,
+      "end": 5062,
+      "sha256": "fb7a51627a5a2c7aeb7ab57d3870fca0fe4914556301d0ac438506207a703ae7",
+      "text": "K8r=[\"rule\",\"mode\",\"subcommandResults\",\"permissionPromptTool\",\"hook\",\"asyncAgent\",\"sandboxOverride\",\"workingDir\",\"safetyCheck\",\"classifier\",\"other\"]"
+    },
+    {
+      "name": "FCn",
+      "module": "chunk-hrhfcbdv.js",
+      "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+      "start": 8111,
+      "end": 8189,
+      "sha256": "f22560a92de90d2c8513b92557f13ab5bf56ab5c03adb8d68148e796e7ea15b8",
+      "text": "FCn=[\"classifier_transcript_too_long\",\"outside_reads_blocked\",\"memory_paused\"]"
+    }
+  ],
+  "lazyConstructor": {
+    "module": "chunk-aybmj3t4.js",
+    "moduleSha256": "bf0b9819eea4ab1b4e8a70ffb924d5f5a1a62c148ea2ebf839429258515b91aa",
+    "start": 89951,
+    "end": 90004,
+    "sha256": "c4d4f74a992db701e7133ba488b1f94f4a3d1bbb100ccd4a17a5bf648019f233",
+    "text": "function tE(e){return new ic({type:\"lazy\",getter:e})}"
+  },
+  "adaptation": "Whole original incoming method and its hook/MCP helpers verbatim; existing QueryRuntime owns callbacks, pending MCP responses and no-response sentinel. Debug and the existing telemetry-disabled C sink are supplied as lexical ports; no additional callback/cache/token/execution owner.",
+  "incomingMethod": {
+    "start": 32849,
+    "end": 37426,
+    "sha256": "00e0ba89ab9579ff63868428a4278217c63b933c7b03f5cff6dcb8966bcf0c8a",
+    "text": "async processControlRequest(e,s){if(Eae.some((n)=>n===e.request.subtype))return t(`[Query.processControlRequest] ${e.request.subtype} ${e.request_id} is for the machine serving this session's tools \\u2014 leaving it unanswered`),ie;if(e.request.subtype===\"can_use_tool\"){if(!this.canUseTool)throw Error(\"canUseTool callback is not provided.\");let n=e.request.computer_folder,r=await this.canUseTool(e.request.tool_name,e.request.input,{signal:s,suggestions:e.request.permission_suggestions,blockedPath:e.request.blocked_path,...e.request.mcp_server&&{mcpServer:{name:e.request.mcp_server.name,source:e.request.mcp_server.source}},decisionReason:e.request.decision_reason,title:e.request.title,displayName:e.request.display_name,description:e.request.description,defaultToNo:e.request.default_to_no,suppressAlwaysAllowRule:e.request.suppress_always_allow_rule,toolUseID:e.request.tool_use_id,agentID:e.request.agent_id,requestId:e.request_id,...typeof e.request.requires_user_interaction===\"boolean\"&&{requiresUserInteraction:e.request.requires_user_interaction},...typeof e.request.server_prompt===\"string\"&&{serverPrompt:e.request.server_prompt},...typeof n===\"object\"&&n!==null&&\"path\"in n&&typeof n.path===\"string\"&&\"computer_name\"in n&&typeof n.computer_name===\"string\"&&{computerFolder:{path:n.path,computer_name:n.computer_name}},...e.request.matched_ask_rule&&{matchedAskRule:{source:e.request.matched_ask_rule.source,toolName:e.request.matched_ask_rule.tool_name,...e.request.matched_ask_rule.rule_content!==void 0&&{ruleContent:e.request.matched_ask_rule.rule_content}}}});if(r===null)return ie;return{...r,toolUseID:e.request.tool_use_id}}else if(e.request.subtype===\"hook_callback\")return await this.handleHookCallbacks(e.request.callback_id,e.request.input,e.request.tool_use_id,s);else if(e.request.subtype===\"mcp_message\"){let n=e.request,r=this.sdkMcpServers.get(n.server_name)?.transport;if(!r)throw Error(`SDK MCP server not found: ${n.server_name}`);if(Gtn(n.message))return{mcp_response:await this.handleMcpControlRequest(n.server_name,n,r)};else{if(r.onmessage)r.onmessage(n.message);return{mcp_response:{jsonrpc:\"2.0\",result:{},id:0}}}}else if(e.request.subtype===\"elicitation\"){let n=e.request;if(this.onElicitation){let r=await this.onElicitation({serverName:n.mcp_server_name,message:n.message,mode:n.mode,url:n.url,elicitationId:n.elicitation_id,requestedSchema:n.requested_schema,title:n.title,displayName:n.display_name,description:n.description},{signal:s,requestId:e.request_id});if(r===null)return ie;return r}return{action:\"decline\"}}else if(e.request.subtype===\"request_user_dialog\"){if(this.onUserDialog){let n=await this.onUserDialog({dialogKind:e.request.dialog_kind,payload:e.request.payload,toolUseID:e.request.tool_use_id},{signal:s,requestId:e.request_id});if(n===null)return ie;return n}return t(`[Query] No onUserDialog handler for request_user_dialog (kind=${e.request.dialog_kind}) \\u2014 staying silent so a capable client (or the worker's park deadline) settles it`),i(\"tengu_request_user_dialog_response_ignored\",{shape:c(\"auto_cancel\")}),ie}else if(e.request.subtype===\"oauth_token_refresh\"){if(!this.getOAuthToken)throw Error(\"getOAuthToken callback is not provided.\");let n,r=await this.getOAuthToken({signal:s,onDecline:(a)=>{if(OKo(a))n=a}})??null;return r===null&&n!==void 0?{accessToken:r,reason:n}:{accessToken:r}}else if(e.request.subtype===\"host_auth_token_refresh\"){if(!this.getHostAuthToken)throw Error(\"getHostAuthToken callback is not provided.\");let n=await this.getHostAuthToken({signal:s})??null;return typeof n===\"string\"||n===null?{authToken:n}:n}else if(e.request.subtype===\"remote_control_work_secret\"){let n=this.workSecretAnswerer;if(!n)throw Error(\"refreshWorkSecret callback is not provided.\");if(!Kt(n.sessionId,e.request.session_id))throw Error(\"remote_control_work_secret names a session this host did not attach.\");return{work_secret:await n.refresh(n.sessionId,{signal:s})||null}}if(e.request.subtype===\"ui_copy\"&&this.uiHost?.copy){let{subtype:n,...r}=e.request;return this.uiHost.copy(r,{signal:s})}if(e.request.subtype===\"ui_prompt_read\"&&this.uiHost?.promptRead){let{subtype:n,...r}=e.request;return this.uiHost.promptRead(r,{signal:s})}if(e.request.subtype===\"ui_prompt_fill\"&&this.uiHost?.promptFill){let{subtype:n,...r}=e.request;return this.uiHost.promptFill(r,{signal:s})}if(e.request.subtype===\"ui_prompt_suggest\"&&this.uiHost?.promptSuggest){let{subtype:n,...r}=e.request;return this.uiHost.promptSuggest(r,{signal:s})}throw Error(\"Unsupported control request subtype: \"+e.request.subtype)}"
+  },
+  "helperMethods": {
+    "handleControlRequest": {
+      "start": 31673,
+      "end": 32713,
+      "sha256": "38cec81a1cb952d523d1fff57e7a7f545362685158468fbe26f6ff922cc3cf93",
+      "text": "async handleControlRequest(e){if(this.cleanupPerformed){t(`[Query.handleControlRequest] Request ${e.request_id} (${e.request.subtype}) arrived after close \\u2014 skipping`);return}if(this.cancelControllers.has(e.request_id)){t(`[Query.handleControlRequest] Duplicate delivery of in-flight request ${e.request_id} (${e.request.subtype}) \\u2014 skipping`);return}let s=new AbortController;this.cancelControllers.set(e.request_id,s);try{let n;try{let r=await this.processControlRequest(e,s.signal);if(this.cleanupPerformed)return;if(r===ie)return;let a={type:\"control_response\",response:{subtype:\"success\",request_id:e.request_id,response:r}};n=_(a)+`\n`}catch(r){if(this.cleanupPerformed)return;let a={type:\"control_response\",response:{subtype:\"error\",request_id:e.request_id,error:l(r)}};n=_(a)+`\n`}try{await Promise.resolve(this.transport.write(n))}catch(r){t(`[Query.handleControlRequest] Response write failed: ${l(r)}`,{level:\"error\"})}}finally{if(this.cancelControllers.get(e.request_id)===s)this.cancelControllers.delete(e.request_id)}}"
+    },
+    "handleHookCallbacks": {
+      "start": 57120,
+      "end": 57263,
+      "sha256": "d7fb8aa9d57a67a47fcd0ce651485581efff9047af41c437a80aa790ac2ff20d",
+      "text": "handleHookCallbacks(e,s,n,r){let a=this.hookCallbacks.get(e);if(!a)throw Error(`No hook callback found for ID: ${e}`);return a(s,n,{signal:r})}"
+    },
+    "handleMcpControlRequest": {
+      "start": 58630,
+      "end": 58978,
+      "sha256": "df8658f53151ea2d6ba6a8917336f90765f1211e4cd525c6cff15a9ec01999ed",
+      "text": "handleMcpControlRequest(e,s,n){let r=\"id\"in s.message?s.message.id:null,a=`${e}:${r}`;return new Promise((d,m)=>{let g=()=>{this.pendingMcpResponses.delete(a)},h=(S)=>{g(),d(S)},b=(S)=>{g(),m(S)};if(this.pendingMcpResponses.set(a,{resolve:h,reject:b}),n.onmessage)n.onmessage(s.message);else{g(),m(Error(\"No message handler registered\"));return}})}"
+    }
+  }
+}

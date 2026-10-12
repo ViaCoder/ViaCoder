@@ -1,0 +1,43 @@
+{
+  "version": "2.1.286",
+  "platform": "darwin-arm64",
+  "file": "chunk-2nscfgw9.js",
+  "sha256": "5f2e79dc208fa1829ae1b7e8862ea500c7b40b8a9bb26b51b9706852f7f79f92",
+  "parent": "PNt",
+  "declarations": {
+    "state": {
+      "start": 2066458,
+      "end": 2066465,
+      "source": "nH=null",
+      "sha256": "da4075c22832e4d7a32fa9360438720f533b51ed1028f39778a61508d538f0f4"
+    },
+    "clear": {
+      "start": 2066466,
+      "end": 2066506,
+      "source": "function oH(){if(nH!==null)nH(),nH=null}",
+      "sha256": "3f164a63d57f1d269cc7d394e998c27b316c40192b3dc8d0fd7229519b42c8a6"
+    },
+    "delay": {
+      "start": 2104905,
+      "end": 2104956,
+      "source": "Ls=rc(process.env.CLAUDE_SLOW_FIRST_BYTE_MS)||30000",
+      "sha256": "39f97be1fb7b5d463700655476c9363d9ef1eb8e1ef38db043023ea4151de0a1"
+    },
+    "arm": {
+      "start": 2104957,
+      "end": 2105232,
+      "source": "nH=B.setTimeout(()=>{nH=null;let sa=B.monotonicNow()-oy;t(`Slow first byte: no stream chunk ${(sa/1000).toFixed(1)}s after request sent (attempt ${Lu})`,{level:\"warn\"}),i(\"tengu_api_slow_first_byte\",{model:bt(D.model),provider:PA(),attempt:Lu,elapsed_ms:Math.round(sa)})},Ls)",
+      "sha256": "ef28785985b5d794b6b6632b596cf961ef23eaefc54536f2e6e2e7163f09ac9d"
+    }
+  },
+  "bodyRewrites": [],
+  "lifecycle": {
+    "arm": "each actual streaming dispatch after cancelling previous warning",
+    "clear": [
+      "dispatch rejection",
+      "first parsed non-ping event (not response headers)",
+      "catch",
+      "stream resource cleanup"
+    ]
+  }
+}

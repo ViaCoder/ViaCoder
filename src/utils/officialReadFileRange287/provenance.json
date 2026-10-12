@@ -1,0 +1,329 @@
+{
+  "version": "2.1.287",
+  "platform": "darwin-arm64",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "roots": {
+    "readRange": [
+      "chunk-09m4fzsj.js",
+      "Ake"
+    ],
+    "fileTooLarge": [
+      "chunk-09m4fzsj.js",
+      "Tut"
+    ],
+    "selectedTooLarge": [
+      "chunk-09m4fzsj.js",
+      "ZLt"
+    ]
+  },
+  "modules": [
+    {
+      "file": "chunk-k99m10te.js",
+      "rows": [
+        {
+          "file": "chunk-k99m10te.js",
+          "name": "pn",
+          "start": 615,
+          "end": 844,
+          "moduleLength": 857,
+          "moduleSha256": "d7a028aa1d5c254163b7c65e01777ffa71c868f8535fcc265f5207163f928793",
+          "sha256": "22481aa7014e5607bcd059323ce0d0c85a32d5ec7a7b94b4acd497fb68e97e84",
+          "source": "function pn(t){let e=t/1024;if(e<1)return`${t} bytes`;if(e<1024)return`${e.toFixed(1).replace(/\\.0$/,\"\")}KB`;let r=e/1024;if(r<1024)return`${r.toFixed(1).replace(/\\.0$/,\"\")}MB`;return`${(r/1024).toFixed(1).replace(/\\.0$/,\"\")}GB`}",
+          "variable": false,
+          "exportNames": [
+            "pn"
+          ]
+        }
+      ],
+      "bindings": {}
+    },
+    {
+      "file": "chunk-c9me9cp7.js",
+      "rows": [
+        {
+          "file": "chunk-c9me9cp7.js",
+          "name": "Ye",
+          "start": 2908,
+          "end": 2979,
+          "moduleLength": 10331,
+          "moduleSha256": "db81856ee883c31a0be18c305014a0d82d3bd698a459223b9de754b934b084ae",
+          "sha256": "c6063004ac4ba58972524fbc48da370ec336b5fde4c10076f4a44c022ae17524",
+          "source": "class Ye extends Error{constructor(n){super(n);this.name=\"AbortError\"}}",
+          "variable": false,
+          "exportNames": [
+            "Ye"
+          ]
+        },
+        {
+          "file": "chunk-c9me9cp7.js",
+          "name": "Z",
+          "start": 4695,
+          "end": 4754,
+          "moduleLength": 10331,
+          "moduleSha256": "db81856ee883c31a0be18c305014a0d82d3bd698a459223b9de754b934b084ae",
+          "sha256": "bb991efe186bd4b3cf95fb76a2ec5ebb6ab8aaa85fea0d3b6cc9f70a86344b06",
+          "source": "function Z(n){return n instanceof Error?n:Error(String(n))}",
+          "variable": false,
+          "exportNames": [
+            "Z"
+          ]
+        }
+      ],
+      "bindings": {}
+    },
+    {
+      "file": "chunk-09m4fzsj.js",
+      "rows": [
+        {
+          "file": "chunk-09m4fzsj.js",
+          "name": "sW",
+          "start": 383921,
+          "end": 383932,
+          "moduleLength": 950788,
+          "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+          "sha256": "44cd3608829aaa99a7ab3b4338c5a44e91b5beb8164b46aad1a56a8ca553397f",
+          "source": "sW=10485760",
+          "variable": true,
+          "exportNames": [
+            "sW"
+          ]
+        },
+        {
+          "file": "chunk-09m4fzsj.js",
+          "name": "iW",
+          "start": 383933,
+          "end": 383945,
+          "moduleLength": 950788,
+          "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+          "sha256": "5280e0c80aad14a82e1e48af86b53587780281dc0b395b59d5b1a559dd3b2456",
+          "source": "iW=134217728",
+          "variable": true,
+          "exportNames": [
+            "iW"
+          ]
+        },
+        {
+          "file": "chunk-09m4fzsj.js",
+          "name": "Tut",
+          "start": 383946,
+          "end": 384293,
+          "moduleLength": 950788,
+          "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+          "sha256": "4020e7ef44637c73ab284f87cba8156e357079ca2d6d512eedc81205dbc0ef52",
+          "source": "class Tut extends Error{sizeInBytes;maxSizeBytes;constructor(e,n){super(`File content (${pn(e)}) exceeds maximum allowed size (${pn(n)}). Use offset and limit parameters to read specific portions of the file, or search for specific content instead of reading the whole file.`);this.sizeInBytes=e;this.maxSizeBytes=n;this.name=\"FileTooLargeError\"}}",
+          "variable": false,
+          "exportNames": [
+            "Tut"
+          ]
+        },
+        {
+          "file": "chunk-09m4fzsj.js",
+          "name": "ZLt",
+          "start": 384293,
+          "end": 384667,
+          "moduleLength": 950788,
+          "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+          "sha256": "d577dcc31e239ba3f93102d2eacfb4508cd378bdadde851dc37741d8207fb268",
+          "source": "class ZLt extends Error{selectedBytes;maxSelectedBytes;constructor(e,n){super(`The requested line range contains over ${pn(n)} of text, more than a read can return. Use a smaller limit \\u2014 or, if a single line is this large, no limit will fit it: search for specific content instead.`);this.selectedBytes=e;this.maxSelectedBytes=n;this.name=\"SelectedRangeTooLargeError\"}}",
+          "variable": false,
+          "exportNames": [
+            "ZLt"
+          ]
+        },
+        {
+          "file": "chunk-09m4fzsj.js",
+          "name": "Ake",
+          "start": 384667,
+          "end": 385407,
+          "moduleLength": 950788,
+          "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+          "sha256": "6be22d89a3198aeb5df6e060ead8577e8279c2cc3f4c8d24d4ecdc4bad977aae",
+          "source": "async function Ake(e,n=0,r,s,h,g){h?.throwIfAborted();let b=g?.truncateOnByteLimit??!1,w=g?.maxSelectedBytes,R=g?.handle,A=R?g?.handleStats??await R.stat():await rW(e);if(w!==void 0&&A.isFile()&&A.size<=w)w=void 0;if(A.isDirectory())throw Object.assign(Error(`EISDIR: illegal operation on a directory, read '${e}'`),{code:\"EISDIR\",errno:-21,syscall:\"read\",path:e});if(A.isFile()&&A.size<sW){if(!b&&s!==void 0&&A.size>s)throw new Tut(A.size,s);let M=R?await R.readFile({signal:h}):await oW(e,{signal:h});if(!b&&s!==void 0){if(M.length>s)throw new Tut(M.length,s)}let D=M.toString(\"utf8\");return aW(D,A.size,A.mtimeMs,n,r,b?s:void 0,w)}return dW(e,n,r,s,w,A.isFile()?void 0:iW,b,h,R?{handle:R,mtimeMs:A.mtimeMs,positional:A.isFile()}:void 0)}",
+          "variable": false,
+          "exportNames": [
+            "Ake"
+          ]
+        },
+        {
+          "file": "chunk-09m4fzsj.js",
+          "name": "aW",
+          "start": 385407,
+          "end": 386429,
+          "moduleLength": 950788,
+          "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+          "sha256": "e5cef6577131ba5ac0a4a07dae229bdbdb1ad6bf6ca020924f00c96f5948b095",
+          "source": "function aW(e,n,r,s,h,g,b){let w=e.charCodeAt(0)===65279;if(w)n-=3;let R=w?e.slice(1):e;if(s===0&&h===void 0&&g===void 0&&b===void 0){let ce=R.includes(\"\\r\")?R.replaceAll(`\\r\n`,`\n`):R;if(ce.endsWith(\"\\r\"))ce=ce.slice(0,-1);let Q=1,fe=ce.indexOf(`\n`);while(fe!==-1)Q++,fe=ce.indexOf(`\n`,fe+1);return{content:ce,lineCount:Q,totalLines:Q,totalBytes:n,readBytes:Buffer.byteLength(ce,\"utf8\"),mtimeMs:r,truncatedByBytes:!1}}let A=h!==void 0?s+h:1/0,M=[],D=0,z=0,j,K=0,X=!1;function J(ce){if(b!==void 0||g!==void 0){let Q=M.length>0?1:0,fe=K+Q+Buffer.byteLength(ce);if(g!==void 0&&fe>g)return X=!0,!1;if(b!==void 0&&fe>b)throw new ZLt(fe,b);K=fe}return M.push(ce),!0}while((j=R.indexOf(`\n`,z))!==-1){if(D>=s&&D<A&&!X){let ce=R.slice(z,j);if(ce.endsWith(\"\\r\"))ce=ce.slice(0,-1);J(ce)}D++,z=j+1}if(D>=s&&D<A&&!X){let ce=R.slice(z);if(ce.endsWith(\"\\r\"))ce=ce.slice(0,-1);J(ce)}D++;let te=M.join(`\n`);return{content:te,lineCount:M.length,totalLines:D,totalBytes:n,readBytes:Buffer.byteLength(te,\"utf8\"),mtimeMs:r,truncatedByBytes:X}}",
+          "variable": false,
+          "exportNames": [
+            "aW"
+          ]
+        },
+        {
+          "file": "chunk-09m4fzsj.js",
+          "name": "lW",
+          "start": 386429,
+          "end": 386492,
+          "moduleLength": 950788,
+          "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+          "sha256": "ee1746d038a68d2062750b01910ae0bcc6c0ad1a538ff93977f24d4692b378aa",
+          "source": "function lW(e){nW(e,(n,r)=>{this.resolveMtime(n?0:r.mtimeMs)})}",
+          "variable": false,
+          "exportNames": [
+            "lW"
+          ]
+        },
+        {
+          "file": "chunk-09m4fzsj.js",
+          "name": "cW",
+          "start": 386492,
+          "end": 386565,
+          "moduleLength": 950788,
+          "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+          "sha256": "cc8fc152eca5f372075fda25cd9a498773e716b068214418dce0eaacb954841d",
+          "source": "function cW(e){let n=this.decoder.write(e);if(n.length>0)BT.call(this,n)}",
+          "variable": false,
+          "exportNames": [
+            "cW"
+          ]
+        },
+        {
+          "file": "chunk-09m4fzsj.js",
+          "name": "BT",
+          "start": 386565,
+          "end": 388339,
+          "moduleLength": 950788,
+          "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+          "sha256": "5d5487ea30d4ff2f8bf16f57366833aa9db3781ce9425ff585d03b6006f51241",
+          "source": "function BT(e){let n=e;if(this.isFirstChunk){if(this.isFirstChunk=!1,n.charCodeAt(0)===65279)n=n.slice(1)}let r=Buffer.byteLength(n);if(this.totalBytesRead+=r,this.hardCapBytes!==void 0&&this.totalBytesRead>this.hardCapBytes){this.stream.destroy(new Tut(this.totalBytesRead,this.hardCapBytes));return}if(!this.truncateOnByteLimit&&this.maxBytes!==void 0&&this.totalBytesRead>this.maxBytes){this.stream.destroy(new Tut(this.totalBytesRead,this.maxBytes));return}let s=this.partial.length>0?this.partial+n:n,h=this.partialBytes+r;this.partial=\"\",this.partialBytes=0;let g=0,b;while((b=s.indexOf(`\n`,g))!==-1){if(this.currentLineIndex>=this.offset&&this.currentLineIndex<this.endLine){let w=s.slice(g,b);if(w.endsWith(\"\\r\"))w=w.slice(0,-1);let R=this.truncateOnByteLimit&&this.maxBytes!==void 0;if(R||this.maxSelectedBytes!==void 0){let A=this.selectedLines.length>0?1:0,M=this.selectedBytes+A+Buffer.byteLength(w);if(R&&M>this.maxBytes)this.truncatedByBytes=!0,this.endLine=this.currentLineIndex;else if(this.maxSelectedBytes!==void 0&&M>this.maxSelectedBytes){this.stream.destroy(new ZLt(M,this.maxSelectedBytes));return}else this.selectedBytes=M,this.selectedLines.push(w)}else this.selectedLines.push(w)}this.currentLineIndex++,g=b+1}if(g<s.length){if(this.currentLineIndex>=this.offset&&this.currentLineIndex<this.endLine){let w=s.slice(g),R=g===0?h:Buffer.byteLength(w),A=this.truncateOnByteLimit&&this.maxBytes!==void 0;if(A||this.maxSelectedBytes!==void 0){let M=this.selectedLines.length>0?1:0,D=this.selectedBytes+M+R;if(A&&D>this.maxBytes){this.truncatedByBytes=!0,this.endLine=this.currentLineIndex;return}if(this.maxSelectedBytes!==void 0&&D>this.maxSelectedBytes){this.stream.destroy(new ZLt(D,this.maxSelectedBytes));return}}this.partial=w,this.partialBytes=R}}}",
+          "variable": false,
+          "exportNames": [
+            "BT"
+          ]
+        },
+        {
+          "file": "chunk-09m4fzsj.js",
+          "name": "uW",
+          "start": 388339,
+          "end": 389114,
+          "moduleLength": 950788,
+          "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+          "sha256": "331902a31e09fad1a9972edd7aaad713ce7e8151e1746b4cf342c488ec36c69c",
+          "source": "function uW(){let e=this.decoder.end();if(e.length>0){if(BT.call(this,e),this.stream.destroyed)return}let n=this.partial;if(n.endsWith(\"\\r\"))n=n.slice(0,-1);if(this.currentLineIndex>=this.offset&&this.currentLineIndex<this.endLine)if(this.truncateOnByteLimit&&this.maxBytes!==void 0){let h=this.selectedLines.length>0?1:0;if(this.selectedBytes+h+Buffer.byteLength(n)>this.maxBytes)this.truncatedByBytes=!0;else this.selectedLines.push(n)}else this.selectedLines.push(n);this.currentLineIndex++;let r=this.selectedLines.join(`\n`),s=this.truncatedByBytes;this.mtimeReady.then((h)=>{this.resolve({content:r,lineCount:this.selectedLines.length,totalLines:this.currentLineIndex,totalBytes:this.totalBytesRead,readBytes:Buffer.byteLength(r,\"utf8\"),mtimeMs:h,truncatedByBytes:s})})}",
+          "variable": false,
+          "exportNames": [
+            "uW"
+          ]
+        },
+        {
+          "file": "chunk-09m4fzsj.js",
+          "name": "dW",
+          "start": 389114,
+          "end": 389782,
+          "moduleLength": 950788,
+          "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+          "sha256": "92b605128603020d3f0c8f7e7ca93768b74deef06b4acb419758fc0e53301b69",
+          "source": "function dW(e,n,r,s,h,g,b,w,R){return new Promise((A,M)=>{let D={stream:R?VMr(R.handle,R.positional,w):tW(e,{highWaterMark:524288,...w?{signal:w}:void 0}),decoder:new ZG(\"utf8\"),offset:n,endLine:r!==void 0?n+r:1/0,maxBytes:s,maxSelectedBytes:h,hardCapBytes:g,truncateOnByteLimit:b,resolve:A,totalBytesRead:0,selectedBytes:0,truncatedByBytes:!1,currentLineIndex:0,selectedLines:[],partial:\"\",partialBytes:0,isFirstChunk:!0,resolveMtime:()=>{},mtimeReady:null};if(D.mtimeReady=new Promise((z)=>{D.resolveMtime=z}),R)D.resolveMtime(R.mtimeMs);else D.stream.once(\"open\",lW.bind(D));D.stream.on(\"data\",fW.bind(D)),D.stream.once(\"end\",pW.bind(D)),D.stream.once(\"error\",M)})}",
+          "variable": false,
+          "exportNames": [
+            "dW"
+          ]
+        },
+        {
+          "file": "chunk-09m4fzsj.js",
+          "name": "$T",
+          "start": 389782,
+          "end": 389876,
+          "moduleLength": 950788,
+          "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+          "sha256": "e26d066523b77974a2a264bd29876cffea89240402b4081983b4fb428dcf166c",
+          "source": "function $T(e){return function(...n){try{e.apply(this,n)}catch(r){this.stream.destroy(Z(r))}}}",
+          "variable": false,
+          "exportNames": [
+            "$T"
+          ]
+        },
+        {
+          "file": "chunk-09m4fzsj.js",
+          "name": "fW",
+          "start": 389880,
+          "end": 389889,
+          "moduleLength": 950788,
+          "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+          "sha256": "97ef12a259ba68a56f3e3950c060e0a6c3ccef8616a4615685797df2121fbdca",
+          "source": "fW=$T(cW)",
+          "variable": true,
+          "exportNames": [
+            "fW"
+          ]
+        },
+        {
+          "file": "chunk-09m4fzsj.js",
+          "name": "pW",
+          "start": 389890,
+          "end": 389899,
+          "moduleLength": 950788,
+          "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+          "sha256": "33b271c43688a148bc8147d256f796fa66613beedd287b05797aa2c1a5b9440a",
+          "source": "pW=$T(uW)",
+          "variable": true,
+          "exportNames": [
+            "pW"
+          ]
+        },
+        {
+          "file": "chunk-09m4fzsj.js",
+          "name": "VMr",
+          "start": 389900,
+          "end": 390393,
+          "moduleLength": 950788,
+          "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+          "sha256": "9afdd2ca9ebfe409ec8d0ae95f153a1db6e2ae1ba7149e8d63a1410cf7313a30",
+          "source": "function VMr(e,n,r){let h=Buffer.allocUnsafe(524288),g=n?0:null,b=!1,w=new eW({read(){if(b)return;b=!0,e.read(h,0,524288,g).then(({bytesRead:R})=>{if(b=!1,w.destroyed)return;if(R===0){w.push(null);return}if(g!==null)g+=R;w.push(Buffer.from(h.subarray(0,R)))}).catch((R)=>{b=!1,w.destroy(Z(R))})}});if(r){let R=()=>{w.destroy(r.reason instanceof Error?r.reason:new Ye)};if(r.aborted)R();else r.addEventListener(\"abort\",R,{once:!0}),w.once(\"close\",()=>r.removeEventListener(\"abort\",R))}return w}",
+          "variable": false,
+          "exportNames": [
+            "VMr"
+          ]
+        }
+      ],
+      "bindings": {
+        "rW": {
+          "builtin": "stat",
+          "builtinModule": "fs/promises"
+        },
+        "pn": {
+          "file": "chunk-k99m10te.js",
+          "name": "pn"
+        },
+        "oW": {
+          "builtin": "readFile",
+          "builtinModule": "fs/promises"
+        },
+        "eW": {
+          "builtin": "Readable",
+          "builtinModule": "stream"
+        },
+        "Z": {
+          "file": "chunk-c9me9cp7.js",
+          "name": "Z"
+        },
+        "Ye": {
+          "file": "chunk-c9me9cp7.js",
+          "name": "Ye"
+        },
+        "tW": {
+          "builtin": "createReadStream",
+          "builtinModule": "fs"
+        },
+        "ZG": {
+          "builtin": "StringDecoder",
+          "builtinModule": "string_decoder"
+        },
+        "nW": {
+          "builtin": "fstat",
+          "builtinModule": "fs"
+        }
+      }
+    }
+  ],
+  "ports": []
+}

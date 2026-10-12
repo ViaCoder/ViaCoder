@@ -1,0 +1,3295 @@
+{
+  "sourceVersion": "2.1.287",
+  "canonicalPlatform": "linux-x64",
+  "offsetUnit": "UTF-16 code units",
+  "bodyRewriting": false,
+  "scope": "complete public profile-cleanup closure, not full logout",
+  "platforms": [
+    {
+      "platform": "linux-x64",
+      "module": {
+        "file": "chunk-6d2kw0hk.js",
+        "moduleSha256": "c887a413df02a6bc4bfd221d1334136e8a06611787f8f62a0694d3868be58f1e",
+        "moduleLength": 14486,
+        "manifestSha256": "ecae5d9ddbf13ef27b6b6a1141953aab4ba311e47dde3ac2a7cc8b5a01c63784",
+        "binarySha256": "3920489a5109cff5786a1a392c25277408ff22bc796d5edb9c16a60e5a1718f0"
+      },
+      "profileGetter": {
+        "module": {
+          "file": "chunk-ex1nk6dh.js",
+          "moduleSha256": "401f0254549188953a04d453fc05a458f69702b60d8209a7ef5ce750f42d0cd8",
+          "moduleLength": 66398,
+          "manifestSha256": "ecae5d9ddbf13ef27b6b6a1141953aab4ba311e47dde3ac2a7cc8b5a01c63784",
+          "binarySha256": "3920489a5109cff5786a1a392c25277408ff22bc796d5edb9c16a60e5a1718f0"
+        },
+        "binding": {
+          "symbol": "ANTHROPIC_PROFILE",
+          "start": 14484,
+          "end": 14508,
+          "source": "ANTHROPIC_PROFILE:()=>bo",
+          "sha256": "475c5444da66ad90625a6e5e2e6999fa3302b1d425250876557b8550a7ed7e4a",
+          "kind": null
+        },
+        "decoder": {
+          "symbol": "bo",
+          "start": 17213,
+          "end": 17223,
+          "source": "bo=H.str()",
+          "sha256": "0dc67fe683bef3dfffebeebed9bd5455b06d8cf7bb0ff906cb642576eff6fa9d",
+          "kind": "var"
+        },
+        "decoderOrigin": {
+          "origin": {
+            "module": "/$bunfs/root/chunk-0atngrzy.js",
+            "file": "chunk-0atngrzy.js",
+            "symbol": "H"
+          },
+          "module": {
+            "file": "chunk-0atngrzy.js",
+            "moduleSha256": "32be495a6edfa86fb55e812c3c59f9f9830c4818b7056fe0936b4c79d4673931",
+            "moduleLength": 1408,
+            "manifestSha256": "ecae5d9ddbf13ef27b6b6a1141953aab4ba311e47dde3ac2a7cc8b5a01c63784",
+            "binarySha256": "3920489a5109cff5786a1a392c25277408ff22bc796d5edb9c16a60e5a1718f0"
+          },
+          "declaration": {
+            "symbol": "H",
+            "start": 1028,
+            "end": 1164,
+            "source": "H={str:()=>f,rawStr:()=>o,bool:()=>s,triBool:()=>l,int:(n)=>n?d(n):m,enum:(n)=>i((e)=>e!==void 0&&n.includes(e.trim())?e.trim():void 0)}",
+            "sha256": "ad434542703a731d85664e4b8afb440779f00c2bed6bb4e3f5ffbb9207cf379c",
+            "kind": "var"
+          }
+        }
+      },
+      "logoutCall": {
+        "module": {
+          "file": "chunk-6d2kw0hk.js",
+          "moduleSha256": "c887a413df02a6bc4bfd221d1334136e8a06611787f8f62a0694d3868be58f1e",
+          "moduleLength": 14486,
+          "manifestSha256": "ecae5d9ddbf13ef27b6b6a1141953aab4ba311e47dde3ac2a7cc8b5a01c63784",
+          "binarySha256": "3920489a5109cff5786a1a392c25277408ff22bc796d5edb9c16a60e5a1718f0"
+        },
+        "declaration": {
+          "symbol": "Qee",
+          "start": 10345,
+          "end": 13043,
+          "source": "async function Qee({clearOnboarding:e=!1,preserveInProcessTokens:r=!1,preserveNonAnthropicAuth:n=!1,storageV5:s,preserveQuotaAutoResume:c=!1,artifactAccount:u=\"signed_out\",incomingIdentity:h,credentials:g}){let{flushTelemetry:R}=await import(\"/$bunfs/root/chunk-d3jt381w.js\");if(await R(),await y1o(u),Pt()){await UJt(s,{preserveQuotaAutoResume:c,artifactAccount:u,incomingIdentity:h});return}if(!r&&Me()===\"firstParty\"){let p=Gn();p.invalidateCache?.();let i=await p.readAsync(g),m=i?.claudeAiOauth;if(m?.refreshToken)await Gk(m.refreshToken,m.clientId);let C=i?.designOauth;if(C?.refreshToken)await Gk(C.refreshToken,C.clientId)}if(Me()===\"gateway\"){let p=Date.now()+5000;for(let C=Cve();C&&Date.now()<p;C=Cve())await lt(C.catch(()=>{}),p-Date.now());let i=Gn();i.invalidateCache?.();let m=(await i.readAsync(g))?.enterpriseGateway;if(m)await Wqo(m,g)}if(!r)a.unset(\"CLAUDE_CODE_OAUTH_TOKEN\"),FB(null);await UKr(s),await b({revoke:!r&&Me()===\"firstParty\"?({refreshToken:p,clientId:i})=>Gk(p,i):void 0});let w=Gn();if(n){if(Me()===\"firstParty\"){w.invalidateCache?.();let p=(await w.readAsync(g))?.designOauth;if(p?.refreshToken)await Gk(p.refreshToken,p.clientId)}await w.mutate((p)=>{let i={...p};return delete i.claudeAiOauth,delete i.organizationUuid,delete i.trustedDeviceToken,delete i.enterpriseGateway,delete i.designOauth,i},g).catch((p)=>{let i=E(p);if(i===\"EPERM\"||i===\"ENOENT\"||lh(p)){t(`[performLogout] re-login secure-storage prune failed (${i}): ${l(p)}`,{level:\"error\"});return}d(p)})}else{let p=!1,i=async()=>{p=!0;let m=await Q(w,g);if(await w.delete(g),m&&Object.keys(m).length>0)await Z(w,m,g)};await dXr(i).catch((m)=>{if(p)throw m;return d(m),JYo(i)})}S9(null),Bfe(null),await UJt(s,{preserveQuotaAutoResume:c,artifactAccount:u,incomingIdentity:h,credentials:g}),await Te((p)=>{let i={...p};if(e){if(i.hasCompletedOnboarding=!1,i.subscriptionNoticeCount=0,i.hasAvailableSubscription=!1,i.customApiKeyResponses!==void 0)i.customApiKeyResponses={approved:[],rejected:KO(i).rejected};let m=Rot;if(i.seenNotifications?.[m]!==void 0){let{[m]:C,...x}=i.seenNotifications;i.seenNotifications=x}}return i.oauthAccount=void 0,i.additionalModelOptionsCache=void 0,i.additionalModelOptionsAnsweredAt=void 0,i.additionalModelCostsCache=void 0,i.modelAccessCache=void 0,i.orgModelDefaultCache=void 0,i.cachedArtifactRoster=void 0,i.artifactRosterDenied=void 0,i.lastSeenOrgDefaultUpdatedAt=void 0,i.clientDataCache=void 0,i.clientDataCacheSlots=void 0,i.autoCompactWindowsCache=void 0,i.cachedUsageUtilization=void 0,i.metricsStatusCache=void 0,i.metricsStatusCacheByPrincipal=void 0,i.githubWebConnectionStatusCache=void 0,i.startupPrefetchedAt=void 0,i},s),dGe(void 0),y(\"oauth_logout\")}",
+          "sha256": "5f5dc63534eb550acade7cc00d0e6069d87e0893e09a9920b47355bdbea0bf1f",
+          "kind": null
+        }
+      },
+      "cleanupSymbol": "b",
+      "local": {
+        "declarations": [
+          {
+            "symbol": "Aot",
+            "start": 2394,
+            "end": 2436,
+            "source": "Aot=\"41077d10-94b8-4194-be48-d251e9eb21b4\"",
+            "sha256": "556bdeef75514bcde4cff1f7beb5b38e5b0def7e342e700eb1432a3c22c64ea3",
+            "kind": "var"
+          },
+          {
+            "symbol": "K",
+            "start": 2449,
+            "end": 2470,
+            "source": "K=/^[A-Za-z0-9_.-]+$/",
+            "sha256": "b2126f2e9325bf16fdab1078480a44c7910dc89c9cacb4705e73de4b153353fa",
+            "kind": "var"
+          },
+          {
+            "symbol": "A",
+            "start": 2471,
+            "end": 2499,
+            "source": "A={created_by:\"claude-code\"}",
+            "sha256": "9eba2cf410b206b0ce4396d57a20542fee7ce4d4d902ca96e095e8484c97f324",
+            "kind": "var"
+          },
+          {
+            "symbol": "B",
+            "start": 2500,
+            "end": 2651,
+            "source": "B=f(()=>pt({created_by:o().optional(),base_url:o().optional(),authentication:pt({type:o(),client_id:o().optional(),credentials_path:o().optional()})}))",
+            "sha256": "733edddede17c4d57ba2ab2b8c77d6e268cf71d8cee80f2f42d09d7a67614d57",
+            "kind": "var"
+          },
+          {
+            "symbol": "z",
+            "start": 2652,
+            "end": 2692,
+            "source": "z=f(()=>pt({created_by:o().optional()}))",
+            "sha256": "316ae73adaa0142aa6a82994c3c039b7547afd5fde2a8d555ef5dd581462f13d",
+            "kind": "var"
+          },
+          {
+            "symbol": "b",
+            "start": 7982,
+            "end": 8401,
+            "source": "async function b({revoke:e}={}){try{let r=XD();if(r===null)return{removed:!1};let n;try{n=S(r)}catch{return{removed:!1}}let s=await k(_(r,\"configs\",`${n}.json`));if(s===null||!D(s))return{removed:!1};if(await I(v(r,n))===null)return{removed:!1};return await iVr(v(r,n),()=>V(e))}catch(r){if(E(r)===\"ENOENT\")return{removed:!1};return t(`Logout: profile credential removal failed: ${l(r)}`,{level:\"error\"}),{removed:!1}}}",
+            "sha256": "1d99652f6396539d4068d1d7ffa50248f54d56712ba566116ce606f08b939f6f",
+            "kind": null
+          },
+          {
+            "symbol": "V",
+            "start": 8401,
+            "end": 8976,
+            "source": "async function V(e){let r=XD();if(r===null)return{removed:!1};let n;try{n=S(r)}catch{return{removed:!1}}let s=await k(_(r,\"configs\",`${n}.json`));if(s===null||!D(s))return{removed:!1};let c=v(r,n),u=await I(c);if(u===null)return{removed:!1};let h={refreshToken:u.refreshToken,clientId:Aot};if(e&&h.refreshToken)await e({refreshToken:h.refreshToken,clientId:h.clientId});try{await H(c)}catch(g){return t(`Logout: could not remove profile credentials: ${l(g)}`,{level:\"error\"}),{removed:!1,...h}}return t(`Logout: removed credentials for profile ${n}`),gJn(),{removed:!0,...h}}",
+            "sha256": "69e7f3c9c7fe2d32a4bf4e0d53b1bb2a1f4114e027d11d3214fde85c3231564c",
+            "kind": null
+          },
+          {
+            "symbol": "S",
+            "start": 8976,
+            "end": 9214,
+            "source": "function S(e){let r=a.ANTHROPIC_PROFILE||lwe(e);if(!L(r))throw new P(`ANTHROPIC_PROFILE \"${r}\" is not a valid profile name (letters, digits, '_', '.', '-')`,\"ANTHROPIC_PROFILE is not a valid profile name\",\"invalid_profile_name\");return r}",
+            "sha256": "90c77154a73afccd11de40a84155995af2d690c477dd7cf0a4eef34e07069a3a",
+            "kind": null
+          },
+          {
+            "symbol": "L",
+            "start": 9214,
+            "end": 9268,
+            "source": "function L(e){return!!e&&K.test(e)&&e!==\".\"&&e!==\"..\"}",
+            "sha256": "ae43b17a6eecc0a22a56ecb145fe94cf06b54189709475c96c15ebf73cc7fc49",
+            "kind": null
+          },
+          {
+            "symbol": "v",
+            "start": 9268,
+            "end": 9322,
+            "source": "function v(e,r){return _(e,\"credentials\",`${r}.json`)}",
+            "sha256": "1858bb4c06e81ed7fc8340f819d1a030041bd618f2352b09396fa566f82497db",
+            "kind": null
+          },
+          {
+            "symbol": "k",
+            "start": 9322,
+            "end": 9689,
+            "source": "async function k(e){let r;try{r=await O(e,\"utf-8\")}catch(c){if(E(c)===\"ENOENT\")return null;if(Mt(c))return{authentication:{type:\"unreadable\"}};throw c}let n;try{n=J(r)}catch(c){return t(`Profile config is not JSON, treating as foreign: ${l(c)}`),{authentication:{type:\"unreadable\"}}}let s=B().safeParse(n);return s.success?s.data:{authentication:{type:\"unreadable\"}}}",
+            "sha256": "9905939139a63535eafe05982403b8163463c437e81227e0b27a834f97c68fcd",
+            "kind": null
+          },
+          {
+            "symbol": "D",
+            "start": 9689,
+            "end": 9810,
+            "source": "function D(e){return e.created_by===A.created_by&&e.authentication.type===\"user_oauth\"&&e.authentication.client_id===Aot}",
+            "sha256": "700b78d3f2b33765d228f9052658e98cc22bf642c3b47517efa30fefcea5ae0a",
+            "kind": null
+          },
+          {
+            "symbol": "I",
+            "start": 9810,
+            "end": 10094,
+            "source": "async function I(e){let r;try{r=await O(e,\"utf-8\")}catch(u){if(Mt(u))return null;throw u}let n;try{n=J(r)}catch{return null}let s=z().safeParse(n);if(!s.success||s.data.created_by!==A.created_by)return null;let c=s.data.refresh_token;return{refreshToken:typeof c===\"string\"?c:void 0}}",
+            "sha256": "6dda547a22dcf127149f81d58ace69716449ed1a756a7e54dd9754cdaf7f1de5",
+            "kind": null
+          }
+        ],
+        "imports": [
+          "XD",
+          "_",
+          "iVr",
+          "E",
+          "t",
+          "l",
+          "H",
+          "gJn",
+          "O",
+          "Mt",
+          "J",
+          "f",
+          "pt",
+          "o",
+          "a",
+          "lwe",
+          "P"
+        ]
+      },
+      "fields": {
+        "join": "_",
+        "unlink": "H",
+        "readFile": "O",
+        "configDir": "XD",
+        "environment": "a",
+        "defaultProfile": "lwe",
+        "reset": "gJn",
+        "debug": "t",
+        "schemaLazy": "f",
+        "looseObject": "pt",
+        "string": "o",
+        "parse": "J"
+      },
+      "errorModule": {
+        "file": "chunk-5pp15f99.js",
+        "moduleSha256": "d304d5ac5154290e1285e5876ad74d63e3a972b7c811ce7671dcda052020f448",
+        "moduleLength": 10330,
+        "manifestSha256": "ecae5d9ddbf13ef27b6b6a1141953aab4ba311e47dde3ac2a7cc8b5a01c63784",
+        "binarySha256": "3920489a5109cff5786a1a392c25277408ff22bc796d5edb9c16a60e5a1718f0"
+      },
+      "errors": [
+        {
+          "symbol": "P",
+          "start": 3714,
+          "end": 3869,
+          "source": "class P extends Error{telemetryMessage;errorClass;constructor(n,e,t){super(n);this.name=\"TelemetrySafeError\",this.telemetryMessage=e??n,this.errorClass=t}}",
+          "sha256": "e0165a34780a88fe34268a00a97acdaace9a83c4b760613e669e99daf6ac0899",
+          "kind": null
+        },
+        {
+          "symbol": "l",
+          "start": 4754,
+          "end": 4814,
+          "source": "function l(n){return n instanceof Error?n.message:String(n)}",
+          "sha256": "2f921ed78ffeed39032d7e9c4783e05c294cba2ce61cc5ac20466ece27a81075",
+          "kind": null
+        },
+        {
+          "symbol": "E",
+          "start": 4814,
+          "end": 4913,
+          "source": "function E(n){if(n&&typeof n===\"object\"&&\"code\"in n&&typeof n.code===\"string\")return n.code;return}",
+          "sha256": "a84ab0a2488aed5689416393c679dde4e7f4b29aa980e121bd56b25ab3e7b5e4",
+          "kind": null
+        },
+        {
+          "symbol": "u",
+          "start": 8245,
+          "end": 8324,
+          "source": "u=new Set([\"ENOENT\",\"EACCES\",\"EPERM\",\"ENOTDIR\",\"ELOOP\",\"ENAMETOOLONG\",\"EROFS\"])",
+          "sha256": "30de65b6b8e676f875f68c923e61adb633e126dacc5bd7913e7e3c3e032eee7e",
+          "kind": "var"
+        },
+        {
+          "symbol": "Mt",
+          "start": 8325,
+          "end": 8356,
+          "source": "function Mt(n){return RA(E(n))}",
+          "sha256": "f67439343fc4eba05eaa589043b01f3663fc37ad35bb203a2a660a8a863775cc",
+          "kind": null
+        },
+        {
+          "symbol": "RA",
+          "start": 8356,
+          "end": 8399,
+          "source": "function RA(n){return n!==void 0&&u.has(n)}",
+          "sha256": "2814612708ec846c331411bb6f6f4996fa84f6e67e047eb1af84623db8da0415",
+          "kind": null
+        }
+      ],
+      "errorBindings": {
+        "E": "E",
+        "l": "l",
+        "Mt": "Mt",
+        "P": "P"
+      },
+      "origins": {
+        "join": {
+          "origin": {
+            "module": "path",
+            "symbol": "join"
+          }
+        },
+        "unlink": {
+          "origin": {
+            "module": "fs/promises",
+            "symbol": "unlink"
+          }
+        },
+        "readFile": {
+          "origin": {
+            "module": "fs/promises",
+            "symbol": "readFile"
+          }
+        },
+        "configDir": {
+          "origin": {
+            "module": "/$bunfs/root/chunk-hytx897n.js",
+            "file": "chunk-hytx897n.js",
+            "symbol": "XD"
+          },
+          "module": {
+            "file": "chunk-hytx897n.js",
+            "moduleSha256": "665f374019c720c6c2ea6499deca56b8605952caa59dcf21f9674ebfbc2f5630",
+            "moduleLength": 31939,
+            "manifestSha256": "ecae5d9ddbf13ef27b6b6a1141953aab4ba311e47dde3ac2a7cc8b5a01c63784",
+            "binarySha256": "3920489a5109cff5786a1a392c25277408ff22bc796d5edb9c16a60e5a1718f0"
+          },
+          "declaration": {
+            "symbol": "XD",
+            "start": 12710,
+            "end": 12747,
+            "source": "function XD(){return de()?.dir??null}",
+            "sha256": "0ce5653f6ecf6976515557738db0463d5793333675a1cee777c4ed16e526ed00",
+            "kind": null
+          }
+        },
+        "environment": {
+          "origin": {
+            "module": "/$bunfs/root/chunk-ex1nk6dh.js",
+            "file": "chunk-ex1nk6dh.js",
+            "symbol": "a"
+          },
+          "module": {
+            "file": "chunk-ex1nk6dh.js",
+            "moduleSha256": "401f0254549188953a04d453fc05a458f69702b60d8209a7ef5ce750f42d0cd8",
+            "moduleLength": 66398,
+            "manifestSha256": "ecae5d9ddbf13ef27b6b6a1141953aab4ba311e47dde3ac2a7cc8b5a01c63784",
+            "binarySha256": "3920489a5109cff5786a1a392c25277408ff22bc796d5edb9c16a60e5a1718f0"
+          },
+          "declaration": {
+            "symbol": "a",
+            "start": 66144,
+            "end": 66155,
+            "source": "a=GZe(ZU,p)",
+            "sha256": "d28ceb3d6531a3928c884f53c2e6880eaaa56765f1e70e171722f4015fdfe7f0",
+            "kind": "var"
+          }
+        },
+        "defaultProfile": {
+          "origin": {
+            "module": "/$bunfs/root/chunk-hytx897n.js",
+            "file": "chunk-hytx897n.js",
+            "symbol": "lwe"
+          },
+          "module": {
+            "file": "chunk-hytx897n.js",
+            "moduleSha256": "665f374019c720c6c2ea6499deca56b8605952caa59dcf21f9674ebfbc2f5630",
+            "moduleLength": 31939,
+            "manifestSha256": "ecae5d9ddbf13ef27b6b6a1141953aab4ba311e47dde3ac2a7cc8b5a01c63784",
+            "binarySha256": "3920489a5109cff5786a1a392c25277408ff22bc796d5edb9c16a60e5a1718f0"
+          },
+          "declaration": {
+            "symbol": "lwe",
+            "start": 12169,
+            "end": 12235,
+            "source": "function lwe(e){return I(g(e,\"active_config\"))?.trim()||\"default\"}",
+            "sha256": "7cc755bcd9fefd0bbfb091c9f1d91f7ea7bc4bac5f456c80d9e39e46709a4a7a",
+            "kind": null
+          }
+        },
+        "reset": {
+          "origin": {
+            "module": "/$bunfs/root/chunk-21a47tq5.js",
+            "file": "chunk-21a47tq5.js",
+            "symbol": "gJn"
+          },
+          "module": {
+            "file": "chunk-21a47tq5.js",
+            "moduleSha256": "dc9a1fa8a7b0164d6c63ce37e0e0c73c92bce78b61f2190d2d7f7adadcf2dbe6",
+            "moduleLength": 23178,
+            "manifestSha256": "ecae5d9ddbf13ef27b6b6a1141953aab4ba311e47dde3ac2a7cc8b5a01c63784",
+            "binarySha256": "3920489a5109cff5786a1a392c25277408ff22bc796d5edb9c16a60e5a1718f0"
+          },
+          "declaration": {
+            "symbol": "gJn",
+            "start": 21366,
+            "end": 21399,
+            "source": "function gJn(){A().reset(),oEn()}",
+            "sha256": "cb79bcd20f8967130bb754a011c9266144519992e0c369a582a38f5caf110444",
+            "kind": null
+          }
+        },
+        "debug": {
+          "origin": {
+            "module": "/$bunfs/root/chunk-bgzq3rjr.js",
+            "file": "chunk-bgzq3rjr.js",
+            "symbol": "t"
+          },
+          "module": {
+            "file": "chunk-bgzq3rjr.js",
+            "moduleSha256": "d380caf178afc7121f367de7970541c410ec13f30ac375dff455f58ba50d6ff7",
+            "moduleLength": 67050,
+            "manifestSha256": "ecae5d9ddbf13ef27b6b6a1141953aab4ba311e47dde3ac2a7cc8b5a01c63784",
+            "binarySha256": "3920489a5109cff5786a1a392c25277408ff22bc796d5edb9c16a60e5a1718f0"
+          },
+          "declaration": {
+            "symbol": "t",
+            "start": 46026,
+            "end": 46071,
+            "source": "function t(e,n={level:\"debug\"}){U().log(e,n)}",
+            "sha256": "da9e0b5e590a43c6f7cf46f3cfcd93d97f399db1017ff8dae938bdbd15e13790",
+            "kind": null
+          }
+        },
+        "schemaLazy": {
+          "origin": {
+            "module": "/$bunfs/root/chunk-bh1vweff.js",
+            "file": "chunk-bh1vweff.js",
+            "symbol": "f"
+          },
+          "module": {
+            "file": "chunk-bh1vweff.js",
+            "moduleSha256": "9e81f66f3df4b3770c584b9ae0ef4678f23381901e5b6c1edbf36fb2e808b6a3",
+            "moduleLength": 981,
+            "manifestSha256": "ecae5d9ddbf13ef27b6b6a1141953aab4ba311e47dde3ac2a7cc8b5a01c63784",
+            "binarySha256": "3920489a5109cff5786a1a392c25277408ff22bc796d5edb9c16a60e5a1718f0"
+          },
+          "declaration": {
+            "symbol": "f",
+            "start": 932,
+            "end": 965,
+            "source": "function f(e){return err.lazy(e)}",
+            "sha256": "b9c5e59b1f36465be39f0b3882a0e0981c2747a70f39875c374d0ad93da14822",
+            "kind": null
+          }
+        },
+        "looseObject": {
+          "origin": {
+            "module": "/$bunfs/root/chunk-g1cpfw9w.js",
+            "file": "chunk-g1cpfw9w.js",
+            "symbol": "pt"
+          },
+          "module": {
+            "file": "chunk-g1cpfw9w.js",
+            "moduleSha256": "f7319c6db310bc341a41b8fac6ca7642f40c2c38106f63f5ebad32508a0d55f7",
+            "moduleLength": 90494,
+            "manifestSha256": "ecae5d9ddbf13ef27b6b6a1141953aab4ba311e47dde3ac2a7cc8b5a01c63784",
+            "binarySha256": "3920489a5109cff5786a1a392c25277408ff22bc796d5edb9c16a60e5a1718f0"
+          },
+          "declaration": {
+            "symbol": "pt",
+            "start": 84598,
+            "end": 84678,
+            "source": "function pt(e,t){return new Vwe({type:\"object\",shape:e,catchall:se(),...La(t)})}",
+            "sha256": "c291a034540aba90891bf3a2a61d9c7a6cd5d03d52a79a4a5ef7b5403dacaab1",
+            "kind": null
+          }
+        },
+        "string": {
+          "origin": {
+            "module": "/$bunfs/root/chunk-g1cpfw9w.js",
+            "file": "chunk-g1cpfw9w.js",
+            "symbol": "o"
+          },
+          "module": {
+            "file": "chunk-g1cpfw9w.js",
+            "moduleSha256": "f7319c6db310bc341a41b8fac6ca7642f40c2c38106f63f5ebad32508a0d55f7",
+            "moduleLength": 90494,
+            "manifestSha256": "ecae5d9ddbf13ef27b6b6a1141953aab4ba311e47dde3ac2a7cc8b5a01c63784",
+            "binarySha256": "3920489a5109cff5786a1a392c25277408ff22bc796d5edb9c16a60e5a1718f0"
+          },
+          "declaration": {
+            "symbol": "o",
+            "start": 79808,
+            "end": 79839,
+            "source": "function o(e){return cn(_qt,e)}",
+            "sha256": "aea45166904b8f68f2847d165bf262c49a6215936548658adbe77a6020ef6c8a",
+            "kind": null
+          }
+        },
+        "parse": {
+          "origin": {
+            "module": "/$bunfs/root/chunk-bgzq3rjr.js",
+            "file": "chunk-bgzq3rjr.js",
+            "symbol": "J"
+          },
+          "module": {
+            "file": "chunk-bgzq3rjr.js",
+            "moduleSha256": "d380caf178afc7121f367de7970541c410ec13f30ac375dff455f58ba50d6ff7",
+            "moduleLength": 67050,
+            "manifestSha256": "ecae5d9ddbf13ef27b6b6a1141953aab4ba311e47dde3ac2a7cc8b5a01c63784",
+            "binarySha256": "3920489a5109cff5786a1a392c25277408ff22bc796d5edb9c16a60e5a1718f0"
+          },
+          "declaration": {
+            "symbol": "J",
+            "start": 46693,
+            "end": 46786,
+            "source": "J=(e,n)=>{using r=tg`JSON.parse(${Se(e)})`;return typeof n>\"u\"?JSON.parse(e):JSON.parse(e,n)}",
+            "sha256": "f253c7845988ea33589c94dec254b2c9181ce854de1ea7f4e1265dc30707e195",
+            "kind": "var"
+          }
+        }
+      },
+      "lock": {
+        "origin": {
+          "module": "/$bunfs/root/chunk-21a47tq5.js",
+          "file": "chunk-21a47tq5.js",
+          "symbol": "iVr"
+        },
+        "module": {
+          "file": "chunk-21a47tq5.js",
+          "moduleSha256": "dc9a1fa8a7b0164d6c63ce37e0e0c73c92bce78b61f2190d2d7f7adadcf2dbe6",
+          "moduleLength": 23178,
+          "manifestSha256": "ecae5d9ddbf13ef27b6b6a1141953aab4ba311e47dde3ac2a7cc8b5a01c63784",
+          "binarySha256": "3920489a5109cff5786a1a392c25277408ff22bc796d5edb9c16a60e5a1718f0"
+        },
+        "declaration": {
+          "symbol": "iVr",
+          "start": 15343,
+          "end": 15393,
+          "source": "function iVr(e,n){return j(ae(e),n,\"fail-closed\")}",
+          "sha256": "9140de7cfa6c73c825ca65fa8053dc2380f937e6b2e44b0881503aa35cb82afe",
+          "kind": null
+        },
+        "aliases": {
+          "lockDirectory": "j",
+          "dirname": "ae"
+        },
+        "origins": [
+          {
+            "origin": {
+              "file": "chunk-21a47tq5.js",
+              "symbol": "j"
+            },
+            "module": {
+              "file": "chunk-21a47tq5.js",
+              "moduleSha256": "dc9a1fa8a7b0164d6c63ce37e0e0c73c92bce78b61f2190d2d7f7adadcf2dbe6",
+              "moduleLength": 23178,
+              "manifestSha256": "ecae5d9ddbf13ef27b6b6a1141953aab4ba311e47dde3ac2a7cc8b5a01c63784",
+              "binarySha256": "3920489a5109cff5786a1a392c25277408ff22bc796d5edb9c16a60e5a1718f0"
+            },
+            "declaration": {
+              "symbol": "j",
+              "start": 15393,
+              "end": 15837,
+              "source": "async function j(e,n,s){let r=ce[s],o;try{o=await de(e,r,s)}catch(u){if(s===\"fail-closed\"||u instanceof xd)throw u;return t(`wif: credentials lock unavailable at ${e} (${l(u)}); refreshing without cross-process serialization`),n()}try{return i(\"tengu_wif_user_oauth_lock_acquired\",{mode:c(s)}),await n()}finally{i(\"tengu_wif_user_oauth_lock_released\",{mode:c(s)});try{await o()}catch(u){if(as(u))t(`wif: lock release failed: ${u}`);else d(u)}}}",
+              "sha256": "9abf66179a976d94438e087fce0caee9db940436fb3403ec160787f26dd12182",
+              "kind": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "platform": "linux-arm64",
+      "module": {
+        "file": "chunk-b3jrqn71.js",
+        "moduleSha256": "e6fc9821b9578677abeeb1af52f6443a8851c2f7d663199ac9f3719708a0567a",
+        "moduleLength": 14486,
+        "manifestSha256": "f3be5b23f9cbb909555fe028143b9a3a40c1e3e49961e09c49d8e5a6b61ae83b",
+        "binarySha256": "e4daf793d1e74fb0d9874dd09e98690bbfd7be515f78a87fd05b9e2b4bb33b03"
+      },
+      "profileGetter": {
+        "module": {
+          "file": "chunk-ysvw6cpd.js",
+          "moduleSha256": "e02e25a1106bb3b20e93c25179f26f876c08b42f049eaffd828449ea0941323d",
+          "moduleLength": 66400,
+          "manifestSha256": "f3be5b23f9cbb909555fe028143b9a3a40c1e3e49961e09c49d8e5a6b61ae83b",
+          "binarySha256": "e4daf793d1e74fb0d9874dd09e98690bbfd7be515f78a87fd05b9e2b4bb33b03"
+        },
+        "binding": {
+          "symbol": "ANTHROPIC_PROFILE",
+          "start": 14486,
+          "end": 14510,
+          "source": "ANTHROPIC_PROFILE:()=>bo",
+          "sha256": "475c5444da66ad90625a6e5e2e6999fa3302b1d425250876557b8550a7ed7e4a",
+          "kind": null
+        },
+        "decoder": {
+          "symbol": "bo",
+          "start": 17215,
+          "end": 17225,
+          "source": "bo=D.str()",
+          "sha256": "fb810e378af325f5ddadf5798b94e54ed06f2b1ee71e394dae698f054593eb0e",
+          "kind": "var"
+        },
+        "decoderOrigin": {
+          "origin": {
+            "module": "/$bunfs/root/chunk-5zcsspp1.js",
+            "file": "chunk-5zcsspp1.js",
+            "symbol": "D"
+          },
+          "module": {
+            "file": "chunk-5zcsspp1.js",
+            "moduleSha256": "aedfc71fb9e6f031eec91d60facf7014549561ea6caedffec549ee0b2d7efcb0",
+            "moduleLength": 1408,
+            "manifestSha256": "f3be5b23f9cbb909555fe028143b9a3a40c1e3e49961e09c49d8e5a6b61ae83b",
+            "binarySha256": "e4daf793d1e74fb0d9874dd09e98690bbfd7be515f78a87fd05b9e2b4bb33b03"
+          },
+          "declaration": {
+            "symbol": "D",
+            "start": 1028,
+            "end": 1164,
+            "source": "D={str:()=>f,rawStr:()=>o,bool:()=>s,triBool:()=>l,int:(n)=>n?d(n):m,enum:(n)=>i((e)=>e!==void 0&&n.includes(e.trim())?e.trim():void 0)}",
+            "sha256": "15c2ec2560412cfb56c1d2f520bd430b89d87dd2a339e35de30e0aa66663ea93",
+            "kind": "var"
+          }
+        }
+      },
+      "logoutCall": {
+        "module": {
+          "file": "chunk-b3jrqn71.js",
+          "moduleSha256": "e6fc9821b9578677abeeb1af52f6443a8851c2f7d663199ac9f3719708a0567a",
+          "moduleLength": 14486,
+          "manifestSha256": "f3be5b23f9cbb909555fe028143b9a3a40c1e3e49961e09c49d8e5a6b61ae83b",
+          "binarySha256": "e4daf793d1e74fb0d9874dd09e98690bbfd7be515f78a87fd05b9e2b4bb33b03"
+        },
+        "declaration": {
+          "symbol": "Qee",
+          "start": 10345,
+          "end": 13043,
+          "source": "async function Qee({clearOnboarding:e=!1,preserveInProcessTokens:r=!1,preserveNonAnthropicAuth:n=!1,storageV5:s,preserveQuotaAutoResume:c=!1,artifactAccount:u=\"signed_out\",incomingIdentity:h,credentials:g}){let{flushTelemetry:E}=await import(\"/$bunfs/root/chunk-v3b793cr.js\");if(await E(),await y1o(u),Pt()){await BJt(s,{preserveQuotaAutoResume:c,artifactAccount:u,incomingIdentity:h});return}if(!r&&Me()===\"firstParty\"){let p=Gn();p.invalidateCache?.();let i=await p.readAsync(g),m=i?.claudeAiOauth;if(m?.refreshToken)await GE(m.refreshToken,m.clientId);let C=i?.designOauth;if(C?.refreshToken)await GE(C.refreshToken,C.clientId)}if(Me()===\"gateway\"){let p=Date.now()+5000;for(let C=Cve();C&&Date.now()<p;C=Cve())await lt(C.catch(()=>{}),p-Date.now());let i=Gn();i.invalidateCache?.();let m=(await i.readAsync(g))?.enterpriseGateway;if(m)await WKo(m,g)}if(!r)a.unset(\"CLAUDE_CODE_OAUTH_TOKEN\"),UH(null);await BVr(s),await b({revoke:!r&&Me()===\"firstParty\"?({refreshToken:p,clientId:i})=>GE(p,i):void 0});let w=Gn();if(n){if(Me()===\"firstParty\"){w.invalidateCache?.();let p=(await w.readAsync(g))?.designOauth;if(p?.refreshToken)await GE(p.refreshToken,p.clientId)}await w.mutate((p)=>{let i={...p};return delete i.claudeAiOauth,delete i.organizationUuid,delete i.trustedDeviceToken,delete i.enterpriseGateway,delete i.designOauth,i},g).catch((p)=>{let i=k(p);if(i===\"EPERM\"||i===\"ENOENT\"||lh(p)){t(`[performLogout] re-login secure-storage prune failed (${i}): ${l(p)}`,{level:\"error\"});return}d(p)})}else{let p=!1,i=async()=>{p=!0;let m=await Q(w,g);if(await w.delete(g),m&&Object.keys(m).length>0)await Z(w,m,g)};await dXr(i).catch((m)=>{if(p)throw m;return d(m),JYo(i)})}S8(null),Hfe(null),await BJt(s,{preserveQuotaAutoResume:c,artifactAccount:u,incomingIdentity:h,credentials:g}),await Te((p)=>{let i={...p};if(e){if(i.hasCompletedOnboarding=!1,i.subscriptionNoticeCount=0,i.hasAvailableSubscription=!1,i.customApiKeyResponses!==void 0)i.customApiKeyResponses={approved:[],rejected:VI(i).rejected};let m=Aot;if(i.seenNotifications?.[m]!==void 0){let{[m]:C,...F}=i.seenNotifications;i.seenNotifications=F}}return i.oauthAccount=void 0,i.additionalModelOptionsCache=void 0,i.additionalModelOptionsAnsweredAt=void 0,i.additionalModelCostsCache=void 0,i.modelAccessCache=void 0,i.orgModelDefaultCache=void 0,i.cachedArtifactRoster=void 0,i.artifactRosterDenied=void 0,i.lastSeenOrgDefaultUpdatedAt=void 0,i.clientDataCache=void 0,i.clientDataCacheSlots=void 0,i.autoCompactWindowsCache=void 0,i.cachedUsageUtilization=void 0,i.metricsStatusCache=void 0,i.metricsStatusCacheByPrincipal=void 0,i.githubWebConnectionStatusCache=void 0,i.startupPrefetchedAt=void 0,i},s),d2e(void 0),y(\"oauth_logout\")}",
+          "sha256": "928157c60c13503ebd98b14f7b348299dcb0596c61c560b8b084d39a9db68244",
+          "kind": null
+        }
+      },
+      "cleanupSymbol": "b",
+      "local": {
+        "declarations": [
+          {
+            "symbol": "Rot",
+            "start": 2394,
+            "end": 2436,
+            "source": "Rot=\"41077d10-94b8-4194-be48-d251e9eb21b4\"",
+            "sha256": "e926e4be4a47cb6588b9e2482540f821d4a842f4d54a5d8ac57fa8c10cb60ce6",
+            "kind": "var"
+          },
+          {
+            "symbol": "j",
+            "start": 2449,
+            "end": 2470,
+            "source": "j=/^[A-Za-z0-9_.-]+$/",
+            "sha256": "9ffeae62ec53e0eb8f7d5b06637a0deeb4d9de6c2cf28e2b1dc51c693759eb8e",
+            "kind": "var"
+          },
+          {
+            "symbol": "A",
+            "start": 2471,
+            "end": 2499,
+            "source": "A={created_by:\"claude-code\"}",
+            "sha256": "9eba2cf410b206b0ce4396d57a20542fee7ce4d4d902ca96e095e8484c97f324",
+            "kind": "var"
+          },
+          {
+            "symbol": "K",
+            "start": 2500,
+            "end": 2651,
+            "source": "K=f(()=>pt({created_by:o().optional(),base_url:o().optional(),authentication:pt({type:o(),client_id:o().optional(),credentials_path:o().optional()})}))",
+            "sha256": "55728dbfeeef8ce1714f7780d49486db5a3b1b4b8ecdc0f80689b9e653150f7a",
+            "kind": "var"
+          },
+          {
+            "symbol": "z",
+            "start": 2652,
+            "end": 2692,
+            "source": "z=f(()=>pt({created_by:o().optional()}))",
+            "sha256": "316ae73adaa0142aa6a82994c3c039b7547afd5fde2a8d555ef5dd581462f13d",
+            "kind": "var"
+          },
+          {
+            "symbol": "b",
+            "start": 7982,
+            "end": 8401,
+            "source": "async function b({revoke:e}={}){try{let r=XN();if(r===null)return{removed:!1};let n;try{n=S(r)}catch{return{removed:!1}}let s=await R(_(r,\"configs\",`${n}.json`));if(s===null||!D(s))return{removed:!1};if(await I(v(r,n))===null)return{removed:!1};return await iqr(v(r,n),()=>V(e))}catch(r){if(k(r)===\"ENOENT\")return{removed:!1};return t(`Logout: profile credential removal failed: ${l(r)}`,{level:\"error\"}),{removed:!1}}}",
+            "sha256": "3c35c0e561f267ffbe890c25da264f76d51756ec3dc34e20febbaef2416ad94f",
+            "kind": null
+          },
+          {
+            "symbol": "V",
+            "start": 8401,
+            "end": 8976,
+            "source": "async function V(e){let r=XN();if(r===null)return{removed:!1};let n;try{n=S(r)}catch{return{removed:!1}}let s=await R(_(r,\"configs\",`${n}.json`));if(s===null||!D(s))return{removed:!1};let c=v(r,n),u=await I(c);if(u===null)return{removed:!1};let h={refreshToken:u.refreshToken,clientId:Rot};if(e&&h.refreshToken)await e({refreshToken:h.refreshToken,clientId:h.clientId});try{await x(c)}catch(g){return t(`Logout: could not remove profile credentials: ${l(g)}`,{level:\"error\"}),{removed:!1,...h}}return t(`Logout: removed credentials for profile ${n}`),gJn(),{removed:!0,...h}}",
+            "sha256": "fa481f16236c420dc7267e8ec14f52dece387b7e3ed05f8c0bd9ee354daf816f",
+            "kind": null
+          },
+          {
+            "symbol": "S",
+            "start": 8976,
+            "end": 9214,
+            "source": "function S(e){let r=a.ANTHROPIC_PROFILE||lwe(e);if(!L(r))throw new P(`ANTHROPIC_PROFILE \"${r}\" is not a valid profile name (letters, digits, '_', '.', '-')`,\"ANTHROPIC_PROFILE is not a valid profile name\",\"invalid_profile_name\");return r}",
+            "sha256": "90c77154a73afccd11de40a84155995af2d690c477dd7cf0a4eef34e07069a3a",
+            "kind": null
+          },
+          {
+            "symbol": "L",
+            "start": 9214,
+            "end": 9268,
+            "source": "function L(e){return!!e&&j.test(e)&&e!==\".\"&&e!==\"..\"}",
+            "sha256": "5e644f89d993ddb45aebd7b8f71ed0157305409e80aed11ca45720deb889b5b6",
+            "kind": null
+          },
+          {
+            "symbol": "v",
+            "start": 9268,
+            "end": 9322,
+            "source": "function v(e,r){return _(e,\"credentials\",`${r}.json`)}",
+            "sha256": "1858bb4c06e81ed7fc8340f819d1a030041bd618f2352b09396fa566f82497db",
+            "kind": null
+          },
+          {
+            "symbol": "R",
+            "start": 9322,
+            "end": 9689,
+            "source": "async function R(e){let r;try{r=await O(e,\"utf-8\")}catch(c){if(k(c)===\"ENOENT\")return null;if(Mt(c))return{authentication:{type:\"unreadable\"}};throw c}let n;try{n=J(r)}catch(c){return t(`Profile config is not JSON, treating as foreign: ${l(c)}`),{authentication:{type:\"unreadable\"}}}let s=K().safeParse(n);return s.success?s.data:{authentication:{type:\"unreadable\"}}}",
+            "sha256": "07369a6eb47f13bb2d615a9b363a2d8f23d859c6a45523c1d2ffb798fcc0c6dc",
+            "kind": null
+          },
+          {
+            "symbol": "D",
+            "start": 9689,
+            "end": 9810,
+            "source": "function D(e){return e.created_by===A.created_by&&e.authentication.type===\"user_oauth\"&&e.authentication.client_id===Rot}",
+            "sha256": "2757fc4be232bf47999f292993c84ae7e1404483f8a75100bcc9cc7a228b0a8a",
+            "kind": null
+          },
+          {
+            "symbol": "I",
+            "start": 9810,
+            "end": 10094,
+            "source": "async function I(e){let r;try{r=await O(e,\"utf-8\")}catch(u){if(Mt(u))return null;throw u}let n;try{n=J(r)}catch{return null}let s=z().safeParse(n);if(!s.success||s.data.created_by!==A.created_by)return null;let c=s.data.refresh_token;return{refreshToken:typeof c===\"string\"?c:void 0}}",
+            "sha256": "6dda547a22dcf127149f81d58ace69716449ed1a756a7e54dd9754cdaf7f1de5",
+            "kind": null
+          }
+        ],
+        "imports": [
+          "XN",
+          "_",
+          "iqr",
+          "k",
+          "t",
+          "l",
+          "x",
+          "gJn",
+          "O",
+          "Mt",
+          "J",
+          "f",
+          "pt",
+          "o",
+          "a",
+          "lwe",
+          "P"
+        ]
+      },
+      "fields": {
+        "join": "_",
+        "unlink": "x",
+        "readFile": "O",
+        "configDir": "XN",
+        "environment": "a",
+        "defaultProfile": "lwe",
+        "reset": "gJn",
+        "debug": "t",
+        "schemaLazy": "f",
+        "looseObject": "pt",
+        "string": "o",
+        "parse": "J"
+      },
+      "errorModule": {
+        "file": "chunk-gwr1he3z.js",
+        "moduleSha256": "013d1bf1d328fd90a53b3188caacf31ef0b54140e783c094cccb6bec6f1ac424",
+        "moduleLength": 10330,
+        "manifestSha256": "f3be5b23f9cbb909555fe028143b9a3a40c1e3e49961e09c49d8e5a6b61ae83b",
+        "binarySha256": "e4daf793d1e74fb0d9874dd09e98690bbfd7be515f78a87fd05b9e2b4bb33b03"
+      },
+      "errors": [
+        {
+          "symbol": "P",
+          "start": 3714,
+          "end": 3869,
+          "source": "class P extends Error{telemetryMessage;errorClass;constructor(n,e,t){super(n);this.name=\"TelemetrySafeError\",this.telemetryMessage=e??n,this.errorClass=t}}",
+          "sha256": "e0165a34780a88fe34268a00a97acdaace9a83c4b760613e669e99daf6ac0899",
+          "kind": null
+        },
+        {
+          "symbol": "l",
+          "start": 4754,
+          "end": 4814,
+          "source": "function l(n){return n instanceof Error?n.message:String(n)}",
+          "sha256": "2f921ed78ffeed39032d7e9c4783e05c294cba2ce61cc5ac20466ece27a81075",
+          "kind": null
+        },
+        {
+          "symbol": "k",
+          "start": 4814,
+          "end": 4913,
+          "source": "function k(n){if(n&&typeof n===\"object\"&&\"code\"in n&&typeof n.code===\"string\")return n.code;return}",
+          "sha256": "30989737b326ea6cc73ea4f358375de688c7476f7d872fd74ea71d11917d53b8",
+          "kind": null
+        },
+        {
+          "symbol": "u",
+          "start": 8245,
+          "end": 8324,
+          "source": "u=new Set([\"ENOENT\",\"EACCES\",\"EPERM\",\"ENOTDIR\",\"ELOOP\",\"ENAMETOOLONG\",\"EROFS\"])",
+          "sha256": "30de65b6b8e676f875f68c923e61adb633e126dacc5bd7913e7e3c3e032eee7e",
+          "kind": "var"
+        },
+        {
+          "symbol": "Mt",
+          "start": 8325,
+          "end": 8356,
+          "source": "function Mt(n){return AR(k(n))}",
+          "sha256": "47441498c3dd486984f2eeebc36d661a9641de57ba509cd3634e0ba82b444a8b",
+          "kind": null
+        },
+        {
+          "symbol": "AR",
+          "start": 8356,
+          "end": 8399,
+          "source": "function AR(n){return n!==void 0&&u.has(n)}",
+          "sha256": "3f6c418ae5e6d2fa5a9c4b2161bdc26a2b4962530e9a1576158f194de4b3c7cc",
+          "kind": null
+        }
+      ],
+      "errorBindings": {
+        "k": "k",
+        "l": "l",
+        "Mt": "Mt",
+        "P": "P"
+      },
+      "origins": {
+        "join": {
+          "origin": {
+            "module": "path",
+            "symbol": "join"
+          }
+        },
+        "unlink": {
+          "origin": {
+            "module": "fs/promises",
+            "symbol": "unlink"
+          }
+        },
+        "readFile": {
+          "origin": {
+            "module": "fs/promises",
+            "symbol": "readFile"
+          }
+        },
+        "configDir": {
+          "origin": {
+            "module": "/$bunfs/root/chunk-ckxjg44r.js",
+            "file": "chunk-ckxjg44r.js",
+            "symbol": "XN"
+          },
+          "module": {
+            "file": "chunk-ckxjg44r.js",
+            "moduleSha256": "8524c050ded09d3dc775798eecbef4de9dfa96aeaed9eb9433d733b4dc33938c",
+            "moduleLength": 31939,
+            "manifestSha256": "f3be5b23f9cbb909555fe028143b9a3a40c1e3e49961e09c49d8e5a6b61ae83b",
+            "binarySha256": "e4daf793d1e74fb0d9874dd09e98690bbfd7be515f78a87fd05b9e2b4bb33b03"
+          },
+          "declaration": {
+            "symbol": "XN",
+            "start": 12710,
+            "end": 12747,
+            "source": "function XN(){return de()?.dir??null}",
+            "sha256": "aea5e37e975c801ff3aedfb4d8b54262d70386221a47f87108583d34634f3b80",
+            "kind": null
+          }
+        },
+        "environment": {
+          "origin": {
+            "module": "/$bunfs/root/chunk-ysvw6cpd.js",
+            "file": "chunk-ysvw6cpd.js",
+            "symbol": "a"
+          },
+          "module": {
+            "file": "chunk-ysvw6cpd.js",
+            "moduleSha256": "e02e25a1106bb3b20e93c25179f26f876c08b42f049eaffd828449ea0941323d",
+            "moduleLength": 66400,
+            "manifestSha256": "f3be5b23f9cbb909555fe028143b9a3a40c1e3e49961e09c49d8e5a6b61ae83b",
+            "binarySha256": "e4daf793d1e74fb0d9874dd09e98690bbfd7be515f78a87fd05b9e2b4bb33b03"
+          },
+          "declaration": {
+            "symbol": "a",
+            "start": 66146,
+            "end": 66157,
+            "source": "a=GZe(ZU,c)",
+            "sha256": "550f8c000ede33ada61685d232c1b5734cd33c5013e896f0fc3d3e6133b2f247",
+            "kind": "var"
+          }
+        },
+        "defaultProfile": {
+          "origin": {
+            "module": "/$bunfs/root/chunk-ckxjg44r.js",
+            "file": "chunk-ckxjg44r.js",
+            "symbol": "lwe"
+          },
+          "module": {
+            "file": "chunk-ckxjg44r.js",
+            "moduleSha256": "8524c050ded09d3dc775798eecbef4de9dfa96aeaed9eb9433d733b4dc33938c",
+            "moduleLength": 31939,
+            "manifestSha256": "f3be5b23f9cbb909555fe028143b9a3a40c1e3e49961e09c49d8e5a6b61ae83b",
+            "binarySha256": "e4daf793d1e74fb0d9874dd09e98690bbfd7be515f78a87fd05b9e2b4bb33b03"
+          },
+          "declaration": {
+            "symbol": "lwe",
+            "start": 12169,
+            "end": 12235,
+            "source": "function lwe(e){return I(g(e,\"active_config\"))?.trim()||\"default\"}",
+            "sha256": "7cc755bcd9fefd0bbfb091c9f1d91f7ea7bc4bac5f456c80d9e39e46709a4a7a",
+            "kind": null
+          }
+        },
+        "reset": {
+          "origin": {
+            "module": "/$bunfs/root/chunk-n37bzhgk.js",
+            "file": "chunk-n37bzhgk.js",
+            "symbol": "gJn"
+          },
+          "module": {
+            "file": "chunk-n37bzhgk.js",
+            "moduleSha256": "e12f32167ef0dbdfd1b8557a98eca7266e57f50c71935f9f3591140740cbf523",
+            "moduleLength": 23178,
+            "manifestSha256": "f3be5b23f9cbb909555fe028143b9a3a40c1e3e49961e09c49d8e5a6b61ae83b",
+            "binarySha256": "e4daf793d1e74fb0d9874dd09e98690bbfd7be515f78a87fd05b9e2b4bb33b03"
+          },
+          "declaration": {
+            "symbol": "gJn",
+            "start": 21366,
+            "end": 21399,
+            "source": "function gJn(){A().reset(),okn()}",
+            "sha256": "ce84d2355e5ab6fe0ee3f4b8a35b78de249b60f5a75a989d0150468950708523",
+            "kind": null
+          }
+        },
+        "debug": {
+          "origin": {
+            "module": "/$bunfs/root/chunk-m2pbrf6n.js",
+            "file": "chunk-m2pbrf6n.js",
+            "symbol": "t"
+          },
+          "module": {
+            "file": "chunk-m2pbrf6n.js",
+            "moduleSha256": "2965a14ff7a491a63d5a4a4e076b801f79bdcb5ace0c2fa306be890dc97d2288",
+            "moduleLength": 67050,
+            "manifestSha256": "f3be5b23f9cbb909555fe028143b9a3a40c1e3e49961e09c49d8e5a6b61ae83b",
+            "binarySha256": "e4daf793d1e74fb0d9874dd09e98690bbfd7be515f78a87fd05b9e2b4bb33b03"
+          },
+          "declaration": {
+            "symbol": "t",
+            "start": 46026,
+            "end": 46071,
+            "source": "function t(e,n={level:\"debug\"}){B().log(e,n)}",
+            "sha256": "fd84e2a67849a102de5dd988ba3086c62b1b4af8a0b96a0f9fbaaea0f24b318c",
+            "kind": null
+          }
+        },
+        "schemaLazy": {
+          "origin": {
+            "module": "/$bunfs/root/chunk-bh1vweff.js",
+            "file": "chunk-bh1vweff.js",
+            "symbol": "f"
+          },
+          "module": {
+            "file": "chunk-bh1vweff.js",
+            "moduleSha256": "9e81f66f3df4b3770c584b9ae0ef4678f23381901e5b6c1edbf36fb2e808b6a3",
+            "moduleLength": 981,
+            "manifestSha256": "f3be5b23f9cbb909555fe028143b9a3a40c1e3e49961e09c49d8e5a6b61ae83b",
+            "binarySha256": "e4daf793d1e74fb0d9874dd09e98690bbfd7be515f78a87fd05b9e2b4bb33b03"
+          },
+          "declaration": {
+            "symbol": "f",
+            "start": 932,
+            "end": 965,
+            "source": "function f(e){return err.lazy(e)}",
+            "sha256": "b9c5e59b1f36465be39f0b3882a0e0981c2747a70f39875c374d0ad93da14822",
+            "kind": null
+          }
+        },
+        "looseObject": {
+          "origin": {
+            "module": "/$bunfs/root/chunk-ab7yvgy4.js",
+            "file": "chunk-ab7yvgy4.js",
+            "symbol": "pt"
+          },
+          "module": {
+            "file": "chunk-ab7yvgy4.js",
+            "moduleSha256": "760c602d67ac093068dac3824d914107110e20e30a47b95f78a77afdf41b9403",
+            "moduleLength": 90494,
+            "manifestSha256": "f3be5b23f9cbb909555fe028143b9a3a40c1e3e49961e09c49d8e5a6b61ae83b",
+            "binarySha256": "e4daf793d1e74fb0d9874dd09e98690bbfd7be515f78a87fd05b9e2b4bb33b03"
+          },
+          "declaration": {
+            "symbol": "pt",
+            "start": 84598,
+            "end": 84678,
+            "source": "function pt(e,t){return new qwe({type:\"object\",shape:e,catchall:se(),...La(t)})}",
+            "sha256": "62ad7f7b8a49d18850aebb0bc90afa08c0965b57e758c29da685578dce1e9ba0",
+            "kind": null
+          }
+        },
+        "string": {
+          "origin": {
+            "module": "/$bunfs/root/chunk-ab7yvgy4.js",
+            "file": "chunk-ab7yvgy4.js",
+            "symbol": "o"
+          },
+          "module": {
+            "file": "chunk-ab7yvgy4.js",
+            "moduleSha256": "760c602d67ac093068dac3824d914107110e20e30a47b95f78a77afdf41b9403",
+            "moduleLength": 90494,
+            "manifestSha256": "f3be5b23f9cbb909555fe028143b9a3a40c1e3e49961e09c49d8e5a6b61ae83b",
+            "binarySha256": "e4daf793d1e74fb0d9874dd09e98690bbfd7be515f78a87fd05b9e2b4bb33b03"
+          },
+          "declaration": {
+            "symbol": "o",
+            "start": 79808,
+            "end": 79839,
+            "source": "function o(e){return cn(_Kt,e)}",
+            "sha256": "92f8c063af3b608470b704c6d3e71b2cc672753cc18c9444f0386c2d88fb0749",
+            "kind": null
+          }
+        },
+        "parse": {
+          "origin": {
+            "module": "/$bunfs/root/chunk-m2pbrf6n.js",
+            "file": "chunk-m2pbrf6n.js",
+            "symbol": "J"
+          },
+          "module": {
+            "file": "chunk-m2pbrf6n.js",
+            "moduleSha256": "2965a14ff7a491a63d5a4a4e076b801f79bdcb5ace0c2fa306be890dc97d2288",
+            "moduleLength": 67050,
+            "manifestSha256": "f3be5b23f9cbb909555fe028143b9a3a40c1e3e49961e09c49d8e5a6b61ae83b",
+            "binarySha256": "e4daf793d1e74fb0d9874dd09e98690bbfd7be515f78a87fd05b9e2b4bb33b03"
+          },
+          "declaration": {
+            "symbol": "J",
+            "start": 46693,
+            "end": 46786,
+            "source": "J=(e,n)=>{using r=tg`JSON.parse(${Se(e)})`;return typeof n>\"u\"?JSON.parse(e):JSON.parse(e,n)}",
+            "sha256": "f253c7845988ea33589c94dec254b2c9181ce854de1ea7f4e1265dc30707e195",
+            "kind": "var"
+          }
+        }
+      },
+      "lock": {
+        "origin": {
+          "module": "/$bunfs/root/chunk-n37bzhgk.js",
+          "file": "chunk-n37bzhgk.js",
+          "symbol": "iqr"
+        },
+        "module": {
+          "file": "chunk-n37bzhgk.js",
+          "moduleSha256": "e12f32167ef0dbdfd1b8557a98eca7266e57f50c71935f9f3591140740cbf523",
+          "moduleLength": 23178,
+          "manifestSha256": "f3be5b23f9cbb909555fe028143b9a3a40c1e3e49961e09c49d8e5a6b61ae83b",
+          "binarySha256": "e4daf793d1e74fb0d9874dd09e98690bbfd7be515f78a87fd05b9e2b4bb33b03"
+        },
+        "declaration": {
+          "symbol": "iqr",
+          "start": 15343,
+          "end": 15393,
+          "source": "function iqr(e,n){return K(ae(e),n,\"fail-closed\")}",
+          "sha256": "d9ecbd9e394a55c83e113f250a4ec44d80c915f729d020d04cd8a364843c109b",
+          "kind": null
+        },
+        "aliases": {
+          "lockDirectory": "K",
+          "dirname": "ae"
+        },
+        "origins": [
+          {
+            "origin": {
+              "file": "chunk-n37bzhgk.js",
+              "symbol": "K"
+            },
+            "module": {
+              "file": "chunk-n37bzhgk.js",
+              "moduleSha256": "e12f32167ef0dbdfd1b8557a98eca7266e57f50c71935f9f3591140740cbf523",
+              "moduleLength": 23178,
+              "manifestSha256": "f3be5b23f9cbb909555fe028143b9a3a40c1e3e49961e09c49d8e5a6b61ae83b",
+              "binarySha256": "e4daf793d1e74fb0d9874dd09e98690bbfd7be515f78a87fd05b9e2b4bb33b03"
+            },
+            "declaration": {
+              "symbol": "K",
+              "start": 15393,
+              "end": 15837,
+              "source": "async function K(e,n,s){let r=ce[s],o;try{o=await de(e,r,s)}catch(u){if(s===\"fail-closed\"||u instanceof xd)throw u;return t(`wif: credentials lock unavailable at ${e} (${l(u)}); refreshing without cross-process serialization`),n()}try{return i(\"tengu_wif_user_oauth_lock_acquired\",{mode:c(s)}),await n()}finally{i(\"tengu_wif_user_oauth_lock_released\",{mode:c(s)});try{await o()}catch(u){if(as(u))t(`wif: lock release failed: ${u}`);else d(u)}}}",
+              "sha256": "4eee34e27be92c4437128e30b471b1ac5857966088b4972cd1d1d751f56c18b1",
+              "kind": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "platform": "darwin-x64",
+      "module": {
+        "file": "chunk-53sc2ee8.js",
+        "moduleSha256": "34930d9db4cf4f75a467b05a1d40d7500caf3bc23cf940200e482a3705b44929",
+        "moduleLength": 14486,
+        "manifestSha256": "ba9e122d28e8a42927eb23c7c86b62295f24a223546ee5476e761837579a709b",
+        "binarySha256": "f1863213e4f55aaadc2e6ee617f934ada29930e5de4c5e5f8f9e34a0d594fdd7"
+      },
+      "profileGetter": {
+        "module": {
+          "file": "chunk-5kdb7ws1.js",
+          "moduleSha256": "35536b38d81ea676c2928a182f2b59103d58f3467309ecf236f5e804bfe491cb",
+          "moduleLength": 65736,
+          "manifestSha256": "ba9e122d28e8a42927eb23c7c86b62295f24a223546ee5476e761837579a709b",
+          "binarySha256": "f1863213e4f55aaadc2e6ee617f934ada29930e5de4c5e5f8f9e34a0d594fdd7"
+        },
+        "binding": {
+          "symbol": "ANTHROPIC_PROFILE",
+          "start": 13822,
+          "end": 13846,
+          "source": "ANTHROPIC_PROFILE:()=>bo",
+          "sha256": "475c5444da66ad90625a6e5e2e6999fa3302b1d425250876557b8550a7ed7e4a",
+          "kind": null
+        },
+        "decoder": {
+          "symbol": "bo",
+          "start": 16551,
+          "end": 16561,
+          "source": "bo=L.str()",
+          "sha256": "43ea4c6fa7fb8002766d0ef5a3bdf0542c84132bb16a78218c24ebfc7cace146",
+          "kind": "var"
+        },
+        "decoderOrigin": {
+          "origin": {
+            "module": "/$bunfs/root/chunk-mpsacq7n.js",
+            "file": "chunk-mpsacq7n.js",
+            "symbol": "L"
+          },
+          "module": {
+            "file": "chunk-mpsacq7n.js",
+            "moduleSha256": "66f7f3cca32549c2fcbade1b71cb622c98f1278b25af5d44202abdf2dc538a04",
+            "moduleLength": 1408,
+            "manifestSha256": "ba9e122d28e8a42927eb23c7c86b62295f24a223546ee5476e761837579a709b",
+            "binarySha256": "f1863213e4f55aaadc2e6ee617f934ada29930e5de4c5e5f8f9e34a0d594fdd7"
+          },
+          "declaration": {
+            "symbol": "L",
+            "start": 1028,
+            "end": 1164,
+            "source": "L={str:()=>f,rawStr:()=>o,bool:()=>s,triBool:()=>l,int:(n)=>n?d(n):m,enum:(n)=>i((e)=>e!==void 0&&n.includes(e.trim())?e.trim():void 0)}",
+            "sha256": "fc86530a25c57882f98c9a870e4da11d10a83c2184701b682f32283132e0be13",
+            "kind": "var"
+          }
+        }
+      },
+      "logoutCall": {
+        "module": {
+          "file": "chunk-53sc2ee8.js",
+          "moduleSha256": "34930d9db4cf4f75a467b05a1d40d7500caf3bc23cf940200e482a3705b44929",
+          "moduleLength": 14486,
+          "manifestSha256": "ba9e122d28e8a42927eb23c7c86b62295f24a223546ee5476e761837579a709b",
+          "binarySha256": "f1863213e4f55aaadc2e6ee617f934ada29930e5de4c5e5f8f9e34a0d594fdd7"
+        },
+        "declaration": {
+          "symbol": "ite",
+          "start": 10345,
+          "end": 13043,
+          "source": "async function ite({clearOnboarding:e=!1,preserveInProcessTokens:r=!1,preserveNonAnthropicAuth:n=!1,storageV5:s,preserveQuotaAutoResume:c=!1,artifactAccount:u=\"signed_out\",incomingIdentity:h,credentials:g}){let{flushTelemetry:S}=await import(\"/$bunfs/root/chunk-kwgeatcq.js\");if(await S(),await ZBo(u),Ht()){await rJt(s,{preserveQuotaAutoResume:c,artifactAccount:u,incomingIdentity:h});return}if(!r&&Oe()===\"firstParty\"){let p=zn();p.invalidateCache?.();let i=await p.readAsync(g),m=i?.claudeAiOauth;if(m?.refreshToken)await KA(m.refreshToken,m.clientId);let C=i?.designOauth;if(C?.refreshToken)await KA(C.refreshToken,C.clientId)}if(Oe()===\"gateway\"){let p=Date.now()+5000;for(let C=LEe();C&&Date.now()<p;C=LEe())await lt(C.catch(()=>{}),p-Date.now());let i=zn();i.invalidateCache?.();let m=(await i.readAsync(g))?.enterpriseGateway;if(m)await C3o(m,g)}if(!r)a.unset(\"CLAUDE_CODE_OAUTH_TOKEN\"),ZU(null);await mKr(s),await N({revoke:!r&&Oe()===\"firstParty\"?({refreshToken:p,clientId:i})=>KA(p,i):void 0});let w=zn();if(n){if(Oe()===\"firstParty\"){w.invalidateCache?.();let p=(await w.readAsync(g))?.designOauth;if(p?.refreshToken)await KA(p.refreshToken,p.clientId)}await w.mutate((p)=>{let i={...p};return delete i.claudeAiOauth,delete i.organizationUuid,delete i.trustedDeviceToken,delete i.enterpriseGateway,delete i.designOauth,i},g).catch((p)=>{let i=E(p);if(i===\"EPERM\"||i===\"ENOENT\"||ch(p)){t(`[performLogout] re-login secure-storage prune failed (${i}): ${l(p)}`,{level:\"error\"});return}d(p)})}else{let p=!1,i=async()=>{p=!0;let m=await J(w,g);if(await w.delete(g),m&&Object.keys(m).length>0)await Q(w,m,g)};await _9r(i).catch((m)=>{if(p)throw m;return d(m),D5o(i)})}TY(null),Kfe(null),await rJt(s,{preserveQuotaAutoResume:c,artifactAccount:u,incomingIdentity:h,credentials:g}),await Ce((p)=>{let i={...p};if(e){if(i.hasCompletedOnboarding=!1,i.subscriptionNoticeCount=0,i.hasAvailableSubscription=!1,i.customApiKeyResponses!==void 0)i.customApiKeyResponses={approved:[],rejected:ZP(i).rejected};let m=Mot;if(i.seenNotifications?.[m]!==void 0){let{[m]:C,...D}=i.seenNotifications;i.seenNotifications=D}}return i.oauthAccount=void 0,i.additionalModelOptionsCache=void 0,i.additionalModelOptionsAnsweredAt=void 0,i.additionalModelCostsCache=void 0,i.modelAccessCache=void 0,i.orgModelDefaultCache=void 0,i.cachedArtifactRoster=void 0,i.artifactRosterDenied=void 0,i.lastSeenOrgDefaultUpdatedAt=void 0,i.clientDataCache=void 0,i.clientDataCacheSlots=void 0,i.autoCompactWindowsCache=void 0,i.cachedUsageUtilization=void 0,i.metricsStatusCache=void 0,i.metricsStatusCacheByPrincipal=void 0,i.githubWebConnectionStatusCache=void 0,i.startupPrefetchedAt=void 0,i},s),gGe(void 0),y(\"oauth_logout\")}",
+          "sha256": "e6bcce51129e7dd355673da10c90d2fe37609a3303f3400d359dd07744485a57",
+          "kind": null
+        }
+      },
+      "cleanupSymbol": "N",
+      "local": {
+        "declarations": [
+          {
+            "symbol": "Oot",
+            "start": 2394,
+            "end": 2436,
+            "source": "Oot=\"41077d10-94b8-4194-be48-d251e9eb21b4\"",
+            "sha256": "87aacb878a1cbdfd1cd2c10831a2609585981230bd19ca594f8219fabe2d7946",
+            "kind": "var"
+          },
+          {
+            "symbol": "K",
+            "start": 2449,
+            "end": 2470,
+            "source": "K=/^[A-Za-z0-9_.-]+$/",
+            "sha256": "b2126f2e9325bf16fdab1078480a44c7910dc89c9cacb4705e73de4b153353fa",
+            "kind": "var"
+          },
+          {
+            "symbol": "P",
+            "start": 2471,
+            "end": 2499,
+            "source": "P={created_by:\"claude-code\"}",
+            "sha256": "37afc022d11f578e64377b5bc57dfeb13be83802a08fc18319ea040103d9ed80",
+            "kind": "var"
+          },
+          {
+            "symbol": "B",
+            "start": 2500,
+            "end": 2651,
+            "source": "B=f(()=>pt({created_by:o().optional(),base_url:o().optional(),authentication:pt({type:o(),client_id:o().optional(),credentials_path:o().optional()})}))",
+            "sha256": "733edddede17c4d57ba2ab2b8c77d6e268cf71d8cee80f2f42d09d7a67614d57",
+            "kind": "var"
+          },
+          {
+            "symbol": "z",
+            "start": 2652,
+            "end": 2692,
+            "source": "z=f(()=>pt({created_by:o().optional()}))",
+            "sha256": "316ae73adaa0142aa6a82994c3c039b7547afd5fde2a8d555ef5dd581462f13d",
+            "kind": "var"
+          },
+          {
+            "symbol": "N",
+            "start": 7982,
+            "end": 8401,
+            "source": "async function N({revoke:e}={}){try{let r=rD();if(r===null)return{removed:!1};let n;try{n=A(r)}catch{return{removed:!1}}let s=await R(_(r,\"configs\",`${n}.json`));if(s===null||!L(s))return{removed:!1};if(await k(v(r,n))===null)return{removed:!1};return await Pzr(v(r,n),()=>W(e))}catch(r){if(E(r)===\"ENOENT\")return{removed:!1};return t(`Logout: profile credential removal failed: ${l(r)}`,{level:\"error\"}),{removed:!1}}}",
+            "sha256": "375fa4e267fea85b85ae5fe47b8852a6ff651e47f46fccc5d455370555195013",
+            "kind": null
+          },
+          {
+            "symbol": "W",
+            "start": 8401,
+            "end": 8976,
+            "source": "async function W(e){let r=rD();if(r===null)return{removed:!1};let n;try{n=A(r)}catch{return{removed:!1}}let s=await R(_(r,\"configs\",`${n}.json`));if(s===null||!L(s))return{removed:!1};let c=v(r,n),u=await k(c);if(u===null)return{removed:!1};let h={refreshToken:u.refreshToken,clientId:Oot};if(e&&h.refreshToken)await e({refreshToken:h.refreshToken,clientId:h.clientId});try{await x(c)}catch(g){return t(`Logout: could not remove profile credentials: ${l(g)}`,{level:\"error\"}),{removed:!1,...h}}return t(`Logout: removed credentials for profile ${n}`),M7n(),{removed:!0,...h}}",
+            "sha256": "b9bc0023a08ad5afd73e0133916ad41dcbe9e77d39b1af5999b4c383d30ada43",
+            "kind": null
+          },
+          {
+            "symbol": "A",
+            "start": 8976,
+            "end": 9214,
+            "source": "function A(e){let r=a.ANTHROPIC_PROFILE||mwe(e);if(!b(r))throw new H(`ANTHROPIC_PROFILE \"${r}\" is not a valid profile name (letters, digits, '_', '.', '-')`,\"ANTHROPIC_PROFILE is not a valid profile name\",\"invalid_profile_name\");return r}",
+            "sha256": "8de4971f31776b5b3972af2e97fedf5a426f6877e8b9bb0c6428a7c0e236bb3c",
+            "kind": null
+          },
+          {
+            "symbol": "b",
+            "start": 9214,
+            "end": 9268,
+            "source": "function b(e){return!!e&&K.test(e)&&e!==\".\"&&e!==\"..\"}",
+            "sha256": "75c711b971cfddf0aac25e7a72e474798acfb4d8da2c0f2ca5116081c9c27b94",
+            "kind": null
+          },
+          {
+            "symbol": "v",
+            "start": 9268,
+            "end": 9322,
+            "source": "function v(e,r){return _(e,\"credentials\",`${r}.json`)}",
+            "sha256": "1858bb4c06e81ed7fc8340f819d1a030041bd618f2352b09396fa566f82497db",
+            "kind": null
+          },
+          {
+            "symbol": "R",
+            "start": 9322,
+            "end": 9689,
+            "source": "async function R(e){let r;try{r=await T(e,\"utf-8\")}catch(c){if(E(c)===\"ENOENT\")return null;if(Ot(c))return{authentication:{type:\"unreadable\"}};throw c}let n;try{n=Y(r)}catch(c){return t(`Profile config is not JSON, treating as foreign: ${l(c)}`),{authentication:{type:\"unreadable\"}}}let s=B().safeParse(n);return s.success?s.data:{authentication:{type:\"unreadable\"}}}",
+            "sha256": "3e96ab225f0cd1a699f7b8486231f435edac534dead0430cf7e8d1a1a9d0460a",
+            "kind": null
+          },
+          {
+            "symbol": "L",
+            "start": 9689,
+            "end": 9810,
+            "source": "function L(e){return e.created_by===P.created_by&&e.authentication.type===\"user_oauth\"&&e.authentication.client_id===Oot}",
+            "sha256": "41480920fc746457fb79fc39bf648030adfb4bbf69d9e3ca6c5c292cd073884c",
+            "kind": null
+          },
+          {
+            "symbol": "k",
+            "start": 9810,
+            "end": 10094,
+            "source": "async function k(e){let r;try{r=await T(e,\"utf-8\")}catch(u){if(Ot(u))return null;throw u}let n;try{n=Y(r)}catch{return null}let s=z().safeParse(n);if(!s.success||s.data.created_by!==P.created_by)return null;let c=s.data.refresh_token;return{refreshToken:typeof c===\"string\"?c:void 0}}",
+            "sha256": "1169fe114e60bf77ecd98433b8c71faccf4da92be45cc86f3ddeb425a14f2db9",
+            "kind": null
+          }
+        ],
+        "imports": [
+          "rD",
+          "_",
+          "Pzr",
+          "E",
+          "t",
+          "l",
+          "x",
+          "M7n",
+          "T",
+          "Ot",
+          "Y",
+          "f",
+          "pt",
+          "o",
+          "a",
+          "mwe",
+          "H"
+        ]
+      },
+      "fields": {
+        "join": "_",
+        "unlink": "x",
+        "readFile": "T",
+        "configDir": "rD",
+        "environment": "a",
+        "defaultProfile": "mwe",
+        "reset": "M7n",
+        "debug": "t",
+        "schemaLazy": "f",
+        "looseObject": "pt",
+        "string": "o",
+        "parse": "Y"
+      },
+      "errorModule": {
+        "file": "chunk-sbek65a7.js",
+        "moduleSha256": "ea7cfffb45ba6720135b9540897917beddcaa994f57691602f9d28c5563affd0",
+        "moduleLength": 10331,
+        "manifestSha256": "ba9e122d28e8a42927eb23c7c86b62295f24a223546ee5476e761837579a709b",
+        "binarySha256": "f1863213e4f55aaadc2e6ee617f934ada29930e5de4c5e5f8f9e34a0d594fdd7"
+      },
+      "errors": [
+        {
+          "symbol": "H",
+          "start": 3714,
+          "end": 3869,
+          "source": "class H extends Error{telemetryMessage;errorClass;constructor(n,e,t){super(n);this.name=\"TelemetrySafeError\",this.telemetryMessage=e??n,this.errorClass=t}}",
+          "sha256": "9eb71a566814056f974fc8f63483a220a24c0f1c09856667e212570af71e0b18",
+          "kind": null
+        },
+        {
+          "symbol": "l",
+          "start": 4754,
+          "end": 4814,
+          "source": "function l(n){return n instanceof Error?n.message:String(n)}",
+          "sha256": "2f921ed78ffeed39032d7e9c4783e05c294cba2ce61cc5ac20466ece27a81075",
+          "kind": null
+        },
+        {
+          "symbol": "E",
+          "start": 4814,
+          "end": 4913,
+          "source": "function E(n){if(n&&typeof n===\"object\"&&\"code\"in n&&typeof n.code===\"string\")return n.code;return}",
+          "sha256": "a84ab0a2488aed5689416393c679dde4e7f4b29aa980e121bd56b25ab3e7b5e4",
+          "kind": null
+        },
+        {
+          "symbol": "u",
+          "start": 8245,
+          "end": 8324,
+          "source": "u=new Set([\"ENOENT\",\"EACCES\",\"EPERM\",\"ENOTDIR\",\"ELOOP\",\"ENAMETOOLONG\",\"EROFS\"])",
+          "sha256": "30de65b6b8e676f875f68c923e61adb633e126dacc5bd7913e7e3c3e032eee7e",
+          "kind": "var"
+        },
+        {
+          "symbol": "Ot",
+          "start": 8325,
+          "end": 8356,
+          "source": "function Ot(n){return Hk(E(n))}",
+          "sha256": "a72fd12924664487eea111bba2feeb7bc41fc8b1e1fb8bceee436d62097446bc",
+          "kind": null
+        },
+        {
+          "symbol": "Hk",
+          "start": 8356,
+          "end": 8399,
+          "source": "function Hk(n){return n!==void 0&&u.has(n)}",
+          "sha256": "cb79c54ac1d747df672c7131479d810923f9f2858cd407ea76fdd0ff59fe679d",
+          "kind": null
+        }
+      ],
+      "errorBindings": {
+        "E": "E",
+        "l": "l",
+        "Ot": "Ot",
+        "H": "H"
+      },
+      "origins": {
+        "join": {
+          "origin": {
+            "module": "path",
+            "symbol": "join"
+          }
+        },
+        "unlink": {
+          "origin": {
+            "module": "fs/promises",
+            "symbol": "unlink"
+          }
+        },
+        "readFile": {
+          "origin": {
+            "module": "fs/promises",
+            "symbol": "readFile"
+          }
+        },
+        "configDir": {
+          "origin": {
+            "module": "/$bunfs/root/chunk-209mtwte.js",
+            "file": "chunk-209mtwte.js",
+            "symbol": "rD"
+          },
+          "module": {
+            "file": "chunk-209mtwte.js",
+            "moduleSha256": "3ce02cac9fa0c8e291bcfef3d5ef3ab4d7144a119adbb8448e1e9535cca17f6a",
+            "moduleLength": 29506,
+            "manifestSha256": "ba9e122d28e8a42927eb23c7c86b62295f24a223546ee5476e761837579a709b",
+            "binarySha256": "f1863213e4f55aaadc2e6ee617f934ada29930e5de4c5e5f8f9e34a0d594fdd7"
+          },
+          "declaration": {
+            "symbol": "rD",
+            "start": 12708,
+            "end": 12745,
+            "source": "function rD(){return ce()?.dir??null}",
+            "sha256": "5e34e6d6a17ac7d04c7dd4eba8702962181978446192622d49b78dc532263a4e",
+            "kind": null
+          }
+        },
+        "environment": {
+          "origin": {
+            "module": "/$bunfs/root/chunk-5kdb7ws1.js",
+            "file": "chunk-5kdb7ws1.js",
+            "symbol": "a"
+          },
+          "module": {
+            "file": "chunk-5kdb7ws1.js",
+            "moduleSha256": "35536b38d81ea676c2928a182f2b59103d58f3467309ecf236f5e804bfe491cb",
+            "moduleLength": 65736,
+            "manifestSha256": "ba9e122d28e8a42927eb23c7c86b62295f24a223546ee5476e761837579a709b",
+            "binarySha256": "f1863213e4f55aaadc2e6ee617f934ada29930e5de4c5e5f8f9e34a0d594fdd7"
+          },
+          "declaration": {
+            "symbol": "a",
+            "start": 65482,
+            "end": 65493,
+            "source": "a=ZZe(ZU,p)",
+            "sha256": "74de4cb1ceb4570de989cf139c5bf2d72e5ee5a80c7a8aea71f4c542f809a6c7",
+            "kind": "var"
+          }
+        },
+        "defaultProfile": {
+          "origin": {
+            "module": "/$bunfs/root/chunk-209mtwte.js",
+            "file": "chunk-209mtwte.js",
+            "symbol": "mwe"
+          },
+          "module": {
+            "file": "chunk-209mtwte.js",
+            "moduleSha256": "3ce02cac9fa0c8e291bcfef3d5ef3ab4d7144a119adbb8448e1e9535cca17f6a",
+            "moduleLength": 29506,
+            "manifestSha256": "ba9e122d28e8a42927eb23c7c86b62295f24a223546ee5476e761837579a709b",
+            "binarySha256": "f1863213e4f55aaadc2e6ee617f934ada29930e5de4c5e5f8f9e34a0d594fdd7"
+          },
+          "declaration": {
+            "symbol": "mwe",
+            "start": 12167,
+            "end": 12233,
+            "source": "function mwe(e){return I(g(e,\"active_config\"))?.trim()||\"default\"}",
+            "sha256": "eb71fc466f14a5f61d7098ba0c148612161cb167f19bb3fab98a91fcb613ff98",
+            "kind": null
+          }
+        },
+        "reset": {
+          "origin": {
+            "module": "/$bunfs/root/chunk-erq38xpv.js",
+            "file": "chunk-erq38xpv.js",
+            "symbol": "M7n"
+          },
+          "module": {
+            "file": "chunk-erq38xpv.js",
+            "moduleSha256": "13f16bf8c6614895edf0894baf84c0e81c5f8be5e19dd7a4ed26dd8aeafca45d",
+            "moduleLength": 23178,
+            "manifestSha256": "ba9e122d28e8a42927eb23c7c86b62295f24a223546ee5476e761837579a709b",
+            "binarySha256": "f1863213e4f55aaadc2e6ee617f934ada29930e5de4c5e5f8f9e34a0d594fdd7"
+          },
+          "declaration": {
+            "symbol": "M7n",
+            "start": 21366,
+            "end": 21399,
+            "source": "function M7n(){A().reset(),vvn()}",
+            "sha256": "7e2c2ef88c9cf3bc06e400a40b83b83bb839f4276cc9be05eb136cb78e311825",
+            "kind": null
+          }
+        },
+        "debug": {
+          "origin": {
+            "module": "/$bunfs/root/chunk-twb9dkx9.js",
+            "file": "chunk-twb9dkx9.js",
+            "symbol": "t"
+          },
+          "module": {
+            "file": "chunk-twb9dkx9.js",
+            "moduleSha256": "4bedf0e154fa98dfc2e265d93f75650206203e7d84ef2336f6dfc90aefb523d9",
+            "moduleLength": 67079,
+            "manifestSha256": "ba9e122d28e8a42927eb23c7c86b62295f24a223546ee5476e761837579a709b",
+            "binarySha256": "f1863213e4f55aaadc2e6ee617f934ada29930e5de4c5e5f8f9e34a0d594fdd7"
+          },
+          "declaration": {
+            "symbol": "t",
+            "start": 46026,
+            "end": 46071,
+            "source": "function t(e,n={level:\"debug\"}){U().log(e,n)}",
+            "sha256": "da9e0b5e590a43c6f7cf46f3cfcd93d97f399db1017ff8dae938bdbd15e13790",
+            "kind": null
+          }
+        },
+        "schemaLazy": {
+          "origin": {
+            "module": "/$bunfs/root/chunk-5qqrzb2c.js",
+            "file": "chunk-5qqrzb2c.js",
+            "symbol": "f"
+          },
+          "module": {
+            "file": "chunk-5qqrzb2c.js",
+            "moduleSha256": "91b433ccc5add9cada15ca727fd71e45dc2b3042168625a06d879b12cab45945",
+            "moduleLength": 981,
+            "manifestSha256": "ba9e122d28e8a42927eb23c7c86b62295f24a223546ee5476e761837579a709b",
+            "binarySha256": "f1863213e4f55aaadc2e6ee617f934ada29930e5de4c5e5f8f9e34a0d594fdd7"
+          },
+          "declaration": {
+            "symbol": "f",
+            "start": 932,
+            "end": 965,
+            "source": "function f(e){return _rr.lazy(e)}",
+            "sha256": "d9356663a66c8ccff1054002018547334d12bd2d053a1f041a6d6e6b128d3e1e",
+            "kind": null
+          }
+        },
+        "looseObject": {
+          "origin": {
+            "module": "/$bunfs/root/chunk-h7f86550.js",
+            "file": "chunk-h7f86550.js",
+            "symbol": "pt"
+          },
+          "module": {
+            "file": "chunk-h7f86550.js",
+            "moduleSha256": "f6efe2f096a338a3024322204005d99a3be3882ef11e77cb700b7710df39665c",
+            "moduleLength": 90494,
+            "manifestSha256": "ba9e122d28e8a42927eb23c7c86b62295f24a223546ee5476e761837579a709b",
+            "binarySha256": "f1863213e4f55aaadc2e6ee617f934ada29930e5de4c5e5f8f9e34a0d594fdd7"
+          },
+          "declaration": {
+            "symbol": "pt",
+            "start": 84598,
+            "end": 84678,
+            "source": "function pt(e,t){return new Jwe({type:\"object\",shape:e,catchall:se(),...Da(t)})}",
+            "sha256": "8fb88dced219396ecdf61f452fabbf30a8ee44c0def0acd6d398e9e170d4b74c",
+            "kind": null
+          }
+        },
+        "string": {
+          "origin": {
+            "module": "/$bunfs/root/chunk-h7f86550.js",
+            "file": "chunk-h7f86550.js",
+            "symbol": "o"
+          },
+          "module": {
+            "file": "chunk-h7f86550.js",
+            "moduleSha256": "f6efe2f096a338a3024322204005d99a3be3882ef11e77cb700b7710df39665c",
+            "moduleLength": 90494,
+            "manifestSha256": "ba9e122d28e8a42927eb23c7c86b62295f24a223546ee5476e761837579a709b",
+            "binarySha256": "f1863213e4f55aaadc2e6ee617f934ada29930e5de4c5e5f8f9e34a0d594fdd7"
+          },
+          "declaration": {
+            "symbol": "o",
+            "start": 79808,
+            "end": 79839,
+            "source": "function o(e){return cn(PVt,e)}",
+            "sha256": "3b2ec20a47a17c126cca61eafd369abb0fdc1ae6341822b36de8a53505b75206",
+            "kind": null
+          }
+        },
+        "parse": {
+          "origin": {
+            "module": "/$bunfs/root/chunk-twb9dkx9.js",
+            "file": "chunk-twb9dkx9.js",
+            "symbol": "Y"
+          },
+          "module": {
+            "file": "chunk-twb9dkx9.js",
+            "moduleSha256": "4bedf0e154fa98dfc2e265d93f75650206203e7d84ef2336f6dfc90aefb523d9",
+            "moduleLength": 67079,
+            "manifestSha256": "ba9e122d28e8a42927eb23c7c86b62295f24a223546ee5476e761837579a709b",
+            "binarySha256": "f1863213e4f55aaadc2e6ee617f934ada29930e5de4c5e5f8f9e34a0d594fdd7"
+          },
+          "declaration": {
+            "symbol": "Y",
+            "start": 46693,
+            "end": 46786,
+            "source": "Y=(e,n)=>{using r=ng`JSON.parse(${Se(e)})`;return typeof n>\"u\"?JSON.parse(e):JSON.parse(e,n)}",
+            "sha256": "20803a156fd733bef35bd61ed1363839ce84756656d8a0fec8c8ad9cccb444d0",
+            "kind": "var"
+          }
+        }
+      },
+      "lock": {
+        "origin": {
+          "module": "/$bunfs/root/chunk-erq38xpv.js",
+          "file": "chunk-erq38xpv.js",
+          "symbol": "Pzr"
+        },
+        "module": {
+          "file": "chunk-erq38xpv.js",
+          "moduleSha256": "13f16bf8c6614895edf0894baf84c0e81c5f8be5e19dd7a4ed26dd8aeafca45d",
+          "moduleLength": 23178,
+          "manifestSha256": "ba9e122d28e8a42927eb23c7c86b62295f24a223546ee5476e761837579a709b",
+          "binarySha256": "f1863213e4f55aaadc2e6ee617f934ada29930e5de4c5e5f8f9e34a0d594fdd7"
+        },
+        "declaration": {
+          "symbol": "Pzr",
+          "start": 15343,
+          "end": 15393,
+          "source": "function Pzr(e,n){return j(ae(e),n,\"fail-closed\")}",
+          "sha256": "406c1e7bf894dd6a67470930b54dbf0cd3753ce2e2151ce95c92bb2abf9cb17f",
+          "kind": null
+        },
+        "aliases": {
+          "lockDirectory": "j",
+          "dirname": "ae"
+        },
+        "origins": [
+          {
+            "origin": {
+              "file": "chunk-erq38xpv.js",
+              "symbol": "j"
+            },
+            "module": {
+              "file": "chunk-erq38xpv.js",
+              "moduleSha256": "13f16bf8c6614895edf0894baf84c0e81c5f8be5e19dd7a4ed26dd8aeafca45d",
+              "moduleLength": 23178,
+              "manifestSha256": "ba9e122d28e8a42927eb23c7c86b62295f24a223546ee5476e761837579a709b",
+              "binarySha256": "f1863213e4f55aaadc2e6ee617f934ada29930e5de4c5e5f8f9e34a0d594fdd7"
+            },
+            "declaration": {
+              "symbol": "j",
+              "start": 15393,
+              "end": 15837,
+              "source": "async function j(e,n,s){let r=ce[s],o;try{o=await de(e,r,s)}catch(u){if(s===\"fail-closed\"||u instanceof xd)throw u;return t(`wif: credentials lock unavailable at ${e} (${l(u)}); refreshing without cross-process serialization`),n()}try{return i(\"tengu_wif_user_oauth_lock_acquired\",{mode:c(s)}),await n()}finally{i(\"tengu_wif_user_oauth_lock_released\",{mode:c(s)});try{await o()}catch(u){if(as(u))t(`wif: lock release failed: ${u}`);else d(u)}}}",
+              "sha256": "9abf66179a976d94438e087fce0caee9db940436fb3403ec160787f26dd12182",
+              "kind": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "platform": "darwin-arm64",
+      "module": {
+        "file": "chunk-kjjppes5.js",
+        "moduleSha256": "37a1a0f4e4252495df65c6dfd6bb6ea330b0596147f86836dfb1ebd66f9aade1",
+        "moduleLength": 14486,
+        "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+        "binarySha256": "6eab8333fe2121553100d8f40bfada384a3e989b94f947e18ba6677a6fcb41ea"
+      },
+      "profileGetter": {
+        "module": {
+          "file": "chunk-mbfze585.js",
+          "moduleSha256": "2e40ea5244009e4c37b57879f34c96cc3e3bc7d3c5468f9e65d63fe5ce13287a",
+          "moduleLength": 65738,
+          "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+          "binarySha256": "6eab8333fe2121553100d8f40bfada384a3e989b94f947e18ba6677a6fcb41ea"
+        },
+        "binding": {
+          "symbol": "ANTHROPIC_PROFILE",
+          "start": 13824,
+          "end": 13848,
+          "source": "ANTHROPIC_PROFILE:()=>bo",
+          "sha256": "475c5444da66ad90625a6e5e2e6999fa3302b1d425250876557b8550a7ed7e4a",
+          "kind": null
+        },
+        "decoder": {
+          "symbol": "bo",
+          "start": 16553,
+          "end": 16563,
+          "source": "bo=D.str()",
+          "sha256": "fb810e378af325f5ddadf5798b94e54ed06f2b1ee71e394dae698f054593eb0e",
+          "kind": "var"
+        },
+        "decoderOrigin": {
+          "origin": {
+            "module": "/$bunfs/root/chunk-4geah9ee.js",
+            "file": "chunk-4geah9ee.js",
+            "symbol": "D"
+          },
+          "module": {
+            "file": "chunk-4geah9ee.js",
+            "moduleSha256": "53bddacc1b3b9d5f4e052518cd29efc8dcefd57f594eb671bc2114089574de8f",
+            "moduleLength": 1408,
+            "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+            "binarySha256": "6eab8333fe2121553100d8f40bfada384a3e989b94f947e18ba6677a6fcb41ea"
+          },
+          "declaration": {
+            "symbol": "D",
+            "start": 1028,
+            "end": 1164,
+            "source": "D={str:()=>f,rawStr:()=>o,bool:()=>s,triBool:()=>l,int:(n)=>n?d(n):m,enum:(n)=>i((e)=>e!==void 0&&n.includes(e.trim())?e.trim():void 0)}",
+            "sha256": "15c2ec2560412cfb56c1d2f520bd430b89d87dd2a339e35de30e0aa66663ea93",
+            "kind": "var"
+          }
+        }
+      },
+      "logoutCall": {
+        "module": {
+          "file": "chunk-kjjppes5.js",
+          "moduleSha256": "37a1a0f4e4252495df65c6dfd6bb6ea330b0596147f86836dfb1ebd66f9aade1",
+          "moduleLength": 14486,
+          "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+          "binarySha256": "6eab8333fe2121553100d8f40bfada384a3e989b94f947e18ba6677a6fcb41ea"
+        },
+        "declaration": {
+          "symbol": "ite",
+          "start": 10345,
+          "end": 13043,
+          "source": "async function ite({clearOnboarding:e=!1,preserveInProcessTokens:r=!1,preserveNonAnthropicAuth:n=!1,storageV5:s,preserveQuotaAutoResume:c=!1,artifactAccount:u=\"signed_out\",incomingIdentity:h,credentials:g}){let{flushTelemetry:R}=await import(\"/$bunfs/root/chunk-pc840nxb.js\");if(await R(),await ZBo(u),Pt()){await rJt(s,{preserveQuotaAutoResume:c,artifactAccount:u,incomingIdentity:h});return}if(!r&&He()===\"firstParty\"){let p=zn();p.invalidateCache?.();let i=await p.readAsync(g),m=i?.claudeAiOauth;if(m?.refreshToken)await qC(m.refreshToken,m.clientId);let C=i?.designOauth;if(C?.refreshToken)await qC(C.refreshToken,C.clientId)}if(He()===\"gateway\"){let p=Date.now()+5000;for(let C=DEe();C&&Date.now()<p;C=DEe())await lt(C.catch(()=>{}),p-Date.now());let i=zn();i.invalidateCache?.();let m=(await i.readAsync(g))?.enterpriseGateway;if(m)await Aqo(m,g)}if(!r)a.unset(\"CLAUDE_CODE_OAUTH_TOKEN\"),ZU(null);await m3r(s),await b({revoke:!r&&He()===\"firstParty\"?({refreshToken:p,clientId:i})=>qC(p,i):void 0});let w=zn();if(n){if(He()===\"firstParty\"){w.invalidateCache?.();let p=(await w.readAsync(g))?.designOauth;if(p?.refreshToken)await qC(p.refreshToken,p.clientId)}await w.mutate((p)=>{let i={...p};return delete i.claudeAiOauth,delete i.organizationUuid,delete i.trustedDeviceToken,delete i.enterpriseGateway,delete i.designOauth,i},g).catch((p)=>{let i=E(p);if(i===\"EPERM\"||i===\"ENOENT\"||ch(p)){t(`[performLogout] re-login secure-storage prune failed (${i}): ${l(p)}`,{level:\"error\"});return}d(p)})}else{let p=!1,i=async()=>{p=!0;let m=await J(w,g);if(await w.delete(g),m&&Object.keys(m).length>0)await Q(w,m,g)};await _9r(i).catch((m)=>{if(p)throw m;return d(m),L5o(i)})}kY(null),qfe(null),await rJt(s,{preserveQuotaAutoResume:c,artifactAccount:u,incomingIdentity:h,credentials:g}),await Ae((p)=>{let i={...p};if(e){if(i.hasCompletedOnboarding=!1,i.subscriptionNoticeCount=0,i.hasAvailableSubscription=!1,i.customApiKeyResponses!==void 0)i.customApiKeyResponses={approved:[],rejected:Z0(i).rejected};let m=Mot;if(i.seenNotifications?.[m]!==void 0){let{[m]:C,...x}=i.seenNotifications;i.seenNotifications=x}}return i.oauthAccount=void 0,i.additionalModelOptionsCache=void 0,i.additionalModelOptionsAnsweredAt=void 0,i.additionalModelCostsCache=void 0,i.modelAccessCache=void 0,i.orgModelDefaultCache=void 0,i.cachedArtifactRoster=void 0,i.artifactRosterDenied=void 0,i.lastSeenOrgDefaultUpdatedAt=void 0,i.clientDataCache=void 0,i.clientDataCacheSlots=void 0,i.autoCompactWindowsCache=void 0,i.cachedUsageUtilization=void 0,i.metricsStatusCache=void 0,i.metricsStatusCacheByPrincipal=void 0,i.githubWebConnectionStatusCache=void 0,i.startupPrefetchedAt=void 0,i},s),g6e(void 0),y(\"oauth_logout\")}",
+          "sha256": "ce918b8332b0ed3eabf8a5a8233739421f4ffa39361d1ebeca3c6fd4cc6f7deb",
+          "kind": null
+        }
+      },
+      "cleanupSymbol": "b",
+      "local": {
+        "declarations": [
+          {
+            "symbol": "Hot",
+            "start": 2394,
+            "end": 2436,
+            "source": "Hot=\"41077d10-94b8-4194-be48-d251e9eb21b4\"",
+            "sha256": "2e0782704775aae762101048c9a519b6a1ff2fa499099eb4755012fd17d8810e",
+            "kind": "var"
+          },
+          {
+            "symbol": "K",
+            "start": 2449,
+            "end": 2470,
+            "source": "K=/^[A-Za-z0-9_.-]+$/",
+            "sha256": "b2126f2e9325bf16fdab1078480a44c7910dc89c9cacb4705e73de4b153353fa",
+            "kind": "var"
+          },
+          {
+            "symbol": "A",
+            "start": 2471,
+            "end": 2499,
+            "source": "A={created_by:\"claude-code\"}",
+            "sha256": "9eba2cf410b206b0ce4396d57a20542fee7ce4d4d902ca96e095e8484c97f324",
+            "kind": "var"
+          },
+          {
+            "symbol": "B",
+            "start": 2500,
+            "end": 2651,
+            "source": "B=f(()=>pt({created_by:o().optional(),base_url:o().optional(),authentication:pt({type:o(),client_id:o().optional(),credentials_path:o().optional()})}))",
+            "sha256": "733edddede17c4d57ba2ab2b8c77d6e268cf71d8cee80f2f42d09d7a67614d57",
+            "kind": "var"
+          },
+          {
+            "symbol": "z",
+            "start": 2652,
+            "end": 2692,
+            "source": "z=f(()=>pt({created_by:o().optional()}))",
+            "sha256": "316ae73adaa0142aa6a82994c3c039b7547afd5fde2a8d555ef5dd581462f13d",
+            "kind": "var"
+          },
+          {
+            "symbol": "b",
+            "start": 7982,
+            "end": 8401,
+            "source": "async function b({revoke:e}={}){try{let r=rL();if(r===null)return{removed:!1};let n;try{n=S(r)}catch{return{removed:!1}}let s=await k(_(r,\"configs\",`${n}.json`));if(s===null||!D(s))return{removed:!1};if(await I(v(r,n))===null)return{removed:!1};return await Ozr(v(r,n),()=>W(e))}catch(r){if(E(r)===\"ENOENT\")return{removed:!1};return t(`Logout: profile credential removal failed: ${l(r)}`,{level:\"error\"}),{removed:!1}}}",
+            "sha256": "19984d7b3067cefeecefa2c08eb8c246c213b7f9951ccab1ecc06350024b06dc",
+            "kind": null
+          },
+          {
+            "symbol": "W",
+            "start": 8401,
+            "end": 8976,
+            "source": "async function W(e){let r=rL();if(r===null)return{removed:!1};let n;try{n=S(r)}catch{return{removed:!1}}let s=await k(_(r,\"configs\",`${n}.json`));if(s===null||!D(s))return{removed:!1};let c=v(r,n),u=await I(c);if(u===null)return{removed:!1};let h={refreshToken:u.refreshToken,clientId:Hot};if(e&&h.refreshToken)await e({refreshToken:h.refreshToken,clientId:h.clientId});try{await H(c)}catch(g){return t(`Logout: could not remove profile credentials: ${l(g)}`,{level:\"error\"}),{removed:!1,...h}}return t(`Logout: removed credentials for profile ${n}`),M7n(),{removed:!0,...h}}",
+            "sha256": "2e5c8b52cd51579a5efd1265bb905a8545e8676d98ba55707cf0619c6b907da3",
+            "kind": null
+          },
+          {
+            "symbol": "S",
+            "start": 8976,
+            "end": 9214,
+            "source": "function S(e){let r=a.ANTHROPIC_PROFILE||mwe(e);if(!L(r))throw new P(`ANTHROPIC_PROFILE \"${r}\" is not a valid profile name (letters, digits, '_', '.', '-')`,\"ANTHROPIC_PROFILE is not a valid profile name\",\"invalid_profile_name\");return r}",
+            "sha256": "19d9b450efa36900cbda91ca643cc220e35df1fb9918413b6d8a8ab2a1701df6",
+            "kind": null
+          },
+          {
+            "symbol": "L",
+            "start": 9214,
+            "end": 9268,
+            "source": "function L(e){return!!e&&K.test(e)&&e!==\".\"&&e!==\"..\"}",
+            "sha256": "ae43b17a6eecc0a22a56ecb145fe94cf06b54189709475c96c15ebf73cc7fc49",
+            "kind": null
+          },
+          {
+            "symbol": "v",
+            "start": 9268,
+            "end": 9322,
+            "source": "function v(e,r){return _(e,\"credentials\",`${r}.json`)}",
+            "sha256": "1858bb4c06e81ed7fc8340f819d1a030041bd618f2352b09396fa566f82497db",
+            "kind": null
+          },
+          {
+            "symbol": "k",
+            "start": 9322,
+            "end": 9689,
+            "source": "async function k(e){let r;try{r=await O(e,\"utf-8\")}catch(c){if(E(c)===\"ENOENT\")return null;if(Ht(c))return{authentication:{type:\"unreadable\"}};throw c}let n;try{n=Y(r)}catch(c){return t(`Profile config is not JSON, treating as foreign: ${l(c)}`),{authentication:{type:\"unreadable\"}}}let s=B().safeParse(n);return s.success?s.data:{authentication:{type:\"unreadable\"}}}",
+            "sha256": "94d67a2c2d6d97431244c5232928b26911cd336c1d802d1e0d0d4b0864ce4a2e",
+            "kind": null
+          },
+          {
+            "symbol": "D",
+            "start": 9689,
+            "end": 9810,
+            "source": "function D(e){return e.created_by===A.created_by&&e.authentication.type===\"user_oauth\"&&e.authentication.client_id===Hot}",
+            "sha256": "e46f43c66bb5026e0ab1d1c821f1e27aecf34cee5955906719db358ba1ab1f23",
+            "kind": null
+          },
+          {
+            "symbol": "I",
+            "start": 9810,
+            "end": 10094,
+            "source": "async function I(e){let r;try{r=await O(e,\"utf-8\")}catch(u){if(Ht(u))return null;throw u}let n;try{n=Y(r)}catch{return null}let s=z().safeParse(n);if(!s.success||s.data.created_by!==A.created_by)return null;let c=s.data.refresh_token;return{refreshToken:typeof c===\"string\"?c:void 0}}",
+            "sha256": "bd7008434da057e4a6af3efd6adea72323395963821ee9b1867405af83cfbd95",
+            "kind": null
+          }
+        ],
+        "imports": [
+          "rL",
+          "_",
+          "Ozr",
+          "E",
+          "t",
+          "l",
+          "H",
+          "M7n",
+          "O",
+          "Ht",
+          "Y",
+          "f",
+          "pt",
+          "o",
+          "a",
+          "mwe",
+          "P"
+        ]
+      },
+      "fields": {
+        "join": "_",
+        "unlink": "H",
+        "readFile": "O",
+        "configDir": "rL",
+        "environment": "a",
+        "defaultProfile": "mwe",
+        "reset": "M7n",
+        "debug": "t",
+        "schemaLazy": "f",
+        "looseObject": "pt",
+        "string": "o",
+        "parse": "Y"
+      },
+      "errorModule": {
+        "file": "chunk-c9me9cp7.js",
+        "moduleSha256": "db81856ee883c31a0be18c305014a0d82d3bd698a459223b9de754b934b084ae",
+        "moduleLength": 10331,
+        "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+        "binarySha256": "6eab8333fe2121553100d8f40bfada384a3e989b94f947e18ba6677a6fcb41ea"
+      },
+      "errors": [
+        {
+          "symbol": "P",
+          "start": 3714,
+          "end": 3869,
+          "source": "class P extends Error{telemetryMessage;errorClass;constructor(n,e,t){super(n);this.name=\"TelemetrySafeError\",this.telemetryMessage=e??n,this.errorClass=t}}",
+          "sha256": "e0165a34780a88fe34268a00a97acdaace9a83c4b760613e669e99daf6ac0899",
+          "kind": null
+        },
+        {
+          "symbol": "l",
+          "start": 4754,
+          "end": 4814,
+          "source": "function l(n){return n instanceof Error?n.message:String(n)}",
+          "sha256": "2f921ed78ffeed39032d7e9c4783e05c294cba2ce61cc5ac20466ece27a81075",
+          "kind": null
+        },
+        {
+          "symbol": "E",
+          "start": 4814,
+          "end": 4913,
+          "source": "function E(n){if(n&&typeof n===\"object\"&&\"code\"in n&&typeof n.code===\"string\")return n.code;return}",
+          "sha256": "a84ab0a2488aed5689416393c679dde4e7f4b29aa980e121bd56b25ab3e7b5e4",
+          "kind": null
+        },
+        {
+          "symbol": "u",
+          "start": 8245,
+          "end": 8324,
+          "source": "u=new Set([\"ENOENT\",\"EACCES\",\"EPERM\",\"ENOTDIR\",\"ELOOP\",\"ENAMETOOLONG\",\"EROFS\"])",
+          "sha256": "30de65b6b8e676f875f68c923e61adb633e126dacc5bd7913e7e3c3e032eee7e",
+          "kind": "var"
+        },
+        {
+          "symbol": "Ht",
+          "start": 8325,
+          "end": 8356,
+          "source": "function Ht(n){return PT(E(n))}",
+          "sha256": "f99ca7661497decc4ab25c643d1589774c201238e94337618181b48b1254db39",
+          "kind": null
+        },
+        {
+          "symbol": "PT",
+          "start": 8356,
+          "end": 8399,
+          "source": "function PT(n){return n!==void 0&&u.has(n)}",
+          "sha256": "e824c06455293f2b05b3e0ab64734f7e9101134260d6612509bcb74fc4bb908f",
+          "kind": null
+        }
+      ],
+      "errorBindings": {
+        "E": "E",
+        "l": "l",
+        "Ht": "Ht",
+        "P": "P"
+      },
+      "origins": {
+        "join": {
+          "origin": {
+            "module": "path",
+            "symbol": "join"
+          }
+        },
+        "unlink": {
+          "origin": {
+            "module": "fs/promises",
+            "symbol": "unlink"
+          }
+        },
+        "readFile": {
+          "origin": {
+            "module": "fs/promises",
+            "symbol": "readFile"
+          }
+        },
+        "configDir": {
+          "origin": {
+            "module": "/$bunfs/root/chunk-8ptzhr8g.js",
+            "file": "chunk-8ptzhr8g.js",
+            "symbol": "rL"
+          },
+          "module": {
+            "file": "chunk-8ptzhr8g.js",
+            "moduleSha256": "9a19d00409822fae9a74e2a68be1c7029d4ea3e0263f1ee3954762df39bfbaf1",
+            "moduleLength": 29506,
+            "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+            "binarySha256": "6eab8333fe2121553100d8f40bfada384a3e989b94f947e18ba6677a6fcb41ea"
+          },
+          "declaration": {
+            "symbol": "rL",
+            "start": 12708,
+            "end": 12745,
+            "source": "function rL(){return ce()?.dir??null}",
+            "sha256": "eeed22e723305023b2c1c028f843cbaf43101d8213e72365d4e987b80f012d3a",
+            "kind": null
+          }
+        },
+        "environment": {
+          "origin": {
+            "module": "/$bunfs/root/chunk-mbfze585.js",
+            "file": "chunk-mbfze585.js",
+            "symbol": "a"
+          },
+          "module": {
+            "file": "chunk-mbfze585.js",
+            "moduleSha256": "2e40ea5244009e4c37b57879f34c96cc3e3bc7d3c5468f9e65d63fe5ce13287a",
+            "moduleLength": 65738,
+            "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+            "binarySha256": "6eab8333fe2121553100d8f40bfada384a3e989b94f947e18ba6677a6fcb41ea"
+          },
+          "declaration": {
+            "symbol": "a",
+            "start": 65484,
+            "end": 65495,
+            "source": "a=ZZe(jU,R)",
+            "sha256": "44ef2e88407080f40da65be8f6c06357952a012f91c7fbf90982c130cc9ac988",
+            "kind": "var"
+          }
+        },
+        "defaultProfile": {
+          "origin": {
+            "module": "/$bunfs/root/chunk-8ptzhr8g.js",
+            "file": "chunk-8ptzhr8g.js",
+            "symbol": "mwe"
+          },
+          "module": {
+            "file": "chunk-8ptzhr8g.js",
+            "moduleSha256": "9a19d00409822fae9a74e2a68be1c7029d4ea3e0263f1ee3954762df39bfbaf1",
+            "moduleLength": 29506,
+            "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+            "binarySha256": "6eab8333fe2121553100d8f40bfada384a3e989b94f947e18ba6677a6fcb41ea"
+          },
+          "declaration": {
+            "symbol": "mwe",
+            "start": 12167,
+            "end": 12233,
+            "source": "function mwe(e){return I(g(e,\"active_config\"))?.trim()||\"default\"}",
+            "sha256": "eb71fc466f14a5f61d7098ba0c148612161cb167f19bb3fab98a91fcb613ff98",
+            "kind": null
+          }
+        },
+        "reset": {
+          "origin": {
+            "module": "/$bunfs/root/chunk-ax8nkkm1.js",
+            "file": "chunk-ax8nkkm1.js",
+            "symbol": "M7n"
+          },
+          "module": {
+            "file": "chunk-ax8nkkm1.js",
+            "moduleSha256": "13fd653c844d4f387f64bd5ef969a6ae1181a233c550dc185b434a8984ba1a11",
+            "moduleLength": 23178,
+            "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+            "binarySha256": "6eab8333fe2121553100d8f40bfada384a3e989b94f947e18ba6677a6fcb41ea"
+          },
+          "declaration": {
+            "symbol": "M7n",
+            "start": 21366,
+            "end": 21399,
+            "source": "function M7n(){A().reset(),vvn()}",
+            "sha256": "7e2c2ef88c9cf3bc06e400a40b83b83bb839f4276cc9be05eb136cb78e311825",
+            "kind": null
+          }
+        },
+        "debug": {
+          "origin": {
+            "module": "/$bunfs/root/chunk-q80zaav8.js",
+            "file": "chunk-q80zaav8.js",
+            "symbol": "t"
+          },
+          "module": {
+            "file": "chunk-q80zaav8.js",
+            "moduleSha256": "f9503296591b825624caf5932b9c5973cde96b859259266a506b616dca5cd41e",
+            "moduleLength": 67079,
+            "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+            "binarySha256": "6eab8333fe2121553100d8f40bfada384a3e989b94f947e18ba6677a6fcb41ea"
+          },
+          "declaration": {
+            "symbol": "t",
+            "start": 46026,
+            "end": 46071,
+            "source": "function t(e,n={level:\"debug\"}){U().log(e,n)}",
+            "sha256": "da9e0b5e590a43c6f7cf46f3cfcd93d97f399db1017ff8dae938bdbd15e13790",
+            "kind": null
+          }
+        },
+        "schemaLazy": {
+          "origin": {
+            "module": "/$bunfs/root/chunk-5qqrzb2c.js",
+            "file": "chunk-5qqrzb2c.js",
+            "symbol": "f"
+          },
+          "module": {
+            "file": "chunk-5qqrzb2c.js",
+            "moduleSha256": "91b433ccc5add9cada15ca727fd71e45dc2b3042168625a06d879b12cab45945",
+            "moduleLength": 981,
+            "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+            "binarySha256": "6eab8333fe2121553100d8f40bfada384a3e989b94f947e18ba6677a6fcb41ea"
+          },
+          "declaration": {
+            "symbol": "f",
+            "start": 932,
+            "end": 965,
+            "source": "function f(e){return _rr.lazy(e)}",
+            "sha256": "d9356663a66c8ccff1054002018547334d12bd2d053a1f041a6d6e6b128d3e1e",
+            "kind": null
+          }
+        },
+        "looseObject": {
+          "origin": {
+            "module": "/$bunfs/root/chunk-aybmj3t4.js",
+            "file": "chunk-aybmj3t4.js",
+            "symbol": "pt"
+          },
+          "module": {
+            "file": "chunk-aybmj3t4.js",
+            "moduleSha256": "bf0b9819eea4ab1b4e8a70ffb924d5f5a1a62c148ea2ebf839429258515b91aa",
+            "moduleLength": 90494,
+            "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+            "binarySha256": "6eab8333fe2121553100d8f40bfada384a3e989b94f947e18ba6677a6fcb41ea"
+          },
+          "declaration": {
+            "symbol": "pt",
+            "start": 84598,
+            "end": 84678,
+            "source": "function pt(e,t){return new Jwe({type:\"object\",shape:e,catchall:se(),...La(t)})}",
+            "sha256": "deacc08ec8df5d6ebe64a388d20aee5aef50834861490b56f7c46ce3b4c00865",
+            "kind": null
+          }
+        },
+        "string": {
+          "origin": {
+            "module": "/$bunfs/root/chunk-aybmj3t4.js",
+            "file": "chunk-aybmj3t4.js",
+            "symbol": "o"
+          },
+          "module": {
+            "file": "chunk-aybmj3t4.js",
+            "moduleSha256": "bf0b9819eea4ab1b4e8a70ffb924d5f5a1a62c148ea2ebf839429258515b91aa",
+            "moduleLength": 90494,
+            "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+            "binarySha256": "6eab8333fe2121553100d8f40bfada384a3e989b94f947e18ba6677a6fcb41ea"
+          },
+          "declaration": {
+            "symbol": "o",
+            "start": 79808,
+            "end": 79839,
+            "source": "function o(e){return cn(OVt,e)}",
+            "sha256": "657449f167dbc6037be33dfd3ef010881dc62eb9fd72da9785282bae87e163a8",
+            "kind": null
+          }
+        },
+        "parse": {
+          "origin": {
+            "module": "/$bunfs/root/chunk-q80zaav8.js",
+            "file": "chunk-q80zaav8.js",
+            "symbol": "Y"
+          },
+          "module": {
+            "file": "chunk-q80zaav8.js",
+            "moduleSha256": "f9503296591b825624caf5932b9c5973cde96b859259266a506b616dca5cd41e",
+            "moduleLength": 67079,
+            "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+            "binarySha256": "6eab8333fe2121553100d8f40bfada384a3e989b94f947e18ba6677a6fcb41ea"
+          },
+          "declaration": {
+            "symbol": "Y",
+            "start": 46693,
+            "end": 46786,
+            "source": "Y=(e,n)=>{using r=ng`JSON.parse(${Se(e)})`;return typeof n>\"u\"?JSON.parse(e):JSON.parse(e,n)}",
+            "sha256": "20803a156fd733bef35bd61ed1363839ce84756656d8a0fec8c8ad9cccb444d0",
+            "kind": "var"
+          }
+        }
+      },
+      "lock": {
+        "origin": {
+          "module": "/$bunfs/root/chunk-ax8nkkm1.js",
+          "file": "chunk-ax8nkkm1.js",
+          "symbol": "Ozr"
+        },
+        "module": {
+          "file": "chunk-ax8nkkm1.js",
+          "moduleSha256": "13fd653c844d4f387f64bd5ef969a6ae1181a233c550dc185b434a8984ba1a11",
+          "moduleLength": 23178,
+          "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+          "binarySha256": "6eab8333fe2121553100d8f40bfada384a3e989b94f947e18ba6677a6fcb41ea"
+        },
+        "declaration": {
+          "symbol": "Ozr",
+          "start": 15343,
+          "end": 15393,
+          "source": "function Ozr(e,n){return j(ae(e),n,\"fail-closed\")}",
+          "sha256": "d119c06bb22609b4d02aa176ac3792bb90e2b4a786a1a81a36bbe4788531d521",
+          "kind": null
+        },
+        "aliases": {
+          "lockDirectory": "j",
+          "dirname": "ae"
+        },
+        "origins": [
+          {
+            "origin": {
+              "file": "chunk-ax8nkkm1.js",
+              "symbol": "j"
+            },
+            "module": {
+              "file": "chunk-ax8nkkm1.js",
+              "moduleSha256": "13fd653c844d4f387f64bd5ef969a6ae1181a233c550dc185b434a8984ba1a11",
+              "moduleLength": 23178,
+              "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+              "binarySha256": "6eab8333fe2121553100d8f40bfada384a3e989b94f947e18ba6677a6fcb41ea"
+            },
+            "declaration": {
+              "symbol": "j",
+              "start": 15393,
+              "end": 15837,
+              "source": "async function j(e,n,s){let r=ce[s],o;try{o=await de(e,r,s)}catch(u){if(s===\"fail-closed\"||u instanceof xd)throw u;return t(`wif: credentials lock unavailable at ${e} (${l(u)}); refreshing without cross-process serialization`),n()}try{return i(\"tengu_wif_user_oauth_lock_acquired\",{mode:c(s)}),await n()}finally{i(\"tengu_wif_user_oauth_lock_released\",{mode:c(s)});try{await o()}catch(u){if(as(u))t(`wif: lock release failed: ${u}`);else d(u)}}}",
+              "sha256": "9abf66179a976d94438e087fce0caee9db940436fb3403ec160787f26dd12182",
+              "kind": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "platform": "win32-x64",
+      "module": {
+        "file": "chunk-9xbcz4jc.js",
+        "moduleSha256": "c9a00cd8e917e16d776c7c99b2a0d0bb75cb7482051c091bf5278048a87d864e",
+        "moduleLength": 14486,
+        "manifestSha256": "c71e85888df3301fd3c4cb158744538810418e2d67591debe8e4f7c771fcdddc",
+        "binarySha256": "6d5be51f0edfe3429cd1a9885950db31c1e59eb9a2c9a30a47e64179d2ff98b4"
+      },
+      "profileGetter": {
+        "module": {
+          "file": "chunk-5g00bdfr.js",
+          "moduleSha256": "da1a132ee91c1c9cff1f8560ab401cd9a1a38ce2daaeabc1b2db56f82ab8872c",
+          "moduleLength": 65807,
+          "manifestSha256": "c71e85888df3301fd3c4cb158744538810418e2d67591debe8e4f7c771fcdddc",
+          "binarySha256": "6d5be51f0edfe3429cd1a9885950db31c1e59eb9a2c9a30a47e64179d2ff98b4"
+        },
+        "binding": {
+          "symbol": "ANTHROPIC_PROFILE",
+          "start": 13894,
+          "end": 13918,
+          "source": "ANTHROPIC_PROFILE:()=>bo",
+          "sha256": "475c5444da66ad90625a6e5e2e6999fa3302b1d425250876557b8550a7ed7e4a",
+          "kind": null
+        },
+        "decoder": {
+          "symbol": "bo",
+          "start": 16623,
+          "end": 16633,
+          "source": "bo=D.str()",
+          "sha256": "fb810e378af325f5ddadf5798b94e54ed06f2b1ee71e394dae698f054593eb0e",
+          "kind": "var"
+        },
+        "decoderOrigin": {
+          "origin": {
+            "module": "B:/~BUN/root/chunk-gqk1he6j.js",
+            "file": "chunk-gqk1he6j.js",
+            "symbol": "D"
+          },
+          "module": {
+            "file": "chunk-gqk1he6j.js",
+            "moduleSha256": "c8ef8a3cfbeead85113afe5eb06251ddf4ad3f611599f4a5900e7ee617012f71",
+            "moduleLength": 1408,
+            "manifestSha256": "c71e85888df3301fd3c4cb158744538810418e2d67591debe8e4f7c771fcdddc",
+            "binarySha256": "6d5be51f0edfe3429cd1a9885950db31c1e59eb9a2c9a30a47e64179d2ff98b4"
+          },
+          "declaration": {
+            "symbol": "D",
+            "start": 1028,
+            "end": 1164,
+            "source": "D={str:()=>f,rawStr:()=>o,bool:()=>s,triBool:()=>l,int:(n)=>n?d(n):m,enum:(n)=>i((e)=>e!==void 0&&n.includes(e.trim())?e.trim():void 0)}",
+            "sha256": "15c2ec2560412cfb56c1d2f520bd430b89d87dd2a339e35de30e0aa66663ea93",
+            "kind": "var"
+          }
+        }
+      },
+      "logoutCall": {
+        "module": {
+          "file": "chunk-9xbcz4jc.js",
+          "moduleSha256": "c9a00cd8e917e16d776c7c99b2a0d0bb75cb7482051c091bf5278048a87d864e",
+          "moduleLength": 14486,
+          "manifestSha256": "c71e85888df3301fd3c4cb158744538810418e2d67591debe8e4f7c771fcdddc",
+          "binarySha256": "6d5be51f0edfe3429cd1a9885950db31c1e59eb9a2c9a30a47e64179d2ff98b4"
+        },
+        "declaration": {
+          "symbol": "rte",
+          "start": 10345,
+          "end": 13043,
+          "source": "async function rte({clearOnboarding:e=!1,preserveInProcessTokens:r=!1,preserveNonAnthropicAuth:n=!1,storageV5:s,preserveQuotaAutoResume:c=!1,artifactAccount:u=\"signed_out\",incomingIdentity:h,credentials:g}){let{flushTelemetry:R}=await import(\"B:/~BUN/root/chunk-yp5wqrtx.js\");if(await R(),await w1o(u),Pt()){await qJt(s,{preserveQuotaAutoResume:c,artifactAccount:u,incomingIdentity:h});return}if(!r&&Oe()===\"firstParty\"){let p=Gn();p.invalidateCache?.();let i=await p.readAsync(g),m=i?.claudeAiOauth;if(m?.refreshToken)await Vk(m.refreshToken,m.clientId);let C=i?.designOauth;if(C?.refreshToken)await Vk(C.refreshToken,C.clientId)}if(Oe()===\"gateway\"){let p=Date.now()+5000;for(let C=Ave();C&&Date.now()<p;C=Ave())await lt(C.catch(()=>{}),p-Date.now());let i=Gn();i.invalidateCache?.();let m=(await i.readAsync(g))?.enterpriseGateway;if(m)await qqo(m,g)}if(!r)a.unset(\"CLAUDE_CODE_OAUTH_TOKEN\"),jB(null);await KKr(s),await b({revoke:!r&&Oe()===\"firstParty\"?({refreshToken:p,clientId:i})=>Vk(p,i):void 0});let w=Gn();if(n){if(Oe()===\"firstParty\"){w.invalidateCache?.();let p=(await w.readAsync(g))?.designOauth;if(p?.refreshToken)await Vk(p.refreshToken,p.clientId)}await w.mutate((p)=>{let i={...p};return delete i.claudeAiOauth,delete i.organizationUuid,delete i.trustedDeviceToken,delete i.enterpriseGateway,delete i.designOauth,i},g).catch((p)=>{let i=v(p);if(i===\"EPERM\"||i===\"ENOENT\"||lh(p)){t(`[performLogout] re-login secure-storage prune failed (${i}): ${l(p)}`,{level:\"error\"});return}d(p)})}else{let p=!1,i=async()=>{p=!0;let m=await Q(w,g);if(await w.delete(g),m&&Object.keys(m).length>0)await Z(w,m,g)};await p8r(i).catch((m)=>{if(p)throw m;return d(m),t5o(i)})}E9(null),jfe(null),await qJt(s,{preserveQuotaAutoResume:c,artifactAccount:u,incomingIdentity:h,credentials:g}),await Te((p)=>{let i={...p};if(e){if(i.hasCompletedOnboarding=!1,i.subscriptionNoticeCount=0,i.hasAvailableSubscription=!1,i.customApiKeyResponses!==void 0)i.customApiKeyResponses={approved:[],rejected:YO(i).rejected};let m=Iot;if(i.seenNotifications?.[m]!==void 0){let{[m]:C,...x}=i.seenNotifications;i.seenNotifications=x}}return i.oauthAccount=void 0,i.additionalModelOptionsCache=void 0,i.additionalModelOptionsAnsweredAt=void 0,i.additionalModelCostsCache=void 0,i.modelAccessCache=void 0,i.orgModelDefaultCache=void 0,i.cachedArtifactRoster=void 0,i.artifactRosterDenied=void 0,i.lastSeenOrgDefaultUpdatedAt=void 0,i.clientDataCache=void 0,i.clientDataCacheSlots=void 0,i.autoCompactWindowsCache=void 0,i.cachedUsageUtilization=void 0,i.metricsStatusCache=void 0,i.metricsStatusCacheByPrincipal=void 0,i.githubWebConnectionStatusCache=void 0,i.startupPrefetchedAt=void 0,i},s),u2e(void 0),y(\"oauth_logout\")}",
+          "sha256": "3834c28deaeeee1914081ef75379d3adf49ad82357a8f45a387b2f7001f78ab4",
+          "kind": null
+        }
+      },
+      "cleanupSymbol": "b",
+      "local": {
+        "declarations": [
+          {
+            "symbol": "xot",
+            "start": 2394,
+            "end": 2436,
+            "source": "xot=\"41077d10-94b8-4194-be48-d251e9eb21b4\"",
+            "sha256": "dd9f5bf2afc2d461da2b5c7628e8535127e51b749f7d75d169a8a6db8be87080",
+            "kind": "var"
+          },
+          {
+            "symbol": "K",
+            "start": 2449,
+            "end": 2470,
+            "source": "K=/^[A-Za-z0-9_.-]+$/",
+            "sha256": "b2126f2e9325bf16fdab1078480a44c7910dc89c9cacb4705e73de4b153353fa",
+            "kind": "var"
+          },
+          {
+            "symbol": "S",
+            "start": 2471,
+            "end": 2499,
+            "source": "S={created_by:\"claude-code\"}",
+            "sha256": "80c1552a36c3563550d11f56a65be1d24bb7c8aefce6b4f8858c5cfe0b1d1ce5",
+            "kind": "var"
+          },
+          {
+            "symbol": "B",
+            "start": 2500,
+            "end": 2651,
+            "source": "B=f(()=>pt({created_by:o().optional(),base_url:o().optional(),authentication:pt({type:o(),client_id:o().optional(),credentials_path:o().optional()})}))",
+            "sha256": "733edddede17c4d57ba2ab2b8c77d6e268cf71d8cee80f2f42d09d7a67614d57",
+            "kind": "var"
+          },
+          {
+            "symbol": "z",
+            "start": 2652,
+            "end": 2692,
+            "source": "z=f(()=>pt({created_by:o().optional()}))",
+            "sha256": "316ae73adaa0142aa6a82994c3c039b7547afd5fde2a8d555ef5dd581462f13d",
+            "kind": "var"
+          },
+          {
+            "symbol": "b",
+            "start": 7982,
+            "end": 8401,
+            "source": "async function b({revoke:e}={}){try{let r=ZL();if(r===null)return{removed:!1};let n;try{n=E(r)}catch{return{removed:!1}}let s=await k(_(r,\"configs\",`${n}.json`));if(s===null||!D(s))return{removed:!1};if(await I(A(r,n))===null)return{removed:!1};return await gVr(A(r,n),()=>V(e))}catch(r){if(v(r)===\"ENOENT\")return{removed:!1};return t(`Logout: profile credential removal failed: ${l(r)}`,{level:\"error\"}),{removed:!1}}}",
+            "sha256": "a55b2ad6fd60e71db088cbb1dbe11c9f331e786ab43d23db73a2698a00f81263",
+            "kind": null
+          },
+          {
+            "symbol": "V",
+            "start": 8401,
+            "end": 8976,
+            "source": "async function V(e){let r=ZL();if(r===null)return{removed:!1};let n;try{n=E(r)}catch{return{removed:!1}}let s=await k(_(r,\"configs\",`${n}.json`));if(s===null||!D(s))return{removed:!1};let c=A(r,n),u=await I(c);if(u===null)return{removed:!1};let h={refreshToken:u.refreshToken,clientId:xot};if(e&&h.refreshToken)await e({refreshToken:h.refreshToken,clientId:h.clientId});try{await H(c)}catch(g){return t(`Logout: could not remove profile credentials: ${l(g)}`,{level:\"error\"}),{removed:!1,...h}}return t(`Logout: removed credentials for profile ${n}`),EJn(),{removed:!0,...h}}",
+            "sha256": "e2597d93b5bec9fa2820f49a0e2ede6cd1b6a609223bd426e2056af7d81d64a5",
+            "kind": null
+          },
+          {
+            "symbol": "E",
+            "start": 8976,
+            "end": 9214,
+            "source": "function E(e){let r=a.ANTHROPIC_PROFILE||cwe(e);if(!L(r))throw new P(`ANTHROPIC_PROFILE \"${r}\" is not a valid profile name (letters, digits, '_', '.', '-')`,\"ANTHROPIC_PROFILE is not a valid profile name\",\"invalid_profile_name\");return r}",
+            "sha256": "b8f14b2bab05ab9f02f91d0043006ac72fbb5d8adf095ecf83688ff83ad4c68f",
+            "kind": null
+          },
+          {
+            "symbol": "L",
+            "start": 9214,
+            "end": 9268,
+            "source": "function L(e){return!!e&&K.test(e)&&e!==\".\"&&e!==\"..\"}",
+            "sha256": "ae43b17a6eecc0a22a56ecb145fe94cf06b54189709475c96c15ebf73cc7fc49",
+            "kind": null
+          },
+          {
+            "symbol": "A",
+            "start": 9268,
+            "end": 9322,
+            "source": "function A(e,r){return _(e,\"credentials\",`${r}.json`)}",
+            "sha256": "106227f7a4a5424c711d78b9bbf4104d94589ff37b900fe809d888a783222f68",
+            "kind": null
+          },
+          {
+            "symbol": "k",
+            "start": 9322,
+            "end": 9689,
+            "source": "async function k(e){let r;try{r=await O(e,\"utf-8\")}catch(c){if(v(c)===\"ENOENT\")return null;if(Mt(c))return{authentication:{type:\"unreadable\"}};throw c}let n;try{n=X(r)}catch(c){return t(`Profile config is not JSON, treating as foreign: ${l(c)}`),{authentication:{type:\"unreadable\"}}}let s=B().safeParse(n);return s.success?s.data:{authentication:{type:\"unreadable\"}}}",
+            "sha256": "7c4b98c636e63b4f81be0f4acff03d6ea5e65d2a185cddf08c96fad5a6b7be30",
+            "kind": null
+          },
+          {
+            "symbol": "D",
+            "start": 9689,
+            "end": 9810,
+            "source": "function D(e){return e.created_by===S.created_by&&e.authentication.type===\"user_oauth\"&&e.authentication.client_id===xot}",
+            "sha256": "b6493d7178d41ae5a977f178ec7c2d77176f150dc76539245bbc1dc2cc7475bf",
+            "kind": null
+          },
+          {
+            "symbol": "I",
+            "start": 9810,
+            "end": 10094,
+            "source": "async function I(e){let r;try{r=await O(e,\"utf-8\")}catch(u){if(Mt(u))return null;throw u}let n;try{n=X(r)}catch{return null}let s=z().safeParse(n);if(!s.success||s.data.created_by!==S.created_by)return null;let c=s.data.refresh_token;return{refreshToken:typeof c===\"string\"?c:void 0}}",
+            "sha256": "67317c85de42ffc8372b130366cded42853e731b8465e1119a9d3823bf9e6ebf",
+            "kind": null
+          }
+        ],
+        "imports": [
+          "ZL",
+          "_",
+          "gVr",
+          "v",
+          "t",
+          "l",
+          "H",
+          "EJn",
+          "O",
+          "Mt",
+          "X",
+          "f",
+          "pt",
+          "o",
+          "a",
+          "cwe",
+          "P"
+        ]
+      },
+      "fields": {
+        "join": "_",
+        "unlink": "H",
+        "readFile": "O",
+        "configDir": "ZL",
+        "environment": "a",
+        "defaultProfile": "cwe",
+        "reset": "EJn",
+        "debug": "t",
+        "schemaLazy": "f",
+        "looseObject": "pt",
+        "string": "o",
+        "parse": "X"
+      },
+      "errorModule": {
+        "file": "chunk-dtespbs4.js",
+        "moduleSha256": "f7767d0c0924847be79dfeaade788dc4d97d5f99a5e91e36d3e9ce23946a432a",
+        "moduleLength": 10330,
+        "manifestSha256": "c71e85888df3301fd3c4cb158744538810418e2d67591debe8e4f7c771fcdddc",
+        "binarySha256": "6d5be51f0edfe3429cd1a9885950db31c1e59eb9a2c9a30a47e64179d2ff98b4"
+      },
+      "errors": [
+        {
+          "symbol": "P",
+          "start": 3714,
+          "end": 3869,
+          "source": "class P extends Error{telemetryMessage;errorClass;constructor(n,e,t){super(n);this.name=\"TelemetrySafeError\",this.telemetryMessage=e??n,this.errorClass=t}}",
+          "sha256": "e0165a34780a88fe34268a00a97acdaace9a83c4b760613e669e99daf6ac0899",
+          "kind": null
+        },
+        {
+          "symbol": "l",
+          "start": 4754,
+          "end": 4814,
+          "source": "function l(n){return n instanceof Error?n.message:String(n)}",
+          "sha256": "2f921ed78ffeed39032d7e9c4783e05c294cba2ce61cc5ac20466ece27a81075",
+          "kind": null
+        },
+        {
+          "symbol": "v",
+          "start": 4814,
+          "end": 4913,
+          "source": "function v(n){if(n&&typeof n===\"object\"&&\"code\"in n&&typeof n.code===\"string\")return n.code;return}",
+          "sha256": "fac610e89149796538ed2079d613248acb1ba8228f14c4b19c9a70581fe0af8b",
+          "kind": null
+        },
+        {
+          "symbol": "u",
+          "start": 8245,
+          "end": 8324,
+          "source": "u=new Set([\"ENOENT\",\"EACCES\",\"EPERM\",\"ENOTDIR\",\"ELOOP\",\"ENAMETOOLONG\",\"EROFS\"])",
+          "sha256": "30de65b6b8e676f875f68c923e61adb633e126dacc5bd7913e7e3c3e032eee7e",
+          "kind": "var"
+        },
+        {
+          "symbol": "Mt",
+          "start": 8325,
+          "end": 8356,
+          "source": "function Mt(n){return xC(v(n))}",
+          "sha256": "639b65cde121fa8ff897c24c4718a0c0e68b593fb9de4b3c61305d0c11437b19",
+          "kind": null
+        },
+        {
+          "symbol": "xC",
+          "start": 8356,
+          "end": 8399,
+          "source": "function xC(n){return n!==void 0&&u.has(n)}",
+          "sha256": "3aded1b29b8c025677d6c956a60621bc5e702490e092da009685971a2294493f",
+          "kind": null
+        }
+      ],
+      "errorBindings": {
+        "v": "v",
+        "l": "l",
+        "Mt": "Mt",
+        "P": "P"
+      },
+      "origins": {
+        "join": {
+          "origin": {
+            "module": "path",
+            "symbol": "join"
+          }
+        },
+        "unlink": {
+          "origin": {
+            "module": "fs/promises",
+            "symbol": "unlink"
+          }
+        },
+        "readFile": {
+          "origin": {
+            "module": "fs/promises",
+            "symbol": "readFile"
+          }
+        },
+        "configDir": {
+          "origin": {
+            "module": "B:/~BUN/root/chunk-bh25fsba.js",
+            "file": "chunk-bh25fsba.js",
+            "symbol": "ZL"
+          },
+          "module": {
+            "file": "chunk-bh25fsba.js",
+            "moduleSha256": "86552fe876ede58e8dac9f30b62cad30d1e8934cccc810f1bb99244aec861efd",
+            "moduleLength": 28998,
+            "manifestSha256": "c71e85888df3301fd3c4cb158744538810418e2d67591debe8e4f7c771fcdddc",
+            "binarySha256": "6d5be51f0edfe3429cd1a9885950db31c1e59eb9a2c9a30a47e64179d2ff98b4"
+          },
+          "declaration": {
+            "symbol": "ZL",
+            "start": 12030,
+            "end": 12067,
+            "source": "function ZL(){return ce()?.dir??null}",
+            "sha256": "dc05cd96c95f6b45a99a5c56f063d599d63b3e63b720613581fd40c854c85b3e",
+            "kind": null
+          }
+        },
+        "environment": {
+          "origin": {
+            "module": "B:/~BUN/root/chunk-5g00bdfr.js",
+            "file": "chunk-5g00bdfr.js",
+            "symbol": "a"
+          },
+          "module": {
+            "file": "chunk-5g00bdfr.js",
+            "moduleSha256": "da1a132ee91c1c9cff1f8560ab401cd9a1a38ce2daaeabc1b2db56f82ab8872c",
+            "moduleLength": 65807,
+            "manifestSha256": "c71e85888df3301fd3c4cb158744538810418e2d67591debe8e4f7c771fcdddc",
+            "binarySha256": "6d5be51f0edfe3429cd1a9885950db31c1e59eb9a2c9a30a47e64179d2ff98b4"
+          },
+          "declaration": {
+            "symbol": "a",
+            "start": 65554,
+            "end": 65565,
+            "source": "a=KZe(ZU,c)",
+            "sha256": "05a64fc396618bebc9a01a1eb9362298d6e9d2a4ceb5868b56b2c9b444ee62f3",
+            "kind": "var"
+          }
+        },
+        "defaultProfile": {
+          "origin": {
+            "module": "B:/~BUN/root/chunk-bh25fsba.js",
+            "file": "chunk-bh25fsba.js",
+            "symbol": "cwe"
+          },
+          "module": {
+            "file": "chunk-bh25fsba.js",
+            "moduleSha256": "86552fe876ede58e8dac9f30b62cad30d1e8934cccc810f1bb99244aec861efd",
+            "moduleLength": 28998,
+            "manifestSha256": "c71e85888df3301fd3c4cb158744538810418e2d67591debe8e4f7c771fcdddc",
+            "binarySha256": "6d5be51f0edfe3429cd1a9885950db31c1e59eb9a2c9a30a47e64179d2ff98b4"
+          },
+          "declaration": {
+            "symbol": "cwe",
+            "start": 11489,
+            "end": 11555,
+            "source": "function cwe(e){return I(g(e,\"active_config\"))?.trim()||\"default\"}",
+            "sha256": "3c642646c45ccaa8696ac085064f17e04e633d06d78fd50efdef6d56e4bc2ddb",
+            "kind": null
+          }
+        },
+        "reset": {
+          "origin": {
+            "module": "B:/~BUN/root/chunk-mjhnqftt.js",
+            "file": "chunk-mjhnqftt.js",
+            "symbol": "EJn"
+          },
+          "module": {
+            "file": "chunk-mjhnqftt.js",
+            "moduleSha256": "0fc2090642ccd36eb4d150ba09b586e114fce1e6e0a26a365974a6d9bc910349",
+            "moduleLength": 22617,
+            "manifestSha256": "c71e85888df3301fd3c4cb158744538810418e2d67591debe8e4f7c771fcdddc",
+            "binarySha256": "6d5be51f0edfe3429cd1a9885950db31c1e59eb9a2c9a30a47e64179d2ff98b4"
+          },
+          "declaration": {
+            "symbol": "EJn",
+            "start": 21366,
+            "end": 21399,
+            "source": "function EJn(){A().reset(),pEn()}",
+            "sha256": "8b31a68e1fd43f59f72f2e3d9d207942644d68a21be0880045f5179ce61774fd",
+            "kind": null
+          }
+        },
+        "debug": {
+          "origin": {
+            "module": "B:/~BUN/root/chunk-18x8g08z.js",
+            "file": "chunk-18x8g08z.js",
+            "symbol": "t"
+          },
+          "module": {
+            "file": "chunk-18x8g08z.js",
+            "moduleSha256": "66d13b08cadadb5e8395194950992a8365529efdb2d8ac23f0db2884566cb228",
+            "moduleLength": 66694,
+            "manifestSha256": "c71e85888df3301fd3c4cb158744538810418e2d67591debe8e4f7c771fcdddc",
+            "binarySha256": "6d5be51f0edfe3429cd1a9885950db31c1e59eb9a2c9a30a47e64179d2ff98b4"
+          },
+          "declaration": {
+            "symbol": "t",
+            "start": 46026,
+            "end": 46071,
+            "source": "function t(e,n={level:\"debug\"}){U().log(e,n)}",
+            "sha256": "da9e0b5e590a43c6f7cf46f3cfcd93d97f399db1017ff8dae938bdbd15e13790",
+            "kind": null
+          }
+        },
+        "schemaLazy": {
+          "origin": {
+            "module": "B:/~BUN/root/chunk-qbn4ejff.js",
+            "file": "chunk-qbn4ejff.js",
+            "symbol": "f"
+          },
+          "module": {
+            "file": "chunk-qbn4ejff.js",
+            "moduleSha256": "9d40051e4df27d1ac5efcfd53cdba560f938db41db43a639d275d9ff943805e1",
+            "moduleLength": 981,
+            "manifestSha256": "c71e85888df3301fd3c4cb158744538810418e2d67591debe8e4f7c771fcdddc",
+            "binarySha256": "6d5be51f0edfe3429cd1a9885950db31c1e59eb9a2c9a30a47e64179d2ff98b4"
+          },
+          "declaration": {
+            "symbol": "f",
+            "start": 932,
+            "end": 965,
+            "source": "function f(e){return urr.lazy(e)}",
+            "sha256": "83a62c61a676fff7dfdf5bc2ed20f84e31328ef1f50df9771b9ee2f13e6ce915",
+            "kind": null
+          }
+        },
+        "looseObject": {
+          "origin": {
+            "module": "B:/~BUN/root/chunk-zw3pe4ym.js",
+            "file": "chunk-zw3pe4ym.js",
+            "symbol": "pt"
+          },
+          "module": {
+            "file": "chunk-zw3pe4ym.js",
+            "moduleSha256": "f96cde8809cde117826fe92f9d4b1b47602c5ab445a3b9206571ab12b5c12290",
+            "moduleLength": 90494,
+            "manifestSha256": "c71e85888df3301fd3c4cb158744538810418e2d67591debe8e4f7c771fcdddc",
+            "binarySha256": "6d5be51f0edfe3429cd1a9885950db31c1e59eb9a2c9a30a47e64179d2ff98b4"
+          },
+          "declaration": {
+            "symbol": "pt",
+            "start": 84598,
+            "end": 84678,
+            "source": "function pt(e,t){return new qwe({type:\"object\",shape:e,catchall:se(),...La(t)})}",
+            "sha256": "62ad7f7b8a49d18850aebb0bc90afa08c0965b57e758c29da685578dce1e9ba0",
+            "kind": null
+          }
+        },
+        "string": {
+          "origin": {
+            "module": "B:/~BUN/root/chunk-zw3pe4ym.js",
+            "file": "chunk-zw3pe4ym.js",
+            "symbol": "o"
+          },
+          "module": {
+            "file": "chunk-zw3pe4ym.js",
+            "moduleSha256": "f96cde8809cde117826fe92f9d4b1b47602c5ab445a3b9206571ab12b5c12290",
+            "moduleLength": 90494,
+            "manifestSha256": "c71e85888df3301fd3c4cb158744538810418e2d67591debe8e4f7c771fcdddc",
+            "binarySha256": "6d5be51f0edfe3429cd1a9885950db31c1e59eb9a2c9a30a47e64179d2ff98b4"
+          },
+          "declaration": {
+            "symbol": "o",
+            "start": 79808,
+            "end": 79839,
+            "source": "function o(e){return cn(kqt,e)}",
+            "sha256": "61defda3c582f7c5adf774913afebd61e47c288d6a0782d96b151a777532fc2f",
+            "kind": null
+          }
+        },
+        "parse": {
+          "origin": {
+            "module": "B:/~BUN/root/chunk-18x8g08z.js",
+            "file": "chunk-18x8g08z.js",
+            "symbol": "X"
+          },
+          "module": {
+            "file": "chunk-18x8g08z.js",
+            "moduleSha256": "66d13b08cadadb5e8395194950992a8365529efdb2d8ac23f0db2884566cb228",
+            "moduleLength": 66694,
+            "manifestSha256": "c71e85888df3301fd3c4cb158744538810418e2d67591debe8e4f7c771fcdddc",
+            "binarySha256": "6d5be51f0edfe3429cd1a9885950db31c1e59eb9a2c9a30a47e64179d2ff98b4"
+          },
+          "declaration": {
+            "symbol": "X",
+            "start": 46693,
+            "end": 46786,
+            "source": "X=(e,n)=>{using r=tg`JSON.parse(${Se(e)})`;return typeof n>\"u\"?JSON.parse(e):JSON.parse(e,n)}",
+            "sha256": "d9c11c20b09494bb3b6d1ca031aea141ef3da17d92c6fc4b9a1fad82e70d7dd0",
+            "kind": "var"
+          }
+        }
+      },
+      "lock": {
+        "origin": {
+          "module": "B:/~BUN/root/chunk-mjhnqftt.js",
+          "file": "chunk-mjhnqftt.js",
+          "symbol": "gVr"
+        },
+        "module": {
+          "file": "chunk-mjhnqftt.js",
+          "moduleSha256": "0fc2090642ccd36eb4d150ba09b586e114fce1e6e0a26a365974a6d9bc910349",
+          "moduleLength": 22617,
+          "manifestSha256": "c71e85888df3301fd3c4cb158744538810418e2d67591debe8e4f7c771fcdddc",
+          "binarySha256": "6d5be51f0edfe3429cd1a9885950db31c1e59eb9a2c9a30a47e64179d2ff98b4"
+        },
+        "declaration": {
+          "symbol": "gVr",
+          "start": 15343,
+          "end": 15393,
+          "source": "function gVr(e,n){return j(ae(e),n,\"fail-closed\")}",
+          "sha256": "bc6a4f750f90d51d79719a60270973869b1cea9c7e27bc8e7a4de1122444eae7",
+          "kind": null
+        },
+        "aliases": {
+          "lockDirectory": "j",
+          "dirname": "ae"
+        },
+        "origins": [
+          {
+            "origin": {
+              "file": "chunk-mjhnqftt.js",
+              "symbol": "j"
+            },
+            "module": {
+              "file": "chunk-mjhnqftt.js",
+              "moduleSha256": "0fc2090642ccd36eb4d150ba09b586e114fce1e6e0a26a365974a6d9bc910349",
+              "moduleLength": 22617,
+              "manifestSha256": "c71e85888df3301fd3c4cb158744538810418e2d67591debe8e4f7c771fcdddc",
+              "binarySha256": "6d5be51f0edfe3429cd1a9885950db31c1e59eb9a2c9a30a47e64179d2ff98b4"
+            },
+            "declaration": {
+              "symbol": "j",
+              "start": 15393,
+              "end": 15837,
+              "source": "async function j(e,n,s){let r=ce[s],o;try{o=await de(e,r,s)}catch(u){if(s===\"fail-closed\"||u instanceof xd)throw u;return t(`wif: credentials lock unavailable at ${e} (${l(u)}); refreshing without cross-process serialization`),n()}try{return i(\"tengu_wif_user_oauth_lock_acquired\",{mode:c(s)}),await n()}finally{i(\"tengu_wif_user_oauth_lock_released\",{mode:c(s)});try{await o()}catch(u){if(ls(u))t(`wif: lock release failed: ${u}`);else d(u)}}}",
+              "sha256": "905b7c7267829dfdd1eec552a3c62deae422666aedd27b10bccca3729cf56a62",
+              "kind": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "platform": "win32-arm64",
+      "module": {
+        "file": "chunk-g6rfqq5z.js",
+        "moduleSha256": "06bc2e27ed28143178ce1cc0c702010968b753bc7f0c126a2c4933ed3070f485",
+        "moduleLength": 14486,
+        "manifestSha256": "d0d8b3b882ba61ba321ab072b5cbc28a1a4089cfb4c5dce0698311aae10c739e",
+        "binarySha256": "11438981154e99af8f9aeabe193871c92b8b550b35354686a140fc056f1bfe54"
+      },
+      "profileGetter": {
+        "module": {
+          "file": "chunk-r5twd8z5.js",
+          "moduleSha256": "c36b0f4f9922f6d67f18fd1f3a78d298114022f7b679fe7ba6aa802c26137462",
+          "moduleLength": 65809,
+          "manifestSha256": "d0d8b3b882ba61ba321ab072b5cbc28a1a4089cfb4c5dce0698311aae10c739e",
+          "binarySha256": "11438981154e99af8f9aeabe193871c92b8b550b35354686a140fc056f1bfe54"
+        },
+        "binding": {
+          "symbol": "ANTHROPIC_PROFILE",
+          "start": 13896,
+          "end": 13920,
+          "source": "ANTHROPIC_PROFILE:()=>bo",
+          "sha256": "475c5444da66ad90625a6e5e2e6999fa3302b1d425250876557b8550a7ed7e4a",
+          "kind": null
+        },
+        "decoder": {
+          "symbol": "bo",
+          "start": 16625,
+          "end": 16635,
+          "source": "bo=D.str()",
+          "sha256": "fb810e378af325f5ddadf5798b94e54ed06f2b1ee71e394dae698f054593eb0e",
+          "kind": "var"
+        },
+        "decoderOrigin": {
+          "origin": {
+            "module": "B:/~BUN/root/chunk-4v46wy4m.js",
+            "file": "chunk-4v46wy4m.js",
+            "symbol": "D"
+          },
+          "module": {
+            "file": "chunk-4v46wy4m.js",
+            "moduleSha256": "b82f0c6279fc6bff3d526b640852db767ec14bf5ba80bed96b502141c2a8ee04",
+            "moduleLength": 1408,
+            "manifestSha256": "d0d8b3b882ba61ba321ab072b5cbc28a1a4089cfb4c5dce0698311aae10c739e",
+            "binarySha256": "11438981154e99af8f9aeabe193871c92b8b550b35354686a140fc056f1bfe54"
+          },
+          "declaration": {
+            "symbol": "D",
+            "start": 1028,
+            "end": 1164,
+            "source": "D={str:()=>f,rawStr:()=>o,bool:()=>s,triBool:()=>l,int:(n)=>n?d(n):m,enum:(n)=>i((e)=>e!==void 0&&n.includes(e.trim())?e.trim():void 0)}",
+            "sha256": "15c2ec2560412cfb56c1d2f520bd430b89d87dd2a339e35de30e0aa66663ea93",
+            "kind": "var"
+          }
+        }
+      },
+      "logoutCall": {
+        "module": {
+          "file": "chunk-g6rfqq5z.js",
+          "moduleSha256": "06bc2e27ed28143178ce1cc0c702010968b753bc7f0c126a2c4933ed3070f485",
+          "moduleLength": 14486,
+          "manifestSha256": "d0d8b3b882ba61ba321ab072b5cbc28a1a4089cfb4c5dce0698311aae10c739e",
+          "binarySha256": "11438981154e99af8f9aeabe193871c92b8b550b35354686a140fc056f1bfe54"
+        },
+        "declaration": {
+          "symbol": "rte",
+          "start": 10345,
+          "end": 13043,
+          "source": "async function rte({clearOnboarding:e=!1,preserveInProcessTokens:r=!1,preserveNonAnthropicAuth:n=!1,storageV5:s,preserveQuotaAutoResume:c=!1,artifactAccount:u=\"signed_out\",incomingIdentity:h,credentials:g}){let{flushTelemetry:R}=await import(\"B:/~BUN/root/chunk-ygf97770.js\");if(await R(),await w1o(u),Pt()){await VJt(s,{preserveQuotaAutoResume:c,artifactAccount:u,incomingIdentity:h});return}if(!r&&Oe()===\"firstParty\"){let p=Gn();p.invalidateCache?.();let i=await p.readAsync(g),m=i?.claudeAiOauth;if(m?.refreshToken)await qE(m.refreshToken,m.clientId);let C=i?.designOauth;if(C?.refreshToken)await qE(C.refreshToken,C.clientId)}if(Oe()===\"gateway\"){let p=Date.now()+5000;for(let C=Ave();C&&Date.now()<p;C=Ave())await lt(C.catch(()=>{}),p-Date.now());let i=Gn();i.invalidateCache?.();let m=(await i.readAsync(g))?.enterpriseGateway;if(m)await VVo(m,g)}if(!r)a.unset(\"CLAUDE_CODE_OAUTH_TOKEN\"),jH(null);await KKr(s),await b({revoke:!r&&Oe()===\"firstParty\"?({refreshToken:p,clientId:i})=>qE(p,i):void 0});let w=Gn();if(n){if(Oe()===\"firstParty\"){w.invalidateCache?.();let p=(await w.readAsync(g))?.designOauth;if(p?.refreshToken)await qE(p.refreshToken,p.clientId)}await w.mutate((p)=>{let i={...p};return delete i.claudeAiOauth,delete i.organizationUuid,delete i.trustedDeviceToken,delete i.enterpriseGateway,delete i.designOauth,i},g).catch((p)=>{let i=v(p);if(i===\"EPERM\"||i===\"ENOENT\"||lh(p)){t(`[performLogout] re-login secure-storage prune failed (${i}): ${l(p)}`,{level:\"error\"});return}d(p)})}else{let p=!1,i=async()=>{p=!0;let m=await Q(w,g);if(await w.delete(g),m&&Object.keys(m).length>0)await Z(w,m,g)};await p8r(i).catch((m)=>{if(p)throw m;return d(m),tYo(i)})}k9(null),jfe(null),await VJt(s,{preserveQuotaAutoResume:c,artifactAccount:u,incomingIdentity:h,credentials:g}),await Te((p)=>{let i={...p};if(e){if(i.hasCompletedOnboarding=!1,i.subscriptionNoticeCount=0,i.hasAvailableSubscription=!1,i.customApiKeyResponses!==void 0)i.customApiKeyResponses={approved:[],rejected:YO(i).rejected};let m=Iot;if(i.seenNotifications?.[m]!==void 0){let{[m]:C,...F}=i.seenNotifications;i.seenNotifications=F}}return i.oauthAccount=void 0,i.additionalModelOptionsCache=void 0,i.additionalModelOptionsAnsweredAt=void 0,i.additionalModelCostsCache=void 0,i.modelAccessCache=void 0,i.orgModelDefaultCache=void 0,i.cachedArtifactRoster=void 0,i.artifactRosterDenied=void 0,i.lastSeenOrgDefaultUpdatedAt=void 0,i.clientDataCache=void 0,i.clientDataCacheSlots=void 0,i.autoCompactWindowsCache=void 0,i.cachedUsageUtilization=void 0,i.metricsStatusCache=void 0,i.metricsStatusCacheByPrincipal=void 0,i.githubWebConnectionStatusCache=void 0,i.startupPrefetchedAt=void 0,i},s),u2e(void 0),y(\"oauth_logout\")}",
+          "sha256": "7b4b27d104ff31a48d399249b63e38103bd51ba2319e3e3b989c97fcd2417225",
+          "kind": null
+        }
+      },
+      "cleanupSymbol": "b",
+      "local": {
+        "declarations": [
+          {
+            "symbol": "xot",
+            "start": 2394,
+            "end": 2436,
+            "source": "xot=\"41077d10-94b8-4194-be48-d251e9eb21b4\"",
+            "sha256": "dd9f5bf2afc2d461da2b5c7628e8535127e51b749f7d75d169a8a6db8be87080",
+            "kind": "var"
+          },
+          {
+            "symbol": "j",
+            "start": 2449,
+            "end": 2470,
+            "source": "j=/^[A-Za-z0-9_.-]+$/",
+            "sha256": "9ffeae62ec53e0eb8f7d5b06637a0deeb4d9de6c2cf28e2b1dc51c693759eb8e",
+            "kind": "var"
+          },
+          {
+            "symbol": "S",
+            "start": 2471,
+            "end": 2499,
+            "source": "S={created_by:\"claude-code\"}",
+            "sha256": "80c1552a36c3563550d11f56a65be1d24bb7c8aefce6b4f8858c5cfe0b1d1ce5",
+            "kind": "var"
+          },
+          {
+            "symbol": "K",
+            "start": 2500,
+            "end": 2651,
+            "source": "K=f(()=>pt({created_by:o().optional(),base_url:o().optional(),authentication:pt({type:o(),client_id:o().optional(),credentials_path:o().optional()})}))",
+            "sha256": "55728dbfeeef8ce1714f7780d49486db5a3b1b4b8ecdc0f80689b9e653150f7a",
+            "kind": "var"
+          },
+          {
+            "symbol": "z",
+            "start": 2652,
+            "end": 2692,
+            "source": "z=f(()=>pt({created_by:o().optional()}))",
+            "sha256": "316ae73adaa0142aa6a82994c3c039b7547afd5fde2a8d555ef5dd581462f13d",
+            "kind": "var"
+          },
+          {
+            "symbol": "b",
+            "start": 7982,
+            "end": 8401,
+            "source": "async function b({revoke:e}={}){try{let r=ZN();if(r===null)return{removed:!1};let n;try{n=E(r)}catch{return{removed:!1}}let s=await k(_(r,\"configs\",`${n}.json`));if(s===null||!D(s))return{removed:!1};if(await I(A(r,n))===null)return{removed:!1};return await gqr(A(r,n),()=>V(e))}catch(r){if(v(r)===\"ENOENT\")return{removed:!1};return t(`Logout: profile credential removal failed: ${l(r)}`,{level:\"error\"}),{removed:!1}}}",
+            "sha256": "33bf105951d6ba6e42238254254fd4392b61e803338f2f3fdd40e27b1de50452",
+            "kind": null
+          },
+          {
+            "symbol": "V",
+            "start": 8401,
+            "end": 8976,
+            "source": "async function V(e){let r=ZN();if(r===null)return{removed:!1};let n;try{n=E(r)}catch{return{removed:!1}}let s=await k(_(r,\"configs\",`${n}.json`));if(s===null||!D(s))return{removed:!1};let c=A(r,n),u=await I(c);if(u===null)return{removed:!1};let h={refreshToken:u.refreshToken,clientId:xot};if(e&&h.refreshToken)await e({refreshToken:h.refreshToken,clientId:h.clientId});try{await x(c)}catch(g){return t(`Logout: could not remove profile credentials: ${l(g)}`,{level:\"error\"}),{removed:!1,...h}}return t(`Logout: removed credentials for profile ${n}`),kJn(),{removed:!0,...h}}",
+            "sha256": "78ee2c2e14f5665483e975d65fb95ae2f197f67e914b5fa9577b4bbba12f8ca7",
+            "kind": null
+          },
+          {
+            "symbol": "E",
+            "start": 8976,
+            "end": 9214,
+            "source": "function E(e){let r=a.ANTHROPIC_PROFILE||cwe(e);if(!L(r))throw new P(`ANTHROPIC_PROFILE \"${r}\" is not a valid profile name (letters, digits, '_', '.', '-')`,\"ANTHROPIC_PROFILE is not a valid profile name\",\"invalid_profile_name\");return r}",
+            "sha256": "b8f14b2bab05ab9f02f91d0043006ac72fbb5d8adf095ecf83688ff83ad4c68f",
+            "kind": null
+          },
+          {
+            "symbol": "L",
+            "start": 9214,
+            "end": 9268,
+            "source": "function L(e){return!!e&&j.test(e)&&e!==\".\"&&e!==\"..\"}",
+            "sha256": "5e644f89d993ddb45aebd7b8f71ed0157305409e80aed11ca45720deb889b5b6",
+            "kind": null
+          },
+          {
+            "symbol": "A",
+            "start": 9268,
+            "end": 9322,
+            "source": "function A(e,r){return _(e,\"credentials\",`${r}.json`)}",
+            "sha256": "106227f7a4a5424c711d78b9bbf4104d94589ff37b900fe809d888a783222f68",
+            "kind": null
+          },
+          {
+            "symbol": "k",
+            "start": 9322,
+            "end": 9689,
+            "source": "async function k(e){let r;try{r=await O(e,\"utf-8\")}catch(c){if(v(c)===\"ENOENT\")return null;if(Mt(c))return{authentication:{type:\"unreadable\"}};throw c}let n;try{n=X(r)}catch(c){return t(`Profile config is not JSON, treating as foreign: ${l(c)}`),{authentication:{type:\"unreadable\"}}}let s=K().safeParse(n);return s.success?s.data:{authentication:{type:\"unreadable\"}}}",
+            "sha256": "87496ce36a8b5115c7d2a0a45202c16b6dbfb72ec9bc54b6ee35a5df5ab6f704",
+            "kind": null
+          },
+          {
+            "symbol": "D",
+            "start": 9689,
+            "end": 9810,
+            "source": "function D(e){return e.created_by===S.created_by&&e.authentication.type===\"user_oauth\"&&e.authentication.client_id===xot}",
+            "sha256": "b6493d7178d41ae5a977f178ec7c2d77176f150dc76539245bbc1dc2cc7475bf",
+            "kind": null
+          },
+          {
+            "symbol": "I",
+            "start": 9810,
+            "end": 10094,
+            "source": "async function I(e){let r;try{r=await O(e,\"utf-8\")}catch(u){if(Mt(u))return null;throw u}let n;try{n=X(r)}catch{return null}let s=z().safeParse(n);if(!s.success||s.data.created_by!==S.created_by)return null;let c=s.data.refresh_token;return{refreshToken:typeof c===\"string\"?c:void 0}}",
+            "sha256": "67317c85de42ffc8372b130366cded42853e731b8465e1119a9d3823bf9e6ebf",
+            "kind": null
+          }
+        ],
+        "imports": [
+          "ZN",
+          "_",
+          "gqr",
+          "v",
+          "t",
+          "l",
+          "x",
+          "kJn",
+          "O",
+          "Mt",
+          "X",
+          "f",
+          "pt",
+          "o",
+          "a",
+          "cwe",
+          "P"
+        ]
+      },
+      "fields": {
+        "join": "_",
+        "unlink": "x",
+        "readFile": "O",
+        "configDir": "ZN",
+        "environment": "a",
+        "defaultProfile": "cwe",
+        "reset": "kJn",
+        "debug": "t",
+        "schemaLazy": "f",
+        "looseObject": "pt",
+        "string": "o",
+        "parse": "X"
+      },
+      "errorModule": {
+        "file": "chunk-216b0h9x.js",
+        "moduleSha256": "9cc92ff38922e454a2bebcfbef8a955253134bca9881fea24ddfba31d87c3d7c",
+        "moduleLength": 10330,
+        "manifestSha256": "d0d8b3b882ba61ba321ab072b5cbc28a1a4089cfb4c5dce0698311aae10c739e",
+        "binarySha256": "11438981154e99af8f9aeabe193871c92b8b550b35354686a140fc056f1bfe54"
+      },
+      "errors": [
+        {
+          "symbol": "P",
+          "start": 3714,
+          "end": 3869,
+          "source": "class P extends Error{telemetryMessage;errorClass;constructor(n,e,t){super(n);this.name=\"TelemetrySafeError\",this.telemetryMessage=e??n,this.errorClass=t}}",
+          "sha256": "e0165a34780a88fe34268a00a97acdaace9a83c4b760613e669e99daf6ac0899",
+          "kind": null
+        },
+        {
+          "symbol": "l",
+          "start": 4754,
+          "end": 4814,
+          "source": "function l(n){return n instanceof Error?n.message:String(n)}",
+          "sha256": "2f921ed78ffeed39032d7e9c4783e05c294cba2ce61cc5ac20466ece27a81075",
+          "kind": null
+        },
+        {
+          "symbol": "v",
+          "start": 4814,
+          "end": 4913,
+          "source": "function v(n){if(n&&typeof n===\"object\"&&\"code\"in n&&typeof n.code===\"string\")return n.code;return}",
+          "sha256": "fac610e89149796538ed2079d613248acb1ba8228f14c4b19c9a70581fe0af8b",
+          "kind": null
+        },
+        {
+          "symbol": "u",
+          "start": 8245,
+          "end": 8324,
+          "source": "u=new Set([\"ENOENT\",\"EACCES\",\"EPERM\",\"ENOTDIR\",\"ELOOP\",\"ENAMETOOLONG\",\"EROFS\"])",
+          "sha256": "30de65b6b8e676f875f68c923e61adb633e126dacc5bd7913e7e3c3e032eee7e",
+          "kind": "var"
+        },
+        {
+          "symbol": "Mt",
+          "start": 8325,
+          "end": 8356,
+          "source": "function Mt(n){return xC(v(n))}",
+          "sha256": "639b65cde121fa8ff897c24c4718a0c0e68b593fb9de4b3c61305d0c11437b19",
+          "kind": null
+        },
+        {
+          "symbol": "xC",
+          "start": 8356,
+          "end": 8399,
+          "source": "function xC(n){return n!==void 0&&u.has(n)}",
+          "sha256": "3aded1b29b8c025677d6c956a60621bc5e702490e092da009685971a2294493f",
+          "kind": null
+        }
+      ],
+      "errorBindings": {
+        "v": "v",
+        "l": "l",
+        "Mt": "Mt",
+        "P": "P"
+      },
+      "origins": {
+        "join": {
+          "origin": {
+            "module": "path",
+            "symbol": "join"
+          }
+        },
+        "unlink": {
+          "origin": {
+            "module": "fs/promises",
+            "symbol": "unlink"
+          }
+        },
+        "readFile": {
+          "origin": {
+            "module": "fs/promises",
+            "symbol": "readFile"
+          }
+        },
+        "configDir": {
+          "origin": {
+            "module": "B:/~BUN/root/chunk-rpp80gz0.js",
+            "file": "chunk-rpp80gz0.js",
+            "symbol": "ZN"
+          },
+          "module": {
+            "file": "chunk-rpp80gz0.js",
+            "moduleSha256": "746ebe03d7b207a4d99adda1959e62f55f69f12ff67e4da68dfccf817258be97",
+            "moduleLength": 28998,
+            "manifestSha256": "d0d8b3b882ba61ba321ab072b5cbc28a1a4089cfb4c5dce0698311aae10c739e",
+            "binarySha256": "11438981154e99af8f9aeabe193871c92b8b550b35354686a140fc056f1bfe54"
+          },
+          "declaration": {
+            "symbol": "ZN",
+            "start": 12030,
+            "end": 12067,
+            "source": "function ZN(){return ce()?.dir??null}",
+            "sha256": "86c1064299007ca67eb5ed0e5e99c34226bef0c534f8110d1edd5d0e643e7094",
+            "kind": null
+          }
+        },
+        "environment": {
+          "origin": {
+            "module": "B:/~BUN/root/chunk-r5twd8z5.js",
+            "file": "chunk-r5twd8z5.js",
+            "symbol": "a"
+          },
+          "module": {
+            "file": "chunk-r5twd8z5.js",
+            "moduleSha256": "c36b0f4f9922f6d67f18fd1f3a78d298114022f7b679fe7ba6aa802c26137462",
+            "moduleLength": 65809,
+            "manifestSha256": "d0d8b3b882ba61ba321ab072b5cbc28a1a4089cfb4c5dce0698311aae10c739e",
+            "binarySha256": "11438981154e99af8f9aeabe193871c92b8b550b35354686a140fc056f1bfe54"
+          },
+          "declaration": {
+            "symbol": "a",
+            "start": 65556,
+            "end": 65567,
+            "source": "a=KZe(kU,p)",
+            "sha256": "860be0a83aa78970ec6f24795af07d1d2824b661418be10577c58faa9388efb5",
+            "kind": "var"
+          }
+        },
+        "defaultProfile": {
+          "origin": {
+            "module": "B:/~BUN/root/chunk-rpp80gz0.js",
+            "file": "chunk-rpp80gz0.js",
+            "symbol": "cwe"
+          },
+          "module": {
+            "file": "chunk-rpp80gz0.js",
+            "moduleSha256": "746ebe03d7b207a4d99adda1959e62f55f69f12ff67e4da68dfccf817258be97",
+            "moduleLength": 28998,
+            "manifestSha256": "d0d8b3b882ba61ba321ab072b5cbc28a1a4089cfb4c5dce0698311aae10c739e",
+            "binarySha256": "11438981154e99af8f9aeabe193871c92b8b550b35354686a140fc056f1bfe54"
+          },
+          "declaration": {
+            "symbol": "cwe",
+            "start": 11489,
+            "end": 11555,
+            "source": "function cwe(e){return I(g(e,\"active_config\"))?.trim()||\"default\"}",
+            "sha256": "3c642646c45ccaa8696ac085064f17e04e633d06d78fd50efdef6d56e4bc2ddb",
+            "kind": null
+          }
+        },
+        "reset": {
+          "origin": {
+            "module": "B:/~BUN/root/chunk-q7pxjcas.js",
+            "file": "chunk-q7pxjcas.js",
+            "symbol": "kJn"
+          },
+          "module": {
+            "file": "chunk-q7pxjcas.js",
+            "moduleSha256": "3f3395820b52eeb9b5735504eff9111160e34e8c3d690a14a5652f9a76da730a",
+            "moduleLength": 22617,
+            "manifestSha256": "d0d8b3b882ba61ba321ab072b5cbc28a1a4089cfb4c5dce0698311aae10c739e",
+            "binarySha256": "11438981154e99af8f9aeabe193871c92b8b550b35354686a140fc056f1bfe54"
+          },
+          "declaration": {
+            "symbol": "kJn",
+            "start": 21366,
+            "end": 21399,
+            "source": "function kJn(){A().reset(),pkn()}",
+            "sha256": "8f25f496489d7f6da611ed2b71f0daf5da449b1bcb509038bd72a9913c3d480e",
+            "kind": null
+          }
+        },
+        "debug": {
+          "origin": {
+            "module": "B:/~BUN/root/chunk-afd6vefy.js",
+            "file": "chunk-afd6vefy.js",
+            "symbol": "t"
+          },
+          "module": {
+            "file": "chunk-afd6vefy.js",
+            "moduleSha256": "1c3adba3174f5b52897e6e0540a1c61150fda80907a3cae7d4810e50a052a792",
+            "moduleLength": 66694,
+            "manifestSha256": "d0d8b3b882ba61ba321ab072b5cbc28a1a4089cfb4c5dce0698311aae10c739e",
+            "binarySha256": "11438981154e99af8f9aeabe193871c92b8b550b35354686a140fc056f1bfe54"
+          },
+          "declaration": {
+            "symbol": "t",
+            "start": 46026,
+            "end": 46071,
+            "source": "function t(e,n={level:\"debug\"}){B().log(e,n)}",
+            "sha256": "fd84e2a67849a102de5dd988ba3086c62b1b4af8a0b96a0f9fbaaea0f24b318c",
+            "kind": null
+          }
+        },
+        "schemaLazy": {
+          "origin": {
+            "module": "B:/~BUN/root/chunk-qbn4ejff.js",
+            "file": "chunk-qbn4ejff.js",
+            "symbol": "f"
+          },
+          "module": {
+            "file": "chunk-qbn4ejff.js",
+            "moduleSha256": "9d40051e4df27d1ac5efcfd53cdba560f938db41db43a639d275d9ff943805e1",
+            "moduleLength": 981,
+            "manifestSha256": "d0d8b3b882ba61ba321ab072b5cbc28a1a4089cfb4c5dce0698311aae10c739e",
+            "binarySha256": "11438981154e99af8f9aeabe193871c92b8b550b35354686a140fc056f1bfe54"
+          },
+          "declaration": {
+            "symbol": "f",
+            "start": 932,
+            "end": 965,
+            "source": "function f(e){return urr.lazy(e)}",
+            "sha256": "83a62c61a676fff7dfdf5bc2ed20f84e31328ef1f50df9771b9ee2f13e6ce915",
+            "kind": null
+          }
+        },
+        "looseObject": {
+          "origin": {
+            "module": "B:/~BUN/root/chunk-bpexv6zt.js",
+            "file": "chunk-bpexv6zt.js",
+            "symbol": "pt"
+          },
+          "module": {
+            "file": "chunk-bpexv6zt.js",
+            "moduleSha256": "73078a52b082dfd40ffbc0e527450e533ca2e348de69884a3cc20f6340e8d09a",
+            "moduleLength": 90494,
+            "manifestSha256": "d0d8b3b882ba61ba321ab072b5cbc28a1a4089cfb4c5dce0698311aae10c739e",
+            "binarySha256": "11438981154e99af8f9aeabe193871c92b8b550b35354686a140fc056f1bfe54"
+          },
+          "declaration": {
+            "symbol": "pt",
+            "start": 84598,
+            "end": 84678,
+            "source": "function pt(e,t){return new Vwe({type:\"object\",shape:e,catchall:se(),...Na(t)})}",
+            "sha256": "8858d29c17a64567a30a867e56ac4ab080e36c94d4449faf3492553d59ef53a2",
+            "kind": null
+          }
+        },
+        "string": {
+          "origin": {
+            "module": "B:/~BUN/root/chunk-bpexv6zt.js",
+            "file": "chunk-bpexv6zt.js",
+            "symbol": "o"
+          },
+          "module": {
+            "file": "chunk-bpexv6zt.js",
+            "moduleSha256": "73078a52b082dfd40ffbc0e527450e533ca2e348de69884a3cc20f6340e8d09a",
+            "moduleLength": 90494,
+            "manifestSha256": "d0d8b3b882ba61ba321ab072b5cbc28a1a4089cfb4c5dce0698311aae10c739e",
+            "binarySha256": "11438981154e99af8f9aeabe193871c92b8b550b35354686a140fc056f1bfe54"
+          },
+          "declaration": {
+            "symbol": "o",
+            "start": 79808,
+            "end": 79839,
+            "source": "function o(e){return cn(EVt,e)}",
+            "sha256": "a450e11121f4f942bdde0e164be8536041b1c61e4e9915ca1ffeae10cf4462ad",
+            "kind": null
+          }
+        },
+        "parse": {
+          "origin": {
+            "module": "B:/~BUN/root/chunk-afd6vefy.js",
+            "file": "chunk-afd6vefy.js",
+            "symbol": "X"
+          },
+          "module": {
+            "file": "chunk-afd6vefy.js",
+            "moduleSha256": "1c3adba3174f5b52897e6e0540a1c61150fda80907a3cae7d4810e50a052a792",
+            "moduleLength": 66694,
+            "manifestSha256": "d0d8b3b882ba61ba321ab072b5cbc28a1a4089cfb4c5dce0698311aae10c739e",
+            "binarySha256": "11438981154e99af8f9aeabe193871c92b8b550b35354686a140fc056f1bfe54"
+          },
+          "declaration": {
+            "symbol": "X",
+            "start": 46693,
+            "end": 46786,
+            "source": "X=(e,n)=>{using r=tg`JSON.parse(${Se(e)})`;return typeof n>\"u\"?JSON.parse(e):JSON.parse(e,n)}",
+            "sha256": "d9c11c20b09494bb3b6d1ca031aea141ef3da17d92c6fc4b9a1fad82e70d7dd0",
+            "kind": "var"
+          }
+        }
+      },
+      "lock": {
+        "origin": {
+          "module": "B:/~BUN/root/chunk-q7pxjcas.js",
+          "file": "chunk-q7pxjcas.js",
+          "symbol": "gqr"
+        },
+        "module": {
+          "file": "chunk-q7pxjcas.js",
+          "moduleSha256": "3f3395820b52eeb9b5735504eff9111160e34e8c3d690a14a5652f9a76da730a",
+          "moduleLength": 22617,
+          "manifestSha256": "d0d8b3b882ba61ba321ab072b5cbc28a1a4089cfb4c5dce0698311aae10c739e",
+          "binarySha256": "11438981154e99af8f9aeabe193871c92b8b550b35354686a140fc056f1bfe54"
+        },
+        "declaration": {
+          "symbol": "gqr",
+          "start": 15343,
+          "end": 15393,
+          "source": "function gqr(e,n){return K(ae(e),n,\"fail-closed\")}",
+          "sha256": "6f17040fdf20efbb74f162a74a65bb07f6cc3a52f2225077336a7518bf163ffa",
+          "kind": null
+        },
+        "aliases": {
+          "lockDirectory": "K",
+          "dirname": "ae"
+        },
+        "origins": [
+          {
+            "origin": {
+              "file": "chunk-q7pxjcas.js",
+              "symbol": "K"
+            },
+            "module": {
+              "file": "chunk-q7pxjcas.js",
+              "moduleSha256": "3f3395820b52eeb9b5735504eff9111160e34e8c3d690a14a5652f9a76da730a",
+              "moduleLength": 22617,
+              "manifestSha256": "d0d8b3b882ba61ba321ab072b5cbc28a1a4089cfb4c5dce0698311aae10c739e",
+              "binarySha256": "11438981154e99af8f9aeabe193871c92b8b550b35354686a140fc056f1bfe54"
+            },
+            "declaration": {
+              "symbol": "K",
+              "start": 15393,
+              "end": 15837,
+              "source": "async function K(e,n,s){let r=ce[s],o;try{o=await de(e,r,s)}catch(u){if(s===\"fail-closed\"||u instanceof xd)throw u;return t(`wif: credentials lock unavailable at ${e} (${l(u)}); refreshing without cross-process serialization`),n()}try{return i(\"tengu_wif_user_oauth_lock_acquired\",{mode:c(s)}),await n()}finally{i(\"tengu_wif_user_oauth_lock_released\",{mode:c(s)});try{await o()}catch(u){if(ls(u))t(`wif: lock release failed: ${u}`);else d(u)}}}",
+              "sha256": "43411ac22a81b4cb0a05eba341a4fe5f0e5fcbe93037f3a710c42897b0d8a5ea",
+              "kind": null
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "generated": {
+    "src/utils/officialOAuthProfileClear287/runtime.js": {
+      "sha256": "46620bfa4e52cdac146872855c6e6e4ffbc3562e8ae4f42a6e60cdb16aa1c825",
+      "bytes": 3615
+    },
+    "src/utils/officialOAuthProfileClear287/runtime.d.ts": {
+      "sha256": "824c99d273d50ff321e241fa84fb008b938cb8245701056c0fd06fe4d5bd2ff0",
+      "bytes": 836
+    }
+  }
+}

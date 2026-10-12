@@ -1,0 +1,155 @@
+{
+  "file": "cli",
+  "moduleSha256": "6bc800c3fa1069f12de645dccef9338fe226bf770eb86124cbb9c97a31e27edd",
+  "start": 10261,
+  "end": 13536,
+  "sha256": "89b75c684a8745d0ec934038e6609b77099732522266b119e696318ec8632ee9",
+  "source": "if(p.length>0||t.includes(\"--bg\")||t.includes(\"--background\")){if(h(\"cli_bg_path\"),ct(t))console.error(p.length>0?`--desktop can't be combined with \\`claude ${p[0]}\\`.`:\"--desktop opens the Claude Desktop app and can't run in the background (`--bg`, `--background`, `--routine`).\"),process.exit(1);if(B>0){let[{eagerParseCliFlag:r},{loadSettingsFromFlag:d,loadManagedSettingsFromFlag:u}]=await Promise.all([import(\"/$bunfs/root/chunk-wsmbyaxb.js\"),import(\"/$bunfs/root/chunk-3hsx8w8s.js\")]),P=t.slice(0,B),v=r(\"--settings\",P);if(v)d(v);let L=r(\"--managed-settings\",P);if(L)u(L)}let{loadFastPathPolicy:e}=await import(\"/$bunfs/root/chunk-8zd8e2dt.js\");{let r=await e(l),d=[\"logs\",\"stop\",\"kill\",\"rm\"].includes(p[0]??\"\");if(r)if(d)process.stderr.write(`${r}\n`);else{let{exitWithError:u}=await import(\"/$bunfs/root/chunk-4fdra957.js\");u(r)}}let{configureGlobalAgents:i}=await import(\"/$bunfs/root/chunk-dy2m4vah.js\");i();let o=await import(\"/$bunfs/root/chunk-7h2w1v6q.js\");if(await o.ensureFleetGateHydrated(),!o.isAgentsFleetEnabled()){let r=p[0]??t.find((d)=>d===\"--bg\"||d===\"--background\"||d===\"--routine\"||d.startsWith(\"--routine=\"))??\"--bg\";return o.fleetGateRejected(r)}let[s,{pinStorageV5:D},{initDefaultDebugLog:y},{seedInstallIDs:M,watchGlobalConfigThroughStorage:C}]=await Promise.all([import(\"/$bunfs/root/chunk-ryd9860h.js\"),import(\"/$bunfs/root/chunk-vg1zhjr3.js\"),import(\"/$bunfs/root/chunk-nsq22pc0.js\"),import(\"/$bunfs/root/chunk-5d0c5s4c.js\")]),a=D(l);if(F()&&a!==void 0){y({storageV5:a}),C(a);let[{credentialsStoreFor:r},{setGrowthBookCredentials:d,setGrowthBookStorageBackend:u},{composePolicyLimitsClient:P,primePolicyLimitsCache:v},{primeFastPathCredentials:L}]=await Promise.all([import(\"/$bunfs/root/chunk-g1873y03.js\"),import(\"/$bunfs/root/chunk-tv06v0ct.js\"),import(\"/$bunfs/root/chunk-zbn10208.js\"),import(\"/$bunfs/root/chunk-qs0hd6s7.js\")]),O=r(a);d(O),u(a),P({storageV5:a,credentials:O}),await L(O),await v(a),await M(a)}switch(p[0]){case\"logs\":case\"attach\":case\"stop\":case\"kill\":case\"respawn\":case\"rm\":{let[{initializeAnalyticsSink:r},{initialize1PEventLogging:d,shutdown1PEventLogging:u},{shutdownDatadog:P},{sleep:v}]=await Promise.all([import(\"/$bunfs/root/chunk-2yv45jed.js\"),import(\"/$bunfs/root/chunk-q3h89ake.js\"),import(\"/$bunfs/root/chunk-wht9dj9x.js\"),import(\"/$bunfs/root/chunk-nc6ah7j4.js\")]);if(r(),d(a),p[0]===\"logs\")await s.logsHandler(p[1],a);else if(p[0]===\"attach\")await s.attachHandler(p[1],a);else if(p[0]===\"respawn\")await s.respawnHandler(p[1],a);else if(p[0]===\"rm\")await s.rmHandler(p[1],a);else await s.stopHandler(p[1],a);return await Promise.race([Promise.all([u(),P()]),v(500,void 0,{unref:!0})]).catch(()=>{}),process.exit(process.exitCode??0)}default:{let[{initializeAnalyticsSink:r},{initialize1PEventLogging:d,shutdown1PEventLogging:u},{shutdownDatadog:P},{logEvent:v},{sleep:L}]=await Promise.all([import(\"/$bunfs/root/chunk-2yv45jed.js\"),import(\"/$bunfs/root/chunk-q3h89ake.js\"),import(\"/$bunfs/root/chunk-wht9dj9x.js\"),import(\"/$bunfs/root/chunk-4j8pxnz6.js\"),import(\"/$bunfs/root/chunk-nc6ah7j4.js\")]);r(),d(a),v(\"tengu_background\",{via_flag:!0,via:S(\"flag\")}),await s.handleBgFlag(t,a),await Promise.race([Promise.all([u(),P()]),L(500,void 0,{unref:!0})]).catch(()=>{}),process.exit(process.exitCode??0)}}return}",
+  "ct": {
+    "start": 1797,
+    "end": 1886,
+    "sha256": "c09a49cf494fe67d695d038a35bd85007eed7a08fc37a3f4b05bcb0f8a87739b",
+    "source": "function ct(n){let m=n.indexOf(\"--\");return(m===-1?n:n.slice(0,m)).includes(\"--desktop\")}"
+  },
+  "inverseExact": true,
+  "transports": [
+    {
+      "start": 3021,
+      "end": 3061,
+      "before": "import(\"/$bunfs/root/chunk-nc6ah7j4.js\")",
+      "after": "ports.importSource(\"chunk-nc6ah7j4.js\")"
+    },
+    {
+      "start": 2980,
+      "end": 3020,
+      "before": "import(\"/$bunfs/root/chunk-4j8pxnz6.js\")",
+      "after": "ports.importSource(\"chunk-4j8pxnz6.js\")"
+    },
+    {
+      "start": 2939,
+      "end": 2979,
+      "before": "import(\"/$bunfs/root/chunk-wht9dj9x.js\")",
+      "after": "ports.importSource(\"chunk-wht9dj9x.js\")"
+    },
+    {
+      "start": 2898,
+      "end": 2938,
+      "before": "import(\"/$bunfs/root/chunk-q3h89ake.js\")",
+      "after": "ports.importSource(\"chunk-q3h89ake.js\")"
+    },
+    {
+      "start": 2857,
+      "end": 2897,
+      "before": "import(\"/$bunfs/root/chunk-2yv45jed.js\")",
+      "after": "ports.importSource(\"chunk-2yv45jed.js\")"
+    },
+    {
+      "start": 2288,
+      "end": 2328,
+      "before": "import(\"/$bunfs/root/chunk-nc6ah7j4.js\")",
+      "after": "ports.importSource(\"chunk-nc6ah7j4.js\")"
+    },
+    {
+      "start": 2247,
+      "end": 2287,
+      "before": "import(\"/$bunfs/root/chunk-wht9dj9x.js\")",
+      "after": "ports.importSource(\"chunk-wht9dj9x.js\")"
+    },
+    {
+      "start": 2206,
+      "end": 2246,
+      "before": "import(\"/$bunfs/root/chunk-q3h89ake.js\")",
+      "after": "ports.importSource(\"chunk-q3h89ake.js\")"
+    },
+    {
+      "start": 2165,
+      "end": 2205,
+      "before": "import(\"/$bunfs/root/chunk-2yv45jed.js\")",
+      "after": "ports.importSource(\"chunk-2yv45jed.js\")"
+    },
+    {
+      "start": 1822,
+      "end": 1862,
+      "before": "import(\"/$bunfs/root/chunk-qs0hd6s7.js\")",
+      "after": "ports.importSource(\"chunk-qs0hd6s7.js\")"
+    },
+    {
+      "start": 1781,
+      "end": 1821,
+      "before": "import(\"/$bunfs/root/chunk-zbn10208.js\")",
+      "after": "ports.importSource(\"chunk-zbn10208.js\")"
+    },
+    {
+      "start": 1740,
+      "end": 1780,
+      "before": "import(\"/$bunfs/root/chunk-tv06v0ct.js\")",
+      "after": "ports.importSource(\"chunk-tv06v0ct.js\")"
+    },
+    {
+      "start": 1699,
+      "end": 1739,
+      "before": "import(\"/$bunfs/root/chunk-g1873y03.js\")",
+      "after": "ports.importSource(\"chunk-g1873y03.js\")"
+    },
+    {
+      "start": 1416,
+      "end": 1456,
+      "before": "import(\"/$bunfs/root/chunk-5d0c5s4c.js\")",
+      "after": "ports.importSource(\"chunk-5d0c5s4c.js\")"
+    },
+    {
+      "start": 1375,
+      "end": 1415,
+      "before": "import(\"/$bunfs/root/chunk-nsq22pc0.js\")",
+      "after": "ports.importSource(\"chunk-nsq22pc0.js\")"
+    },
+    {
+      "start": 1334,
+      "end": 1374,
+      "before": "import(\"/$bunfs/root/chunk-vg1zhjr3.js\")",
+      "after": "ports.importSource(\"chunk-vg1zhjr3.js\")"
+    },
+    {
+      "start": 1293,
+      "end": 1333,
+      "before": "import(\"/$bunfs/root/chunk-ryd9860h.js\")",
+      "after": "ports.importSource(\"chunk-ryd9860h.js\")"
+    },
+    {
+      "start": 929,
+      "end": 969,
+      "before": "import(\"/$bunfs/root/chunk-7h2w1v6q.js\")",
+      "after": "ports.importSource(\"chunk-7h2w1v6q.js\")"
+    },
+    {
+      "start": 872,
+      "end": 912,
+      "before": "import(\"/$bunfs/root/chunk-dy2m4vah.js\")",
+      "after": "ports.importSource(\"chunk-dy2m4vah.js\")"
+    },
+    {
+      "start": 790,
+      "end": 830,
+      "before": "import(\"/$bunfs/root/chunk-4fdra957.js\")",
+      "after": "ports.importSource(\"chunk-4fdra957.js\")"
+    },
+    {
+      "start": 610,
+      "end": 650,
+      "before": "import(\"/$bunfs/root/chunk-8zd8e2dt.js\")",
+      "after": "ports.importSource(\"chunk-8zd8e2dt.js\")"
+    },
+    {
+      "start": 448,
+      "end": 488,
+      "before": "import(\"/$bunfs/root/chunk-3hsx8w8s.js\")",
+      "after": "ports.importSource(\"chunk-3hsx8w8s.js\")"
+    },
+    {
+      "start": 407,
+      "end": 447,
+      "before": "import(\"/$bunfs/root/chunk-wsmbyaxb.js\")",
+      "after": "ports.importSource(\"chunk-wsmbyaxb.js\")"
+    }
+  ]
+}

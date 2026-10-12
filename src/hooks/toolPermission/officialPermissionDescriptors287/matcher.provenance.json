@@ -1,0 +1,452 @@
+{
+  "version": "2.1.287",
+  "offsetUnit": "UTF-16 end-exclusive",
+  "units": [
+    {
+      "file": "chunk-8h2vcvzs.js",
+      "name": "s",
+      "start": 715,
+      "end": 984,
+      "moduleSha256": "feaa9371f9db98be084fda2c47fed401d5cfaef5befde3e522374ddc0744e2ca",
+      "sha256": "89f21245168ceaf27b4d7d28fed8746e6014ab8b3065cffdf480cd6d7123b0c5",
+      "source": "s=Ho({kind:\"permission_workflow\",payload:f(()=>Qh((o)=>typeof o===\"object\"&&o!==null&&(\"requestId\"in o)&&(\"toolName\"in o)&&(\"permissionResult\"in o)&&(\"script\"in o))),result:f(()=>Qh((o)=>typeof o===\"object\"&&o!==null&&(\"behavior\"in o))),default:{behavior:\"cancelled\"}})"
+    },
+    {
+      "file": "chunk-wsccbnna.js",
+      "name": "fe",
+      "start": 42372,
+      "end": 42396,
+      "moduleSha256": "1b95d6dd7a9ae42fda5d73ca209ff27a0b1aa13d854e3a9f4d6a20f6f4f09a7c",
+      "sha256": "26f63df3dac67d5f1cc0e583eee32d098b8211c75346b599c829d62b2682070f",
+      "source": "function fe(e){return e}"
+    },
+    {
+      "file": "chunk-wsccbnna.js",
+      "name": "_o",
+      "start": 16402,
+      "end": 16532,
+      "moduleSha256": "1b95d6dd7a9ae42fda5d73ca209ff27a0b1aa13d854e3a9f4d6a20f6f4f09a7c",
+      "sha256": "c5dcd62b100e73a638e996072e8cb4bec67a1ebcba90a3aa46bc156e7de74476",
+      "source": "function _o(e){let s=DO(e),n=e.input.url,r=\"\";if(typeof n===\"string\")try{r=new URL(n).hostname}catch{r=\"\"}return{...s,hostname:r}}"
+    },
+    {
+      "file": "chunk-wsccbnna.js",
+      "name": "Ro",
+      "start": 16158,
+      "end": 16402,
+      "moduleSha256": "1b95d6dd7a9ae42fda5d73ca209ff27a0b1aa13d854e3a9f4d6a20f6f4f09a7c",
+      "sha256": "50db7a51176b967f6414819976dc0a84890a9f9ccfb479891c376e0a1164bcb1",
+      "source": "function Ro(e){let s=DO(e),n=e.permissionResult.metadata?.command?.chrome;if(!n&&typeof e.input.url===\"string\")try{let r=new URL(e.input.url);if(r.host)n={host:r.host,url:r.href}}catch{}return{...s,chrome:n,verbPhrase:ZIt(e.tool.name,e.input)}}"
+    },
+    {
+      "file": "chunk-wsccbnna.js",
+      "name": "xo",
+      "start": 19962,
+      "end": 20333,
+      "moduleSha256": "1b95d6dd7a9ae42fda5d73ca209ff27a0b1aa13d854e3a9f4d6a20f6f4f09a7c",
+      "sha256": "4abc668a5872feb1bfc86fba72cddc14763635e9b9134345b19375e75bbb344e",
+      "source": "function xo(e){let s=DO(e),n=$w();_h(n);let r=wG()??\"\",g=e.assistantMessage.isUnmetered===!0?void 0:e.assistantMessage.message.usage,h;if(g&&typeof g.input_tokens===\"number\"){let v=Nue(g);h={input_tokens:v.input_tokens,cache_creation_input_tokens:v.cache_creation_input_tokens,cache_read_input_tokens:v.cache_read_input_tokens}}return{...s,plan:r,planFilePath:n,usage:h}}"
+    },
+    {
+      "file": "chunk-wsccbnna.js",
+      "name": "Co",
+      "start": 19309,
+      "end": 19701,
+      "moduleSha256": "1b95d6dd7a9ae42fda5d73ca209ff27a0b1aa13d854e3a9f4d6a20f6f4f09a7c",
+      "sha256": "9a3a05732de2db7dda86e0c13a35b8d5c2fc59252b25be0abd587084d35b5035",
+      "source": "function Co(e){let s=DO(e),n=e.permissionResult.metadata,r=n!==null&&typeof n===\"object\"&&\"command\"in n&&n.command!==null&&typeof n.command===\"object\"?n.command:void 0,g=r!==void 0&&typeof r.name===\"string\"?r.name:void 0,h=r!==void 0&&typeof r.description===\"string\"?r.description:void 0,b=(typeof e.input.skill===\"string\"?e.input.skill:void 0)??g??\"\";return{...s,skill:b,skillDescription:h}}"
+    },
+    {
+      "file": "chunk-wsccbnna.js",
+      "name": "Eo",
+      "start": 19701,
+      "end": 19962,
+      "moduleSha256": "1b95d6dd7a9ae42fda5d73ca209ff27a0b1aa13d854e3a9f4d6a20f6f4f09a7c",
+      "sha256": "f1e2b1634b0ab159fac67f2f1eceb2c250f2cd1e77925ed5c52bfb91e58fb024",
+      "source": "function Eo(e){let s=DO(e),n=typeof e.input.command===\"string\"&&e.input.command.length<=CS?Bs(e.input.command):\"\",r=typeof s.renderedToolUseMessage===\"string\"?Bs(s.renderedToolUseMessage):s.renderedToolUseMessage;return{...s,renderedToolUseMessage:r,command:n}}"
+    },
+    {
+      "file": "chunk-wsccbnna.js",
+      "name": "vo",
+      "start": 16918,
+      "end": 17629,
+      "moduleSha256": "1b95d6dd7a9ae42fda5d73ca209ff27a0b1aa13d854e3a9f4d6a20f6f4f09a7c",
+      "sha256": "ee3359bfd49d225806409dbffb8b631061866d226319af759111d08e0aea4ed9",
+      "source": "function vo(e){let s=DO(e),n=typeof e.input.command===\"string\"?AS(e.input.command,{maxUnits:CS}):void 0,r=Ge(e.input.mcp,\"server\"),g=Ge(e.input.mcp,\"tool\"),h=r!==void 0&&g!==void 0?{server:Do(r,\"(unnamed server)\"),tool:Do(g,\"(unnamed tool)\"),argsDisplay:ft(e.input.mcp)}:void 0,v=Ge(e.input.ws,\"url\"),b=jSr(e.input.ws),R=v!==void 0?{url:AS(jrt(v),{maxUnits:CS}),protocols:b?.map((P,w)=>w<fLn?Ks(vBe(re(P,LH))):\"\"),protocolsWithheld:b?.slice(0,fLn).some((P)=>{let w=re(P,LH);return km(w)!==w})}:void 0,D=typeof e.input.interval_ms===\"number\"?e.input.interval_ms:30000,_=typeof e.input.description===\"string\"?Ti(e.input.description).text:void 0;return{...s,command:n,mcp:h,ws:R,intervalMs:D,monitorDescription:_}}"
+    },
+    {
+      "file": "chunk-wsccbnna.js",
+      "name": "ft",
+      "start": 16818,
+      "end": 16918,
+      "moduleSha256": "1b95d6dd7a9ae42fda5d73ca209ff27a0b1aa13d854e3a9f4d6a20f6f4f09a7c",
+      "sha256": "5072ae200cc4b43a5907a7e5c8a7df6f16e16a8c6a01ee51d36a4c60e9ab2963",
+      "source": "function ft(e){if(!(\"args\"in e)||e.args===void 0)return;return AS(e.args,{scrub:\"key\",maxUnits:CS})}"
+    },
+    {
+      "file": "chunk-wsccbnna.js",
+      "name": "Ge",
+      "start": 17714,
+      "end": 17829,
+      "moduleSha256": "1b95d6dd7a9ae42fda5d73ca209ff27a0b1aa13d854e3a9f4d6a20f6f4f09a7c",
+      "sha256": "73bdcdd2b1de3b3326f6b70e93f5ad09b164d1d85ec20d533be8cb974b8249f4",
+      "source": "function Ge(e,s){if(e===null||typeof e!==\"object\"||!(s in e))return;let n=e[s];return typeof n===\"string\"?n:void 0}"
+    },
+    {
+      "file": "chunk-wsccbnna.js",
+      "name": "Do",
+      "start": 17629,
+      "end": 17714,
+      "moduleSha256": "1b95d6dd7a9ae42fda5d73ca209ff27a0b1aa13d854e3a9f4d6a20f6f4f09a7c",
+      "sha256": "ac2c2a7842dfc212c0a262bbde757c478c6d62c88640c1d75079d5754dca3992",
+      "source": "function Do(e,s){let n=Ks(pPe(re(e,LH))).replace(/\\s+/g,\" \").trim();return UG(n)?n:s}"
+    },
+    {
+      "file": "chunk-wsccbnna.js",
+      "name": "jrt",
+      "start": 17829,
+      "end": 17888,
+      "moduleSha256": "1b95d6dd7a9ae42fda5d73ca209ff27a0b1aa13d854e3a9f4d6a20f6f4f09a7c",
+      "sha256": "215888820a98bb44e75b5026d1de3947bfecf3bab9e6ae3e85312a6dd4209fbe",
+      "source": "function jrt(e){try{return new URL(e).href}catch{return e}}"
+    },
+    {
+      "file": "chunk-wsccbnna.js",
+      "name": "To",
+      "start": 18491,
+      "end": 19309,
+      "moduleSha256": "1b95d6dd7a9ae42fda5d73ca209ff27a0b1aa13d854e3a9f4d6a20f6f4f09a7c",
+      "sha256": "2a9b2cffd6b7d25bfb5bb413c4a8d358e474db472782eef74ea8ab9ca4f7be6a",
+      "source": "function To(e){let s=DO(e),n=typeof e.input.filePath===\"string\"?e.input.filePath:\"\",r=typeof e.input.title===\"string\"?e.input.title:\"\",g=VXe(r)?\"\":wQ(r),v=(Array.isArray(e.input.options)?e.input.options:[]).filter((D)=>D!==null&&typeof D===\"object\"&&(\"label\"in D)&&typeof D.label===\"string\"&&(\"description\"in D)&&typeof D.description===\"string\"&&(\"value\"in D)&&typeof D.value===\"string\").map((D)=>({label:VXe(D.label)?\"\":wQ(D.label),description:Ti(D.description).text,value:D.value})),b,R=!1;if(kl(n)||Lh(n))b=`(Network path \\u2014 content not previewed: ${n})`,R=!0;else try{b=gL(n,sWe)}catch(D){if(t$(D))b=`(Artifact too large for preview: ${n})`;else b=W(D)?`(File not found: ${n})`:`(Error reading file: ${String(D)})`;R=!0}return{...s,filePath:n,artifactTitle:g,artifactOptions:v,fileContent:b,contentWithheld:R}}"
+    },
+    {
+      "file": "chunk-wsccbnna.js",
+      "name": "So",
+      "start": 17888,
+      "end": 18491,
+      "moduleSha256": "1b95d6dd7a9ae42fda5d73ca209ff27a0b1aa13d854e3a9f4d6a20f6f4f09a7c",
+      "sha256": "a53af9afb35148c06a4101e946d8526a41c353f4eff8840cb5b95b9c1c818b02",
+      "source": "function So(e){let s=DO(e),n=typeof e.input.runId===\"string\"&&typeof e.input.script!==\"string\",r=typeof e.input.script===\"string\"?e.input.script:n&&typeof s.renderedToolUseMessage===\"string\"?s.renderedToolUseMessage:\"\",g=e.input.script!==void 0&&typeof e.input.script!==\"string\",h=typeof e.input.name===\"string\"&&e.input.name!==\"\"&&!e.input.scriptPath&&Bs(e.input.name)===e.input.name?e.input.name:void 0,v=typeof s.renderedToolUseMessage===\"string\"?Bs(s.renderedToolUseMessage):s.renderedToolUseMessage,b=e.input.args;return{...s,renderedToolUseMessage:v,script:r,scriptForged:g,workflowName:h,args:b}}"
+    },
+    {
+      "file": "chunk-wsccbnna.js",
+      "name": "qTt",
+      "start": 29777,
+      "end": 30050,
+      "moduleSha256": "1b95d6dd7a9ae42fda5d73ca209ff27a0b1aa13d854e3a9f4d6a20f6f4f09a7c",
+      "sha256": "f705b7e546beb48440c1373d960276d0792722e228ae16d3fe29bf32e0e4c27f",
+      "source": "qTt=Ho({kind:\"permission_webfetch\",payload:f(()=>Qh((e)=>typeof e===\"object\"&&e!==null&&(\"requestId\"in e)&&(\"toolName\"in e)&&(\"permissionResult\"in e)&&(\"hostname\"in e))),result:f(()=>Qh((e)=>typeof e===\"object\"&&e!==null&&(\"behavior\"in e))),default:{behavior:\"cancelled\"}})"
+    },
+    {
+      "file": "chunk-wsccbnna.js",
+      "name": "BTt",
+      "start": 10174,
+      "end": 10448,
+      "moduleSha256": "1b95d6dd7a9ae42fda5d73ca209ff27a0b1aa13d854e3a9f4d6a20f6f4f09a7c",
+      "sha256": "de08a5186e344631cfd971557ca765f513bb4eb158507260ab241aee83f2b5d3",
+      "source": "BTt=Ho({kind:\"permission_browser\",payload:f(()=>Qh((e)=>typeof e===\"object\"&&e!==null&&(\"requestId\"in e)&&(\"toolName\"in e)&&(\"permissionResult\"in e)&&(\"verbPhrase\"in e))),result:f(()=>Qh((e)=>typeof e===\"object\"&&e!==null&&(\"behavior\"in e))),default:{behavior:\"cancelled\"}})"
+    },
+    {
+      "file": "chunk-wsccbnna.js",
+      "name": "gae",
+      "start": 4732,
+      "end": 5015,
+      "moduleSha256": "1b95d6dd7a9ae42fda5d73ca209ff27a0b1aa13d854e3a9f4d6a20f6f4f09a7c",
+      "sha256": "43be6a56799129a986294bc8bd3685ee3842054b35bde6093f0b05729e5e21a6",
+      "source": "gae=Ho({kind:\"permission_ask_user_question\",payload:f(()=>Qh((e)=>typeof e===\"object\"&&e!==null&&(\"requestId\"in e)&&(\"toolName\"in e)&&(\"permissionResult\"in e)&&(\"questions\"in e))),result:f(()=>Qh((e)=>typeof e===\"object\"&&e!==null&&(\"behavior\"in e))),default:{behavior:\"cancelled\"}})"
+    },
+    {
+      "file": "chunk-wsccbnna.js",
+      "name": "jTt",
+      "start": 10453,
+      "end": 10715,
+      "moduleSha256": "1b95d6dd7a9ae42fda5d73ca209ff27a0b1aa13d854e3a9f4d6a20f6f4f09a7c",
+      "sha256": "c967bbe9a060d313e9589abc1a6e078a0bb2fae21405cb2e967140f5592b614c",
+      "source": "jTt=Ho({kind:\"permission_enter_plan_mode\",payload:f(()=>Qh((e)=>typeof e===\"object\"&&e!==null&&(\"requestId\"in e)&&(\"toolName\"in e)&&(\"permissionResult\"in e))),result:f(()=>Qh((e)=>typeof e===\"object\"&&e!==null&&(\"behavior\"in e))),default:{behavior:\"cancelled\"}})"
+    },
+    {
+      "file": "chunk-wsccbnna.js",
+      "name": "WTt",
+      "start": 10720,
+      "end": 10998,
+      "moduleSha256": "1b95d6dd7a9ae42fda5d73ca209ff27a0b1aa13d854e3a9f4d6a20f6f4f09a7c",
+      "sha256": "bb2fbbf460b16c9d6cc9bccd820740639b7c47ba8cea0f2e7512c237ed470ca0",
+      "source": "WTt=Ho({kind:\"permission_exit_plan_mode_v2\",payload:f(()=>Qh((e)=>typeof e===\"object\"&&e!==null&&(\"requestId\"in e)&&(\"toolName\"in e)&&(\"permissionResult\"in e)&&(\"plan\"in e))),result:f(()=>Qh((e)=>typeof e===\"object\"&&e!==null&&(\"behavior\"in e))),default:{behavior:\"cancelled\"}})"
+    },
+    {
+      "file": "chunk-wsccbnna.js",
+      "name": "VTt",
+      "start": 29505,
+      "end": 29772,
+      "moduleSha256": "1b95d6dd7a9ae42fda5d73ca209ff27a0b1aa13d854e3a9f4d6a20f6f4f09a7c",
+      "sha256": "9592145e332b6ea74ab38f79cfba7d855162039694f90650bdff67f3ef81e171",
+      "source": "VTt=Ho({kind:\"permission_skill\",payload:f(()=>Qh((e)=>typeof e===\"object\"&&e!==null&&(\"requestId\"in e)&&(\"toolName\"in e)&&(\"permissionResult\"in e)&&(\"skill\"in e))),result:f(()=>Qh((e)=>typeof e===\"object\"&&e!==null&&(\"behavior\"in e))),default:{behavior:\"cancelled\"}})"
+    },
+    {
+      "file": "chunk-wsccbnna.js",
+      "name": "zTt",
+      "start": 29226,
+      "end": 29500,
+      "moduleSha256": "1b95d6dd7a9ae42fda5d73ca209ff27a0b1aa13d854e3a9f4d6a20f6f4f09a7c",
+      "sha256": "6f37c16c30b9c20fcbca6059d488471e016a07a64eaa1896de4f57338c95c390",
+      "source": "zTt=Ho({kind:\"permission_powershell\",payload:f(()=>Qh((e)=>typeof e===\"object\"&&e!==null&&(\"requestId\"in e)&&(\"toolName\"in e)&&(\"permissionResult\"in e)&&(\"command\"in e))),result:f(()=>Qh((e)=>typeof e===\"object\"&&e!==null&&(\"behavior\"in e))),default:{behavior:\"cancelled\"}})"
+    },
+    {
+      "file": "chunk-wsccbnna.js",
+      "name": "GTt",
+      "start": 28947,
+      "end": 29221,
+      "moduleSha256": "1b95d6dd7a9ae42fda5d73ca209ff27a0b1aa13d854e3a9f4d6a20f6f4f09a7c",
+      "sha256": "f0970abe151f2b76bbcfff1efc2517561f09290a3880c6b9f920fcf63f389461",
+      "source": "GTt=Ho({kind:\"permission_monitor\",payload:f(()=>Qh((e)=>typeof e===\"object\"&&e!==null&&(\"requestId\"in e)&&(\"toolName\"in e)&&(\"permissionResult\"in e)&&(\"intervalMs\"in e))),result:f(()=>Qh((e)=>typeof e===\"object\"&&e!==null&&(\"behavior\"in e))),default:{behavior:\"cancelled\"}})"
+    },
+    {
+      "file": "chunk-wsccbnna.js",
+      "name": "zo",
+      "start": 41940,
+      "end": 41947,
+      "moduleSha256": "1b95d6dd7a9ae42fda5d73ca209ff27a0b1aa13d854e3a9f4d6a20f6f4f09a7c",
+      "sha256": "e32cbdc5687f7212eda9ada976797092850ac0e49803253bfcdea6f33920b258",
+      "source": "zo=null"
+    },
+    {
+      "file": "chunk-wsccbnna.js",
+      "name": "Vo",
+      "start": 41948,
+      "end": 41955,
+      "moduleSha256": "1b95d6dd7a9ae42fda5d73ca209ff27a0b1aa13d854e3a9f4d6a20f6f4f09a7c",
+      "sha256": "336b1c6ad45928e3606672c4ae05408df0051977ea1be8fd352e6e7da0cbe7fd",
+      "source": "Vo=null"
+    },
+    {
+      "file": "chunk-wsccbnna.js",
+      "name": "Se",
+      "start": 41956,
+      "end": 41963,
+      "moduleSha256": "1b95d6dd7a9ae42fda5d73ca209ff27a0b1aa13d854e3a9f4d6a20f6f4f09a7c",
+      "sha256": "873cf0c13dd87e3fff16c0d31c7b34225faf3d2a9b38fa5249776ed34a33b1b0",
+      "source": "Se=null"
+    },
+    {
+      "file": "chunk-wsccbnna.js",
+      "name": "Go",
+      "start": 41964,
+      "end": 41971,
+      "moduleSha256": "1b95d6dd7a9ae42fda5d73ca209ff27a0b1aa13d854e3a9f4d6a20f6f4f09a7c",
+      "sha256": "ab3a08ed62d356e34cf35338db9a320aef1f9b61f7a5fb91fa8b407cf801bd9b",
+      "source": "Go=null"
+    },
+    {
+      "file": "chunk-wsccbnna.js",
+      "name": "Qo",
+      "start": 41972,
+      "end": 41979,
+      "moduleSha256": "1b95d6dd7a9ae42fda5d73ca209ff27a0b1aa13d854e3a9f4d6a20f6f4f09a7c",
+      "sha256": "5749214a47e9c9bbbdd0879a5a262bd080187326772f5dc1029f3258794ebb77",
+      "source": "Qo=null"
+    },
+    {
+      "file": "chunk-wsccbnna.js",
+      "name": "Yo",
+      "start": 41980,
+      "end": 41987,
+      "moduleSha256": "1b95d6dd7a9ae42fda5d73ca209ff27a0b1aa13d854e3a9f4d6a20f6f4f09a7c",
+      "sha256": "2fae7207b6dd3ecc94aeb72a30af4a29d5c371e411545d81c379ff3b61de5610",
+      "source": "Yo=null"
+    },
+    {
+      "file": "chunk-wsccbnna.js",
+      "name": "Xo",
+      "start": 41988,
+      "end": 41995,
+      "moduleSha256": "1b95d6dd7a9ae42fda5d73ca209ff27a0b1aa13d854e3a9f4d6a20f6f4f09a7c",
+      "sha256": "ecb3fff29e0ef8247caf75299940c279f792154697a1d399d4dd6e6f5cad34f1",
+      "source": "Xo=null"
+    },
+    {
+      "file": "chunk-wsccbnna.js",
+      "name": "Ft",
+      "start": 42400,
+      "end": 43233,
+      "moduleSha256": "1b95d6dd7a9ae42fda5d73ca209ff27a0b1aa13d854e3a9f4d6a20f6f4f09a7c",
+      "sha256": "d04bf90ea84443e40d2ead08bd0d49ea967b4f0589422cf809d15363c3bda0de",
+      "source": "Ft=[fe({matches:(e)=>e===gy,dialog:qTt,build:_o}),fe({matches:(e)=>e.name.startsWith(yM),dialog:BTt,build:Ro}),fe({matches:(e)=>e===o5,dialog:gae,build:Ao}),fe({matches:(e)=>e===RXt,dialog:jTt,build:DO}),fe({matches:(e)=>e===_V,dialog:WTt,build:xo}),fe({matches:(e)=>e===Jze,dialog:VTt,build:Co}),fe({matches:(e)=>e.name===wt,dialog:zTt,build:Eo}),fe({matches:(e)=>e===It,dialog:GTt,build:vo}),...zo!==null&&Vo!==null?[fe({matches:(e)=>e===zo,dialog:Vo,build:To})]:[],fe({matches:(e)=>e===Ko,dialog:xt,build:So}),...Go!==null&&Qo!==null?[fe({matches:(e)=>e===Go,dialog:Qo,build:DO})]:[],...Yo!==null&&Xo!==null?[fe({matches:(e)=>e===Yo,dialog:Xo,build:DO})]:[],...Se!==null?[fe({matches:(e)=>Se.isAccountMemoryWriteDialogTool(e),dialog:Se.accountMemoryWritePermissionDialog,build:Se.buildAccountMemoryWritePermissionDescriptor})]:[]]"
+    },
+    {
+      "file": "chunk-wsccbnna.js",
+      "name": "Ymr",
+      "start": 43234,
+      "end": 43284,
+      "moduleSha256": "1b95d6dd7a9ae42fda5d73ca209ff27a0b1aa13d854e3a9f4d6a20f6f4f09a7c",
+      "sha256": "9f87d2b1bb80ce93e0b878cb7486e2381f8031298d79ece8886763ec7e96c41f",
+      "source": "function Ymr(e){return Ft.find((s)=>s.matches(e))}"
+    }
+  ],
+  "ports": {
+    "Ho": {
+      "file": "chunk-e4zevz88.js",
+      "name": "Ho"
+    },
+    "f": {
+      "file": "chunk-5qqrzb2c.js",
+      "name": "f"
+    },
+    "Qh": {
+      "file": "chunk-e4zevz88.js",
+      "name": "Qh"
+    },
+    "DO": {
+      "owner": "existing Tool catalog / permissionDescriptors287",
+      "name": "DO"
+    },
+    "ZIt": {
+      "file": "chunk-3jd8g3z9.js",
+      "name": "ZIt"
+    },
+    "$w": {
+      "file": "chunk-epk29mef.js",
+      "name": "$w"
+    },
+    "_h": {
+      "file": "chunk-epk29mef.js",
+      "name": "_h"
+    },
+    "wG": {
+      "file": "chunk-epk29mef.js",
+      "name": "wG"
+    },
+    "Nue": {
+      "file": "chunk-1b21she7.js",
+      "name": "Nue"
+    },
+    "CS": {
+      "file": "chunk-b5kmgz2n.js",
+      "name": "CS"
+    },
+    "Bs": {
+      "file": "chunk-xep95vq1.js",
+      "name": "Bs"
+    },
+    "AS": {
+      "file": "chunk-b5kmgz2n.js",
+      "name": "AS"
+    },
+    "jSr": {
+      "file": "chunk-fpptm2t1.js",
+      "name": "jSr"
+    },
+    "fLn": {
+      "file": "chunk-fpptm2t1.js",
+      "name": "fLn"
+    },
+    "Ks": {
+      "file": "chunk-b5kmgz2n.js",
+      "name": "Ks"
+    },
+    "vBe": {
+      "file": "chunk-b5kmgz2n.js",
+      "name": "vBe"
+    },
+    "re": {
+      "file": "chunk-eske5nfz.js",
+      "name": "re"
+    },
+    "LH": {
+      "file": "chunk-b5kmgz2n.js",
+      "name": "LH"
+    },
+    "km": {
+      "file": "chunk-b5kmgz2n.js",
+      "name": "km"
+    },
+    "Ti": {
+      "file": "chunk-b5kmgz2n.js",
+      "name": "Ti"
+    },
+    "pPe": {
+      "file": "chunk-b5kmgz2n.js",
+      "name": "pPe"
+    },
+    "UG": {
+      "file": "chunk-b5kmgz2n.js",
+      "name": "UG"
+    },
+    "VXe": {
+      "file": "chunk-b5kmgz2n.js",
+      "name": "VXe"
+    },
+    "wQ": {
+      "file": "chunk-b5kmgz2n.js",
+      "name": "wQ"
+    },
+    "kl": {
+      "file": "chunk-x954y317.js",
+      "name": "kl"
+    },
+    "Lh": {
+      "file": "chunk-x954y317.js",
+      "name": "Lh"
+    },
+    "gL": {
+      "file": "chunk-bffwghss.js",
+      "name": "gL"
+    },
+    "sWe": {
+      "file": "chunk-0pprbvtw.js",
+      "name": "sWe"
+    },
+    "t$": {
+      "file": "chunk-bffwghss.js",
+      "name": "t$"
+    },
+    "W": {
+      "file": "chunk-c9me9cp7.js",
+      "name": "W"
+    },
+    "gy": {
+      "owner": "existing Tool catalog / permissionDescriptors287",
+      "name": "gy"
+    },
+    "yM": {
+      "file": "chunk-df0597gf.js",
+      "name": "yM"
+    },
+    "o5": {
+      "owner": "existing Tool catalog / permissionDescriptors287",
+      "name": "o5"
+    },
+    "Ao": {
+      "owner": "existing Tool catalog / permissionDescriptors287",
+      "name": "Ao"
+    },
+    "RXt": {
+      "owner": "existing Tool catalog / permissionDescriptors287",
+      "name": "RXt"
+    },
+    "_V": {
+      "owner": "existing Tool catalog / permissionDescriptors287",
+      "name": "_V"
+    },
+    "Jze": {
+      "owner": "existing Tool catalog / permissionDescriptors287",
+      "name": "Jze"
+    },
+    "wt": {
+      "file": "chunk-xep95vq1.js",
+      "name": "wt"
+    },
+    "It": {
+      "owner": "existing Tool catalog / permissionDescriptors287",
+      "name": "It"
+    },
+    "Ko": {
+      "owner": "existing Tool catalog / permissionDescriptors287",
+      "name": "Ko"
+    }
+  },
+  "transportAdapters": [
+    "Original xt dynamic import resolves the complete same pinned workflowPermissionDialog s, via xt=s inside this stateless factory",
+    "Ko/It/gy/o5/RXt/_V/Jze resolve existing catalog Tool identities; DO/Ao resolve existing descriptor owner, no original Tool graph copies"
+  ],
+  "factorySha256": "623b20cfe88e55c05b8fd4803a4720335a6ecfb1c3bd45530204753de20db8d2"
+}

@@ -1,0 +1,216 @@
+{
+  "version": "2.1.287",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16 end-exclusive",
+  "rows": [
+    {
+      "file": "chunk-bpkkwmx3.js",
+      "name": "ce",
+      "start": 12700,
+      "end": 12914,
+      "moduleSha256": "3fc43aaf75977ddb35423588ce5a908b2b1e8dae7e979aea8b77c5009b4664a6",
+      "sha256": "0c1a299e24c72d3e0f0c8baecd9d09aa6d6781a2a9990cf9a0728c91d09a20fc",
+      "source": "ce=async(n,e)=>{let a=await b(e,{customInstructions:n});if(a.type!==\"skipped\")return a;return a.reason.startsWith(D5)?{type:\"text\",value:a.reason,level:\"error\"}:{type:\"text\",value:`Not compacted \\xB7 ${a.reason}`}}",
+      "variable": true
+    },
+    {
+      "file": "chunk-bpkkwmx3.js",
+      "name": "b",
+      "start": 12915,
+      "end": 13668,
+      "moduleSha256": "3fc43aaf75977ddb35423588ce5a908b2b1e8dae7e979aea8b77c5009b4664a6",
+      "sha256": "cc400d917b77394f62d43492841a65e35ef9bfafe00f570dd4779a2dee782ae1",
+      "source": "async function b(n,{customInstructions:e,mainThreadAgentDefinition:a,trigger:p=\"manual\",origin:g}){let{abortController:k}=n,{messages:i}=n;if(n.getAppState().endedByModel)throw new P(UN(\"Claude ended this conversation. Start a new session (or /clear) to continue.\"),\"Claude ended this conversation\");if(i=ai(i),i.length===0)throw Error(w);let o=e.trim();try{return await D(i,n,{customInstructions:o,mainThreadAgentDefinition:a,trigger:p,origin:g??n.hookOrigin})}catch(r){if(k.signal.aborted)throw new Ye(\"Compaction canceled.\");else if(TI(r,cFe))return{type:\"text\",value:cFe};else if(r instanceof H6)return{type:\"text\",value:r.message,level:\"error\"};else throw d(r),Error(`Error during compaction: ${r instanceof Error?r.message:String(r)}`,{cause:r})}}",
+      "variable": false
+    },
+    {
+      "file": "chunk-bpkkwmx3.js",
+      "name": "D",
+      "start": 13668,
+      "end": 17443,
+      "moduleSha256": "3fc43aaf75977ddb35423588ce5a908b2b1e8dae7e979aea8b77c5009b4664a6",
+      "sha256": "12c638b6661e24bbe76d0561013658f103786ce440e9315ec232b162edd9e16a",
+      "source": "async function D(n,e,{customInstructions:a,mainThreadAgentDefinition:p,trigger:g,origin:k}){e.onCompactEvent?.({type:\"compact_progress\",event:{type:\"hooks_start\",hookType:\"pre_compact\"}}),e.onCompactEvent?.({type:\"sdk_status\",status:\"compacting\"});let i=performance.now(),o=YU(),r,y=ug(n),E,S,R,v=async(s,m)=>{let[f,h]=await Promise.all([hye(e.session,{trigger:\"manual\",customInstructions:m||null},e,e.abortController.signal),wPt({toolUseContext:e,forkContextMessages:s,mainThreadAgentDefinition:p})]);if(R=h,f.blockedBy)return t(`Compaction blocked by PreCompact hook: ${f.blockedBy}`,{level:\"warn\"}),e.onQueryEvent?.({type:\"notification\",notification:{key:\"compaction-blocked-by-hook\",text:\"compaction blocked by PreCompact hook\",priority:\"immediate\",color:\"warning\"}}),{skip:`${D5}: ${f.blockedBy}`};let _=T4e(m,f.newCustomInstructions);e.onCompactEvent?.({type:\"stream_mode\",mode:\"requesting\"}),e.onQueryEvent?.({type:\"response_length\",op:\"reset\"}),e.onCompactEvent?.({type:\"compact_progress\",event:{type:\"compact_start\"}});let c=await I(e,m??\"\",f.newCustomInstructions,s,kHt(n));if(S=c.reuse,c.hit&&c.replacement!==void 0){let C=[...c.replacement,...c.since];return{messages:C,tokensBefore:y,record:{kind:\"replacement\",messages:C}}}let u=await(c.hit?G6n({...c.finalize,startTime:i,cacheSafeParams:h,mainChainTailAtStart:o}):HIr(s,h,{customInstructions:_,trigger:\"manual\",manualPrecomputeReuse:c.reuse,userWaitStartedAt:i,precomputedKind:c.precomputedKind,precomputedFailureCause:c.precomputedFailureCause,onResponseLength:(C)=>e.onQueryEvent?.(C)})).catch((C)=>(d(C),{ok:!1,reason:\"error\",detail:l(C)}));if(!u.ok)switch(u.reason){case\"too_few_groups\":throw Error(cFe);case\"aborted\":throw Error(qk);case\"exhausted\":throw new H6(O);case\"media_unstrippable\":throw new H6(A);case\"error\":throw new H6(`Error during compaction: ${u.detail||\"unknown error\"}`)}let M=u.result.boundaryMarker,T=Bi(M)?M.compactMetadata:void 0;return{messages:JD(u.result),tokensBefore:T?.preTokens,tokensAfter:T?.postTokens,usage:Xxr(u.result.compactionUsage),record:{kind:\"compacted\",compactionResult:u.result,hookDisplay:f.userDisplayMessage}}};try{let s=await Yxr({trigger:g,instructions:a||void 0,messages:n,isIsolated:!1,origin:k,signal:e.abortController.signal,compact:v});if(s.kind===\"skipped\")return r=`skipped: ${s.reason}`,{type:\"skipped\",reason:s.reason};let m=s.record,f=R??await wPt({toolUseContext:e,forkContextMessages:n,mainThreadAgentDefinition:p}),h=s.kind===\"replaced\"?s.messages:s.record.kind===\"replacement\"?Ajn(s.record.messages):void 0,_=h===void 0&&m?.kind===\"compacted\"?m.compactionResult:await DIr({replacement:h??[],preCompactMessages:n,cacheSafeParams:f,querySource:void 0,trigger:\"manual\",startTime:i,coreBoundary:m?.kind===\"compacted\"?m.compactionResult.boundaryMarker:void 0,compactionKind:\"manual\",precomputed:m?.kind===\"replacement\"}),c=m?.kind===\"compacted\"?m.hookDisplay:void 0,u=_.boundaryMarker;if(Bi(u))E=u.compactMetadata.postTokens;Pce(e.session,void 0,e.setAppState,void 0,void 0,e.storageV5),rht(),ZT(e.session,\"compaction\");let M=[c,_.userDisplayMessage].filter(Boolean).join(`\n`)||void 0;return{type:\"compact\",compactionResult:{..._,userDisplayMessage:M},displayText:L(e.options.verbose,M),result:{...s.result,...E!==void 0&&{tokensAfter:E}}}}catch(s){throw r=s instanceof Error?s.message:\"reactive compaction failed\",s}finally{e.onCompactEvent?.({type:\"stream_mode\",mode:\"requesting\"}),e.onQueryEvent?.({type:\"response_length\",op:\"reset\"}),e.onCompactEvent?.({type:\"compact_progress\",event:{type:\"compact_end\"}}),yRe({trigger:\"manual\",success:!r,durationMs:performance.now()-i,preTokens:y,postTokens:E,error:r,precomputeReuse:S}),e.onCompactEvent?.({type:\"sdk_status\",status:null,metadata:{compactResult:r?\"failed\":\"success\",...r&&{compactError:r}}})}}",
+      "variable": false
+    },
+    {
+      "file": "chunk-bpkkwmx3.js",
+      "name": "L",
+      "start": 18903,
+      "end": 19090,
+      "moduleSha256": "3fc43aaf75977ddb35423588ce5a908b2b1e8dae7e979aea8b77c5009b4664a6",
+      "sha256": "b56b9a6fc719cde544ed52254ba91ec3943c938f861e0eb7d98faf38daaac16b",
+      "source": "function L(n,e){let a=ole(\"tip\"),p=o_(\"app:toggleTranscript\",\"Global\",\"ctrl+o\"),g=[...n?[]:[`(${p} to see full summary)`],...e?[e]:[],...a?[a]:[]];return fe.dim(\"Compacted \"+g.join(`\n`))}",
+      "variable": false
+    },
+    {
+      "file": "chunk-bpkkwmx3.js",
+      "name": "w",
+      "start": 12522,
+      "end": 12548,
+      "moduleSha256": "3fc43aaf75977ddb35423588ce5a908b2b1e8dae7e979aea8b77c5009b4664a6",
+      "sha256": "7fb3bc11b49c10473653566adc9cc6e9a4979836e1222eca716b2cec1a12d3bb",
+      "source": "w=\"No messages to compact\"",
+      "variable": true
+    },
+    {
+      "file": "chunk-bpkkwmx3.js",
+      "name": "O",
+      "start": 12549,
+      "end": 12633,
+      "moduleSha256": "3fc43aaf75977ddb35423588ce5a908b2b1e8dae7e979aea8b77c5009b4664a6",
+      "sha256": "0f27c7ca60e86b4f1e1176bdd5fae6e1e97de9a349a0daba6d8c4a073d2c6cb7",
+      "source": "O=\"Compaction failed \\xB7 conversation could not be reduced below the context limit\"",
+      "variable": true
+    },
+    {
+      "file": "chunk-bpkkwmx3.js",
+      "name": "A",
+      "start": 12634,
+      "end": 12695,
+      "moduleSha256": "3fc43aaf75977ddb35423588ce5a908b2b1e8dae7e979aea8b77c5009b4664a6",
+      "sha256": "dcced4a11d1d832a74429513578c6df75f4ffb9092a0c13f6ab528890767701e",
+      "source": "A=\"Compaction failed \\xB7 attached media exceeds size limits\"",
+      "variable": true
+    }
+  ],
+  "bindings": {
+    "Ajn": {
+      "file": "chunk-mphp7acd.js",
+      "name": "Ajn"
+    },
+    "Bi": {
+      "file": "chunk-mphp7acd.js",
+      "name": "Bi"
+    },
+    "D5": {
+      "file": "chunk-mphp7acd.js",
+      "name": "D5"
+    },
+    "DIr": {
+      "file": "chunk-mphp7acd.js",
+      "name": "DIr"
+    },
+    "G6n": {
+      "file": "chunk-mphp7acd.js",
+      "name": "G6n"
+    },
+    "H6": {
+      "file": "chunk-mphp7acd.js",
+      "name": "H6"
+    },
+    "HIr": {
+      "file": "chunk-mphp7acd.js",
+      "name": "HIr"
+    },
+    "I": {
+      "file": "chunk-bpkkwmx3.js",
+      "name": "I"
+    },
+    "JD": {
+      "file": "chunk-mphp7acd.js",
+      "name": "JD"
+    },
+    "P": {
+      "file": "chunk-c9me9cp7.js",
+      "name": "P"
+    },
+    "Pce": {
+      "file": "chunk-mphp7acd.js",
+      "name": "Pce"
+    },
+    "T4e": {
+      "file": "chunk-mphp7acd.js",
+      "name": "T4e"
+    },
+    "TI": {
+      "file": "chunk-c9me9cp7.js",
+      "name": "TI"
+    },
+    "UN": {
+      "file": "chunk-qd1zqdpb.js",
+      "name": "UN"
+    },
+    "Xxr": {
+      "file": "chunk-mphp7acd.js",
+      "name": "Xxr"
+    },
+    "YU": {
+      "file": "chunk-bn3p37gv.js",
+      "name": "YU"
+    },
+    "Ye": {
+      "file": "chunk-c9me9cp7.js",
+      "name": "Ye"
+    },
+    "Yxr": {
+      "file": "chunk-mphp7acd.js",
+      "name": "Yxr"
+    },
+    "ZT": {
+      "file": "chunk-mphp7acd.js",
+      "name": "ZT"
+    },
+    "ai": {
+      "file": "chunk-mphp7acd.js",
+      "name": "ai"
+    },
+    "cFe": {
+      "file": "chunk-mphp7acd.js",
+      "name": "cFe"
+    },
+    "d": {
+      "file": "chunk-amhtwhch.js",
+      "name": "d"
+    },
+    "fe": {
+      "file": "chunk-2q133q3v.js",
+      "name": "fe"
+    },
+    "hye": {
+      "file": "chunk-mphp7acd.js",
+      "name": "hye"
+    },
+    "kHt": {
+      "file": "chunk-mphp7acd.js",
+      "name": "kHt"
+    },
+    "l": {
+      "file": "chunk-c9me9cp7.js",
+      "name": "l"
+    },
+    "o_": {
+      "file": "chunk-kte1py10.js",
+      "name": "o_"
+    },
+    "ole": {
+      "file": "chunk-4162en39.js",
+      "name": "ole"
+    },
+    "qk": {
+      "file": "chunk-a56phknn.js",
+      "name": "qk"
+    },
+    "rht": {
+      "file": "chunk-1b21she7.js",
+      "name": "rht"
+    },
+    "t": {
+      "file": "chunk-q80zaav8.js",
+      "name": "t"
+    },
+    "ug": {
+      "file": "chunk-mphp7acd.js",
+      "name": "ug"
+    },
+    "wPt": {
+      "file": "chunk-bp6s6p24.js",
+      "name": "wPt"
+    },
+    "yRe": {
+      "file": "chunk-qyc5w2q1.js",
+      "name": "yRe"
+    }
+  },
+  "nativeSha256": "30b1de0b5cb6f7557bfd587971441181244aef0e038d851227a1fa244189dd29"
+}

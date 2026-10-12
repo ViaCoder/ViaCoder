@@ -1,0 +1,590 @@
+{
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "networkEvidence": {
+    "module": "chunk-x954y317.js",
+    "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+    "roots": [
+      "kl"
+    ],
+    "rows": [
+      {
+        "name": "Ln",
+        "start": 7227,
+        "end": 7275,
+        "sha256": "a7544d5dcd55adcf0ca6c54350b7dd2aace3bfcffeec0204e829b2a5f897c162",
+        "source": "function Ln(t){return/^[\\\\/]{2}/.test(t)||CD(t)}",
+        "variable": false
+      },
+      {
+        "name": "jS",
+        "start": 7886,
+        "end": 8182,
+        "sha256": "99ffe4e5a3cbf6708f9ac9a17e5880d65fcdc17de7bd0f4d49adafc92aa73c3e",
+        "source": "function jS(t){if(!/\\/\\.(?:vol|file|nofollow|resolve)(?:\\/|$)/i.test(t))return!1;if(!t.startsWith(\"/\"))return!1;let e=[];for(let n of t.split(\"/\")){if(n===\"\"||n===\".\")continue;if(n===\"..\"){e.pop();continue}if(e.push(n),e.length===1&&/^\\.(?:vol|file|nofollow|resolve)$/i.test(n))return!0}return!1}",
+        "variable": false
+      },
+      {
+        "name": "C",
+        "start": 8387,
+        "end": 8497,
+        "sha256": "e5dc2853ef180823f80bdec7f7e97fdf198b08a9538c40d7805341a31f894a03",
+        "source": "function C(t){return t.length===2&&_R(t[0])===\"net\"||t.length===3&&_R(t[0])===\"network\"&&_R(t[1])===\"servers\"}",
+        "variable": false
+      },
+      {
+        "name": "_R",
+        "start": 8744,
+        "end": 8859,
+        "sha256": "098779b55917be70b7f2dc773dcbe71d350be4f50b90ccfef7b9267e996d2779",
+        "source": "function _R(t){return t.replace(/[\\u200c-\\u200f\\u202a-\\u202e\\u206a-\\u206f\\ufeff]/g,\"\").toUpperCase().toLowerCase()}",
+        "variable": false
+      },
+      {
+        "name": "ca",
+        "start": 11108,
+        "end": 11136,
+        "sha256": "f592f9245b0e853926b0588be47249b7a8176fa4fc3dc3019f5e6e9eefb59b28",
+        "source": "function ca(t){return da(t)}",
+        "variable": false
+      },
+      {
+        "name": "kl",
+        "start": 11428,
+        "end": 11477,
+        "sha256": "10b6e389a4e70c725d84fef0d69f944e4d9efb1a5555f6892739664db8320db3",
+        "source": "function kl(t){return Ln(t)||ca(t)||SR(t)||jS(t)}",
+        "variable": false
+      },
+      {
+        "name": "da",
+        "start": 11526,
+        "end": 11562,
+        "sha256": "0ef3c7539f554da9ec078359a324bbb64d7670577771ce892ddfd655de6b21d6",
+        "source": "function da(t){return UEe(t)!==null}",
+        "variable": false
+      },
+      {
+        "name": "Bt",
+        "start": 11566,
+        "end": 11573,
+        "sha256": "5ee6cf59406fd9e8376bb8e361a166ee93e21a4b59d5b683e58541806bd566fa",
+        "source": "Bt=1024",
+        "variable": true
+      },
+      {
+        "name": "Gt",
+        "start": 11574,
+        "end": 11581,
+        "sha256": "fbcad8bae54d05fbbe41b20ae1b3a3c1d88258ed6cd07edbf1e9ec0c72fe1bdd",
+        "source": "Gt=4096",
+        "variable": true
+      },
+      {
+        "name": "I",
+        "start": 11582,
+        "end": 11591,
+        "sha256": "7768764948caa247cd09b42a5b58a539baa502ef417d251873fe4f6ec07fe9cb",
+        "source": "I=new Map",
+        "variable": true
+      },
+      {
+        "name": "k",
+        "start": 11592,
+        "end": 11601,
+        "sha256": "6b7fa8f6f2e917e558e4237eef30e28aa4124f9f11ae0bc2d28e0fb79eba5f3b",
+        "source": "k=new Map",
+        "variable": true
+      },
+      {
+        "name": "UEe",
+        "start": 11602,
+        "end": 11762,
+        "sha256": "2f44d552f5be7d618e957330bd7390ba0b912b159aad91c1b2c60735ab406fe2",
+        "source": "function UEe(t){if(!t.startsWith(\"/\"))return null;if(t.length>Gt)return Lt(t);let e=I.get(t);if(e===void 0){if(e=Lt(t),I.size>=Bt)I.clear();I.set(t,e)}return e}",
+        "variable": false
+      },
+      {
+        "name": "Lt",
+        "start": 11762,
+        "end": 11923,
+        "sha256": "8316fff200862d351d23d68c54da443a4639a67d379ea07582d7e05a4bfcc885",
+        "source": "function Lt(t){let e=[];for(let n of t.split(\"/\")){if(n===\"\"||n===\".\")continue;if(n===\"..\"){e.pop();continue}if(e.push(n),C(e))return\"/\"+e.join(\"/\")}return null}",
+        "variable": false
+      },
+      {
+        "name": "w$",
+        "start": 12359,
+        "end": 12515,
+        "sha256": "f8f5f2b3f5f9afda34fed9a7e68bb8fc37d34e95aa1dd609a88b11b30b6f43b8",
+        "source": "function w$(t){if(!t.startsWith(\"/\"))return!1;if(t.length>Gt)return Mt(t);let e=k.get(t);if(e===void 0){if(e=Mt(t),k.size>=Bt)k.clear();k.set(t,e)}return e}",
+        "variable": false
+      },
+      {
+        "name": "Mt",
+        "start": 12515,
+        "end": 12700,
+        "sha256": "ae2d793b23f969646b4a45d68a6d706ba3e8bbdab116510b2c01ec848ffb6f7d",
+        "source": "function Mt(t){let e=[];for(let n of t.split(\"/\")){if(n===\"\"||n===\".\")continue;if(n===\"..\"){e.pop();continue}if(e.push(n),e.length===1&&e[0].toLowerCase()===\"network\")return!0}return!1}",
+        "variable": false
+      },
+      {
+        "name": "SR",
+        "start": 12700,
+        "end": 12728,
+        "sha256": "dc1b32ebafb0afe23ff5aacb47797b4b4c5346cb521ef72b907899cf87a26864",
+        "source": "function SR(t){return w$(t)}",
+        "variable": false
+      },
+      {
+        "name": "CD",
+        "start": 22506,
+        "end": 22573,
+        "sha256": "9f5e7c088caa4dd78a84828f38adca74c7648141a5e012155e4a32cf89bc17e6",
+        "source": "function CD(t){return Ft.test(t)||t.includes(\"??\")&&Ft.test(Xt(t))}",
+        "variable": false
+      },
+      {
+        "name": "Ft",
+        "start": 22577,
+        "end": 22597,
+        "sha256": "be89eb72d93dcb5bab40560ab6e99b3595f800cd5af0aceb194eb562ac0feef8",
+        "source": "Ft=/^[\\\\/]\\?\\?[\\\\/]/",
+        "variable": true
+      },
+      {
+        "name": "Xt",
+        "start": 22598,
+        "end": 22653,
+        "sha256": "193c741fc06a5afc4ed932f3624a7aecfda1266a6633044e3f6352fa22bc56da",
+        "source": "function Xt(t){return tt.win32?tt.win32.normalize(t):t}",
+        "variable": false
+      }
+    ],
+    "ports": [
+      {
+        "name": "tt",
+        "imported": "*",
+        "module": "path"
+      }
+    ]
+  },
+  "consumerEvidence": {
+    "module": "chunk-mphp7acd.js",
+    "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+    "roots": [
+      "AA"
+    ],
+    "rows": [
+      {
+        "name": "AA",
+        "start": 467369,
+        "end": 467736,
+        "sha256": "cfdc7f907fa8a00c7db9aeed8c6048d3943becf9867cd4e4ca916903cdf5220e",
+        "source": "function AA(e){switch(e){case\"user\":return il();case\"project\":return lPn(Co()??oe(),\".mcp.json\");case\"local\":return`${il()} [project: ${oe()}]`;case\"dynamic\":return\"Dynamically configured\";case\"enterprise\":return Hcn();case\"managed\":return\"managed settings (managedMcpServers)\";case\"claudeai\":return\"claude.ai\";case\"agent\":return\"agent frontmatter\";default:return e}}",
+        "variable": false
+      }
+    ],
+    "ports": [
+      {
+        "name": "il",
+        "imported": "il",
+        "module": "/$bunfs/root/chunk-mbfze585.js"
+      },
+      {
+        "name": "lPn",
+        "imported": "join",
+        "module": "path"
+      },
+      {
+        "name": "Co",
+        "imported": "Co",
+        "module": "/$bunfs/root/chunk-bn3p37gv.js"
+      },
+      {
+        "name": "oe",
+        "imported": "oe",
+        "module": "/$bunfs/root/chunk-s354e3rr.js"
+      },
+      {
+        "name": "Hcn",
+        "module": "canonical-owner"
+      }
+    ]
+  },
+  "mcpProject": {
+    "module": "chunk-mphp7acd.js",
+    "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+    "parent": {
+      "name": "Fnt",
+      "start": 490726,
+      "end": 492547,
+      "sha256": "db34f34face7fd2b7f972cfaf9f6563864f42609be220ab3c3a71c4e17f1bb38"
+    },
+    "start": 490935,
+    "end": 491440,
+    "sha256": "ab40ec321392b3ccc576ab98110de47afe5d7a619356f18a74508370f79c2f60",
+    "source": "{let s=HA(),g=[],h=[],b=Ee(),w=Co()??b;while(w!==yPn(w).root)h.push(w),w=hPn(w);for(let D of h.reverse()){let j=hG(D,\".mcp.json\"),{config:z,errors:K}=TLt({filePath:j,expandVars:n,scope:\"project\"});if(!z){let he=K.filter((_e)=>!_e.message.startsWith(\"MCP config file not found\"));if(he.length>0)t(`MCP config errors for ${j}: ${_(he.map((_e)=>_e.message))}`,{level:\"error\"}),g.push(...he);continue}if(z.mcpServers)Object.assign(s,pG(z.mcpServers,e,b));if(K.length>0)g.push(...K)}return{servers:s,errors:g}}"
+  },
+  "units": [
+    {
+      "module": "chunk-bn3p37gv.js",
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "roots": [
+        "Co",
+        "reo"
+      ],
+      "rows": [
+        {
+          "name": "Co",
+          "start": 85932,
+          "end": 85996,
+          "sha256": "007c7826b78d346af6dd6cb1136e542234e22126d7db9b30603b1cac662690fe",
+          "source": "function Co(){return n().host.launchOptions.projectConfigRoot()}",
+          "variable": false
+        },
+        {
+          "name": "reo",
+          "start": 85996,
+          "end": 86063,
+          "sha256": "b1654e57d4fb0e329565049fa25972183ba713d20f42caefc69f00721945f57a",
+          "source": "function reo(e){n().host.launchOptions.replaceProjectConfigRoot(e)}",
+          "variable": false
+        }
+      ],
+      "ports": [
+        {
+          "name": "n",
+          "module": "canonical-owner"
+        }
+      ]
+    },
+    {
+      "module": "chunk-x954y317.js",
+      "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+      "roots": [
+        "kl"
+      ],
+      "rows": [
+        {
+          "name": "kl",
+          "start": 11428,
+          "end": 11477,
+          "sha256": "10b6e389a4e70c725d84fef0d69f944e4d9efb1a5555f6892739664db8320db3",
+          "source": "function kl(t){return Ln(t)||ca(t)||SR(t)||jS(t)}",
+          "variable": false
+        }
+      ],
+      "ports": [
+        {
+          "name": "jS",
+          "module": "canonical-owner"
+        },
+        {
+          "name": "SR",
+          "module": "canonical-owner"
+        },
+        {
+          "name": "ca",
+          "module": "canonical-owner"
+        },
+        {
+          "name": "Ln",
+          "module": "canonical-owner"
+        }
+      ]
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "roots": [
+        "WRn",
+        "jle",
+        "rwe"
+      ],
+      "rows": [
+        {
+          "name": "WRn",
+          "start": 422537,
+          "end": 422724,
+          "sha256": "5d89b4287a1da37906eeee1f2c04ac80ef3a50dcae79ebbdfb4b1d4505ef972f",
+          "source": "function WRn(e){let n=rzt(e),r=eP(),s=r===null?null:rzt(r);if(!n||!s)return n;let g=aI(e);if(g&&ap(g)===ap(s))return n;let h=ap(n),b=ap(s);if(h!==b&&h.startsWith(b+HRn))return s;return n}",
+          "variable": false
+        },
+        {
+          "name": "jle",
+          "start": 422829,
+          "end": 423430,
+          "sha256": "c38030af7a085629efddcbe68a64b24b6406d3a9fbad37d9bc5f962628a93fae",
+          "source": "async function jle(e,n){let r=Co()??n;if(r===null)return[];let s=owe(BRn()).normalize(\"NFC\"),g=WRn(r),h=owe(r),b=[];while(!0){if(ap(h)===ap(s))break;if(b.push(ET(h,\".claude\",e)),g&&ap(h)===ap(g))break;let j=URn(h);if(j===h)break;h=j}let w=await Promise.all(b.map((j)=>yX(j).then(()=>({claudeSubdir:j,exists:!0}),(z)=>({claudeSubdir:j,exists:!1,error:z})))),D=[];for(let j of w){let{claudeSubdir:z}=j;if(j.exists){D.push(z);continue}let K=j.error;if(Ht(K));else if(E(K)===\"ENFILE\")t(`getProjectDirsUpToHome: stat ${z} hit ENFILE (system fd-table full); skipping`,{level:\"error\"});else throw K}return D}",
+          "variable": false
+        },
+        {
+          "name": "rwe",
+          "start": 423430,
+          "end": 423639,
+          "sha256": "88c10f609eef58dad79839dc6c5da4718ca3a781ef3e7c14d4dcfdac1ce42a18",
+          "source": "function rwe(e,n,r){if(r===null||Co()!==null)return;let s=lr(r),g=bs(r);if(!s||!g||g===s)return;let h=ap(ET(s,\".claude\",n));if(e.some((D)=>ap(D)===h))return;let w=ET(g,\".claude\",n);if(!e.includes(w))e.push(w)}",
+          "variable": false
+        }
+      ],
+      "ports": [
+        {
+          "name": "Co",
+          "imported": "Co",
+          "module": "/$bunfs/root/chunk-bn3p37gv.js"
+        },
+        {
+          "name": "lr",
+          "imported": "lr",
+          "module": "/$bunfs/root/chunk-2ynta9xc.js"
+        },
+        {
+          "name": "bs",
+          "imported": "bs",
+          "module": "/$bunfs/root/chunk-2ynta9xc.js"
+        },
+        {
+          "name": "ap",
+          "imported": "ap",
+          "module": "/$bunfs/root/chunk-0pprbvtw.js"
+        },
+        {
+          "name": "ET",
+          "imported": "join",
+          "module": "path"
+        },
+        {
+          "name": "owe",
+          "imported": "resolve",
+          "module": "path"
+        },
+        {
+          "name": "BRn",
+          "imported": "homedir",
+          "module": "os"
+        },
+        {
+          "name": "URn",
+          "imported": "dirname",
+          "module": "path"
+        },
+        {
+          "name": "yX",
+          "imported": "stat",
+          "module": "fs/promises"
+        },
+        {
+          "name": "Ht",
+          "imported": "Ht",
+          "module": "/$bunfs/root/chunk-c9me9cp7.js"
+        },
+        {
+          "name": "E",
+          "imported": "E",
+          "module": "/$bunfs/root/chunk-c9me9cp7.js"
+        },
+        {
+          "name": "t",
+          "imported": "t",
+          "module": "/$bunfs/root/chunk-q80zaav8.js"
+        },
+        {
+          "name": "rzt",
+          "imported": "rzt",
+          "module": "/$bunfs/root/chunk-f1vb7bx7.js"
+        },
+        {
+          "name": "eP",
+          "imported": "eP",
+          "module": "/$bunfs/root/chunk-bn3p37gv.js"
+        },
+        {
+          "name": "aI",
+          "imported": "aI",
+          "module": "/$bunfs/root/chunk-f1vb7bx7.js"
+        },
+        {
+          "name": "HRn",
+          "imported": "sep",
+          "module": "path"
+        }
+      ]
+    },
+    {
+      "module": "chunk-z6bxsds6.js",
+      "moduleSha256": "d61c217d40821968f7024fd18a54b936163654848271023cd293a87f11059698",
+      "roots": [
+        "Yt"
+      ],
+      "rows": [
+        {
+          "name": "Gb",
+          "start": 756,
+          "end": 796,
+          "sha256": "862a20ce5723decb5dfc7838bc3eff99d2d26ee8bc4346f3d0a2bf7c2afb448c",
+          "source": "function Gb(r){console.error(fe.red(r))}",
+          "variable": false
+        },
+        {
+          "name": "Yt",
+          "start": 796,
+          "end": 865,
+          "sha256": "17ce9a78816fc49c381710f94dbc52f51010de74bd9795feefebe1444ef0c5f4",
+          "source": "function Yt(r,e=\"cli_error\"){if(r)Gb(r);iy(e),process.exit(1);return}",
+          "variable": false
+        }
+      ],
+      "ports": [
+        {
+          "name": "iy",
+          "imported": "iy",
+          "module": "/$bunfs/root/chunk-g3fn1fm9.js"
+        },
+        {
+          "name": "fe",
+          "imported": "fe",
+          "module": "/$bunfs/root/chunk-2q133q3v.js"
+        }
+      ]
+    },
+    {
+      "module": "chunk-g3fn1fm9.js",
+      "moduleSha256": "94da4e25849627f9ec3d32fff123ea37087ee936ea1befb862af48a2a6ad2e8a",
+      "roots": [
+        "iy"
+      ],
+      "rows": [
+        {
+          "name": "y",
+          "start": 793,
+          "end": 807,
+          "sha256": "a6d70be90b8df322787258feab1d1152cfb4e33e59410496f871ba2c83769f1c",
+          "source": "y=\"exit-cause\"",
+          "variable": true
+        },
+        {
+          "name": "iy",
+          "start": 851,
+          "end": 941,
+          "sha256": "02b9acee7bce4b19582ca69037e1ffc785539d9161ead33bc37bbb4a66ccec9e",
+          "source": "function iy(e,t){let n=t??process.env.CLAUDE_JOB_DIR;if(!n)return;try{f(c(n,y),e)}catch{}}",
+          "variable": false
+        }
+      ],
+      "ports": [
+        {
+          "name": "f",
+          "imported": "writeFileSync",
+          "module": "fs"
+        },
+        {
+          "name": "c",
+          "imported": "join",
+          "module": "path"
+        }
+      ]
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "roots": [
+        "HA",
+        "pG"
+      ],
+      "rows": [
+        {
+          "name": "HA",
+          "start": 471552,
+          "end": 471593,
+          "sha256": "24205f88754fbc54536e8b195601c0a2156b0aff6ebfcac84e3bbfebc78b1f5c",
+          "source": "function HA(){return Object.create(null)}",
+          "variable": false
+        },
+        {
+          "name": "pG",
+          "start": 471593,
+          "end": 471729,
+          "sha256": "d1852c0ac75d118dd8af236c9f13f2df514a5e4701bf091238e8035f9d4a2d9a",
+          "source": "function pG(e,n,r){let s=HA();if(e)for(let[g,h]of Object.entries(e))s[g]=r===void 0?{...h,scope:n}:{...h,scope:n,declaredIn:r};return s}",
+          "variable": false
+        }
+      ],
+      "ports": []
+    },
+    {
+      "module": "chunk-c9me9cp7.js",
+      "moduleSha256": "db81856ee883c31a0be18c305014a0d82d3bd698a459223b9de754b934b084ae",
+      "roots": [
+        "Ht",
+        "E"
+      ],
+      "rows": [
+        {
+          "name": "E",
+          "start": 4814,
+          "end": 4913,
+          "sha256": "a84ab0a2488aed5689416393c679dde4e7f4b29aa980e121bd56b25ab3e7b5e4",
+          "source": "function E(n){if(n&&typeof n===\"object\"&&\"code\"in n&&typeof n.code===\"string\")return n.code;return}",
+          "variable": false
+        },
+        {
+          "name": "u",
+          "start": 8245,
+          "end": 8324,
+          "sha256": "30de65b6b8e676f875f68c923e61adb633e126dacc5bd7913e7e3c3e032eee7e",
+          "source": "u=new Set([\"ENOENT\",\"EACCES\",\"EPERM\",\"ENOTDIR\",\"ELOOP\",\"ENAMETOOLONG\",\"EROFS\"])",
+          "variable": true
+        },
+        {
+          "name": "Ht",
+          "start": 8325,
+          "end": 8356,
+          "sha256": "f99ca7661497decc4ab25c643d1589774c201238e94337618181b48b1254db39",
+          "source": "function Ht(n){return PT(E(n))}",
+          "variable": false
+        },
+        {
+          "name": "PT",
+          "start": 8356,
+          "end": 8399,
+          "sha256": "e824c06455293f2b05b3e0ab64734f7e9101134260d6612509bcb74fc4bb908f",
+          "source": "function PT(n){return n!==void 0&&u.has(n)}",
+          "variable": false
+        }
+      ],
+      "ports": []
+    }
+  ],
+  "preAction": {
+    "module": "chunk-q1842b1c.js",
+    "moduleSha256": "53011f90e32203bb47d179b337e6d65e0caf63a2ca681545b60f9c3c388c212f",
+    "start": 53195,
+    "end": 58125,
+    "sha256": "2b93382fcbadaf270a3ec8d2005e0fc7d60874e7d43e9071b8fba9f1462feb79",
+    "statements": [
+      {
+        "name": "preAction:projectConfigRoot",
+        "start": 53730,
+        "end": 53775,
+        "source": "let ne=w.getOptionValue(\"projectConfigRoot\");",
+        "sha256": "0138818b5bd7c4e187e435e83db0a3c06c7d2283c0fddf5c92e9d4c892388f7d",
+        "kind": "complete-statement"
+      },
+      {
+        "name": "preAction:projectConfigRoot",
+        "start": 53775,
+        "end": 54157,
+        "source": "if(typeof ne===\"string\"){if(!Jr(ne)||kl(ne))return Yt(\"Error: --project-config-root must be an absolute local path\");let M;try{M=await Kr(ne),await(await qr(M)).close()}catch{return Yt(\"Error: --project-config-root is not an existing directory that this user can list\")}if(kl(M))return Yt(\"Error: --project-config-root resolves to a network location, not a local directory\");reo(M)}",
+        "sha256": "d57eafb4882661a2815a972db89414cf4f5f07f357c9ebd0a18250866e3e1c80",
+        "kind": "complete-statement"
+      }
+    ]
+  },
+  "option": {
+    "module": "chunk-q1842b1c.js",
+    "start": 73360,
+    "end": 73665,
+    "sha256": "cca2d7d069ad2231c22d1ff98d8a4e061750a5969fc171dd10c198cc4cc1fd41",
+    "source": "new Zo(\"--project-config-root <dir>\",\"Read project settings, .mcp.json and the .claude config trees (commands, agents, skills, workflows, routines, output-styles; --routine is refused with this flag) from this directory rather than the working directory (for a session a host starts in a worktree of it)\")"
+  }
+}

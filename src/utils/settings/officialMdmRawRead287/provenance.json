@@ -1,0 +1,881 @@
+{
+  "version": "2.1.287",
+  "offsetUnit": "UTF-16 code units",
+  "scope": "Complete raw read/startup platform closures plus exact unreadable error and registry parser. Full policy parsing/composition remains separate.",
+  "platforms": [
+    {
+      "platform": "darwin-arm64",
+      "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+      "readerFile": "chunk-ad99rt1r.js",
+      "constantsFile": "chunk-qgj6nmy1.js",
+      "bindings": [
+        "const Ie=ports.require;",
+        "const s=ports.os.userInfo;",
+        "const S=ports.childProcess.execFile;",
+        "const p=ports.fs.accessSync;",
+        "const k=ports.fs.closeSync;",
+        "const E=ports.fs.constants;",
+        "const y=ports.fs.openSync;",
+        "const w=ports.fs.readSync;"
+      ],
+      "exports": [
+        "_Cn",
+        "R8r",
+        "x8r"
+      ],
+      "paths": "P9o",
+      "ranges": [
+        {
+          "file": "chunk-qgj6nmy1.js",
+          "start": 692,
+          "end": 1006,
+          "moduleLength": 1357,
+          "moduleSha256": "9b85bebc165cea3642e8fc4b48cfcbf325e068d424d15d3774e939b77f01f12e",
+          "sha256": "5d993d811e1e41177f9864fa3684c258f671fb15e3256f37c9d3faf086167dfb",
+          "source": "var t=\"com.anthropic.claudecode\",bCn=\"HKLM\\\\SOFTWARE\\\\Policies\\\\ClaudeCode\",wCn=\"HKCU\\\\SOFTWARE\\\\Policies\\\\ClaudeCode\",Szt=\"Settings\",H8r=\"/usr/bin/plutil\",T9o=[\"-convert\",\"json\",\"-o\",\"-\",\"--\"],k9o=[\"-lint\",\"-s\",\"--\"],R9o=5000,ztr=2097152,x9o=\"/mnt/c/Windows/System32/reg.exe\",lL=\"/mnt/c/Program Files/ClaudeCode\";"
+        },
+        {
+          "file": "chunk-qgj6nmy1.js",
+          "start": 1006,
+          "end": 1030,
+          "moduleLength": 1357,
+          "moduleSha256": "9b85bebc165cea3642e8fc4b48cfcbf325e068d424d15d3774e939b77f01f12e",
+          "sha256": "77c2de8a8027020a7f040f59fef6f1b45492dbde7439579b4d22783b0df39b41",
+          "source": "function DSt(){return!1}"
+        },
+        {
+          "file": "chunk-qgj6nmy1.js",
+          "start": 1030,
+          "end": 1300,
+          "moduleLength": 1357,
+          "moduleSha256": "9b85bebc165cea3642e8fc4b48cfcbf325e068d424d15d3774e939b77f01f12e",
+          "sha256": "77287e980f48aecdfa905275c648d63d9b1087e3ad149b5269ae358b2ec97fca",
+          "source": "function P9o(){let e=\"\";try{e=s().username}catch{}let r=[];if(e)r.push({path:`/Library/Managed Preferences/${e}/${t}.plist`,label:\"per-user managed preferences\"});return r.push({path:`/Library/Managed Preferences/${t}.plist`,label:\"device-level managed preferences\"}),r}"
+        },
+        {
+          "file": "chunk-ad99rt1r.js",
+          "start": 834,
+          "end": 932,
+          "moduleLength": 3885,
+          "moduleSha256": "8544f31a743d931da52deb9d2506cd28549a687235719592926dd2509c3928ff",
+          "sha256": "d8cc9e446bdc9393ff22ca328cf4859cf39a4359c293c63219b27fce8052c6cd",
+          "source": "class f{promise=null;start(){if(this.promise)return;this.promise=_Cn()}reset(){this.promise=null}}"
+        },
+        {
+          "file": "chunk-ad99rt1r.js",
+          "start": 932,
+          "end": 944,
+          "moduleLength": 3885,
+          "moduleSha256": "8544f31a743d931da52deb9d2506cd28549a687235719592926dd2509c3928ff",
+          "sha256": "a6e45312db3f7dd8f42c5c82f2d0fa8e7807cb24137122d71b778762e68880b9",
+          "source": "var g=new f;"
+        },
+        {
+          "file": "chunk-ad99rt1r.js",
+          "start": 944,
+          "end": 1407,
+          "moduleLength": 3885,
+          "moduleSha256": "8544f31a743d931da52deb9d2506cd28549a687235719592926dd2509c3928ff",
+          "sha256": "8f2393f4f3fbe3a6e734c075ef336e5b86d900c5532192c93abe6800510c57be",
+          "source": "function _(t){if(!t)return{status:\"ok\",exitCode:0,errno:null,signal:null};let n=t,e=typeof n.signal===\"string\"&&n.signal?n.signal:null;if(typeof n.code===\"string\")return{status:\"spawn_error\",exitCode:null,errno:n.code,signal:null};if(n.killed===!0)return{status:\"timeout\",exitCode:null,errno:null,signal:e};if(e)return{status:\"killed\",exitCode:null,errno:null,signal:e};return{status:\"exited\",exitCode:typeof n.code===\"number\"?n.code:null,errno:null,signal:null}}"
+        },
+        {
+          "file": "chunk-ad99rt1r.js",
+          "start": 1407,
+          "end": 1756,
+          "moduleLength": 3885,
+          "moduleSha256": "8544f31a743d931da52deb9d2506cd28549a687235719592926dd2509c3928ff",
+          "sha256": "d7cce5a7b7bd96b7e2dc107f727948a81d9a34dd9a9fc7ac5351b5c55eba251b",
+          "source": "function d(t,n,e){let u=Date.now();return new Promise((o)=>{try{S(t,n,{encoding:\"utf-8\",timeout:R9o,windowsHide:!0,...e!==void 0&&{maxBuffer:e}},(s,r)=>{o({stdout:r??\"\",..._(s),durationMs:Date.now()-u})})}catch(s){let r=s.code;o({stdout:\"\",status:\"spawn_error\",exitCode:null,errno:typeof r===\"string\"?r:null,signal:null,durationMs:Date.now()-u})}})}"
+        },
+        {
+          "file": "chunk-ad99rt1r.js",
+          "start": 1756,
+          "end": 1868,
+          "moduleLength": 3885,
+          "moduleSha256": "8544f31a743d931da52deb9d2506cd28549a687235719592926dd2509c3928ff",
+          "sha256": "553bdcb2182ab66c7468493ce8cb2ae09acc648a062ca435e8a5526fc55fef31",
+          "source": "function m(t){return{status:t.status,exitCode:t.exitCode,errno:t.errno,signal:t.signal,durationMs:t.durationMs}}"
+        },
+        {
+          "file": "chunk-ad99rt1r.js",
+          "start": 1868,
+          "end": 1945,
+          "moduleLength": 3885,
+          "moduleSha256": "8544f31a743d931da52deb9d2506cd28549a687235719592926dd2509c3928ff",
+          "sha256": "79837b799400454565a87b229c5887068aef85fd651d58638a5239b6f969e329",
+          "source": "function R(t){return t.status===\"ok\"||t.status===\"exited\"&&t.exitCode!==null}"
+        },
+        {
+          "file": "chunk-ad99rt1r.js",
+          "start": 1945,
+          "end": 2038,
+          "moduleLength": 3885,
+          "moduleSha256": "8544f31a743d931da52deb9d2506cd28549a687235719592926dd2509c3928ff",
+          "sha256": "b57066db357961a7a836e437a072ad08355ee214fda6480d51547676a26ea3db",
+          "source": "function x(t){return t.status===\"spawn_error\"&&t.errno===\"ERR_CHILD_PROCESS_STDIO_MAXBUFFER\"}"
+        },
+        {
+          "file": "chunk-ad99rt1r.js",
+          "start": 2038,
+          "end": 2270,
+          "moduleLength": 3885,
+          "moduleSha256": "8544f31a743d931da52deb9d2506cd28549a687235719592926dd2509c3928ff",
+          "sha256": "f26845ba2db6ab830e6e2aa53ee627ffe1276506d525876194fca6caaf4400aa",
+          "source": "function O(t){let n;try{return n=y(t,\"r\"),w(n,Buffer.alloc(1),0,1,0),null}catch(e){return{code:e&&typeof e===\"object\"&&\"code\"in e?e.code:void 0,message:e instanceof Error?e.message:String(e)}}finally{if(n!==void 0)try{k(n)}catch{}}}"
+        },
+        {
+          "file": "chunk-ad99rt1r.js",
+          "start": 2270,
+          "end": 3498,
+          "moduleLength": 3885,
+          "moduleSha256": "8544f31a743d931da52deb9d2506cd28549a687235719592926dd2509c3928ff",
+          "sha256": "7ace77fc2c09e7f27bedd9d7217b67ab87d83433518e6f745dd1ba99e1e60e80",
+          "source": "function _Cn(){return(async()=>{{let t=P9o(),e=(await Promise.all(t.map(async({path:o,...s})=>{try{p(o,E.R_OK)}catch(l){let a=l&&typeof l===\"object\"&&\"code\"in l?l.code:void 0;if(a===\"ENOENT\"||a===\"ENOTDIR\")return null;return{stdout:null,unreadReason:l instanceof Error?l.message:String(l),...typeof a===\"string\"&&{unreadErrno:a},...s}}let r=await d(H8r,[...T9o,o],ztr);if(!R(r))return{stdout:null,unreadReason:\"plutil did not finish converting it\",...s};if(r.status===\"ok\")return{stdout:r.stdout,...s};let c=await d(H8r,[...k9o,o]);if(!R(c))return{stdout:null,unreadReason:\"plutil did not finish checking it\",...s};if(c.status===\"ok\")return{stdout:null,unreadReason:\"it holds a value plutil cannot convert to JSON (a date or data value)\",...s};let i=O(o);if(i!==null){if(i.code===\"ENOENT\"||i.code===\"ENOTDIR\")return null;return{stdout:null,unreadReason:i.message,...typeof i.code===\"string\"&&{unreadErrno:i.code},...s}}return{stdout:\"\",...s}}))).filter((o)=>o!==null),u=e.findIndex((o)=>o.stdout!==null);return{plistStdouts:u===-1?e:e.slice(0,u+1),hklmStdout:null,hkcuStdout:null,outcomes:{hklm:null,hkcu:null}}}if(DSt())return h(x9o);return{plistStdouts:null,hklmStdout:null,hkcuStdout:null,outcomes:{hklm:null,hkcu:null}}})()}"
+        },
+        {
+          "file": "chunk-ad99rt1r.js",
+          "start": 3498,
+          "end": 3806,
+          "moduleLength": 3885,
+          "moduleSha256": "8544f31a743d931da52deb9d2506cd28549a687235719592926dd2509c3928ff",
+          "sha256": "b447c6e19627101b76cbbd294e855b13248e5e574a8b8cc2b54daa56868c33cb",
+          "source": "async function h(t){let n=(o)=>d(t,[\"query\",o,\"/v\",Szt],ztr),[e,u]=await Promise.all([n(bCn),n(wCn)]);return{plistStdouts:null,hklmStdout:e.status===\"ok\"?e.stdout:null,...x(e)&&{hklmUnreadReason:`the value exceeds ${ztr/1048576} MiB`},hkcuStdout:u.status===\"ok\"?u.stdout:null,outcomes:{hklm:m(e),hkcu:m(u)}}}"
+        },
+        {
+          "file": "chunk-ad99rt1r.js",
+          "start": 3806,
+          "end": 3831,
+          "moduleLength": 3885,
+          "moduleSha256": "8544f31a743d931da52deb9d2506cd28549a687235719592926dd2509c3928ff",
+          "sha256": "00c89d2708c44adb975f4e106d278475f5de6fad3eacba69c36f7bc1e83d3cc7",
+          "source": "function R8r(){g.start()}"
+        },
+        {
+          "file": "chunk-ad99rt1r.js",
+          "start": 3831,
+          "end": 3863,
+          "moduleLength": 3885,
+          "moduleSha256": "8544f31a743d931da52deb9d2506cd28549a687235719592926dd2509c3928ff",
+          "sha256": "8c6f543ae7056885255bc9dd268e5fbe266a5979fa6d0395e154aaf3d482f9e3",
+          "source": "function x8r(){return g.promise}"
+        }
+      ]
+    },
+    {
+      "platform": "darwin-x64",
+      "manifestSha256": "ba9e122d28e8a42927eb23c7c86b62295f24a223546ee5476e761837579a709b",
+      "readerFile": "chunk-7eawqyhr.js",
+      "constantsFile": "chunk-3yecq1hn.js",
+      "bindings": [
+        "const Ie=ports.require;",
+        "const s=ports.os.userInfo;",
+        "const S=ports.childProcess.execFile;",
+        "const p=ports.fs.accessSync;",
+        "const k=ports.fs.closeSync;",
+        "const E=ports.fs.constants;",
+        "const y=ports.fs.openSync;",
+        "const w=ports.fs.readSync;"
+      ],
+      "exports": [
+        "_An",
+        "R8r",
+        "x8r"
+      ],
+      "paths": "H9o",
+      "ranges": [
+        {
+          "file": "chunk-3yecq1hn.js",
+          "start": 692,
+          "end": 1006,
+          "moduleLength": 1357,
+          "moduleSha256": "5141eb7d417cc1a8a35f0b85a8d4bd383995225099427ad93660fd7e1d854814",
+          "sha256": "6af1d447ecbb6e23eddaf6de7fc4da969a8f7630bb602973ff1bb216d0641782",
+          "source": "var t=\"com.anthropic.claudecode\",bAn=\"HKLM\\\\SOFTWARE\\\\Policies\\\\ClaudeCode\",wAn=\"HKCU\\\\SOFTWARE\\\\Policies\\\\ClaudeCode\",Szt=\"Settings\",O8r=\"/usr/bin/plutil\",k9o=[\"-convert\",\"json\",\"-o\",\"-\",\"--\"],T9o=[\"-lint\",\"-s\",\"--\"],R9o=5000,ztr=2097152,x9o=\"/mnt/c/Windows/System32/reg.exe\",lD=\"/mnt/c/Program Files/ClaudeCode\";"
+        },
+        {
+          "file": "chunk-3yecq1hn.js",
+          "start": 1006,
+          "end": 1030,
+          "moduleLength": 1357,
+          "moduleSha256": "5141eb7d417cc1a8a35f0b85a8d4bd383995225099427ad93660fd7e1d854814",
+          "sha256": "b4b7c980ad3861597d5565969466c5719c929bb6710f128b93b9d7c3c109502e",
+          "source": "function LSt(){return!1}"
+        },
+        {
+          "file": "chunk-3yecq1hn.js",
+          "start": 1030,
+          "end": 1300,
+          "moduleLength": 1357,
+          "moduleSha256": "5141eb7d417cc1a8a35f0b85a8d4bd383995225099427ad93660fd7e1d854814",
+          "sha256": "ed606bae0eae9fe88678e86fde197f7aea832da6d777265c9a390f88c722f3c7",
+          "source": "function H9o(){let e=\"\";try{e=s().username}catch{}let r=[];if(e)r.push({path:`/Library/Managed Preferences/${e}/${t}.plist`,label:\"per-user managed preferences\"});return r.push({path:`/Library/Managed Preferences/${t}.plist`,label:\"device-level managed preferences\"}),r}"
+        },
+        {
+          "file": "chunk-7eawqyhr.js",
+          "start": 834,
+          "end": 932,
+          "moduleLength": 3885,
+          "moduleSha256": "d245b32d32be2b6332d08b4e87f9b58756cfc2465650aea83f08956e90fd5927",
+          "sha256": "8e2c7693acb9932622b2f0dbb9cbe7468aa2d93dc7b3475395341bd32f9d62ba",
+          "source": "class f{promise=null;start(){if(this.promise)return;this.promise=_An()}reset(){this.promise=null}}"
+        },
+        {
+          "file": "chunk-7eawqyhr.js",
+          "start": 932,
+          "end": 944,
+          "moduleLength": 3885,
+          "moduleSha256": "d245b32d32be2b6332d08b4e87f9b58756cfc2465650aea83f08956e90fd5927",
+          "sha256": "a6e45312db3f7dd8f42c5c82f2d0fa8e7807cb24137122d71b778762e68880b9",
+          "source": "var g=new f;"
+        },
+        {
+          "file": "chunk-7eawqyhr.js",
+          "start": 944,
+          "end": 1407,
+          "moduleLength": 3885,
+          "moduleSha256": "d245b32d32be2b6332d08b4e87f9b58756cfc2465650aea83f08956e90fd5927",
+          "sha256": "8f2393f4f3fbe3a6e734c075ef336e5b86d900c5532192c93abe6800510c57be",
+          "source": "function _(t){if(!t)return{status:\"ok\",exitCode:0,errno:null,signal:null};let n=t,e=typeof n.signal===\"string\"&&n.signal?n.signal:null;if(typeof n.code===\"string\")return{status:\"spawn_error\",exitCode:null,errno:n.code,signal:null};if(n.killed===!0)return{status:\"timeout\",exitCode:null,errno:null,signal:e};if(e)return{status:\"killed\",exitCode:null,errno:null,signal:e};return{status:\"exited\",exitCode:typeof n.code===\"number\"?n.code:null,errno:null,signal:null}}"
+        },
+        {
+          "file": "chunk-7eawqyhr.js",
+          "start": 1407,
+          "end": 1756,
+          "moduleLength": 3885,
+          "moduleSha256": "d245b32d32be2b6332d08b4e87f9b58756cfc2465650aea83f08956e90fd5927",
+          "sha256": "d7cce5a7b7bd96b7e2dc107f727948a81d9a34dd9a9fc7ac5351b5c55eba251b",
+          "source": "function d(t,n,e){let u=Date.now();return new Promise((o)=>{try{S(t,n,{encoding:\"utf-8\",timeout:R9o,windowsHide:!0,...e!==void 0&&{maxBuffer:e}},(s,r)=>{o({stdout:r??\"\",..._(s),durationMs:Date.now()-u})})}catch(s){let r=s.code;o({stdout:\"\",status:\"spawn_error\",exitCode:null,errno:typeof r===\"string\"?r:null,signal:null,durationMs:Date.now()-u})}})}"
+        },
+        {
+          "file": "chunk-7eawqyhr.js",
+          "start": 1756,
+          "end": 1868,
+          "moduleLength": 3885,
+          "moduleSha256": "d245b32d32be2b6332d08b4e87f9b58756cfc2465650aea83f08956e90fd5927",
+          "sha256": "553bdcb2182ab66c7468493ce8cb2ae09acc648a062ca435e8a5526fc55fef31",
+          "source": "function m(t){return{status:t.status,exitCode:t.exitCode,errno:t.errno,signal:t.signal,durationMs:t.durationMs}}"
+        },
+        {
+          "file": "chunk-7eawqyhr.js",
+          "start": 1868,
+          "end": 1945,
+          "moduleLength": 3885,
+          "moduleSha256": "d245b32d32be2b6332d08b4e87f9b58756cfc2465650aea83f08956e90fd5927",
+          "sha256": "79837b799400454565a87b229c5887068aef85fd651d58638a5239b6f969e329",
+          "source": "function R(t){return t.status===\"ok\"||t.status===\"exited\"&&t.exitCode!==null}"
+        },
+        {
+          "file": "chunk-7eawqyhr.js",
+          "start": 1945,
+          "end": 2038,
+          "moduleLength": 3885,
+          "moduleSha256": "d245b32d32be2b6332d08b4e87f9b58756cfc2465650aea83f08956e90fd5927",
+          "sha256": "b57066db357961a7a836e437a072ad08355ee214fda6480d51547676a26ea3db",
+          "source": "function x(t){return t.status===\"spawn_error\"&&t.errno===\"ERR_CHILD_PROCESS_STDIO_MAXBUFFER\"}"
+        },
+        {
+          "file": "chunk-7eawqyhr.js",
+          "start": 2038,
+          "end": 2270,
+          "moduleLength": 3885,
+          "moduleSha256": "d245b32d32be2b6332d08b4e87f9b58756cfc2465650aea83f08956e90fd5927",
+          "sha256": "f26845ba2db6ab830e6e2aa53ee627ffe1276506d525876194fca6caaf4400aa",
+          "source": "function O(t){let n;try{return n=y(t,\"r\"),w(n,Buffer.alloc(1),0,1,0),null}catch(e){return{code:e&&typeof e===\"object\"&&\"code\"in e?e.code:void 0,message:e instanceof Error?e.message:String(e)}}finally{if(n!==void 0)try{k(n)}catch{}}}"
+        },
+        {
+          "file": "chunk-7eawqyhr.js",
+          "start": 2270,
+          "end": 3498,
+          "moduleLength": 3885,
+          "moduleSha256": "d245b32d32be2b6332d08b4e87f9b58756cfc2465650aea83f08956e90fd5927",
+          "sha256": "a448dad6381fdd74f139bb523f91865c8931c9856632bbb6d07e995bc243ae77",
+          "source": "function _An(){return(async()=>{{let t=H9o(),e=(await Promise.all(t.map(async({path:o,...s})=>{try{p(o,E.R_OK)}catch(l){let a=l&&typeof l===\"object\"&&\"code\"in l?l.code:void 0;if(a===\"ENOENT\"||a===\"ENOTDIR\")return null;return{stdout:null,unreadReason:l instanceof Error?l.message:String(l),...typeof a===\"string\"&&{unreadErrno:a},...s}}let r=await d(O8r,[...k9o,o],ztr);if(!R(r))return{stdout:null,unreadReason:\"plutil did not finish converting it\",...s};if(r.status===\"ok\")return{stdout:r.stdout,...s};let c=await d(O8r,[...T9o,o]);if(!R(c))return{stdout:null,unreadReason:\"plutil did not finish checking it\",...s};if(c.status===\"ok\")return{stdout:null,unreadReason:\"it holds a value plutil cannot convert to JSON (a date or data value)\",...s};let i=O(o);if(i!==null){if(i.code===\"ENOENT\"||i.code===\"ENOTDIR\")return null;return{stdout:null,unreadReason:i.message,...typeof i.code===\"string\"&&{unreadErrno:i.code},...s}}return{stdout:\"\",...s}}))).filter((o)=>o!==null),u=e.findIndex((o)=>o.stdout!==null);return{plistStdouts:u===-1?e:e.slice(0,u+1),hklmStdout:null,hkcuStdout:null,outcomes:{hklm:null,hkcu:null}}}if(LSt())return h(x9o);return{plistStdouts:null,hklmStdout:null,hkcuStdout:null,outcomes:{hklm:null,hkcu:null}}})()}"
+        },
+        {
+          "file": "chunk-7eawqyhr.js",
+          "start": 3498,
+          "end": 3806,
+          "moduleLength": 3885,
+          "moduleSha256": "d245b32d32be2b6332d08b4e87f9b58756cfc2465650aea83f08956e90fd5927",
+          "sha256": "a719095ca2bf301a44b1c29364d64d281db1c1a1d5ea5e8ea5f87b91a2b49abf",
+          "source": "async function h(t){let n=(o)=>d(t,[\"query\",o,\"/v\",Szt],ztr),[e,u]=await Promise.all([n(bAn),n(wAn)]);return{plistStdouts:null,hklmStdout:e.status===\"ok\"?e.stdout:null,...x(e)&&{hklmUnreadReason:`the value exceeds ${ztr/1048576} MiB`},hkcuStdout:u.status===\"ok\"?u.stdout:null,outcomes:{hklm:m(e),hkcu:m(u)}}}"
+        },
+        {
+          "file": "chunk-7eawqyhr.js",
+          "start": 3806,
+          "end": 3831,
+          "moduleLength": 3885,
+          "moduleSha256": "d245b32d32be2b6332d08b4e87f9b58756cfc2465650aea83f08956e90fd5927",
+          "sha256": "00c89d2708c44adb975f4e106d278475f5de6fad3eacba69c36f7bc1e83d3cc7",
+          "source": "function R8r(){g.start()}"
+        },
+        {
+          "file": "chunk-7eawqyhr.js",
+          "start": 3831,
+          "end": 3863,
+          "moduleLength": 3885,
+          "moduleSha256": "d245b32d32be2b6332d08b4e87f9b58756cfc2465650aea83f08956e90fd5927",
+          "sha256": "8c6f543ae7056885255bc9dd268e5fbe266a5979fa6d0395e154aaf3d482f9e3",
+          "source": "function x8r(){return g.promise}"
+        }
+      ]
+    },
+    {
+      "platform": "linux-arm64",
+      "manifestSha256": "f3be5b23f9cbb909555fe028143b9a3a40c1e3e49961e09c49d8e5a6b61ae83b",
+      "readerFile": "chunk-h1ch1gh6.js",
+      "constantsFile": "chunk-cvk34zra.js",
+      "bindings": [
+        "const Ie=ports.require;",
+        "const d=ports.childProcess.execFile;"
+      ],
+      "exports": [
+        "Ykn",
+        "GYr",
+        "qYr"
+      ],
+      "ranges": [
+        {
+          "file": "chunk-cvk34zra.js",
+          "start": 662,
+          "end": 767,
+          "moduleLength": 1099,
+          "moduleSha256": "843151500eb20ccefd588d4f51abe39c3c936dee314376e30c74b5b43015e6a9",
+          "sha256": "e4f63cbb52995a0cd75d34f4eb5e7375133f5105eb23649c7046f2034a1c8e6a",
+          "source": "var Xkn=\"HKLM\\\\SOFTWARE\\\\Policies\\\\ClaudeCode\",Jkn=\"HKCU\\\\SOFTWARE\\\\Policies\\\\ClaudeCode\",QGt=\"Settings\";"
+        },
+        {
+          "file": "chunk-cvk34zra.js",
+          "start": 767,
+          "end": 867,
+          "moduleLength": 1099,
+          "moduleSha256": "843151500eb20ccefd588d4f51abe39c3c936dee314376e30c74b5b43015e6a9",
+          "sha256": "b6f7fab88aa83e584c6dcd13651cae63db4cec9459249addb70fdb69d7522c07",
+          "source": "var O5o=5000,KYr=2097152,I5o=\"/mnt/c/Windows/System32/reg.exe\",ZN=\"/mnt/c/Program Files/ClaudeCode\";"
+        },
+        {
+          "file": "chunk-cvk34zra.js",
+          "start": 867,
+          "end": 1058,
+          "moduleLength": 1099,
+          "moduleSha256": "843151500eb20ccefd588d4f51abe39c3c936dee314376e30c74b5b43015e6a9",
+          "sha256": "4a67718bc5b0a7c3eb984f0190c7f443d633a6f2403ece10964c5421133de8a1",
+          "source": "function Sbt(){if(process.env.WSL_DISTRO_NAME)return!0;try{let e=Ie(\"fs\").readFileSync(\"/proc/version\",\"utf8\").toLowerCase();return e.includes(\"microsoft\")||e.includes(\"wsl\")}catch{return!1}}"
+        },
+        {
+          "file": "chunk-h1ch1gh6.js",
+          "start": 728,
+          "end": 826,
+          "moduleLength": 2390,
+          "moduleSha256": "65d477cc22634df99dea5b2639568deefe21decf9e0f0103a6ca9fe73eb1ed93",
+          "sha256": "597ea0191744fc873d95ef83f70df7541e454700b508b581f612acbf2230db72",
+          "source": "class i{promise=null;start(){if(this.promise)return;this.promise=Ykn()}reset(){this.promise=null}}"
+        },
+        {
+          "file": "chunk-h1ch1gh6.js",
+          "start": 826,
+          "end": 838,
+          "moduleLength": 2390,
+          "moduleSha256": "65d477cc22634df99dea5b2639568deefe21decf9e0f0103a6ca9fe73eb1ed93",
+          "sha256": "d868e6ad5a88599bf8acfa8310ba99d89451a755c4e0017d8cb2f34f29d8f020",
+          "source": "var a=new i;"
+        },
+        {
+          "file": "chunk-h1ch1gh6.js",
+          "start": 838,
+          "end": 1301,
+          "moduleLength": 2390,
+          "moduleSha256": "65d477cc22634df99dea5b2639568deefe21decf9e0f0103a6ca9fe73eb1ed93",
+          "sha256": "88da6c8d5dff2e7a1cb0912210cafac781fe88e7deafa46f96bf4a449710d67f",
+          "source": "function c(e){if(!e)return{status:\"ok\",exitCode:0,errno:null,signal:null};let t=e,n=typeof t.signal===\"string\"&&t.signal?t.signal:null;if(typeof t.code===\"string\")return{status:\"spawn_error\",exitCode:null,errno:t.code,signal:null};if(t.killed===!0)return{status:\"timeout\",exitCode:null,errno:null,signal:n};if(n)return{status:\"killed\",exitCode:null,errno:null,signal:n};return{status:\"exited\",exitCode:typeof t.code===\"number\"?t.code:null,errno:null,signal:null}}"
+        },
+        {
+          "file": "chunk-h1ch1gh6.js",
+          "start": 1301,
+          "end": 1650,
+          "moduleLength": 2390,
+          "moduleSha256": "65d477cc22634df99dea5b2639568deefe21decf9e0f0103a6ca9fe73eb1ed93",
+          "sha256": "1a849829c9a977283db9bc53a0cc9c82b65415f23fb91efc6229c266aa0b8263",
+          "source": "function R(e,t,n){let s=Date.now();return new Promise((o)=>{try{d(e,t,{encoding:\"utf-8\",timeout:O5o,windowsHide:!0,...n!==void 0&&{maxBuffer:n}},(u,r)=>{o({stdout:r??\"\",...c(u),durationMs:Date.now()-s})})}catch(u){let r=u.code;o({stdout:\"\",status:\"spawn_error\",exitCode:null,errno:typeof r===\"string\"?r:null,signal:null,durationMs:Date.now()-s})}})}"
+        },
+        {
+          "file": "chunk-h1ch1gh6.js",
+          "start": 1650,
+          "end": 1762,
+          "moduleLength": 2390,
+          "moduleSha256": "65d477cc22634df99dea5b2639568deefe21decf9e0f0103a6ca9fe73eb1ed93",
+          "sha256": "99ac536b9cf3c4af9aeba1da21c6875969b521f72eba8b3b042e4739f138ddcd",
+          "source": "function l(e){return{status:e.status,exitCode:e.exitCode,errno:e.errno,signal:e.signal,durationMs:e.durationMs}}"
+        },
+        {
+          "file": "chunk-h1ch1gh6.js",
+          "start": 1762,
+          "end": 1855,
+          "moduleLength": 2390,
+          "moduleSha256": "65d477cc22634df99dea5b2639568deefe21decf9e0f0103a6ca9fe73eb1ed93",
+          "sha256": "a50a56bd66c2f1f466780f988f18f1d35ac194c957bc24cb64477de24155f9d9",
+          "source": "function m(e){return e.status===\"spawn_error\"&&e.errno===\"ERR_CHILD_PROCESS_STDIO_MAXBUFFER\"}"
+        },
+        {
+          "file": "chunk-h1ch1gh6.js",
+          "start": 1855,
+          "end": 2003,
+          "moduleLength": 2390,
+          "moduleSha256": "65d477cc22634df99dea5b2639568deefe21decf9e0f0103a6ca9fe73eb1ed93",
+          "sha256": "fc98a15385312c03205f27397fd483efb1b1d2833ae1a3f864a230a5fdee8cf6",
+          "source": "function Ykn(){return(async()=>{if(Sbt())return f(I5o);return{plistStdouts:null,hklmStdout:null,hkcuStdout:null,outcomes:{hklm:null,hkcu:null}}})()}"
+        },
+        {
+          "file": "chunk-h1ch1gh6.js",
+          "start": 2003,
+          "end": 2311,
+          "moduleLength": 2390,
+          "moduleSha256": "65d477cc22634df99dea5b2639568deefe21decf9e0f0103a6ca9fe73eb1ed93",
+          "sha256": "8be0ab6913db136f404dab6fb701a8790d147976fac0c67dd621951bd906a9ae",
+          "source": "async function f(e){let t=(o)=>R(e,[\"query\",o,\"/v\",QGt],KYr),[n,s]=await Promise.all([t(Xkn),t(Jkn)]);return{plistStdouts:null,hklmStdout:n.status===\"ok\"?n.stdout:null,...m(n)&&{hklmUnreadReason:`the value exceeds ${KYr/1048576} MiB`},hkcuStdout:s.status===\"ok\"?s.stdout:null,outcomes:{hklm:l(n),hkcu:l(s)}}}"
+        },
+        {
+          "file": "chunk-h1ch1gh6.js",
+          "start": 2311,
+          "end": 2336,
+          "moduleLength": 2390,
+          "moduleSha256": "65d477cc22634df99dea5b2639568deefe21decf9e0f0103a6ca9fe73eb1ed93",
+          "sha256": "ed1b793b22ed2439a5361acd7d18cfbda83eb3a44e0fde03dc3f0114e7f2ff5b",
+          "source": "function GYr(){a.start()}"
+        },
+        {
+          "file": "chunk-h1ch1gh6.js",
+          "start": 2336,
+          "end": 2368,
+          "moduleLength": 2390,
+          "moduleSha256": "65d477cc22634df99dea5b2639568deefe21decf9e0f0103a6ca9fe73eb1ed93",
+          "sha256": "b6366c83b5d1423c1f9b5b8904ab536a625b41cad6fa33d2a8d1086d42724d75",
+          "source": "function qYr(){return a.promise}"
+        }
+      ]
+    },
+    {
+      "platform": "linux-x64",
+      "manifestSha256": "ecae5d9ddbf13ef27b6b6a1141953aab4ba311e47dde3ac2a7cc8b5a01c63784",
+      "readerFile": "chunk-k2pzx1e3.js",
+      "constantsFile": "chunk-kyft9ys7.js",
+      "bindings": [
+        "const Oe=ports.require;",
+        "const d=ports.childProcess.execFile;"
+      ],
+      "exports": [
+        "YEn",
+        "GYr",
+        "VYr"
+      ],
+      "ranges": [
+        {
+          "file": "chunk-kyft9ys7.js",
+          "start": 662,
+          "end": 767,
+          "moduleLength": 1099,
+          "moduleSha256": "2a0498fd3810a54820c7737e7c927ad161c5e35c30b750c8d84060bd9973739c",
+          "sha256": "37d553faf20c098ce61bb503025c804d38e4785bffdd986d551ec0d0922fabe6",
+          "source": "var XEn=\"HKLM\\\\SOFTWARE\\\\Policies\\\\ClaudeCode\",JEn=\"HKCU\\\\SOFTWARE\\\\Policies\\\\ClaudeCode\",Q2t=\"Settings\";"
+        },
+        {
+          "file": "chunk-kyft9ys7.js",
+          "start": 767,
+          "end": 867,
+          "moduleLength": 1099,
+          "moduleSha256": "2a0498fd3810a54820c7737e7c927ad161c5e35c30b750c8d84060bd9973739c",
+          "sha256": "571d7ccb7d0f4bbc5fdabdecea22225f72db1e48db74b9fa72fc52427b44cdc0",
+          "source": "var I6o=5000,qYr=2097152,O6o=\"/mnt/c/Windows/System32/reg.exe\",ZD=\"/mnt/c/Program Files/ClaudeCode\";"
+        },
+        {
+          "file": "chunk-kyft9ys7.js",
+          "start": 867,
+          "end": 1058,
+          "moduleLength": 1099,
+          "moduleSha256": "2a0498fd3810a54820c7737e7c927ad161c5e35c30b750c8d84060bd9973739c",
+          "sha256": "a542e703528a4004b01ee90644c1b40d7b595af5172af588139a5f5dcae25bce",
+          "source": "function Sbt(){if(process.env.WSL_DISTRO_NAME)return!0;try{let e=Oe(\"fs\").readFileSync(\"/proc/version\",\"utf8\").toLowerCase();return e.includes(\"microsoft\")||e.includes(\"wsl\")}catch{return!1}}"
+        },
+        {
+          "file": "chunk-k2pzx1e3.js",
+          "start": 728,
+          "end": 826,
+          "moduleLength": 2390,
+          "moduleSha256": "54398cb8de819570cc184fd29dfc05878b1f53e54513f3fe51280c5f43d5364c",
+          "sha256": "577187aa0b8dc243b9284b7e3b986758181080f64f69d75fa37920e8e76087df",
+          "source": "class i{promise=null;start(){if(this.promise)return;this.promise=YEn()}reset(){this.promise=null}}"
+        },
+        {
+          "file": "chunk-k2pzx1e3.js",
+          "start": 826,
+          "end": 838,
+          "moduleLength": 2390,
+          "moduleSha256": "54398cb8de819570cc184fd29dfc05878b1f53e54513f3fe51280c5f43d5364c",
+          "sha256": "d868e6ad5a88599bf8acfa8310ba99d89451a755c4e0017d8cb2f34f29d8f020",
+          "source": "var a=new i;"
+        },
+        {
+          "file": "chunk-k2pzx1e3.js",
+          "start": 838,
+          "end": 1301,
+          "moduleLength": 2390,
+          "moduleSha256": "54398cb8de819570cc184fd29dfc05878b1f53e54513f3fe51280c5f43d5364c",
+          "sha256": "88da6c8d5dff2e7a1cb0912210cafac781fe88e7deafa46f96bf4a449710d67f",
+          "source": "function c(e){if(!e)return{status:\"ok\",exitCode:0,errno:null,signal:null};let t=e,n=typeof t.signal===\"string\"&&t.signal?t.signal:null;if(typeof t.code===\"string\")return{status:\"spawn_error\",exitCode:null,errno:t.code,signal:null};if(t.killed===!0)return{status:\"timeout\",exitCode:null,errno:null,signal:n};if(n)return{status:\"killed\",exitCode:null,errno:null,signal:n};return{status:\"exited\",exitCode:typeof t.code===\"number\"?t.code:null,errno:null,signal:null}}"
+        },
+        {
+          "file": "chunk-k2pzx1e3.js",
+          "start": 1301,
+          "end": 1650,
+          "moduleLength": 2390,
+          "moduleSha256": "54398cb8de819570cc184fd29dfc05878b1f53e54513f3fe51280c5f43d5364c",
+          "sha256": "0239bba611fb4881920f7a24f2d888d7c3a44a9a65a84bac52c358e2045c18e8",
+          "source": "function R(e,t,n){let s=Date.now();return new Promise((o)=>{try{d(e,t,{encoding:\"utf-8\",timeout:I6o,windowsHide:!0,...n!==void 0&&{maxBuffer:n}},(u,r)=>{o({stdout:r??\"\",...c(u),durationMs:Date.now()-s})})}catch(u){let r=u.code;o({stdout:\"\",status:\"spawn_error\",exitCode:null,errno:typeof r===\"string\"?r:null,signal:null,durationMs:Date.now()-s})}})}"
+        },
+        {
+          "file": "chunk-k2pzx1e3.js",
+          "start": 1650,
+          "end": 1762,
+          "moduleLength": 2390,
+          "moduleSha256": "54398cb8de819570cc184fd29dfc05878b1f53e54513f3fe51280c5f43d5364c",
+          "sha256": "99ac536b9cf3c4af9aeba1da21c6875969b521f72eba8b3b042e4739f138ddcd",
+          "source": "function l(e){return{status:e.status,exitCode:e.exitCode,errno:e.errno,signal:e.signal,durationMs:e.durationMs}}"
+        },
+        {
+          "file": "chunk-k2pzx1e3.js",
+          "start": 1762,
+          "end": 1855,
+          "moduleLength": 2390,
+          "moduleSha256": "54398cb8de819570cc184fd29dfc05878b1f53e54513f3fe51280c5f43d5364c",
+          "sha256": "a50a56bd66c2f1f466780f988f18f1d35ac194c957bc24cb64477de24155f9d9",
+          "source": "function m(e){return e.status===\"spawn_error\"&&e.errno===\"ERR_CHILD_PROCESS_STDIO_MAXBUFFER\"}"
+        },
+        {
+          "file": "chunk-k2pzx1e3.js",
+          "start": 1855,
+          "end": 2003,
+          "moduleLength": 2390,
+          "moduleSha256": "54398cb8de819570cc184fd29dfc05878b1f53e54513f3fe51280c5f43d5364c",
+          "sha256": "1d33f2d4b610c1ee95d6d1cf227a2a526326a9b73a7aa7808f12bd37f30b4cbb",
+          "source": "function YEn(){return(async()=>{if(Sbt())return f(O6o);return{plistStdouts:null,hklmStdout:null,hkcuStdout:null,outcomes:{hklm:null,hkcu:null}}})()}"
+        },
+        {
+          "file": "chunk-k2pzx1e3.js",
+          "start": 2003,
+          "end": 2311,
+          "moduleLength": 2390,
+          "moduleSha256": "54398cb8de819570cc184fd29dfc05878b1f53e54513f3fe51280c5f43d5364c",
+          "sha256": "bcbdb50b7d14079d7b119299923e62ac3ad4335f392eac51ee77e5070ae10d0d",
+          "source": "async function f(e){let t=(o)=>R(e,[\"query\",o,\"/v\",Q2t],qYr),[n,s]=await Promise.all([t(XEn),t(JEn)]);return{plistStdouts:null,hklmStdout:n.status===\"ok\"?n.stdout:null,...m(n)&&{hklmUnreadReason:`the value exceeds ${qYr/1048576} MiB`},hkcuStdout:s.status===\"ok\"?s.stdout:null,outcomes:{hklm:l(n),hkcu:l(s)}}}"
+        },
+        {
+          "file": "chunk-k2pzx1e3.js",
+          "start": 2311,
+          "end": 2336,
+          "moduleLength": 2390,
+          "moduleSha256": "54398cb8de819570cc184fd29dfc05878b1f53e54513f3fe51280c5f43d5364c",
+          "sha256": "ed1b793b22ed2439a5361acd7d18cfbda83eb3a44e0fde03dc3f0114e7f2ff5b",
+          "source": "function GYr(){a.start()}"
+        },
+        {
+          "file": "chunk-k2pzx1e3.js",
+          "start": 2336,
+          "end": 2368,
+          "moduleLength": 2390,
+          "moduleSha256": "54398cb8de819570cc184fd29dfc05878b1f53e54513f3fe51280c5f43d5364c",
+          "sha256": "9ec0457d7cfe0fc0c812ee01d873f80f0d0ee8b0cffaf8f6277e13ab26940e92",
+          "source": "function VYr(){return a.promise}"
+        }
+      ]
+    },
+    {
+      "platform": "win32-arm64",
+      "manifestSha256": "d0d8b3b882ba61ba321ab072b5cbc28a1a4089cfb4c5dce0698311aae10c739e",
+      "readerFile": "chunk-h3r241ns.js",
+      "constantsFile": "chunk-0ajk2sb6.js",
+      "bindings": [
+        "const De=ports.require;",
+        "const c=ports.childProcess.execFile;"
+      ],
+      "exports": [
+        "rEn",
+        "QYr",
+        "ZYr"
+      ],
+      "ranges": [
+        {
+          "file": "chunk-0ajk2sb6.js",
+          "start": 662,
+          "end": 767,
+          "moduleLength": 932,
+          "moduleSha256": "7472ab8dfccd1f104211e6a215e5b5029eb350e99192e14526a67775be59557d",
+          "sha256": "01c38ce18b09dfa09b8bba0e73bfd57a4da3cebcf290a7c5a398a9b6ffc28de8",
+          "source": "var oEn=\"HKLM\\\\SOFTWARE\\\\Policies\\\\ClaudeCode\",sEn=\"HKCU\\\\SOFTWARE\\\\Policies\\\\ClaudeCode\",eqt=\"Settings\";"
+        },
+        {
+          "file": "chunk-0ajk2sb6.js",
+          "start": 767,
+          "end": 867,
+          "moduleLength": 932,
+          "moduleSha256": "7472ab8dfccd1f104211e6a215e5b5029eb350e99192e14526a67775be59557d",
+          "sha256": "ee55ada08e6a667ad12b5b1530c9fdd60e36afba1fd554ded6f581347d345ad8",
+          "source": "var N5o=5000,e8r=2097152,L5o=\"/mnt/c/Windows/System32/reg.exe\",nL=\"/mnt/c/Program Files/ClaudeCode\";"
+        },
+        {
+          "file": "chunk-0ajk2sb6.js",
+          "start": 867,
+          "end": 891,
+          "moduleLength": 932,
+          "moduleSha256": "7472ab8dfccd1f104211e6a215e5b5029eb350e99192e14526a67775be59557d",
+          "sha256": "4170f4bab09ebe0189040ce51a649030ef9f5601e16d4586a7271cdd67440494",
+          "source": "function Tbt(){return!1}"
+        },
+        {
+          "file": "chunk-h3r241ns.js",
+          "start": 728,
+          "end": 826,
+          "moduleLength": 2471,
+          "moduleSha256": "de97c272df93cabbf34f07b67bdb83a8e735ab27738196c341a3aa06cb1248ee",
+          "sha256": "2aa046063b4aa0f5ebf3db453fb5e2c2abd850c14f5af073a500d35c5c75be0f",
+          "source": "class a{promise=null;start(){if(this.promise)return;this.promise=rEn()}reset(){this.promise=null}}"
+        },
+        {
+          "file": "chunk-h3r241ns.js",
+          "start": 826,
+          "end": 838,
+          "moduleLength": 2471,
+          "moduleSha256": "de97c272df93cabbf34f07b67bdb83a8e735ab27738196c341a3aa06cb1248ee",
+          "sha256": "899a7029bb9f1a974763a5e079851ab6eef46b0401b5e82adef864f88e9db040",
+          "source": "var d=new a;"
+        },
+        {
+          "file": "chunk-h3r241ns.js",
+          "start": 838,
+          "end": 1301,
+          "moduleLength": 2471,
+          "moduleSha256": "de97c272df93cabbf34f07b67bdb83a8e735ab27738196c341a3aa06cb1248ee",
+          "sha256": "30daf86a34e3eaa349e7a29606e8807256f1b84e384b19d2cf84622441665aed",
+          "source": "function R(e){if(!e)return{status:\"ok\",exitCode:0,errno:null,signal:null};let t=e,n=typeof t.signal===\"string\"&&t.signal?t.signal:null;if(typeof t.code===\"string\")return{status:\"spawn_error\",exitCode:null,errno:t.code,signal:null};if(t.killed===!0)return{status:\"timeout\",exitCode:null,errno:null,signal:n};if(n)return{status:\"killed\",exitCode:null,errno:null,signal:n};return{status:\"exited\",exitCode:typeof t.code===\"number\"?t.code:null,errno:null,signal:null}}"
+        },
+        {
+          "file": "chunk-h3r241ns.js",
+          "start": 1301,
+          "end": 1650,
+          "moduleLength": 2471,
+          "moduleSha256": "de97c272df93cabbf34f07b67bdb83a8e735ab27738196c341a3aa06cb1248ee",
+          "sha256": "7eeb97b81638777312de2fc41c6a66aca1dd967f9f4fd121dd3fe01c1f857517",
+          "source": "function m(e,t,n){let s=Date.now();return new Promise((o)=>{try{c(e,t,{encoding:\"utf-8\",timeout:N5o,windowsHide:!0,...n!==void 0&&{maxBuffer:n}},(u,r)=>{o({stdout:r??\"\",...R(u),durationMs:Date.now()-s})})}catch(u){let r=u.code;o({stdout:\"\",status:\"spawn_error\",exitCode:null,errno:typeof r===\"string\"?r:null,signal:null,durationMs:Date.now()-s})}})}"
+        },
+        {
+          "file": "chunk-h3r241ns.js",
+          "start": 1650,
+          "end": 1762,
+          "moduleLength": 2471,
+          "moduleSha256": "de97c272df93cabbf34f07b67bdb83a8e735ab27738196c341a3aa06cb1248ee",
+          "sha256": "99ac536b9cf3c4af9aeba1da21c6875969b521f72eba8b3b042e4739f138ddcd",
+          "source": "function l(e){return{status:e.status,exitCode:e.exitCode,errno:e.errno,signal:e.signal,durationMs:e.durationMs}}"
+        },
+        {
+          "file": "chunk-h3r241ns.js",
+          "start": 1762,
+          "end": 1855,
+          "moduleLength": 2471,
+          "moduleSha256": "de97c272df93cabbf34f07b67bdb83a8e735ab27738196c341a3aa06cb1248ee",
+          "sha256": "789eae536b1ae279a3723de00176e2443496431c36aff07975fd473dd594792a",
+          "source": "function f(e){return e.status===\"spawn_error\"&&e.errno===\"ERR_CHILD_PROCESS_STDIO_MAXBUFFER\"}"
+        },
+        {
+          "file": "chunk-h3r241ns.js",
+          "start": 1855,
+          "end": 2084,
+          "moduleLength": 2471,
+          "moduleSha256": "de97c272df93cabbf34f07b67bdb83a8e735ab27738196c341a3aa06cb1248ee",
+          "sha256": "fcde36547463f435a7b9216eca07616abb96f82fe64e1299a27934aec85395e4",
+          "source": "function rEn(){return(async()=>{{let t=`${process.env.SYSTEMROOT||\"C:\\\\Windows\"}\\\\System32\\\\reg.exe`;return i(t)}if(Tbt())return i(L5o);return{plistStdouts:null,hklmStdout:null,hkcuStdout:null,outcomes:{hklm:null,hkcu:null}}})()}"
+        },
+        {
+          "file": "chunk-h3r241ns.js",
+          "start": 2084,
+          "end": 2392,
+          "moduleLength": 2471,
+          "moduleSha256": "de97c272df93cabbf34f07b67bdb83a8e735ab27738196c341a3aa06cb1248ee",
+          "sha256": "41418cfc2ad1992266f4b39984e0fb555666c8df8ad37a19943f896c371ca586",
+          "source": "async function i(e){let t=(o)=>m(e,[\"query\",o,\"/v\",eqt],e8r),[n,s]=await Promise.all([t(oEn),t(sEn)]);return{plistStdouts:null,hklmStdout:n.status===\"ok\"?n.stdout:null,...f(n)&&{hklmUnreadReason:`the value exceeds ${e8r/1048576} MiB`},hkcuStdout:s.status===\"ok\"?s.stdout:null,outcomes:{hklm:l(n),hkcu:l(s)}}}"
+        },
+        {
+          "file": "chunk-h3r241ns.js",
+          "start": 2392,
+          "end": 2417,
+          "moduleLength": 2471,
+          "moduleSha256": "de97c272df93cabbf34f07b67bdb83a8e735ab27738196c341a3aa06cb1248ee",
+          "sha256": "783f1da7efd96a1daa2ab6255346ec2dba72c54775f4790f8327c470fbacad6a",
+          "source": "function QYr(){d.start()}"
+        },
+        {
+          "file": "chunk-h3r241ns.js",
+          "start": 2417,
+          "end": 2449,
+          "moduleLength": 2471,
+          "moduleSha256": "de97c272df93cabbf34f07b67bdb83a8e735ab27738196c341a3aa06cb1248ee",
+          "sha256": "69a3e02938f931936d1ffccce52341c15c58ad9394b31418f1aa52b158e7ecfd",
+          "source": "function ZYr(){return d.promise}"
+        }
+      ]
+    },
+    {
+      "platform": "win32-x64",
+      "manifestSha256": "c71e85888df3301fd3c4cb158744538810418e2d67591debe8e4f7c771fcdddc",
+      "readerFile": "chunk-xm6qf1zg.js",
+      "constantsFile": "chunk-tyx573sp.js",
+      "bindings": [
+        "const De=ports.require;",
+        "const c=ports.childProcess.execFile;"
+      ],
+      "exports": [
+        "rkn",
+        "Q5r",
+        "Z5r"
+      ],
+      "ranges": [
+        {
+          "file": "chunk-tyx573sp.js",
+          "start": 662,
+          "end": 767,
+          "moduleLength": 932,
+          "moduleSha256": "acbdf4af4a47b1fa6ddce959bd989f02f7640680089090b0ad96e6245466a1ec",
+          "sha256": "57c84643823503427b90f8519d16f6415942649d7f09d66f34fa203337db3f2f",
+          "source": "var okn=\"HKLM\\\\SOFTWARE\\\\Policies\\\\ClaudeCode\",skn=\"HKCU\\\\SOFTWARE\\\\Policies\\\\ClaudeCode\",eVt=\"Settings\";"
+        },
+        {
+          "file": "chunk-tyx573sp.js",
+          "start": 767,
+          "end": 867,
+          "moduleLength": 932,
+          "moduleSha256": "acbdf4af4a47b1fa6ddce959bd989f02f7640680089090b0ad96e6245466a1ec",
+          "sha256": "ca4d993aca0052a2fcab552e14cdc1fd57e476856966509e7d8d168e00b5f22a",
+          "source": "var LYo=5000,e8r=2097152,NYo=\"/mnt/c/Windows/System32/reg.exe\",nN=\"/mnt/c/Program Files/ClaudeCode\";"
+        },
+        {
+          "file": "chunk-tyx573sp.js",
+          "start": 867,
+          "end": 891,
+          "moduleLength": 932,
+          "moduleSha256": "acbdf4af4a47b1fa6ddce959bd989f02f7640680089090b0ad96e6245466a1ec",
+          "sha256": "4170f4bab09ebe0189040ce51a649030ef9f5601e16d4586a7271cdd67440494",
+          "source": "function Tbt(){return!1}"
+        },
+        {
+          "file": "chunk-xm6qf1zg.js",
+          "start": 728,
+          "end": 826,
+          "moduleLength": 2471,
+          "moduleSha256": "054ac592214ca07372fd06bb818ec4d890e7fb57496e0e90329c283dae5c14b3",
+          "sha256": "ec483edd2ad5e4d90662e71648ba5088fdd6279ac3dd54e3a6f13d3c177abac6",
+          "source": "class a{promise=null;start(){if(this.promise)return;this.promise=rkn()}reset(){this.promise=null}}"
+        },
+        {
+          "file": "chunk-xm6qf1zg.js",
+          "start": 826,
+          "end": 838,
+          "moduleLength": 2471,
+          "moduleSha256": "054ac592214ca07372fd06bb818ec4d890e7fb57496e0e90329c283dae5c14b3",
+          "sha256": "899a7029bb9f1a974763a5e079851ab6eef46b0401b5e82adef864f88e9db040",
+          "source": "var d=new a;"
+        },
+        {
+          "file": "chunk-xm6qf1zg.js",
+          "start": 838,
+          "end": 1301,
+          "moduleLength": 2471,
+          "moduleSha256": "054ac592214ca07372fd06bb818ec4d890e7fb57496e0e90329c283dae5c14b3",
+          "sha256": "30daf86a34e3eaa349e7a29606e8807256f1b84e384b19d2cf84622441665aed",
+          "source": "function R(e){if(!e)return{status:\"ok\",exitCode:0,errno:null,signal:null};let t=e,n=typeof t.signal===\"string\"&&t.signal?t.signal:null;if(typeof t.code===\"string\")return{status:\"spawn_error\",exitCode:null,errno:t.code,signal:null};if(t.killed===!0)return{status:\"timeout\",exitCode:null,errno:null,signal:n};if(n)return{status:\"killed\",exitCode:null,errno:null,signal:n};return{status:\"exited\",exitCode:typeof t.code===\"number\"?t.code:null,errno:null,signal:null}}"
+        },
+        {
+          "file": "chunk-xm6qf1zg.js",
+          "start": 1301,
+          "end": 1650,
+          "moduleLength": 2471,
+          "moduleSha256": "054ac592214ca07372fd06bb818ec4d890e7fb57496e0e90329c283dae5c14b3",
+          "sha256": "83e3bc5b4702d1c43932062f78a1b24ec3ef4f67ee0d0582c6b4e42641b8d0e0",
+          "source": "function m(e,t,n){let s=Date.now();return new Promise((o)=>{try{c(e,t,{encoding:\"utf-8\",timeout:LYo,windowsHide:!0,...n!==void 0&&{maxBuffer:n}},(u,r)=>{o({stdout:r??\"\",...R(u),durationMs:Date.now()-s})})}catch(u){let r=u.code;o({stdout:\"\",status:\"spawn_error\",exitCode:null,errno:typeof r===\"string\"?r:null,signal:null,durationMs:Date.now()-s})}})}"
+        },
+        {
+          "file": "chunk-xm6qf1zg.js",
+          "start": 1650,
+          "end": 1762,
+          "moduleLength": 2471,
+          "moduleSha256": "054ac592214ca07372fd06bb818ec4d890e7fb57496e0e90329c283dae5c14b3",
+          "sha256": "99ac536b9cf3c4af9aeba1da21c6875969b521f72eba8b3b042e4739f138ddcd",
+          "source": "function l(e){return{status:e.status,exitCode:e.exitCode,errno:e.errno,signal:e.signal,durationMs:e.durationMs}}"
+        },
+        {
+          "file": "chunk-xm6qf1zg.js",
+          "start": 1762,
+          "end": 1855,
+          "moduleLength": 2471,
+          "moduleSha256": "054ac592214ca07372fd06bb818ec4d890e7fb57496e0e90329c283dae5c14b3",
+          "sha256": "789eae536b1ae279a3723de00176e2443496431c36aff07975fd473dd594792a",
+          "source": "function f(e){return e.status===\"spawn_error\"&&e.errno===\"ERR_CHILD_PROCESS_STDIO_MAXBUFFER\"}"
+        },
+        {
+          "file": "chunk-xm6qf1zg.js",
+          "start": 1855,
+          "end": 2084,
+          "moduleLength": 2471,
+          "moduleSha256": "054ac592214ca07372fd06bb818ec4d890e7fb57496e0e90329c283dae5c14b3",
+          "sha256": "be7e3dc41ebeb42a7f3b78739de6efa107753bfa2f2b2d1ae3cbf6fb837f302a",
+          "source": "function rkn(){return(async()=>{{let t=`${process.env.SYSTEMROOT||\"C:\\\\Windows\"}\\\\System32\\\\reg.exe`;return i(t)}if(Tbt())return i(NYo);return{plistStdouts:null,hklmStdout:null,hkcuStdout:null,outcomes:{hklm:null,hkcu:null}}})()}"
+        },
+        {
+          "file": "chunk-xm6qf1zg.js",
+          "start": 2084,
+          "end": 2392,
+          "moduleLength": 2471,
+          "moduleSha256": "054ac592214ca07372fd06bb818ec4d890e7fb57496e0e90329c283dae5c14b3",
+          "sha256": "817d5a47c0590d689e968939df6ecf335e8f74196e7910259ebf28010b22a928",
+          "source": "async function i(e){let t=(o)=>m(e,[\"query\",o,\"/v\",eVt],e8r),[n,s]=await Promise.all([t(okn),t(skn)]);return{plistStdouts:null,hklmStdout:n.status===\"ok\"?n.stdout:null,...f(n)&&{hklmUnreadReason:`the value exceeds ${e8r/1048576} MiB`},hkcuStdout:s.status===\"ok\"?s.stdout:null,outcomes:{hklm:l(n),hkcu:l(s)}}}"
+        },
+        {
+          "file": "chunk-xm6qf1zg.js",
+          "start": 2392,
+          "end": 2417,
+          "moduleLength": 2471,
+          "moduleSha256": "054ac592214ca07372fd06bb818ec4d890e7fb57496e0e90329c283dae5c14b3",
+          "sha256": "7e3837e694c43dd2f0caa0d306c66643eb16e963410d8f2cbb35408818b60746",
+          "source": "function Q5r(){d.start()}"
+        },
+        {
+          "file": "chunk-xm6qf1zg.js",
+          "start": 2417,
+          "end": 2449,
+          "moduleLength": 2471,
+          "moduleSha256": "054ac592214ca07372fd06bb818ec4d890e7fb57496e0e90329c283dae5c14b3",
+          "sha256": "f7ae1b4e22ff92563ecf1a8d0d96855d77c1315636b74ae5af39d798f2cdb378",
+          "source": "function Z5r(){return d.promise}"
+        }
+      ]
+    }
+  ],
+  "common": [
+    {
+      "file": "chunk-f1vb7bx7.js",
+      "start": 10875,
+      "end": 11139,
+      "moduleLength": 111323,
+      "moduleSha256": "2f76d1800a2202fe6717904ab677e2509d0b124302d3d31e325353b307f795d1",
+      "sha256": "ad395ee43becd748f465db6e294da56515ce40a0ccfd8b23ffeecbe233ea044d",
+      "source": "function Mt(e,n,r,s){return{file:e,path:\"\",message:`Managed settings document (${e}) could not be read: ${n}; none of its settings are in effect.`,severity:r?\"warning\":\"fatal\",statusOnly:!0,errorClass:\"unreadable\",...s!==void 0&&{errno:s},...r&&{userWritable:!0}}}"
+    },
+    {
+      "file": "chunk-f1vb7bx7.js",
+      "start": 11139,
+      "end": 11335,
+      "moduleLength": 111323,
+      "moduleSha256": "2f76d1800a2202fe6717904ab677e2509d0b124302d3d31e325353b307f795d1",
+      "sha256": "7b6abadf72d281866e830c1ed836a3d0c71567f1995ab8838146eaabf592304a",
+      "source": "function xt(e,n=\"Settings\"){let r=n.replace(/[.*+?^${}()|[\\]\\\\]/g,\"\\\\$&\"),s=new RegExp(`^[ \\\\t]+${r}[ \\\\t]+REG_(?:EXPAND_)?SZ[ \\\\t]+([\\\\s\\\\S]*)`,\"im\"),g=e.match(s)?.[1]?.trimEnd();return g?g:null}"
+    }
+  ]
+}

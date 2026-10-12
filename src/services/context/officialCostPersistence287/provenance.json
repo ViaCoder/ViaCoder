@@ -1,0 +1,422 @@
+{
+  "version": "2.1.287",
+  "platform": "darwin-arm64",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "binarySha256": "6eab8333fe2121553100d8f40bfada384a3e989b94f947e18ba6677a6fcb41ea",
+  "offsetUnit": "UTF-16 code units",
+  "endExclusive": true,
+  "modules": [
+    {
+      "file": "chunk-5qqrzb2c.js",
+      "sha256": "91b433ccc5add9cada15ca727fd71e45dc2b3042168625a06d879b12cab45945",
+      "length": 981,
+      "imports": {},
+      "rows": [
+        {
+          "name": "i",
+          "kind": "class",
+          "start": 615,
+          "end": 918,
+          "sha256": "ac8fa5a2a589fa1dd648bd6ea9451f06fb378142827f2b065f3628d8134987d9",
+          "source": "class i{resetters=[];built=[];lazy(e){let t,r=()=>{t=void 0};return this.resetters.push(r),()=>{if(t===void 0)t=e(),this.built.push(r);return t}}builtCount(){return this.built.length}releaseBuiltSince(e){for(let t of this.built.splice(e))t()}reset(){for(let e of this.resetters)e();this.built.length=0}}"
+        },
+        {
+          "name": "_rr",
+          "kind": "variable",
+          "start": 922,
+          "end": 931,
+          "sha256": "a044ed0ffcd2af33f87dba4847114fcfa941b77911af4eff3fc5c51c8011e070",
+          "source": "_rr=new i"
+        },
+        {
+          "name": "f",
+          "kind": "function",
+          "start": 932,
+          "end": 965,
+          "sha256": "d9356663a66c8ccff1054002018547334d12bd2d053a1f041a6d6e6b128d3e1e",
+          "source": "function f(e){return _rr.lazy(e)}"
+        }
+      ]
+    },
+    {
+      "file": "chunk-nankzm0s.js",
+      "sha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "length": 706979,
+      "imports": {},
+      "rows": [
+        {
+          "name": "yJe",
+          "kind": "function",
+          "start": 467026,
+          "end": 467582,
+          "sha256": "48e641ed9db9b6c099379355bbcbaa988072803ae5dc6e308ae1cbc178277554",
+          "source": "function yJe(){let e={ISSUES_EXPLAINER:\"report the issue at https://github.com/anthropics/claude-code/issues\",PACKAGE_URL:\"@anthropic-ai/claude-code\",README_URL:\"https://code.claude.com/docs/en/overview\",VERSION:\"2.1.287\",FEEDBACK_CHANNEL:\"https://github.com/anthropics/claude-code/issues\",BUILD_TIME:\"2026-10-01T16:02:06Z\",GIT_SHA:\"3c446a1b98aceb99a6cdee0f84a8bea42f4a8937\",HOOKS_WORKER_URL:\"/$bunfs/root/src/plugins/functionHooks/hooks-worker/hooks-worker.js\",DD_SOURCEMAP_GROUP:\"darwin\"}.VERSION.match(/^\\d+\\.\\d+\\.\\d+(?:-[a-z]+)?/);return e?e[0]:void 0}"
+        }
+      ]
+    },
+    {
+      "file": "chunk-bn3p37gv.js",
+      "sha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "length": 117054,
+      "imports": {},
+      "rows": [
+        {
+          "name": "XZr",
+          "kind": "function",
+          "start": 85391,
+          "end": 85437,
+          "sha256": "a95c2bf14d85b1bdd947c162ee88ddb1218a61b50769502706f5de22bf916b55",
+          "source": "function XZr(e){v.costLedger.registerSaver(e)}"
+        },
+        {
+          "name": "JZr",
+          "kind": "function",
+          "start": 85437,
+          "end": 85493,
+          "sha256": "1a33f6a2606220177f725276a61b62c82f4f6b3b09768f97a8cd79f7fc8cb756",
+          "source": "function JZr(e){n().costLedger.runSaver(e,v.costLedger)}"
+        },
+        {
+          "name": "QZr",
+          "kind": "function",
+          "start": 85493,
+          "end": 85552,
+          "sha256": "e83eacf10291c92c2c035327a22caf0b97f65efa02c6fc76beb7ce56f2ffbb1b",
+          "source": "function QZr(e){v.costLedger.registerTranscriptRecorder(e)}"
+        },
+        {
+          "name": "ZZr",
+          "kind": "function",
+          "start": 85552,
+          "end": 85625,
+          "sha256": "d4649217ac2946351d500ae2dd8d60872cc56e145bbab848fc148b679e5bddb7",
+          "source": "function ZZr(e,t){n().costLedger.runTranscriptRecorder(e,t,v.costLedger)}"
+        },
+        {
+          "name": "eeo",
+          "kind": "function",
+          "start": 85625,
+          "end": 85686,
+          "sha256": "cec889cf521df92e39d57b528d41ee9e14e7742ef5756638b74b1b5ad745c607",
+          "source": "function eeo(){let e=n();return e.costLedger.belongsTo(e.id)}"
+        },
+        {
+          "name": "teo",
+          "kind": "function",
+          "start": 85736,
+          "end": 85788,
+          "sha256": "0e5ea84c4d3d359108208f63397c371c6e78e4175814eeb688e034ca18e696ad",
+          "source": "function teo(){let e=n();e.costLedger.scopeTo(e.id)}"
+        }
+      ]
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "sha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "length": 4409957,
+      "imports": {
+        "Qr": {
+          "module": "chunk-bn3p37gv.js",
+          "symbol": "Qr"
+        },
+        "kEe": {
+          "module": "chunk-bn3p37gv.js",
+          "symbol": "kEe"
+        },
+        "q": {
+          "module": "chunk-bn3p37gv.js",
+          "symbol": "q"
+        },
+        "$Oe": {
+          "module": "chunk-bn3p37gv.js",
+          "symbol": "$Oe"
+        },
+        "ah": {
+          "module": "chunk-bn3p37gv.js",
+          "symbol": "ah"
+        },
+        "_O": {
+          "module": "chunk-bn3p37gv.js",
+          "symbol": "_O"
+        },
+        "aie": {
+          "module": "chunk-bn3p37gv.js",
+          "symbol": "aie"
+        },
+        "Csr": {
+          "module": "chunk-bn3p37gv.js",
+          "symbol": "Csr"
+        },
+        "Asr": {
+          "module": "chunk-bn3p37gv.js",
+          "symbol": "Asr"
+        },
+        "REe": {
+          "module": "chunk-bn3p37gv.js",
+          "symbol": "REe"
+        },
+        "xEe": {
+          "module": "chunk-bn3p37gv.js",
+          "symbol": "xEe"
+        },
+        "Twt": {
+          "module": "chunk-bn3p37gv.js",
+          "symbol": "Twt"
+        },
+        "vf": {
+          "module": "chunk-bn3p37gv.js",
+          "symbol": "vf"
+        },
+        "kwt": {
+          "module": "chunk-bn3p37gv.js",
+          "symbol": "kwt"
+        },
+        "Rwt": {
+          "module": "chunk-bn3p37gv.js",
+          "symbol": "Rwt"
+        },
+        "gZr": {
+          "module": "chunk-bn3p37gv.js",
+          "symbol": "gZr"
+        },
+        "ksr": {
+          "module": "chunk-bn3p37gv.js",
+          "symbol": "ksr"
+        },
+        "nP": {
+          "module": "chunk-bn3p37gv.js",
+          "symbol": "nP"
+        },
+        "Qp": {
+          "module": "chunk-bn3p37gv.js",
+          "symbol": "Qp"
+        },
+        "ZZr": {
+          "module": "chunk-bn3p37gv.js",
+          "symbol": "ZZr"
+        },
+        "eeo": {
+          "module": "chunk-bn3p37gv.js",
+          "symbol": "eeo"
+        },
+        "teo": {
+          "module": "chunk-bn3p37gv.js",
+          "symbol": "teo"
+        },
+        "neo": {
+          "module": "chunk-bn3p37gv.js",
+          "symbol": "neo"
+        },
+        "d": {
+          "module": "chunk-amhtwhch.js",
+          "symbol": "d"
+        },
+        "f": {
+          "module": "chunk-5qqrzb2c.js",
+          "symbol": "f"
+        },
+        "pf": {
+          "module": "chunk-nankzm0s.js",
+          "symbol": "pf"
+        },
+        "QQ": {
+          "module": "chunk-nankzm0s.js",
+          "symbol": "QQ"
+        },
+        "yJe": {
+          "module": "chunk-nankzm0s.js",
+          "symbol": "yJe"
+        },
+        "$f": {
+          "module": "chunk-nankzm0s.js",
+          "symbol": "$f"
+        },
+        "ue": {
+          "module": "chunk-pjkhrw0g.js",
+          "symbol": "ue"
+        },
+        "cn": {
+          "module": "chunk-pjkhrw0g.js",
+          "symbol": "cn"
+        },
+        "Eo": {
+          "module": "chunk-pjkhrw0g.js",
+          "symbol": "Eo"
+        },
+        "mt": {
+          "module": "chunk-pjkhrw0g.js",
+          "symbol": "mt"
+        },
+        "Cg": {
+          "module": "chunk-pjkhrw0g.js",
+          "symbol": "Cg"
+        },
+        "Ip": {
+          "module": "chunk-pjkhrw0g.js",
+          "symbol": "Ip"
+        }
+      },
+      "rows": [
+        {
+          "name": "T3e",
+          "kind": "variable",
+          "start": 121202,
+          "end": 121222,
+          "sha256": "d8c1bb410ab44f08d471483238bb4aac12745f3ce2631e9f6083b62e728ff05d",
+          "source": "T3e=1000000000000000"
+        },
+        {
+          "name": "tyn",
+          "kind": "variable",
+          "start": 121092,
+          "end": 121099,
+          "sha256": "711e09c8717356fcc82b6b50a7df394e82f1ba4450abc6cd1f3287a27823b27a",
+          "source": "tyn=1e9"
+        },
+        {
+          "name": "ayn",
+          "kind": "variable",
+          "start": 121100,
+          "end": 121201,
+          "sha256": "8841a093acd1b764dfc5d87784eb09e1d4cd997febd1a41a22f8ddb823b4d348",
+          "source": "ayn=Object.keys({inputTokens:!0,outputTokens:!0,cacheReadInputTokens:!0,cacheCreationInputTokens:!0})"
+        },
+        {
+          "name": "myn",
+          "kind": "variable",
+          "start": 121223,
+          "end": 121230,
+          "sha256": "32b45f7b0780d052ab276c7a804a85557b296683c7f586f4aad1dfae62fb0bfc",
+          "source": "myn=T3e"
+        },
+        {
+          "name": "c3",
+          "kind": "variable",
+          "start": 121231,
+          "end": 121783,
+          "sha256": "be94dbc60dbe090ce99b03ead97ca36554389328a0bf204d258f6e7a32fd526e",
+          "source": "c3=f(()=>{let e=cn().nonnegative().finite().max(T3e);return mt({type:Ip(\"cost-state\"),sessionId:ue(),totalCostUSD:e.max(tyn),totalAPIDuration:e,totalAPIDurationWithoutRetries:e,totalToolDuration:e,totalLinesAdded:e,totalLinesRemoved:e,totalDuration:e,startTime:e,modelUsage:Cg(ue().regex(/^[^\\p{Cc}\\p{Cf}]+$/u),mt({inputTokens:e,outputTokens:e,thinkingTokens:e.optional(),cacheReadInputTokens:e,cacheCreationInputTokens:e,webSearchRequests:e,costUSD:e})).refine((n)=>ayn.every((r)=>kEe(Object.values(n),r)<=myn)),hasUnknownModelCost:Eo().optional()})})"
+        },
+        {
+          "name": "CMt",
+          "kind": "function",
+          "start": 732892,
+          "end": 733440,
+          "sha256": "a08d32da73c1fb2b3b71a63421e529b928c5f84e9c68a4463e91019588eb222f",
+          "source": "function CMt(){if(!eeo())return;return{type:\"cost-state\",sessionId:q(),totalCostUSD:ah(),totalAPIDuration:_O(),totalAPIDurationWithoutRetries:Csr(),totalToolDuration:Asr(),totalLinesAdded:REe(),totalLinesRemoved:xEe(),totalDuration:aie(),startTime:$Oe(),modelUsage:Qr(nP(),(e)=>({inputTokens:e.inputTokens,outputTokens:e.outputTokens,thinkingTokens:e.thinkingTokens,cacheReadInputTokens:e.cacheReadInputTokens,cacheCreationInputTokens:e.cacheCreationInputTokens,webSearchRequests:e.webSearchRequests,costUSD:e.costUSD})),hasUnknownModelCost:ksr()}}"
+        },
+        {
+          "name": "Bce",
+          "kind": "function",
+          "start": 733440,
+          "end": 733943,
+          "sha256": "adc046d67aca56d049bbe35ad6ebb56f6bfd457ca90516d073f05408d099638c",
+          "source": "function Bce(e){let n=e.costState;if(!n)return teo(),!1;return neo({totalCostUSD:n.totalCostUSD,totalAPIDuration:n.totalAPIDuration,totalAPIDurationWithoutRetries:n.totalAPIDurationWithoutRetries,totalToolDuration:n.totalToolDuration,totalLinesAdded:n.totalLinesAdded,totalLinesRemoved:n.totalLinesRemoved,lastDuration:n.totalDuration,startTime:n.startTime,modelUsage:Qr(n.modelUsage,(r,s)=>({...r,contextWindow:pf(s,Qp()),maxOutputTokens:QQ(s).default})),hasUnknownModelCost:n.hasUnknownModelCost}),!0}"
+        },
+        {
+          "name": "cdt",
+          "kind": "function",
+          "start": 733943,
+          "end": 734000,
+          "sha256": "33d8382b7a7b60bba14210e3431fda64826957e921962627ac705df5fba5226f",
+          "source": "function cdt(e,n){let r=CMt();if(r)ZZr(r,n);$f(GEe(e),n)}"
+        },
+        {
+          "name": "GEe",
+          "kind": "function",
+          "start": 734071,
+          "end": 734855,
+          "sha256": "3f387a99c339df62774427544fce7753f05e30d908d5dcad3dee407eebe63b44",
+          "source": "function GEe(e){let n={lastCost:ah(),lastAPIDuration:_O(),lastAPIDurationWithoutRetries:Csr(),lastToolDuration:Asr(),lastDuration:aie(),lastStartTime:$Oe(),lastLinesAdded:REe(),lastLinesRemoved:xEe(),lastTotalInputTokens:Twt(),lastTotalOutputTokens:vf(),lastTotalCacheCreationInputTokens:Rwt(),lastTotalCacheReadInputTokens:kwt(),lastTotalWebSearchRequests:gZr(),lastFpsAverage:e?.averageFps,lastFpsLow1Pct:e?.low1PctFps,lastGracefulShutdown:Ai(),lastVersionBase:yJe(),lastModelUsage:Qr(nP(),(r)=>({inputTokens:r.inputTokens,outputTokens:r.outputTokens,thinkingTokens:r.thinkingTokens,cacheReadInputTokens:r.cacheReadInputTokens,cacheCreationInputTokens:r.cacheCreationInputTokens,webSearchRequests:r.webSearchRequests,costUSD:r.costUSD})),lastSessionId:q()};return(r)=>({...r,...n})}"
+        },
+        {
+          "name": "fUn",
+          "kind": "function",
+          "start": 732862,
+          "end": 732892,
+          "sha256": "68fed0c230baa8226d2665a289bb31e7bf2c5afe11c7e4400c420efa874d3dae",
+          "source": "function fUn(e){cdt(void 0,e)}"
+        },
+        {
+          "name": "YZo",
+          "kind": "function",
+          "start": 4247413,
+          "end": 4247481,
+          "sha256": "912fbc45b325eb5d1bb846ea628509697a6c672f2a04b61cff7286fd159fc63d",
+          "source": "function YZo(e,n){js().appendEntry(e,e.sessionId,void 0,n).catch(d)}"
+        }
+      ]
+    }
+  ],
+  "callers": [
+    {
+      "file": "chunk-8tppeqgy.js",
+      "sha256": "1936ac23419dfc18ae3bd82f1ab54724335e6f261ca7563ef41f61e34b726450",
+      "length": 25004,
+      "rows": [
+        {
+          "start": 21387,
+          "end": 24847,
+          "callStart": 22043,
+          "callEnd": 22049,
+          "sha256": "85f1330f863169d2b87c131605f2aaa013866aec0f63d867f128a6e1ea067a0c",
+          "source": "async function T5t(e,o,r){OVe(r.session.host);let n=r.modeApi?.matchSessionMode(e.mode);if(n)e.messages.push(Nt(n,\"warning\"));let s=$io({...e,source:o.resumeSource??\"file\"},(h)=>e.messages.push(Nt(h,\"warning\"))),{adoptedSessionId:u,effectiveFork:l}=dxe(o.sessionIdOverride??e.sessionId,o.forkSession);if(u)ay(u,\"resume\",o.transcriptPath?re(o.transcriptPath):null),await C5t(r.session,r.storageV5),await cq();if(l){if(await $Te(e,{stripWorktreeSession:!0,stripRelocatedCwd:!0,storageV5:r.storageV5}),e.contentReplacements?.length)await Sne(e.contentReplacements,void 0,r.storageV5)}else f1(e,{storageV5:r.storageV5});if(Hie(s.declined===!0),Ott(e.messages),Bce(e),!l){let h=rve(w4.of(r.session.host),e.worktreeSession,void 0,{storageV5:r.storageV5});if(h)e.messages.push(Nt(Itt(h),\"warning\"));if(F()&&r.storageV5!==void 0)await Nce(r.storageV5);else Lce()}let m=await ZEe(e.projectPath,r.storageV5),{agentDefinition:f,agentType:g}=Rie(e.agentSetting,r.mainThreadAgentDefinition,r.agentDefinitions,{sessionAgentDefinitions:m,sessionCwd:e.projectPath,onResolveMiss:(h)=>e.messages.push(Nt(h,\"warning\"))}),y=e.permissionMode,w=!1,R=await Ae(y,r.permissionModeCliSet||!1),k=null;if(l)Ptt(e.messages);let A=await eve(e.messages,r.initialState.mainLoopModel,(h)=>e.messages.push(Nt(h,\"warning\")),{storageV5:r.storageV5,credentials:r.credentials}),b=A?tve(e.messages,A,l,r.storageV5,r.credentials):void 0;nve(e.messages,l),Htt(e.messages,{fork:l,startup:!0});let v;if(R){let{transitionPermissionMode:h}=await import(\"/$bunfs/root/chunk-5v3372cv.js\"),U=r.initialState.toolPermissionContext;try{v={...h(U.mode,R,U),mode:R}}catch(ae){t(`[sessionRestore] transitionPermissionMode rejected restored mode '${R}': ${ae}`)}}m1(r.modeApi?.isCoordinatorMode()?\"coordinator\":\"normal\");let x=o.includeAttribution?Pe(e):void 0,H=xtt(e.agentName,e.agentColor),M=r.initialState.standaloneAgentContext?{...H,...r.initialState.standaloneAgentContext}:H;Fde(M?.name,r.storageV5,{autoOnly:!e.customTitle&&!r.initialState.standaloneAgentContext?.name});let se=await Me(!!n,r.currentCwd,r.cliAgents,r.agentDefinitions,r.storageV5),j=r.initialState.initialMessage;if(a.CLAUDE_CODE_RESUME_INTERRUPTED_TURN&&e.turnInterruptionState?.kind===\"interrupted_prompt\"&&Hy(e.turnInterruptionState.message.origin))t(\"[sessionRestore] Auto-resuming interrupted turn for bg crash-respawn\"),Yln(\"repl_restore\",e.turnInterruptionState.message),Xln(e.messages,e.turnInterruptionState.message),j={message:e.turnInterruptionState.message};let T=r.initialState;Oxn({sourceSessionId:o.sessionIdOverride??e.sessionId,transcriptPath:o.transcriptPath});let W=nJ();return import.meta.require(\"/$bunfs/root/chunk-cd74mtad.js\").restoreGoalFromTranscript(e.messages,(h)=>{T=h(T)},W),{messages:e.messages.filter((h)=>!(h.type===\"system\"&&(h.subtype===\"bridge_status\"||h.subtype===\"cloud_session_status\"))),sessionStartHooks:e.sessionStartHooks,fileHistorySnapshots:e.fileHistorySnapshots,contentReplacements:e.contentReplacements,agentName:e.agentName,agentColor:e.agentColor===\"default\"?void 0:e.agentColor,restoredAgentDef:f,initialState:{...T,initialMessage:j,...!l&&e.bridgeSessionId&&!(T.replBridgeEnabled&&!T.replBridgeOutboundOnly)&&{replBridgeEnabled:!0,replBridgeOutboundOnly:!1},...e.endedByModel?{endedByModel:!0}:{},...g&&{agent:g},...k&&{attentionBudget:k},...b&&{mainLoopModel:b},...x&&{attribution:x},...M&&{standaloneAgentContext:M},...v&&{toolPermissionContext:v},agentDefinitions:se},sessionHooks:W}}"
+        }
+      ]
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "sha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "length": 566845,
+      "rows": [
+        {
+          "start": 552738,
+          "end": 563384,
+          "callStart": 554234,
+          "callEnd": 554240,
+          "sha256": "28abc2b516ed98f491070a52c1698252921bbdde79d349545b8e4ae9c5234cd7",
+          "source": "async function DI(e,r,n,s){let g=!hR();if(s.continue)try{i(\"tengu_continue_print\",{});let{clearSessionCaches:h}=await import(\"/$bunfs/root/chunk-0yspv0sq.js\");h(e,void 0,void 0,void 0,s.storageV5);let M,v=Mm(await s.restoredWorkerState,s.tools??[]),R=await Mye(void 0,void 0,{forkSession:!!s.forkSession,...s.sdkUrl&&{acceptCustomIds:!0},storageV5:s.storageV5,credentials:s.credentials,...mye(e.precompute,s.storageV5,{forkSession:!!s.forkSession}),onNewestRunningInBackground:(U)=>{M=U},...v.size>0&&{hostAnswerableToolUseIds:v},restoredCardToolUseId:Cl(await s.restoredWorkerState)});if(R)s.onFreshSessionStartRows?.(await iHr(R));if(Aw(R,s.outputFormat))return{messages:[]};if(!R&&M!==void 0)return await js(\"tengu_continue\",{success:!1,entrypoint:S(\"print\")}),go(e8e(M),s.outputFormat,{startupFailureReason:\"session_held_by_background\"}),cs(1),{messages:[],aborted:!0};if(R){let U=vi.matchSessionMode(R.mode);if(U){process.stderr.write(U+`\n`);let z=await wme(oe(),s.cliAgents??[],s.storageV5);r((he)=>({...he,agentDefinitions:z}))}let{adoptedSessionId:H,effectiveFork:I}=dxe(R.sessionId,!!s.forkSession,{acceptCustomIds:!!s.sdkUrl});if(H){if(ay(H,\"resume\",R.fullPath?Gl(R.fullPath):null),g)await cq()}Rtt(R,r,n,{preserveLiveBudget:!1});let de=Z_(R.messages,s,r);if(I){if(await $Te(R,{stripWorktreeSession:!0,stripRelocatedCwd:!0,storageV5:s.storageV5}),R.contentReplacements?.length)await Sne(R.contentReplacements,void 0,s.storageV5)}else f1(R,{storageV5:s.storageV5});if(Dw(s.outputFormat),Bce(R),!I){let z=g&&!!H;if(await Iw(e,R.worktreeSession,{persist:z,storageV5:s.storageV5},s.outputFormat))return{messages:[],aborted:!0}}return m1(vi.isCoordinatorMode()?\"coordinator\":\"normal\"),{messages:R.messages,turnInterruptionState:R.turnInterruptionState,supersededToolUseIds:R.supersededToolUseIds,supersededToolNames:R.supersededToolNames,answeredToolUseIds:R.answeredToolUseIds,rescueSuppressed:R.rescueSuppressed,deferredToolUse:R.deferredToolUse,agentSetting:R.agentSetting,sessionProjectPath:R.projectPath,planModeOnResume:de,resumedAsFork:I}}i(\"tengu_continue\",{success:!1,entrypoint:S(\"print\")})}catch(h){return d(h),cs(1),{messages:[]}}if(s.teleport)try{await zb();let h=j_e();if(h)throw await V2(\"allow_remote_sessions\",\"cloud_session\"),Error(h);if(i(\"tengu_teleport_print\",{}),typeof s.teleport!==\"string\")throw Error(\"No session ID provided for teleport\");let{clearSessionCaches:M}=await import(\"/$bunfs/root/chunk-0yspv0sq.js\");M(e,void 0,void 0,void 0,s.storageV5);let{checkOutTeleportedSessionBranch:v,processMessagesForTeleportResume:R,teleportResumeCodeSession:U,validateGitState:H}=await import(\"/$bunfs/root/chunk-v2hdbxe7.js\");await H();let I=await U(s.teleport),{branchError:de}=await v(I.branch);return{messages:R(I.log,de,I.environmentKind),messagesOrigin:\"remote\"}}catch(h){return t(`Teleport in print mode failed: ${l(h)}`,{level:\"error\"}),cs(1),{messages:[]}}if(s.resume){let h=\"load_error\",M=performance.now(),v=s.sdkUrl?qh():void 0;try{i(\"tengu_resume_print\",{});let R=typeof s.resume===\"string\"?s.resume.trim():\"\",U=UQr(R);if(!U&&R){let _e=await mq(R,{exact:!0},s.storageV5);if(_e.length===1){let Ne=hp(_e[0]);if(Ne)U=UQr(Ne)}else if(_e.length>1){let Ne=_e.map((et)=>`  ${hp(et)??\"(unknown)\"}  (modified ${et.modified.toISOString()})`).join(`\n`);return i(\"tengu_session_resumed\",{entrypoint:S(\"print\"),success:!1,failure_reason:S(\"not_found_explicit_id\")}),go(`Error: --resume \"${R}\" matches ${_e.length} sessions. Pass one of these session IDs to disambiguate:\n${Ne}`,s.outputFormat),cs(1),{messages:[]}}}if(!U){let _e=\"Error: --resume requires a valid session ID or session title when used with --print. Usage: claude -p --resume <session-id|title>\";if(R)_e+=`. Provided value \"${R}\" is not a UUID and does not match any session title.`;return i(\"tengu_session_resumed\",{entrypoint:S(\"print\"),success:!1,failure_reason:S(\"not_found_explicit_id\")}),go(_e,s.outputFormat),cs(1),{messages:[]}}let{clearSessionCaches:H}=await import(\"/$bunfs/root/chunk-0yspv0sq.js\");H(e,void 0,void 0,void 0,s.storageV5);let I=null;if(s.sdkUrl){let _e=performance.now();s.restoredWorkerState.then(()=>wr(\"resume_worker_init_join_ms\",performance.now()-_e,_e));let[,Ne]=await Promise.all([(s.hydratePrefetch??Promise.resolve(null)).then((et)=>(U6o(et,_e),nMt(voo()),B0r(U.sessionId,et,Eoo(),s.storageV5))),s.restoredWorkerState,wl().restore(bl())]);if(wr(\"resume_hydrate_ms\",performance.now()-_e,_e),I=Ne,Ne?.external||Ne?.internal){if(r(Sso(Ne)),typeof Ne.external?.model===\"string\"){let et=Ne.external.model.trim().toLowerCase()===\"default\"?El():Ne.external.model;if(Iy(et)||$r(et))Jp(et),r((bt)=>({...bt,mainLoopModel:et}))}}}else if(U.isUrl&&U.ingressUrl&&Le(\"true\"))await $0r(U.sessionId,U.ingressUrl,s.storageV5);if(!s.forkSession){let _e=performance.now(),Ne=await S4(U.sessionId,s.storageV5);if(wr(\"resume_live_check_ms\",performance.now()-_e,_e),Ne){let et=s.liveBackgroundHandoff!==void 0?await s.liveBackgroundHandoff.open({holder:Ne,entrypoint:\"print\",prompt:s.liveBackgroundHandoff.prompt,storageV5:s.storageV5}):void 0;return go(`Error: ${Wie({holder:Ne,canFork:!0,handoff:et})}`,Qbt()?s.outputFormat:void 0,{startupFailureReason:\"session_held_by_background\"}),cs(1),{messages:[],aborted:!0}}}let de=!U.jsonlFile?await Xoo(U.sessionId):void 0,z=performance.now(),he=await s.remoteControlForkChild?.adoptSeed({sha256:I?.internal?.fork_seed_sha256??void 0,unread:I===null||I.readFailed===!0})??null,ge=Mm(I,s.tools??[]),fe=await Mye(U.sessionId,U.jsonlFile||void 0,{forkSession:!!s.forkSession,...s.sdkUrl&&{acceptCustomIds:!0},storageV5:s.storageV5,credentials:s.credentials,precedingRows:he?{rows:he.rows,first:he.firstBoot}:void 0,...mye(e.precompute,s.storageV5,{forkSession:!!s.forkSession}),...ge.size>0&&{hostAnswerableToolUseIds:ge},restoredCardToolUseId:Cl(I)});if(wr(\"resume_deserialize_ms\",performance.now()-z,z),fe)s.onFreshSessionStartRows?.(await iHr(fe));if(h=\"processing_error\",Aw(fe,s.outputFormat))return{messages:[]};if(!fe||fe.messages.length===0&&(U.isUrl||s.sdkUrl||!fe.sessionId))if(U.isUrl||s.sdkUrl){let _e=[];if(uSe()){let ir=a.CLAUDE_CODE_RESUME_FROM_SESSION;if(ir)try{t(`[resume-from] Hydrating from source session ${ir}`);let{prepareApiRequest:qe}=await import(\"/$bunfs/root/chunk-6ksdzqrz.js\"),{teleportFromSessionsAPI:Ur,deserializeRemoteSessionLog:Sr}=await import(\"/$bunfs/root/chunk-v2hdbxe7.js\"),{accessToken:Ar,orgUUID:Wr}=await qe(s.credentials),{log:Gt}=await Ur(ir,Wr,Ar);_e=Sr(Gt),t(`[resume-from] Loaded ${_e.length} messages from ${ir}`)}catch(qe){t(`[resume-from] Failed to hydrate from ${ir}: ${l(qe)}`)}}let Ne=performance.now(),et=await(s.sessionStartHooksPromise??WY(e,{kind:\"session-start\",source:\"startup\",storageV5:s.storageV5,credentials:s.credentials}));wr(\"hooks_init_ms\",performance.now()-Ne,Ne);let bt=ZTe(_e,et);s.onFreshSessionStartRows?.(bt);let Xt=dxe(fe?.sessionId,!!s.forkSession,{acceptCustomIds:!!s.sdkUrl});if(fe&&Xt.adoptedSessionId)ay(Xt.adoptedSessionId,\"resume\",fe.fullPath?Gl(fe.fullPath):null),f1(fe,{storageV5:s.storageV5});let dr=Dm(I,r,{lane:s.sdkUrl?\"sdk_url\":\"print\",forkSession:s.forkSession});if(xa&&s.sdkUrl)xa.noteTeleportBootUnreached(\"empty_hydration\",s.relayAwaitsHandoff===!0);return{messages:[..._e,...bt],..._e.length>0&&{messagesOrigin:\"remote\"},planModeOnResume:dr,resumedAsFork:Xt.effectiveFork}}else return i(\"tengu_session_resumed\",{entrypoint:S(\"print\"),success:!1,failure_reason:S(\"not_found_explicit_id\")}),go(`${lk} ${U.sessionId}`,s.outputFormat),cs(1),{messages:[]};if(s.resumeSessionAt){let _e=fe.messages.findIndex((Ne)=>Ne.uuid===s.resumeSessionAt);if(_e<0)return i(\"tengu_session_resumed\",{entrypoint:S(\"print\"),success:!1,failure_reason:S(\"processing_error\")}),go(`No message found with message.uuid of: ${s.resumeSessionAt}`,s.outputFormat),cs(1),{messages:[]};if(s.resumeDropsTurn!==void 0){let Ne=yg(fe.messages.slice(_e+1),s.resumeDropsTurn);if(!Ne.ok)return i(\"tengu_session_resumed\",{entrypoint:S(\"print\"),success:!1,failure_reason:S(\"drop_guard_refused\")}),go(`${pg} resuming at ${s.resumeSessionAt} would discard entries not attributable to turn ${s.resumeDropsTurn}: ${Ne.reason}`,s.outputFormat),cs(1),{messages:[]}}fe.messages=_e>=0?fe.messages.slice(0,_e+1):[]}let Se=vi.matchSessionMode(fe.mode);if(Se){process.stderr.write(Se+`\n`);let _e=await wme(oe(),s.cliAgents??[],s.storageV5);r((Ne)=>({...Ne,agentDefinitions:_e}))}let{adoptedSessionId:Pe,effectiveFork:Q}=dxe(fe.sessionId,!!s.forkSession,{acceptCustomIds:!!s.sdkUrl});if(Pe){if(ay(Pe,\"resume\",fe.fullPath?Gl(fe.fullPath):null),g)await cq()}Rtt(fe,r,n,{preserveLiveBudget:!1});let Te=he!==null?new Set(he.rows.map((_e)=>_e.uuid)):void 0,Ue=Dm(I,r,{lane:s.sdkUrl?\"sdk_url\":\"print\",forkSession:s.forkSession,transcript:{messages:fe.messages,sourceRows:Te===void 0?fe.messages:fe.messages.filter((_e)=>!Te.has(_e.uuid)),sourceAllowed:Im(s)}});if(Q){if(await $Te(fe,{stripWorktreeSession:!0,stripRelocatedCwd:!0,storageV5:s.storageV5}),fe.contentReplacements?.length)await Sne(fe.contentReplacements,void 0,s.storageV5)}else f1(fe,{storageV5:s.storageV5});if(Dw(s.outputFormat),Bce(fe),!Q){let _e=g&&!!Pe;if(await Iw(e,fe.worktreeSession,{persist:_e,storageV5:s.storageV5},s.outputFormat))return{messages:[],aborted:!0}}if(m1(vi.isCoordinatorMode()?\"coordinator\":\"normal\"),i(\"tengu_session_resumed\",{entrypoint:S(\"print\"),success:!0,interruption_kind:c(fe.turnInterruptionState?.kind??\"none\"),resume_duration_ms:Math.round(performance.now()-M)}),xa&&s.sdkUrl){let _e=performance.now();await xa.bootTeleportFromTranscript(U.sessionId,fe.messages,s.storageV5,s.relayAwaitsHandoff===!0),wr(\"relay_marker_scan_ms\",performance.now()-_e,_e)}return{messages:fe.messages,liveSourceRows:Te,turnInterruptionState:fe.turnInterruptionState,supersededToolUseIds:fe.supersededToolUseIds,supersededToolNames:fe.supersededToolNames,answeredToolUseIds:fe.answeredToolUseIds,rescueSuppressed:fe.rescueSuppressed,deferredToolUse:fe.deferredToolUse,agentSetting:fe.agentSetting,sessionProjectPath:fe.projectPath,planModeOnResume:Ue,transcriptAnchor:de,resumedAsFork:Q}}catch(R){let U=h;if(i(\"tengu_session_resumed\",{entrypoint:S(\"print\"),success:!1,failure_reason:c(U),error_name:OL(Z(R)),error_code:NY(R)}),U===\"load_error\"&&(Nhe(R)||R instanceof ki))t(`--print resume load failed (${E(R)}): ${l(R)}`,{level:\"error\"});else d(R);let H=R instanceof Error?`${Vm}: ${xI(R,U)}`:`${Vm} with --print mode`;return go(H,s.outputFormat),cs(1),{messages:[]}}finally{v?.()}}if(CT())return{messages:[]};let w=await(s.sessionStartHooksPromise??WY(e,{kind:\"session-start\",source:\"startup\",storageV5:s.storageV5,credentials:s.credentials}));return s.onFreshSessionStartRows?.(w),{messages:w}}"
+        },
+        {
+          "start": 552738,
+          "end": 563384,
+          "callStart": 561805,
+          "callEnd": 561812,
+          "sha256": "28abc2b516ed98f491070a52c1698252921bbdde79d349545b8e4ae9c5234cd7",
+          "source": "async function DI(e,r,n,s){let g=!hR();if(s.continue)try{i(\"tengu_continue_print\",{});let{clearSessionCaches:h}=await import(\"/$bunfs/root/chunk-0yspv0sq.js\");h(e,void 0,void 0,void 0,s.storageV5);let M,v=Mm(await s.restoredWorkerState,s.tools??[]),R=await Mye(void 0,void 0,{forkSession:!!s.forkSession,...s.sdkUrl&&{acceptCustomIds:!0},storageV5:s.storageV5,credentials:s.credentials,...mye(e.precompute,s.storageV5,{forkSession:!!s.forkSession}),onNewestRunningInBackground:(U)=>{M=U},...v.size>0&&{hostAnswerableToolUseIds:v},restoredCardToolUseId:Cl(await s.restoredWorkerState)});if(R)s.onFreshSessionStartRows?.(await iHr(R));if(Aw(R,s.outputFormat))return{messages:[]};if(!R&&M!==void 0)return await js(\"tengu_continue\",{success:!1,entrypoint:S(\"print\")}),go(e8e(M),s.outputFormat,{startupFailureReason:\"session_held_by_background\"}),cs(1),{messages:[],aborted:!0};if(R){let U=vi.matchSessionMode(R.mode);if(U){process.stderr.write(U+`\n`);let z=await wme(oe(),s.cliAgents??[],s.storageV5);r((he)=>({...he,agentDefinitions:z}))}let{adoptedSessionId:H,effectiveFork:I}=dxe(R.sessionId,!!s.forkSession,{acceptCustomIds:!!s.sdkUrl});if(H){if(ay(H,\"resume\",R.fullPath?Gl(R.fullPath):null),g)await cq()}Rtt(R,r,n,{preserveLiveBudget:!1});let de=Z_(R.messages,s,r);if(I){if(await $Te(R,{stripWorktreeSession:!0,stripRelocatedCwd:!0,storageV5:s.storageV5}),R.contentReplacements?.length)await Sne(R.contentReplacements,void 0,s.storageV5)}else f1(R,{storageV5:s.storageV5});if(Dw(s.outputFormat),Bce(R),!I){let z=g&&!!H;if(await Iw(e,R.worktreeSession,{persist:z,storageV5:s.storageV5},s.outputFormat))return{messages:[],aborted:!0}}return m1(vi.isCoordinatorMode()?\"coordinator\":\"normal\"),{messages:R.messages,turnInterruptionState:R.turnInterruptionState,supersededToolUseIds:R.supersededToolUseIds,supersededToolNames:R.supersededToolNames,answeredToolUseIds:R.answeredToolUseIds,rescueSuppressed:R.rescueSuppressed,deferredToolUse:R.deferredToolUse,agentSetting:R.agentSetting,sessionProjectPath:R.projectPath,planModeOnResume:de,resumedAsFork:I}}i(\"tengu_continue\",{success:!1,entrypoint:S(\"print\")})}catch(h){return d(h),cs(1),{messages:[]}}if(s.teleport)try{await zb();let h=j_e();if(h)throw await V2(\"allow_remote_sessions\",\"cloud_session\"),Error(h);if(i(\"tengu_teleport_print\",{}),typeof s.teleport!==\"string\")throw Error(\"No session ID provided for teleport\");let{clearSessionCaches:M}=await import(\"/$bunfs/root/chunk-0yspv0sq.js\");M(e,void 0,void 0,void 0,s.storageV5);let{checkOutTeleportedSessionBranch:v,processMessagesForTeleportResume:R,teleportResumeCodeSession:U,validateGitState:H}=await import(\"/$bunfs/root/chunk-v2hdbxe7.js\");await H();let I=await U(s.teleport),{branchError:de}=await v(I.branch);return{messages:R(I.log,de,I.environmentKind),messagesOrigin:\"remote\"}}catch(h){return t(`Teleport in print mode failed: ${l(h)}`,{level:\"error\"}),cs(1),{messages:[]}}if(s.resume){let h=\"load_error\",M=performance.now(),v=s.sdkUrl?qh():void 0;try{i(\"tengu_resume_print\",{});let R=typeof s.resume===\"string\"?s.resume.trim():\"\",U=UQr(R);if(!U&&R){let _e=await mq(R,{exact:!0},s.storageV5);if(_e.length===1){let Ne=hp(_e[0]);if(Ne)U=UQr(Ne)}else if(_e.length>1){let Ne=_e.map((et)=>`  ${hp(et)??\"(unknown)\"}  (modified ${et.modified.toISOString()})`).join(`\n`);return i(\"tengu_session_resumed\",{entrypoint:S(\"print\"),success:!1,failure_reason:S(\"not_found_explicit_id\")}),go(`Error: --resume \"${R}\" matches ${_e.length} sessions. Pass one of these session IDs to disambiguate:\n${Ne}`,s.outputFormat),cs(1),{messages:[]}}}if(!U){let _e=\"Error: --resume requires a valid session ID or session title when used with --print. Usage: claude -p --resume <session-id|title>\";if(R)_e+=`. Provided value \"${R}\" is not a UUID and does not match any session title.`;return i(\"tengu_session_resumed\",{entrypoint:S(\"print\"),success:!1,failure_reason:S(\"not_found_explicit_id\")}),go(_e,s.outputFormat),cs(1),{messages:[]}}let{clearSessionCaches:H}=await import(\"/$bunfs/root/chunk-0yspv0sq.js\");H(e,void 0,void 0,void 0,s.storageV5);let I=null;if(s.sdkUrl){let _e=performance.now();s.restoredWorkerState.then(()=>wr(\"resume_worker_init_join_ms\",performance.now()-_e,_e));let[,Ne]=await Promise.all([(s.hydratePrefetch??Promise.resolve(null)).then((et)=>(U6o(et,_e),nMt(voo()),B0r(U.sessionId,et,Eoo(),s.storageV5))),s.restoredWorkerState,wl().restore(bl())]);if(wr(\"resume_hydrate_ms\",performance.now()-_e,_e),I=Ne,Ne?.external||Ne?.internal){if(r(Sso(Ne)),typeof Ne.external?.model===\"string\"){let et=Ne.external.model.trim().toLowerCase()===\"default\"?El():Ne.external.model;if(Iy(et)||$r(et))Jp(et),r((bt)=>({...bt,mainLoopModel:et}))}}}else if(U.isUrl&&U.ingressUrl&&Le(\"true\"))await $0r(U.sessionId,U.ingressUrl,s.storageV5);if(!s.forkSession){let _e=performance.now(),Ne=await S4(U.sessionId,s.storageV5);if(wr(\"resume_live_check_ms\",performance.now()-_e,_e),Ne){let et=s.liveBackgroundHandoff!==void 0?await s.liveBackgroundHandoff.open({holder:Ne,entrypoint:\"print\",prompt:s.liveBackgroundHandoff.prompt,storageV5:s.storageV5}):void 0;return go(`Error: ${Wie({holder:Ne,canFork:!0,handoff:et})}`,Qbt()?s.outputFormat:void 0,{startupFailureReason:\"session_held_by_background\"}),cs(1),{messages:[],aborted:!0}}}let de=!U.jsonlFile?await Xoo(U.sessionId):void 0,z=performance.now(),he=await s.remoteControlForkChild?.adoptSeed({sha256:I?.internal?.fork_seed_sha256??void 0,unread:I===null||I.readFailed===!0})??null,ge=Mm(I,s.tools??[]),fe=await Mye(U.sessionId,U.jsonlFile||void 0,{forkSession:!!s.forkSession,...s.sdkUrl&&{acceptCustomIds:!0},storageV5:s.storageV5,credentials:s.credentials,precedingRows:he?{rows:he.rows,first:he.firstBoot}:void 0,...mye(e.precompute,s.storageV5,{forkSession:!!s.forkSession}),...ge.size>0&&{hostAnswerableToolUseIds:ge},restoredCardToolUseId:Cl(I)});if(wr(\"resume_deserialize_ms\",performance.now()-z,z),fe)s.onFreshSessionStartRows?.(await iHr(fe));if(h=\"processing_error\",Aw(fe,s.outputFormat))return{messages:[]};if(!fe||fe.messages.length===0&&(U.isUrl||s.sdkUrl||!fe.sessionId))if(U.isUrl||s.sdkUrl){let _e=[];if(uSe()){let ir=a.CLAUDE_CODE_RESUME_FROM_SESSION;if(ir)try{t(`[resume-from] Hydrating from source session ${ir}`);let{prepareApiRequest:qe}=await import(\"/$bunfs/root/chunk-6ksdzqrz.js\"),{teleportFromSessionsAPI:Ur,deserializeRemoteSessionLog:Sr}=await import(\"/$bunfs/root/chunk-v2hdbxe7.js\"),{accessToken:Ar,orgUUID:Wr}=await qe(s.credentials),{log:Gt}=await Ur(ir,Wr,Ar);_e=Sr(Gt),t(`[resume-from] Loaded ${_e.length} messages from ${ir}`)}catch(qe){t(`[resume-from] Failed to hydrate from ${ir}: ${l(qe)}`)}}let Ne=performance.now(),et=await(s.sessionStartHooksPromise??WY(e,{kind:\"session-start\",source:\"startup\",storageV5:s.storageV5,credentials:s.credentials}));wr(\"hooks_init_ms\",performance.now()-Ne,Ne);let bt=ZTe(_e,et);s.onFreshSessionStartRows?.(bt);let Xt=dxe(fe?.sessionId,!!s.forkSession,{acceptCustomIds:!!s.sdkUrl});if(fe&&Xt.adoptedSessionId)ay(Xt.adoptedSessionId,\"resume\",fe.fullPath?Gl(fe.fullPath):null),f1(fe,{storageV5:s.storageV5});let dr=Dm(I,r,{lane:s.sdkUrl?\"sdk_url\":\"print\",forkSession:s.forkSession});if(xa&&s.sdkUrl)xa.noteTeleportBootUnreached(\"empty_hydration\",s.relayAwaitsHandoff===!0);return{messages:[..._e,...bt],..._e.length>0&&{messagesOrigin:\"remote\"},planModeOnResume:dr,resumedAsFork:Xt.effectiveFork}}else return i(\"tengu_session_resumed\",{entrypoint:S(\"print\"),success:!1,failure_reason:S(\"not_found_explicit_id\")}),go(`${lk} ${U.sessionId}`,s.outputFormat),cs(1),{messages:[]};if(s.resumeSessionAt){let _e=fe.messages.findIndex((Ne)=>Ne.uuid===s.resumeSessionAt);if(_e<0)return i(\"tengu_session_resumed\",{entrypoint:S(\"print\"),success:!1,failure_reason:S(\"processing_error\")}),go(`No message found with message.uuid of: ${s.resumeSessionAt}`,s.outputFormat),cs(1),{messages:[]};if(s.resumeDropsTurn!==void 0){let Ne=yg(fe.messages.slice(_e+1),s.resumeDropsTurn);if(!Ne.ok)return i(\"tengu_session_resumed\",{entrypoint:S(\"print\"),success:!1,failure_reason:S(\"drop_guard_refused\")}),go(`${pg} resuming at ${s.resumeSessionAt} would discard entries not attributable to turn ${s.resumeDropsTurn}: ${Ne.reason}`,s.outputFormat),cs(1),{messages:[]}}fe.messages=_e>=0?fe.messages.slice(0,_e+1):[]}let Se=vi.matchSessionMode(fe.mode);if(Se){process.stderr.write(Se+`\n`);let _e=await wme(oe(),s.cliAgents??[],s.storageV5);r((Ne)=>({...Ne,agentDefinitions:_e}))}let{adoptedSessionId:Pe,effectiveFork:Q}=dxe(fe.sessionId,!!s.forkSession,{acceptCustomIds:!!s.sdkUrl});if(Pe){if(ay(Pe,\"resume\",fe.fullPath?Gl(fe.fullPath):null),g)await cq()}Rtt(fe,r,n,{preserveLiveBudget:!1});let Te=he!==null?new Set(he.rows.map((_e)=>_e.uuid)):void 0,Ue=Dm(I,r,{lane:s.sdkUrl?\"sdk_url\":\"print\",forkSession:s.forkSession,transcript:{messages:fe.messages,sourceRows:Te===void 0?fe.messages:fe.messages.filter((_e)=>!Te.has(_e.uuid)),sourceAllowed:Im(s)}});if(Q){if(await $Te(fe,{stripWorktreeSession:!0,stripRelocatedCwd:!0,storageV5:s.storageV5}),fe.contentReplacements?.length)await Sne(fe.contentReplacements,void 0,s.storageV5)}else f1(fe,{storageV5:s.storageV5});if(Dw(s.outputFormat),Bce(fe),!Q){let _e=g&&!!Pe;if(await Iw(e,fe.worktreeSession,{persist:_e,storageV5:s.storageV5},s.outputFormat))return{messages:[],aborted:!0}}if(m1(vi.isCoordinatorMode()?\"coordinator\":\"normal\"),i(\"tengu_session_resumed\",{entrypoint:S(\"print\"),success:!0,interruption_kind:c(fe.turnInterruptionState?.kind??\"none\"),resume_duration_ms:Math.round(performance.now()-M)}),xa&&s.sdkUrl){let _e=performance.now();await xa.bootTeleportFromTranscript(U.sessionId,fe.messages,s.storageV5,s.relayAwaitsHandoff===!0),wr(\"relay_marker_scan_ms\",performance.now()-_e,_e)}return{messages:fe.messages,liveSourceRows:Te,turnInterruptionState:fe.turnInterruptionState,supersededToolUseIds:fe.supersededToolUseIds,supersededToolNames:fe.supersededToolNames,answeredToolUseIds:fe.answeredToolUseIds,rescueSuppressed:fe.rescueSuppressed,deferredToolUse:fe.deferredToolUse,agentSetting:fe.agentSetting,sessionProjectPath:fe.projectPath,planModeOnResume:Ue,transcriptAnchor:de,resumedAsFork:Q}}catch(R){let U=h;if(i(\"tengu_session_resumed\",{entrypoint:S(\"print\"),success:!1,failure_reason:c(U),error_name:OL(Z(R)),error_code:NY(R)}),U===\"load_error\"&&(Nhe(R)||R instanceof ki))t(`--print resume load failed (${E(R)}): ${l(R)}`,{level:\"error\"});else d(R);let H=R instanceof Error?`${Vm}: ${xI(R,U)}`:`${Vm} with --print mode`;return go(H,s.outputFormat),cs(1),{messages:[]}}finally{v?.()}}if(CT())return{messages:[]};let w=await(s.sessionStartHooksPromise??WY(e,{kind:\"session-start\",source:\"startup\",storageV5:s.storageV5,credentials:s.credentials}));return s.onFreshSessionStartRows?.(w),{messages:w}}"
+        }
+      ]
+    },
+    {
+      "file": "chunk-f2cpzzp9.js",
+      "sha256": "ecf059605929abc2d38c30fc6d3b5b0b69ef05c9d344e934443f320a48256dae",
+      "length": 1601421,
+      "rows": [
+        {
+          "start": 322083,
+          "end": 328040,
+          "callStart": 327417,
+          "callEnd": 327423,
+          "sha256": "3129a38d246fe19936ba187721b0cd9bb49d165d115de92d92db190307bfb4fd",
+          "source": "async(h,v,D)=>{let{session:N,store:X,_setAppState:Se,turn:_e,dialogStore:Pe,taskRegistry:Ie,scope:Oe,storageV5:Ne,credentials:Ve,initialMainThreadAgentDefinition:qe,draft:ze}=this,{mainLoopModel:pt}=this._requireHost(),St=this.transcript.replace,ht=performance.now();try{OVe(N.host);let yt={...v,messages:I5(v.messages)},bt=Czn(yt.messages),xt=void 0,Ut=import.meta.require(\"/$bunfs/root/chunk-3tc44sbx.js\"),Ct=Ut.matchSessionMode(v.mode);if(Ct){let Wo=await wme(Es(N).originalCwd,[],Ne);Se((Eo)=>({...Eo,agentDefinitions:Wo})),bt.push(Nt(Ct,\"warning\"))}let Wt=_ye();await qct(N,\"resume\",{sessionHooks:this.sessionHooks,getAppState:()=>X.getState(),signal:AbortSignal.timeout(Wt),storageV5:Ne,credentials:Ve});let Yt=await ZEe(v.projectPath,Ne),{agentDefinition:qt}=Rie(v.agentSetting,qe,X.getState().agentDefinitions,{sessionAgentDefinitions:Yt,sessionCwd:v.projectPath,onResolveMiss:(Wo)=>bt.push(Nt(Wo,\"warning\"))});Oe.setMainThreadAgentDefinition(qt),Se((Wo)=>({...Wo,agent:qt?.agentType}));let no,lo;if(D!==\"fork\")lo=await eve(bt,pt,(Wo)=>bt.push(Nt(Wo,\"warning\")),{scheduleTelemetry:(Wo)=>{no=Wo},storageV5:Ne,credentials:Ve});Htt(bt,{fork:D===\"fork\",sessionId:h});let to=await H5(N,D===\"fork\"?\"fork\":\"resume\",{sessionId:h,sessionTitle:v.customTitle,agentType:qt?.agentType,model:lo??pt,resumedMessages:v.messages,storageV5:Ne,credentials:Ve});if(bt.push(...ZTe(bt,to)),D===\"fork\")IWr(v,uS(h),Ne);else Pgt(v,uS(h),Ne);if(v.fileHistorySnapshots)ain(v,uS(h),Ne);Se((Wo)=>({...Wo,standaloneAgentContext:xtt(v.agentName,v.agentColor),sendMessagePins:{},agentNameRegistry:TJt(Wo.agentNameRegistry,Wo.tasks)}));let wo=D===\"fork\"?this.conversationOrigin:D===\"rewind_pre_clear\"?this.preClearOrigin??this.conversationOrigin:\"local\";_e.resetLoadingState(),_e.setAbortController(null),this.transcript.cut(),this._publish({conversationId:h}),this._resetTurnEventTail(),cdt(void 0,Ne);let ko=uS(h),so=Vi(ko),Ro=q();if(ay(ko,D===\"fork\"?\"fork\":\"resume\",v.fullPath?hgt(v.fullPath):null),D!==\"fork\"&&ko!==Ro)h_n(Oe.readFileState);if(this.restoreReadFileState(bt,v.projectPath??Es(N).originalCwd,D===\"fork\",wo),D!==\"fork\")rr().inheritPredecessorLinks(I2r(ko),v.modified.getTime());if(D!==\"fork\")fyo(v.artifactCommentMonitor,{...Ne!==void 0&&{storageV5:Ne}});if(lo){let Wo=tve(bt,lo,!1,Ne,Ve);if(Wo)Se((Eo)=>{if(Eo.mainLoopModel===Wo)return Eo;return B_(N,Eo,Wo,\"resume\"),{...Eo,mainLoopModel:Wo}})}nve(bt,D===\"fork\"),no?.();let{renameRecordingForSession:co}=await import(\"/$bunfs/root/chunk-akgv8qbe.js\");if(await co(N,Ne),await cq(),D!==\"fork\"){if(NRn(X.getState,X.setState,Pe),WYe(),_xe(),this.rehydrateResumedFrameState(bt,!1,wo,!1),_et(Ei()),wet(Ei()),tkn(Ei()),bet(Ei()),nkn(Ei()),o2(Oe.memorySelector),!Object.values(X.getState().tasks).some((Eo)=>X$e.has(Eo.type)&&(Eo.status===\"running\"||kn(Eo)&&e_(Eo))))MMn(),$an(N.host)}if(Rtt(yt,X.setState,this.sessionHooks,{preserveLiveBudget:D===\"fork\"||D===\"rewind_pre_clear\"}),lMt(ORe(v),Se),fMt(),f1(D===\"fork\"?rdt(v,{stripRelocatedCwd:!0}):{...v,artifactCommentMonitor:void 0},{taintSid:so,storageV5:Ne}),Qxn(),Ott(bt),D===\"fork\")if(v.precautionarySuppressionHeld)uq(so),wne(so);else FGn(so,Vi(hp(v)));let No=Lct();if(No)idt(No);if(Fde(v.agentName,Ne,{autoOnly:!v.customTitle}),D!==\"fork\"&&v.bridgeSessionId)Se((Wo)=>Wo.replBridgeEnabled&&!Wo.replBridgeOutboundOnly?Wo:{...Wo,replBridgeEnabled:!0,replBridgeOutboundOnly:!1});if(this._publish({haikuTitle:void 0}),D!==\"fork\"){scr(v.worktreeSession===void 0?v.projectPath:v.worktreeSession?.worktreePath,Ne);let Wo=rve(w4.of(N.host),v.worktreeSession,v.projectPath,{storageV5:Ne});if(Wo)bt.push(Nt(Itt(Wo),\"warning\"));if(this._resetReplTabToConvo(),Oe.isolationLatch.onLatch=void 0,F()&&Ne!==void 0)await Nce(Ne);else Lce();Oe.reseatIsolationLatch(v.isolationLatch??mDt(bt,Oe.combinedInitialTools,void 0,void 0,N));{let Eo=ixt({...Ne!==void 0&&{storageV5:Ne}}),Mo=[...iQt()];if(Mo.length>0){let Uo=go();bt.push(Nt(Koo(Mo.map((Do)=>Cn({slug:Do,env:Uo}))),\"warning\"))}let zo=Yoo(Eo,ute);if(zo.length>0){let Uo=ko,Do=\"unknown\",bo,qo=0,Qo=!1;try{let{listRegisteredSessionRecords:gn}=await import(\"/$bunfs/root/chunk-3b4yxh25.js\"),Jo=await FMe({records:await gn(),sessionId:Uo,selfPid:process.pid,isRunning:ga,isSameProcess:HS});Qo=!0,Do=Jo.verdict,bo=Jo.holder,qo=Jo.otherHolders?.length??0}catch{p(\"artifact_live_subscribe\",\"holder_probe_failed\")}let Sn=go(),Tn=zo.map((gn)=>Cn({slug:gn,env:Sn})),Zt=Date.now();if(Do!==\"none\"&&Qo)JRn(Do===\"live\"?\"held_by_live_session\":\"holder_unknown\",{path:\"switch\",probed:Qo,liveHolder:bo,otherHolders:qo,monitors:zo.length,jobStamped:[...Eo.values()].some((gn)=>gn.state===\"armed\"&&gn.holder===\"bg\"),jobHolder:\"none\",takeover:\"not_attempted\",now:Zt});if(Do===\"live\")bt.push(Nt(alr(Tn,bo!==void 0?rQt(bo,qo,Zt):void 0),\"notice\"));else bt.push(Nt(qoo(Tn),\"notice\"))}}if(qMt({abortController:new AbortController,taskRegistry:Ie,storageV5:Ne,credentials:Ve}),IE())QPe().restoreMcpTasks({taskRegistry:Ie,getMcpClients:()=>X.getState().mcp.clients,requestDialog:Oe.requestDialog,storageV5:Ne,credentials:Ve});jz(BS().map((Eo)=>Eo.id)),gtt(bt,Ie,void 0,void 0,Ne)}else{ixt({...Ne!==void 0&&{storageV5:Ne}});let Wo=Uc();if(Wo)d0(Wo,Ne);if(Oe.isolationLatch.current)Uce(Oe.isolationLatch.current,Ne)}let{isCoordinatorMode:ho}=import.meta.require(\"/$bunfs/root/chunk-3tc44sbx.js\");if(m1(ho()?\"coordinator\":\"normal\"),y6e(),Bce(v),D!==\"fork\")Oe.reconstructContentReplacementState(bt,v.contentReplacements??[]);if(sye(bt),fGe.of(N).emit(uS(h)),JNe(),St(()=>bt),this.conversationOrigin=wo,D!==\"fork\")ze.replaceValue(\"\");if(D!==\"fork\"){try{await $Ir(ko,{sessionId:ko,transcriptPath:v.fullPath},N.precompute,Ne)}catch(Wo){d(Wo)}this.maybePromptStaleResume(bt,{sessionId:ko,transcriptPath:v.fullPath??Yf(ko)})}i(\"tengu_session_resumed\",{entrypoint:c(D),success:!0,resume_duration_ms:Math.round(performance.now()-ht)})}catch(yt){throw i(\"tengu_session_resumed\",{entrypoint:c(D),success:!1,failure_reason:S(\"processing_error\"),error_name:OL(Z(yt))}),yt}}"
+        }
+      ]
+    },
+    {
+      "file": "chunk-ngnr2mvg.js",
+      "sha256": "df381a4968845e2665389a02171aad005061cf507c944d4f7df67fe9e40eeb7e",
+      "length": 41878,
+      "rows": [
+        {
+          "start": 33706,
+          "end": 37400,
+          "callStart": 35400,
+          "callEnd": 35406,
+          "sha256": "29fb83b672f8658bb887502243da35935a9ec9b52e891794cf1f7b7a22855250",
+          "source": "async function go(t){if(xe.current)return;xe.current=!0,so(!0);let C=performance.now();try{let o=await W5t(t,ue,I);if(o){let T=await xw(o);if(T)process.stdout.write(T);ao(o);return}if(!B){let T=hp(t),Se=T?await S4(T,h):null;if(T&&Se){let te=Fe?void 0:Nvt(Se,{replacesProcess:!0});if(te!==void 0)try{await Fcr(te,\"picker\",h);return}catch(V){p(\"resume_live_background_open\",\"open_failed\",{entrypoint:S(\"picker\")}),Ee({sessionId:T,log:t,jobId:te,handoff:{reason:\"open_failed\",detail:l(V),promptSent:!1}});return}p(\"resume_live_background_open\",Fe?\"launch_prompt_pending\":\"not_openable\",{entrypoint:S(\"picker\")}),Ee({sessionId:T,log:t,jobId:Se.jobId});return}}}catch(o){d(st(Z(o),\"resume picker: pre-load failed\")),He({sessionId:hp(t)??void 0});return}let N=!1,H=\"load_error\",P;try{let o=await Mye(t,void 0,{forkSession:B??!1,storageV5:h,credentials:Me,...mye(O.precompute,h,{forkSession:!!B})});if(!o)throw i(\"tengu_session_resumed\",{entrypoint:S(\"picker\"),success:!1,failure_reason:S(\"not_found_picker\")}),N=!0,Error(\"Failed to load conversation\");P=o.sessionStartHooks,H=\"processing_error\";let T=Nio({...o,source:\"store\"},(f)=>o.messages.push(Nt(f,\"warning\"))),te=import.meta.require(\"/$bunfs/root/chunk-3tc44sbx.js\").matchSessionMode(o.mode);if(te){let f=await wme(Es(O).originalCwd,[],h);G((Ue)=>({...Ue,agentDefinitions:f})),o.messages.push(Nt(te,\"warning\"))}KJt(O);let{adoptedSessionId:V,effectiveFork:W}=dxe(o.sessionId,!!B),Ge=V?Vi(V):Vi(q());if(V)ay(V,\"resume\",t.fullPath?Co(t.fullPath):null),await C5t(O,h),await cq();else if(W){if(await $Te(o,{stripWorktreeSession:!0,stripRelocatedCwd:!0,destSid:Ge,storageV5:h}),o.contentReplacements?.length)await Sne(o.contentReplacements,void 0,h)}Bce(o),Oxn({sourceSessionId:o.sessionId,transcriptPath:t.fullPath});let ho=await ZEe(t.projectPath,h),{agentDefinition:Le}=Rie(o.agentSetting,j,eo,{sessionAgentDefinitions:ho,sessionCwd:t.projectPath,onResolveMiss:(f)=>o.messages.push(Nt(f,\"warning\"))});if(Le?.mcpServers?.length)await BI();if(G((f)=>({...f,agent:Le?.agentType})),W)Ptt(o.messages);nve(o.messages,W);let We=await eve(o.messages,oo,(f)=>o.messages.push(Nt(f,\"warning\")),{storageV5:h,credentials:Me}),Re=We?tve(o.messages,We,W,h,Me):void 0;if(Re)G((f)=>{if(f.mainLoopModel===Re)return f;return B_(O,f,Re,\"resume\"),{...f,mainLoopModel:Re}});Htt(o.messages,{fork:W,startup:!0});let{isCoordinatorMode:So}=import.meta.require(\"/$bunfs/root/chunk-3tc44sbx.js\");m1(So()?\"coordinator\":\"normal\"),Fio(T);let $e=xtt(o.agentName,o.agentColor),Pe=Ie?{...$e,...Ie}:$e;if(Pe)G((f)=>({...f,standaloneAgentContext:Pe}));if(Fde(Pe?.name,h,{autoOnly:!o.customTitle&&!Ie?.name}),f1(W?rdt(o,{stripWorktreeSession:!0,stripRelocatedCwd:!0}):o,{taintSid:Ge,storageV5:h}),Hie(T.declined===!0),Ott(o.messages),lMt(ORe(o),G),Klr(o.messages,G,to),OVe(O.host),!W&&o.bridgeSessionId)G((f)=>f.replBridgeEnabled&&!f.replBridgeOutboundOnly?f:{...f,replBridgeEnabled:!0,replBridgeOutboundOnly:!1});if(!W){let f=rve(w4.of(O.host),o.worktreeSession,void 0,{storageV5:h});if(f)o.messages.push(Nt(Itt(f),\"warning\"));if(hve(O.host,G),V)if(F()&&h!==void 0)await Nce(h);else Lce()}i(\"tengu_session_resumed\",{entrypoint:S(\"picker\"),success:!0,resume_duration_ms:Math.round(performance.now()-C)}),me([]),io({messages:o.messages,fileHistorySnapshots:o.fileHistorySnapshots,contentReplacements:o.contentReplacements,agentName:o.agentName,agentColor:o.agentColor===\"default\"?void 0:o.agentColor,mainThreadAgentDefinition:Le,pendingHookMessages:o.sessionStartHooks})}catch(o){if(!N){let T=H;i(\"tengu_session_resumed\",{entrypoint:S(\"picker\"),success:!1,failure_reason:c(T),error_name:OL(Z(o))})}d(st(Z(o),\"resume picker: onSelect failed\")),P?.abort(),He({sessionId:hp(t)??void 0})}}"
+        }
+      ]
+    }
+  ],
+  "scope": "Complete cost saver/CMt/cdt/Bce/recorder registration closures. Real current execution root/native ledger and existing Project single writer are IO ports. Only existing local storage backend is bound; storageV5 is not implemented or emulated."
+}

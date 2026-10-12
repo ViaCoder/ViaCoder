@@ -1,0 +1,292 @@
+{
+  "mode": "launch",
+  "literalNamespaces": [],
+  "requiredSameOwnerPorts": [],
+  "version": "2.1.287",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "rangeConvention": "UTF-16 end-exclusive",
+  "roots": {
+    "launchInteractive": [
+      "chunk-mphp7acd.js",
+      "pHr"
+    ],
+    "checkTeleport": [
+      "chunk-mphp7acd.js",
+      "Rzn"
+    ],
+    "teleportRequirements": [
+      "chunk-mphp7acd.js",
+      "zln"
+    ],
+    "gitAvailable": [
+      "chunk-mphp7acd.js",
+      "F4o"
+    ]
+  },
+  "modules": [
+    {
+      "file": "chunk-2ynta9xc.js",
+      "rows": [
+        {
+          "file": "chunk-2ynta9xc.js",
+          "name": "CWe",
+          "start": 59327,
+          "end": 59535,
+          "moduleLength": 77871,
+          "moduleSha256": "f3e239a22bc356ef2664a104850f816b164d4874821637ec72f203620c439e1d",
+          "sha256": "280e4b28d0d18639d50a2e94cb9ca71fb1be97126be9b38b9130a05c6e4c771f",
+          "source": "CWe=async(e)=>{let n=[...yn,\"--no-optional-locks\",\"status\",\"--porcelain\",$S];if(e?.ignoreUntracked)n.push(\"-uno\");let{stdout:r}=await Ke(vt(),n,{preserveOutputOnError:!1,env:Qo()});return r.trim().length===0}",
+          "variable": true,
+          "exportNames": [
+            "CWe"
+          ]
+        }
+      ],
+      "initializers": [],
+      "bindings": {
+        "yn": {
+          "port": "source:chunk-fmv8bhm3.js:yn",
+          "identity": "chunk-fmv8bhm3.js:yn"
+        },
+        "$S": {
+          "port": "source:chunk-fmv8bhm3.js:$S",
+          "identity": "chunk-fmv8bhm3.js:$S"
+        },
+        "Ke": {
+          "port": "sharedPort:attachmentExecFile",
+          "identity": "chunk-fmv8bhm3.js:Ke"
+        },
+        "vt": {
+          "port": "source:chunk-2ynta9xc.js:vt",
+          "identity": "chunk-2ynta9xc.js:vt"
+        },
+        "Qo": {
+          "port": "source:chunk-fmv8bhm3.js:Qo",
+          "identity": "chunk-fmv8bhm3.js:Qo"
+        }
+      }
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "rows": [
+        {
+          "file": "chunk-mphp7acd.js",
+          "name": "pHr",
+          "start": 3170708,
+          "end": 3172263,
+          "moduleLength": 4409957,
+          "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+          "sha256": "2fd11489a37a53560073ded2bc99a381af7722c7e112182a5954b55cdc93cda5",
+          "source": "async function pHr(e,n){await Rzn(e,new Set([\"needsGitStash\"]),n.showTeleportErrors);let s,g,h=[],b,w=await p0({initialMessage:n.description,initialMessageUuid:n.descriptionUuid,signal:n.signal,source:n.source,branchName:n.branchName,branchFromHead:n.branchFromHead,explicitRef:n.explicitRef,permissionMode:n.permissionMode,proactivityLevel:n.proactivityLevel,effort:n.effort,disallowedTools:n.disallowedTools,builtinTools:n.builtinTools,model:n.model,title:n.title,environmentVariables:n.environmentVariables,appendSystemPrompt:n.appendSystemPrompt,poolId:n.poolId,reuseOutcomeBranch:n.reuseOutcomeBranch,correlationId:n.correlationId,persistentVolume:n.persistentVolume,monorepo:n.monorepo,noMonorepo:n.noMonorepo,sessionGroupingId:n.sessionGroupingId,deviceBinding:n.deviceBinding,connectedSession:n.connectedSession,...{},storageV5:n.storageV5,credentials:n.credentials,allowBundle:!0,firstUpload:n.firstUpload,staysAttached:n.staysAttached,deferInitialMessage:n.deferInitialMessage,forwardHomeSettings:n.forwardHomeSettings,...n.homeSettingsConsent&&{homeSettingsConsent:n.homeSettingsConsent},onProgress:n.onProgress,onBundleFail:(D,j)=>{switch(j){case\"env_create\":s=\"env_create_failed\";break;case\"bundle\":s=\"bundle_failed\";break;default:{let z=j}}g=D,process.stderr.write(`\n${D}\n`)},onBundleNotice:(D)=>{h.push(D),process.stderr.write(`\n${D}\n`)},onCreateFail:(D,j,z)=>{s=j,g=D,b=z,process.stderr.write(`\n${D}\n`)}});if(w)return{ok:!0,session:w,notices:h};return{ok:!1,failReason:s??(n.signal.aborted?\"aborted\":\"unknown\"),failMessage:g,failDetail:b}}",
+          "variable": false,
+          "exportNames": [
+            "pHr"
+          ]
+        },
+        {
+          "file": "chunk-mphp7acd.js",
+          "name": "Rzn",
+          "start": 3168751,
+          "end": 3168975,
+          "moduleLength": 4409957,
+          "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+          "sha256": "2ded5da61a46fcb985abfd6ca84b00131335d9d7fc505b13ad7f6ae76ad92160",
+          "source": "async function Rzn(e,n,r){let s=Jmt(await zln(),n);if(s.size>0)i(\"tengu_teleport_errors_detected\",{error_types:Oa([...s]),errors_ignored:Oa([...n])}),await r(e,n),i(\"tengu_teleport_errors_resolved\",{error_types:Oa([...s])})}",
+          "variable": false,
+          "exportNames": [
+            "Rzn"
+          ]
+        },
+        {
+          "file": "chunk-mphp7acd.js",
+          "name": "zln",
+          "start": 2833506,
+          "end": 2833645,
+          "moduleLength": 4409957,
+          "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+          "sha256": "a0e9ab6698f965ffad9c5e88d50f14493a8bd9ebefaad55132ed62fa5e9c3ef3",
+          "source": "async function zln(e){let n=new Set,[r,s]=await Promise.all([YBe(e),F4o()]);if(r)n.add(\"needsLogin\");if(!s)n.add(\"needsGitStash\");return n}",
+          "variable": false,
+          "exportNames": [
+            "zln"
+          ]
+        },
+        {
+          "file": "chunk-mphp7acd.js",
+          "name": "F4o",
+          "start": 2826119,
+          "end": 2826179,
+          "moduleLength": 4409957,
+          "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+          "sha256": "952bd203b6637e81c5cb6a4c26e9325b8799e258183dc3f20819fc87ea7e3d94",
+          "source": "async function F4o(){return await CWe({ignoreUntracked:!0})}",
+          "variable": false,
+          "exportNames": [
+            "F4o"
+          ]
+        }
+      ],
+      "initializers": [],
+      "bindings": {
+        "Jmt": {
+          "port": "source:chunk-6xrs6gmd.js:Jmt",
+          "identity": "chunk-6xrs6gmd.js:Jmt"
+        },
+        "YBe": {
+          "port": "source:chunk-mphp7acd.js:YBe",
+          "identity": "chunk-mphp7acd.js:YBe"
+        },
+        "CWe": {
+          "file": "chunk-2ynta9xc.js",
+          "name": "CWe"
+        },
+        "i": {
+          "port": "source:chunk-6hnyhakg.js:i",
+          "identity": "chunk-6hnyhakg.js:i"
+        },
+        "Oa": {
+          "port": "source:chunk-n4qghq20.js:Oa",
+          "identity": "chunk-n4qghq20.js:Oa"
+        },
+        "p0": {
+          "port": "source:chunk-mphp7acd.js:p0",
+          "identity": "chunk-mphp7acd.js:p0"
+        }
+      }
+    }
+  ],
+  "ports": [
+    {
+      "port": "source:chunk-6xrs6gmd.js:Jmt",
+      "file": "chunk-6xrs6gmd.js",
+      "name": "Jmt",
+      "start": 34662,
+      "end": 34740,
+      "moduleLength": 253011,
+      "moduleSha256": "f9dd0da1e467d32595bc9af036ebe3d18edca89a87e6204bf2519aeb61615e17",
+      "sha256": "fef0d384aeb389947aa98e86599df80c4d1487364b9b5d857b46485ff23326df",
+      "source": "function Jmt(e,n){let r=new Set;for(let s of e)if(!n.has(s))r.add(s);return r}",
+      "variable": false
+    },
+    {
+      "port": "source:chunk-mphp7acd.js:YBe",
+      "file": "chunk-mphp7acd.js",
+      "name": "YBe",
+      "start": 2825994,
+      "end": 2826119,
+      "moduleLength": 4409957,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "72cf3c8c768c213a45eb18abacefddcb5ca07980546c4c8ea776c1b0a7a3fd14",
+      "source": "async function YBe(e){if(F()&&e!==void 0){if(!await lIe(e))return!1;return $i({credentials:e})}if(!ft())return!1;return $i()}",
+      "variable": false
+    },
+    {
+      "port": "source:chunk-fmv8bhm3.js:yn",
+      "file": "chunk-fmv8bhm3.js",
+      "name": "yn",
+      "start": 4833,
+      "end": 4907,
+      "moduleLength": 20985,
+      "moduleSha256": "f12234b916e119ba08925edd52562e4f1f5f62a9589769d536f8ede611adaf2f",
+      "sha256": "1fab62db04b104986b0e0d065d3cf7ffceb75cdfb650bf68ae7e99ba5a452173",
+      "source": "yn=Object.freeze([\"-c\",\"core.hooksPath=/dev/null\",\"-c\",\"core.fsmonitor=\"])",
+      "variable": true
+    },
+    {
+      "port": "source:chunk-fmv8bhm3.js:$S",
+      "file": "chunk-fmv8bhm3.js",
+      "name": "$S",
+      "start": 4908,
+      "end": 4938,
+      "moduleLength": 20985,
+      "moduleSha256": "f12234b916e119ba08925edd52562e4f1f5f62a9589769d536f8ede611adaf2f",
+      "sha256": "cde858bf10562568fd5d7c866a7a26873aeaa3f1bfe19721b2dcee5cfd4cc631",
+      "source": "$S=\"--ignore-submodules=dirty\"",
+      "variable": true
+    },
+    {
+      "port": "sharedPort:attachmentExecFile",
+      "file": "chunk-fmv8bhm3.js",
+      "name": "Ke",
+      "start": 14979,
+      "end": 15549,
+      "moduleLength": 20985,
+      "moduleSha256": "f12234b916e119ba08925edd52562e4f1f5f62a9589769d536f8ede611adaf2f",
+      "sha256": "e07c082451398affd42b511a354eb23a3f674b6ad4b2bbd3af9fafbbdb10fc07",
+      "source": "function Ke(e,r,n={timeout:10*B*U,preserveOutputOnError:!0,useCwd:!0}){return Je(e,r,{allowRepoGitHooks:n.allowRepoGitHooks,allowGitTerminalPrompt:n.allowGitTerminalPrompt,abortSignal:n.abortSignal,timeout:n.timeout,preserveOutputOnError:n.preserveOutputOnError,cwd:n.cwd??(n.useCwd?oe():void 0),env:n.env,extendEnv:n.extendEnv,stdin:n.stdin,input:n.input,stdout:n.stdout,stderr:n.stderr,maxBuffer:n.maxBuffer,stripFinalNewline:n.stripFinalNewline,useToolMemoryCgroup:n.useToolMemoryCgroup,toolCgroupClass:n.toolCgroupClass,waitForExitAfterKill:n.waitForExitAfterKill})}",
+      "variable": false
+    },
+    {
+      "port": "source:chunk-2ynta9xc.js:vt",
+      "file": "chunk-2ynta9xc.js",
+      "name": "vt",
+      "start": 53914,
+      "end": 53997,
+      "moduleLength": 77871,
+      "moduleSha256": "f3e239a22bc356ef2664a104850f816b164d4874821637ec72f203620c439e1d",
+      "sha256": "beae79e87446b6d6c0e5197c51e2d402a4673ea4790d9fc482d9083683d4d57c",
+      "source": "function vt(){let e=Cu();return e.gitExecutable??=uD(\"git\")||\"git\",e.gitExecutable}",
+      "variable": false
+    },
+    {
+      "port": "source:chunk-fmv8bhm3.js:Qo",
+      "file": "chunk-fmv8bhm3.js",
+      "name": "Qo",
+      "start": 5984,
+      "end": 6101,
+      "moduleLength": 20985,
+      "moduleSha256": "f12234b916e119ba08925edd52562e4f1f5f62a9589769d536f8ede611adaf2f",
+      "sha256": "e44b1fc87acb437bede85c971e4080b2c29e85ed08c18cb51790c7aa88210c08",
+      "source": "function Qo(e,r={}){let n=e?.GIT_ALLOW_PROTOCOL?.split(\":\").includes(\"ssh\")??!1;return nt(fe({...Ze,...!n&&Xe},e,r))}",
+      "variable": false
+    },
+    {
+      "port": "source:chunk-6hnyhakg.js:i",
+      "file": "chunk-6hnyhakg.js",
+      "name": "i",
+      "start": 1280,
+      "end": 1397,
+      "moduleLength": 1555,
+      "moduleSha256": "b2c8cad6d46be86d5715172f94bfc8b9ddbe5f28c2e068ee53ebebb35b9948de",
+      "sha256": "7f2df95e7a21ebb980f33de170d716031fa6e71b459046f55a71def4a55e662f",
+      "source": "function i(t,e){let n=a().state;if(n.sink===null){s(n,{eventName:t,metadata:e,async:!1});return}n.sink.logEvent(t,e)}",
+      "variable": false
+    },
+    {
+      "port": "source:chunk-n4qghq20.js:Oa",
+      "file": "chunk-n4qghq20.js",
+      "name": "Oa",
+      "start": 894,
+      "end": 943,
+      "moduleLength": 1262,
+      "moduleSha256": "39fd2d5d055aa0449210ddff4a5907753c0460a10b43931920c5796a088aabbb",
+      "sha256": "84033057b8106ca9a5856c6491400bcf49a965748c486bddc2e2f6bf659ea187",
+      "source": "function Oa(n){return r([...n].sort().join(\",\"))}",
+      "variable": false
+    },
+    {
+      "port": "source:chunk-mphp7acd.js:p0",
+      "file": "chunk-mphp7acd.js",
+      "name": "p0",
+      "start": 3187761,
+      "end": 3215210,
+      "moduleLength": 4409957,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "808a8dfcc991d1b0d6d10d52574a00e05633cca8a0f87c35597bd7329c17ec1e",
+      "source": "async function p0(e){let{initialMessage:n,signal:r}=e,s=e.cwd??oe(),g=e.connectedSession===void 0?void 0:Promise.resolve(e.connectedSession),h=()=>g??=o9e(),b,w=()=>b??=h().then((_e)=>W9t(_e,void 0)),D,j=()=>D??=XA().catch(()=>!1).then(async(_e)=>_e||await h()),z=op(\"allow_remote_sessions\",\"Cloud sessions\",\"are\");if(z)return $C(\"allow_remote_sessions\",\"cloud_session\"),e.onCreateFail?.(z,\"policy_denied\"),null;if(AT())return e.onCreateFail?.(xzn,\"restricted_session\"),null;if(e.builtinTools?.length===0)return e.onCreateFail?.(m6t,\"builtin_tools_empty\"),null;if(a.CLAUDE_CODE_EVAL_CONFINED)return e.onCreateFail?.(UV,\"eval_confined\"),null;if(!Vn())return e.onCreateFail?.(\"Cloud sessions are only available on the first-party Anthropic API provider.\",\"not_first_party\"),null;let K=null,he=!1;try{e.onProgress?.({kind:\"checking\",...lr(s)===null&&{folder:!0}});let _e=m1r(e)&&(Object.keys(e.environmentVariables??{}).length===0&&await h()||(e.source===\"ultrareview\"||e.source===\"ultraplan\")&&await v_(o$o))?\"v1alpha2\":\"v1\";if(e.sessionGroupingId&&_e!==\"v1alpha2\")return e.onCreateFail?.(m1r(e)?\"--project requires the new session-create endpoint, which isn't enabled for your account yet \\u2014 no session was created.\":\"--project cannot be used on a GitHub-PR-bound create; it has no Project input \\u2014 no session was created.\",\"project_not_enabled\",{endpoint:_e}),null;if(e.agentId&&_e!==\"v1alpha2\")return e.onCreateFail?.(\"Dispatching into a Kindling project requires the new session-create endpoint, which isn't enabled for your account yet \\u2014 no session was created.\",\"agent_not_enabled\",{endpoint:_e}),null;if(e.deviceBinding&&e.sessionGroupingId)return e.onCreateFail?.(\"--project cannot be combined with a device-bound session yet \\u2014 no session was created.\",\"device_bind_project_unsupported\",{endpoint:_e}),null;if(e.deviceBinding&&e.agentId)return e.onCreateFail?.(\"An agent-owned session cannot be combined with a device-bound session yet \\u2014 no session was created.\",\"device_bind_agent_unsupported\",{endpoint:_e}),null;if(e.deviceBinding&&e.deferInitialMessage!==!0&&Eje(e,n)!==void 0)return e.onCreateFail?.(g6t,\"device_bind_tools_prompt_unsupported\",{endpoint:_e}),null;await $i({credentials:e.credentials,storageV5:e.storageV5});let ke=_2e();if(!ke){let ta=\"Cloud sessions require a claude.ai login. Run /login to authenticate.\"+(a.CLAUDE_CODE_REMOTE?` (in CCR: env=${a.CLAUDE_CODE_OAUTH_TOKEN?\"set\":\"unset\"}, fd=${a.CLAUDE_CODE_OAUTH_TOKEN_FILE_DESCRIPTOR?\"set\":\"unset\"})`:\"\");return d(Error(ta)),e.onCreateFail?.(ta,\"no_access_token\"),null}let be=await hj();if(!be){let ta=\"Unable to get organization UUID for cloud session creation\"+(a.CLAUDE_CODE_REMOTE?` (in CCR: CLAUDE_CODE_ORGANIZATION_UUID=${a.CLAUDE_CODE_ORGANIZATION_UUID?\"set\":\"unset\"})`:\"\");return d(Error(ta)),e.onCreateFail?.(ta,\"no_org_uuid\"),null}let ve={...e.environmentVariables};if(delete ve.CLAUDE_CODE_OAUTH_TOKEN,e.environmentId){let{url:ta,headers:xl}=Z9t(_e,ke,be),Xa=null,bd=null;if(e.useBundle){let fp=await j(),wl=await s8t({oauthToken:ke,sessionId:q(),baseUrl:dn().BASE_API_URL},{signal:r,baseRef:e.bundleBaseRef,forceScope:e.bundleForceScope,...fp&&{hardenForDeviceSessions:!0},...r8t(fp,e.onBundleNotice)},e.onBundleNotice);if(r.aborted)throw new Ye;if(!wl.success){if(t(`Bundle upload failed: ${wl.error}`,{level:\"error\"}),wl.failReason!==\"too_large\")e.onBundleFail?.(wl.error,\"bundle\");return null}if(bd=wl.fileId,wl.leftOut?.length)e.onBundleNotice?.(kje(wl.leftOut,{readRules:fp}));if(wl.deletedHere?.length)e.onBundleNotice?.(_je(wl.deletedHere));i(\"tengu_teleport_bundle_mode\",{size_bytes:wl.bundleSizeBytes,scope:c(wl.scope),has_wip:wl.hasWip,reason:S(\"explicit_env_bundle\")})}else if(e.sourceUrl)Xa={type:\"git_repository\",url:e.sourceUrl,revision:e.branchName};else if(!e.agentId){let fp=await hT();if(fp&&!dD(fp))Xa={type:\"git_repository\",url:`https://${fp.host}/${fp.owner}/${fp.name}`,revision:e.branchName}}let Ml=e.title||e.description||\"Remote task\",gf=Eje(e,n),Qf=V9t({initialMessage:gf?null:n,initialMessageUuid:e.initialMessageUuid,permissionMode:e.permissionMode,proactivityLevel:e.proactivityLevel,ultraplan:e.ultraplan,title:e.title,thinking:e.thinking}),Gu=await e8t(e.deviceBinding,_e,e.environmentId,void 0,e.correlationId,e.credentials,h()),Am=f$t(e.environmentId),Cb=(fp,wl,xb)=>_e===\"v1alpha2\"?Efn({title:Ml,worker:Am,events:Qf,sources:Xa?[Xa]:[],outcomes:[],model:e.model,seedBundleFileId:bd??void 0,environmentVariables:ve,appendSystemPrompt:e.appendSystemPrompt,customSystemPrompt:e.customSystemPrompt,appendSubagentSystemPrompt:e.appendSubagentSystemPrompt,fallbackModel:e.fallbackModel,maxTurns:e.maxTurns,maxBudgetUsd:e.maxBudgetUsd,allowedTools:e.allowedTools,disallowedTools:e.disallowedTools,builtinTools:e.builtinTools,outputSchema:e.outputSchema,tags:e.tags,sessionGroupingId:e.sessionGroupingId,agentId:e.agentId,correlationId:e.correlationId,deviceBinding:fp,requestElevatedTier:wl,deferFirstPrompt:xb}):{title:Ml,events:Qf,session_context:{sources:Xa?[Xa]:[],...bd&&{seed_bundle_file_id:bd},outcomes:[],environment_variables:ve,...e.model&&{model:e.model},...e.appendSystemPrompt&&{append_system_prompt:e.appendSystemPrompt},...Y9t(e),...e.outputSchema&&{output_schema:e.outputSchema},...e.correlationId&&{correlation_id:e.correlationId}},...Am,...e.tags&&{tags:e.tags}};if(t(`[teleportToRemote] explicit env ${e.environmentId}, ${Object.keys(ve).length} env vars, ${bd?`bundle=${bd}`:`source=${Xa?.url??\"none\"}@${e.branchName??\"default\"}`}`),r.aborted)throw new Ye;let{response:zu,bind:Ny,held:By,attested:xp,firstPromptDeferred:Nv}=await n8t({prepared:Gu,buildBody:Cb,drops:g1r({events:Qf,environmentVariables:ve}),callerSendsFirstPrompt:e.deferInitialMessage===!0,attaches:{anything:Xa!==null||bd!==null,launchCheckout:null},post:(fp,wl)=>St.post(ta,fp,{headers:wl?{...xl,...wl}:xl,signal:r,validateStatus:(xb)=>xb<500})});if(zu.status!==200&&zu.status!==201){let fp=`CreateSession ${zu.status}: ${_(zu.data)}`,wl=zu.data;if([401,403,429].includes(zu.status)||wl?.error?.reason===\"github_repo_access_denied\"||vA(wl))t(`[teleportToRemote] ${fp}`,{level:\"error\"});else{let xb=(NP)=>NP&&/^[a-z][a-z0-9_]*$/.test(NP)?NP:void 0;d(Error(`[type=${xb(wl?.error?.type)},reason=${xb(wl?.error?.reason)}] ${fp}`))}return e.onCreateFail?.(vA(wl)&&RUe||e.sessionGroupingId&&_1r(e.sessionGroupingId,wl?.error)||y1r(zu.status,wl?.error?.message)||wl?.error?.message||`${zu.status} ${zu.statusText||\"\"}`.trim(),\"create_request_failed\",{status:zu.status,serverType:q9t(wl?.error?.type),serverReason:K9t(wl?.error?.reason),endpoint:_e}),null}let Zf=vfn(_e,zu.data);if(!Zf||typeof Zf.id!==\"string\")return d(st(Error(`No session id in response: ${_(zu.data)}`),\"CreateSession response missing session id\")),e.onCreateFail?.(\"Server returned a malformed session response (no session id)\",\"malformed_response\"),null;e.onProgress?.({kind:\"session_exists\",sessionId:Zf.id});let jy=await Q9t({options:e,createEndpoint:_e,responseData:zu.data,sessionId:Zf.id,held:gf,bound:Ny?.ok===!0,firstPromptDeferred:Nv,followsUploads:!1,signal:r});if(!jy.ok)return null;if(z9t(Zf.id,e.source,{project:!1,global:!1},{endpoint:_e,grouped:e.sessionGroupingId!=null},e.storageV5),t8t(e.deviceBinding,Ny,Zf.id,e.storageV5),xp&&e.title)J9t(Zf.id,e.title,Ny?.ok?Ny.value:void 0,e.credentials,Ny?.ok?By:void 0);let Rb=gf?jy.withheld:Nv?X9t(Qf,n):void 0;return{id:Zf.id,title:Zf.title||Ml,...Rb&&{withheldInitialMessage:Rb},...e.maxTurns!==void 0&&{maxTurnsConfirmed:AUe(_e,Zf,e.maxTurns)}}}let Te=!1,xe=e.poolId!==void 0?{id:e.poolId,source:void 0,ignoredUntrustedPool:void 0}:Te?{id:void 0,source:void 0,ignoredUntrustedPool:void 0}:zde();if(xe.ignoredUntrustedPool)t(`Ignoring self-hosted environment default ${xe.ignoredUntrustedPool.id} from ${xe.ignoredUntrustedPool.source} \\u2014 environment placement is only honoured from user/policy/flag settings. Run /remote-env to set your environment.`,{level:\"warn\"});let Pe=xe.id,$e=Gde(Pe);if($e&&e.poolId===void 0)Cfn(ke,e.credentials).then((ta)=>{if(ta.length>0&&!ta.some((xl)=>xl.pool_id===Pe))t(`Configured default environment ${Pe} is not in the org's environment list \\u2014 sending it anyway; server validates at CreateSession`,{level:\"warn\"})},(ta)=>t(`fetchSelfHostedPools rejected: ${l(ta)}`,{level:\"warn\"}));let Ne=e.description||qJo(n),We=!Ne&&await h(),qe=e.title&&e.reuseOutcomeBranch?Promise.resolve({title:e.title,branchName:e.reuseOutcomeBranch}):We?Promise.resolve(G9t):HJo(Ne||G9t.title,r,e.credentials);t(\"[teleport] phase: env-select\");let Qe=$e?[]:await m9(ke,e.storageV5,e.credentials);if(r.aborted)throw new Ye;if(!$e&&Qe.length===0&&!Te)try{Qe=[await D1e(void 0,r,ke)],t(\"[teleportToRemote] Auto-created default cloud env\")}catch(ta){if(r.aborted)throw new Ye;return t(`[teleportToRemote] auto-create env failed: ${l(ta)}`,{level:\"warn\"}),e.onBundleFail?.(\"Could not create a cloud environment. Set one up at https://claude.ai/code/onboarding?magic=env-setup\",\"env_create\"),null}t(`Available environments: ${Qe.map((ta)=>`${ta.environment_id} (${ta.name}, ${ta.kind})`).join(\", \")}`);let Ze=Pe,et=Ze?Qe.find((ta)=>ta.environment_id===Ze):void 0,bt=Qe.find((ta)=>ta.kind===\"anthropic_cloud\");if(!$e&&e.useDefaultEnvironment&&!et&&!bt){if(t(`No configured default or anthropic_cloud in env list (${Qe.length} envs); retrying fetchEnvironments`),Qe=await m9(ke,e.storageV5,e.credentials),r.aborted)throw new Ye;if(et=Ze?Qe.find((ta)=>ta.environment_id===Ze):void 0,bt=Qe.find((ta)=>ta.kind===\"anthropic_cloud\"),!et&&!bt){let ta=`No configured default or anthropic_cloud environment available after retry (got: ${Qe.map((xl)=>`${xl.name} (${xl.kind})`).join(\", \")}${Ze?`; configured default ${Ze} not in list`:\"\"})`;return t(`[teleportToRemote] ${ta}. Silent byoc fallthrough would launch into a dead env \\u2014 fail fast instead.`,{level:\"error\"}),e.onCreateFail?.(ta,\"no_default_env\"),null}}let kt=$e?void 0:et||bt||Qe.find((ta)=>ta.kind!==\"bridge\")||Qe[0];if(!kt&&!$e)return d(Error(\"No environments available for session creation\")),e.onCreateFail?.(\"No environments available for session creation\",\"no_environments\"),null;if(Ze&&kt){let ta=kt.environment_id===Ze;t(ta?`Using configured default environment: ${Ze}`:`Configured default environment ${Ze} not found, using first available`)}let $t=$e?Ze:kt.environment_id;t(kt?`Selected environment: ${$t} (${kt.name}, ${kt.kind})`:`Selected environment: ${$t}`);let It=null,jt=null,Xt=null,un=\"all\",rn=null,Yt=null;if(e.sourceUrl)It={type:\"git_repository\",url:e.sourceUrl,revision:e.branchName};t(\"[teleport] phase: branch-detect\");let Qt=It||e.agentId||Te?null:await hT(e.cwd),nn=Qt&&dD(Qt)?null:Qt;if(Qt&&!nn)t(\"[teleportToRemote] nested GitLab project \\u2014 not sent as a git source\");let Pn=!1,$n=null,qn=!1,En=!1,zn=e.sourceUrl?\"explicit_source_url\":e.agentId?\"agent_defaults\":\"no_git_at_all\",xn=lr(s),Jn=$e||kt?.kind===\"byoc\",wn=e.reuseOutcomeBranch?\"--on-branch\":\"--ref\",eo=null,to=e.allowBundle&&!Jn&&!e.agentId&&a.CCR_FORCE_BUNDLE,ao=e.allowBundle&&!Jn&&!e.agentId&&xn!==null&&(a.CCR_ENABLE_BUNDLE||await v_(\"tengu_ccr_bundle_seed_enabled\")),mo=e.allowBundle&&!Jn&&!e.agentId&&xn!==null?L9t():[];if(mo.length>0)e.onBundleNotice?.(`${mo.join(\", \")} in this repository\\u2019s .claude/settings files ${mo.length===1?\"is\":\"are\"} ignored there: how a cloud start is seeded from this machine is the machine owner\\u2019s setting (shell environment or ~/.claude/settings.json), never a repository\\u2019s.`);let $o=null,Ao={folderRoot:null,optedIn:!1,insideAnotherCheckout:!1},{folderRoot:Po,optedIn:ur}=Ao,kr,po=e.branchFromHead===!0&&e.branchName!==void 0&&e.explicitRef===void 0,Tr=xn!==null&&await j()?await Kde(xn,r):void 0,Yr=xn!==null&&nn&&!Jn&&!to&&(ur||po)?await Orr(xn,Tr===void 0?void 0:await D5t(Tr,xn,r)):null,gr=po&&e.branchName!==void 0&&xn!==null&&Yr!==null?await N5t({gitRoot:xn,remoteName:Yr.name,branch:e.branchName,nameContaining:nn?!oo(nn.host):!1,sessionRoot:Tr===void 0?void 0:xn,sessionReach:Tr,signal:r}):null,_o=po&&Yr===null&&Tr!==void 0&&!!nn&&!Jn&&!to;if(_o)t(\"[teleportToRemote] the screened remote look-up answered nothing, so the start was not resolved. One possible cause: its git applies no personal git file, so a checkout that git takes for another account\\u2019s counts as safe only when the system file says so (git config --system --add safe.directory <path>).\",{level:\"warn\"});let wo=gr?.kind===\"pushed_ancestor\"&&(!nn||oo(nn.host)||gr.branch!==null||gr.containedIn!==void 0)?gr:null;if(r.aborted)throw new Ye;let br=null;if(r.aborted)throw new Ye;if(nn&&!to)if(Jn)Pn=!0,zn=\"byoc_env_skip_preflight\";else if(oo(nn.host)){let ta=await G4e(nn.owner,nn.name,r);Pn=ta.appInstalled,$n=ta.defaultBranch,qn=ta.transient,En=ta.linkedAccountAccess===\"github_not_connected\",zn=Pn?\"github_preflight_ok\":\"github_preflight_failed\"}else Pn=!0,zn=\"ghes_optimistic\";else if(to)zn=\"forced_bundle\";else if(xn&&!e.agentId)zn=\"no_github_remote\";if(r.aborted)throw new Ye;let xo={engine:\"none\",reason:\"not_opted_in\"},dr=null,or=null,Wr=null,_r=null,Fr=null,es=null,qs=null,Vs=(ta,xl)=>{},fs=nn&&!oo(nn.host)?{reason:\"other_host\"}:e.explicitRef!==void 0?{reason:\"explicit_ref\",flag:wn}:null;if(!Pn&&!ao&&nn)Pn=!0;let Qi=null,xs=null,gi=null;if(gr?.kind===\"none\"&&Pn&&nn&&ao&&or===null&&dr===null)Pn=!1,zn=\"branch_not_on_remote\";if(Pn&&nn){let{host:ta,owner:xl,name:Xa}=nn;kr??=e.branchName??await _T();let bd=kr;if(wo!==null&&Yr!==null){let Ml=oo(ta)?null:wo.branch??wo.containedIn??null;bd=Ml??wo.commit,xs=Ml!==null?Dh(Ml):wo.branch!==null?`${Yr.name}/${Dh(wo.branch)}`:`commit ${wo.commit.slice(0,12)}`,gi=B5t({branch:kr,start:wo,remoteName:Yr.name,host:ta,byName:Ml,carried:ur&&Ml===null}),Qi=gi}else if(gr?.kind===\"none\"){bd=$n??gr.defaultBranch??await _T();let Ml=Dh(bd);xs=Ml,Qi=`${kr===\"HEAD\"?\"This detached HEAD\":`Branch ${Dh(kr)}`} shares no history with ${Yr?.name??\"the remote\"} as last fetched here, so the cloud session starts from ${Ml} instead; commits and changes that exist only on this machine are not in it.`}else if(_o&&!ur){let Ml=oo(ta)?\"GitHub\":ta;Qi=`${kr===\"HEAD\"?`This checkout is on a detached HEAD, and no remote of it could be read, so its commit could not be looked for on ${Ml}. The cloud session was asked to start from HEAD as ${Ml} has it, its default branch. To start from your work, push it`:`Whether branch ${Dh(kr)} is on ${Ml} could not be checked, because no remote of this checkout could be read. The cloud session was asked to start from it by name. If it is not there, push your work`} to a branch and start a new session from that branch.`}if(e.reuseOutcomeBranch){let Ml=process.env.CCR_ON_BRANCH_DEFAULT_GUARD,gf=a.CCR_ON_BRANCH_DEFAULT_GUARD??(Ml!=null&&String(Ml).trim()?\"enforce\":await v_(\"tengu_on_branch_default_guard_observe\").catch(()=>!1)?\"observe\":\"enforce\");if(gf!==\"off\"){let Qf=$n??await Yrr(e.cwd);if(Qf===null)t(\"[teleportToRemote] reuse-outcome-branch collision guard: default branch unknown (no preflight answer, origin/HEAD \"+`unresolved) \\u2014 failing open for '${e.reuseOutcomeBranch}'`);else if(e.reuseOutcomeBranch===Qf){let Gu=e.explicitRef===e.reuseOutcomeBranch,Am=e.source===\"autofix_pr\";if(i(\"tengu_teleport_on_branch_default_guard\",{mode:c(gf),source:c(e.source),evidence:c($n!==null?\"preflight\":\"local_symref\"),arm:c(Jn?\"pool\":\"managed\")}),Jn)t(`[teleportToRemote] reuse-outcome-branch collision guard (pool arm): '${e.reuseOutcomeBranch}' is the `+\"repository's default branch \\u2014 allowed on self-hosted \"+\"pools; emitted for policy telemetry only\");else if(gf===\"observe\")t(`[teleportToRemote] reuse-outcome-branch collision guard (observe): '${e.reuseOutcomeBranch}' is the `+\"repository's default branch \\u2014 would deny; proceeding \"+\"(CCR_ON_BRANCH_DEFAULT_GUARD=observe)\");else return e.onCreateFail?.((Gu?`--on-branch ${e.reuseOutcomeBranch} targets `:Am?`This pull request's head branch '${e.reuseOutcomeBranch}' is `:`The requested outcome branch '${e.reuseOutcomeBranch}' is `)+\"the repository's default branch, which this environment's runner cannot reuse as its work branch (its git checkout -b fails on a name the clone already has). \"+(Gu?`Use --ref ${e.reuseOutcomeBranch} to base the `+\"session on it and let it push to a fresh claude/\\u2026 branch.\":Am?\"Autofix can monitor this PR from a self-hosted (BYOC) default environment, whose runner tolerates reusing the default branch.\":\"Use a non-default branch.\"),\"outcome_branch_is_default\"),null}}}t(`[teleportToRemote] Git source: ${ta}/${xl}/${Xa}, revision: ${bd??\"none\"}${Wr===null?\"\":` pinned at ${Wr}`}`),It={type:\"git_repository\",url:`https://${ta}/${xl}/${Xa}`,revision:Wr??bd,...e.reuseOutcomeBranch&&{allow_unrestricted_git_push:!0}},jt=`${xl}/${Xa}`}let ar=null,Go=null,Hr=Qt?oR(Qt.host):null,os=Hr===\"gitlab\"?\"GitLab\":Hr===\"bitbucket\"?\"Bitbucket\":null;if(!It&&!Jn&&e.explicitRef){let ta=to?\"CCR_FORCE_BUNDLE is set\":nn?qn?\"the GitHub App preflight failed transiently (network or service hiccup)\":\"the GitHub App is not set up for this repository\":\"no GitHub remote was detected in this directory\",xl=ao?\"be seeded from your local working tree\":\"start with an empty sandbox\",Xa=ao?`drop ${wn} to seed from local HEAD`:`drop ${wn} to start with an empty sandbox`;return e.onCreateFail?.(En?`${wn} ${e.explicitRef} cannot be honored: ${f8e()} \\u2014 or ${Xa} instead.`:`${wn} ${e.explicitRef} cannot be honored: ${ta}, so the session would ${xl} instead. `+(!Qt?\"\":qn?\"Retry in a moment, or \":os?`Cloud sessions can't clone from ${os} yet \\u2014 `:\"Set up the GitHub integration at https://claude.ai/code, or \")+`${Xa}.`,e.reuseOutcomeBranch?\"on_branch_no_git_source\":\"explicit_ref_no_git_source\",{preflightTransient:qn}),null}if(r.aborted)throw new Ye;let mr=!0,ls=e.firstUpload,ts=!1,Zs=!It&&ao;if(!1)switch(Xa.kind){case\"failed\":case\"bundle\":case\"clone_fallback\":case\"created_empty\":}if(Zs){t(\"[teleport] phase: bundle-upload\"),t(`[teleportToRemote] Bundling (reason: ${zn})`),i(\"tengu_teleport_bundle_started\",{reason:c(zn)}),e.onProgress?.({kind:\"bundling\",rerouted:!1}),rn=Date.now();let xl=await j(),Xa=await s8t({oauthToken:ke,sessionId:q(),baseUrl:dn().BASE_API_URL},{signal:r,currentBranchOnly:ur,...xl&&{hardenForDeviceSessions:!0},...r8t(xl,e.onBundleNotice),onBundled:(bd)=>e.onProgress?.({kind:\"bundled\",...bd})},ar===null?e.onBundleNotice:null,os?{kind:\"other_forge\",forge:os}:to?{kind:\"forced_bundle\"}:null);if(r.aborted)throw new Ye;if(!Xa.success){let{failReason:bd,error:Ml}=Xa,gf=\"advice\"in Xa?Xa.advice:void 0;if(bd===\"uncommitted_credentials\"||bd===\"git_dir_tampered\")return t(`Bundle refused: ${Ml}`,{level:\"error\"}),e.onBundleFail?.(Ml,\"bundle\"),null;{t(`Bundle upload failed: ${Ml}`,{level:\"error\"});let Qf=!Qt?\"\":zn===\"branch_not_on_remote\"?\". This branch shares no history with the remote as last fetched here; push it (or fetch) to start from GitHub instead\":qn?\". The GitHub App preflight failed transiently (network or service hiccup) \\u2014 retry in a moment to start from GitHub instead\":os?`. Cloud sessions can't clone from ${os} yet, so the bundle is the only way to start one from this repository`:\". Please set up GitHub on https://claude.ai/code\",Gu;switch(bd){case\"empty_repo\":Gu=`${Ml} \\u2014 run \\`git add . && git commit -m \"initial\"\\` then retry`;break;case\"too_large\":Gu=`Repo is too large to teleport${Qf}`;break;case\"git_error\":Gu=`Failed to create git bundle (${Ml})${Qf}`;break;case\"stash_failed\":case\"no_changes\":case\"unsupported_layout\":case\"refused\":Gu=Ml;break;case\"not_a_repo\":Gu=Ml;break;case\"upload_failed\":Gu=`Could not upload repo bundle (${Ml})${Qf}`;break;case void 0:Gu=`Bundle upload failed: ${Ml}${Qf}`;break;default:{let Am=bd;Gu=`Bundle upload failed: ${Ml}`}}return e.onBundleFail?.(Gu,\"bundle\"),null}}else{if(Xt=Xa.fileId,un=Xa.scope,Xa.leftOut?.length)e.onBundleNotice?.(kje(Xa.leftOut,{readRules:xl}));if(Xa.deletedHere?.length)e.onBundleNotice?.(_je(Xa.deletedHere));i(\"tengu_teleport_bundle_mode\",{size_bytes:Xa.bundleSizeBytes,scope:c(Xa.scope),has_wip:Xa.hasWip,current_branch_only:ur,reason:c(zn)})}}let vi=null,Ui=br===null?null:await br;if(r.aborted)throw new Ye;let Zo=It!==null&&xs!==null?xs:kr,ri=Wr!==null,Wa=null,ss=Fr,ii=es,Yo=gr?.kind??null;if(i(\"tengu_teleport_source_decision\",{reason:c(zn),path:S(It?\"github\":Xt?\"bundle\":\"empty\"),...{},...Yo!==null&&{checkout_start:c(Yo)},..._o&&{checkout_start:S(\"remote_unresolved\")},...wo!==null&&{checkout_start_ahead:wo.aheadCount},...{},...{},...{},...{},...{},...{},...{}}),!It&&!Xt){if(Jn&&!e.agentId){let ta=e.explicitRef?` \\u2014 so ${wn} ${e.explicitRef} cannot be honored`:\"\",Xa=`${`The selected environment \"${kt?.name??$t}\"`} requires a git source, but no GitHub remote was detected${ta}. Check that \\`git remote get-url origin\\` returns a GitHub URL.`;return t(`[teleportToRemote] ${Xa} (byoc env, sourceReason=${zn})`,{level:\"error\"}),e.onCreateFail?.(Xa,\"byoc_no_git_source\"),null}if(K===null&&vi===null)t(\"[teleportToRemote] No repository detected \\u2014 session will have an empty sandbox\")}t(\"[teleport] phase: title-await\");let qr=await qe;if(r.aborted)throw new Ye;let Lr=e.title||qr.title,Kr=e.reuseOutcomeBranch||qr.branchName,vr=jt===null?null:{type:\"git_repository\",git_info:{type:\"github\",repo:jt,branches:[Kr]}},{url:nr,headers:hs}=Z9t(_e,ke,be),Rr=!1;if(Qi!==null&&It!==null&&!0)e.onBundleNotice?.(Qi);let ti=Rr&&_e===\"v1alpha2\",oi=!1,Ci=e.ultraplan?`ultraplan: ${Lr}`:Lr,ua=Eje(e,n),Tl=ur||Po!==null||eo!==null,Pl=ua??(e.deferInitialMessage===!0&&n!==null&&Tl?{content:n,uuid:e.initialMessageUuid??DE()}:void 0),Eu=V9t({initialMessage:Pl?null:n,initialMessageUuid:e.initialMessageUuid,permissionMode:e.permissionMode,proactivityLevel:e.proactivityLevel,ultraplan:e.ultraplan,title:e.title,thinking:e.thinking}),Ps=e.model??rt(),Ul=a_n(Ps,e.effort);e.onProgress?.({kind:\"creating\"});let Cp=$o!==null?$o.binder:await e8t(e.deviceBinding,_e,$t,kt?.kind,e.correlationId,e.credentials,h()),ma=(ta,xl,Xa,bd)=>{let Ml=e.deviceBinding!==void 0&&ta===void 0,gf=_e===\"v1alpha2\"?Efn({title:Ci,worker:f$t($t),events:Eu,sources:It?[It]:[],outcomes:vr?[vr]:[],model:Ps,effortLevel:Ul,seedBundleFileId:Xt??void 0,reuseOutcomeBranches:Boolean(e.reuseOutcomeBranch),environmentVariables:ve,appendSystemPrompt:e.appendSystemPrompt,customSystemPrompt:e.customSystemPrompt,appendSubagentSystemPrompt:e.appendSubagentSystemPrompt,fallbackModel:e.fallbackModel,maxTurns:e.maxTurns,maxBudgetUsd:e.maxBudgetUsd,allowedTools:e.allowedTools,disallowedTools:e.disallowedTools,builtinTools:e.builtinTools,outputSchema:e.outputSchema,tags:e.tags,sessionGroupingId:e.sessionGroupingId,agentId:e.agentId,correlationId:e.correlationId,persistentVolume:e.persistentVolume,deviceBinding:ta,requestElevatedTier:xl,deferFirstPrompt:Xa,repositoriesTrusted:bd}):{title:Ci,events:Eu,session_context:{sources:It?[It]:[],...Xt&&{seed_bundle_file_id:Xt},outcomes:vr?[vr]:[],model:Ps,...Ul&&{effort_level:Ul},...e.reuseOutcomeBranch&&{reuse_outcome_branches:!0},...e.githubPr&&{github_pr:e.githubPr},...Object.keys(ve).length>0&&{environment_variables:ve},...e.appendSystemPrompt&&{append_system_prompt:e.appendSystemPrompt},...Y9t(e),...e.outputSchema&&{output_schema:e.outputSchema},...e.correlationId&&{correlation_id:e.correlationId}},...f$t($t),...h1r(e.persistentVolume),...e.tags&&{tags:e.tags}};return t(`Creating session with payload: ${_(s$o(gf),null,2)}`),gf};if(r.aborted)throw new Ye;e.onProgress?.({kind:\"request_sent\"}),t(\"[teleport] phase: POST-sent\");let{response:Wc,bind:Yd,held:bg,attested:yC,firstPromptDeferred:jL}=await n8t({prepared:Cp,buildBody:ma,drops:g1r({events:Eu,environmentVariables:ve}),callerSendsFirstPrompt:e.deferInitialMessage===!0,attaches:{anything:It!==null||Xt!==null||ur||Po!==null,launchCheckout:It!==null&&nn!==null&&Xt===null?xn:null},post:(ta,xl)=>St.post(nr,ta,{headers:xl?{...hs,...xl}:hs,signal:r,validateStatus:(Xa)=>Xa<500})});t(`[teleport] phase: POST-response status=${Wc.status}`);let WL=Yd?.ok===!0?bg:void 0,Qc=ti&&(e.deviceBinding===void 0||yC);if(!(Wc.status===200||Wc.status===201)){let ta=`API request failed with status ${Wc.status}: ${Wc.statusText}\n\nResponse data: ${_(Wc.data,null,2)}`,xl=Wc.data,Xa=xl?.error?.type,bd=xl?.error?.reason,Ml=xl?.error?.message,gf=It?Gx(It.url):null,Qf=gf?`${gf.owner}/${gf.name}`:Xt?\"a seed bundle (no git source)\":It?.url??\"no source\",Gu=gf!==null&&uhn(gf),Am=K9t(bd),Cb=typeof Ml===\"string\"&&Ml.includes(\"source repository configuration is not permitted for this environment\")||Am===\"monorepo_source_required\"||Am===\"monorepo_env_required\"||Wc.status===400&&!bd&&Xa===\"invalid_request_error\"&&!Jn&&It!==null&&!Xt&&Gu&&typeof Ml===\"string\"&&/^the request was invalid\\.?$/i.test(Ml);if([401,403,429].includes(Wc.status)||bd===\"github_repo_access_denied\"||vA(xl)||Cb||PUe(bd)!==void 0)t(ta,{level:\"error\"});else{let xp=(Zf)=>Zf&&/^[a-z][a-z0-9_]*$/.test(Zf)?Zf:void 0,Nv=\"\";d(Error(`[type=${xp(Xa)},reason=${xp(bd)},isByocEnv=${Jn}] ${ta}`))}let zu=y1r(Wc.status,Ml)||Ml||`${Wc.status} ${Wc.statusText||\"\"}`.trim();if(Cb)zu=zJo(Gu,kt?.name??$t,Qf);let Ny=e.sessionGroupingId&&_1r(e.sessionGroupingId,xl?.error),By=vA(xl)&&RUe||Ny||zu;return e.onCreateFail?.(By,\"create_request_failed\",{status:Wc.status,serverType:q9t(Xa),serverReason:Am,endpoint:_e}),null}let Kf=vfn(_e,Wc.data);if(!Kf||typeof Kf.id!==\"string\")return d(st(Error(`Cannot determine session ID from API response: ${_(Wc.data)}`),\"CreateSession response missing session id\")),e.onCreateFail?.(\"Server returned a malformed session response (no session id)\",\"malformed_response\"),null;e.onProgress?.({kind:\"session_exists\",sessionId:Kf.id});let Xpn=Qc&&!0&&!(Yd!==void 0&&!Yd.ok),Iv=null;if(Iv!==null)e.onBundleNotice?.(Iv);let vVe=oi&&yC,Ov=async(ta,xl=null)=>{},cge=(ta)=>Iu(Ov(!1,ta),r,()=>new Ye).catch((xl)=>{if(!at(xl))d(xl)}),Rm=await Q9t({options:e,createEndpoint:_e,responseData:Wc.data,sessionId:Kf.id,held:ua,bound:Yd?.ok===!0,firstPromptDeferred:jL,followsUploads:Tl,signal:r});if(!Rm.ok)return null;if(t(`Successfully created remote session: ${Kf.id}`),K===null)e.onProgress?.({kind:\"created\"});let y_=()=>z9t(Kf.id,e.source,{project:It!==null&&zn!==\"github_preflight_failed\"&&zn!==\"monorepo_env_no_checkout\"&&zn!==\"monorepo_flag\",global:Xt===null&&K===null},{endpoint:_e,grouped:e.sessionGroupingId!=null,effortLevel:Ul},e.storageV5);if(Wa?.kind!==\"seed\"||Wa.cloudCheckoutOrigin.kind!==\"created_empty\")y_();let Fg=null,tS=(ta)=>Fg??=Wk(Kf.id,ta);if(!1)switch(Wa.kind){case\"seed\":if(Gu!==null&&Am!==null)switch(By.kind){case\"cancelled\":case\"unfilled\":case\"armed\":}case\"not_armed\":default:}if(t8t(e.deviceBinding,Yd,Kf.id,e.storageV5),yC&&e.title)J9t(Kf.id,e.title,Yd?.ok?Yd.value:void 0,e.credentials,WL);let LP=eo===null?void 0:await eZo({sessionId:Kf.id,planning:eo,boundDeviceUuid:Yd?.ok?Yd.value:void 0,held:WL,consentMode:e.homeSettingsConsent,signal:r,credentials:e.credentials,storageV5:e.storageV5}),yj=ua?Rm.withheld:jL?Pl?{...Pl,followsPermissionMode:!0}:X9t(Eu,n):Pl;return{id:Kf.id,title:Kf.title||Ci,...yj&&{withheldInitialMessage:yj},...LP&&{homeSeed:LP},...e.maxTurns!==void 0&&{maxTurnsConfirmed:AUe(_e,Kf,e.maxTurns)}}}catch(_e){let ke=Z(_e);if(at(_e)||St.isCancel(_e))return t(`Remote session create aborted: ${ke.message}`),null;let be=Pu(_e);if(be)t(`Remote session create failed (network): ${ke.message}`,{level:\"error\"});else d(st(Z(ke),\"Remote session create failed\"));return e.onCreateFail?.(`Cloud session create failed: ${ke.message}`,be?\"network_error\":\"exception\"),null}finally{if(K!==null&&!he)e.firstUpload?.discard(K).catch((_e)=>d(_e))}}",
+      "variable": false,
+      "dependencyOnlyLiteralFalseBranches": [
+        {
+          "start": 3205468,
+          "end": 3205552,
+          "sha256": "1f7ef2634953828fa9151d43ac83dc2d238d229bd0657d2dbca2d89e0085054c"
+        },
+        {
+          "start": 3214094,
+          "end": 3214230,
+          "sha256": "af3bd4d3dde391058c584351673e54d69379a363dd12e2b36c49d5e99f2ceb6d"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "version": "2.1.287",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF16 end-exclusive",
+  "groups": {
+    "accessors": {
+      "module": "chunk-bn3p37gv.js",
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "imported": [
+        "n"
+      ],
+      "roots": [
+        "Bz",
+        "ov",
+        "U3t",
+        "xL",
+        "uto",
+        "KOe"
+      ],
+      "declarations": [
+        {
+          "name": "Bz",
+          "start": 98029,
+          "end": 98094,
+          "sha256": "9eb7d91bb3545598f9bcb3199003a33bc75824f63debf8f38bda82dc32dd5a97",
+          "variable": false,
+          "source": "function Bz(e){n().host.extensionsConfig.replaceInlinePlugins(e)}"
+        },
+        {
+          "name": "ov",
+          "start": 98094,
+          "end": 98157,
+          "sha256": "57227dad7c89c84d85bdc427703c7284341c3c1f8062205f1aefc7f5f58637d8",
+          "variable": false,
+          "source": "function ov(){return n().host.extensionsConfig.inlinePlugins()}"
+        },
+        {
+          "name": "U3t",
+          "start": 98157,
+          "end": 98228,
+          "sha256": "8790c78b9eeb7dec8e3144b09ab9349346e6a328e43b5a98f75566a60312a8af",
+          "variable": false,
+          "source": "function U3t(e){n().host.extensionsConfig.replaceInlinePluginsNoMcp(e)}"
+        },
+        {
+          "name": "xL",
+          "start": 98228,
+          "end": 98296,
+          "sha256": "39b0f0c7471fbcb06e1301645bd390591d2b4ec717424af68a8a285664e580d4",
+          "variable": false,
+          "source": "function xL(){return n().host.extensionsConfig.inlinePluginsNoMcp()}"
+        },
+        {
+          "name": "uto",
+          "start": 98296,
+          "end": 98365,
+          "sha256": "552ead58e2e97b0f147b72e1a5f94a6e54b03072894c1965dc3cba44208aac99",
+          "variable": false,
+          "source": "function uto(e){n().host.extensionsConfig.replaceInlinePluginUrls(e)}"
+        },
+        {
+          "name": "KOe",
+          "start": 98365,
+          "end": 98432,
+          "sha256": "d0804456ed5514b181c963b8e880146b53cd7a3ff5e29db79d23f90df2e56f21",
+          "variable": false,
+          "source": "function KOe(){return n().host.extensionsConfig.inlinePluginUrls()}"
+        }
+      ]
+    }
+  },
+  "owner": {
+    "file": "chunk-bn3p37gv.js",
+    "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+    "name": "_e",
+    "start": 58997,
+    "end": 60510,
+    "sha256": "1f90886bb8797abcba801958932f51d7ddc8069177f526ee1df511837a901901",
+    "variable": false,
+    "source": "class _e{#e=[];#t=[];#n=[];#o=void 0;#r=new Map;#i=new Map;#l=[];#d=[];#s=!1;#u=void 0;#a=void 0;#c=void 0;inlinePlugins(){return this.#e}replaceInlinePlugins(e){this.#e=e}inlinePluginsNoMcp(){return this.#t}replaceInlinePluginsNoMcp(e){this.#t=e}inlinePluginUrls(){return this.#n}replaceInlinePluginUrls(e){this.#n=e}syncedPluginDirs(){return this.#o??[]}syncedPluginDirsRegistered(){return this.#o!==void 0}syncedPluginAttestation(e){return this.#r.get(e)}replaceSyncedPluginDirs(e,t=new Map){this.#o=e,this.#r=t,this.#i=this.#p(this.#i)}clearSyncedPluginDirs(){this.#o=void 0,this.#r=new Map,this.#i=new Map}attestedOfficialPluginMarketplace(e){return this.#i.get(e)}replaceAttestedOfficialPluginIds(e){this.#i=this.#p(e)}#p(e){let t=new Set([...this.#r.values()].map((o)=>`${o.pluginName}@${o.marketplace}`));return new Map([...e].filter(([o,r])=>t.has(`${o.slice(0,o.lastIndexOf(\"@\"))}@${r}`)))}additionalDirectoriesForClaudeMd(){return this.#l}replaceAdditionalDirectoriesForClaudeMd(e){this.#l=e}allowedChannels(){return this.#d}replaceAllowedChannels(e){this.#d=e}hasDevChannels(){return this.#s}replaceHasDevChannels(e){this.#s=e}sessionSkillAllowlist(){return this.#u}replaceSessionSkillAllowlist(e){this.#u=e}chromeFlagOverride(){return this.#a}replaceChromeFlagOverride(e){this.#a=e}teammateAgentId(){return this.#c}replaceTeammateAgentId(e){this.#c=e}reset(){this.#e=[],this.#t=[],this.#n=[],this.clearSyncedPluginDirs(),this.#l=[],this.#d=[],this.#s=!1,this.#u=void 0,this.#a=void 0,this.#c=void 0}}",
+    "production": "existing getExecutionSession287().host.extensionsConfig; never instantiate _e in the accessor factory"
+  },
+  "api": {
+    "setInlinePlugins": "Bz",
+    "getInlinePlugins": "ov",
+    "setInlinePluginsNoMcp": "U3t",
+    "getInlinePluginsNoMcp": "xL",
+    "setInlinePluginUrls": "uto",
+    "getInlinePluginUrls": "KOe"
+  },
+  "productionCallers": [
+    {
+      "module": "chunk-q1842b1c.js",
+      "moduleSha256": "53011f90e32203bb47d179b337e6d65e0caf63a2ca681545b60f9c3c388c212f",
+      "token": "Bz(he)",
+      "start": 55093,
+      "end": 55099,
+      "sha256": "0e3e6f452e574dbac2577ee3eba5b33611467342b34f6d54d4e5b1b223daa303",
+      "source": "Bz(he)",
+      "declaration": {
+        "name": "inline callback",
+        "start": 53195,
+        "end": 58125,
+        "sha256": "2b93382fcbadaf270a3ec8d2005e0fc7d60874e7d43e9071b8fba9f1462feb79"
+      }
+    },
+    {
+      "module": "chunk-q1842b1c.js",
+      "moduleSha256": "53011f90e32203bb47d179b337e6d65e0caf63a2ca681545b60f9c3c388c212f",
+      "token": "U3t(Fe)",
+      "start": 55233,
+      "end": 55240,
+      "sha256": "2b8c101e909eaed61ac97cdc34b0015b3bf46d309ba3cd26a4757e2684b8d2a1",
+      "source": "U3t(Fe)",
+      "declaration": {
+        "name": "inline callback",
+        "start": 53195,
+        "end": 58125,
+        "sha256": "2b93382fcbadaf270a3ec8d2005e0fc7d60874e7d43e9071b8fba9f1462feb79"
+      }
+    },
+    {
+      "module": "chunk-q1842b1c.js",
+      "moduleSha256": "53011f90e32203bb47d179b337e6d65e0caf63a2ca681545b60f9c3c388c212f",
+      "token": "uto(Ne)",
+      "start": 55400,
+      "end": 55407,
+      "sha256": "ae9a42b5d33b3ab313cf05259a3f516bec092fe3f158c3730b581eb305245eed",
+      "source": "uto(Ne)",
+      "declaration": {
+        "name": "inline callback",
+        "start": 53195,
+        "end": 58125,
+        "sha256": "2b93382fcbadaf270a3ec8d2005e0fc7d60874e7d43e9071b8fba9f1462feb79"
+      }
+    },
+    {
+      "module": "chunk-q1842b1c.js",
+      "moduleSha256": "53011f90e32203bb47d179b337e6d65e0caf63a2ca681545b60f9c3c388c212f",
+      "token": "new Zo(\"--plugin-dir-no-mcp <path>\"",
+      "start": 74801,
+      "end": 74994,
+      "sha256": "c4ab55800f05757b717b0ccf68fc620ae15588afab39851e2097c7c54dfde19c",
+      "source": "new Zo(\"--plugin-dir-no-mcp <path>\",\"Like --plugin-dir but the engine will not read this plugin's .mcp.json (caller owns its MCP connections)\").argParser((w,C)=>[...C,w]).default([]).hideHelp()",
+      "declaration": {
+        "name": "ur",
+        "start": 53001,
+        "end": 81994,
+        "sha256": "6804367dcd5df214753d4e30b438929b33163abf63d392afc5731db1edf3dda9"
+      }
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "token": "...ov().map",
+      "start": 3802435,
+      "end": 3802588,
+      "sha256": "9273538d185bd9116a6b61ee11d3d7aad2e36dda9f8508dc8da5125ce2fe22ce",
+      "source": "[...ov().map((Pe)=>({kind:\"path\",value:Pe})),...xL().map((Pe)=>({kind:\"path\",value:Pe,skipMcpDiscovery:!0})),...KOe().map((Pe)=>({kind:\"url\",value:Pe}))]",
+      "declaration": {
+        "name": "iqe",
+        "start": 3802153,
+        "end": 3804301,
+        "sha256": "ab21456565c1fd8085f6cd2434e3ed26eb8daa138632d41b826a390237590966"
+      }
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "token": "z.skipMcpDiscovery",
+      "start": 3788976,
+      "end": 3789136,
+      "sha256": "71c30bfad0d693a8818aa5498f88e1badc3bf6bd216172ba99e3328cc9c8aecf",
+      "source": "if(Ne.enabled=Ayt(Ne.source,s,Ne.manifest.defaultEnabled,_e.installationPreference),z.kind===\"path\"&&z.skipMcpDiscovery)Ne.skipMcpDiscovery=!0,Ne.mcpServers={};",
+      "declaration": {
+        "name": "inline callback",
+        "start": 3785457,
+        "end": 3790369,
+        "sha256": "11a96c2c9d8178aac9d51ff78cf585758ebc5bc9819b895317df4b65f6f9d1d9"
+      }
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "token": "if(e.skipMcpDiscovery)return{}",
+      "start": 443770,
+      "end": 443801,
+      "sha256": "ae49c6e6574b61a74252686dfca13ce414ac1a3878614104b060631d61564dbd",
+      "source": "if(e.skipMcpDiscovery)return{};",
+      "declaration": {
+        "name": "sKe",
+        "start": 443370,
+        "end": 446142,
+        "sha256": "ed40665d5533f750fb48d63353b1844a94db6d870f5247cadb59a99dc0fe37cc"
+      }
+    }
+  ]
+}

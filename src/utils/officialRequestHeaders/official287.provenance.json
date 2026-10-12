@@ -1,0 +1,881 @@
+{
+  "version": "2.1.287",
+  "platform": "darwin-arm64",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16 code units",
+  "records": [
+    {
+      "group": "bareSourceGate",
+      "file": "chunk-brnn4zwp.js",
+      "symbol": "Cb",
+      "start": 4828,
+      "end": 4851,
+      "offsetUnit": "UTF-16 code units",
+      "moduleSha256": "6fc81e7fe2a8a0809d0901a28e8bd5487b116b245931c3ac30fcf9b6655400c7",
+      "sourceSha256": "8a9ce1197cf103b4a645a0b4321a5760394faf4b4afe5fedd2c701d4cbc52af7",
+      "source": "function Cb(){return!1}",
+      "variable": false
+    },
+    {
+      "group": "apiKeySource",
+      "file": "chunk-nankzm0s.js",
+      "symbol": "Gp",
+      "start": 620548,
+      "end": 620621,
+      "offsetUnit": "UTF-16 code units",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "sourceSha256": "57ff03411084e0b0565d5455845f741fd0370d6b290b434d5637f0f81d3d9a17",
+      "source": "function Gp(e={}){try{return mb(e)}catch{return{key:null,source:\"none\"}}}",
+      "variable": false
+    },
+    {
+      "group": "messageBearer",
+      "file": "chunk-09m4fzsj.js",
+      "symbol": "d9",
+      "start": 608471,
+      "end": 608718,
+      "offsetUnit": "UTF-16 code units",
+      "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+      "sourceSha256": "307c81b795c79f8517a3f24ee23c3c4c32131de6d15acf101bb98cfe21b7c450",
+      "source": "async function d9(e,n){let r=xr()&&Gp({skipRetrievingKeyFromApiKeyHelper:!0}).source===\"none\",h=Cb()&&!r?void 0:a.ANTHROPIC_AUTH_TOKEN,g=h||await a2e(n);if(g)return e.Authorization=`Bearer ${g}`,h?\"ANTHROPIC_AUTH_TOKEN\":\"apiKeyHelper\";return null}",
+      "variable": false
+    },
+    {
+      "group": "oauthHold",
+      "file": "chunk-nankzm0s.js",
+      "symbol": "l2e",
+      "start": 646594,
+      "end": 646699,
+      "offsetUnit": "UTF-16 code units",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "sourceSha256": "bf3921a0da0007d27ccf960aeb81ac0101c71094329ebde32ea04a4fe5a29599",
+      "source": "function l2e(){let e=fn()?.refreshToken;if(!e)return null;let n=gi.get(e);return n===void 0?null:{url:n}}",
+      "variable": false
+    },
+    {
+      "group": "oauthHoldError",
+      "file": "chunk-8ptzhr8g.js",
+      "symbol": "ose",
+      "start": 7132,
+      "end": 7257,
+      "offsetUnit": "UTF-16 code units",
+      "moduleSha256": "9a19d00409822fae9a74e2a68be1c7029d4ea3e0263f1ee3954762df39bfbaf1",
+      "sourceSha256": "843480c9e9bc127aa0521ffe05eebcc1310a450c73f2c6b61254b4be535aeee6",
+      "source": "class ose extends Error{url;constructor(e){super(\"OAuth account is on hold\");this.url=e;this.name=\"OAuthAccountOnHoldError\"}}",
+      "variable": false
+    },
+    {
+      "group": "oauthLockError",
+      "file": "chunk-09m4fzsj.js",
+      "symbol": "H5e",
+      "start": 599006,
+      "end": 599194,
+      "offsetUnit": "UTF-16 code units",
+      "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+      "sourceSha256": "247831ce2b7e0c40a3556e2417056ebb84bcd6886f947b12bccc1f1b79c1df87",
+      "source": "class H5e extends Error{constructor(){super(\"OAuth access token could not be refreshed: another Claude Code process is holding the refresh lock\");this.name=\"OAuthRefreshLockTimeoutError\"}}",
+      "variable": false
+    },
+    {
+      "group": "sdkInheritance",
+      "file": "chunk-xep95vq1.js",
+      "symbol": "zk",
+      "start": 162591,
+      "end": 162677,
+      "offsetUnit": "UTF-16 code units",
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "sourceSha256": "e8f303877ec9ddf52a514e5ca22b1578886b2a4510262e2b67b16227d1bdb5de",
+      "source": "zk={__auth:{provider:null,tokenCache:null,resolution:null,error:null,extraHeaders:{}}}",
+      "variable": true
+    },
+    {
+      "group": "sdkAuth",
+      "file": "chunk-b5kmgz2n.js",
+      "symbol": "_Go",
+      "start": 3850,
+      "end": 3978,
+      "offsetUnit": "UTF-16 code units",
+      "moduleSha256": "3b02f5902f32e22b0bfb68e29d336b5b337a1b02ad226b5c61fe4f3ba83e5df1",
+      "sourceSha256": "3b25338c75e8adbe129c0790356742d8c21e4999335493809129acaddbe94c3e",
+      "source": "function _Go(e){if(e.isSubscriber)return{apiKey:null,authToken:e.oauthAccessToken??null};return{apiKey:e.apiKey,authToken:null}}",
+      "variable": false
+    },
+    {
+      "group": "sdkSubscriber",
+      "file": "chunk-b5kmgz2n.js",
+      "symbol": "Z_n",
+      "start": 3766,
+      "end": 3850,
+      "offsetUnit": "UTF-16 code units",
+      "moduleSha256": "3b02f5902f32e22b0bfb68e29d336b5b337a1b02ad226b5c61fe4f3ba83e5df1",
+      "sourceSha256": "6a10257109d95e26db7a66b8fa40505365dfefc0f6e7e7fd86291b335e32a0ed",
+      "source": "function Z_n(e){return e.anthropicAuthEnabled&&Boolean(e.oauthScopes?.includes(fA))}",
+      "variable": false
+    },
+    {
+      "group": "classification",
+      "file": "chunk-nankzm0s.js",
+      "symbol": "Ss",
+      "start": 247071,
+      "end": 247246,
+      "offsetUnit": "UTF-16 code units",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "sourceSha256": "3782269a038c9f362dcb8caace33d83952e4eb647b7d6d924afb39e2e9069990",
+      "source": "function Ss(e){if(e===void 0)return;if(e.startsWith(\"repl_main_thread\")||e===\"sdk\")return\"main\";if(e.startsWith(\"agent:\")||e===\"hook_agent\")return\"subagent\";return\"auxiliary\"}",
+      "variable": false
+    },
+    {
+      "group": "classification",
+      "file": "chunk-nankzm0s.js",
+      "symbol": "vVo",
+      "start": 277366,
+      "end": 277540,
+      "offsetUnit": "UTF-16 code units",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "sourceSha256": "a09aec25295e1d7d426ce1219d8461e81e400b6adef1971b13055569f0a54b83",
+      "source": "function vVo(e,n){if(e===void 0)return;if(e===\"compact\")return\"compaction\";let r=Ss(e);if(r===\"subagent\"&&n.agentType===\"subagent\"&&n.workflowRunId)return\"workflow\";return r}",
+      "variable": false
+    },
+    {
+      "group": "classification",
+      "file": "chunk-nankzm0s.js",
+      "symbol": "p_",
+      "start": 277544,
+      "end": 277563,
+      "offsetUnit": "UTF-16 code units",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "sourceSha256": "a9d53d5354496f259735f2d91878ee1f9ec05162c5420d5b7343c905e778a153",
+      "source": "p_=\"agent:builtin:\"",
+      "variable": true
+    },
+    {
+      "group": "classification",
+      "file": "chunk-nankzm0s.js",
+      "symbol": "CVo",
+      "start": 277564,
+      "end": 277781,
+      "offsetUnit": "UTF-16 code units",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "sourceSha256": "5ecedf76797e09c68b5f66483022a13e10a8656e39a9f6db67f33a94050d5d0d",
+      "source": "function CVo(e,n){if(e===void 0||!e.startsWith(\"agent:\"))return;if(n.agentType===\"teammate\")return\"teammate\";if(e.startsWith(p_))return e.slice(p_.length)||void 0;if(e.startsWith(\"agent:custom\"))return\"custom\";return}",
+      "variable": false
+    },
+    {
+      "group": "classification",
+      "file": "chunk-nankzm0s.js",
+      "symbol": "Rp",
+      "start": 456863,
+      "end": 456906,
+      "offsetUnit": "UTF-16 code units",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "sourceSha256": "d31d5a991538820d38f3a333f6eb90db431406c41c001634ff15788c9742e127",
+      "source": "function Rp(e){return e.agentType===\"main\"}",
+      "variable": false
+    },
+    {
+      "group": "outgoingValidation",
+      "file": "chunk-nankzm0s.js",
+      "symbol": "eQn",
+      "start": 277301,
+      "end": 277334,
+      "offsetUnit": "UTF-16 code units",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "sourceSha256": "40e5da6b20cbca4866fa21207a9885fabe51f0483c0d0a8eb23e814a45c529a1",
+      "source": "eQn=\"x-claude-code-request-class\"",
+      "variable": true
+    },
+    {
+      "group": "outgoingValidation",
+      "file": "chunk-nankzm0s.js",
+      "symbol": "tQn",
+      "start": 277335,
+      "end": 277365,
+      "offsetUnit": "UTF-16 code units",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "sourceSha256": "064e0c9bdaf89581591139d41ae2e72ac9082ff41389ddb7522880a13b5db54f",
+      "source": "tQn=\"x-claude-code-agent-type\"",
+      "variable": true
+    },
+    {
+      "group": "outgoingValidation",
+      "file": "chunk-nankzm0s.js",
+      "symbol": "nQn",
+      "start": 277785,
+      "end": 277814,
+      "offsetUnit": "UTF-16 code units",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "sourceSha256": "399d25e8fe1e3da4b7d770617c062acbe7fc93f06e47b61741115e75322aa66e",
+      "source": "nQn=\"x-claude-code-prompt-id\"",
+      "variable": true
+    },
+    {
+      "group": "outgoingValidation",
+      "file": "chunk-nankzm0s.js",
+      "symbol": "jyt",
+      "start": 277819,
+      "end": 277849,
+      "offsetUnit": "UTF-16 code units",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "sourceSha256": "a0f7f00c43bac3675574cb674f71160437eab3b4e00cff9bdd47fae90364a34e",
+      "source": "jyt=\"X-Claude-Code-Session-Id\"",
+      "variable": true
+    },
+    {
+      "group": "outgoingValidation",
+      "file": "chunk-nankzm0s.js",
+      "symbol": "KG",
+      "start": 277850,
+      "end": 278114,
+      "offsetUnit": "UTF-16 code units",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "sourceSha256": "5f672686445e8d61baed31ffce55609c761894cb95a61431c3644c397bf57660",
+      "source": "class KG extends P{header;source;constructor(e,n,r){super(e,\"request header value rejected before send: not a valid HTTP header value\");this.header=n;this.source=r;this.name=\"InvalidRequestHeaderValueError\"}get isUserSupplied(){return this.source!==\"claude-code\"}}",
+      "variable": false
+    },
+    {
+      "group": "outgoingValidation",
+      "file": "chunk-nankzm0s.js",
+      "symbol": "bx",
+      "start": 278118,
+      "end": 278248,
+      "offsetUnit": "UTF-16 code units",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "sourceSha256": "cbe648d3bc4ad5608727f83858b6ab39d95f0d7375da47bf3cd301f773ed02f5",
+      "source": "bx=new Set([\"x-app\",jyt,\"x-claude-code-agent-id\",\"x-claude-code-parent-agent-id\",nQn,eQn,tQn,\"x-anthropic-additional-protection\"])",
+      "variable": true
+    },
+    {
+      "group": "outgoingValidation",
+      "file": "chunk-nankzm0s.js",
+      "symbol": "vx",
+      "start": 278249,
+      "end": 278455,
+      "offsetUnit": "UTF-16 code units",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "sourceSha256": "dc29127fcd84dc8e70559dbd4e87ad7c37d03480fc2766a5911f5256187dc3bc",
+      "source": "vx={\"x-client-app\":\"CLAUDE_AGENT_SDK_CLIENT_APP\",\"x-claude-remote-container-id\":\"CLAUDE_CODE_CONTAINER_ID\",\"x-claude-remote-session-id\":\"CLAUDE_CODE_REMOTE_SESSION_ID\",\"User-Agent\":\"User-Agent environment\"}",
+      "variable": true
+    },
+    {
+      "group": "outgoingValidation",
+      "file": "chunk-nankzm0s.js",
+      "symbol": "Fo",
+      "start": 278456,
+      "end": 279263,
+      "offsetUnit": "UTF-16 code units",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "sourceSha256": "cfbb93c5227995650fb31a5eaa8446dc7dd178e59ffc0ea943ed41b6ec87e1c8",
+      "source": "Fo={ANTHROPIC_API_KEY:\" from ANTHROPIC_API_KEY\",apiKeyHelper:\" from apiKeyHelper\",\"/login managed key\":\" from the saved /login API key\",ANTHROPIC_AUTH_TOKEN:\" from ANTHROPIC_AUTH_TOKEN\",CLAUDE_CODE_OAUTH_TOKEN:\" from CLAUDE_CODE_OAUTH_TOKEN\",CLAUDE_CODE_OAUTH_TOKEN_FILE_DESCRIPTOR:\" from the OAuth token file descriptor\",CCR_OAUTH_TOKEN_FILE:\" from the OAuth token file\",\"claude.ai\":\" from the saved claude.ai login\",ANTHROPIC_CUSTOM_HEADERS:\" from ANTHROPIC_CUSTOM_HEADERS\",CLAUDE_AGENT_SDK_CLIENT_APP:\" from CLAUDE_AGENT_SDK_CLIENT_APP\",CLAUDE_CODE_CONTAINER_ID:\" from CLAUDE_CODE_CONTAINER_ID\",CLAUDE_CODE_REMOTE_SESSION_ID:\" from CLAUDE_CODE_REMOTE_SESSION_ID\",\"User-Agent environment\":\" from CLAUDE_CODE_ENTRYPOINT / CLAUDE_AGENT_SDK_VERSION / CLAUDE_AGENT_SDK_CLIENT_APP\",unknown:\"\",\"claude-code\":\"\"}",
+      "variable": true
+    },
+    {
+      "group": "outgoingValidation",
+      "file": "chunk-nankzm0s.js",
+      "symbol": "rQn",
+      "start": 279264,
+      "end": 280833,
+      "offsetUnit": "UTF-16 code units",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "sourceSha256": "74b3f981e90848b5a05112155f9cc0836a96144232d3b9e47902e0719db693cb",
+      "source": "function rQn({apiKey:e,getApiKeySource:n,authToken:r,getAuthTokenSource:s,defaultHeaders:g,authorizationSource:h,customHeaderNames:b,envSuppliedHeaderNames:v}){if(e!==null&&id(\"x-api-key\",e)){let w=n();throw new KG(`Invalid X-Api-Key header value${Fo[w]}: ${Un(e)}.`,\"X-Api-Key\",w)}for(let[w,A]of Object.entries(g)){if(typeof A!==\"string\"||!id(w,A))continue;let R=b.indexOf(w),M=`distinct header ${R+1} of ${b.length} parsed from ANTHROPIC_CUSTOM_HEADERS`;if(Sx(w))throw new KG(R===-1?`Invalid request header name: the HTTP runtime does not accept it (${sd(w.length)}).`:`Invalid name for ${M}: the HTTP runtime does not accept it (${sd(w.length)}).`,\"other\",R===-1?\"claude-code\":\"ANTHROPIC_CUSTOM_HEADERS\");let D=vx[w];if(D!==void 0&&v.has(w))throw new KG(`Invalid ${w} header value${Fo[D]}: ${Un(A)}.`,\"other\",D);let K=w===\"Authorization\"&&h!==null;if(w.toLowerCase()===\"authorization\"){let G=K?h:R===-1?\"unknown\":\"ANTHROPIC_CUSTOM_HEADERS\",z=K&&A.startsWith(\"Bearer \")?A.slice(7):A;throw new KG(`Invalid Authorization header value${Fo[G]}: ${Un(z)}.`,\"Authorization\",G)}if(R!==-1)throw new KG(`Invalid value for ${M}: ${Un(A)}.`,w.toLowerCase()===\"x-api-key\"?\"X-Api-Key\":\"other\",\"ANTHROPIC_CUSTOM_HEADERS\");if(D!==void 0)throw new KG(`Invalid ${w} header value${Fo[D]}: ${Un(A)}.`,\"other\",D);throw new KG(bx.has(w)?`Invalid ${w} header value: ${Un(A)}.`:`Invalid request header value: ${Un(A)}.`,\"other\",\"claude-code\")}if(r!==null&&id(\"authorization\",`Bearer ${r}`)){let w=s();throw new KG(`Invalid Authorization header value${Fo[w]}: ${Un(r)}.`,\"Authorization\",w)}}",
+      "variable": false
+    },
+    {
+      "group": "outgoingValidation",
+      "file": "chunk-nankzm0s.js",
+      "symbol": "id",
+      "start": 280833,
+      "end": 280901,
+      "offsetUnit": "UTF-16 code units",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "sourceSha256": "de093d9c01bd05fa7809ab263d70f704e9a189ed82ec95081745114c89298789",
+      "source": "function id(e,n){try{return new Headers([[e,n]]),!1}catch{return!0}}",
+      "variable": false
+    },
+    {
+      "group": "outgoingValidation",
+      "file": "chunk-nankzm0s.js",
+      "symbol": "Sx",
+      "start": 280901,
+      "end": 280969,
+      "offsetUnit": "UTF-16 code units",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "sourceSha256": "23232fa251a9e33088b49531ca746984d24b1d096f81bc4491fa7e960fe575f6",
+      "source": "function Sx(e){try{return new Headers([[e,\"x\"]]),!1}catch{return!0}}",
+      "variable": false
+    },
+    {
+      "group": "outgoingValidation",
+      "file": "chunk-nankzm0s.js",
+      "symbol": "Un",
+      "start": 280969,
+      "end": 281108,
+      "offsetUnit": "UTF-16 code units",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "sourceSha256": "bfba8d1eb02f61a8d59e229db469767cd7f8a61182cc2a35e4d9bf1bf319e556",
+      "source": "function Un(e){let n=LSt(e),r=rnr(e);return n===null?`it contains a character the HTTP runtime does not accept (${sd(r.length)})`:onr(n,r)}",
+      "variable": false
+    },
+    {
+      "group": "outgoingValidation",
+      "file": "chunk-nankzm0s.js",
+      "symbol": "sd",
+      "start": 281108,
+      "end": 281168,
+      "offsetUnit": "UTF-16 code units",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "sourceSha256": "077694b2297f0de5c25005bdff9d2d34a8b7313270e50f8f8dbeae89df7d661e",
+      "source": "function sd(e){return e===1?\"1 character\":`${e} characters`}",
+      "variable": false
+    },
+    {
+      "group": "validationText",
+      "file": "chunk-hrhfcbdv.js",
+      "symbol": "LSt",
+      "start": 43379,
+      "end": 43724,
+      "offsetUnit": "UTF-16 code units",
+      "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+      "sourceSha256": "ef840b5fa180c0c04560c34a844ae03baca772b49d9a7e33cda07a960119a37c",
+      "source": "function LSt(e){let n=0,s=e.length;while(n<s&&tr(e.charCodeAt(n)))n++;while(s>n&&tr(e.charCodeAt(s-1)))s--;let r=or(e.slice(n,s));if(r!==-1)return{kind:\"line_break\",index:Ze(e,n+r)};for(let i=n;i<s;i++){let d=e.charCodeAt(i);if(d===0)return{kind:\"nul\",index:Ze(e,i)};if(d>255)return{kind:\"non_ascii\",index:Ze(e,i),codePoint:sr(e,i)}}return null}",
+      "variable": false
+    },
+    {
+      "group": "validationText",
+      "file": "chunk-hrhfcbdv.js",
+      "symbol": "rnr",
+      "start": 43724,
+      "end": 43896,
+      "offsetUnit": "UTF-16 code units",
+      "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+      "sourceSha256": "7204a2570aaa84ebe329bb4684ddd4656a7394031ded8607252045ede5c84afa",
+      "source": "function rnr(e){let n=1;for(let s=0;s<e.length;s++){let r=e.charCodeAt(s);if(r===10)n++;else if(r===13){if(n++,e.charCodeAt(s+1)===10)s++}}return{length:rr(e),lineCount:n}}",
+      "variable": false
+    },
+    {
+      "group": "validationText",
+      "file": "chunk-hrhfcbdv.js",
+      "symbol": "onr",
+      "start": 43896,
+      "end": 44552,
+      "offsetUnit": "UTF-16 code units",
+      "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+      "sourceSha256": "08cbf9d3175cbf096ee9eb06e0e5b9414039523b236808d8d806c54b27ec29f3",
+      "source": "function onr(e,{length:n,lineCount:s}){let r=n===1?\"1 character\":`${n} characters`,i=s>1?`${r} on ${s} lines`:r;switch(e.kind){case\"line_break\":return`it contains a line break at character ${e.index+1} (${i})`;case\"nul\":return`it contains a NUL byte at character ${e.index+1} (${i})`;case\"control_character\":return`it contains a control character at character ${e.index+1} (${i})`;case\"whitespace\":return`it contains whitespace at character ${e.index+1} (${i})`;case\"non_ascii\":return`it contains ${Kc(e.codePoint)??\"a non-ASCII character\"} at character ${e.index+1} (${i})`;case\"too_long\":return`it is ${e.length} characters long (limit ${e.maxLength})`}}",
+      "variable": false
+    },
+    {
+      "group": "validationText",
+      "file": "chunk-hrhfcbdv.js",
+      "symbol": "Kc",
+      "start": 44552,
+      "end": 45138,
+      "offsetUnit": "UTF-16 code units",
+      "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+      "sourceSha256": "c7a7ea52cbc8335175bc1468e260bbc927246e4667cf70b3b493c0ded3491ea2",
+      "source": "function Kc(e){switch(e){case 65279:return\"a byte-order mark (U+FEFF)\";case 8203:case 8204:case 8205:case 8288:return`a zero-width character (${Ut(e)})`;case 160:case 8239:return`a no-break space (${Ut(e)})`;case 8216:case 8217:case 8220:case 8221:return`a typographic quote (${Ut(e)})`;case 8211:case 8212:return`a typographic dash (${Ut(e)})`;case 8230:return\"an ellipsis character (U+2026)\";case 8232:case 8233:return`a line or paragraph separator (${Ut(e)})`;case 65533:return\"a replacement character (U+FFFD)\";default:return e>=55296&&e<=57343?\"an unpaired UTF-16 surrogate\":null}}",
+      "variable": false
+    },
+    {
+      "group": "validationText",
+      "file": "chunk-hrhfcbdv.js",
+      "symbol": "Ut",
+      "start": 45138,
+      "end": 45211,
+      "offsetUnit": "UTF-16 code units",
+      "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+      "sourceSha256": "9ec3aa48e45bf4cc07126d15be42e40207e70aa8af7c6a2d5b7892f27e841133",
+      "source": "function Ut(e){return`U+${e.toString(16).toUpperCase().padStart(4,\"0\")}`}",
+      "variable": false
+    },
+    {
+      "group": "validationText",
+      "file": "chunk-hrhfcbdv.js",
+      "symbol": "or",
+      "start": 45211,
+      "end": 45314,
+      "offsetUnit": "UTF-16 code units",
+      "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+      "sourceSha256": "cc26e9b083cbc01afd1e8faf43aab0c40fbebb2fdc356763ec19234b974b479d",
+      "source": "function or(e){let n=e.indexOf(`\n`),s=e.indexOf(\"\\r\");if(n===-1)return s;return s===-1?n:Math.min(n,s)}",
+      "variable": false
+    },
+    {
+      "group": "validationText",
+      "file": "chunk-hrhfcbdv.js",
+      "symbol": "tr",
+      "start": 45314,
+      "end": 45366,
+      "offsetUnit": "UTF-16 code units",
+      "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+      "sourceSha256": "e54f550596ac2835efb3a3ded75424ec5c1e72d557426aa40694de96191fe51e",
+      "source": "function tr(e){return e===9||e===32||e===10||e===13}",
+      "variable": false
+    },
+    {
+      "group": "validationText",
+      "file": "chunk-hrhfcbdv.js",
+      "symbol": "sr",
+      "start": 45366,
+      "end": 45424,
+      "offsetUnit": "UTF-16 code units",
+      "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+      "sourceSha256": "06c6b6310e232bc064f6b130310d594e58631d8b07d2bc7bcf06d25fed8fcd39",
+      "source": "function sr(e,n){return e.codePointAt(n)??e.charCodeAt(n)}",
+      "variable": false
+    },
+    {
+      "group": "validationText",
+      "file": "chunk-hrhfcbdv.js",
+      "symbol": "Ze",
+      "start": 45424,
+      "end": 45580,
+      "offsetUnit": "UTF-16 code units",
+      "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+      "sourceSha256": "f30ff85439f9d2606bed2aa0d680aa48736e5df7ea4ac41fd98f1de0f2f6042b",
+      "source": "function Ze(e,n){let s=0;for(let r=0;r<n;r++){let i=e.charCodeAt(r);if(i>=55296&&i<=56319&&r+1<e.length&&(e.charCodeAt(r+1)&64512)===56320)r++;s++}return s}",
+      "variable": false
+    },
+    {
+      "group": "validationText",
+      "file": "chunk-hrhfcbdv.js",
+      "symbol": "rr",
+      "start": 45580,
+      "end": 45617,
+      "offsetUnit": "UTF-16 code units",
+      "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+      "sourceSha256": "9bb2ceb2950d321a658e3b62bc89a36dc5c39d5e9d7a9490eb8d3c895a4e797b",
+      "source": "function rr(e){return Ze(e,e.length)}",
+      "variable": false
+    },
+    {
+      "group": "validationErrorBase",
+      "file": "chunk-c9me9cp7.js",
+      "symbol": "P",
+      "start": 3714,
+      "end": 3869,
+      "offsetUnit": "UTF-16 code units",
+      "moduleSha256": "db81856ee883c31a0be18c305014a0d82d3bd698a459223b9de754b934b084ae",
+      "sourceSha256": "e0165a34780a88fe34268a00a97acdaace9a83c4b760613e669e99daf6ac0899",
+      "source": "class P extends Error{telemetryMessage;errorClass;constructor(n,e,t){super(n);this.name=\"TelemetrySafeError\",this.telemetryMessage=e??n,this.errorClass=t}}",
+      "variable": false
+    },
+    {
+      "group": "hintGate",
+      "file": "chunk-09m4fzsj.js",
+      "symbol": "rdn",
+      "start": 596980,
+      "end": 597145,
+      "offsetUnit": "UTF-16 code units",
+      "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+      "sourceSha256": "11305cf6b0f81c42f7de4e1a483249b65a18d5c3ded079d1f5ca9e6807cefa1f",
+      "source": "function rdn(){let e=a.CLAUDE_CODE_GATEWAY_HINT_HEADERS;if(e!==void 0)return e;if(ja())return!0;if(He()!==\"firstParty\")return!1;return k(\"tengu_splendid_sutton\",!1)}",
+      "variable": false
+    },
+    {
+      "group": "agentEncoding",
+      "file": "chunk-mky26gaw.js",
+      "symbol": "Uer",
+      "start": 2299,
+      "end": 2379,
+      "offsetUnit": "UTF-16 code units",
+      "moduleSha256": "18e1cb6eece5251380198c3954ec5aee2e9e1f9a4c406361ad889739b6226d40",
+      "sourceSha256": "95449013585bf8cd37f12255173944cd74f3ba1ad735057b5e079b3ea2d534a4",
+      "source": "function Uer(e){return e.replace(/%|[^\\x20-\\x7e]/gu,(n)=>encodeURIComponent(n))}",
+      "variable": false
+    },
+    {
+      "group": "promptId",
+      "file": "chunk-yptq0vrd.js",
+      "symbol": "d",
+      "start": 1051,
+      "end": 1118,
+      "offsetUnit": "UTF-16 code units",
+      "moduleSha256": "a83fdb79423408b04623e8344c532b0f9180e1a2b32e03ab2a41063675794f61",
+      "sourceSha256": "5cad9d3447c14c5668926df52dfce2e1d1b0dc15f8328a5bb3e24b5b0540cecf",
+      "source": "d=/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i",
+      "variable": true
+    },
+    {
+      "group": "promptId",
+      "file": "chunk-yptq0vrd.js",
+      "symbol": "tn",
+      "start": 1408,
+      "end": 1482,
+      "offsetUnit": "UTF-16 code units",
+      "moduleSha256": "a83fdb79423408b04623e8344c532b0f9180e1a2b32e03ab2a41063675794f61",
+      "sourceSha256": "5025b2226455a6fa14e2f90f36311b1a6759d32ebaa9344af2e284b215419e5b",
+      "source": "function tn(t){if(typeof t!==\"string\")return null;return d.test(t)?t:null}",
+      "variable": false
+    }
+  ],
+  "fragments": [
+    {
+      "file": "chunk-09m4fzsj.js",
+      "symbol": "subscriberGuardStatement",
+      "start": 607528,
+      "end": 607690,
+      "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+      "source": "if(ke){let ze=l2e();if(ze)throw new ose(ze.url);if(he===\"lock_timeout\"&&be?.expiresAt!=null&&Date.now()>=be.expiresAt&&k(\"tengu_sharded_beacon\",!0))throw new H5e}",
+      "sourceSha256": "45ea3700f9e4634fbbb519fbd646c637d4f3960f2efdfb4672b8a363739900e1"
+    }
+  ],
+  "ports": {
+    "bareSourceGate": [],
+    "apiKeySource": [
+      "mb"
+    ],
+    "messageBearer": [
+      "Cb",
+      "Gp",
+      "a",
+      "a2e",
+      "xr"
+    ],
+    "oauthHold": [
+      "fn",
+      "gi"
+    ],
+    "oauthHoldError": [],
+    "oauthLockError": [],
+    "sdkInheritance": [],
+    "sdkAuth": [],
+    "sdkSubscriber": [
+      "fA"
+    ],
+    "classification": [],
+    "outgoingValidation": [
+      "LSt",
+      "P",
+      "onr",
+      "rnr"
+    ],
+    "validationText": [],
+    "validationErrorBase": [],
+    "hintGate": [
+      "He",
+      "a",
+      "ja",
+      "k"
+    ],
+    "agentEncoding": [],
+    "promptId": [],
+    "oauthConstructorGuard": [
+      "H5e",
+      "k",
+      "l2e",
+      "ose"
+    ]
+  },
+  "ambientBindings": {
+    "bareSourceGate": [],
+    "apiKeySource": [],
+    "messageBearer": [],
+    "oauthHold": [],
+    "oauthHoldError": [],
+    "oauthLockError": [],
+    "sdkInheritance": [],
+    "sdkAuth": [],
+    "sdkSubscriber": [],
+    "classification": [],
+    "outgoingValidation": [
+      "Object"
+    ],
+    "validationText": [],
+    "validationErrorBase": [],
+    "hintGate": [],
+    "agentEncoding": [
+      "encodeURIComponent"
+    ],
+    "promptId": []
+  },
+  "portBindings": {
+    "bareSourceGate": {},
+    "apiKeySource": {
+      "mb": [
+        {
+          "kind": "local-declaration",
+          "file": "chunk-nankzm0s.js",
+          "start": 622696,
+          "end": 623762,
+          "source": "function mb(e={}){if(f8()){if(a.ANTHROPIC_API_KEY)return{key:a.ANTHROPIC_API_KEY,source:\"ANTHROPIC_API_KEY\"};if(vh())return{key:e.skipRetrievingKeyFromApiKeyHelper?null:NQn(),source:\"apiKeyHelper\"};return{key:null,source:\"none\"}}let n=Cb()?void 0:a.ANTHROPIC_API_KEY;if($3t()&&n)return{key:n,source:\"ANTHROPIC_API_KEY\"};if(Le(!1)){let h=AZ();if(h)return{key:h,source:\"ANTHROPIC_API_KEY\"};if(!n&&!a.CLAUDE_CODE_OAUTH_TOKEN&&!a.CLAUDE_CODE_OAUTH_TOKEN_FILE_DESCRIPTOR&&!sO()&&!a.ANTHROPIC_AUTH_TOKEN&&!fd()&&Vn())throw Error(\"ANTHROPIC_API_KEY, ANTHROPIC_AUTH_TOKEN, CLAUDE_CODE_OAUTH_TOKEN, or WIF env vars (ANTHROPIC_FEDERATION_RULE_ID + ANTHROPIC_ORGANIZATION_ID) required\");if(n)return{key:n,source:\"ANTHROPIC_API_KEY\"};return{key:null,source:\"none\"}}if(n&&ZZn(koe(n))===\"approved\")return{key:n,source:\"ANTHROPIC_API_KEY\"};let r=AZ();if(r)return{key:r,source:\"ANTHROPIC_API_KEY\"};if(vh()){if(e.skipRetrievingKeyFromApiKeyHelper)return{key:null,source:\"apiKeyHelper\"};return{key:NQn(),source:\"apiKeyHelper\"}}let g=jQn();if(g)return g;return{key:null,source:\"none\"}}",
+          "sha256": "fa4e45018282379b06674b3e70d4c9ed908c6f53cc876c3e8c98e6561860011b"
+        }
+      ]
+    },
+    "messageBearer": {
+      "Cb": [
+        {
+          "kind": "import",
+          "file": "chunk-09m4fzsj.js",
+          "module": "/$bunfs/root/chunk-brnn4zwp.js",
+          "imported": "Cb",
+          "start": 1508,
+          "end": 1510,
+          "source": "Cb",
+          "sha256": "c60c4dbd55b71c3287caeb9500bb712fcaedd89fd8ff25333022a7227eaab060"
+        }
+      ],
+      "Gp": [
+        {
+          "kind": "import",
+          "file": "chunk-09m4fzsj.js",
+          "module": "/$bunfs/root/chunk-nankzm0s.js",
+          "imported": "Gp",
+          "start": 2538,
+          "end": 2540,
+          "source": "Gp",
+          "sha256": "2b8d56068c6c3455ee4d2fb0756d279c093b9259790477395d0cc6c20025ef7e"
+        }
+      ],
+      "a": [
+        {
+          "kind": "import",
+          "file": "chunk-09m4fzsj.js",
+          "module": "/$bunfs/root/chunk-mbfze585.js",
+          "imported": "a",
+          "start": 1591,
+          "end": 1592,
+          "source": "a",
+          "sha256": "ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb"
+        }
+      ],
+      "a2e": [
+        {
+          "kind": "import",
+          "file": "chunk-09m4fzsj.js",
+          "module": "/$bunfs/root/chunk-nankzm0s.js",
+          "imported": "a2e",
+          "start": 2548,
+          "end": 2551,
+          "source": "a2e",
+          "sha256": "477844f5736f0746e0f6b9b66c9f25c4622342afb8fd01a810b8b187fcae1bd0"
+        }
+      ],
+      "xr": [
+        {
+          "kind": "import",
+          "file": "chunk-09m4fzsj.js",
+          "module": "/$bunfs/root/chunk-brnn4zwp.js",
+          "imported": "xr",
+          "start": 1498,
+          "end": 1500,
+          "source": "xr",
+          "sha256": "b9cc272cfc2456cfa99fb4460b33c56e388f255280e9640a79391815f098940f"
+        }
+      ]
+    },
+    "oauthHold": {
+      "fn": [
+        {
+          "kind": "local-declaration",
+          "file": "chunk-nankzm0s.js",
+          "start": 649052,
+          "end": 649174,
+          "source": "function fn(){if(f8())return null;let e=Rpe.of(U().host);if(e.value!==void 0)return e.value;let n=vK();return e.value=n,n}",
+          "sha256": "9e506641867bc4d772962da0630c845e929164dcc0ec6d65591e55f166a9e1a6"
+        }
+      ],
+      "gi": [
+        {
+          "kind": "local-declaration",
+          "file": "chunk-nankzm0s.js",
+          "start": 646564,
+          "end": 646593,
+          "source": "gi=ct(new Map,(e)=>e.clear())",
+          "sha256": "4cc3fbd9690730001d0efdd73afdd650b3b63ce6f5b1b0be7bfd77e9cfa03cef"
+        }
+      ]
+    },
+    "oauthHoldError": {},
+    "oauthLockError": {},
+    "sdkInheritance": {},
+    "sdkAuth": {},
+    "sdkSubscriber": {
+      "fA": [
+        {
+          "kind": "import",
+          "file": "chunk-b5kmgz2n.js",
+          "module": "/$bunfs/root/chunk-a5b8yq96.js",
+          "imported": "fA",
+          "start": 1047,
+          "end": 1049,
+          "source": "fA",
+          "sha256": "f2aafd5ed5195650cf8c292774829bb1e2d62a2f1d6de530d28159fdd0aae2ba"
+        }
+      ]
+    },
+    "classification": {},
+    "outgoingValidation": {
+      "LSt": [
+        {
+          "kind": "import",
+          "file": "chunk-nankzm0s.js",
+          "module": "/$bunfs/root/chunk-hrhfcbdv.js",
+          "imported": "LSt",
+          "start": 2397,
+          "end": 2400,
+          "source": "LSt",
+          "sha256": "38af71e9d31bc0b38a0542c5f71f80e920c237fb9bce58cc49a4a64acc8a0ca9"
+        }
+      ],
+      "P": [
+        {
+          "kind": "import",
+          "file": "chunk-nankzm0s.js",
+          "module": "/$bunfs/root/chunk-c9me9cp7.js",
+          "imported": "P",
+          "start": 752,
+          "end": 753,
+          "source": "P",
+          "sha256": "5c62e091b8c0565f1bafad0dad5934276143ae2ccef7a5381e8ada5b1a8d26d2"
+        }
+      ],
+      "onr": [
+        {
+          "kind": "import",
+          "file": "chunk-nankzm0s.js",
+          "module": "/$bunfs/root/chunk-hrhfcbdv.js",
+          "imported": "onr",
+          "start": 2405,
+          "end": 2408,
+          "source": "onr",
+          "sha256": "bfffcce68cbb0175977710271118630a1fc6c638b5a1e4db749a1cee29dcf6ce"
+        }
+      ],
+      "rnr": [
+        {
+          "kind": "import",
+          "file": "chunk-nankzm0s.js",
+          "module": "/$bunfs/root/chunk-hrhfcbdv.js",
+          "imported": "rnr",
+          "start": 2401,
+          "end": 2404,
+          "source": "rnr",
+          "sha256": "fb3efe9d32eccd6d13022b1e8c5e0bd41daa0d5f0b87169e2e6c42ed16f15f52"
+        }
+      ]
+    },
+    "validationText": {},
+    "validationErrorBase": {},
+    "hintGate": {
+      "He": [
+        {
+          "kind": "import",
+          "file": "chunk-09m4fzsj.js",
+          "module": "/$bunfs/root/chunk-wz6xag6e.js",
+          "imported": "He",
+          "start": 4435,
+          "end": 4437,
+          "source": "He",
+          "sha256": "30efdfb52ff67f80dab7cb89dcfe0eec8412966cfe58324993674b4616d6bd11"
+        }
+      ],
+      "a": [
+        {
+          "kind": "import",
+          "file": "chunk-09m4fzsj.js",
+          "module": "/$bunfs/root/chunk-mbfze585.js",
+          "imported": "a",
+          "start": 1591,
+          "end": 1592,
+          "source": "a",
+          "sha256": "ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb"
+        }
+      ],
+      "ja": [
+        {
+          "kind": "import",
+          "file": "chunk-09m4fzsj.js",
+          "module": "/$bunfs/root/chunk-wz6xag6e.js",
+          "imported": "ja",
+          "start": 4453,
+          "end": 4455,
+          "source": "ja",
+          "sha256": "3702fc1866630796050c50e9c829bd32fde7cc4c883f28e3e4ca430307c485b0"
+        }
+      ],
+      "k": [
+        {
+          "kind": "import",
+          "file": "chunk-09m4fzsj.js",
+          "module": "/$bunfs/root/chunk-nankzm0s.js",
+          "imported": "k",
+          "start": 2685,
+          "end": 2686,
+          "source": "k",
+          "sha256": "8254c329a92850f6d539dd376f4816ee2764517da5e0235514af433164480d7a"
+        }
+      ]
+    },
+    "agentEncoding": {},
+    "promptId": {},
+    "oauthConstructorGuard": {
+      "H5e": [
+        {
+          "kind": "local-declaration",
+          "file": "chunk-09m4fzsj.js",
+          "start": 599006,
+          "end": 599194,
+          "source": "class H5e extends Error{constructor(){super(\"OAuth access token could not be refreshed: another Claude Code process is holding the refresh lock\");this.name=\"OAuthRefreshLockTimeoutError\"}}",
+          "sha256": "247831ce2b7e0c40a3556e2417056ebb84bcd6886f947b12bccc1f1b79c1df87"
+        }
+      ],
+      "k": [
+        {
+          "kind": "import",
+          "file": "chunk-09m4fzsj.js",
+          "module": "/$bunfs/root/chunk-nankzm0s.js",
+          "imported": "k",
+          "start": 2685,
+          "end": 2686,
+          "source": "k",
+          "sha256": "8254c329a92850f6d539dd376f4816ee2764517da5e0235514af433164480d7a"
+        }
+      ],
+      "l2e": [
+        {
+          "kind": "import",
+          "file": "chunk-09m4fzsj.js",
+          "module": "/$bunfs/root/chunk-nankzm0s.js",
+          "imported": "l2e",
+          "start": 2566,
+          "end": 2569,
+          "source": "l2e",
+          "sha256": "630ba71f6614a9e4dbda912ddf5870d7f2e8f8856d41fde1d0998d7a5577ba20"
+        }
+      ],
+      "ose": [
+        {
+          "kind": "import",
+          "file": "chunk-09m4fzsj.js",
+          "module": "/$bunfs/root/chunk-8ptzhr8g.js",
+          "imported": "ose",
+          "start": 4908,
+          "end": 4911,
+          "source": "ose",
+          "sha256": "699a9f9d57b23ee3a86afdc0fe67adf9dafc3e648ad8d3b54687f091b64471cf"
+        }
+      ]
+    }
+  },
+  "factories": {
+    "bareSourceGate": "createMessageBareSourceGate287",
+    "apiKeySource": "createMessageApiKeySource287",
+    "messageBearer": "createMessageBearer287",
+    "oauthHold": "createOAuthHeldAccountReader287",
+    "oauthHoldError": "createOAuthHeldAccountError287",
+    "oauthLockError": "createOAuthLockTimeoutError287",
+    "sdkInheritance": "createSdkAuthInheritance287",
+    "sdkAuth": "createSdkAuthentication287",
+    "sdkSubscriber": "createSdkSubscriber287",
+    "classification": "createRequestClassification287",
+    "outgoingValidation": "createOutgoingHeaderValidation287",
+    "validationText": "createHeaderValidationText287",
+    "validationErrorBase": "createHeaderValidationErrorBase287",
+    "hintGate": "createRequestHintGate287",
+    "agentEncoding": "createAgentHeaderEncoding287",
+    "promptId": "createPromptIdValidator287",
+    "oauthConstructorGuard": "createOAuthConstructorGuard287"
+  }
+}

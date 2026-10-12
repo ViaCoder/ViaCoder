@@ -1,0 +1,155 @@
+{
+  "version": "2.1.287",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16 end-exclusive",
+  "declarations": [
+    {
+      "file": "chunk-eske5nfz.js",
+      "name": "ot",
+      "start": 3219,
+      "endExclusive": 3284,
+      "moduleSha256": "0ab96d3fc2e14f26d13bba42a3f5583f805c2f100c56befce938b7b723d405a5",
+      "sha256": "7882373685973c541ad5bd2fda020e83e93e3a092155419e9e2f688837f0e340",
+      "source": "function ot(t,n){let e=t.indexOf(n);return e===-1?t:t.slice(0,e)}"
+    },
+    {
+      "file": "chunk-eske5nfz.js",
+      "name": "Mr",
+      "start": 3284,
+      "endExclusive": 3316,
+      "moduleSha256": "0ab96d3fc2e14f26d13bba42a3f5583f805c2f100c56befce938b7b723d405a5",
+      "sha256": "8ca4f30596b6042ede80a2ce6cac843ecac345574ad5d4ecce308b0dd3b80c95",
+      "source": "function Mr(t){return ot(t,`\n`)}"
+    },
+    {
+      "file": "chunk-mnb8wrpd.js",
+      "name": "y9t",
+      "start": 662,
+      "endExclusive": 759,
+      "moduleSha256": "f56b8a7b40fda43f5d09afab7ab7e5e45a16bf4b0aacc36519db7ca2a2ec303d",
+      "sha256": "f767921d21f032df0de20db9243c5399ba4f106438411a6d2100fd72f5025313",
+      "source": "function y9t(e,n=new Date){let r=a(n),t=c(g(e));return t?`${r}-${t}.txt`:`conversation-${r}.txt`}"
+    },
+    {
+      "file": "chunk-mnb8wrpd.js",
+      "name": "a",
+      "start": 759,
+      "endExclusive": 1031,
+      "moduleSha256": "f56b8a7b40fda43f5d09afab7ab7e5e45a16bf4b0aacc36519db7ca2a2ec303d",
+      "sha256": "893a0cdd5f962986df20e908dbfeebdcb96e7bd6922f0a3989cb31ccfdf62d4b",
+      "source": "function a(e){let n=e.getFullYear(),r=String(e.getMonth()+1).padStart(2,\"0\"),t=String(e.getDate()).padStart(2,\"0\"),s=String(e.getHours()).padStart(2,\"0\"),i=String(e.getMinutes()).padStart(2,\"0\"),o=String(e.getSeconds()).padStart(2,\"0\");return`${n}-${r}-${t}-${s}${i}${o}`}"
+    },
+    {
+      "file": "chunk-mnb8wrpd.js",
+      "name": "g",
+      "start": 1031,
+      "endExclusive": 1335,
+      "moduleSha256": "f56b8a7b40fda43f5d09afab7ab7e5e45a16bf4b0aacc36519db7ca2a2ec303d",
+      "sha256": "fd3f49dd1d055b35bd1243a3f4bffba0fa8d29a04aedacf9702c1f4f12b30591",
+      "source": "function g(e){let n=e.find((s)=>s.type===\"user\");if(!n||n.type!==\"user\")return\"\";let r=n.message?.content,t=\"\";if(typeof r===\"string\")t=r.trim();else if(Array.isArray(r)){let s=r.findLast((i)=>i.type===\"text\");if(s&&\"text\"in s)t=s.text.trim()}if(t=Mr(t),t.length>50)t=t.substring(0,49)+\"\\u2026\";return t}"
+    },
+    {
+      "file": "chunk-mnb8wrpd.js",
+      "name": "c",
+      "start": 1335,
+      "endExclusive": 1460,
+      "moduleSha256": "f56b8a7b40fda43f5d09afab7ab7e5e45a16bf4b0aacc36519db7ca2a2ec303d",
+      "sha256": "97edf192d8a37134aaac7b0f6704af97fbef48d26b85ff6703548529e4385857",
+      "source": "function c(e){return e.toLowerCase().replace(/[^a-z0-9\\s-]/g,\"\").replace(/\\s+/g,\"-\").replace(/-+/g,\"-\").replace(/^-|-$/g,\"\")}"
+    },
+    {
+      "file": "chunk-1ypw9bby.js",
+      "name": "KHe",
+      "start": 185559,
+      "endExclusive": 185732,
+      "moduleSha256": "0397b6c56319beacec08785f2107f321ec4c279f6d7413ae35cb63de424eca45",
+      "sha256": "df3f1c7077937c6e590b7204a3d265a79087597c94cd3633db287a84cca17d50",
+      "source": "async function KHe(l,u,m,{columns:p,storageV5:h,welcomeHeader:x}){let v=[];return await gE(l,u,m,(T)=>void v.push(en(T)),{columns:p,storageV5:h,welcomeHeader:x}),v.join(\"\")}"
+    },
+    {
+      "file": "chunk-ayrbvbss.js",
+      "name": "le",
+      "start": 20655,
+      "endExclusive": 20755,
+      "moduleSha256": "6518f9a74d5a9d54a86fb90aceea2b4a63d63fe406e2d27f93ecf36c8d675141",
+      "sha256": "0493232de120755b5268cf9c929a1ce4ab5ca680baea510e34b27d03ecae6451",
+      "source": "function le(a){let o=ae(a)===\"\"?`${a}.txt`:a,l=b$().workspace===\"remote\"?Ee():void 0;return Xe(o,l)}"
+    },
+    {
+      "file": "chunk-ayrbvbss.js",
+      "name": "h",
+      "start": 20755,
+      "endExclusive": 20871,
+      "moduleSha256": "6518f9a74d5a9d54a86fb90aceea2b4a63d63fe406e2d27f93ecf36c8d675141",
+      "sha256": "297d9821d97eb11f505bee8bfbb5373d1df9f61b5d967252f28c5d8874715d91",
+      "source": "async function h(a,o){let l=le(a);return await re(se(l),{recursive:!0}),await ie(l,o,{encoding:\"utf-8\",flush:!0}),l}"
+    },
+    {
+      "file": "chunk-ayrbvbss.js",
+      "name": "ke",
+      "start": 20871,
+      "endExclusive": 20909,
+      "moduleSha256": "6518f9a74d5a9d54a86fb90aceea2b4a63d63fe406e2d27f93ecf36c8d675141",
+      "sha256": "47fc14e9a1786962495621780913bde54ae7d04a4cd9c9dd71a8ba75c294b4c0",
+      "source": "function ke(Re){return Re.originalCwd}"
+    },
+    {
+      "file": "chunk-ayrbvbss.js",
+      "name": "Be",
+      "start": 20909,
+      "endExclusive": 20939,
+      "moduleSha256": "6518f9a74d5a9d54a86fb90aceea2b4a63d63fe406e2d27f93ecf36c8d675141",
+      "sha256": "38f3b166e84a1cd0552e254517cc47a4126e86d0f085c485bbcfce7805d2b25e",
+      "source": "function Be(Me){return Me.cwd}"
+    },
+    {
+      "file": "chunk-ayrbvbss.js",
+      "name": "S",
+      "start": 20939,
+      "endExclusive": 23505,
+      "moduleSha256": "6518f9a74d5a9d54a86fb90aceea2b4a63d63fe406e2d27f93ecf36c8d675141",
+      "sha256": "72c0f3d2def50be2d25feb91e91922f0538fb60a23ac549fb89ae31ea6690dbe",
+      "source": "function S(a){let c=w(32),{content:o,defaultFilename:l,onDone:t}=a,[,v]=g(null),[p,f]=g(l),[E,Ie]=g(l.length),[i,q]=g(!1),{columns:D}=ve(),Pe=fw(ke),Te=fw(Be),z;if(c[0]===b)z=()=>{q(!1),v(null)},c[0]=z;else z=c[0];let _e=z,K;if(c[1]!==o||c[2]!==t)K=async(Q)=>{if(Q===\"clipboard\"){let W=await xw(o);if(W)process.stdout.write(W);y(\"export_clipboard\"),t({success:!0,message:\"Conversation copied to clipboard\"})}else if(Q===\"file\")v(\"file\"),q(!0)},c[1]=o,c[2]=t,c[3]=K;else K=c[3];let k=K,Y;if(c[4]!==o||c[5]!==p||c[6]!==t)Y=async()=>{;try{let Ge=await h(p,o);y(\"export_file\"),t({success:!0,message:`Conversation exported to: ${Ge}`})}catch(C){let Z=C;m(\"export_file\",\"write_failed\"),t({success:!1,message:`Failed to export conversation: ${Z instanceof Error?Z.message:\"Unknown error\"}`})}},c[4]=o,c[5]=p,c[6]=t,c[7]=Y;else Y=c[7];let B=Y,C;if(c[8]!==t||c[9]!==i)C=()=>{if(i)_e();else t({success:!1,message:\"Export cancelled\"})},c[8]=t,c[9]=i,c[10]=C;else C=c[10];let d=C,Le=b$().workspace===\"remote\"&&Pe!==Te,H;if(c[11]===b)H={label:\"Copy to clipboard\",value:\"clipboard\",description:\"Copy the conversation to your system clipboard\"},c[11]=H;else H=c[11];const I=Le?\"Save the conversation to a file in the directory claude was launched from\":\"Save the conversation to a file in the current directory\";let ee;if(c[12]!==I)ee=[H,{label:\"Save to file\",value:\"file\",description:I}],c[12]=I,c[13]=ee;else ee=c[13];let P=ee,oe;if(c[14]!==i)oe=i?r(be,{children:[e(j,{chord:\"enter\",action:\"save\"}),e(et,{action:\"confirm:no\",context:\"Confirmation\",fallback:\"Esc\",description:\"go back\"})]}):e(et,{action:\"confirm:no\",context:\"Confirmation\",fallback:\"Esc\",description:\"cancel\"}),c[14]=i,c[15]=oe;else oe=c[15];let T=oe,te;if(c[16]!==i)te={context:\"Settings\",isActive:i},c[16]=i,c[17]=te;else te=c[17];We(\"confirm:no\",d,te);const _=!i;let F;if(c[18]!==D||c[19]!==E||c[20]!==p||c[21]!==d||c[22]!==B||c[23]!==k||c[24]!==P||c[25]!==i)F=!i?e($e,{options:P,onChange:k,onCancel:d}):r(s,{flexDirection:\"column\",children:[e(n,{children:\"Enter filename:\"}),r(s,{flexDirection:\"row\",gap:1,marginTop:1,children:[e(n,{children:\">\"}),e(sr,{value:p,onChange:f,onSubmit:B,focus:!0,showCursor:!0,columns:D,cursorOffset:E,onChangeCursorOffset:Ie})]})]}),c[18]=D,c[19]=E,c[20]=p,c[21]=d,c[22]=B,c[23]=k,c[24]=P,c[25]=i,c[26]=F;else F=c[26];let ne;if(c[27]!==d||c[28]!==T||c[29]!==_||c[30]!==F)ne=e(he,{title:\"Export conversation\",subtitle:\"Select export method\",color:\"permission\",onCancel:d,inputGuide:T,isCancelActive:_,children:F}),c[27]=d,c[28]=T,c[29]=_,c[30]=F,c[31]=ne;else ne=c[31];return ne}"
+    },
+    {
+      "file": "chunk-ayrbvbss.js",
+      "name": "wo",
+      "start": 23505,
+      "endExclusive": 23933,
+      "moduleSha256": "6518f9a74d5a9d54a86fb90aceea2b4a63d63fe406e2d27f93ecf36c8d675141",
+      "sha256": "e4d0fd479b3f316ffab8bb9049662930b52d63d70d852c44769547564d6122ea",
+      "source": "async function wo(a,o,l){let t=await KHe(o.session,o.messages,o.options.tools||[],{storageV5:o.storageV5}),v=l.trim();if(v){try{let f=await h(v,t);y(\"export_file\"),a(`Conversation exported to: ${f}`)}catch(f){m(\"export_file\",\"write_failed\"),a(`Failed to export conversation: ${f instanceof Error?f.message:\"Unknown error\"}`)}return null}let p=y9t(o.messages);return e(S,{content:t,defaultFilename:p,onDone:(f)=>{a(f.message)}})}"
+    }
+  ],
+  "ports": [
+    "ae",
+    "b$",
+    "Ee",
+    "Xe",
+    "re",
+    "se",
+    "ie",
+    "w",
+    "g",
+    "ve",
+    "fw",
+    "b",
+    "xw",
+    "y",
+    "m",
+    "r",
+    "e",
+    "be",
+    "j",
+    "et",
+    "We",
+    "$e",
+    "s",
+    "n",
+    "sr",
+    "he",
+    "gE",
+    "en"
+  ],
+  "boundary": "Full wo/S/path writer/default filename/KHe bodies. Product gE delegates to the complete canonical 287 gE/Gy/Ree/bDe with the same session and store; export-only scoped inner Messages preserves C full transcript/details. ProjectProvider is restored separately in officialExecutionProject287. Ordinary undefined storageV5 render is verified; a private StorageV5 Ink host is not supplied."
+}

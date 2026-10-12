@@ -1,0 +1,1 @@
+export declare function createOfficialProtocolRetry286(ports:{v4:()=>boolean|undefined;HLt:number}):{NLt(error:{noResponse:unknown},attempt:number,maxRetries:number,noResponseCount:number,remainingRetries?:number):number}

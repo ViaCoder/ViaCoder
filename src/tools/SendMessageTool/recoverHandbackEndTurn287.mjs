@@ -1,0 +1,8 @@
+import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';import ts from 'typescript';
+const raw=path.resolve(import.meta.dirname,'../../../../.work/official-modules-2.1.287/darwin-arm64/raw'),sha=s=>crypto.createHash('sha256').update(s).digest('hex');
+const file='chunk-mphp7acd.js',text=fs.readFileSync(path.join(raw,file),'utf8'),moduleSha256=sha(text);if(moduleSha256!=='cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384')throw Error('source pin');
+const sf=ts.createSourceFile(file,text,99,true),wanted=new Set(['YM','DMe','Cdo','pne','QR','mFe','Kin','yl','xC']),rows=[];
+for(const st of sf.statements)for(const n of ts.isVariableStatement(st)?st.declarationList.declarations:[st])if(n.name&&wanted.has(n.name.getText(sf))){const source=n.getText(sf);rows.push({file,name:n.name.getText(sf),start:n.getStart(sf),end:n.end,source,sha256:sha(source),moduleSha256,variable:ts.isVariableDeclaration(n)})}
+if(rows.length!==wanted.size)throw Error('missing whole declaration');
+const native='// Complete original PostToolBatch producer/presence/parent-scope gates. No new hook owner.\nexport function createHandbackEndTurnNative287({V9,Ty,LEe,S$,MQ,Xc,oe,PA}){\n'+rows.map(r=>(r.variable?'var ':'')+r.source+';').join('\n')+'\nreturn {postToolBatch:Kin,parentScopes:pne,managedWebAgent:YM,presence:QR,timeout:yl};\n}\n';
+for(const[f,d]of [['handbackEndTurnNative287.js',native],['handbackEndTurnProvenance287.json',JSON.stringify({moduleSha256,offsetUnit:'UTF-16',rows,nativeSha256:sha(native)},null,2)+'\n']]){const p=path.join(import.meta.dirname,f);if(process.argv.includes('--check')){if(fs.readFileSync(p,'utf8')!==d)throw Error('stale '+f)}else fs.writeFileSync(p,d)}

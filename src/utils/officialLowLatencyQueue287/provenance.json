@@ -1,0 +1,362 @@
+{
+  "version": "2.1.287",
+  "platform": "darwin-arm64",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "binarySha256": "6eab8333fe2121553100d8f40bfada384a3e989b94f947e18ba6677a6fcb41ea",
+  "offsetUnit": "UTF-16 code units",
+  "owner": {
+    "module": "chunk-mphp7acd.js",
+    "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+    "name": "zOr",
+    "start": 223743,
+    "end": 239846,
+    "sha256": "5d7972d0a3c2b3b826f2e983510dd0de2027a039720bbf78842acf0a72cf2484",
+    "source": "function zOr(e){let n=e?.recordOperation??Rbn,r=z_e();function s(Yo,qr,Lr,Kr,vr){let nr={type:\"queue-operation\",operation:Yo,timestamp:new Date().toISOString(),sessionId:q(),...qr!==void 0&&{content:qr},...Lr!==void 0&&{reason:Lr},...Kr!==void 0&&{commandUuid:Kr},...vr!==void 0&&{deliveryId:vr}};n(nr)}let g=[...e?.adopt??[]],h=Object.freeze([...g]),b=Me(),w=Me();eq(()=>g.filter(tf).map(Dln));let D=new Set,j=new Set,z=256;function K(){h=Object.freeze([...g]),b.emit()}function he(Yo,qr){if(D.delete(Yo))D.add(Yo);else{if(qr?.terminalEmitted!==!0&&D.size>=z){let Lr;for(let Kr of D)if(!j.has(Kr)){Lr=Kr;break}if(Lr!==void 0)D.delete(Lr)}D.add(Yo)}if(qr?.terminalEmitted!==!0)return!1;if(j.has(Yo))return!1;return j.add(Yo),!0}function _e(Yo){return D.delete(Yo)}function ke(Yo){return j.delete(Yo)}function be(Yo){return j.has(Yo)}let ve=new Set;function Te(Yo){for(let qr of Yo)if(qr.uuid!==void 0)ve.add(qr.uuid)}function xe(Yo){for(let qr of Yo)if(qr.uuid!==void 0)ve.delete(qr.uuid)}function Pe(Yo){return ve.has(Yo)}let $e=new Map;function Ne(Yo){if(Yo===void 0)return{withdrawn:()=>!1,[Symbol.dispose]:()=>{}};let qr={withdrawn:!1};return $e.set(Yo,qr),{withdrawn:()=>qr.withdrawn,[Symbol.dispose]:()=>{if($e.get(Yo)===qr)$e.delete(Yo)}}}function We(Yo){let qr=$e.get(Yo);if(qr===void 0||qr.withdrawn)return!1;return qr.withdrawn=!0,!0}let qe=!1;function Qe(){if(qe)return;qe=!0,K()}function Ze(Yo,qr){return bt(g.find((Lr)=>Lr.uuid===Yo&&Lr.screeningPending===!0),qr)}function et(Yo,qr){return bt(g.includes(Yo)?Yo:void 0,qr)}function bt(Yo,qr){if(Yo===void 0)return!1;if(\"dropped\"in qr)return mr([Yo],{reason:\"dropped_by_hook\"}),!0;return delete Yo.screeningPending,Yo.promptSubmitted=qr.promptSubmitted,Yo.drainOnly=qr.drainOnly,K(),!0}function ht(Yo){let qr=g.find((Lr)=>Lr.uuid===Yo);if(qr===void 0||qr.priority===\"now\"||ve.has(Yo))return!1;return qr.priority=\"now\",K(),!0}function kt(Yo,qr){let Lr=g.find((Kr)=>Kr.uuid===Yo);if(Lr===void 0||Lr.priority!==\"now\")return!1;return Lr.priority=qr,K(),!0}function $t(){return qe||Dr()}let It=null,jt;function Xt(Yo){It=Yo,jt=void 0}function un(Yo){if(Yo===void 0||It===Yo)It=null,jt=void 0}function rn(Yo){return It!==null&&It.some(Yo)}let Yt=new Set;function Qt(Yo){return Yt.add(Yo),{[Symbol.dispose]:()=>{Yt.delete(Yo)}}}function nn(Yo){for(let qr of Yt)if(Yo(qr))return!0;return!1}function Pn(Yo){let qr=new Set(Yo.map((Kr)=>Kr.uuid));for(let Kr of Yt)if(Kr.uuid!==void 0&&qr.has(Kr.uuid))Yt.delete(Kr);let Lr=(It??[]).flatMap((Kr)=>Kr.uuid===void 0?[]:[Kr.uuid]);if(Lr.length>0&&jt!==\"appended\")jt=Lr.some((Kr)=>qr.has(Kr))?\"appended\":\"passed-over\"}function $n(){return jt}let qn=Promise.resolve();function En(){let Yo=qn,qr;return qn=new Promise((Lr)=>{qr=Lr}),{prior:Yo,release:qr}}function zn(){return h}function xn(){return[...g]}function Jn(){return g.length}function wn(){return G(g,B7)}function eo(){return wn()}function to(){return g.length>0}function ao(){return g.some((Yo)=>!tb(Yo)&&Yo.passive!==!0)}function mo(){if(g.length>0)K()}let $o=A1r({},C$t),Ao=e?.dropReceiptTrailMs===void 0?{}:{trailMs:e.dropReceiptTrailMs},Po=x1r(Ao);function ur(){$o=A1r({},C$t),Po.dispose(),Po=x1r(Ao)}function kr(Yo){return Po.flushPendingReceipts(Yo)}function po(){return G(g,(Yo)=>W_e(Yo.origin))}function Tr(Yo,qr=\"coalesced\"){let Lr=Yo.origin;if(!W_e(Lr))return H_e;let Kr=Yo.admissionExempt===\"resurrected\";if(!Kr&&!X7e(Lr)){let vr=$o.checkHopChain(Lr.hopChain,R1r());if(vr&&!vr.admitted){if(Po.report({reason:vr.reason,from:Lr.from,...Lr.name!==void 0&&{name:Lr.name}}),qr===\"coalesced\")Yr(Yo,vr.reason);return{admitted:!1,reason:vr.reason}}}if(!Kr&&X7e(Lr)){let vr=typeof Yo.value===\"string\"?Yo.value:fo(Yo.value),nr=$o.admit({senderKey:Lr.from!==\"unknown\"?`from:${Lr.from}`:`pid:${Lr.verifiedPeerPid}`,body:vr,hopChain:Lr.hopChain,ownTokens:R1r()});if(!nr.admitted){if(Po.report({reason:nr.reason,from:Lr.from,...Lr.name!==void 0&&{name:Lr.name}}),qr===\"coalesced\")Yr(Yo,nr.reason);return{admitted:!1,reason:nr.reason}}}if(po()>=C$t().maxQueuedPeerMessages){if(Po.report({reason:\"queue-full\",from:Lr.from,...Lr.name!==void 0&&{name:Lr.name}}),qr===\"coalesced\")Yr(Yo,\"queue-full\");return{admitted:!1,reason:\"queue-full\"}}return y(\"peer_loop_guard\"),H_e}function Yr(Yo,qr){let Lr=Yo.origin;if(Lr?.kind!==\"peer\"||ty(Lr.from).scheme!==\"uds\"||!hi().inbound.sendPeerReceipt)return;Po.noteDropForReceipt(`${Lr.from}\\x00${Lr.verifiedPeerPid??\"\"}\\x00${qr}`,Lr.msg_id,(Kr)=>hi().inbound.sendPeerReceipt?.(Yo,\"dropped\",{dropReason:qr,droppedMsgIds:Kr}))}function gr(Yo,{receipt:qr=\"coalesced\",ahead:Lr=!1}={}){let Kr=Tr(Yo,qr);if(!Kr.admitted)return Kr;let vr={...V7e(Yo),priority:Yo.priority??\"next\",timestamp:Yo.timestamp??new Date().toISOString()};if(Lr)g.unshift(vr);else g.push(vr);if(Yo.origin?.kind===\"peer\"&&Yo.origin.handback===!0&&Yo.origin.senderTaskId!==void 0&&Yo.admissionExempt!==\"resurrected\")_9n({sender:Yo.origin.senderTaskId,recipient:Yo.agentId,senderName:Yo.origin.from,flagged:Yo.origin.flagged===!0});if(zFo(Yo.uuid),K(),!Yo.unlogged)s(\"enqueue\",typeof Yo.value===\"string\"?Yo.value:void 0);return H_e}function _o(Yo){gr(Yo)}function wo(Yo,{turnAttribution:qr=\"none\"}={}){if(!Tr(Yo).admitted)return;let Lr=Yo;if(Yo.mode===\"task-notification\"&&typeof Yo.value===\"string\"){let nr=md(Yo.value,rSt);if(nr!==Yo.value)t(`enqueuePendingNotification: task-notification capped from ${Yo.value.length} to ${nr.length} chars`,{level:\"warn\"}),Lr={...Yo,value:nr}}let Kr=Yo.inheritedTurnAttributionKey??(qr===\"inherit\"&&Yo.mode===\"task-notification\"?Gwn():void 0);if(qr===\"inherit\"&&Yo.mode===\"task-notification\"&&(Lr.origin===void 0||Lr.origin.kind===\"task-notification\"))Lr={...Lr,origin:{...Lr.origin??{kind:\"task-notification\"},producer:\"session-task\"}};let vr=Yo.stampThreadState??(Yo.mode===\"task-notification\"&&Yo.handbackPointer!==!0&&Xf(Yo)&&LMt({isPeer:!1}));if(g.push({...V7e(Lr),priority:Yo.priority??\"later\",timestamp:Yo.timestamp??new Date().toISOString(),...Kr&&{inheritedTurnAttributionKey:Kr},...vr&&{stampThreadState:!0}}),K(),!Yo.unlogged)s(\"enqueue\",typeof Lr.value===\"string\"?Lr.value:void 0)}async function br(Yo){dr(1);let{command:qr,delivered:Lr}=or(Yo,void 0);return g.push(qr),K(),s(\"enqueue\",qr.pollEvent?.envelope),Lr}async function xo(Yo){if(dr(Yo.length),Yo.length===0||Yo.length>X1e||Yo.some((nr)=>nr.wake===!1))throw m(\"poll_event_delivery\",\"group_refused\"),new P(`poll event rejected: a group holds 1 to ${X1e} events, none of them wake: false`,\"poll event rejected: group shape\");let qr=j_e(),Lr=Yo.map((nr)=>or(nr,qr)),Kr=Lr.reduce((nr,{command:hs})=>nr+Buffer.byteLength(hs.pollEvent?.envelope??\"\",\"utf8\"),0);if(Kr>oue)throw m(\"poll_event_delivery\",\"group_too_large\"),new P(`poll event rejected: the group is ${Kr} bytes after nonce stamping (cap ${oue})`,\"poll event rejected: group too large\");let vr=Yo.reduce((nr,hs)=>nr+(hs.declared===void 0?0:Q8e(hs.declared.fields)),0);if(vr>oue)throw m(\"poll_event_delivery\",\"group_too_large\"),new P(`poll event rejected: the group's fields are ${vr} bytes as sent (cap ${oue})`,\"poll event rejected: group too large\");g.push(...Lr.map(({command:nr})=>nr)),K();for(let{command:nr}of Lr)s(\"enqueue\",nr.pollEvent?.envelope);await Promise.all(Lr.map(({delivered:nr})=>nr))}function dr(Yo){let qr=G(g,tb);if(qr+Yo>lSe)throw m(\"poll_event_delivery\",\"queue_cap\"),new P(Yo===1?`poll event rejected: ${lSe} events already queued`:`poll event rejected: the queue holds at most ${lSe} events (${qr} queued, ${Yo} arriving)`,\"poll event rejected: queue depth cap\")}function or(Yo,qr){if(!q8e(Yo.kind))throw m(\"poll_event_delivery\",\"invalid_kind\"),new P(\"poll event rejected: invalid kind (a lowercase letter, then lowercase letters, digits and hyphens, at most 64 characters)\",\"poll event rejected: invalid kind\");if(Y8e(Yo.kind)&&Yo.allowReservedKind!==!0)throw m(\"poll_event_delivery\",\"reserved_kind\"),new P(`poll event rejected: kind \"${Yo.kind}\" is reserved for a trusted in-process producer`,\"poll event rejected: reserved kind\");let Lr,Kr=\"element\",vr;if(Yo.element!==void 0){if(Yo.content!==void 0||Yo.declared!==void 0)throw Error(\"poll event: pass one of content, element, declared\");let ua=Buffer.byteLength(Yo.element,\"utf8\");if(ua>Nmn(Yo.kind))throw m(\"poll_event_delivery\",\"envelope_too_large\"),new P(`poll event rejected: envelope is ${ua} bytes (cap ${Nmn(Yo.kind)})`,\"poll event rejected: envelope too large\");let Tl=Bmn(Yo.element);if(!Tl.ok)throw m(\"poll_event_delivery\",\"validation_failed\"),new P(`poll event rejected: ${Tl.reason}`,\"poll event rejected: element failed validation\");if(Tl.kind!==Yo.kind)throw m(\"poll_event_delivery\",\"kind_mismatch\"),new P(`poll event rejected: element kind \"${Tl.kind}\" does not match declared kind \"${Yo.kind}\"`,\"poll event rejected: kind mismatch\");Lr=Yo.element}else if(Yo.declared!==void 0){if(Yo.content!==void 0)throw Error(\"poll event: pass one of content, element, declared\");let ua=R2n(Yo.declared);if(!ua.ok||Yo.declared.declaration.kind!==Yo.kind)throw m(\"poll_event_delivery\",\"fields_invalid\"),new P(`poll event rejected: ${ua.ok?\"declaration is for another kind\":ua.reason}`,\"poll event rejected: fields failed validation\");Lr=ua.envelope,Kr=\"json\",vr={at:Yo.declared.at,fields:ua.fields}}else if(Yo.content!==void 0)Lr=$mn({kind:Yo.kind,at:new Date().toISOString(),content:Yo.content});else throw Error(\"poll event: content, element or declared is required\");let nr=eUo();Lr=jmn(Lr,nr,Kr);let hs=Buffer.byteLength(Lr,\"utf8\");if(hs>Nmn(Yo.kind))throw m(\"poll_event_delivery\",\"envelope_too_large\"),new P(`poll event rejected: envelope is ${hs} bytes after nonce stamping (cap ${Nmn(Yo.kind)})`,\"poll event rejected: envelope too large\");let Rr=Yo.wake??!0,Vr,ti,oi=new Promise((ua,Tl)=>{Vr=ua,ti=Tl});return{command:{value:Lr,mode:\"poll-event\",agentId:Ge(),priority:Rr?\"next\":\"later\",uuid:j_e(),isMeta:!0,...!1,timestamp:new Date().toISOString(),pollEvent:{kind:Yo.kind,envelope:Lr,...!1,...Yo.media!==void 0&&Yo.media.length>0&&{media:Yo.media},...!1,...!1,...!1,wake:Rr,...!1,...!1,settleDelivered:Vr,settleDropped:ti,provenance:Yo.provenance,...vr!==void 0&&{declared:vr},...qr!==void 0&&{group:qr}}},delivered:oi}}function Wr(){let Yo=g.filter(J1e);if(Yo.length===0)return{commands:[],remainingWakeCount:0};let qr=YUr(Yo),Lr=new Set(qr),Kr=g.filter((vr)=>!Lr.has(vr));g.length=0,g.push(...Kr),K();for(let vr of Lr)if(!vr.unlogged)s(\"dequeue\");return{commands:qr,remainingWakeCount:gi()}}let _r=!1;function Fr(){if(_r)return!1;return _r=!0,!0}function es(){_r=!1}let qs=0;function Vs(){qs++}function fs(){if(qs===0)return;if(qs--,qs===0)try{b.emit()}catch(Yo){if(at(Yo))t(`queueChanged listener aborted: ${Yo}`);else d(Yo)}}function Qi(){return qs}function xs(Yo){let qr=G(Yo,(Lr)=>Lr.pollEvent?.wake===!0);return Math.max(0,gi()-qr)}function gi(){return G(g,(Yo)=>J1e(Yo)&&Yo.pollEvent?.wake===!0)}function ar(Yo){if(g.length===0)return;let qr=-1,Lr=1/0;for(let vr=0;vr<g.length;vr++){let nr=g[vr];if(Yo&&!Yo(nr))continue;let hs=R9[nr.priority??\"next\"];if(hs<Lr)qr=vr,Lr=hs}if(qr===-1)return;let[Kr]=g.splice(qr,1);if(K(),!Kr.unlogged)s(\"dequeue\");return Kr}function Go(){if(g.length===0)return[];let Yo=[...g];g.length=0,K();for(let qr of Yo)if(!qr.unlogged)s(\"dequeue\");return Yo}function Hr(Yo){if(g.length===0)return;let qr=-1,Lr=1/0;for(let Kr=0;Kr<g.length;Kr++){let vr=g[Kr];if(Yo&&!Yo(vr))continue;let nr=R9[vr.priority??\"next\"];if(nr<Lr)qr=Kr,Lr=nr}if(qr===-1)return;return g[qr]}function os(Yo){let qr=[],Lr=[];for(let Kr of g)if(Yo(Kr))qr.push(Kr);else Lr.push(Kr);if(qr.length===0)return[];g.length=0,g.push(...Lr),K();for(let Kr of qr)if(!Kr.unlogged)s(\"dequeue\");return qr}function mr(Yo,qr){vi((Lr)=>Yo.includes(Lr),r.commandsDiscarded,qr?.reason)}function ls(Yo,qr){vi((Lr)=>Yo.includes(Lr),r.commandsConsumed,qr.reason)}function ts(Yo,qr){return vi(Yo,r.commandsDiscarded,qr?.reason)}function Zs(Yo){VFo(Yo),r.commandsDiscarded.emit(Yo)}function vi(Yo,qr,Lr){let Kr=[];for(let vr=g.length-1;vr>=0;vr--)if(Yo(g[vr]))Kr.unshift(g.splice(vr,1)[0]);if(Kr.length>0){K();try{w.emit()}catch(vr){if(at(vr))t(`commandsRemoved listener aborted: ${vr}`);else d(vr)}for(let vr of Kr){if(vr.unlogged)continue;s(\"remove\",typeof vr.value===\"string\"?vr.value:void 0,Lr,vr.attachmentSourceUuid??vr.uuid,vr.deliveryId)}if(qr===r.commandsDiscarded)Zs(Kr);else qr.emit(Kr)}return Kr}function Ui(Yo){if(g.length===0)return[];let qr=Yo?.keep,Lr=qr?g.filter((vr)=>!qr(vr)):g;if(Lr.length===0)return[];let Kr=F7e(Lr,(vr)=>vr.mode);return t(`[clearCommandQueue] dropping ${Lr.length} queued command(s): ${Object.entries(Kr).map(([vr,nr])=>`${vr}=${nr.length}`).join(\" \")}`,{level:\"warn\"}),vre(Lr.filter(tb),\"queue cleared\"),ts(qr?(vr)=>!qr(vr):()=>!0,Yo)}function Zo(){g.length=0,h=Object.freeze([]),_r=!1,D.clear(),j.clear(),ve.clear(),qe=!1,ur(),un(),Yt.clear()}function ri(Yo,qr,Lr){let Kr=Yo.map((hs)=>({text:Dln(hs),entries:BOr(hs)}));function vr(hs,Rr){let Vr=new Set;for(let ti of wd(hs))if(OLt(ti.id)&&!Rr.has(ti.id))Vr.add(ti.id);return Vr}let nr=[vr(qr,new Set(Object.keys(Lr).map(Number))),...Kr.map((hs)=>vr(hs.text,new Set(hs.entries.map((Rr)=>Rr.id))))];return Kr.map((hs,Rr)=>{let Vr=new Set;nr.forEach((Ci,ua)=>{if(ua!==Rr+1)for(let Tl of Ci)Vr.add(Tl)});let ti=hs.text,oi=hs.entries.map((Ci)=>{if(Ci.type!==\"text\"||!Vr.has(Ci.id))return Ci;let ua=PC(qr,Lr);return ti=U_e(ti,Ci.id,ua,\"text\"),{...Ci,id:ua}});return{text:ti,entries:oi}})}function Wa(Yo,qr,Lr={}){if(g.length===0)return;let Kr=Yo===\"\",vr=g.filter((Pl)=>YTe(Pl,Kr));if(vr.length===0)return;let nr=vr.every((Pl)=>Pl.mode===\"bash\")?\"bash\":\"prompt\",hs=nr===\"bash\"?vr:vr.filter((Pl)=>Pl.mode!==\"bash\"),Rr=ri(hs,Yo,Lr),Vr=Rr.map((Pl,Eu)=>Q7e(Pl.text,hs[Eu].value,Yo,Lr)),{text:ti,cursorOffset:oi}=J7e(Vr.map((Pl)=>Pl.text).filter(Boolean).join(`\n`),Yo,qr),Ci=[];for(let[Pl,Eu]of Rr.entries())Ci.push(...Eu.entries,...Vr[Pl].images);for(let Pl of hs){if(Pl.unlogged)continue;s(\"popAll\",typeof Pl.value===\"string\"?Pl.value:void 0)}let ua=new Set(hs),Tl=g.filter((Pl)=>!ua.has(Pl));return g.length=0,g.push(...Tl),K(),Zs(hs),{text:ti,cursorOffset:oi,images:Ci,mode:nr,ideSelection:hs.find((Pl)=>Pl.ideSelection?.text)?.ideSelection??hs.find((Pl)=>Pl.ideSelection!==void 0)?.ideSelection}}function ss(Yo,qr,Lr,Kr={}){let nr=g.filter(tf)[Yo];if(!nr)return;if(!YTe(nr,qr===\"\"))return;let[hs]=ri([nr],qr,Kr),{text:Rr,entries:Vr}=hs,ti=Q7e(Rr,nr.value,qr,Kr),{text:oi,cursorOffset:Ci}=J7e(ti.text,qr,Lr),ua=Vr;if(ua.push(...ti.images),!nr.unlogged)s(\"popOne\",typeof nr.value===\"string\"?nr.value:void 0);let Tl=g.indexOf(nr);if(Tl!==-1)g.splice(Tl,1),K(),Zs([nr]);return{text:oi,cursorOffset:Ci,images:ua,mode:nr.mode===\"bash\"?\"bash\":\"prompt\",ideSelection:nr.ideSelection}}function ii(Yo){let qr=R9[Yo];return g.filter((Lr)=>R9[Lr.priority??\"next\"]<=qr)}return{subscribe:b.subscribe,subscribeToRemovals:w.subscribe,getCommandQueueSnapshot:zn,getCommandQueue:xn,getCommandQueueLength:Jn,getMainThreadQueueLength:wn,getDrainableMainThreadQueueLength:eo,...!1,getQueuedPeerMessageCount:po,hasCommandsInQueue:to,recheckCommandQueue:mo,enqueue:_o,enqueueReportingAdmission:gr,flushPeerDropReceipts:kr,enqueuePendingNotification:wo,enqueuePollEvent:br,enqueuePollEventGroup:xo,drainPollEventChunk:Wr,countPendingWakePollEvents:gi,countRemainingWakePollEventsAfter:xs,hasUserIntentCommandsInQueue:ao,tryBeginPollCall:Fr,endPollCall:es,beginPollEventAdmission:Vs,endPollEventAdmission:fs,pollEventAdmissionsPending:Qi,dequeue:ar,dequeueAll:Go,peek:Hr,dequeueAllMatching:os,remove:mr,consume:ls,removeByFilter:ts,clearCommandQueue:Ui,resetCommandQueue:Zo,popAllEditable:Wa,popEditableAt:ss,getCommandsByMaxPriority:ii,markCancelPending:he,consumeCancelPending:_e,consumeCancelPendingAcked:ke,hasCancelPendingAcked:be,registerFoldInFlight:Te,unregisterFoldInFlight:xe,isFoldInFlight:Pe,beginInboundIngest:Ne,withdrawInboundIngest:We,suspendMidTurnFold:Qe,isMidTurnFoldSuspended:$t,settleScreening:Ze,settleSurfaced:et,promoteToNow:ht,demoteFromNow:kt,setInFlightDrainBatch:Xt,clearInFlightDrainBatch:un,someInFlightDrainCommand:rn,trackSubmission:Qt,someSubmissionInFlight:nn,noteTurnAppended:Pn,getInFlightDrainBatchStanding:$n,takeInboundEnqueueTurn:En}}"
+  },
+  "resetOwner": {
+    "module": "chunk-mphp7acd.js",
+    "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+    "name": "Zo",
+    "start": 236389,
+    "end": 236498,
+    "sha256": "e18005390a7c01585a7514fb8bcff3663da1c062b980440a9793f33b12078a20",
+    "source": "function Zo(){g.length=0,h=Object.freeze([]),_r=!1,D.clear(),j.clear(),ve.clear(),qe=!1,ur(),un(),Yt.clear()}"
+  },
+  "pollAdmissionRows287": [
+    {
+      "name": "qs",
+      "source": "qs=0",
+      "start": 234208,
+      "end": 234212,
+      "sha256": "a25c556396e929ad6f9320fdef7ecc05e175f1fc8e918cc0f35d5c5f19a3da3c",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "variable": true
+    },
+    {
+      "name": "Vs",
+      "source": "function Vs(){qs++}",
+      "start": 234213,
+      "end": 234232,
+      "sha256": "ebade2001933d6b373d83087f1bb84e17aa05e2194aad7d3df52955aacb8a461",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "variable": false
+    },
+    {
+      "name": "fs",
+      "source": "function fs(){if(qs===0)return;if(qs--,qs===0)try{b.emit()}catch(Yo){if(at(Yo))t(`queueChanged listener aborted: ${Yo}`);else d(Yo)}}",
+      "start": 234232,
+      "end": 234365,
+      "sha256": "1cb61cbf5c37c339a6931e296e735156ead8aaf3255f492f2aa14767618da0e1",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "variable": false
+    },
+    {
+      "name": "Qi",
+      "source": "function Qi(){return qs}",
+      "start": 234365,
+      "end": 234389,
+      "sha256": "21c053fe96299b3266d317ee28d566c3fbea4b9d84e9d4fe195399057fbbe1b4",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "variable": false
+    }
+  ],
+  "ownerState": {
+    "queueArray": "zOr local g array; wired to the existing messageQueueManager commandQueue, no second queue",
+    "foldSet": "zOr local ve=new Set; one instance owned with this queue array",
+    "foldSuspended": "zOr local qe=!1; one instance owned with this queue array",
+    "cancelReset": "The production source reset Zo clears D/j alongside the other zOr-owned state. Local resetCancelPending is deliberately the scoped test-cleanup action for the two restored sets; it is not exported as a second production reset.",
+    "globalCommitted": [
+      {
+        "module": "chunk-xep95vq1.js",
+        "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+        "name": "qi",
+        "start": 154536,
+        "end": 154558,
+        "sha256": "ef8fe9a9aa527b9c1522a2a51965cb965e6e943fe0ca8fa29566bc16d2ab7c13",
+        "source": "class qi{committed=!1}"
+      },
+      {
+        "module": "chunk-xep95vq1.js",
+        "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+        "name": "Hi",
+        "start": 154562,
+        "end": 154571,
+        "sha256": "930ecd679cee844e8220db4f56f3e8b9339cc3ccf738f71580f778723c443a89",
+        "source": "Hi=new qi"
+      },
+      {
+        "module": "chunk-xep95vq1.js",
+        "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+        "name": "Dr",
+        "start": 154572,
+        "end": 154606,
+        "sha256": "4eb057ec83954c396679f8ece9e36255fab8a3ca23c25957deecede8e539855e",
+        "source": "function Dr(){return Hi.committed}"
+      },
+      {
+        "module": "chunk-xep95vq1.js",
+        "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+        "name": "Xoe",
+        "start": 154606,
+        "end": 154637,
+        "sha256": "44adbf32b6ea604da57f0c1176ed160391cc693f36a0c35e5314e84331f140c3",
+        "source": "function Xoe(){Hi.committed=!0}"
+      }
+    ],
+    "operations": {
+      "he": {
+        "module": "chunk-mphp7acd.js",
+        "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+        "name": "he",
+        "start": 224214,
+        "end": 224471,
+        "sha256": "b8a8a72ac680c9c2b0215fdb463aba544f80019cf7f456de50d358da400d6cac",
+        "source": "function he(Yo,qr){if(D.delete(Yo))D.add(Yo);else{if(qr?.terminalEmitted!==!0&&D.size>=z){let Lr;for(let Kr of D)if(!j.has(Kr)){Lr=Kr;break}if(Lr!==void 0)D.delete(Lr)}D.add(Yo)}if(qr?.terminalEmitted!==!0)return!1;if(j.has(Yo))return!1;return j.add(Yo),!0}"
+      },
+      "_e": {
+        "module": "chunk-mphp7acd.js",
+        "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+        "name": "_e",
+        "start": 224471,
+        "end": 224507,
+        "sha256": "7c18e9cb1a32efe996b988ca1941f13e3fed536a279f722b3e6e2edb1be4b415",
+        "source": "function _e(Yo){return D.delete(Yo)}"
+      },
+      "ke": {
+        "module": "chunk-mphp7acd.js",
+        "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+        "name": "ke",
+        "start": 224507,
+        "end": 224543,
+        "sha256": "c049307fa09183dc9a724e9bd7b0a8ee67fdf72c146c6fadcdfbda0fd32b86dd",
+        "source": "function ke(Yo){return j.delete(Yo)}"
+      },
+      "be": {
+        "module": "chunk-mphp7acd.js",
+        "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+        "name": "be",
+        "start": 224543,
+        "end": 224576,
+        "sha256": "020ae6e3bf55f132df3fb8cae2a17ccde473386cad30688f38eaf037709739a2",
+        "source": "function be(Yo){return j.has(Yo)}"
+      },
+      "Te": {
+        "module": "chunk-mphp7acd.js",
+        "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+        "name": "Te",
+        "start": 224591,
+        "end": 224660,
+        "sha256": "1f988b0b81825dc224acc4eb0c9c9996fdd7ea9973b476fbf336f14e111a8b61",
+        "source": "function Te(Yo){for(let qr of Yo)if(qr.uuid!==void 0)ve.add(qr.uuid)}"
+      },
+      "xe": {
+        "module": "chunk-mphp7acd.js",
+        "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+        "name": "xe",
+        "start": 224660,
+        "end": 224732,
+        "sha256": "62d2fa87a2d74286bc6ab1fd7c565d17806064a49e44a6fe529aad7c6dcecd32",
+        "source": "function xe(Yo){for(let qr of Yo)if(qr.uuid!==void 0)ve.delete(qr.uuid)}"
+      },
+      "Pe": {
+        "module": "chunk-mphp7acd.js",
+        "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+        "name": "Pe",
+        "start": 224732,
+        "end": 224766,
+        "sha256": "83f4b415c7e93f6ab3b619172cb3ec558c2ecc09d827c23be158f0debc3366ac",
+        "source": "function Pe(Yo){return ve.has(Yo)}"
+      },
+      "Qe": {
+        "module": "chunk-mphp7acd.js",
+        "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+        "name": "Qe",
+        "start": 225097,
+        "end": 225134,
+        "sha256": "55980148e72cf2229eee5163a411829d06de8720f8cbc1234f6706eff8f76178",
+        "source": "function Qe(){if(qe)return;qe=!0,K()}"
+      },
+      "ht": {
+        "module": "chunk-mphp7acd.js",
+        "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+        "name": "ht",
+        "start": 225490,
+        "end": 225629,
+        "sha256": "24495aaad3bc6375203f7cce1640685732f9575e1446e13a42cc740203238b8f",
+        "source": "function ht(Yo){let qr=g.find((Lr)=>Lr.uuid===Yo);if(qr===void 0||qr.priority===\"now\"||ve.has(Yo))return!1;return qr.priority=\"now\",K(),!0}"
+      },
+      "kt": {
+        "module": "chunk-mphp7acd.js",
+        "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+        "name": "kt",
+        "start": 225629,
+        "end": 225756,
+        "sha256": "d084f61fa0ffd1b4d376cdde7d32926d1157ce1efabd10d195b0fe2bab4d6e5f",
+        "source": "function kt(Yo,qr){let Lr=g.find((Kr)=>Kr.uuid===Yo);if(Lr===void 0||Lr.priority!==\"now\")return!1;return Lr.priority=qr,K(),!0}"
+      },
+      "$t": {
+        "module": "chunk-mphp7acd.js",
+        "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+        "name": "$t",
+        "start": 225756,
+        "end": 225786,
+        "sha256": "7998da5148009c665431cbd615b0d03740b964e87703c3be217426a7bc0cee16",
+        "source": "function $t(){return qe||Dr()}"
+      }
+    },
+    "intakeOperations": {
+      "$e": {
+        "module": "chunk-mphp7acd.js",
+        "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+        "name": "$e",
+        "start": 224770,
+        "end": 224780,
+        "sha256": "1fbbadbf347c46a3ab08964f912e7fa0ed8f5e0cbb3ab96bc6f374fc5dbbad34",
+        "source": "$e=new Map",
+        "variable": true
+      },
+      "Ne": {
+        "module": "chunk-mphp7acd.js",
+        "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+        "name": "Ne",
+        "start": 224781,
+        "end": 224989,
+        "sha256": "27e5fc9bd87de5a186b6ce621593b954344ef16656da0dea28702287c4a5a23e",
+        "source": "function Ne(Yo){if(Yo===void 0)return{withdrawn:()=>!1,[Symbol.dispose]:()=>{}};let qr={withdrawn:!1};return $e.set(Yo,qr),{withdrawn:()=>qr.withdrawn,[Symbol.dispose]:()=>{if($e.get(Yo)===qr)$e.delete(Yo)}}}",
+        "variable": false
+      },
+      "We": {
+        "module": "chunk-mphp7acd.js",
+        "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+        "name": "We",
+        "start": 224989,
+        "end": 225087,
+        "sha256": "c61c7772fd2b9332b2144eeb1d509a56dc16337d64165831296ea97c6f96e562",
+        "source": "function We(Yo){let qr=$e.get(Yo);if(qr===void 0||qr.withdrawn)return!1;return qr.withdrawn=!0,!0}",
+        "variable": false
+      },
+      "It": {
+        "module": "chunk-mphp7acd.js",
+        "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+        "name": "It",
+        "start": 225790,
+        "end": 225797,
+        "sha256": "62cf2475a2ee80c3f707705e4c636cc716435f6d9c268060af4567c71b29195d",
+        "source": "It=null",
+        "variable": true
+      },
+      "jt": {
+        "module": "chunk-mphp7acd.js",
+        "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+        "name": "jt",
+        "start": 225798,
+        "end": 225800,
+        "sha256": "f6c08823b6875e909510804d1db4b278e34f9ce2415484226497ee80931e42a8",
+        "source": "jt",
+        "variable": true
+      },
+      "Xt": {
+        "module": "chunk-mphp7acd.js",
+        "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+        "name": "Xt",
+        "start": 225801,
+        "end": 225833,
+        "sha256": "4c2979b9c0728fa6e0af461229cc62dc789a1f83bec6a84b08ad65141d02e5d0",
+        "source": "function Xt(Yo){It=Yo,jt=void 0}",
+        "variable": false
+      },
+      "un": {
+        "module": "chunk-mphp7acd.js",
+        "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+        "name": "un",
+        "start": 225833,
+        "end": 225891,
+        "sha256": "84d3672337ee878b6defac3f599cf1b5ebdb29b94d7b32ffe4254bb8941a97b6",
+        "source": "function un(Yo){if(Yo===void 0||It===Yo)It=null,jt=void 0}",
+        "variable": false
+      },
+      "rn": {
+        "module": "chunk-mphp7acd.js",
+        "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+        "name": "rn",
+        "start": 225891,
+        "end": 225937,
+        "sha256": "e4b76edd82ceb3481530a5eb1496b9edb3286ad9fcc38a1375176e13d2afa1e6",
+        "source": "function rn(Yo){return It!==null&&It.some(Yo)}",
+        "variable": false
+      },
+      "Yt": {
+        "module": "chunk-mphp7acd.js",
+        "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+        "name": "Yt",
+        "start": 225941,
+        "end": 225951,
+        "sha256": "5b6ab9817a43946dd72d7596834b2aa2493fbb13e5214ba60065b7e037bd6df2",
+        "source": "Yt=new Set",
+        "variable": true
+      },
+      "Qt": {
+        "module": "chunk-mphp7acd.js",
+        "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+        "name": "Qt",
+        "start": 225952,
+        "end": 226025,
+        "sha256": "8560fdf5140f8f5c06207670ac2a76023bab59dd5a4365eee67b9f75814bb020",
+        "source": "function Qt(Yo){return Yt.add(Yo),{[Symbol.dispose]:()=>{Yt.delete(Yo)}}}",
+        "variable": false
+      },
+      "nn": {
+        "module": "chunk-mphp7acd.js",
+        "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+        "name": "nn",
+        "start": 226025,
+        "end": 226086,
+        "sha256": "9e6b17815470d478b7b0932b51f705682d5b5468e777ff3981c4c6641220b483",
+        "source": "function nn(Yo){for(let qr of Yt)if(Yo(qr))return!0;return!1}",
+        "variable": false
+      },
+      "Pn": {
+        "module": "chunk-mphp7acd.js",
+        "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+        "name": "Pn",
+        "start": 226086,
+        "end": 226355,
+        "sha256": "ab6dca1454064469c7f6d419c968985317ced98ae08bb343ea7532996fb032a0",
+        "source": "function Pn(Yo){let qr=new Set(Yo.map((Kr)=>Kr.uuid));for(let Kr of Yt)if(Kr.uuid!==void 0&&qr.has(Kr.uuid))Yt.delete(Kr);let Lr=(It??[]).flatMap((Kr)=>Kr.uuid===void 0?[]:[Kr.uuid]);if(Lr.length>0&&jt!==\"appended\")jt=Lr.some((Kr)=>qr.has(Kr))?\"appended\":\"passed-over\"}",
+        "variable": false
+      },
+      "$n": {
+        "module": "chunk-mphp7acd.js",
+        "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+        "name": "$n",
+        "start": 226355,
+        "end": 226379,
+        "sha256": "831eaca67e0fc6295b4d271b5b1ccc3d9e2eac89af43e29dce8d512ed7c286df",
+        "source": "function $n(){return jt}",
+        "variable": false
+      },
+      "qn": {
+        "module": "chunk-mphp7acd.js",
+        "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+        "name": "qn",
+        "start": 226383,
+        "end": 226403,
+        "sha256": "26385124d9f83ce2f8f0d9a11a00338bbbd5e2ec4a47b0eeac62692ab5447820",
+        "source": "qn=Promise.resolve()",
+        "variable": true
+      },
+      "En": {
+        "module": "chunk-mphp7acd.js",
+        "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+        "name": "En",
+        "start": 226404,
+        "end": 226490,
+        "sha256": "79aad8854c90bdc26d8266813ebd785b8753191201cb51d230ea35c566fbb8f3",
+        "source": "function En(){let Yo=qn,qr;return qn=new Promise((Lr)=>{qr=Lr}),{prior:Yo,release:qr}}",
+        "variable": false
+      }
+    },
+    "intakeState": "Original $e/It/jt/Yt/qn cells are scoped inside the same factory instance as D/j/ve/qe and the existing commandQueue. No additional queue, controller, or cancellation flag."
+  },
+  "sourceIdentity": "The committed-fold reader/writer share the exact generated Hi singleton; no false default is installed."
+}

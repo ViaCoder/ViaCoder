@@ -1,0 +1,62 @@
+{
+  "version": "2.1.287",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16 end-exclusive",
+  "rows": [
+    {
+      "file": "chunk-hrhfcbdv.js",
+      "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+      "name": "Xg",
+      "start": 194716,
+      "end": 195009,
+      "sha256": "8e29348c7ae2829d0c69534fcfeac8e841e03b3af3baee64a0d17ed926710142",
+      "source": "Xg=f(()=>Fe([o(),u({}).passthrough().describe('{ id: stable id (letters, digits, \".\", \"_\", \"-\"; max 64), text: the tip (max 500 characters, one line), cooldownSessions?: sessions to wait before showing it again (default 0), priority?: tie-break weight among never-shown tips (default 0) }')]))"
+    },
+    {
+      "file": "chunk-hrhfcbdv.js",
+      "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+      "name": "PYr",
+      "start": 195010,
+      "end": 195137,
+      "sha256": "28a82d44a0edbaad283a04777c79ab2b865fa61faaae4848a49f8b9234533e77",
+      "source": "PYr=f(()=>Gi((e)=>Array.isArray(e)?e.filter((n)=>typeof n===\"string\"||!!n&&typeof n===\"object\"&&!Array.isArray(n)):[],T(Xg())))"
+    },
+    {
+      "file": "chunk-hrhfcbdv.js",
+      "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+      "name": "settings.spinnerTipsOverride",
+      "start": 257593,
+      "end": 258351,
+      "sha256": "da2abc81a283267559b57218387adf35bddadbf204c1d3745982402a7bbe0394",
+      "source": "()=>u({excludeDefault:H().optional().catch(void 0),tips:PYr().optional(),tipsFile:o().optional().catch(void 0).describe(\"Absolute or ~/ local path to a JSON file holding an array of tips (same shapes as `tips`); honored from user, --settings and on-disk managed settings only. Read once per CLI process (restart to pick up edits).\"),label:o().optional().catch(void 0).describe('Prefix shown before your tips in the spinner (default \"Tip\")')}).passthrough().optional().catch(void 0).describe(\"Add your organization's own tips to the spinner tip rotation. tips: strings or {id, text, cooldownSessions?, priority?} objects; tipsFile: a JSON file of the same; label: prefix shown before your tips; excludeDefault: if true, only show your tips (default: false).\")"
+    },
+    {
+      "file": "chunk-hrhfcbdv.js",
+      "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+      "name": "settings.pluginSuggestionMarketplaces",
+      "start": 248188,
+      "end": 249064,
+      "sha256": "c0e372177d63525264bd8c4b783485c515e5a2973c2d8b720c798d13f62e29d9",
+      "source": "()=>T(o()).optional().describe(\"Marketplace names whose plugins may surface as contextual install suggestions (relevance-based tips). No marketplace-declared suggestions surface without this allowlist; the built-in first-party frontend-design tip is unaffected. Only honored when set in managed settings (policy scope); the key is ignored in user, project, and local settings. A name only takes effect when the marketplace is registered on the machine AND its registered source is also declared in managed settings, either as the extraKnownMarketplaces entry for that name or as an entry of strictKnownMarketplaces. A marketplace registered from a different source under an allowlisted name is ignored. The official marketplace is exempt from the source requirement: allowlisting its name alone suffices, since that name can only register from the official Anthropic source.\")"
+    },
+    {
+      "file": "chunk-f3vd025c.js",
+      "moduleSha256": "3581bd0ffb98fbc226ad71257a91947cbe72729107e03bc6371723ded5adc639",
+      "name": "Spinner.effectiveTip",
+      "start": 22782,
+      "end": 22965,
+      "sha256": "b4eb4fa498cde177335ce37033b4db82cf882ed6afc184869c180bc82099c949",
+      "source": "ut?d:Wme()?d:wt&&!mt?\"Use /clear to start fresh when switching topics and free up context\":St&&!mt?\"Use /btw to ask a quick side question without interrupting Claude's current work\":d"
+    },
+    {
+      "file": "chunk-f3vd025c.js",
+      "moduleSha256": "3581bd0ffb98fbc226ad71257a91947cbe72729107e03bc6371723ded5adc639",
+      "name": "Spinner.tipLine",
+      "start": 22969,
+      "end": 23060,
+      "sha256": "9d67bc80244616b0562bafcf2cd4462c6fa82a9c3b700ba8bdbb569f2a13ed1b",
+      "source": "mt?`Next: ${mt.subject.replace(/\\s+/g,\" \").trim()}`:Rt?`${Rt===d&&p?p:\"Tip\"}: ${Rt}`:void 0"
+    }
+  ],
+  "adaptation": "Schema ports use existing zod/lazySchema. Spinner pure expression formal names retained; no settings reader/cache or UI state added."
+}

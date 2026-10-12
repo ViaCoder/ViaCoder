@@ -1,0 +1,2 @@
+// Complete fixed original aJo Powerup stage; only fixed dynamic-import transport.
+export function createPowerupStartupStage287(ports){return new Function("ports","const {P,e,importDiscovery287,importStep287}=ports;return (async(u)=>{if(!P.onboardingShown)return null;let{resolvePowerupDiscoveryArm:f}=await importDiscovery287();if(f()!==\"step\")return null;let{PowerupDiscoveryStep:D}=await importStep287();return e(D,{onDone:()=>u()})});")(ports)}

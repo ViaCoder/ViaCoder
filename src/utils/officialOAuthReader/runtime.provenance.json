@@ -1,0 +1,410 @@
+{
+  "version": "2.1.286",
+  "platform": "darwin-arm64",
+  "binarySha256": "75e3016e9d2570767b08e43a7467d4817a4f149232c169ca295f2c95fef21433",
+  "offsetUnit": "UTF-16 code units",
+  "records": [
+    {
+      "group": "reader",
+      "file": "chunk-npckm0wr.js",
+      "symbol": "Rht",
+      "start": 1453,
+      "end": 1462,
+      "moduleSha256": "e5e8ed124ef2040c548608f174eefc40ef6ac7103799aea8038e061ab9985a1b",
+      "sha256": "7a8eebf998dae1f3c71b477bd88d3deebe46b9d9c004c78c3c57cc7b3292cf7c",
+      "source": "Rht=30000",
+      "variable": true
+    },
+    {
+      "group": "reader",
+      "file": "chunk-majxx0zh.js",
+      "symbol": "cc",
+      "start": 607057,
+      "end": 607117,
+      "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+      "sha256": "233052afe95e5ff2473b052a5d10240050742b75c2591707474ba28edb0482d8",
+      "source": "function cc(){return a.CLAUDE_CODE_PROVIDER_MANAGED_BY_HOST}",
+      "variable": false
+    },
+    {
+      "group": "reader",
+      "file": "chunk-majxx0zh.js",
+      "symbol": "xf",
+      "start": 643856,
+      "end": 643952,
+      "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+      "sha256": "4d1e824223f122d0db7600ebdc39a16c229aa523c8c2a7c4e99c2decb1a11916",
+      "source": "function xf(e){if(e){let n=e.refreshToken;return n===\"\"||!!n&&bi.has(n)}if(cc())return!1;return}",
+      "variable": false
+    },
+    {
+      "group": "reader",
+      "file": "chunk-majxx0zh.js",
+      "symbol": "lk",
+      "start": 644010,
+      "end": 644064,
+      "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+      "sha256": "3710d8547e6d2cd704b0c8a86a3dbcd2dd8836b9b3525a16e744cdf5bd226a9d",
+      "source": "function lk(e=[\"user:inference\"]){return Fk()??[...e]}",
+      "variable": false
+    },
+    {
+      "group": "reader",
+      "file": "chunk-majxx0zh.js",
+      "symbol": "Fk",
+      "start": 644064,
+      "end": 644167,
+      "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+      "sha256": "d76698063eee29802a8434e83350af2d0059d43d3073d428be79ab1585ece738",
+      "source": "function Fk(){let e=a.CLAUDE_CODE_OAUTH_SCOPES?.split(/\\s+/).filter(Boolean);return e?.length?e:void 0}",
+      "variable": false
+    },
+    {
+      "group": "reader",
+      "file": "chunk-majxx0zh.js",
+      "symbol": "jH",
+      "start": 644171,
+      "end": 644232,
+      "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+      "sha256": "4d8ff493c59b86583d17bc0ed20fb18c904cdbd81a774a1a18261bc72bdb3328",
+      "source": "jH=[\"user:inference\",\"user:ccr_inference\",\"user:file_upload\"]",
+      "variable": true
+    },
+    {
+      "group": "reader",
+      "file": "chunk-majxx0zh.js",
+      "symbol": "zH",
+      "start": 644233,
+      "end": 644844,
+      "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+      "sha256": "65f6be69459479177ca1319f326a43f17a0e798911ce21410f3e56993063b735",
+      "source": "function zH(){if(a.CLAUDE_CODE_OAUTH_TOKEN)return{accessToken:a.CLAUDE_CODE_OAUTH_TOKEN,refreshToken:null,expiresAt:null,scopes:lk(),subscriptionType:a.CLAUDE_CODE_SUBSCRIPTION_TYPE||null,rateLimitTier:a.CLAUDE_CODE_RATE_LIMIT_TIER||null};let e=d0(),n=(r)=>({accessToken:r,refreshToken:null,expiresAt:null,scopes:FYr()??lk(jH),subscriptionType:a.CLAUDE_CODE_SUBSCRIPTION_TYPE||null,rateLimitTier:a.CLAUDE_CODE_RATE_LIMIT_TIER||null});if(e&&(!GG()||cc()))return n(e);if(cc())return null;try{let g=zn().read({fromStoreCopy:!0})?.claudeAiOauth;if(g?.accessToken)return g}catch(r){d(r)}if(e)return n(e);return null}",
+      "variable": false
+    },
+    {
+      "group": "reader",
+      "file": "chunk-majxx0zh.js",
+      "symbol": "pn",
+      "start": 645456,
+      "end": 645578,
+      "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+      "sha256": "44f4e490bd3b19f3105bca2ee9d272da78b02b9cfa9b110819fe9832388f3c97",
+      "source": "function pn(){if(r9())return null;let e=Jde.of(j().host);if(e.value!==void 0)return e.value;let n=zH();return e.value=n,n}",
+      "variable": false
+    },
+    {
+      "group": "reader",
+      "file": "chunk-majxx0zh.js",
+      "symbol": "$k",
+      "start": 647105,
+      "end": 647502,
+      "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+      "sha256": "71f7c4d7cde970c4f739975acec3ce69d3c6aa40d78bcd7fc5eea48f359ee3c4",
+      "source": "async function $k(e,n){if(F()&&n!==void 0){let s=await n.probeCredentials();if(s.state!==\"present\")return wf(e,n);if(s.version!==e.lastCredentialsVersion){e.lastCredentialsVersion=s.version,KT(),Ef(e);return}return uk(e,n)}let r;try{r=(await Tf(Rf(zS(),\".credentials.json\"))).mtimeMs}catch{return wf(e,n)}if(r!==e.lastCredentialsMtimeMs){e.lastCredentialsMtimeMs=r,KT(),Ef(e);return}await uk(e,n)}",
+      "variable": false
+    },
+    {
+      "group": "reader",
+      "file": "chunk-majxx0zh.js",
+      "symbol": "uk",
+      "start": 647502,
+      "end": 647823,
+      "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+      "sha256": "d03d38e2c4aab29490d0a63736a3c24cbbed694c215d735818e8fd9f4baf75e6",
+      "source": "async function uk(e,n){try{if(!Bn())return;let r=e.promise?await e.promise.catch(()=>null):e.value;if(r===void 0)return;if(r!==null&&!xf(r))return;let s=Date.now();if(s-e.lastUnusableTokenRecheckAt<Rht)return;if(e.lastUnusableTokenRecheckAt=s,r!==null)e.lastKeychainAccessToken=r.accessToken;await wf(e,n)}catch(r){d(r)}}",
+      "variable": false
+    },
+    {
+      "group": "reader",
+      "file": "chunk-majxx0zh.js",
+      "symbol": "Ef",
+      "start": 647823,
+      "end": 647891,
+      "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+      "sha256": "1d012fc4b50e261daa095c65d85307da10a0edfd952500399ff25817f2c3869f",
+      "source": "function Ef(e){try{e.credentialsChangedOnDisk.emit()}catch(n){d(n)}}",
+      "variable": false
+    },
+    {
+      "group": "reader",
+      "file": "chunk-majxx0zh.js",
+      "symbol": "wf",
+      "start": 648078,
+      "end": 648235,
+      "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+      "sha256": "652c8e850e9240aba23699005a94e22b83a46360c7bd985b072798ab5b562e3f",
+      "source": "async function wf(e,n){if(e.clear(),F())USe();let s=(await Fa(n))?.accessToken??null;if(s!==e.lastKeychainAccessToken)e.lastKeychainAccessToken=s,Pf(),Ef(e)}",
+      "variable": false
+    },
+    {
+      "group": "reader",
+      "file": "chunk-majxx0zh.js",
+      "symbol": "Fa",
+      "start": 652930,
+      "end": 653115,
+      "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+      "sha256": "69d459c265aa551c458e6c6c8cc532031f139421f93fccbf10997bd9e4d2a9c1",
+      "source": "function Fa(e){if(r9())return Promise.resolve(null);let n=Jde.of(j().host);if(n.promise)return n.promise;let r=XH(e);return n.promise=r,r.catch(()=>{if(n.promise===r)n.promise=null}),r}",
+      "variable": false
+    },
+    {
+      "group": "reader",
+      "file": "chunk-majxx0zh.js",
+      "symbol": "XH",
+      "start": 653115,
+      "end": 653390,
+      "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+      "sha256": "6a1241aa41edc7b28b209e3cf0cf7a94cd72ffae1961585febfc3ca520573b8d",
+      "source": "async function XH(e){if(a.CLAUDE_CODE_OAUTH_TOKEN)return pn();let n=F()&&e!==void 0?await m7n(e):d0();if(n&&(!GG()||cc()))return pn();if(cc())return null;try{let g=(await zn().readAsync(e))?.claudeAiOauth;if(g?.accessToken)return g}catch(r){d(r)}if(n)return pn();return null}",
+      "variable": false
+    }
+  ],
+  "ports": {
+    "reader": [
+      "Bn",
+      "F",
+      "FYr",
+      "GG",
+      "Jde",
+      "KT",
+      "Pf",
+      "Rf",
+      "Tf",
+      "USe",
+      "a",
+      "bi",
+      "d",
+      "d0",
+      "j",
+      "m7n",
+      "r9",
+      "zS",
+      "zn"
+    ]
+  },
+  "portBindings": {
+    "reader": {
+      "Bn": [
+        {
+          "kind": "import",
+          "file": "chunk-majxx0zh.js",
+          "module": "/$bunfs/root/chunk-0sv6vt2c.js",
+          "imported": "Bn",
+          "start": 3643,
+          "end": 3645,
+          "source": "Bn",
+          "sha256": "a0638912f2384dfe3113db0454983b65372d3d402a33202a1eb966c1378317b5"
+        }
+      ],
+      "F": [
+        {
+          "kind": "import",
+          "file": "chunk-majxx0zh.js",
+          "module": "/$bunfs/root/chunk-r65ydf8e.js",
+          "imported": "F",
+          "start": 1210,
+          "end": 1211,
+          "source": "F",
+          "sha256": "f67ab10ad4e4c53121b6a5fe4da9c10ddee905b978d3788d2723d7bfacbe28a9"
+        }
+      ],
+      "FYr": [
+        {
+          "kind": "import",
+          "file": "chunk-majxx0zh.js",
+          "module": "/$bunfs/root/chunk-ar1aj28g.js",
+          "imported": "FYr",
+          "start": 1083,
+          "end": 1086,
+          "source": "FYr",
+          "sha256": "11ae825236cc85e458142c85e3e1569c59789a5576699809b84117323cd06a0a"
+        }
+      ],
+      "GG": [
+        {
+          "kind": "import",
+          "file": "chunk-majxx0zh.js",
+          "module": "/$bunfs/root/chunk-ar1aj28g.js",
+          "imported": "GG",
+          "start": 1080,
+          "end": 1082,
+          "source": "GG",
+          "sha256": "bee30e5b6d59c1bdf10100ef331706553fd3c4e6b0a342a092c6f6f733b8be36"
+        }
+      ],
+      "Jde": [
+        {
+          "kind": "local-declaration",
+          "file": "chunk-majxx0zh.js",
+          "start": 645434,
+          "end": 645455,
+          "source": "Jde=new q(()=>new Lk)",
+          "sha256": "da8d643ed4846c90f1d46812f258f59a34d0a17149edbc332b537bbff9f21580"
+        }
+      ],
+      "KT": [
+        {
+          "kind": "local-declaration",
+          "file": "chunk-majxx0zh.js",
+          "start": 646250,
+          "end": 646282,
+          "source": "function KT(){if(Kk(),F())USe()}",
+          "sha256": "795c4ba9293d847a91c4297a95b73811788bf5a5ae1d30761f4b50b7cc6a4a76"
+        }
+      ],
+      "Pf": [
+        {
+          "kind": "local-declaration",
+          "file": "chunk-majxx0zh.js",
+          "start": 646190,
+          "end": 646220,
+          "source": "function Pf(){E2(),q_e(),Qw()}",
+          "sha256": "a11f711378cc51155c5a97eb75bbc5d8e2f99dcb44bfc0180637c90d0c0b85c0"
+        }
+      ],
+      "Rf": [
+        {
+          "kind": "import",
+          "file": "chunk-majxx0zh.js",
+          "module": "path",
+          "imported": "join",
+          "start": 6775,
+          "end": 6785,
+          "source": "join as Rf",
+          "sha256": "b515466d260716f40231231632272806050ec11252cf449df4048ca56e32bd34"
+        }
+      ],
+      "Tf": [
+        {
+          "kind": "import",
+          "file": "chunk-majxx0zh.js",
+          "module": "fs/promises",
+          "imported": "stat",
+          "start": 6725,
+          "end": 6735,
+          "source": "stat as Tf",
+          "sha256": "59264a45d846e9aaf38a06cae887e22171f00bd2b5016b15674558499226fa0f"
+        }
+      ],
+      "USe": [
+        {
+          "kind": "import",
+          "file": "chunk-majxx0zh.js",
+          "module": "/$bunfs/root/chunk-x5pmvzy7.js",
+          "imported": "USe",
+          "start": 3839,
+          "end": 3842,
+          "source": "USe",
+          "sha256": "ec85f5ee7193484b4561b665a9219aa74399e4e10309b90f45345c85ac599baa"
+        }
+      ],
+      "a": [
+        {
+          "kind": "import",
+          "file": "chunk-majxx0zh.js",
+          "module": "/$bunfs/root/chunk-07mxqtdh.js",
+          "imported": "a",
+          "start": 1681,
+          "end": 1682,
+          "source": "a",
+          "sha256": "ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb"
+        }
+      ],
+      "bi": [
+        {
+          "kind": "local-declaration",
+          "file": "chunk-majxx0zh.js",
+          "start": 642938,
+          "end": 642967,
+          "source": "bi=it(new Set,(e)=>e.clear())",
+          "sha256": "e8935a8bafcb7b43c2b968f0a1e5c970f6116872d5f5b5cc87d72a0b7d4d924e"
+        }
+      ],
+      "d": [
+        {
+          "kind": "import",
+          "file": "chunk-majxx0zh.js",
+          "module": "/$bunfs/root/chunk-j72sz16r.js",
+          "imported": "d",
+          "start": 1946,
+          "end": 1947,
+          "source": "d",
+          "sha256": "18ac3e7343f016890c510e93f935261169d9e3f565436429830faf0934f4f8e4"
+        }
+      ],
+      "d0": [
+        {
+          "kind": "import",
+          "file": "chunk-majxx0zh.js",
+          "module": "/$bunfs/root/chunk-f09yefd8.js",
+          "imported": "d0",
+          "start": 4627,
+          "end": 4629,
+          "source": "d0",
+          "sha256": "0ad52e338662c923b15fd45a73c6e97336efccf28a7aef9449443cc6dd7415fb"
+        }
+      ],
+      "j": [
+        {
+          "kind": "import",
+          "file": "chunk-majxx0zh.js",
+          "module": "/$bunfs/root/chunk-ar1aj28g.js",
+          "imported": "j",
+          "start": 943,
+          "end": 944,
+          "source": "j",
+          "sha256": "189f40034be7a199f1fa9891668ee3ab6049f82d38c68be70f596eab2e1857b7"
+        }
+      ],
+      "m7n": [
+        {
+          "kind": "import",
+          "file": "chunk-majxx0zh.js",
+          "module": "/$bunfs/root/chunk-f09yefd8.js",
+          "imported": "m7n",
+          "start": 4630,
+          "end": 4633,
+          "source": "m7n",
+          "sha256": "76ce73337f65866e7c1c9753cbf252092f8bc65290418fa990936b5a932d593b"
+        }
+      ],
+      "r9": [
+        {
+          "kind": "local-declaration",
+          "file": "chunk-majxx0zh.js",
+          "start": 615272,
+          "end": 615313,
+          "source": "function r9(){if(!kr())return!1;return!0}",
+          "sha256": "b7a76a17685d4ab5d7ec23ddbcd8b5b43414bd104e2b7a1098a11f681123d5c3"
+        }
+      ],
+      "zS": [
+        {
+          "kind": "import",
+          "file": "chunk-majxx0zh.js",
+          "module": "/$bunfs/root/chunk-npckm0wr.js",
+          "imported": "zS",
+          "start": 3947,
+          "end": 3949,
+          "source": "zS",
+          "sha256": "2a0eec766ec0835a58c6f07210bf4b95d665625db96ee18f6f1a8e7b3a05fe18"
+        }
+      ],
+      "zn": [
+        {
+          "kind": "import",
+          "file": "chunk-majxx0zh.js",
+          "module": "/$bunfs/root/chunk-x5pmvzy7.js",
+          "imported": "zn",
+          "start": 3843,
+          "end": 3845,
+          "source": "zn",
+          "sha256": "4f240c3fce857e766bc57dc127e931bdd4d17496a8e71c83b56feca4cc9b3c79"
+        }
+      ]
+    }
+  },
+  "returns": {
+    "reader": "{sync:pn,async:Fa,readAsync:XH,readSync:zH,check:$k,recheck:uk,uncached:wf,unusable:xf,emit:Ef,scopes:lk}"
+  }
+}

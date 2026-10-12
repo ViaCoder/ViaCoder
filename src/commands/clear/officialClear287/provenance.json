@@ -1,0 +1,902 @@
+{
+  "version": "2.1.287",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16",
+  "adaptations": [
+    "B_r: awaited local-C live MCP disposal before tasks/AppState reset",
+    "Bun virtual import/require resolution only"
+  ],
+  "groups": [
+    {
+      "file": "chunk-r62efkt7.js",
+      "rows": [
+        {
+          "file": "chunk-r62efkt7.js",
+          "moduleSha256": "d54cd26f75a3de59813635dc61437b1960458b4e3214d772ab04a35c3e03789f",
+          "name": "B_r",
+          "start": 2475,
+          "end": 6382,
+          "sha256": "b9a6b5165e6a17aa40a90f165379b6f90d33c7c7e4ffab3284bde28ee77ebaf2",
+          "source": "async function*B_r({session:o,setMessages:m,readFileState:D,sessionEnvVars:N,toolState:j,memorySelector:L,getAppState:r,setAppState:T,sessionHooksRegistry:H,dialogStore:F,isolationLatch:u,taskRegistry:O,clearedSessionTitle:p,storageV5:s,credentials:h,deferSessionStartHooks:R,releaseDeferredSessionStartHooks:B,resetTrigger:k,resetUserMessageUuid:x}){KJt(o),Aw(N6),WYe(),_xe(),ASe();let K=_ye();await qct(o,\"clear\",{sessionHooks:H,getAppState:r,signal:AbortSignal.timeout(K),storageV5:s,credentials:h}),vsn(\"conversation_clear\");let l=new Set,b=[];if(r)for(let e of Object.values(r().tasks)){if(C(e))continue;if(kn(e))l.add(e.agentId),b.push(e);else if(_p(e))l.add(e.identity.agentId)}B?.(),y3(\"clear\"),m((e)=>{if(eye()===\"padded-countdown\")gin.of(o).rollOverContext(\"main\",v5(e));return[]});let Y=r?Object.values(r().tasks).some((e)=>!C(e)&&X$e.has(e.type)&&(e.status===\"running\"||kn(e)&&e_(e))):!1;G_r(o,l,T,j,s,Y);let E=Ee();try{Rf(E)}catch{t(`/clear: originalCwd \"${E}\" no longer exists; falling back`);let e=cr();if(e!==E)try{Rf(e)}catch{}}if(D.clear(),Oae.of(o.host).reset(),KS.of(o).discardAll(),Aw((e)=>e.mode===\"task-notification\"&&typeof e.value===\"string\"&&m4e(e.value)!==null),N?.clear(),o2(L),u&&l.size===0)u.current=null;if(r)wZt(r);let c=xf(q()),A=$ce(),f=!p&&c!==void 0,W=f&&BGn(Vi(q())),S,M;if(jYe(),T){if(F?.dismissKind(CX.kind),kUt(new Set),T((e)=>{let i={};for(let[g,n]of Object.entries(e.tasks)){if(!C(n)){i[g]=n;continue}try{if(n.status===\"running\"){if(Lu(n))n.shellCommand?.kill(),n.shellCommand?.cleanup();if(\"abortController\"in n)n.abortController?.abort()}}catch(oe){d(oe)}Qu(g)}return S=G(Object.values(i),(g)=>!ie.has(g.type)),M=e.activeGoal,{...bZt(e),tasks:i,runningSubagents:S===0?0:e.runningSubagents,...{endedByModel:!1},attribution:K5e(),cacheBreakerPhrase:void 0,sendMessagePins:{},agentNameRegistry:TJt(e.agentNameRegistry,i),frameUrls:{},standaloneAgentContext:f&&e.standaloneAgentContext?.name?{name:e.standaloneAgentContext.name}:void 0,fileHistory:{snapshots:[],trackedFiles:new Set,snapshotSequence:0}}}),M!==void 0)N9(M,\"session_clear\");F4({})}if(O&&S===0)O.resetWebSearchCalls();if(r){for(let e of r().mcp.clients)if(e.name===\"ide\"&&e.type===\"connected\"){Pre(e,void 0);let{clearServerCache:i}=import.meta.require(\"/$bunfs/root/chunk-3xgd8dv8.js\").mcpClientModule();await i(e.name,e.config).catch(()=>{})}}AWr();let z=q(),Q=p?Dc()??au():void 0,X=dq(),I=S===0&&l.size===0?void 0:i4(),J=[...SMt()],V=!1,ee=!1;if(fMt(),X)V0r();if(V)AY(!0),jwt(!0);if(ee)S6e(!0),b6e(!0);if(I!==void 0)QOe(I);let _=se();if(Ce()||mc()&&iue()){let e=k===\"clear\"?tn(x):null;Wi({type:\"conversation_reset\",new_conversation_id:_,...k!==void 0&&{trigger:k},...e!==null&&{user_message_uuid:e},timestamp:new Date().toISOString()}),y(\"bridge_conversation_reset\")}UVe.of(o.host).conversationReset(),yield{type:\"conversation_reset\",newConversationId:_},JZr(s),y6e();let w=Vi(q()),ne=W||f&&BGn(w);if(zQr({setCurrentAsParent:!0}),f&&c!==void 0)ZD(c);let ae=Promise.resolve(!0);if(OUe(),GYe(),lNr.of(o).reset(),qt().needsAuthNoticedThisSession.clear(),xRe(o),a.CLAUDE_CODE_SESSION_ID)process.env.CLAUDE_CODE_SESSION_ID=q();await cq();for(let e of re?.pauseStampsCarriedAcrossClear(r?.().mcp.clients,J)??[])rOr({...e,afterUuid:null},s);if(K0r(),Y0r(w),await UFr(q(),au(),s),p)await d2(z,p,Q,\"user\",s);else if(c){if(await d2(q(),c,void 0,\"user\",s),A)await vye(q(),A,void 0,\"user\",s)}for(let e of b)if(e.status===\"running\")xTe(e.agentId);let{isCoordinatorMode:te}=import.meta.require(\"/$bunfs/root/chunk-3tc44sbx.js\");m1(te()?\"coordinator\":\"normal\");let P=Uc();if(P)d0(P,s);if(u?.current)Uce(u.current,s);if(R){R((e)=>H5(o,\"clear\",{signal:e,storageV5:s,credentials:h}).catch((i)=>{if(at(i))t(`SessionStart hooks after /clear aborted: ${Z(i).message}`);else d(st(Z(i),\"SessionStart hooks after /clear threw\"));return[]}));return}let U=await H5(o,\"clear\",{storageV5:s,credentials:h});if(U.length>0)m(()=>U)}"
+        },
+        {
+          "file": "chunk-r62efkt7.js",
+          "moduleSha256": "d54cd26f75a3de59813635dc61437b1960458b4e3214d772ab04a35c3e03789f",
+          "name": "C",
+          "start": 6382,
+          "end": 6446,
+          "sha256": "9bd79b187b4ac4cf3a327f775b7f820abee538033fdb4db7cbf6b7c0ed963ffb",
+          "source": "function C(o){return\"isBackgrounded\"in o&&o.isBackgrounded===!1}"
+        },
+        {
+          "file": "chunk-r62efkt7.js",
+          "moduleSha256": "d54cd26f75a3de59813635dc61437b1960458b4e3214d772ab04a35c3e03789f",
+          "name": "ie",
+          "start": 6450,
+          "end": 6514,
+          "sha256": "dad6d8dd289106c74a24d1bf8285821c7ffc191edd39ecaabe68d1944ff5489f",
+          "source": "ie=new Set([\"local_bash\",\"monitor_mcp\",\"monitor_ws\",\"mcp_task\"])"
+        },
+        {
+          "file": "chunk-r62efkt7.js",
+          "moduleSha256": "d54cd26f75a3de59813635dc61437b1960458b4e3214d772ab04a35c3e03789f",
+          "name": "j_r",
+          "start": 6515,
+          "end": 6604,
+          "sha256": "4e65c9dc8f334b7bcb229fd9c230a0a1c389de2e00746cf6f1f8bc9f261f64ab",
+          "source": "function j_r(o){return Object.values(o).some((m)=>!C(m)&&X$e.has(m.type)&&!yi(m.status))}"
+        },
+        {
+          "file": "chunk-r62efkt7.js",
+          "moduleSha256": "d54cd26f75a3de59813635dc61437b1960458b4e3214d772ab04a35c3e03789f",
+          "name": "re",
+          "start": 2467,
+          "end": 2474,
+          "sha256": "b239f0c6205f666adcb65dcb724a6fc06991c7999621a744b12518ea8b053894",
+          "source": "re=null"
+        }
+      ],
+      "imports": [
+        {
+          "local": "tn",
+          "file": "/$bunfs/root/chunk-yptq0vrd.js",
+          "name": "tn"
+        },
+        {
+          "local": "q",
+          "file": "/$bunfs/root/chunk-bn3p37gv.js",
+          "name": "q"
+        },
+        {
+          "local": "zQr",
+          "file": "/$bunfs/root/chunk-bn3p37gv.js",
+          "name": "zQr"
+        },
+        {
+          "local": "Ee",
+          "file": "/$bunfs/root/chunk-bn3p37gv.js",
+          "name": "Ee"
+        },
+        {
+          "local": "cr",
+          "file": "/$bunfs/root/chunk-bn3p37gv.js",
+          "name": "cr"
+        },
+        {
+          "local": "JZr",
+          "file": "/$bunfs/root/chunk-bn3p37gv.js",
+          "name": "JZr"
+        },
+        {
+          "local": "y6e",
+          "file": "/$bunfs/root/chunk-bn3p37gv.js",
+          "name": "y6e"
+        },
+        {
+          "local": "Ce",
+          "file": "/$bunfs/root/chunk-bn3p37gv.js",
+          "name": "Ce"
+        },
+        {
+          "local": "AY",
+          "file": "/$bunfs/root/chunk-bn3p37gv.js",
+          "name": "AY"
+        },
+        {
+          "local": "S6e",
+          "file": "/$bunfs/root/chunk-bn3p37gv.js",
+          "name": "S6e"
+        },
+        {
+          "local": "jwt",
+          "file": "/$bunfs/root/chunk-bn3p37gv.js",
+          "name": "jwt"
+        },
+        {
+          "local": "b6e",
+          "file": "/$bunfs/root/chunk-bn3p37gv.js",
+          "name": "b6e"
+        },
+        {
+          "local": "i4",
+          "file": "/$bunfs/root/chunk-bn3p37gv.js",
+          "name": "i4"
+        },
+        {
+          "local": "QOe",
+          "file": "/$bunfs/root/chunk-bn3p37gv.js",
+          "name": "QOe"
+        },
+        {
+          "local": "mc",
+          "file": "/$bunfs/root/chunk-bn3p37gv.js",
+          "name": "mc"
+        },
+        {
+          "local": "at",
+          "file": "/$bunfs/root/chunk-c9me9cp7.js",
+          "name": "at"
+        },
+        {
+          "local": "st",
+          "file": "/$bunfs/root/chunk-c9me9cp7.js",
+          "name": "st"
+        },
+        {
+          "local": "Z",
+          "file": "/$bunfs/root/chunk-c9me9cp7.js",
+          "name": "Z"
+        },
+        {
+          "local": "y",
+          "file": "/$bunfs/root/chunk-9d2ykxmy.js",
+          "name": "y"
+        },
+        {
+          "local": "Wi",
+          "file": "/$bunfs/root/chunk-nankzm0s.js",
+          "name": "Wi"
+        },
+        {
+          "local": "Uc",
+          "file": "/$bunfs/root/chunk-nankzm0s.js",
+          "name": "Uc"
+        },
+        {
+          "local": "a",
+          "file": "/$bunfs/root/chunk-mbfze585.js",
+          "name": "a"
+        },
+        {
+          "local": "t",
+          "file": "/$bunfs/root/chunk-q80zaav8.js",
+          "name": "t"
+        },
+        {
+          "local": "d",
+          "file": "/$bunfs/root/chunk-amhtwhch.js",
+          "name": "d"
+        },
+        {
+          "local": "qt",
+          "file": "/$bunfs/root/chunk-758hjhx1.js",
+          "name": "qt"
+        },
+        {
+          "local": "K5e",
+          "file": "/$bunfs/root/chunk-09m4fzsj.js",
+          "name": "K5e"
+        },
+        {
+          "local": "lNr",
+          "file": "/$bunfs/root/chunk-09m4fzsj.js",
+          "name": "lNr"
+        },
+        {
+          "local": "vsn",
+          "file": "/$bunfs/root/chunk-mphp7acd.js",
+          "name": "vsn"
+        },
+        {
+          "local": "v5",
+          "file": "/$bunfs/root/chunk-mphp7acd.js",
+          "name": "v5"
+        },
+        {
+          "local": "o2",
+          "file": "/$bunfs/root/chunk-mphp7acd.js",
+          "name": "o2"
+        },
+        {
+          "local": "gin",
+          "file": "/$bunfs/root/chunk-mphp7acd.js",
+          "name": "gin"
+        },
+        {
+          "local": "eye",
+          "file": "/$bunfs/root/chunk-mphp7acd.js",
+          "name": "eye"
+        },
+        {
+          "local": "m4e",
+          "file": "/$bunfs/root/chunk-mphp7acd.js",
+          "name": "m4e"
+        },
+        {
+          "local": "KS",
+          "file": "/$bunfs/root/chunk-mphp7acd.js",
+          "name": "KS"
+        },
+        {
+          "local": "Lu",
+          "file": "/$bunfs/root/chunk-mphp7acd.js",
+          "name": "Lu"
+        },
+        {
+          "local": "Rf",
+          "file": "/$bunfs/root/chunk-mphp7acd.js",
+          "name": "Rf"
+        },
+        {
+          "local": "xTe",
+          "file": "/$bunfs/root/chunk-mphp7acd.js",
+          "name": "xTe"
+        },
+        {
+          "local": "e_",
+          "file": "/$bunfs/root/chunk-mphp7acd.js",
+          "name": "e_"
+        },
+        {
+          "local": "H5",
+          "file": "/$bunfs/root/chunk-mphp7acd.js",
+          "name": "H5"
+        },
+        {
+          "local": "qct",
+          "file": "/$bunfs/root/chunk-mphp7acd.js",
+          "name": "qct"
+        },
+        {
+          "local": "_ye",
+          "file": "/$bunfs/root/chunk-mphp7acd.js",
+          "name": "_ye"
+        },
+        {
+          "local": "Dc",
+          "file": "/$bunfs/root/chunk-mphp7acd.js",
+          "name": "Dc"
+        },
+        {
+          "local": "cq",
+          "file": "/$bunfs/root/chunk-mphp7acd.js",
+          "name": "cq"
+        },
+        {
+          "local": "d2",
+          "file": "/$bunfs/root/chunk-mphp7acd.js",
+          "name": "d2"
+        },
+        {
+          "local": "dq",
+          "file": "/$bunfs/root/chunk-mphp7acd.js",
+          "name": "dq"
+        },
+        {
+          "local": "V0r",
+          "file": "/$bunfs/root/chunk-mphp7acd.js",
+          "name": "V0r"
+        },
+        {
+          "local": "K0r",
+          "file": "/$bunfs/root/chunk-mphp7acd.js",
+          "name": "K0r"
+        },
+        {
+          "local": "Vi",
+          "file": "/$bunfs/root/chunk-mphp7acd.js",
+          "name": "Vi"
+        },
+        {
+          "local": "Y0r",
+          "file": "/$bunfs/root/chunk-mphp7acd.js",
+          "name": "Y0r"
+        },
+        {
+          "local": "BGn",
+          "file": "/$bunfs/root/chunk-mphp7acd.js",
+          "name": "BGn"
+        },
+        {
+          "local": "xf",
+          "file": "/$bunfs/root/chunk-mphp7acd.js",
+          "name": "xf"
+        },
+        {
+          "local": "$ce",
+          "file": "/$bunfs/root/chunk-mphp7acd.js",
+          "name": "$ce"
+        },
+        {
+          "local": "fMt",
+          "file": "/$bunfs/root/chunk-mphp7acd.js",
+          "name": "fMt"
+        },
+        {
+          "local": "vye",
+          "file": "/$bunfs/root/chunk-mphp7acd.js",
+          "name": "vye"
+        },
+        {
+          "local": "ZD",
+          "file": "/$bunfs/root/chunk-mphp7acd.js",
+          "name": "ZD"
+        },
+        {
+          "local": "m1",
+          "file": "/$bunfs/root/chunk-mphp7acd.js",
+          "name": "m1"
+        },
+        {
+          "local": "Uce",
+          "file": "/$bunfs/root/chunk-mphp7acd.js",
+          "name": "Uce"
+        },
+        {
+          "local": "rOr",
+          "file": "/$bunfs/root/chunk-mphp7acd.js",
+          "name": "rOr"
+        },
+        {
+          "local": "SMt",
+          "file": "/$bunfs/root/chunk-mphp7acd.js",
+          "name": "SMt"
+        },
+        {
+          "local": "d0",
+          "file": "/$bunfs/root/chunk-mphp7acd.js",
+          "name": "d0"
+        },
+        {
+          "local": "N6",
+          "file": "/$bunfs/root/chunk-mphp7acd.js",
+          "name": "N6"
+        },
+        {
+          "local": "Aw",
+          "file": "/$bunfs/root/chunk-mphp7acd.js",
+          "name": "Aw"
+        },
+        {
+          "local": "y3",
+          "file": "/$bunfs/root/chunk-1b21she7.js",
+          "name": "y3"
+        },
+        {
+          "local": "au",
+          "file": "/$bunfs/root/chunk-13899ncf.js",
+          "name": "au"
+        },
+        {
+          "local": "AWr",
+          "file": "/$bunfs/root/chunk-epk29mef.js",
+          "name": "AWr"
+        },
+        {
+          "local": "Qu",
+          "file": "/$bunfs/root/chunk-p54b66vv.js",
+          "name": "Qu"
+        },
+        {
+          "local": "_p",
+          "file": "/$bunfs/root/chunk-w7hy7pqe.js",
+          "name": "_p"
+        },
+        {
+          "local": "X$e",
+          "file": "/$bunfs/root/chunk-w7hy7pqe.js",
+          "name": "X$e"
+        },
+        {
+          "local": "kn",
+          "file": "/$bunfs/root/chunk-w7hy7pqe.js",
+          "name": "kn"
+        },
+        {
+          "local": "xRe",
+          "file": "/$bunfs/root/chunk-fwf64yxz.js",
+          "name": "xRe"
+        },
+        {
+          "local": "OUe",
+          "file": "/$bunfs/root/chunk-r18gtvpy.js",
+          "name": "OUe"
+        },
+        {
+          "local": "ASe",
+          "file": "/$bunfs/root/chunk-n25r032v.js",
+          "name": "ASe"
+        },
+        {
+          "local": "jYe",
+          "file": "/$bunfs/root/chunk-n25r032v.js",
+          "name": "jYe"
+        },
+        {
+          "local": "_xe",
+          "file": "/$bunfs/root/chunk-n25r032v.js",
+          "name": "_xe"
+        },
+        {
+          "local": "WYe",
+          "file": "/$bunfs/root/chunk-n25r032v.js",
+          "name": "WYe"
+        },
+        {
+          "local": "GYe",
+          "file": "/$bunfs/root/chunk-n25r032v.js",
+          "name": "GYe"
+        },
+        {
+          "local": "kUt",
+          "file": "/$bunfs/root/chunk-dh3dvyv8.js",
+          "name": "kUt"
+        },
+        {
+          "local": "iue",
+          "file": "/$bunfs/root/chunk-cwq90agc.js",
+          "name": "iue"
+        },
+        {
+          "local": "Pre",
+          "file": "/$bunfs/root/chunk-rgcp4trk.js",
+          "name": "Pre"
+        },
+        {
+          "local": "UFr",
+          "file": "/$bunfs/root/chunk-1jqp49rh.js",
+          "name": "UFr"
+        },
+        {
+          "local": "KJt",
+          "file": "/$bunfs/root/chunk-by5kes8x.js",
+          "name": "KJt"
+        },
+        {
+          "local": "CX",
+          "file": "/$bunfs/root/chunk-vpchszge.js",
+          "name": "CX"
+        },
+        {
+          "local": "bZt",
+          "file": "/$bunfs/root/chunk-y7068xm3.js",
+          "name": "bZt"
+        },
+        {
+          "local": "wZt",
+          "file": "/$bunfs/root/chunk-y7068xm3.js",
+          "name": "wZt"
+        },
+        {
+          "local": "Oae",
+          "file": "/$bunfs/root/chunk-yc409gx5.js",
+          "name": "Oae"
+        },
+        {
+          "local": "UVe",
+          "file": "/$bunfs/root/chunk-c41bht4d.js",
+          "name": "UVe"
+        },
+        {
+          "local": "G_r",
+          "file": "/$bunfs/root/chunk-a09sr9se.js",
+          "name": "G_r"
+        },
+        {
+          "local": "F4",
+          "file": "/$bunfs/root/chunk-vcryn0jr.js",
+          "name": "F4"
+        },
+        {
+          "local": "TJt",
+          "file": "/$bunfs/root/chunk-x55whpmj.js",
+          "name": "TJt"
+        },
+        {
+          "local": "yi",
+          "file": "/$bunfs/root/chunk-y1ndyy9p.js",
+          "name": "yi"
+        },
+        {
+          "local": "N9",
+          "file": "/$bunfs/root/chunk-mt9jr7v7.js",
+          "name": "N9"
+        },
+        {
+          "local": "G",
+          "file": "/$bunfs/root/chunk-h3rrxdgy.js",
+          "name": "G"
+        },
+        {
+          "local": "se",
+          "file": "crypto",
+          "name": "randomUUID"
+        }
+      ]
+    },
+    {
+      "file": "chunk-a09sr9se.js",
+      "rows": [
+        {
+          "file": "chunk-a09sr9se.js",
+          "moduleSha256": "c730668263f0ec9ba5cd98e6cbe92a27106b704c1e3731f112b78cebb1a0bdae",
+          "name": "G_r",
+          "start": 1414,
+          "end": 2561,
+          "sha256": "e3eaf43df549c6402d2fe59a2ba7c5494b728cddcdf78958c68f88e68151d9d5",
+          "source": "function G_r(t,r=new Set,i,o,l,n=!1){let a=r.size>0;if(Msn(t),Dbt(t),LBt.of(t).clear(),z_r(Hae),f0(),eWo(r),!a)ANt.peek(t)?.clear();let s=GIr();if(s?.getTeleportCacheState().status===\"active\")s.revertTeleportCache(\"transcript_cleared\",\"main\");if(Pce(t,void 0,i,void 0,void 0,l),yR(\"clear\"),_q(),_et(Ei()),wet(Ei()),tkn(Ei()),bet(Ei()),nkn(Ei()),!n)MMn(),$an(t.host);if(eHt(t,\"session_start\"),Xle.of(t).reset(),h6r.of(t).clear(),IMe.of(t).reset(),i?.((e)=>{if(e.storedImagePaths.size===0&&e.imageDescriptions.size===0&&Object.keys(e.displayedMessageContent).length===0)return e;return{...e,storedImagePaths:new Map,imageDescriptions:new Map,displayedMessageContent:{}}}),nTo(),!a)tho();if(UVt(),!a)w_o();if(qto(r),QVt(),dIo(),Bln().catch(()=>{}),rko(t),o)o.get(Got).clear(),o.get(XCe).clear(),import(\"/$bunfs/root/chunk-m63p6f9t.js\").then(({WebFetchCache:e})=>o.get(e).clear()),import(\"/$bunfs/root/chunk-7rq2cvsh.js\").then(({WebFetchHistory:e})=>o.get(e).clear()),import(\"/$bunfs/root/chunk-87jvhhxm.js\").then(({ToolSearchDescriptionCache:e})=>o.get(e).clear());import(\"/$bunfs/root/chunk-jz49fewx.js\").then(({clearAgentDefinitionsCache:e})=>e())}"
+        },
+        {
+          "file": "chunk-a09sr9se.js",
+          "moduleSha256": "c730668263f0ec9ba5cd98e6cbe92a27106b704c1e3731f112b78cebb1a0bdae",
+          "name": "MMn",
+          "start": 2561,
+          "end": 2667,
+          "sha256": "5d6e3e27f2ab73770d901423e26e24c753584631de03063ba43be43198000807",
+          "source": "function MMn(){let t=ko();t.bashPromptSkillCommands=void 0,t.workflowAuthoringSkillAvailable=void 0,vpe()}"
+        }
+      ],
+      "imports": [
+        {
+          "local": "_et",
+          "file": "/$bunfs/root/chunk-bn3p37gv.js",
+          "name": "_et"
+        },
+        {
+          "local": "bet",
+          "file": "/$bunfs/root/chunk-bn3p37gv.js",
+          "name": "bet"
+        },
+        {
+          "local": "wet",
+          "file": "/$bunfs/root/chunk-bn3p37gv.js",
+          "name": "wet"
+        },
+        {
+          "local": "tkn",
+          "file": "/$bunfs/root/chunk-bn3p37gv.js",
+          "name": "tkn"
+        },
+        {
+          "local": "nkn",
+          "file": "/$bunfs/root/chunk-bn3p37gv.js",
+          "name": "nkn"
+        },
+        {
+          "local": "qto",
+          "file": "/$bunfs/root/chunk-bn3p37gv.js",
+          "name": "qto"
+        },
+        {
+          "local": "yR",
+          "file": "/$bunfs/root/chunk-bn3p37gv.js",
+          "name": "yR"
+        },
+        {
+          "local": "Ei",
+          "file": "/$bunfs/root/chunk-bn3p37gv.js",
+          "name": "Ei"
+        },
+        {
+          "local": "ANt",
+          "file": "/$bunfs/root/chunk-09m4fzsj.js",
+          "name": "ANt"
+        },
+        {
+          "local": "QVt",
+          "file": "/$bunfs/root/chunk-2ynta9xc.js",
+          "name": "QVt"
+        },
+        {
+          "local": "Dbt",
+          "file": "/$bunfs/root/chunk-2ynta9xc.js",
+          "name": "Dbt"
+        },
+        {
+          "local": "nTo",
+          "file": "/$bunfs/root/chunk-mphp7acd.js",
+          "name": "nTo"
+        },
+        {
+          "local": "Xle",
+          "file": "/$bunfs/root/chunk-mphp7acd.js",
+          "name": "Xle"
+        },
+        {
+          "local": "eHt",
+          "file": "/$bunfs/root/chunk-mphp7acd.js",
+          "name": "eHt"
+        },
+        {
+          "local": "Msn",
+          "file": "/$bunfs/root/chunk-mphp7acd.js",
+          "name": "Msn"
+        },
+        {
+          "local": "rko",
+          "file": "/$bunfs/root/chunk-mphp7acd.js",
+          "name": "rko"
+        },
+        {
+          "local": "GIr",
+          "file": "/$bunfs/root/chunk-mphp7acd.js",
+          "name": "GIr"
+        },
+        {
+          "local": "Pce",
+          "file": "/$bunfs/root/chunk-mphp7acd.js",
+          "name": "Pce"
+        },
+        {
+          "local": "$an",
+          "file": "/$bunfs/root/chunk-mphp7acd.js",
+          "name": "$an"
+        },
+        {
+          "local": "Bln",
+          "file": "/$bunfs/root/chunk-mphp7acd.js",
+          "name": "Bln"
+        },
+        {
+          "local": "dIo",
+          "file": "/$bunfs/root/chunk-mphp7acd.js",
+          "name": "dIo"
+        },
+        {
+          "local": "f0",
+          "file": "/$bunfs/root/chunk-mphp7acd.js",
+          "name": "f0"
+        },
+        {
+          "local": "_q",
+          "file": "/$bunfs/root/chunk-mphp7acd.js",
+          "name": "_q"
+        },
+        {
+          "local": "vpe",
+          "file": "/$bunfs/root/chunk-nankzm0s.js",
+          "name": "vpe"
+        },
+        {
+          "local": "ko",
+          "file": "/$bunfs/root/chunk-vz8a844r.js",
+          "name": "ko"
+        },
+        {
+          "local": "UVt",
+          "file": "/$bunfs/root/chunk-9hktajv8.js",
+          "name": "UVt"
+        },
+        {
+          "local": "h6r",
+          "file": "/$bunfs/root/chunk-1b21she7.js",
+          "name": "h6r"
+        },
+        {
+          "local": "eWo",
+          "file": "/$bunfs/root/chunk-1b21she7.js",
+          "name": "eWo"
+        },
+        {
+          "local": "LBt",
+          "file": "/$bunfs/root/chunk-a6fqs976.js",
+          "name": "LBt"
+        },
+        {
+          "local": "Hae",
+          "file": "/$bunfs/root/chunk-v712djva.js",
+          "name": "Hae"
+        },
+        {
+          "local": "z_r",
+          "file": "/$bunfs/root/chunk-v712djva.js",
+          "name": "z_r"
+        },
+        {
+          "local": "w_o",
+          "file": "/$bunfs/root/chunk-7gjg43eb.js",
+          "name": "w_o"
+        },
+        {
+          "local": "IMe",
+          "file": "/$bunfs/root/chunk-89m3jf58.js",
+          "name": "IMe"
+        },
+        {
+          "local": "Got",
+          "file": "/$bunfs/root/chunk-x7apjnrw.js",
+          "name": "Got"
+        },
+        {
+          "local": "tho",
+          "file": "/$bunfs/root/chunk-zrv7m4tv.js",
+          "name": "tho"
+        },
+        {
+          "local": "XCe",
+          "file": "/$bunfs/root/chunk-a7065ckb.js",
+          "name": "XCe"
+        }
+      ]
+    },
+    {
+      "file": "chunk-y7068xm3.js",
+      "rows": [
+        {
+          "file": "chunk-y7068xm3.js",
+          "moduleSha256": "3c4243eb35e227b8178946ad36bfda8d0501397f1f0bb1a14d83c1655542605e",
+          "name": "o",
+          "start": 815,
+          "end": 834,
+          "sha256": "0585a51cc4e1ba2aa1f8193ff1951f3baf5e352340987114bd019939fc4a375a",
+          "source": "o=Object.freeze({})"
+        },
+        {
+          "file": "chunk-y7068xm3.js",
+          "moduleSha256": "3c4243eb35e227b8178946ad36bfda8d0501397f1f0bb1a14d83c1655542605e",
+          "name": "i",
+          "start": 835,
+          "end": 854,
+          "sha256": "bbfef45c71ad2ef94219e2583c65f4a4aae58a4768a7610c3d334fdd14f3e030",
+          "source": "i=Object.freeze({})"
+        },
+        {
+          "file": "chunk-y7068xm3.js",
+          "moduleSha256": "3c4243eb35e227b8178946ad36bfda8d0501397f1f0bb1a14d83c1655542605e",
+          "name": "_Zt",
+          "start": 855,
+          "end": 1878,
+          "sha256": "73566ee358e616394dfc52fa3923682562f4a684234465cda9d219c482bc9617",
+          "source": "_Zt={bagelActive:void 0,bagelUrl:void 0,bagelPanelVisible:void 0,computerUseMcpState:void 0,denialTracking:void 0,activeGoal:void 0,remoteAutocompactState:void 0,queuedGoalOrigin:void 0,frameOpenFailedPath:null,frameOpenFailedSeen:!1,artifactWatchApproved:!1,artifactDbWriteApproved:!1,artifactDbWriteHumanApproved:!1,artifactDbReadConsentSlugs:vZt,artifactDbReadHumanConsentSlugs:CZt,artifactReadConsentSlugs:Oxt,artifactConsentEpoch:0,artifactAssetUploadConsentSlugs:AZt,artifactAssetUploadHumanConsentSlugs:TZt,artifactAssetReadConsentSlugs:Hxt,artifactAssetReadHumanConsentSlugs:Dxt,artifactOutsideOrgConsentSlugs:Mxt,artifactHandlersReadConsentSlugs:kZt,artifactHandlersReadHumanConsentSlugs:RZt,artifactHandlersWriteConsentSlugs:xZt,artifactHandlersWriteHumanConsentSlugs:PZt,artifactRoomJoinConsentSlugs:vqe,artifactReadPageDataApproved:!1,artifactReadPageDataHumanApproved:!1,artifactPlanPublishConsentPaths:EZt,prResolvedThisSession:!1,ultrareviewOverageConfirmed:!1,artifactReadVersions:o,artifactReadObservers:i}"
+        },
+        {
+          "file": "chunk-y7068xm3.js",
+          "moduleSha256": "3c4243eb35e227b8178946ad36bfda8d0501397f1f0bb1a14d83c1655542605e",
+          "name": "s",
+          "start": 1879,
+          "end": 2019,
+          "sha256": "cf8aba4cac1bbeca2dc89ad76a4fd8663f24faa64ac12947713f527c14ba9f83",
+          "source": "s={artifactReadConsentSlugs:Oxt,artifactAssetReadConsentSlugs:Hxt,artifactAssetReadHumanConsentSlugs:Dxt,artifactOutsideOrgConsentSlugs:Mxt}"
+        },
+        {
+          "file": "chunk-y7068xm3.js",
+          "moduleSha256": "3c4243eb35e227b8178946ad36bfda8d0501397f1f0bb1a14d83c1655542605e",
+          "name": "_",
+          "start": 2020,
+          "end": 2036,
+          "sha256": "37131bc1da86b5496763589c8a8cfc96fe95b6340ab6d1beb7cd94e592630941",
+          "source": "_=Object.keys(s)"
+        },
+        {
+          "file": "chunk-y7068xm3.js",
+          "moduleSha256": "3c4243eb35e227b8178946ad36bfda8d0501397f1f0bb1a14d83c1655542605e",
+          "name": "SZt",
+          "start": 2037,
+          "end": 2100,
+          "sha256": "3b51ce07ce0b0443540e15226bf5b67b84544c11f249e3c55c173d028b618539",
+          "source": "function SZt(e){return _.every((t)=>e[t]===s[t])?e:{...e,...s}}"
+        },
+        {
+          "file": "chunk-y7068xm3.js",
+          "moduleSha256": "3c4243eb35e227b8178946ad36bfda8d0501397f1f0bb1a14d83c1655542605e",
+          "name": "T",
+          "start": 2104,
+          "end": 2122,
+          "sha256": "19ff04616972aa12604567974dececb1c057dc8c7ef4e69a257fb112f4d52eaf",
+          "source": "T=Object.keys(_Zt)"
+        },
+        {
+          "file": "chunk-y7068xm3.js",
+          "moduleSha256": "3c4243eb35e227b8178946ad36bfda8d0501397f1f0bb1a14d83c1655542605e",
+          "name": "bZt",
+          "start": 2123,
+          "end": 2632,
+          "sha256": "d066b16e199ea7c27bd44d7cd4d166cfa54d8f7524b16f969675038a2d3cd36b",
+          "source": "function bZt(e){let t=e.webBrowser,r=t.view===void 0&&t.logs.length===0&&t.unreadErrors===0&&t.unreadWarnings===0,n=zSo(e.workshopTelemetry),S=Object.keys(e.artifactReadVersions??{}).length===0&&Object.keys(e.artifactReadObservers??{}).length===0;if(r&&n===e.workshopTelemetry&&S&&T.every((a)=>a===\"artifactReadVersions\"||a===\"artifactReadObservers\"||e[a]===_Zt[a]))return e;return{...e,..._Zt,...n!==e.workshopTelemetry&&{workshopTelemetry:n},webBrowser:r?t:{...Fwr(),cleanupRegistered:t.cleanupRegistered}}}"
+        },
+        {
+          "file": "chunk-y7068xm3.js",
+          "moduleSha256": "3c4243eb35e227b8178946ad36bfda8d0501397f1f0bb1a14d83c1655542605e",
+          "name": "wZt",
+          "start": 2632,
+          "end": 2746,
+          "sha256": "144bc8bf1049a6614e7267da631f556f007c73b36ac129a71f870a4a439247c9",
+          "source": "function wZt(e){if(e().webBrowser.view&&typeof Bun<\"u\"&&\"WebView\"in Bun)return Bun.WebView.closeAll(),!0;return!1}"
+        }
+      ],
+      "imports": [
+        {
+          "local": "zSo",
+          "file": "/$bunfs/root/chunk-b71frq50.js",
+          "name": "zSo"
+        },
+        {
+          "local": "Fwr",
+          "file": "/$bunfs/root/chunk-6yxjcy08.js",
+          "name": "Fwr"
+        },
+        {
+          "local": "EZt",
+          "file": "/$bunfs/root/chunk-kb9ws1y5.js",
+          "name": "EZt"
+        },
+        {
+          "local": "vZt",
+          "file": "/$bunfs/root/chunk-kb9ws1y5.js",
+          "name": "vZt"
+        },
+        {
+          "local": "CZt",
+          "file": "/$bunfs/root/chunk-kb9ws1y5.js",
+          "name": "CZt"
+        },
+        {
+          "local": "Oxt",
+          "file": "/$bunfs/root/chunk-kb9ws1y5.js",
+          "name": "Oxt"
+        },
+        {
+          "local": "Hxt",
+          "file": "/$bunfs/root/chunk-kb9ws1y5.js",
+          "name": "Hxt"
+        },
+        {
+          "local": "Dxt",
+          "file": "/$bunfs/root/chunk-kb9ws1y5.js",
+          "name": "Dxt"
+        },
+        {
+          "local": "Mxt",
+          "file": "/$bunfs/root/chunk-kb9ws1y5.js",
+          "name": "Mxt"
+        },
+        {
+          "local": "AZt",
+          "file": "/$bunfs/root/chunk-kb9ws1y5.js",
+          "name": "AZt"
+        },
+        {
+          "local": "TZt",
+          "file": "/$bunfs/root/chunk-kb9ws1y5.js",
+          "name": "TZt"
+        },
+        {
+          "local": "kZt",
+          "file": "/$bunfs/root/chunk-kb9ws1y5.js",
+          "name": "kZt"
+        },
+        {
+          "local": "RZt",
+          "file": "/$bunfs/root/chunk-kb9ws1y5.js",
+          "name": "RZt"
+        },
+        {
+          "local": "xZt",
+          "file": "/$bunfs/root/chunk-kb9ws1y5.js",
+          "name": "xZt"
+        },
+        {
+          "local": "PZt",
+          "file": "/$bunfs/root/chunk-kb9ws1y5.js",
+          "name": "PZt"
+        },
+        {
+          "local": "vqe",
+          "file": "/$bunfs/root/chunk-kb9ws1y5.js",
+          "name": "vqe"
+        }
+      ]
+    }
+  ],
+  "nativeSha256": "7c95af4533bad3b2846ba2f5559ecf33fbfdbb83217c3f13a903c1092db20a65"
+}

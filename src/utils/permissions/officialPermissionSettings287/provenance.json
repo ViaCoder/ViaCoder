@@ -1,0 +1,1212 @@
+{
+  "version": "2.1.287",
+  "platform": "darwin-arm64",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16 code units",
+  "caller": {
+    "file": "chunk-4zgx6txq.js",
+    "moduleSha256": "6826d9c59803a523f3fc09fa2d2e045de39e5342c40364cf99e0a19d2c628044",
+    "call": {
+      "source": "_G(ee)",
+      "start": 13762,
+      "end": 13768,
+      "sha256": "45d2702f12bf872a877f7744f2d1f46ea41f5d7403a0327b2a2d218cb0ded5d1"
+    },
+    "import": {
+      "file": "chunk-6xrs6gmd.js",
+      "name": "_G",
+      "start": 1784,
+      "end": 1786
+    }
+  },
+  "aggregation": {
+    "_G": {
+      "file": "chunk-6xrs6gmd.js",
+      "moduleSha256": "f9dd0da1e467d32595bc9af036ebe3d18edca89a87e6204bf2519aeb61615e17",
+      "source": "function _G(e={}){let n=Ju(e);return cgt()?n.filter((r)=>r.ruleBehavior!==\"allow\"):n}",
+      "start": 69144,
+      "end": 69229,
+      "sha256": "a9b4e04691690410fee01ee2f0c4878a3468fb28b25400d6845449d6263a2807"
+    },
+    "Ju": {
+      "file": "chunk-6xrs6gmd.js",
+      "moduleSha256": "f9dd0da1e467d32595bc9af036ebe3d18edca89a87e6204bf2519aeb61615e17",
+      "source": "function Ju(e={}){if(Gh())return PSe(\"policySettings\");let n=[];for(let r of Xo())n.push(...PSe(r));if(!(e.strictPersistedTrust??Pm())){let{gateProject:r,gateLocal:s}=Rhn(),g=new Set,h=n.filter((w)=>{if(w.ruleBehavior!==\"allow\")return!0;if(w.source===\"projectSettings\"&&r)return g.add(\".claude/settings.json\"),!1;if(w.source===\"localSettings\"&&s)return g.add(\".claude/settings.local.json\"),!1;return!0});if(h.length!==n.length)vs(\"permissions.allow\",n.length-h.length,[...g]);return h}return n}",
+      "start": 69229,
+      "end": 69723,
+      "sha256": "7a553aab486a0e0210fe7a6a92aa19db1c6b53f23c4416bbe7156979f567a6a6"
+    },
+    "PSe": {
+      "file": "chunk-6xrs6gmd.js",
+      "moduleSha256": "f9dd0da1e467d32595bc9af036ebe3d18edca89a87e6204bf2519aeb61615e17",
+      "source": "function PSe(e){let n=ge(e);return h8n(n,e)}",
+      "start": 72651,
+      "end": 72695,
+      "sha256": "e3f340c2ed81bd10a4991efb40720ca1fb30ebd6d1e4ec408931501fe961d679"
+    },
+    "h8n": {
+      "file": "chunk-6xrs6gmd.js",
+      "moduleSha256": "f9dd0da1e467d32595bc9af036ebe3d18edca89a87e6204bf2519aeb61615e17",
+      "source": "function h8n(e,n){if(!e||!e.permissions)return[];let{permissions:r}=e,s=[];for(let g of Xu){let h=r[g];if(h)for(let w of h)s.push({source:n,ruleBehavior:g,ruleValue:jn(w)})}return s}",
+      "start": 68907,
+      "end": 69089,
+      "sha256": "f13b945c0ce908ab3377d773c35f4ce073bb5290b829c1c63338892795f330c7"
+    },
+    "cgt": {
+      "file": "chunk-6xrs6gmd.js",
+      "moduleSha256": "f9dd0da1e467d32595bc9af036ebe3d18edca89a87e6204bf2519aeb61615e17",
+      "source": "function cgt(){return a.CLAUDE_CODE_EVAL_CONFINED===!0}",
+      "start": 69089,
+      "end": 69144,
+      "sha256": "97952caf4021a6d8f0d2aba9e974853db2c6a123e770685a4dfbb46904429829"
+    },
+    "Gh": {
+      "file": "chunk-6xrs6gmd.js",
+      "moduleSha256": "f9dd0da1e467d32595bc9af036ebe3d18edca89a87e6204bf2519aeb61615e17",
+      "source": "function Gh(){return ge(\"policySettings\")?.allowManagedPermissionRulesOnly===!0}",
+      "start": 67016,
+      "end": 67096,
+      "sha256": "1b14ba8c9a352080b54a177bf2bb2a0870c7c9bcd73b017ef283f53c4112cfab"
+    }
+  },
+  "behaviorSource": {
+    "file": "chunk-6xrs6gmd.js",
+    "moduleSha256": "f9dd0da1e467d32595bc9af036ebe3d18edca89a87e6204bf2519aeb61615e17",
+    "source": "Xu=[\"allow\",\"deny\",\"ask\"]",
+    "start": 68881,
+    "end": 68906,
+    "values": [
+      "allow",
+      "deny",
+      "ask"
+    ],
+    "sha256": "28064887bb05401351507dcd777ab300de3ed82d3dd29f6a586552ca7ae311f5"
+  },
+  "imports": {
+    "Pm": {
+      "file": "chunk-nankzm0s.js",
+      "name": "Pm",
+      "start": 1722,
+      "end": 1724
+    },
+    "Xo": {
+      "file": "chunk-s3exmmq6.js",
+      "name": "Xo",
+      "start": 2620,
+      "end": 2622
+    },
+    "ge": {
+      "file": "chunk-f1vb7bx7.js",
+      "name": "ge",
+      "start": 2774,
+      "end": 2776
+    },
+    "jn": {
+      "file": "chunk-db6pdgvs.js",
+      "name": "jn",
+      "start": 2213,
+      "end": 2215
+    }
+  },
+  "sourceOrder": {
+    "file": "chunk-s3exmmq6.js",
+    "moduleSha256": "3ffa1fa6a8703bab1f7418e04f68d263132d744f24762fc223caabc81ed9307c",
+    "name": "Li",
+    "source": "Li=[\"userSettings\",\"projectSettings\",\"localSettings\",\"flagSettings\",\"policySettings\"]",
+    "start": 3862,
+    "end": 3947,
+    "values": [
+      "userSettings",
+      "projectSettings",
+      "localSettings",
+      "flagSettings",
+      "policySettings"
+    ],
+    "sha256": "f0799e626aaa58793159f98daeca1d8120f5d2542e773fc3996684652f1ad787"
+  },
+  "trust": {
+    "Rhn": {
+      "file": "chunk-6xrs6gmd.js",
+      "moduleSha256": "f9dd0da1e467d32595bc9af036ebe3d18edca89a87e6204bf2519aeb61615e17",
+      "source": "function Rhn(){return{gateProject:!rw(),gateLocal:J0({onIndeterminate:\"untracked\"})}}",
+      "start": 71317,
+      "end": 71402,
+      "sha256": "3dfedee369b528e196cd0de740d10cf140256430eba93691c2df1484ceee355b"
+    },
+    "functions": {
+      "Pm": {
+        "file": "chunk-nankzm0s.js",
+        "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+        "source": "function Pm(e){let n=e??um();return n!==null&&U_t(n)}",
+        "start": 528029,
+        "end": 528082,
+        "sha256": "859527efa4b6c1f21d693c3c3df75529de3253593f8e2474cc743b93276da7fe"
+      },
+      "J0": {
+        "file": "chunk-nankzm0s.js",
+        "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+        "source": "function J0({onIndeterminate:e}){if(fi())return!0;if(!ds()){if(k0()&&Co()===null&&iD(Ee(),aI)===Xe(Ee()))return!1;return!0}let n=OE();if(n===\"indeterminate\")return e===\"tracked\";return n===\"tracked\"||n===\"tracked_in_index\"}",
+        "start": 528739,
+        "end": 528962,
+        "sha256": "734dee53eeae29e03e12b42ce9cb8f87f0b09ac46341427dda38f88e84dc0db7"
+      },
+      "ds": {
+        "file": "chunk-nankzm0s.js",
+        "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+        "source": "function ds(){if(fi())return!1;let e=oe();if(e.trustAccepted)return!0;let n=T0();if(n)e.setTrustAccepted(!0);return n}",
+        "start": 527868,
+        "end": 527986,
+        "sha256": "fc80d3fd67da9df646e46b129b6aace6f0c88ea0809d65c9c1e25044337c3661"
+      },
+      "fi": {
+        "file": "chunk-nankzm0s.js",
+        "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+        "source": "function fi(){if(Qbe()&&!vJe())return!1;return um()===null}",
+        "start": 563216,
+        "end": 563275,
+        "sha256": "82cc2fdb27c03bc702be6d3279fa9753fc0d69841dd5de23da9f96a90ea94649"
+      },
+      "T0": {
+        "file": "chunk-nankzm0s.js",
+        "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+        "source": "function T0(){if(a.CLAUDE_CODE_SANDBOXED)return!0;if(Yfe())return!0;let e=le(),n=vIe();if(e.projects?.[n]?.hasTrustDialogAccepted)return!0;return xE(e,Ee())!==null}",
+        "start": 530875,
+        "end": 531039,
+        "sha256": "2bdd0a6586aa51f29c2f6b90f10d15b1d7afb836ec78071920c4bd70854886c4"
+      },
+      "k0": {
+        "file": "chunk-nankzm0s.js",
+        "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+        "source": "function k0(){let e=Ee(),n=ae();try{if(n.realpathSync(Xe(e))===n.realpathSync(RE()))return!0}catch{}return Xe(we())===Xe(We(e,\".claude\"))}",
+        "start": 529267,
+        "end": 529405,
+        "sha256": "92a73eee414f220d7d7c649b1dad57f57b922c74103613f0672ab0b9585190d1"
+      },
+      "OE": {
+        "file": "chunk-nankzm0s.js",
+        "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+        "source": "function OE(){let e=oe(),n=Ee(),r=e.localSettingsGitTracked?.cwd===n?e.localSettingsGitTracked.value:void 0;if(r===void 0)r=A0(),e.setLocalSettingsGitTracked({cwd:n,value:r});return r}",
+        "start": 529028,
+        "end": 529212,
+        "sha256": "b822e33756a059380cadd95f71aa604f801504f49669c50aa6201580968fb412"
+      },
+      "A0": {
+        "file": "chunk-nankzm0s.js",
+        "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+        "source": "function A0(){let e=Ee(),n=Co(),r=n??e,s=[r],g=n??iD(e,aI);if(g!==Xe(r))s.push(g);let h=!1,b=!1;for(let v of s){let w=C0(v);if(w===\"tracked_in_index\")return\"tracked_in_index\";if(w===\"tracked\")h=!0;if(w===\"indeterminate\")b=!0}if(h)return\"tracked\";return b?\"indeterminate\":\"untracked\"}",
+        "start": 529405,
+        "end": 529688,
+        "sha256": "3a62933161291bca37cdb606e4117ec7343198852581231ef511f5f6c701d035"
+      },
+      "C0": {
+        "file": "chunk-nankzm0s.js",
+        "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+        "source": "function C0(e){let n=ae();try{if(n.realpathSync(Xe(e))===n.realpathSync(RE()))return\"untracked\"}catch{}if(Xe(we())===Xe(We(e,\".claude\")))return\"untracked\";for(let r of[We(e,\".claude\"),We(e,\".claude\",\"settings.local.json\")])try{if(n.lstatSync(r).isSymbolicLink())return\"tracked\"}catch(s){if(!W(s))return\"tracked\"}try{return n.lstatSync(We(e,\".claude\",\".git\")),\"tracked\"}catch(r){if(!W(r))return\"tracked\"}if(PU(e,{uncached:!0})!==null)return\"tracked\";if(Tz())return\"tracked\";try{let r=Ie(\"child_process\"),s=import.meta.require(\"/$bunfs/root/chunk-q35nq0jw.js\"),g=s.resolveExecutableSafely(\"git\");if(g===null)return\"untracked\";let h=r.spawnSync(g,[...yn,\"-C\",e,\"ls-files\",\"--error-unmatch\",\"--\",\":(icase).claude/settings.local.json\"],{cwd:e,encoding:\"utf8\",timeout:2000,windowsHide:!0,env:Qo({GIT_LITERAL_PATHSPECS:\"\",LC_ALL:\"C\",GIT_TRACE2:\"0\",GIT_TRACE2_PERF:\"0\",GIT_TRACE2_EVENT:\"0\"})});if(h.error&&W(h.error))return\"untracked\";if(h.signal!==null||h.error)return\"tracked\";if(h.status===128)return/^fatal: not a git repository/.test(h.stderr??\"\")?\"indeterminate\":\"tracked\";if(h.status===0)return\"tracked_in_index\";if(h.status===1)return\"untracked\";return\"tracked\"}catch{return\"untracked\"}}",
+        "start": 529688,
+        "end": 530875,
+        "sha256": "8a7c357bf1c31682068325ef2219ffd0924f592a389a9546eb6a744455b151a4"
+      },
+      "xE": {
+        "file": "chunk-nankzm0s.js",
+        "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+        "source": "function xE(e,n){let r=Mn(Xe(n)),s=KZn(r);if(s?.rootOnly){let g=$U(Xe(s.root));return e.projects?.[g]?.hasTrustDialogAccepted===!0?g:null}return PE(e,r,s!==null?$U(Xe(s.root)):null)}",
+        "start": 531039,
+        "end": 531221,
+        "sha256": "9a5d12dc065f37ae342a65d9287d54d5eca98f382a4841a5d6f4aedf8aa50e59"
+      },
+      "KZn": {
+        "file": "chunk-nankzm0s.js",
+        "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+        "source": "function KZn(e){let n=Mn(Xe(e)),r=ktr(n,{uncached:!0});if(r!==null&&Ttr(r.root,{uncached:!0})!==!0)return{root:r.root,rootOnly:!0};let s=LS(n);return s!==null?{root:s,rootOnly:!1}:null}",
+        "start": 531221,
+        "end": 531406,
+        "sha256": "beea2face37743ffca10a3b015391a9209780327e337a2c150d5be319c6d6204"
+      },
+      "PE": {
+        "file": "chunk-nankzm0s.js",
+        "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+        "source": "function PE(e,n,r){let s=$U(n);while(!0){if(!(r===null||s===r||s.startsWith(r.endsWith(\"/\")?r:r+\"/\")))return null;if(e.projects?.[s]?.hasTrustDialogAccepted)return s;if(s===r)return null;let h=$U(Xe(s,\"..\"));if(h===s)return null;s=h}}",
+        "start": 531406,
+        "end": 531640,
+        "sha256": "5150e9568f1cdf0c9511755050f749be2571af86ee7763dcb7fa420bc0fa4d72"
+      },
+      "iD": {
+        "file": "chunk-hrhfcbdv.js",
+        "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+        "source": "function iD(e,n){let s=Qnr(e,n);if(s.decided!==void 0)return s.decided;if(!Xns(s.root))return s.cwdResolved;return s.root}",
+        "start": 400380,
+        "end": 400502,
+        "sha256": "8077b263d8180cad5323e88abab9c231128fceb45365071491f649e01dbc1861"
+      },
+      "Qnr": {
+        "file": "chunk-hrhfcbdv.js",
+        "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+        "source": "function Qnr(e,n){let s=n?.(e);if(!s)return{decided:he(e)};let r=he(s),i=he(e);if(r===i)return{decided:r};let d;try{d=Znr()}catch{return{decided:i}}if(r===d)return{decided:i};return{decided:void 0,root:r,cwdResolved:i}}",
+        "start": 400502,
+        "end": 400721,
+        "sha256": "3138dc872864e0320277cb3d5b8bb1c2f80a99e5b2eab33b68725946ba1d1f7d"
+      },
+      "Yns": {
+        "file": "chunk-hrhfcbdv.js",
+        "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+        "source": "function Yns(e){return va().localStoreProbes.canonicalRootOwnerUids(e,I_)}",
+        "start": 400721,
+        "end": 400795,
+        "sha256": "754ea2fa3364b3b1eb63a54bddb8829aafb55327f3e2d8d081cb85bcc320d1c8"
+      },
+      "I_": {
+        "file": "chunk-hrhfcbdv.js",
+        "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+        "source": "function I_(e){let n=ae(),s=null;try{s=n.lstatSync(ve(e,\".claude\")).uid}catch(r){if(!W(r))throw r}return{rootUid:n.statSync(e).uid,gitEntryUid:L_(e),claudeEntryUid:s}}",
+        "start": 400795,
+        "end": 400962,
+        "sha256": "62d552acbf7e759aca96b1b77f377c4bd5518647d966533d97b0bb0c16a1a25b"
+      },
+      "L_": {
+        "file": "chunk-hrhfcbdv.js",
+        "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+        "source": "function L_(e){let n=ae();try{return n.lstatSync(ve(e,\".git\")).uid}catch(s){throw s}}",
+        "start": 400962,
+        "end": 401047,
+        "sha256": "142b6c3c10d05f5c923f38db8cfcbb94fa68e85de15809b1117451af1e462797"
+      },
+      "Xns": {
+        "file": "chunk-hrhfcbdv.js",
+        "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+        "source": "function Xns(e){if(typeof process.getuid!==\"function\"&&typeof process.geteuid!==\"function\")return t(`localSettings: not canonicalizing the consent store to ${e} \\u2014 this platform has no uid semantics to verify directory ownership with, so the store stays at the session cwd (canonicalization is POSIX-only)`,{level:\"warn\"}),!1;let n=typeof process.geteuid===\"function\"?process.geteuid():process.getuid?.();try{let{rootUid:s,gitEntryUid:r,claudeEntryUid:i}=Yns(e);if(s===n&&r===n&&(i===null||i===n))return!0;return t(`localSettings: not canonicalizing the consent store to ${e} \\u2014 it (uid ${s}), its .git entry (uid ${r}), or its .claude entry (uid ${i??\"absent\"}) is not owned by the current user (uid ${n}); the store stays at the session cwd (the pre-canonicalization behavior). If you own this repo, chown it (including .git and .claude) or run from a directory you own.`,{level:\"warn\"}),!1}catch(s){return t(`localSettings: not canonicalizing the consent store to ${e} \\u2014 its ownership could not be verified (${s instanceof Error?s.message:String(s)}); the store stays at the session cwd`,{level:\"warn\"}),!1}}",
+        "start": 401047,
+        "end": 402171,
+        "sha256": "332e050c70dd81e5b2a5530e76076f97712ca55504f6fb8785526d2f63b126d9"
+      },
+      "Znr": {
+        "file": "chunk-hrhfcbdv.js",
+        "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+        "source": "function Znr(){return va().localStoreProbes.normalizedRealHomeDir(N_)}",
+        "start": 402171,
+        "end": 402241,
+        "sha256": "db8b299ba9b88dcc4071f6ee91bd43030359033d44a7ea0a3dc8fb5bdb408678"
+      },
+      "N_": {
+        "file": "chunk-hrhfcbdv.js",
+        "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+        "source": "function N_(){let e=fm(nc());if(e===null)throw Error(\"home directory realpath unavailable\");return Mn(e)}",
+        "start": 402241,
+        "end": 402346,
+        "sha256": "c0ab16e0315530eb83dab92c7afe2aa1b2417968cde4e0d398864efc6d250435"
+      },
+      "rw": {
+        "file": "chunk-f1vb7bx7.js",
+        "moduleSha256": "2f76d1800a2202fe6717904ab677e2509d0b124302d3d31e325353b307f795d1",
+        "source": "function rw(){let e=Zn(\"projectSettings\"),n=Zn(\"userSettings\");return!!e&&!!n&&ye(e)===ye(n)}",
+        "start": 87667,
+        "end": 87760,
+        "sha256": "15af6b59c59d5de1f0b306eb4ba2a407a477b9a8cce1361a6653d74f00378a5f"
+      },
+      "ge": {
+        "file": "chunk-f1vb7bx7.js",
+        "moduleSha256": "2f76d1800a2202fe6717904ab677e2509d0b124302d3d31e325353b307f795d1",
+        "source": "function ge(e){if(rP()&&Hm.has(e))return null;return Xje(e,M())}",
+        "start": 87897,
+        "end": 87961,
+        "sha256": "944522b950e26a01530949b297fc04635325dc5e421062a2de5c37495cc5ae3a"
+      },
+      "Xo": {
+        "file": "chunk-s3exmmq6.js",
+        "moduleSha256": "3ffa1fa6a8703bab1f7418e04f68d263132d744f24762fc223caabc81ed9307c",
+        "source": "function Xo(){let e=qOe(),n=va();if(n.enabledSources?.allowed===e)return n.enabledSources.result;let t=new Set(e);t.add(\"flagSettings\"),t.add(\"policySettings\");let o=Li.filter((i)=>t.has(i));return n.enabledSources={allowed:e,result:o},o}",
+        "start": 5584,
+        "end": 5822,
+        "sha256": "60b97c33fbf148dc24d0732de2d666c729ca73685dbf116d7d37d3c5db03835a"
+      }
+    },
+    "canonicalPath": {
+      "functions": {
+        "aI": {
+          "file": "chunk-f1vb7bx7.js",
+          "moduleSha256": "2f76d1800a2202fe6717904ab677e2509d0b124302d3d31e325353b307f795d1",
+          "source": "function aI(e){return bt(e,()=>bs(e),!1)}",
+          "start": 4218,
+          "end": 4259,
+          "sha256": "6dff2bba075e1dc169e5bff17ae8c659c16991a7114693001bc208466a0ef74d"
+        },
+        "Ne": {
+          "file": "chunk-2ynta9xc.js",
+          "moduleSha256": "f3e239a22bc356ef2664a104850f816b164d4874821637ec72f203620c439e1d",
+          "source": "function Ne(e,n){try{let r=Zt(e);if(r.isSymbolicLink()){let o=ZVt(e);if(o===null)return!1;if(Ni(o,n))return!1;if(oy(o,n))return!1;let s=Qt(e);return s.isDirectory()||s.isFile()}return r.isDirectory()||r.isFile()}catch{return!1}}",
+          "start": 49902,
+          "end": 50130,
+          "sha256": "0a2bc91d1908fedfee3f19615e39e5d969422f55755e74575888d8c202bc7e50"
+        },
+        "en": {
+          "file": "chunk-2ynta9xc.js",
+          "moduleSha256": "f3e239a22bc356ef2664a104850f816b164d4874821637ec72f203620c439e1d",
+          "source": "function en(e){let n=Date.now();ne(\"info\",\"find_git_root_started\");let r=N(e),o=r.substring(0,r.indexOf(T)+1)||T,s=0;while(r!==o){let i=x(r,\".git\");if(s++,Ne(i,r))return ne(\"info\",\"find_git_root_completed\",{duration_ms:Date.now()-n,stat_count:s,found:!0}),Mn(r);let c=z(r);if(c===r)break;r=c}if(s++,Ne(x(o,\".git\"),o))return ne(\"info\",\"find_git_root_completed\",{duration_ms:Date.now()-n,stat_count:s,found:!0}),Mn(o);return ne(\"info\",\"find_git_root_completed\",{duration_ms:Date.now()-n,stat_count:s,found:!1}),OK}",
+          "start": 50130,
+          "end": 50642,
+          "sha256": "3ada2f694dbc49822a84b0b35b56e509fe5699f684b6d783f146f097765cf7e7"
+        },
+        "lr": {
+          "file": "chunk-2ynta9xc.js",
+          "moduleSha256": "f3e239a22bc356ef2664a104850f816b164d4874821637ec72f203620c439e1d",
+          "source": "function lr(e){let n=$se(Cu().rootByPath,e,en);return n===OK?null:n}",
+          "start": 50642,
+          "end": 50710,
+          "sha256": "15a9f0d83aa409fb60bcac2ba6155e00cd91c5447c435921c7ab9f65ed208441"
+        },
+        "bs": {
+          "file": "chunk-2ynta9xc.js",
+          "moduleSha256": "f3e239a22bc356ef2664a104850f816b164d4874821637ec72f203620c439e1d",
+          "source": "function bs(e){let n=lr(e);if(!n)return null;return $se(Cu().canonicalRootByRoot,n,Be)}",
+          "start": 52445,
+          "end": 52532,
+          "sha256": "e589b80210a7a7ddd3f3259b0cdc952eecee8dec48b27d13985ed825bdce9f39"
+        },
+        "Be": {
+          "file": "chunk-2ynta9xc.js",
+          "moduleSha256": "f3e239a22bc356ef2664a104850f816b164d4874821637ec72f203620c439e1d",
+          "source": "function Be(e){try{return tn(e,B(x(e,\".git\"),\"utf-8\"))}catch{return e}}",
+          "start": 51677,
+          "end": 51748,
+          "sha256": "e4f4c834abf148f52c5e158968a32fef314319f8db2eb0dea26bdd761d444d28"
+        },
+        "tn": {
+          "file": "chunk-2ynta9xc.js",
+          "moduleSha256": "f3e239a22bc356ef2664a104850f816b164d4874821637ec72f203620c439e1d",
+          "source": "function tn(e,n){try{let r=n.trim();if(!r.startsWith(\"gitdir:\"))return e;let o=r.slice(7).trim();if(Ni(o,e))return e;if(oy(o,e))return e;let s=N(e,o);if(yL(x(s,\"commondir\"),s))return e;let i=B(x(s,\"commondir\"),\"utf-8\").trim();if(Ni(i,s))return e;if(oy(i,s))return e;let c=N(s,i);if(N(z(s))!==x(c,\"worktrees\"))return e;if(yL(x(s,\"gitdir\"),s))return e;let f=B(x(s,\"gitdir\"),\"utf-8\").trim();if(Ni(f,e))return e;if(oy(f,s,e))return e;if(ye(N(s,f))!==x(ye(e),\".git\"))return e;if(he(c)!==\".git\"){if(Ne(x(c,\".git\"),c))return e;return Mn(c)}return Mn(z(c))}catch{return e}}",
+          "start": 51748,
+          "end": 52313,
+          "sha256": "0cfc6372740835627d28410e5e3b66488953fa3574eb3d36bccbbc5ec1b81513"
+        },
+        "Cu": {
+          "file": "chunk-2ynta9xc.js",
+          "moduleSha256": "f3e239a22bc356ef2664a104850f816b164d4874821637ec72f203620c439e1d",
+          "source": "function Cu(){return ko.of(U().host)}",
+          "start": 49865,
+          "end": 49902,
+          "sha256": "419112aec277b38b690160a0e52b1a80858ed63d022a623efd108990d79538e7"
+        },
+        "LS": {
+          "file": "chunk-2ynta9xc.js",
+          "moduleSha256": "f3e239a22bc356ef2664a104850f816b164d4874821637ec72f203620c439e1d",
+          "source": "function LS(e){let n=en(e);return n===OK?null:n}",
+          "start": 50710,
+          "end": 50758,
+          "sha256": "a33102133a2c6a5c6b64b689b0a176ae7939afbb6affc853ef7c08cc5ab6698d"
+        }
+      },
+      "boundarySafety": {
+        "guardClosure": {
+          "Ni": {
+            "file": "chunk-x954y317.js",
+            "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+            "source": "function Ni(t,e){let n=f(e,t);if(hee(t,e)||hee(n,e))return!0;let r=DY(e);for(let o of[t,n]){if(ca(o)){let i=DY(o);if(i===null||i!==r)return!0}if(w$(o)||O_(o)||jS(o)||Pir(o,e))return!0}return!1}",
+            "start": 9532,
+            "end": 9725,
+            "sha256": "c27657e81bba8bfd6ed27507a775809cfc1514f6f90e340b07112096f14e41af"
+          },
+          "hee": {
+            "file": "chunk-x954y317.js",
+            "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+            "source": "function hee(t,e){if(!Ln(t))return!1;if(uC(t)||CD(t))return!0;if(Sa(t))return!0;let n=oP(t);return n===null||n!==oP(e)}",
+            "start": 8268,
+            "end": 8387,
+            "sha256": "704fd25be0cf1f9485f99166c854a68c608eceedb53fe43d957b55f5d0bdef4b"
+          },
+          "Ln": {
+            "file": "chunk-x954y317.js",
+            "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+            "source": "function Ln(t){return/^[\\\\/]{2}/.test(t)||CD(t)}",
+            "start": 7227,
+            "end": 7275,
+            "sha256": "a7544d5dcd55adcf0ca6c54350b7dd2aace3bfcffeec0204e829b2a5f897c162"
+          },
+          "CD": {
+            "file": "chunk-x954y317.js",
+            "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+            "source": "function CD(t){return Ft.test(t)||t.includes(\"??\")&&Ft.test(Xt(t))}",
+            "start": 22506,
+            "end": 22573,
+            "sha256": "9f5e7c088caa4dd78a84828f38adca74c7648141a5e012155e4a32cf89bc17e6"
+          },
+          "Ft": {
+            "file": "chunk-x954y317.js",
+            "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+            "source": "Ft=/^[\\\\/]\\?\\?[\\\\/]/",
+            "start": 22577,
+            "end": 22597,
+            "sha256": "be89eb72d93dcb5bab40560ab6e99b3595f800cd5af0aceb194eb562ac0feef8"
+          },
+          "Xt": {
+            "file": "chunk-x954y317.js",
+            "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+            "source": "function Xt(t){return tt.win32?tt.win32.normalize(t):t}",
+            "start": 22598,
+            "end": 22653,
+            "sha256": "193c741fc06a5afc4ed932f3624a7aecfda1266a6633044e3f6352fa22bc56da"
+          },
+          "uC": {
+            "file": "chunk-x954y317.js",
+            "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+            "source": "function uC(t){return/^[\\\\/]{2}[?.][\\\\/]/.test(t)}",
+            "start": 7836,
+            "end": 7886,
+            "sha256": "f924aaf43a746fd584d7e2411af04f3b7aab632118bba465e7d59bc5a493e56c"
+          },
+          "Sa": {
+            "file": "chunk-x954y317.js",
+            "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+            "source": "function Sa(t){return/(^|[\\\\/])\\.{1,2}[. ]*([\\\\/]|$)/.test(t)}",
+            "start": 7559,
+            "end": 7621,
+            "sha256": "8ecd9cc96d72d6cb8f4dbf90eb2920532763d5c8194eaa98575382ce3d614233"
+          },
+          "oP": {
+            "file": "chunk-x954y317.js",
+            "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+            "source": "function oP(t){if(/^[\\\\/]{2}[?.][\\\\/](?!unc[\\\\/])/i.test(t))return null;return t.match(/^[\\\\/]{2}(?:[?.][\\\\/]unc[\\\\/])?([^\\\\/]+)/i)?.[1]?.replace(/[A-Z]/g,(e)=>e.toLowerCase())??null}",
+            "start": 7376,
+            "end": 7559,
+            "sha256": "a8e9ee88d3717e94476fe60badb026f74303473aa7f9671609adba24ebbe1769"
+          },
+          "DY": {
+            "file": "chunk-x954y317.js",
+            "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+            "source": "function DY(t){if(!t.startsWith(\"/\"))return null;let e=[];for(let n of t.split(\"/\")){if(n===\"\"||n===\".\")continue;if(n===\"..\"){e.pop();continue}if(e.push(n),C(e))return O(n)}return null}",
+            "start": 8497,
+            "end": 8682,
+            "sha256": "44f2cef885951c186c4940b44e97d0779d36939a0b192cca1d5c338bc814d338"
+          },
+          "C": {
+            "file": "chunk-x954y317.js",
+            "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+            "source": "function C(t){return t.length===2&&_R(t[0])===\"net\"||t.length===3&&_R(t[0])===\"network\"&&_R(t[1])===\"servers\"}",
+            "start": 8387,
+            "end": 8497,
+            "sha256": "e5dc2853ef180823f80bdec7f7e97fdf198b08a9538c40d7805341a31f894a03"
+          },
+          "_R": {
+            "file": "chunk-x954y317.js",
+            "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+            "source": "function _R(t){return t.replace(/[\\u200c-\\u200f\\u202a-\\u202e\\u206a-\\u206f\\ufeff]/g,\"\").toUpperCase().toLowerCase()}",
+            "start": 8744,
+            "end": 8859,
+            "sha256": "098779b55917be70b7f2dc773dcbe71d350be4f50b90ccfef7b9267e996d2779"
+          },
+          "O": {
+            "file": "chunk-x954y317.js",
+            "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+            "source": "function O(t){return t.replace(/[A-Z]/g,(e)=>e.toLowerCase())}",
+            "start": 8682,
+            "end": 8744,
+            "sha256": "443bd881d31a570896faf8d59ab272557d909cc9c1519a045f67c79cb6a0f510"
+          },
+          "ca": {
+            "file": "chunk-x954y317.js",
+            "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+            "source": "function ca(t){return da(t)}",
+            "start": 11108,
+            "end": 11136,
+            "sha256": "f592f9245b0e853926b0588be47249b7a8176fa4fc3dc3019f5e6e9eefb59b28"
+          },
+          "da": {
+            "file": "chunk-x954y317.js",
+            "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+            "source": "function da(t){return UEe(t)!==null}",
+            "start": 11526,
+            "end": 11562,
+            "sha256": "0ef3c7539f554da9ec078359a324bbb64d7670577771ce892ddfd655de6b21d6"
+          },
+          "UEe": {
+            "file": "chunk-x954y317.js",
+            "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+            "source": "function UEe(t){if(!t.startsWith(\"/\"))return null;if(t.length>Gt)return Lt(t);let e=I.get(t);if(e===void 0){if(e=Lt(t),I.size>=Bt)I.clear();I.set(t,e)}return e}",
+            "start": 11602,
+            "end": 11762,
+            "sha256": "2f44d552f5be7d618e957330bd7390ba0b912b159aad91c1b2c60735ab406fe2"
+          },
+          "Gt": {
+            "file": "chunk-x954y317.js",
+            "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+            "source": "Gt=4096",
+            "start": 11574,
+            "end": 11581,
+            "sha256": "fbcad8bae54d05fbbe41b20ae1b3a3c1d88258ed6cd07edbf1e9ec0c72fe1bdd"
+          },
+          "Lt": {
+            "file": "chunk-x954y317.js",
+            "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+            "source": "function Lt(t){let e=[];for(let n of t.split(\"/\")){if(n===\"\"||n===\".\")continue;if(n===\"..\"){e.pop();continue}if(e.push(n),C(e))return\"/\"+e.join(\"/\")}return null}",
+            "start": 11762,
+            "end": 11923,
+            "sha256": "8316fff200862d351d23d68c54da443a4639a67d379ea07582d7e05a4bfcc885"
+          },
+          "I": {
+            "file": "chunk-x954y317.js",
+            "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+            "source": "I=new Map",
+            "start": 11582,
+            "end": 11591,
+            "sha256": "7768764948caa247cd09b42a5b58a539baa502ef417d251873fe4f6ec07fe9cb"
+          },
+          "Bt": {
+            "file": "chunk-x954y317.js",
+            "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+            "source": "Bt=1024",
+            "start": 11566,
+            "end": 11573,
+            "sha256": "5ee6cf59406fd9e8376bb8e361a166ee93e21a4b59d5b683e58541806bd566fa"
+          },
+          "w$": {
+            "file": "chunk-x954y317.js",
+            "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+            "source": "function w$(t){if(!t.startsWith(\"/\"))return!1;if(t.length>Gt)return Mt(t);let e=k.get(t);if(e===void 0){if(e=Mt(t),k.size>=Bt)k.clear();k.set(t,e)}return e}",
+            "start": 12359,
+            "end": 12515,
+            "sha256": "f8f5f2b3f5f9afda34fed9a7e68bb8fc37d34e95aa1dd609a88b11b30b6f43b8"
+          },
+          "Mt": {
+            "file": "chunk-x954y317.js",
+            "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+            "source": "function Mt(t){let e=[];for(let n of t.split(\"/\")){if(n===\"\"||n===\".\")continue;if(n===\"..\"){e.pop();continue}if(e.push(n),e.length===1&&e[0].toLowerCase()===\"network\")return!0}return!1}",
+            "start": 12515,
+            "end": 12700,
+            "sha256": "ae2d793b23f969646b4a45d68a6d706ba3e8bbdab116510b2c01ec848ffb6f7d"
+          },
+          "k": {
+            "file": "chunk-x954y317.js",
+            "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+            "source": "k=new Map",
+            "start": 11592,
+            "end": 11601,
+            "sha256": "6b7fa8f6f2e917e558e4237eef30e28aa4124f9f11ae0bc2d28e0fb79eba5f3b"
+          },
+          "O_": {
+            "file": "chunk-x954y317.js",
+            "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+            "source": "function O_(t){if(!t.startsWith(\"/\"))return!1;let e=[];for(let n of t.split(\"/\")){if(n===\"\"||n===\".\")continue;if(n===\"..\"){e.pop();continue}e.push(n)}return e.length===1&&e[0].toLowerCase()===\"net\"}",
+            "start": 12161,
+            "end": 12359,
+            "sha256": "a2484523122c49e520853f1b7857e1fdc191b8dbbfb016d07023bbca8742f172"
+          },
+          "jS": {
+            "file": "chunk-x954y317.js",
+            "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+            "source": "function jS(t){if(!/\\/\\.(?:vol|file|nofollow|resolve)(?:\\/|$)/i.test(t))return!1;if(!t.startsWith(\"/\"))return!1;let e=[];for(let n of t.split(\"/\")){if(n===\"\"||n===\".\")continue;if(n===\"..\"){e.pop();continue}if(e.push(n),e.length===1&&/^\\.(?:vol|file|nofollow|resolve)$/i.test(n))return!0}return!1}",
+            "start": 7886,
+            "end": 8182,
+            "sha256": "99ffe4e5a3cbf6708f9ac9a17e5880d65fcdc17de7bd0f4d49adafc92aa73c3e"
+          },
+          "Pir": {
+            "file": "chunk-x954y317.js",
+            "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+            "source": "function Pir(t,e,n=\"darwin\",r=n===\"darwin\"&&zt()){if(n!==\"darwin\"||!AW(t,n,r))return!1;let o=et(e,n,r).complete[0]??null,{complete:i,partial:s}=et(t,n,r);if(i.length===0&&s.length===0)return!0;if(o===null)return!0;return i.some((a)=>a!==o)||s.some((a)=>!o.startsWith(a))}",
+            "start": 9725,
+            "end": 9996,
+            "sha256": "0de53858e2c794449852046964a3baaa2ee3e47be05822d7c8cb362c5e07d620"
+          },
+          "zt": {
+            "file": "chunk-x954y317.js",
+            "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+            "source": "function zt(t=Dt){let e=t===Dt;if(e&&J.value!==void 0)return J.value;let n;try{let r=!1;try{r=t.readAutoMaster().split(`\n`).some((o)=>{let i=o.replace(/#.*$/,\"\").trim().split(/\\s+/);return i.length>=2&&i[0].toLowerCase()===\"/home\"})}catch(o){if(!W(o))throw o}n=r||t.homeIsOwnMount()}catch{return!0}if(e)J.value=n;return n}",
+            "start": 10043,
+            "end": 10365,
+            "sha256": "bacee927a628a8941cf8f624eae57a00c59b60d75b25bd6d2f3454b88c2c61b6"
+          },
+          "Dt": {
+            "file": "chunk-x954y317.js",
+            "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+            "source": "Dt={readAutoMaster:()=>hn(\"/etc/auto_master\",\"utf8\"),homeIsOwnMount:()=>{let t;try{t=Rt(\"/home\")}catch(e){if(W(e))return!0;throw e}return t.dev!==Rt(\"/Users\").dev}}",
+            "start": 10369,
+            "end": 10533,
+            "sha256": "e2d3911c6e00987a25d71a52213847aabf870ab89c4bb330da245685ec534650"
+          },
+          "J": {
+            "file": "chunk-x954y317.js",
+            "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+            "source": "J=ct({value:void 0},(t)=>{t.value=void 0})",
+            "start": 10000,
+            "end": 10042,
+            "sha256": "49286514e4448588a4e2da56c4c41c20fc7d3d891f0365544061780d48d8aed6"
+          },
+          "ct": {
+            "file": "chunk-x954y317.js",
+            "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+            "source": "function ct(t,e){return t}",
+            "start": 5356,
+            "end": 5382,
+            "sha256": "5da0f7703a355ff03a7692122a7882ea1749f0801ed8f38d6b64ce727d2cd856"
+          },
+          "AW": {
+            "file": "chunk-x954y317.js",
+            "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+            "source": "function AW(t,e=\"darwin\",n=e===\"darwin\"&&zt()){if(e!==\"darwin\")return!1;if(w$(t)||jS(t))return!0;if(!t.startsWith(\"/\"))return!1;let{complete:r,partial:o}=et(t,e,n);if(o.length>0)return!0;if(r.some((s)=>s.startsWith(\"/network/\")))return!0;let i=r.filter((s)=>s.startsWith(\"/home/\"));if(i.length>0){let s=bn();if(i.some((a)=>a!==s))return!0}return!1}",
+            "start": 13234,
+            "end": 13582,
+            "sha256": "a0d4f6bae772b152895fccc33cb23a6e72cd73c242938ab50dfa43dcd6ca7c91"
+          },
+          "et": {
+            "file": "chunk-x954y317.js",
+            "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+            "source": "function et(t,e,n){let r=[],o=[];if(!t.startsWith(\"/\"))return{complete:r,partial:o};let i=[];for(let s of t.split(\"/\")){if(s===\"\"||s===\".\")continue;if(s===\"..\"){i.pop();continue}if(i.push(s),i.length>xn)continue;let a=\"/\"+i.join(\"/\"),u=(e===\"darwin\"?E$(a):a).split(\"/\").filter((w)=>w!==\"\"),h=u[0]?.toLowerCase();if(h===\"network\"){if(u.length===1)o.push(\"/network/\");else if(u.length===2)o.push(`/network/${O(u[1])}/`);else if(u.length===3)r.push(`/network/${O(u[1])}/${O(u[2])}`)}else if(n&&h===\"home\"&&u.length===2)r.push(`/home/${u[1]}`)}return{complete:r,partial:o}}",
+            "start": 10539,
+            "end": 11108,
+            "sha256": "07c50e41221da2c3c47c01fd6e423e528419c127a6e0c6f86a54c633b86d3428"
+          },
+          "xn": {
+            "file": "chunk-x954y317.js",
+            "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+            "source": "xn=6",
+            "start": 10534,
+            "end": 10538,
+            "sha256": "0253cb79469d7479dc45e472b28386fc1381868b8fa7121192e06e6a245897c7"
+          },
+          "E$": {
+            "file": "chunk-x954y317.js",
+            "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+            "source": "function E$(t){let e=t.split(\"/\");if(e.length<5||e[0]!==\"\"||N(e[1]??\"\")!==\"system\"||N(e[2]??\"\")!==\"volumes\"||N(e[3]??\"\")!==\"data\")return t;let n=e.slice(4);for(let r of vn){let o=r.split(\"/\");if(n.length<o.length)continue;if(o.every((i,s)=>N(n[s]??\"\")===N(i)))return\"/\"+n.join(\"/\")}return t}",
+            "start": 16920,
+            "end": 17211,
+            "sha256": "8de5a108b652e243a3867460f517b2326b47c457dab954fe0e93a67181da992e"
+          },
+          "N": {
+            "file": "chunk-x954y317.js",
+            "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+            "source": "function N(t){return t.toUpperCase().toLowerCase()}",
+            "start": 17211,
+            "end": 17262,
+            "sha256": "77e8e855ffba278b862af2b32d96fda169532f705053761e3b2c31a70041c67e"
+          },
+          "vn": {
+            "file": "chunk-x954y317.js",
+            "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+            "source": "vn=[\"usr/local\",\"usr/libexec/cups\",\"usr/share/snmp\",\"AppleInternal\",\"Applications\",\"Library\",\"Users\",\"Volumes\",\"cores\",\"home\",\"media\",\"mnt\",\"opt\",\"pkg\",\"private\",\"sw\"]",
+            "start": 16752,
+            "end": 16919,
+            "sha256": "073c3e1fdb62938dcf3cd950e3d42dc16502b6c5f0680ea89b3ea1f6d1e03f8e"
+          },
+          "bn": {
+            "file": "chunk-x954y317.js",
+            "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+            "source": "function bn(){let t;try{t=ot()}catch{return null}let e=/^\\/home\\/([^/]+)/.exec(E$(t));return e?`/home/${e[1]}`:null}",
+            "start": 13582,
+            "end": 13698,
+            "sha256": "80e4e4a8fa6c89dfee2ce98f5445214b474351d110f7d238fbd8e176f3ef870f"
+          },
+          "vD": {
+            "file": "chunk-x954y317.js",
+            "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+            "source": "function vD(t,e){if(jS(t))return!0;if(ca(t)){let n=DY(t);if(n===null||n!==DY(e))return!0}return Pir(t,e)}",
+            "start": 9427,
+            "end": 9532,
+            "sha256": "a4a0922e6e4305ce395e30f81804dc9a6fcfd98d3e1806d4fda547331d6f1f59"
+          }
+        },
+        "guardImports": {
+          "W": {
+            "file": "chunk-c9me9cp7.js",
+            "name": "W",
+            "start": 622,
+            "end": 623
+          },
+          "E": null,
+          "f": {
+            "file": "path",
+            "name": "resolve",
+            "start": 7129,
+            "end": 7141
+          },
+          "hn": {
+            "file": "fs",
+            "name": "readFileSync",
+            "start": 6892,
+            "end": 6910
+          },
+          "Rt": {
+            "file": "fs",
+            "name": "statSync",
+            "start": 6949,
+            "end": 6963
+          },
+          "ot": {
+            "file": "os",
+            "name": "homedir",
+            "start": 7020,
+            "end": 7033
+          },
+          "tt": null
+        },
+        "canonicalHelpers": {
+          "mn": {
+            "file": "chunk-2ynta9xc.js",
+            "moduleSha256": "f3e239a22bc356ef2664a104850f816b164d4874821637ec72f203620c439e1d",
+            "source": "function mn(e){try{let n=ns(e);if(n.isSymbolicLink())return\"symlink\";return n.isFile()?\"file\":n.isDirectory()?\"dir\":\"special\"}catch(n){let r=E(n);return r===\"ENOENT\"||r===\"ENOTDIR\"?\"absent\":\"other\"}}",
+            "start": 65830,
+            "end": 66029,
+            "sha256": "d2f99712ee672e288c2d4d815d81d5adda2cf07ab338b5ad914469f5c7a1c603"
+          },
+          "le": {
+            "file": "chunk-2ynta9xc.js",
+            "moduleSha256": "f3e239a22bc356ef2664a104850f816b164d4874821637ec72f203620c439e1d",
+            "source": "function le(e,n,r=40,o=n,s=!1){if(r<=0)return!1;let i=Rs.exec(e),c=i?i[0]:\"\",f=e.slice(c.length).split(hs);for(let g=0;g<f.length;g++){let b=f[g];if(b===\"\"||b===\".\")continue;if(b===\"..\"){c=be(c);continue}if(c=C(c,b),vD(c,o)||w$(c))return!1;let S=mn(c);if(S===\"other\"||S===\"special\"&&!s)return!1;if(S===\"symlink\"){let R=ZVt(c);if(R===null)return!1;if(ms(R,be(c)))return!1;let u=hn.test(R)?R:be(c)+Re+R,h=f.slice(g+1).join(Re),_=h?ys.test(u)?u+h:u+Re+h:u;return le(_,n,r-1,o,s)}}return!0}",
+            "start": 66498,
+            "end": 66984,
+            "sha256": "0af41fd23725229880b8a479b2f7c8bbcab6441a0354a59d4790bfd9d16fa26d"
+          },
+          "J": {
+            "file": "chunk-2ynta9xc.js",
+            "moduleSha256": "f3e239a22bc356ef2664a104850f816b164d4874821637ec72f203620c439e1d",
+            "source": "function J(e,n,r=n,o=!1){if(!le(hn.test(e)?e:n+Re+e,n,void 0,r,o))return!0;return!le(j(n,e),n,void 0,r,o)}",
+            "start": 66984,
+            "end": 67090,
+            "sha256": "80ab8530b0978d70132fbe9f6cd83c0dc5f539ac8a3bae951fd3fab027ec6d4b"
+          },
+          "oy": {
+            "file": "chunk-2ynta9xc.js",
+            "moduleSha256": "f3e239a22bc356ef2664a104850f816b164d4874821637ec72f203620c439e1d",
+            "source": "function oy(e,n,r=n){return J(e,n,r)}",
+            "start": 67090,
+            "end": 67127,
+            "sha256": "f540eca6ac98abc8b971b63a6669d74540c53b0590334330b86fe60d64f371cc"
+          },
+          "ms": {
+            "file": "chunk-2ynta9xc.js",
+            "moduleSha256": "f3e239a22bc356ef2664a104850f816b164d4874821637ec72f203620c439e1d",
+            "source": "function ms(e,n){return Ni(e,n)}",
+            "start": 66426,
+            "end": 66458,
+            "sha256": "694debf5c06bc8095742e475807bb0a96b3d959edabb9a07ed7d0c25789c1546"
+          },
+          "ZVt": {
+            "file": "chunk-2ynta9xc.js",
+            "moduleSha256": "f3e239a22bc356ef2664a104850f816b164d4874821637ec72f203620c439e1d",
+            "source": "function ZVt(e){try{let n=os(e,{encoding:\"buffer\"}),r=n.toString(\"utf-8\");if(r.includes(\"\\x00\")||!Buffer.from(r,\"utf-8\").equals(n))return null;return r}catch{return null}}",
+            "start": 66029,
+            "end": 66200,
+            "sha256": "60d515def09e53eeaf54ba12ea3cb0b895396150cdc177e6f3b5eed4d7a2b816"
+          },
+          "yL": {
+            "file": "chunk-2ynta9xc.js",
+            "moduleSha256": "f3e239a22bc356ef2664a104850f816b164d4874821637ec72f203620c439e1d",
+            "source": "function yL(e,n){if(!le(e,n))return!0;let r=mn(e);return r===\"symlink\"||r===\"special\"||r===\"other\"}",
+            "start": 66200,
+            "end": 66299,
+            "sha256": "65ecad3e6009de3ac55956cdaf9a6956e2e6a4003aba22a72837909bb78db7f7"
+          }
+        },
+        "errorHelpers": {
+          "E": {
+            "file": "chunk-c9me9cp7.js",
+            "moduleSha256": "db81856ee883c31a0be18c305014a0d82d3bd698a459223b9de754b934b084ae",
+            "source": "function E(n){if(n&&typeof n===\"object\"&&\"code\"in n&&typeof n.code===\"string\")return n.code;return}",
+            "start": 4814,
+            "end": 4913,
+            "sha256": "a84ab0a2488aed5689416393c679dde4e7f4b29aa980e121bd56b25ab3e7b5e4"
+          },
+          "W": {
+            "file": "chunk-c9me9cp7.js",
+            "moduleSha256": "db81856ee883c31a0be18c305014a0d82d3bd698a459223b9de754b934b084ae",
+            "source": "function W(n){return E(n)===\"ENOENT\"}",
+            "start": 7491,
+            "end": 7528,
+            "sha256": "8439c063340ce5b84a3647299d7b288005264d912e9522120edf677792960d6f"
+          }
+        },
+        "runtimeAdapters": {
+          "fs": "node:fs operations bound directly; original per-call try/catch and ENOENT/ENOTDIR branches retained",
+          "path": "node:path module bound directly; original path.resolve alias retained",
+          "homeDirectory": "node:os homedir bound directly for the original Darwin /home mount check",
+          "diagnostics": {
+            "source": {
+              "file": "chunk-h7xaj2fc.js",
+              "moduleSha256": "1783d29c84dc3ac59c4294dcd0a6a879763625d925c9cb2f7151d1277533a1db",
+              "source": "function ne(n,t,i){let r=m();if(!r)return;let o;try{o=e(n,t,l(i))}catch{o=e(n,t,{diagnostics_payload_failed:!0})}g().append(r,o)}",
+              "start": 1225,
+              "end": 1354,
+              "sha256": "3ba15db2d14280a4748450226fe292911184a66f7441605688cbf00ea82b2e50"
+            },
+            "caller": {
+              "file": "chunk-2ynta9xc.js",
+              "moduleSha256": "f3e239a22bc356ef2664a104850f816b164d4874821637ec72f203620c439e1d",
+              "source": "function en(e){let n=Date.now();ne(\"info\",\"find_git_root_started\");let r=N(e),o=r.substring(0,r.indexOf(T)+1)||T,s=0;while(r!==o){let i=x(r,\".git\");if(s++,Ne(i,r))return ne(\"info\",\"find_git_root_completed\",{duration_ms:Date.now()-n,stat_count:s,found:!0}),Mn(r);let c=z(r);if(c===r)break;r=c}if(s++,Ne(x(o,\".git\"),o))return ne(\"info\",\"find_git_root_completed\",{duration_ms:Date.now()-n,stat_count:s,found:!0}),Mn(o);return ne(\"info\",\"find_git_root_completed\",{duration_ms:Date.now()-n,stat_count:s,found:!1}),OK}",
+              "start": 50130,
+              "end": 50642,
+              "sha256": "3ada2f694dbc49822a84b0b35b56e509fe5699f684b6d783f146f097765cf7e7"
+            },
+            "runtimeAdapter": "existing debug logger; preserves official event names and fields without introducing the separate upstream telemetry-file writer"
+          }
+        }
+      },
+      "cacheClosure": {
+        "qt": "class qt{rootByPath=new hd({max:50});canonicalRootByRoot=new hd({max:50});remoteSlugByRoot=new hd({max:50});monorepoRuledOutByRoot=new hd({max:50});monorepoVerdictByDir=new hd({max:50});gitDirByCwd=new Map;linkedFromRootByPin=new hd({max:64});markersByRoot=new hd({max:50});repositoryByCwd=new Map;remoteHostByCwd=new Map;repoClassByCanonicalRoot=new Map;linguistGeneratedByPath=new Map;wcRootByPath=new hd({max:50});wcTrunkByRoot=new Map;wcWorktreesByRoot=new hd({max:50,ttl:60000});wcRemoteHashByRoot=new hd({max:50});wcHeadByRoot=new Map;sessionRepoNameByCwd=new hd({max:50});diffCheckoutIsRepo=new Map;gitExecutable=null;reportedHookInstallSkips=new Set;clear(){this.rootByPath.clear(),this.canonicalRootByRoot.clear(),this.remoteSlugByRoot.clear(),this.monorepoRuledOutByRoot.clear(),this.monorepoVerdictByDir.clear(),this.gitDirByCwd.clear(),this.linkedFromRootByPin.clear(),this.markersByRoot.clear(),this.repositoryByCwd.clear(),this.remoteHostByCwd.clear(),this.repoClassByCanonicalRoot.clear(),this.linguistGeneratedByPath.clear(),this.wcRootByPath.clear(),this.wcTrunkByRoot.clear(),this.wcWorktreesByRoot.clear(),this.wcRemoteHashByRoot.clear(),this.wcHeadByRoot.clear(),this.sessionRepoNameByCwd.clear(),this.diffCheckoutIsRepo.clear(),this.gitExecutable=null,this.reportedHookInstallSkips.clear()}}",
+        "V": "class V{#e;#t=new WeakMap;constructor(e){this.#e=e}of(e){let t=this.#t.get(e);if(t!==void 0)return t;let o=this.#e();return this.#t.set(e,o),o}}",
+        "ko": "ko=new V(()=>new qt)",
+        "OK": "OK=Symbol(\"git-repo-negative-result\")",
+        "sourceModules": {
+          "qt": "chunk-2ynta9xc.js",
+          "V": "chunk-bn3p37gv.js"
+        },
+        "cacheImplementation": "Original qt class and ko initializer; original V WeakMap-of-host cache; imported LRUCache class is the existing package runtime dependency."
+      },
+      "bindings": {
+        "aI": {
+          "file": "chunk-2ynta9xc.js",
+          "name": "bs",
+          "start": 2205,
+          "end": 2207
+        },
+        "bs": null,
+        "Cu": null
+      },
+      "productionAdapter": {
+        "file": "src/utils/permissions/officialPermissionSettings287/trust.native.js",
+        "entry": "generated original closure aI/bs/Cu/ko/V/qt/lr/en/Be/tn",
+        "hostOwner": "ko.of(U().host) with original V and complete qt cache class",
+        "cacheShape": {
+          "rootByPath": 50,
+          "canonicalRootByRoot": 50
+        },
+        "rootHelper": "original en + Ne",
+        "canonicalHelper": "original Be + tn",
+        "boundaryBindings": "real node fs/path plus explicit Git path-safety/diagnostic ports"
+      }
+    },
+    "bindings": {
+      "trust": {
+        "um": {
+          "file": "chunk-bn3p37gv.js",
+          "name": "um",
+          "start": 960,
+          "end": 962
+        },
+        "U_t": null,
+        "Qbe": null,
+        "vJe": null,
+        "Yfe": {
+          "file": "chunk-bn3p37gv.js",
+          "name": "Yfe",
+          "start": 1132,
+          "end": 1135
+        },
+        "Ee": {
+          "file": "chunk-bn3p37gv.js",
+          "name": "Ee",
+          "start": 957,
+          "end": 959
+        },
+        "Co": {
+          "file": "chunk-bn3p37gv.js",
+          "name": "Co",
+          "start": 1026,
+          "end": 1028
+        },
+        "iD": {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "iD",
+          "start": 2483,
+          "end": 2485
+        },
+        "aI": {
+          "file": "chunk-f1vb7bx7.js",
+          "name": "aI",
+          "start": 3394,
+          "end": 3396
+        },
+        "Xe": {
+          "file": "path",
+          "name": "resolve",
+          "start": 65363,
+          "end": 65376
+        },
+        "oe": null,
+        "le": null,
+        "vIe": null,
+        "xE": null,
+        "k0": null,
+        "ae": {
+          "file": "chunk-q80zaav8.js",
+          "name": "ae",
+          "start": 1763,
+          "end": 1765
+        },
+        "RE": {
+          "file": "os",
+          "name": "homedir",
+          "start": 65293,
+          "end": 65306
+        },
+        "we": {
+          "file": "chunk-brnn4zwp.js",
+          "name": "we",
+          "start": 1490,
+          "end": 1492
+        },
+        "We": {
+          "file": "path",
+          "name": "join",
+          "start": 65352,
+          "end": 65362
+        },
+        "W": {
+          "file": "chunk-c9me9cp7.js",
+          "name": "W",
+          "start": 774,
+          "end": 775
+        },
+        "PU": {
+          "file": "chunk-f1vb7bx7.js",
+          "name": "PU",
+          "start": 3383,
+          "end": 3385
+        },
+        "Tz": {
+          "file": "chunk-1nayt2j6.js",
+          "name": "Tz",
+          "start": 3113,
+          "end": 3115
+        },
+        "yn": {
+          "file": "chunk-fmv8bhm3.js",
+          "name": "yn",
+          "start": 3173,
+          "end": 3175
+        },
+        "Qo": {
+          "file": "chunk-fmv8bhm3.js",
+          "name": "Qo",
+          "start": 3176,
+          "end": 3178
+        }
+      },
+      "settings": {
+        "Zn": null,
+        "ye": {
+          "file": "path",
+          "name": "resolve",
+          "start": 3430,
+          "end": 3443
+        }
+      },
+      "enabled": {
+        "qOe": {
+          "file": "chunk-bn3p37gv.js",
+          "name": "qOe",
+          "start": 631,
+          "end": 634
+        },
+        "va": null
+      }
+    },
+    "trustRootImports": {
+      "declarations": {
+        "xE": {
+          "file": "chunk-nankzm0s.js",
+          "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+          "source": "function xE(e,n){let r=Mn(Xe(n)),s=KZn(r);if(s?.rootOnly){let g=$U(Xe(s.root));return e.projects?.[g]?.hasTrustDialogAccepted===!0?g:null}return PE(e,r,s!==null?$U(Xe(s.root)):null)}",
+          "start": 531039,
+          "end": 531221,
+          "sha256": "9a5d12dc065f37ae342a65d9287d54d5eca98f382a4841a5d6f4aedf8aa50e59"
+        },
+        "KZn": {
+          "file": "chunk-nankzm0s.js",
+          "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+          "source": "function KZn(e){let n=Mn(Xe(e)),r=ktr(n,{uncached:!0});if(r!==null&&Ttr(r.root,{uncached:!0})!==!0)return{root:r.root,rootOnly:!0};let s=LS(n);return s!==null?{root:s,rootOnly:!1}:null}",
+          "start": 531221,
+          "end": 531406,
+          "sha256": "beea2face37743ffca10a3b015391a9209780327e337a2c150d5be319c6d6204"
+        },
+        "PE": {
+          "file": "chunk-nankzm0s.js",
+          "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+          "source": "function PE(e,n,r){let s=$U(n);while(!0){if(!(r===null||s===r||s.startsWith(r.endsWith(\"/\")?r:r+\"/\")))return null;if(e.projects?.[s]?.hasTrustDialogAccepted)return s;if(s===r)return null;let h=$U(Xe(s,\"..\"));if(h===s)return null;s=h}}",
+          "start": 531406,
+          "end": 531640,
+          "sha256": "5150e9568f1cdf0c9511755050f749be2571af86ee7763dcb7fa420bc0fa4d72"
+        },
+        "pathStyleNormalizer": {
+          "file": "chunk-2ejbgdvw.js",
+          "moduleSha256": "8559c9bec3476547332951b3adb387e7fcf0aeb366bfe09ffdb2e5334028bfa5",
+          "source": "function $U(e){let r=u(e);if(O()===\"windows\")return r.replaceAll(\"\\\\\",\"/\");return r}",
+          "start": 4453,
+          "end": 4537,
+          "sha256": "8592e3dba3a0ffc6741c51ebd1fad17eacc3ed08ec1b3661afaf65494e96e9a7"
+        },
+        "canonicalLookup": {
+          "file": "chunk-2ynta9xc.js",
+          "moduleSha256": "f3e239a22bc356ef2664a104850f816b164d4874821637ec72f203620c439e1d",
+          "source": "function LS(e){let n=en(e);return n===OK?null:n}",
+          "start": 50710,
+          "end": 50758,
+          "sha256": "a33102133a2c6a5c6b64b689b0a176ae7939afbb6affc853ef7c08cc5ab6698d"
+        }
+      },
+      "imports": {
+        "Mn": {
+          "file": "chunk-x954y317.js",
+          "name": "Mn",
+          "start": 1328,
+          "end": 1330
+        },
+        "Xe": {
+          "file": "path",
+          "name": "resolve",
+          "start": 65363,
+          "end": 65376
+        },
+        "LS": {
+          "file": "chunk-2ynta9xc.js",
+          "name": "LS",
+          "start": 3004,
+          "end": 3006
+        },
+        "pathNormalize": {
+          "file": "path",
+          "name": "normalize",
+          "start": 1090,
+          "end": 1104
+        },
+        "pathPlatform": {
+          "file": "chunk-amhtwhch.js",
+          "name": "O",
+          "start": 822,
+          "end": 823
+        },
+        "ktr": {
+          "file": "chunk-f1vb7bx7.js",
+          "name": "ktr",
+          "start": 3390,
+          "end": 3393
+        },
+        "Ttr": {
+          "file": "chunk-f1vb7bx7.js",
+          "name": "Ttr",
+          "start": 3386,
+          "end": 3389
+        }
+      },
+      "pathStylePlatformOriginal": {
+        "declaration": {
+          "file": "chunk-amhtwhch.js",
+          "moduleSha256": "5fb2fb2d3d66c7ec04ce0fac39ed9f665b410441ebae71d3f893920600949ecb",
+          "source": "function O(){return p().getPlatform()}",
+          "start": 18390,
+          "end": 18428,
+          "sha256": "05acf0004b234bd9fc8f68aa69fcee92dfabb0d75a7a67d2fc14e041916b7a30"
+        },
+        "runtimePort": "process.platform mapped to official windows discriminator"
+      },
+      "canonicalHostRootCache": {
+        "file": "chunk-f1vb7bx7.js",
+        "moduleSha256": "2f76d1800a2202fe6717904ab677e2509d0b124302d3d31e325353b307f795d1",
+        "initializer": "ct(new Map,(e)=>e.clear())",
+        "initializerSha256": "a8cfcc8757df2cc15228e3d1d9bc41ed6c6bf2cdbc27b308dfc6b67e19f1b793",
+        "Ttr": {
+          "file": "chunk-f1vb7bx7.js",
+          "moduleSha256": "2f76d1800a2202fe6717904ab677e2509d0b124302d3d31e325353b307f795d1",
+          "source": "function Ttr(e,{uncached:n=!1}={}){let r=n?void 0:Nt.get(e);if(r!==void 0)return r;let s=fm(e);if(s===null)return;let g;try{g=Znr()}catch{return}let h=Mn(s)===g;return Nt.set(e,h),h}",
+          "start": 3567,
+          "end": 3749,
+          "sha256": "2f2913a648e97ad8c1510fea224342b67090b7a8bf473127b9ffe8ac27733d1d"
+        },
+        "Fr": {
+          "file": "chunk-f1vb7bx7.js",
+          "moduleSha256": "2f76d1800a2202fe6717904ab677e2509d0b124302d3d31e325353b307f795d1",
+          "source": "function Fr(e,{uncached:n=!1}={}){return!1}",
+          "start": 3783,
+          "end": 3826,
+          "sha256": "da383b0f2d144bc21003671d68ed6d6e4680fd161e91c62bab1194fc22a71d5b"
+        },
+        "PU": {
+          "file": "chunk-f1vb7bx7.js",
+          "moduleSha256": "2f76d1800a2202fe6717904ab677e2509d0b124302d3d31e325353b307f795d1",
+          "source": "function PU(e,{uncached:n=!1}={}){return null}",
+          "start": 3487,
+          "end": 3533,
+          "sha256": "ba86ce6641e98decf5e196a6a33790688f57544703ae3472fcb2b70d157c4193"
+        }
+      }
+    },
+    "runtimeBindingEvidence": {
+      "rwYe": {
+        "declaration": {
+          "file": "chunk-f1vb7bx7.js",
+          "moduleSha256": "2f76d1800a2202fe6717904ab677e2509d0b124302d3d31e325353b307f795d1",
+          "source": "function rw(){let e=Zn(\"projectSettings\"),n=Zn(\"userSettings\");return!!e&&!!n&&ye(e)===ye(n)}",
+          "start": 87667,
+          "end": 87760,
+          "sha256": "15af6b59c59d5de1f0b306eb4ba2a407a477b9a8cce1361a6653d74f00378a5f"
+        },
+        "import": {
+          "file": "path",
+          "name": "resolve",
+          "start": 3430,
+          "end": 3443
+        },
+        "runtimePort": "pathResolve"
+      },
+      "canonicalYe": {
+        "import": {
+          "file": "fs",
+          "name": "realpathSync",
+          "start": 40729,
+          "end": 40747
+        },
+        "binding": "fs.realpathSync inside canonical-path closure"
+      }
+    },
+    "gateImports": {
+      "rw": {
+        "file": "chunk-f1vb7bx7.js",
+        "name": "rw",
+        "start": 2771,
+        "end": 2773
+      },
+      "J0": {
+        "file": "chunk-nankzm0s.js",
+        "name": "J0",
+        "start": 1728,
+        "end": 1730
+      }
+    },
+    "j0ImportAliases": {
+      "fi": null,
+      "ds": null,
+      "k0": null,
+      "Co": {
+        "file": "chunk-bn3p37gv.js",
+        "name": "Co",
+        "start": 1026,
+        "end": 1028
+      },
+      "iD": {
+        "file": "chunk-hrhfcbdv.js",
+        "name": "iD",
+        "start": 2483,
+        "end": 2485
+      },
+      "Ee": {
+        "file": "chunk-bn3p37gv.js",
+        "name": "Ee",
+        "start": 957,
+        "end": 959
+      },
+      "aI": {
+        "file": "chunk-f1vb7bx7.js",
+        "name": "aI",
+        "start": 3394,
+        "end": 3396
+      },
+      "Xe": {
+        "file": "path",
+        "name": "resolve",
+        "start": 65363,
+        "end": 65376
+      },
+      "OE": null
+    }
+  },
+  "boundary": {
+    "local": "permissionsLoader.ts:getSettingsForSource/getEnabledSettingSources/checkHasTrustDialogAccepted; actual CLI configuration and Git index; managed-only branch remains existing policySettings gate; no private backend implementation",
+    "ports": "Settings lookup, official Li source ordering, persisted cwd trust, project/local alias and tracked-file classification, parser, and dropped-rule diagnostics bind to actual local owners. The classifier runs original git ls-files under original hook/fsmonitor/pathspec/timeout/status semantics; no Git index parser is used.",
+    "observedLocalGap": "The main loadAllPermissionRulesFromDisk call has no strictPersistedTrust argument; the adapter defaults to the official Pm-equivalent persisted-trust result. The actual temp-disk settings/trust test runs under the offline guard; J0 tracked/untracked enum decisions are unit checked, and the exact classifier command is separately verified against real temporary tracked and untracked Git repositories. Private enterprise trust overrides, host source checks, and original J0 home-directory exceptions remain out of scope."
+  }
+}

@@ -1,0 +1,93 @@
+#!/usr/bin/env bash
+# One-command source release flow. Never enable xtrace: deploy credentials are
+# passed only as the sshpass -f filename option and are never read here.
+set -euo pipefail
+
+ROOT="$(cd -P "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+INSTALLER="$ROOT/install/cc-install"
+
+usage() {
+  cat <<'EOF'
+Usage:
+  cc-release local [--offline|--online] [--prefix DIR] [--bin-dir DIR]
+  cc-release deploy --server USER@HOST --password-file FILE [--offline|--online] [--prefix DIR] [--bin-dir DIR]
+
+Builds a checksummed source release for darwin/linux amd64/arm64. Local install
+uses the current machine's Bun/native dependencies. Deploy transfers the
+release to the specified host, where the existing cc-install validates the
+host architecture, Bun runtime, dependencies, and release before promotion.
+Remote deploy requires sshpass, ssh, scp, tar, sha256sum, and Bun on the host.
+No system cc path is created or replaced. Default dependency mode is --online.
+EOF
+}
+fail() { printf '%s\n' "$1" >&2; exit 2; }
+shell_quote() {
+  # Produce one POSIX-shell word without evaluating or interpolating the value.
+  local value="$1"
+  value=${value//\'/\'\\\'\'}
+  printf "'%s'" "$value"
+}
+[[ $# -gt 0 ]] || { usage; exit 2; }
+mode="$1"; shift
+case "$mode" in local|deploy) ;; *) usage; exit 2 ;; esac
+
+server=""; password_file=""; dep_mode="--online"; prefix=""; bin_dir=""
+while (($#)); do
+  case "$1" in
+    --offline|--online) dep_mode="$1"; shift ;;
+    --server) (($# >= 2)) || fail 'Missing value for --server'; server="$2"; shift 2 ;;
+    --password-file) (($# >= 2)) || fail 'Missing value for --password-file'; password_file="$2"; shift 2 ;;
+    --prefix) (($# >= 2)) && [[ -n "$2" ]] || fail 'Missing value for --prefix'; prefix="$2"; shift 2 ;;
+    --bin-dir) (($# >= 2)) && [[ -n "$2" ]] || fail 'Missing value for --bin-dir'; bin_dir="$2"; shift 2 ;;
+    *) fail 'Unknown option.' ;;
+  esac
+done
+
+if [[ "$mode" == deploy ]]; then
+  [[ -n "$server" && "$server" =~ ^[A-Za-z0-9._-]+@[A-Za-z0-9][A-Za-z0-9.-]*$ ]] || fail 'Deploy requires --server USER@HOST.'
+  [[ -n "$password_file" && -f "$password_file" && ! -L "$password_file" && -r "$password_file" ]] || fail 'Deploy requires a readable regular --password-file.'
+  command -v sshpass >/dev/null 2>&1 || fail 'sshpass is required for password-file deployment.'
+  command -v ssh >/dev/null 2>&1 || fail 'ssh is required for deployment.'
+  command -v scp >/dev/null 2>&1 || fail 'scp is required for deployment.'
+  command -v tar >/dev/null 2>&1 || fail 'tar is required for deployment.'
+  command -v sha256sum >/dev/null 2>&1 || fail 'sha256sum is required for deployment.'
+else
+  [[ -z "$server$password_file" ]] || fail 'Server and password-file options are valid only with deploy.'
+fi
+
+work="$(mktemp -d "${TMPDIR:-/tmp}/cc-release.XXXXXXXX")"
+cleanup() { rm -rf -- "$work"; }
+trap cleanup EXIT HUP INT TERM
+
+# Pack is reused verbatim: its allowlist omits credentials, .work, git and
+# node_modules, and emits both a manifest and archive checksum.
+"$INSTALLER" pack "$ROOT" "$work"
+artifact="$(find "$work" -mindepth 1 -maxdepth 1 -type d ! -name '.pack-*' -print -quit)"
+[[ -n "$artifact" ]] || fail 'Release pack did not produce an artifact.'
+archive="$artifact.tar.gz"
+[[ -f "$archive" && -f "$archive.sha256" ]] || fail 'Release archive/checksum is missing.'
+
+if [[ "$mode" == local ]]; then
+  args=("$artifact" "$dep_mode")
+  [[ -z "$prefix" ]] || args+=(--prefix "$prefix")
+  [[ -z "$bin_dir" ]] || args+=(--bin-dir "$bin_dir")
+  "$INSTALLER" install "${args[@]}"
+  exit 0
+fi
+
+# Workdir and artifact basename are generated locally and constrained to safe
+# characters. The remote command contains no caller-provided shell fragments.
+remote_dir="/tmp/$(basename "$work")"
+archive_name="$(basename "$archive")"
+artifact_name="$(basename "$artifact")"
+remote_install_args=""
+[[ -z "$prefix" ]] || remote_install_args+=" --prefix $(shell_quote "$prefix")"
+[[ -z "$bin_dir" ]] || remote_install_args+=" --bin-dir $(shell_quote "$bin_dir")"
+remote_command="set -eu; umask 022; mkdir -p '$remote_dir'; cd '$remote_dir'; sha256sum -c '$archive_name.sha256'; tar -xzf '$archive_name'; if [ -x \"\$HOME/.bun/bin/bun\" ]; then BUN_BIN=\"\$HOME/.bun/bin/bun\"; else BUN_BIN=\"\$(command -v bun)\"; fi; export BUN_BIN; './$artifact_name/install/cc-install' install './$artifact_name' $dep_mode --remote-lifecycle$remote_install_args; rm -rf -- '$remote_dir'"
+
+# `sshpass -f` consumes the password file internally. Do not cat it, copy it,
+# put a password value in an environment variable/argv, or print command lines.
+sshpass -f "$password_file" ssh -o BatchMode=no -- "$server" "umask 077; mkdir -p '$remote_dir'"
+sshpass -f "$password_file" scp -o BatchMode=no -- "$archive" "$archive.sha256" "$server:$remote_dir/"
+sshpass -f "$password_file" ssh -o BatchMode=no -- "$server" "$remote_command"
+printf 'Deployed and verified %s to %s.\n' "$(basename "$artifact")" "$server"

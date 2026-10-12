@@ -1,0 +1,47 @@
+// Complete original Agents hook module lexical closure; original public export aliases restored for the source runtime.
+function D(e,t){let o=new Set([e.path]),{path:n,parent:i}=e;while(i!==void 0&&!o.has(i))o.add(i),n=i,i=t.get(i)?.parent;return n};
+var k=["project","local","user"];
+var U=(e)=>e.flatMap((t)=>t.parts.map((o,n)=>({path:o.path,kind:"project",content:o.content,...n>0&&{parent:t.parts[0]?.path??o.path}})));
+function ue(e,t,o){if((e==="~"||e.startsWith("~/"))&&o!==void 0){let i=o.replace(/(?<=.)[\\/]+$/,"");return e==="~"?i:`${i}${ce(i)}${e.slice(2)}`}return/^(?:[A-Za-z]:)?[\\/]/.test(e)?e:`${t}${ce(t)}${e}`};
+var ce=(e)=>e.includes("\\")?"\\":"/";
+var p=(e)=>e.replaceAll("\\","/").replace(/(?<=.)\/+$/,"");
+var M=(e,t)=>p(e).startsWith(`${p(t)}/`);
+var q=(e,t)=>p(e.path)===p(t);
+var xe=(e)=>`Contents of ${e.path}:
+
+${e.content}`;
+function ge(e,t){let o=new Set(t.map((n)=>n.dir));return e.filter((n)=>!o.has(n.dir))};
+var E=(e)=>e.kind==="project"||e.kind==="local";
+function O(e){let t=p(e),o=t.lastIndexOf("/.claude/"),n=o===-1?t.lastIndexOf("/"):o;return n<=0?"/":t.slice(0,n)};
+function V(e,t){let o=new Map(e.map((l)=>[l.path,l])),n=e.findIndex((l)=>E(l)&&M(O(D(l,o)),t));if(n!==-1)return n;let i=e.findLastIndex(E);if(i!==-1)return i+1;let r=e.findIndex((l)=>l.kind==="memory");return r===-1?e.length:r};
+var z=["AGENTS.md",".claude/AGENTS.md"];
+var _=["CLAUDE.md",".claude/CLAUDE.md","CLAUDE.local.md"];
+var Y="main";
+function ye(e,t){if(!(E(e)&&e.parent===void 0&&_.some((r)=>p(e.path).endsWith(`/${r}`))))return!1;let n=O(e.path),i=p(t);return n===i||M(i,n)};
+var Ee=(e)=>!k.includes(e.kind);
+function J(e,t){let o=new Set(t.map((r)=>p(r.path))),n=new Set(t.filter(E).map((r)=>r.content.trim())),i=[];for(let r of e){let l=p(r.path),h=r.content.trim();if(!(o.has(l)||h!==""&&n.has(h)))o.add(l),i.push(r)}return i};
+function Oe(e,t){if(t.length===0)return e;let o=[...e],n=new Map(t.map((r)=>[r.path,r])),i=new Map;for(let r of t){let l=O(D(r,n));i.set(l,[...i.get(l)??[],r])}for(let[r,l]of i)o.splice(V(o,r),0,...l);return o};
+var C="claude-md-or-agents-md";
+var ve={none:"managed-only",claude:"claude-md","agents-fallback":"claude-md-or-agents-md",both:"claude-md-and-agents-md"};
+function he(e){if(e===void 0)return;return(typeof e==="string"?ve[e]:void 0)??"claude-md"};
+var N=["claude-md","claude-md-or-agents-md","claude-md-and-agents-md","managed-only"];
+var Ae=(e)=>N.find((t)=>t===e)??C;
+var Be=new Set(["1","true","yes","on"]);
+var X=(e)=>e!==void 0&&Be.has(e.trim().toLowerCase());
+var b="agents_md";
+function Ie(e,t,o){let n=e.reduce((i,r)=>i+(r.parent===void 0?0:1),0);return{fileCount:e.length-n,importCount:n,totalContentLength:e.reduce((i,r)=>i+r.content.length,0),isYielded:t,isWalkFailed:o}};
+var ee="agents_md_load";
+var te="walk_failed";
+var Se=(e)=>e.isWalkFailed?{feature:b,kind:"sad",reason:te}:{feature:b,kind:"ok"};
+var F=(e)=>({value:e,of:N});
+var De=(e,t)=>({event:ee,props:{mode:F(e),file_count:t.fileCount,import_count:t.importCount,total_content_length:t.totalContentLength,yielded:t.isYielded,walk_failed:t.isWalkFailed}});
+var oe="agents_md_mode";
+var Me=(e,t)=>({event:oe,props:{mode:F(e),is_interactive:t}});
+var re="agents_md_nested";
+var _e=(e,t)=>({event:re,props:{mode:F(e),file_count:t}});
+var L=(e)=>{Promise.resolve().then(e).catch(()=>{return})};
+var j=[];
+function Ye(e,t){let o=Ae(t.instructionFiles),n=he(t.projectInstructions),i=n!==void 0&&o===C,r=i?n:o,l=n===void 0;if(e("session.start",(s,a,c)=>{if(L(()=>s.telemetry.log(Me(r,a.isInteractive))),!l)l=!0,s.ui.log(i?`option projectInstructions in settings is honoured for now, read as instructionFiles ${r}; set instructionFiles to ${r} and remove projectInstructions`:`option projectInstructions in settings is not read: instructionFiles ${r} is set; remove projectInstructions`);return c(a)}),r==="claude-md")return;if(r==="managed-only"){e("prompt.context",{instructionFiles:{kind:k}},(s,a,c)=>c({...a,instructionFiles:a.instructionFiles?.filter(Ee)}));return}let h=r==="claude-md-or-agents-md",y=new Map,se=[],ae,A,P,le,me=!1;e("prompt.context",async(s,a,c)=>{let m=a.instructionFiles;if(m===void 0)return c(a).finally(()=>{y.clear()});let x=h?await s.session.root():void 0;P=x??P;let f=!1;A=x!==void 0&&(m.some((d)=>ye(d,x))||await s.fs.ancestors({names:_}).then((d)=>d.length>0,()=>(f=!0,!0)));let R=A?j:await s.fs.ancestors({names:z}).catch(()=>(f=!0,j)),u=J(U(R),m);if(!me){me=!0;let d=Ie(u,A&&!f,f);L(()=>s.telemetry.log(De(r,d))),L(()=>s.telemetry.mark(Se(d)))}if(x!==void 0&&x!==le&&u.length>0)le=x,s.ui.log("no CLAUDE.md found; AGENTS.md loaded: "+u.filter((d)=>d.parent===void 0).map((d)=>d.path).join(", "),{to:"debug"});let S=Oe(m,u);return c({...a,instructionFiles:S}).finally(()=>{y.clear(),se=S})}),e("agent.spawn",{fork:!0},async(s,a,c)=>{let m=await c(a);if(m.agentId!==void 0){let x=y.get(a.parentAgentId??Y);y.set(m.agentId,new Set(x))}return m}),e("tool.call",{tool:"Read"},async(s,a,c)=>{let m=await c(a);if(a.tool!=="Read"||m.deny!==void 0||m.isError)return m;if(!await $e(s))return m;let[f,R]=await Promise.all([s.session.root(),s.session.cwd()]);ae??=await Ze(s,R);let u=ue(a.file_path,R,ae);if(f!==P)P=f,A=void 0,y.clear();if(A??=h&&(await s.fs.ancestors({names:_})).length>0,A||!M(u,f))return m;let[S,d]=await Promise.all([s.fs.ancestors({names:z,of:u,below:f}),s.fs.ancestors({names:_,of:u,below:f})]).catch(()=>[j,j]),de=a.agentId??Y,G=y.get(de)??new Set;y.set(de,G);let Re=(h?ge(S,d):S).filter((g)=>M(g.dir,f)),pe=J(U(Re),[...se,...U(d)]).filter((g)=>!G.has(g.path)),T=pe.filter((g)=>!q(g,u)),Te=a.offset===void 0&&a.limit===void 0;for(let g of pe)if(T.includes(g)||q(g,u)&&Te)G.add(g.path);let fe=T.length>0;if(fe)L(()=>s.telemetry.log(_e(r,T.length)));return fe?{...m,context:[...m.context??[],...T.map(xe)]}:m})};
+async function $e(e){let[t,o]=await Promise.all([e.env.get("CLAUDE_CODE_SIMPLE"),e.env.get("CLAUDE_CODE_DISABLE_ATTACHMENTS")]);return!X(t)&&!X(o)};
+async function Ze(e,t){let[o,n]=await Promise.all([e.env.get("HOME"),e.env.get("USERPROFILE")]);return t.includes("\\")?n??o:o??n};
+export {z as AGENTS_NAMES,_ as CLAUDE_NAMES,C as DEFAULT_MODE,k as DROPPED_KINDS,b as FEATURE_NAME,ee as LOAD_EVENT,Y as MAIN_LOOP,N as MODES,oe as MODE_EVENT,re as NESTED_EVENT,te as WALK_FAILED_REASON,ue as absoluteOf,D as chainRootOf,U as filesOf,V as insertionIndex,M as isBelow,ye as isClaudeFileOnWalk,q as isFileAt,Ee as isKeptWithoutInstructions,E as isProjectOwn,X as isSwitchedOn,he as legacyModeOf,Ie as loadCountsOf,Se as loadMarkOf,De as loadRowOf,F as modeChoiceOf,Ae as modeOf,Me as modeRowOf,xe as nestedFrame,_e as nestedRowOf,p as normalSpellingOf,ge as outsideClaudeDirs,O as projectDirOf,L as quietly,Ye as register,J as unseenFiles,Oe as withProjectFiles};

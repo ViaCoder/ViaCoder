@@ -1,0 +1,167 @@
+{
+  "schema": "official-provider-selection-287-verbatim-v1",
+  "version": "2.1.287",
+  "platform": "darwin-arm64",
+  "offsetUnit": "UTF-16 code units",
+  "corpus": "../.work/official-modules-2.1.287/darwin-arm64",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "modules": [
+    {
+      "file": "chunk-bn3p37gv.js",
+      "sha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5"
+    },
+    {
+      "file": "chunk-mbfze585.js",
+      "sha256": "2e40ea5244009e4c37b57879f34c96cc3e3bc7d3c5468f9e65d63fe5ce13287a"
+    },
+    {
+      "file": "chunk-wz6xag6e.js",
+      "sha256": "24c4b2f916cc12257edf0008fa8d98838ac2f5cb0ae35bdc3b5447f963347d58"
+    }
+  ],
+  "functionSources": [
+    {
+      "file": "chunk-bn3p37gv.js",
+      "name": "M3t",
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "start": 96151,
+      "end": 96221,
+      "source": "function M3t(){return n().host.credentialSlots.gatewayServerProcess()}",
+      "sha256": "9d2725186a0631b861a09e279bcb55db51104bc5cf4d63b829e7691515a86ded",
+      "bodySource": "{return n().host.credentialSlots.gatewayServerProcess()}",
+      "bodySha256": "ba32465c75d290255287399489f84c9008673eda3bd96a7887af5aa61802e915"
+    },
+    {
+      "file": "chunk-bn3p37gv.js",
+      "name": "L3t",
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "start": 96306,
+      "end": 96383,
+      "source": "function L3t(){return n().host.credentialSlots.gatewayRequiredByHostPolicy()}",
+      "sha256": "67cea84e59e3c2234f2a91fdebe32d94abe825bacdf2d607a2148cbac9cd0359",
+      "bodySource": "{return n().host.credentialSlots.gatewayRequiredByHostPolicy()}",
+      "bodySha256": "ceb7d94141d9d93f7d0027ba61e6afb7725165a1dcedd0baf92043e59a83475b"
+    },
+    {
+      "file": "chunk-wz6xag6e.js",
+      "name": "He",
+      "moduleSha256": "24c4b2f916cc12257edf0008fa8d98838ac2f5cb0ae35bdc3b5447f963347d58",
+      "start": 26564,
+      "end": 26887,
+      "source": "function He(){if(uo()||M3t()||L3t())return\"gateway\";return a.CLAUDE_CODE_USE_BEDROCK?\"bedrock\":a.CLAUDE_CODE_USE_FOUNDRY?\"foundry\":a.CLAUDE_CODE_USE_ANTHROPIC_AWS?\"anthropicAws\":a.CLAUDE_CODE_USE_ANTHROPIC_GOOGLE_CLOUD?\"anthropicGoogleCloud\":a.CLAUDE_CODE_USE_MANTLE?\"mantle\":a.CLAUDE_CODE_USE_VERTEX?\"vertex\":\"firstParty\"}",
+      "sha256": "e1c7679b6d98301be1c2d7529de7ab3e1fc0cb15736679770886f6ae5c461d76",
+      "bodySource": "{if(uo()||M3t()||L3t())return\"gateway\";return a.CLAUDE_CODE_USE_BEDROCK?\"bedrock\":a.CLAUDE_CODE_USE_FOUNDRY?\"foundry\":a.CLAUDE_CODE_USE_ANTHROPIC_AWS?\"anthropicAws\":a.CLAUDE_CODE_USE_ANTHROPIC_GOOGLE_CLOUD?\"anthropicGoogleCloud\":a.CLAUDE_CODE_USE_MANTLE?\"mantle\":a.CLAUDE_CODE_USE_VERTEX?\"vertex\":\"firstParty\"}",
+      "bodySha256": "e30568e690075bc4d353c33e31facd5c337aed570911031052ca2ef6ff860eef"
+    }
+  ],
+  "runtimeSha256": "3a891dadfcd78a84d2dd83b766a42e0f746fc74a36d353c4603a201f8d1c7376",
+  "imports": {
+    "environment": {
+      "file": "chunk-mbfze585.js",
+      "importedName": "a",
+      "source": "import{a}from\"/$bunfs/root/chunk-mbfze585.js\";",
+      "start": 762,
+      "end": 808,
+      "localName": "a",
+      "declaration": {
+        "file": "chunk-mbfze585.js",
+        "name": "a",
+        "moduleSha256": "2e40ea5244009e4c37b57879f34c96cc3e3bc7d3c5468f9e65d63fe5ce13287a",
+        "start": 65484,
+        "end": 65495,
+        "source": "a=ZZe(jU,R)",
+        "sha256": "44ef2e88407080f40da65be8f6c06357952a012f91c7fbf90982c130cc9ac988"
+      }
+    },
+    "gatewayAuth": {
+      "file": "chunk-bn3p37gv.js",
+      "importedName": "uo",
+      "source": "import{uo,M3t,L3t}from\"/$bunfs/root/chunk-bn3p37gv.js\";",
+      "start": 615,
+      "end": 670,
+      "localName": "uo",
+      "declaration": {
+        "file": "chunk-bn3p37gv.js",
+        "name": "uo",
+        "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+        "start": 95766,
+        "end": 95826,
+        "source": "function uo(){return n().host.credentialSlots.gatewayAuth()}",
+        "sha256": "38a6769d93ec6d6952041abae354324f962c5d84b69768f0c3f694b07d3ad49b",
+        "bodySource": "{return n().host.credentialSlots.gatewayAuth()}",
+        "bodySha256": "9ce6d19c0aee3700e591b2978f5ab48a5dc892f9fbf0264c1498d937bae1d0a0"
+      }
+    }
+  },
+  "ports": {
+    "environment": {
+      "symbol": "a",
+      "type": "OfficialProviderSelectionPorts287.environment",
+      "behavior": "Lazy property reads; environment() called once per original property access.",
+      "import": {
+        "file": "chunk-mbfze585.js",
+        "importedName": "a",
+        "source": "import{a}from\"/$bunfs/root/chunk-mbfze585.js\";",
+        "start": 762,
+        "end": 808,
+        "localName": "a",
+        "declaration": {
+          "file": "chunk-mbfze585.js",
+          "name": "a",
+          "moduleSha256": "2e40ea5244009e4c37b57879f34c96cc3e3bc7d3c5468f9e65d63fe5ce13287a",
+          "start": 65484,
+          "end": 65495,
+          "source": "a=ZZe(jU,R)",
+          "sha256": "44ef2e88407080f40da65be8f6c06357952a012f91c7fbf90982c130cc9ac988"
+        }
+      }
+    },
+    "gatewayAuth": {
+      "symbol": "uo",
+      "method": "credentialSlots.gatewayAuth",
+      "source": "function uo(){return n().host.credentialSlots.gatewayAuth()}",
+      "sourceSha256": "38a6769d93ec6d6952041abae354324f962c5d84b69768f0c3f694b07d3ad49b",
+      "bodySource": "{return n().host.credentialSlots.gatewayAuth()}",
+      "bodySha256": "9ce6d19c0aee3700e591b2978f5ab48a5dc892f9fbf0264c1498d937bae1d0a0",
+      "runtimeBinding": "const uo=ports.gatewayAuth;"
+    },
+    "gatewayServerProcess": {
+      "symbol": "M3t",
+      "method": "credentialSlots.gatewayServerProcess",
+      "runtimeBinding": "n().host.credentialSlots.gatewayServerProcess",
+      "source": {
+        "file": "chunk-bn3p37gv.js",
+        "name": "M3t",
+        "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+        "start": 96151,
+        "end": 96221,
+        "source": "function M3t(){return n().host.credentialSlots.gatewayServerProcess()}",
+        "sha256": "9d2725186a0631b861a09e279bcb55db51104bc5cf4d63b829e7691515a86ded",
+        "bodySource": "{return n().host.credentialSlots.gatewayServerProcess()}",
+        "bodySha256": "ba32465c75d290255287399489f84c9008673eda3bd96a7887af5aa61802e915"
+      }
+    },
+    "gatewayRequiredByHostPolicy": {
+      "symbol": "L3t",
+      "method": "credentialSlots.gatewayRequiredByHostPolicy",
+      "runtimeBinding": "n().host.credentialSlots.gatewayRequiredByHostPolicy",
+      "source": {
+        "file": "chunk-bn3p37gv.js",
+        "name": "L3t",
+        "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+        "start": 96306,
+        "end": 96383,
+        "source": "function L3t(){return n().host.credentialSlots.gatewayRequiredByHostPolicy()}",
+        "sha256": "67cea84e59e3c2234f2a91fdebe32d94abe825bacdf2d607a2148cbac9cd0359",
+        "bodySource": "{return n().host.credentialSlots.gatewayRequiredByHostPolicy()}",
+        "bodySha256": "ceb7d94141d9d93f7d0027ba61e6afb7725165a1dcedd0baf92043e59a83475b"
+      }
+    }
+  },
+  "adapters": [
+    "a lazy typed environment adapter",
+    "uo is the existing gatewayAuth IO port",
+    "n() exposes only the two credential-slot IO ports used by verbatim M3t/L3t"
+  ],
+  "boundary": "Sidecar source recovery and IO-port fixture only; production provider integration remains with the main controller."
+}

@@ -1,0 +1,3 @@
+// Full original nested pc/Br. Getter ports are the existing watcher frame, not a second watcher/state.
+const bind=new Function('ports',"with(ports){function pc(D){if(!ne||ce)return;for(let z of D){let ue=[Zn(z),z===\"localSettings\"?eE():void 0].filter((fe)=>fe!==void 0);if(ue.length===0)continue;Promise.all(ue.map((fe)=>Br(z,fe))).then((fe)=>{if(fe.some((_e)=>_e)){t(`ConfigChange hook blocked reapplying ${z}`);return}if(!ce)Lt(z)})}}\nfunction Br(D,z){if(!Be)return d(Error(\"settingsChangeDetector: ConfigChange hook gate not wired\")),Promise.resolve(!0);return Be(_u(D),z)};return{reapply:pc}}");
+export function createSettingsReapply287(ports){return bind(ports)}

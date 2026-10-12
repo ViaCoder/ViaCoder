@@ -1,0 +1,57 @@
+import type {ExecutionSession287,ExecutionSessionRegistryConstructor287} from '../officialExecutionOwners287/native.js'
+export interface RuntimeMemo287 {
+ pinnedFeatureValues?:unknown
+ reminderFold?:unknown
+ echoWireToolInputs?:unknown
+ maxSubagentSpawnDepthFromGrowthBook?:unknown
+ decstbmRendererEnabled?:unknown
+ forkSubagentEnabledSource?:string
+ bashFirstDescriptionTrimmed?:unknown
+ bashFirstDescriptionTrimmedCompiledOnly?:unknown
+ bashPromptSkillCommands?:unknown
+ bashPromptCarriesPreShip?:unknown
+ coordinatorReadOnlyBashEnabled?:unknown
+ coordinatorWorkerOutputTrees?:unknown
+ bashActFirstEnabled?:unknown
+ defaultFileReadingLimits?:unknown
+ suggestRolloutEnabled?:unknown
+ sendUserFileDeferred?:unknown
+ sessionStartWorkflowSizeGuideline?:unknown
+ totalTokensReminderMode?:string
+ totalTokensReminderBudget?:number
+ totalTokensReminderAfterUserTurn?:boolean
+ silentTurnReminderTurns?:unknown
+ clientDataCapabilityLogged?:unknown
+ sharedMemoryServedViaTools?:boolean
+ tetherLiveGate?:unknown
+ threadsEnvOptIn?:unknown
+ keptReminderDelivery?:unknown
+ keptReminderRetired?:unknown
+ clearAtProbeFailures?:unknown
+ threadsProbeFailures?:unknown
+ displayUpdatesProbeFailures?:unknown
+ keptReminderOkLogged?:unknown
+ artifactReplPathEnabled?:unknown
+ artifactPreviewBrowserSearch?:unknown
+ artifactPreviewBrowser?:unknown
+ sandboxedAttemptGateEnabled?:unknown
+ commandNetworkListsOffered?:unknown
+ replGateOn?:unknown
+ replGateSource?:unknown
+ replTypedEvents?:unknown
+ replDrawShare?:unknown
+ replConversationResumed?:unknown
+ machinesSectionShown?:unknown
+ workflowAuthoringSkillAvailable?:unknown
+ attributionAnnouncementEnabled?:unknown
+ autoModeContextEnabled?:unknown
+ serverClassifierShadowEnabled?:unknown
+ thirdPartyServerClassifierEnabled?:unknown
+ userServerClassifierSwitch?:unknown
+ shellDescription?:string
+ agentProxyNote?:string|null
+ keptDeferredToolsEnabled?:unknown
+ segmentedTranscript?:unknown
+ clear():void
+}
+export function createRuntimeMemo287(ports:{execution():ExecutionSession287;registry:ExecutionSessionRegistryConstructor287}):()=>RuntimeMemo287

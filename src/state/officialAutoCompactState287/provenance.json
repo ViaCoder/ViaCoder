@@ -1,0 +1,84 @@
+{
+  "version": "2.1.287",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16 end-exclusive",
+  "initial": [
+    {
+      "file": "chunk-5ne43w2c.js",
+      "name": "p_o",
+      "start": 69359,
+      "end": 69427,
+      "sha256": "06ea3f6c25ab17c0d3355671bb40c500bf504f0ffe403becb59cb4cc6690bf10",
+      "moduleSha256": "8a88c85626e20fdbedbe7f3a3789910e040ae8f22d759f062eede1dd0080ca7c",
+      "source": "function p_o(e,s){if(e===void 0)return s;return e===\"auto\"?void 0:e}",
+      "variable": false
+    }
+  ],
+  "command": [
+    {
+      "file": "chunk-3yv05bv9.js",
+      "name": "g",
+      "start": 869,
+      "end": 1033,
+      "sha256": "9713d8657ccc2e8275809dc236c4935cf92b2982347c3f14daaae6b533c09b73",
+      "moduleSha256": "2562e184c7e488701ff21c2f16154fd8f6dac2a80209b127438de2300b537e56",
+      "source": "g={env:\"from CLAUDE_CODE_AUTO_COMPACT_WINDOW\",\"unknown-model\":\"default for an unrecognized model\",\"model-default\":\"default for this model\",settings:\"from settings\"}",
+      "variable": true
+    },
+    {
+      "file": "chunk-3yv05bv9.js",
+      "name": "w",
+      "start": 1034,
+      "end": 1794,
+      "sha256": "689fc3d45aad44daa3c1ac6aacc6779dba222988dc4a9418f073a779f46f265e",
+      "moduleSha256": "2562e184c7e488701ff21c2f16154fd8f6dac2a80209b127438de2300b537e56",
+      "source": "function w(a,o){let{window:e,configured:n,source:r}=wE(Vu(a),o),t=n>e?` \\xB7 capped to ${fr(e)} by model`:\"\",s=[`Auto-compact window: ${r===\"auto\"?\"auto\":r===\"experiment\"||r===\"clientdata\"?`auto (${fr(n)} tokens)${t}`:`${fr(n)} tokens (${g[r]})${t}`}`];if(!bm())s.push(\"Auto-compact is currently disabled (see /config)\");if(s.push(\"Auto-compact summarizes the conversation when context usage approaches this limit. The actual threshold is the minimum of this setting and your model's maximum context window.\"),s.push(\"The auto setting picks a window tuned for your model and is strongly recommended for the best cost and performance.\"),Ult(r))s.push(\"Overriding auto may result in high token usage, especially when resuming long sessions.\");return s.join(`\n`)}",
+      "variable": false
+    },
+    {
+      "file": "chunk-3yv05bv9.js",
+      "name": "vRt",
+      "start": 1794,
+      "end": 2961,
+      "sha256": "41ff1c7d0add04e48d627982973590ff9bb506144d3c78e157377440ed3648f2",
+      "moduleSha256": "2562e184c7e488701ff21c2f16154fd8f6dac2a80209b127438de2300b537e56",
+      "source": "async function vRt(a,o){let e=o.options.mainLoopModel;if(wE(Vu(e),void 0).source===\"env\")return\"CLAUDE_CODE_AUTO_COMPACT_WINDOW is set and takes precedence. Unset it to change this setting.\";let n=a.trim().toLowerCase(),t=n===\"reset\"||n===\"unset\"||n===\"default\"?\"auto\":xHt(n);if(t===void 0)return`Couldn't parse '${a}'. Expected 'auto' or 100k\\u20131M tokens (e.g. 500k, 200000, or 200 as shorthand)`;let u=t===\"auto\"?void 0:t,{error:s}=await hn(\"userSettings\",{autoCompactWindow:u},void 0,o.storageV5);if(s)return`Couldn't save setting: ${s.message}`;let m=tt().autoCompactWindow,{window:d,source:l}=wE(Vu(e),m),c=l===\"env\"||m!==u,f=c?m:u;if(o.onQueryEvent?.({type:\"apply_flag_settings\",settings:{autoCompactWindow:f??null}}),i(\"tengu_autocompact_command\",{action:S(t===\"auto\"?\"auto\":\"set\"),...u!==void 0&&{tokens:u}}),t===\"auto\")return c?`Auto-compact window set to auto in settings, but a higher-priority override is active (${fr(d)} tokens)`:\"Auto-compact window set to auto\";let p=\"\";if(c)p=`, but a higher-priority override is active (${fr(d)} tokens)`;else if(d<t)p=` (capped to model limit of ${fr(d)})`;return`Auto-compact window set to ${fr(t)} tokens${p}`}",
+      "variable": false
+    },
+    {
+      "file": "chunk-3yv05bv9.js",
+      "name": "Oss",
+      "start": 2965,
+      "end": 3125,
+      "sha256": "e43b3339d1568cdafe3da336773a52bbec597e39bdbe71496d843daa52da0dd2",
+      "moduleSha256": "2562e184c7e488701ff21c2f16154fd8f6dac2a80209b127438de2300b537e56",
+      "source": "Oss=async(a,o)=>{let e=a.trim();if(!e)return{type:\"text\",value:w(o.options.mainLoopModel,o.options.autoCompactWindow)};return{type:\"text\",value:await vRt(e,o)}}",
+      "variable": true
+    }
+  ],
+  "sourceLabel": [
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "Ult",
+      "start": 1022489,
+      "end": 1022538,
+      "sha256": "8d8eeae6ad5f0e8d07c75a3be4ae9c2abc7f15d10b6a7706f210592ccc0d9b78",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "source": "function Ult(e){return e===\"env\"||e===\"settings\"}",
+      "variable": false
+    }
+  ],
+  "canonicalFlag": [
+    {
+      "file": "chunk-da7sx57w.js",
+      "name": "kqe",
+      "start": 615,
+      "end": 1517,
+      "sha256": "2493cda9f7f9aa34927e7b82127410789acea818418139c4e4f37c4307ed5f2f",
+      "moduleSha256": "bf078fc9f30f2f7fc6990cc2e36f2e8481bd5040ac51941e540207a47aace15c",
+      "source": "function kqe(n,i){i((r)=>{let o=r;if(\"cacheBreakerPhrase\"in n){let e=n.cacheBreakerPhrase,a=e==null?void 0:String(e);if(o.cacheBreakerPhrase!==a)o={...o,cacheBreakerPhrase:a}}if(\"autoCompactWindow\"in n){let e=n.autoCompactWindow,a=e==null?void 0:Number(e);if(o.autoCompactWindow!==a)o={...o,autoCompactWindow:a}}if(\"briefTranscript\"in n){let e=Boolean(n.briefTranscript);if(o.briefTranscript!==e)o={...o,briefTranscript:e}}if(\"isBriefOnly\"in n){let e=Boolean(n.isBriefOnly);if(o.isBriefOnly!==e)o={...o,isBriefOnly:e}}if(\"slackTagConnected\"in n){let e=Boolean(n.slackTagConnected);if(o.slackTagConnected!==e)o={...o,slackTagConnected:e}}if(\"fastMode\"in n){let e=Boolean(n.fastMode);if(o.fastMode!==e)o={...o,fastMode:e}}if(\"model\"in n){let e=n.model,a=e==null?null:String(e);if(o.mainLoopModelForSession!==a)o={...o,mainLoopModelForSession:a};if(o.mainLoopModel!==a)o={...o,mainLoopModel:a}}return o})}",
+      "variable": false
+    }
+  ],
+  "adaptation": "No source-body edits. Command telemetry i is explicitly disabled C; kqe is read from existing lifecycle namespace, not re-instantiated."
+}

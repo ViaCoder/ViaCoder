@@ -1,0 +1,316 @@
+{
+  "version": "2.1.287",
+  "platform": "darwin-arm64",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "sourceModule": {
+    "file": "chunk-xapeakym.js",
+    "sha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+    "length": 566845
+  },
+  "offsetUnit": "UTF-16 end-exclusive",
+  "rows": [
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "qb",
+      "start": 449292,
+      "endExclusive": 452690,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "fa7e7db0b032e322d30c37f4e05fde26857701ef9be9d41bbff2a421da187b32",
+      "source": "async function qb(b,D){let K={reload_claude_md:Boolean(D.reload_claude_md),reload_skills:Boolean(D.reload_skills),reload_plugins:Boolean(D.reload_plugins)};try{let ce,ke;try{ce=Xe(D.directory)}catch{throw new P(\"register_repo_root: target path could not be resolved\",\"register_repo_root: path expansion failed\",\"expansion_failed\")}let Ie=CB(D.directory,ce,v().toolPermissionContext.trustedNetworkDirectories);if(!Ie.ok)throw new P(\"register_repo_root: target is a network path, an obfuscated spelling, or a path whose directories and symbolic links could not all be examined, which cannot be registered\",Nb[Ie.reason],sp(Ie.reason));try{ke=await hw(ce)}catch(nt){throw new P(\"register_repo_root: target path could not be resolved\",\"register_repo_root: path resolution failed\",Zp(nt)||ch(nt)?\"resolve_failed\":void 0)}let Ye=HD(ke,v().toolPermissionContext.trustedNetworkDirectories);if(Ye!==void 0)throw new P(\"register_repo_root: target is a network path, an obfuscated spelling, or a path whose directories and symbolic links could not all be examined, which cannot be registered\",\"register_repo_root: resolved path rejected by the spelling screen\",sp(Ye));let Oe;try{Oe=await Jk(ke)}catch(nt){throw new P(\"register_repo_root: target path could not be resolved\",\"register_repo_root: target stat failed\",Zp(nt)||ch(nt)?\"stat_failed\":void 0)}if(!Oe.allowed)throw new P(`register_repo_root: ${Kt(D.directory)} ${Oe.reason}`,\"register_repo_root: target is not a directory\",Oe.code);let Ke=await zk(v().toolPermissionContext.additionalWorkingDirectories),$e=Gk(ke,Ee(),Ke.filter((nt)=>nt.source===\"cliArg\").map((nt)=>nt.resolved),Ke.map((nt)=>nt.resolved));if(!$e.allowed)throw new P(`register_repo_root: ${Kt(D.directory)} ${$e.reason}`,\"register_repo_root: directory is outside the allowed registration scope\",$e.code);if(v().toolPermissionContext.additionalWorkingDirectories.has(ke))throw new P(`register_repo_root: ${Kt(D.directory)} is already a registered working directory`,\"register_repo_root: directory is already a registered working directory\",\"already_registered\");R((nt)=>({...nt,toolPermissionContext:ed(nt.toolPermissionContext,{type:\"addDirectories\",directories:[ke],destination:\"session\"})}));let Qe=xu();if(!Qe.includes(ke))CW([...Qe,ke]);je.refreshConfig();let mt=Xa();if(Gct(e,ke,\"register_repo_root\",{storageV5:I.storageV5,credentials:I.credentials}).then(({results:nt,systemMessages:sr})=>{for(let fr of sr)t(`DirectoryAdded hook: ${fr}`);for(let fr of nt)if(!fr.succeeded&&fr.output)t(`DirectoryAdded hook failed: ${fr.output}`,{level:\"error\"})}).catch((nt)=>{t(`DirectoryAdded hook exec failed: ${nt}`,{level:\"error\"})}).finally(mt),D.reload_claude_md){TA(e);let nt=RA(ke,\"CLAUDE.md\");if(!No.includes(nt))No.push(nt)}if(D.reload_skills)await RRt();if(D.reload_plugins){await Promise.race([Promise.allSettled([jl(void 0,I.storageV5,I.credentials)]),ee(Jat())]),await NO(_e,I.storageV5,I.credentials),Ne=!0;let nt=new Set(Object.keys(Lt.configs)),sr=new Set(v().mcp.clients.filter((fr)=>!nt.has(fr.name)).map((fr)=>fr.name));await Promise.allSettled([ea(sr,\"reload_plugins\")])}let A={directory:qm(e)?D.directory:ke};Ze(b,A),y(\"sdk_register_repo_root\",K)}catch(ce){let ke=Kk(ce),Ie=ke===void 0?void 0:op[ke];if(nr(b,\"register_repo_root\",ce,{expected:Ie===\"sad\"||Ie===\"bad\"}),ke!==void 0&&Ie===\"sad\")p(\"sdk_register_repo_root\",ke,K);else m(\"sdk_register_repo_root\",ke??\"error\",K)}}"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Wb",
+      "start": 452690,
+      "endExclusive": 453491,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "5ad41f8bf5df152062cb414a1c5cd16f9430a5a8dc992b3b4ade752375daf846",
+      "source": "async function Wb(b,D){try{let{stageFile:K,addDirectoryDestFromMountPath:ce}=await import(\"/$bunfs/root/chunk-0yrgwat2.js\"),ke;try{ke=ce(D.mount_path)}catch(Ke){Hn(\"add_directory dest\",l(Ke)),We(b,f9(e,l(Ke),\"add_directory failed\"));return}if(!Le(a.CLAUDE_CODE_ADDITIONAL_DIRECTORIES_CLAUDE_MD)){We(b,\"add_directory requires CLAUDE_CODE_ADDITIONAL_DIRECTORIES_CLAUDE_MD to be set in the container environment\");return}let Ie=await K({mount_path:D.mount_path,force:!0});if(!Ie.ok){Hn(\"add_directory stage\",Ie.error),We(b,f9(e,Ie.error,\"add_directory failed\"));return}let Ye=Gl(ke),Oe=xu();if(!Oe.includes(Ye))CW([...Oe,Ye]);if(TA(e),ZT(e,\"directory_added\"),await RRt(),qm(e))Hn(\"add_directory staged\",`${ke} (${Ye})`),Ze(b,{});else Ze(b,{staged_path:ke,directory:Ye})}catch(K){nr(b,\"add_directory\",K)}}"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "hI.control_request.list_directory",
+      "start": 477157,
+      "endExclusive": 477769,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "4489a8eb545ce6935b9d47dbf04229cdd41a82d4b31e410c7560892ce05833cd",
+      "source": "if(A.request.subtype===\"list_directory\"&&a.CLAUDE_CODE_REMOTE&&O()===\"linux\"&&k(\"tengu_gentle_hummingbird\",!0)){let j=A,ue=A.request.path;Cr(async()=>{let J;try{J=await mt(ue)}catch(ie){let be=LKt(ie);if(be!==void 0)nr(j,\"list_directory\",ie,{expected:be!==\"unexpected_error\"});else We(j,\"list denied: unexpected_error\"),vee(qm(e),\"list_directory\",ie instanceof Hr?new P(l(ie),\"list_directory: a refusal of another module\"):ie);if(be!==void 0&&nar[be]===\"sad\")p(\"remote_list_directory\",be);else m(\"remote_list_directory\",be??\"unexpected_error\");return}Ze(j,qm(e)?{...J,absPath:ue}:J),y(\"remote_list_directory\")})}"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "hI.control_request.stage_file",
+      "start": 488758,
+      "endExclusive": 489550,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "510906997d010c66b1af407e8ec43a0067c6d8c839e4627c724264c4cf674fc0",
+      "source": "if(A.request.subtype===\"stage_file\"){let j=A.request;I.homeSeed?.record.noteStagedRow(j);let ue=j.filestore_path?void 0:Fd.begin();Cr(async()=>{let J;try{let{stageFile:ie,stageFileWireResult:be,STAGE_FILE_OUTPUTS_MOUNT_PREFIX:ve}=await import(\"/$bunfs/root/chunk-0yrgwat2.js\");if(j.mount_path.startsWith(`${ve}/`)||cm(j.mount_path))J=Cy;let{recordStagedOutputAsRead:pt}=await import(\"/$bunfs/root/chunk-h70yxeyt.js\"),St=Xa(),it;try{if(it=await ie(j,void 0,await Ry(j.mount_path)),it.ok)J=void 0;if(it.ok&&it.outputPath!==void 0){let Bt=await pt(Gn,it.outputPath);ne(\"info\",\"stage_file_output_read_state\",{outcome:Bt})}}finally{St()}if(it.ok)Ze(A,be(it));else Hn(\"stage_file\",it.error),We(A,$so(it.error)??f9(e,it.error,\"stage_file failed\"))}catch(ie){nr(A,\"stage_file\",ie)}finally{ue?.(J)}})}"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "hI.control_request.register_repo_root",
+      "start": 489555,
+      "endExclusive": 489632,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "d5760984dded2e8f22535f47abc6256fedfcde145bba59dfccc3490b0fd7dc02",
+      "source": "if(A.request.subtype===\"register_repo_root\"){let j=A.request;Cr(()=>qb(A,j))}"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "hI.control_request.add_directory",
+      "start": 489637,
+      "endExclusive": 489752,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "5b8986c693b734439c6e74e585a77898d1ff590f2ff5543db5d6e99090ee1efd",
+      "source": "if(A.request.subtype===\"add_directory\"){let j=A.request;Cr(async()=>{let ue=Xa();try{await Wb(A,j)}finally{ue()}})}"
+    }
+  ],
+  "branches": [
+    {
+      "subtype": "list_directory",
+      "condition": "A.request.subtype===\"list_directory\"&&a.CLAUDE_CODE_REMOTE&&O()===\"linux\"&&k(\"tengu_gentle_hummingbird\",!0)",
+      "source": "if(A.request.subtype===\"list_directory\"&&a.CLAUDE_CODE_REMOTE&&O()===\"linux\"&&k(\"tengu_gentle_hummingbird\",!0)){let j=A,ue=A.request.path;Cr(async()=>{let J;try{J=await mt(ue)}catch(ie){let be=LKt(ie);if(be!==void 0)nr(j,\"list_directory\",ie,{expected:be!==\"unexpected_error\"});else We(j,\"list denied: unexpected_error\"),vee(qm(e),\"list_directory\",ie instanceof Hr?new P(l(ie),\"list_directory: a refusal of another module\"):ie);if(be!==void 0&&nar[be]===\"sad\")p(\"remote_list_directory\",be);else m(\"remote_list_directory\",be??\"unexpected_error\");return}Ze(j,qm(e)?{...J,absPath:ue}:J),y(\"remote_list_directory\")})}",
+      "start": 477157,
+      "endExclusive": 477769,
+      "sha256": "4489a8eb545ce6935b9d47dbf04229cdd41a82d4b31e410c7560892ce05833cd"
+    },
+    {
+      "subtype": "stage_file",
+      "condition": "A.request.subtype===\"stage_file\"",
+      "source": "if(A.request.subtype===\"stage_file\"){let j=A.request;I.homeSeed?.record.noteStagedRow(j);let ue=j.filestore_path?void 0:Fd.begin();Cr(async()=>{let J;try{let{stageFile:ie,stageFileWireResult:be,STAGE_FILE_OUTPUTS_MOUNT_PREFIX:ve}=await import(\"/$bunfs/root/chunk-0yrgwat2.js\");if(j.mount_path.startsWith(`${ve}/`)||cm(j.mount_path))J=Cy;let{recordStagedOutputAsRead:pt}=await import(\"/$bunfs/root/chunk-h70yxeyt.js\"),St=Xa(),it;try{if(it=await ie(j,void 0,await Ry(j.mount_path)),it.ok)J=void 0;if(it.ok&&it.outputPath!==void 0){let Bt=await pt(Gn,it.outputPath);ne(\"info\",\"stage_file_output_read_state\",{outcome:Bt})}}finally{St()}if(it.ok)Ze(A,be(it));else Hn(\"stage_file\",it.error),We(A,$so(it.error)??f9(e,it.error,\"stage_file failed\"))}catch(ie){nr(A,\"stage_file\",ie)}finally{ue?.(J)}})}",
+      "start": 488758,
+      "endExclusive": 489550,
+      "sha256": "510906997d010c66b1af407e8ec43a0067c6d8c839e4627c724264c4cf674fc0"
+    },
+    {
+      "subtype": "register_repo_root",
+      "condition": "A.request.subtype===\"register_repo_root\"",
+      "source": "if(A.request.subtype===\"register_repo_root\"){let j=A.request;Cr(()=>qb(A,j))}",
+      "start": 489555,
+      "endExclusive": 489632,
+      "sha256": "d5760984dded2e8f22535f47abc6256fedfcde145bba59dfccc3490b0fd7dc02"
+    },
+    {
+      "subtype": "add_directory",
+      "condition": "A.request.subtype===\"add_directory\"",
+      "source": "if(A.request.subtype===\"add_directory\"){let j=A.request;Cr(async()=>{let ue=Xa();try{await Wb(A,j)}finally{ue()}})}",
+      "start": 489637,
+      "endExclusive": 489752,
+      "sha256": "5b8986c693b734439c6e74e585a77898d1ff590f2ff5543db5d6e99090ee1efd"
+    }
+  ],
+  "helpers": [
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "qb",
+      "start": 449292,
+      "endExclusive": 452690,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "fa7e7db0b032e322d30c37f4e05fde26857701ef9be9d41bbff2a421da187b32",
+      "source": "async function qb(b,D){let K={reload_claude_md:Boolean(D.reload_claude_md),reload_skills:Boolean(D.reload_skills),reload_plugins:Boolean(D.reload_plugins)};try{let ce,ke;try{ce=Xe(D.directory)}catch{throw new P(\"register_repo_root: target path could not be resolved\",\"register_repo_root: path expansion failed\",\"expansion_failed\")}let Ie=CB(D.directory,ce,v().toolPermissionContext.trustedNetworkDirectories);if(!Ie.ok)throw new P(\"register_repo_root: target is a network path, an obfuscated spelling, or a path whose directories and symbolic links could not all be examined, which cannot be registered\",Nb[Ie.reason],sp(Ie.reason));try{ke=await hw(ce)}catch(nt){throw new P(\"register_repo_root: target path could not be resolved\",\"register_repo_root: path resolution failed\",Zp(nt)||ch(nt)?\"resolve_failed\":void 0)}let Ye=HD(ke,v().toolPermissionContext.trustedNetworkDirectories);if(Ye!==void 0)throw new P(\"register_repo_root: target is a network path, an obfuscated spelling, or a path whose directories and symbolic links could not all be examined, which cannot be registered\",\"register_repo_root: resolved path rejected by the spelling screen\",sp(Ye));let Oe;try{Oe=await Jk(ke)}catch(nt){throw new P(\"register_repo_root: target path could not be resolved\",\"register_repo_root: target stat failed\",Zp(nt)||ch(nt)?\"stat_failed\":void 0)}if(!Oe.allowed)throw new P(`register_repo_root: ${Kt(D.directory)} ${Oe.reason}`,\"register_repo_root: target is not a directory\",Oe.code);let Ke=await zk(v().toolPermissionContext.additionalWorkingDirectories),$e=Gk(ke,Ee(),Ke.filter((nt)=>nt.source===\"cliArg\").map((nt)=>nt.resolved),Ke.map((nt)=>nt.resolved));if(!$e.allowed)throw new P(`register_repo_root: ${Kt(D.directory)} ${$e.reason}`,\"register_repo_root: directory is outside the allowed registration scope\",$e.code);if(v().toolPermissionContext.additionalWorkingDirectories.has(ke))throw new P(`register_repo_root: ${Kt(D.directory)} is already a registered working directory`,\"register_repo_root: directory is already a registered working directory\",\"already_registered\");R((nt)=>({...nt,toolPermissionContext:ed(nt.toolPermissionContext,{type:\"addDirectories\",directories:[ke],destination:\"session\"})}));let Qe=xu();if(!Qe.includes(ke))CW([...Qe,ke]);je.refreshConfig();let mt=Xa();if(Gct(e,ke,\"register_repo_root\",{storageV5:I.storageV5,credentials:I.credentials}).then(({results:nt,systemMessages:sr})=>{for(let fr of sr)t(`DirectoryAdded hook: ${fr}`);for(let fr of nt)if(!fr.succeeded&&fr.output)t(`DirectoryAdded hook failed: ${fr.output}`,{level:\"error\"})}).catch((nt)=>{t(`DirectoryAdded hook exec failed: ${nt}`,{level:\"error\"})}).finally(mt),D.reload_claude_md){TA(e);let nt=RA(ke,\"CLAUDE.md\");if(!No.includes(nt))No.push(nt)}if(D.reload_skills)await RRt();if(D.reload_plugins){await Promise.race([Promise.allSettled([jl(void 0,I.storageV5,I.credentials)]),ee(Jat())]),await NO(_e,I.storageV5,I.credentials),Ne=!0;let nt=new Set(Object.keys(Lt.configs)),sr=new Set(v().mcp.clients.filter((fr)=>!nt.has(fr.name)).map((fr)=>fr.name));await Promise.allSettled([ea(sr,\"reload_plugins\")])}let A={directory:qm(e)?D.directory:ke};Ze(b,A),y(\"sdk_register_repo_root\",K)}catch(ce){let ke=Kk(ce),Ie=ke===void 0?void 0:op[ke];if(nr(b,\"register_repo_root\",ce,{expected:Ie===\"sad\"||Ie===\"bad\"}),ke!==void 0&&Ie===\"sad\")p(\"sdk_register_repo_root\",ke,K);else m(\"sdk_register_repo_root\",ke??\"error\",K)}}"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Wb",
+      "start": 452690,
+      "endExclusive": 453491,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "5ad41f8bf5df152062cb414a1c5cd16f9430a5a8dc992b3b4ade752375daf846",
+      "source": "async function Wb(b,D){try{let{stageFile:K,addDirectoryDestFromMountPath:ce}=await import(\"/$bunfs/root/chunk-0yrgwat2.js\"),ke;try{ke=ce(D.mount_path)}catch(Ke){Hn(\"add_directory dest\",l(Ke)),We(b,f9(e,l(Ke),\"add_directory failed\"));return}if(!Le(a.CLAUDE_CODE_ADDITIONAL_DIRECTORIES_CLAUDE_MD)){We(b,\"add_directory requires CLAUDE_CODE_ADDITIONAL_DIRECTORIES_CLAUDE_MD to be set in the container environment\");return}let Ie=await K({mount_path:D.mount_path,force:!0});if(!Ie.ok){Hn(\"add_directory stage\",Ie.error),We(b,f9(e,Ie.error,\"add_directory failed\"));return}let Ye=Gl(ke),Oe=xu();if(!Oe.includes(Ye))CW([...Oe,Ye]);if(TA(e),ZT(e,\"directory_added\"),await RRt(),qm(e))Hn(\"add_directory staged\",`${ke} (${Ye})`),Ze(b,{});else Ze(b,{staged_path:ke,directory:Ye})}catch(K){nr(b,\"add_directory\",K)}}"
+    }
+  ],
+  "imports": {
+    "Le": {
+      "file": "chunk-4s38z9x2.js",
+      "name": "Le"
+    },
+    "P": {
+      "file": "chunk-c9me9cp7.js",
+      "name": "P"
+    },
+    "Hr": {
+      "file": "chunk-c9me9cp7.js",
+      "name": "Hr"
+    },
+    "l": {
+      "file": "chunk-c9me9cp7.js",
+      "name": "l"
+    },
+    "ch": {
+      "file": "chunk-c9me9cp7.js",
+      "name": "ch"
+    },
+    "Zp": {
+      "file": "chunk-c9me9cp7.js",
+      "name": "Zp"
+    },
+    "ee": {
+      "file": "chunk-f2n7vgt8.js",
+      "name": "ee"
+    },
+    "a": {
+      "file": "chunk-mbfze585.js",
+      "name": "a"
+    },
+    "Ee": {
+      "file": "chunk-bn3p37gv.js",
+      "name": "Ee"
+    },
+    "xu": {
+      "file": "chunk-bn3p37gv.js",
+      "name": "xu"
+    },
+    "CW": {
+      "file": "chunk-bn3p37gv.js",
+      "name": "CW"
+    },
+    "t": {
+      "file": "chunk-q80zaav8.js",
+      "name": "t"
+    },
+    "O": {
+      "file": "chunk-amhtwhch.js",
+      "name": "O"
+    },
+    "Jat": {
+      "file": "chunk-mphp7acd.js",
+      "name": "Jat"
+    },
+    "TA": {
+      "file": "chunk-mphp7acd.js",
+      "name": "TA"
+    },
+    "ZT": {
+      "file": "chunk-mphp7acd.js",
+      "name": "ZT"
+    },
+    "Gct": {
+      "file": "chunk-mphp7acd.js",
+      "name": "Gct"
+    },
+    "y": {
+      "file": "chunk-9d2ykxmy.js",
+      "name": "y"
+    },
+    "m": {
+      "file": "chunk-9d2ykxmy.js",
+      "name": "m"
+    },
+    "p": {
+      "file": "chunk-9d2ykxmy.js",
+      "name": "p"
+    },
+    "k": {
+      "file": "chunk-nankzm0s.js",
+      "name": "k"
+    },
+    "Kt": {
+      "file": "chunk-hrhfcbdv.js",
+      "name": "Kt"
+    },
+    "Xe": {
+      "file": "chunk-2ejbgdvw.js",
+      "name": "Xe"
+    },
+    "ne": {
+      "file": "chunk-h7xaj2fc.js",
+      "name": "ne"
+    },
+    "ed": {
+      "file": "chunk-6xrs6gmd.js",
+      "name": "ed"
+    },
+    "je": {
+      "file": "chunk-5vadtxaa.js",
+      "name": "je"
+    },
+    "qm": {
+      "file": "chunk-x5mcrns6.js",
+      "name": "qm"
+    },
+    "f9": {
+      "file": "chunk-x5mcrns6.js",
+      "name": "f9"
+    },
+    "vee": {
+      "file": "chunk-n2zepamy.js",
+      "name": "vee"
+    },
+    "$so": {
+      "file": "chunk-1b45yw62.js",
+      "name": "$so"
+    },
+    "nar": {
+      "file": "chunk-1acz4ecf.js",
+      "name": "nar"
+    },
+    "LKt": {
+      "file": "chunk-1acz4ecf.js",
+      "name": "LKt"
+    },
+    "CB": {
+      "file": "chunk-a26hqvw3.js",
+      "name": "CB"
+    },
+    "HD": {
+      "file": "chunk-a26hqvw3.js",
+      "name": "HD"
+    },
+    "NO": {
+      "file": "chunk-7pnv5sqm.js",
+      "name": "NO"
+    },
+    "RRt": {
+      "file": "chunk-4zwfxvty.js",
+      "name": "RRt"
+    },
+    "hw": {
+      "file": "promises",
+      "name": "realpath"
+    },
+    "Gl": {
+      "file": "path",
+      "name": "dirname"
+    },
+    "RA": {
+      "file": "path",
+      "name": "join"
+    }
+  },
+  "callerPorts": [
+    "Cr",
+    "Cy",
+    "Fd",
+    "Gk",
+    "Gn",
+    "Hn",
+    "I",
+    "Jk",
+    "Kk",
+    "Lt",
+    "Nb",
+    "Ne",
+    "No",
+    "R",
+    "Ry",
+    "We",
+    "Xa",
+    "Ze",
+    "_e",
+    "cm",
+    "e",
+    "ea",
+    "jl",
+    "loadCanonicalModule287",
+    "mt",
+    "nr",
+    "op",
+    "sp",
+    "v",
+    "zk"
+  ],
+  "dynamicImports": [
+    "chunk-0yrgwat2.js",
+    "chunk-h70yxeyt.js"
+  ],
+  "contract": "Exact selected branch statements and complete nested qb/Wb declarations. Branch conditions—including the Linux remote list_directory gate—are source-preserved. Current print receiver/queue/read-state/config/MCP state must be passed by the sole existing owner; canonical chunk loads use getOriginalModsLifecycle287().importPublicSourceModule287."
+}

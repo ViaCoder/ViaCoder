@@ -1,0 +1,333 @@
+{
+  "version": "2.1.287",
+  "platform": "darwin-arm64",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16 end-exclusive",
+  "rows": [
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "hI.mcp_authenticate",
+      "start": 499741,
+      "endExclusive": 502510,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "80e378e1cc7b3f381e6d5c8c7ba1baa2a4561b1a71cf0d453e69f1e386baec39",
+      "source": "{let{serverName:j,redirectUri:ue}=A.request,J=is(j)??Qt.find((ve)=>ve.name===j)?.config??null,ie=J?NB(j,J):null,be=J?If(j,J):null;if(!J||!ie)We(A,`Server not found: ${Kt(j)}`);else if(be===\"managed-policy\")We(A,`MCP server ${Kt(j)} is blocked by enterprise managed policy`);else if(Io(j))We(A,Rit(j,\"authenticating\"));else if(be)We(A,t3e(j,\"authenticating\"));else if(ie.kind===\"claudeai-proxy\"){let ve=zhe(ie.config);if(!ve)We(A,\"Unable to build claude.ai connector auth URL (missing org or server id)\");else i(\"tengu_claudeai_mcp_auth_started\",{}),Ze(A,{authUrl:ve,requiresUserAction:!0,callbackExpected:!1})}else if(ie.kind===\"unsupported-transport\")We(A,`Server type \"${ie.transport}\" does not support OAuth authentication`);else if(ie.kind===\"anthropic-hosted\")We(A,Kt(ie.message));else Cr(async()=>{let ve;try{let pt=(wt)=>{let Ut,vt=new Promise((Zn)=>{Ut=Zn}),hr,gn,kr={oauthPromise:void 0,adopted:!1,adopt:()=>{if(kr.adopted||!kr.oauthPromise)return;kr.adopted=!0,ii.set(j,kr.oauthPromise),Rs.delete(j),Ea().setActiveOAuthPromise(j,kr.oauthPromise)}},Rn=Ea().performMCPOAuthFlow(j,ie.config,(Zn)=>Ut(Zn),void 0,{skipBrowserOpen:!0,redirectUri:wt,onWaitingForCallback:(Zn,po,oa)=>{hr=po,gn=oa,kr.adopt()}});return kr.oauthPromise=Rn,ve=Rn,{oauthPromise:Rn,adopt:kr.adopt,raced:Promise.race([vt,Rn.then(()=>null)]).then((Zn)=>({authUrl:Zn,callbackPort:hr,state:gn}))}},St=ie.config.oauth?.clientId?void 0:ue,it=\"localhost\",Bt=gr(),Wt=pt(St),ot;if(St)try{ot=await Wt.raced,it=\"custom\"}catch(wt){if(t(`[mcp_authenticate] AS rejected custom redirectUri for ${j}; falling back to localhost: ${r_(Ac(j,ie.config,l(wt)))}`),ii.get(j)===Wt.oauthPromise)Za.delete(j),ii.delete(j);Wt=pt(),ot=await Wt.raced}else ot=await Wt.raced;let Je=Wt.oauthPromise,{authUrl:jt,callbackPort:kt,state:Pr}=ot;if(jt)Ze(A,{authUrl:jt,requiresUserAction:!0,callbackExpected:!0,redirectScheme:it,state:Pr,...it===\"localhost\"&&{callbackPort:kt}});else Ze(A,{requiresUserAction:!1,callbackExpected:!1});Wt.adopt();let ft=Je.then(async()=>{if(gr()!==Bt){t(`MCP server ${j}: OAuth completed after an identity change; discarding without reconnecting`);return}if(ihe(I.storageV5),Io(j))return;if(b1(j,J)){t(`MCP server ${j} blocked by managed policy after OAuth \\u2014 skipping reconnect`,{level:\"warn\"});return}if(Za.has(j)){Rs.set(j,Date.now());return}if(!is(j)){t(`MCP server ${Kt(j)}: OAuth completed for a server that is no longer configured; not reconnecting`);return}Ni(j,J);let wt=await os(j,J,{distrust:!1});ji(j,wt)}).catch((wt)=>{t(`MCP OAuth failed for ${j}: ${r_(Ac(j,ie.config,l(wt)))}`,{level:\"error\"})}).finally(()=>{if(ii.get(j)===Je)Za.delete(j),ii.delete(j)})}catch(pt){if(ve&&ii.get(j)===ve)Za.delete(j),ii.delete(j);nr(A,\"mcp_authenticate\",Error(Da(Ac(j,ie.config,l(pt)))))}})}"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "hI.mcp_oauth_callback_url",
+      "start": 502563,
+      "endExclusive": 503584,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "60f7f7ba841a0f67e4f6fdfcb7b63ee0671a4131b73fe15d62af2ff40a6c7aac",
+      "source": "{let{serverName:j,callbackUrl:ue}=A.request,J=Ea().getOAuthCallbackSubmitter(j);if(J){let ie=!1;try{let be=new URL(ue);ie=be.searchParams.has(\"code\")||be.searchParams.has(\"error\")}catch{}if(!ie)We(A,\"Invalid callback URL: missing authorization code. Please paste the full redirect URL including the code parameter.\");else if(!J(ue))We(A,\"Callback URL not accepted: it belongs to a different sign-in attempt (OAuth state mismatch) or carries no authorization code. The sign-in in progress is still waiting; submit the redirect URL from its own browser page.\");else{Za.add(j);let be=ii.get(j)??Ea().getActiveOAuthPromise(j);if(be)tl.set(j,be),Cr(async()=>{try{await be,Ze(A)}catch(ve){let pt=is(j)??Qt.find((it)=>it.name===j)?.config??null,St=pt?Da(Ac(j,pt,l(ve))):\"[error detail unavailable: server configuration could not be located]\";Hn(\"mcp_oauth_callback_url\",St),We(A,f9(e,St,\"OAuth authentication failed\"))}finally{if(tl.get(j)===be)tl.delete(j)}});else Ze(A)}}else We(A,`No active OAuth flow for server: ${Kt(j)}`)}"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Za",
+      "start": 453803,
+      "endExclusive": 453813,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "3caa6d043ddae7a151f9633dd0b4bc634d5972095dafa28c7c6df3dc87c6b815",
+      "source": "Za=new Set"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "ii",
+      "start": 453814,
+      "endExclusive": 453824,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "8a3efc607349756c1be41609b3461d44f3a1cd20ced9cfd9ef288a9ee497f292",
+      "source": "ii=new Map"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "tl",
+      "start": 453825,
+      "endExclusive": 453835,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "c69df5ad0e1bd2ed01bed9398836137028628bf66edb4a2640dd69e8ad669863",
+      "source": "tl=new Map"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Rs",
+      "start": 394307,
+      "endExclusive": 394317,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "e734f157b0428b5ae3f94272f6b36bdbe435209436297aac9f87cb2010267174",
+      "source": "Rs=new Map"
+    },
+    {
+      "file": "chunk-fvgdmd24.js",
+      "name": "Sis",
+      "start": 12813,
+      "endExclusive": 12872,
+      "moduleSha256": "54064191adacc4f6640623e75b19b573e41f3216abc0aa398bdec3d049f60431",
+      "sha256": "ee4d105754e9e58d60749f5672fc322e363c797e321e51b9b4890e3d0e082d4c",
+      "source": "function Sis(e){return qt().oauthCallbackSubmitters.get(e)}"
+    },
+    {
+      "file": "chunk-fvgdmd24.js",
+      "name": "bis",
+      "start": 12872,
+      "endExclusive": 12988,
+      "moduleSha256": "54064191adacc4f6640623e75b19b573e41f3216abc0aa398bdec3d049f60431",
+      "sha256": "e7efcd64c0b350d5419f16a86dd3e818e6062c3f25be81aee59bc78683bfb53b",
+      "source": "function bis(e,t){let n=qt().activeOAuthFlows;n.set(e,t),t.finally(()=>{if(n.get(e)===t)n.delete(e)}).catch(()=>{})}"
+    },
+    {
+      "file": "chunk-fvgdmd24.js",
+      "name": "wis",
+      "start": 12988,
+      "endExclusive": 13040,
+      "moduleSha256": "54064191adacc4f6640623e75b19b573e41f3216abc0aa398bdec3d049f60431",
+      "sha256": "56f904c60ee0be593167adfee316377f3117444baeee4b6fa2403b585e4c98a1",
+      "source": "function wis(e){return qt().activeOAuthFlows.get(e)}"
+    },
+    {
+      "file": "chunk-fvgdmd24.js",
+      "name": "Ais.manualCallbackRegistration",
+      "start": 23821,
+      "endExclusive": 24344,
+      "moduleSha256": "54064191adacc4f6640623e75b19b573e41f3216abc0aa398bdec3d049f60431",
+      "sha256": "edbba117c926584afdd14de63579a347199357184b1743251185d70b196c0c67",
+      "source": "{let x=(X)=>{try{let H=new URL(X),V=H.searchParams.get(\"code\"),ce=H.searchParams.get(\"state\"),q=H.searchParams.get(\"error\");if(!V&&!q)return!1;if(ce!==J)return te(e,\"Ignoring manual callback URL whose state belongs to a different flow\"),!1;if(q){let Z=H.searchParams.get(\"error_description\")||\"\";return W(),G(Error(`OAuth error: ${q} - ${Z}`)),!0}if(!V)return!1;return te(e,\"Received auth code via manual callback URL\"),W(),ve(V),!0}catch{return!1}};_e=x,w.oauthCallbackSubmitters.set(e,x),d?.onWaitingForCallback?.(x,M,J)}"
+    },
+    {
+      "file": "chunk-fvgdmd24.js",
+      "name": "Ais.cleanup.oauthCallbackSubmitters",
+      "start": 23464,
+      "endExclusive": 23541,
+      "moduleSha256": "54064191adacc4f6640623e75b19b573e41f3216abc0aa398bdec3d049f60431",
+      "sha256": "b82fe5ba05b7ce663326d942712f9776bb92d2c8b3a7a04be4f53a962e76f12a",
+      "source": "if(w.oauthCallbackSubmitters.get(e)===_e)w.oauthCallbackSubmitters.delete(e);"
+    },
+    {
+      "file": "chunk-fvgdmd24.js",
+      "name": "Ais.cleanup.oauthCallbackListeners",
+      "start": 23390,
+      "endExclusive": 23464,
+      "moduleSha256": "54064191adacc4f6640623e75b19b573e41f3216abc0aa398bdec3d049f60431",
+      "sha256": "5078274206a6f775d1ed1d19433da178a81e01750f76cc802bb21ed27a262436",
+      "source": "if(w.oauthCallbackListeners.get(M)===N)w.oauthCallbackListeners.delete(M);"
+    },
+    {
+      "file": "chunk-fvgdmd24.js",
+      "name": "Ais.listenerAdoption",
+      "start": 22634,
+      "endExclusive": 22715,
+      "moduleSha256": "54064191adacc4f6640623e75b19b573e41f3216abc0aa398bdec3d049f60431",
+      "sha256": "e88954941ac5782bf2151237935012a2aa37f2cb155f63f8cfa426c39f9952c2",
+      "source": "if(!R)w.oauthCallbackListeners.get(M)?.abort(),w.oauthCallbackListeners.set(M,N);"
+    },
+    {
+      "file": "chunk-pt1xa083.js",
+      "name": "ihe",
+      "start": 2359,
+      "endExclusive": 2598,
+      "moduleSha256": "74a48a4d8dd6f57b17d7f426255f06c40f520331b5117e769b705265aaf1be3a",
+      "sha256": "1f1eb2e729e1affdbfa8175525d13eef00abcb195f6e0b380b72b0f6217ce1d0",
+      "source": "function ihe(e){if(qt().authCacheRead=null,F()&&e!==void 0){e.delete(Ait()).then((r)=>{if(!r.ok)t(`mcp needs-auth cache delete failed: ${it(r.error)}`,{level:\"error\"})}).catch(()=>{});return}if(Ut())return;Bt().delete(CLe()).catch(()=>{})}"
+    },
+    {
+      "file": "chunk-c4h4snq8.js",
+      "name": "Rit",
+      "start": 1270,
+      "endExclusive": 1370,
+      "moduleSha256": "754d6e1ac557e89b90f0b560c47305e8cb3779fa687885463607cc1b5ab14106",
+      "sha256": "c19281db3a3af28e580e96ad48b44e1c3caf985840190f7664d088694bc65ea4",
+      "source": "function Rit(e,n){return`MCP server ${Wr(e)} is disabled \\u2014 enable it (mcp_toggle) before ${n}`}"
+    },
+    {
+      "file": "chunk-c4h4snq8.js",
+      "name": "t3e",
+      "start": 1370,
+      "endExclusive": 1487,
+      "moduleSha256": "754d6e1ac557e89b90f0b560c47305e8cb3779fa687885463607cc1b5ab14106",
+      "sha256": "9296e19e4cd64e48e22140b23372eedc11bb29333cd03c478bfc4a7ec2dab75f",
+      "source": "function t3e(e,n){return`MCP server ${Wr(e)} is not approved for this project \\u2014 approve it in /mcp before ${n}`}"
+    },
+    {
+      "file": "chunk-frz39n89.js",
+      "name": "Bis",
+      "start": 15360,
+      "endExclusive": 15419,
+      "moduleSha256": "5104743d680f884eace6b3880fdbd02114488cca4df61efa4bada567d16df23f",
+      "sha256": "1c8a01d4deab60d8cbf38d4890423ced3cec39ba00f9115d32d09170f6b98b0f",
+      "source": "function Bis(e){return qt().oauthCallbackSubmitters.get(e)}"
+    },
+    {
+      "file": "chunk-frz39n89.js",
+      "name": "jis",
+      "start": 15419,
+      "endExclusive": 15535,
+      "moduleSha256": "5104743d680f884eace6b3880fdbd02114488cca4df61efa4bada567d16df23f",
+      "sha256": "b619acfa3fc0400d83d76684f6459e4085be9de29f2bceeb80ff4ebb204d3ab5",
+      "source": "function jis(e,t){let n=qt().activeOAuthFlows;n.set(e,t),t.finally(()=>{if(n.get(e)===t)n.delete(e)}).catch(()=>{})}"
+    },
+    {
+      "file": "chunk-frz39n89.js",
+      "name": "Wis",
+      "start": 15535,
+      "endExclusive": 15587,
+      "moduleSha256": "5104743d680f884eace6b3880fdbd02114488cca4df61efa4bada567d16df23f",
+      "sha256": "6fa765f22303ea1569515747c16a5912b5a587b3790701854fb7c7f0e2e09c1f",
+      "source": "function Wis(e){return qt().activeOAuthFlows.get(e)}"
+    }
+  ],
+  "branches": [
+    {
+      "subtype": "mcp_authenticate",
+      "condition": "A.request.subtype===\"mcp_authenticate\"",
+      "body": "{let{serverName:j,redirectUri:ue}=A.request,J=is(j)??Qt.find((ve)=>ve.name===j)?.config??null,ie=J?NB(j,J):null,be=J?If(j,J):null;if(!J||!ie)We(A,`Server not found: ${Kt(j)}`);else if(be===\"managed-policy\")We(A,`MCP server ${Kt(j)} is blocked by enterprise managed policy`);else if(Io(j))We(A,Rit(j,\"authenticating\"));else if(be)We(A,t3e(j,\"authenticating\"));else if(ie.kind===\"claudeai-proxy\"){let ve=zhe(ie.config);if(!ve)We(A,\"Unable to build claude.ai connector auth URL (missing org or server id)\");else i(\"tengu_claudeai_mcp_auth_started\",{}),Ze(A,{authUrl:ve,requiresUserAction:!0,callbackExpected:!1})}else if(ie.kind===\"unsupported-transport\")We(A,`Server type \"${ie.transport}\" does not support OAuth authentication`);else if(ie.kind===\"anthropic-hosted\")We(A,Kt(ie.message));else Cr(async()=>{let ve;try{let pt=(wt)=>{let Ut,vt=new Promise((Zn)=>{Ut=Zn}),hr,gn,kr={oauthPromise:void 0,adopted:!1,adopt:()=>{if(kr.adopted||!kr.oauthPromise)return;kr.adopted=!0,ii.set(j,kr.oauthPromise),Rs.delete(j),Ea().setActiveOAuthPromise(j,kr.oauthPromise)}},Rn=Ea().performMCPOAuthFlow(j,ie.config,(Zn)=>Ut(Zn),void 0,{skipBrowserOpen:!0,redirectUri:wt,onWaitingForCallback:(Zn,po,oa)=>{hr=po,gn=oa,kr.adopt()}});return kr.oauthPromise=Rn,ve=Rn,{oauthPromise:Rn,adopt:kr.adopt,raced:Promise.race([vt,Rn.then(()=>null)]).then((Zn)=>({authUrl:Zn,callbackPort:hr,state:gn}))}},St=ie.config.oauth?.clientId?void 0:ue,it=\"localhost\",Bt=gr(),Wt=pt(St),ot;if(St)try{ot=await Wt.raced,it=\"custom\"}catch(wt){if(t(`[mcp_authenticate] AS rejected custom redirectUri for ${j}; falling back to localhost: ${r_(Ac(j,ie.config,l(wt)))}`),ii.get(j)===Wt.oauthPromise)Za.delete(j),ii.delete(j);Wt=pt(),ot=await Wt.raced}else ot=await Wt.raced;let Je=Wt.oauthPromise,{authUrl:jt,callbackPort:kt,state:Pr}=ot;if(jt)Ze(A,{authUrl:jt,requiresUserAction:!0,callbackExpected:!0,redirectScheme:it,state:Pr,...it===\"localhost\"&&{callbackPort:kt}});else Ze(A,{requiresUserAction:!1,callbackExpected:!1});Wt.adopt();let ft=Je.then(async()=>{if(gr()!==Bt){t(`MCP server ${j}: OAuth completed after an identity change; discarding without reconnecting`);return}if(ihe(I.storageV5),Io(j))return;if(b1(j,J)){t(`MCP server ${j} blocked by managed policy after OAuth \\u2014 skipping reconnect`,{level:\"warn\"});return}if(Za.has(j)){Rs.set(j,Date.now());return}if(!is(j)){t(`MCP server ${Kt(j)}: OAuth completed for a server that is no longer configured; not reconnecting`);return}Ni(j,J);let wt=await os(j,J,{distrust:!1});ji(j,wt)}).catch((wt)=>{t(`MCP OAuth failed for ${j}: ${r_(Ac(j,ie.config,l(wt)))}`,{level:\"error\"})}).finally(()=>{if(ii.get(j)===Je)Za.delete(j),ii.delete(j)})}catch(pt){if(ve&&ii.get(j)===ve)Za.delete(j),ii.delete(j);nr(A,\"mcp_authenticate\",Error(Da(Ac(j,ie.config,l(pt)))))}})}",
+      "row": {
+        "file": "chunk-xapeakym.js",
+        "name": "hI.mcp_authenticate",
+        "start": 499741,
+        "endExclusive": 502510,
+        "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+        "sha256": "80e378e1cc7b3f381e6d5c8c7ba1baa2a4561b1a71cf0d453e69f1e386baec39",
+        "source": "{let{serverName:j,redirectUri:ue}=A.request,J=is(j)??Qt.find((ve)=>ve.name===j)?.config??null,ie=J?NB(j,J):null,be=J?If(j,J):null;if(!J||!ie)We(A,`Server not found: ${Kt(j)}`);else if(be===\"managed-policy\")We(A,`MCP server ${Kt(j)} is blocked by enterprise managed policy`);else if(Io(j))We(A,Rit(j,\"authenticating\"));else if(be)We(A,t3e(j,\"authenticating\"));else if(ie.kind===\"claudeai-proxy\"){let ve=zhe(ie.config);if(!ve)We(A,\"Unable to build claude.ai connector auth URL (missing org or server id)\");else i(\"tengu_claudeai_mcp_auth_started\",{}),Ze(A,{authUrl:ve,requiresUserAction:!0,callbackExpected:!1})}else if(ie.kind===\"unsupported-transport\")We(A,`Server type \"${ie.transport}\" does not support OAuth authentication`);else if(ie.kind===\"anthropic-hosted\")We(A,Kt(ie.message));else Cr(async()=>{let ve;try{let pt=(wt)=>{let Ut,vt=new Promise((Zn)=>{Ut=Zn}),hr,gn,kr={oauthPromise:void 0,adopted:!1,adopt:()=>{if(kr.adopted||!kr.oauthPromise)return;kr.adopted=!0,ii.set(j,kr.oauthPromise),Rs.delete(j),Ea().setActiveOAuthPromise(j,kr.oauthPromise)}},Rn=Ea().performMCPOAuthFlow(j,ie.config,(Zn)=>Ut(Zn),void 0,{skipBrowserOpen:!0,redirectUri:wt,onWaitingForCallback:(Zn,po,oa)=>{hr=po,gn=oa,kr.adopt()}});return kr.oauthPromise=Rn,ve=Rn,{oauthPromise:Rn,adopt:kr.adopt,raced:Promise.race([vt,Rn.then(()=>null)]).then((Zn)=>({authUrl:Zn,callbackPort:hr,state:gn}))}},St=ie.config.oauth?.clientId?void 0:ue,it=\"localhost\",Bt=gr(),Wt=pt(St),ot;if(St)try{ot=await Wt.raced,it=\"custom\"}catch(wt){if(t(`[mcp_authenticate] AS rejected custom redirectUri for ${j}; falling back to localhost: ${r_(Ac(j,ie.config,l(wt)))}`),ii.get(j)===Wt.oauthPromise)Za.delete(j),ii.delete(j);Wt=pt(),ot=await Wt.raced}else ot=await Wt.raced;let Je=Wt.oauthPromise,{authUrl:jt,callbackPort:kt,state:Pr}=ot;if(jt)Ze(A,{authUrl:jt,requiresUserAction:!0,callbackExpected:!0,redirectScheme:it,state:Pr,...it===\"localhost\"&&{callbackPort:kt}});else Ze(A,{requiresUserAction:!1,callbackExpected:!1});Wt.adopt();let ft=Je.then(async()=>{if(gr()!==Bt){t(`MCP server ${j}: OAuth completed after an identity change; discarding without reconnecting`);return}if(ihe(I.storageV5),Io(j))return;if(b1(j,J)){t(`MCP server ${j} blocked by managed policy after OAuth \\u2014 skipping reconnect`,{level:\"warn\"});return}if(Za.has(j)){Rs.set(j,Date.now());return}if(!is(j)){t(`MCP server ${Kt(j)}: OAuth completed for a server that is no longer configured; not reconnecting`);return}Ni(j,J);let wt=await os(j,J,{distrust:!1});ji(j,wt)}).catch((wt)=>{t(`MCP OAuth failed for ${j}: ${r_(Ac(j,ie.config,l(wt)))}`,{level:\"error\"})}).finally(()=>{if(ii.get(j)===Je)Za.delete(j),ii.delete(j)})}catch(pt){if(ve&&ii.get(j)===ve)Za.delete(j),ii.delete(j);nr(A,\"mcp_authenticate\",Error(Da(Ac(j,ie.config,l(pt)))))}})}"
+      }
+    },
+    {
+      "subtype": "mcp_oauth_callback_url",
+      "condition": "A.request.subtype===\"mcp_oauth_callback_url\"",
+      "body": "{let{serverName:j,callbackUrl:ue}=A.request,J=Ea().getOAuthCallbackSubmitter(j);if(J){let ie=!1;try{let be=new URL(ue);ie=be.searchParams.has(\"code\")||be.searchParams.has(\"error\")}catch{}if(!ie)We(A,\"Invalid callback URL: missing authorization code. Please paste the full redirect URL including the code parameter.\");else if(!J(ue))We(A,\"Callback URL not accepted: it belongs to a different sign-in attempt (OAuth state mismatch) or carries no authorization code. The sign-in in progress is still waiting; submit the redirect URL from its own browser page.\");else{Za.add(j);let be=ii.get(j)??Ea().getActiveOAuthPromise(j);if(be)tl.set(j,be),Cr(async()=>{try{await be,Ze(A)}catch(ve){let pt=is(j)??Qt.find((it)=>it.name===j)?.config??null,St=pt?Da(Ac(j,pt,l(ve))):\"[error detail unavailable: server configuration could not be located]\";Hn(\"mcp_oauth_callback_url\",St),We(A,f9(e,St,\"OAuth authentication failed\"))}finally{if(tl.get(j)===be)tl.delete(j)}});else Ze(A)}}else We(A,`No active OAuth flow for server: ${Kt(j)}`)}",
+      "row": {
+        "file": "chunk-xapeakym.js",
+        "name": "hI.mcp_oauth_callback_url",
+        "start": 502563,
+        "endExclusive": 503584,
+        "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+        "sha256": "60f7f7ba841a0f67e4f6fdfcb7b63ee0671a4131b73fe15d62af2ff40a6c7aac",
+        "source": "{let{serverName:j,callbackUrl:ue}=A.request,J=Ea().getOAuthCallbackSubmitter(j);if(J){let ie=!1;try{let be=new URL(ue);ie=be.searchParams.has(\"code\")||be.searchParams.has(\"error\")}catch{}if(!ie)We(A,\"Invalid callback URL: missing authorization code. Please paste the full redirect URL including the code parameter.\");else if(!J(ue))We(A,\"Callback URL not accepted: it belongs to a different sign-in attempt (OAuth state mismatch) or carries no authorization code. The sign-in in progress is still waiting; submit the redirect URL from its own browser page.\");else{Za.add(j);let be=ii.get(j)??Ea().getActiveOAuthPromise(j);if(be)tl.set(j,be),Cr(async()=>{try{await be,Ze(A)}catch(ve){let pt=is(j)??Qt.find((it)=>it.name===j)?.config??null,St=pt?Da(Ac(j,pt,l(ve))):\"[error detail unavailable: server configuration could not be located]\";Hn(\"mcp_oauth_callback_url\",St),We(A,f9(e,St,\"OAuth authentication failed\"))}finally{if(tl.get(j)===be)tl.delete(j)}});else Ze(A)}}else We(A,`No active OAuth flow for server: ${Kt(j)}`)}"
+      }
+    }
+  ],
+  "bindings": {
+    "NB": {
+      "file": "chunk-brn9wfk4.js",
+      "name": "NB"
+    },
+    "If": {
+      "file": "chunk-mphp7acd.js",
+      "name": "If"
+    },
+    "Kt": {
+      "file": "chunk-hrhfcbdv.js",
+      "name": "Kt"
+    },
+    "Io": {
+      "file": "chunk-mphp7acd.js",
+      "name": "Io"
+    },
+    "Rit": {
+      "file": "chunk-c4h4snq8.js",
+      "name": "Rit"
+    },
+    "t3e": {
+      "file": "chunk-c4h4snq8.js",
+      "name": "t3e"
+    },
+    "zhe": {
+      "file": "chunk-mphp7acd.js",
+      "name": "zhe"
+    },
+    "i": {
+      "file": "chunk-6hnyhakg.js",
+      "name": "i"
+    },
+    "gr": {
+      "file": "chunk-z6w3579x.js",
+      "name": "gr"
+    },
+    "t": {
+      "file": "chunk-q80zaav8.js",
+      "name": "t"
+    },
+    "r_": {
+      "file": "chunk-09m4fzsj.js",
+      "name": "r_"
+    },
+    "Ac": {
+      "file": "chunk-8g6wxraa.js",
+      "name": "Ac"
+    },
+    "l": {
+      "file": "chunk-c9me9cp7.js",
+      "name": "l"
+    },
+    "ihe": {
+      "file": "chunk-pt1xa083.js",
+      "name": "ihe"
+    },
+    "b1": {
+      "file": "chunk-mphp7acd.js",
+      "name": "b1"
+    },
+    "Da": {
+      "file": "chunk-09m4fzsj.js",
+      "name": "Da"
+    },
+    "f9": {
+      "file": "chunk-x5mcrns6.js",
+      "name": "f9"
+    }
+  },
+  "callerPorts": [
+    "Ea",
+    "Hn",
+    "I",
+    "Ni",
+    "Qt",
+    "Rs",
+    "We",
+    "Za",
+    "Ze",
+    "e",
+    "ii",
+    "is",
+    "ji",
+    "nr",
+    "os",
+    "tl"
+  ],
+  "helperBindings": {
+    "Ut": {
+      "file": "chunk-bn3p37gv.js",
+      "name": "Ut"
+    },
+    "F": {
+      "file": "chunk-ky674g9x.js",
+      "name": "F"
+    },
+    "Bt": {
+      "file": "chunk-m59srz4k.js",
+      "name": "Bt"
+    },
+    "qt": {
+      "file": "chunk-758hjhx1.js",
+      "name": "qt"
+    },
+    "Wr": {
+      "file": "chunk-09m4fzsj.js",
+      "name": "Wr"
+    },
+    "it": {
+      "file": "chunk-eetz002h.js",
+      "name": "it"
+    },
+    "CLe": {
+      "file": "chunk-pt1xa083.js",
+      "name": "CLe"
+    },
+    "Ait": {
+      "file": "chunk-pt1xa083.js",
+      "name": "Ait"
+    }
+  },
+  "registryGenerationEquivalent": true,
+  "scope": "Whole original print MCP authenticate/manual-callback lifecycle and original auth callback/identity cleanup on existing AP qt state; no OAuth client/config/credential owner created"
+}

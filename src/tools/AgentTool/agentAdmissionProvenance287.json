@@ -1,0 +1,202 @@
+{
+  "version": "2.1.287",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16",
+  "rows": [
+    {
+      "file": "chunk-w7hy7pqe.js",
+      "name": "I",
+      "start": 16118,
+      "end": 16184,
+      "source": "function I(e,n){return e!==void 0&&Object.hasOwn(e,n)?e[n]:void 0}",
+      "sha256": "c7d14b99c040875b970275f71fcd774c74c2676880f325014dc11df20c51019c",
+      "moduleSha256": "0058040a5a3a46cb306e16506569c2817deb3e76b00a790da4273cedf111822a",
+      "variable": false
+    },
+    {
+      "file": "chunk-w7hy7pqe.js",
+      "name": "J$e",
+      "start": 33502,
+      "end": 33508,
+      "source": "J$e=[]",
+      "sha256": "b61df87e3f6c1a84f412a2821a5687f6b2f498933bea68159c65098db3467513",
+      "moduleSha256": "0058040a5a3a46cb306e16506569c2817deb3e76b00a790da4273cedf111822a",
+      "variable": true
+    },
+    {
+      "file": "chunk-w7hy7pqe.js",
+      "name": "Zt",
+      "start": 33509,
+      "end": 33519,
+      "source": "Zt=new Set",
+      "sha256": "4e8932a75dc3c657b1d134cfc00aef629e0d967778354db85f4374ad57df3e34",
+      "moduleSha256": "0058040a5a3a46cb306e16506569c2817deb3e76b00a790da4273cedf111822a",
+      "variable": true
+    },
+    {
+      "file": "chunk-w7hy7pqe.js",
+      "name": "Ipt",
+      "start": 33520,
+      "end": 33562,
+      "source": "Ipt={messages:J$e,inProgressToolUseIDs:Zt}",
+      "sha256": "7857a8d86b539ef62fe471cedf9da6082af5c868e072b130b77f6f66500b61db",
+      "moduleSha256": "0058040a5a3a46cb306e16506569c2817deb3e76b00a790da4273cedf111822a",
+      "variable": true
+    },
+    {
+      "file": "chunk-w7hy7pqe.js",
+      "name": "Gm",
+      "start": 34132,
+      "end": 35071,
+      "source": "function Gm(e,n){let r=0;return{register(s){en(s,n)},update(s,o){Jt(s,n,o)},updateTranscript(s,o){n((i)=>{let u=I(i.transcripts,s)??Ipt,f=o(u);if(f===u)return i;return{...i,transcripts:{...i.transcripts,[s]:f}}})},getTranscript(s){return I(e().transcripts,s)},remove(s){rr().taskEvicted.emit(s),n((o)=>{if(!Object.hasOwn(o.tasks,s))return o;let{[s]:i,...u}=o.tasks,f=o.transcripts??{},{[s]:g,...h}=f;return{...o,tasks:u,transcripts:s in f?h:f}})},evictTerminal(s){tn(s,n)},applyOffsetsAndEvict(s,o){nn(n,s,o)},get(s){return I(e().tasks,s)},all(){return e().tasks},incrementWebSearchCalls(){r++},getWebSearchCalls(){return r},resetWebSearchCalls(){r=0},takeConcurrencySlot(){n((o)=>({...o,runningSubagents:o.runningSubagents+1}));let s=!1;return()=>{if(s)return;s=!0,n((o)=>{let i=Math.max(0,o.runningSubagents-1);if(i===o.runningSubagents)return o;return{...o,runningSubagents:i}})}},getConcurrentSubagents(){return e().runningSubagents}}}",
+      "sha256": "f29b0e24fa052688c94ea62e3538b97901a89f7f5891cf1a773584d0383385eb",
+      "moduleSha256": "0058040a5a3a46cb306e16506569c2817deb3e76b00a790da4273cedf111822a",
+      "variable": false
+    },
+    {
+      "file": "chunk-k35krsdc.js",
+      "name": "R",
+      "start": 2107,
+      "end": 2663,
+      "source": "R={\"user-cancel\":new DOMException(\"user-cancel\",\"AbortError\"),\"remote-cancel\":new DOMException(\"remote-cancel\",\"AbortError\"),shutdown:new DOMException(\"shutdown\",\"AbortError\"),interrupt:new DOMException(\"interrupt\",\"AbortError\"),\"turn-abort\":new DOMException(\"turn-abort\",\"AbortError\"),background:new DOMException(\"background\",\"AbortError\"),\"refusal-fallback-edit\":new DOMException(\"refusal-fallback-edit\",\"AbortError\"),\"recovery-timeout\":new DOMException(\"recovery-timeout\",\"AbortError\"),\"permission-stop\":new DOMException(\"permission-stop\",\"AbortError\")}",
+      "sha256": "82d830f01468bd38fc17185e363cca2b153c432b151afde826caa251a49b36eb",
+      "moduleSha256": "4bdedb0dcb7dee6a20f04802ab9ed001bb8e405332be73c4b92b2dcb387432fd",
+      "variable": true
+    },
+    {
+      "file": "chunk-k35krsdc.js",
+      "name": "fl",
+      "start": 2664,
+      "end": 2691,
+      "source": "function fl(e){return R[e]}",
+      "sha256": "5608e4294659876c07d85970e76527693af68887dfe5ec81f25f5d3b47111a03",
+      "moduleSha256": "4bdedb0dcb7dee6a20f04802ab9ed001bb8e405332be73c4b92b2dcb387432fd",
+      "variable": false
+    },
+    {
+      "file": "chunk-k35krsdc.js",
+      "name": "Oi",
+      "start": 2691,
+      "end": 2774,
+      "source": "function Oi(e){return e instanceof DOMException&&e.name===\"AbortError\"?e.message:e}",
+      "sha256": "d8d91ae8221c4c9225fa563433ae32633afe4144d4692ce47fa78127da0048aa",
+      "moduleSha256": "4bdedb0dcb7dee6a20f04802ab9ed001bb8e405332be73c4b92b2dcb387432fd",
+      "variable": false
+    },
+    {
+      "file": "chunk-k35krsdc.js",
+      "name": "w",
+      "start": 2897,
+      "end": 2976,
+      "source": "w=new Set([\"interrupt\",\"turn-abort\",\"refusal-fallback-edit\",\"permission-stop\"])",
+      "sha256": "2e256e709e11d6eac51386d95c7bbcf409232d1dbb2e304327fb0406a43a3df3",
+      "moduleSha256": "4bdedb0dcb7dee6a20f04802ab9ed001bb8e405332be73c4b92b2dcb387432fd",
+      "variable": true
+    },
+    {
+      "file": "chunk-k35krsdc.js",
+      "name": "Joe",
+      "start": 2977,
+      "end": 3013,
+      "source": "function Joe(e){return w.has(Oi(e))}",
+      "sha256": "5f10e3b135cf01612880ce04b6c24167e161e6b2ec196080321acd4557882665",
+      "moduleSha256": "4bdedb0dcb7dee6a20f04802ab9ed001bb8e405332be73c4b92b2dcb387432fd",
+      "variable": false
+    },
+    {
+      "file": "chunk-k35krsdc.js",
+      "name": "iT",
+      "start": 3013,
+      "end": 3071,
+      "source": "function iT(e){return Oi(e.reason)===\"shutdown\"?!0:void 0}",
+      "sha256": "4f3b03ac7ea7d28eb7ea16731085ba2f7616b458d3ef3199dc3db0cf1320fae9",
+      "moduleSha256": "4bdedb0dcb7dee6a20f04802ab9ed001bb8e405332be73c4b92b2dcb387432fd",
+      "variable": false
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "u2",
+      "start": 732608,
+      "end": 732653,
+      "source": "function u2(e){return e!==void 0&&!(zle()<e)}",
+      "sha256": "d8251668486ce5ade4484679f10c5daf75f3643ee71a3a389c18dcfdb2540b1a",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "variable": false
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "Gro",
+      "start": 1299397,
+      "end": 1299403,
+      "source": "Gro=20",
+      "sha256": "1e91a2dc50166efb2d1b188217478161b7e59d738f4bb9cbdb513578b16c6f98",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "variable": true
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "MWn",
+      "start": 1299404,
+      "end": 1299470,
+      "source": "function MWn(){return a.CLAUDE_CODE_MAX_CONCURRENT_SUBAGENTS??Gro}",
+      "sha256": "63b3369e6f0d795627fc93d1fc81c0a3702ef8cdede4241191f747236b8a64e3",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "variable": false
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "qS",
+      "start": 1330082,
+      "end": 1330087,
+      "source": "qS=10",
+      "sha256": "f66bf21403c4a93ece52b6e2b4641b30bebe28a1d6295688452df95ca92dfa4f",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "variable": true
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "oRo",
+      "start": 1331442,
+      "end": 1331745,
+      "source": "function oRo(){return`Auto mode is unavailable: the server returned no safety verdict for ${qS} responses in a row, so this agent was stopped before it finished. Nobody interrupted it; whatever it returned is partial. Retrying now will likely stop the same way \\u2014 wait for the user's next message.`}",
+      "sha256": "88deed2efa359ce3625bb12982ec880cdd23d67aafc899cf450416664358ad66",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "variable": false
+    },
+    {
+      "file": "chunk-xmc0bp9s.js",
+      "name": "Mt",
+      "start": 16137,
+      "end": 16613,
+      "source": "Mt=(r=!1)=>{if(e.abortController.signal.aborted){let A=Oi(e.abortController.signal.reason);if(!(r&&A===\"interrupt\"))throw new Ye}let{maxBudgetUsd:b}=e.options;if(u2(b))throw m(\"subagent_launch\",\"subagent_budget_exhausted\"),IMe.of(e.session).recordRefused(\"budget\"),new j(`Budget limit reached ($${zle().toFixed(2)} spent of the $${b} maximum). New agents cannot be started. Complete the remaining work directly with your tools, or wrap up with the results you already have.`)}",
+      "sha256": "9da25cd8ce3a4a35ccb33f2e018a989821dc6e5213748e5aaacaa56f1cda0f8a",
+      "moduleSha256": "8d0dcef1db8c631b05db36385708c530397b731b39b8db7a231f8baf1c600005",
+      "variable": true
+    },
+    {
+      "file": "chunk-xmc0bp9s.js",
+      "name": "Mn",
+      "start": 16614,
+      "end": 16707,
+      "source": "Mn=async()=>{let r=Sn(e);if(r)throw await ve(),r;return e.taskRegistry.takeConcurrencySlot()}",
+      "sha256": "229a7cfc4dea81700a746f59e2487f6371c148ed77dec42dbb05493d8195cf23",
+      "moduleSha256": "8d0dcef1db8c631b05db36385708c530397b731b39b8db7a231f8baf1c600005",
+      "variable": true
+    },
+    {
+      "file": "chunk-xmc0bp9s.js",
+      "name": "Sn",
+      "start": 45408,
+      "end": 45911,
+      "source": "function Sn(n){let e=MWn();if(n.taskRegistry.getConcurrentSubagents()<e)return;if(k(\"tengu_amber_kestrel\",!1))return;let h=n.getAppState();if(jC(h.ultracode,n.rootToolSurface.mainLoopModel))return;return m(\"subagent_launch\",\"subagent_concurrency_cap\"),IMe.of(n.session).recordRefused(\"concurrency_limit\"),new j(`Concurrent subagent limit reached. You can run ${e} subagents at once. Do not retry. If the user wants more concurrent subagents, ask them to increase CLAUDE_CODE_MAX_CONCURRENT_SUBAGENTS.`)}",
+      "sha256": "41971140a41a89653553c7d33dd67a80349cfb4397f3e5334ef516db7d97eaa5",
+      "moduleSha256": "8d0dcef1db8c631b05db36385708c530397b731b39b8db7a231f8baf1c600005",
+      "variable": false
+    }
+  ],
+  "nativeSha256": "1726003320155e3e7577efe760bced320d1a31e41d5c8338519aaa9e72f9369a",
+  "ports": {
+    "registry": "Gm with original canonical AppState/get/set + framework Task writers; rr existing execution.host SessionSlot",
+    "admission": "IMe existing root stats, zle existing cost, jC existing selector owner, a original environment, C telemetry disabled"
+  }
+}

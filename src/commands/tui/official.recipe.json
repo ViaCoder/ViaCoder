@@ -1,0 +1,190 @@
+{
+  "version": "2.1.287",
+  "offsetUnit": "UTF-16 end-exclusive",
+  "retainedCarrySha256": "071d6dc9360f464b4928053f43e682625a8d3fd3d87bc0f0ae3e15668f07992a",
+  "recipes": [
+    {
+      "product": "src/commands/tui/official.js",
+      "template": "// Complete fixed 2.1.287 eos and public formatters; retain C host/relaunch and telemetry cancellation.\nexport function createTuiCommand(deps){\nconst {Cl,jO,sIt,me,JZ,Ile,QZ,P3,dx,ile,kbe,Et,cn,Po,QSn,t_,w4,XI,x1,Qe,K2,$jt}=deps;\nconst Sc=Cl,gH=jO,BFt=sIt,pe=me,ere=JZ,Fue=Ile,tre=QZ,e4=P3,jP=dx,pue=ile,cCe=kbe,Pt=Et,hn=cn,Bo=Po,lPn=QSn,Zm=t_,t9=w4,yO=XI,$$=x1,tt=Qe,GW=K2;\nconst a=process.env,x2={},i=()=>{},c=x=>x,d=()=>{},nz=()=>false,rxn=()=>false,d4t=$jt;\nvar @@ORIGINAL_9@@;\n@@ORIGINAL_1@@\n@@ORIGINAL_0@@\n@@ORIGINAL_2@@\n@@ORIGINAL_3@@\n@@ORIGINAL_10@@\nvar @@ORIGINAL_4@@;\nreturn eos;\n}\n// Same live caller readers, no message/task/session state is allocated here.\nexport @@ORIGINAL_7@@\nexport @@ORIGINAL_8@@\nexport function createRestartTaskPredicate287(read){\nconst q=(...a)=>read('chunk-bn3p37gv.js','q')(...a),P_e=(...a)=>read('chunk-w7hy7pqe.js','P_e')(...a),Y$e=(...a)=>read('chunk-w7hy7pqe.js','Y$e')(...a);\nconst iie=(...a)=>read('chunk-bn3p37gv.js','iie')(...a),Ee=(...a)=>read('chunk-bn3p37gv.js','Ee')(...a),HWe=(...a)=>read('chunk-t6xmn86v.js','HWe')(...a),xg=(...a)=>read('chunk-t6xmn86v.js','xg')(...a);\n@@ORIGINAL_11@@\n@@ORIGINAL_5@@\n@@ORIGINAL_6@@\nreturn cCe;\n}\nexport function createTuiCarry({kMr}) {\nfunction VKe(t, i) { let r = (n, g) => n === \"\" || g && n.trimStart().startsWith(\"{\") ? n : i(n); return { settings: t.settings === void 0 ? void 0 : r(t.settings, !0), managedSettings: t.managedSettings, pluginDir: t.pluginDir.map((n) => r(n, !1)), pluginDirNoMcp: t.pluginDirNoMcp.map((n) => r(n, !1)), addDir: t.addDir.map((n) => kMr(n) ? n : r(n, !1)), mcpConfig: t.mcpConfig.map((n) => r(n, !0)), strictMcpConfig: t.strictMcpConfig, restricted: t.restricted, settingSources: t.settingSources }; }\nfunction QX(t) { return [...t.settings ? [\"--settings\", t.settings] : [], ...t.managedSettings ? [\"--managed-settings\", t.managedSettings] : [], ...t.pluginDir.flatMap((i) => [\"--plugin-dir\", i]), ...t.pluginDirNoMcp.flatMap((i) => [\"--plugin-dir-no-mcp\", i]), ...t.addDir.flatMap((i) => [\"--add-dir\", i]), ...t.mcpConfig.flatMap((i) => [\"--mcp-config\", i]), ...t.settingSources !== void 0 ? [`--setting-sources=${t.settingSources}`] : [], ...t.strictMcpConfig ? [\"--strict-mcp-config\"] : [], ...t.restricted ? [\"--restricted\"] : []]; }\nfunction Xvr(n) { return [n.systemPrompt, n.systemPromptFile, n.appendSystemPromptFile, n.permissionPromptTool, n.settingSources, n.managedSettings, n.projectConfigRoot].some((e) => e !== void 0) || (n.tools ?? []).some((e) => e !== \"default\"); }\nreturn {resolve:VKe,argv:QX,restricted:Xvr};\n}\n",
+      "templateSha256": "2d928b449c767888cd4098277754fbcf354f841fad6f072dcc6927e1cc59c4ae",
+      "declarations": [
+        {
+          "file": "chunk-f2cpzzp9.js",
+          "modulePath": "provenance-reference://not-bundled/859fc84c594cf8227222324f3a767c8130e37e39c0c09344d4761b92bd9623f3",
+          "moduleSha256": "ecf059605929abc2d38c30fc6d3b5b0b69ef05c9d344e934443f320a48256dae",
+          "symbol": "u4t",
+          "start": 61090,
+          "end": 61246,
+          "sha256": "71ffffcee0faa8ddfaddde90275a5b7963bd71505c63bd77fe0f802eba53343c",
+          "token": "@@ORIGINAL_0@@"
+        },
+        {
+          "file": "chunk-f2cpzzp9.js",
+          "modulePath": "provenance-reference://not-bundled/859fc84c594cf8227222324f3a767c8130e37e39c0c09344d4761b92bd9623f3",
+          "moduleSha256": "ecf059605929abc2d38c30fc6d3b5b0b69ef05c9d344e934443f320a48256dae",
+          "symbol": "vJo",
+          "start": 61246,
+          "end": 61492,
+          "sha256": "8439b8044445f4b0efceb1c050c83e35927ce9f8f8e8390f0f9222035bc77bfd",
+          "token": "@@ORIGINAL_1@@"
+        },
+        {
+          "file": "chunk-f2cpzzp9.js",
+          "modulePath": "provenance-reference://not-bundled/859fc84c594cf8227222324f3a767c8130e37e39c0c09344d4761b92bd9623f3",
+          "moduleSha256": "ecf059605929abc2d38c30fc6d3b5b0b69ef05c9d344e934443f320a48256dae",
+          "symbol": "$oo",
+          "start": 61492,
+          "end": 61678,
+          "sha256": "1a4dc6916308e8525aa2fcc32cfc6b2b40f1a1f5b08337bd18343b5a4ca61c03",
+          "token": "@@ORIGINAL_2@@"
+        },
+        {
+          "file": "chunk-f2cpzzp9.js",
+          "modulePath": "provenance-reference://not-bundled/859fc84c594cf8227222324f3a767c8130e37e39c0c09344d4761b92bd9623f3",
+          "moduleSha256": "ecf059605929abc2d38c30fc6d3b5b0b69ef05c9d344e934443f320a48256dae",
+          "symbol": "CJo",
+          "start": 61678,
+          "end": 61820,
+          "sha256": "f85677ad5eebe5c51cdcdedc2242ab6653db50636bf883a47ae84d1c0d1da4e0",
+          "token": "@@ORIGINAL_3@@"
+        },
+        {
+          "file": "chunk-f2cpzzp9.js",
+          "modulePath": "provenance-reference://not-bundled/859fc84c594cf8227222324f3a767c8130e37e39c0c09344d4761b92bd9623f3",
+          "moduleSha256": "ecf059605929abc2d38c30fc6d3b5b0b69ef05c9d344e934443f320a48256dae",
+          "symbol": "eos",
+          "start": 61824,
+          "end": 65402,
+          "sha256": "1ac1dfa430353374b4938ca36eb0dc887d9d0a461b284c77bcf61656fb9e796c",
+          "token": "@@ORIGINAL_4@@"
+        },
+        {
+          "file": "chunk-f10wcx31.js",
+          "modulePath": "provenance-reference://not-bundled/d8a2fc3ff80f1002fc5920c3ec79c4324c5cceb5d510fd8460d58ba3c6c0aece",
+          "moduleSha256": "b6bafae6d3d29905a3572b87df6f99f8e385f4e01a9000bfa09a8dd811685895",
+          "symbol": "h",
+          "start": 2769,
+          "end": 3252,
+          "sha256": "5c9078b7aff84ff674cacc72d624ca2c4bb9a18166e6b4e64b0475ae64f73fea",
+          "token": "@@ORIGINAL_5@@"
+        },
+        {
+          "file": "chunk-f10wcx31.js",
+          "modulePath": "provenance-reference://not-bundled/d8a2fc3ff80f1002fc5920c3ec79c4324c5cceb5d510fd8460d58ba3c6c0aece",
+          "moduleSha256": "b6bafae6d3d29905a3572b87df6f99f8e385f4e01a9000bfa09a8dd811685895",
+          "symbol": "cCe",
+          "start": 3475,
+          "end": 3523,
+          "sha256": "073640cc09b5fb114e62253a412b0dc81dd5a0f808dd068cd60a7eb743caf9fd",
+          "token": "@@ORIGINAL_6@@"
+        },
+        {
+          "file": "chunk-scey49m3.js",
+          "modulePath": "provenance-reference://not-bundled/2a74d132aed0d46dd38ec2e54b56e7e2c35165208ef00ea8f37d56ff4dd0bfbe",
+          "moduleSha256": "57ef49a9766dd232a907fd4978c3999d7ba95b3439ed6da2f17aca3b8d78f3dd",
+          "symbol": "jP",
+          "start": 960,
+          "end": 1012,
+          "sha256": "51b21391364275c7be5c8e75aa9ecad3fa483011184f686fc0f3234d48eeae78",
+          "token": "@@ORIGINAL_7@@"
+        },
+        {
+          "file": "chunk-scey49m3.js",
+          "modulePath": "provenance-reference://not-bundled/2a74d132aed0d46dd38ec2e54b56e7e2c35165208ef00ea8f37d56ff4dd0bfbe",
+          "moduleSha256": "57ef49a9766dd232a907fd4978c3999d7ba95b3439ed6da2f17aca3b8d78f3dd",
+          "symbol": "pue",
+          "start": 1163,
+          "end": 1234,
+          "sha256": "7727251850e0569e987a2cc5f853dd36fc55e5ad2d1aceafd07ee51ddf82343d",
+          "token": "@@ORIGINAL_8@@"
+        },
+        {
+          "file": "chunk-f2cpzzp9.js",
+          "modulePath": "provenance-reference://not-bundled/859fc84c594cf8227222324f3a767c8130e37e39c0c09344d4761b92bd9623f3",
+          "moduleSha256": "ecf059605929abc2d38c30fc6d3b5b0b69ef05c9d344e934443f320a48256dae",
+          "symbol": "Y6",
+          "start": 60615,
+          "end": 60642,
+          "sha256": "9a7387494e2843997437fb2c498fc40da67a20407c80d8c426327ea0991b10f7",
+          "token": "@@ORIGINAL_9@@"
+        },
+        {
+          "file": "chunk-f2cpzzp9.js",
+          "modulePath": "provenance-reference://not-bundled/859fc84c594cf8227222324f3a767c8130e37e39c0c09344d4761b92bd9623f3",
+          "moduleSha256": "ecf059605929abc2d38c30fc6d3b5b0b69ef05c9d344e934443f320a48256dae",
+          "symbol": "n4",
+          "start": 65403,
+          "end": 65514,
+          "sha256": "f7bc6b47455f64522843e8a99e2c8292fcb32703210ce3a27feb221a4e2a27a9",
+          "token": "@@ORIGINAL_10@@"
+        },
+        {
+          "file": "chunk-dyg2mvj3.js",
+          "moduleSha256": "78fd70940aae02e7f57d2018ec77f45e6ea41bc996622910b570d4c7c5dcec55",
+          "symbol": "Q$",
+          "start": 2054,
+          "end": 2098,
+          "sha256": "e9b387b926096eaa3b239041c60141587948cbe47c3a0af0462fc585cbd69fca",
+          "token": "@@ORIGINAL_11@@"
+        }
+      ]
+    },
+    {
+      "product": "src/components/worktreeExitEnteredExisting287.js",
+      "template": "import {dirname} from 'node:path';import {homedir} from 'node:os';\n// Complete original stateless Sye/CAe/lq/Vm closures; all writes borrow existing canonical cells.\nexport function createEnteredExistingExit287(read,storage,projectSetter,worktreeState){\nconst at=(...args)=>read(\"chunk-c9me9cp7.js\",\"at\")(...args);\nconst oB=(...args)=>read(\"chunk-x954y317.js\",\"oB\")(...args);\nconst h$=(...args)=>read(\"chunk-q80zaav8.js\",\"h$\")(...args);\nconst zf=(...args)=>read(\"chunk-q80zaav8.js\",\"zf\")(...args);\nconst t=(...args)=>read(\"chunk-q80zaav8.js\",\"t\")(...args);\nconst lr=(...args)=>read(\"chunk-2ynta9xc.js\",\"lr\")(...args);\nconst Uc=(...args)=>read(\"chunk-nankzm0s.js\",\"Uc\")(...args);\nconst Wt=worktreeState;\nfunction T_t(e){Wt().setCurrentSession(e)}\nconst $f=(...args)=>read(\"chunk-nankzm0s.js\",\"$f\")(...args);\nconst on=(...args)=>read(\"chunk-b5kmgz2n.js\",\"on\")(...args);\nconst cd=(...args)=>read(\"chunk-7fkv6k8a.js\",\"cd\")(...args);\nconst OQn=(...args)=>read(\"os\",\"homedir\")(...args);\nfunction vT(e){projectSetter(e)}\nconst Rf=(...args)=>read(\"chunk-mphp7acd.js\",\"Rf\")(...args);\nconst X_=(...args)=>read(\"chunk-epk29mef.js\",\"X_\")(...args);\nconst Kl=new Proxy({}, {get:(_,key)=>read('chunk-epk29mef.js','Kl')[key]})\nconst DMe=(...args)=>read(\"chunk-s6vr35c0.js\",\"DMe\")(...args);\nconst JVe=(...args)=>read(\"chunk-s6vr35c0.js\",\"JVe\")(...args);\nconst RCe=(...args)=>read(\"chunk-s6vr35c0.js\",\"RCe\")(...args);\nconst hpo=dirname\nconst ypo=homedir\nconst YDt=(...args)=>read('chunk-mphp7acd.js','YDt')(...args);\nconst requireOriginal287=(path)=>{if(path!=='/$bunfs/root/chunk-waq70p5c.js')throw Error('Unknown storage namespace '+path);return storage;};\n@@ORIGINAL_0@@\n@@ORIGINAL_1@@\n@@ORIGINAL_2@@\n@@ORIGINAL_4@@\n@@ORIGINAL_3@@\nreturn async(session,storageV5)=>{if(session?.enteredExisting!==true)throw Error('Entered-existing exit requires its actual WorktreeSession');await Sye(storageV5);await Vm(session,storageV5);return `Returned to ${session.originalCwd} (worktree at ${session.worktreePath} left in place)`;};\n}\n",
+      "templateSha256": "a6e87c63647ea47e992d07d6c3f311e07d0f48b8bd5e5db83c5fa03c8f484cfd",
+      "declarations": [
+        {
+          "file": "chunk-mphp7acd.js",
+          "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+          "symbol": "lq",
+          "start": 1169088,
+          "end": 1169248,
+          "sha256": "e8787af89fe1ac4d7abe3e398d09530129798296d4f678384108da96014f67f2",
+          "token": "@@ORIGINAL_0@@"
+        },
+        {
+          "file": "chunk-mphp7acd.js",
+          "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+          "symbol": "CAe",
+          "start": 1206143,
+          "end": 1206200,
+          "sha256": "8375f2c610ec152b7eab5cb02c8a3b7907b8a1f50379e8221bf87104b57a1bd4",
+          "token": "@@ORIGINAL_1@@"
+        },
+        {
+          "file": "chunk-mphp7acd.js",
+          "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+          "symbol": "Sye",
+          "start": 1206200,
+          "end": 1206660,
+          "sha256": "9c6de32f89ce60041b62d02c6e78070a6f790e1fb4ae2722c7091bb466dad851",
+          "token": "@@ORIGINAL_2@@"
+        },
+        {
+          "file": "chunk-f2cpzzp9.js",
+          "moduleSha256": "ecf059605929abc2d38c30fc6d3b5b0b69ef05c9d344e934443f320a48256dae",
+          "symbol": "Vm",
+          "start": 1445814,
+          "end": 1446497,
+          "sha256": "9b1f34e0c452ef7daa76e48728acb3e9275d7e8aa09d8a902fb9d7d2722eb478",
+          "token": "@@ORIGINAL_3@@"
+        },
+        {
+          "file": "chunk-f2cpzzp9.js",
+          "moduleSha256": "ecf059605929abc2d38c30fc6d3b5b0b69ef05c9d344e934443f320a48256dae",
+          "symbol": "qH",
+          "start": 1445739,
+          "end": 1445814,
+          "sha256": "b3e83f72f9d2f3b534fd8018e102b09b47948e3ee6e7f03794406e58641f9447",
+          "requireRemap": true,
+          "token": "@@ORIGINAL_4@@"
+        }
+      ]
+    }
+  ],
+  "hostMappings": [
+    "TUI same current task/session/project/settings readers; no telemetry; existing C relaunch and carry preserved",
+    "Worktree storage/qH uses existing sessionStorage; import.meta.require remapped only; T_t same Wt; vT existing original project owner adapter"
+  ]
+}

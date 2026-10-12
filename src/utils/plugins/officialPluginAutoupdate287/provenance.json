@@ -1,0 +1,625 @@
+{
+  "version": "2.1.287",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16 end-exclusive",
+  "roots": {
+    "chunk-v77qmtr0.js": [
+      "I",
+      "bso",
+      "B",
+      "O",
+      "Plr",
+      "j",
+      "fxn",
+      "x",
+      "Ilr",
+      "D"
+    ],
+    "chunk-7b2vy2nw.js": [
+      "S",
+      "wX",
+      "M"
+    ],
+    "chunk-rj9er4xt.js": [
+      "yGe",
+      "bi"
+    ],
+    "chunk-nastk12x.js": [
+      "AMe"
+    ],
+    "chunk-f2cpzzp9.js": [
+      "Wot",
+      "ZE"
+    ],
+    "chunk-mphp7acd.js": [
+      "h2",
+      "mKe",
+      "m2",
+      "jye",
+      "rH",
+      "Yu",
+      "Jf",
+      "Nd",
+      "_c",
+      "Il",
+      "Mb",
+      "xi",
+      "yy",
+      "aVn",
+      "lLt"
+    ],
+    "chunk-hrhfcbdv.js": [
+      "Iwe"
+    ],
+    "chunk-nankzm0s.js": [
+      "uZ"
+    ],
+    "chunk-5e581hrd.js": [
+      "Q_",
+      "w"
+    ],
+    "chunk-yv06fjzd.js": [
+      "Ny",
+      "_y"
+    ]
+  },
+  "declarations": [
+    {
+      "file": "chunk-v77qmtr0.js",
+      "name": "I",
+      "start": 2257,
+      "endExclusive": 2265,
+      "moduleSha256": "85d207b2dbaf94954ee1dbb789a1136838176b23614519f7fe785364764469ba",
+      "sha256": "02e50b50c7dc4b0bc59a7d26f225480140b995fd2767250890d290d9998185e3",
+      "source": "I=600000",
+      "variable": true,
+      "boundary": null
+    },
+    {
+      "file": "chunk-v77qmtr0.js",
+      "name": "bso",
+      "start": 2266,
+      "endExclusive": 2600,
+      "moduleSha256": "85d207b2dbaf94954ee1dbb789a1136838176b23614519f7fe785364764469ba",
+      "sha256": "b069efa42a279b5f2503a11f0c736177497bce1d8927204862a9a25444ce6e10",
+      "source": "function bso(o){let n=ut();if(n.autoUpdateListener=o,n.pendingAutoUpdateNotification!==null)o(n.pendingAutoUpdateNotification.updated,n.pendingAutoUpdateNotification.blocked,n.pendingAutoUpdateNotification.reresolved,n.pendingAutoUpdateNotification.announce),n.pendingAutoUpdateNotification=null;return()=>{n.autoUpdateListener=null}}",
+      "variable": false,
+      "boundary": null
+    },
+    {
+      "file": "chunk-v77qmtr0.js",
+      "name": "B",
+      "start": 2600,
+      "endExclusive": 2977,
+      "moduleSha256": "85d207b2dbaf94954ee1dbb789a1136838176b23614519f7fe785364764469ba",
+      "sha256": "fc68053838747c1ba2a999553b8b2fa031cf802696cc199038f96b748f717933",
+      "source": "async function B(o){let n=await _c(o),u=rH(),a=new Set;for(let[s,r]of Object.entries(n)){if(!Lc(r.source))continue;if(YB(r.source)&&!Dft())continue;if(Iwe(s,r,jye(s,u)))a.add(s.toLowerCase())}if(!a.has(gn)&&!Object.hasOwn(n,gn)&&m2()&&Lc({source:\"pluginDirectory\"})){if(Object.keys((F()&&o!==void 0?await Nd(o):Jf()).plugins).some((r)=>r.endsWith(`@${gn}`)))a.add(gn)}return a}",
+      "variable": false,
+      "boundary": null
+    },
+    {
+      "file": "chunk-v77qmtr0.js",
+      "name": "O",
+      "start": 2977,
+      "endExclusive": 5139,
+      "moduleSha256": "85d207b2dbaf94954ee1dbb789a1136838176b23614519f7fe785364764469ba",
+      "sha256": "9300eafb0725928daaf5704350d70665c78340120ff0ea788eca448433a3a91d",
+      "source": "async function O(o,n,u,a,s){let r=!1,f=!1,C=null,h=null,_=!1,k=!1,b=!1,y=!1;for(let{scope:m}of n)try{let e=await yGe(o,m,a??{},s);switch(e.outcome){case\"updated\":r=!0,t(`Plugin autoupdate: updated ${o} from ${e.oldVersion} to ${e.newVersion}`);break;case\"skipped\":{if(t(`Plugin autoupdate: ${o} ${e.message}`),e.skipReason===\"entry_helper_deferred\")h={type:\"autoupdate-deferred-entry-helper\",source:o,plugin:vn(o).name,message:e.message};else if(e.blockedBy&&e.blockedBy.length>0){let g=e.blockedBy.map((P)=>vn(P).name),R=e.blockedBy.filter((P)=>u.has(P)).map((P)=>vn(P).name);h={type:\"autoupdate-blocked-by-pinner\",source:o,plugin:vn(o).name,heldAt:e.oldVersion,blockedBy:g,disabledPinners:R}}break}case\"failed\":if(_=e.failureCode===\"not_found\"||e.failureCode===\"not_cached\",k||=e.failureCode===\"directory_identity_changed\",b||=e.failureCode===\"directory_listing_not_installable\",y||=e.failureCode===\"directory_unavailable\"||e.failureCode===\"marketplace_policy_blocked\"||e.failureCode===\"directory_binding_unreadable\",e.failureCode===\"command_source_skipped\")C=o;else if(e.failureCode===\"entry_helper_disabled_by_policy\"||e.failureCode===\"entry_helper_remote_policy_unconsented\"||e.failureCode===\"plugin_policy_blocked\"||e.failureCode===\"command_source_refused\"&&(vk()||!fXe()))h={type:\"autoupdate-disabled-by-policy\",source:o,plugin:vn(o).name,message:e.message};else if(e.failureCode===\"entry_helper_not_inlined\")h={type:\"generic-error\",source:o,plugin:vn(o).name,error:e.message},f=!0;else if(e.failureCode!==\"command_source_inactive\")f=!0;t(`Plugin autoupdate: failed to update ${o}: ${e.message}`,{level:\"warn\"});break;case\"up_to_date\":break}}catch(e){f=!0,t(`Plugin autoupdate: error updating ${o}: ${l(e)}`,{level:\"warn\"})}let p=f&&!_&&!k&&!b&&!y&&h===null&&o.endsWith(`@${gn}`);if(p)h={type:\"generic-error\",source:o,plugin:vn(o).name,error:'The Anthropic Directory lists a different commit, but the background update failed, so this plugin is still on the old one. Choose \"Update now\" in /plugin \\u2192 Installed to retry and see the error'};return{updated:r?o:null,blocked:h,failed:f,directoryStuck:p,directoryIdentityChanged:k,commandSourceSkipped:C}}",
+      "variable": false,
+      "boundary": null
+    },
+    {
+      "file": "chunk-v77qmtr0.js",
+      "name": "Plr",
+      "start": 5139,
+      "endExclusive": 6407,
+      "moduleSha256": "85d207b2dbaf94954ee1dbb789a1136838176b23614519f7fe785364764469ba",
+      "sha256": "93eb364b2d93c1e66be8ff33dddd8e72c6eb94ecca992ce5872d9a73538bc591",
+      "source": "async function Plr(o,n=new Set,{skipCommandSources:u=!1}={},a){let s=F()&&a!==void 0?await Nd(a):Jf(),r=Object.keys(s.plugins);if(r.length===0)return{updated:[],blocked:[],updateFailedCount:0,commandSourceSkipped:[],directory:{updated:0,updateFailed:0,stuck:0,identityChanged:0}};let{disabled:f}=await xi(a),C=new Set(f.map((m)=>m.source));if(o.has(gn))await mKe(Object.entries(s.plugins));let h=await Promise.allSettled(r.map(async(m)=>{let{marketplace:e}=vn(m);if(!e||!o.has(e.toLowerCase()))return null;if(n.has(m))return null;let g=s.plugins[m];if(!g||g.length===0)return null;let R=g.filter(Yu);if(R.length===0)return null;return O(m,R,C,u?{skipCommandSources:!0}:void 0,a)})),_=[],k=[],b=[],y=0,p={updated:0,updateFailed:0,stuck:0,identityChanged:0};for(let[m,e]of h.entries()){if(e.status!==\"fulfilled\"||e.value===null)continue;let g=c9(r[m]??\"\");if(e.value.updated!==null){if(_.push(e.value.updated),g)p.updated++}if(e.value.blocked!==null)k.push(e.value.blocked);if(e.value.failed){if(y++,g)p.updateFailed++}if(e.value.directoryStuck)p.stuck++;if(e.value.directoryIdentityChanged)p.identityChanged++;if(e.value.commandSourceSkipped!==null)b.push(e.value.commandSourceSkipped)}return{updated:_,blocked:k,updateFailedCount:y,commandSourceSkipped:b,directory:p}}",
+      "variable": false,
+      "boundary": null
+    },
+    {
+      "file": "chunk-v77qmtr0.js",
+      "name": "j",
+      "start": 6407,
+      "endExclusive": 8911,
+      "moduleSha256": "85d207b2dbaf94954ee1dbb789a1136838176b23614519f7fe785364764469ba",
+      "sha256": "beecb159cb06e07057b8832a366745adf8a64aaae55edddac510d3adb043c28b",
+      "source": "async function j(o){let n={attemptedCount:0,commandSourced:new Set,updated:[],blocked:[],failedCount:0},u=vk(),a=!Mft();if(u||a)t(u?\"Plugin autoupdate: command-source refresh disabled by managed settings (still excluding command-sourced plugins from the regular pass)\":\"Plugin autoupdate: command-source refresh disabled by tengu_plugin_command_source_refresh (still excluding command-sourced plugins from the regular pass)\");try{let s=F()&&o!==void 0?await Nd(o):Jf(),r=new Map;for(let[_,k]of Object.entries(s.plugins)){let b=(k??[]).filter(Yu),{name:y,marketplace:p}=vn(_);if(b.length===0||!y||!p)continue;let m=r.get(p)??[];m.push({pluginId:_,name:y,installations:b}),r.set(p,m)}let f,C=new Set,h=r.size>0?await Il(o):{};for(let[_,k]of r){let b=h[_];if(tF(b?.source)){for(let{pluginId:p,installations:m}of k)if(m.some((e)=>e.sourceCommand!==void 0))n.commandSourced.add(p);continue}let y=await Mb(_,o);if(!y)continue;for(let{pluginId:p,name:m,installations:e}of k){let g=y.plugins.find((w)=>w.name===m);if(!g||typeof g.source===\"string\"||g.source.source!==\"command\")continue;if(n.commandSourced.add(p),u||a)continue;if(!f)f=new Set(await AMe()),C=new Set((await xi(o)).disabled.map((w)=>w.source));if(!f.has(p)||wp(p)){t(`Plugin autoupdate: not re-resolving ${p} (disabled or blocked by policy)`);continue}let R=EH(g.source),P=e.filter((w)=>w.sourceCommand!==R);if(P.length>0){let w=P.every((v)=>v.sourceCommand===void 0),M=L(P.map((v)=>v.scope)).map((v)=>na(\"plugin update\",p,`--scope ${v}`)).filter((v)=>v!==null).map((v)=>`\\`${v}\\``);t(`Plugin autoupdate: not re-resolving ${p}: marketplace command differs from the accepted one`,{level:\"warn\"}),n.blocked.push({type:\"generic-error\",source:p,plugin:m,error:(w?`${Lt(m,200)}'s marketplace entry now installs it by running a command`:`${Lt(m,200)}'s marketplace entry changed the command it runs`)+` (\\`${Lt(g.source.command,iZe)}${g.source.mode===\"link\"?\" [mode: link]\":\"\"}\\`). It was not re-run in the background; ${M.length>0?`run ${M.join(\" and \")}`:\"an explicit per-scope plugin update is needed\"} to review and accept it.`})}let U=e.filter((w)=>w.sourceCommand===R);if(U.length===0)continue;n.attemptedCount++,t(`Plugin autoupdate: re-resolving command-sourced plugin ${p}`);let E=await O(p,U,C,{skipMarketplaceRefresh:!0},o);if(E.updated!==null)n.updated.push(E.updated);if(E.blocked!==null)n.blocked.push(E.blocked);if(E.failed)n.failedCount++}}}catch(s){t(`Plugin autoupdate: command-source refresh failed: ${l(s)}`,{level:\"warn\"})}return n}",
+      "variable": false,
+      "boundary": null
+    },
+    {
+      "file": "chunk-v77qmtr0.js",
+      "name": "fxn",
+      "start": 8911,
+      "endExclusive": 9274,
+      "moduleSha256": "85d207b2dbaf94954ee1dbb789a1136838176b23614519f7fe785364764469ba",
+      "sha256": "282a059de7a38788c2031e67b4010f903677ae4148154ee71159c913e3516c64",
+      "source": "function fxn(o,n,u=[],{announce:a=!0}={}){if(o.length===0&&n.length===0)return;let s=ut();if(s.autoUpdateListener)s.autoUpdateListener(o,n,u,a);else{let r=s.pendingAutoUpdateNotification;s.pendingAutoUpdateNotification={updated:L([...r?.updated??[],...o]),blocked:[...r?.blocked??[],...n],reresolved:L([...r?.reresolved??[],...u]),announce:(r?.announce??!1)||a}}}",
+      "variable": false,
+      "boundary": null
+    },
+    {
+      "file": "chunk-v77qmtr0.js",
+      "name": "x",
+      "start": 9274,
+      "endExclusive": 9371,
+      "moduleSha256": "85d207b2dbaf94954ee1dbb789a1136838176b23614519f7fe785364764469ba",
+      "sha256": "9e6afc5bb44eff3a79344813df10fc04bbb1618f31baed0f2fd851ac87b06c9d",
+      "source": "function x(){return{attemptedCount:0,commandSourced:new Set,updated:[],blocked:[],failedCount:0}}",
+      "variable": false,
+      "boundary": null
+    },
+    {
+      "file": "chunk-v77qmtr0.js",
+      "name": "Ilr",
+      "start": 9371,
+      "endExclusive": 9598,
+      "moduleSha256": "85d207b2dbaf94954ee1dbb789a1136838176b23614519f7fe785364764469ba",
+      "sha256": "a9d2e61d71a10ef192d2600565fcc1429f301c33694781874c3c9f5753d6431d",
+      "source": "function Ilr(o){let n=ut();return n.commandSourceReresolve??=(async()=>{if(Ft())return x();let u=await j(o);if(u.attemptedCount>0)Dxe();try{fxn(u.updated,u.blocked,u.updated)}catch(a){d(a)}return u})(),n.commandSourceReresolve}",
+      "variable": false,
+      "boundary": null
+    },
+    {
+      "file": "chunk-v77qmtr0.js",
+      "name": "D",
+      "start": 9598,
+      "endExclusive": 12352,
+      "moduleSha256": "85d207b2dbaf94954ee1dbb789a1136838176b23614519f7fe785364764469ba",
+      "sha256": "c4e6da6999b63d2e18e1fe87f7a864f82c30a747a39dcb22108b9546932723f3",
+      "source": "function D(o){return(async()=>{let n=await Ilr(o),u=Date.now(),a={marketplaces_refreshed:0,marketplace_refresh_failed:0,marketplace_refresh_policy_skipped:0,plugins_updated:0,plugin_update_failed:0,plugins_blocked_by_pin:0,plugins_helper_deferred:0,plugins_policy_blocked:0,command_plugins_refreshed:n.attemptedCount,command_plugin_refresh_failed:n.failedCount},s={};s={directory_updated:0,directory_update_failed:0,directory_update_stuck:0,directory_identity_changed:0};let r=()=>{if(n.attemptedCount>0||n.failedCount>0)i(\"tengu_plugin_autoupdate_pass\",{outcome:S(\"skipped\"),...a,...s,duration_ms:Date.now()-u})};if(uZ()){t(\"Plugin autoupdate: skipped (auto-updater disabled)\"),r();return}try{let f=await B(o);if(f.size===0){r();return}let C=Math.floor(Math.random()*I);await ee(C,void 0,{unref:!0}),u=Date.now();let h=await Promise.allSettled(Array.from(f).map(async(e)=>{try{return await h2(e,o,void 0,{isBackground:!0}),\"refreshed\"}catch(g){if(g instanceof Fl)return t(`Plugin autoupdate: marketplace ${e} not refreshed (managed policy): ${l(g)}`),\"policy\";return t(`Plugin autoupdate: failed to refresh marketplace ${e}: ${l(g)}`,{level:\"warn\"}),\"failed\"}}));a.marketplace_refresh_failed=G(h,(e)=>e.status===\"fulfilled\"&&e.value===\"failed\"),a.marketplace_refresh_policy_skipped=G(h,(e)=>e.status===\"fulfilled\"&&e.value===\"policy\"),a.marketplaces_refreshed=f.size-a.marketplace_refresh_failed-a.marketplace_refresh_policy_skipped,t(\"Plugin autoupdate: checking installed plugins\");let{updated:_,blocked:k,updateFailedCount:b,directory:y}=await Plr(f,n.commandSourced,{skipCommandSources:!0},o);if(a.plugins_updated=_.length,a.plugin_update_failed=b,s={directory_updated:y.updated,directory_update_failed:y.updateFailed,directory_update_stuck:y.stuck,directory_identity_changed:y.identityChanged},a.plugins_blocked_by_pin=G(k,(e)=>e.type===\"autoupdate-blocked-by-pinner\"),a.plugins_helper_deferred=G(k,(e)=>e.type===\"autoupdate-deferred-entry-helper\"),a.plugins_policy_blocked=G(k,(e)=>e.type===\"autoupdate-disabled-by-policy\"),_.length>0)yy(\"autoupdate dep-resolution\");let{errors:p}=await xi(o),m=await wX(p.filter((e)=>{if(e.type!==\"dependency-unsatisfied\")return!1;let g=vn(e.source).marketplace;return g!==void 0&&f.has(g.toLowerCase())}),o);if(m.installed.length>0)t(`Plugin autoupdate: resolved ${m.installed.length} missing plugin dependencies: ${m.installed.join(\", \")}`),_.push(...m.installed);fxn(_,k),i(\"tengu_plugin_autoupdate_pass\",{outcome:a.marketplace_refresh_failed>0||a.plugin_update_failed>0?S(\"partial\"):S(\"ok\"),...a,...s,duration_ms:Date.now()-u})}catch(f){t(`Plugin autoupdate: failed: ${l(f)}`,{level:\"error\"}),i(\"tengu_plugin_autoupdate_pass\",{outcome:S(\"failed\"),error_kind:c(nG(f)),...a,...s,duration_ms:Date.now()-u})}})()}",
+      "variable": false,
+      "boundary": null
+    },
+    {
+      "file": "chunk-7b2vy2nw.js",
+      "name": "S",
+      "start": 1129,
+      "endExclusive": 1157,
+      "moduleSha256": "a91b5fa48cd3ec7d2c3e62362c4d9b2e44ec608a8e31c9af0680f112f5c9e752",
+      "sha256": "336ccd4d4585a46d7815f5f810315b08d7d32c515f652cebde4e839b5430b8ef",
+      "source": "S=[\"user\",\"project\",\"local\"]",
+      "variable": true,
+      "boundary": null
+    },
+    {
+      "file": "chunk-7b2vy2nw.js",
+      "name": "wX",
+      "start": 1158,
+      "endExclusive": 3049,
+      "moduleSha256": "a91b5fa48cd3ec7d2c3e62362c4d9b2e44ec608a8e31c9af0680f112f5c9e752",
+      "sha256": "33191b7c12fe87125fbf2ae4cd80fa7f6462a2f572bf9af004dc64a8d366f27a",
+      "source": "async function wX(a,r){let n=new Map;for(let e of a){if(e.type!==\"dependency-unsatisfied\"||e.reason!==\"not-found\")continue;let c=n.get(e.dependency);if(!c)c=new Set,n.set(e.dependency,c);c.add(e.source)}if(n.size===0)return{installed:[],stillUnresolved:[],marketplaceMissing:[]};let i=await Il(r),f=S.map((e)=>[e,pKe(Mk(e))]),g=[],s=[],p=[];for(let[e,c]of n){let u=vn(e).marketplace;if(!u||!i[u]){s.push(e),p.push(e);continue}if(!Lc(i[u].source)){t(`resolveMissingDependencies: skipping \"${e}\" \\u2014 marketplace \"${u}\" is blocked by enterprise policy`),s.push(e);continue}let y=!1;for(let o of c){let d=vn(o).marketplace;if(d===u){y=!0;break}if(!d)continue;if((await Mb(d,r))?.allowCrossMarketplaceDependenciesOn?.includes(u)){y=!0;break}}if(!y){t(`resolveMissingDependencies: skipping \"${e}\" \\u2014 cross-marketplace dependency not in any declaring marketplace's allowlist`),s.push(e);continue}try{let o=await a5e(e,r,\"install\");if(!o){s.push(e);continue}let d=o.entry.source;if(typeof d===\"object\"&&d.source===\"archive\"&&eSe(RRe({entry:o.entry,archiveUrl:d.url,marketplaceSource:tSe(e,i),trustedSettingsEntryAuth:dke(l_(e),o.entry.name)}).entry)){t(`resolveMissingDependencies: skipping \"${e}\" \\u2014 it fetches its archive through an entry headersHelper, which only an explicit install from /plugin may run`),s.push(e);continue}let m=M(c,f),h=await lLt({pluginId:e,entry:o.entry,scope:m??\"user\",marketplaceInstallLocation:o.marketplaceInstallLocation,trigger:\"dependency-resolution\",explicit:!1,auto:m!==void 0,requiredByEnabledDependent:!0,storageV5:r});if(h.ok){for(let k of h.closure)if(!g.includes(k))g.push(k)}else t(`resolveMissingDependencies: install of \"${e}\" did not complete (${h.reason})`,{level:\"warn\"}),s.push(e)}catch(o){t(`resolveMissingDependencies: install of \"${e}\" threw: ${l(o)}`,{level:\"warn\"}),s.push(e)}}return{installed:g,stillUnresolved:s,marketplaceMissing:p}}",
+      "variable": false,
+      "boundary": null
+    },
+    {
+      "file": "chunk-7b2vy2nw.js",
+      "name": "M",
+      "start": 3393,
+      "endExclusive": 3469,
+      "moduleSha256": "a91b5fa48cd3ec7d2c3e62362c4d9b2e44ec608a8e31c9af0680f112f5c9e752",
+      "sha256": "dbff0a497c92ccae77b955c5673e7aa96332c87d5597c82c1e1eaf52d01e649c",
+      "source": "function M(a,r){for(let[n,i]of r)for(let f of a)if(i.has(f))return n;return}",
+      "variable": false,
+      "boundary": null
+    },
+    {
+      "file": "chunk-rj9er4xt.js",
+      "name": "yGe",
+      "start": 98537,
+      "endExclusive": 99598,
+      "moduleSha256": "0cf224ca5bba08401ae7d9a3515918685644bacf1e61781bf067b12d0a2ab3be",
+      "sha256": "2f542118b6753c2bb13c37e815e85a327662700ce2557969f76a4d135569a324",
+      "source": "async function yGe(e,n,i={},a){let o;try{o=await bi(e,n,i,a)}catch(w){let b={is_directory:c9(e)};if(w instanceof Fl){let r=w instanceof h9?w.failureCode:\"command_source_refused\";if(Yn[r]===\"sad\")p(\"plugin_update_op\",r,b);else m(\"plugin_update_op\",r,b);return{outcome:\"failed\",message:w.message,scope:n,failureCode:r}}throw m(\"plugin_update_op\",\"exception\",b),w}let u={is_directory:c9(o.pluginId??e),pin_changed:o.pinChanged===!0,no_clone_short_circuit:o.noCloneShortCircuit===!0,not_checked:o.notChecked===!0};switch(o.outcome){case\"failed\":if(o.failureCode!==void 0&&Yn[o.failureCode]===\"sad\")p(\"plugin_update_op\",o.failureCode,u);else m(\"plugin_update_op\",o.failureCode??\"op_failed\",u);break;case\"skipped\":p(\"plugin_update_op\",o.skipReason??\"skipped\",u);break;case\"up_to_date\":case\"updated\":if(o.refreshFailed)p(\"plugin_update_op\",o.refreshRefusedByPolicy?\"marketplace_refresh_policy_refused\":\"marketplace_refresh_failed\",u);else y(\"plugin_update_op\",{already_up_to_date:o.outcome===\"up_to_date\",version_unknown:o.newVersion===\"unknown\",...u});break}return o}",
+      "variable": false,
+      "boundary": null
+    },
+    {
+      "file": "chunk-rj9er4xt.js",
+      "name": "bi",
+      "start": 100885,
+      "endExclusive": 117165,
+      "moduleSha256": "0cf224ca5bba08401ae7d9a3515918685644bacf1e61781bf067b12d0a2ab3be",
+      "sha256": "63cced6d26059e7af2f5a6fac6ca91ea6bc9efe3bf93d198175d24e5cde13843",
+      "source": "async function bi(e,n,{skipMarketplaceRefresh:i=!1,skipCommandSources:a=!1,announceCommandSource:o,explicit:u=!1,consentedEntryHelper:w,onEntryHelperDisclosure:b},r){let d=u;e=JP(e);let{name:c,marketplace:C}=r8(e),j=zn(e,C,\"update\");if(j!==void 0)return{outcome:\"failed\",message:j,failureCode:qn(e,C)};let O=await Sq(r);if(O!==void 0)return{outcome:\"failed\",message:`Plugin \"${ze(e)}\" was not updated: ${B6(O)}`,failureCode:\"install_records_unreadable\"};let E=C,g=E?`${c}@${E}`:e,H=F()&&r!==void 0?await Nd(r):Jf(),U=qw(Object.keys(H.plugins),g);if(U===void 0&&E===void 0){let v=rqr(Object.keys(H.plugins),c).filter((z)=>(H.plugins[z]?.length??0)>0);if(v.length>1)return{outcome:\"failed\",message:`Plugin \"${Lt(c,200)}\" is installed from more than one marketplace. Include the marketplace name to pick one: ${v.map((z)=>`\\`claude plugin update ${Lt(z,200)}\\``).join(\" or \")}`,scope:n,failureCode:\"ambiguous_marketplace\"};if(v.length===0)return{outcome:\"failed\",message:`Plugin \"${Lt(c,200)}\" is not installed`,scope:n,failureCode:\"not_installed\"};U=v[0]}if(U)g=U,{marketplace:E}=vn(g);let ie=U?H.plugins[U]:void 0,ye=await elt(g,ie),be=void 0;if(be!==void 0&&!be.ok)return{outcome:\"failed\",message:be.message,pluginId:g,scope:n,failureCode:\"not_found\"};let K,B=!1,A,x=!1;if(wp(g))return{outcome:\"failed\",message:`Plugin \"${Lt(g,200)}\" is blocked by your organization's policy and was not updated`,pluginId:g,scope:n,failureCode:\"plugin_policy_blocked\"};if(E===xh){if(!Tcn())return{outcome:\"failed\",message:kcn,pluginId:g,scope:n,failureCode:\"npm_marketplace_disabled\"};if(!ie||ie.length===0)return{outcome:\"failed\",message:`Plugin \"${c}\" is not installed`,pluginId:g,scope:n,failureCode:\"not_installed\"};return wi(g,c,n??Ft(ie),ie,r,u)}if(E){let z=(await _c(r))[E]?.source;if(z&&sp(z)&&await CE()===\"blocked\")return{outcome:\"failed\",message:Xn(c),pluginId:g,scope:n,failureCode:\"marketplace_policy_blocked\"};let he=!z&&E===gn&&m2();if(tF(he?{source:\"pluginDirectory\"}:z))return{outcome:\"failed\",message:`Plugin \"${c}\" is from marketplace \"${E}\", which is blocked by your organization's policy`,pluginId:g,scope:n,failureCode:\"marketplace_policy_blocked\"};if(x=!z&&E===gn&&!m2(),!i&&(z&&(z.source===\"github\"||z.source===\"git\"||z.source===\"url\"||z.source===\"claudeai\"||z.source===\"pluginDirectory\")||!z&&E===gn&&m2()))try{await h2(E,r,void 0,{skipIfRecent:!0})}catch(pe){if(B=pe instanceof Fl,K=B?\"marketplace not refreshed \\u2014 your organization's managed settings forbid its headersHelper (the version shown is from the cached catalog; ask your admin)\":`marketplace not refreshed (${wI(l(pe))})`,pe instanceof Toe)A=wI(pe.message);t(`Failed to refresh marketplace '${E}' before update; using cached data: ${l(pe)}`,{level:\"warn\"})}}let J={pluginName:c,refreshWarning:K,directoryRefreshFailed:E===gn&&!B,directoryNotChecked:x},X=i||A!==void 0?await OA(g,r):await g2(g,r,\"update\");if(!X&&!i&&E===gn){if(A!==void 0)return{outcome:\"failed\",message:`Could not check \"${ze(c)}\" for updates. ${A}`,pluginId:g,scope:n,failureCode:\"directory_unavailable\"};if(await wcn(c,r))return{outcome:\"failed\",message:`Plugin \"${ze(c)}\" is blocked by your organization's policy and was not updated`,pluginId:g,scope:n,failureCode:\"plugin_policy_blocked\"};let v=await ZHr(c);if(v!==void 0)return{outcome:\"failed\",message:`\"${ze(c)}\" was not updated: ${v}`,pluginId:g,scope:n,failureCode:\"directory_listing_not_installable\"}}if(!X)return{outcome:\"failed\",message:i?`Plugin \"${c}\" is not in the locally cached marketplace catalog; it was not re-resolved.`:`Plugin \"${c}\" not found`,pluginId:g,scope:n,failureCode:i?\"not_cached\":\"not_found\"};let{entry:f}=X,{marketplaceInstallLocation:Z}=X;if(!ie||ie.length===0)return{outcome:\"failed\",message:`Plugin \"${c}\" is not installed`,pluginId:g,scope:n,failureCode:\"not_installed\"};if(n===void 0)n=Ft(ie);let ne=Ame(n),N=ie.filter((v)=>v.scope===n),$e=N.find(Yu);if(!$e&&N.length>1)t(`updatePluginOp: ${N.length} ${n}-scope installs, none match CWD '${ne}'; updating '${N[0]?.projectPath}' only`,{level:\"warn\"});let P=$e??N[0];if(!P){let v=ne?`${n} (${ne})`:n;return{outcome:\"failed\",message:`Plugin \"${c}\" is not installed at scope ${v}`,pluginId:g,scope:n,failureCode:\"not_installed_at_scope\"}}let M=P.projectPath,T;if(typeof f.source===\"object\"&&f.source.source===\"command\"){let v=vk(),z=v||a,he=qw(await AMe(),g)!==void 0,pe=v||a&&!he,Pe=n===\"user\"?void 0:`--scope ${n}`;T=z?void 0:await o?.(g,f,P.sourceCommand);let qe=o!==void 0&&!G1e()&&P.sourceCommand===EH(f.source);if(z||T===void 0&&!qe&&!he)return{outcome:\"failed\",message:a&&!pe?`${Lt(c,200)} is installed by running a command, which the background marketplace update never runs; it is left to the per-session re-resolve (when that is enabled) or an explicit update \\u2014 ${Xm(\"plugin update\",g,{extra:Pe,fallback:\"a per-plugin update reviews it\"})}.`:v?p3:`${Lt(c,200)} is disabled, so the command that installs it was not run. Enable it first, then ${Xm(\"plugin update\",g,{extra:Pe,fallback:\"update it explicitly\"})}.`,pluginId:g,scope:n,failureCode:a&&!pe?\"command_source_skipped\":\"command_source_inactive\"}}let h=ae(),Q=P.version,{enabled:de,disabled:Je}=i?await xi(r):await Lb(r),se=ICo(g,[...de,...Je]),_=se.filter((v)=>v.constraint.version!==void 0),Ge=se.map((v)=>v.constraint.version).filter((v)=>v!==void 0),fe,Ie=\"\",me=await _c(r),Te=me[E??\"\"]?.source,ve=(v)=>u&&!Qq(f.source)&&!(typeof f.source===\"string\"&&Te!==void 0&&ju(Te))?zt(v,P,c,r):Promise.resolve(v);if(Ge.length>0){let v=qon(Ge);if(!v.ok)return{outcome:\"skipped\",message:`Skipped \\u2014 ${Kon(\"Plugin\",g,Ge,v.reason)}`,pluginId:g,scope:n,blockedBy:_.map((pe)=>pe.plugin.source),oldVersion:Q,skipReason:\"pinner_blocked\"};let z=me[E??\"\"]?.source,he=$ye(f.source)??(typeof f.source===\"string\"?lcn(z):null);if(he!==null&&v.range!==\"*\"&&!g.endsWith(`@${gn}`)){let pe=await Nzn(he,f.name,v.range);if(pe===null)t(`updatePluginOp(${g}): no ${f.name}--v* tag satisfying ${v.range}; falling back to HEAD + post-fetch guard`);else if(pe.version===P.resolvedVersion&&pe.sha===P.gitCommitSha)return ve({outcome:\"up_to_date\",message:Kt(J,`${c} is already at the latest version satisfying ${Ge.join(\", \")} (${pe.version}, required by ${_.map((Pe)=>Pe.plugin.name).join(\", \")}).`),pluginId:g,newVersion:P.version,oldVersion:Q,scope:n,refreshFailed:K!==void 0?!0:void 0,refreshRefusedByPolicy:B||void 0});else if(fe=pe,Ie=` (highest tag satisfying ${Ge.join(\", \")} from ${_.map((Pe)=>Pe.plugin.name).join(\", \")})`,typeof f.source===\"string\"){let Pe=Lzn(z,f.source);if(Pe!==null)f={...f,source:Pe}}}}let Ke,rn,dn,G,V,ke=!1,te,De,Ne;{let v=f.source,z=typeof v===\"object\"&&v.source===\"claudeai\",he=P.claudeaiPluginId;if(he!==void 0&&(!z||v.pluginId!==he)||he===void 0&&z)return{outcome:\"failed\",message:he===void 0?`${c} is listed by a claude.ai-hosted marketplace but its install record no longer says which claude.ai plugin it came from \\u2014 not updated. Uninstall and install it again to re-pin it.`:`${c} was installed from a claude.ai-hosted marketplace, but \"${E}\" now lists ${z?\"a different claude.ai plugin\":\"another source\"} under that name \\u2014 not updated. Uninstall and install it again to switch to what the marketplace lists now, or remove it.`,pluginId:g,scope:n,failureCode:\"claudeai_identity_changed\"}}let Be=g.endsWith(`@${gn}`);if(Be&&c5e(g,ie,ye))return{outcome:\"failed\",message:`\"${ze(c)}\" was not updated: plugin-directory-bindings.json in the plugins folder could not be used (unreadable, a symbolic link or not a file, over 1 MB, damaged, or written by a newer Claude Code), so its ${Pr} listing could not be checked against the repository it was installed from. Nothing was changed. Try again; if this repeats, check the file for those causes.`,pluginId:g,scope:n,failureCode:\"directory_binding_unreadable\"};if(Be&&l5e(g,ie,f.source,ye))return{outcome:\"failed\",message:`\"${ze(c)}\" was not updated: the ${Pr} now lists a different repository under that name. Uninstall it, then install the new listing if you want it.`,pluginId:g,scope:n,failureCode:\"directory_identity_changed\"};if(Be&&(Vw(f.source,void 0)?.length??0)>Yon)return{outcome:\"failed\",message:`\"${ze(c)}\" was not updated: the repository address in its ${Pr} listing is too long. Nothing was changed. Only a change to the listing can fix this.`,pluginId:g,scope:n,failureCode:\"directory_listing_not_installable\"};let je=_Lt(g,ie,ye).length>0,We=rLt({pluginId:g,pluginName:c,source:f.source,boundByRecord:je,action:\"updated\"});if(!We.ok)return{outcome:\"failed\",message:We.message,pluginId:g,scope:n,failureCode:\"directory_listing_not_installable\"};if(typeof f.source!==\"string\"){let v=f.source,z=fe&&(v.source===\"github\"||v.source===\"url\"||v.source===\"git-subdir\")?{...v,ref:fe.ref,sha:fe.sha}:v,he=me[E??\"\"]?.source,pe=l_(g),Pe=dke(pe,f.name),qe=v.source===\"archive\"?RRe({entry:f,archiveUrl:v.url,marketplaceSource:he,trustedSettingsEntryAuth:Pe}):void 0,Me=qe!==void 0&&v.source===\"archive\"?r1t(qe,v.url):null,xe=Me===null?null:NSe(he,E),Ae=xe!==null?{outcome:\"failed\",message:o1t(f.name,xe),pluginId:g,scope:n,failureCode:xe===\"remote_policy_unconsented\"?\"entry_helper_remote_policy_unconsented\":\"entry_helper_disabled_by_policy\"}:null;if(d&&Ae!==null)return Ae;let Ze=d&&b===void 0?fmn(w,Me):null;if(Ze!==null)return{outcome:\"failed\",message:mmn(Ze,f.name,\"update\"),pluginId:g,scope:n,failureCode:pmn[Ze]};if(!d&&Me!==null){let q=f.version??(v.source===\"archive\"&&v.sha256!==void 0?Mzn(v.sha256):void 0);if(q!==void 0&&q===Q)return{outcome:\"up_to_date\",message:Un(J,Q),pluginId:g,newVersion:Q,oldVersion:Q,scope:n,refreshFailed:K!==void 0?!0:void 0,refreshRefusedByPolicy:B||void 0};if(Ae!==null)return Ae;let Fe=na(\"plugin update\",g);return{outcome:\"skipped\",message:`Skipped \\u2014 \"${ze(f.name)}\" fetches its archive through a headersHelper, which only runs when you update it yourself. Update it from /plugin`+(Fe?` (or \\`${Fe}\\`).`:\".\"),pluginId:g,scope:n,oldVersion:Q,skipReason:\"entry_helper_deferred\"}}if(d&&Me!==null){if(b!==void 0){let q=await b(CPn(Me),Me,g);if(q!==\"accepted\")return{outcome:\"failed\",message:\"Aborted \\u2014 the headersHelper command was not confirmed, so it was not run.\",pluginId:g,scope:n,failureCode:q===\"declined\"?\"entry_helper_declined\":\"entry_helper_unconfirmed\"}}}if(v.source===\"claudeai\"&&fe===void 0&&v.version!==\"\"&&v.version===Q)return ve({outcome:\"up_to_date\",message:Un(J,Q),pluginId:g,newVersion:Q,oldVersion:Q,scope:n,refreshFailed:K!==void 0?!0:void 0,refreshRefusedByPolicy:B||void 0});let Ve=M3(g,f.source);if(Ve!==void 0&&(x||P.gitCommitSha===Ve)){let q=Vw(f.source,void 0);if(!x&&P.gitCommitSha===Ve&&P.directoryRepositoryKey===void 0&&q!==void 0)try{await E0o(g,n,M,q,r)}catch(Fe){t(`Could not record the repository of ${g}: ${l(Fe)}`,{level:\"warn\"})}return ve({outcome:\"up_to_date\",message:Un(J,Q),pluginId:g,newVersion:Q,oldVersion:Q,scope:n,refreshFailed:K!==void 0?!0:void 0,refreshRefusedByPolicy:B||void 0,...x?{notChecked:!0}:{noCloneShortCircuit:!0}})}let le=await u5e(z,{manifest:{name:f.name},storageV5:r,isDirectoryPlugin:c9(g),directoryPin:M3(g,z)??null,archiveAuth:await Fft({pluginSource:z,pluginName:f.name,marketplaceName:E,marketplaceSource:he,trustedMarketplaceAuth:cke(he,pe),trustedSettingsEntryAuth:Pe,entry:f,runEntryHelper:d}),entryDeclaresComponents:Gdt(f),declaredComponentPaths:ELt(f),commandSourceConsent:T!==void 0?{kind:\"shown\",command:T,pluginId:g}:{kind:\"recorded\",command:G1e()?void 0:P.sourceCommand,pluginId:g}});if(Ke=le.path,rn=le.producerPath,dn=le.contentSha256,ke=!0,fe?.sha!==void 0||le.gitCommitSha!==void 0||je||g.endsWith(`@${gn}`))te=fe?.sha??le.gitCommitSha;else if($ye(z)!==null){let q=await oke(le.path);te=q.repo?q.sha??void 0:null}else te=null;V=le.manifest?.version;let Ce=await N5(g,f.source,le.manifest,le.path,{kind:\"catalog\",version:f.version},fe?.sha??le.gitCommitSha,le.contentSha256);G=fe&&(le.manifest?.version||f.version)?vyt(Ce,fe.sha):Ce}else{let v=n_(Z)!==void 0?\"system\":\"workspace\",z=await P9(g,Z,f.source,me,vv(),r,v);if(z.kind===\"location-error\")throw z.error;if(z.kind!==\"ok\"){let Me=RBt(z,Z,f.source);return{outcome:\"failed\",message:Me.message,pluginId:g,scope:n,failureCode:Me.code}}Ne=z.marketplaceDir,Ke=z.entryPath;let he=me[E??\"\"],pe=he!==void 0&&ju(he.source);try{if(pe)await z8n(r,Ke,v);else await h.stat(Ke)}catch(Me){if(W(Me))return{outcome:\"failed\",message:`Plugin source not found at ${sl(Ke)}`,pluginId:g,scope:n,failureCode:\"source_missing\"};throw Me}let Pe;try{Pe=(await $5(Ke,f.name,f.source)).manifest}catch{}V=Pe?.version;let qe=await oke(Ke,Ne);if(!qe.repo&&E===ud)De=await vHr(Ke);te=qe.repo?qe.sha??void 0:De!==void 0?EHr(De):null,G=await N5(g,f.source,Pe,Ke,{kind:\"catalog\",version:f.version},void 0,void 0,Ne)}try{let v=rLt({pluginId:g,pluginName:c,source:f.source,boundByRecord:je,fetched:{gitCommitSha:te??void 0},action:\"updated\"});if(!v.ok)return{outcome:\"failed\",message:v.message,pluginId:g,scope:n,failureCode:\"directory_commit_mismatch\"};if(fe===void 0&&Ge.length>0){let q=Pn.valid(V)??Pn.coerce(V)?.version,Fe=se.filter(({constraint:He})=>He.version!==void 0&&q!==void 0&&!Pn.satisfies(q,He.version)).map(({plugin:He})=>He.source);if(Fe.length>0)return{outcome:\"skipped\",message:`Skipped \\u2014 ${Fe.join(\", \")} requires ${c} at a version range that ${V??G} does not satisfy`,pluginId:g,scope:n,blockedBy:Fe,oldVersion:Q,skipReason:\"pinner_blocked\"}}if(G===\"unknown\"&&Q!==void 0&&Q!==\"unknown\"&&(De?.kind===\"refused\"||De?.kind===\"too-large\"))return{outcome:\"skipped\",message:De.kind===\"refused\"?`Skipped \\u2014 ${c} stays at ${Q}. Its new version comes from the official marketplace's .gcs-sha file, and that name is now a link, a folder or another special file, so it was not read.`:`Skipped \\u2014 ${c} stays at ${Q}. Its new version comes from the official marketplace's .gcs-sha file, which is larger than 1 MB, so it was not read.`,pluginId:g,scope:n,oldVersion:Q,skipReason:\"snapshot_file_refused\"};let z=S1(g,G),he=G===\"unknown\",pe=jFe(g,G),Pe=v.reviewedCommit!==void 0&&P.gitCommitSha!==v.reviewedCommit,qe=!he&&!Pe&&(P.version===G||P.installPath===z||P.installPath===pe),Me=!1;if(qe&&typeof f.source===\"object\"&&f.source.source===\"command\"){let q=qA(P.installPath,{trustedRoots:LSe(g,me,vv())}),Fe=q.absolute;Me=q.suspect||!await(Qq(f.source)?n1t(Fe):Fe.endsWith(\".zip\")?dc(Fe):Gye(Fe,r))||(Qq(f.source)?await Pi(Fe,rn??P.sourceProducerPath):await n1t(Fe,{unclassifiableIsFarm:!0}))}if(qe&&!Me){if(typeof f.source===\"object\"&&f.source.source===\"command\"&&(P.sourceCommand!==EH(f.source)||rn!==void 0&&P.sourceProducerPath!==rn))await aVn(g,n,M,P.installPath,G,P.gitCommitSha,P.resolvedVersion,{sourceCommand:EH(f.source),sourceProducerPath:rn??P.sourceProducerPath},r),Dxe();return ve({outcome:\"up_to_date\",message:Un(J,G),pluginId:g,newVersion:G,oldVersion:Q,scope:n,refreshFailed:K!==void 0?!0:void 0,refreshRefusedByPolicy:B||void 0})}z=await pke(Ke,g,G,f,Ne,{forceOverwrite:he||Pe,storageV5:r});let xe=P.installPath;if(await aVn(g,n,M,z,G,te,fe?.version,typeof f.source===\"object\"&&f.source.source===\"command\"?{sourceCommand:EH(f.source),sourceProducerPath:rn??P.sourceProducerPath}:void 0,r,typeof f.source===\"object\"&&f.source.source===\"claudeai\"?{claudeaiPluginId:f.source.pluginId,archiveSha256:dn}:void 0,Be?Vw(f.source,void 0):void 0),rn!==void 0)Dxe();if(xe&&xe!==z){let q=F()&&r!==void 0?await Nd(r):Jf();if(!Object.values(q.plugins).some((He)=>He.some((Re)=>Re.installPath===xe)))await Dne(xe,r)}let Ae=M?`${n} (${M})`:n,Ze=M3(g,f.source),Ve=Ze===void 0?void 0:te??Ze,le=ucn(G),Ce=Ve?`Plugin \"${c}\" updated to the listed commit ${Ve.slice(0,7)}${le?` (version ${le})`:\"\"} for scope ${Ae}. Restart to apply changes.`:he&&(Q??\"unknown\")===\"unknown\"?`Plugin \"${c}\" refreshed from source for scope ${Ae}. Restart to apply changes.`:`Plugin \"${c}\" updated from ${Q||\"unknown\"} to ${G}${Ie} for scope ${Ae}. Restart to apply changes.`;return{outcome:\"updated\",message:K===void 0?Ce:J.directoryRefreshFailed?`${Ce} Warning: ${Vn()}.`:`${Ce} Warning: ${K}.`,pluginId:g,newVersion:G,oldVersion:Q,...te&&{gitCommitSha:te},scope:n,refreshFailed:K!==void 0?!0:void 0,refreshRefusedByPolicy:B||void 0,pinChanged:typeof P.gitCommitSha===\"string\"&&typeof te===\"string\"&&P.gitCommitSha!==te}}finally{let v=S1(g,G);if(ke&&Ke!==v&&!yn(v).startsWith(yn(Ke)+Bt))await h.rm(Ke,{recursive:!0,force:!0})}}",
+      "variable": false,
+      "boundary": null
+    },
+    {
+      "file": "chunk-nastk12x.js",
+      "name": "AMe",
+      "start": 863,
+      "endExclusive": 1189,
+      "moduleSha256": "90fb776678dabb1251197e762c1ab786d3030372f116cd52ed2f44a8d180fe25",
+      "sha256": "e038ecb310b58d787d2df449db8255716e9e4f1d27c9f679ab5f3514d85eaf56",
+      "source": "async function AMe(){let o=tt(),n=[],r=q7();for(let[e,i]of Object.entries(r)){if(E1(e))continue;if(e.includes(\"@\")&&i)n.push(e)}if(o.enabledPlugins)for(let[e,i]of Object.entries(o.enabledPlugins)){if(!e.includes(\"@\"))continue;let c=E1(e)?ZSn(e):i,s=n.indexOf(e);if(c){if(s===-1)n.push(e)}else if(s!==-1)n.splice(s,1)}return n}",
+      "variable": false,
+      "boundary": null
+    },
+    {
+      "file": "chunk-f2cpzzp9.js",
+      "name": "Wot",
+      "start": 1507349,
+      "endExclusive": 1509762,
+      "moduleSha256": "ecf059605929abc2d38c30fc6d3b5b0b69ef05c9d344e934443f320a48256dae",
+      "sha256": "2baaebe4a289179f53fd648075a32b58ad6dd5ef6cf3437f275133cacddaddab",
+      "source": "Wot={id:\"plugin-autoupdate\",deps:(h)=>[h.store,h.storageV5,h.credentials],setup(){let h=0,v=[],D=new WeakSet;return({store:N,storageV5:X,credentials:Se},_e)=>{if(Ft())return;let Pe=bso((Ne,Ve,qe,ze)=>{t(`Plugin autoupdate notification: ${Ne.length} plugin(s) updated (${qe.length} re-resolved), ${Ve.length} skipped (pinned, deferred or refused)`);let pt=(xt,Ut=new Set)=>N.setState((Ct)=>{let Wt=new Set(xt.map(ZE)),Yt=Ct.plugins.errors.filter((no)=>no.type!==\"autoupdate-blocked-by-pinner\"&&no.type!==\"autoupdate-deferred-entry-helper\"&&no.type!==\"autoupdate-disabled-by-policy\"&&!(D.has(no)&&(Wt.has(ZE(no))||Ut.has(ZE(no)))));for(let no of xt)D.add(no);let qt=[...Yt,...xt];if(qt.length===Ct.plugins.errors.length&&qt.every((no,lo)=>no===Ct.plugins.errors[lo]))return Ct;return{...Ct,plugins:{...Ct.plugins,errors:qt}}}),St=new Set(Ve.map(ZE)),ht=new Set(Ne),yt=new Set(v.filter((xt)=>ht.has(xt.source)).map(ZE));v=[...v.filter((xt)=>!St.has(ZE(xt))&&!ht.has(xt.source)),...Ve],pt(v,yt);let bt=++h;if(qe.length===0){if(ze)Oe(Ne,!1);return}Ie().then((xt)=>{if(xt)pt(v);if(bt!==h)return;Oe(Ne,xt)})});async function Ie(){try{let{mainLoopModel:Ne,dynamicMcpConfig:Ve}=_e();if((await mV({model:Ne,dynamicMcpConfig:Ve,mcpClients:N.getState().mcp.clients,storageV5:X,credentials:Se})).wouldInvalidateCache)return p(\"plugin_command_reresolve_reload\",\"cache_impact\"),!1;if((await NO(JW.over(N),X,Se)).error_count>0)return p(\"plugin_command_reresolve_reload\",\"load_errors\"),\"with-errors\";return y(\"plugin_command_reresolve_reload\"),\"ok\"}catch(Ne){return t(`Plugin autoupdate: in-session reload failed: ${l(Ne)}`,{level:\"warn\"}),m(\"plugin_command_reresolve_reload\",\"refresh_failed\"),!1}}function Oe(Ne,Ve){if(Ft())return;if(Ne.length===0)return;let qe=Ne.map((pt)=>{let St=pt.indexOf(\"@\");return St>0?pt.substring(0,St):pt}),ze=qe.length<=2?qe.join(\" and \"):`${qe.length} plugins`;_e().addNotification({key:Ve?\"plugin-autoupdate-reloaded\":\"plugin-autoupdate-restart\",segments:[{text:`${qe.length===1?\"Plugin\":\"Plugins\"} updated: ${ze}`,color:Ve===\"with-errors\"?\"warning\":\"success\"},Ve===\"ok\"?{text:\" \\xB7 reloaded for this session\",dim:!0}:Ve===\"with-errors\"?{text:\" \\xB7 reloaded with errors \\u2014 see /plugin\",dim:!0}:{text:\" \\xB7 Run /reload-plugins to apply\",dim:!0}],priority:\"low\",timeoutMs:1e4}),t(`Showing plugin autoupdate notification for: ${qe.join(\", \")} (${Ve?\"reloaded\":\"reload required\"})`)}return Pe}}}",
+      "variable": true,
+      "boundary": null
+    },
+    {
+      "file": "chunk-f2cpzzp9.js",
+      "name": "ZE",
+      "start": 1509763,
+      "endExclusive": 1509811,
+      "moduleSha256": "ecf059605929abc2d38c30fc6d3b5b0b69ef05c9d344e934443f320a48256dae",
+      "sha256": "c5d189de8f517a4cfefb0f7c5cde4a4d5b75e0e554c60ecc137856224ddda6ab",
+      "source": "function ZE(h){return`${h.type}\\x00${h.source}`}",
+      "variable": false,
+      "boundary": null
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "h2",
+      "start": 3513617,
+      "endExclusive": 3513863,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "4a580f63c03e983c711586cc45f5d308432a5004843e30894c530a42473ae70a",
+      "source": "function h2(e,n,r,s){let{marketplaceRefreshesInFlight:g}=ut(),h=g.get(e);if(h){if(r)h.listeners.push(r);return h.promise}let b=r?[r]:[],D=jar(e,n,(j)=>{for(let z of b)Up(z,j)},s).finally(()=>g.delete(e));return g.set(e,{promise:D,listeners:b}),D}",
+      "variable": false,
+      "boundary": null
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "mKe",
+      "start": 388119,
+      "endExclusive": 388451,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "5cb8cc6d7c53b50df9f4a38ebd497b1a6162b05e1d3f8d8116ae0dcf916e2357",
+      "source": "async function mKe(e){{let n=!1,r=new Map;for(let[s,g]of e){if(!Ib(s))continue;n=!0;let h=g.find((b)=>b.directoryRepositoryKey!==void 0)?.directoryRepositoryKey;if(h!==void 0)r.set(s,h)}if(!n)return new Map;if(r.size===0||!att())return fKe();return x1((s)=>{for(let[g,h]of r)if(e0(s.keys(),g).length===0)s.set(g,h)})}return new Map}",
+      "variable": false,
+      "boundary": null
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "m2",
+      "start": 3436983,
+      "endExclusive": 3437016,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "dc1a062cd56753b36c3cc6b964d784aedd8fd7191896b33a7b8e312e803722d6",
+      "source": "function m2(){return kb()!==null}",
+      "variable": false,
+      "boundary": null
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "jye",
+      "start": 3445054,
+      "endExclusive": 3445541,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "8969163b171c1af5f89d02071b3d29939c40a45640278b7d8397e36326deca51",
+      "source": "function jye(e,n){let r=n[e]?.autoUpdate;if(e===gn&&W_()){let s=qQt();if(r!==s)KU(`declared-auto-update:${e}:${s}:${r}`,`Marketplace ${_(e)}: autoUpdate is taken only from ${pLt}, which ${s===void 0?\"do not set it, so the default (on) applies\":`set it to ${s}`}. Ignored: ${r===void 0?\"an entry in project or local settings that has no autoUpdate and would otherwise replace the entry that sets it\":`autoUpdate ${r} in project, local or --add-dir settings`}.`,\"debug\");return s}return r}",
+      "variable": false,
+      "boundary": null
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "rH",
+      "start": 3444695,
+      "endExclusive": 3444954,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "437284501ea9aa25e6075a52fe476a3790c7ecfffe731086bed3ec8f326c974d",
+      "source": "function rH(){let e={},n={...q7(),...tt().enabledPlugins??{}};for(let[g,h]of Object.entries(n))if(h&&vn(g).marketplace===ud){e[ud]={source:OJ,sourceIsFallback:!0};break}let r=i5e(),s=r?VQt(tt().extraKnownMarketplaces??{}):vv();return{...e,...r?xVn():{},...s}}",
+      "variable": false,
+      "boundary": null
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "Yu",
+      "start": 3552432,
+      "endExclusive": 3552616,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "204acdf7f86e2a7d44f76a57c8037e8b0612c8591602faba26591911f782e61b",
+      "source": "function Yu(e){if(e.scope===\"user\"||e.scope===\"managed\")return!0;let n=Ee();if(e.projectPath===n)return!0;if(!e.projectPath)return!1;let r=aI(n);return r!==null&&aI(e.projectPath)===r}",
+      "variable": false,
+      "boundary": null
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "Jf",
+      "start": 3548076,
+      "endExclusive": 3548169,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "4d23ae90db0d7f0b4dc081dfacd6c67452cbabbebf25ca74de48302fdd69eaec",
+      "source": "function Jf(){try{let e=BGe();return e?HGe(e):{version:2,plugins:{}}}catch(e){return jJt(e)}}",
+      "variable": false,
+      "boundary": null
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "Nd",
+      "start": 3548169,
+      "endExclusive": 3548331,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "1ec42279a3cf5c7382fe69b1d8e646f9a85373cc3dd65e61dad0a3e4b5da51b7",
+      "source": "async function Nd(e){let n=Yk(e);if(e===void 0||n===null||!F())return Jf();try{let r=await A4(e,n);return r?HGe(r):{version:2,plugins:{}}}catch(r){return jJt(r)}}",
+      "variable": false,
+      "boundary": null
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "_c",
+      "start": 3452266,
+      "endExclusive": 3452730,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "5f74247f325ee8c95bce70fa2f17fe8cad3ab99ee50385ed823496631c4f5b3e",
+      "source": "async function _c(e){let[n,r]=await Promise.all([yar(e),_5()]),s=far(n,eL(e)),g=s;for(let[w,D]of Object.entries(r)){if(Object.hasOwn(s,w))continue;if(g===s)g={...s};g[w]=b8(w,D)}let h=W_()?jU:null;if(h&&!Object.hasOwn(g,gn)){let w=Cy();if(w!==null)w1e(w);if(w!==null||await h.isPluginDirectoryMarketplaceEnabled()){if(g===s)g={...s};g[gn]=await h.pluginDirectoryRegistryEntry()}}$No(g[gn]?.source?.source);let b=_4.get(s);if(g!==s&&b!==void 0)_4.set(g,b);return g}",
+      "variable": false,
+      "boundary": null
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "Il",
+      "start": 3454517,
+      "endExclusive": 3454597,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "3993bbc5f597b8b52bdb2b2b42fbf439df6d29f352313040533d5b95d7bcffb1",
+      "source": "async function Il(e){try{return await _c(e)}catch{let n={};return tJt.add(n),n}}",
+      "variable": false,
+      "boundary": null
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "Mb",
+      "start": 3498645,
+      "endExclusive": 3499505,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "6ac1dd2db4a287808a280423ff377797d27cb7c91d26e4e23698c8264389eff7",
+      "source": "async function Mb(e,n,r){if(e.toLowerCase()===xh)return null;let s=r?.unreadableCatalogs;if(r?.registryEntry)return Vfe(n,e,r.registryEntry,r.registryEntryIsSaved?e:void 0,s);let g=ae(),h=w4(),b=F()&&n!==void 0?v4():null;if(n!==void 0&&b!==null){let D=await n.read([b]);if(!D.ok)return t(`Failed to read cached marketplace ${e}: ${it(D.error)}`,{level:\"warn\"}),null;let j=D.value.items[0];if(!j?.found)return qfe(n,e,s);let z;try{let K=Y(Buffer.from(j.value).toString(\"utf-8\"));z=Xfe(e,K)}catch(K){return t(`Failed to read cached marketplace ${e}: ${l(K)}`,{level:\"warn\"}),null}return z?await Vfe(n,e,z,e,s):await qfe(n,e,s)}let w;try{let D=await g.readFile(h,{encoding:\"utf-8\"}),j=Y(D);w=Xfe(e,j)}catch(D){if(W(D))return qfe(n,e,s);return t(`Failed to read cached marketplace ${e}: ${l(D)}`,{level:\"warn\"}),null}return w?await Vfe(n,e,w,e,s):await qfe(n,e,s)}",
+      "variable": false,
+      "boundary": null
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "xi",
+      "start": 3800669,
+      "endExclusive": 3801099,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "c7b1b0f3fb03303fb64d7b452c84ac9571b5416236abbd35fc9abd03ca948e9d",
+      "source": "function xi(e,n){let r=ut();if(r.pluginLoadCacheOnly!==void 0)return ktn(\"loadAllPluginsCacheOnly\",r.pluginLoadCacheOnlyArm,e),r.pluginLoadCacheOnly;return r.pluginLoadCacheOnlyArm=_tn(e),r.pluginLoadCacheOnly=(async()=>{if(a.CLAUDE_CODE_SYNC_PLUGIN_INSTALL){let s=Lb(e,n);return r.pluginLoadCacheOnlyArm=r.pluginLoadArm,s}return iqe(()=>nqe({cacheOnly:!0,storageV5:e,credentials:void 0}),{storageV5:e})})(),r.pluginLoadCacheOnly}",
+      "variable": false,
+      "boundary": null
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "yy",
+      "start": 3804546,
+      "endExclusive": 3804780,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "763b576d411cb97b13bd9452a5b1ff10a5632062d3b2992b256cd2aa72a6a5ac",
+      "source": "function yy(e){if(e)t(`clearPluginCache: invalidating loadAllPlugins cache (${e})`);let n=ut();if(n.pluginLoad=void 0,n.pluginLoadArm=void 0,n.pluginLoadCacheOnly=void 0,n.pluginLoadCacheOnlyArm=void 0,jNo(),E9o()!==void 0)Ro();C9o()}",
+      "variable": false,
+      "boundary": null
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "aVn",
+      "start": 3548503,
+      "endExclusive": 3549260,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "4029588fb33c07fd871f64799a9864507294c0e362f209f8554620bb035b8ecf",
+      "source": "async function aVn(e,n,r,s,g,h,b,w,D,j,z,K){let he=w?.sourceCommand,_e=w?.sourceProducerPath,ke={newPath:s,newVersion:g,gitCommitSha:h,resolvedVersion:b,sourceCommand:he,sourceProducerPath:_e,claudeAi:j,directoryRepositoryKey:z,npm:K};if(z!==void 0)await O1(e,z,{keepExisting:!0});let be=Yk(D),ve;if(F()&&D!==void 0&&be!==null)ve=await QGe(D,be,(Te)=>CJt(Te,e,n,r,ke));else{let Te=Jf();if(ve=CJt(Te,e,n,r,ke).result,ve===\"updated\")ZA(HE(eh()),Te),yI(eh(),x4(Te)),ut().installedPluginsFile=null}switch(ve){case\"no-plugin\":t(`Cannot update ${e} on disk: plugin not found in installed plugins`);return;case\"no-installation\":t(`Cannot update ${e} on disk: no installation for scope ${n}`);return;case\"updated\":t(`Updated ${e} on disk to version ${g} at ${s}`)}}",
+      "variable": false,
+      "boundary": null
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "lLt",
+      "start": 3659040,
+      "endExclusive": 3674048,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "871421b7494597e5a2d13e5fe0dbf8c553b96635dbb05e8dab84dc8f019342eb",
+      "source": "async function lLt({pluginId:e,entry:n,scope:r,marketplaceInstallLocation:s,trigger:g,explicit:h,consentedEntryHelper:b,auto:w,requiredByEnabledDependent:D,commandSourceConsent:j,replaceInstalledCopy:z,replaceOnlyPluginIds:K,switchTargetMarkedInItsOwnWalk:he,switchWalkNotFresh:_e,storageV5:ke}){let be=Mk(r),ve=await Sq(ke);if(ve!==void 0)return{ok:!1,reason:\"installed-list-held\",held:ve};let Te=await xHr(e,n,ke);if(!Te.ok)return Te.refusal;let{knownMarketplaces:xe,failClosedOnUnknownSource:Pe}=Te,[$e,...Ne]=m2()&&!w&&!D?await Y4e(e,n,xe,ke):[],We=$e?[$e,...Ne]:void 0;if(We&&z&&_e!==void 0)return{ok:!1,reason:\"switch-needs-fresh-listing\",pluginName:n.name,detail:_e,installedCopies:We};if(z&&(await kHr(K,We??[],ke)).length>0)return{ok:!1,reason:\"fewer-installed-than-shown\",pluginName:n.name};let qe=We&&z?dcn(e,We,K,he):void 0;if(qe?.reason===\"more-installed-than-shown\")return{ok:!1,reason:\"more-installed-than-shown\",pluginName:n.name};if(We&&(!z||qe!==void 0))return{ok:!1,reason:\"installed-from-other-marketplace\",pluginName:n.name,installedCopies:We};let Qe=new Map;if(dZe(n.source)&&!s)return{ok:!1,reason:\"local-source-no-location\",pluginName:n.name};if(s)Qe.set(e,{entry:n,marketplaceInstallLocation:s});let Ze=vn(e).marketplace,et=new Set((Ze?(await Mb(Ze,ke))?.allowCrossMarketplaceDependenciesOn:void 0)??[]),bt=r!==\"user\"?oe():void 0,ht=(F()&&ke!==void 0?await Nd(ke):Jf()).plugins,kt=new Set;for(let Go of pKe(be))if(ht[Go]?.some((Hr)=>Hr.scope===r&&Hr.projectPath===bt))kt.add(Go);let $t=await xi(ke),It=$t.enabled.concat($t.disabled),jt=new Map;for(let Go of It)jt.set(Go.source,Go.resolvedVersion??Go.manifest.version);let Xt=ge(be)?.enabledPlugins,un=new Set;for(let Go of It){if(!Go.depConstraints)continue;for(let[Hr,os]of Go.depConstraints){if(os.version===void 0)continue;let mr=Fp(Hr,Go.source);if(Array.isArray(Xt?.[mr]))continue;if(wp(mr)||fL(mr,xe,{failClosedOnUnknownSource:Pe})){t(`installResolvedPlugin: ${mr} version-unsatisfied but policy-blocked; not force-including`);continue}if(!R1(jt.get(mr),os.version)){if(yen(mr,xe)){let ls=Qe.get(mr)??await g2(mr,ke,\"update\"),ts=await C4(ke);if(ls?BU(ls.entry,ts):ts!==null||pXe(void 0)){t(`installResolvedPlugin: ${mr} version-unsatisfied but a policy-blocked copy, or unlisted while a block stands; not force-including`);continue}if(ls)Qe.set(mr,ls)}un.add(mr)}}}let rn=await Jet(e,async(Go)=>{if(Qe.has(Go))return Qe.get(Go).entry;if(Go===e)return n;let Hr=await g2(Go,ke,un.has(Go)?\"update\":\"install\");if(Hr)Qe.set(Go,Hr);return Hr?.entry??null},kt,et,un);if(!rn.ok)return{ok:!1,reason:\"resolution-failed\",resolution:rn};let Yt=rn.closure.find((Go)=>!WGe(Go));if(Yt!==void 0)return{ok:!1,reason:\"unrecordable-plugin-id\",pluginId:Yt};for(let Go of rn.closure){if(Go===e||kt.has(Go))continue;if(wp(Go))return{ok:!1,reason:\"dependency-blocked-by-policy\",pluginName:n.name,blockedDependency:Go};let Hr=await hen(Go);if(Hr!==null)return{ok:!1,reason:\"plugin-directory-unavailable\",pluginName:n.name,cause:Hr,unavailableDependency:Go};let os=fL(Go,xe,{failClosedOnUnknownSource:Pe});if(os)return{ok:!1,reason:\"dependency-marketplace-blocked-by-policy\",pluginName:n.name,blockedDependency:Go,marketplaceName:os};let mr=Qe.get(Go)?.entry;if(mr!==void 0&&await $ze(Go,mr,xe,ke))return{ok:!1,reason:\"dependency-blocked-by-policy\",pluginName:n.name,blockedDependency:Go}}let Qt=(F()&&ke!==void 0?await Nd(ke):Jf()).plugins,nn=len(rn.closure,rn.closure,Qt);if(nn!==null)return{ok:!1,reason:\"plugin-folder-held\",...nn,rootKept:!1};let Pn={...lI(be)?.enabledPlugins??{}},$n={};for(let Go of Xo())Object.assign($n,ge(Go)?.enabledPlugins??{});let qn=new Set(Object.keys($n).filter((Go)=>$n[Go]!==void 0)),En=D===!0||It.some((Go)=>{if(Go.source===e)return!1;let Hr=$n[Go.source];return(Hr!==void 0?Hr===!0||Array.isArray(Hr):Go.manifest.defaultEnabled!==!1)&&(Go.manifest.dependencies??[]).some((mr)=>C1(Fp(mr,Go.source),e))});function zn(Go){return Go===e?n:Qe.get(Go)?.entry}let xn=new Map,Jn=new Map;for(let Go of rn.closure){let Hr=zn(Go);xn.set(Go,Hr?.defaultEnabled??!0),Jn.set(Go,(Hr?.dependencies??[]).map((os)=>Fp(os,Go)))}let wn=cen({closure:rn.closure,rootId:e,rootRequiredByDependent:En,priorEnabled:Pn,explicitAnywhere:qn,defaultsById:xn,dependenciesById:Jn}),eo=new Map,to={};for(let Go of rn.closure){let Hr=Pn[Go];to[Go]=Array.isArray(Hr)?Hr:wn.get(Go)??!0,eo.set(Go,to[Go])}let{error:ao}=await Ri(be,(Go)=>({enabledPlugins:{...Go?.enabledPlugins,...to}}),void 0,ke);if(ao)return{ok:!1,reason:\"settings-write-failed\",message:ao.message};async function mo(Go,Hr){if(!dZe(Hr.entry.source))return;let{entryPath:os,reason:mr}=Lgt(await P9(Go,Hr.marketplaceInstallLocation,Hr.entry.source,xe,vv(),ke));if(os===void 0)throw new P(`Cannot install ${Lt(Go,120)}: ${mr}`,\"plugin install marketplace entry path refused\");return os}let $o=new Map,Ao=new Map,Po=new Set,ur=!1,kr=rn.closure;async function po(){for(let[Go,Hr]of $o){$o.delete(Go);let{records:os=[],recordedAt:mr}=Ao.get(Go)??{},ls=(F()&&ke!==void 0?await Nd(ke):Jf()).plugins[Go]?.find((Zo)=>Zo.scope===r&&Zo.projectPath===bt),ts=os.find((Zo)=>Zo.scope===r&&Zo.projectPath===bt),Zs=(w===!0||Go!==e)&&(ts===void 0||ts.auto===!0),vi={installPath:Hr,lastUpdated:mr??ls?.lastUpdated,...Zs&&{auto:!0}};if(ls!==void 0&&(ls.installPath!==Hr||mr!==void 0&&ls.lastUpdated!==mr||Zs&&ls.auto!==!0)){Po.add(Go);continue}if(ts!==void 0){if(ls!==void 0&&!await GJt(Go,ts,vi,ke))Po.add(Go);continue}if(await hLt(Go,r,bt,ke,vi)===!1){Po.add(Go);continue}if(ur||=Go===e,os.length===0)await Dne(Hr,ke)}}async function Tr(){let Go={};for(let ls of kr){if(Po.has(ls))continue;Go[ls]=ls===e&&$o.has(ls)&&!Array.isArray(Pn[ls])?wn.get(e)??!0:Pn[ls]}let{[e]:Hr,...os}=Go,{error:mr}=await Ri(be,(ls)=>({enabledPlugins:ur&&ls?.enabledPlugins?.[e]!==eo.get(e)?os:Go}),{legacyRevocation:\"skip\"},ke);if(mr)t(`Failed to roll back enabledPlugins after install failure for ${e}: ${mr.message}. Retry may skip un-cached deps; manually disable then reinstall to recover.`,{level:\"error\"})}let Yr,gr=new Map,_o=new Map,wo=[];try{if(!Qe.has(e)){let Zo=(await g2(e,ke,\"install\"))?.marketplaceInstallLocation;if(Zo)Qe.set(e,{entry:n,marketplaceInstallLocation:Zo})}let Go=new Set(kr),Hr=new Map,os=new Map;for(let Zo of It){if(!Zo.depConstraints)continue;if(Go.has(Zo.source))continue;for(let[ri,Wa]of Zo.depConstraints){if(Wa.version===void 0)continue;let ss=Fp(ri,Zo.source);os.set(ss,[...os.get(ss)??[],Zo.source]);let ii=Hr.get(ss);if(ii)ii.push(Wa.version);else Hr.set(ss,[Wa.version])}}let mr=new Map,ls=new Map;async function ts(Zo){switch(Zo){case\"directory-pin-unsatisfied\":await po();break;case\"range-conflict\":case\"no-matching-tag\":case\"plugin-folder-held\":if(w||D||Pn[e]!==void 0||Ao.get(e)?.records.length!==0)break;try{for(let ri of $o.keys())if(Ao.get(ri)?.records.length!==0)$o.delete(ri);await po()}catch(ri){d(ri),t(`What the failed install of ${e} installed was not all taken out: ${l(ri)}. Run \\`claude plugin uninstall\\` for it to recover.`,{level:\"warn\"})}break;case\"directory-binding-unreadable\":case\"directory-identity-changed\":break}await Tr()}async function Zs(Zo){let ri=Qe.get(Zo);if(!ri)return{ok:!0,dependencies:void 0};let Wa=[...mr.get(Zo)??[],...Hr.get(Zo)??[]],ss,ii=ri.entry,Yo;if(Wa.length>0){let Lr=qon(Wa);if(!Lr.ok)return{ok:!1,reason:\"range-conflict\",dep:Zo,ranges:Wa,why:Lr.reason};if(Zo.endsWith(`@${gn}`))Yo=Lr.range===\"*\"?void 0:Lr.range;else if(Lr.range!==\"*\"){let Kr=$ye(ri.entry.source),vr=xe[vn(Zo).marketplace??\"\"]?.source,nr=Kr===null&&typeof ri.entry.source===\"string\",hs=nr?lcn(vr):Kr;if(hs!==null){let Rr=await Nzn(hs,ri.entry.name,Lr.range,ls);if(Rr===null&&!nr)return{ok:!1,reason:\"no-matching-tag\",dep:Zo,range:Lr.range};if(Rr===null)t(`materializeOne(${Zo}): no ${ri.entry.name}--v* tag satisfying ${Lr.range} on marketplace repo; falling through to HEAD copy`);else if(ss=Rr,nr&&typeof ri.entry.source===\"string\"){let Vr=Lzn(vr,ri.entry.source);if(Vr!==null)ii={...ri.entry,source:Vr}}}}}let qr=await AHr(Zo,ii,r,bt,await mo(Zo,{...ri,entry:ii}),ss,w===!0||Zo!==e,ri.marketplaceInstallLocation,tSe(Zo,xe),Zo===e&&w!==!0?j:{kind:\"none\",pluginId:Zo},ke,{explicitInstall:h&&Zo===e,consented:Zo===e?b:void 0},void 0,Yo).catch((Lr)=>{if(Lr instanceof tme||Lr instanceof SH||Lr instanceof oLt)return Lr;throw Lr});if(qr instanceof oLt)return{ok:!1,reason:\"plugin-folder-held\",pluginId:Zo,sharedWith:\"installed\",holders:qr.holders};if(qr instanceof SH)return{ok:!1,reason:qr.reason,dep:Zo,message:qr.message};if(qr instanceof tme)return{ok:!1,reason:\"directory-pin-unsatisfied\",dep:Zo,message:`\"${Lt(ri.entry.name,120)}\" from the ${Pr} is pinned to its listed commit (${qr.manifestVersion?`version ${Lt(qr.manifestVersion,120)}`:\"no version\"}), which does not satisfy ${Lt(Wa.join(\", \"),120)} required by ${(os.get(Zo)??[]).map((Lr)=>`\"${Lt(vn(Lr).name,120)}\"`).join(\", \")}.`};$o.set(Zo,qr.path),Ao.set(Zo,{records:qr.recordsBefore,recordedAt:qr.recordedAt}),gr.set(Zo,qr.defaultEnabled),_o.set(Zo,qr.dependencies??[]);for(let[Lr,Kr]of qr.depConstraints??[]){if(Kr.version===void 0)continue;let vr=Fp(Lr,Zo);os.set(vr,[...os.get(vr)??[],Zo]);let nr=mr.get(vr);if(nr)nr.push(Kr.version);else mr.set(vr,[Kr.version])}return{ok:!0,dependencies:qr.dependencies??[]}}for(let Zo=rn.closure.length-1;Zo>=0;Zo--){let ri=rn.closure[Zo];if(ri===void 0)continue;let Wa=ri!==e&&kt.has(ri),ss;try{ss=await Zs(ri)}catch(ii){if(Wa){t(`installResolvedPlugin: force-included ${ri} fetch threw (${ii instanceof Error?ii.message:String(ii)}); skipping (pinner stays demoted)`);continue}throw ii}if(!ss.ok){if(Wa){t(ss.reason===\"range-conflict\"?`installResolvedPlugin: force-included ${ri} has disjoint pinner ranges ${ss.ranges.join(\", \")}; skipping (pinner stays demoted)`:ss.reason===\"no-matching-tag\"?`installResolvedPlugin: force-included ${ri} has no tag satisfying ${ss.range}; skipping (pinner stays demoted)`:ss.reason===\"directory-binding-unreadable\"||ss.reason===\"directory-identity-changed\"||ss.reason===\"plugin-folder-held\"?`installResolvedPlugin: force-included ${ri} was refused before any fetch (${ss.reason}); skipping (pinner stays demoted)`:`installResolvedPlugin: force-included ${ri} is pinned to a listed commit outside the required range; skipping (pinner stays demoted)`);continue}return await ts(ss.reason),ss.reason===\"plugin-folder-held\"?{...ss,rootKept:$o.has(e)}:ss}if(ri===e)Yr=ss.dependencies}let vi=new Set((Yr??[]).map((Zo)=>Fp(Zo,e)));for(let[Zo,ri]of mr){if(Go.has(Zo)||un.has(Zo)&&vi.has(Zo)||!kt.has(Zo))continue;let Wa=ri.concat(Hr.get(Zo)??[]),ss=qon(Wa);if(!ss.ok)return await ts(\"range-conflict\"),{ok:!1,reason:\"range-conflict\",dep:Zo,ranges:Wa,why:ss.reason};let ii=jt.get(Zo);if(ss.range!==\"*\"&&!R1(ii,ss.range)){let Yo=os.get(Zo)?.includes(e)===!0&&!Array.isArray(Xt?.[Zo])&&!wp(Zo)&&!fL(Zo,xe,{failClosedOnUnknownSource:Pe});if(Yo)await Tr();else await ts(\"range-conflict\");return{ok:!1,reason:\"range-conflict\",dep:Zo,ranges:Wa,why:\"installed-unsatisfied\",installed:ii,suggestDependencyUpdate:Yo}}}let Ui=[{manifestDeps:Yr,declaringId:e}];while(Ui.length>0){let Zo=[];for(let{manifestDeps:Yo,declaringId:qr}of Ui){let Lr=await rur({rootManifestDeps:Yo,pluginId:qr,closureSet:Go,alreadyEnabled:kt,forceInclude:un,rootMarketplace:Ze,allowedCrossMarketplaces:et,knownMarketplaces:xe,failClosedOnUnknownSource:Pe,depInfo:Qe,storageV5:ke});if(!Lr.ok){if(await Tr(),Lr.blockedMarketplace)return{ok:!1,reason:\"dependency-marketplace-blocked-by-policy\",pluginName:n.name,blockedDependency:Lr.blockedDependency,marketplaceName:Lr.blockedMarketplace};return{ok:!1,reason:\"dependency-blocked-by-policy\",pluginName:n.name,blockedDependency:Lr.blockedDependency}}wo.push(...Lr.notFound.filter((Kr)=>!$t.enabled.some((vr)=>vr.source===Kr)));for(let Kr of Lr.ids){if(Go.has(Kr))continue;Go.add(Kr),kr.push(Kr),Zo.push(Kr)}}if(Zo.length===0)break;let ri=len(Zo,kr,Qt);if(ri!==null)return await ts(\"plugin-folder-held\"),{ok:!1,reason:\"plugin-folder-held\",...ri,rootKept:$o.has(e)};let Wa={};for(let Yo of Zo)Wa[Yo]=!0,eo.set(Yo,!0);let{error:ss}=await Ri(be,(Yo)=>({enabledPlugins:{...Yo?.enabledPlugins,...Wa}}),void 0,ke);if(ss)return await Tr(),{ok:!1,reason:\"settings-write-failed\",message:ss.message};let ii=[];for(let Yo of Zo){let qr=kt.has(Yo),Lr;try{Lr=await Zs(Yo)}catch(Kr){if(qr){t(`installResolvedPlugin: force-included ${Yo} fetch threw (${Kr instanceof Error?Kr.message:String(Kr)}); skipping (pinner stays demoted)`);continue}throw Kr}if(!Lr.ok){if(qr){t(`installResolvedPlugin: force-included ${Yo} ${Lr.reason}; skipping (pinner stays demoted)`);continue}return await ts(Lr.reason),Lr.reason===\"plugin-folder-held\"?{...Lr,rootKept:$o.has(e)}:Lr}ii.push({manifestDeps:Lr.dependencies,declaringId:Yo})}Ui=ii}}catch(Go){throw await Tr(),Go}if(Yr!==void 0){let Go=new Set(Yr.map((Hr)=>Fp(Hr,e)));for(let Hr of n.dependencies??[]){let os=Fp(Hr,e);if(!Go.has(os))t(`Marketplace entry for ${e} lists dependency \"${Hr}\" not present in plugin.json \\u2014 catalog may be stale`)}}let br=new Map,xo=new Map;for(let Go of kr){let Hr=zn(Go);br.set(Go,Hr?.defaultEnabled??gr.get(Go)??!0);let os=(Hr?.dependencies??[]).map((mr)=>Fp(mr,Go));for(let mr of _o.get(Go)??[])os.push(Fp(mr,Go));xo.set(Go,os)}let dr=cen({closure:kr,rootId:e,rootRequiredByDependent:En,priorEnabled:Pn,explicitAnywhere:qn,defaultsById:br,dependenciesById:xo}),or={};for(let Go of kr){let Hr=Pn[Go],os=dr.get(Go)??!0;if(Hr!==void 0&&Hr!==os)continue;if(eo.get(Go)!==os)or[Go]=os}let Wr=!0;if(Object.keys(or).length>0){let{error:Go}=await Ri(be,(Hr)=>({enabledPlugins:{...Hr?.enabledPlugins,...or}}),void 0,ke);if(Go)Wr=!1,t(`Failed to apply defaultEnabled correction for ${e}: ${Go.message}`,{level:\"warn\"})}let _r=Xo(),Fr=_r.indexOf(be);function es(Go){for(let Hr=_r.length-1;Hr>Fr;Hr--){let os=ge(_r[Hr])?.enabledPlugins?.[Go];if(os!==void 0)return os===!1}return!1}let qs=kr.filter((Go)=>dr.get(Go)===!1&&(Wr||eo.get(Go)===!1)),Vs=kr.filter((Go)=>qs.includes(Go)||es(Go));ou(ke);let fs=Yl(e).marketplace,Qi=el(fs),xs=Qi||Bc();ys(\"plugin_installed\",{...xs&&{\"plugin.name\":n.name},...xs&&n.version&&{\"plugin.version\":n.version},...xs&&fs&&{\"marketplace.name\":fs},\"marketplace.is_official\":String(Qi),...g&&{\"install.trigger\":g},...qs.includes(e)&&{\"install.disabled_by_default\":\"true\"}});let gi=\"\";if(wo.length>0){let Go=await CE();if(Go!==\"unavailable\"){let Hr=`@${gn}`,os=Go===\"off\"?`the ${Pr} is off`:Go===\"blocked\"?`the ${Pr} is blocked by your organization`:`the ${Pr} could not be read, or does not list it`,mr=L(wo),ls=mr.slice(0,5),ts=mr.length-ls.length;gi=`. Warning: ${ls.map((Zs)=>`dependency \"${ze(Zs,120)}\" was not installed (${Zs.endsWith(Hr)?os:\"no marketplace you have added lists it\"})`).join(\"; \")}${ts>0?`; and ${ts} more`:\"\"}. \"${ze(n.name,120)}\" will not load without ${I(mr.length,\"it\",\"them\")}`}}let ar=`${i7([...$o.keys()].filter((Go)=>Go!==e))}${gi}`;return{ok:!0,closure:rn.closure,depNote:ar,installedDisabled:Vs,installedDisabledByDefault:qs,...We&&{replacedCopies:We},copiesInOtherProjects:m2()&&r===\"user\"&&w!==!0?await iLt(e,n,xe,ke):[]}}",
+      "variable": false,
+      "boundary": null
+    },
+    {
+      "file": "chunk-hrhfcbdv.js",
+      "name": "Iwe",
+      "start": 124607,
+      "endExclusive": 124838,
+      "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+      "sha256": "d5ffad665dc3f66e86bd121be2156027a32d8299d0278e656d7968a92e379071",
+      "source": "function Iwe(e,n,s){if(s!==void 0)return s;if(n.autoUpdate!==void 0)return n.autoUpdate;if(n.source?.source===\"claudeai\")return!0;if(n.source?.source===\"pluginDirectory\")return!0;let r=e.toLowerCase();return w0e.has(r)&&!Pp.has(r)}",
+      "variable": false,
+      "boundary": null
+    },
+    {
+      "file": "chunk-nankzm0s.js",
+      "name": "uZ",
+      "start": 570262,
+      "endExclusive": 570318,
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "sha256": "054aadedcf81a8fa73b4e4ef9b6f77f1fd9742cb64fad1ef01db3722853a23e8",
+      "source": "function uZ(){return qoe()&&!a.FORCE_AUTOUPDATE_PLUGINS}",
+      "variable": false,
+      "boundary": "Existing local C shouldSkipPluginAutoupdate; not a replacement of original D/Ilr"
+    },
+    {
+      "file": "chunk-5e581hrd.js",
+      "name": "Q_",
+      "start": 6475,
+      "endExclusive": 6506,
+      "moduleSha256": "0f4475ac019952b923e3d3ae936d72b950cd56c21eb876295f50a90f9670d518",
+      "sha256": "054b766041080ce7b07d3be1070fc469058aac6b4e0821394988048f11cc0502",
+      "source": "function Q_(e){return Rn(w(e))}",
+      "variable": false,
+      "boundary": null
+    },
+    {
+      "file": "chunk-5e581hrd.js",
+      "name": "w",
+      "start": 6506,
+      "endExclusive": 11717,
+      "moduleSha256": "0f4475ac019952b923e3d3ae936d72b950cd56c21eb876295f50a90f9670d518",
+      "sha256": "2e81297c05234315a9af8bb4a8fc4bc623d65b11ac4f2370354338b11ee82f9d",
+      "source": "function w(e){switch(e.type){case\"generic-error\":return Ez(e.error);case\"path-not-found\":return`Path not found: ${sl(e.path)} (${ze(e.component)}${e.errno?`, ${ze(e.errno)}`:\"\"})`;case\"path-traversal\":return`Path escapes plugin directory: ${sl(e.path)} (${ze(e.component)})${e.reason?` \\u2014 ${sl(e.reason)}`:\"\"}`;case\"git-auth-failed\":return`Git authentication failed (${ze(e.authType)}): ${sl(e.gitUrl)}`;case\"git-timeout\":return`Git ${ze(e.operation)} timeout: ${sl(e.gitUrl)}`;case\"network-error\":return`Network error: ${sl(e.url)}${e.details?` - ${ze(e.details)}`:\"\"}`;case\"manifest-parse-error\":return`Manifest parse error: ${ze(e.parseError,500)} (in ${sl(e.manifestPath)})`;case\"manifest-validation-error\":return`Manifest validation failed: ${ze(e.validationErrors.join(\", \"),1000)} (in ${sl(e.manifestPath)})`;case\"plugin-not-found\":if(e.removedFromDirectory)return X6r(e.pluginId,e.directoryRenamedTo,e.directoryIdentityChanged===!0,e.directoryNotInstallableReason,e.registryReadFailed===!0);return`Plugin ${ze(e.pluginId)} not found in marketplace ${ze(e.marketplace)}`;case\"marketplace-not-found\":if(e.registrationHidden!==void 0){let n=`Marketplace ${ze(e.marketplace)} is added but ignored`;return e.registrationHiddenReason===void 0?`${n} (see the debug log)`:`${n}. ${la(gbt(e.registrationHiddenReason))}. ${la(Zxe[e.registrationHidden])}.`}return`Marketplace ${ze(e.marketplace)} not found`;case\"marketplace-load-failed\":if(e.directoryBlockedBy!==void 0)return fht(Bue(e)??e.source,e.directoryBlockedBy);if(uht(e))return`Plugin \"${ze(Bue(e)??e.source)}\" is not loaded: the Anthropic Directory's catalog is not on this machine yet.`;if(e.nameRefused)return lXn(e.marketplace);return`Marketplace ${ze(e.marketplace)} failed to load: ${ze(e.reason)}`;case\"mcp-config-invalid\":return`MCP server ${ze(e.serverName)} invalid: ${ze(e.validationError)}`;case\"hook-load-failed\":return`Hook load failed: ${ze(e.reason)}`;case\"component-load-failed\":return`${ze(e.component)} load failed from ${sl(e.path)}: ${ze(e.reason)}`;case\"mcpb-download-failed\":return`Failed to download MCPB from ${sl(e.url)}: ${ze(e.reason)}`;case\"mcpb-extract-failed\":return`Failed to extract MCPB ${sl(e.mcpbPath)}: ${ze(e.reason)}`;case\"mcpb-invalid-manifest\":return`MCPB manifest invalid at ${sl(e.mcpbPath)}: ${ze(e.validationError)}`;case\"lsp-config-invalid\":return`Plugin \"${ze(e.plugin)}\" has invalid LSP server config for \"${ze(e.serverName)}\": ${ze(e.validationError)}`;case\"lsp-server-start-failed\":return`Plugin \"${ze(e.plugin)}\" failed to start LSP server \"${ze(e.serverName)}\": ${ze(e.reason)}`;case\"lsp-server-crashed\":if(e.signal)return`Plugin \"${ze(e.plugin)}\" LSP server \"${ze(e.serverName)}\" crashed with signal ${e.signal}`;return`Plugin \"${ze(e.plugin)}\" LSP server \"${ze(e.serverName)}\" crashed with exit code ${e.exitCode??\"unknown\"}`;case\"lsp-request-timeout\":return`Plugin \"${ze(e.plugin)}\" LSP server \"${ze(e.serverName)}\" timed out on ${ze(e.method)} request after ${e.timeoutMs}ms`;case\"lsp-request-failed\":return`Plugin \"${ze(e.plugin)}\" LSP server \"${ze(e.serverName)}\" ${ze(e.method)} request failed: ${ze(e.error)}`;case\"marketplace-blocked-by-policy\":{let n=dXn(e);if(n!==null)return fht(e.plugin,n);if(e.blockedByBlocklist)return`Marketplace '${ze(e.marketplace)}' is blocked by enterprise policy`;return`Marketplace '${ze(e.marketplace)}' is not in the allowed marketplace list`}case\"dependency-unsatisfied\":{let n=na(\"plugin install\",e.dependency),i=e.reason===\"not-enabled\"?\"disabled \\u2014 enable it or remove the dependency\":`not installed \\u2014 ${n?`run \\`${n}\\`, or `:\"\"}check that its marketplace is added`;return`Dependency \"${ze(e.dependency)}\" is ${i}`}case\"dependency-version-unsatisfied\":return`Requires \"${ze(e.dependency)}\" ${ze(e.required)}, installed ${ze(e.installed??\"version unknown\")}`;case\"plugin-cache-miss\":if(e.registryReadFailed===!0)return`Plugin \"${ze(e.plugin)}\" is not loaded: installed_plugins.json could not be read, so its install could not be checked \\u2014 fix or restore installed_plugins.json in the plugins directory, then run /reload-plugins${e.installedListHeldNote===void 0?\"\":`. ${e.installedListHeldNote}`}`;return`Plugin \"${ze(e.plugin)}\" not cached at ${sl(e.installPath)} \\u2014 run /plugin to refresh${e.installedListHeldNote===void 0?\"\":`. ${e.installedListHeldNote}`}`;case\"plugin-not-installed\":{let n=na(\"plugin install\",e.source,\"--scope project\");if(e.installedListHeldNote!==void 0)return`Plugin \"${ze(e.plugin)}\" is enabled in project settings, but whether it is installed could not be checked. ${e.installedListHeldNote}`;return`Plugin \"${ze(e.plugin)}\" is enabled in project settings but isn't installed${n?` \\u2014 run \\`${n}\\``:\" \\u2014 install it at project scope (from /plugin or claude plugin install)\"}`}case\"autoupdate-deferred-entry-helper\":case\"autoupdate-disabled-by-policy\":return e.message;case\"autoupdate-blocked-by-pinner\":{let n=e.heldAt?` at ${sl(e.heldAt)}`:\"\",i=ze(e.blockedBy.join(\", \")),r=e.disabledPinners.length>0?` (note: ${ze(e.disabledPinners.join(\", \"))} ${e.disabledPinners.length===1?\"is\":\"are\"} currently disabled)`:\"\";return`Autoupdate held \"${ze(e.plugin)}\"${n} \\u2014 version constraint from ${i}${r}`}}}",
+      "variable": false,
+      "boundary": null
+    },
+    {
+      "file": "chunk-yv06fjzd.js",
+      "name": "Ny",
+      "start": 123988,
+      "endExclusive": 128461,
+      "moduleSha256": "5b7f64cf193ec3194f609ffa43d7a5c1c91295e32f6dc2d7d93102335e8353df",
+      "sha256": "1992159c863a04fb1ff7b657b24a00a1ab7acd8d33aeeb8a5e47ab9482d4567b",
+      "source": "function Ny(a){switch(a.type){case\"path-not-found\":return a.errno?`${ze(a.component)} path could not be checked: ${sl(a.path)} (${ze(a.errno)})`:`${ze(a.component)} path not found: ${sl(a.path)}`;case\"path-traversal\":return`${ze(a.component)} path escapes plugin directory: ${sl(a.path)}${a.reason?` \\u2014 ${sl(a.reason)}`:\"\"}`;case\"git-auth-failed\":return`Git ${a.authType.toUpperCase()} authentication failed for ${sl(a.gitUrl)}`;case\"git-timeout\":return`Git ${ze(a.operation)} timed out for ${sl(a.gitUrl)}`;case\"network-error\":return`Network error accessing ${sl(a.url)}${a.details?`: ${ze(a.details)}`:\"\"}`;case\"manifest-parse-error\":return`Failed to parse manifest at ${sl(a.manifestPath)}: ${ze(a.parseError,500)}`;case\"manifest-validation-error\":return`Invalid manifest at ${sl(a.manifestPath)}: ${ze(a.validationErrors.join(\", \"),1000)}`;case\"plugin-not-found\":if(a.removedFromDirectory)return X6r(a.pluginId,a.directoryRenamedTo,a.directoryIdentityChanged===!0,a.directoryNotInstallableReason,a.registryReadFailed===!0);return`Plugin \"${ze(a.pluginId)}\" not found in marketplace \"${ze(a.marketplace)}\"`;case\"marketplace-not-found\":return a.registryReadFailed?`Marketplace \"${ze(a.marketplace)}\": the marketplace registry could not be read`:a.registrationHidden?a.registrationHiddenReason===void 0?`Marketplace \"${ze(a.marketplace)}\" is added but ignored (see the debug log)`:`Marketplace \"${ze(a.marketplace)}\" is added but ignored. ${la(gbt(a.registrationHiddenReason))}`:`Marketplace \"${ze(a.marketplace)}\" not found`;case\"marketplace-load-failed\":if(a.directoryBlockedBy!==void 0||uht(a))return Q_(a);if(a.nameRefused)return lXn(a.marketplace);return`Failed to load marketplace \"${ze(a.marketplace)}\": ${ze(a.reason)}`;case\"mcp-config-invalid\":return`Invalid MCP server config for \"${ze(a.serverName)}\": ${ze(a.validationError)}`;case\"hook-load-failed\":return`Failed to load hooks from ${sl(a.hookPath)}: ${ze(a.reason)}`;case\"component-load-failed\":return`Failed to load ${ze(a.component)} from ${sl(a.path)}: ${ze(a.reason)}`;case\"mcpb-download-failed\":return`Failed to download MCPB from ${sl(a.url)}: ${ze(a.reason)}`;case\"mcpb-extract-failed\":return`Failed to extract MCPB ${sl(a.mcpbPath)}: ${ze(a.reason)}`;case\"mcpb-invalid-manifest\":return`MCPB manifest invalid at ${sl(a.mcpbPath)}: ${ze(a.validationError)}`;case\"marketplace-blocked-by-policy\":{let v=dXn(a);if(v!==null)return fht(void 0,v);return a.blockedByBlocklist?`Marketplace \"${ze(a.marketplace)}\" is blocked by enterprise policy`:`Marketplace \"${ze(a.marketplace)}\" is not in the allowed marketplace list`}case\"dependency-unsatisfied\":return a.reason===\"not-enabled\"?`Dependency \"${ze(a.dependency)}\" is disabled`:`Dependency \"${ze(a.dependency)}\" is not installed`;case\"dependency-version-unsatisfied\":return`Requires \"${ze(a.dependency)}\" ${ze(a.required)}, installed ${ze(a.installed??\"version unknown\")}`;case\"lsp-config-invalid\":return`Invalid LSP server config for \"${ze(a.serverName)}\": ${ze(a.validationError)}`;case\"lsp-server-start-failed\":return`LSP server \"${ze(a.serverName)}\" failed to start: ${ze(a.reason)}`;case\"lsp-server-crashed\":return a.signal?`LSP server \"${ze(a.serverName)}\" crashed with signal ${a.signal}`:`LSP server \"${ze(a.serverName)}\" crashed with exit code ${a.exitCode??\"unknown\"}`;case\"lsp-request-timeout\":return`LSP server \"${ze(a.serverName)}\" timed out on ${ze(a.method)} after ${a.timeoutMs}ms`;case\"lsp-request-failed\":return`LSP server \"${ze(a.serverName)}\" ${ze(a.method)} failed: ${ze(a.error)}`;case\"plugin-cache-miss\":if(a.registryReadFailed===!0)return`Plugin \"${ze(a.plugin)}\" is not loaded: installed_plugins.json could not be read, so its install could not be checked`;return`Plugin \"${ze(a.plugin)}\" not cached at ${sl(a.installPath)}`;case\"plugin-not-installed\":if(a.installedListHeldNote!==void 0)return`Plugin \"${ze(a.plugin)}\" is enabled in project settings, but whether it is installed could not be checked`;return`Plugin \"${ze(a.plugin)}\" is enabled in project settings but isn't installed here`;case\"autoupdate-deferred-entry-helper\":case\"autoupdate-disabled-by-policy\":return a.message;case\"autoupdate-blocked-by-pinner\":{let v=a.heldAt?` at ${sl(a.heldAt)}`:\"\",C=a.disabledPinners.length>0?` (${ze(a.disabledPinners.join(\", \"))} ${a.disabledPinners.length===1?\"is\":\"are\"} disabled)`:\"\";return`Autoupdate held${v} \\u2014 version constraint from ${ze(a.blockedBy.join(\", \"))}${C}`}case\"generic-error\":return Ez(a.error)}return Q_(a)}",
+      "variable": false,
+      "boundary": null
+    },
+    {
+      "file": "chunk-yv06fjzd.js",
+      "name": "_y",
+      "start": 128515,
+      "endExclusive": 133975,
+      "moduleSha256": "5b7f64cf193ec3194f609ffa43d7a5c1c91295e32f6dc2d7d93102335e8353df",
+      "sha256": "0bc78170569f71856742a3172fb45ebda2895e28f971dfbd2ac7988094f98a57",
+      "source": "function _y(a){switch(a.type){case\"path-not-found\":return a.errno?`Claude Code could not check this path (${ze(a.errno)}): look for a symlink pointing at itself, a broken network mount, or a permissions problem, then run /reload-plugins`:\"Check that the path in your manifest or marketplace config is correct\";case\"path-traversal\":return a.reason?\"Files a plugin declares must resolve to a location inside the plugin (or, for a local marketplace, inside the marketplace). If a symlink points elsewhere, replace it with a copy of the file or point Claude Code at the directory that holds the real files; if the path could not be resolved, check that every link in it exists and is readable\":'Paths in plugin.json must not use \"..\" to reference files outside the plugin directory';case\"git-auth-failed\":return a.authType===\"ssh\"?\"Configure SSH keys or use HTTPS URL instead\":\"Configure credentials or use SSH URL instead\";case\"git-timeout\":case\"network-error\":return\"Check your internet connection and try again\";case\"manifest-parse-error\":return\"Check manifest file syntax in the plugin directory\";case\"manifest-validation-error\":return\"Check manifest file follows the required schema\";case\"plugin-not-found\":if(a.removedFromDirectory){if(a.registryReadFailed===!0)return`Run /reload-plugins. If it is still not loaded, fix or restore installed_plugins.json in the plugins directory, then run it again${a.installedListHeldNote===void 0?\"\":`. ${a.installedListHeldNote}`}`;if(a.directoryRenamedTo?.length)return\"Uninstall it, then install it under its new name from /plugin \\u2192 Discover\";if(a.directoryNotInstallableReason!==void 0)return\"It loads again once the listing can be installed. Uninstall it if you no longer need it\";return a.directoryIdentityChanged?\"Uninstall it, then install the new listing if you want it\":\"Uninstall it. If you still need it, install it from another marketplace you trust\"}return`Plugin may not exist in marketplace \"${ze(a.marketplace)}\"`;case\"marketplace-not-found\":{let v=T2t(a);if(v!==void 0)return v;return a.registryReadFailed?\"Check known_marketplaces.json in the plugins directory, then run /reload-plugins\":a.registrationHidden?a.registrationHiddenReason===void 0?\"Remove and re-add the marketplace\":la(Zxe[a.registrationHidden]):a.availableMarketplaces.length>0?`Available marketplaces: ${ze(a.availableMarketplaces.join(\", \"))}`:\"Add the marketplace first using /plugin marketplace add\"}case\"mcp-config-invalid\":return\"Check MCP server configuration in .mcp.json or manifest\";case\"hook-load-failed\":return\"Check the plugin's hooks configuration and that its hooks file is readable\";case\"component-load-failed\":return`Check ${ze(a.component)} directory structure and file permissions`;case\"mcpb-download-failed\":return\"Check your internet connection and URL accessibility\";case\"mcpb-extract-failed\":return\"Verify the MCPB file is valid and not corrupted\";case\"mcpb-invalid-manifest\":return\"Contact the plugin author about the invalid manifest\";case\"marketplace-blocked-by-policy\":if(dXn(a)!==null)return\"Uninstall the plugins installed from it (/plugin \\u2192 Installed, or `claude plugin uninstall <plugin>`), or install them from a marketplace your organization allows\";if(a.blockedByBlocklist)return\"This marketplace source is explicitly blocked by your administrator\";return a.allowedSources.length>0?`Allowed sources: ${ze(a.allowedSources.join(\", \"))}`:\"Contact your administrator to configure allowed marketplace sources\";case\"dependency-unsatisfied\":return a.reason===\"not-enabled\"?`Enable \"${ze(a.dependency)}\" or uninstall \"${ze(a.plugin)}\"`:`Install \"${ze(a.dependency)}\" or uninstall \"${ze(a.plugin)}\"`;case\"dependency-version-unsatisfied\":return`Update \"${ze(a.dependency)}\" to satisfy ${ze(a.required)}, or uninstall \"${ze(a.plugin)}\"`;case\"lsp-config-invalid\":return\"Check LSP server configuration in the plugin manifest\";case\"lsp-server-start-failed\":case\"lsp-server-crashed\":case\"lsp-request-timeout\":case\"lsp-request-failed\":return\"Check LSP server logs with --debug for details\";case\"plugin-cache-miss\":{let v=a.installedListHeldNote===void 0?\"\":`. ${a.installedListHeldNote}`;if(a.registryReadFailed===!0)return`Fix or restore installed_plugins.json in the plugins directory, then run /reload-plugins${v}`;return`Run /plugin to refresh the plugin cache${v}`}case\"plugin-not-installed\":{if(a.installedListHeldNote!==void 0)return a.installedListHeldNote;let v=na(\"plugin install\",a.source,\"--scope project\");return v?`Run \\`${v}\\` to install it for this project`:\"Install it at project scope to fix this\"}case\"autoupdate-deferred-entry-helper\":case\"autoupdate-disabled-by-policy\":return null;case\"autoupdate-blocked-by-pinner\":{let v=a.disabledPinners.length>0?a.disabledPinners[0]:a.blockedBy[0];return v?`Update or uninstall \"${ze(v)}\" to unblock${a.disabledPinners.length>0?\" (it is currently disabled)\":\"\"}`:null}case\"marketplace-load-failed\":if(a.directoryBlockedBy!==void 0)return\"Uninstall it (/plugin \\u2192 Installed, or `claude plugin uninstall <plugin>`), or install it from a marketplace your organization allows\";if(uht(a))return pht;if(a.nameRefused)return i6o(a.marketplace,{declaredInSettings:a.nameRefusedDeclaredInSettings===!0});return a.reason===\"cache-miss\"?a.catalogReadFailed?\"The cached marketplace catalog could not be read; run /reload-plugins to refresh it\":\"Run /reload-plugins to refresh the marketplace cache\":null;case\"generic-error\":return null}let h=a;return null}",
+      "variable": false,
+      "boundary": null
+    }
+  ],
+  "rawModules": [
+    {
+      "file": "chunk-v77qmtr0.js",
+      "moduleSha256": "85d207b2dbaf94954ee1dbb789a1136838176b23614519f7fe785364764469ba",
+      "bytes": 13673
+    },
+    {
+      "file": "chunk-7b2vy2nw.js",
+      "moduleSha256": "a91b5fa48cd3ec7d2c3e62362c4d9b2e44ec608a8e31c9af0680f112f5c9e752",
+      "bytes": 3494
+    },
+    {
+      "file": "chunk-rj9er4xt.js",
+      "moduleSha256": "0cf224ca5bba08401ae7d9a3515918685644bacf1e61781bf067b12d0a2ab3be",
+      "bytes": 124255
+    },
+    {
+      "file": "chunk-nastk12x.js",
+      "moduleSha256": "90fb776678dabb1251197e762c1ab786d3030372f116cd52ed2f44a8d180fe25",
+      "bytes": 2155
+    },
+    {
+      "file": "chunk-f2cpzzp9.js",
+      "moduleSha256": "ecf059605929abc2d38c30fc6d3b5b0b69ef05c9d344e934443f320a48256dae",
+      "bytes": 1601421
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "bytes": 4409957
+    },
+    {
+      "file": "chunk-hrhfcbdv.js",
+      "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+      "bytes": 433955
+    },
+    {
+      "file": "chunk-nankzm0s.js",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "bytes": 706979
+    },
+    {
+      "file": "chunk-5e581hrd.js",
+      "moduleSha256": "0f4475ac019952b923e3d3ae936d72b950cd56c21eb876295f50a90f9670d518",
+      "bytes": 24251
+    },
+    {
+      "file": "chunk-yv06fjzd.js",
+      "moduleSha256": "5b7f64cf193ec3194f609ffa43d7a5c1c91295e32f6dc2d7d93102335e8353df",
+      "bytes": 242324
+    }
+  ],
+  "bodyRewriting": false,
+  "production": "actual Hlr D port → pluginAutoupdate.ts → one canonical getOriginalModsLifecycle287 namespace; full selected D/B/Ilr/Plr/j/O + wX/yGe/bi dependencies; Wot mounted actual REPL hook/caller same AppState/notification owner",
+  "scope": "Finite source contract. Shared dependency closure emitted by canonical hooks-lifecycle owner, not a second factory/cache and not all plugin lifecycle acceptance.",
+  "statelessDisplay": {
+    "functions": [
+      "Ny",
+      "_y"
+    ],
+    "bindings": {
+      "la": {
+        "file": "chunk-eske5nfz.js",
+        "name": "la"
+      },
+      "gbt": {
+        "file": "chunk-db6pdgvs.js",
+        "name": "gbt"
+      },
+      "Ez": {
+        "file": "chunk-db6pdgvs.js",
+        "name": "Ez"
+      },
+      "sl": {
+        "file": "chunk-db6pdgvs.js",
+        "name": "sl"
+      },
+      "ze": {
+        "file": "chunk-db6pdgvs.js",
+        "name": "ze"
+      },
+      "na": {
+        "file": "chunk-h0r6byca.js",
+        "name": "na"
+      },
+      "lXn": {
+        "file": "chunk-5e581hrd.js",
+        "name": "lXn"
+      },
+      "i6o": {
+        "file": "chunk-5e581hrd.js",
+        "name": "i6o"
+      },
+      "Zxe": {
+        "file": "chunk-5e581hrd.js",
+        "name": "Zxe"
+      },
+      "X6r": {
+        "file": "chunk-5e581hrd.js",
+        "name": "X6r"
+      },
+      "uht": {
+        "file": "chunk-5e581hrd.js",
+        "name": "uht"
+      },
+      "pht": {
+        "file": "chunk-5e581hrd.js",
+        "name": "pht"
+      },
+      "T2t": {
+        "file": "chunk-5e581hrd.js",
+        "name": "T2t"
+      },
+      "dXn": {
+        "file": "chunk-5e581hrd.js",
+        "name": "dXn"
+      },
+      "fht": {
+        "file": "chunk-5e581hrd.js",
+        "name": "fht"
+      },
+      "Q_": {
+        "file": "chunk-5e581hrd.js",
+        "name": "Q_"
+      }
+    },
+    "contract": "Exact pure original functions. All helpers resolve from same canonical namespaces; no second registry/listener/cache. Necessary new autoupdate error-type branches only; existing error UI switches untouched."
+  }
+}

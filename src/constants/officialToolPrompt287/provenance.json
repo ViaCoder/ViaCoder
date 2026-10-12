@@ -1,0 +1,1009 @@
+{
+  "version": "2.1.287",
+  "offsetUnit": "UTF-16 code units",
+  "scope": "Complete tool section, bullet helper, literal tool names. REPL/embedded runtime selection are source-qualified host ports; not the whole prompt composer.",
+  "platforms": [
+    {
+      "platform": "darwin-arm64",
+      "file": "chunk-mphp7acd.js",
+      "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "moduleLength": 4409957,
+      "rows": [
+        {
+          "role": "tools",
+          "file": "chunk-mphp7acd.js",
+          "name": "Bao",
+          "alias": "Bao",
+          "start": 1435266,
+          "end": 1436582,
+          "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+          "moduleLength": 4409957,
+          "source": "function Bao(e){let n=[PE,fk].find((w)=>e.has(w));if(gM()){let w=[n?`Break down and manage your work with the ${n} tool. These tools are helpful for planning your work and helping the user track your progress. Mark each task as completed as soon as you are done with the task. Do not batch up multiple tasks before marking them as completed.`:null].filter((D)=>D!==null);if(w.length===0)return\"\";return[\"# Using your tools\",...Sm(w)].join(`\n`)}let r=bE(),s=e.has(Ue),g=s?Ue:wt,h=[dt,Ot,Sn,...r&&s?[]:[co,Jr]].join(\", \"),b=[`Prefer dedicated tools over ${g} when one fits (${h}) \\u2014 reserve ${g} for shell-only operations.`,n?`Use ${n} to plan and track work. Mark each task completed as soon as it's done; don't batch.`:null,\"You can call multiple tools in a single response. If you intend to call multiple tools and there are no dependencies between them, make all independent tool calls in parallel. Maximize use of parallel tool calls where possible to increase efficiency. However, if some tool calls depend on previous calls to inform dependent values, do NOT call these tools in parallel and instead call them sequentially. For instance, if one operation must complete before another starts, run these operations sequentially instead.\"].filter((w)=>w!==null);return[\"# Using your tools\",...Sm(b)].join(`\n`)}",
+          "sha256": "2c92bdb18874b8afabfab056c81a25683064e07fbd0cec4bdf3fe14d592c3cfd",
+          "variable": false
+        },
+        {
+          "role": "bullets",
+          "file": "chunk-mphp7acd.js",
+          "name": "Sm",
+          "alias": "Sm",
+          "start": 123554,
+          "end": 123644,
+          "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+          "moduleLength": 4409957,
+          "source": "function Sm(e){return e.flatMap((n)=>Array.isArray(n)?n.map((r)=>`  - ${r}`):[` - ${n}`])}",
+          "sha256": "6e6a73ea4df6e79dd7a455c4df0261cc478f62aca74e3752394615a84f7ef579",
+          "variable": false
+        },
+        {
+          "role": "toolName",
+          "file": "chunk-710jgjjk.js",
+          "name": "PE",
+          "alias": "PE",
+          "start": 3570,
+          "end": 3585,
+          "moduleSha256": "7d925d4f9a944e843bbc1da51383ec9e5ef6dccd9493246ab023d306323584db",
+          "moduleLength": 14275,
+          "source": "PE=\"TaskCreate\"",
+          "sha256": "421493dd7c7be782f918a0cef138ee26b5037ee1dc82dfd3750893a1816d2ad7",
+          "variable": true
+        },
+        {
+          "role": "toolName",
+          "file": "chunk-710jgjjk.js",
+          "name": "fk",
+          "alias": "fk",
+          "start": 3590,
+          "end": 3604,
+          "moduleSha256": "7d925d4f9a944e843bbc1da51383ec9e5ef6dccd9493246ab023d306323584db",
+          "moduleLength": 14275,
+          "source": "fk=\"TodoWrite\"",
+          "sha256": "d3ab343b6e7aeecdd25884783284fa83244bf566e605a10db6cbded0ff82a2b5",
+          "variable": true
+        },
+        {
+          "role": "toolName",
+          "file": "chunk-xep95vq1.js",
+          "name": "Ue",
+          "alias": "Ue",
+          "start": 612063,
+          "end": 612072,
+          "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+          "moduleLength": 613574,
+          "source": "Ue=\"Bash\"",
+          "sha256": "4d2969737eb3d231b5dc1f2bebe3bdc6bc17bfc86df631970b20305f0f6156a4",
+          "variable": true
+        },
+        {
+          "role": "toolName",
+          "file": "chunk-xep95vq1.js",
+          "name": "wt",
+          "alias": "wt",
+          "start": 612077,
+          "end": 612092,
+          "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+          "moduleLength": 613574,
+          "source": "wt=\"PowerShell\"",
+          "sha256": "fbab0bf9df08fdb518b733caae2096712e70bdd28ef9a54dde6d673c1bad2583",
+          "variable": true
+        },
+        {
+          "role": "toolName",
+          "file": "chunk-z82saar5.js",
+          "name": "dt",
+          "alias": "dt",
+          "start": 639,
+          "end": 648,
+          "moduleSha256": "e664260818573420edcf2f3ddf740d60c4fb80022c37e4395ca4149564144c89",
+          "moduleLength": 804,
+          "source": "dt=\"Read\"",
+          "sha256": "27f1d287576b018c956d83abf288caeb99d9a700d5025fe6776bd58bc642e8b2",
+          "variable": true
+        },
+        {
+          "role": "toolName",
+          "file": "chunk-xep95vq1.js",
+          "name": "Ot",
+          "alias": "Ot",
+          "start": 168551,
+          "end": 168560,
+          "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+          "moduleLength": 613574,
+          "source": "Ot=\"Edit\"",
+          "sha256": "95641327de05ccbef6120536af46a6b2e70c3411b9dcfa74dff7d74e682f9a09",
+          "variable": true
+        },
+        {
+          "role": "toolName",
+          "file": "chunk-xep95vq1.js",
+          "name": "Sn",
+          "alias": "Sn",
+          "start": 169197,
+          "end": 169207,
+          "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+          "moduleLength": 613574,
+          "source": "Sn=\"Write\"",
+          "sha256": "de78159d4beea3160b38f892dda12b0db3dea5b1ca2ea56d7743d89e77999ad5",
+          "variable": true
+        },
+        {
+          "role": "toolName",
+          "file": "chunk-nankzm0s.js",
+          "name": "co",
+          "alias": "co",
+          "start": 436112,
+          "end": 436121,
+          "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+          "moduleLength": 706979,
+          "source": "co=\"Glob\"",
+          "sha256": "1138fd83a5ce15530a92aff1c7e5a907cf0613b28cbe535cc1bf2247670ad3e6",
+          "variable": true
+        },
+        {
+          "role": "toolName",
+          "file": "chunk-nankzm0s.js",
+          "name": "Jr",
+          "alias": "Jr",
+          "start": 436126,
+          "end": 436135,
+          "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+          "moduleLength": 706979,
+          "source": "Jr=\"Grep\"",
+          "sha256": "662c80a7551527dc437d08113b20fe201599043d6916763eb8013b7055390746",
+          "variable": true
+        }
+      ],
+      "ports": {
+        "repl": "gM",
+        "embeddedSearch": "bE"
+      },
+      "portOrigins": {
+        "gM": {
+          "file": "chunk-t2h010j6.js",
+          "name": "gM"
+        },
+        "bE": {
+          "file": "chunk-mphp7acd.js",
+          "name": "bE",
+          "source": "function bE(){if(!Le(\"true\"))return!1;if(Neo())return!1;return a.CLAUDE_CODE_ENTRYPOINT!==\"local-agent\"}"
+        }
+      }
+    },
+    {
+      "platform": "darwin-x64",
+      "file": "chunk-xyr63zg5.js",
+      "manifestSha256": "ba9e122d28e8a42927eb23c7c86b62295f24a223546ee5476e761837579a709b",
+      "moduleSha256": "350a58d418914413ef2b573f1feee859c944ad06217c830e64e8c65f161cdeed",
+      "moduleLength": 4409285,
+      "rows": [
+        {
+          "role": "tools",
+          "file": "chunk-xyr63zg5.js",
+          "name": "Bao",
+          "alias": "Bao",
+          "start": 1434958,
+          "end": 1436274,
+          "moduleSha256": "350a58d418914413ef2b573f1feee859c944ad06217c830e64e8c65f161cdeed",
+          "moduleLength": 4409285,
+          "source": "function Bao(e){let n=[HE,fT].find((w)=>e.has(w));if(gM()){let w=[n?`Break down and manage your work with the ${n} tool. These tools are helpful for planning your work and helping the user track your progress. Mark each task as completed as soon as you are done with the task. Do not batch up multiple tasks before marking them as completed.`:null].filter((L)=>L!==null);if(w.length===0)return\"\";return[\"# Using your tools\",...vm(w)].join(`\n`)}let r=bE(),s=e.has(Ue),g=s?Ue:wt,h=[dt,Pt,Sn,...r&&s?[]:[co,Jr]].join(\", \"),b=[`Prefer dedicated tools over ${g} when one fits (${h}) \\u2014 reserve ${g} for shell-only operations.`,n?`Use ${n} to plan and track work. Mark each task completed as soon as it's done; don't batch.`:null,\"You can call multiple tools in a single response. If you intend to call multiple tools and there are no dependencies between them, make all independent tool calls in parallel. Maximize use of parallel tool calls where possible to increase efficiency. However, if some tool calls depend on previous calls to inform dependent values, do NOT call these tools in parallel and instead call them sequentially. For instance, if one operation must complete before another starts, run these operations sequentially instead.\"].filter((w)=>w!==null);return[\"# Using your tools\",...vm(b)].join(`\n`)}",
+          "sha256": "8ba48ee405435f63da61bd6b84ad72def6730de0712291591305fdcbde65d404",
+          "variable": false
+        },
+        {
+          "role": "bullets",
+          "file": "chunk-xyr63zg5.js",
+          "name": "vm",
+          "alias": "vm",
+          "start": 123498,
+          "end": 123588,
+          "moduleSha256": "350a58d418914413ef2b573f1feee859c944ad06217c830e64e8c65f161cdeed",
+          "moduleLength": 4409285,
+          "source": "function vm(e){return e.flatMap((n)=>Array.isArray(n)?n.map((r)=>`  - ${r}`):[` - ${n}`])}",
+          "sha256": "2ffa0339cf25c56d6971920fde013ac1b652af3d8693952d3cec7c102384b5aa",
+          "variable": false
+        },
+        {
+          "role": "toolName",
+          "file": "chunk-qs6gk6ze.js",
+          "name": "HE",
+          "alias": "HE",
+          "start": 3570,
+          "end": 3585,
+          "moduleSha256": "57187ff9d7f07e55519ba9744b4b717af12c9badd106648ac6d75439735184cd",
+          "moduleLength": 14275,
+          "source": "HE=\"TaskCreate\"",
+          "sha256": "97d2c72d554e26cb625bb4e3715e94958e545cdfc9a5e6a3c68061498662655f",
+          "variable": true
+        },
+        {
+          "role": "toolName",
+          "file": "chunk-qs6gk6ze.js",
+          "name": "fT",
+          "alias": "fT",
+          "start": 3590,
+          "end": 3604,
+          "moduleSha256": "57187ff9d7f07e55519ba9744b4b717af12c9badd106648ac6d75439735184cd",
+          "moduleLength": 14275,
+          "source": "fT=\"TodoWrite\"",
+          "sha256": "8decd98de978cdbbbac5be08c74c656e4eabc96ae07fb56d28daa3aeb60cb2a8",
+          "variable": true
+        },
+        {
+          "role": "toolName",
+          "file": "chunk-1484hydp.js",
+          "name": "Ue",
+          "alias": "Ue",
+          "start": 612063,
+          "end": 612072,
+          "moduleSha256": "4cccb99a67ed5ad0ca7df1965914230508b9be4e8d079175a17b465d84f83c22",
+          "moduleLength": 613574,
+          "source": "Ue=\"Bash\"",
+          "sha256": "4d2969737eb3d231b5dc1f2bebe3bdc6bc17bfc86df631970b20305f0f6156a4",
+          "variable": true
+        },
+        {
+          "role": "toolName",
+          "file": "chunk-1484hydp.js",
+          "name": "wt",
+          "alias": "wt",
+          "start": 612077,
+          "end": 612092,
+          "moduleSha256": "4cccb99a67ed5ad0ca7df1965914230508b9be4e8d079175a17b465d84f83c22",
+          "moduleLength": 613574,
+          "source": "wt=\"PowerShell\"",
+          "sha256": "fbab0bf9df08fdb518b733caae2096712e70bdd28ef9a54dde6d673c1bad2583",
+          "variable": true
+        },
+        {
+          "role": "toolName",
+          "file": "chunk-qnsmbv93.js",
+          "name": "dt",
+          "alias": "dt",
+          "start": 639,
+          "end": 648,
+          "moduleSha256": "d576c288bc24d5322835895f26fdfad6aab3ccf85102cd32f6908f99b21ebfd0",
+          "moduleLength": 804,
+          "source": "dt=\"Read\"",
+          "sha256": "27f1d287576b018c956d83abf288caeb99d9a700d5025fe6776bd58bc642e8b2",
+          "variable": true
+        },
+        {
+          "role": "toolName",
+          "file": "chunk-1484hydp.js",
+          "name": "Pt",
+          "alias": "Pt",
+          "start": 168551,
+          "end": 168560,
+          "moduleSha256": "4cccb99a67ed5ad0ca7df1965914230508b9be4e8d079175a17b465d84f83c22",
+          "moduleLength": 613574,
+          "source": "Pt=\"Edit\"",
+          "sha256": "6c0540817dac3c9a8025a79bfa1c0f16a2333c5feca14f3dbdaa18a15ca91e8c",
+          "variable": true
+        },
+        {
+          "role": "toolName",
+          "file": "chunk-1484hydp.js",
+          "name": "Sn",
+          "alias": "Sn",
+          "start": 169197,
+          "end": 169207,
+          "moduleSha256": "4cccb99a67ed5ad0ca7df1965914230508b9be4e8d079175a17b465d84f83c22",
+          "moduleLength": 613574,
+          "source": "Sn=\"Write\"",
+          "sha256": "de78159d4beea3160b38f892dda12b0db3dea5b1ca2ea56d7743d89e77999ad5",
+          "variable": true
+        },
+        {
+          "role": "toolName",
+          "file": "chunk-j825n4z9.js",
+          "name": "co",
+          "alias": "co",
+          "start": 436028,
+          "end": 436037,
+          "moduleSha256": "44acfb339cd1323b1a59ae7dcbd3efbcacb183bc5f4043b0e2d52e1511ac113f",
+          "moduleLength": 706559,
+          "source": "co=\"Glob\"",
+          "sha256": "1138fd83a5ce15530a92aff1c7e5a907cf0613b28cbe535cc1bf2247670ad3e6",
+          "variable": true
+        },
+        {
+          "role": "toolName",
+          "file": "chunk-j825n4z9.js",
+          "name": "Jr",
+          "alias": "Jr",
+          "start": 436042,
+          "end": 436051,
+          "moduleSha256": "44acfb339cd1323b1a59ae7dcbd3efbcacb183bc5f4043b0e2d52e1511ac113f",
+          "moduleLength": 706559,
+          "source": "Jr=\"Grep\"",
+          "sha256": "662c80a7551527dc437d08113b20fe201599043d6916763eb8013b7055390746",
+          "variable": true
+        }
+      ],
+      "ports": {
+        "repl": "gM",
+        "embeddedSearch": "bE"
+      },
+      "portOrigins": {
+        "gM": {
+          "file": "chunk-qwkjje3k.js",
+          "name": "gM"
+        },
+        "bE": {
+          "file": "chunk-xyr63zg5.js",
+          "name": "bE",
+          "source": "function bE(){if(!De(\"true\"))return!1;if(Neo())return!1;return a.CLAUDE_CODE_ENTRYPOINT!==\"local-agent\"}"
+        }
+      }
+    },
+    {
+      "platform": "linux-arm64",
+      "file": "chunk-gakypdfc.js",
+      "manifestSha256": "f3be5b23f9cbb909555fe028143b9a3a40c1e3e49961e09c49d8e5a6b61ae83b",
+      "moduleSha256": "a9a2bc50c519b09d776b68b9852839e84acbebec53deb2438e96d73f52e56db3",
+      "moduleLength": 4409403,
+      "rows": [
+        {
+          "role": "tools",
+          "file": "chunk-gakypdfc.js",
+          "name": "Hao",
+          "alias": "Hao",
+          "start": 1434921,
+          "end": 1436237,
+          "moduleSha256": "a9a2bc50c519b09d776b68b9852839e84acbebec53deb2438e96d73f52e56db3",
+          "moduleLength": 4409403,
+          "source": "function Hao(e){let n=[Av,uC].find((w)=>e.has(w));if(dN()){let w=[n?`Break down and manage your work with the ${n} tool. These tools are helpful for planning your work and helping the user track your progress. Mark each task as completed as soon as you are done with the task. Do not batch up multiple tasks before marking them as completed.`:null].filter((D)=>D!==null);if(w.length===0)return\"\";return[\"# Using your tools\",...bm(w)].join(`\n`)}let r=_v(),s=e.has(Be),g=s?Be:St,h=[dt,It,bn,...r&&s?[]:[co,Jr]].join(\", \"),S=[`Prefer dedicated tools over ${g} when one fits (${h}) \\u2014 reserve ${g} for shell-only operations.`,n?`Use ${n} to plan and track work. Mark each task completed as soon as it's done; don't batch.`:null,\"You can call multiple tools in a single response. If you intend to call multiple tools and there are no dependencies between them, make all independent tool calls in parallel. Maximize use of parallel tool calls where possible to increase efficiency. However, if some tool calls depend on previous calls to inform dependent values, do NOT call these tools in parallel and instead call them sequentially. For instance, if one operation must complete before another starts, run these operations sequentially instead.\"].filter((w)=>w!==null);return[\"# Using your tools\",...bm(S)].join(`\n`)}",
+          "sha256": "cefde283de0dc8464a5dea5e823614a6f41184e0543410b80e49428dbc719f54",
+          "variable": false
+        },
+        {
+          "role": "bullets",
+          "file": "chunk-gakypdfc.js",
+          "name": "bm",
+          "alias": "bm",
+          "start": 123452,
+          "end": 123542,
+          "moduleSha256": "a9a2bc50c519b09d776b68b9852839e84acbebec53deb2438e96d73f52e56db3",
+          "moduleLength": 4409403,
+          "source": "function bm(e){return e.flatMap((n)=>Array.isArray(n)?n.map((r)=>`  - ${r}`):[` - ${n}`])}",
+          "sha256": "202e697b41f8dedb4f3e8bb4bfc3516d4f7c1ae0e96ced9597fb3de2b017924f",
+          "variable": false
+        },
+        {
+          "role": "toolName",
+          "file": "chunk-ehjw0a61.js",
+          "name": "Av",
+          "alias": "Av",
+          "start": 3570,
+          "end": 3585,
+          "moduleSha256": "d99b29337d7fdd7616f924d8ae474174b5f72d797cccf6e3b18d0c0a37c7f9dc",
+          "moduleLength": 14275,
+          "source": "Av=\"TaskCreate\"",
+          "sha256": "fc25cf999248515d53e64a532750d34893f0c77968c49391674606491dd51685",
+          "variable": true
+        },
+        {
+          "role": "toolName",
+          "file": "chunk-ehjw0a61.js",
+          "name": "uC",
+          "alias": "uC",
+          "start": 3590,
+          "end": 3604,
+          "moduleSha256": "d99b29337d7fdd7616f924d8ae474174b5f72d797cccf6e3b18d0c0a37c7f9dc",
+          "moduleLength": 14275,
+          "source": "uC=\"TodoWrite\"",
+          "sha256": "fb5c27ff8a6306ee1e4fc0cbfdd48ba959b2dc75f7160b870cb473a893b931a1",
+          "variable": true
+        },
+        {
+          "role": "toolName",
+          "file": "chunk-vh9qcyhh.js",
+          "name": "Be",
+          "alias": "Be",
+          "start": 612266,
+          "end": 612275,
+          "moduleSha256": "285555d8215beda82381e3f97531e7533b907993241a89acdf8a54d1873f3845",
+          "moduleLength": 613778,
+          "source": "Be=\"Bash\"",
+          "sha256": "78f76a2a8c5e35f845274a8952670bc56f73e54b0dc48b89a51bf821d0c0edbc",
+          "variable": true
+        },
+        {
+          "role": "toolName",
+          "file": "chunk-vh9qcyhh.js",
+          "name": "St",
+          "alias": "St",
+          "start": 612280,
+          "end": 612295,
+          "moduleSha256": "285555d8215beda82381e3f97531e7533b907993241a89acdf8a54d1873f3845",
+          "moduleLength": 613778,
+          "source": "St=\"PowerShell\"",
+          "sha256": "4e4753306e999e0e3b071dcbd37745d700f70feb706d5cc2c11ee996ac949cf1",
+          "variable": true
+        },
+        {
+          "role": "toolName",
+          "file": "chunk-1gk3cdvc.js",
+          "name": "dt",
+          "alias": "dt",
+          "start": 639,
+          "end": 648,
+          "moduleSha256": "327f97dcca4810e5938d9b118159e484ad797eabb2f1c7187f70ea6d01aa91ab",
+          "moduleLength": 804,
+          "source": "dt=\"Read\"",
+          "sha256": "27f1d287576b018c956d83abf288caeb99d9a700d5025fe6776bd58bc642e8b2",
+          "variable": true
+        },
+        {
+          "role": "toolName",
+          "file": "chunk-vh9qcyhh.js",
+          "name": "It",
+          "alias": "It",
+          "start": 168753,
+          "end": 168762,
+          "moduleSha256": "285555d8215beda82381e3f97531e7533b907993241a89acdf8a54d1873f3845",
+          "moduleLength": 613778,
+          "source": "It=\"Edit\"",
+          "sha256": "e423939e0858d7875046c27b169b20b7e759a005565dd337ad68ac987fa14791",
+          "variable": true
+        },
+        {
+          "role": "toolName",
+          "file": "chunk-vh9qcyhh.js",
+          "name": "bn",
+          "alias": "bn",
+          "start": 169399,
+          "end": 169409,
+          "moduleSha256": "285555d8215beda82381e3f97531e7533b907993241a89acdf8a54d1873f3845",
+          "moduleLength": 613778,
+          "source": "bn=\"Write\"",
+          "sha256": "c253ecaae2d1bfe49ff1e4c47835f9c24b081ae63f2ef98f4efacd5315b95ae0",
+          "variable": true
+        },
+        {
+          "role": "toolName",
+          "file": "chunk-g77csgy5.js",
+          "name": "co",
+          "alias": "co",
+          "start": 436120,
+          "end": 436129,
+          "moduleSha256": "4835e14445bc039be98296d558b8319aa9783d4ce2e83ad50b153d5717f6d306",
+          "moduleLength": 705753,
+          "source": "co=\"Glob\"",
+          "sha256": "1138fd83a5ce15530a92aff1c7e5a907cf0613b28cbe535cc1bf2247670ad3e6",
+          "variable": true
+        },
+        {
+          "role": "toolName",
+          "file": "chunk-g77csgy5.js",
+          "name": "Jr",
+          "alias": "Jr",
+          "start": 436134,
+          "end": 436143,
+          "moduleSha256": "4835e14445bc039be98296d558b8319aa9783d4ce2e83ad50b153d5717f6d306",
+          "moduleLength": 705753,
+          "source": "Jr=\"Grep\"",
+          "sha256": "662c80a7551527dc437d08113b20fe201599043d6916763eb8013b7055390746",
+          "variable": true
+        }
+      ],
+      "ports": {
+        "repl": "dN",
+        "embeddedSearch": "_v"
+      },
+      "portOrigins": {
+        "dN": {
+          "file": "chunk-0evsm659.js",
+          "name": "dN"
+        },
+        "_v": {
+          "file": "chunk-gakypdfc.js",
+          "name": "_v",
+          "source": "function _v(){if(!Le(\"true\"))return!1;if(leo())return!1;return a.CLAUDE_CODE_ENTRYPOINT!==\"local-agent\"}"
+        }
+      }
+    },
+    {
+      "platform": "linux-x64",
+      "file": "chunk-jrjyjez0.js",
+      "manifestSha256": "ecae5d9ddbf13ef27b6b6a1141953aab4ba311e47dde3ac2a7cc8b5a01c63784",
+      "moduleSha256": "910de0d981a1b620b1866ae5ca44f40dc05f06f1b2205bbb9c8dccf58d5c468e",
+      "moduleLength": 4410099,
+      "rows": [
+        {
+          "role": "tools",
+          "file": "chunk-jrjyjez0.js",
+          "name": "Hao",
+          "alias": "Hao",
+          "start": 1435240,
+          "end": 1436556,
+          "moduleSha256": "910de0d981a1b620b1866ae5ca44f40dc05f06f1b2205bbb9c8dccf58d5c468e",
+          "moduleLength": 4410099,
+          "source": "function Hao(e){let n=[Rv,uC].find((w)=>e.has(w));if(dD()){let w=[n?`Break down and manage your work with the ${n} tool. These tools are helpful for planning your work and helping the user track your progress. Mark each task as completed as soon as you are done with the task. Do not batch up multiple tasks before marking them as completed.`:null].filter((H)=>H!==null);if(w.length===0)return\"\";return[\"# Using your tools\",...vm(w)].join(`\n`)}let r=_v(),s=e.has(Ue),g=s?Ue:St,h=[dt,Ot,bn,...r&&s?[]:[co,Jr]].join(\", \"),S=[`Prefer dedicated tools over ${g} when one fits (${h}) \\u2014 reserve ${g} for shell-only operations.`,n?`Use ${n} to plan and track work. Mark each task completed as soon as it's done; don't batch.`:null,\"You can call multiple tools in a single response. If you intend to call multiple tools and there are no dependencies between them, make all independent tool calls in parallel. Maximize use of parallel tool calls where possible to increase efficiency. However, if some tool calls depend on previous calls to inform dependent values, do NOT call these tools in parallel and instead call them sequentially. For instance, if one operation must complete before another starts, run these operations sequentially instead.\"].filter((w)=>w!==null);return[\"# Using your tools\",...vm(S)].join(`\n`)}",
+          "sha256": "5333953ee8fea4a586a05eef86f922f100894d7ec3b493243d634a2b57b68f5b",
+          "variable": false
+        },
+        {
+          "role": "bullets",
+          "file": "chunk-jrjyjez0.js",
+          "name": "vm",
+          "alias": "vm",
+          "start": 123510,
+          "end": 123600,
+          "moduleSha256": "910de0d981a1b620b1866ae5ca44f40dc05f06f1b2205bbb9c8dccf58d5c468e",
+          "moduleLength": 4410099,
+          "source": "function vm(e){return e.flatMap((n)=>Array.isArray(n)?n.map((r)=>`  - ${r}`):[` - ${n}`])}",
+          "sha256": "2ffa0339cf25c56d6971920fde013ac1b652af3d8693952d3cec7c102384b5aa",
+          "variable": false
+        },
+        {
+          "role": "toolName",
+          "file": "chunk-pgss11qg.js",
+          "name": "Rv",
+          "alias": "Rv",
+          "start": 3570,
+          "end": 3585,
+          "moduleSha256": "27680648564d11e5c8a6aa67f49ec4627f47a92e36ebacb69cff6566e491dfc3",
+          "moduleLength": 14275,
+          "source": "Rv=\"TaskCreate\"",
+          "sha256": "7ccf0a3ca4c5f2ed84d8cf853974ca1ff9ad028390851f72be056b56b89d9619",
+          "variable": true
+        },
+        {
+          "role": "toolName",
+          "file": "chunk-pgss11qg.js",
+          "name": "uC",
+          "alias": "uC",
+          "start": 3590,
+          "end": 3604,
+          "moduleSha256": "27680648564d11e5c8a6aa67f49ec4627f47a92e36ebacb69cff6566e491dfc3",
+          "moduleLength": 14275,
+          "source": "uC=\"TodoWrite\"",
+          "sha256": "fb5c27ff8a6306ee1e4fc0cbfdd48ba959b2dc75f7160b870cb473a893b931a1",
+          "variable": true
+        },
+        {
+          "role": "toolName",
+          "file": "chunk-mw1vp1ye.js",
+          "name": "Ue",
+          "alias": "Ue",
+          "start": 612266,
+          "end": 612275,
+          "moduleSha256": "d0396c7a9eab44dbcea047b68d68582e12379a70c2e90d5d89f6d0a29d271881",
+          "moduleLength": 613778,
+          "source": "Ue=\"Bash\"",
+          "sha256": "4d2969737eb3d231b5dc1f2bebe3bdc6bc17bfc86df631970b20305f0f6156a4",
+          "variable": true
+        },
+        {
+          "role": "toolName",
+          "file": "chunk-mw1vp1ye.js",
+          "name": "St",
+          "alias": "St",
+          "start": 612280,
+          "end": 612295,
+          "moduleSha256": "d0396c7a9eab44dbcea047b68d68582e12379a70c2e90d5d89f6d0a29d271881",
+          "moduleLength": 613778,
+          "source": "St=\"PowerShell\"",
+          "sha256": "4e4753306e999e0e3b071dcbd37745d700f70feb706d5cc2c11ee996ac949cf1",
+          "variable": true
+        },
+        {
+          "role": "toolName",
+          "file": "chunk-vv128tk2.js",
+          "name": "dt",
+          "alias": "dt",
+          "start": 639,
+          "end": 648,
+          "moduleSha256": "08aae7989cb8af8aee5892a64e7c12a2837ff8e307048b1cc4b9ae82229ce594",
+          "moduleLength": 804,
+          "source": "dt=\"Read\"",
+          "sha256": "27f1d287576b018c956d83abf288caeb99d9a700d5025fe6776bd58bc642e8b2",
+          "variable": true
+        },
+        {
+          "role": "toolName",
+          "file": "chunk-mw1vp1ye.js",
+          "name": "Ot",
+          "alias": "Ot",
+          "start": 168753,
+          "end": 168762,
+          "moduleSha256": "d0396c7a9eab44dbcea047b68d68582e12379a70c2e90d5d89f6d0a29d271881",
+          "moduleLength": 613778,
+          "source": "Ot=\"Edit\"",
+          "sha256": "95641327de05ccbef6120536af46a6b2e70c3411b9dcfa74dff7d74e682f9a09",
+          "variable": true
+        },
+        {
+          "role": "toolName",
+          "file": "chunk-mw1vp1ye.js",
+          "name": "bn",
+          "alias": "bn",
+          "start": 169399,
+          "end": 169409,
+          "moduleSha256": "d0396c7a9eab44dbcea047b68d68582e12379a70c2e90d5d89f6d0a29d271881",
+          "moduleLength": 613778,
+          "source": "bn=\"Write\"",
+          "sha256": "c253ecaae2d1bfe49ff1e4c47835f9c24b081ae63f2ef98f4efacd5315b95ae0",
+          "variable": true
+        },
+        {
+          "role": "toolName",
+          "file": "chunk-k985080f.js",
+          "name": "co",
+          "alias": "co",
+          "start": 436206,
+          "end": 436215,
+          "moduleSha256": "d6199404b28747162a26ebad430cd2da54bba9f337d9f6326241b38e313cf917",
+          "moduleLength": 706187,
+          "source": "co=\"Glob\"",
+          "sha256": "1138fd83a5ce15530a92aff1c7e5a907cf0613b28cbe535cc1bf2247670ad3e6",
+          "variable": true
+        },
+        {
+          "role": "toolName",
+          "file": "chunk-k985080f.js",
+          "name": "Jr",
+          "alias": "Jr",
+          "start": 436220,
+          "end": 436229,
+          "moduleSha256": "d6199404b28747162a26ebad430cd2da54bba9f337d9f6326241b38e313cf917",
+          "moduleLength": 706187,
+          "source": "Jr=\"Grep\"",
+          "sha256": "662c80a7551527dc437d08113b20fe201599043d6916763eb8013b7055390746",
+          "variable": true
+        }
+      ],
+      "ports": {
+        "repl": "dD",
+        "embeddedSearch": "_v"
+      },
+      "portOrigins": {
+        "dD": {
+          "file": "chunk-hgswh8h0.js",
+          "name": "dD"
+        },
+        "_v": {
+          "file": "chunk-jrjyjez0.js",
+          "name": "_v",
+          "source": "function _v(){if(!Le(\"true\"))return!1;if(leo())return!1;return a.CLAUDE_CODE_ENTRYPOINT!==\"local-agent\"}"
+        }
+      }
+    },
+    {
+      "platform": "win32-arm64",
+      "file": "chunk-2ta2c3j5.js",
+      "manifestSha256": "d0d8b3b882ba61ba321ab072b5cbc28a1a4089cfb4c5dce0698311aae10c739e",
+      "moduleSha256": "32e092a685dc008cceed15b87d7d176136d31fb5bfef7914adbcab1a5f152cba",
+      "moduleLength": 4409585,
+      "rows": [
+        {
+          "role": "tools",
+          "file": "chunk-2ta2c3j5.js",
+          "name": "Wao",
+          "alias": "Wao",
+          "start": 1434663,
+          "end": 1435979,
+          "moduleSha256": "32e092a685dc008cceed15b87d7d176136d31fb5bfef7914adbcab1a5f152cba",
+          "moduleLength": 4409585,
+          "source": "function Wao(e){let n=[Av,uR].find((w)=>e.has(w));if(fN()){let w=[n?`Break down and manage your work with the ${n} tool. These tools are helpful for planning your work and helping the user track your progress. Mark each task as completed as soon as you are done with the task. Do not batch up multiple tasks before marking them as completed.`:null].filter((D)=>D!==null);if(w.length===0)return\"\";return[\"# Using your tools\",...wm(w)].join(`\n`)}let r=_v(),s=e.has(Be),g=s?Be:St,h=[dt,Ot,bn,...r&&s?[]:[co,Jr]].join(\", \"),S=[`Prefer dedicated tools over ${g} when one fits (${h}) \\u2014 reserve ${g} for shell-only operations.`,n?`Use ${n} to plan and track work. Mark each task completed as soon as it's done; don't batch.`:null,\"You can call multiple tools in a single response. If you intend to call multiple tools and there are no dependencies between them, make all independent tool calls in parallel. Maximize use of parallel tool calls where possible to increase efficiency. However, if some tool calls depend on previous calls to inform dependent values, do NOT call these tools in parallel and instead call them sequentially. For instance, if one operation must complete before another starts, run these operations sequentially instead.\"].filter((w)=>w!==null);return[\"# Using your tools\",...wm(S)].join(`\n`)}",
+          "sha256": "ca290f35415627e81adaf62fd799813285f82ab1d845a505f57c2c465d5afb26",
+          "variable": false
+        },
+        {
+          "role": "bullets",
+          "file": "chunk-2ta2c3j5.js",
+          "name": "wm",
+          "alias": "wm",
+          "start": 123279,
+          "end": 123369,
+          "moduleSha256": "32e092a685dc008cceed15b87d7d176136d31fb5bfef7914adbcab1a5f152cba",
+          "moduleLength": 4409585,
+          "source": "function wm(e){return e.flatMap((n)=>Array.isArray(n)?n.map((r)=>`  - ${r}`):[` - ${n}`])}",
+          "sha256": "22fd7661483f7f5e02e9ebd63750867f51f66e9435e7f59b29fef4f022ef8efb",
+          "variable": false
+        },
+        {
+          "role": "toolName",
+          "file": "chunk-nvwjqxfd.js",
+          "name": "Av",
+          "alias": "Av",
+          "start": 3570,
+          "end": 3585,
+          "moduleSha256": "aa698bfbd1f983636879f620eb6d55ee170914c5a0cc8f802b43c122346aa3ab",
+          "moduleLength": 14275,
+          "source": "Av=\"TaskCreate\"",
+          "sha256": "fc25cf999248515d53e64a532750d34893f0c77968c49391674606491dd51685",
+          "variable": true
+        },
+        {
+          "role": "toolName",
+          "file": "chunk-nvwjqxfd.js",
+          "name": "uR",
+          "alias": "uR",
+          "start": 3590,
+          "end": 3604,
+          "moduleSha256": "aa698bfbd1f983636879f620eb6d55ee170914c5a0cc8f802b43c122346aa3ab",
+          "moduleLength": 14275,
+          "source": "uR=\"TodoWrite\"",
+          "sha256": "fee727a9d51bae573151ef518a26d830f824e97f03477a2c8b4de2ae93c539bc",
+          "variable": true
+        },
+        {
+          "role": "toolName",
+          "file": "chunk-ga85rfgd.js",
+          "name": "Be",
+          "alias": "Be",
+          "start": 611959,
+          "end": 611968,
+          "moduleSha256": "261c59d627aa643cce6cfcafcb18d489871b9c2a343aa8b9922b899aa8632088",
+          "moduleLength": 613471,
+          "source": "Be=\"Bash\"",
+          "sha256": "78f76a2a8c5e35f845274a8952670bc56f73e54b0dc48b89a51bf821d0c0edbc",
+          "variable": true
+        },
+        {
+          "role": "toolName",
+          "file": "chunk-ga85rfgd.js",
+          "name": "St",
+          "alias": "St",
+          "start": 611973,
+          "end": 611988,
+          "moduleSha256": "261c59d627aa643cce6cfcafcb18d489871b9c2a343aa8b9922b899aa8632088",
+          "moduleLength": 613471,
+          "source": "St=\"PowerShell\"",
+          "sha256": "4e4753306e999e0e3b071dcbd37745d700f70feb706d5cc2c11ee996ac949cf1",
+          "variable": true
+        },
+        {
+          "role": "toolName",
+          "file": "chunk-xhxakxsh.js",
+          "name": "dt",
+          "alias": "dt",
+          "start": 639,
+          "end": 648,
+          "moduleSha256": "714f339c88904096109ad1e10dc68a94bb17b6003e88dd8e510d6c35f75cb295",
+          "moduleLength": 804,
+          "source": "dt=\"Read\"",
+          "sha256": "27f1d287576b018c956d83abf288caeb99d9a700d5025fe6776bd58bc642e8b2",
+          "variable": true
+        },
+        {
+          "role": "toolName",
+          "file": "chunk-ga85rfgd.js",
+          "name": "Ot",
+          "alias": "Ot",
+          "start": 168446,
+          "end": 168455,
+          "moduleSha256": "261c59d627aa643cce6cfcafcb18d489871b9c2a343aa8b9922b899aa8632088",
+          "moduleLength": 613471,
+          "source": "Ot=\"Edit\"",
+          "sha256": "95641327de05ccbef6120536af46a6b2e70c3411b9dcfa74dff7d74e682f9a09",
+          "variable": true
+        },
+        {
+          "role": "toolName",
+          "file": "chunk-ga85rfgd.js",
+          "name": "bn",
+          "alias": "bn",
+          "start": 169092,
+          "end": 169102,
+          "moduleSha256": "261c59d627aa643cce6cfcafcb18d489871b9c2a343aa8b9922b899aa8632088",
+          "moduleLength": 613471,
+          "source": "bn=\"Write\"",
+          "sha256": "c253ecaae2d1bfe49ff1e4c47835f9c24b081ae63f2ef98f4efacd5315b95ae0",
+          "variable": true
+        },
+        {
+          "role": "toolName",
+          "file": "chunk-jzrab299.js",
+          "name": "co",
+          "alias": "co",
+          "start": 436020,
+          "end": 436029,
+          "moduleSha256": "9363128c17a7aa7a3eea09d61cd42d6a8773c0c2c0d563037ba1aa9152513549",
+          "moduleLength": 705581,
+          "source": "co=\"Glob\"",
+          "sha256": "1138fd83a5ce15530a92aff1c7e5a907cf0613b28cbe535cc1bf2247670ad3e6",
+          "variable": true
+        },
+        {
+          "role": "toolName",
+          "file": "chunk-jzrab299.js",
+          "name": "Jr",
+          "alias": "Jr",
+          "start": 436034,
+          "end": 436043,
+          "moduleSha256": "9363128c17a7aa7a3eea09d61cd42d6a8773c0c2c0d563037ba1aa9152513549",
+          "moduleLength": 705581,
+          "source": "Jr=\"Grep\"",
+          "sha256": "662c80a7551527dc437d08113b20fe201599043d6916763eb8013b7055390746",
+          "variable": true
+        }
+      ],
+      "ports": {
+        "repl": "fN",
+        "embeddedSearch": "_v"
+      },
+      "portOrigins": {
+        "fN": {
+          "file": "chunk-7063nx12.js",
+          "name": "fN"
+        },
+        "_v": {
+          "file": "chunk-2ta2c3j5.js",
+          "name": "_v",
+          "source": "function _v(){if(!Le(process.env.EMBEDDED_SEARCH_TOOLS))return!1;if(meo())return!1;return a.CLAUDE_CODE_ENTRYPOINT!==\"local-agent\"}"
+        }
+      }
+    },
+    {
+      "platform": "win32-x64",
+      "file": "chunk-5hdtkwdb.js",
+      "manifestSha256": "c71e85888df3301fd3c4cb158744538810418e2d67591debe8e4f7c771fcdddc",
+      "moduleSha256": "f0ee6d6caace627b5824e6197fe2474a196c0b59e36f19c725a9a4d1a7b1eda0",
+      "moduleLength": 4410233,
+      "rows": [
+        {
+          "role": "tools",
+          "file": "chunk-5hdtkwdb.js",
+          "name": "Wao",
+          "alias": "Wao",
+          "start": 1434960,
+          "end": 1436276,
+          "moduleSha256": "f0ee6d6caace627b5824e6197fe2474a196c0b59e36f19c725a9a4d1a7b1eda0",
+          "moduleLength": 4410233,
+          "source": "function Wao(e){let n=[Av,uR].find((w)=>e.has(w));if(fL()){let w=[n?`Break down and manage your work with the ${n} tool. These tools are helpful for planning your work and helping the user track your progress. Mark each task as completed as soon as you are done with the task. Do not batch up multiple tasks before marking them as completed.`:null].filter((D)=>D!==null);if(w.length===0)return\"\";return[\"# Using your tools\",...km(w)].join(`\n`)}let r=_v(),s=e.has(Ue),g=s?Ue:St,h=[dt,Ot,bn,...r&&s?[]:[co,Jr]].join(\", \"),S=[`Prefer dedicated tools over ${g} when one fits (${h}) \\u2014 reserve ${g} for shell-only operations.`,n?`Use ${n} to plan and track work. Mark each task completed as soon as it's done; don't batch.`:null,\"You can call multiple tools in a single response. If you intend to call multiple tools and there are no dependencies between them, make all independent tool calls in parallel. Maximize use of parallel tool calls where possible to increase efficiency. However, if some tool calls depend on previous calls to inform dependent values, do NOT call these tools in parallel and instead call them sequentially. For instance, if one operation must complete before another starts, run these operations sequentially instead.\"].filter((w)=>w!==null);return[\"# Using your tools\",...km(S)].join(`\n`)}",
+          "sha256": "26c6e7a18f273d5338a28f60d4a652cb93d213dbcb9762ef772369c1a066ba94",
+          "variable": false
+        },
+        {
+          "role": "bullets",
+          "file": "chunk-5hdtkwdb.js",
+          "name": "km",
+          "alias": "km",
+          "start": 123333,
+          "end": 123423,
+          "moduleSha256": "f0ee6d6caace627b5824e6197fe2474a196c0b59e36f19c725a9a4d1a7b1eda0",
+          "moduleLength": 4410233,
+          "source": "function km(e){return e.flatMap((n)=>Array.isArray(n)?n.map((r)=>`  - ${r}`):[` - ${n}`])}",
+          "sha256": "606fdbd7840c24d08e31a789c044f64266067f618ff6aedc37e5ff384d13fb08",
+          "variable": false
+        },
+        {
+          "role": "toolName",
+          "file": "chunk-gv2fx31e.js",
+          "name": "Av",
+          "alias": "Av",
+          "start": 3570,
+          "end": 3585,
+          "moduleSha256": "5f23b02bdb8b7076d3840ccb81e183b3848cd6e86985a15cc045f78ca262d07e",
+          "moduleLength": 14275,
+          "source": "Av=\"TaskCreate\"",
+          "sha256": "fc25cf999248515d53e64a532750d34893f0c77968c49391674606491dd51685",
+          "variable": true
+        },
+        {
+          "role": "toolName",
+          "file": "chunk-gv2fx31e.js",
+          "name": "uR",
+          "alias": "uR",
+          "start": 3590,
+          "end": 3604,
+          "moduleSha256": "5f23b02bdb8b7076d3840ccb81e183b3848cd6e86985a15cc045f78ca262d07e",
+          "moduleLength": 14275,
+          "source": "uR=\"TodoWrite\"",
+          "sha256": "fee727a9d51bae573151ef518a26d830f824e97f03477a2c8b4de2ae93c539bc",
+          "variable": true
+        },
+        {
+          "role": "toolName",
+          "file": "chunk-pqmgzeq0.js",
+          "name": "Ue",
+          "alias": "Ue",
+          "start": 611959,
+          "end": 611968,
+          "moduleSha256": "8e6e4d08aa045e532530139d720e3964a607c20523822b1b91bcd0afc62b709f",
+          "moduleLength": 613471,
+          "source": "Ue=\"Bash\"",
+          "sha256": "4d2969737eb3d231b5dc1f2bebe3bdc6bc17bfc86df631970b20305f0f6156a4",
+          "variable": true
+        },
+        {
+          "role": "toolName",
+          "file": "chunk-pqmgzeq0.js",
+          "name": "St",
+          "alias": "St",
+          "start": 611973,
+          "end": 611988,
+          "moduleSha256": "8e6e4d08aa045e532530139d720e3964a607c20523822b1b91bcd0afc62b709f",
+          "moduleLength": 613471,
+          "source": "St=\"PowerShell\"",
+          "sha256": "4e4753306e999e0e3b071dcbd37745d700f70feb706d5cc2c11ee996ac949cf1",
+          "variable": true
+        },
+        {
+          "role": "toolName",
+          "file": "chunk-xhxakxsh.js",
+          "name": "dt",
+          "alias": "dt",
+          "start": 639,
+          "end": 648,
+          "moduleSha256": "714f339c88904096109ad1e10dc68a94bb17b6003e88dd8e510d6c35f75cb295",
+          "moduleLength": 804,
+          "source": "dt=\"Read\"",
+          "sha256": "27f1d287576b018c956d83abf288caeb99d9a700d5025fe6776bd58bc642e8b2",
+          "variable": true
+        },
+        {
+          "role": "toolName",
+          "file": "chunk-pqmgzeq0.js",
+          "name": "Ot",
+          "alias": "Ot",
+          "start": 168446,
+          "end": 168455,
+          "moduleSha256": "8e6e4d08aa045e532530139d720e3964a607c20523822b1b91bcd0afc62b709f",
+          "moduleLength": 613471,
+          "source": "Ot=\"Edit\"",
+          "sha256": "95641327de05ccbef6120536af46a6b2e70c3411b9dcfa74dff7d74e682f9a09",
+          "variable": true
+        },
+        {
+          "role": "toolName",
+          "file": "chunk-pqmgzeq0.js",
+          "name": "bn",
+          "alias": "bn",
+          "start": 169092,
+          "end": 169102,
+          "moduleSha256": "8e6e4d08aa045e532530139d720e3964a607c20523822b1b91bcd0afc62b709f",
+          "moduleLength": 613471,
+          "source": "bn=\"Write\"",
+          "sha256": "c253ecaae2d1bfe49ff1e4c47835f9c24b081ae63f2ef98f4efacd5315b95ae0",
+          "variable": true
+        },
+        {
+          "role": "toolName",
+          "file": "chunk-xybe1vrh.js",
+          "name": "co",
+          "alias": "co",
+          "start": 436101,
+          "end": 436110,
+          "moduleSha256": "f6bcd764f28c2767881941459fcd034e465882afc68abf977d197c0e3b9cfd27",
+          "moduleLength": 705986,
+          "source": "co=\"Glob\"",
+          "sha256": "1138fd83a5ce15530a92aff1c7e5a907cf0613b28cbe535cc1bf2247670ad3e6",
+          "variable": true
+        },
+        {
+          "role": "toolName",
+          "file": "chunk-xybe1vrh.js",
+          "name": "Jr",
+          "alias": "Jr",
+          "start": 436115,
+          "end": 436124,
+          "moduleSha256": "f6bcd764f28c2767881941459fcd034e465882afc68abf977d197c0e3b9cfd27",
+          "moduleLength": 705986,
+          "source": "Jr=\"Grep\"",
+          "sha256": "662c80a7551527dc437d08113b20fe201599043d6916763eb8013b7055390746",
+          "variable": true
+        }
+      ],
+      "ports": {
+        "repl": "fL",
+        "embeddedSearch": "_v"
+      },
+      "portOrigins": {
+        "fL": {
+          "file": "chunk-0f4gwajz.js",
+          "name": "fL"
+        },
+        "_v": {
+          "file": "chunk-5hdtkwdb.js",
+          "name": "_v",
+          "source": "function _v(){if(!Ne(process.env.EMBEDDED_SEARCH_TOOLS))return!1;if(meo())return!1;return a.CLAUDE_CODE_ENTRYPOINT!==\"local-agent\"}"
+        }
+      }
+    }
+  ]
+}

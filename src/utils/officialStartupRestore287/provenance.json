@@ -1,0 +1,35 @@
+{
+  "version": "2.1.287",
+  "rangeConvention": "UTF-16 end-exclusive",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "rows": [
+    {
+      "file": "chunk-8tppeqgy.js",
+      "name": "xtt",
+      "start": 7840,
+      "end": 7923,
+      "moduleSha256": "1936ac23419dfc18ae3bd82f1ab54724335e6f261ca7563ef41f61e34b726450",
+      "sha256": "079e8b6ba13984fb9b603c8b3bf52eec3e2368be1186488d9729d2a3e66093dc",
+      "source": "function xtt(e,o){if(!e&&!o)return;return{name:e??\"\",color:o===\"default\"?void 0:o}}"
+    },
+    {
+      "file": "chunk-8tppeqgy.js",
+      "name": "T5t.M",
+      "start": 23227,
+      "end": 23314,
+      "moduleSha256": "1936ac23419dfc18ae3bd82f1ab54724335e6f261ca7563ef41f61e34b726450",
+      "sha256": "6f98a5c702d9448d019ecd8c2bcc34e58ff78ee48d7ec79b0214fe0c03c459fb",
+      "source": "r.initialState.standaloneAgentContext?{...H,...r.initialState.standaloneAgentContext}:H"
+    }
+  ],
+  "parent": {
+    "file": "chunk-8tppeqgy.js",
+    "name": "T5t",
+    "start": 21387,
+    "end": 24847,
+    "moduleSha256": "1936ac23419dfc18ae3bd82f1ab54724335e6f261ca7563ef41f61e34b726450",
+    "sha256": "85f1330f863169d2b87c131605f2aaa013866aec0f63d867f128a6e1ea067a0c",
+    "source": "async function T5t(e,o,r){OVe(r.session.host);let n=r.modeApi?.matchSessionMode(e.mode);if(n)e.messages.push(Nt(n,\"warning\"));let s=$io({...e,source:o.resumeSource??\"file\"},(h)=>e.messages.push(Nt(h,\"warning\"))),{adoptedSessionId:u,effectiveFork:l}=dxe(o.sessionIdOverride??e.sessionId,o.forkSession);if(u)ay(u,\"resume\",o.transcriptPath?re(o.transcriptPath):null),await C5t(r.session,r.storageV5),await cq();if(l){if(await $Te(e,{stripWorktreeSession:!0,stripRelocatedCwd:!0,storageV5:r.storageV5}),e.contentReplacements?.length)await Sne(e.contentReplacements,void 0,r.storageV5)}else f1(e,{storageV5:r.storageV5});if(Hie(s.declined===!0),Ott(e.messages),Bce(e),!l){let h=rve(w4.of(r.session.host),e.worktreeSession,void 0,{storageV5:r.storageV5});if(h)e.messages.push(Nt(Itt(h),\"warning\"));if(F()&&r.storageV5!==void 0)await Nce(r.storageV5);else Lce()}let m=await ZEe(e.projectPath,r.storageV5),{agentDefinition:f,agentType:g}=Rie(e.agentSetting,r.mainThreadAgentDefinition,r.agentDefinitions,{sessionAgentDefinitions:m,sessionCwd:e.projectPath,onResolveMiss:(h)=>e.messages.push(Nt(h,\"warning\"))}),y=e.permissionMode,w=!1,R=await Ae(y,r.permissionModeCliSet||!1),k=null;if(l)Ptt(e.messages);let A=await eve(e.messages,r.initialState.mainLoopModel,(h)=>e.messages.push(Nt(h,\"warning\")),{storageV5:r.storageV5,credentials:r.credentials}),b=A?tve(e.messages,A,l,r.storageV5,r.credentials):void 0;nve(e.messages,l),Htt(e.messages,{fork:l,startup:!0});let v;if(R){let{transitionPermissionMode:h}=await import(\"/$bunfs/root/chunk-5v3372cv.js\"),U=r.initialState.toolPermissionContext;try{v={...h(U.mode,R,U),mode:R}}catch(ae){t(`[sessionRestore] transitionPermissionMode rejected restored mode '${R}': ${ae}`)}}m1(r.modeApi?.isCoordinatorMode()?\"coordinator\":\"normal\");let x=o.includeAttribution?Pe(e):void 0,H=xtt(e.agentName,e.agentColor),M=r.initialState.standaloneAgentContext?{...H,...r.initialState.standaloneAgentContext}:H;Fde(M?.name,r.storageV5,{autoOnly:!e.customTitle&&!r.initialState.standaloneAgentContext?.name});let se=await Me(!!n,r.currentCwd,r.cliAgents,r.agentDefinitions,r.storageV5),j=r.initialState.initialMessage;if(a.CLAUDE_CODE_RESUME_INTERRUPTED_TURN&&e.turnInterruptionState?.kind===\"interrupted_prompt\"&&Hy(e.turnInterruptionState.message.origin))t(\"[sessionRestore] Auto-resuming interrupted turn for bg crash-respawn\"),Yln(\"repl_restore\",e.turnInterruptionState.message),Xln(e.messages,e.turnInterruptionState.message),j={message:e.turnInterruptionState.message};let T=r.initialState;Oxn({sourceSessionId:o.sessionIdOverride??e.sessionId,transcriptPath:o.transcriptPath});let W=nJ();return import.meta.require(\"/$bunfs/root/chunk-cd74mtad.js\").restoreGoalFromTranscript(e.messages,(h)=>{T=h(T)},W),{messages:e.messages.filter((h)=>!(h.type===\"system\"&&(h.subtype===\"bridge_status\"||h.subtype===\"cloud_session_status\"))),sessionStartHooks:e.sessionStartHooks,fileHistorySnapshots:e.fileHistorySnapshots,contentReplacements:e.contentReplacements,agentName:e.agentName,agentColor:e.agentColor===\"default\"?void 0:e.agentColor,restoredAgentDef:f,initialState:{...T,initialMessage:j,...!l&&e.bridgeSessionId&&!(T.replBridgeEnabled&&!T.replBridgeOutboundOnly)&&{replBridgeEnabled:!0,replBridgeOutboundOnly:!1},...e.endedByModel?{endedByModel:!0}:{},...g&&{agent:g},...k&&{attentionBudget:k},...b&&{mainLoopModel:b},...x&&{attribution:x},...M&&{standaloneAgentContext:M},...v&&{toolPermissionContext:v},agentDefinitions:se},sessionHooks:W}}"
+  },
+  "boundary": "Restored applicable standalone precedence only; whole T5t engine/permission/model successor is not claimed."
+}

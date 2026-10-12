@@ -1,0 +1,4 @@
+import type {HooksSettings,SettingsJson} from '../../settings/types.js'
+export interface HooksSnapshotOwner287 {snapshotKey():string;snapshotsBySessionId:Map<string,{initialHooksConfig:HooksSettings|null}>;setSnapshotKey(read:()=>string):void;current():{initialHooksConfig:HooksSettings|null};store(value:HooksSettings|null):void;evict(key:string):void}
+export interface HooksSnapshotRuntime287 {snapshot():HooksSettings|null;capture():void;update(options?:{userLayer?:'retain'}):void;managedOnly():boolean;disabled():boolean;owner():HooksSnapshotOwner287}
+export function createHooksSnapshot287(ports:{root:{readonly host:object};settingsForSource(source:'policySettings'):SettingsJson|null;settings():SettingsJson;invalidateSettings(options?:{userLayer?:'retain'}):void;notify():void}):HooksSnapshotRuntime287

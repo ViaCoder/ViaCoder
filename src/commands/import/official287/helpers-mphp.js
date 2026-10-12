@@ -1,0 +1,2 @@
+// Generated: complete official 2.1.287 import closure. Dependencies borrow the existing canonical owner.
+export function create(ports){return new Function('ports',"with(ports){\nfunction qdt(e){return le().mcpServers?.[e]!==void 0};\nvar xIo=\"Do NOT read the foreign-agent config files or write Claude Code config yourself \\u2014 the deterministic import (triggered by `--yes`) applies the same safe-name and path-traversal guards as the terminal picker.\";\nreturn {\"xIo\":xIo,\"qdt\":qdt};\n}")(ports)}

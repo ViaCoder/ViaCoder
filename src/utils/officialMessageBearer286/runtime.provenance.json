@@ -1,0 +1,106 @@
+{
+  "version": "2.1.286",
+  "platform": "darwin-arm64",
+  "binarySha256": "75e3016e9d2570767b08e43a7467d4817a4f149232c169ca295f2c95fef21433",
+  "offsetUnit": "UTF-16 code units",
+  "records": [
+    {
+      "group": "bearer",
+      "file": "chunk-gxp5am6q.js",
+      "symbol": "QS",
+      "start": 4828,
+      "end": 4851,
+      "moduleSha256": "cdf77705bef58c387fffc2f83592c38ff8812d3ebe0b1ba0b6e34535300feaee",
+      "sha256": "cffd3744bf2d497394f304626cb2e3a327306e651f2c69b80d2ee78da42702e0",
+      "source": "function QS(){return!1}",
+      "emittedSha256": "cffd3744bf2d497394f304626cb2e3a327306e651f2c69b80d2ee78da42702e0",
+      "variable": false
+    },
+    {
+      "group": "bearer",
+      "file": "chunk-majxx0zh.js",
+      "symbol": "wp",
+      "start": 616954,
+      "end": 617027,
+      "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49",
+      "sha256": "c99b3934e90f2aff4aacfde535fe841ba1e039a2f7ab3e67f41e910ae348d28a",
+      "source": "function wp(e={}){try{return BS(e)}catch{return{key:null,source:\"none\"}}}",
+      "emittedSha256": "c99b3934e90f2aff4aacfde535fe841ba1e039a2f7ab3e67f41e910ae348d28a",
+      "variable": false
+    },
+    {
+      "group": "bearer",
+      "file": "chunk-tx79xqc5.js",
+      "symbol": "z3",
+      "start": 606274,
+      "end": 606521,
+      "moduleSha256": "9c1e53986aa126f85e625401314cc5e1ef9e3250f7f7067894f2cb662cc9a069",
+      "sha256": "87921aa065668278ef6be4b8415b3076ac58317579771feae4324117a9bad5dd",
+      "source": "async function z3(e,n){let r=kr()&&wp({skipRetrievingKeyFromApiKeyHelper:!0}).source===\"none\",h=QS()&&!r?void 0:a.ANTHROPIC_AUTH_TOKEN,g=h||await oUe(n);if(g)return e.Authorization=`Bearer ${g}`,h?\"ANTHROPIC_AUTH_TOKEN\":\"apiKeyHelper\";return null}",
+      "emittedSha256": "87921aa065668278ef6be4b8415b3076ac58317579771feae4324117a9bad5dd",
+      "variable": false
+    }
+  ],
+  "ports": {
+    "bearer": [
+      "BS",
+      "a",
+      "kr",
+      "oUe"
+    ]
+  },
+  "portBindings": {
+    "bearer": {
+      "BS": [
+        {
+          "kind": "local-declaration",
+          "file": "chunk-majxx0zh.js",
+          "start": 619102,
+          "end": 620168,
+          "source": "function BS(e={}){if(r9()){if(a.ANTHROPIC_API_KEY)return{key:a.ANTHROPIC_API_KEY,source:\"ANTHROPIC_API_KEY\"};if(ih())return{key:e.skipRetrievingKeyFromApiKeyHelper?null:A8n(),source:\"apiKeyHelper\"};return{key:null,source:\"none\"}}let n=QS()?void 0:a.ANTHROPIC_API_KEY;if(VGt()&&n)return{key:n,source:\"ANTHROPIC_API_KEY\"};if(Le(!1)){let h=qJ();if(h)return{key:h,source:\"ANTHROPIC_API_KEY\"};if(!n&&!a.CLAUDE_CODE_OAUTH_TOKEN&&!a.CLAUDE_CODE_OAUTH_TOKEN_FILE_DESCRIPTOR&&!d0()&&!a.ANTHROPIC_AUTH_TOKEN&&!Wc()&&Bn())throw Error(\"ANTHROPIC_API_KEY, ANTHROPIC_AUTH_TOKEN, CLAUDE_CODE_OAUTH_TOKEN, or WIF env vars (ANTHROPIC_FEDERATION_RULE_ID + ANTHROPIC_ORGANIZATION_ID) required\");if(n)return{key:n,source:\"ANTHROPIC_API_KEY\"};return{key:null,source:\"none\"}}if(n&&WYn(ire(n))===\"approved\")return{key:n,source:\"ANTHROPIC_API_KEY\"};let r=qJ();if(r)return{key:r,source:\"ANTHROPIC_API_KEY\"};if(ih()){if(e.skipRetrievingKeyFromApiKeyHelper)return{key:null,source:\"apiKeyHelper\"};return{key:A8n(),source:\"apiKeyHelper\"}}let g=P8n();if(g)return g;return{key:null,source:\"none\"}}",
+          "sha256": "6bf0a98c0d6dce4ae1cbd4776e743c14a0f74f927b0e30b304b511a7a4eec120"
+        }
+      ],
+      "a": [
+        {
+          "kind": "import",
+          "file": "chunk-tx79xqc5.js",
+          "module": "/$bunfs/root/chunk-07mxqtdh.js",
+          "imported": "a",
+          "start": 1579,
+          "end": 1580,
+          "source": "a",
+          "sha256": "ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb"
+        }
+      ],
+      "kr": [
+        {
+          "kind": "import",
+          "file": "chunk-tx79xqc5.js",
+          "module": "/$bunfs/root/chunk-gxp5am6q.js",
+          "imported": "kr",
+          "start": 1486,
+          "end": 1488,
+          "source": "kr",
+          "sha256": "d5647005d31dcbb66ff531c5e097544a03558bc538b9c65ee2539594886ffbc0"
+        }
+      ],
+      "oUe": [
+        {
+          "kind": "import",
+          "file": "chunk-tx79xqc5.js",
+          "module": "/$bunfs/root/chunk-majxx0zh.js",
+          "imported": "oUe",
+          "start": 2519,
+          "end": 2522,
+          "source": "oUe",
+          "sha256": "34360faeb4156c516f3c9c0a229c8f0bb93d145953a6d60ed364c3720a581545"
+        }
+      ]
+    }
+  },
+  "returns": {
+    "bearer": "z3"
+  },
+  "importRemaps": {}
+}

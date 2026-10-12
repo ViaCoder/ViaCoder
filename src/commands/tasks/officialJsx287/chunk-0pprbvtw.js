@@ -1,0 +1,3 @@
+export function create(ports){const {requireOriginal287,importOriginal287,H,Y,P,N,_,A,w,E,dm}=ports;
+async function kZe(e,n){let r=H(e,n);if(r===""||r.startsWith("..")||Y(r))throw new P(`assertDirChainReal: dir must be strictly inside base (rel: ${r})`,"assertDirChainReal: dir must be strictly inside base");let o=e;for(let f of r.split(N)){o=_(o,f);try{await(await A(o,w.O_RDONLY|w.O_DIRECTORY|w.O_NOFOLLOW)).close()}catch(i){let s=E(i);if(s==="ELOOP"||s==="ENOTDIR")throw new dm(`Refusing to write under symlinked or non-directory path: ${o}`);if(s==="ENOENT")return;throw i}}};
+return {"kZe":kZe};}

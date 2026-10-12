@@ -1,0 +1,1213 @@
+{
+  "version": "2.1.286",
+  "platform": "darwin-arm64",
+  "binarySha256": "75e3016e9d2570767b08e43a7467d4817a4f149232c169ca295f2c95fef21433",
+  "offsetUnit": "UTF-16 code units",
+  "records": [
+    {
+      "group": "integer",
+      "file": "chunk-gxp5am6q.js",
+      "symbol": "N",
+      "start": 830,
+      "end": 872,
+      "moduleSha256": "cdf77705bef58c387fffc2f83592c38ff8812d3ebe0b1ba0b6e34535300feaee",
+      "sha256": "fc64be771d88469b3b720b95b7b99ee4d907ddeb49a233a646ecab7c3817e32d",
+      "source": "N=/^[+-]?(\\d+(\\.\\d*)?|\\.\\d+)[eE][+-]?\\d+$/",
+      "variable": true
+    },
+    {
+      "group": "integer",
+      "file": "chunk-gxp5am6q.js",
+      "symbol": "E",
+      "start": 873,
+      "end": 927,
+      "moduleSha256": "cdf77705bef58c387fffc2f83592c38ff8812d3ebe0b1ba0b6e34535300feaee",
+      "sha256": "fd2ec11e9c74067bee439414a1810394cb842da2c20408bd04e19a1fe8366a35",
+      "source": "E=/^[+-]?\\d{1,3}([_,\\u00A0\\u202F ])\\d{3}(?:\\1\\d{3})*$/",
+      "variable": true
+    },
+    {
+      "group": "integer",
+      "file": "chunk-gxp5am6q.js",
+      "symbol": "c",
+      "start": 928,
+      "end": 950,
+      "moduleSha256": "cdf77705bef58c387fffc2f83592c38ff8812d3ebe0b1ba0b6e34535300feaee",
+      "sha256": "33c84d7671033ca797af658d1febbce1f25f511ec97efcb216ae120ddd2f3bd9",
+      "source": "c=/[_,\\u00A0\\u202F ]/g",
+      "variable": true
+    },
+    {
+      "group": "integer",
+      "file": "chunk-gxp5am6q.js",
+      "symbol": "m",
+      "start": 951,
+      "end": 1101,
+      "moduleSha256": "cdf77705bef58c387fffc2f83592c38ff8812d3ebe0b1ba0b6e34535300feaee",
+      "sha256": "9ca6c76819e310d839a98f586070d670ba09defdbb105da307c51e32cfccaff1",
+      "source": "function m(e){if(e.length<=32){if(N.test(e)){let n=Number(e);return Number.isInteger(n)?n:NaN}if(E.test(e))return parseInt(e.replace(c,\"\"),10)}return}",
+      "variable": false
+    },
+    {
+      "group": "integer",
+      "file": "chunk-gxp5am6q.js",
+      "symbol": "rc",
+      "start": 1101,
+      "end": 1167,
+      "moduleSha256": "cdf77705bef58c387fffc2f83592c38ff8812d3ebe0b1ba0b6e34535300feaee",
+      "sha256": "63ab5edfe23a809e5557cfb492784ba6243d7928aec64963f092e13890d3eddd",
+      "source": "function rc(e){let n=String(e).trim();return m(n)??parseInt(n,10)}",
+      "variable": false
+    },
+    {
+      "group": "integer",
+      "file": "chunk-gxp5am6q.js",
+      "symbol": "eQe",
+      "start": 3290,
+      "end": 3370,
+      "moduleSha256": "cdf77705bef58c387fffc2f83592c38ff8812d3ebe0b1ba0b6e34535300feaee",
+      "sha256": "6fb16f57f4f85e6e8fcdbc47c31102dfc9a60995afdf52087c24c0fe711e903a",
+      "source": "function eQe(e,n){if(e===void 0)return n;let r=rc(e);return Number.isNaN(r)?n:r}",
+      "variable": false
+    },
+    {
+      "group": "decoders",
+      "file": "chunk-ktw7xkh2.js",
+      "symbol": "Le",
+      "start": 615,
+      "end": 757,
+      "moduleSha256": "9bb8f848f236e5f615eaa58d0ecf4264bff833a905243f2fd0e4b5fdeb4790ad",
+      "sha256": "c7c851b23895c896ce38865f13ecbb54e11e83018c8ced9cae422c41298e6dfd",
+      "source": "function Le(e){if(!e)return!1;if(typeof e===\"boolean\")return e;let n=String(e).toLowerCase().trim();return[\"1\",\"true\",\"yes\",\"on\"].includes(n)}",
+      "variable": false
+    },
+    {
+      "group": "decoders",
+      "file": "chunk-ktw7xkh2.js",
+      "symbol": "Cs",
+      "start": 757,
+      "end": 908,
+      "moduleSha256": "9bb8f848f236e5f615eaa58d0ecf4264bff833a905243f2fd0e4b5fdeb4790ad",
+      "sha256": "88defc1253988f33c035451913f1018f77fe5394dc418b9650dbd6d92c0e836e",
+      "source": "function Cs(e){if(e===void 0)return!1;if(typeof e===\"boolean\")return!e;let n=String(e).toLowerCase().trim();return[\"0\",\"false\",\"no\",\"off\"].includes(n)}",
+      "variable": false
+    },
+    {
+      "group": "decoders",
+      "file": "chunk-rmy2pep5.js",
+      "symbol": "u",
+      "start": 801,
+      "end": 850,
+      "moduleSha256": "88ae7dd89db5a2d82e8c87782060c847c7d144eaccfbe64622b4a370cabb389c",
+      "sha256": "7a686c44a4bdd8b12153c001f3bc94d776fa4b48eee2f0e23cd73cb09ee52149",
+      "source": "function u(n){return n===void 0?void 0:String(n)}",
+      "variable": false
+    },
+    {
+      "group": "decoders",
+      "file": "chunk-rmy2pep5.js",
+      "symbol": "i",
+      "start": 712,
+      "end": 753,
+      "moduleSha256": "88ae7dd89db5a2d82e8c87782060c847c7d144eaccfbe64622b4a370cabb389c",
+      "sha256": "b310d818ac6a9248e1a446c3795ce08cc79264bc55d9f3672eeb783d0b24327c",
+      "source": "function i(n){return{parse:(e)=>n(u(e))}}",
+      "variable": false
+    },
+    {
+      "group": "decoders",
+      "file": "chunk-rmy2pep5.js",
+      "symbol": "t",
+      "start": 753,
+      "end": 801,
+      "moduleSha256": "88ae7dd89db5a2d82e8c87782060c847c7d144eaccfbe64622b4a370cabb389c",
+      "sha256": "0785eff74b9253b961b8036e32691bf760b9907ae5cd4569c092f04bc896b6fe",
+      "source": "function t(n){let e=n?.trim();return e?e:void 0}",
+      "variable": false
+    },
+    {
+      "group": "decoders",
+      "file": "chunk-rmy2pep5.js",
+      "symbol": "d",
+      "start": 1165,
+      "end": 1392,
+      "moduleSha256": "88ae7dd89db5a2d82e8c87782060c847c7d144eaccfbe64622b4a370cabb389c",
+      "sha256": "04a96418fb6fb64af48ecc100ef2d4273b4dd56975878272fadf9b478b1f17fe",
+      "source": "function d(n){return i((e)=>{if(e===void 0)return;if(n?.digitsOnly&&!/^[+-]?\\d+$/.test(e.trim()))return;let r=rc(e);if(!Number.isFinite(r))return;if(n?.min!==void 0&&r<n.min)return;if(n?.max!==void 0&&r>n.max)return;return r})}",
+      "variable": false
+    },
+    {
+      "group": "decoders",
+      "file": "chunk-rmy2pep5.js",
+      "symbol": "f",
+      "start": 854,
+      "end": 860,
+      "moduleSha256": "88ae7dd89db5a2d82e8c87782060c847c7d144eaccfbe64622b4a370cabb389c",
+      "sha256": "6fc328d8fea2b2419cd13c9e5c144d1a9d2189473bf6a610ca8aaa6ea2f2cfbc",
+      "source": "f=i(t)",
+      "variable": true
+    },
+    {
+      "group": "decoders",
+      "file": "chunk-rmy2pep5.js",
+      "symbol": "o",
+      "start": 861,
+      "end": 872,
+      "moduleSha256": "88ae7dd89db5a2d82e8c87782060c847c7d144eaccfbe64622b4a370cabb389c",
+      "sha256": "64a3368c80ea1356b39fb0076176734daa12af6718b77021dd86647c22a49ac8",
+      "source": "o=i((n)=>n)",
+      "variable": true
+    },
+    {
+      "group": "decoders",
+      "file": "chunk-rmy2pep5.js",
+      "symbol": "s",
+      "start": 873,
+      "end": 888,
+      "moduleSha256": "88ae7dd89db5a2d82e8c87782060c847c7d144eaccfbe64622b4a370cabb389c",
+      "sha256": "4ac954bde4becf6149e0dcd245dd634f28bfcf859a2a29c153eb87db2bc69136",
+      "source": "s=i((n)=>Le(n))",
+      "variable": true
+    },
+    {
+      "group": "decoders",
+      "file": "chunk-rmy2pep5.js",
+      "symbol": "l",
+      "start": 889,
+      "end": 943,
+      "moduleSha256": "88ae7dd89db5a2d82e8c87782060c847c7d144eaccfbe64622b4a370cabb389c",
+      "sha256": "8a15a5a9651d3e9e42ce493a2d975ed0dcfdcfc54abbd85f7595e59d214a0ec0",
+      "source": "l=i((n)=>{if(Le(n))return!0;if(Cs(n))return!1;return})",
+      "variable": true
+    },
+    {
+      "group": "decoders",
+      "file": "chunk-rmy2pep5.js",
+      "symbol": "m",
+      "start": 944,
+      "end": 949,
+      "moduleSha256": "88ae7dd89db5a2d82e8c87782060c847c7d144eaccfbe64622b4a370cabb389c",
+      "sha256": "09ed0d48849129f78f6cbf0bc4f720e475ea4ddc01d5776dc8c70b29e7c46901",
+      "source": "m=d()",
+      "variable": true
+    },
+    {
+      "group": "decoders",
+      "file": "chunk-rmy2pep5.js",
+      "symbol": "D",
+      "start": 1028,
+      "end": 1164,
+      "moduleSha256": "88ae7dd89db5a2d82e8c87782060c847c7d144eaccfbe64622b4a370cabb389c",
+      "sha256": "15c2ec2560412cfb56c1d2f520bd430b89d87dd2a339e35de30e0aa66663ea93",
+      "source": "D={str:()=>f,rawStr:()=>o,bool:()=>s,triBool:()=>l,int:(n)=>n?d(n):m,enum:(n)=>i((e)=>e!==void 0&&n.includes(e.trim())?e.trim():void 0)}",
+      "variable": true
+    },
+    {
+      "group": "environment",
+      "file": "chunk-rmy2pep5.js",
+      "symbol": "gKo",
+      "start": 950,
+      "end": 1024,
+      "moduleSha256": "88ae7dd89db5a2d82e8c87782060c847c7d144eaccfbe64622b4a370cabb389c",
+      "sha256": "d4c92b69a26a58f43dca5ae491bd869fe4f5873b3628be5ad5e6f19f26af7e25",
+      "source": "function gKo(n){if(typeof n===\"boolean\")return n?\"1\":\"0\";return String(n)}",
+      "variable": false
+    },
+    {
+      "group": "environment",
+      "file": "chunk-07mxqtdh.js",
+      "symbol": "ZI",
+      "start": 61034,
+      "end": 61044,
+      "moduleSha256": "8fe1ef6c86ed39fc9bd66865a357b8f94de75b8133e01ee093c994d27eaa28ff",
+      "sha256": "c05ec672ffadebe5731f3565223c9b9d4f2906c3e9472ea331e71098f682b33c",
+      "source": "ZI=D.str()",
+      "variable": true
+    },
+    {
+      "group": "environment",
+      "file": "chunk-07mxqtdh.js",
+      "symbol": "at",
+      "start": 15882,
+      "end": 15892,
+      "moduleSha256": "8fe1ef6c86ed39fc9bd66865a357b8f94de75b8133e01ee093c994d27eaa28ff",
+      "sha256": "f9923b1b572fecec8022be122d36f3f91a04c0185b92805ace6ac4d4d5da6632",
+      "source": "at=D.str()",
+      "variable": true
+    },
+    {
+      "group": "environment",
+      "file": "chunk-07mxqtdh.js",
+      "symbol": "ut",
+      "start": 15893,
+      "end": 15903,
+      "moduleSha256": "8fe1ef6c86ed39fc9bd66865a357b8f94de75b8133e01ee093c994d27eaa28ff",
+      "sha256": "f53c00547ae88415a190f1cd8f8aa6934f02caa50e8ce23ed96f0b1fceb03571",
+      "source": "ut=D.str()",
+      "variable": true
+    },
+    {
+      "group": "environment",
+      "file": "chunk-07mxqtdh.js",
+      "symbol": "Hi",
+      "start": 63964,
+      "end": 63974,
+      "moduleSha256": "8fe1ef6c86ed39fc9bd66865a357b8f94de75b8133e01ee093c994d27eaa28ff",
+      "sha256": "96c47d447e7532e387c3821ef4007e63f598bc883aefc5c5d67cc9556f537e05",
+      "source": "Hi=D.str()",
+      "variable": true
+    },
+    {
+      "group": "environment",
+      "file": "chunk-07mxqtdh.js",
+      "symbol": "AU",
+      "start": 64319,
+      "end": 64329,
+      "moduleSha256": "8fe1ef6c86ed39fc9bd66865a357b8f94de75b8133e01ee093c994d27eaa28ff",
+      "sha256": "7f2fd5baf91fd6b35b52a47719682cd04e02f81f3ab86741a6a9fc8379ce5ff6",
+      "source": "AU=D.str()",
+      "variable": true
+    },
+    {
+      "group": "environment",
+      "file": "chunk-07mxqtdh.js",
+      "symbol": "Lo",
+      "start": 16358,
+      "end": 16368,
+      "moduleSha256": "8fe1ef6c86ed39fc9bd66865a357b8f94de75b8133e01ee093c994d27eaa28ff",
+      "sha256": "29cae9b29a2a65041f60e9d0402e1f29ae4966309be843196e7c54c8d4276c1e",
+      "source": "Lo=D.int()",
+      "variable": true
+    },
+    {
+      "group": "environment",
+      "file": "chunk-07mxqtdh.js",
+      "symbol": "iL",
+      "start": 53869,
+      "end": 53879,
+      "moduleSha256": "8fe1ef6c86ed39fc9bd66865a357b8f94de75b8133e01ee093c994d27eaa28ff",
+      "sha256": "3cbb292fc77e44f65789ff5edbbecb3210d170928317ff03a11d0ecbbfdf32d1",
+      "source": "iL=D.str()",
+      "variable": true
+    },
+    {
+      "group": "environment",
+      "file": "chunk-07mxqtdh.js",
+      "symbol": "In",
+      "start": 34503,
+      "end": 34517,
+      "moduleSha256": "8fe1ef6c86ed39fc9bd66865a357b8f94de75b8133e01ee093c994d27eaa28ff",
+      "sha256": "17552495aa9002db40d796d6973133eaba0adfe25f33d025f2deb8cd01242b9a",
+      "source": "In=D.triBool()",
+      "variable": true
+    },
+    {
+      "group": "environment",
+      "file": "chunk-07mxqtdh.js",
+      "symbol": "OL",
+      "start": 53764,
+      "end": 53774,
+      "moduleSha256": "8fe1ef6c86ed39fc9bd66865a357b8f94de75b8133e01ee093c994d27eaa28ff",
+      "sha256": "f10f042d61ae716e291c7d0e8002479a8a7116eb942da58b62add90f7904a18c",
+      "source": "OL=D.str()",
+      "variable": true
+    },
+    {
+      "group": "environment",
+      "file": "chunk-07mxqtdh.js",
+      "symbol": "Up",
+      "start": 55111,
+      "end": 55122,
+      "moduleSha256": "8fe1ef6c86ed39fc9bd66865a357b8f94de75b8133e01ee093c994d27eaa28ff",
+      "sha256": "78afa433d56644ea3d151059c41e965604bd9efe6ede6cc4ffe0154f98341ef0",
+      "source": "Up=D.bool()",
+      "variable": true
+    },
+    {
+      "group": "environment",
+      "file": "chunk-07mxqtdh.js",
+      "symbol": "_o",
+      "start": 16221,
+      "end": 16231,
+      "moduleSha256": "8fe1ef6c86ed39fc9bd66865a357b8f94de75b8133e01ee093c994d27eaa28ff",
+      "sha256": "55c1fc0b7cf5102682280b334f44e79514d38f97eac902407ed98cc443a1cfa5",
+      "source": "_o=D.str()",
+      "variable": true
+    },
+    {
+      "group": "environment",
+      "file": "chunk-07mxqtdh.js",
+      "symbol": "Bt",
+      "start": 15904,
+      "end": 15914,
+      "moduleSha256": "8fe1ef6c86ed39fc9bd66865a357b8f94de75b8133e01ee093c994d27eaa28ff",
+      "sha256": "0cab36d82ca5220e1835a902856884fec37ba633455e9c05d03302a6b8da44f8",
+      "source": "Bt=D.str()",
+      "variable": true
+    },
+    {
+      "group": "environment",
+      "file": "chunk-07mxqtdh.js",
+      "symbol": "Xt",
+      "start": 16080,
+      "end": 16090,
+      "moduleSha256": "8fe1ef6c86ed39fc9bd66865a357b8f94de75b8133e01ee093c994d27eaa28ff",
+      "sha256": "70c51650b2f52b33194b254dd9575046c8c6fd150a94beb887f5b8baef8d7cb6",
+      "source": "Xt=D.str()",
+      "variable": true
+    },
+    {
+      "group": "environment",
+      "file": "chunk-07mxqtdh.js",
+      "symbol": "OU",
+      "start": 64330,
+      "end": 64341,
+      "moduleSha256": "8fe1ef6c86ed39fc9bd66865a357b8f94de75b8133e01ee093c994d27eaa28ff",
+      "sha256": "1e9fe8da6f63110ebf040e8b1cd980cab8566f3a09b80822d0218918fd481b55",
+      "source": "OU=D.bool()",
+      "variable": true
+    },
+    {
+      "group": "environment",
+      "file": "chunk-07mxqtdh.js",
+      "symbol": "Zp",
+      "start": 55445,
+      "end": 55456,
+      "moduleSha256": "8fe1ef6c86ed39fc9bd66865a357b8f94de75b8133e01ee093c994d27eaa28ff",
+      "sha256": "ff2923c29bea0ab030c031bf7c405336fb7f7161bc636fb30dc7a25793b871bc",
+      "source": "Zp=D.bool()",
+      "variable": true
+    },
+    {
+      "group": "environment",
+      "file": "chunk-07mxqtdh.js",
+      "symbol": "Do",
+      "start": 16322,
+      "end": 16339,
+      "moduleSha256": "8fe1ef6c86ed39fc9bd66865a357b8f94de75b8133e01ee093c994d27eaa28ff",
+      "sha256": "2ac11fe0657e4cd1b4f9bc35783a3fe1e9ffc1753f090f96bfde72d981f63183",
+      "source": "Do=D.int({min:0})",
+      "variable": true
+    },
+    {
+      "group": "environment",
+      "file": "chunk-07mxqtdh.js",
+      "symbol": "To",
+      "start": 16340,
+      "end": 16357,
+      "moduleSha256": "8fe1ef6c86ed39fc9bd66865a357b8f94de75b8133e01ee093c994d27eaa28ff",
+      "sha256": "868b119821d0d668e1e4fffb000488707f3eb2d0a3766ea0360eacb84a7659f1",
+      "source": "To=D.int({min:0})",
+      "variable": true
+    },
+    {
+      "group": "environment",
+      "file": "chunk-07mxqtdh.js",
+      "symbol": "tc",
+      "start": 54275,
+      "end": 54285,
+      "moduleSha256": "8fe1ef6c86ed39fc9bd66865a357b8f94de75b8133e01ee093c994d27eaa28ff",
+      "sha256": "d1269ce1ea7feec6bf8c86cfa355866cf0959133aa94462fc8dd7139373a7e2e",
+      "source": "tc=D.str()",
+      "variable": true
+    },
+    {
+      "group": "environment",
+      "file": "chunk-07mxqtdh.js",
+      "symbol": "Fo",
+      "start": 16608,
+      "end": 16618,
+      "moduleSha256": "8fe1ef6c86ed39fc9bd66865a357b8f94de75b8133e01ee093c994d27eaa28ff",
+      "sha256": "4b238afc6685e389b32a3f8cf0c762bd03e0a0bff043d4a69c44a251cb8058c5",
+      "source": "Fo=D.str()",
+      "variable": true
+    },
+    {
+      "group": "environment",
+      "file": "chunk-07mxqtdh.js",
+      "symbol": "fo",
+      "start": 16619,
+      "end": 16629,
+      "moduleSha256": "8fe1ef6c86ed39fc9bd66865a357b8f94de75b8133e01ee093c994d27eaa28ff",
+      "sha256": "e062d01e03acdf42565ba41a963cbdaa0a2b5e08872e2dbea25b5f9af25a19c3",
+      "source": "fo=D.str()",
+      "variable": true
+    },
+    {
+      "group": "environment",
+      "file": "chunk-07mxqtdh.js",
+      "symbol": "zt",
+      "start": 16157,
+      "end": 16167,
+      "moduleSha256": "8fe1ef6c86ed39fc9bd66865a357b8f94de75b8133e01ee093c994d27eaa28ff",
+      "sha256": "230d0d4b6640f95ab4f66ca200171176b2ff11a911a304d3239ba6e138ff1f61",
+      "source": "zt=D.str()",
+      "variable": true
+    },
+    {
+      "group": "environment",
+      "file": "chunk-07mxqtdh.js",
+      "symbol": "oc",
+      "start": 54286,
+      "end": 54296,
+      "moduleSha256": "8fe1ef6c86ed39fc9bd66865a357b8f94de75b8133e01ee093c994d27eaa28ff",
+      "sha256": "8bab5b5da47ac5f869181613be15eb8a6bfe94bd9c4d9cbc3835f5bd8e06f2df",
+      "source": "oc=D.str()",
+      "variable": true
+    },
+    {
+      "group": "environment",
+      "file": "chunk-07mxqtdh.js",
+      "symbol": "CT",
+      "start": 53124,
+      "end": 53134,
+      "moduleSha256": "8fe1ef6c86ed39fc9bd66865a357b8f94de75b8133e01ee093c994d27eaa28ff",
+      "sha256": "b95ce47b49424164a97f87d92e6934381f7a4cf3246c75dc74be1114d67b7c5b",
+      "source": "CT=D.str()",
+      "variable": true
+    },
+    {
+      "group": "environment",
+      "file": "chunk-07mxqtdh.js",
+      "symbol": "Bo",
+      "start": 16553,
+      "end": 16563,
+      "moduleSha256": "8fe1ef6c86ed39fc9bd66865a357b8f94de75b8133e01ee093c994d27eaa28ff",
+      "sha256": "8fe4f2c51c4011e3ba6e7fe78a49d0e56978add635aa281dbb43a6af96753301",
+      "source": "Bo=D.str()",
+      "variable": true
+    },
+    {
+      "group": "environment",
+      "file": "chunk-07mxqtdh.js",
+      "symbol": "rT",
+      "start": 53077,
+      "end": 53087,
+      "moduleSha256": "8fe1ef6c86ed39fc9bd66865a357b8f94de75b8133e01ee093c994d27eaa28ff",
+      "sha256": "7f527a33a55450536f1f5d763de524069816c867b453bdfd21d08d4915a2709d",
+      "source": "rT=D.str()",
+      "variable": true
+    },
+    {
+      "group": "environment",
+      "file": "chunk-07mxqtdh.js",
+      "symbol": "Cc",
+      "start": 54363,
+      "end": 54373,
+      "moduleSha256": "8fe1ef6c86ed39fc9bd66865a357b8f94de75b8133e01ee093c994d27eaa28ff",
+      "sha256": "3456a229d7fa2955ad53cd85da0d0b99777a3cc0a2e305a62a38c258e1b9007b",
+      "source": "Cc=D.str()",
+      "variable": true
+    },
+    {
+      "group": "environment",
+      "file": "chunk-07mxqtdh.js",
+      "symbol": "ci",
+      "start": 61310,
+      "end": 61347,
+      "moduleSha256": "8fe1ef6c86ed39fc9bd66865a357b8f94de75b8133e01ee093c994d27eaa28ff",
+      "sha256": "dba4b6afe0d89c4eb8b6111560e50334936bf2e20cba3ec257c727415b537e8b",
+      "source": "ci=D.int({min:0,max:9,digitsOnly:!0})",
+      "variable": true
+    },
+    {
+      "group": "environment",
+      "file": "chunk-07mxqtdh.js",
+      "symbol": "Ti",
+      "start": 61280,
+      "end": 61294,
+      "moduleSha256": "8fe1ef6c86ed39fc9bd66865a357b8f94de75b8133e01ee093c994d27eaa28ff",
+      "sha256": "72e7714d39aba97e6be710252a19914229f4dff2497f9d3225e56b53061d51a5",
+      "source": "Ti=D.triBool()",
+      "variable": true
+    },
+    {
+      "group": "environment",
+      "file": "chunk-07mxqtdh.js",
+      "symbol": "Li",
+      "start": 61295,
+      "end": 61309,
+      "moduleSha256": "8fe1ef6c86ed39fc9bd66865a357b8f94de75b8133e01ee093c994d27eaa28ff",
+      "sha256": "142204603eb67476f3bac127229bc0addcab4080c37a2f1581564599dd73caa2",
+      "source": "Li=D.triBool()",
+      "variable": true
+    },
+    {
+      "group": "environment",
+      "file": "chunk-07mxqtdh.js",
+      "symbol": "NA",
+      "start": 39945,
+      "end": 39955,
+      "moduleSha256": "8fe1ef6c86ed39fc9bd66865a357b8f94de75b8133e01ee093c994d27eaa28ff",
+      "sha256": "625ea890907035f6a2ffbb127cb97cd883829ceb1cb90ab8a89945f6ab9eeccc",
+      "source": "NA=D.str()",
+      "variable": true
+    },
+    {
+      "group": "environment",
+      "file": "chunk-07mxqtdh.js",
+      "symbol": "UL",
+      "start": 53880,
+      "end": 53890,
+      "moduleSha256": "8fe1ef6c86ed39fc9bd66865a357b8f94de75b8133e01ee093c994d27eaa28ff",
+      "sha256": "c9b592c70df23f25ca878a5817f4a15856d86a3745a7c69b09ca96a1b5a8ce99",
+      "source": "UL=D.str()",
+      "variable": true
+    },
+    {
+      "group": "environment",
+      "file": "chunk-07mxqtdh.js",
+      "symbol": "Ai",
+      "start": 61238,
+      "end": 61252,
+      "moduleSha256": "8fe1ef6c86ed39fc9bd66865a357b8f94de75b8133e01ee093c994d27eaa28ff",
+      "sha256": "ac998b097d0cde0ba755d4b8cc8c723a64f6fd5d60100db04467e24c336ac3b8",
+      "source": "Ai=D.triBool()",
+      "variable": true
+    },
+    {
+      "group": "environment",
+      "file": "chunk-07mxqtdh.js",
+      "symbol": "Si",
+      "start": 61384,
+      "end": 61401,
+      "moduleSha256": "8fe1ef6c86ed39fc9bd66865a357b8f94de75b8133e01ee093c994d27eaa28ff",
+      "sha256": "98b675ff968dad787b16968f763976abcbe88d228035057ac0415ec2da18def9",
+      "source": "Si=D.int({min:1})",
+      "variable": true
+    },
+    {
+      "group": "environment",
+      "file": "chunk-07mxqtdh.js",
+      "symbol": "mi",
+      "start": 63975,
+      "end": 63986,
+      "moduleSha256": "8fe1ef6c86ed39fc9bd66865a357b8f94de75b8133e01ee093c994d27eaa28ff",
+      "sha256": "2ab1b0cf0240220df46b012d487d5d21acf7328a8b1bf735d16d28bcb07dd2ff",
+      "source": "mi=D.bool()",
+      "variable": true
+    },
+    {
+      "group": "environment",
+      "file": "chunk-07mxqtdh.js",
+      "symbol": "Di",
+      "start": 61265,
+      "end": 61279,
+      "moduleSha256": "8fe1ef6c86ed39fc9bd66865a357b8f94de75b8133e01ee093c994d27eaa28ff",
+      "sha256": "4a5f35de83ed19c558f80f18d507bdc0772594e12053b9d7d7624e2b931a82c3",
+      "source": "Di=D.triBool()",
+      "variable": true
+    },
+    {
+      "group": "environment",
+      "file": "chunk-07mxqtdh.js",
+      "symbol": "Oi",
+      "start": 61253,
+      "end": 61264,
+      "moduleSha256": "8fe1ef6c86ed39fc9bd66865a357b8f94de75b8133e01ee093c994d27eaa28ff",
+      "sha256": "eaba21e3fecda2a1aa9322052dad2258b361ab3ed348cbbb565db3dc744e5fec",
+      "source": "Oi=D.bool()",
+      "variable": true
+    },
+    {
+      "group": "environment",
+      "file": "chunk-07mxqtdh.js",
+      "symbol": "ii",
+      "start": 61420,
+      "end": 61431,
+      "moduleSha256": "8fe1ef6c86ed39fc9bd66865a357b8f94de75b8133e01ee093c994d27eaa28ff",
+      "sha256": "34e7bb332b9f52b0a421f445dda207c7ea037da65e2604074bf81013448551ed",
+      "source": "ii=D.bool()",
+      "variable": true
+    },
+    {
+      "group": "environment",
+      "file": "chunk-07mxqtdh.js",
+      "symbol": "zI",
+      "start": 61078,
+      "end": 61088,
+      "moduleSha256": "8fe1ef6c86ed39fc9bd66865a357b8f94de75b8133e01ee093c994d27eaa28ff",
+      "sha256": "c0eeafbb94c1ffcf527477065a30f9f8cf0ade58aee4d519c5823a3dcae1f44d",
+      "source": "zI=D.int()",
+      "variable": true
+    },
+    {
+      "group": "environment",
+      "file": "chunk-07mxqtdh.js",
+      "symbol": "gJe",
+      "start": 64815,
+      "end": 65149,
+      "moduleSha256": "8fe1ef6c86ed39fc9bd66865a357b8f94de75b8133e01ee093c994d27eaa28ff",
+      "sha256": "1ddb721aa3a310ee9114c10a56a8b97b9383f1a1fea92c658fda1134c27ac6ec",
+      "source": "function gJe(t,o){let _=Object.create(o);for(let[E,r]of Object.entries(t)){let e=_,s;Object.defineProperty(_,E,{get:()=>{let n=process.env[E];if(n!==e)s=r.parse(n),e=n;return s},enumerable:!0,configurable:!0})}return Object.defineProperties(_,{set:{value:(E,r)=>{process.env[E]=gKo(r)}},unset:{value:(E)=>{delete process.env[E]}}}),_}",
+      "variable": false
+    }
+  ],
+  "ports": {
+    "integer": [],
+    "decoders": [
+      "rc"
+    ],
+    "environment": [
+      "D",
+      "process"
+    ]
+  },
+  "returns": {
+    "integer": "{integer:rc,withDefault:eQe}",
+    "decoders": "D",
+    "environment": "gJe({ANTHROPIC_CUSTOM_HEADERS:ZI,ANTHROPIC_API_KEY:at,ANTHROPIC_AUTH_TOKEN:ut,ANTHROPIC_BASE_URL:Hi,ANTHROPIC_UNIX_SOCKET:AU,CLAUDE_CODE_API_KEY_HELPER_TTL_MS:Lo,CLAUDE_CODE_ENTRYPOINT:iL,CLAUDE_CODE_GATEWAY_HINT_HEADERS:In,CLAUDE_CODE_DESKTOP_APP_VERSION:OL,CLAUDE_CODE_ADDITIONAL_PROTECTION:Up,CLAUDE_CODE_HOST_AUTH_ENV_VAR:_o,CLAUDE_CODE_OAUTH_TOKEN:Bt,CLAUDE_CODE_OAUTH_TOKEN_FILE_DESCRIPTOR:Xt,CLAUDE_CODE_PROVIDER_MANAGED_BY_HOST:OU,CLAUDE_CODE_REMOTE:Zp,CLAUDE_CODE_OAUTH_401_WAIT_MS:Do,CLAUDE_CODE_AUTH_FAIL_EXIT_MS:To,CLAUDE_CODE_REMOTE_SESSION_ID:tc,CLAUDE_CODE_SUBSCRIPTION_TYPE:Fo,CLAUDE_CODE_RATE_LIMIT_TIER:fo,CLAUDE_CODE_OAUTH_SCOPES:zt,CLAUDE_CODE_REMOTE_SESSION_ORIGIN:oc,CLAUDE_BG_AUTH_SNAPSHOT_PATH:CT,ANTHROPIC_PROFILE:Bo,CLAUDE_AGENT_SDK_CLIENT_APP:rT,CLAUDE_CODE_SESSION_KIND:Cc,CLAUDE_CODE_GZIP_REQUEST_BODY_LEVEL:ci,CLAUDE_CODE_GZIP_REQUEST_BODIES:Ti,CLAUDE_CODE_GZIP_CCR_REQUEST_BODIES:Li,NODE_EXTRA_CA_CERTS:NA,CLAUDE_CODE_ENVIRONMENT_KIND:UL,CLAUDE_ENABLE_BYTE_WATCHDOG:Ai,CLAUDE_STREAM_FIRST_BYTE_TIMEOUT_MS:Si,_CLAUDE_CODE_ASSUME_FIRST_PARTY_BASE_URL:mi,CLAUDE_ENABLE_STREAM_WATCHDOG:Di,CLAUDE_ENABLE_BYTE_WATCHDOG_BEDROCK:Oi,CLAUDE_CODE_RETRY_WATCHDOG:ii,CLAUDE_CODE_MAX_RETRIES:zI},{})"
+  },
+  "schema": {
+    "ANTHROPIC_CUSTOM_HEADERS": "ZI",
+    "ANTHROPIC_API_KEY": "at",
+    "ANTHROPIC_AUTH_TOKEN": "ut",
+    "ANTHROPIC_BASE_URL": "Hi",
+    "ANTHROPIC_UNIX_SOCKET": "AU",
+    "CLAUDE_CODE_API_KEY_HELPER_TTL_MS": "Lo",
+    "CLAUDE_CODE_ENTRYPOINT": "iL",
+    "CLAUDE_CODE_GATEWAY_HINT_HEADERS": "In",
+    "CLAUDE_CODE_DESKTOP_APP_VERSION": "OL",
+    "CLAUDE_CODE_ADDITIONAL_PROTECTION": "Up",
+    "CLAUDE_CODE_HOST_AUTH_ENV_VAR": "_o",
+    "CLAUDE_CODE_OAUTH_TOKEN": "Bt",
+    "CLAUDE_CODE_OAUTH_TOKEN_FILE_DESCRIPTOR": "Xt",
+    "CLAUDE_CODE_PROVIDER_MANAGED_BY_HOST": "OU",
+    "CLAUDE_CODE_REMOTE": "Zp",
+    "CLAUDE_CODE_OAUTH_401_WAIT_MS": "Do",
+    "CLAUDE_CODE_AUTH_FAIL_EXIT_MS": "To",
+    "CLAUDE_CODE_REMOTE_SESSION_ID": "tc",
+    "CLAUDE_CODE_SUBSCRIPTION_TYPE": "Fo",
+    "CLAUDE_CODE_RATE_LIMIT_TIER": "fo",
+    "CLAUDE_CODE_OAUTH_SCOPES": "zt",
+    "CLAUDE_CODE_REMOTE_SESSION_ORIGIN": "oc",
+    "CLAUDE_BG_AUTH_SNAPSHOT_PATH": "CT",
+    "ANTHROPIC_PROFILE": "Bo",
+    "CLAUDE_AGENT_SDK_CLIENT_APP": "rT",
+    "CLAUDE_CODE_SESSION_KIND": "Cc",
+    "CLAUDE_CODE_GZIP_REQUEST_BODY_LEVEL": "ci",
+    "CLAUDE_CODE_GZIP_REQUEST_BODIES": "Ti",
+    "CLAUDE_CODE_GZIP_CCR_REQUEST_BODIES": "Li",
+    "NODE_EXTRA_CA_CERTS": "NA",
+    "CLAUDE_CODE_ENVIRONMENT_KIND": "UL",
+    "CLAUDE_ENABLE_BYTE_WATCHDOG": "Ai",
+    "CLAUDE_STREAM_FIRST_BYTE_TIMEOUT_MS": "Si",
+    "_CLAUDE_CODE_ASSUME_FIRST_PARTY_BASE_URL": "mi",
+    "CLAUDE_ENABLE_STREAM_WATCHDOG": "Di",
+    "CLAUDE_ENABLE_BYTE_WATCHDOG_BEDROCK": "Oi",
+    "CLAUDE_CODE_RETRY_WATCHDOG": "ii",
+    "CLAUDE_CODE_MAX_RETRIES": "zI"
+  },
+  "schemaBindings": [
+    {
+      "field": "ANTHROPIC_API_KEY",
+      "symbol": "at",
+      "file": "chunk-07mxqtdh.js",
+      "start": 13604,
+      "end": 13628,
+      "source": "ANTHROPIC_API_KEY:()=>at",
+      "sha256": "6f37bac408f5f670013f6934ed52451bfb355b8cf7c3a6a3f59aa31b6b28d84d"
+    },
+    {
+      "field": "ANTHROPIC_AUTH_TOKEN",
+      "symbol": "ut",
+      "file": "chunk-07mxqtdh.js",
+      "start": 13629,
+      "end": 13656,
+      "source": "ANTHROPIC_AUTH_TOKEN:()=>ut",
+      "sha256": "b0490b6b37494a31b3de0a88544966d1fb47b5de48ed59ce55cc4675fb4e394e"
+    },
+    {
+      "field": "ANTHROPIC_PROFILE",
+      "symbol": "Bo",
+      "file": "chunk-07mxqtdh.js",
+      "start": 13824,
+      "end": 13848,
+      "source": "ANTHROPIC_PROFILE:()=>Bo",
+      "sha256": "bb378649e2df2831d9e9b8fbdc632a937f3caada2a7658b7bc0d14743d1f585e"
+    },
+    {
+      "field": "CLAUDE_CODE_API_KEY_HELPER_TTL_MS",
+      "symbol": "Lo",
+      "file": "chunk-07mxqtdh.js",
+      "start": 14166,
+      "end": 14206,
+      "source": "CLAUDE_CODE_API_KEY_HELPER_TTL_MS:()=>Lo",
+      "sha256": "8bb4a47e0de2a67a19a270e613d685c8b3c04c99f5a434ffbe010bdecb050f8a"
+    },
+    {
+      "field": "CLAUDE_CODE_AUTH_FAIL_EXIT_MS",
+      "symbol": "To",
+      "file": "chunk-07mxqtdh.js",
+      "start": 14207,
+      "end": 14243,
+      "source": "CLAUDE_CODE_AUTH_FAIL_EXIT_MS:()=>To",
+      "sha256": "72a3b6b82946814e7ad3c5f4e5508f00bfd9a2ff336d8b9b05c0208bbc0516cd"
+    },
+    {
+      "field": "CLAUDE_CODE_HOST_AUTH_ENV_VAR",
+      "symbol": "_o",
+      "file": "chunk-07mxqtdh.js",
+      "start": 14539,
+      "end": 14575,
+      "source": "CLAUDE_CODE_HOST_AUTH_ENV_VAR:()=>_o",
+      "sha256": "97d1b905458580a9f9932994d194a658568cc394cbbb6f2f75cbfccb0d186908"
+    },
+    {
+      "field": "CLAUDE_CODE_OAUTH_401_WAIT_MS",
+      "symbol": "Do",
+      "file": "chunk-07mxqtdh.js",
+      "start": 14659,
+      "end": 14695,
+      "source": "CLAUDE_CODE_OAUTH_401_WAIT_MS:()=>Do",
+      "sha256": "ea97f5935ba39e15b78333fee75865164fca0f068a00e7bef88e17ab26c684d0"
+    },
+    {
+      "field": "CLAUDE_CODE_OAUTH_SCOPES",
+      "symbol": "zt",
+      "file": "chunk-07mxqtdh.js",
+      "start": 14770,
+      "end": 14801,
+      "source": "CLAUDE_CODE_OAUTH_SCOPES:()=>zt",
+      "sha256": "49aabae5da945b0356aac5b9987e09809cf9757d0993f26f938b1ecdeeb0fd7f"
+    },
+    {
+      "field": "CLAUDE_CODE_OAUTH_TOKEN",
+      "symbol": "Bt",
+      "file": "chunk-07mxqtdh.js",
+      "start": 14802,
+      "end": 14832,
+      "source": "CLAUDE_CODE_OAUTH_TOKEN:()=>Bt",
+      "sha256": "fbfba33501da751c94ac984bbc2a94fdea61af4825c062ef96d3dc9fab21244f"
+    },
+    {
+      "field": "CLAUDE_CODE_OAUTH_TOKEN_FILE_DESCRIPTOR",
+      "symbol": "Xt",
+      "file": "chunk-07mxqtdh.js",
+      "start": 14833,
+      "end": 14879,
+      "source": "CLAUDE_CODE_OAUTH_TOKEN_FILE_DESCRIPTOR:()=>Xt",
+      "sha256": "392c64daa4d241571e32bc0698a96a082908646e75c298828e253ce6392f0acc"
+    },
+    {
+      "field": "CLAUDE_CODE_RATE_LIMIT_TIER",
+      "symbol": "fo",
+      "file": "chunk-07mxqtdh.js",
+      "start": 14961,
+      "end": 14995,
+      "source": "CLAUDE_CODE_RATE_LIMIT_TIER:()=>fo",
+      "sha256": "502c95b3ab8c8ec060e7b159c2e4e76ea52f81beedb7001b9e63f8affc8c456c"
+    },
+    {
+      "field": "CLAUDE_CODE_SUBSCRIPTION_TYPE",
+      "symbol": "Fo",
+      "file": "chunk-07mxqtdh.js",
+      "start": 15402,
+      "end": 15438,
+      "source": "CLAUDE_CODE_SUBSCRIPTION_TYPE:()=>Fo",
+      "sha256": "e6be6cdb9e5e9d9493fa67b11d89fe1dfcaacc27c7f5d0d5c8133470fb373bc6"
+    },
+    {
+      "field": "CLAUDE_CODE_GATEWAY_HINT_HEADERS",
+      "symbol": "In",
+      "file": "chunk-07mxqtdh.js",
+      "start": 25924,
+      "end": 25963,
+      "source": "CLAUDE_CODE_GATEWAY_HINT_HEADERS:()=>In",
+      "sha256": "6b3ed88904fe1f32ec67a9be42f1c0ed5883430349aacac75fc10c86bf8af360"
+    },
+    {
+      "field": "NODE_EXTRA_CA_CERTS",
+      "symbol": "NA",
+      "file": "chunk-07mxqtdh.js",
+      "start": 37703,
+      "end": 37729,
+      "source": "NODE_EXTRA_CA_CERTS:()=>NA",
+      "sha256": "38be26ac46d4ba65fce6832819ef0c86d796cc3bd53141f0bf94038b9086a013"
+    },
+    {
+      "field": "CLAUDE_AGENT_SDK_CLIENT_APP",
+      "symbol": "rT",
+      "file": "chunk-07mxqtdh.js",
+      "start": 41802,
+      "end": 41836,
+      "source": "CLAUDE_AGENT_SDK_CLIENT_APP:()=>rT",
+      "sha256": "8ed504b60594de34ffcc5eb81893d9fc0c29920d19aef8afb715c91a5a656601"
+    },
+    {
+      "field": "CLAUDE_BG_AUTH_SNAPSHOT_PATH",
+      "symbol": "CT",
+      "file": "chunk-07mxqtdh.js",
+      "start": 42200,
+      "end": 42235,
+      "source": "CLAUDE_BG_AUTH_SNAPSHOT_PATH:()=>CT",
+      "sha256": "d887fad88f55cd58e0636530b1cb2be56b0d181779bfe947dfe5e2b389171fc2"
+    },
+    {
+      "field": "CLAUDE_CODE_ADDITIONAL_PROTECTION",
+      "symbol": "Up",
+      "file": "chunk-07mxqtdh.js",
+      "start": 43403,
+      "end": 43443,
+      "source": "CLAUDE_CODE_ADDITIONAL_PROTECTION:()=>Up",
+      "sha256": "1ead213316ac26575258e0904d4d662df801a2a0a413a849e0224aaa4b20aa42"
+    },
+    {
+      "field": "CLAUDE_CODE_DESKTOP_APP_VERSION",
+      "symbol": "OL",
+      "file": "chunk-07mxqtdh.js",
+      "start": 44825,
+      "end": 44863,
+      "source": "CLAUDE_CODE_DESKTOP_APP_VERSION:()=>OL",
+      "sha256": "a5be95223414b60ce0d9468fdcc776f23936bcba31543eaba6546d0dcb249d94"
+    },
+    {
+      "field": "CLAUDE_CODE_ENTRYPOINT",
+      "symbol": "iL",
+      "file": "chunk-07mxqtdh.js",
+      "start": 45434,
+      "end": 45463,
+      "source": "CLAUDE_CODE_ENTRYPOINT:()=>iL",
+      "sha256": "6560e3f8afc684317aad034a2bafde163bf87e63a21e15c2f4646eb8dd95eb16"
+    },
+    {
+      "field": "CLAUDE_CODE_ENVIRONMENT_KIND",
+      "symbol": "UL",
+      "file": "chunk-07mxqtdh.js",
+      "start": 45464,
+      "end": 45499,
+      "source": "CLAUDE_CODE_ENVIRONMENT_KIND:()=>UL",
+      "sha256": "3f94b944fe1c3b1a37348ee9aef9b813021dada9aa455d26f9623364f1ef2308"
+    },
+    {
+      "field": "CLAUDE_CODE_REMOTE",
+      "symbol": "Zp",
+      "file": "chunk-07mxqtdh.js",
+      "start": 48143,
+      "end": 48168,
+      "source": "CLAUDE_CODE_REMOTE:()=>Zp",
+      "sha256": "61f75939f66f54e821e648c9d24a081800e7634a5bc282db19ee6f1314e08088"
+    },
+    {
+      "field": "CLAUDE_CODE_REMOTE_SESSION_ID",
+      "symbol": "tc",
+      "file": "chunk-07mxqtdh.js",
+      "start": 48373,
+      "end": 48409,
+      "source": "CLAUDE_CODE_REMOTE_SESSION_ID:()=>tc",
+      "sha256": "f967386f53751a169d8b79f5161bdd8adc0016f1b26fd3fc2774ec100b8e60b0"
+    },
+    {
+      "field": "CLAUDE_CODE_REMOTE_SESSION_ORIGIN",
+      "symbol": "oc",
+      "file": "chunk-07mxqtdh.js",
+      "start": 48410,
+      "end": 48450,
+      "source": "CLAUDE_CODE_REMOTE_SESSION_ORIGIN:()=>oc",
+      "sha256": "48d60cca5858f860d1c394018aa55fb99339a27631c4152aa9c4c78d60c57582"
+    },
+    {
+      "field": "CLAUDE_CODE_SESSION_KIND",
+      "symbol": "Cc",
+      "file": "chunk-07mxqtdh.js",
+      "start": 49274,
+      "end": 49305,
+      "source": "CLAUDE_CODE_SESSION_KIND:()=>Cc",
+      "sha256": "a55dfffde26f31f5b0b54d608edac384b293e7a6bf671aeec1caf72c2d48bbc4"
+    },
+    {
+      "field": "ANTHROPIC_CUSTOM_HEADERS",
+      "symbol": "ZI",
+      "file": "chunk-07mxqtdh.js",
+      "start": 59384,
+      "end": 59415,
+      "source": "ANTHROPIC_CUSTOM_HEADERS:()=>ZI",
+      "sha256": "41b17833936d47c38d128a40a7a72583df43a38c8feda43a61587445418d922a"
+    },
+    {
+      "field": "CLAUDE_CODE_GZIP_CCR_REQUEST_BODIES",
+      "symbol": "Li",
+      "file": "chunk-07mxqtdh.js",
+      "start": 59918,
+      "end": 59960,
+      "source": "CLAUDE_CODE_GZIP_CCR_REQUEST_BODIES:()=>Li",
+      "sha256": "f01959bfaa64f2e6e9fb0405c17e80420fd2584b7b1aa748e22fd040311934a9"
+    },
+    {
+      "field": "CLAUDE_CODE_GZIP_REQUEST_BODIES",
+      "symbol": "Ti",
+      "file": "chunk-07mxqtdh.js",
+      "start": 59961,
+      "end": 59999,
+      "source": "CLAUDE_CODE_GZIP_REQUEST_BODIES:()=>Ti",
+      "sha256": "23244ed5af87ba3afecbe010c8235ff206bd598040496df698f588ed5b7f36e7"
+    },
+    {
+      "field": "CLAUDE_CODE_GZIP_REQUEST_BODY_LEVEL",
+      "symbol": "ci",
+      "file": "chunk-07mxqtdh.js",
+      "start": 60000,
+      "end": 60042,
+      "source": "CLAUDE_CODE_GZIP_REQUEST_BODY_LEVEL:()=>ci",
+      "sha256": "f4825e1891f78d108a327e125b5c79a4df387f8e8680e8d3a5d653546c1dd258"
+    },
+    {
+      "field": "CLAUDE_CODE_MAX_RETRIES",
+      "symbol": "zI",
+      "file": "chunk-07mxqtdh.js",
+      "start": 60118,
+      "end": 60148,
+      "source": "CLAUDE_CODE_MAX_RETRIES:()=>zI",
+      "sha256": "2a53df7ab388ccf5e6e8289b04e30bcb21cab6f9314e58e22bb85f612839c497"
+    },
+    {
+      "field": "CLAUDE_CODE_RETRY_WATCHDOG",
+      "symbol": "ii",
+      "file": "chunk-07mxqtdh.js",
+      "start": 60314,
+      "end": 60347,
+      "source": "CLAUDE_CODE_RETRY_WATCHDOG:()=>ii",
+      "sha256": "30de05101e46526e8c822ec2dec420d9566636d53ea123210c16b4142c0c3eca"
+    },
+    {
+      "field": "CLAUDE_ENABLE_BYTE_WATCHDOG",
+      "symbol": "Ai",
+      "file": "chunk-07mxqtdh.js",
+      "start": 60395,
+      "end": 60429,
+      "source": "CLAUDE_ENABLE_BYTE_WATCHDOG:()=>Ai",
+      "sha256": "88373581527149c780bad8892e0e194709bcc0c1a08802f3e546873666316b84"
+    },
+    {
+      "field": "CLAUDE_ENABLE_BYTE_WATCHDOG_BEDROCK",
+      "symbol": "Oi",
+      "file": "chunk-07mxqtdh.js",
+      "start": 60430,
+      "end": 60472,
+      "source": "CLAUDE_ENABLE_BYTE_WATCHDOG_BEDROCK:()=>Oi",
+      "sha256": "6195aa481ab011b6f6a78d1a28054bfb43af54da89f83efb7fe4dd4efe66b7fa"
+    },
+    {
+      "field": "CLAUDE_ENABLE_STREAM_WATCHDOG",
+      "symbol": "Di",
+      "file": "chunk-07mxqtdh.js",
+      "start": 60473,
+      "end": 60509,
+      "source": "CLAUDE_ENABLE_STREAM_WATCHDOG:()=>Di",
+      "sha256": "606715d9eb858bcce297c413dfc87870c68be4bdf658d3f95afac0cd7c1ae93b"
+    },
+    {
+      "field": "CLAUDE_STREAM_FIRST_BYTE_TIMEOUT_MS",
+      "symbol": "Si",
+      "file": "chunk-07mxqtdh.js",
+      "start": 60577,
+      "end": 60619,
+      "source": "CLAUDE_STREAM_FIRST_BYTE_TIMEOUT_MS:()=>Si",
+      "sha256": "8c181cc34747fbfd5940a97fb27060c98f696faf1e016b9040cde23ad299bd18"
+    },
+    {
+      "field": "ANTHROPIC_BASE_URL",
+      "symbol": "Hi",
+      "file": "chunk-07mxqtdh.js",
+      "start": 61599,
+      "end": 61624,
+      "source": "ANTHROPIC_BASE_URL:()=>Hi",
+      "sha256": "92f2acd153ae5b308d6c7d47be3c5ed158a344f6b12712d7e05a42d93b122d72"
+    },
+    {
+      "field": "ANTHROPIC_UNIX_SOCKET",
+      "symbol": "AU",
+      "file": "chunk-07mxqtdh.js",
+      "start": 62049,
+      "end": 62077,
+      "source": "ANTHROPIC_UNIX_SOCKET:()=>AU",
+      "sha256": "de536a1f8137346147fec3c590ef4a8b21a38320e2f84dc61790a6acd2e8efe1"
+    },
+    {
+      "field": "CLAUDE_CODE_PROVIDER_MANAGED_BY_HOST",
+      "symbol": "OU",
+      "file": "chunk-07mxqtdh.js",
+      "start": 63258,
+      "end": 63301,
+      "source": "CLAUDE_CODE_PROVIDER_MANAGED_BY_HOST:()=>OU",
+      "sha256": "8307b7dc69950e0300ce722f40ddf3374904defc0e28dab7ec196fe1a82a413e"
+    },
+    {
+      "field": "_CLAUDE_CODE_ASSUME_FIRST_PARTY_BASE_URL",
+      "symbol": "mi",
+      "file": "chunk-07mxqtdh.js",
+      "start": 63838,
+      "end": 63885,
+      "source": "_CLAUDE_CODE_ASSUME_FIRST_PARTY_BASE_URL:()=>mi",
+      "sha256": "1e0d9d5cd1bd2966a305953a8154276b8f5f3464ad528875d197c3fd9dfbeb34"
+    }
+  ],
+  "additions287": {
+    "version": "2.1.287",
+    "field": "CLAUDE_CODE_GZIP_REQUEST_BODY_BLOCKS",
+    "type": "number | undefined",
+    "schema": {
+      "min": 0,
+      "max": 2,
+      "digitsOnly": true
+    },
+    "corpora": [
+      {
+        "platform": "linux-x64",
+        "manifestSha256": "ecae5d9ddbf13ef27b6b6a1141953aab4ba311e47dde3ac2a7cc8b5a01c63784",
+        "module": "chunk-ex1nk6dh.js",
+        "moduleSha256": "401f0254549188953a04d453fc05a458f69702b60d8209a7ef5ce750f42d0cd8",
+        "fragments": {
+          "fieldBinding": {
+            "start": 60909,
+            "end": 60952,
+            "source": "CLAUDE_CODE_GZIP_REQUEST_BODY_BLOCKS:()=>Ui",
+            "sha256": "b4128ca3f6c9a22d013850719ce924382ff97cd133ab05b6459e302efa0fde05"
+          },
+          "parserDeclaration": {
+            "start": 62301,
+            "end": 62338,
+            "source": "Ui=H.int({min:0,max:2,digitsOnly:!0})",
+            "sha256": "880d19f8fd68d726517513e2c7a6613304a1e6ed26d6ffd99350309a2f5f6d71"
+          },
+          "getterDeclaration": {
+            "start": 65806,
+            "end": 66140,
+            "source": "function GZe(t,o){let _=Object.create(o);for(let[r,s]of Object.entries(t)){let n=_,e;Object.defineProperty(_,r,{get:()=>{let C=process.env[r];if(C!==n)e=s.parse(C),n=C;return e},enumerable:!0,configurable:!0})}return Object.defineProperties(_,{set:{value:(r,s)=>{process.env[r]=sJo(s)}},unset:{value:(r)=>{delete process.env[r]}}}),_}",
+            "sha256": "379851ef009ff05b405f2ccefb6055db7e90bff91b5cf6c454607d1512b56463"
+          }
+        }
+      },
+      {
+        "platform": "linux-arm64",
+        "manifestSha256": "f3be5b23f9cbb909555fe028143b9a3a40c1e3e49961e09c49d8e5a6b61ae83b",
+        "module": "chunk-ysvw6cpd.js",
+        "moduleSha256": "e02e25a1106bb3b20e93c25179f26f876c08b42f049eaffd828449ea0941323d",
+        "fragments": {
+          "fieldBinding": {
+            "start": 60911,
+            "end": 60954,
+            "source": "CLAUDE_CODE_GZIP_REQUEST_BODY_BLOCKS:()=>Ui",
+            "sha256": "b4128ca3f6c9a22d013850719ce924382ff97cd133ab05b6459e302efa0fde05"
+          },
+          "parserDeclaration": {
+            "start": 62303,
+            "end": 62340,
+            "source": "Ui=D.int({min:0,max:2,digitsOnly:!0})",
+            "sha256": "fe05af27e66bd19a40e847992fe64db32b5b20a975970d548572259e7d308081"
+          },
+          "getterDeclaration": {
+            "start": 65808,
+            "end": 66142,
+            "source": "function GZe(t,o){let _=Object.create(o);for(let[E,r]of Object.entries(t)){let e=_,s;Object.defineProperty(_,E,{get:()=>{let n=process.env[E];if(n!==e)s=r.parse(n),e=n;return s},enumerable:!0,configurable:!0})}return Object.defineProperties(_,{set:{value:(E,r)=>{process.env[E]=sJo(r)}},unset:{value:(E)=>{delete process.env[E]}}}),_}",
+            "sha256": "ec4bde63e13f76d0f14835d0fd24168d2c16ead09df284bc75d57b5cde7e0205"
+          }
+        }
+      },
+      {
+        "platform": "darwin-x64",
+        "manifestSha256": "ba9e122d28e8a42927eb23c7c86b62295f24a223546ee5476e761837579a709b",
+        "module": "chunk-5kdb7ws1.js",
+        "moduleSha256": "35536b38d81ea676c2928a182f2b59103d58f3467309ecf236f5e804bfe491cb",
+        "fragments": {
+          "fieldBinding": {
+            "start": 60247,
+            "end": 60290,
+            "source": "CLAUDE_CODE_GZIP_REQUEST_BODY_BLOCKS:()=>Ui",
+            "sha256": "b4128ca3f6c9a22d013850719ce924382ff97cd133ab05b6459e302efa0fde05"
+          },
+          "parserDeclaration": {
+            "start": 61639,
+            "end": 61676,
+            "source": "Ui=L.int({min:0,max:2,digitsOnly:!0})",
+            "sha256": "3e44e798e6806d4e87f11e1b2a53d2aa565e2cd2627b9ce874b781b2cbe3a52e"
+          },
+          "getterDeclaration": {
+            "start": 65144,
+            "end": 65478,
+            "source": "function ZZe(t,o){let _=Object.create(o);for(let[r,s]of Object.entries(t)){let n=_,e;Object.defineProperty(_,r,{get:()=>{let C=process.env[r];if(C!==n)e=s.parse(C),n=C;return e},enumerable:!0,configurable:!0})}return Object.defineProperties(_,{set:{value:(r,s)=>{process.env[r]=B7o(s)}},unset:{value:(r)=>{delete process.env[r]}}}),_}",
+            "sha256": "000c0d3ff5844fabe398581ab337f1a495ca35b4763f545def9cf2024fd20bd0"
+          }
+        }
+      },
+      {
+        "platform": "darwin-arm64",
+        "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+        "module": "chunk-mbfze585.js",
+        "moduleSha256": "2e40ea5244009e4c37b57879f34c96cc3e3bc7d3c5468f9e65d63fe5ce13287a",
+        "fragments": {
+          "fieldBinding": {
+            "start": 60249,
+            "end": 60292,
+            "source": "CLAUDE_CODE_GZIP_REQUEST_BODY_BLOCKS:()=>xi",
+            "sha256": "b0178a60332c40a079a3acf922c6073f69432e522d8a2e68e6528f619bfa3f33"
+          },
+          "parserDeclaration": {
+            "start": 61641,
+            "end": 61678,
+            "source": "xi=D.int({min:0,max:2,digitsOnly:!0})",
+            "sha256": "0b616a84dbb5f15a5ab67ef635507262b2e3c3c21109f14cef3bdb4b3cfc92c7"
+          },
+          "getterDeclaration": {
+            "start": 65146,
+            "end": 65480,
+            "source": "function ZZe(t,o){let _=Object.create(o);for(let[r,s]of Object.entries(t)){let n=_,e;Object.defineProperty(_,r,{get:()=>{let C=process.env[r];if(C!==n)e=s.parse(C),n=C;return e},enumerable:!0,configurable:!0})}return Object.defineProperties(_,{set:{value:(r,s)=>{process.env[r]=B7o(s)}},unset:{value:(r)=>{delete process.env[r]}}}),_}",
+            "sha256": "000c0d3ff5844fabe398581ab337f1a495ca35b4763f545def9cf2024fd20bd0"
+          }
+        }
+      },
+      {
+        "platform": "win32-x64",
+        "manifestSha256": "c71e85888df3301fd3c4cb158744538810418e2d67591debe8e4f7c771fcdddc",
+        "module": "chunk-5g00bdfr.js",
+        "moduleSha256": "da1a132ee91c1c9cff1f8560ab401cd9a1a38ce2daaeabc1b2db56f82ab8872c",
+        "fragments": {
+          "fieldBinding": {
+            "start": 60319,
+            "end": 60362,
+            "source": "CLAUDE_CODE_GZIP_REQUEST_BODY_BLOCKS:()=>Ui",
+            "sha256": "b4128ca3f6c9a22d013850719ce924382ff97cd133ab05b6459e302efa0fde05"
+          },
+          "parserDeclaration": {
+            "start": 61711,
+            "end": 61748,
+            "source": "Ui=D.int({min:0,max:2,digitsOnly:!0})",
+            "sha256": "fe05af27e66bd19a40e847992fe64db32b5b20a975970d548572259e7d308081"
+          },
+          "getterDeclaration": {
+            "start": 65216,
+            "end": 65550,
+            "source": "function KZe(t,o){let _=Object.create(o);for(let[E,r]of Object.entries(t)){let e=_,s;Object.defineProperty(_,E,{get:()=>{let n=process.env[E];if(n!==e)s=r.parse(n),e=n;return s},enumerable:!0,configurable:!0})}return Object.defineProperties(_,{set:{value:(E,r)=>{process.env[E]=lJo(r)}},unset:{value:(E)=>{delete process.env[E]}}}),_}",
+            "sha256": "49ab634d383f4a7c45cbf0525537a393032853b436a87c104bf51d6f51dccd58"
+          }
+        }
+      },
+      {
+        "platform": "win32-arm64",
+        "manifestSha256": "d0d8b3b882ba61ba321ab072b5cbc28a1a4089cfb4c5dce0698311aae10c739e",
+        "module": "chunk-r5twd8z5.js",
+        "moduleSha256": "c36b0f4f9922f6d67f18fd1f3a78d298114022f7b679fe7ba6aa802c26137462",
+        "fragments": {
+          "fieldBinding": {
+            "start": 60321,
+            "end": 60364,
+            "source": "CLAUDE_CODE_GZIP_REQUEST_BODY_BLOCKS:()=>ii",
+            "sha256": "6185e0c6b2350c4c41c76fbe11068966f2f3ac2a5190aec091db175a689dbffd"
+          },
+          "parserDeclaration": {
+            "start": 61713,
+            "end": 61750,
+            "source": "ii=D.int({min:0,max:2,digitsOnly:!0})",
+            "sha256": "ee3fbcf017c4e1de8aa07ca598cd0b8217caffa60afa23f0961a7d58447d9bf1"
+          },
+          "getterDeclaration": {
+            "start": 65218,
+            "end": 65552,
+            "source": "function KZe(t,o){let _=Object.create(o);for(let[E,r]of Object.entries(t)){let e=_,s;Object.defineProperty(_,E,{get:()=>{let n=process.env[E];if(n!==e)s=r.parse(n),e=n;return s},enumerable:!0,configurable:!0})}return Object.defineProperties(_,{set:{value:(E,r)=>{process.env[E]=lJo(r)}},unset:{value:(E)=>{delete process.env[E]}}}),_}",
+            "sha256": "49ab634d383f4a7c45cbf0525537a393032853b436a87c104bf51d6f51dccd58"
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,242 @@
+{
+  "version": "2.1.287",
+  "platform": "darwin-arm64",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16 code units",
+  "roots": {
+    "liveIdentity": "J",
+    "record": "q"
+  },
+  "branches": [],
+  "portDeclarations": [
+    {
+      "name": "t",
+      "role": "debug",
+      "file": "chunk-q80zaav8.js",
+      "start": 46026,
+      "end": 46071,
+      "source": "function t(e,n={level:\"debug\"}){U().log(e,n)}",
+      "sha256": "da9e0b5e590a43c6f7cf46f3cfcd93d97f399db1017ff8dae938bdbd15e13790",
+      "moduleSha256": "f9503296591b825624caf5932b9c5973cde96b859259266a506b616dca5cd41e"
+    },
+    {
+      "name": "uo",
+      "role": "gatewayAuth",
+      "file": "chunk-bn3p37gv.js",
+      "start": 95766,
+      "end": 95826,
+      "source": "function uo(){return n().host.credentialSlots.gatewayAuth()}",
+      "sha256": "38a6769d93ec6d6952041abae354324f962c5d84b69768f0c3f694b07d3ad49b",
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5"
+    },
+    {
+      "name": "Re",
+      "role": "gatewayPin",
+      "file": "chunk-p03a4z7b.js",
+      "start": 14127,
+      "end": 14183,
+      "source": "async function Re(e,n){return ope(s8(new URL(e.url)),n)}",
+      "sha256": "de562d99158dae8fdf400385a9e26f4696979eede353aa96d686d113a93249d0",
+      "moduleSha256": "8771a71ec06e0533db85d461446f8dab10c0917debb6847f65d61b03731d7641"
+    },
+    {
+      "name": "_e",
+      "role": "gatewayIdentity",
+      "file": "chunk-p03a4z7b.js",
+      "start": 13825,
+      "end": 14127,
+      "source": "function _e(e,n){if(!bD(e)||!n||n===aqr)return;let r;try{r=new URL(e.url)}catch{return}if(r.protocol!==\"https:\")return;let s=`${r.origin}${r.pathname===\"/\"?\"\":r.pathname}`,g=ffn(e)??\"\";return{organizationUuid:`${Se}${s}#${n}`,accountUuid:g.length>Qe?`sha256:${Oe(\"sha256\").update(g).digest(\"hex\")}`:g}}",
+      "sha256": "9190752c69cb1138771894a947511a7922537cf97000130097daa37300136d37",
+      "moduleSha256": "8771a71ec06e0533db85d461446f8dab10c0917debb6847f65d61b03731d7641"
+    },
+    {
+      "name": "o_t",
+      "role": "profileEligible",
+      "file": "chunk-nankzm0s.js",
+      "start": 615968,
+      "end": 616112,
+      "source": "function o_t(){return ew()!==\"env-quad\"&&yQe()===\"user_oauth\"&&fd({skipApiKeyHelper:!0})&&Gp({skipRetrievingKeyFromApiKeyHelper:!0}).key===null}",
+      "sha256": "bfdb5c3236101ef15843dad73eaee759a76741c7f4a30c9bbb08cb44944cc3a7",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa"
+    },
+    {
+      "name": "ye",
+      "role": "profileIdentity",
+      "file": "chunk-p03a4z7b.js",
+      "start": 13563,
+      "end": 13800,
+      "source": "function ye(){let e=oje(),n=Qm();return e?.organizationUuid&&e.accountEmail&&n?.organizationUuid===e.organizationUuid&&n.emailAddress===e.accountEmail&&n.accountUuid?{organizationUuid:e.organizationUuid,accountUuid:n.accountUuid}:void 0}",
+      "sha256": "023876aba7026e0169f1637c2ce4512b2e699c69374f75b42f55b534e5e03a55",
+      "moduleSha256": "8771a71ec06e0533db85d461446f8dab10c0917debb6847f65d61b03731d7641"
+    },
+    {
+      "name": "G",
+      "role": "oauthIdentity",
+      "file": "chunk-p03a4z7b.js",
+      "start": 13269,
+      "end": 13563,
+      "source": "async function G(e){let n=Qm(),r=await Zg(e),s=r===\"store\"?\"stored_login\":r===\"env\"||r===\"fd\"?\"injected_token\":void 0;if(r!==\"store\")return{credentialOrigin:s};return{credentialOrigin:s,consentIdentity:n?.organizationUuid?{organizationUuid:n.organizationUuid,accountUuid:n.accountUuid}:void 0}}",
+      "sha256": "195c11279fac8849eb4df1ff763879f4ca379239b2b9b9cc9c9d926468e409ed",
+      "moduleSha256": "8771a71ec06e0533db85d461446f8dab10c0917debb6847f65d61b03731d7641"
+    },
+    {
+      "name": "Qm",
+      "role": "storedAccount",
+      "file": "chunk-nankzm0s.js",
+      "start": 667700,
+      "end": 667739,
+      "source": "function Qm(){return le().oauthAccount}",
+      "sha256": "b9506ce8af2ef5edd330c6a8e1c327cc33625fe2b4f024553f66e3e8fd9aa8e9",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa"
+    },
+    {
+      "name": "K0o",
+      "role": "writeRecord",
+      "file": "chunk-09m4fzsj.js",
+      "start": 332847,
+      "end": 333776,
+      "source": "async function K0o(e,n,r){try{let{records:s,newerVersion:h,unreadable:g}=await lT(r);if(h||g){t(`Remote settings: Consent records file is ${h?\"from a newer version\":\"unreadable\"}; not overwriting it`);return}let b=fL(n),w=s.get(e.organizationUuid),R=w?.accountUuid===e.accountUuid,A=!Y8(b);if(A&&!(w&&R))return;let M=A&&w?w.dangerousSettingsHash:cAn(b),D=Date.now();if(R&&w.dangerousSettingsHash===M&&D-w.updatedAt<Dz)return;s.delete(e.organizationUuid);let z=[...s].sort(([,K],[,X])=>X.updatedAt-K.updatedAt).slice(0,Iz-1);z.unshift([e.organizationUuid,{accountUuid:e.accountUuid,dangerousSettingsHash:M,updatedAt:D}]);let j=_({version:Rb,records:Object.fromEntries(z)});if(F()&&r!==void 0){let K=await r.write(De.state(iT),j,{mode:384});if(!K.ok)t(`Remote settings: Failed to record org consent - ${it(K.error)}`);return}await Bt().atomicWrite(aT(),j,384)}catch(s){t(`Remote settings: Failed to record org consent - ${l(s)}`)}}",
+      "sha256": "8c9075ecdbd6070c2c03e030b8c1009fc7d2c668d48b63e9ab97d76e9c88aebb",
+      "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f"
+    },
+    {
+      "name": "mb",
+      "role": "selectApiKey",
+      "file": "chunk-nankzm0s.js",
+      "start": 622696,
+      "end": 623762,
+      "source": "function mb(e={}){if(f8()){if(a.ANTHROPIC_API_KEY)return{key:a.ANTHROPIC_API_KEY,source:\"ANTHROPIC_API_KEY\"};if(vh())return{key:e.skipRetrievingKeyFromApiKeyHelper?null:NQn(),source:\"apiKeyHelper\"};return{key:null,source:\"none\"}}let n=Cb()?void 0:a.ANTHROPIC_API_KEY;if($3t()&&n)return{key:n,source:\"ANTHROPIC_API_KEY\"};if(Le(!1)){let h=AZ();if(h)return{key:h,source:\"ANTHROPIC_API_KEY\"};if(!n&&!a.CLAUDE_CODE_OAUTH_TOKEN&&!a.CLAUDE_CODE_OAUTH_TOKEN_FILE_DESCRIPTOR&&!sO()&&!a.ANTHROPIC_AUTH_TOKEN&&!fd()&&Vn())throw Error(\"ANTHROPIC_API_KEY, ANTHROPIC_AUTH_TOKEN, CLAUDE_CODE_OAUTH_TOKEN, or WIF env vars (ANTHROPIC_FEDERATION_RULE_ID + ANTHROPIC_ORGANIZATION_ID) required\");if(n)return{key:n,source:\"ANTHROPIC_API_KEY\"};return{key:null,source:\"none\"}}if(n&&ZZn(koe(n))===\"approved\")return{key:n,source:\"ANTHROPIC_API_KEY\"};let r=AZ();if(r)return{key:r,source:\"ANTHROPIC_API_KEY\"};if(vh()){if(e.skipRetrievingKeyFromApiKeyHelper)return{key:null,source:\"apiKeyHelper\"};return{key:NQn(),source:\"apiKeyHelper\"}}let g=jQn();if(g)return g;return{key:null,source:\"none\"}}",
+      "sha256": "fa4e45018282379b06674b3e70d4c9ed908c6f53cc876c3e8c98e6561860011b",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa"
+    }
+  ],
+  "dynamicImportRemap": {
+    "none": true
+  },
+  "modules": [
+    {
+      "file": "chunk-nankzm0s.js",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "moduleLength": 706979,
+      "rows": [
+        {
+          "file": "chunk-nankzm0s.js",
+          "name": "Gp",
+          "names": [
+            "Gp"
+          ],
+          "start": 620548,
+          "end": 620621,
+          "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+          "sha256": "57ff03411084e0b0565d5455845f741fd0370d6b290b434d5637f0f81d3d9a17",
+          "source": "function Gp(e={}){try{return mb(e)}catch{return{key:null,source:\"none\"}}}",
+          "runtimeSource": "function Gp(e={}){try{return mb(e)}catch{return{key:null,source:\"none\"}}}",
+          "variable": false
+        }
+      ],
+      "bindings": {
+        "mb": {
+          "port": "selectApiKey"
+        }
+      },
+      "optionalGlobals": []
+    },
+    {
+      "file": "chunk-p03a4z7b.js",
+      "moduleSha256": "8771a71ec06e0533db85d461446f8dab10c0917debb6847f65d61b03731d7641",
+      "moduleLength": 35913,
+      "rows": [
+        {
+          "file": "chunk-p03a4z7b.js",
+          "name": "Xe",
+          "names": [
+            "Xe"
+          ],
+          "start": 13213,
+          "end": 13269,
+          "moduleSha256": "8771a71ec06e0533db85d461446f8dab10c0917debb6847f65d61b03731d7641",
+          "sha256": "91d9634c57dae373d73556eded88f275e961167c231b7b80d3079b9b71937e39",
+          "source": "async function Xe(e){return(await G(e)).consentIdentity}",
+          "runtimeSource": "async function Xe(e){return(await G(e)).consentIdentity}",
+          "variable": false
+        },
+        {
+          "file": "chunk-p03a4z7b.js",
+          "name": "Se",
+          "names": [
+            "Se"
+          ],
+          "start": 13804,
+          "end": 13817,
+          "moduleSha256": "8771a71ec06e0533db85d461446f8dab10c0917debb6847f65d61b03731d7641",
+          "sha256": "fb537edc36d607db9f2e2f04c74b6abff0bb8a867e8dc8c7b8bdb6d3c94530f8",
+          "source": "Se=\"gateway:\"",
+          "runtimeSource": "Se=\"gateway:\"",
+          "variable": true
+        },
+        {
+          "file": "chunk-p03a4z7b.js",
+          "name": "J",
+          "names": [
+            "J"
+          ],
+          "start": 14183,
+          "end": 14355,
+          "moduleSha256": "8771a71ec06e0533db85d461446f8dab10c0917debb6847f65d61b03731d7641",
+          "sha256": "fe41f47e09bbf42687ec78415f9a45865bb3c12207ef194843688ba6ff3e99ec",
+          "source": "async function J(e){let n=uo();if(n)return _e(n,await Re(n,e).catch(()=>{return}));if(Gp({skipRetrievingKeyFromApiKeyHelper:!0}).key===null&&o_t())return ye();return Xe(e)}",
+          "runtimeSource": "async function J(e){let n=uo();if(n)return _e(n,await Re(n,e).catch(()=>{return}));if(Gp({skipRetrievingKeyFromApiKeyHelper:!0}).key===null&&o_t())return ye();return Xe(e)}",
+          "variable": false
+        },
+        {
+          "file": "chunk-p03a4z7b.js",
+          "name": "q",
+          "names": [
+            "q"
+          ],
+          "start": 14355,
+          "end": 14653,
+          "moduleSha256": "8771a71ec06e0533db85d461446f8dab10c0917debb6847f65d61b03731d7641",
+          "sha256": "4b6a4ab35c0e00fc252cae49dc668e85f5f8a3a117c1974c792d33d9cce0053b",
+          "source": "async function q(e,n,r,s){if(!e)return;let g=e.organizationUuid.startsWith(Se)?await J(s):Qm();if(g?.organizationUuid!==e.organizationUuid||g.accountUuid!==e.accountUuid){t(\"Remote settings: consent identity no longer matches the fetch identity; not recording org consent\");return}await K0o(e,n,r)}",
+          "runtimeSource": "async function q(e,n,r,s){if(!e)return;let g=e.organizationUuid.startsWith(Se)?await J(s):Qm();if(g?.organizationUuid!==e.organizationUuid||g.accountUuid!==e.accountUuid){t(\"Remote settings: consent identity no longer matches the fetch identity; not recording org consent\");return}await K0o(e,n,r)}",
+          "variable": false
+        }
+      ],
+      "bindings": {
+        "uo": {
+          "port": "gatewayAuth"
+        },
+        "_e": {
+          "port": "gatewayIdentity"
+        },
+        "Re": {
+          "port": "gatewayPin"
+        },
+        "Gp": {
+          "file": "chunk-nankzm0s.js",
+          "name": "Gp"
+        },
+        "o_t": {
+          "port": "profileEligible"
+        },
+        "ye": {
+          "port": "profileIdentity"
+        },
+        "G": {
+          "port": "oauthIdentity"
+        },
+        "Qm": {
+          "port": "storedAccount"
+        },
+        "t": {
+          "port": "debug"
+        },
+        "K0o": {
+          "port": "writeRecord"
+        }
+      },
+      "optionalGlobals": []
+    }
+  ]
+}

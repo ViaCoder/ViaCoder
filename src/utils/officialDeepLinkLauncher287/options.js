@@ -1,0 +1,2 @@
+// Complete original hidden flag declarations and base64url decoders.
+export function deepLinkOptions287(Zo){return [new Zo("--prefill-b64 <b64>","Base64url-encoded --prefill value (deep-link shell-safe launch paths)").argParser((w)=>Buffer.from(w,"base64url").toString("utf8")).hideHelp(),new Zo("--deep-link-cwd-b64 <b64>","Base64url-encoded working directory (deep-link shell-safe launch paths)").argParser((w)=>Buffer.from(w,"base64url").toString("utf8")).hideHelp()];}

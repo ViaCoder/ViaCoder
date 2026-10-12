@@ -1,0 +1,12 @@
+export function module0(ports:{get(file:string,name:string):unknown;module(file:string):unknown;sourceEntryArgs?(flag:string):string[]}):Record<string,any>
+export function module1(ports:{get(file:string,name:string):unknown;module(file:string):unknown;sourceEntryArgs?(flag:string):string[]}):Record<string,any>
+export function module2(ports:{get(file:string,name:string):unknown;module(file:string):unknown;sourceEntryArgs?(flag:string):string[]}):Record<string,any>
+export function module3(ports:{get(file:string,name:string):unknown;module(file:string):unknown;sourceEntryArgs?(flag:string):string[]}):Record<string,any>
+export function module4(ports:{get(file:string,name:string):unknown;module(file:string):unknown;sourceEntryArgs?(flag:string):string[]}):Record<string,any>
+export function module5(ports:{get(file:string,name:string):unknown;module(file:string):unknown;sourceEntryArgs?(flag:string):string[]}):Record<string,any>
+export function module6(ports:{get(file:string,name:string):unknown;module(file:string):unknown;sourceEntryArgs?(flag:string):string[]}):Record<string,any>
+export function module7(ports:{get(file:string,name:string):unknown;module(file:string):unknown;sourceEntryArgs?(flag:string):string[]}):Record<string,any>
+export function module8(ports:{get(file:string,name:string):unknown;module(file:string):unknown;sourceEntryArgs?(flag:string):string[]}):Record<string,any>
+export function module9(ports:{get(file:string,name:string):unknown;module(file:string):unknown;sourceEntryArgs?(flag:string):string[]}):Record<string,any>
+export function module10(ports:{get(file:string,name:string):unknown;module(file:string):unknown;sourceEntryArgs?(flag:string):string[]}):Record<string,any>
+export function module11(ports:{get(file:string,name:string):unknown;module(file:string):unknown;sourceEntryArgs?(flag:string):string[]}):Record<string,any>

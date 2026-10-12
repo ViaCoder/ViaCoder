@@ -1,0 +1,41 @@
+{
+  "version": "2.1.287",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+  "rows": [
+    {
+      "name": "$A",
+      "start": 351634,
+      "end": 351696,
+      "sha256": "d7dc1bd3bad136fd46333e19dc3eb94b7e6e0ba7ab010887a112b85997131ca8",
+      "file": "chunk-xapeakym.js",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "offsetUnit": "UTF16 end-exclusive",
+      "source": "function $A(e,r){return parseInt(r??\"1\",10)>1&&e===\"archived\"}"
+    },
+    {
+      "name": "end_session",
+      "start": 457478,
+      "end": 457884,
+      "sha256": "9acf836523b5dcdc085ef6c09b6456120beab3fb6479701a01c9e30987b1c03a",
+      "file": "chunk-xapeakym.js",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "offsetUnit": "UTF16 end-exclusive",
+      "source": "if($A(A.request.reason,process.env.CLAUDE_CODE_WORKER_EPOCH)){t(\"[print.ts] stale 'archived' end_session ignored on epoch>1 \\u2014 from prior lifecycle\"),Ze(A);continue}if(t(`[print.ts] end_session received, reason=${A.request.reason??\"unspecified\"}`),qe.endSessionRequested=!0,ll(),Q.suspendMidTurnFold(),qe.abortController)qe.abortController.abort(fl(\"shutdown\"));Oo(),Pt.abort(),On.discard(),Ze(A);break"
+    }
+  ],
+  "flowEdits": [
+    {
+      "start": 401,
+      "end": 406,
+      "next": "return \"break\";"
+    },
+    {
+      "start": 160,
+      "end": 168,
+      "next": "return \"continue\";"
+    }
+  ],
+  "nativeSha256": "925cd0e3f98908c67b2b8d92481bc30f548cbfefec3c59638072c1dfb143df08",
+  "contract": "Complete original $A + 406-character end_session branch. ll borrows existing SDK permission teardown cell; Q is same queue, Oo same interruptSweep budget timer, fl same shutdown token, qe same drain, Pt same outer lifetime, On same suggestions, Ze same response. No additional lifetime/budget/state. Original continue/break become explicit flow result; print continues/breaks its existing loop. C bridgeRenamesClosed is applied only on accepted shutdown via the existing Pt.abort call."
+}

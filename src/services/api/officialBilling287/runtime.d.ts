@@ -1,0 +1,5 @@
+export type AttributionAgent287={agentType:string;isMainSession?:boolean}
+export type AttributionMessage287={type:string;isMeta?:boolean;message:{content:unknown}}
+export interface BillingAttributionPorts287 {provider:()=>string;base:()=>boolean;scope:()=>boolean;optOut:(value:string|undefined)=>boolean;workload:()=>string|undefined;logger:(value:string)=>void;a:{readonly ANTHROPIC_UNIX_SOCKET?:string};process:{env:Record<string,string|undefined>};buildMetadata:{readonly VERSION:string}}
+export function createBillingAttribution287(ports:BillingAttributionPorts287):{format:(fingerprint:string,agent:AttributionAgent287,previous?:string,prompt?:string,origin?:string,position?:{promptIndex?:unknown;turnIndex?:unknown},options?:{ignoreEnvOptOut?:boolean})=>string}
+export function createFingerprint287(ports:{buildMetadata:{readonly VERSION:string}}):{firstMessageText:(messages:readonly AttributionMessage287[])=>string;fingerprint:(text:string,version:string)=>string;fingerprintFromMessages:(messages:readonly AttributionMessage287[])=>string}

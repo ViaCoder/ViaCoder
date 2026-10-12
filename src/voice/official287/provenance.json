@@ -1,0 +1,2799 @@
+{
+  "version": "2.1.287",
+  "platforms": {
+    "darwin-arm64": {
+      "command": {
+        "file": "chunk-kchvs8w2.js",
+        "moduleSha256": "62ca9a8f1f9176233d28ec2f934bfb152b6f4bba8aa5c7429fc34da1212cb6be",
+        "imports": [
+          {
+            "local": "sHe",
+            "imported": "sHe",
+            "module": "/$bunfs/root/chunk-4s38z9x2.js"
+          },
+          {
+            "local": "i",
+            "imported": "i",
+            "module": "/$bunfs/root/chunk-6hnyhakg.js"
+          },
+          {
+            "local": "vl",
+            "imported": "vl",
+            "module": "/$bunfs/root/chunk-nankzm0s.js"
+          },
+          {
+            "local": "Ae",
+            "imported": "Ae",
+            "module": "/$bunfs/root/chunk-nankzm0s.js"
+          },
+          {
+            "local": "le",
+            "imported": "le",
+            "module": "/$bunfs/root/chunk-nankzm0s.js"
+          },
+          {
+            "local": "tt",
+            "imported": "tt",
+            "module": "/$bunfs/root/chunk-f1vb7bx7.js"
+          },
+          {
+            "local": "hn",
+            "imported": "hn",
+            "module": "/$bunfs/root/chunk-f1vb7bx7.js"
+          },
+          {
+            "local": "LNt",
+            "imported": "LNt",
+            "module": "/$bunfs/root/chunk-09m4fzsj.js"
+          },
+          {
+            "local": "s9e",
+            "imported": "s9e",
+            "module": "/$bunfs/root/chunk-09m4fzsj.js"
+          },
+          {
+            "local": "op",
+            "imported": "op",
+            "module": "/$bunfs/root/chunk-b5kmgz2n.js"
+          },
+          {
+            "local": "$C",
+            "imported": "$C",
+            "module": "/$bunfs/root/chunk-eh4x73e7.js"
+          },
+          {
+            "local": "o_",
+            "imported": "o_",
+            "module": "/$bunfs/root/chunk-kte1py10.js"
+          }
+        ],
+        "exports": [
+          {
+            "local": "D",
+            "name": "call"
+          }
+        ],
+        "rows": [
+          {
+            "start": 4632,
+            "end": 4640,
+            "sha256": "2b995f3f06c01a573ca709a6a5f4d22789d0d543b18bcca6db715e29fff0c530",
+            "source": "var V=2;"
+          },
+          {
+            "start": 4640,
+            "end": 4761,
+            "sha256": "de59328ed9f0e067872ff39ab8ce7594ecad9ea73bafe2077ca5cf73ceecbbc6",
+            "source": "function L(s){let e=s.trim().toLowerCase();if(e===\"\")return;if(e===\"hold\"||e===\"tap\"||e===\"off\")return e;return\"invalid\"}"
+          },
+          {
+            "start": 4761,
+            "end": 7451,
+            "sha256": "2921355a077f0f96a41c35c47e519e4d4b493ad4cfc9960974788dc612e6e5c8",
+            "source": "var D=async(s,e)=>{if(!s9e()){if(!vl())return{type:\"text\",value:\"Voice mode requires a Claude.ai account. Please run /login to sign in.\"};let o=op(\"allow_voice_mode\",\"Voice mode\",\"is\");if(o)return $C(\"allow_voice_mode\",\"slash_command\"),{type:\"text\",value:o};return{type:\"text\",value:\"Voice mode is not available.\"}}let a=tt(),v=LNt(a),t=L(s);if(t===\"invalid\")return{type:\"text\",value:`Unknown mode: \"${s.trim()}\". Use hold, tap, or off.`};if(t===\"off\"||t===void 0&&v){if((await hn(\"userSettings\",{voiceEnabled:!1,voice:{...a.voice,enabled:!1}},void 0,e.storageV5)).error)return{type:\"text\",value:\"Failed to update settings. Check your settings file for syntax errors.\"};return i(\"tengu_voice_toggled\",{enabled:!1}),{type:\"text\",value:\"Voice mode disabled.\"}}let{isVoiceStreamAvailable:y}=await import(\"/$bunfs/root/chunk-4twtt9pw.js\"),{checkRecordingAvailability:h}=await import(\"/$bunfs/root/chunk-zz5gfvgg.js\"),r=await h(e.session.host,{probeForwarded:!0});if(!r.available)return{type:\"text\",value:r.reason??\"Voice mode is not available in this environment.\"};if(!y())return{type:\"text\",value:\"Voice mode requires a Claude.ai account. Please run /login to sign in.\"};let{checkVoiceDependencies:b,requestMicrophonePermission:C}=await import(\"/$bunfs/root/chunk-zz5gfvgg.js\"),c=await b(e.session.host);if(!c.available)return{type:\"text\",value:`No audio recording tool found.${c.installCommand?`\nInstall audio recording tools? Run: ${c.installCommand}`:`\nInstall SoX manually for audio recording.`}`};if(!await C(e.session.host)){let o;return o=\"System Settings \\u2192 Privacy & Security \\u2192 Microphone\",{type:\"text\",value:`Microphone access is denied. To enable it, go to ${o}, then run /voice again.`}}let l=t===\"hold\"||t===\"tap\"?t:a.voice?.mode??\"hold\";if((await hn(\"userSettings\",{voiceEnabled:!0,voice:{...a.voice,enabled:!0,mode:l}},void 0,e.storageV5)).error)return{type:\"text\",value:\"Failed to update settings. Check your settings file for syntax errors.\"};i(\"tengu_voice_toggled\",{enabled:!0,tap_mode:l===\"tap\"});let g=o_(\"voice:pushToTalk\",\"Chat\",\"space\"),w=l===\"tap\"?`Tap ${g} (with input empty) to start, tap again to send.`:`Hold ${g} to record.`,n=sHe(a.language),m=le(),p=m.voiceLangHintLastLanguage!==n.code,f=p?0:m.voiceLangHintShownCount??0,u=!n.fellBackFrom&&f<V,d=\"\";if(n.fellBackFrom)d=` Note: \"${n.fellBackFrom}\" is not a supported dictation language; using English. Change it via /config.`;else if(u)d=` Dictation language: ${n.code} (/config to change).`;if(p||u)await Ae((o)=>({...o,voiceLangHintShownCount:f+(u?1:0),voiceLangHintLastLanguage:n.code}),e.storageV5);let S=r.note?` ${r.note}`:\"\";return{type:\"text\",value:`Voice mode enabled (${l}). ${w}${d}${S}`}};"
+          }
+        ]
+      },
+      "capture": {
+        "file": "chunk-zz5gfvgg.js",
+        "moduleSha256": "4fc44fc2c8f1ed1ffc50485601fb8f6eb76df19ba5fcc861632046c4024e7d6e",
+        "imports": [
+          {
+            "local": "V",
+            "imported": "V",
+            "module": "/$bunfs/root/chunk-bn3p37gv.js"
+          },
+          {
+            "local": "t",
+            "imported": "t",
+            "module": "/$bunfs/root/chunk-q80zaav8.js"
+          },
+          {
+            "local": "Cb",
+            "imported": "Cb",
+            "module": "/$bunfs/root/chunk-brnn4zwp.js"
+          },
+          {
+            "local": "a",
+            "imported": "a",
+            "module": "/$bunfs/root/chunk-mbfze585.js"
+          },
+          {
+            "local": "O",
+            "imported": "O",
+            "module": "/$bunfs/root/chunk-amhtwhch.js"
+          },
+          {
+            "local": "Ga",
+            "imported": "Ga",
+            "module": "/$bunfs/root/chunk-1nayt2j6.js"
+          },
+          {
+            "local": "Ke",
+            "imported": "Ke",
+            "module": "/$bunfs/root/chunk-fmv8bhm3.js"
+          },
+          {
+            "local": "R",
+            "imported": "spawn",
+            "module": "child_process"
+          },
+          {
+            "local": "m",
+            "imported": "homedir",
+            "module": "os"
+          },
+          {
+            "local": "v",
+            "imported": "join",
+            "module": "path"
+          }
+        ],
+        "exports": [
+          {
+            "local": "ue",
+            "name": "checkRecordingAvailability"
+          },
+          {
+            "local": "ce",
+            "name": "checkVoiceDependencies"
+          },
+          {
+            "local": "le",
+            "name": "requestMicrophonePermission"
+          },
+          {
+            "local": "y",
+            "name": "startRecording"
+          },
+          {
+            "local": "C",
+            "name": "stopRecording"
+          }
+        ],
+        "rows": [
+          {
+            "start": 1737,
+            "end": 1820,
+            "sha256": "c3884febeb227327bd3e8a540f24f180bcf4b73a586d8e7e5254b564810e3999",
+            "source": "var M=v(m(),\".cache\",\"coder-audio\",\"port\"),W=v(m(),\".cache\",\"coder-audio\",\"token\");"
+          },
+          {
+            "start": 1820,
+            "end": 2007,
+            "sha256": "1ad645074ec95d1fe17d3581fbfe16b86d882bb2fc00e17cdcc0d29998884e30",
+            "source": "class g{audioNapi=null;audioNapiPromise=null;arecordProbe=null;linuxAlsaCardsProbe=null;activeRecorder=null;activeForwardedSocket=null;forwardedStartGeneration=0;nativeRecordingActive=!1}"
+          },
+          {
+            "start": 2007,
+            "end": 2030,
+            "sha256": "dfb03309d1db0d8e46ca6dd62f523982064783b9b89750c6bb9e8948d0de6577",
+            "source": "var l=new V(()=>new g);"
+          },
+          {
+            "start": 2030,
+            "end": 2049,
+            "sha256": "2bc8d10451a8546229d4ec6b9a13ded9447aa7c940292c5ac9f1ddc8949d0da4",
+            "source": "var w={started:!0};"
+          },
+          {
+            "start": 2049,
+            "end": 2104,
+            "sha256": "29d37f99f318cfe1f22266bd1d8734439d26dbbf77e9025bb975e84e3cec7302",
+            "source": "var h={started:!1,superseded:!1,hint:null,expected:!1};"
+          },
+          {
+            "start": 2104,
+            "end": 2356,
+            "sha256": "823fc024fad70dfc6fd0104b30ca7de89be8fe0d608d27d84a5d52bb0a3a47dc",
+            "source": "function f(e){return e.audioNapiPromise??=(async()=>{let o=Date.now(),r=await import(\"/$bunfs/root/chunk-m1csvk08.js\");return r.isNativeAudioAvailable(),e.audioNapi=r,t(`[voice] audio-capture-napi loaded in ${Date.now()-o}ms`),r})(),e.audioNapiPromise}"
+          },
+          {
+            "start": 2356,
+            "end": 2387,
+            "sha256": "c342e6972bc27eaf555a06ee079737b7450a88b5992a0df85b40e5cb0c331d19",
+            "source": "var k=16000,x=1,E=\"2.0\",S=\"3%\";"
+          },
+          {
+            "start": 2387,
+            "end": 2475,
+            "sha256": "3b05ed8a8703cde96f4b34ba1c2f6694e7433516351e51d2a46bf477dab47621",
+            "source": "async function u(e){return(await Ke(e,[\"--version\"],{timeout:3000,useCwd:!1})).code===0}"
+          },
+          {
+            "start": 2475,
+            "end": 2601,
+            "sha256": "57601e9975c31cf39fb26334c7672ab9eee87af6497628cd56ac4e641d0f1dd4",
+            "source": "async function b(){if(await u(\"brew\"))return{cmd:\"brew\",args:[\"install\",\"sox\"],displayCommand:\"brew install sox\"};return null}"
+          },
+          {
+            "start": 2601,
+            "end": 2897,
+            "sha256": "772dc7b648affcee13d552a327f3b2795f3da4279259a707b8fa2894bf2828d4",
+            "source": "async function ce(e){let o=l.of(e);if((await f(o)).isNativeAudioAvailable())return{available:!0,missing:[],installCommand:null};let s=[];if(!await u(\"sox\"))s.push(\"sox (rec command)\");let n=s.length>0?await b():null;return{available:s.length===0,missing:s,installCommand:n?.displayCommand??null}}"
+          },
+          {
+            "start": 2897,
+            "end": 3060,
+            "sha256": "125042e594ca1ef75019adf9135b59caa6c53ae04df6d43164589be544cccfa2",
+            "source": "async function le(e){if(!(await f(l.of(e))).isNativeAudioAvailable())return!0;if((await y(e,(s)=>{},()=>{},{silenceDetection:!1})).started)return C(e),!0;return!1}"
+          },
+          {
+            "start": 3060,
+            "end": 4392,
+            "sha256": "4d5efe77b74d0e491ba87b903de79515e9a92917dee2ebfc7c3b21749bac6694",
+            "source": "async function ue(e,o={}){if(Cb()||a.CLAUDE_CODE_REMOTE)return{available:!1,reason:`Voice mode requires microphone access, but no audio device is available in this environment.\n\nTo use voice mode, run Claude Code locally instead.`};let r=l.of(e);if((await f(r)).isNativeAudioAvailable())return{available:!0,reason:null};let n=`Voice mode could not find a working audio recorder in WSL.\n\n`+`WSL2 with WSLg provides audio via PulseAudio \\u2014 install SoX with its PulseAudio backend (sudo apt install sox libsox-fmt-pulse) so Claude Code can record through it.\n\n`+\"If WSLg is not available (for example WSL1), run Claude Code in native Windows instead.\",d=await u(\"sox\");if(d&&await u(\"rec\"))return{available:!0,reason:null};if(O()===\"wsl\")return{available:!1,reason:n};if(!d){let i=await b();return{available:!1,reason:i?`Voice mode requires SoX for audio recording. Install it with: ${i.displayCommand}`:`Voice mode requires SoX for audio recording. Install SoX manually:\n  macOS: brew install sox\n  Ubuntu/Debian: sudo apt-get install sox\n  Fedora: sudo dnf install sox`}}return{available:!1,reason:`Voice mode requires a microphone, but SoX could not open an audio capture device.\n\nThis usually means the host has no microphone (for example, a remote server). Run Claude Code on a machine with a microphone to use voice input.`}}"
+          },
+          {
+            "start": 4392,
+            "end": 4809,
+            "sha256": "68c0c104264b292be1cd5ec8fc3f4630031614dde8cb205268d7005456fb916a",
+            "source": "async function y(e,o,r,s){t(\"[voice] startRecording called, platform=darwin\");let n=l.of(e),d=await f(n),i=d.isNativeAudioAvailable()&&!0,c=s?.silenceDetection!==!1;if(i){if(n.nativeRecordingActive||d.isNativeRecordingActive())d.stopNativeRecording(),n.nativeRecordingActive=!1;if(d.startNativeRecording((p)=>{o(p)},()=>{if(c)n.nativeRecordingActive=!1,r()}))return n.nativeRecordingActive=!0,w}return P(n,o,r,s)?w:h}"
+          },
+          {
+            "start": 4809,
+            "end": 5354,
+            "sha256": "3c1d4affadf8a0e79931c32a604246e25e0ca8eb1fe5395352f7561b5125d577",
+            "source": "function P(e,o,r,s){let n=s?.silenceDetection!==!1,d=[\"-q\",\"--buffer\",\"1024\",\"-t\",\"raw\",\"-r\",String(k),\"-e\",\"signed\",\"-b\",\"16\",\"-c\",String(x),\"-\"];if(n)d.push(\"silence\",\"1\",\"0.1\",S,\"1\",E,S);let i=R(\"rec\",d,{stdio:[\"pipe\",\"pipe\",\"pipe\"],windowsHide:!0,...Ga(\"helper\")});return e.activeRecorder=i,i.stdout?.on(\"data\",(c)=>{o(c)}),i.stderr?.on(\"data\",()=>{}),i.on(\"close\",()=>{e.activeRecorder=null,r()}),i.on(\"error\",(c)=>{t(`[voice] SoX rec spawn failed: ${c instanceof Error?c.message:String(c)}`,{level:\"error\"}),e.activeRecorder=null,r()}),!0}"
+          },
+          {
+            "start": 5354,
+            "end": 5566,
+            "sha256": "14a933f25e5c591baf8516e0c1d0c22b42fd5456a7384e5fdf318835af69fead",
+            "source": "function C(e){let o=l.of(e);if(o.nativeRecordingActive&&o.audioNapi){o.audioNapi.stopNativeRecording(),o.nativeRecordingActive=!1;return}if(o.activeRecorder)o.activeRecorder.kill(\"SIGTERM\"),o.activeRecorder=null}"
+          }
+        ]
+      },
+      "native": {
+        "file": "chunk-m1csvk08.js",
+        "moduleSha256": "db407a61ef84ab4eb2c87370ebd2022d212b16865c7b63a8ef1fbdce0f298322",
+        "imports": [
+          {
+            "local": "Qzr",
+            "imported": "Qzr",
+            "module": "/$bunfs/root/chunk-s2w5x3wj.js"
+          },
+          {
+            "local": "Ie",
+            "imported": "Ie",
+            "module": "/$bunfs/root/chunk-870yz02b.js"
+          }
+        ],
+        "exports": [
+          {
+            "local": "c",
+            "name": "isNativeAudioAvailable"
+          },
+          {
+            "local": "b",
+            "name": "isNativePlaying"
+          },
+          {
+            "local": "d",
+            "name": "isNativeRecordingActive"
+          },
+          {
+            "local": "v",
+            "name": "microphoneAuthorizationStatus"
+          },
+          {
+            "local": "p",
+            "name": "startNativePlayback"
+          },
+          {
+            "local": "l",
+            "name": "startNativeRecording"
+          },
+          {
+            "local": "m",
+            "name": "stopNativePlayback"
+          },
+          {
+            "local": "s",
+            "name": "stopNativeRecording"
+          },
+          {
+            "local": "f",
+            "name": "writeNativePlaybackData"
+          }
+        ],
+        "rows": [
+          {
+            "start": 710,
+            "end": 726,
+            "sha256": "82c9462314338c7c5946154002086e5ec4c93f87ee752b1364843500ff37488c",
+            "source": "var a=null,i=!1;"
+          },
+          {
+            "start": 726,
+            "end": 1073,
+            "sha256": "cb9385ab194453146058b5c4ef1e03d19f399c75a740629b66ea650f7c4d2bc4",
+            "source": "function r(){if(i)return a;i=!0;let t=\"darwin\";if(t!==\"darwin\"&&t!==\"linux\"&&t!==\"win32\")return null;try{return a=Qzr(),a}catch{}let o=`arm64-${t}`,u=(t===\"linux\"?[o,`${o}-musl`]:[o]).flatMap((n)=>[`./vendor/audio-capture/${n}/audio-capture.node`,`../audio-capture/${n}/audio-capture.node`]);for(let n of u)try{return a=Ie(n),a}catch{}return null}"
+          },
+          {
+            "start": 1073,
+            "end": 1104,
+            "sha256": "7810cc8d739a987131cf78ff1d0afbc9efa6e201cf5f569c3fc1606d40ef2cd9",
+            "source": "function c(){return r()!==null}"
+          },
+          {
+            "start": 1104,
+            "end": 1174,
+            "sha256": "55667f48afb55fa304d4f75c7f2e8c0c53445b40f3cfd39ccf3b154fdc661ff2",
+            "source": "function l(t,o){let e=r();if(!e)return!1;return e.startRecording(t,o)}"
+          },
+          {
+            "start": 1174,
+            "end": 1228,
+            "sha256": "428b0c7baee8ecfaf754373c746091003e86358dd81a60c5a91ca5c337572ec2",
+            "source": "function s(){let t=r();if(!t)return;t.stopRecording()}"
+          },
+          {
+            "start": 1228,
+            "end": 1289,
+            "sha256": "86036a0d29212daba6e3a46af832fc33388fa3222a280bce5737db117dd5404f",
+            "source": "function d(){let t=r();if(!t)return!1;return t.isRecording()}"
+          },
+          {
+            "start": 1289,
+            "end": 1358,
+            "sha256": "bdcd4b87d98d69a0e02ef8c85e0b6ed12810a90a4ffcba27a2ca949ddda6d3c7",
+            "source": "function p(t,o){let e=r();if(!e)return!1;return e.startPlayback(t,o)}"
+          },
+          {
+            "start": 1358,
+            "end": 1418,
+            "sha256": "54abf0a838fe4232eb995aeeb84e70b55668e24cabd6136982935c0d0a8df119",
+            "source": "function f(t){let o=r();if(!o)return;o.writePlaybackData(t)}"
+          },
+          {
+            "start": 1418,
+            "end": 1471,
+            "sha256": "5882de14aa002d162879cfcb868511f6a581affd38761395038db375dea14d5a",
+            "source": "function m(){let t=r();if(!t)return;t.stopPlayback()}"
+          },
+          {
+            "start": 1471,
+            "end": 1530,
+            "sha256": "a10ccc847dfd53d1547913eebbff0762cf0702ad6bc612f3b149b3ba4404eecb",
+            "source": "function b(){let t=r();if(!t)return!1;return t.isPlaying()}"
+          },
+          {
+            "start": 1530,
+            "end": 1643,
+            "sha256": "5bcbf15c001cbeaf826a85784dfe21179701059e0f0cfd788a0a15666e3b02e8",
+            "source": "function v(){let t=r();if(!t||!t.microphoneAuthorizationStatus)return 0;return t.microphoneAuthorizationStatus()}"
+          }
+        ]
+      },
+      "stream": {
+        "file": "chunk-4twtt9pw.js",
+        "moduleSha256": "e39edf62973bfd1b6ac74a2004cff9e23d35e2eb05fcd28b83b33bce5f2d6999",
+        "imports": [
+          {
+            "local": "s_r",
+            "imported": "s_r",
+            "module": "/$bunfs/root/chunk-vnsj0eyq.js"
+          },
+          {
+            "local": "i_r",
+            "imported": "i_r",
+            "module": "/$bunfs/root/chunk-vnsj0eyq.js"
+          },
+          {
+            "local": "a_r",
+            "imported": "a_r",
+            "module": "/$bunfs/root/chunk-vnsj0eyq.js"
+          }
+        ],
+        "exports": [
+          {
+            "local": "a_r",
+            "name": "connectVoiceStream"
+          },
+          {
+            "local": "i_r",
+            "name": "isVoiceStreamAvailable"
+          },
+          {
+            "local": "s_r",
+            "name": "probeVoiceConnectivity"
+          }
+        ],
+        "rows": []
+      },
+      "nativeShim": {
+        "file": "chunk-s2w5x3wj.js",
+        "moduleSha256": "e95bea508c78301664086d83d8e02cf41255ac6ec34d8eed287af1e52c6b8265",
+        "imports": [
+          {
+            "local": "v",
+            "imported": "v",
+            "module": "/$bunfs/root/chunk-870yz02b.js"
+          },
+          {
+            "local": "Ie",
+            "imported": "Ie",
+            "module": "/$bunfs/root/chunk-870yz02b.js"
+          }
+        ],
+        "exports": [
+          {
+            "local": "Qzr",
+            "name": "Qzr"
+          }
+        ],
+        "rows": [
+          {
+            "start": 664,
+            "end": 738,
+            "source": "var Qzr=v(function(R,T){T.exports=Ie(\"/$bunfs/root/audio-capture.node\")});",
+            "sha256": "d20dfb1f40685fb58a45aa23cbe6490c379e438c802515f724a515de0ea6e374"
+          }
+        ]
+      },
+      "asset": {
+        "file": "audio-capture.node",
+        "sha256": "e7071daaf4f1b42ab494d7c9a83e4d0069ae4bd4ba41ddc6e98b2cf600f57a18",
+        "length": 438064
+      },
+      "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5"
+    },
+    "darwin-x64": {
+      "command": {
+        "file": "chunk-ksnzx4yj.js",
+        "moduleSha256": "a06aa1498544fc55d6344b1fd732d370447dcc4335cb81db75a2271508fae62d",
+        "imports": [
+          {
+            "local": "sOe",
+            "imported": "sOe",
+            "module": "/$bunfs/root/chunk-71psc81s.js"
+          },
+          {
+            "local": "i",
+            "imported": "i",
+            "module": "/$bunfs/root/chunk-be7gt24m.js"
+          },
+          {
+            "local": "vl",
+            "imported": "vl",
+            "module": "/$bunfs/root/chunk-j825n4z9.js"
+          },
+          {
+            "local": "Ce",
+            "imported": "Ce",
+            "module": "/$bunfs/root/chunk-j825n4z9.js"
+          },
+          {
+            "local": "le",
+            "imported": "le",
+            "module": "/$bunfs/root/chunk-j825n4z9.js"
+          },
+          {
+            "local": "tt",
+            "imported": "tt",
+            "module": "/$bunfs/root/chunk-v2te3hxm.js"
+          },
+          {
+            "local": "hn",
+            "imported": "hn",
+            "module": "/$bunfs/root/chunk-v2te3hxm.js"
+          },
+          {
+            "local": "DNt",
+            "imported": "DNt",
+            "module": "/$bunfs/root/chunk-2ep4dvcb.js"
+          },
+          {
+            "local": "s9e",
+            "imported": "s9e",
+            "module": "/$bunfs/root/chunk-2ep4dvcb.js"
+          },
+          {
+            "local": "op",
+            "imported": "op",
+            "module": "/$bunfs/root/chunk-vb6dge74.js"
+          },
+          {
+            "local": "$A",
+            "imported": "$A",
+            "module": "/$bunfs/root/chunk-vjq5fmr9.js"
+          },
+          {
+            "local": "o_",
+            "imported": "o_",
+            "module": "/$bunfs/root/chunk-1kv9tx41.js"
+          }
+        ],
+        "exports": [
+          {
+            "local": "D",
+            "name": "call"
+          }
+        ],
+        "rows": [
+          {
+            "start": 4632,
+            "end": 4640,
+            "sha256": "2b995f3f06c01a573ca709a6a5f4d22789d0d543b18bcca6db715e29fff0c530",
+            "source": "var V=2;"
+          },
+          {
+            "start": 4640,
+            "end": 4761,
+            "sha256": "de59328ed9f0e067872ff39ab8ce7594ecad9ea73bafe2077ca5cf73ceecbbc6",
+            "source": "function L(s){let e=s.trim().toLowerCase();if(e===\"\")return;if(e===\"hold\"||e===\"tap\"||e===\"off\")return e;return\"invalid\"}"
+          },
+          {
+            "start": 4761,
+            "end": 7451,
+            "sha256": "c0d089c752abbeeae32de14f158218d4374c6f309ca2ef809bc6a81589444b34",
+            "source": "var D=async(s,e)=>{if(!s9e()){if(!vl())return{type:\"text\",value:\"Voice mode requires a Claude.ai account. Please run /login to sign in.\"};let o=op(\"allow_voice_mode\",\"Voice mode\",\"is\");if(o)return $A(\"allow_voice_mode\",\"slash_command\"),{type:\"text\",value:o};return{type:\"text\",value:\"Voice mode is not available.\"}}let a=tt(),v=DNt(a),t=L(s);if(t===\"invalid\")return{type:\"text\",value:`Unknown mode: \"${s.trim()}\". Use hold, tap, or off.`};if(t===\"off\"||t===void 0&&v){if((await hn(\"userSettings\",{voiceEnabled:!1,voice:{...a.voice,enabled:!1}},void 0,e.storageV5)).error)return{type:\"text\",value:\"Failed to update settings. Check your settings file for syntax errors.\"};return i(\"tengu_voice_toggled\",{enabled:!1}),{type:\"text\",value:\"Voice mode disabled.\"}}let{isVoiceStreamAvailable:y}=await import(\"/$bunfs/root/chunk-3c7a3ec2.js\"),{checkRecordingAvailability:h}=await import(\"/$bunfs/root/chunk-v6zc7wd9.js\"),r=await h(e.session.host,{probeForwarded:!0});if(!r.available)return{type:\"text\",value:r.reason??\"Voice mode is not available in this environment.\"};if(!y())return{type:\"text\",value:\"Voice mode requires a Claude.ai account. Please run /login to sign in.\"};let{checkVoiceDependencies:b,requestMicrophonePermission:C}=await import(\"/$bunfs/root/chunk-v6zc7wd9.js\"),c=await b(e.session.host);if(!c.available)return{type:\"text\",value:`No audio recording tool found.${c.installCommand?`\nInstall audio recording tools? Run: ${c.installCommand}`:`\nInstall SoX manually for audio recording.`}`};if(!await C(e.session.host)){let o;return o=\"System Settings \\u2192 Privacy & Security \\u2192 Microphone\",{type:\"text\",value:`Microphone access is denied. To enable it, go to ${o}, then run /voice again.`}}let l=t===\"hold\"||t===\"tap\"?t:a.voice?.mode??\"hold\";if((await hn(\"userSettings\",{voiceEnabled:!0,voice:{...a.voice,enabled:!0,mode:l}},void 0,e.storageV5)).error)return{type:\"text\",value:\"Failed to update settings. Check your settings file for syntax errors.\"};i(\"tengu_voice_toggled\",{enabled:!0,tap_mode:l===\"tap\"});let g=o_(\"voice:pushToTalk\",\"Chat\",\"space\"),w=l===\"tap\"?`Tap ${g} (with input empty) to start, tap again to send.`:`Hold ${g} to record.`,n=sOe(a.language),m=le(),p=m.voiceLangHintLastLanguage!==n.code,f=p?0:m.voiceLangHintShownCount??0,u=!n.fellBackFrom&&f<V,d=\"\";if(n.fellBackFrom)d=` Note: \"${n.fellBackFrom}\" is not a supported dictation language; using English. Change it via /config.`;else if(u)d=` Dictation language: ${n.code} (/config to change).`;if(p||u)await Ce((o)=>({...o,voiceLangHintShownCount:f+(u?1:0),voiceLangHintLastLanguage:n.code}),e.storageV5);let S=r.note?` ${r.note}`:\"\";return{type:\"text\",value:`Voice mode enabled (${l}). ${w}${d}${S}`}};"
+          }
+        ]
+      },
+      "capture": {
+        "file": "chunk-v6zc7wd9.js",
+        "moduleSha256": "cfd427379ec497f4b9c71528a4ea74a589886da50c9e8597aad3db16ee908afc",
+        "imports": [
+          {
+            "local": "V",
+            "imported": "V",
+            "module": "/$bunfs/root/chunk-ascjmg0h.js"
+          },
+          {
+            "local": "t",
+            "imported": "t",
+            "module": "/$bunfs/root/chunk-twb9dkx9.js"
+          },
+          {
+            "local": "Ab",
+            "imported": "Ab",
+            "module": "/$bunfs/root/chunk-9493s8b6.js"
+          },
+          {
+            "local": "a",
+            "imported": "a",
+            "module": "/$bunfs/root/chunk-5kdb7ws1.js"
+          },
+          {
+            "local": "P",
+            "imported": "P",
+            "module": "/$bunfs/root/chunk-a7t07gyz.js"
+          },
+          {
+            "local": "Ga",
+            "imported": "Ga",
+            "module": "/$bunfs/root/chunk-t4dfzyxz.js"
+          },
+          {
+            "local": "qe",
+            "imported": "qe",
+            "module": "/$bunfs/root/chunk-sgykyqwa.js"
+          },
+          {
+            "local": "R",
+            "imported": "spawn",
+            "module": "child_process"
+          },
+          {
+            "local": "m",
+            "imported": "homedir",
+            "module": "os"
+          },
+          {
+            "local": "v",
+            "imported": "join",
+            "module": "path"
+          }
+        ],
+        "exports": [
+          {
+            "local": "ue",
+            "name": "checkRecordingAvailability"
+          },
+          {
+            "local": "ce",
+            "name": "checkVoiceDependencies"
+          },
+          {
+            "local": "le",
+            "name": "requestMicrophonePermission"
+          },
+          {
+            "local": "y",
+            "name": "startRecording"
+          },
+          {
+            "local": "D",
+            "name": "stopRecording"
+          }
+        ],
+        "rows": [
+          {
+            "start": 1737,
+            "end": 1820,
+            "sha256": "c3884febeb227327bd3e8a540f24f180bcf4b73a586d8e7e5254b564810e3999",
+            "source": "var M=v(m(),\".cache\",\"coder-audio\",\"port\"),W=v(m(),\".cache\",\"coder-audio\",\"token\");"
+          },
+          {
+            "start": 1820,
+            "end": 2007,
+            "sha256": "1ad645074ec95d1fe17d3581fbfe16b86d882bb2fc00e17cdcc0d29998884e30",
+            "source": "class g{audioNapi=null;audioNapiPromise=null;arecordProbe=null;linuxAlsaCardsProbe=null;activeRecorder=null;activeForwardedSocket=null;forwardedStartGeneration=0;nativeRecordingActive=!1}"
+          },
+          {
+            "start": 2007,
+            "end": 2030,
+            "sha256": "dfb03309d1db0d8e46ca6dd62f523982064783b9b89750c6bb9e8948d0de6577",
+            "source": "var l=new V(()=>new g);"
+          },
+          {
+            "start": 2030,
+            "end": 2049,
+            "sha256": "2bc8d10451a8546229d4ec6b9a13ded9447aa7c940292c5ac9f1ddc8949d0da4",
+            "source": "var w={started:!0};"
+          },
+          {
+            "start": 2049,
+            "end": 2104,
+            "sha256": "29d37f99f318cfe1f22266bd1d8734439d26dbbf77e9025bb975e84e3cec7302",
+            "source": "var h={started:!1,superseded:!1,hint:null,expected:!1};"
+          },
+          {
+            "start": 2104,
+            "end": 2356,
+            "sha256": "31849b0740dce0bfac1908149818169aa935d678ed806aac827a1e2711ce3093",
+            "source": "function f(e){return e.audioNapiPromise??=(async()=>{let o=Date.now(),r=await import(\"/$bunfs/root/chunk-maa338n6.js\");return r.isNativeAudioAvailable(),e.audioNapi=r,t(`[voice] audio-capture-napi loaded in ${Date.now()-o}ms`),r})(),e.audioNapiPromise}"
+          },
+          {
+            "start": 2356,
+            "end": 2387,
+            "sha256": "c342e6972bc27eaf555a06ee079737b7450a88b5992a0df85b40e5cb0c331d19",
+            "source": "var k=16000,x=1,E=\"2.0\",S=\"3%\";"
+          },
+          {
+            "start": 2387,
+            "end": 2475,
+            "sha256": "a239402d00a6bd694adbfd99762a401a22e7c2fc31aacefe090c0d1c7f0cb2df",
+            "source": "async function u(e){return(await qe(e,[\"--version\"],{timeout:3000,useCwd:!1})).code===0}"
+          },
+          {
+            "start": 2475,
+            "end": 2601,
+            "sha256": "57601e9975c31cf39fb26334c7672ab9eee87af6497628cd56ac4e641d0f1dd4",
+            "source": "async function b(){if(await u(\"brew\"))return{cmd:\"brew\",args:[\"install\",\"sox\"],displayCommand:\"brew install sox\"};return null}"
+          },
+          {
+            "start": 2601,
+            "end": 2897,
+            "sha256": "772dc7b648affcee13d552a327f3b2795f3da4279259a707b8fa2894bf2828d4",
+            "source": "async function ce(e){let o=l.of(e);if((await f(o)).isNativeAudioAvailable())return{available:!0,missing:[],installCommand:null};let s=[];if(!await u(\"sox\"))s.push(\"sox (rec command)\");let n=s.length>0?await b():null;return{available:s.length===0,missing:s,installCommand:n?.displayCommand??null}}"
+          },
+          {
+            "start": 2897,
+            "end": 3060,
+            "sha256": "26e15f05a3909618de578a20209087714b585fe010089d81e4b5aaa286a45c33",
+            "source": "async function le(e){if(!(await f(l.of(e))).isNativeAudioAvailable())return!0;if((await y(e,(s)=>{},()=>{},{silenceDetection:!1})).started)return D(e),!0;return!1}"
+          },
+          {
+            "start": 3060,
+            "end": 4392,
+            "sha256": "1326fbc43407bb0277188795cc701be07e67f46eb3e4415ff648812abb6301a7",
+            "source": "async function ue(e,o={}){if(Ab()||a.CLAUDE_CODE_REMOTE)return{available:!1,reason:`Voice mode requires microphone access, but no audio device is available in this environment.\n\nTo use voice mode, run Claude Code locally instead.`};let r=l.of(e);if((await f(r)).isNativeAudioAvailable())return{available:!0,reason:null};let n=`Voice mode could not find a working audio recorder in WSL.\n\n`+`WSL2 with WSLg provides audio via PulseAudio \\u2014 install SoX with its PulseAudio backend (sudo apt install sox libsox-fmt-pulse) so Claude Code can record through it.\n\n`+\"If WSLg is not available (for example WSL1), run Claude Code in native Windows instead.\",d=await u(\"sox\");if(d&&await u(\"rec\"))return{available:!0,reason:null};if(P()===\"wsl\")return{available:!1,reason:n};if(!d){let i=await b();return{available:!1,reason:i?`Voice mode requires SoX for audio recording. Install it with: ${i.displayCommand}`:`Voice mode requires SoX for audio recording. Install SoX manually:\n  macOS: brew install sox\n  Ubuntu/Debian: sudo apt-get install sox\n  Fedora: sudo dnf install sox`}}return{available:!1,reason:`Voice mode requires a microphone, but SoX could not open an audio capture device.\n\nThis usually means the host has no microphone (for example, a remote server). Run Claude Code on a machine with a microphone to use voice input.`}}"
+          },
+          {
+            "start": 4392,
+            "end": 4809,
+            "sha256": "55f94ce47c6ddaaf6e49346947d82e61e9f4672e13a5c8daf0f1ba2037b54180",
+            "source": "async function y(e,o,r,s){t(\"[voice] startRecording called, platform=darwin\");let n=l.of(e),d=await f(n),i=d.isNativeAudioAvailable()&&!0,c=s?.silenceDetection!==!1;if(i){if(n.nativeRecordingActive||d.isNativeRecordingActive())d.stopNativeRecording(),n.nativeRecordingActive=!1;if(d.startNativeRecording((p)=>{o(p)},()=>{if(c)n.nativeRecordingActive=!1,r()}))return n.nativeRecordingActive=!0,w}return C(n,o,r,s)?w:h}"
+          },
+          {
+            "start": 4809,
+            "end": 5354,
+            "sha256": "d78122c9d2e4f03ae79328792af243f3ed477f176630ff9805e7a4942f1b4ff7",
+            "source": "function C(e,o,r,s){let n=s?.silenceDetection!==!1,d=[\"-q\",\"--buffer\",\"1024\",\"-t\",\"raw\",\"-r\",String(k),\"-e\",\"signed\",\"-b\",\"16\",\"-c\",String(x),\"-\"];if(n)d.push(\"silence\",\"1\",\"0.1\",S,\"1\",E,S);let i=R(\"rec\",d,{stdio:[\"pipe\",\"pipe\",\"pipe\"],windowsHide:!0,...Ga(\"helper\")});return e.activeRecorder=i,i.stdout?.on(\"data\",(c)=>{o(c)}),i.stderr?.on(\"data\",()=>{}),i.on(\"close\",()=>{e.activeRecorder=null,r()}),i.on(\"error\",(c)=>{t(`[voice] SoX rec spawn failed: ${c instanceof Error?c.message:String(c)}`,{level:\"error\"}),e.activeRecorder=null,r()}),!0}"
+          },
+          {
+            "start": 5354,
+            "end": 5566,
+            "sha256": "a955465517f101636b5d5b0b6f2a77b79e3eba90bdf644d365f9d53cde36969d",
+            "source": "function D(e){let o=l.of(e);if(o.nativeRecordingActive&&o.audioNapi){o.audioNapi.stopNativeRecording(),o.nativeRecordingActive=!1;return}if(o.activeRecorder)o.activeRecorder.kill(\"SIGTERM\"),o.activeRecorder=null}"
+          }
+        ]
+      },
+      "native": {
+        "file": "chunk-maa338n6.js",
+        "moduleSha256": "13fa80b92ff140fbcf41f6fee910c3b00dd1a86e218e55c98f0fde18596cb199",
+        "imports": [
+          {
+            "local": "Qzr",
+            "imported": "Qzr",
+            "module": "/$bunfs/root/chunk-291h5b47.js"
+          },
+          {
+            "local": "Ie",
+            "imported": "Ie",
+            "module": "/$bunfs/root/chunk-870yz02b.js"
+          }
+        ],
+        "exports": [
+          {
+            "local": "c",
+            "name": "isNativeAudioAvailable"
+          },
+          {
+            "local": "b",
+            "name": "isNativePlaying"
+          },
+          {
+            "local": "d",
+            "name": "isNativeRecordingActive"
+          },
+          {
+            "local": "v",
+            "name": "microphoneAuthorizationStatus"
+          },
+          {
+            "local": "p",
+            "name": "startNativePlayback"
+          },
+          {
+            "local": "l",
+            "name": "startNativeRecording"
+          },
+          {
+            "local": "m",
+            "name": "stopNativePlayback"
+          },
+          {
+            "local": "s",
+            "name": "stopNativeRecording"
+          },
+          {
+            "local": "f",
+            "name": "writeNativePlaybackData"
+          }
+        ],
+        "rows": [
+          {
+            "start": 710,
+            "end": 726,
+            "sha256": "82c9462314338c7c5946154002086e5ec4c93f87ee752b1364843500ff37488c",
+            "source": "var a=null,i=!1;"
+          },
+          {
+            "start": 726,
+            "end": 1071,
+            "sha256": "caab3c1eac18381890fa0b293736aebe246846895cb4b13db1efac7e977a4ca8",
+            "source": "function r(){if(i)return a;i=!0;let t=\"darwin\";if(t!==\"darwin\"&&t!==\"linux\"&&t!==\"win32\")return null;try{return a=Qzr(),a}catch{}let o=`x64-${t}`,u=(t===\"linux\"?[o,`${o}-musl`]:[o]).flatMap((n)=>[`./vendor/audio-capture/${n}/audio-capture.node`,`../audio-capture/${n}/audio-capture.node`]);for(let n of u)try{return a=Ie(n),a}catch{}return null}"
+          },
+          {
+            "start": 1071,
+            "end": 1102,
+            "sha256": "7810cc8d739a987131cf78ff1d0afbc9efa6e201cf5f569c3fc1606d40ef2cd9",
+            "source": "function c(){return r()!==null}"
+          },
+          {
+            "start": 1102,
+            "end": 1172,
+            "sha256": "55667f48afb55fa304d4f75c7f2e8c0c53445b40f3cfd39ccf3b154fdc661ff2",
+            "source": "function l(t,o){let e=r();if(!e)return!1;return e.startRecording(t,o)}"
+          },
+          {
+            "start": 1172,
+            "end": 1226,
+            "sha256": "428b0c7baee8ecfaf754373c746091003e86358dd81a60c5a91ca5c337572ec2",
+            "source": "function s(){let t=r();if(!t)return;t.stopRecording()}"
+          },
+          {
+            "start": 1226,
+            "end": 1287,
+            "sha256": "86036a0d29212daba6e3a46af832fc33388fa3222a280bce5737db117dd5404f",
+            "source": "function d(){let t=r();if(!t)return!1;return t.isRecording()}"
+          },
+          {
+            "start": 1287,
+            "end": 1356,
+            "sha256": "bdcd4b87d98d69a0e02ef8c85e0b6ed12810a90a4ffcba27a2ca949ddda6d3c7",
+            "source": "function p(t,o){let e=r();if(!e)return!1;return e.startPlayback(t,o)}"
+          },
+          {
+            "start": 1356,
+            "end": 1416,
+            "sha256": "54abf0a838fe4232eb995aeeb84e70b55668e24cabd6136982935c0d0a8df119",
+            "source": "function f(t){let o=r();if(!o)return;o.writePlaybackData(t)}"
+          },
+          {
+            "start": 1416,
+            "end": 1469,
+            "sha256": "5882de14aa002d162879cfcb868511f6a581affd38761395038db375dea14d5a",
+            "source": "function m(){let t=r();if(!t)return;t.stopPlayback()}"
+          },
+          {
+            "start": 1469,
+            "end": 1528,
+            "sha256": "a10ccc847dfd53d1547913eebbff0762cf0702ad6bc612f3b149b3ba4404eecb",
+            "source": "function b(){let t=r();if(!t)return!1;return t.isPlaying()}"
+          },
+          {
+            "start": 1528,
+            "end": 1641,
+            "sha256": "5bcbf15c001cbeaf826a85784dfe21179701059e0f0cfd788a0a15666e3b02e8",
+            "source": "function v(){let t=r();if(!t||!t.microphoneAuthorizationStatus)return 0;return t.microphoneAuthorizationStatus()}"
+          }
+        ]
+      },
+      "stream": {
+        "file": "chunk-3c7a3ec2.js",
+        "moduleSha256": "3fab39f49b295fc0e60516608bb8281ab353124d64e3d86bbb76b627ea5311ef",
+        "imports": [
+          {
+            "local": "s_r",
+            "imported": "s_r",
+            "module": "/$bunfs/root/chunk-2sg3ps7f.js"
+          },
+          {
+            "local": "i_r",
+            "imported": "i_r",
+            "module": "/$bunfs/root/chunk-2sg3ps7f.js"
+          },
+          {
+            "local": "a_r",
+            "imported": "a_r",
+            "module": "/$bunfs/root/chunk-2sg3ps7f.js"
+          }
+        ],
+        "exports": [
+          {
+            "local": "a_r",
+            "name": "connectVoiceStream"
+          },
+          {
+            "local": "i_r",
+            "name": "isVoiceStreamAvailable"
+          },
+          {
+            "local": "s_r",
+            "name": "probeVoiceConnectivity"
+          }
+        ],
+        "rows": []
+      },
+      "nativeShim": {
+        "file": "chunk-291h5b47.js",
+        "moduleSha256": "96876775af6f6ed18b00ed92e91cf3c0ae3d30b5b21b590af0add27ad0bdc255",
+        "imports": [
+          {
+            "local": "v",
+            "imported": "v",
+            "module": "/$bunfs/root/chunk-870yz02b.js"
+          },
+          {
+            "local": "Ie",
+            "imported": "Ie",
+            "module": "/$bunfs/root/chunk-870yz02b.js"
+          }
+        ],
+        "exports": [
+          {
+            "local": "Qzr",
+            "name": "Qzr"
+          }
+        ],
+        "rows": [
+          {
+            "start": 664,
+            "end": 738,
+            "source": "var Qzr=v(function(L,H){H.exports=Ie(\"/$bunfs/root/audio-capture.node\")});",
+            "sha256": "fbdedd03f111233c8490c51107f25f19525ee993876448591945775ece23c152"
+          }
+        ]
+      },
+      "asset": {
+        "file": "audio-capture.node",
+        "sha256": "a03067d255c963e840ea1c2ece8afa080ce7e9003c6fe8ee781d6925dc735e9b",
+        "length": 443180
+      },
+      "manifestSha256": "ba9e122d28e8a42927eb23c7c86b62295f24a223546ee5476e761837579a709b"
+    },
+    "linux-arm64": {
+      "command": {
+        "file": "chunk-9h1gk6ey.js",
+        "moduleSha256": "63b271a3fc75ce5a5be9a89db783683a01be36a8be52369825fdcdc9eea58069",
+        "imports": [
+          {
+            "local": "Q0e",
+            "imported": "Q0e",
+            "module": "/$bunfs/root/chunk-7vreh9fj.js"
+          },
+          {
+            "local": "i",
+            "imported": "i",
+            "module": "/$bunfs/root/chunk-y2exaczw.js"
+          },
+          {
+            "local": "wl",
+            "imported": "wl",
+            "module": "/$bunfs/root/chunk-g77csgy5.js"
+          },
+          {
+            "local": "Te",
+            "imported": "Te",
+            "module": "/$bunfs/root/chunk-g77csgy5.js"
+          },
+          {
+            "local": "le",
+            "imported": "le",
+            "module": "/$bunfs/root/chunk-g77csgy5.js"
+          },
+          {
+            "local": "tt",
+            "imported": "tt",
+            "module": "/$bunfs/root/chunk-j624axd2.js"
+          },
+          {
+            "local": "hn",
+            "imported": "hn",
+            "module": "/$bunfs/root/chunk-j624axd2.js"
+          },
+          {
+            "local": "vFt",
+            "imported": "vFt",
+            "module": "/$bunfs/root/chunk-2sd5rhmn.js"
+          },
+          {
+            "local": "J5e",
+            "imported": "J5e",
+            "module": "/$bunfs/root/chunk-2sd5rhmn.js"
+          },
+          {
+            "local": "op",
+            "imported": "op",
+            "module": "/$bunfs/root/chunk-m6aj1d5n.js"
+          },
+          {
+            "local": "FE",
+            "imported": "FE",
+            "module": "/$bunfs/root/chunk-x81bqjgw.js"
+          },
+          {
+            "local": "r_",
+            "imported": "r_",
+            "module": "/$bunfs/root/chunk-hane5eck.js"
+          }
+        ],
+        "exports": [
+          {
+            "local": "D",
+            "name": "call"
+          }
+        ],
+        "rows": [
+          {
+            "start": 4632,
+            "end": 4640,
+            "sha256": "2b995f3f06c01a573ca709a6a5f4d22789d0d543b18bcca6db715e29fff0c530",
+            "source": "var V=2;"
+          },
+          {
+            "start": 4640,
+            "end": 4761,
+            "sha256": "de59328ed9f0e067872ff39ab8ce7594ecad9ea73bafe2077ca5cf73ceecbbc6",
+            "source": "function L(s){let e=s.trim().toLowerCase();if(e===\"\")return;if(e===\"hold\"||e===\"tap\"||e===\"off\")return e;return\"invalid\"}"
+          },
+          {
+            "start": 4761,
+            "end": 7420,
+            "sha256": "157d0c92c887118934c5b01b283d573554a98ca2212eb49f09781a88b14fc5d1",
+            "source": "var D=async(s,e)=>{if(!J5e()){if(!wl())return{type:\"text\",value:\"Voice mode requires a Claude.ai account. Please run /login to sign in.\"};let o=op(\"allow_voice_mode\",\"Voice mode\",\"is\");if(o)return FE(\"allow_voice_mode\",\"slash_command\"),{type:\"text\",value:o};return{type:\"text\",value:\"Voice mode is not available.\"}}let a=tt(),v=vFt(a),t=L(s);if(t===\"invalid\")return{type:\"text\",value:`Unknown mode: \"${s.trim()}\". Use hold, tap, or off.`};if(t===\"off\"||t===void 0&&v){if((await hn(\"userSettings\",{voiceEnabled:!1,voice:{...a.voice,enabled:!1}},void 0,e.storageV5)).error)return{type:\"text\",value:\"Failed to update settings. Check your settings file for syntax errors.\"};return i(\"tengu_voice_toggled\",{enabled:!1}),{type:\"text\",value:\"Voice mode disabled.\"}}let{isVoiceStreamAvailable:y}=await import(\"/$bunfs/root/chunk-7gx8161m.js\"),{checkRecordingAvailability:h}=await import(\"/$bunfs/root/chunk-0nzb0pmr.js\"),r=await h(e.session.host,{probeForwarded:!0});if(!r.available)return{type:\"text\",value:r.reason??\"Voice mode is not available in this environment.\"};if(!y())return{type:\"text\",value:\"Voice mode requires a Claude.ai account. Please run /login to sign in.\"};let{checkVoiceDependencies:b,requestMicrophonePermission:C}=await import(\"/$bunfs/root/chunk-0nzb0pmr.js\"),c=await b(e.session.host);if(!c.available)return{type:\"text\",value:`No audio recording tool found.${c.installCommand?`\nInstall audio recording tools? Run: ${c.installCommand}`:`\nInstall SoX manually for audio recording.`}`};if(!await C(e.session.host)){let o;return o=\"your system's audio settings\",{type:\"text\",value:`Microphone access is denied. To enable it, go to ${o}, then run /voice again.`}}let l=t===\"hold\"||t===\"tap\"?t:a.voice?.mode??\"hold\";if((await hn(\"userSettings\",{voiceEnabled:!0,voice:{...a.voice,enabled:!0,mode:l}},void 0,e.storageV5)).error)return{type:\"text\",value:\"Failed to update settings. Check your settings file for syntax errors.\"};i(\"tengu_voice_toggled\",{enabled:!0,tap_mode:l===\"tap\"});let g=r_(\"voice:pushToTalk\",\"Chat\",\"space\"),w=l===\"tap\"?`Tap ${g} (with input empty) to start, tap again to send.`:`Hold ${g} to record.`,n=Q0e(a.language),m=le(),p=m.voiceLangHintLastLanguage!==n.code,f=p?0:m.voiceLangHintShownCount??0,u=!n.fellBackFrom&&f<V,d=\"\";if(n.fellBackFrom)d=` Note: \"${n.fellBackFrom}\" is not a supported dictation language; using English. Change it via /config.`;else if(u)d=` Dictation language: ${n.code} (/config to change).`;if(p||u)await Te((o)=>({...o,voiceLangHintShownCount:f+(u?1:0),voiceLangHintLastLanguage:n.code}),e.storageV5);let S=r.note?` ${r.note}`:\"\";return{type:\"text\",value:`Voice mode enabled (${l}). ${w}${d}${S}`}};"
+          }
+        ]
+      },
+      "capture": {
+        "file": "chunk-0nzb0pmr.js",
+        "moduleSha256": "9197b4cfe165e6b81d5c23c957a96a559b83bfde74dce1cd124f585e02e6615d",
+        "imports": [
+          {
+            "local": "q",
+            "imported": "q",
+            "module": "/$bunfs/root/chunk-jx85q2yb.js"
+          },
+          {
+            "local": "t",
+            "imported": "t",
+            "module": "/$bunfs/root/chunk-m2pbrf6n.js"
+          },
+          {
+            "local": "kS",
+            "imported": "kS",
+            "module": "/$bunfs/root/chunk-e9gmdyxt.js"
+          },
+          {
+            "local": "a",
+            "imported": "a",
+            "module": "/$bunfs/root/chunk-ysvw6cpd.js"
+          },
+          {
+            "local": "I",
+            "imported": "I",
+            "module": "/$bunfs/root/chunk-sh2djrhe.js"
+          },
+          {
+            "local": "Fa",
+            "imported": "Fa",
+            "module": "/$bunfs/root/chunk-drrh8wnk.js"
+          },
+          {
+            "local": "Je",
+            "imported": "Je",
+            "module": "/$bunfs/root/chunk-tf6fp71c.js"
+          },
+          {
+            "local": "m",
+            "imported": "spawn",
+            "module": "child_process"
+          },
+          {
+            "local": "P",
+            "imported": "readFile",
+            "module": "fs/promises"
+          },
+          {
+            "local": "b",
+            "imported": "homedir",
+            "module": "os"
+          },
+          {
+            "local": "R",
+            "imported": "join",
+            "module": "path"
+          }
+        ],
+        "exports": [
+          {
+            "local": "we",
+            "name": "checkRecordingAvailability"
+          },
+          {
+            "local": "me",
+            "name": "checkVoiceDependencies"
+          },
+          {
+            "local": "ve",
+            "name": "requestMicrophonePermission"
+          },
+          {
+            "local": "F",
+            "name": "startRecording"
+          },
+          {
+            "local": "N",
+            "name": "stopRecording"
+          }
+        ],
+        "rows": [
+          {
+            "start": 1776,
+            "end": 1859,
+            "sha256": "688c78819a6520b13e13cc23eb308da1e4d36be27b38c988fe212d651f336b9b",
+            "source": "var G=R(b(),\".cache\",\"coder-audio\",\"port\"),X=R(b(),\".cache\",\"coder-audio\",\"token\");"
+          },
+          {
+            "start": 1859,
+            "end": 2046,
+            "sha256": "4f90b54043706b3015656d2386a9e92dd1f6a981f60bad5e72e17501fab91331",
+            "source": "class A{audioNapi=null;audioNapiPromise=null;arecordProbe=null;linuxAlsaCardsProbe=null;activeRecorder=null;activeForwardedSocket=null;forwardedStartGeneration=0;nativeRecordingActive=!1}"
+          },
+          {
+            "start": 2046,
+            "end": 2069,
+            "sha256": "d8e2e884b26e3c1abf562e785d163ba5b4dfc5e190880f2f86cb4fb4523fa65e",
+            "source": "var u=new q(()=>new A);"
+          },
+          {
+            "start": 2069,
+            "end": 2088,
+            "sha256": "dbf200e898c1de2398826c084d13dfcc638ad3fdfc058087b44085d7008d8263",
+            "source": "var p={started:!0};"
+          },
+          {
+            "start": 2088,
+            "end": 2143,
+            "sha256": "4850f77689b33538cd99c2a551dfece787f38d3410d90f26ca5d2d379a0888da",
+            "source": "var k={started:!1,superseded:!1,hint:null,expected:!1};"
+          },
+          {
+            "start": 2143,
+            "end": 2395,
+            "sha256": "19a9aebc95dc8418d75124e8e92791f7ca1e5f687b6a85fdcc96dc527cab80a2",
+            "source": "function f(e){return e.audioNapiPromise??=(async()=>{let o=Date.now(),r=await import(\"/$bunfs/root/chunk-rfwnawqk.js\");return r.isNativeAudioAvailable(),e.audioNapi=r,t(`[voice] audio-capture-napi loaded in ${Date.now()-o}ms`),r})(),e.audioNapiPromise}"
+          },
+          {
+            "start": 2395,
+            "end": 2426,
+            "sha256": "baa00e690d8bf8f7b02d6c17daed130abc1cc99491e90c83229dcbd0f52ffbd3",
+            "source": "var v=16000,w=1,D=\"2.0\",h=\"3%\";"
+          },
+          {
+            "start": 2426,
+            "end": 2514,
+            "sha256": "8fcd1a159f3167a648e8650dd9a0617e703f59f861fb9ad516f1bec3f04fb82f",
+            "source": "async function c(e){return(await Je(e,[\"--version\"],{timeout:3000,useCwd:!1})).code===0}"
+          },
+          {
+            "start": 2514,
+            "end": 3002,
+            "sha256": "2cb4254e80a4678c49b45448fa86c0f161ceb94faaa17a1bad920e3797c2f464",
+            "source": "function x(e){return e.arecordProbe??=new Promise((o)=>{let r=m(\"arecord\",[\"-f\",\"S16_LE\",\"-r\",String(v),\"-c\",String(w),\"-t\",\"raw\",\"/dev/null\"],{stdio:[\"ignore\",\"ignore\",\"pipe\"],windowsHide:!0}),s=\"\";r.stderr?.on(\"data\",(i)=>{s+=i.toString()});let n=setTimeout((i,d)=>{i.kill(\"SIGTERM\"),d({ok:!0,stderr:\"\"})},150,r,o);r.once(\"close\",(i)=>{clearTimeout(n),o({ok:i===0,stderr:s.trim()})}),r.once(\"error\",()=>{clearTimeout(n),o({ok:!1,stderr:\"arecord: command not found\"})})}),e.arecordProbe}"
+          },
+          {
+            "start": 3002,
+            "end": 3179,
+            "sha256": "3076230be33b7e0a41f719969d4ab8311ade517f8318e3bc1aa2fd2a682ea8bb",
+            "source": "function g(e){return e.linuxAlsaCardsProbe??=P(\"/proc/asound/cards\",\"utf8\").then((o)=>{let r=o.trim();return r!==\"\"&&!r.includes(\"no soundcards\")},()=>!1),e.linuxAlsaCardsProbe}"
+          },
+          {
+            "start": 3179,
+            "end": 3557,
+            "sha256": "fdd7673dc4b21db3f5b2ee4254cc3c2e9062f2b08373d9f1b1c48c2a04963427",
+            "source": "async function E(){if(await c(\"apt-get\"))return{cmd:\"sudo\",args:[\"apt-get\",\"install\",\"-y\",\"sox\"],displayCommand:\"sudo apt-get install sox\"};if(await c(\"dnf\"))return{cmd:\"sudo\",args:[\"dnf\",\"install\",\"-y\",\"sox\"],displayCommand:\"sudo dnf install sox\"};if(await c(\"pacman\"))return{cmd:\"sudo\",args:[\"pacman\",\"-S\",\"--noconfirm\",\"sox\"],displayCommand:\"sudo pacman -S sox\"};return null}"
+          },
+          {
+            "start": 3557,
+            "end": 3939,
+            "sha256": "26834d5180a48eebf251ca45c515777bbe0a671ac2f4a22d2b6dbd0fdd1b3d3d",
+            "source": "async function me(e){let o=u.of(e);if((await f(o)).isNativeAudioAvailable()&&await g(o))return{available:!0,missing:[],installCommand:null};if(await c(\"arecord\"))return{available:!0,missing:[],installCommand:null};let s=[];if(!await c(\"sox\"))s.push(\"sox (rec command)\");let n=s.length>0?await E():null;return{available:s.length===0,missing:s,installCommand:n?.displayCommand??null}}"
+          },
+          {
+            "start": 3939,
+            "end": 4102,
+            "sha256": "4f88b07ab5ccf44303e52c09e171ac2e75ad2cf015e41e36d1d9470b3b0feb15",
+            "source": "async function ve(e){if(!(await f(u.of(e))).isNativeAudioAvailable())return!0;if((await F(e,(s)=>{},()=>{},{silenceDetection:!1})).started)return N(e),!0;return!1}"
+          },
+          {
+            "start": 4102,
+            "end": 5578,
+            "sha256": "eaa0c11e48972ce914680f561d29c41f2d01b130c2994d08fecfa521c984daa8",
+            "source": "async function we(e,o={}){if(kS()||a.CLAUDE_CODE_REMOTE)return{available:!1,reason:`Voice mode requires microphone access, but no audio device is available in this environment.\n\nTo use voice mode, run Claude Code locally instead.`};let r=u.of(e);if((await f(r)).isNativeAudioAvailable()&&await g(r))return{available:!0,reason:null};let n=`Voice mode could not find a working audio recorder in WSL.\n\n`+`WSL2 with WSLg provides audio via PulseAudio \\u2014 install SoX with its PulseAudio backend (sudo apt install sox libsox-fmt-pulse) so Claude Code can record through it.\n\n`+\"If WSLg is not available (for example WSL1), run Claude Code in native Windows instead.\";if(await c(\"arecord\")){let d=await x(r);if(d.ok)return{available:!0,reason:null};t(`[voice] arecord probe failed: ${d.stderr}`)}let i=await c(\"sox\");if(i&&await c(\"rec\"))return{available:!0,reason:null};if(I()===\"wsl\")return{available:!1,reason:n};if(!i){let d=await E();return{available:!1,reason:d?`Voice mode requires SoX for audio recording. Install it with: ${d.displayCommand}`:`Voice mode requires SoX for audio recording. Install SoX manually:\n  macOS: brew install sox\n  Ubuntu/Debian: sudo apt-get install sox\n  Fedora: sudo dnf install sox`}}return{available:!1,reason:`Voice mode requires a microphone, but SoX could not open an audio capture device.\n\nThis usually means the host has no microphone (for example, a remote server). Run Claude Code on a machine with a microphone to use voice input.`}}"
+          },
+          {
+            "start": 5578,
+            "end": 6061,
+            "sha256": "e60e876ffa2ba3fee1d3db6133834c0b152d59e5f9b13618fce0d31d0d5ad9c4",
+            "source": "async function F(e,o,r,s){t(\"[voice] startRecording called, platform=linux\");let n=u.of(e),i=await f(n),d=i.isNativeAudioAvailable()&&await g(n),l=s?.silenceDetection!==!1;if(d){if(n.nativeRecordingActive||i.isNativeRecordingActive())i.stopNativeRecording(),n.nativeRecordingActive=!1;if(i.startNativeRecording((S)=>{o(S)},()=>{if(l)n.nativeRecordingActive=!1,r()}))return n.nativeRecordingActive=!0,p}if(await c(\"arecord\")&&(await x(n)).ok)return T(n,o,r)?p:k;return C(n,o,r,s)?p:k}"
+          },
+          {
+            "start": 6061,
+            "end": 6606,
+            "sha256": "24f8f3e49f97a8e03a14b40a86f7a0615a29edde2422098f76c9e94296497763",
+            "source": "function C(e,o,r,s){let n=s?.silenceDetection!==!1,i=[\"-q\",\"--buffer\",\"1024\",\"-t\",\"raw\",\"-r\",String(v),\"-e\",\"signed\",\"-b\",\"16\",\"-c\",String(w),\"-\"];if(n)i.push(\"silence\",\"1\",\"0.1\",h,\"1\",D,h);let d=m(\"rec\",i,{stdio:[\"pipe\",\"pipe\",\"pipe\"],windowsHide:!0,...Fa(\"helper\")});return e.activeRecorder=d,d.stdout?.on(\"data\",(l)=>{o(l)}),d.stderr?.on(\"data\",()=>{}),d.on(\"close\",()=>{e.activeRecorder=null,r()}),d.on(\"error\",(l)=>{t(`[voice] SoX rec spawn failed: ${l instanceof Error?l.message:String(l)}`,{level:\"error\"}),e.activeRecorder=null,r()}),!0}"
+          },
+          {
+            "start": 6606,
+            "end": 7022,
+            "sha256": "afa58d78b34c379d2d04286bfd68bba4a2a8cb34262527f6cde619387ba89b9c",
+            "source": "function T(e,o,r){let s=[\"-f\",\"S16_LE\",\"-r\",String(v),\"-c\",String(w),\"-t\",\"raw\",\"-q\",\"-\"],n=m(\"arecord\",s,{stdio:[\"pipe\",\"pipe\",\"pipe\"],windowsHide:!0,...Fa(\"helper\")});return e.activeRecorder=n,n.stdout?.on(\"data\",(i)=>{o(i)}),n.stderr?.on(\"data\",()=>{}),n.on(\"close\",()=>{e.activeRecorder=null,r()}),n.on(\"error\",(i)=>{t(`[voice] arecord recorder spawn error: ${i}`,{level:\"error\"}),e.activeRecorder=null,r()}),!0}"
+          },
+          {
+            "start": 7022,
+            "end": 7234,
+            "sha256": "5376008f293121fcb44b8838b92c968a39cea7efd5e70aca7898b00dc3423357",
+            "source": "function N(e){let o=u.of(e);if(o.nativeRecordingActive&&o.audioNapi){o.audioNapi.stopNativeRecording(),o.nativeRecordingActive=!1;return}if(o.activeRecorder)o.activeRecorder.kill(\"SIGTERM\"),o.activeRecorder=null}"
+          }
+        ]
+      },
+      "native": {
+        "file": "chunk-rfwnawqk.js",
+        "moduleSha256": "4f081131913d2531cd2ce48f2cb7b582f5dd70b13a44a063c7e9b11823c1382f",
+        "imports": [
+          {
+            "local": "Tqr",
+            "imported": "Tqr",
+            "module": "/$bunfs/root/chunk-pvb93er8.js"
+          },
+          {
+            "local": "Ie",
+            "imported": "Ie",
+            "module": "/$bunfs/root/chunk-sq5jk69w.js"
+          }
+        ],
+        "exports": [
+          {
+            "local": "c",
+            "name": "isNativeAudioAvailable"
+          },
+          {
+            "local": "b",
+            "name": "isNativePlaying"
+          },
+          {
+            "local": "d",
+            "name": "isNativeRecordingActive"
+          },
+          {
+            "local": "v",
+            "name": "microphoneAuthorizationStatus"
+          },
+          {
+            "local": "p",
+            "name": "startNativePlayback"
+          },
+          {
+            "local": "l",
+            "name": "startNativeRecording"
+          },
+          {
+            "local": "m",
+            "name": "stopNativePlayback"
+          },
+          {
+            "local": "s",
+            "name": "stopNativeRecording"
+          },
+          {
+            "local": "f",
+            "name": "writeNativePlaybackData"
+          }
+        ],
+        "rows": [
+          {
+            "start": 710,
+            "end": 726,
+            "sha256": "82c9462314338c7c5946154002086e5ec4c93f87ee752b1364843500ff37488c",
+            "source": "var a=null,i=!1;"
+          },
+          {
+            "start": 726,
+            "end": 1072,
+            "sha256": "82b37d99ee126f5be6007cab630013e3ee5fd075a25022bb5976e16ed7c2d6dc",
+            "source": "function r(){if(i)return a;i=!0;let t=\"linux\";if(t!==\"darwin\"&&t!==\"linux\"&&t!==\"win32\")return null;try{return a=Tqr(),a}catch{}let o=`arm64-${t}`,u=(t===\"linux\"?[o,`${o}-musl`]:[o]).flatMap((n)=>[`./vendor/audio-capture/${n}/audio-capture.node`,`../audio-capture/${n}/audio-capture.node`]);for(let n of u)try{return a=Ie(n),a}catch{}return null}"
+          },
+          {
+            "start": 1072,
+            "end": 1103,
+            "sha256": "7810cc8d739a987131cf78ff1d0afbc9efa6e201cf5f569c3fc1606d40ef2cd9",
+            "source": "function c(){return r()!==null}"
+          },
+          {
+            "start": 1103,
+            "end": 1173,
+            "sha256": "55667f48afb55fa304d4f75c7f2e8c0c53445b40f3cfd39ccf3b154fdc661ff2",
+            "source": "function l(t,o){let e=r();if(!e)return!1;return e.startRecording(t,o)}"
+          },
+          {
+            "start": 1173,
+            "end": 1227,
+            "sha256": "428b0c7baee8ecfaf754373c746091003e86358dd81a60c5a91ca5c337572ec2",
+            "source": "function s(){let t=r();if(!t)return;t.stopRecording()}"
+          },
+          {
+            "start": 1227,
+            "end": 1288,
+            "sha256": "86036a0d29212daba6e3a46af832fc33388fa3222a280bce5737db117dd5404f",
+            "source": "function d(){let t=r();if(!t)return!1;return t.isRecording()}"
+          },
+          {
+            "start": 1288,
+            "end": 1357,
+            "sha256": "bdcd4b87d98d69a0e02ef8c85e0b6ed12810a90a4ffcba27a2ca949ddda6d3c7",
+            "source": "function p(t,o){let e=r();if(!e)return!1;return e.startPlayback(t,o)}"
+          },
+          {
+            "start": 1357,
+            "end": 1417,
+            "sha256": "54abf0a838fe4232eb995aeeb84e70b55668e24cabd6136982935c0d0a8df119",
+            "source": "function f(t){let o=r();if(!o)return;o.writePlaybackData(t)}"
+          },
+          {
+            "start": 1417,
+            "end": 1470,
+            "sha256": "5882de14aa002d162879cfcb868511f6a581affd38761395038db375dea14d5a",
+            "source": "function m(){let t=r();if(!t)return;t.stopPlayback()}"
+          },
+          {
+            "start": 1470,
+            "end": 1529,
+            "sha256": "a10ccc847dfd53d1547913eebbff0762cf0702ad6bc612f3b149b3ba4404eecb",
+            "source": "function b(){let t=r();if(!t)return!1;return t.isPlaying()}"
+          },
+          {
+            "start": 1529,
+            "end": 1642,
+            "sha256": "5bcbf15c001cbeaf826a85784dfe21179701059e0f0cfd788a0a15666e3b02e8",
+            "source": "function v(){let t=r();if(!t||!t.microphoneAuthorizationStatus)return 0;return t.microphoneAuthorizationStatus()}"
+          }
+        ]
+      },
+      "stream": {
+        "file": "chunk-7gx8161m.js",
+        "moduleSha256": "bd92330bdeec96fe2ae21e472991400899953e20d88c4f78efab467ef5ab10ee",
+        "imports": [
+          {
+            "local": "s_r",
+            "imported": "s_r",
+            "module": "/$bunfs/root/chunk-zgyd51c8.js"
+          },
+          {
+            "local": "i_r",
+            "imported": "i_r",
+            "module": "/$bunfs/root/chunk-zgyd51c8.js"
+          },
+          {
+            "local": "a_r",
+            "imported": "a_r",
+            "module": "/$bunfs/root/chunk-zgyd51c8.js"
+          }
+        ],
+        "exports": [
+          {
+            "local": "a_r",
+            "name": "connectVoiceStream"
+          },
+          {
+            "local": "i_r",
+            "name": "isVoiceStreamAvailable"
+          },
+          {
+            "local": "s_r",
+            "name": "probeVoiceConnectivity"
+          }
+        ],
+        "rows": []
+      },
+      "nativeShim": {
+        "file": "chunk-pvb93er8.js",
+        "moduleSha256": "d921498cd5a7a842a82031c467451f70e463f84d6c1002fd2fd9fbd09b0f78d1",
+        "imports": [
+          {
+            "local": "v",
+            "imported": "v",
+            "module": "/$bunfs/root/chunk-sq5jk69w.js"
+          },
+          {
+            "local": "Ie",
+            "imported": "Ie",
+            "module": "/$bunfs/root/chunk-sq5jk69w.js"
+          }
+        ],
+        "exports": [
+          {
+            "local": "Tqr",
+            "name": "Tqr"
+          }
+        ],
+        "rows": [
+          {
+            "start": 664,
+            "end": 738,
+            "source": "var Tqr=v(function(R,T){T.exports=Ie(\"/$bunfs/root/audio-capture.node\")});",
+            "sha256": "91bd4a7023d0cecd9407b5a92564e941d67cfebe69f8de0fa7a292339f3a0a5b"
+          }
+        ]
+      },
+      "asset": {
+        "file": "audio-capture.node",
+        "sha256": "c1d8aeacbfce5977d6d0e07f8ff5a410b12baafadfabeb66aeecc460423f4601",
+        "length": 458784
+      },
+      "manifestSha256": "f3be5b23f9cbb909555fe028143b9a3a40c1e3e49961e09c49d8e5a6b61ae83b"
+    },
+    "linux-x64": {
+      "command": {
+        "file": "chunk-hxe7t544.js",
+        "moduleSha256": "8ab854130e6120b1df53a85c7e745d60ea477a816866ccc83d88bb009744cb2b",
+        "imports": [
+          {
+            "local": "QMe",
+            "imported": "QMe",
+            "module": "/$bunfs/root/chunk-51c5swn7.js"
+          },
+          {
+            "local": "i",
+            "imported": "i",
+            "module": "/$bunfs/root/chunk-t81kh18z.js"
+          },
+          {
+            "local": "wl",
+            "imported": "wl",
+            "module": "/$bunfs/root/chunk-k985080f.js"
+          },
+          {
+            "local": "Te",
+            "imported": "Te",
+            "module": "/$bunfs/root/chunk-k985080f.js"
+          },
+          {
+            "local": "le",
+            "imported": "le",
+            "module": "/$bunfs/root/chunk-k985080f.js"
+          },
+          {
+            "local": "tt",
+            "imported": "tt",
+            "module": "/$bunfs/root/chunk-hqnt8197.js"
+          },
+          {
+            "local": "hn",
+            "imported": "hn",
+            "module": "/$bunfs/root/chunk-hqnt8197.js"
+          },
+          {
+            "local": "vNt",
+            "imported": "vNt",
+            "module": "/$bunfs/root/chunk-da9jta6b.js"
+          },
+          {
+            "local": "J6e",
+            "imported": "J6e",
+            "module": "/$bunfs/root/chunk-da9jta6b.js"
+          },
+          {
+            "local": "op",
+            "imported": "op",
+            "module": "/$bunfs/root/chunk-d1pn0ynp.js"
+          },
+          {
+            "local": "Nk",
+            "imported": "Nk",
+            "module": "/$bunfs/root/chunk-gzc08xzv.js"
+          },
+          {
+            "local": "r_",
+            "imported": "r_",
+            "module": "/$bunfs/root/chunk-61hndvam.js"
+          }
+        ],
+        "exports": [
+          {
+            "local": "D",
+            "name": "call"
+          }
+        ],
+        "rows": [
+          {
+            "start": 4632,
+            "end": 4640,
+            "sha256": "2b995f3f06c01a573ca709a6a5f4d22789d0d543b18bcca6db715e29fff0c530",
+            "source": "var V=2;"
+          },
+          {
+            "start": 4640,
+            "end": 4761,
+            "sha256": "de59328ed9f0e067872ff39ab8ce7594ecad9ea73bafe2077ca5cf73ceecbbc6",
+            "source": "function L(s){let e=s.trim().toLowerCase();if(e===\"\")return;if(e===\"hold\"||e===\"tap\"||e===\"off\")return e;return\"invalid\"}"
+          },
+          {
+            "start": 4761,
+            "end": 7420,
+            "sha256": "3a29deffe304f7c769c4de42c3e1d0bc6289951103b4b175a74e32dd3b16ff58",
+            "source": "var D=async(s,e)=>{if(!J6e()){if(!wl())return{type:\"text\",value:\"Voice mode requires a Claude.ai account. Please run /login to sign in.\"};let o=op(\"allow_voice_mode\",\"Voice mode\",\"is\");if(o)return Nk(\"allow_voice_mode\",\"slash_command\"),{type:\"text\",value:o};return{type:\"text\",value:\"Voice mode is not available.\"}}let a=tt(),v=vNt(a),t=L(s);if(t===\"invalid\")return{type:\"text\",value:`Unknown mode: \"${s.trim()}\". Use hold, tap, or off.`};if(t===\"off\"||t===void 0&&v){if((await hn(\"userSettings\",{voiceEnabled:!1,voice:{...a.voice,enabled:!1}},void 0,e.storageV5)).error)return{type:\"text\",value:\"Failed to update settings. Check your settings file for syntax errors.\"};return i(\"tengu_voice_toggled\",{enabled:!1}),{type:\"text\",value:\"Voice mode disabled.\"}}let{isVoiceStreamAvailable:y}=await import(\"/$bunfs/root/chunk-thmtkj01.js\"),{checkRecordingAvailability:h}=await import(\"/$bunfs/root/chunk-pw3n1yrt.js\"),r=await h(e.session.host,{probeForwarded:!0});if(!r.available)return{type:\"text\",value:r.reason??\"Voice mode is not available in this environment.\"};if(!y())return{type:\"text\",value:\"Voice mode requires a Claude.ai account. Please run /login to sign in.\"};let{checkVoiceDependencies:b,requestMicrophonePermission:C}=await import(\"/$bunfs/root/chunk-pw3n1yrt.js\"),c=await b(e.session.host);if(!c.available)return{type:\"text\",value:`No audio recording tool found.${c.installCommand?`\nInstall audio recording tools? Run: ${c.installCommand}`:`\nInstall SoX manually for audio recording.`}`};if(!await C(e.session.host)){let o;return o=\"your system's audio settings\",{type:\"text\",value:`Microphone access is denied. To enable it, go to ${o}, then run /voice again.`}}let l=t===\"hold\"||t===\"tap\"?t:a.voice?.mode??\"hold\";if((await hn(\"userSettings\",{voiceEnabled:!0,voice:{...a.voice,enabled:!0,mode:l}},void 0,e.storageV5)).error)return{type:\"text\",value:\"Failed to update settings. Check your settings file for syntax errors.\"};i(\"tengu_voice_toggled\",{enabled:!0,tap_mode:l===\"tap\"});let g=r_(\"voice:pushToTalk\",\"Chat\",\"space\"),w=l===\"tap\"?`Tap ${g} (with input empty) to start, tap again to send.`:`Hold ${g} to record.`,n=QMe(a.language),m=le(),p=m.voiceLangHintLastLanguage!==n.code,f=p?0:m.voiceLangHintShownCount??0,u=!n.fellBackFrom&&f<V,d=\"\";if(n.fellBackFrom)d=` Note: \"${n.fellBackFrom}\" is not a supported dictation language; using English. Change it via /config.`;else if(u)d=` Dictation language: ${n.code} (/config to change).`;if(p||u)await Te((o)=>({...o,voiceLangHintShownCount:f+(u?1:0),voiceLangHintLastLanguage:n.code}),e.storageV5);let S=r.note?` ${r.note}`:\"\";return{type:\"text\",value:`Voice mode enabled (${l}). ${w}${d}${S}`}};"
+          }
+        ]
+      },
+      "capture": {
+        "file": "chunk-pw3n1yrt.js",
+        "moduleSha256": "83874aa70b02fd8c909610212830f592fc6a89c6b917ef8131fc8c47ee830e70",
+        "imports": [
+          {
+            "local": "V",
+            "imported": "V",
+            "module": "/$bunfs/root/chunk-8e9587qc.js"
+          },
+          {
+            "local": "t",
+            "imported": "t",
+            "module": "/$bunfs/root/chunk-bgzq3rjr.js"
+          },
+          {
+            "local": "ES",
+            "imported": "ES",
+            "module": "/$bunfs/root/chunk-k0b4t22a.js"
+          },
+          {
+            "local": "a",
+            "imported": "a",
+            "module": "/$bunfs/root/chunk-ex1nk6dh.js"
+          },
+          {
+            "local": "O",
+            "imported": "O",
+            "module": "/$bunfs/root/chunk-fs7xtb5z.js"
+          },
+          {
+            "local": "Na",
+            "imported": "Na",
+            "module": "/$bunfs/root/chunk-bvbt1kef.js"
+          },
+          {
+            "local": "Je",
+            "imported": "Je",
+            "module": "/$bunfs/root/chunk-9h99vqw6.js"
+          },
+          {
+            "local": "m",
+            "imported": "spawn",
+            "module": "child_process"
+          },
+          {
+            "local": "P",
+            "imported": "readFile",
+            "module": "fs/promises"
+          },
+          {
+            "local": "b",
+            "imported": "homedir",
+            "module": "os"
+          },
+          {
+            "local": "R",
+            "imported": "join",
+            "module": "path"
+          }
+        ],
+        "exports": [
+          {
+            "local": "we",
+            "name": "checkRecordingAvailability"
+          },
+          {
+            "local": "me",
+            "name": "checkVoiceDependencies"
+          },
+          {
+            "local": "ve",
+            "name": "requestMicrophonePermission"
+          },
+          {
+            "local": "F",
+            "name": "startRecording"
+          },
+          {
+            "local": "N",
+            "name": "stopRecording"
+          }
+        ],
+        "rows": [
+          {
+            "start": 1776,
+            "end": 1859,
+            "sha256": "688c78819a6520b13e13cc23eb308da1e4d36be27b38c988fe212d651f336b9b",
+            "source": "var G=R(b(),\".cache\",\"coder-audio\",\"port\"),X=R(b(),\".cache\",\"coder-audio\",\"token\");"
+          },
+          {
+            "start": 1859,
+            "end": 2046,
+            "sha256": "4f90b54043706b3015656d2386a9e92dd1f6a981f60bad5e72e17501fab91331",
+            "source": "class A{audioNapi=null;audioNapiPromise=null;arecordProbe=null;linuxAlsaCardsProbe=null;activeRecorder=null;activeForwardedSocket=null;forwardedStartGeneration=0;nativeRecordingActive=!1}"
+          },
+          {
+            "start": 2046,
+            "end": 2069,
+            "sha256": "8b46db179585d748011f06bd1211d6b5a06d7336d07bdd726d0f4840aedf6aab",
+            "source": "var u=new V(()=>new A);"
+          },
+          {
+            "start": 2069,
+            "end": 2088,
+            "sha256": "dbf200e898c1de2398826c084d13dfcc638ad3fdfc058087b44085d7008d8263",
+            "source": "var p={started:!0};"
+          },
+          {
+            "start": 2088,
+            "end": 2143,
+            "sha256": "4850f77689b33538cd99c2a551dfece787f38d3410d90f26ca5d2d379a0888da",
+            "source": "var k={started:!1,superseded:!1,hint:null,expected:!1};"
+          },
+          {
+            "start": 2143,
+            "end": 2395,
+            "sha256": "9538e3d1da045c7759123d570787e0ad76654ca11d2c1d4ab84fe31eb13b341f",
+            "source": "function f(e){return e.audioNapiPromise??=(async()=>{let o=Date.now(),r=await import(\"/$bunfs/root/chunk-my9yxbtv.js\");return r.isNativeAudioAvailable(),e.audioNapi=r,t(`[voice] audio-capture-napi loaded in ${Date.now()-o}ms`),r})(),e.audioNapiPromise}"
+          },
+          {
+            "start": 2395,
+            "end": 2426,
+            "sha256": "baa00e690d8bf8f7b02d6c17daed130abc1cc99491e90c83229dcbd0f52ffbd3",
+            "source": "var v=16000,w=1,D=\"2.0\",h=\"3%\";"
+          },
+          {
+            "start": 2426,
+            "end": 2514,
+            "sha256": "8fcd1a159f3167a648e8650dd9a0617e703f59f861fb9ad516f1bec3f04fb82f",
+            "source": "async function c(e){return(await Je(e,[\"--version\"],{timeout:3000,useCwd:!1})).code===0}"
+          },
+          {
+            "start": 2514,
+            "end": 3002,
+            "sha256": "2cb4254e80a4678c49b45448fa86c0f161ceb94faaa17a1bad920e3797c2f464",
+            "source": "function x(e){return e.arecordProbe??=new Promise((o)=>{let r=m(\"arecord\",[\"-f\",\"S16_LE\",\"-r\",String(v),\"-c\",String(w),\"-t\",\"raw\",\"/dev/null\"],{stdio:[\"ignore\",\"ignore\",\"pipe\"],windowsHide:!0}),s=\"\";r.stderr?.on(\"data\",(i)=>{s+=i.toString()});let n=setTimeout((i,d)=>{i.kill(\"SIGTERM\"),d({ok:!0,stderr:\"\"})},150,r,o);r.once(\"close\",(i)=>{clearTimeout(n),o({ok:i===0,stderr:s.trim()})}),r.once(\"error\",()=>{clearTimeout(n),o({ok:!1,stderr:\"arecord: command not found\"})})}),e.arecordProbe}"
+          },
+          {
+            "start": 3002,
+            "end": 3179,
+            "sha256": "3076230be33b7e0a41f719969d4ab8311ade517f8318e3bc1aa2fd2a682ea8bb",
+            "source": "function g(e){return e.linuxAlsaCardsProbe??=P(\"/proc/asound/cards\",\"utf8\").then((o)=>{let r=o.trim();return r!==\"\"&&!r.includes(\"no soundcards\")},()=>!1),e.linuxAlsaCardsProbe}"
+          },
+          {
+            "start": 3179,
+            "end": 3557,
+            "sha256": "fdd7673dc4b21db3f5b2ee4254cc3c2e9062f2b08373d9f1b1c48c2a04963427",
+            "source": "async function E(){if(await c(\"apt-get\"))return{cmd:\"sudo\",args:[\"apt-get\",\"install\",\"-y\",\"sox\"],displayCommand:\"sudo apt-get install sox\"};if(await c(\"dnf\"))return{cmd:\"sudo\",args:[\"dnf\",\"install\",\"-y\",\"sox\"],displayCommand:\"sudo dnf install sox\"};if(await c(\"pacman\"))return{cmd:\"sudo\",args:[\"pacman\",\"-S\",\"--noconfirm\",\"sox\"],displayCommand:\"sudo pacman -S sox\"};return null}"
+          },
+          {
+            "start": 3557,
+            "end": 3939,
+            "sha256": "26834d5180a48eebf251ca45c515777bbe0a671ac2f4a22d2b6dbd0fdd1b3d3d",
+            "source": "async function me(e){let o=u.of(e);if((await f(o)).isNativeAudioAvailable()&&await g(o))return{available:!0,missing:[],installCommand:null};if(await c(\"arecord\"))return{available:!0,missing:[],installCommand:null};let s=[];if(!await c(\"sox\"))s.push(\"sox (rec command)\");let n=s.length>0?await E():null;return{available:s.length===0,missing:s,installCommand:n?.displayCommand??null}}"
+          },
+          {
+            "start": 3939,
+            "end": 4102,
+            "sha256": "4f88b07ab5ccf44303e52c09e171ac2e75ad2cf015e41e36d1d9470b3b0feb15",
+            "source": "async function ve(e){if(!(await f(u.of(e))).isNativeAudioAvailable())return!0;if((await F(e,(s)=>{},()=>{},{silenceDetection:!1})).started)return N(e),!0;return!1}"
+          },
+          {
+            "start": 4102,
+            "end": 5578,
+            "sha256": "654a4969bfa2e5ff1bd4ddf9427c791e8f480f0a116d263d62073af05c2671da",
+            "source": "async function we(e,o={}){if(ES()||a.CLAUDE_CODE_REMOTE)return{available:!1,reason:`Voice mode requires microphone access, but no audio device is available in this environment.\n\nTo use voice mode, run Claude Code locally instead.`};let r=u.of(e);if((await f(r)).isNativeAudioAvailable()&&await g(r))return{available:!0,reason:null};let n=`Voice mode could not find a working audio recorder in WSL.\n\n`+`WSL2 with WSLg provides audio via PulseAudio \\u2014 install SoX with its PulseAudio backend (sudo apt install sox libsox-fmt-pulse) so Claude Code can record through it.\n\n`+\"If WSLg is not available (for example WSL1), run Claude Code in native Windows instead.\";if(await c(\"arecord\")){let d=await x(r);if(d.ok)return{available:!0,reason:null};t(`[voice] arecord probe failed: ${d.stderr}`)}let i=await c(\"sox\");if(i&&await c(\"rec\"))return{available:!0,reason:null};if(O()===\"wsl\")return{available:!1,reason:n};if(!i){let d=await E();return{available:!1,reason:d?`Voice mode requires SoX for audio recording. Install it with: ${d.displayCommand}`:`Voice mode requires SoX for audio recording. Install SoX manually:\n  macOS: brew install sox\n  Ubuntu/Debian: sudo apt-get install sox\n  Fedora: sudo dnf install sox`}}return{available:!1,reason:`Voice mode requires a microphone, but SoX could not open an audio capture device.\n\nThis usually means the host has no microphone (for example, a remote server). Run Claude Code on a machine with a microphone to use voice input.`}}"
+          },
+          {
+            "start": 5578,
+            "end": 6061,
+            "sha256": "e60e876ffa2ba3fee1d3db6133834c0b152d59e5f9b13618fce0d31d0d5ad9c4",
+            "source": "async function F(e,o,r,s){t(\"[voice] startRecording called, platform=linux\");let n=u.of(e),i=await f(n),d=i.isNativeAudioAvailable()&&await g(n),l=s?.silenceDetection!==!1;if(d){if(n.nativeRecordingActive||i.isNativeRecordingActive())i.stopNativeRecording(),n.nativeRecordingActive=!1;if(i.startNativeRecording((S)=>{o(S)},()=>{if(l)n.nativeRecordingActive=!1,r()}))return n.nativeRecordingActive=!0,p}if(await c(\"arecord\")&&(await x(n)).ok)return T(n,o,r)?p:k;return C(n,o,r,s)?p:k}"
+          },
+          {
+            "start": 6061,
+            "end": 6606,
+            "sha256": "f1ce287fe40021b471a13ef61c039859965e5b8043ecb4088e016b54d679ac33",
+            "source": "function C(e,o,r,s){let n=s?.silenceDetection!==!1,i=[\"-q\",\"--buffer\",\"1024\",\"-t\",\"raw\",\"-r\",String(v),\"-e\",\"signed\",\"-b\",\"16\",\"-c\",String(w),\"-\"];if(n)i.push(\"silence\",\"1\",\"0.1\",h,\"1\",D,h);let d=m(\"rec\",i,{stdio:[\"pipe\",\"pipe\",\"pipe\"],windowsHide:!0,...Na(\"helper\")});return e.activeRecorder=d,d.stdout?.on(\"data\",(l)=>{o(l)}),d.stderr?.on(\"data\",()=>{}),d.on(\"close\",()=>{e.activeRecorder=null,r()}),d.on(\"error\",(l)=>{t(`[voice] SoX rec spawn failed: ${l instanceof Error?l.message:String(l)}`,{level:\"error\"}),e.activeRecorder=null,r()}),!0}"
+          },
+          {
+            "start": 6606,
+            "end": 7022,
+            "sha256": "0c0b35dfff09f565991afcd419344c47bb5a560b614d233c69e9b8b05dfc9c67",
+            "source": "function T(e,o,r){let s=[\"-f\",\"S16_LE\",\"-r\",String(v),\"-c\",String(w),\"-t\",\"raw\",\"-q\",\"-\"],n=m(\"arecord\",s,{stdio:[\"pipe\",\"pipe\",\"pipe\"],windowsHide:!0,...Na(\"helper\")});return e.activeRecorder=n,n.stdout?.on(\"data\",(i)=>{o(i)}),n.stderr?.on(\"data\",()=>{}),n.on(\"close\",()=>{e.activeRecorder=null,r()}),n.on(\"error\",(i)=>{t(`[voice] arecord recorder spawn error: ${i}`,{level:\"error\"}),e.activeRecorder=null,r()}),!0}"
+          },
+          {
+            "start": 7022,
+            "end": 7234,
+            "sha256": "5376008f293121fcb44b8838b92c968a39cea7efd5e70aca7898b00dc3423357",
+            "source": "function N(e){let o=u.of(e);if(o.nativeRecordingActive&&o.audioNapi){o.audioNapi.stopNativeRecording(),o.nativeRecordingActive=!1;return}if(o.activeRecorder)o.activeRecorder.kill(\"SIGTERM\"),o.activeRecorder=null}"
+          }
+        ]
+      },
+      "native": {
+        "file": "chunk-my9yxbtv.js",
+        "moduleSha256": "39f352c0007a9fe27acc28e6f2ac8503f515d35d73833473be040f155cbb2c85",
+        "imports": [
+          {
+            "local": "TVr",
+            "imported": "TVr",
+            "module": "/$bunfs/root/chunk-kwxfbk7y.js"
+          },
+          {
+            "local": "Oe",
+            "imported": "Oe",
+            "module": "/$bunfs/root/chunk-pkdk25gm.js"
+          }
+        ],
+        "exports": [
+          {
+            "local": "c",
+            "name": "isNativeAudioAvailable"
+          },
+          {
+            "local": "b",
+            "name": "isNativePlaying"
+          },
+          {
+            "local": "d",
+            "name": "isNativeRecordingActive"
+          },
+          {
+            "local": "v",
+            "name": "microphoneAuthorizationStatus"
+          },
+          {
+            "local": "p",
+            "name": "startNativePlayback"
+          },
+          {
+            "local": "l",
+            "name": "startNativeRecording"
+          },
+          {
+            "local": "m",
+            "name": "stopNativePlayback"
+          },
+          {
+            "local": "s",
+            "name": "stopNativeRecording"
+          },
+          {
+            "local": "f",
+            "name": "writeNativePlaybackData"
+          }
+        ],
+        "rows": [
+          {
+            "start": 710,
+            "end": 726,
+            "sha256": "82c9462314338c7c5946154002086e5ec4c93f87ee752b1364843500ff37488c",
+            "source": "var a=null,i=!1;"
+          },
+          {
+            "start": 726,
+            "end": 1070,
+            "sha256": "338179b950d2db2414ef53e7908b1b368f871f286bd3d6db997f07fa16d62600",
+            "source": "function r(){if(i)return a;i=!0;let t=\"linux\";if(t!==\"darwin\"&&t!==\"linux\"&&t!==\"win32\")return null;try{return a=TVr(),a}catch{}let o=`x64-${t}`,u=(t===\"linux\"?[o,`${o}-musl`]:[o]).flatMap((n)=>[`./vendor/audio-capture/${n}/audio-capture.node`,`../audio-capture/${n}/audio-capture.node`]);for(let n of u)try{return a=Oe(n),a}catch{}return null}"
+          },
+          {
+            "start": 1070,
+            "end": 1101,
+            "sha256": "7810cc8d739a987131cf78ff1d0afbc9efa6e201cf5f569c3fc1606d40ef2cd9",
+            "source": "function c(){return r()!==null}"
+          },
+          {
+            "start": 1101,
+            "end": 1171,
+            "sha256": "55667f48afb55fa304d4f75c7f2e8c0c53445b40f3cfd39ccf3b154fdc661ff2",
+            "source": "function l(t,o){let e=r();if(!e)return!1;return e.startRecording(t,o)}"
+          },
+          {
+            "start": 1171,
+            "end": 1225,
+            "sha256": "428b0c7baee8ecfaf754373c746091003e86358dd81a60c5a91ca5c337572ec2",
+            "source": "function s(){let t=r();if(!t)return;t.stopRecording()}"
+          },
+          {
+            "start": 1225,
+            "end": 1286,
+            "sha256": "86036a0d29212daba6e3a46af832fc33388fa3222a280bce5737db117dd5404f",
+            "source": "function d(){let t=r();if(!t)return!1;return t.isRecording()}"
+          },
+          {
+            "start": 1286,
+            "end": 1355,
+            "sha256": "bdcd4b87d98d69a0e02ef8c85e0b6ed12810a90a4ffcba27a2ca949ddda6d3c7",
+            "source": "function p(t,o){let e=r();if(!e)return!1;return e.startPlayback(t,o)}"
+          },
+          {
+            "start": 1355,
+            "end": 1415,
+            "sha256": "54abf0a838fe4232eb995aeeb84e70b55668e24cabd6136982935c0d0a8df119",
+            "source": "function f(t){let o=r();if(!o)return;o.writePlaybackData(t)}"
+          },
+          {
+            "start": 1415,
+            "end": 1468,
+            "sha256": "5882de14aa002d162879cfcb868511f6a581affd38761395038db375dea14d5a",
+            "source": "function m(){let t=r();if(!t)return;t.stopPlayback()}"
+          },
+          {
+            "start": 1468,
+            "end": 1527,
+            "sha256": "a10ccc847dfd53d1547913eebbff0762cf0702ad6bc612f3b149b3ba4404eecb",
+            "source": "function b(){let t=r();if(!t)return!1;return t.isPlaying()}"
+          },
+          {
+            "start": 1527,
+            "end": 1640,
+            "sha256": "5bcbf15c001cbeaf826a85784dfe21179701059e0f0cfd788a0a15666e3b02e8",
+            "source": "function v(){let t=r();if(!t||!t.microphoneAuthorizationStatus)return 0;return t.microphoneAuthorizationStatus()}"
+          }
+        ]
+      },
+      "stream": {
+        "file": "chunk-thmtkj01.js",
+        "moduleSha256": "b044080c5e8a402f67f5a91444ab89b3753c5b939e114d4f35fee2584fa93955",
+        "imports": [
+          {
+            "local": "s_r",
+            "imported": "s_r",
+            "module": "/$bunfs/root/chunk-bmzmbsdd.js"
+          },
+          {
+            "local": "i_r",
+            "imported": "i_r",
+            "module": "/$bunfs/root/chunk-bmzmbsdd.js"
+          },
+          {
+            "local": "a_r",
+            "imported": "a_r",
+            "module": "/$bunfs/root/chunk-bmzmbsdd.js"
+          }
+        ],
+        "exports": [
+          {
+            "local": "a_r",
+            "name": "connectVoiceStream"
+          },
+          {
+            "local": "i_r",
+            "name": "isVoiceStreamAvailable"
+          },
+          {
+            "local": "s_r",
+            "name": "probeVoiceConnectivity"
+          }
+        ],
+        "rows": []
+      },
+      "nativeShim": {
+        "file": "chunk-kwxfbk7y.js",
+        "moduleSha256": "0e63d6ab2f03125dca79cc9763a20a805a7378c141f3afc8d72123bf32feee16",
+        "imports": [
+          {
+            "local": "v",
+            "imported": "v",
+            "module": "/$bunfs/root/chunk-pkdk25gm.js"
+          },
+          {
+            "local": "Oe",
+            "imported": "Oe",
+            "module": "/$bunfs/root/chunk-pkdk25gm.js"
+          }
+        ],
+        "exports": [
+          {
+            "local": "TVr",
+            "name": "TVr"
+          }
+        ],
+        "rows": [
+          {
+            "start": 664,
+            "end": 738,
+            "source": "var TVr=v(function(L,H){H.exports=Oe(\"/$bunfs/root/audio-capture.node\")});",
+            "sha256": "42f9be68cdb7130ddd4b0e19f739787db11c332b0f24f2a93ae8606487b4ecba"
+          }
+        ]
+      },
+      "asset": {
+        "file": "audio-capture.node",
+        "sha256": "4bf312cbbc81f577d5ed0bcdcba803bfaa219c05ac4a1cca729ec81628561e88",
+        "length": 492368
+      },
+      "manifestSha256": "ecae5d9ddbf13ef27b6b6a1141953aab4ba311e47dde3ac2a7cc8b5a01c63784"
+    },
+    "win32-arm64": {
+      "command": {
+        "file": "chunk-h2r0898n.js",
+        "moduleSha256": "0c943c87c6e79ba0ca4b8e50b6e1b1b899f6ae195bb358fdb874750592baa5f3",
+        "imports": [
+          {
+            "local": "ZMe",
+            "imported": "ZMe",
+            "module": "B:/~BUN/root/chunk-qvvbjypt.js"
+          },
+          {
+            "local": "i",
+            "imported": "i",
+            "module": "B:/~BUN/root/chunk-rjmct7hh.js"
+          },
+          {
+            "local": "vl",
+            "imported": "vl",
+            "module": "B:/~BUN/root/chunk-jzrab299.js"
+          },
+          {
+            "local": "Te",
+            "imported": "Te",
+            "module": "B:/~BUN/root/chunk-jzrab299.js"
+          },
+          {
+            "local": "le",
+            "imported": "le",
+            "module": "B:/~BUN/root/chunk-jzrab299.js"
+          },
+          {
+            "local": "et",
+            "imported": "et",
+            "module": "B:/~BUN/root/chunk-8wtem9wj.js"
+          },
+          {
+            "local": "hn",
+            "imported": "hn",
+            "module": "B:/~BUN/root/chunk-8wtem9wj.js"
+          },
+          {
+            "local": "CFt",
+            "imported": "CFt",
+            "module": "B:/~BUN/root/chunk-etyk70ys.js"
+          },
+          {
+            "local": "Q5e",
+            "imported": "Q5e",
+            "module": "B:/~BUN/root/chunk-etyk70ys.js"
+          },
+          {
+            "local": "op",
+            "imported": "op",
+            "module": "B:/~BUN/root/chunk-4cx1ybpf.js"
+          },
+          {
+            "local": "$E",
+            "imported": "$E",
+            "module": "B:/~BUN/root/chunk-3fkcepzk.js"
+          },
+          {
+            "local": "i_",
+            "imported": "i_",
+            "module": "B:/~BUN/root/chunk-tx0sjz0h.js"
+          }
+        ],
+        "exports": [
+          {
+            "local": "D",
+            "name": "call"
+          }
+        ],
+        "rows": [
+          {
+            "start": 4632,
+            "end": 4640,
+            "sha256": "2b995f3f06c01a573ca709a6a5f4d22789d0d543b18bcca6db715e29fff0c530",
+            "source": "var V=2;"
+          },
+          {
+            "start": 4640,
+            "end": 4761,
+            "sha256": "de59328ed9f0e067872ff39ab8ce7594ecad9ea73bafe2077ca5cf73ceecbbc6",
+            "source": "function L(s){let e=s.trim().toLowerCase();if(e===\"\")return;if(e===\"hold\"||e===\"tap\"||e===\"off\")return e;return\"invalid\"}"
+          },
+          {
+            "start": 4761,
+            "end": 7433,
+            "sha256": "e7bed9a461313062f0239df23091df1a4945324e4d2bdd4319503fa9363a9377",
+            "source": "var D=async(s,e)=>{if(!Q5e()){if(!vl())return{type:\"text\",value:\"Voice mode requires a Claude.ai account. Please run /login to sign in.\"};let o=op(\"allow_voice_mode\",\"Voice mode\",\"is\");if(o)return $E(\"allow_voice_mode\",\"slash_command\"),{type:\"text\",value:o};return{type:\"text\",value:\"Voice mode is not available.\"}}let a=et(),v=CFt(a),t=L(s);if(t===\"invalid\")return{type:\"text\",value:`Unknown mode: \"${s.trim()}\". Use hold, tap, or off.`};if(t===\"off\"||t===void 0&&v){if((await hn(\"userSettings\",{voiceEnabled:!1,voice:{...a.voice,enabled:!1}},void 0,e.storageV5)).error)return{type:\"text\",value:\"Failed to update settings. Check your settings file for syntax errors.\"};return i(\"tengu_voice_toggled\",{enabled:!1}),{type:\"text\",value:\"Voice mode disabled.\"}}let{isVoiceStreamAvailable:y}=await import(\"B:/~BUN/root/chunk-zh7nwgen.js\"),{checkRecordingAvailability:h}=await import(\"B:/~BUN/root/chunk-t4rzac1j.js\"),r=await h(e.session.host,{probeForwarded:!0});if(!r.available)return{type:\"text\",value:r.reason??\"Voice mode is not available in this environment.\"};if(!y())return{type:\"text\",value:\"Voice mode requires a Claude.ai account. Please run /login to sign in.\"};let{checkVoiceDependencies:b,requestMicrophonePermission:C}=await import(\"B:/~BUN/root/chunk-t4rzac1j.js\"),c=await b(e.session.host);if(!c.available)return{type:\"text\",value:`No audio recording tool found.${c.installCommand?`\nInstall audio recording tools? Run: ${c.installCommand}`:`\nInstall SoX manually for audio recording.`}`};if(!await C(e.session.host)){let o;return o=\"Settings \\u2192 Privacy \\u2192 Microphone\",{type:\"text\",value:`Microphone access is denied. To enable it, go to ${o}, then run /voice again.`}}let l=t===\"hold\"||t===\"tap\"?t:a.voice?.mode??\"hold\";if((await hn(\"userSettings\",{voiceEnabled:!0,voice:{...a.voice,enabled:!0,mode:l}},void 0,e.storageV5)).error)return{type:\"text\",value:\"Failed to update settings. Check your settings file for syntax errors.\"};i(\"tengu_voice_toggled\",{enabled:!0,tap_mode:l===\"tap\"});let g=i_(\"voice:pushToTalk\",\"Chat\",\"space\"),w=l===\"tap\"?`Tap ${g} (with input empty) to start, tap again to send.`:`Hold ${g} to record.`,n=ZMe(a.language),m=le(),p=m.voiceLangHintLastLanguage!==n.code,f=p?0:m.voiceLangHintShownCount??0,u=!n.fellBackFrom&&f<V,d=\"\";if(n.fellBackFrom)d=` Note: \"${n.fellBackFrom}\" is not a supported dictation language; using English. Change it via /config.`;else if(u)d=` Dictation language: ${n.code} (/config to change).`;if(p||u)await Te((o)=>({...o,voiceLangHintShownCount:f+(u?1:0),voiceLangHintLastLanguage:n.code}),e.storageV5);let S=r.note?` ${r.note}`:\"\";return{type:\"text\",value:`Voice mode enabled (${l}). ${w}${d}${S}`}};"
+          }
+        ]
+      },
+      "capture": {
+        "file": "chunk-t4rzac1j.js",
+        "moduleSha256": "415ec5b071915553cfbfab2057c767a2e40a942771c455b80403c716b5568a97",
+        "imports": [
+          {
+            "local": "q",
+            "imported": "q",
+            "module": "B:/~BUN/root/chunk-ce0nkjpw.js"
+          },
+          {
+            "local": "t",
+            "imported": "t",
+            "module": "B:/~BUN/root/chunk-afd6vefy.js"
+          },
+          {
+            "local": "TS",
+            "imported": "TS",
+            "module": "B:/~BUN/root/chunk-m3pe2pqf.js"
+          },
+          {
+            "local": "a",
+            "imported": "a",
+            "module": "B:/~BUN/root/chunk-r5twd8z5.js"
+          },
+          {
+            "local": "O",
+            "imported": "O",
+            "module": "B:/~BUN/root/chunk-vc0xq0q5.js"
+          },
+          {
+            "local": "ml",
+            "imported": "ml",
+            "module": "B:/~BUN/root/chunk-mft3dn8b.js"
+          },
+          {
+            "local": "tt",
+            "imported": "tt",
+            "module": "B:/~BUN/root/chunk-sg7dxhxq.js"
+          },
+          {
+            "local": "h",
+            "imported": "spawn",
+            "module": "child_process"
+          },
+          {
+            "local": "m",
+            "imported": "homedir",
+            "module": "os"
+          },
+          {
+            "local": "v",
+            "imported": "join",
+            "module": "path"
+          }
+        ],
+        "exports": [
+          {
+            "local": "ue",
+            "name": "checkRecordingAvailability"
+          },
+          {
+            "local": "ce",
+            "name": "checkVoiceDependencies"
+          },
+          {
+            "local": "le",
+            "name": "requestMicrophonePermission"
+          },
+          {
+            "local": "y",
+            "name": "startRecording"
+          },
+          {
+            "local": "C",
+            "name": "stopRecording"
+          }
+        ],
+        "rows": [
+          {
+            "start": 1737,
+            "end": 1820,
+            "sha256": "5c558181238672f56ad9113fa6a766f700b90953d66d6807bbf41b3c2e1d2365",
+            "source": "var V=v(m(),\".cache\",\"coder-audio\",\"port\"),M=v(m(),\".cache\",\"coder-audio\",\"token\");"
+          },
+          {
+            "start": 1820,
+            "end": 2007,
+            "sha256": "1ad645074ec95d1fe17d3581fbfe16b86d882bb2fc00e17cdcc0d29998884e30",
+            "source": "class g{audioNapi=null;audioNapiPromise=null;arecordProbe=null;linuxAlsaCardsProbe=null;activeRecorder=null;activeForwardedSocket=null;forwardedStartGeneration=0;nativeRecordingActive=!1}"
+          },
+          {
+            "start": 2007,
+            "end": 2030,
+            "sha256": "df9a2e5162bf487663647bd1734747026db64f3ebddc3f387791d4c5098fd686",
+            "source": "var l=new q(()=>new g);"
+          },
+          {
+            "start": 2030,
+            "end": 2049,
+            "sha256": "2bc8d10451a8546229d4ec6b9a13ded9447aa7c940292c5ac9f1ddc8949d0da4",
+            "source": "var w={started:!0};"
+          },
+          {
+            "start": 2049,
+            "end": 2104,
+            "sha256": "e2ec64d665a9bafc9d947072bc9f7565b6b8228e51b6ecbc07c1e303f0cc1d66",
+            "source": "var S={started:!1,superseded:!1,hint:null,expected:!1};"
+          },
+          {
+            "start": 2104,
+            "end": 2356,
+            "sha256": "1f50208d08e293ecfa369462a566cb466c6fb51089b4460dfe77f5849d86106e",
+            "source": "function u(e){return e.audioNapiPromise??=(async()=>{let o=Date.now(),r=await import(\"B:/~BUN/root/chunk-mje2akyd.js\");return r.isNativeAudioAvailable(),e.audioNapi=r,t(`[voice] audio-capture-napi loaded in ${Date.now()-o}ms`),r})(),e.audioNapiPromise}"
+          },
+          {
+            "start": 2356,
+            "end": 2387,
+            "sha256": "726b6c79c2fc113f8e7e1a89293122e399edf0920fbe87b2752b6a1d0a6420a3",
+            "source": "var k=16000,x=1,E=\"2.0\",b=\"3%\";"
+          },
+          {
+            "start": 2387,
+            "end": 2475,
+            "sha256": "ff36db501e7453aa71dca0db8ba1f59e6cf71a6ad35e2235911878a1c46be090",
+            "source": "async function f(e){return(await tt(e,[\"--version\"],{timeout:3000,useCwd:!1})).code===0}"
+          },
+          {
+            "start": 2475,
+            "end": 2506,
+            "sha256": "118f172664e42af8feb0f4a901fab0d74385c291e314dba22f1a9c8dd8f690b0",
+            "source": "async function A(){return null}"
+          },
+          {
+            "start": 2506,
+            "end": 2744,
+            "sha256": "cc3caab288e681a3ba6640905630ab1bdc563a63c412796a1c00ef707f59808e",
+            "source": "async function ce(e){let o=l.of(e);if((await u(o)).isNativeAudioAvailable())return{available:!0,missing:[],installCommand:null};return{available:!1,missing:[\"Voice mode requires the native audio module (not loaded)\"],installCommand:null}}"
+          },
+          {
+            "start": 2744,
+            "end": 2907,
+            "sha256": "3cd2bafdc29c74342c69834e1db8ce895f70d6c7f0c8dedcbc5697aa6075dec1",
+            "source": "async function le(e){if(!(await u(l.of(e))).isNativeAudioAvailable())return!0;if((await y(e,(s)=>{},()=>{},{silenceDetection:!1})).started)return C(e),!0;return!1}"
+          },
+          {
+            "start": 2907,
+            "end": 3334,
+            "sha256": "dff0cd45c50363be261febe4f44ecd08f839d72f879bfccf1c597f0e7f7d7b96",
+            "source": "async function ue(e,o={}){if(TS()||a.CLAUDE_CODE_REMOTE)return{available:!1,reason:`Voice mode requires microphone access, but no audio device is available in this environment.\n\nTo use voice mode, run Claude Code locally instead.`};let r=l.of(e);if((await u(r)).isNativeAudioAvailable())return{available:!0,reason:null};return{available:!1,reason:\"Voice recording requires the native audio module, which could not be loaded.\"}}"
+          },
+          {
+            "start": 3334,
+            "end": 3800,
+            "sha256": "41196b849eaec6b1ac8bc6ba31c34dde59807e1ba9634743772c5f47ae9f18c7",
+            "source": "async function y(e,o,r,s){t(\"[voice] startRecording called, platform=win32\");let n=l.of(e),d=await u(n),i=d.isNativeAudioAvailable()&&!0,c=s?.silenceDetection!==!1;if(i){if(n.nativeRecordingActive||d.isNativeRecordingActive())d.stopNativeRecording(),n.nativeRecordingActive=!1;if(d.startNativeRecording((p)=>{o(p)},()=>{if(c)n.nativeRecordingActive=!1,r()}))return n.nativeRecordingActive=!0,w}return t(\"[voice] Windows native recording unavailable, no fallback\"),S}"
+          },
+          {
+            "start": 3800,
+            "end": 4345,
+            "sha256": "d7b8e02bbb3c090c67bd5d70bcf714a646c8cda84af4d5729f1d18c101e3eb04",
+            "source": "function P(e,o,r,s){let n=s?.silenceDetection!==!1,d=[\"-q\",\"--buffer\",\"1024\",\"-t\",\"raw\",\"-r\",String(k),\"-e\",\"signed\",\"-b\",\"16\",\"-c\",String(x),\"-\"];if(n)d.push(\"silence\",\"1\",\"0.1\",b,\"1\",E,b);let i=h(\"rec\",d,{stdio:[\"pipe\",\"pipe\",\"pipe\"],windowsHide:!0,...ml(\"helper\")});return e.activeRecorder=i,i.stdout?.on(\"data\",(c)=>{o(c)}),i.stderr?.on(\"data\",()=>{}),i.on(\"close\",()=>{e.activeRecorder=null,r()}),i.on(\"error\",(c)=>{t(`[voice] SoX rec spawn failed: ${c instanceof Error?c.message:String(c)}`,{level:\"error\"}),e.activeRecorder=null,r()}),!0}"
+          },
+          {
+            "start": 4345,
+            "end": 4557,
+            "sha256": "14a933f25e5c591baf8516e0c1d0c22b42fd5456a7384e5fdf318835af69fead",
+            "source": "function C(e){let o=l.of(e);if(o.nativeRecordingActive&&o.audioNapi){o.audioNapi.stopNativeRecording(),o.nativeRecordingActive=!1;return}if(o.activeRecorder)o.activeRecorder.kill(\"SIGTERM\"),o.activeRecorder=null}"
+          }
+        ]
+      },
+      "native": {
+        "file": "chunk-mje2akyd.js",
+        "moduleSha256": "4d1c068ab348a80020c59a2703d8bdb199f1cd9ac601d3929cdef406c79e469e",
+        "imports": [
+          {
+            "local": "Dqr",
+            "imported": "Dqr",
+            "module": "B:/~BUN/root/chunk-7nnp0deq.js"
+          },
+          {
+            "local": "De",
+            "imported": "De",
+            "module": "B:/~BUN/root/chunk-rbfjs313.js"
+          }
+        ],
+        "exports": [
+          {
+            "local": "c",
+            "name": "isNativeAudioAvailable"
+          },
+          {
+            "local": "b",
+            "name": "isNativePlaying"
+          },
+          {
+            "local": "d",
+            "name": "isNativeRecordingActive"
+          },
+          {
+            "local": "v",
+            "name": "microphoneAuthorizationStatus"
+          },
+          {
+            "local": "p",
+            "name": "startNativePlayback"
+          },
+          {
+            "local": "l",
+            "name": "startNativeRecording"
+          },
+          {
+            "local": "m",
+            "name": "stopNativePlayback"
+          },
+          {
+            "local": "s",
+            "name": "stopNativeRecording"
+          },
+          {
+            "local": "f",
+            "name": "writeNativePlaybackData"
+          }
+        ],
+        "rows": [
+          {
+            "start": 710,
+            "end": 726,
+            "sha256": "82c9462314338c7c5946154002086e5ec4c93f87ee752b1364843500ff37488c",
+            "source": "var a=null,i=!1;"
+          },
+          {
+            "start": 726,
+            "end": 1072,
+            "sha256": "950d0f4c85f401f70ee4e09e530a02a0e061de566f42ab5fdb13484ce1b6dd7b",
+            "source": "function r(){if(i)return a;i=!0;let t=\"win32\";if(t!==\"darwin\"&&t!==\"linux\"&&t!==\"win32\")return null;try{return a=Dqr(),a}catch{}let o=`arm64-${t}`,u=(t===\"linux\"?[o,`${o}-musl`]:[o]).flatMap((n)=>[`./vendor/audio-capture/${n}/audio-capture.node`,`../audio-capture/${n}/audio-capture.node`]);for(let n of u)try{return a=De(n),a}catch{}return null}"
+          },
+          {
+            "start": 1072,
+            "end": 1103,
+            "sha256": "7810cc8d739a987131cf78ff1d0afbc9efa6e201cf5f569c3fc1606d40ef2cd9",
+            "source": "function c(){return r()!==null}"
+          },
+          {
+            "start": 1103,
+            "end": 1173,
+            "sha256": "55667f48afb55fa304d4f75c7f2e8c0c53445b40f3cfd39ccf3b154fdc661ff2",
+            "source": "function l(t,o){let e=r();if(!e)return!1;return e.startRecording(t,o)}"
+          },
+          {
+            "start": 1173,
+            "end": 1227,
+            "sha256": "428b0c7baee8ecfaf754373c746091003e86358dd81a60c5a91ca5c337572ec2",
+            "source": "function s(){let t=r();if(!t)return;t.stopRecording()}"
+          },
+          {
+            "start": 1227,
+            "end": 1288,
+            "sha256": "86036a0d29212daba6e3a46af832fc33388fa3222a280bce5737db117dd5404f",
+            "source": "function d(){let t=r();if(!t)return!1;return t.isRecording()}"
+          },
+          {
+            "start": 1288,
+            "end": 1357,
+            "sha256": "bdcd4b87d98d69a0e02ef8c85e0b6ed12810a90a4ffcba27a2ca949ddda6d3c7",
+            "source": "function p(t,o){let e=r();if(!e)return!1;return e.startPlayback(t,o)}"
+          },
+          {
+            "start": 1357,
+            "end": 1417,
+            "sha256": "54abf0a838fe4232eb995aeeb84e70b55668e24cabd6136982935c0d0a8df119",
+            "source": "function f(t){let o=r();if(!o)return;o.writePlaybackData(t)}"
+          },
+          {
+            "start": 1417,
+            "end": 1470,
+            "sha256": "5882de14aa002d162879cfcb868511f6a581affd38761395038db375dea14d5a",
+            "source": "function m(){let t=r();if(!t)return;t.stopPlayback()}"
+          },
+          {
+            "start": 1470,
+            "end": 1529,
+            "sha256": "a10ccc847dfd53d1547913eebbff0762cf0702ad6bc612f3b149b3ba4404eecb",
+            "source": "function b(){let t=r();if(!t)return!1;return t.isPlaying()}"
+          },
+          {
+            "start": 1529,
+            "end": 1642,
+            "sha256": "5bcbf15c001cbeaf826a85784dfe21179701059e0f0cfd788a0a15666e3b02e8",
+            "source": "function v(){let t=r();if(!t||!t.microphoneAuthorizationStatus)return 0;return t.microphoneAuthorizationStatus()}"
+          }
+        ]
+      },
+      "stream": {
+        "file": "chunk-zh7nwgen.js",
+        "moduleSha256": "e539d7e41dc8954cad69cd710dc9164f7c54723d5398f8c53dceefa96e8f87d0",
+        "imports": [
+          {
+            "local": "m_r",
+            "imported": "m_r",
+            "module": "B:/~BUN/root/chunk-zb087b9d.js"
+          },
+          {
+            "local": "g_r",
+            "imported": "g_r",
+            "module": "B:/~BUN/root/chunk-zb087b9d.js"
+          },
+          {
+            "local": "h_r",
+            "imported": "h_r",
+            "module": "B:/~BUN/root/chunk-zb087b9d.js"
+          }
+        ],
+        "exports": [
+          {
+            "local": "h_r",
+            "name": "connectVoiceStream"
+          },
+          {
+            "local": "g_r",
+            "name": "isVoiceStreamAvailable"
+          },
+          {
+            "local": "m_r",
+            "name": "probeVoiceConnectivity"
+          }
+        ],
+        "rows": []
+      },
+      "nativeShim": {
+        "file": "chunk-7nnp0deq.js",
+        "moduleSha256": "41816e1a0744634ba8346ab0664c0f1b0e1033c15831dd0a5e6be82c7840bbab",
+        "imports": [
+          {
+            "local": "k",
+            "imported": "k",
+            "module": "B:/~BUN/root/chunk-rbfjs313.js"
+          },
+          {
+            "local": "De",
+            "imported": "De",
+            "module": "B:/~BUN/root/chunk-rbfjs313.js"
+          }
+        ],
+        "exports": [
+          {
+            "local": "Dqr",
+            "name": "Dqr"
+          }
+        ],
+        "rows": [
+          {
+            "start": 664,
+            "end": 738,
+            "source": "var Dqr=k(function(R,T){T.exports=De(\"B:/~BUN/root/audio-capture.node\")});",
+            "sha256": "8eaf61159ed072225e52b674739ede04a27ffc62745c09ccea5059e122dc75ca"
+          }
+        ]
+      },
+      "asset": {
+        "file": "audio-capture.node",
+        "sha256": "6f6c85f45a17e7d88ab07e62b1a1bdb8095199ce05da17d97fae94fcaac7658b",
+        "length": 474624
+      },
+      "manifestSha256": "d0d8b3b882ba61ba321ab072b5cbc28a1a4089cfb4c5dce0698311aae10c739e"
+    },
+    "win32-x64": {
+      "command": {
+        "file": "chunk-13mjy98y.js",
+        "moduleSha256": "eb9163327161df2261ae6839d58b813350feb7d7ede7c19a81bff7813f5832b5",
+        "imports": [
+          {
+            "local": "ZMe",
+            "imported": "ZMe",
+            "module": "B:/~BUN/root/chunk-rp3mhja2.js"
+          },
+          {
+            "local": "i",
+            "imported": "i",
+            "module": "B:/~BUN/root/chunk-sxkgmszn.js"
+          },
+          {
+            "local": "vl",
+            "imported": "vl",
+            "module": "B:/~BUN/root/chunk-xybe1vrh.js"
+          },
+          {
+            "local": "Te",
+            "imported": "Te",
+            "module": "B:/~BUN/root/chunk-xybe1vrh.js"
+          },
+          {
+            "local": "le",
+            "imported": "le",
+            "module": "B:/~BUN/root/chunk-xybe1vrh.js"
+          },
+          {
+            "local": "et",
+            "imported": "et",
+            "module": "B:/~BUN/root/chunk-h9d2c83b.js"
+          },
+          {
+            "local": "hn",
+            "imported": "hn",
+            "module": "B:/~BUN/root/chunk-h9d2c83b.js"
+          },
+          {
+            "local": "CHt",
+            "imported": "CHt",
+            "module": "B:/~BUN/root/chunk-162ty249.js"
+          },
+          {
+            "local": "QYe",
+            "imported": "QYe",
+            "module": "B:/~BUN/root/chunk-162ty249.js"
+          },
+          {
+            "local": "op",
+            "imported": "op",
+            "module": "B:/~BUN/root/chunk-9kz70g65.js"
+          },
+          {
+            "local": "Fk",
+            "imported": "Fk",
+            "module": "B:/~BUN/root/chunk-jj0an6rd.js"
+          },
+          {
+            "local": "i_",
+            "imported": "i_",
+            "module": "B:/~BUN/root/chunk-tv1zfjey.js"
+          }
+        ],
+        "exports": [
+          {
+            "local": "D",
+            "name": "call"
+          }
+        ],
+        "rows": [
+          {
+            "start": 4632,
+            "end": 4640,
+            "sha256": "2b995f3f06c01a573ca709a6a5f4d22789d0d543b18bcca6db715e29fff0c530",
+            "source": "var V=2;"
+          },
+          {
+            "start": 4640,
+            "end": 4761,
+            "sha256": "de59328ed9f0e067872ff39ab8ce7594ecad9ea73bafe2077ca5cf73ceecbbc6",
+            "source": "function L(s){let e=s.trim().toLowerCase();if(e===\"\")return;if(e===\"hold\"||e===\"tap\"||e===\"off\")return e;return\"invalid\"}"
+          },
+          {
+            "start": 4761,
+            "end": 7433,
+            "sha256": "d775105c0561dd2cc7a3370a2ab1191e1a087aa225011ded5c1c21e8e23df38b",
+            "source": "var D=async(s,e)=>{if(!QYe()){if(!vl())return{type:\"text\",value:\"Voice mode requires a Claude.ai account. Please run /login to sign in.\"};let o=op(\"allow_voice_mode\",\"Voice mode\",\"is\");if(o)return Fk(\"allow_voice_mode\",\"slash_command\"),{type:\"text\",value:o};return{type:\"text\",value:\"Voice mode is not available.\"}}let a=et(),v=CHt(a),t=L(s);if(t===\"invalid\")return{type:\"text\",value:`Unknown mode: \"${s.trim()}\". Use hold, tap, or off.`};if(t===\"off\"||t===void 0&&v){if((await hn(\"userSettings\",{voiceEnabled:!1,voice:{...a.voice,enabled:!1}},void 0,e.storageV5)).error)return{type:\"text\",value:\"Failed to update settings. Check your settings file for syntax errors.\"};return i(\"tengu_voice_toggled\",{enabled:!1}),{type:\"text\",value:\"Voice mode disabled.\"}}let{isVoiceStreamAvailable:y}=await import(\"B:/~BUN/root/chunk-7jm6v13c.js\"),{checkRecordingAvailability:h}=await import(\"B:/~BUN/root/chunk-r91ed2a1.js\"),r=await h(e.session.host,{probeForwarded:!0});if(!r.available)return{type:\"text\",value:r.reason??\"Voice mode is not available in this environment.\"};if(!y())return{type:\"text\",value:\"Voice mode requires a Claude.ai account. Please run /login to sign in.\"};let{checkVoiceDependencies:b,requestMicrophonePermission:C}=await import(\"B:/~BUN/root/chunk-r91ed2a1.js\"),c=await b(e.session.host);if(!c.available)return{type:\"text\",value:`No audio recording tool found.${c.installCommand?`\nInstall audio recording tools? Run: ${c.installCommand}`:`\nInstall SoX manually for audio recording.`}`};if(!await C(e.session.host)){let o;return o=\"Settings \\u2192 Privacy \\u2192 Microphone\",{type:\"text\",value:`Microphone access is denied. To enable it, go to ${o}, then run /voice again.`}}let l=t===\"hold\"||t===\"tap\"?t:a.voice?.mode??\"hold\";if((await hn(\"userSettings\",{voiceEnabled:!0,voice:{...a.voice,enabled:!0,mode:l}},void 0,e.storageV5)).error)return{type:\"text\",value:\"Failed to update settings. Check your settings file for syntax errors.\"};i(\"tengu_voice_toggled\",{enabled:!0,tap_mode:l===\"tap\"});let g=i_(\"voice:pushToTalk\",\"Chat\",\"space\"),w=l===\"tap\"?`Tap ${g} (with input empty) to start, tap again to send.`:`Hold ${g} to record.`,n=ZMe(a.language),m=le(),p=m.voiceLangHintLastLanguage!==n.code,f=p?0:m.voiceLangHintShownCount??0,u=!n.fellBackFrom&&f<V,d=\"\";if(n.fellBackFrom)d=` Note: \"${n.fellBackFrom}\" is not a supported dictation language; using English. Change it via /config.`;else if(u)d=` Dictation language: ${n.code} (/config to change).`;if(p||u)await Te((o)=>({...o,voiceLangHintShownCount:f+(u?1:0),voiceLangHintLastLanguage:n.code}),e.storageV5);let S=r.note?` ${r.note}`:\"\";return{type:\"text\",value:`Voice mode enabled (${l}). ${w}${d}${S}`}};"
+          }
+        ]
+      },
+      "capture": {
+        "file": "chunk-r91ed2a1.js",
+        "moduleSha256": "b286bca725afa2a8d95906f1b997934c57364607575aa26723646d4379e2d607",
+        "imports": [
+          {
+            "local": "V",
+            "imported": "V",
+            "module": "B:/~BUN/root/chunk-q2pbxf3c.js"
+          },
+          {
+            "local": "t",
+            "imported": "t",
+            "module": "B:/~BUN/root/chunk-18x8g08z.js"
+          },
+          {
+            "local": "TS",
+            "imported": "TS",
+            "module": "B:/~BUN/root/chunk-b30v7v7s.js"
+          },
+          {
+            "local": "a",
+            "imported": "a",
+            "module": "B:/~BUN/root/chunk-5g00bdfr.js"
+          },
+          {
+            "local": "O",
+            "imported": "O",
+            "module": "B:/~BUN/root/chunk-eg7cx7jg.js"
+          },
+          {
+            "local": "ml",
+            "imported": "ml",
+            "module": "B:/~BUN/root/chunk-r5g3xbdq.js"
+          },
+          {
+            "local": "tt",
+            "imported": "tt",
+            "module": "B:/~BUN/root/chunk-vgyj8wz1.js"
+          },
+          {
+            "local": "h",
+            "imported": "spawn",
+            "module": "child_process"
+          },
+          {
+            "local": "m",
+            "imported": "homedir",
+            "module": "os"
+          },
+          {
+            "local": "v",
+            "imported": "join",
+            "module": "path"
+          }
+        ],
+        "exports": [
+          {
+            "local": "ue",
+            "name": "checkRecordingAvailability"
+          },
+          {
+            "local": "ce",
+            "name": "checkVoiceDependencies"
+          },
+          {
+            "local": "le",
+            "name": "requestMicrophonePermission"
+          },
+          {
+            "local": "y",
+            "name": "startRecording"
+          },
+          {
+            "local": "C",
+            "name": "stopRecording"
+          }
+        ],
+        "rows": [
+          {
+            "start": 1737,
+            "end": 1820,
+            "sha256": "c3884febeb227327bd3e8a540f24f180bcf4b73a586d8e7e5254b564810e3999",
+            "source": "var M=v(m(),\".cache\",\"coder-audio\",\"port\"),W=v(m(),\".cache\",\"coder-audio\",\"token\");"
+          },
+          {
+            "start": 1820,
+            "end": 2007,
+            "sha256": "1ad645074ec95d1fe17d3581fbfe16b86d882bb2fc00e17cdcc0d29998884e30",
+            "source": "class g{audioNapi=null;audioNapiPromise=null;arecordProbe=null;linuxAlsaCardsProbe=null;activeRecorder=null;activeForwardedSocket=null;forwardedStartGeneration=0;nativeRecordingActive=!1}"
+          },
+          {
+            "start": 2007,
+            "end": 2030,
+            "sha256": "dfb03309d1db0d8e46ca6dd62f523982064783b9b89750c6bb9e8948d0de6577",
+            "source": "var l=new V(()=>new g);"
+          },
+          {
+            "start": 2030,
+            "end": 2049,
+            "sha256": "2bc8d10451a8546229d4ec6b9a13ded9447aa7c940292c5ac9f1ddc8949d0da4",
+            "source": "var w={started:!0};"
+          },
+          {
+            "start": 2049,
+            "end": 2104,
+            "sha256": "e2ec64d665a9bafc9d947072bc9f7565b6b8228e51b6ecbc07c1e303f0cc1d66",
+            "source": "var S={started:!1,superseded:!1,hint:null,expected:!1};"
+          },
+          {
+            "start": 2104,
+            "end": 2356,
+            "sha256": "6e879a1ae862f828dc4a91126a1838891055be40f95f34b8518e39d0e53531f2",
+            "source": "function u(e){return e.audioNapiPromise??=(async()=>{let o=Date.now(),r=await import(\"B:/~BUN/root/chunk-bny5na9q.js\");return r.isNativeAudioAvailable(),e.audioNapi=r,t(`[voice] audio-capture-napi loaded in ${Date.now()-o}ms`),r})(),e.audioNapiPromise}"
+          },
+          {
+            "start": 2356,
+            "end": 2387,
+            "sha256": "726b6c79c2fc113f8e7e1a89293122e399edf0920fbe87b2752b6a1d0a6420a3",
+            "source": "var k=16000,x=1,E=\"2.0\",b=\"3%\";"
+          },
+          {
+            "start": 2387,
+            "end": 2475,
+            "sha256": "ff36db501e7453aa71dca0db8ba1f59e6cf71a6ad35e2235911878a1c46be090",
+            "source": "async function f(e){return(await tt(e,[\"--version\"],{timeout:3000,useCwd:!1})).code===0}"
+          },
+          {
+            "start": 2475,
+            "end": 2506,
+            "sha256": "118f172664e42af8feb0f4a901fab0d74385c291e314dba22f1a9c8dd8f690b0",
+            "source": "async function A(){return null}"
+          },
+          {
+            "start": 2506,
+            "end": 2744,
+            "sha256": "cc3caab288e681a3ba6640905630ab1bdc563a63c412796a1c00ef707f59808e",
+            "source": "async function ce(e){let o=l.of(e);if((await u(o)).isNativeAudioAvailable())return{available:!0,missing:[],installCommand:null};return{available:!1,missing:[\"Voice mode requires the native audio module (not loaded)\"],installCommand:null}}"
+          },
+          {
+            "start": 2744,
+            "end": 2907,
+            "sha256": "3cd2bafdc29c74342c69834e1db8ce895f70d6c7f0c8dedcbc5697aa6075dec1",
+            "source": "async function le(e){if(!(await u(l.of(e))).isNativeAudioAvailable())return!0;if((await y(e,(s)=>{},()=>{},{silenceDetection:!1})).started)return C(e),!0;return!1}"
+          },
+          {
+            "start": 2907,
+            "end": 3334,
+            "sha256": "dff0cd45c50363be261febe4f44ecd08f839d72f879bfccf1c597f0e7f7d7b96",
+            "source": "async function ue(e,o={}){if(TS()||a.CLAUDE_CODE_REMOTE)return{available:!1,reason:`Voice mode requires microphone access, but no audio device is available in this environment.\n\nTo use voice mode, run Claude Code locally instead.`};let r=l.of(e);if((await u(r)).isNativeAudioAvailable())return{available:!0,reason:null};return{available:!1,reason:\"Voice recording requires the native audio module, which could not be loaded.\"}}"
+          },
+          {
+            "start": 3334,
+            "end": 3800,
+            "sha256": "41196b849eaec6b1ac8bc6ba31c34dde59807e1ba9634743772c5f47ae9f18c7",
+            "source": "async function y(e,o,r,s){t(\"[voice] startRecording called, platform=win32\");let n=l.of(e),d=await u(n),i=d.isNativeAudioAvailable()&&!0,c=s?.silenceDetection!==!1;if(i){if(n.nativeRecordingActive||d.isNativeRecordingActive())d.stopNativeRecording(),n.nativeRecordingActive=!1;if(d.startNativeRecording((p)=>{o(p)},()=>{if(c)n.nativeRecordingActive=!1,r()}))return n.nativeRecordingActive=!0,w}return t(\"[voice] Windows native recording unavailable, no fallback\"),S}"
+          },
+          {
+            "start": 3800,
+            "end": 4345,
+            "sha256": "d7b8e02bbb3c090c67bd5d70bcf714a646c8cda84af4d5729f1d18c101e3eb04",
+            "source": "function P(e,o,r,s){let n=s?.silenceDetection!==!1,d=[\"-q\",\"--buffer\",\"1024\",\"-t\",\"raw\",\"-r\",String(k),\"-e\",\"signed\",\"-b\",\"16\",\"-c\",String(x),\"-\"];if(n)d.push(\"silence\",\"1\",\"0.1\",b,\"1\",E,b);let i=h(\"rec\",d,{stdio:[\"pipe\",\"pipe\",\"pipe\"],windowsHide:!0,...ml(\"helper\")});return e.activeRecorder=i,i.stdout?.on(\"data\",(c)=>{o(c)}),i.stderr?.on(\"data\",()=>{}),i.on(\"close\",()=>{e.activeRecorder=null,r()}),i.on(\"error\",(c)=>{t(`[voice] SoX rec spawn failed: ${c instanceof Error?c.message:String(c)}`,{level:\"error\"}),e.activeRecorder=null,r()}),!0}"
+          },
+          {
+            "start": 4345,
+            "end": 4557,
+            "sha256": "14a933f25e5c591baf8516e0c1d0c22b42fd5456a7384e5fdf318835af69fead",
+            "source": "function C(e){let o=l.of(e);if(o.nativeRecordingActive&&o.audioNapi){o.audioNapi.stopNativeRecording(),o.nativeRecordingActive=!1;return}if(o.activeRecorder)o.activeRecorder.kill(\"SIGTERM\"),o.activeRecorder=null}"
+          }
+        ]
+      },
+      "native": {
+        "file": "chunk-bny5na9q.js",
+        "moduleSha256": "07981631a13b6702bcb7ad25ee688904e28d1976535acb1801067b6a4809f8d8",
+        "imports": [
+          {
+            "local": "DVr",
+            "imported": "DVr",
+            "module": "B:/~BUN/root/chunk-c05ydc1x.js"
+          },
+          {
+            "local": "De",
+            "imported": "De",
+            "module": "B:/~BUN/root/chunk-vt59rfva.js"
+          }
+        ],
+        "exports": [
+          {
+            "local": "c",
+            "name": "isNativeAudioAvailable"
+          },
+          {
+            "local": "b",
+            "name": "isNativePlaying"
+          },
+          {
+            "local": "d",
+            "name": "isNativeRecordingActive"
+          },
+          {
+            "local": "v",
+            "name": "microphoneAuthorizationStatus"
+          },
+          {
+            "local": "p",
+            "name": "startNativePlayback"
+          },
+          {
+            "local": "l",
+            "name": "startNativeRecording"
+          },
+          {
+            "local": "m",
+            "name": "stopNativePlayback"
+          },
+          {
+            "local": "s",
+            "name": "stopNativeRecording"
+          },
+          {
+            "local": "f",
+            "name": "writeNativePlaybackData"
+          }
+        ],
+        "rows": [
+          {
+            "start": 710,
+            "end": 726,
+            "sha256": "82c9462314338c7c5946154002086e5ec4c93f87ee752b1364843500ff37488c",
+            "source": "var a=null,i=!1;"
+          },
+          {
+            "start": 726,
+            "end": 1070,
+            "sha256": "a6b10b60a474792aaaea8934a22b96885dfa8dd4c4bdf62e38e0b21405ab9bc8",
+            "source": "function r(){if(i)return a;i=!0;let t=\"win32\";if(t!==\"darwin\"&&t!==\"linux\"&&t!==\"win32\")return null;try{return a=DVr(),a}catch{}let o=`x64-${t}`,u=(t===\"linux\"?[o,`${o}-musl`]:[o]).flatMap((n)=>[`./vendor/audio-capture/${n}/audio-capture.node`,`../audio-capture/${n}/audio-capture.node`]);for(let n of u)try{return a=De(n),a}catch{}return null}"
+          },
+          {
+            "start": 1070,
+            "end": 1101,
+            "sha256": "7810cc8d739a987131cf78ff1d0afbc9efa6e201cf5f569c3fc1606d40ef2cd9",
+            "source": "function c(){return r()!==null}"
+          },
+          {
+            "start": 1101,
+            "end": 1171,
+            "sha256": "55667f48afb55fa304d4f75c7f2e8c0c53445b40f3cfd39ccf3b154fdc661ff2",
+            "source": "function l(t,o){let e=r();if(!e)return!1;return e.startRecording(t,o)}"
+          },
+          {
+            "start": 1171,
+            "end": 1225,
+            "sha256": "428b0c7baee8ecfaf754373c746091003e86358dd81a60c5a91ca5c337572ec2",
+            "source": "function s(){let t=r();if(!t)return;t.stopRecording()}"
+          },
+          {
+            "start": 1225,
+            "end": 1286,
+            "sha256": "86036a0d29212daba6e3a46af832fc33388fa3222a280bce5737db117dd5404f",
+            "source": "function d(){let t=r();if(!t)return!1;return t.isRecording()}"
+          },
+          {
+            "start": 1286,
+            "end": 1355,
+            "sha256": "bdcd4b87d98d69a0e02ef8c85e0b6ed12810a90a4ffcba27a2ca949ddda6d3c7",
+            "source": "function p(t,o){let e=r();if(!e)return!1;return e.startPlayback(t,o)}"
+          },
+          {
+            "start": 1355,
+            "end": 1415,
+            "sha256": "54abf0a838fe4232eb995aeeb84e70b55668e24cabd6136982935c0d0a8df119",
+            "source": "function f(t){let o=r();if(!o)return;o.writePlaybackData(t)}"
+          },
+          {
+            "start": 1415,
+            "end": 1468,
+            "sha256": "5882de14aa002d162879cfcb868511f6a581affd38761395038db375dea14d5a",
+            "source": "function m(){let t=r();if(!t)return;t.stopPlayback()}"
+          },
+          {
+            "start": 1468,
+            "end": 1527,
+            "sha256": "a10ccc847dfd53d1547913eebbff0762cf0702ad6bc612f3b149b3ba4404eecb",
+            "source": "function b(){let t=r();if(!t)return!1;return t.isPlaying()}"
+          },
+          {
+            "start": 1527,
+            "end": 1640,
+            "sha256": "5bcbf15c001cbeaf826a85784dfe21179701059e0f0cfd788a0a15666e3b02e8",
+            "source": "function v(){let t=r();if(!t||!t.microphoneAuthorizationStatus)return 0;return t.microphoneAuthorizationStatus()}"
+          }
+        ]
+      },
+      "stream": {
+        "file": "chunk-7jm6v13c.js",
+        "moduleSha256": "b779a21664870633c3827589e06f0454c91c677eb11ae89073cf8082001bb906",
+        "imports": [
+          {
+            "local": "m_r",
+            "imported": "m_r",
+            "module": "B:/~BUN/root/chunk-5x3vy203.js"
+          },
+          {
+            "local": "g_r",
+            "imported": "g_r",
+            "module": "B:/~BUN/root/chunk-5x3vy203.js"
+          },
+          {
+            "local": "h_r",
+            "imported": "h_r",
+            "module": "B:/~BUN/root/chunk-5x3vy203.js"
+          }
+        ],
+        "exports": [
+          {
+            "local": "h_r",
+            "name": "connectVoiceStream"
+          },
+          {
+            "local": "g_r",
+            "name": "isVoiceStreamAvailable"
+          },
+          {
+            "local": "m_r",
+            "name": "probeVoiceConnectivity"
+          }
+        ],
+        "rows": []
+      },
+      "nativeShim": {
+        "file": "chunk-c05ydc1x.js",
+        "moduleSha256": "9a6ca5ebdfc7d0de6c1c13e4a00d80b8db599d558d95d1d02901af7c9b69a23c",
+        "imports": [
+          {
+            "local": "E",
+            "imported": "E",
+            "module": "B:/~BUN/root/chunk-vt59rfva.js"
+          },
+          {
+            "local": "De",
+            "imported": "De",
+            "module": "B:/~BUN/root/chunk-vt59rfva.js"
+          }
+        ],
+        "exports": [
+          {
+            "local": "DVr",
+            "name": "DVr"
+          }
+        ],
+        "rows": [
+          {
+            "start": 664,
+            "end": 738,
+            "source": "var DVr=E(function(A,H){H.exports=De(\"B:/~BUN/root/audio-capture.node\")});",
+            "sha256": "b7ad8e4f23b7c45538e143e37abc4f5a9b628d8a2423acc5b06541ca9553e9c7"
+          }
+        ]
+      },
+      "asset": {
+        "file": "audio-capture.node",
+        "sha256": "3fe6ef86ba63897e448708847fa126c08580584f6fb16f576420eaccb16a942e",
+        "length": 509440
+      },
+      "manifestSha256": "c71e85888df3301fd3c4cb158744538810418e2d67591debe8e4f7c771fcdddc"
+    }
+  }
+}

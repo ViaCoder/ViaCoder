@@ -1,0 +1,273 @@
+{
+  "version": "2.1.287",
+  "canonical": "linux-x64",
+  "scope": "native reset delay and wait lease; retry dispatch/eligibility binding verified separately",
+  "offsetUnit": "UTF-16 code units",
+  "usingAdaptation": "native caller using Symbol.dispose is represented by try/finally around the same retry wait, never by helper-function scope disposal",
+  "platforms": [
+    {
+      "platform": "darwin-arm64",
+      "file": "chunk-mphp7acd.js",
+      "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "moduleLength": 4409957,
+      "retry": {
+        "symbol": "iae",
+        "start": 2017211,
+        "end": 2028934,
+        "sha256": "2d95b0912edc6132f500248db86ce0720830060ea6936d16e60772f42e76102a"
+      },
+      "lease": {
+        "start": 2028106,
+        "end": 2028389,
+        "source": "let Tr=void 0;if(ur&&!r.signal?.aborted)try{Tr=r.onQuotaWindowWait?.(ur,{retryAtMs:g.now()+Ao,attempt:kr,maxRetries:s})}catch(xo){d(xo)}let Yr=()=>{r.signal?.removeEventListener(\"abort\",Yr);try{Tr?.()}catch(xo){d(xo)}Tr=void 0};if(Tr)r.signal?.addEventListener(\"abort\",Yr,{once:!0});",
+        "sha256": "99594607794a80ddd31a4ac56edf3a11764c623ea84c0f2bbfaba2f59deb0e70",
+        "disposer": "Yr",
+        "parameters": [
+          "r",
+          "ur",
+          "g",
+          "Ao",
+          "kr",
+          "s"
+        ],
+        "logger": "d"
+      },
+      "delay": {
+        "symbol": "LLo",
+        "start": 2034269,
+        "end": 2034492,
+        "source": "function LLo(e,n){let r=e.headers?.get?.(\"anthropic-ratelimit-unified-reset\");if(!r)return null;let s=Number(r);if(!Number.isFinite(s))return null;let g=Math.round(s*1000-n.now());if(g<=0)return null;return Math.min(g,KDe)}",
+        "sha256": "ce77a9c67e601dc2d87bc6277a2b01d23eb4835401e79cf0dbfa35603cabc5c5"
+      },
+      "cap": {
+        "symbol": "KDe",
+        "start": 2015099,
+        "end": 2015111,
+        "source": "KDe=21600000",
+        "sha256": "8cb55b6675b793b3710094f1788b892f75769c8614a2406ab44ffb5b3d952475"
+      }
+    },
+    {
+      "platform": "darwin-x64",
+      "file": "chunk-xyr63zg5.js",
+      "manifestSha256": "ba9e122d28e8a42927eb23c7c86b62295f24a223546ee5476e761837579a709b",
+      "moduleSha256": "350a58d418914413ef2b573f1feee859c944ad06217c830e64e8c65f161cdeed",
+      "moduleLength": 4409285,
+      "retry": {
+        "symbol": "iae",
+        "start": 2016735,
+        "end": 2028458,
+        "sha256": "80de51ca5181f533865e82eb7458ee1dfc9b1f321d9b9cf22c821a5e81d23802"
+      },
+      "lease": {
+        "start": 2027630,
+        "end": 2027913,
+        "source": "let Tr=void 0;if(ur&&!r.signal?.aborted)try{Tr=r.onQuotaWindowWait?.(ur,{retryAtMs:g.now()+xo,attempt:kr,maxRetries:s})}catch(Co){d(Co)}let Yr=()=>{r.signal?.removeEventListener(\"abort\",Yr);try{Tr?.()}catch(Co){d(Co)}Tr=void 0};if(Tr)r.signal?.addEventListener(\"abort\",Yr,{once:!0});",
+        "sha256": "ef744df98851e076e0b38e3eafe7a572c139915f0f2143186256cebe019a50e9",
+        "disposer": "Yr",
+        "parameters": [
+          "r",
+          "ur",
+          "g",
+          "xo",
+          "kr",
+          "s"
+        ],
+        "logger": "d"
+      },
+      "delay": {
+        "symbol": "uDo",
+        "start": 2033793,
+        "end": 2034016,
+        "source": "function uDo(e,n){let r=e.headers?.get?.(\"anthropic-ratelimit-unified-reset\");if(!r)return null;let s=Number(r);if(!Number.isFinite(s))return null;let g=Math.round(s*1000-n.now());if(g<=0)return null;return Math.min(g,xDe)}",
+        "sha256": "e66b831fa6da5cf5312abd6de41688967a5da7392f80898d6b51fcf36b53cecf"
+      },
+      "cap": {
+        "symbol": "xDe",
+        "start": 2014623,
+        "end": 2014635,
+        "source": "xDe=21600000",
+        "sha256": "680e8f0601f9350b25dafa5a0d8d5249799dc8a3842f0dc06e941bc9cf5eed1a"
+      }
+    },
+    {
+      "platform": "linux-arm64",
+      "file": "chunk-gakypdfc.js",
+      "manifestSha256": "f3be5b23f9cbb909555fe028143b9a3a40c1e3e49961e09c49d8e5a6b61ae83b",
+      "moduleSha256": "a9a2bc50c519b09d776b68b9852839e84acbebec53deb2438e96d73f52e56db3",
+      "moduleLength": 4409403,
+      "retry": {
+        "symbol": "sae",
+        "start": 2016693,
+        "end": 2028416,
+        "sha256": "c5fc60052b46e4126abed8a9d32ba54d3cc8d7e01f19ca44c972563bca811d3c"
+      },
+      "lease": {
+        "start": 2027588,
+        "end": 2027871,
+        "source": "let Rr=void 0;if(ur&&!r.signal?.aborted)try{Rr=r.onQuotaWindowWait?.(ur,{retryAtMs:g.now()+xo,attempt:kr,maxRetries:s})}catch(To){d(To)}let Yr=()=>{r.signal?.removeEventListener(\"abort\",Yr);try{Rr?.()}catch(To){d(To)}Rr=void 0};if(Rr)r.signal?.addEventListener(\"abort\",Yr,{once:!0});",
+        "sha256": "307a91348c25a0726ec201724006cf18846188b76cbab1a0c827eea6f7215494",
+        "disposer": "Yr",
+        "parameters": [
+          "r",
+          "ur",
+          "g",
+          "xo",
+          "kr",
+          "s"
+        ],
+        "logger": "d"
+      },
+      "delay": {
+        "symbol": "ANo",
+        "start": 2033751,
+        "end": 2033974,
+        "source": "function ANo(e,n){let r=e.headers?.get?.(\"anthropic-ratelimit-unified-reset\");if(!r)return null;let s=Number(r);if(!Number.isFinite(s))return null;let g=Math.round(s*1000-n.now());if(g<=0)return null;return Math.min(g,YDe)}",
+        "sha256": "5b55af96c2c6d4891dea57804f9bf66f5ec71c1dbdd7c8d1960d03eaeed50f76"
+      },
+      "cap": {
+        "symbol": "YDe",
+        "start": 2014581,
+        "end": 2014593,
+        "source": "YDe=21600000",
+        "sha256": "6a4d106e251daf79c5ec4b161a1275cbbe2ec925f516dc5c5d253f8605349c3d"
+      }
+    },
+    {
+      "platform": "linux-x64",
+      "file": "chunk-jrjyjez0.js",
+      "manifestSha256": "ecae5d9ddbf13ef27b6b6a1141953aab4ba311e47dde3ac2a7cc8b5a01c63784",
+      "moduleSha256": "910de0d981a1b620b1866ae5ca44f40dc05f06f1b2205bbb9c8dccf58d5c468e",
+      "moduleLength": 4410099,
+      "retry": {
+        "symbol": "sae",
+        "start": 2017186,
+        "end": 2028909,
+        "sha256": "330daee5792c9b07c03efaf25d7629ea04e663d500d7193b5eebb7d779939b02"
+      },
+      "lease": {
+        "start": 2028081,
+        "end": 2028364,
+        "source": "let Rr=void 0;if(ur&&!r.signal?.aborted)try{Rr=r.onQuotaWindowWait?.(ur,{retryAtMs:g.now()+xo,attempt:Sr,maxRetries:s})}catch(To){d(To)}let Yr=()=>{r.signal?.removeEventListener(\"abort\",Yr);try{Rr?.()}catch(To){d(To)}Rr=void 0};if(Rr)r.signal?.addEventListener(\"abort\",Yr,{once:!0});",
+        "sha256": "7d114556795e894c761c5557427ce7e322625801ae7bd930a6981203ad85ff14",
+        "disposer": "Yr",
+        "parameters": [
+          "r",
+          "ur",
+          "g",
+          "xo",
+          "Sr",
+          "s"
+        ],
+        "logger": "d"
+      },
+      "delay": {
+        "symbol": "qLo",
+        "start": 2034244,
+        "end": 2034467,
+        "source": "function qLo(e,n){let r=e.headers?.get?.(\"anthropic-ratelimit-unified-reset\");if(!r)return null;let s=Number(r);if(!Number.isFinite(s))return null;let g=Math.round(s*1000-n.now());if(g<=0)return null;return Math.min(g,yLe)}",
+        "sha256": "dfd76f57c52c06a01617779593c1e8cd073afdffd8afa5dbec5f1f2dabd77ed4"
+      },
+      "cap": {
+        "symbol": "yLe",
+        "start": 2015074,
+        "end": 2015086,
+        "source": "yLe=21600000",
+        "sha256": "ab292263b29c4500a383b4b8302dfeed6cc1bb770b6593a462131c26734fc603"
+      }
+    },
+    {
+      "platform": "win32-x64",
+      "file": "chunk-5hdtkwdb.js",
+      "manifestSha256": "c71e85888df3301fd3c4cb158744538810418e2d67591debe8e4f7c771fcdddc",
+      "moduleSha256": "f0ee6d6caace627b5824e6197fe2474a196c0b59e36f19c725a9a4d1a7b1eda0",
+      "moduleLength": 4410233,
+      "retry": {
+        "symbol": "sae",
+        "start": 2016930,
+        "end": 2028653,
+        "sha256": "caa95724c6c8e0528341baba609243b5508166d1e3f9d1d58a3d0de7bc41bc70"
+      },
+      "lease": {
+        "start": 2027825,
+        "end": 2028108,
+        "source": "let Ar=void 0;if(mr&&!r.signal?.aborted)try{Ar=r.onQuotaWindowWait?.(mr,{retryAtMs:g.now()+xo,attempt:Er,maxRetries:s})}catch(wo){d(wo)}let es=()=>{r.signal?.removeEventListener(\"abort\",es);try{Ar?.()}catch(wo){d(wo)}Ar=void 0};if(Ar)r.signal?.addEventListener(\"abort\",es,{once:!0});",
+        "sha256": "d3f9e351438b756fc2844353ca1e10177b774ab4139c15c7a9677699143c6c3e",
+        "disposer": "es",
+        "parameters": [
+          "r",
+          "mr",
+          "g",
+          "xo",
+          "Er",
+          "s"
+        ],
+        "logger": "d"
+      },
+      "delay": {
+        "symbol": "eNo",
+        "start": 2033988,
+        "end": 2034211,
+        "source": "function eNo(e,n){let r=e.headers?.get?.(\"anthropic-ratelimit-unified-reset\");if(!r)return null;let s=Number(r);if(!Number.isFinite(s))return null;let g=Math.round(s*1000-n.now());if(g<=0)return null;return Math.min(g,yLe)}",
+        "sha256": "266ea68cd298cef464f2b855da5e56e83e0f5e9a5ed6d888023b442ecc0b4ffe"
+      },
+      "cap": {
+        "symbol": "yLe",
+        "start": 2014818,
+        "end": 2014830,
+        "source": "yLe=21600000",
+        "sha256": "ab292263b29c4500a383b4b8302dfeed6cc1bb770b6593a462131c26734fc603"
+      }
+    },
+    {
+      "platform": "win32-arm64",
+      "file": "chunk-2ta2c3j5.js",
+      "manifestSha256": "d0d8b3b882ba61ba321ab072b5cbc28a1a4089cfb4c5dce0698311aae10c739e",
+      "moduleSha256": "32e092a685dc008cceed15b87d7d176136d31fb5bfef7914adbcab1a5f152cba",
+      "moduleLength": 4409585,
+      "retry": {
+        "symbol": "sae",
+        "start": 2016471,
+        "end": 2028194,
+        "sha256": "08cb0b1cd98b685b4f79bcb7b93ede459cfa46dcaab58edfbe9a5d88089b87b9"
+      },
+      "lease": {
+        "start": 2027366,
+        "end": 2027649,
+        "source": "let Ar=void 0;if(mr&&!r.signal?.aborted)try{Ar=r.onQuotaWindowWait?.(mr,{retryAtMs:g.now()+xo,attempt:Sr,maxRetries:s})}catch(Eo){d(Eo)}let es=()=>{r.signal?.removeEventListener(\"abort\",es);try{Ar?.()}catch(Eo){d(Eo)}Ar=void 0};if(Ar)r.signal?.addEventListener(\"abort\",es,{once:!0});",
+        "sha256": "4e7d681e0dec920ecbd8b103177bf5b36b04a70ecf8ea085712d842abc2ddf9f",
+        "disposer": "es",
+        "parameters": [
+          "r",
+          "mr",
+          "g",
+          "xo",
+          "Sr",
+          "s"
+        ],
+        "logger": "d"
+      },
+      "delay": {
+        "symbol": "JLo",
+        "start": 2033529,
+        "end": 2033752,
+        "source": "function JLo(e,n){let r=e.headers?.get?.(\"anthropic-ratelimit-unified-reset\");if(!r)return null;let s=Number(r);if(!Number.isFinite(s))return null;let g=Math.round(s*1000-n.now());if(g<=0)return null;return Math.min(g,yLe)}",
+        "sha256": "09fe5b0b928880f0a5f1c24c3b2c2460313e77aa83435cc8d9d2295c807247ce"
+      },
+      "cap": {
+        "symbol": "yLe",
+        "start": 2014359,
+        "end": 2014371,
+        "source": "yLe=21600000",
+        "sha256": "ab292263b29c4500a383b4b8302dfeed6cc1bb770b6593a462131c26734fc603"
+      }
+    }
+  ],
+  "generated": {
+    "native.js": {
+      "sha256": "8191149bcedc71afe1043ad6eb8b49a2ed52cade7dcc0395cb1e65418668e97e",
+      "bytes": 830
+    }
+  }
+}

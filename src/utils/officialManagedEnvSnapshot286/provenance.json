@@ -1,0 +1,102 @@
+{
+  "version": "2.1.286",
+  "platform": "darwin-arm64",
+  "source": "raw/chunk-ea02hhvq.js",
+  "sourceSha256": "a39ee42d51a2dec9a1f6c312cee3282594a1a87f8009558839901df8034a64af",
+  "manifestSha256": "a39ee42d51a2dec9a1f6c312cee3282594a1a87f8009558839901df8034a64af",
+  "owner": {
+    "name": "B",
+    "start": 14113,
+    "end": 22390
+  },
+  "selectedMembers": {
+    "preSettingsEnvSnapshot": {
+      "kind": "PropertyDeclaration",
+      "start": 14311,
+      "end": 14341,
+      "source": "preSettingsEnvSnapshot=void 0;",
+      "sha256": "9bfdad58c7e6fbadb60304be89c545bd3001169bc68fb8f079c3d2bb017cf2cc"
+    },
+    "userTierNames": {
+      "kind": "PropertyDeclaration",
+      "start": 14341,
+      "end": 14363,
+      "source": "userTierNames=new Set;",
+      "sha256": "5e7338812461bfeecd28d21ee6e630d526363efd00591bfdb05156601efbec92"
+    },
+    "launchNamesBeforeClaim": {
+      "kind": "PropertyDeclaration",
+      "start": 14363,
+      "end": 14393,
+      "source": "launchNamesBeforeClaim=void 0;",
+      "sha256": "061d1b2d274c6634fd167dc1fc8afbb078eeef3c70fde0393ad2fb8e28882f30"
+    },
+    "userTierNamesInSnapshot": {
+      "kind": "PropertyDeclaration",
+      "start": 14393,
+      "end": 14425,
+      "source": "userTierNamesInSnapshot=new Set;",
+      "sha256": "6c5721522b58cab6367c9729d0d0f1ea879a11809d2f5e48e9415c671c98df94"
+    },
+    "getPreSettingsEnvSnapshot": {
+      "kind": "MethodDeclaration",
+      "start": 14488,
+      "end": 14632,
+      "source": "getPreSettingsEnvSnapshot(){return this.preSettingsEnvSnapshot??=this.latchPreSettingsEnvSnapshot({...process.env}),this.preSettingsEnvSnapshot}",
+      "sha256": "2d709d4164acdf8028f2e2c63bc3643c2b40f9c4ca58efd941672e7951d9bb07"
+    },
+    "latchPreSettingsEnvSnapshot": {
+      "kind": "MethodDeclaration",
+      "start": 14632,
+      "end": 14864,
+      "source": "latchPreSettingsEnvSnapshot(e){let n=this.launchNamesBeforeClaim;return this.userTierNamesInSnapshot=new Set(n===void 0?[]:Object.keys(e).map((r)=>r.toUpperCase()).filter((r)=>this.userTierNames.has(r)&&!n.has(r))),Object.freeze(e)}",
+      "sha256": "67973d033b2553e1b3efeed28be2f67273c1ff56f139547da0a7e0b38319b7f6"
+    },
+    "peekPreSettingsEnvSnapshot": {
+      "kind": "MethodDeclaration",
+      "start": 15097,
+      "end": 15161,
+      "source": "peekPreSettingsEnvSnapshot(){return this.preSettingsEnvSnapshot}",
+      "sha256": "a7f0c8cf8903a12e36f6938b3e2c6d6b0335a715c4687ffc6b28f8a591234423"
+    },
+    "dropPreSettingsEnvSnapshot": {
+      "kind": "MethodDeclaration",
+      "start": 15287,
+      "end": 15509,
+      "source": "dropPreSettingsEnvSnapshot(e){if(e!==void 0&&this.preSettingsEnvSnapshot)this.launchNamesBeforeClaim=new Set([...Object.keys(this.preSettingsEnvSnapshot),...e].map((n)=>n.toUpperCase()));this.preSettingsEnvSnapshot=void 0}",
+      "sha256": "ba9f233dd4418b309e1ca0d2d59125f9ea49aa15a53db20651cdf1442e5d5de9"
+    }
+  },
+  "adapters": {
+    "TR": {
+      "start": 13113,
+      "end": 13164,
+      "source": "function TR(){return D.getPreSettingsEnvSnapshot()}",
+      "sha256": "5dc81d6893640c032ddc64edb8a7b2c736ada8d5361f964965c16ca6fd52387f"
+    },
+    "rh": {
+      "start": 13329,
+      "end": 13381,
+      "source": "function rh(){return D.peekPreSettingsEnvSnapshot()}",
+      "sha256": "e4c0fef6d152349a6756870cad9e6e9db0e2f907a94efe093bd054d0c0cbd77b"
+    },
+    "registration": {
+      "start": 13432,
+      "end": 13440,
+      "source": "zGo(TR);",
+      "sha256": "c9a80452b0445aae6371d1a7457118cf23cc6175497276640b767501725d6d63"
+    },
+    "fUr": {
+      "start": 13440,
+      "end": 13488,
+      "source": "function fUr(e){D.dropPreSettingsEnvSnapshot(e)}",
+      "sha256": "b8e0e09a129e80a25da2a85133ba1362c2d7c649b532e9b8cb311fcb407ad46f"
+    }
+  },
+  "adapterBindings": {
+    "TR": "B.getPreSettingsEnvSnapshot",
+    "rh": "B.peekPreSettingsEnvSnapshot",
+    "fUr": "B.dropPreSettingsEnvSnapshot"
+  },
+  "generatedMembersAreVerbatimAstText": true
+}

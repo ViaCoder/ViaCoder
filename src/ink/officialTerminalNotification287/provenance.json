@@ -1,0 +1,32 @@
+{
+  "version": "2.1.287",
+  "platform": "darwin-arm64",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF16 end-exclusive",
+  "declarations": [
+    {
+      "file": "chunk-nzck9a32.js",
+      "name": "m",
+      "start": 7833,
+      "end": 7948,
+      "moduleSha256": "9cd6d5d6c1be6a6cf2bbc2ae8e125132799573e4f4eaf12f8bb50a2499afc85c",
+      "sha256": "da5b3b527805bf19df2cefe62b20dd5603163e041624a12b8bf49a82965d5398",
+      "source": "function m(r){let n=\"\";for(let o=0;o<r.length;o++){let u=r.charCodeAt(o);n+=u<32||u>=127&&u<=159?\" \":r[o]}return n}"
+    },
+    {
+      "file": "chunk-nzck9a32.js",
+      "name": "dP",
+      "start": 7980,
+      "end": 9001,
+      "moduleSha256": "9cd6d5d6c1be6a6cf2bbc2ae8e125132799573e4f4eaf12f8bb50a2499afc85c",
+      "sha256": "679c7faf1f9df06e31958a30391bfe94ed7ca18eb886e601c1a3f42809f30ec9",
+      "source": "function dP(){let r=ke(zW);if(!r)throw Error(\"useTerminalNotification must be used within TerminalWriteProvider\");let n=ce(({message:s,title:d})=>{let c=d?`${d}: ${s}`:s;r(ox($h(zm.ITERM2,m(c))))},[r]),o=ce(({message:s,title:d,id:c})=>{r(ox($h(zm.KITTY,`i=${c}:d=0:p=title`,m(d)))),r(ox($h(zm.KITTY,`i=${c}:p=body`,m(s)))),r(ox($h(zm.KITTY,`i=${c}:d=1:a=focus`,\"\")))},[r]),u=ce(({message:s,title:d})=>{r(ox($h(zm.GHOSTTY,\"notify\",m(d),m(s))))},[r]),i=ce(()=>{r(dW)},[r]),p=ce((s,d)=>{if(!bze())return;if(!s){r(ox($h(zm.ITERM2,Jpt.PROGRESS,Qpt.CLEAR,\"\")));return}let c=Math.max(0,Math.min(100,Math.round(d??0)));switch(s){case\"completed\":r(ox($h(zm.ITERM2,Jpt.PROGRESS,Qpt.CLEAR,\"\")));break;case\"error\":r(ox($h(zm.ITERM2,Jpt.PROGRESS,Qpt.ERROR,c)));break;case\"indeterminate\":r(ox($h(zm.ITERM2,Jpt.PROGRESS,Qpt.INDETERMINATE,\"\")));break;case\"running\":r(ox($h(zm.ITERM2,Jpt.PROGRESS,Qpt.SET,c)));break;case null:break}},[r]);return Q(()=>({notifyITerm2:n,notifyKitty:o,notifyGhostty:u,notifyBell:i,progress:p}),[n,o,u,i,p])}"
+    }
+  ],
+  "nativeSha256": "d570c0e28c2e3c4063ff8d3b74b8b7ac2052147dcadb914587cf43345b991a6e",
+  "boundaries": [
+    "Same existing TerminalWriteContext/React hooks",
+    "ANSI constants/encoding/multiplexer and progress gate read the selected canonical originals",
+    "Clipboard passthrough and other local customizations are unchanged"
+  ]
+}

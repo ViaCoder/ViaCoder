@@ -1,0 +1,346 @@
+{
+  "version": "2.1.287",
+  "platform": "darwin-arm64",
+  "binarySha256": "6eab8333fe2121553100d8f40bfada384a3e989b94f947e18ba6677a6fcb41ea",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "sourceRoot": "../.work/official-modules-2.1.287/darwin-arm64",
+  "modules": [
+    {
+      "module": "chunk-m59srz4k.js",
+      "moduleSha256": "efb40170e4252963a73cf62c28f20ad76a04090842b663f47dc127ceb1387f94",
+      "declarations": [
+        {
+          "start": 13097,
+          "end": 13138,
+          "sha256": "0e083464987cadedb929efec293604dfc2c23e05a1d7d21f746d0c047cad095a",
+          "source": "var Q0e=k.O_NONBLOCK,Wl=k.O_NOFOLLOW|Q0e;"
+        },
+        {
+          "start": 13376,
+          "end": 14714,
+          "sha256": "32ba890928b30dc96ee99345831b68ee25149f9c96983e91a80e5376be954640",
+          "source": "class ior{read(e){return M(e,\"utf8\")}readBytes(e){return M(e)}write(e,t,r){return _(e,t,{encoding:\"utf8\",mode:r})}async mkdir(e,t){try{await fe(e,{recursive:!0,mode:t})}catch(r){if(E(r)!==\"EEXIST\")throw r}}atomicWrite(e,t,r){return Tn(e,t,r)}delete(e){return de(e)}list(e){return L(e)}append(e,t,r){return ue(e,t,{encoding:\"utf8\",mode:r})}writeExclusive(e,t,r){return _(e,t,{encoding:\"utf8\",flag:\"wx\",mode:r})}writeBytesExclusive(e,t,r){return _(e,t,{flag:\"wx\",mode:r})}copy(e,t){return ce(e,t)}async stat(e){return{mtimeMs:(await me(e)).mtimeMs}}async lstat(e){try{let t=await le(e);return{isSymbolicLink:t.isSymbolicLink(),isFile:t.isFile(),isDirectory:t.isDirectory(),mtimeMs:t.mtimeMs,nlink:t.nlink}}catch(t){if(E(t)===\"ENOENT\")return;throw t}}async listEntries(e){return(await L(e,{withFileTypes:!0})).map((r)=>({name:r.name,isDirectory:r.isDirectory(),isFile:r.isFile()}))}async readRange(e,t,r){R(\"readRange\",\"offset\",t),R(\"readRange\",\"length\",r);let n=await F(e,\"r\");try{return await B(n,t,r)}finally{await n.close()}}async readTail(e,t,r){R(\"readTail\",\"maxBytes\",t);let n=r?.noFollow?ae.O_RDONLY|Wl:\"r\",s=await F(e,n);try{let o=await s.stat();if(r?.noFollow&&!o.isFile())throw Object.assign(Error(\"ENXIO: not a regular file\"),{code:\"ENXIO\",path:e});let{size:c}=o,d=Math.min(t,c);return await B(s,c-d,d)}finally{await s.close()}}}"
+        },
+        {
+          "start": 14714,
+          "end": 14833,
+          "sha256": "c5f63f17b3e84ab709256dec025262f8e6411031ae98155d9dc5fbe689e5d25a",
+          "source": "function R(e,t,r){if(!Number.isInteger(r)||r<0)throw RangeError(`${e}: ${t} must be a non-negative integer, got ${r}`)}"
+        },
+        {
+          "start": 14833,
+          "end": 15033,
+          "sha256": "eb476126c59535eafcc8d116fd5e5a756f1873fb0fa56ce04b0c9a0bc4873ecc",
+          "source": "async function B(e,t,r){if(r===0)return Buffer.alloc(0);let n=Buffer.alloc(r),s=0;while(s<r){let{bytesRead:o}=await e.read(n,s,r-s,t+s);if(o===0)break;s+=o}return s===r?n:Buffer.from(n.subarray(0,s))}"
+        },
+        {
+          "start": 15033,
+          "end": 15047,
+          "sha256": "59f62ba351d2c92c9aa75eb91440d4c8f8b93ec8183d8ee1814ed3cd837ec903",
+          "source": "var ge=new oe;"
+        },
+        {
+          "start": 15047,
+          "end": 15091,
+          "sha256": "d245a03d2d88a7280ca12df562ff872ef88cdc685789a5ae2f40f3a495f1c61e",
+          "source": "function Bt(){return ge.getStore()??new ior}"
+        }
+      ],
+      "manifestEntry": {
+        "index": 69,
+        "name": "/$bunfs/root/chunk-m59srz4k.js",
+        "path": "chunk-m59srz4k.js",
+        "encoding": 1,
+        "loader": 1,
+        "offset": 178918692,
+        "length": 15347,
+        "sha256": "efb40170e4252963a73cf62c28f20ad76a04090842b663f47dc127ceb1387f94"
+      }
+    },
+    {
+      "module": "chunk-31g8tfvj.js",
+      "moduleSha256": "a4ecd8a70a7c49ea9710cd923dece2900831d5a4306866de9af12b47793d717e",
+      "declarations": [
+        {
+          "start": 2491,
+          "end": 2501,
+          "sha256": "9e09e06c5b8d7186d5e85c04cddd63b14b276ee0a182bf763def22a986684512",
+          "source": "var te=!1;"
+        },
+        {
+          "start": 2522,
+          "end": 2546,
+          "sha256": "05d2029c479be22d9a6bd77a5cabf876917e1c216f146a0ef2caaf54ac54a78b",
+          "source": "function ne(){return te}"
+        },
+        {
+          "start": 2924,
+          "end": 2947,
+          "sha256": "824bbb41fd0526aba516e860c5eef8e939145a5bac194629836b3f261ae901e2",
+          "source": "function be(){return!1}"
+        },
+        {
+          "start": 2947,
+          "end": 3007,
+          "sha256": "fadce01940704569c1c567105037ed1ebd360578ce7675844b443938613a3294",
+          "source": "function wor({served:e}){if(!ne())return!1;return e?!1:be()}"
+        },
+        {
+          "start": 3007,
+          "end": 3074,
+          "sha256": "2f695294b11e40765556ad5c838560242d83343f5270e421489842aadcde78f4",
+          "source": "var bL=\".cc-writes\",aA=new Set([\"EXDEV\",\"EPERM\",\"EEXIST\",\"EBUSY\"]);"
+        },
+        {
+          "start": 3074,
+          "end": 3113,
+          "sha256": "8c2797c388fec6faec79037e6d1dd066be988782bab02be9ae097c9ea345d74e",
+          "source": "function mTn(){return wor({served:!1})}"
+        },
+        {
+          "start": 3113,
+          "end": 3364,
+          "sha256": "f8a3d1a10991dd9f4ed7de27171ce9a89278a7950f3da2fcb74ad3d85215a338",
+          "source": "function EJr(e,t){return`Could not rewrite ${e} in place: this file has other names on disk (it is hard-linked, ${t} names in all), and writing it in place would change the file under every one of those names. Remove the extra links, then try again.`}"
+        },
+        {
+          "start": 3364,
+          "end": 3509,
+          "sha256": "b8b1520f32f7e78ef124e70ed67a018f4a674ff0f2a505e32870b3bcbec99e56",
+          "source": "function ae(e,t){return Object.assign(new P(EJr(e,t),\"in-place write refused: the target has other names (a hard link)\"),{code:\"EMLINK\",path:e})}"
+        },
+        {
+          "start": 3552,
+          "end": 3609,
+          "sha256": "6836b1a09e7085f4d87f2fc13d9d6bfe752d80016fd08af46908a7b2330ec028",
+          "source": "function hI(e){return`${e}.tmp.${Te(4).toString(\"hex\")}`}"
+        },
+        {
+          "start": 3782,
+          "end": 3896,
+          "sha256": "bfc95954644c5735904fc460c6e21d88b47ad139bd68b1bd4bc3d65548f9898b",
+          "source": "var se=4,ce=50,ke=Array.from({length:se-1},()=>ce),Eor=[100,500,2000],Ae=new Int32Array(new SharedArrayBuffer(4));"
+        },
+        {
+          "start": 3934,
+          "end": 3967,
+          "sha256": "671af774ef345ed780f26a616fc3446a46f36007415f8637749426d1cf7e9a09",
+          "source": "function le(e,t,n=se-1){return!1}"
+        },
+        {
+          "start": 3967,
+          "end": 3978,
+          "sha256": "70ad6f1ebafc1cf82d376ebc98af3384ad28b83f722e5682a30304ed6e9cefd2",
+          "source": "var ue=128;"
+        },
+        {
+          "start": 3978,
+          "end": 4052,
+          "sha256": "fa2a8bd5934138685acbb3a63dc4451dab33e212d49e35e099cd0dfd1905c312",
+          "source": "async function Ce(e){try{return((await I(e)).mode&ue)===0}catch{return!1}}"
+        },
+        {
+          "start": 4052,
+          "end": 4239,
+          "sha256": "a6b1400488a3716dbf9a41be10483dbb534686f1e08064cfbb4c74e9ec89e7c2",
+          "source": "async function c$(e,t,n=ke){let r=!1;for(let o=0;;o++)try{return await e(),r}catch(i){if(le(i,o,n.length)){if(o===0&&t!==void 0&&await Ce(t))throw i;r=!0,await ee(n[o]);continue}throw i}}"
+        },
+        {
+          "start": 4239,
+          "end": 4284,
+          "sha256": "f5cb237ddef942b3ccb311dc1dea5cca2d587dcd0b5c6357c91448def69311c1",
+          "source": "function ps(e,t,n=K){return c$(()=>n(e,t),t)}"
+        },
+        {
+          "start": 4538,
+          "end": 4617,
+          "sha256": "595477156dd2eb724fb30c52027f7ec089258c72973a527a9b0c26436f821913",
+          "source": "var _Xo=new Set([\"ENOSPC\",\"EIO\",\"EDQUOT\",\"EFBIG\"]),fe=67108864,qZ=a.O_NONBLOCK;"
+        },
+        {
+          "start": 4617,
+          "end": 4689,
+          "sha256": "eeb9e07a983cb18e83757ec6c6e4e0261453462b7770cbe6c1d55eb8d737dbba",
+          "source": "async function de(e,t,n=\"darwin\"){return(await We(e,t,n)).kind===\"pass\"}"
+        },
+        {
+          "start": 4689,
+          "end": 4903,
+          "sha256": "814b92a095f7ff2951adb069f7932e75a6a3c11de7f1503c7cff7a8801cabd97",
+          "source": "async function We(e,t,n=\"darwin\"){if(n!==\"win32\")return{kind:\"pass\"};try{return{kind:(await I(e)).isFile()?\"pass\":\"refuse\"}}catch(r){if(E(r)===\"ENOENT\")return{kind:t?\"pass\":\"refuse\"};return{kind:\"failed\",error:r}}}"
+        },
+        {
+          "start": 5016,
+          "end": 5449,
+          "sha256": "c9f269184930e84d44338fda43c8b7ad3fc7b61aa80e9118d99288296fbe660e",
+          "source": "async function Me(e,t=!1){if(!t&&!await de(e,!0))return{kind:\"unavailable\"};let n;try{n=await L(e,a.O_RDONLY|(t?0:a.O_NOFOLLOW)|qZ)}catch(r){return E(r)===\"ENOENT\"?{kind:\"absent\"}:{kind:\"unavailable\"}}try{let r=await n.stat();if(!r.isFile()||r.size>fe)return{kind:\"unavailable\"};return{kind:\"snapshot\",bytes:new Uint8Array(await n.readFile()),mode:r.mode&4095}}catch{return{kind:\"unavailable\"}}finally{await n.close().catch(()=>{})}}"
+        },
+        {
+          "start": 5449,
+          "end": 5817,
+          "sha256": "50c427ce75336d05674238e10c9ec4b24e8a3fac2686df4d8cce4ac450b4e67f",
+          "source": "async function Ye(e,t,n=!1){if(!n&&!await de(e,!0))return!1;let r;try{r=await L(e,a.O_WRONLY|a.O_CREAT|a.O_TRUNC|(n?0:a.O_NOFOLLOW)|qZ,t.mode)}catch{return!1}try{if(!(await r.stat()).isFile())return await r.close().catch(()=>{}),!1;return await r.writeFile(t.bytes),await r.chmod(t.mode).catch(()=>{}),await r.close(),!0}catch{return await r.close().catch(()=>{}),!1}}"
+        },
+        {
+          "start": 5817,
+          "end": 6192,
+          "sha256": "1e7c303e5f3bcf8a49ccd19444b6c955cfa51749e0f2763b17b7089b97e3f900",
+          "source": "function F(e,t,n){try{if(e instanceof Error)e.message=`${e.message}; ${t!==void 0?`new contents preserved at ${t}; `:\"\"}${n===\"restored\"?\"original target restored\":n===\"removed\"?\"partial target removed\":n===\"untouched\"?\"target untouched\":\"target left partial \\u2014 treat contents as torn\"}`,Object.assign(e,{...t!==void 0&&{preservedTmp:t},targetOutcome:n})}catch{}return e}"
+        },
+        {
+          "start": 6192,
+          "end": 6281,
+          "sha256": "099e1fce00efc165db044e4cfa3b7795c0243d9a07ab1bc45f42da353825f5a8",
+          "source": "function uOe(e){let t=E(e);return t===\"EINVAL\"||t===\"ENOTSUP\"||t===\"EPERM\"||t===\"ENOSYS\"}"
+        },
+        {
+          "start": 6281,
+          "end": 6438,
+          "sha256": "6c256117b1d2fed6604f10bd5bd15cd782ffba1b13a1f6576ea902f2cffd3f0c",
+          "source": "class hTn extends Error{target;constructor(e){super(\"beforePublish refused the write; nothing was published\");this.target=e;this.name=\"PublishRefusedError\"}}"
+        },
+        {
+          "start": 6438,
+          "end": 6715,
+          "sha256": "377b738559a761b27ad314bc7d785f7655d49b3a3bb043a81845274c58276ff0",
+          "source": "async function De(e,t){if(t===void 0)return e;try{await(await L(t,a.O_RDONLY|a.O_DIRECTORY|a.O_NOFOLLOW)).close()}catch(n){switch(E(n)){case\"ENOENT\":case\"ELOOP\":case\"ENOTDIR\":return e;case\"EACCES\":case\"EPERM\":if(await Ue(t))return e;throw n;default:throw n}}return xe(t,ve(e))}"
+        },
+        {
+          "start": 6715,
+          "end": 6831,
+          "sha256": "73165c1a2adaf1828b595a073325b9d8f23cdb29382671b328668f55fb475874",
+          "source": "async function Ue(e){let t=process.getuid?.();if(t===void 0)return!1;try{return(await I(e)).uid!==t}catch{return!1}}"
+        },
+        {
+          "start": 6831,
+          "end": 6839,
+          "sha256": "f0f1cde3974b3307cb41b91aa58ec288744d81eb969c69423cc3c3272eb54fb4",
+          "source": "var C=3;"
+        },
+        {
+          "start": 6839,
+          "end": 6957,
+          "sha256": "0045925ea88eeb23aada0ac04e7ebeef4914a9783faff5096533db69e8384cd9",
+          "source": "async function me(e,t){if(t!==\"win32\")return!1;try{return await I(e),!0}catch(n){return E(n)===\"ENOENT\"?!1:{cause:n}}}"
+        },
+        {
+          "start": 6957,
+          "end": 7132,
+          "sha256": "0691cd48a4cc4537d6b601f69e0ef4751a5ebe5f64263f4cb9b4208e62fe87ad",
+          "source": "function W(e,t){return Object.assign(Error(\"EEXIST: name already taken (exclusive create)\",typeof t===\"object\"?{cause:t.cause}:void 0),{code:\"EEXIST\",syscall:\"lstat\",path:e})}"
+        },
+        {
+          "start": 7132,
+          "end": 7316,
+          "sha256": "cc03d3fe34ae50fd4f55b1766561cc6f7c517f337532126e5ede1951ccba6628",
+          "source": "async function j(e,t,n){for(let r=1;;r++){let o=hI(e),i=await me(o,t);if(i!==!1){if(r<C)continue;throw W(o,i)}try{return await n(o)}catch(s){if(E(s)===\"EEXIST\"&&r<C)continue;throw s}}}"
+        },
+        {
+          "start": 7316,
+          "end": 7502,
+          "sha256": "24dd420c54454c78e1b2437535bad0b67eeb999226b8f6e05e156011be8c6c8a",
+          "source": "async function d$(e,t,n,r=\"darwin\"){return j(e,r,async(o)=>{try{return await oe(o,t,{encoding:\"utf8\",mode:n,flag:\"wx\"}),o}catch(i){if(E(i)!==\"EEXIST\")await x(o).catch(()=>{});throw i}})}"
+        },
+        {
+          "start": 7706,
+          "end": 7837,
+          "sha256": "5cb9fe805c3996944060564a3ac790bfe7b6553bbe0c10422dfbec754ae987cc",
+          "source": "async function Be(e,t,n=\"darwin\"){return j(e,n,async(r)=>({fh:await L(r,n===\"win32\"?\"wx\":a.O_WRONLY|a.O_CREAT|a.O_EXCL,t),tmp:r}))}"
+        },
+        {
+          "start": 8102,
+          "end": 8165,
+          "sha256": "651ac5f294dc2e58e0c0e18653b5fdca09d643519431fd3477c98a9b1c06c482",
+          "source": "async function Tn(e,t,n,r){return Kse(e,t,{mode:n,renameFn:r})}"
+        },
+        {
+          "start": 8165,
+          "end": 10331,
+          "sha256": "6f0774965259c21c57ff9e109f17b6cd5cd7ea196917f931c95ea59e27ae8a05",
+          "source": "async function Kse(e,t,n){let{mode:r,createMode:o,exactMode:i,flush:s,followSymlinks:f,inPlaceOnTempCreateRefused:c,stagingDir:S,renameFn:w,beforePublish:g}=n,v=r??o,k=()=>{if(g!==void 0&&!g())throw new hTn(e)},y=await De(e,S),A=f===!0?0:a.O_NOFOLLOW,m,T=!1,M=!1,G=async(p)=>{let l=await Me(e,f===!0),h=l.kind===\"snapshot\"?l:void 0;k();let u=await L(e,a.O_WRONLY|a.O_CREAT|A|qZ,i??v),N;try{N=await u.stat()}catch(_){throw await u.close().catch(()=>{}),T=p!==void 0,F(_,p,\"untouched\")}let d=N.isCharacterDevice();if(!N.isFile()&&!d)throw await u.close().catch(()=>{}),Object.assign(Error(\"refusing the in-place arm on a non-regular target\"),{code:\"ENXIO\",path:e});if(!d&&N.nlink>1&&mTn())throw await u.close().catch(()=>{}),ae(e,N.nlink);if(g!==void 0&&!g()){if(await u.close().catch(()=>{}),l.kind===\"absent\"&&N.size===0&&!d)await x(e).catch(()=>{});throw new hTn(e)}let z=!1;try{if(!d)await u.truncate(0),z=!0;await u.writeFile(t,{encoding:\"utf8\"});let _=d?void 0:i??(l.kind!==\"absent\"?r:void 0);if(_!==void 0)await u.chmod(_).catch(()=>{});if(s===!0)try{await u.sync()}catch(Y){if(!uOe(Y))throw Y}await u.close()}catch(_){if(await u.close().catch(()=>{}),!z)throw T=p!==void 0,F(_,p,\"untouched\");T=p!==void 0;let Ee=h!==void 0&&await Ye(e,h,f===!0)?\"restored\":await x(e).then(()=>!0,(ye)=>E(ye)===\"ENOENT\")?\"removed\":\"partial\";throw F(_,p,Ee)}let Q=p??m;if(Q!==void 0)await x(Q).catch(()=>{})};try{try{if(i!==void 0||s===!0){let l=await Be(y,i??v),h=l.fh;m=l.tmp;let u=!1,N;try{if(await h.writeFile(t,{encoding:\"utf8\"}),i!==void 0)try{await h.chmod(i)}catch(d){if(!uOe(d))throw d}if(s===!0)try{await h.sync()}catch(d){if(!uOe(d))throw d}}catch(d){u=!0,N=d}if(!u)M=!0;try{await h.close()}catch(d){if(!u)throw T=!0,F(d,m,\"untouched\")}if(u)throw N}else m=await d$(y,t,v),M=!0}catch(l){if(c!==!0)throw l;if(M)throw l;if(E(l)!==\"EACCES\")throw l;if(!await Pe(e).then(()=>!0,()=>!1))throw l;await G(void 0);return}if(m===void 0)throw Error(\"staging block exited without a staging file\");let p=m;try{let l=w??K;await ps(p,e,(h,u)=>(k(),l(h,u)))}catch(l){let h=E(l);if(h===void 0||!aA.has(h))throw l;await G(p)}}catch(p){if(m!==void 0&&!T)await x(m).catch(()=>{});throw p}}"
+        }
+      ],
+      "manifestEntry": {
+        "index": 62,
+        "name": "/$bunfs/root/chunk-31g8tfvj.js",
+        "path": "chunk-31g8tfvj.js",
+        "encoding": 1,
+        "loader": 1,
+        "offset": 178877684,
+        "length": 12449,
+        "sha256": "a4ecd8a70a7c49ea9710cd923dece2900831d5a4306866de9af12b47793d717e"
+      }
+    },
+    {
+      "module": "chunk-c9me9cp7.js",
+      "moduleSha256": "db81856ee883c31a0be18c305014a0d82d3bd698a459223b9de754b934b084ae",
+      "declarations": [
+        {
+          "start": 3714,
+          "end": 3869,
+          "sha256": "e0165a34780a88fe34268a00a97acdaace9a83c4b760613e669e99daf6ac0899",
+          "source": "class P extends Error{telemetryMessage;errorClass;constructor(n,e,t){super(n);this.name=\"TelemetrySafeError\",this.telemetryMessage=e??n,this.errorClass=t}}"
+        },
+        {
+          "start": 4814,
+          "end": 4913,
+          "sha256": "a84ab0a2488aed5689416393c679dde4e7f4b29aa980e121bd56b25ab3e7b5e4",
+          "source": "function E(n){if(n&&typeof n===\"object\"&&\"code\"in n&&typeof n.code===\"string\")return n.code;return}"
+        }
+      ],
+      "manifestEntry": {
+        "index": 17,
+        "name": "/$bunfs/root/chunk-c9me9cp7.js",
+        "path": "chunk-c9me9cp7.js",
+        "encoding": 1,
+        "loader": 1,
+        "offset": 177885670,
+        "length": 10331,
+        "sha256": "db81856ee883c31a0be18c305014a0d82d3bd698a459223b9de754b934b084ae"
+      }
+    },
+    {
+      "module": "chunk-f2n7vgt8.js",
+      "moduleSha256": "d5f5cbf26110e86d1eab22e59072276597718b0d07654b6b0bc9e0d4aa3032ee",
+      "declarations": [
+        {
+          "start": 940,
+          "end": 1103,
+          "sha256": "04a32a28df9eb020ca98b092f55d9febe3b455c4cb05bc3dc4d0079f96bffff4",
+          "source": "class Mir{now(){return Date.now()}monotonicNow(){return performance.now()}setTimeout(t,r,e){let o=setTimeout(t,r);if(e?.unref)o.unref();return()=>clearTimeout(o)}}"
+        },
+        {
+          "start": 1103,
+          "end": 1118,
+          "sha256": "515f7a314a54d80e35b77ac5503a4cdde6a8ee018315f9dbbd85e64f618ff2ed",
+          "source": "var aB=new Mir;"
+        },
+        {
+          "start": 1118,
+          "end": 1504,
+          "sha256": "89744c32a63aab1d61c366d1bd710063e69b776ee53af4f8458c6794a5ccaaa0",
+          "source": "function ee(t,r,e){return new Promise((o,n)=>{if(r?.aborted){if(e?.throwOnAbort||e?.abortError)n(e.abortError?.()??Error(\"aborted\"));else o();return}let m=(e?.clock??aB).setTimeout(()=>{r?.removeEventListener(\"abort\",i),o()},t,{unref:e?.unref});function i(){if(m(),e?.throwOnAbort||e?.abortError)n(e.abortError?.()??Error(\"aborted\"));else o()}r?.addEventListener(\"abort\",i,{once:!0})})}"
+        }
+      ],
+      "manifestEntry": {
+        "index": 16,
+        "name": "/$bunfs/root/chunk-f2n7vgt8.js",
+        "path": "chunk-f2n7vgt8.js",
+        "encoding": 1,
+        "loader": 1,
+        "offset": 177883320,
+        "length": 2349,
+        "sha256": "d5f5cbf26110e86d1eab22e59072276597718b0d07654b6b0bc9e0d4aa3032ee"
+      }
+    }
+  ],
+  "typedPorts": {
+    "filesystemBuiltins": [
+      "node:crypto.randomBytes",
+      "node:fs constants/sync operations",
+      "node:fs/promises",
+      "node:path"
+    ],
+    "description": "All filesystem I/O in the extracted closure is bound to actual Node builtins. Imported original E/P/ee closures are included verbatim. O is not referenced by the Tn dependency closure."
+  }
+}

@@ -1,0 +1,192 @@
+{
+  "version": "2.1.287",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "module": "chunk-mphp7acd.js",
+  "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+  "rangeConvention": "UTF-16 end-exclusive",
+  "rows": [
+    {
+      "name": "Xkt",
+      "start": 1090771,
+      "end": 1090812,
+      "sha256": "aaa2850d4efc1205eafa621ed5bca5e590a3a842e187c4222d4a009aac044375",
+      "source": "function Xkt(e,n){return e.stateByDir[n]}"
+    },
+    {
+      "name": "_xe",
+      "start": 1090812,
+      "end": 1091140,
+      "sha256": "4ee137108b165f5de9e07574a6359e5e2af4d72cbea5330762614de9d8008b4c",
+      "source": "function _xe(e,n,r,s,g,h){let b=e.stateByDir[n],w={memories:r,messages:[{role:\"user\",content:[{type:\"text\",text:`Available memories:\n${s}`,...g&&{cache_control:g}}]},...b?.messages.slice(1)??[]],hydrated:h,...b?.account&&{account:b.account},...b?.accountScope!==void 0&&{accountScope:b.accountScope}};return e.stateByDir[n]=w,w}"
+    },
+    {
+      "name": "Qkt",
+      "start": 1091140,
+      "end": 1091449,
+      "sha256": "32896b84b16a0cb3d4f62db6512be4caa84e78f1183c1e10651f31dae244498e",
+      "source": "function Qkt(e,n,r,s){let g=e.stateByDir[n];if(!g)return()=>{};let h={role:\"assistant\",content:[{type:\"text\",text:s}]};return e.stateByDir[n]={...g,messages:[...g.messages,{role:\"user\",content:[{type:\"text\",text:r}]},h]},()=>{let b=e.stateByDir[n];if(b?.messages.at(-1)===h)b.messages=b.messages.slice(0,-2)}}"
+    },
+    {
+      "name": "Jkt",
+      "start": 1091449,
+      "end": 1091847,
+      "sha256": "75a4b7a24a332e5bbd76c52707defda2c8ef2878b0922f467d3d56b831882dda",
+      "source": "function Jkt(e,n,r,s,g=r?.scope){let h=e.stateByDir[n];if(!h)return;if(g!==void 0&&h.accountScope!==void 0&&h.accountScope!==g)h.messages=h.messages.slice(0,1),delete h.account;if(g!==void 0)h.accountScope=g;if(r===void 0){delete h.account;return}if(h.account?.key===r.key)return;h.account={key:r.key,names:r.names,message:{role:\"user\",content:[{type:\"text\",text:r.text,...s&&{cache_control:s}}]}}}"
+    },
+    {
+      "name": "Zkt",
+      "start": 1091847,
+      "end": 1091951,
+      "sha256": "b1333d8e299bf25f1464891290af81f9f53178900ac0f4cd8f06770eab74841c",
+      "source": "function Zkt(e){let[n,...r]=e.messages;return n===void 0?r:[n,...e.account?[e.account.message]:[],...r]}"
+    },
+    {
+      "name": "d7t",
+      "start": 3343957,
+      "end": 3343995,
+      "sha256": "16aa6cf7d2611ede2bc8b51cfbe680049c3787943cd8fb91420da32ca0e83898",
+      "source": "function d7t(e){return PQe(e)||xQe(e)}"
+    },
+    {
+      "name": "l7t",
+      "start": 3338688,
+      "end": 3341400,
+      "sha256": "88f45676acc9849d953fc1e53cf3edeecc8ab492a440478a026b32a5e513703c",
+      "source": "async function l7t(e,n,r,s,g,h=new Set,b=!1,w,D=!1,j,z=()=>!1,K,he,_e=[],ke=!1,be,ve=!0,Te=be?.scope){if(s.lastUsage=null,b)try{if(r===Xs()&&(z()||YYe()))await Ljr(Xmt,g);if(g.aborted)return[];let{searchMemoryFilesWithIndex:jt}=await import(\"/$bunfs/root/chunk-ef2rd7de.js\"),Xt=y$e(r),un=5+Math.min(h.size+10,20),{ranked:rn,stats:Yt}=await jt(e,n,r,g,un,iNt(),w,D,(Pn)=>Hut(Pn,Xt)),Qt=y$e(r),nn=rn.filter((Pn)=>Hut(Aor(r,Pn.path),Qt)&&!h.has(Pn.path)&&!j?.(Pn.path)).slice(0,5).map((Pn)=>({path:Pn.path,mtimeMs:Pn.mtimeMs}));if(!g.aborted)if(!Yt.sync.scanCompleted)p(\"memory_recall_select\",\"index_sweep_incomplete\",{via_index:!0});else if(Yt.docCount===0)p(\"memory_recall_select\",\"no_candidates\",{via_index:!0});else{let Pn=nn.length>0?void 0:Yt.suppressedByFloor?\"below_relevance_floor\":Yt.hitCount===0?\"no_servable_hits\":Yt.belowFloorCount>0&&rn.length<un?\"partially_below_floor\":\"all_filtered\";y(\"memory_recall_select\",{via_index:!0,selected_count:nn.length,...Pn!==void 0&&{selected_zero_reason:c(Pn)},candidate_docs:Yt.docCount,index_query_term_count:Yt.queryTermCount,index_hit_count:Yt.hitCount,index_below_floor_count:Yt.belowFloorCount,index_top_score:Math.round(Yt.topScore*100)/100,index_relevance_floor:Math.round(Yt.relevanceFloor*100)/100,index_loaded_from_disk:Yt.loadedFromDisk,index_took_ms:Math.round(Yt.tookMs),index_store_held:Yt.storeWasHeld,index_open_wait_ms:Math.round(Yt.openWaitMs),index_store_open_ms:Math.round(Yt.storeOpenMs)})}return nn}catch(jt){if(!g.aborted)p(\"memory_recall_select\",\"index_query_failed\",{via_index:!0}),t(`index recall failed: ${l(jt)}`);return[]}let xe={type:\"ephemeral\"},Pe=r===Xs()&&$jr(),$e=Xkt(s,r),We=(ve?$e?.hydrated||Pe?$e:void 0:$e?.memories.length===0?$e:void 0)??await(ve?_$e(r,g,K,{regularFilesOnly:ke}):Promise.resolve([])).then((jt)=>{if(g.aborted)return;if(jt.length>0)return _xe(s,r,jt,aNt(jt),xe,!Pe);return be?_xe(s,r,[],Oor,xe,!1):void 0});Jkt(s,r,be,xe,Te);let qe=We?.account?.names??new Set,Qe=y$e(r),Ze=(jt)=>!h.has(jt.filePath)&&Hut(jt.filename,Qe);if(!We||!We.memories.some(Ze)&&qe.size===0){if(!g.aborted)p(\"memory_recall_select\",We?We.memories.some((jt)=>!h.has(jt.filePath))?\"none_visible\":\"all_surfaced\":\"no_candidates\");return[]}let et=Zkt(We),bt=new Map(We.memories.map((jt)=>[jt.filename,jt])),ht=await Lor({query:n,memoryDir:r,selectorCtx:s,history:et,turnCount:(We.messages.length-1)/2+1,byFilename:bt,accountNames:qe,cacheControl:xe,signal:g,credentials:he,selectorTurnReverts:_e}),kt=y$e(r),$t=[],It=[];for(let jt of ht){let Xt=bt.get(jt);if(Xt===void 0){if(qe.has(jt))It.push({path:jt,mtimeMs:0,account:!0})}else if(!h.has(Xt.filePath)&&Hut(Xt.filename,kt))$t.push(Xt),It.push({path:Xt.filePath,mtimeMs:Xt.mtimeMs})}return It}"
+    },
+    {
+      "name": "Lor",
+      "start": 3341499,
+      "end": 3343269,
+      "sha256": "ebc45bfdd20eb585357e07cd8246eedbcf00882c63bab8583e805c0895263d9a",
+      "source": "async function Lor(e){let{query:n,memoryDir:r,selectorCtx:s,history:g,turnCount:h,byFilename:b,accountNames:w,cacheControl:D,signal:j,credentials:z,selectorTurnReverts:K}=e,he=(be)=>b.has(be)||w.has(be),_e=`Select memories relevant to:\n${n}`,ke=(be)=>{let[ve,Te]=wpe(be);return t2({model:be,system:[{type:\"text\",text:Mor,cache_control:D}],skipSystemPromptPrefix:!0,messages:[...g,{role:\"user\",content:[{type:\"text\",text:_e,cache_control:D}]}],max_tokens:Ior+Te,thinking:ve,output_format:{type:\"json_schema\",schema:{type:\"object\",properties:{selected_memories:{type:\"array\",items:{type:\"string\"}}},required:[\"selected_memories\"],additionalProperties:!1}},signal:j,querySource:Zee,credentials:z})};try{let{result:be,refusals:ve}=await Bor($or(),ke,j);if(be.stop_reason===\"max_tokens\")return p(\"memory_recall_select\",\"output_truncated\"),t(\"[memdir] selectRelevantMemories truncated at max_tokens\",{level:\"warn\"}),[];let Te=be.content.find((Pe)=>Pe.type===\"text\");if(!Te||Te.type!==\"text\")return p(\"memory_recall_select\",\"no_text_block\"),t(\"[memdir] selectRelevantMemories returned no text block\",{level:\"warn\"}),[];let xe=Y(eW(Te.text));if(K.unshift(Qkt(s,r,_e,Te.text)),s.lastUsage={cacheReadInputTokens:be.usage.cache_read_input_tokens??0,cacheCreationInputTokens:be.usage.cache_creation_input_tokens??0,turnCount:h},ve===0)y(\"memory_recall_select\");else p(\"memory_recall_select\",\"selector_model_fell_back\");return xe.selected_memories.map((Pe)=>typeof Pe!==\"string\"||he(Pe)?Pe:Pe.replace(Dor,\"\")).filter((Pe)=>typeof Pe===\"string\"&&he(Pe))}catch(be){if(s.lastUsage=null,j.aborted)return[];return p(\"memory_recall_select\",d7t(be)?\"every_selector_model_refused\":\"memory_recall_select_query_failed\"),t(`[memdir] selectRelevantMemories failed: ${l(be)}`,{level:\"warn\"}),[]}}"
+    },
+    {
+      "name": "T1e",
+      "start": 3379889,
+      "end": 3379958,
+      "sha256": "515b9a93ba53126a0f4c8fe6af183c88462423f73012a0b6986596c9c8dec4f8",
+      "source": "function T1e(e,n,r){return e.has(n)&&(!r||e.get(n)?.offset===void 0)}"
+    },
+    {
+      "name": "Drr",
+      "start": 3379958,
+      "end": 3381172,
+      "sha256": "1e502d0dc59e375d714b0b0cc366ef6e35608608142925b173d80e4650a8f357",
+      "source": "async function Drr(e,n,r,s,g,h,b,w,D,j,z,K,he,_e){let ke=he?$7t(n).flatMap((qe)=>{let Qe=qe.replace(\"agent-\",\"\"),Ze=r.find((et)=>et.agentType===Qe);return Ze?.memory?[{agentType:Qe,scope:Ze.memory}]:[]}):[],be=ke.length===0?_e?.listing():void 0;await VH().warmCanonicalWcRoot();let ve=he&&!(ke.length===0&&a3()),Te=await be;if(!ve&&Te===void 0)return[];await Ujr(h);let xe=ke.length>0?(await Promise.all(ke.map(({agentType:qe,scope:Qe})=>C2o(qe,Qe)))).filter((qe)=>qe!==null):[{dir:Xs(),regularFilesOnly:!1,containedIn:void 0}],$e=(await Promise.all(xe.map(({dir:qe,regularFilesOnly:Qe,containedIn:Ze})=>l7t(e,n,qe,s,h,b.paths,bJe(),RKr(),qe===Xs(),(et)=>T1e(g,et,K),vxe,w,D,j,Qe,qe===Xs()?Te:void 0,ve,qe===Xs()?_e?.scope()??Cfe?.NO_ACCOUNT_SCOPE:void 0).then((et)=>et.map((bt)=>({...bt,regularFilesOnly:Qe,containedIn:Ze}))).catch(()=>[])))).flat().filter((qe)=>qe.account?_e?.pickable(qe.path)===!0:!T1e(g,qe.path,K)&&!b.paths.has(qe.path)&&!z(qe.path)).slice(0,5),[Ne,We]=await Promise.all([Nrr($e.filter((qe)=>!qe.account),h),_e?.attachmentsFor($e.filter((qe)=>qe.account).map((qe)=>qe.path),v7t.MAX_SESSION_BYTES-b.totalBytes,h)??[]]);return[...Ne.length>0?[{type:\"relevant_memories\",memories:Ne}]:[],...We]}"
+    },
+    {
+      "name": "Lrr",
+      "start": 3381172,
+      "end": 3381480,
+      "sha256": "ad8a735e4bc0f6fccc3746e2a1eb942bd3d057b51791647d48c27e80d2668f34",
+      "source": "function Lrr(e){let n=new Set,r=0;for(let s of e){if(s.type!==\"attachment\")continue;if(s.attachment.type===\"relevant_memories\")for(let g of s.attachment.memories)n.add(g.path),r+=g.content.length;else if(s.attachment.type===\"account_memory_recall\")r+=s.attachment.content.length}return{paths:n,totalBytes:r}}"
+    },
+    {
+      "name": "Nrr",
+      "start": 3381480,
+      "end": 3382105,
+      "sha256": "1a283f46dc2599d1115970dfc3fcd80a046ed8bd15ac7c0cfc80a98aea96ec6f",
+      "source": "async function Nrr(e,n){return(await Promise.all(e.map(async(s)=>{let{path:g,mtimeMs:h,regularFilesOnly:b,containedIn:w}=s;try{if(b&&!(await Uor(g)).isFile())return null;if(w!==void 0&&!await A2o(g,w))return null;let D=await lZ(g,n);if(D===void 0)return null;let j=jQ(D.content),z=D.truncated?j+`\n\n> This memory file was truncated (${D.truncatedByBytes?`${BQ} byte limit`:`first ${wbe} lines`}). Use the ${dt} tool to view the complete file at: ${Wjt(g)}`:j;return{path:g,content:z,mtimeMs:h,header:x3(g,h),limit:D.truncated||D.itemBlockRemoved||j!==D.content?D.lineCount:void 0}}catch{return null}}))).filter((s)=>s!==null)}"
+    },
+    {
+      "name": "WHr",
+      "start": 3382190,
+      "end": 3383920,
+      "sha256": "9fd11c7dc0ebf7172bcf686ad85c7a83aa9cc69b5b7e8d51e1e39e0e14362117",
+      "source": "function WHr(e,n,r,s){let g=n.memorySelector;if(!g||n.agentId||Frr.has(r))return;let h=qd()&&E8(),b=Cfe?.isAccountRecallOn()===!0&&!bJe();if(!h&&!b)return;let w=e.findLast((Te)=>Te.type===\"user\"&&!Te.isMeta);if(!w)return;let D=yh(w);if(!D)return;if(!/\\s/.test(D.trim())&&!(/[\\u3040-\\u30FF\\u3400-\\u4DBF\\u4E00-\\u9FFF\\uAC00-\\uD7AF\\uF900-\\uFAFF]/.test(D.normalize(\"NFKC\"))&&bJe()))return;let j=Lrr(e);if(j.totalBytes>=v7t.MAX_SESSION_BYTES){p(\"memory_recall_select\",\"session_budget_exhausted\");return}let z=b&&Cfe?Cfe.startAccountRecall(ai([...e]),n,r,s,{callMcpToolRaw:GN,executePreToolHooks:ATe}):void 0;if(!h&&!z)return;let K=oht(e,n.options.mainLoopModel,void 0,n.session),he=th(n.abortController),_e=Date.now(),ke=[],be=Drr(n.session,D,n.options.agentDefinitions.activeAgents,g,n.readFileState,he.signal,j,n.storageV5,n.credentials,ke,(Te)=>{let xe=pe(n);if(xe?.blockReadsOutsideWorkingDirectories!==!0)return!1;try{return Pxe(Te,xe)}catch{return!0}},K,h,z).catch((Te)=>{if(!at(Te))d(Te);return[]}),ve={promise:be,settledAt:null,consumedOnIteration:-1,consumedBlocking:!1,earlierReadsMayBeCleared:K,screen(Te,xe){return z?z.screen(Te,xe):[...Te]},[Symbol.dispose](){if(he.abort(),ve.consumedOnIteration===-1)be.then(()=>ke.forEach((xe)=>xe()));z?.finish(ve);let Te=g.lastUsage;i(\"tengu_memdir_prefetch_collected\",{hidden_by_first_iteration:ve.settledAt!==null&&ve.consumedOnIteration===0&&!ve.consumedBlocking,blocking_consume:ve.consumedBlocking,consumed_on_iteration:ve.consumedOnIteration,latency_ms:(ve.settledAt??Date.now())-_e,cache_read_input_tokens:Te?.cacheReadInputTokens,cache_creation_input_tokens:Te?.cacheCreationInputTokens,selector_turn_count:Te?.turnCount})}};return be.finally(()=>{ve.settledAt=Date.now()}),ve}"
+    },
+    {
+      "name": "lZ",
+      "start": 727769,
+      "end": 729054,
+      "sha256": "8ad95901c68ee023b64b7fa4af819147fcc853b182c21e7db76e51bdaa6a72e1",
+      "source": "async function lZ(e,n){{let ke=await Ake(e,0,wbe,BQ,n,{truncateOnByteLimit:!0});return{content:ke.content,lineCount:ke.lineCount,truncated:ke.totalLines>wbe||ke.truncatedByBytes,truncatedByBytes:ke.truncatedByBytes,itemBlockRemoved:!1,viewBytes:ke.totalBytes,viewLines:ke.totalLines}}let r=wbe+WBn,s=await Ake(e,0,r,BQ+eUn,n,{truncateOnByteLimit:!0}),h=!s.content.includes(Y6)?s.content:tUn(s.content),b=h===void 0?nUn(s.content):void 0,w=h??b;if(w===void 0||b!==void 0&&KMo(b)){t(`Recall skipped ${e}: its claudeCodeItem block could not be taken out`),p(\"laptop_memory_item_block\",\"recall_file_dropped\");return}if(b!==void 0)t(`Recall showed ${e} without its header: its claudeCodeItem block could not be taken out`),p(\"laptop_memory_item_block\",\"recall_header_withheld\");let D=s.lineCount===0?[]:w.split(`\n`),j=[],z=0,K=!1;for(let ke of D){if(j.length===wbe)break;let be=z+(j.length>0?1:0)+Buffer.byteLength(ke);if(be>BQ){K=!0;break}z=be,j.push(ke)}let he=j.length<D.length,_e=s.truncatedByBytes||s.totalLines>r;return{content:j.join(`\n`),lineCount:j.length,truncated:he||_e,truncatedByBytes:he?K:j.length<wbe&&s.truncatedByBytes,itemBlockRemoved:w!==s.content,viewBytes:s.totalBytes-(Buffer.byteLength(s.content)-Buffer.byteLength(w)),viewLines:s.totalLines-(s.lineCount-D.length)}}"
+    },
+    {
+      "name": "Zee",
+      "start": 1090636,
+      "end": 1090658,
+      "sha256": "d82b948b0558a73efdb2fa9880a17018d893b8c3f7e9fae733740843655e37b7",
+      "source": "Zee=\"memdir_relevance\""
+    },
+    {
+      "name": "Ior",
+      "start": 3338680,
+      "end": 3338687,
+      "sha256": "529bdeb230e384d004d1db9408a89d6ee544ac1ab4b0dee0116d22ec1d20c4a4",
+      "source": "Ior=512"
+    },
+    {
+      "name": "Oor",
+      "start": 3341404,
+      "end": 3341433,
+      "sha256": "951e46378c409d799c0099de32adcdc8bf7f55f44c8b3db9b2fae7683617c987",
+      "source": "Oor=\"(no local memory files)\""
+    },
+    {
+      "name": "Dor",
+      "start": 3341434,
+      "end": 3341498,
+      "sha256": "0d5c13182241c7acbfb4241205f84f826b85639ce20dbafb71f46fc31df982d0",
+      "source": "Dor=new RegExp(`^\\\\[(?:${[...whn,\"account\"].join(\"|\")})\\\\]\\\\s+`)"
+    },
+    {
+      "name": "Frr",
+      "start": 3382109,
+      "end": 3382189,
+      "sha256": "fbd9b7471468412c101ebe608cb251f18bb74da42db5ec01016ee20bc4df7cdd",
+      "source": "Frr=new Set([\"extract_memories\",\"auto_dream\",Zee,\"prompt_suggestion\",\"compact\"])"
+    },
+    {
+      "name": "v7t",
+      "start": 3345616,
+      "end": 3345645,
+      "sha256": "d1b1ab86c3bba297b8fea212e8d24a04f21cdcffc5e48e71dddd5d17a204f77a",
+      "source": "v7t={MAX_SESSION_BYTES:61440}"
+    },
+    {
+      "name": "Cfe",
+      "start": 3344953,
+      "end": 3344961,
+      "sha256": "f39b0e5f698907c6a7ef5ae1752d0f7749cc227b701dca56a5c6d6900fc86a07",
+      "source": "Cfe=null"
+    },
+    {
+      "name": "Mor",
+      "start": 3337352,
+      "end": 3338679,
+      "sha256": "d4a5129783dc8c26ccf5773496ff357dd96c36580bb58fa8f1dc98fb81119582",
+      "source": "Mor=`You are selecting memories that will be useful to Claude Code as it processes a user's query. The first message lists the available memory files with their filenames and descriptions; subsequent messages each contain one user query.\n\nReturn a list of filenames for the memories that will clearly be useful to Claude Code as it processes the user's query (up to 5). Only include memories that you are certain will be helpful based on their name and description.\n- If you are unsure if a memory will be useful in processing the user's query, then do not include it in your list. Be selective and discerning.\n- If there are no memories in the list that would clearly be useful, feel free to return an empty list.\n- Be especially conservative with user-profile and project-overview memories ([user], [project]). These describe the user's ongoing focus, not what every question is about. A profile saying \"works on DB performance\" is NOT relevant to a question that merely contains the word \"performance\" unless the question is actually about that DB work. Match on what the question IS ABOUT, not on surface keyword overlap with who the user is.\n- Do not re-select memories you already returned for an earlier query in this conversation.\n\nReply with only a JSON object of the form {\"selected_memories\": [\"<filename>\", ...]}.\n`"
+    }
+  ],
+  "transports": [
+    {
+      "name": "l7t",
+      "from": "import(\"/$bunfs/root/chunk-ef2rd7de.js\")",
+      "to": "importRecallIndex287()"
+    },
+    {
+      "name": "Drr",
+      "from": "=>l7t(e,n,qe,s,h,",
+      "to": "=>findRelevantMemories287(e,n,qe,s,h,"
+    }
+  ],
+  "cuts": [
+    {
+      "name": "Lor",
+      "from": "await Bor($or(),ke,j)",
+      "to": "await requestSelectorOnce287(ke,j)",
+      "scope": "existing local single-model/no-refusal-fallback selector"
+    },
+    {
+      "name": "Mor",
+      "scope": "existing SELECT_MEMORIES_SYSTEM_PROMPT byte-exact port; no prompt/scopes rewrite"
+    },
+    {
+      "name": "Nrr:x3",
+      "scope": "existing memoryHeader producer preserves local attachment header wording"
+    }
+  ],
+  "owner": "Passed actual memorySelector/session; existing canonical zt index. No new state/index."
+}

@@ -1,0 +1,1145 @@
+{
+  "version": "2.1.287",
+  "platform": "darwin-arm64",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16 code units",
+  "roots": {
+    "Session": [
+      "chunk-nankzm0s.js",
+      "zh"
+    ],
+    "SessionSlot": [
+      "chunk-nankzm0s.js",
+      "zO"
+    ],
+    "snapshot": [
+      "chunk-mphp7acd.js",
+      "cN"
+    ],
+    "backgroundAnnouncement": [
+      "chunk-mphp7acd.js",
+      "k2n"
+    ],
+    "backgroundText": [
+      "chunk-mphp7acd.js",
+      "s6n"
+    ],
+    "readTail": [
+      "chunk-p54b66vv.js",
+      "hUe"
+    ],
+    "withdraw": [
+      "chunk-mphp7acd.js",
+      "Cmr"
+    ],
+    "claimShellNotification": [
+      "chunk-bm2srtv9.js",
+      "r3"
+    ]
+  },
+  "sourceContracts": {
+    "bashFormatter": {
+      "file": "chunk-mphp7acd.js",
+      "name": "Bash.mapToolResultToToolResultBlockParam",
+      "start": 3994485,
+      "end": 3995861,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "moduleLength": 4409957,
+      "sha256": "ee5bed65d7d6a204602b86cc059f53f6c3c16526d95b48d2f9d6d91c1f6be3de",
+      "source": "mapToolResultToToolResultBlockParam({interrupted:e,stdout:n,stderr:r,isImage:s,backgroundTaskId:g,backgroundedByUser:h,backgroundedToDeliverMessage:b,backgroundedByTurnAbort:w,timedOutAfterMs:D,backgroundEndsWithFinalResponse:j,backgroundCwdHint:z,structuredContent:K,persistedOutputPath:he,persistedOutputSize:_e,staleReadFileStateHint:ke,ghRateLimitHint:be},ve){if(K&&K.length>0)return{tool_use_id:ve,type:\"tool_result\",content:K};if(s){let $e=r6n(n,ve);if($e){let Ne=typeof r===\"string\"?r.trim():\"\";if(Ne)return{...$e,content:[...Array.isArray($e.content)?$e.content:[],{type:\"text\",text:Ne}]};return $e}}let Te=n;if(n)Te=n.replace(/^(\\s*\\n)+/,\"\"),Te=Te.trimEnd();if(he){let $e=n8e(Te,iRe);Te=L_e({filepath:he,originalSize:_e??0,isJson:!1,preview:$e.preview,hasMore:$e.hasMore,truncatedAtBytes:(_e??0)>=gue?gue:void 0})}let xe=r.trim();if(e){if(r)xe+=r6;xe+=\"<error>Command was aborted before completion</error>\"}let Pe=\"\";if(g){if(Pe=s6n({backgroundTaskId:g,outputPath:Sp(g),backgroundedByUser:h,backgroundedToDeliverMessage:b,backgroundedByTurnAbort:w,timedOutAfterMs:D,reapedAtFinalResponse:j,readToolName:dt}),z)Pe+=`\n${z}`;if(BN())return{tool_use_id:ve,type:\"tool_result\",content:k2n(g,[xe,Pe].filter(Boolean).join(`\n`),{backgroundedByUser:h,ending:dlt(j===!0)})}}return{tool_use_id:ve,type:\"tool_result\",content:[Te,xe,Pe,ke,be].filter(Boolean).join(`\n`),is_error:e}}",
+      "variable": false
+    },
+    "hostSession": {
+      "file": "chunk-nankzm0s.js",
+      "name": "rr",
+      "start": 253527,
+      "end": 253564,
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "moduleLength": 706979,
+      "sha256": "0c7f747b2685cadc783fcbaf9419d142abfa1a5647fa3378cec77d81b290bcca",
+      "source": "function rr(){return zO.of(U().host)}",
+      "variable": false
+    },
+    "featureOwner": {
+      "file": "chunk-vz8a844r.js",
+      "name": "ko",
+      "start": 1997,
+      "end": 2028,
+      "moduleSha256": "185deabf48510ff017361955b7f1df2375c8947bdf0bb32644d0689bb5b5bfbf",
+      "moduleLength": 2041,
+      "sha256": "5de41411d21ea21f92910d93dae886e1f7ea6e2c0c534079749dab4fb0132e63",
+      "source": "function ko(){return r.of(U())}",
+      "variable": false
+    },
+    "backgroundPolicy": {
+      "file": "chunk-f4hr5xjf.js",
+      "name": "xk",
+      "start": 1405,
+      "end": 1455,
+      "moduleSha256": "856b13c1d45e5b4329487c055c5242a8d21e56d9be504194be8ca5de90bbfdee",
+      "moduleLength": 1524,
+      "sha256": "8d3fc2c8c34fdb05242f9ecb69a16124e0b5518ce1d968b147c97a6bdd4aa385",
+      "source": "function xk(){return n.getStore()??s.of(U().host)}",
+      "variable": false
+    },
+    "pool": {
+      "file": "chunk-djhbc0y7.js",
+      "name": "pv",
+      "start": 148296,
+      "end": 149034,
+      "moduleSha256": "835421d07f9032664522176d19bcc7d9206b289a8662eddea84a85609050d74b",
+      "moduleLength": 150692,
+      "sha256": "0c3fa0f629843d1de31610344d35127185e709753f5e9754d8b66f8b26b970c9",
+      "source": "function pv(){let e=Js(),r=Wr();return[cXt,...$a()?[fi]:[],...[qR,KR].filter((n)=>!d7().has(n.name)),_V,Sv,RC,hv,...(ni?.()??[]).filter((n)=>!d7().has(n.underlyingV1ToolName)),vce,...go,gy,mo,lo,io,ze,o5,Io,Jze,RXt,...[],Zs,...e?[e]:[],ei,...Fr?[Fr]:[],...dk()?[mr,gr,Tr,wr]:[],...Dr?[Dr]:[],...ri(),...Lr?[Lr]:[],...Nr?[Nr]:[],...HRe()?[ft]:[],...krt()?[nr,lr]:[],kt(),ti(),...jr?[jr]:[],Vt,...r?[r]:[],...Mr?[Mr]:[],...ce?[ce]:[],Tt,...qs,...Cr()?Gs:[],to,...vr?[vr]:[],...Rr?[Rr]:[],...Or?[Or]:[],Xt,jt,...oi,...xr?[xr]:[],...Vs,...Ar?[Ar]:[],eo,Ys,Xs,Qs,...Pr?[Pr]:[],...Ce?[Ce]:[],...zr?[zr]:[],...bt()?[bt()]:[],...$r?[$r]:[],...Br?[Br()]:[],...[],zI,VI,FB,...a.CLAUDE_CODE_ENABLE_REFRESH_MCP_TOOLS?[ht]:[],...Vh()?[Pjn]:[],zIr,Lo]}",
+      "variable": false
+    },
+    "completion": {
+      "file": "chunk-mphp7acd.js",
+      "name": "xqe",
+      "start": 3922930,
+      "end": 3923827,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "moduleLength": 4409957,
+      "sha256": "8facf47b30c29b9289c84f4a69b1aff36d0004e19c0b5f5c257cf16d01c1f3c9",
+      "source": "function xqe({taskId:e,description:n,status:r,exitCode:s,taskRegistry:g,toolUseId:h,kind:b=\"bash\",agentId:w,stdoutBytes:D,exitNote:j,output:z,stopCause:K}){let{claimed:he,task:_e}=r3(e,g);if(!he)return;let ke=BN()&&b!==\"monitor\"?cN({taskId:e,outcome:r,exitCode:_e?.isAdopted?void 0:s,startTime:_e?.startTime??Date.now(),endTime:_e?.endTime??Date.now(),outputFile:Sp(e),output:z,stopCause:K}):void 0;if(ke)rr().withdrawShellNotification??=Cmr,rr().rememberBashTaskSnapshot(e,ke,w);if(!_e?.isAdopted)uxe(e,`\n[${r===\"killed\"?\"killed\":`exited with code ${s??\"unknown\"}`}]\n`);if(r===\"completed\")y(\"task_local_shell\");else if(r===\"failed\")m(\"task_local_shell\",\"task_local_shell_failed\");let be=Rqe(b,n,r,s,D,j,K),ve=Sp(e);if(w!==void 0)Ii(e,r===\"killed\"?\"stopped\":r,{toolUseId:h,summary:be,outputFile:ve});return{taskId:e,toolUseId:h,agentId:w,status:r,summary:be,outputFile:ve,snapshot:ke,stopCause:K}}",
+      "variable": false
+    },
+    "kill": {
+      "file": "chunk-mphp7acd.js",
+      "name": "_N",
+      "start": 3886435,
+      "end": 3887182,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "moduleLength": 4409957,
+      "sha256": "6a2f053e1a9aca8e8b87499381ab8e43babf60024db667966e2ad8af94dd79bc",
+      "source": "function _N(e,n){let r,s=!1;if(n.update(e,(g)=>{if(g.status!==\"running\"||!Lu(g))return g;try{t(`LocalShellTask ${e} kill requested`),g.shellCommand?.kill(),g.shellCommand?.cleanup()}catch(h){d(h)}return s=g.notified,r={toolUseId:g.toolUseId,description:g.description,isAdopted:g.isAdopted===!0,startTime:g.startTime,agentId:g.agentId,kind:g.kind},{...g,status:\"killed\",notified:!0,shellCommand:null,endTime:Date.now()}}),r&&!s){if(!r.isAdopted)uxe(e,`\n[killed]\n`);Ii(e,\"stopped\",{toolUseId:r.toolUseId,summary:r.description,outputFile:Sp(e)})}if(r&&!s&&r.kind!==\"monitor\"&&BN())rr().rememberBashTaskSnapshot(e,cN({taskId:e,outcome:\"killed\",exitCode:void 0,startTime:r.startTime,endTime:Date.now(),outputFile:Sp(e),output:void 0}),r.agentId);Qu(e)}",
+      "variable": false
+    }
+  },
+  "modules": [
+    {
+      "file": "chunk-4s38z9x2.js",
+      "moduleSha256": "eb46628147f83403bbcd57ca88b3370e05c6631bf027a80117844f770b276b2d",
+      "moduleLength": 2740,
+      "rows": [
+        {
+          "file": "chunk-4s38z9x2.js",
+          "name": "s",
+          "start": 1098,
+          "end": 1153,
+          "moduleSha256": "eb46628147f83403bbcd57ca88b3370e05c6631bf027a80117844f770b276b2d",
+          "moduleLength": 2740,
+          "sha256": "8b79e9ad51e95ede56e4385a196d4187b05a3d78fde643acd8c68658ff8e8521",
+          "source": "s=globalThis.process?.getBuiltinModule?.(\"async_hooks\")",
+          "variable": true
+        },
+        {
+          "file": "chunk-4s38z9x2.js",
+          "name": "wKt",
+          "start": 1154,
+          "end": 1195,
+          "moduleSha256": "eb46628147f83403bbcd57ca88b3370e05c6631bf027a80117844f770b276b2d",
+          "moduleLength": 2740,
+          "sha256": "d871ff458e10c6c5509c5b70f7944fba032e2a42697e09aec182aaaac06d05b4",
+          "source": "wKt=s?(e)=>s.AsyncResource.bind(e):(e)=>e",
+          "variable": true
+        },
+        {
+          "file": "chunk-4s38z9x2.js",
+          "name": "Me",
+          "start": 1196,
+          "end": 1457,
+          "moduleSha256": "eb46628147f83403bbcd57ca88b3370e05c6631bf027a80117844f770b276b2d",
+          "moduleLength": 2740,
+          "sha256": "08c491676ef2243b475f885c45f1163b2f0abed6075a2e5fa3a32cdd2afb308a",
+          "source": "function Me(){let e=new Set;return{subscribe(n){let r=wKt(n);return e.add(r),()=>{e.delete(r)}},emit(...n){let r;for(let o of e)try{o(...n)}catch(i){(r??=[]).push(i)}if(r)throw r.length===1?r[0]:AggregateError(r,\"Signal listener(s) threw\")},clear(){e.clear()}}}",
+          "variable": false
+        }
+      ],
+      "bindings": {},
+      "initializers": []
+    },
+    {
+      "file": "chunk-bn3p37gv.js",
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "moduleLength": 117054,
+      "rows": [
+        {
+          "file": "chunk-bn3p37gv.js",
+          "name": "V",
+          "start": 10007,
+          "end": 10151,
+          "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+          "moduleLength": 117054,
+          "sha256": "3b223ad86a79e9969e8241054c03d04d80d046aab19dd519973e4aed1e79e9e9",
+          "source": "class V{#e;#t=new WeakMap;constructor(e){this.#e=e}of(e){let t=this.#t.get(e);if(t!==void 0)return t;let o=this.#e();return this.#t.set(e,o),o}}",
+          "variable": false
+        }
+      ],
+      "bindings": {},
+      "initializers": []
+    },
+    {
+      "file": "chunk-nankzm0s.js",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "moduleLength": 706979,
+      "rows": [
+        {
+          "file": "chunk-nankzm0s.js",
+          "name": "Wh",
+          "start": 250470,
+          "end": 250476,
+          "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+          "moduleLength": 706979,
+          "sha256": "8a5c395f3818ebd41322012507403f8d845c30380ffab18ad87eb872fb0f7b7f",
+          "source": "Wh=200",
+          "variable": true
+        },
+        {
+          "file": "chunk-nankzm0s.js",
+          "name": "jO",
+          "start": 250477,
+          "end": 250482,
+          "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+          "moduleLength": 706979,
+          "sha256": "7d93370366263696674156b765fc15d574268e1d355316aa0cab64fafe1f1c7d",
+          "source": "jO=64",
+          "variable": true
+        },
+        {
+          "file": "chunk-nankzm0s.js",
+          "name": "jh",
+          "start": 250483,
+          "end": 250518,
+          "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+          "moduleLength": 706979,
+          "sha256": "0e50b2e4c6f17bdfc0881570e7714e7cb0c9147940b94ca359b5a0f3cd272fc0",
+          "source": "jh=Date.now()-process.uptime()*1000",
+          "variable": true
+        },
+        {
+          "file": "chunk-nankzm0s.js",
+          "name": "zh",
+          "start": 250519,
+          "end": 253502,
+          "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+          "moduleLength": 706979,
+          "sha256": "9558204f5201bcf3a863d480c2ab1cfb52c84a30b61eaf0e595f4682f6f90e52",
+          "source": "class zh{outputDir=void 0;linkedOutputs=new Map;linksInheritedBefore=jh;inheritedLinkLines=new Map;inheritPredecessorLinks(e,n){if(!Number.isFinite(n))return;this.inheritedLinkLines.set(e,Math.max(jh,Math.min(Date.now(),n)))}linksInheritedBeforeFor(e){return Math.max(this.linksInheritedBefore,this.inheritedLinkLines.get(e)??0)}outputPathBindings=new Map;pendingOutputOps=new Set;diskOutputs=new Map;terminalEmitClaims=new Set;monitorSockets=new Map;streamedMonitorStops=new Map;mcpCallProgress=new WeakMap;remoteSessionLogs=new Map;reportedBashTaskDeliveries=new Set;bashTaskDeliveryOutcomes=new Map;bashTaskSnapshots=new Map;bashTaskGetCounts=new Map;lastPressureReapAt=0;bashTaskGetsByResponse=new Map;withdrawShellNotification=void 0;killAgentMonitors=void 0;autoReactHumanTurnObserver=void 0;frameLiveUserStopObserver=void 0;liveDocUserStopObserver=void 0;autoReactDeliberateStopObserver=void 0;artifactRoomStopObserver=void 0;artifactPresenceStopObserver=void 0;agentIdleWindowTimers=new Map;agentBackgroundSignalResolvers=new Map;resumesInFlight=new Set;canUseToolNarrowings=new Map;taskEvicted=Me();agentStrandedMessages=Me();agentSpawned=Me();agentSettled=Me();agentResumeFailed=Me();cascadeStopExemptions=new Set;cascadeSpared=Me();constructor(){this.taskEvicted.subscribe((e)=>{this.remoteSessionLogs.delete(e)})}rememberBashTaskSnapshot(e,n,r){if(this.bashTaskSnapshots.delete(e),this.bashTaskSnapshots.set(e,{snapshot:n,agentId:r,fetched:!1}),this.bashTaskSnapshots.size>Wh){let s=this.bashTaskSnapshots.keys().next().value;if(s!==void 0)this.bashTaskSnapshots.delete(s)}}countBashTaskGet(e){let n=(this.bashTaskGetCounts.get(e)??0)+1;if(this.bashTaskGetCounts.delete(e),this.bashTaskGetCounts.set(e,n),this.bashTaskGetCounts.size>Wh){let r=this.bashTaskGetCounts.keys().next().value;if(r!==void 0)this.bashTaskGetCounts.delete(r)}return n}countBashTaskGetInResponse(e,n,r){let s=this.bashTaskGetsByResponse.get(e)??new Map;if(this.bashTaskGetsByResponse.delete(e),this.bashTaskGetsByResponse.set(e,s),this.bashTaskGetsByResponse.size>jO){let b=this.bashTaskGetsByResponse.keys().next().value;if(b!==void 0)this.bashTaskGetsByResponse.delete(b)}let g=s.get(n),h=g?.statusKey===r?g.count+1:1;return s.set(n,{count:h,statusKey:r}),h}markBashTaskSnapshotFetched(e){let n=this.bashTaskSnapshots.get(e);if(n)this.bashTaskSnapshots.set(e,{...n,fetched:!0})}reset(){this.outputDir=void 0,this.linkedOutputs.clear(),this.outputPathBindings.clear();for(let e of this.diskOutputs.values())e.cancel();this.diskOutputs.clear(),this.terminalEmitClaims.clear(),this.remoteSessionLogs.clear(),this.bashTaskSnapshots.clear(),this.bashTaskGetCounts.clear(),this.lastPressureReapAt=0,this.bashTaskGetsByResponse.clear(),this.reportedBashTaskDeliveries.clear(),this.bashTaskDeliveryOutcomes.clear()}async drainDiskOutputs(){for(let e of this.diskOutputs.values())e.cancel();while(this.pendingOutputOps.size>0)await Promise.allSettled([...this.pendingOutputOps]);this.diskOutputs.clear()}}",
+          "variable": false
+        },
+        {
+          "file": "chunk-nankzm0s.js",
+          "name": "zO",
+          "start": 253506,
+          "end": 253526,
+          "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+          "moduleLength": 706979,
+          "sha256": "f2d3154cc477ecf4950b1211742bf1e97b7def26fe381e079ce11d2659525cc5",
+          "source": "zO=new V(()=>new zh)",
+          "variable": true
+        }
+      ],
+      "bindings": {
+        "process": {
+          "port": "process"
+        },
+        "Me": {
+          "file": "chunk-4s38z9x2.js",
+          "name": "Me"
+        },
+        "V": {
+          "file": "chunk-bn3p37gv.js",
+          "name": "V"
+        }
+      },
+      "initializers": []
+    },
+    {
+      "file": "chunk-eske5nfz.js",
+      "moduleSha256": "0ab96d3fc2e14f26d13bba42a3f5583f805c2f100c56befce938b7b723d405a5",
+      "moduleLength": 7043,
+      "rows": [
+        {
+          "file": "chunk-eske5nfz.js",
+          "name": "tc",
+          "start": 1270,
+          "end": 1406,
+          "moduleSha256": "0ab96d3fc2e14f26d13bba42a3f5583f805c2f100c56befce938b7b723d405a5",
+          "moduleLength": 7043,
+          "sha256": "9f3d03dd5fdcf11ef7ff90a5ff06fd05d32ff150c30bce0646a76129b7cd5ba1",
+          "source": "function tc(t,n){if(n<=0)return\"\";if(t.length<=n)return t;let e=t.slice(-n),r=e.charCodeAt(0);return f(r>=56320&&r<=57343?e.slice(1):e)}",
+          "variable": false
+        },
+        {
+          "file": "chunk-eske5nfz.js",
+          "name": "f",
+          "start": 1541,
+          "end": 1640,
+          "moduleSha256": "0ab96d3fc2e14f26d13bba42a3f5583f805c2f100c56befce938b7b723d405a5",
+          "moduleLength": 7043,
+          "sha256": "6425fad31006e0e99360a637c4f38d361600a8129aa32a1a854715122a10702c",
+          "source": "function f(t){if(typeof Buffer<\"u\")return Buffer.from(t,\"utf16le\").toString(\"utf16le\");return x(t)}",
+          "variable": false
+        },
+        {
+          "file": "chunk-eske5nfz.js",
+          "name": "x",
+          "start": 1640,
+          "end": 1845,
+          "moduleSha256": "0ab96d3fc2e14f26d13bba42a3f5583f805c2f100c56befce938b7b723d405a5",
+          "moduleLength": 7043,
+          "sha256": "d7ccce29523920f445390e8ce49693e3b19c49ef17df9435da791459ea9cbf34",
+          "source": "function x(t){let e=[];for(let r=0;r<t.length;r+=8192){let i=Math.min(r+8192,t.length),o=new Uint16Array(i-r);for(let u=r;u<i;u++)o[u-r]=t.charCodeAt(u);e.push(String.fromCharCode(...o))}return e.join(\"\")}",
+          "variable": false
+        }
+      ],
+      "bindings": {},
+      "initializers": []
+    },
+    {
+      "file": "chunk-brnn4zwp.js",
+      "moduleSha256": "6fc81e7fe2a8a0809d0901a28e8bd5487b116b245931c3ac30fcf9b6655400c7",
+      "moduleLength": 5165,
+      "rows": [
+        {
+          "file": "chunk-brnn4zwp.js",
+          "name": "N",
+          "start": 830,
+          "end": 872,
+          "moduleSha256": "6fc81e7fe2a8a0809d0901a28e8bd5487b116b245931c3ac30fcf9b6655400c7",
+          "moduleLength": 5165,
+          "sha256": "fc64be771d88469b3b720b95b7b99ee4d907ddeb49a233a646ecab7c3817e32d",
+          "source": "N=/^[+-]?(\\d+(\\.\\d*)?|\\.\\d+)[eE][+-]?\\d+$/",
+          "variable": true
+        },
+        {
+          "file": "chunk-brnn4zwp.js",
+          "name": "E",
+          "start": 873,
+          "end": 927,
+          "moduleSha256": "6fc81e7fe2a8a0809d0901a28e8bd5487b116b245931c3ac30fcf9b6655400c7",
+          "moduleLength": 5165,
+          "sha256": "fd2ec11e9c74067bee439414a1810394cb842da2c20408bd04e19a1fe8366a35",
+          "source": "E=/^[+-]?\\d{1,3}([_,\\u00A0\\u202F ])\\d{3}(?:\\1\\d{3})*$/",
+          "variable": true
+        },
+        {
+          "file": "chunk-brnn4zwp.js",
+          "name": "c",
+          "start": 928,
+          "end": 950,
+          "moduleSha256": "6fc81e7fe2a8a0809d0901a28e8bd5487b116b245931c3ac30fcf9b6655400c7",
+          "moduleLength": 5165,
+          "sha256": "33c84d7671033ca797af658d1febbce1f25f511ec97efcb216ae120ddd2f3bd9",
+          "source": "c=/[_,\\u00A0\\u202F ]/g",
+          "variable": true
+        },
+        {
+          "file": "chunk-brnn4zwp.js",
+          "name": "m",
+          "start": 951,
+          "end": 1101,
+          "moduleSha256": "6fc81e7fe2a8a0809d0901a28e8bd5487b116b245931c3ac30fcf9b6655400c7",
+          "moduleLength": 5165,
+          "sha256": "9ca6c76819e310d839a98f586070d670ba09defdbb105da307c51e32cfccaff1",
+          "source": "function m(e){if(e.length<=32){if(N.test(e)){let n=Number(e);return Number.isInteger(n)?n:NaN}if(E.test(e))return parseInt(e.replace(c,\"\"),10)}return}",
+          "variable": false
+        },
+        {
+          "file": "chunk-brnn4zwp.js",
+          "name": "Oc",
+          "start": 1101,
+          "end": 1167,
+          "moduleSha256": "6fc81e7fe2a8a0809d0901a28e8bd5487b116b245931c3ac30fcf9b6655400c7",
+          "moduleLength": 5165,
+          "sha256": "3419b85dfa0d7e56954b0204ffca9dc7a7cbdb674d791b94d6a810d1e1da8ee3",
+          "source": "function Oc(e){let n=String(e).trim();return m(n)??parseInt(n,10)}",
+          "variable": false
+        }
+      ],
+      "bindings": {},
+      "initializers": []
+    },
+    {
+      "file": "chunk-t2h010j6.js",
+      "moduleSha256": "20859e60cf480a68190d1bfbe7996a12750a3c1aedb884b55cdd372854df4884",
+      "moduleLength": 28572,
+      "rows": [
+        {
+          "file": "chunk-t2h010j6.js",
+          "name": "Me",
+          "start": 13972,
+          "end": 13981,
+          "moduleSha256": "20859e60cf480a68190d1bfbe7996a12750a3c1aedb884b55cdd372854df4884",
+          "moduleLength": 28572,
+          "sha256": "2013a8c557d3979d45f0681f364e2028e7f6cb3070f649183375906a40adc10f",
+          "source": "Me=120000",
+          "variable": true
+        },
+        {
+          "file": "chunk-t2h010j6.js",
+          "name": "Ne",
+          "start": 13982,
+          "end": 13991,
+          "moduleSha256": "20859e60cf480a68190d1bfbe7996a12750a3c1aedb884b55cdd372854df4884",
+          "moduleLength": 28572,
+          "sha256": "0fbaa85cf74a038c7773b720c7ed6be566d96dc5a3de4fe9ca8ac9f939ef61a2",
+          "source": "Ne=600000",
+          "variable": true
+        },
+        {
+          "file": "chunk-t2h010j6.js",
+          "name": "cSe",
+          "start": 13992,
+          "end": 14107,
+          "moduleSha256": "20859e60cf480a68190d1bfbe7996a12750a3c1aedb884b55cdd372854df4884",
+          "moduleLength": 28572,
+          "sha256": "0cff9fbba68a2f82552e3479474c8a26e9a9b50760263aa83ccf6261cc32620b",
+          "source": "function cSe(e=process.env){let n=e.BASH_DEFAULT_TIMEOUT_MS;if(n){let r=Oc(n);if(!isNaN(r)&&r>0)return r}return Me}",
+          "variable": false
+        },
+        {
+          "file": "chunk-t2h010j6.js",
+          "name": "dSe",
+          "start": 14107,
+          "end": 14252,
+          "moduleSha256": "20859e60cf480a68190d1bfbe7996a12750a3c1aedb884b55cdd372854df4884",
+          "moduleLength": 28572,
+          "sha256": "125b1218fb4b61be7112fd092713e09a62936e759f6aff0e0362a2603c17b340",
+          "source": "function dSe(e=process.env){let n=e.BASH_MAX_TIMEOUT_MS;if(n){let r=Oc(n);if(!isNaN(r)&&r>0)return Math.max(r,cSe(e))}return Math.max(Ne,cSe(e))}",
+          "variable": false
+        },
+        {
+          "file": "chunk-t2h010j6.js",
+          "name": "tYe",
+          "start": 14256,
+          "end": 14267,
+          "moduleSha256": "20859e60cf480a68190d1bfbe7996a12750a3c1aedb884b55cdd372854df4884",
+          "moduleLength": 28572,
+          "sha256": "ca77a9f199732e63dfebce6acaaaf8aca89ce0c0fab56b2f671ea89ca82e4c21",
+          "source": "tYe=1800000",
+          "variable": true
+        },
+        {
+          "file": "chunk-t2h010j6.js",
+          "name": "Cre",
+          "start": 14268,
+          "end": 14335,
+          "moduleSha256": "20859e60cf480a68190d1bfbe7996a12750a3c1aedb884b55cdd372854df4884",
+          "moduleLength": 28572,
+          "sha256": "ce3fdeeedfa84b0e070e4513cccc3c8df65e8a8cfe00ba17e3d50a61bec4c707",
+          "source": "function Cre(){return Math.min(Math.max(7200000,dSe()),2147483647)}",
+          "variable": false
+        },
+        {
+          "file": "chunk-t2h010j6.js",
+          "name": "tUo",
+          "start": 14335,
+          "end": 14379,
+          "moduleSha256": "20859e60cf480a68190d1bfbe7996a12750a3c1aedb884b55cdd372854df4884",
+          "moduleLength": 28572,
+          "sha256": "9f6e5b7eb363f7027677ef7fc31dfc3bbb6753dca2c20d836fa88bb5a80ff8ea",
+          "source": "function tUo(e){return Math.max(tYe,cSe(e))}",
+          "variable": false
+        }
+      ],
+      "bindings": {
+        "process": {
+          "port": "process"
+        },
+        "Oc": {
+          "file": "chunk-brnn4zwp.js",
+          "name": "Oc"
+        }
+      },
+      "initializers": []
+    },
+    {
+      "file": "chunk-q80zaav8.js",
+      "moduleSha256": "f9503296591b825624caf5932b9c5973cde96b859259266a506b616dca5cd41e",
+      "moduleLength": 67079,
+      "rows": [
+        {
+          "file": "chunk-q80zaav8.js",
+          "name": "wr",
+          "start": 46337,
+          "end": 46362,
+          "moduleSha256": "f9503296591b825624caf5932b9c5973cde96b859259266a506b616dca5cd41e",
+          "moduleLength": 67079,
+          "sha256": "deee931ee5ab2c558ffc6ffc6e7a938c1e9c7c0cea66132bedcfe7d3db248f80",
+          "source": "wr={[Symbol.dispose](){}}",
+          "variable": true
+        },
+        {
+          "file": "chunk-q80zaav8.js",
+          "name": "Rr",
+          "start": 46363,
+          "end": 46387,
+          "moduleSha256": "f9503296591b825624caf5932b9c5973cde96b859259266a506b616dca5cd41e",
+          "moduleLength": 67079,
+          "sha256": "930d0ad79dbd512fe00567c895f90de0d1a7a5cea37e519c882a7731699a12f7",
+          "source": "function Rr(){return wr}",
+          "variable": false
+        },
+        {
+          "file": "chunk-q80zaav8.js",
+          "name": "ng",
+          "start": 46391,
+          "end": 46396,
+          "moduleSha256": "f9503296591b825624caf5932b9c5973cde96b859259266a506b616dca5cd41e",
+          "moduleLength": 67079,
+          "sha256": "e42e10badba2eb5fb0f5fcd885465c38f438ad11d3086fca0fd71c9162223670",
+          "source": "ng=Rr",
+          "variable": true
+        },
+        {
+          "file": "chunk-q80zaav8.js",
+          "name": "_",
+          "start": 46397,
+          "end": 46481,
+          "moduleSha256": "f9503296591b825624caf5932b9c5973cde96b859259266a506b616dca5cd41e",
+          "moduleLength": 67079,
+          "sha256": "ca5ac7454a94324e4d26454cf5387e3b8f94be3d19d5a7c1f2cacac02549891d",
+          "source": "function _(e,n,r){using s=ng`JSON.stringify(${Se(e)})`;return JSON.stringify(e,n,r)}",
+          "variable": false
+        },
+        {
+          "file": "chunk-q80zaav8.js",
+          "name": "Se",
+          "start": 46981,
+          "end": 47034,
+          "moduleSha256": "f9503296591b825624caf5932b9c5973cde96b859259266a506b616dca5cd41e",
+          "moduleLength": 67079,
+          "sha256": "b50b854105c6389487436c6944cae2b5adc6dc87dc2d83a132913fa7c7081f0d",
+          "source": "function Se(e){return typeof e===\"string\"?e.length:e}",
+          "variable": false
+        }
+      ],
+      "bindings": {},
+      "initializers": []
+    },
+    {
+      "file": "chunk-09m4fzsj.js",
+      "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+      "moduleLength": 950788,
+      "rows": [
+        {
+          "file": "chunk-09m4fzsj.js",
+          "name": "Vdn",
+          "start": 824226,
+          "end": 824280,
+          "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+          "moduleLength": 950788,
+          "sha256": "72838cb8243cb86393b445deb9a51b9115dd03eacf5385abf08f449ab6495203",
+          "source": "function Vdn(){return!xk().backgroundDeadlineDisabled}",
+          "variable": false
+        },
+        {
+          "file": "chunk-09m4fzsj.js",
+          "name": "CLr",
+          "start": 824280,
+          "end": 824336,
+          "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+          "moduleLength": 950788,
+          "sha256": "e56793db00c87db307976b3cb4773ee632abd7a9be619729314446140b9fd718",
+          "source": "function CLr(){return Vdn()&&k(\"tengu_cosmic_shore\",!0)}",
+          "variable": false
+        },
+        {
+          "file": "chunk-09m4fzsj.js",
+          "name": "Nqn",
+          "start": 824336,
+          "end": 824379,
+          "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+          "moduleLength": 950788,
+          "sha256": "d10452c8e3f1d8c31cae024cba7172221554f11e10b73e50e56989c3f4b76edd",
+          "source": "function Nqn(e){return CLr()?ALr(e):void 0}",
+          "variable": false
+        },
+        {
+          "file": "chunk-09m4fzsj.js",
+          "name": "ALr",
+          "start": 824379,
+          "end": 824427,
+          "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+          "moduleLength": 950788,
+          "sha256": "5de6e75e706d2a23d7d532a2cbc90dae445a447b5d0f096ecc596e09e9558a99",
+          "source": "function ALr(e){return Math.min(e??tUo(),Cre())}",
+          "variable": false
+        }
+      ],
+      "bindings": {
+        "xk": {
+          "port": "backgroundPolicy",
+          "identity": "chunk-f4hr5xjf.js:xk"
+        },
+        "k": {
+          "port": "featureValue",
+          "identity": "chunk-nankzm0s.js:k"
+        },
+        "tUo": {
+          "file": "chunk-t2h010j6.js",
+          "name": "tUo"
+        },
+        "Cre": {
+          "file": "chunk-t2h010j6.js",
+          "name": "Cre"
+        }
+      },
+      "initializers": []
+    },
+    {
+      "file": "chunk-m59srz4k.js",
+      "moduleSha256": "efb40170e4252963a73cf62c28f20ad76a04090842b663f47dc127ceb1387f94",
+      "moduleLength": 15347,
+      "rows": [
+        {
+          "file": "chunk-m59srz4k.js",
+          "name": "Jt",
+          "start": 9076,
+          "end": 9776,
+          "moduleSha256": "efb40170e4252963a73cf62c28f20ad76a04090842b663f47dc127ceb1387f94",
+          "moduleLength": 15347,
+          "sha256": "200010bdeb4998a48a947f3c8a394ee77baf0a9928c4d541f3d31a3f7e4ad70a",
+          "source": "function Jt(e,t){if(e<60000){if(e===0)return\"0s\";if(e<1)return`${(e/1000).toFixed(1)}s`;return`${Math.floor(e/1000).toString()}s`}let r=Math.floor(e/86400000),n=Math.floor(e%86400000/3600000),s=Math.floor(e%3600000/60000),o=Math.round(e%60000/1000);if(o===60)o=0,s++;if(s===60)s=0,n++;if(n===24)n=0,r++;let c=t?.hideTrailingZeros;if(t?.mostSignificantOnly){if(r>0)return`${r}d`;if(n>0)return`${n}h`;if(s>0)return`${s}m`;return`${o}s`}if(r>0){if(c&&n===0&&s===0)return`${r}d`;if(c&&s===0)return`${r}d ${n}h`;return`${r}d ${n}h ${s}m`}if(n>0){if(c&&s===0&&o===0)return`${n}h`;if(c&&o===0)return`${n}h ${s}m`;return`${n}h ${s}m ${o}s`}if(s>0){if(c&&o===0)return`${s}m`;return`${s}m ${o}s`}return`${o}s`}",
+          "variable": false
+        }
+      ],
+      "bindings": {},
+      "initializers": []
+    },
+    {
+      "file": "chunk-y1ndyy9p.js",
+      "moduleSha256": "5cbcdae6d0cb9e7cd6271f2375e79d7c7937b664e6786c07cdd2ec6ae569b30f",
+      "moduleLength": 1858,
+      "rows": [
+        {
+          "file": "chunk-y1ndyy9p.js",
+          "name": "yi",
+          "start": 709,
+          "end": 775,
+          "moduleSha256": "5cbcdae6d0cb9e7cd6271f2375e79d7c7937b664e6786c07cdd2ec6ae569b30f",
+          "moduleLength": 1858,
+          "sha256": "c1264e4bbd4574b112a6c46d8562b63cacbd135b45d261a53648b17a6bee6ce6",
+          "source": "function yi(e){return e===\"completed\"||e===\"failed\"||e===\"killed\"}",
+          "variable": false
+        }
+      ],
+      "bindings": {},
+      "initializers": []
+    },
+    {
+      "file": "chunk-w7hy7pqe.js",
+      "moduleSha256": "0058040a5a3a46cb306e16506569c2817deb3e76b00a790da4273cedf111822a",
+      "moduleLength": 44325,
+      "rows": [
+        {
+          "file": "chunk-w7hy7pqe.js",
+          "name": "tx",
+          "start": 33921,
+          "end": 33929,
+          "moduleSha256": "0058040a5a3a46cb306e16506569c2817deb3e76b00a790da4273cedf111822a",
+          "moduleLength": 44325,
+          "sha256": "86dbfb75f9cef9e4152435b61600cbe877a09f4fd94525c9e6c506aafa548b60",
+          "source": "tx=30000",
+          "variable": true
+        },
+        {
+          "file": "chunk-w7hy7pqe.js",
+          "name": "kn",
+          "start": 39565,
+          "end": 39653,
+          "moduleSha256": "0058040a5a3a46cb306e16506569c2817deb3e76b00a790da4273cedf111822a",
+          "moduleLength": 44325,
+          "sha256": "220f12534cb445c146b52f376406d438d6bc82b95add40028782080074b6d794",
+          "source": "function kn(e){return typeof e===\"object\"&&e!==null&&\"type\"in e&&e.type===\"local_agent\"}",
+          "variable": false
+        },
+        {
+          "file": "chunk-w7hy7pqe.js",
+          "name": "ak",
+          "start": 40119,
+          "end": 40169,
+          "moduleSha256": "0058040a5a3a46cb306e16506569c2817deb3e76b00a790da4273cedf111822a",
+          "moduleLength": 44325,
+          "sha256": "7e14ad66f491e5e3f522fee0b7d07fa4bf24a7384e3b856e71d302cf0c033e49",
+          "source": "function ak(e){return e.keepaliveReasons??new Set}",
+          "variable": false
+        },
+        {
+          "file": "chunk-w7hy7pqe.js",
+          "name": "OP",
+          "start": 40169,
+          "end": 40305,
+          "moduleSha256": "0058040a5a3a46cb306e16506569c2817deb3e76b00a790da4273cedf111822a",
+          "moduleLength": 44325,
+          "sha256": "f2381db41d76899e605ac3963412a6cd1a33e2e9b4f7f900e49c2e97547d23fd",
+          "source": "function OP(e,n,r){if(!e)return;r.update(e,(s)=>{if(!kn(s)||ak(s).has(n))return s;return{...s,keepaliveReasons:new Set(ak(s)).add(n)}})}",
+          "variable": false
+        },
+        {
+          "file": "chunk-w7hy7pqe.js",
+          "name": "nx",
+          "start": 40305,
+          "end": 40553,
+          "moduleSha256": "0058040a5a3a46cb306e16506569c2817deb3e76b00a790da4273cedf111822a",
+          "moduleLength": 44325,
+          "sha256": "46fa1a4b81ee55ac9fef609a495f2dfa1ad4eb985d9731c58d7bbe6e022a6378",
+          "source": "function nx(e,n,r){if(!e)return;r.update(e,(s)=>{if(!kn(s)||!ak(s).has(n))return s;let o=new Set(ak(s));o.delete(n);let i=o.size===0&&yi(s.status)&&!s.retain;return{...s,keepaliveReasons:o,...i&&s.evictAfter===void 0&&{evictAfter:Date.now()+tx}}})}",
+          "variable": false
+        }
+      ],
+      "bindings": {
+        "yi": {
+          "file": "chunk-y1ndyy9p.js",
+          "name": "yi"
+        }
+      },
+      "initializers": []
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "moduleLength": 4409957,
+      "rows": [
+        {
+          "file": "chunk-mphp7acd.js",
+          "name": "z3",
+          "start": 170260,
+          "end": 170394,
+          "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+          "moduleLength": 4409957,
+          "sha256": "e081c3c4d84885646e169846bf85d0eee7a049cae2d0768a8fa49cca54c78778",
+          "source": "z3={memory_pressure:\"stopped because the system is running low on memory\",deadline:\"stopped after reaching its background time limit\"}",
+          "variable": true
+        },
+        {
+          "file": "chunk-mphp7acd.js",
+          "name": "V3",
+          "start": 170395,
+          "end": 171216,
+          "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+          "moduleLength": 4409957,
+          "sha256": "91892a529aa5e45085606c652cdf943dcbd917ec0d3faa6780ddd75e9466d174",
+          "source": "V3={memory_pressure:\"This is not a failure of the command. Claude Code stopped it because the system was critically low on memory while the session was idle, which says nothing about the command or its own memory use, so there is nothing in it to debug. Do not start it again on your own, even if the work seems to need it: memory may still be short. Report what was stopped and why, and start it again only when asked. The user can turn this behavior off by starting Claude Code with CLAUDE_CODE_DISABLE_BG_SHELL_PRESSURE_REAP=1 in its environment; setting it from a shell command has no effect.\",deadline:\"If the work in progress still needs it, start it again with `run_in_background` and a longer `timeout`. If it already had the longest `timeout` allowed, do not restart it. Either way, report that it was stopped.\"}",
+          "variable": true
+        },
+        {
+          "file": "chunk-mphp7acd.js",
+          "name": "SXe",
+          "start": 171221,
+          "end": 171230,
+          "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+          "moduleLength": 4409957,
+          "sha256": "0bb0de8ca56813d4ca02f868c9f1948fa0780b4b000295b09ddcbdb94db916d2",
+          "source": "SXe=12000",
+          "variable": true
+        },
+        {
+          "file": "chunk-mphp7acd.js",
+          "name": "wXe",
+          "start": 172397,
+          "end": 172506,
+          "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+          "moduleLength": 4409957,
+          "sha256": "80ab8603edd762a53f2223e12a5aaf530cd0cbe172e206dc2f8cca3b96f26653",
+          "source": "wXe=\"between your tool calls if you are still working, or by starting a new turn if you have already replied\"",
+          "variable": true
+        },
+        {
+          "file": "chunk-mphp7acd.js",
+          "name": "T_e",
+          "start": 172932,
+          "end": 173437,
+          "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+          "moduleLength": 4409957,
+          "sha256": "a5ea53613476deb8bc537df08af0600a6a949d6a5cf46ed59bf929990cbef1e7",
+          "source": "function T_e(){return`If you still need its result and have other work, keep working \\u2014 it reaches you between your tool calls if it exits in time; if waiting for it is all that is left, wait with one foreground shell command that blocks until the output file shows what you need, rather than checking on it repeatedly. Next time, run a command you must wait on in the foreground (with a timeout of up to ${Math.floor(dSe()/60000)} minutes) and keep the background for work you can start and forget.`}",
+          "variable": false
+        },
+        {
+          "file": "chunk-mphp7acd.js",
+          "name": "k2n",
+          "start": 173714,
+          "end": 174368,
+          "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+          "moduleLength": 4409957,
+          "sha256": "9200cf0afd2c25bc6595c9eb53d6d3314b832ebd0f39a9248119f8c74e40d16f",
+          "source": "function k2n(e,n,{backgroundedByUser:r=!1,ending:s}={}){let g=s===\"final_response\"?T_e():s===\"session\"?`This session takes no further input, though: the command is stopped when your turn ends, so its result reaches you only while you are still working. ${T_e()}`:r?\"Its result is delivered to you automatically when it finishes; carry on without waiting for it.\":`When it finishes, its result is delivered to you automatically \\u2014 ${wXe} \\u2014 so there is no need to check whether it is done or to sleep; if that result is all you are waiting for, end your turn.`,h={resultType:\"task\",taskId:e,status:\"working\",statusMessage:`${n} ${g}`};return _(h)}",
+          "variable": false
+        },
+        {
+          "file": "chunk-mphp7acd.js",
+          "name": "J3",
+          "start": 174368,
+          "end": 174416,
+          "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+          "moduleLength": 4409957,
+          "sha256": "8e07a699ad951d370de4927cb211429373c02d6bfdc038f340bceab4cc44574f",
+          "source": "function J3(e){return new Date(e).toISOString()}",
+          "variable": false
+        },
+        {
+          "file": "chunk-mphp7acd.js",
+          "name": "Xkn",
+          "start": 174416,
+          "end": 174602,
+          "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+          "moduleLength": 4409957,
+          "sha256": "0000956dd2f503e486beea49a75edeb74be896193a863c727969bb2b65398526",
+          "source": "function Xkn({content:e,omittedBytes:n},r){let s=tc(e,SXe),g=n>0||s.length<e.length,h=s.replace(/^\\n+/,\"\").trimEnd();return g?`[\\u2026 earlier output omitted; full output: ${r}]\n${h}`:h}",
+          "variable": false
+        },
+        {
+          "file": "chunk-mphp7acd.js",
+          "name": "cN",
+          "start": 174602,
+          "end": 175173,
+          "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+          "moduleLength": 4409957,
+          "sha256": "6d3cc5ff88743b56762f04a3a3d127effc351e90f8904bd58912b420072508fc",
+          "source": "function cN({taskId:e,outcome:n,exitCode:r,startTime:s,endTime:g,outputFile:h,output:b,stopCause:w}){let D={createdAt:J3(s),lastUpdatedAt:J3(g)};if(n===\"killed\"){let z=w?`${z3[w]}. ${V3[w]}`:\"stopped before it completed.\";return{taskId:e,status:\"cancelled\",statusMessage:`The command was ${z} Output so far: ${h}`,...D}}let j=b?Xkn(b,h):\"\";return{taskId:e,status:\"completed\",statusMessage:r===void 0?`Exited; the exit code is not known. Full output: ${h}`:`Exited with code ${r}. Full output: ${h}`,...D,result:{content:j?[{type:\"text\",text:j}]:[],isError:n===\"failed\"}}}",
+          "variable": false
+        },
+        {
+          "file": "chunk-mphp7acd.js",
+          "name": "Mi",
+          "start": 240715,
+          "end": 240763,
+          "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+          "moduleLength": 4409957,
+          "sha256": "fd0a7b1ad31b5721809fe6768afa54f04061a7a31b0099c3c292595bd6893c47",
+          "source": "Mi=(...e)=>hy().enqueuePendingNotification(...e)",
+          "variable": true
+        },
+        {
+          "file": "chunk-mphp7acd.js",
+          "name": "s6n",
+          "start": 880896,
+          "end": 882241,
+          "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+          "moduleLength": 4409957,
+          "sha256": "78dc7070583973b2950ce179c653680aaf3e0cfeffe2707389f4a2546d064eb5",
+          "source": "function s6n({backgroundTaskId:e,outputPath:n,backgroundedByUser:r,backgroundedToDeliverMessage:s,backgroundedByTurnAbort:g,timedOutAfterMs:h,reapedAtFinalResponse:b,readToolName:w}){let D=r?`Command was manually backgrounded by user with ID: ${e}. Output is being written to: ${n}.`:s?`Command was moved to the background (ID: ${e}) so that a message that arrived while it was running can reach you; it was not interrupted. Output is being written to: ${n}.`:h!==void 0?`Command did not complete within its ${Math.max(1,Math.round(h/1000))}s timeout and was moved to the background (ID: ${e}). Output is being written to: ${n}.`:`Command running in background with ID: ${e}. Output is being written to: ${n}.`,j=b?\"If it exits while you are still working you will be notified, but it is terminated when you give your final response and no notification can follow that \\u2014 so do not end your turn to wait for it; if you need its result, wait for it before giving your final response.\":r?void 0:\"You will be notified when it completes.\",K=(h!==void 0||r||s||g)&&!b?Nqn(void 0):void 0,he=K!==void 0?`If it is still running after ${Jt(K,{hideTrailingZeros:!0})} in the background, it will be stopped and you will be notified.`:void 0,_e=r?void 0:`To check interim output, use ${w} on that file path.`;return[D,j,he,_e].filter(Boolean).join(\" \")}",
+          "variable": false
+        },
+        {
+          "file": "chunk-mphp7acd.js",
+          "name": "Cmr",
+          "start": 3923827,
+          "end": 3924160,
+          "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+          "moduleLength": 4409957,
+          "sha256": "b6a5213fbecd7ea8f18c7cb66a3e3e5805d321815af6f8ec87bcc91639bc1ffe",
+          "source": "function Cmr(e,n,r){let s=n??Ge(),g=hy(),h=g.getCommandQueue().filter((b)=>b.mode===\"task-notification\"&&b.taskId===e&&b.agentId===s&&b.taskDelivery!==void 0);if(h.length===0)return;if(g.consume(h,{reason:\"delivered_as_tool_result\"}),n!==void 0)nx(n,`bash:${e}`,r);return()=>{if(n!==void 0)OP(n,`bash:${e}`,r);h.forEach((b)=>Mi(b))}}",
+          "variable": false
+        }
+      ],
+      "bindings": {
+        "tc": {
+          "file": "chunk-eske5nfz.js",
+          "name": "tc"
+        },
+        "dSe": {
+          "file": "chunk-t2h010j6.js",
+          "name": "dSe"
+        },
+        "_": {
+          "file": "chunk-q80zaav8.js",
+          "name": "_"
+        },
+        "Nqn": {
+          "file": "chunk-09m4fzsj.js",
+          "name": "Nqn"
+        },
+        "Jt": {
+          "file": "chunk-m59srz4k.js",
+          "name": "Jt"
+        },
+        "Ge": {
+          "port": "mainAgentId",
+          "identity": "chunk-bn3p37gv.js:Ge"
+        },
+        "hy": {
+          "port": "notificationQueue",
+          "identity": "chunk-mphp7acd.js:hy"
+        },
+        "nx": {
+          "file": "chunk-w7hy7pqe.js",
+          "name": "nx"
+        },
+        "OP": {
+          "file": "chunk-w7hy7pqe.js",
+          "name": "OP"
+        }
+      },
+      "initializers": []
+    },
+    {
+      "file": "chunk-c9me9cp7.js",
+      "moduleSha256": "db81856ee883c31a0be18c305014a0d82d3bd698a459223b9de754b934b084ae",
+      "moduleLength": 10331,
+      "rows": [
+        {
+          "file": "chunk-c9me9cp7.js",
+          "name": "P",
+          "start": 3714,
+          "end": 3869,
+          "moduleSha256": "db81856ee883c31a0be18c305014a0d82d3bd698a459223b9de754b934b084ae",
+          "moduleLength": 10331,
+          "sha256": "e0165a34780a88fe34268a00a97acdaace9a83c4b760613e669e99daf6ac0899",
+          "source": "class P extends Error{telemetryMessage;errorClass;constructor(n,e,t){super(n);this.name=\"TelemetrySafeError\",this.telemetryMessage=e??n,this.errorClass=t}}",
+          "variable": false
+        },
+        {
+          "file": "chunk-c9me9cp7.js",
+          "name": "E",
+          "start": 4814,
+          "end": 4913,
+          "moduleSha256": "db81856ee883c31a0be18c305014a0d82d3bd698a459223b9de754b934b084ae",
+          "moduleLength": 10331,
+          "sha256": "a84ab0a2488aed5689416393c679dde4e7f4b29aa980e121bd56b25ab3e7b5e4",
+          "source": "function E(n){if(n&&typeof n===\"object\"&&\"code\"in n&&typeof n.code===\"string\")return n.code;return}",
+          "variable": false
+        }
+      ],
+      "bindings": {},
+      "initializers": []
+    },
+    {
+      "file": "chunk-p54b66vv.js",
+      "moduleSha256": "f3a80925f5efacd866866a5b846b48529ccfea55417fd8a0088d7dbcce946849",
+      "moduleLength": 20850,
+      "rows": [
+        {
+          "file": "chunk-p54b66vv.js",
+          "name": "A",
+          "start": 2196,
+          "end": 2213,
+          "moduleSha256": "f3a80925f5efacd866866a5b846b48529ccfea55417fd8a0088d7dbcce946849",
+          "moduleLength": 20850,
+          "sha256": "f2cd2fa8831226d2d21fdebdafbc265b68f3ddd5aeae64480649d10d0ff478ce",
+          "source": "A=m.O_NOFOLLOW??0",
+          "variable": true
+        },
+        {
+          "file": "chunk-p54b66vv.js",
+          "name": "Cmt",
+          "start": 2225,
+          "end": 2239,
+          "moduleSha256": "f3a80925f5efacd866866a5b846b48529ccfea55417fd8a0088d7dbcce946849",
+          "moduleLength": 20850,
+          "sha256": "c03db4fc94a2e37e157baf194e05a49d2986a45db44d4d1217309743037caae4",
+          "source": "Cmt=5368709120",
+          "variable": true
+        },
+        {
+          "file": "chunk-p54b66vv.js",
+          "name": "wt",
+          "start": 17813,
+          "end": 17847,
+          "moduleSha256": "f3a80925f5efacd866866a5b846b48529ccfea55417fd8a0088d7dbcce946849",
+          "moduleLength": 20850,
+          "sha256": "0d1c6cb8a0d1368aaee73a14a3958f8990d42310ab4efac1a123356ada084c39",
+          "source": "wt=Symbol(\"taskOutputSwapRefused\")",
+          "variable": true
+        },
+        {
+          "file": "chunk-p54b66vv.js",
+          "name": "g",
+          "start": 17899,
+          "end": 18173,
+          "moduleSha256": "f3a80925f5efacd866866a5b846b48529ccfea55417fd8a0088d7dbcce946849",
+          "moduleLength": 20850,
+          "sha256": "901dd3cf8e36c407efc1bfe22e9ba3e6af28585063870066485aeccc604b0ed3",
+          "source": "function g(e,n,i){let s=`task output swap refused (${n}): ${e}`+(i===void 0?\"\":`. To recover: ${i}.`),r=Object.assign(new P(s,`task output swap refused (${n})`),{[wt]:!0});t(s,{level:\"error\"});let o=`${n}\\x00${e}`;if(!H.has(o)){if(H.size>=Rt)H.clear();H.add(o),d(r)}throw r}",
+          "variable": false
+        },
+        {
+          "file": "chunk-p54b66vv.js",
+          "name": "H",
+          "start": 18177,
+          "end": 18186,
+          "moduleSha256": "f3a80925f5efacd866866a5b846b48529ccfea55417fd8a0088d7dbcce946849",
+          "moduleLength": 20850,
+          "sha256": "e1965a642033e04a04f9bdf72342e35d4ace69a8b2f4193c5392e71c3d60e695",
+          "source": "H=new Set",
+          "variable": true
+        },
+        {
+          "file": "chunk-p54b66vv.js",
+          "name": "Rt",
+          "start": 18187,
+          "end": 18193,
+          "moduleSha256": "f3a80925f5efacd866866a5b846b48529ccfea55417fd8a0088d7dbcce946849",
+          "moduleLength": 20850,
+          "sha256": "9bce69d60ef8ac23388f2cd7e9bbaeb5a81e61314666003f7cfd1d93a1ddc8c9",
+          "source": "Rt=256",
+          "variable": true
+        },
+        {
+          "file": "chunk-p54b66vv.js",
+          "name": "jgn",
+          "start": 18194,
+          "end": 18884,
+          "moduleSha256": "f3a80925f5efacd866866a5b846b48529ccfea55417fd8a0088d7dbcce946849",
+          "moduleLength": 20850,
+          "sha256": "e7c6b2d4bd22e7cf87ba61c89a6fcf7c62bdebd3b276dace0841ad713b7f39c7",
+          "source": "async function jgn(e,n){let i;try{i=await R(e)}catch(u){let a=E(u);if(a===\"ELOOP\"||a===\"ENOTDIR\")g(e,`lstat refused a swapped path (${a})`);throw u}if(!i.isFile()||i.nlink!==1)g(e,\"not a regular nlink-1 file\");let s=!1,r=i.size>n,o;try{o=await X(e,s?r?\"r+\":\"r\":(r?m.O_RDWR:m.O_RDONLY)|A|(m.O_NONBLOCK??0))}catch(u){let a=E(u);if(a===\"ELOOP\"||a===\"EISDIR\"||a===\"ENOTDIR\"||a===\"ENXIO\"||a===\"EOPNOTSUPP\"||a===\"ENOTSUP\")g(e,`open refused a swapped path (${a})`);throw u}try{let u=await o.stat();if(!u.isFile()||u.dev!==i.dev||u.ino!==i.ino||u.nlink!==1)g(e,\"file changed between lstat and open\");if(r&&u.size>n)await o.truncate(n);return{handle:o,size:u.size}}catch(u){throw await o.close(),u}}",
+          "variable": false
+        },
+        {
+          "file": "chunk-p54b66vv.js",
+          "name": "hUe",
+          "start": 18884,
+          "end": 19320,
+          "moduleSha256": "f3a80925f5efacd866866a5b846b48529ccfea55417fd8a0088d7dbcce946849",
+          "moduleLength": 20850,
+          "sha256": "2c576055883043e1c2b7673a764057fc225cd11203a74143ac8ef2211b13efc7",
+          "source": "async function hUe(e,n){let i;try{i=await jgn(Sp(e),Cmt)}catch(o){if(E(o)===\"ENOENT\")return{content:\"\",omittedBytes:0};throw o}let{handle:s}=i,r=Math.min(i.size,Cmt);try{let o=Math.max(0,r-n),u=Buffer.allocUnsafe(r-o),a=0;while(a<u.length){let{bytesRead:c}=await s.read(u,a,u.length-a,o+a);if(c===0)break;a+=c}let f=0;while(o>0&&f<a&&(u[f]&192)===128)f++;return{content:u.toString(\"utf8\",f,a),omittedBytes:o+f}}finally{await s.close()}}",
+          "variable": false
+        }
+      ],
+      "bindings": {
+        "R": {
+          "port": "lstat"
+        },
+        "E": {
+          "file": "chunk-c9me9cp7.js",
+          "name": "E"
+        },
+        "P": {
+          "file": "chunk-c9me9cp7.js",
+          "name": "P"
+        },
+        "t": {
+          "port": "debug",
+          "identity": "chunk-q80zaav8.js:t"
+        },
+        "d": {
+          "port": "logError",
+          "identity": "chunk-amhtwhch.js:d"
+        },
+        "X": {
+          "port": "open"
+        },
+        "m": {
+          "port": "fsConstants"
+        },
+        "Sp": {
+          "port": "outputPath",
+          "identity": "chunk-p54b66vv.js:Sp"
+        }
+      },
+      "initializers": []
+    },
+    {
+      "file": "chunk-bm2srtv9.js",
+      "moduleSha256": "ec7f5e436dcbbc6099cbf7cda9c77b965c630388bf93e8bc12187d9c90abb602",
+      "moduleLength": 1148,
+      "rows": [
+        {
+          "file": "chunk-bm2srtv9.js",
+          "name": "r3",
+          "start": 696,
+          "end": 884,
+          "moduleSha256": "ec7f5e436dcbbc6099cbf7cda9c77b965c630388bf93e8bc12187d9c90abb602",
+          "moduleLength": 1148,
+          "sha256": "2de50dde8a927657f7c1c606c86bac8e1e77680ccdcb9e11260082a417caa196",
+          "source": "function r3(n,s,r){let e=!1,i;return s.update(n,(t)=>{if(i=t,t.notified)return t;if(e=!0,r?.skipStampIfRunning&&t.status===\"running\")return t;return{...t,notified:!0}}),{claimed:e,task:i}}",
+          "variable": false
+        }
+      ],
+      "bindings": {},
+      "initializers": []
+    }
+  ],
+  "ports": [
+    {
+      "port": "backgroundPolicy",
+      "file": "chunk-f4hr5xjf.js",
+      "name": "xk",
+      "start": 1405,
+      "end": 1455,
+      "moduleSha256": "856b13c1d45e5b4329487c055c5242a8d21e56d9be504194be8ca5de90bbfdee",
+      "moduleLength": 1524,
+      "sha256": "8d3fc2c8c34fdb05242f9ecb69a16124e0b5518ce1d968b147c97a6bdd4aa385",
+      "source": "function xk(){return n.getStore()??s.of(U().host)}",
+      "variable": false
+    },
+    {
+      "port": "featureValue",
+      "file": "chunk-nankzm0s.js",
+      "name": "k",
+      "start": 499245,
+      "end": 499282,
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "moduleLength": 706979,
+      "sha256": "e8033436eedf5cf3582462f61d565185a549bf32f07c4169d8a8ec54026b4e6a",
+      "source": "function k(e,n){return Uo(e,n).value}",
+      "variable": false
+    },
+    {
+      "port": "debug",
+      "file": "chunk-q80zaav8.js",
+      "name": "t",
+      "start": 46026,
+      "end": 46071,
+      "moduleSha256": "f9503296591b825624caf5932b9c5973cde96b859259266a506b616dca5cd41e",
+      "moduleLength": 67079,
+      "sha256": "da9e0b5e590a43c6f7cf46f3cfcd93d97f399db1017ff8dae938bdbd15e13790",
+      "source": "function t(e,n={level:\"debug\"}){U().log(e,n)}",
+      "variable": false
+    },
+    {
+      "port": "logError",
+      "file": "chunk-amhtwhch.js",
+      "name": "d",
+      "start": 14780,
+      "end": 15243,
+      "moduleSha256": "5fb2fb2d3d66c7ec04ce0fac39ed9f665b410441ebae71d3f893920600949ecb",
+      "moduleLength": 19500,
+      "sha256": "9534213567783130a8ed63f0d81fdabb654a8fc557790510fdbd170a8df0805c",
+      "source": "function d(e){let r=Z(e);try{if(Le(process.env.CLAUDE_CODE_USE_BEDROCK)||Le(process.env.CLAUDE_CODE_USE_VERTEX)||Le(process.env.CLAUDE_CODE_USE_FOUNDRY)||Le(process.env.CLAUDE_CODE_USE_ANTHROPIC_AWS)||Le(process.env.CLAUDE_CODE_USE_ANTHROPIC_GOOGLE_CLOUD)||Le(process.env.CLAUDE_CODE_USE_MANTLE)||process.env.DISABLE_ERROR_REPORTING||At())return;let s={error:pEt(r),timestamp:new Date().toISOString()};JWe.remember(s),JWe.dispatch({type:\"error\",error:r})}catch{}}",
+      "variable": false
+    },
+    {
+      "port": "outputPath",
+      "file": "chunk-p54b66vv.js",
+      "name": "Sp",
+      "start": 2993,
+      "end": 3166,
+      "moduleSha256": "f3a80925f5efacd866866a5b846b48529ccfea55417fd8a0088d7dbcce946849",
+      "moduleLength": 20850,
+      "sha256": "958930db8c6e00f9453b265fa5b2543b03313db63b148310b450a0bf10e13bcb",
+      "source": "function Sp(e){if(Ut())throw Error(\"Task output has no file in a diskless session\");let n=rr().outputPathBindings.get(e);if(n!==void 0)return n;return b(Ot(),`${e}.output`)}",
+      "variable": false
+    },
+    {
+      "port": "mainAgentId",
+      "file": "chunk-bn3p37gv.js",
+      "name": "Ge",
+      "start": 72206,
+      "end": 72305,
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "moduleLength": 117054,
+      "sha256": "c8af730f9eb3bdadfa252772518cff3fba1e95222d0e2a3f9e726360f4ca1653",
+      "source": "function Ge(){let e=c()?.sessionId;if(e)return yo(e);let t=n();return t.identity.mainAgentId(t.id)}",
+      "variable": false
+    },
+    {
+      "port": "notificationQueue",
+      "file": "chunk-mphp7acd.js",
+      "name": "hy",
+      "start": 240082,
+      "end": 240115,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "moduleLength": 4409957,
+      "sha256": "c889119483f9de1927371655405b27e6eeb0fb9ff71af38fa7913f5c8ceca921",
+      "source": "function hy(){return tQe().queue}",
+      "variable": false
+    }
+  ],
+  "nativeSha256": "aa85d3ecc7f9ed35a423187b5042a944200af920c8bbdf85e2eadd07bcdddbc2"
+}

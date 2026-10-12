@@ -1,0 +1,320 @@
+{
+  "version": "2.1.287",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "rangeConvention": "UTF-16 end-exclusive",
+  "class": {
+    "file": "chunk-mphp7acd.js",
+    "start": 4209418,
+    "end": 4245962,
+    "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+    "sha256": "43250df71138ab01a14715f5349a5259cab4567e0cd7bf8ff42b2dc3b7348e8d",
+    "source": "class Wfn{store;currentSessionTag;currentSessionRelocatedCwd;currentSessionTitle;currentSessionAiTitle;currentSessionAgentName;currentSessionAgentColor;currentSessionLastPrompt;currentSessionLeafUuid;currentSessionLeafTs;currentSessionAgentSetting;currentSessionMode;currentSessionPermissionMode;currentSessionIsolationLatch;currentSessionDevModsFolder;currentSessionMemoryModeStamps=[];atisLatchStamp;currentSessionWorktree;resumedArtifactCommentMonitor;currentSessionPrNumber;currentSessionPrUrl;currentSessionPrRepository;currentSessionArtifactCount;resumedArtifactAutoReactLedger;currentSessionBridgeId;currentSessionBridgeSeq;currentSessionBridgeDialogKinds;currentSessionBridgeGroupingId;currentSessionBridgeNoBackfill;currentSessionBridgeOwnerAccountUuid;currentSessionBridgeOwnerOrganizationUuid;currentSessionHistorySuppressed;currentSessionPrecautionarySuppression;clearResilientPrecautionSids;scanUncertaintyHoldSids;knownTaintedSessionIds;sessionFile=null;setSessionFile(e){if(pun(this.store.writerHealth,this.sessionFile,e,void 0,e===null?Array.from(this.writeQueues.keys()):[]),this.compactAwaitingSummary?.filePath!==e)this.compactAwaitingSummary=void 0;this.sessionFile=e}pendingEntries=[];relocationBuffer=null;remoteIngressUrl=null;internalEventWriter=null;internalEventWriterSessionId=void 0;internalEventReader=null;internalSubagentEventReader=null;internalAgentEventReader=null;agentWorkerEventReader=null;agentIdsWrittenLocally=new Set;agentIdsFetched=new Set;agentTranscriptFetches=new Map;mirrors=[];pendingWriteCount=0;flushResolvers=[];writeQueues=new Map;flushTimer=null;activeDrain=null;storeFence=void 0;drainChain=Promise.resolve();FLUSH_INTERVAL_MS=100;MAX_CHUNK_BYTES=104857600;bytesSinceMetadataReAppend=0;sessionFileAppendSource=void 0;tornTailToSeal=null;bytesSinceCompact=0;backstopThresholdBytes=LL;compactAwaitingSummary=void 0;constructor(e){this.store=e}_resetFlushState(){if(this.pendingWriteCount=0,this.storeFence=void 0,this.bytesSinceMetadataReAppend=0,this.sessionFileAppendSource=void 0,this.tornTailToSeal=null,this.bytesSinceCompact=0,this.compactAwaitingSummary=void 0,this.flushResolvers=[],this.flushTimer)clearTimeout(this.flushTimer);this.flushTimer=null,this.activeDrain=null,this.drainChain=Promise.resolve(),this.writeQueues=new Map,this.mirrors=[]}addMirror(e){this.mirrors.push(e)}fireMirror(e,n){for(let r of this.mirrors)try{r(e,n)}catch(s){t(`[SessionMirror] mirror failed for ${e}: ${s}`,{level:\"error\"})}}incrementPendingWrites(){this.pendingWriteCount++}decrementPendingWrites(){if(this.pendingWriteCount--,this.pendingWriteCount===0){for(let e of this.flushResolvers)e();this.flushResolvers=[]}}async trackWrite(e){this.incrementPendingWrites();try{return await e()}finally{this.decrementPendingWrites()}}pushQueueItem(e,n){let r=this.writeQueues.get(e);if(!r)r=[],this.writeQueues.set(e,r);r.push(n),this.scheduleDrain()}enqueueWrite(e,n,r){if(this.appendsSealedForShutdown)return Promise.resolve();return new Promise((s)=>{this.pushQueueItem(e,{entry:n,resolve:s,storageV5:r})})}enqueueRemove(e,n,r){return new Promise((s)=>{this.pushQueueItem(e,{removeUuid:n,resolve:s,storageV5:r})})}enqueueCompact(e,n){return new Promise((r)=>{this.pushQueueItem(e,{compact:!0,resolve:r,storageV5:n})})}requestCompact(e,n){if(!this.store.localGcEnabled)return;let r=new j5;r.startMidFile(),this.replaySources.set(e,Promise.resolve({index:r,fileExisted:!0})),Kge(),this.queuedToolResults.clear(),this.enqueueCompact(e,n),this.scheduleDrain()}scheduleDrain(){if(this.flushTimer)return;this.flushTimer=setTimeout(async()=>{if(this.flushTimer=null,this.activeDrain=this.drainWriteQueue(),await this.activeDrain,this.activeDrain=null,this.writeQueues.size>0)this.scheduleDrain()},this.FLUSH_INTERVAL_MS)}sealTornTailOnNextAppend(e){this.tornTailToSeal=e}sealTornTailSync(e){if(this.tornTailToSeal!==e)return;if(Ha())return;let n;try{n=y6(e,fP.O_WRONLY|fP.O_APPEND)}catch{return}try{let{size:r}=oVe(n);if(r>0)pfn(n,`\n`,void 0)}finally{h6(n)}this.tornTailToSeal=null}tornTailSealPending(e){return this.tornTailToSeal===e}tornTailSealLanded(e){if(this.tornTailToSeal===e)this.tornTailToSeal=null}async appendToFile(e,n,r){if(this.storeFence!==void 0)throw this.storeFence;this.directAppendsInFlight++;let s;try{s=await qme(e,n,r)===\"backend\"}finally{this.directAppendsInFlight--}if(lun(this.store.writerHealth,e),e===this.sessionFile){let g=Buffer.byteLength(n,\"utf8\");this.bytesSinceMetadataReAppend+=g,this.bytesSinceCompact+=g,this.sessionFileAppendSource=s?r:void 0}}drainsInFlight=0;directAppendsInFlight=0;appendInFlight(){return this.drainsInFlight>0||this.directAppendsInFlight>0}drainWriteQueue(){this.drainsInFlight++;let e=this.drainChain.then(()=>this.drainQueuesOnce());return this.drainChain=e.catch(()=>{}).finally(()=>{this.drainsInFlight--}),e}async drainQueuesOnce(){for(let[e,n]of this.writeQueues){if(n.length===0)continue;let r=n.splice(0),s=0;try{let g=\"\",h=0,b,D=this.mirrors.length>0?[]:void 0;for(let j=0;j<r.length;j++){let z=r[j];if(!(\"entry\"in z)){if(g.length>0){if(await this.appendToFile(e,g,b),D)this.fireMirror(e,D.slice()),D.length=0;for(let _e=h;_e<j;_e++)r[_e].resolve();s=j,g=\"\"}if(this.storeFence!==void 0)throw this.storeFence;if(\"removeUuid\"in z)await this.performRemoveByUuid(e,z.removeUuid,z.storageV5);else await this.performCompactTranscript(e,void 0,void 0,z.storageV5);z.resolve(),s=j+1,h=j+1;continue}let{entry:K}=z,he=fD(K);if(g.length+he.length>=this.MAX_CHUNK_BYTES||z.storageV5!==b&&g.length>0){if(await this.appendToFile(e,g,b),D)this.fireMirror(e,D.slice()),D.length=0;for(let _e=h;_e<j;_e++)r[_e].resolve();s=j,h=j,g=\"\"}b=z.storageV5,g+=he,D?.push(K)}if(g.length>0){if(await this.appendToFile(e,g,b),D)this.fireMirror(e,D);for(let j=h;j<r.length;j++)r[j].resolve();s=r.length}}catch(g){if(g!==this.storeFence){let h=E(g);if(as(g))t(`Transcript write failed (${h}): ${l(g)}`,{level:\"error\"});else d(g);if(eS(this.store.writerHealth,\"drain\",g,e),this.replaySources.delete(e))Kge();if(this.queuedToolResults.clear(),g instanceof Error&&Y2e(g)!==void 0)this.storeFence=g}for(let h=s;h<r.length;h++)r[h].resolve()}}for(let[e,n]of this.writeQueues)if(n.length===0)this.writeQueues.delete(e);if(this.store.localGcEnabled&&this.sessionFile&&this.storeFence===void 0&&this.compactAwaitingSummary===void 0&&this.bytesSinceCompact>=this.backstopThresholdBytes)this.bytesSinceCompact=0,await this.performCompactTranscript(this.sessionFile,void 0,void 0,this.sessionFileAppendSource);if(this.bytesSinceMetadataReAppend>=US/2)try{await this.reAppendSessionMetadataAsync(!1,!0,this.sessionFileAppendSource)}catch(e){if(as(e))t(`Metadata re-append failed (${E(e)}): ${l(e)}`,{level:\"error\"});else d(e)}}resetSessionFile(){this.setSessionFile(null),this.pendingEntries=[],this.bytesSinceMetadataReAppend=0,this.sessionFileAppendSource=void 0,this.bytesSinceCompact=0,this.backstopThresholdBytes=LL}reAppendSessionMetadata(e=!1,n=!1,r=!1){if(!this.sessionFile)return;this.bytesSinceMetadataReAppend=0;let s=rSr(this.sessionFile),g=this.planReAppendSessionMetadata(s,e,n,void 0,r);if(!g)return;try{if(g.entries.length>0)this.sealTornTailSync(g.sessionFile);for(let h of g.entries)Wun(g.sessionFile,h)}catch(h){for(let b of g.stamps)b.inFlight=!1;throw h}for(let h of g.stamps)h.written=!0,h.inFlight=!1}appendOwedEntryAtExit(e){if(!this.sessionFile)return;this.sealTornTailSync(this.sessionFile),Wun(this.sessionFile,e)}exitReStampSource(){return this.sessionFileAppendSource}adoptAppendSource(e){let n=this.sessionFile;this.sessionFileAppendSource=n===null?void 0:$L(n,e)?.backend}async reStampAtExitAsync(e){let n=this.sessionFile;if(!n||this.store.exitReStampDone())return;if(Ha()){this.store.claimExitReStamp();return}try{await this.reAppendSessionMetadataAsync(!1,!1,e,!1)}catch(g){Wme(\"Exit re-stamp through the storage backend failed\",g);return}let r=!0,s=new Set;for(let g=0;;g++){if(this.store.exitReStampDone())return;let{lines:h,clean:b}=this.takeForeignExitLines(s);if(r&&=b,g>0&&h.length===0)break;if(g===Rkr){r=!1;break}for(let w of h){if(this.store.exitReStampDone())return;try{await OC(w.path,w.entry,e,{onlyIfExists:!0,tornTailEntry:w.tornTailEntry}),this.store.takenForeignExitLines.delete(w)}catch(D){Wme(\"Exit line owed to another session's transcript was not appended through the storage backend\",D),r=!1}}if(g>0)continue;for(let w of this.store.exitReStampProviders){if(this.store.exitReStampDone())return;if(this.sessionFile!==n){r=!1;break}try{let D=w();if(D!==void 0)await qme(n,_(D)+`\n`,e),this.fireMirror(n,[D])}catch(D){if(Wme(\"Exit line owed to the transcript was not appended through the storage backend\",D),r=!1,D instanceof Error&&Y2e(D)!==void 0){this.storeFence=D;break}}}}if(r&&this.sessionFile===n)this.store.claimExitReStamp()}takeForeignExitLines(e){let n=[],r=!0;for(let s of this.store.foreignExitReStampProviders)try{for(let g of s()){let h=g.path+`\n`+_(g.entry);if(e.has(h))continue;e.add(h),this.store.takenForeignExitLines.add(g),n.push(g)}}catch(g){Wme(\"Exit lines owed to other sessions' transcripts could not be listed\",g),r=!1}return{lines:n,clean:r}}async reAppendSessionMetadataAsync(e=!1,n=!1,r,s=!1){let g=this.sessionFile;if(!g||this.storeFence!==void 0)return;let h=this.store.getSessionId();this.bytesSinceMetadataReAppend=0,await lln();let b=await sSr(g,r);if(s&&r!==void 0&&(this.sessionFile!==g||this.store.getSessionId()!==h))return;let w=this.planReAppendSessionMetadata(b,e,n,r);if(!w||w.entries.length===0)return;this.directAppendsInFlight++;try{await qme(w.sessionFile,WTn(w.entries),r)}catch(D){if(D instanceof Error&&Y2e(D)!==void 0)this.storeFence=D;for(let j of w.stamps)j.inFlight=!1;throw D}finally{this.directAppendsInFlight--}for(let D of w.stamps)D.written=!0,D.inFlight=!1;this.fireMirror(w.sessionFile,w.entries)}normalizeLastPrompt(e){let n=e.replaceAll(`\n`,\" \").trim();return n.length>200?re(n,200).trim()+\"\\u2026\":n}planReAppendSessionMetadata(e,n,r,s,g=!1){if(!this.sessionFile)return null;let h=this.store.getSessionId();if(!h)return null;let b=this.sessionFile,w=e.split(`\n`);if(!n){let xe=!1,Pe=w.findLast((Ne)=>Ne.includes('\"type\":\"custom-title\"')&&Ne.includes('\"customTitle\":\"'));if(Pe){let Ne=Az(Pe,\"customTitle\");if(Ne!==void 0){if(xe||=this.currentSessionTitle!==(Ne||void 0),this.currentSessionTitle=Ne||void 0,!Ne)z2e(b,h,s)}}let $e=w.findLast((Ne)=>Ne.includes('\"type\":\"ai-title\"')&&Ne.includes('\"aiTitle\":\"'));if($e){let Ne=Az($e,\"aiTitle\");if(Ne!==void 0)xe||=this.currentSessionAiTitle!==(Ne||void 0),this.currentSessionAiTitle=Ne||void 0}if(xe)this.store.sessionTitleChanged.emit()}let D=w.findLast((xe)=>xe.includes('\"type\":\"tag\"')&&xe.includes('\"tag\":\"'));if(D){let xe=Az(D,\"tag\");if(xe!==void 0)this.currentSessionTag=xe||void 0}let j=IWe(e,\"relocated\",\"relocatedCwd\");if(j)this.currentSessionRelocatedCwd??=j;if(this.currentSessionLeafUuid!==void 0){let xe=IWe(e,\"last-prompt\",\"lastPrompt\");if(xe)this.currentSessionLastPrompt??=this.normalizeLastPrompt(xe)}{let xe=Mpn(e);if(xe!==void 0)this.currentSessionArtifactCount=Math.max(this.currentSessionArtifactCount??0,xe)}let z=[];if(this.currentSessionLastPrompt!==void 0||this.currentSessionLeafUuid!==void 0)z.push({type:\"last-prompt\",...this.currentSessionLastPrompt&&{lastPrompt:this.currentSessionLastPrompt},...this.currentSessionLeafUuid&&{leafUuid:this.currentSessionLeafUuid},sessionId:h});if(this.currentSessionTitle)z.push({type:\"custom-title\",customTitle:this.currentSessionTitle,sessionId:h});if(this.currentSessionAiTitle)z.push({type:\"ai-title\",aiTitle:this.currentSessionAiTitle,sessionId:h});if(this.currentSessionTag)z.push({type:\"tag\",tag:this.currentSessionTag,sessionId:h});if(this.currentSessionRelocatedCwd&&e!==\"\")z.push({type:\"relocated\",relocatedCwd:this.currentSessionRelocatedCwd,sessionId:h});if(this.currentSessionAgentName)z.push({type:\"agent-name\",agentName:this.currentSessionAgentName,sessionId:h});if(this.currentSessionAgentColor)z.push({type:\"agent-color\",agentColor:this.currentSessionAgentColor,sessionId:h});if(this.currentSessionAgentSetting)z.push({type:\"agent-setting\",agentSetting:this.currentSessionAgentSetting,sessionId:h});if(this.currentSessionMode)z.push({type:\"mode\",mode:this.currentSessionMode,sessionId:h});if(this.currentSessionPermissionMode)z.push({type:\"permission-mode\",permissionMode:this.currentSessionPermissionMode,sessionId:h});if(this.currentSessionIsolationLatch)z.push({type:\"isolation-latch\",side:this.currentSessionIsolationLatch,sessionId:h});if(this.currentSessionDevModsFolder)z.push({type:\"dev-mods\",folder:this.currentSessionDevModsFolder,sessionId:h});let K=this.currentSessionMemoryModeStamps.findIndex((xe)=>!xe.written),he=[];if(K!==-1&&(g||!this.currentSessionMemoryModeStamps.some((xe)=>xe.inFlight)))for(let xe of this.currentSessionMemoryModeStamps.slice(K))xe.inFlight=!0,he.push(xe),z.push({type:\"memory-mode\",mode:xe.mode,afterUuid:xe.afterUuid,timestamp:xe.timestamp,...xe.reason!==void 0&&{reason:xe.reason},...xe.account!==void 0&&{account:xe.account},...xe.accountChoice!==void 0&&{accountChoice:xe.accountChoice},sessionId:h});let _e=i4();if(_e!==void 0)z.push({type:\"atis-latch\",atis:_e,sessionId:h}),this.atisLatchStamp=`${b}\n${_e}`;if(this.currentSessionWorktree!==void 0)z.push({type:\"worktree-state\",worktreeSession:this.currentSessionWorktree,sessionId:h});if(this.currentSessionPrNumber!==void 0&&this.currentSessionPrUrl&&this.currentSessionPrRepository)z.push({type:\"pr-link\",sessionId:h,prNumber:this.currentSessionPrNumber,prUrl:this.currentSessionPrUrl,prRepository:this.currentSessionPrRepository,timestamp:new Date().toISOString()});if(this.currentSessionArtifactCount&&e!==\"\")z.push({type:\"frame-link\",artifactCount:this.currentSessionArtifactCount,sessionId:h,timestamp:new Date().toISOString()});if(this.currentSessionHistorySuppressed)z.push(DWe(h,\"migration\"));if(this.currentSessionBridgeId)z.push({type:\"bridge-session\",sessionId:h,bridgeSessionId:this.currentSessionBridgeId,lastSequenceNum:this.currentSessionBridgeSeq??0,...this.currentSessionBridgeDialogKinds?.length&&{declaredDialogKinds:this.currentSessionBridgeDialogKinds},...this.currentSessionBridgeGroupingId&&{sessionGroupingId:this.currentSessionBridgeGroupingId},...this.currentSessionBridgeNoBackfill&&{noHistoryBackfill:!0},...this.currentSessionBridgeOwnerAccountUuid&&{ownerAccountUuid:this.currentSessionBridgeOwnerAccountUuid},...this.currentSessionBridgeOwnerOrganizationUuid&&{ownerOrganizationUuid:this.currentSessionBridgeOwnerOrganizationUuid}});if(r||z.length===0)return{sessionFile:b,entries:z,stamps:he};let ke=new Set(z.map((xe)=>xe.type)),be=new Map,ve=0;for(let xe=w.length-1;xe>=0;xe--){if(be.size===ke.size)break;let Pe=w[xe]??\"\";if(ve+=Buffer.byteLength(Pe,\"utf8\")+1,ve>US/2)break;if(!Pe)continue;let $e;for(let Ne of ke)if(!be.has(Ne)&&Pe.includes(`\"type\":\"${Ne}\"`)){$e=Ne;break}if(!$e)continue;try{let Ne=zo(Pe);if(Ne.type===$e)be.set($e,Ne)}catch{}}let Te=(xe)=>{if(xe.type===\"history-suppression\")return _({type:xe.type,sessionId:xe.sessionId});let{timestamp:Pe,ts:$e,...Ne}=xe;return _(Ne)};return{sessionFile:b,entries:z.filter((xe)=>{if(xe.type===\"memory-mode\")return!0;let Pe=be.get(xe.type);return!Pe||Te(xe)!==Te(Pe)}),stamps:he}}async flush(){if(this.flushTimer)clearTimeout(this.flushTimer),this.flushTimer=null;if(this.activeDrain)await this.activeDrain;await this.drainWriteQueue();while(this.pendingWriteCount>0)await new Promise((e)=>{this.flushResolvers.push(e)}),await this.drainWriteQueue();if(this.storeFence!==void 0)throw this.storeFence}async removeMessageByUuid(e,n){return this.trackWrite(async()=>{let r=this.sessionFile;if(r===null)return;return this.replaySources.delete(r),this.queuedToolResults.clear(),this.enqueueRemove(r,e,n)})}async performRemoveByUuid(e,n,r){let s=r!==void 0?My(e):void 0;if(F()&&r!==void 0&&s!==void 0)return this.removeByUuidV5(r,s,n);try{let g=0,h=await hC(e,\"r+\");try{let{size:j}=await h.stat();if(g=j,j===0)return;let z=Math.min(j,US),K=j-z,he=Buffer.allocUnsafe(z),{bytesRead:_e}=await h.read(he,0,z,K),ke=he.subarray(0,_e),be=`\"uuid\":\"${n}\"`,ve=ke.lastIndexOf(be);if(ve>=0){let Te=ke.lastIndexOf(10,ve);if(Te>=0||K===0){let xe=Te+1,Pe=ke.indexOf(10,ve+be.length),$e=Pe>=0?Pe+1:_e,Ne=K+xe,We=_e-$e;if(await h.truncate(Ne),We>0)await h.write(ke,$e,We,Ne);return}}}finally{await h.close()}if(g>K2e){t(`Skipping tombstone removal: session file too large (${pn(g)})`,{level:\"warn\"});return}let w=(await gP(e,{encoding:\"utf-8\"})).split(`\n`),D=w.filter((j)=>{if(!j.trim())return!0;try{return Y(j).uuid!==n}catch{return!0}});if(D.length===w.length)return;await Tfn(e,D.join(`\n`),{encoding:\"utf8\"})}catch{}}async removeByUuidV5(e,n,r){try{let s=Buffer.from(`\"uuid\":\"${r}\"`);for(let g=1;g<=3;g++){let h=await e.read([{key:n,tail:US}]);if(!h.ok){if(ywt(h.error))return await aun(e,n,r,{windowBytes:US,pageBytes:Sun,maxReadBytes:K2e});t(`Tombstone removal abandoned: tail read failed (${h.error.code})`,{level:\"warn\"});return}let[b]=h.value.items;if(!b.found)return;let w=Buffer.from(b.value.buffer,b.value.byteOffset,b.value.byteLength);if(w.length===0)return;let D=b.totalBytes-w.length,j=w.lastIndexOf(s),z=j<0?-1:w.lastIndexOf(10,j);if(j<0||z<0&&D>0)return await this.removeByUuidSlowV5(e,n,r,b.totalBytes,b.version);let K=w.indexOf(10,j+s.length);if(K<0)return;let he=await e.replaceRecords(n,[],{keepBefore:D+z+1,preserveFrom:D+K+1,publishDiscipline:\"inPlace\",precondition:b.version!==void 0?{type:\"ifMatch\",version:b.version}:{type:\"none\"}});if(he.ok||he.error.code===\"NotFound\")return;if(!(he.error.code===\"PreconditionFailed\"||he.error.code===\"Unavailable\")||g===3){t(`Tombstone removal abandoned after ${g} attempt(s) (${he.error.code})`,{level:\"warn\"});return}}}catch(s){t(`Tombstone removal abandoned: ${l(s)}`,{level:\"warn\"})}}async removeByUuidSlowV5(e,n,r,s,g){let h=g;if(h===void 0){let z=await e.stat(n);if(!z.ok){if(z.error.code!==\"NotFound\")t(`Tombstone removal abandoned: stat failed (${z.error.code})`,{level:\"warn\"});return}s=z.value.size,h=z.value.version}if(s>K2e){t(`Skipping tombstone removal: session file too large (${pn(s)})`,{level:\"warn\"});return}let b,w=[],D;for(;;){let z=await e.readRecords(n,{order:\"forward\",...D!==void 0&&{fromSeq:D},maxBytes:Sun});if(!z.ok){t(`Tombstone removal abandoned: paging failed (${z.error.code})`,{level:\"warn\"});return}let K=!1;for(let _e of z.value.items){if(_e.seq>=s){K=!0;break}let ke=Buffer.from(_e.data.buffer,_e.data.byteOffset,_e.data.byteLength).toString(\"utf8\"),be=ke.slice(0,-1),ve=!1;if(be.trim())try{ve=zo(be).uuid===r}catch{}if(ve){b??=_e.seq;continue}if(b!==void 0)w.push({data:ke})}let he=z.value.nextSeq;if(K||he===void 0||he>=s)break;D=he}if(b===void 0)return;let j=await e.replaceRecords(n,w,{keepBefore:b,preserveFrom:s,publishDiscipline:\"inPlace\",precondition:h!==void 0?{type:\"ifMatch\",version:h}:{type:\"none\"}});if(!j.ok&&j.error.code!==\"NotFound\")t(`Tombstone removal abandoned on the paged path (${j.error.code})`,{level:\"warn\"})}async performCompactTranscript(e,n,r,s){let g=s!==void 0?My(e):void 0;if(F()&&s!==void 0&&g!==void 0)return this.performCompactTranscriptV5(s,g,e);let h=`${e}.compact.tmp.${ckr(4).toString(\"hex\")}`,b=!1,w=!1;try{let D=await h_(e);if(D.size<lPo)return;let j=4096,z=[[0,Math.min(j,D.size)],[Math.max(0,Math.floor(D.size/2)-j/2),Math.min(j,D.size)],[Math.max(0,D.size-j),Math.min(j,D.size)]],K=async()=>{let Ne=await hC(e,\"r\");try{let We=[];for(let[qe,Qe]of z){let Ze=Buffer.alloc(Qe),et=0;while(et<Qe){let{bytesRead:bt}=await Ne.read(Ze,et,Qe-et,qe+et);if(bt<=0)break;et+=bt}We.push(Ze.subarray(0,et))}return We}finally{await Ne.close().catch(()=>{})}},he=await K(),_e=async()=>{let Ne=await K();return he.some((We,qe)=>!Ne[qe]||!We.equals(Ne[qe]))};{let Ne=he[2];if(!Ne||Ne.length===0||Ne.at(-1)!==10){i(\"tengu_transcript_compact_failed\",{reason:S(\"snapshot_mid_line\")});return}}if(!await SJr(e,D.size))return;let ke=()=>Rfn({input:ukr(e,{encoding:\"utf8\",end:D.size-1}),crlfDelay:1/0}),be=await j2e(ke());if(be.kind===\"skip\")return;if(be.kind===\"abort\"){i(\"tengu_transcript_compact_failed\",{reason:c(be.reason)});return}let ve=W2e(be.plan),Te=await hC(h,\"w\",384),xe=\"\",Pe=0,$e=async(Ne)=>{if(xe+=G2e(Ne)+`\n`,xe.length>=US)Pe+=Buffer.byteLength(xe,\"utf8\"),await Te.write(xe),xe=\"\"};try{let Ne=0;for await(let qe of ke()){for(let Qe of ve(Ne,qe))await $e(Qe);Ne++}Pe+=Buffer.byteLength(xe,\"utf8\"),await Te.write(xe),n?.();let We=await h_(e);if(We.ino!==D.ino||We.size<D.size||await _e()){i(\"tengu_transcript_compact_failed\",{reason:S(\"source_changed\")});return}if(We.size>D.size){let qe=Buffer.alloc(We.size-D.size),Qe=await hC(e,\"r\"),Ze=0;try{while(Ze<qe.length){let{bytesRead:et}=await Qe.read(qe,Ze,qe.length-Ze,D.size+Ze);if(et<=0)break;Ze+=et}}finally{await Qe.close().catch(()=>{})}while(Ze>0&&qe[Ze-1]!==10)Ze--;Pe+=Ze,await Te.write(qe.subarray(0,Ze))}if(await Te.sync(),r?.(),(await h_(e)).ino!==D.ino||await _e()){i(\"tengu_transcript_compact_failed\",{reason:S(\"source_changed\")});return}}finally{await Te.close().catch(()=>{})}if(w=!0,await ps(h,e),b=!0,this.queuedToolResults.clear(),this.bytesSinceCompact=0,e===this.sessionFile)this.backstopThresholdBytes=D.size-Pe<D.size*wun?Math.min(this.backstopThresholdBytes*2,bun):LL;if(e===this.sessionFile)await this.reAppendSessionMetadataAsync(!1,!0).catch(()=>{});i(\"tengu_transcript_compact\",{bytesBefore:D.size,bytesAfter:Pe})}catch(D){let j=E(D);i(\"tengu_transcript_compact_failed\",{reason:w&&j!==void 0&&aA.has(j)?S(\"rename_fallback\"):S(\"io\")}),t(`Transcript compact failed (${E(D)}): ${l(D)}`,{level:\"warn\"})}finally{if(!b)await rVe(h).catch(()=>{})}}async performCompactTranscriptV5(e,n,r){let s=(g)=>{i(\"tengu_transcript_compact_failed\",{reason:c(g)})};try{let g=await e.stat(n,{witness:!0});if(!g.ok){s(\"io\"),t(`Transcript compact failed (${g.error.code}): ${it(g.error)}`,{level:\"warn\"});return}let h=g.value.size,b=g.value.tornTailBytes??0;if(h+b<lPo)return;if(b>0){s(\"snapshot_mid_line\");return}let w=-1,D=async function*(){let ke;for(;;){let be=await e.readRecords(n,{order:\"forward\",...ke!==void 0&&{fromSeq:ke},maxBytes:bkr});if(!be.ok)throw t(`Transcript compact: storage read failed (${be.error.code}): ${it(be.error)}`,{level:\"warn\"}),Error(\"transcript storage read failed\",{cause:be.error});for(let Te of be.value.items){if(Te.seq>=h)return;w=Te.seq;let xe=Buffer.from(Te.data.buffer,Te.data.byteOffset,Te.data.byteLength).toString(\"utf8\");if(xe.endsWith(`\n`))xe=xe.slice(0,-1);if(xe.endsWith(\"\\r\"))xe=xe.slice(0,-1);yield xe}let ve=be.value.nextSeq;if(ve===void 0||ve>=h)return;ke=ve}},j=await j2e(D());if(j.kind===\"skip\")return;if(j.kind===\"abort\"){s(j.reason);return}let z=W2e(j.plan),K=async function*(){let ke=0;for await(let be of D()){for(let ve of z(ke,be))yield{data:G2e(ve)+`\n`};ke++}},he=await e.replaceRecords(n,K(),{preserveFrom:h,precondition:{type:\"ifUnchangedThrough\",seq:w,version:g.value.version},publishDiscipline:\"atomic\",mode:384,parent:\"mustExist\"});if(!he.ok){let ke=he.error;if(ke.code===\"PreconditionFailed\"){s(\"source_changed\");return}let be=ke.code===\"Failed\"||ke.code===\"Unavailable\"?ke.telemetryCode:void 0;if(ke.code===\"InvalidArgument\"){s(ke.argument.startsWith(\"opts.precondition\")?\"invalid_token\":\"invalid_argument\"),t(`Transcript compact skipped (${ke.code}): ${it(ke)}`,{level:\"warn\"});return}let ve=(ke.code===\"Failed\"||ke.code===\"Unavailable\")&&ke.phase===\"publish\"&&be!==void 0&&aA.has(be);s(ve?\"rename_fallback\":\"io\"),t(`Transcript compact failed (${be??ke.code}): ${it(ke)}`,{level:\"warn\"});return}this.bytesSinceCompact=0;let _e=he.value.sizeAfter;if(r===this.sessionFile)this.backstopThresholdBytes=h-_e<h*wun?Math.min(this.backstopThresholdBytes*2,bun):LL,await this.reAppendSessionMetadataAsync(!1,!0,e,!0).catch(()=>{});i(\"tengu_transcript_compact\",{bytesBefore:h,bytesAfter:_e})}catch(g){s(\"io\"),t(`Transcript compact failed (${E(g)}): ${l(g)}`,{level:\"warn\"})}}shouldSkipPersistence(){return Ha()||this.appendsSealedForShutdown}appendsSealedForShutdown=!1;sealAppendsForShutdown(){this.appendsSealedForShutdown=!0}async materializeSessionFile(e){if(this.shouldSkipPersistence())return;try{if(this.ensureCurrentSessionFile(),await this.reAppendSessionMetadataAsync(!1,!1,e),this.pendingEntries.length>0){let n=this.pendingEntries;this.pendingEntries=[];for(let{entry:r,storageV5:s}of n)await this.appendEntry(r,void 0,void 0,s);if(this.currentSessionRelocatedCwd)await this.reAppendSessionMetadataAsync(!0,!1,e)}}catch(n){let r=E(n);if(as(n))t(`Session file materialize failed (${r}): ${l(n)}`,{level:\"error\"});else d(n);eS(this.store.writerHealth,\"materialize\",n,this.sessionFile)}try{this.store.sessionFileMaterialized.emit()}catch(n){if(as(n))t(`Session file materialize listener failed (${E(n)}): ${l(n)}`,{level:\"error\"});else d(n)}}async insertMessageChain(e,n=!1,r,s,g,h,b,w,D,j){let z=h??q(),K=b??cln(Vi(z)),he=D===void 0?odt(Vi(z))??null:D,_e=j??Vme();return this.trackWrite(async()=>{let ke=s??null,be;if(this.sessionFile===null&&e.some((Ne)=>Ne.type===\"user\"||Ne.type===\"assistant\"||Ne.type===\"system\"))await this.materializeSessionFile(w);let ve;try{ve=await sd()}catch{ve=void 0}EFr();let Te=z,xe=Jfe().get(Te),Pe=n||this.shouldSkipPersistence()?null:await this.store.sessionMessages(Te,w);if(!n&&!K&&this.sessionFile!==null&&z===q()){let Ne=i4();if(Ne!==void 0&&this.atisLatchStamp!==`${this.sessionFile}\n${Ne}`)this.atisLatchStamp=`${this.sessionFile}\n${Ne}`,await this.appendEntry({type:\"atis-latch\",atis:Ne,sessionId:Te},Te,void 0,w)}let $e=!1;for(let Ne of e){let We=Bi(Ne),qe=!n&&z===q()?this.sessionFile:null;if(We&&qe)this.compactAwaitingSummary={filePath:qe,storageV5:w},$e=!1;let Qe=ke;if(Ne.type===\"user\"&&\"sourceToolAssistantUUID\"in Ne&&Ne.sourceToolAssistantUUID){let et=Ne.sourceToolAssistantUUID;if(Pe===null||Pe.has(et))Qe=et;else i(\"tengu_phantom_parent_write\",{})}if(Qe===Ne.uuid)i(\"tengu_chain_self_reference_write\",{});let Ze={parentUuid:We?null:Qe,logicalParentUuid:We?ke:void 0,isSidechain:n,teamName:g?.teamName,agentName:g?.agentName,promptId:Ne.type===\"user\"?NEe()??void 0:void 0,agentId:r,...Ne,...TGn(Te),gitBranch:ve,slug:xe};if(Ze.type===\"user\"&&Ze.toolUseResult!=null)Ze.toolUseResult=Idn(Ze.toolUseResult);if(await this.appendEntry(Ze,z,K,w,he,_e),We&&qe)this.backstopThresholdBytes=LL;if(qe&&(Ne.type===\"user\"||Ne.type===\"assistant\"))$e=!0;if(bye(Ne))ke=Ne.uuid,be=Ne.timestamp}if($e&&this.compactAwaitingSummary){let{filePath:Ne,storageV5:We}=this.compactAwaitingSummary;if(this.compactAwaitingSummary=void 0,Ne===this.sessionFile)this.requestCompact(Ne,We)}if(!n&&z===q()){if(ke&&be&&(!this.currentSessionLeafTs||be>=this.currentSessionLeafTs))this.currentSessionLeafUuid=ke,this.currentSessionLeafTs=be;let Ne=aln(e);if(Ne)this.currentSessionLastPrompt=this.normalizeLastPrompt(Ne)}})}async insertFileHistorySnapshot(e,n,r,s){return this.trackWrite(async()=>{let g={type:\"file-history-snapshot\",messageId:e,snapshot:n,isSnapshotUpdate:r};await this.appendEntry(g,void 0,void 0,s)})}async insertFileHistoryDelta(e,n){return this.trackWrite(async()=>{await this.appendEntry(e,void 0,void 0,n)})}async insertQueueOperation(e,n){return this.trackWrite(async()=>{await this.appendEntry(e,void 0,void 0,n)})}async insertAttributionSnapshot(e,n){return this.trackWrite(async()=>{await this.appendEntry(e,void 0,void 0,n)})}async insertContentReplacement(e,n,r){return this.trackWrite(async()=>{let s={type:\"content-replacement\",sessionId:this.store.getSessionId(),agentId:n,replacements:e};await this.appendEntry(s,void 0,void 0,r)})}replaySources=new Map;queuedToolResults=new Map;oversizeReplayShapes=new Set;queuedToolResultDigest(e,n){if(e.storageV5!==void 0||e.sessionId!==this.store.getSessionId())return;let r=e.agentId?Sh(e.agentId):this.sessionFile;return r?this.queuedToolResults.get(`${r}\n${n}`):void 0}replayIndexFor(e){let n=this.replaySources.get(e);if(n===void 0)n=xkr(e),this.replaySources.set(e,n);return n}async replayTargetFile(e){let n=e.sessionId===this.store.getSessionId()?this.sessionFile:await this.getExistingSessionFile(e.sessionId,e.storageV5);if(n===null||n===void 0)return;return e.agentId?Sh(e.agentId):n}isRemotelyMirrored(){return this.internalEventWriter!==null||Le(\"true\")&&Boolean(this.remoteIngressUrl)}async appendRequestReplayRecords(e){return this.trackWrite(async()=>{let{target:n,request:r}=e;if(this.shouldSkipPersistence())return\"no_transcript\";if(this.oversizeReplayShapes.has(e.shapeHash))return\"shape_too_large\";let s=await this.replayTargetFile(n);if(s===void 0)return\"no_transcript\";let{index:g,fileExisted:h}=await this.replayIndexFor(s);if(!h&&g.size===0||g.hasForkContextRef)return\"no_transcript\";let b=[];if(!g.has(e.shapeHash)){let w={type:\"api-request-shape\",sessionId:r.sessionId,...r.agentId!==void 0&&{agentId:r.agentId},shapeHash:e.shapeHash,timestamp:r.timestamp,version:r.version,shape:bM(e.shape)};if(Buffer.byteLength(_(w))>_kr)return this.oversizeReplayShapes.add(e.shapeHash),d(Error(\"request-replay: system+tools over the record size cap; not recording requests that use them\")),\"shape_too_large\";b.push(w),g.noteLine(w)}for(let{hash:w,message:D}of e.blobCandidates)if(!g.has(w)){let j={type:\"api-request-blob\",sessionId:r.sessionId,...r.agentId!==void 0&&{agentId:r.agentId},hash:w,message:D};b.push(j),g.noteLine(j)}return await Promise.all([...b,r].map((w)=>this.appendEntry(w,n.sessionId,void 0,n.storageV5))),\"written\"})}async appendEntry(e,n=this.store.getSessionId(),r,s,g,h){if(\"agentId\"in e&&e.agentId)this.noteAgentWrittenLocally(e.agentId);if(this.shouldSkipPersistence())return;if(l0(e)&&Pye(e)&&(r===!0||cln(Vi(n))))this.foreignWithheldEntryUuids.add(e.uuid);if(l0(e)&&!e.isSidechain){let j=iSr((h??Vme())?.get(e.uuid))??(Pye(e)?g===void 0?odt(Vi(n)):g:void 0);if(j!==void 0&&j!==null)e.foreignToBridgeSession=j}if(this.relocationBuffer){this.relocationBuffer.push({entry:e,sessionId:n,storageV5:s,foreignAtEntry:r,pulledAtEntry:g,pulledRowsAtEntry:h});return}let b=this.store.getSessionId(),w=n===b,D;if(w){if(this.sessionFile===null){this.pendingEntries.push({entry:e,storageV5:s});return}D=this.sessionFile}else{let j=await this.getExistingSessionFile(n,s);if(!j){d(Error(`appendEntry: session file not found for other session ${n}`));return}D=j}switch($Zo[e.type]){case\"always\":{this.enqueueWrite(D,e,s);return}case\"route-by-agent\":{let j=(e.type===\"content-replacement\"||e.type===\"api-request-shape\"||e.type===\"api-request-blob\"||e.type===\"api-request\"||e.type===\"fork-context-ref\"||e.type===\"observer-ref\")&&e.agentId?Sh(e.agentId):D;if(this.enqueueWrite(j,e,s),e.type===\"fork-context-ref\"&&W5())this.replayIndexFor(j).then(({index:z})=>z.noteLine(e));return}case\"dedup-transcript\":{if(e.type!==\"progress\"&&!l0(e)){d(Error(`appendEntry invariant: dedup-transcript policy on non-transcript type '${e.type}'`));return}let j=await this.store.sessionMessages(n,s),z=e.isSidechain&&e.agentId!==void 0,K=z?Sh(yo(e.agentId)):D,he;if(!this.appendsSealedForShutdown&&W5())try{he=(await this.replayIndexFor(K)).index}catch(ke){d(ke)}let _e=!j.has(e.uuid);if(z||_e){this.enqueueWrite(K,e,s);try{if(he!==void 0){he.noteLine(e);for(let[ke,be]of _6e(e))this.queuedToolResults.set(`${K}\n${ke}`,be)}}catch(ke){d(ke)}if(!z){if(j.add(e.uuid),l0(e))if(this.internalEventWriter&&Ai())this.persistToRemote(n,e);else await this.persistToRemote(n,e)}else if(this.internalEventWriter&&l0(e))this.persistToRemote(n,e)}return}}}beginTranscriptRelocation(){this.relocationBuffer??=[]}isTranscriptRelocationInProgress(){return this.relocationBuffer!==null}async endTranscriptRelocation(){let e=this.relocationBuffer;if(this.relocationBuffer=null,!e)return;for(let{entry:n,sessionId:r,storageV5:s,foreignAtEntry:g,pulledAtEntry:h,pulledRowsAtEntry:b}of e)await this.appendEntry(n,r,g,s,h,b)}ensureCurrentSessionFile(){if(this.sessionFile===null){let e=au();return this.setSessionFile(e),e}return this.sessionFile}existingSessionFiles=new Map;foreignWithheldEntryUuids=new Set;async getExistingSessionFile(e,n){let r=this.existingSessionFiles.get(e);if(r)return r;let s=Yf(e),g=n!==void 0?My(s):void 0;if(F()&&n!==void 0&&g!==void 0)try{let h=await n.statMeta(g);if(h.ok)return this.existingSessionFiles.set(e,s),s;if(h.error.code===\"NotFound\")return null}catch{}try{return await h_(s),this.existingSessionFiles.set(e,s),s}catch(h){if(Ht(h))return null;throw h}}async persistToRemote(e,n){if(this.appendsSealedForShutdown)return;if(Ai()&&!this.internalEventWriter)return;if(UGn(n,this.internalEventWriterSessionId)){t(\"[persist-remote] Skipping upload: the row is the /teleport-pulled conversation's\");return}if(Pye(n)&&(this.foreignWithheldEntryUuids.delete(n.uuid)||HC(Vi(e)))){t(\"[persist-remote] Skipping compact-pair upload: conversation carries a history-suppression taint\");return}if(this.internalEventWriter){try{await this.internalEventWriter(\"transcript\",n,{...Bi(n)&&{isCompaction:!0,preservedEventIds:n.compactMetadata?.preservedMessages?.uuids},...n.agentId&&{agentId:n.agentId}})}catch{i(\"tengu_session_persistence_failed\",{}),t(\"Failed to write transcript as internal event\")}return}if(!Le(\"true\")||!this.remoteIngressUrl)return;if(!await v6e(e,n,this.remoteIngressUrl))i(\"tengu_session_persistence_failed\",{}),cs(1,\"other\")}async mirrorInternalEntry(e){if(HC(Vi(this.store.getSessionId()))){let n=e;if(n.type!==\"last-prompt\"||n.explicit!==!0)return!1;let{lastPrompt:r,...s}=e;e=s}if(!this.internalEventWriter||Ai())return!1;try{await this.internalEventWriter(e.type,e,{})}catch(n){throw i(\"tengu_session_persistence_failed\",{}),t(\"Failed to mirror internal entry to CCR\"),n}return!0}hasInternalEventWriter(){return this.internalEventWriter!==null}async mirrorWorkerEvent(e,n,{sessionId:r,agentId:s}){if(this.shouldSkipPersistence()||HC(r))return!1;if(!this.internalEventWriter||Ai())return!1;return await this.internalEventWriter(e,n,{agentId:s}),!0}setRemoteIngressUrl(e){if(this.remoteIngressUrl=e,t(`Remote persistence enabled with URL: ${e}`),e)this.FLUSH_INTERVAL_MS=Run}setInternalEventWriter(e,n){this.internalEventWriter=e,this.internalEventWriterSessionId=n,t(\"CCR v2 internal event writer registered for transcript persistence\"),this.FLUSH_INTERVAL_MS=Run}clearInternalEventWriter(){if(!this.internalEventWriter)return;this.internalEventWriter=null,t(\"CCR v2 internal event writer cleared\")}setInternalEventReader(e){this.internalEventReader=e,t(\"CCR v2 internal event reader registered for session resume\")}setInternalSubagentEventReader(e){this.internalSubagentEventReader=e,t(\"CCR v2 subagent event reader registered for session resume\")}getInternalEventReader(){return this.internalEventReader}getInternalSubagentEventReader(){return this.internalSubagentEventReader}setInternalAgentEventReader(e){this.internalAgentEventReader=e}setAgentWorkerEventReader(e){this.agentWorkerEventReader=e}getAgentWorkerEventReader(){return this.agentWorkerEventReader}hasInternalAgentEventReader(){return this.internalAgentEventReader!==null}noteAgentWrittenLocally(e){if(this.internalAgentEventReader!==null)this.agentIdsWrittenLocally.add(e)}hasWrittenAgentLocally(e){return this.agentIdsWrittenLocally.has(e)}async hydrateAgentTranscriptOnDemand(e,n,r){let s=this.internalAgentEventReader;if(s===null)return\"no_reader\";if(!FEe(e))return\"unsafe_id\";if(this.agentIdsFetched.has(e))return\"already_fetched\";let g=this.agentIdsWrittenLocally.has(e),h=this.agentTranscriptFetches.get(e);if(h)try{return await h}catch(w){if(!at(w)||r?.aborted)throw w}let b=this.fetchAgentTranscriptOnce(s,e,n,r,g);this.agentTranscriptFetches.set(e,b);try{return await b}finally{if(this.agentTranscriptFetches.get(e)===b)this.agentTranscriptFetches.delete(e)}}async fetchAgentTranscriptOnce(e,n,r,s,g){if(g&&kv($L(Sh(n),r)))return this.agentIdsFetched.add(n),ne(\"info\",\"subagent_lazy_fetch\",{outcome:\"backend_no_create\",written_locally:!0}),\"backend_no_create\";let h=Date.now(),b=\"read_fail\",w,D;try{let j=await e(n,s).catch((he)=>(d(he),null));if(j===null){if(s?.aborted)throw b=\"aborted\",new Ye;throw new O4e(\"read_fail\")}w=j.stats?.pageCount;let z=await $fn(),K=j.events.filter((he)=>he.session_agent_id===n).map((he)=>hfn(he.payload,z));if(D=K.length,K.length===0&&j.events.length>0)throw b=\"unfiltered\",new O4e(\"unfiltered\");if(!g&&this.agentIdsWrittenLocally.has(n))return b=\"superseded\",b;if(K.some(lj))b=\"write_fail\",b=await gPo(n,K,r,{createOnly:g}).catch((_e)=>{throw new O4e(\"write_fail\",{cause:_e})})===\"exists\"?\"superseded\":\"hit\";else b=\"empty\";return this.agentIdsFetched.add(n),b}finally{if(b===\"hit\"||b===\"empty\"||b===\"superseded\")y(\"ccr_subagent_lazy_fetch\");else if(b!==\"aborted\")m(\"ccr_subagent_lazy_fetch\",b);ne(\"info\",\"subagent_lazy_fetch\",{outcome:b,written_locally:g,page_count:w,event_count:D,duration_ms:Date.now()-h})}}}"
+  },
+  "fields": [
+    {
+      "file": "chunk-mphp7acd.js",
+      "start": 4209771,
+      "end": 4209805,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "8a64c2a7e342819997077c4ca061a794870db693af9c65515d754ca1d712d8f6",
+      "source": "currentSessionMemoryModeStamps=[];"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "start": 4210369,
+      "end": 4210386,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "ae3998c778b593350513bc39e4649400f60e450b93b5126fea1ebdc691497f2f",
+      "source": "sessionFile=null;"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "start": 4210606,
+      "end": 4210624,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "7c6a221076bb8f5fd7f191841650c6dfaa12cb5ab6905fe1744c49f0bff445c3",
+      "source": "pendingEntries=[];"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "start": 4210624,
+      "end": 4210646,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "7e4c1d08e8952ad09792e0b1acf283bc7789616ad6f198320f5fe99b9711104b",
+      "source": "relocationBuffer=null;"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "start": 4210646,
+      "end": 4210668,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "a3c25411fc7a44265fb8684fae203a3406d3736c7e1dbc631ffe83f4dd70dfeb",
+      "source": "remoteIngressUrl=null;"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "start": 4210668,
+      "end": 4210693,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "70ef348257e2972450c9d64b1f073a8ff8474d9025711bc301651ec757c81c11",
+      "source": "internalEventWriter=null;"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "start": 4210693,
+      "end": 4210729,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "3bf78969d1351e6b21b27a779137a429d79a3aaceaa00381a71c587fef1489fa",
+      "source": "internalEventWriterSessionId=void 0;"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "start": 4210729,
+      "end": 4210754,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "cc6d08db5dd2738aab833cf812d61080d19994cbcffac64e4af8bbf438df4512",
+      "source": "internalEventReader=null;"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "start": 4210754,
+      "end": 4210787,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "4961188bfcabe4808d87efef1d004cb0c29d3670be08045cc8a9e45bed6e042c",
+      "source": "internalSubagentEventReader=null;"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "start": 4210787,
+      "end": 4210817,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "5c2c5134ae0ae1ec6205387ae27c390f88f030af2dd68f483c16fc28d3d33053",
+      "source": "internalAgentEventReader=null;"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "start": 4210817,
+      "end": 4210845,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "07e2bc4a51bdf781f2459eaacbef73e816c1d51993f926e89f25ec57d74abf7c",
+      "source": "agentWorkerEventReader=null;"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "start": 4210845,
+      "end": 4210876,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "519a31cddbcc9eec8be12dfa2425419ed9867b9dea0eae66d340832803141b93",
+      "source": "agentIdsWrittenLocally=new Set;"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "start": 4210876,
+      "end": 4210900,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "73bd055e3841b48f02435ab2d372e1c16f37848eac9f463192a3a664c8528df8",
+      "source": "agentIdsFetched=new Set;"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "start": 4210900,
+      "end": 4210931,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "69a5cf3dbeaa2cf04ab9409419090869f52eaac4985bdbaf22f521d98dfc8309",
+      "source": "agentTranscriptFetches=new Map;"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "start": 4210931,
+      "end": 4210942,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "25617d31ea826a7fba0d86ee8cd62853460cb8476d228d1f915a799953ccf6ec",
+      "source": "mirrors=[];"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "start": 4210942,
+      "end": 4210962,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "67b4bc1e0e959c091f77f5dea3e94981d2e37ad9a891194dd7786d721f32d675",
+      "source": "pendingWriteCount=0;"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "start": 4210962,
+      "end": 4210980,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "677f7a8e4b7ad8c1c9330191f67714e3d0065f4c6fe349a20b42998006dbfe56",
+      "source": "flushResolvers=[];"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "start": 4210980,
+      "end": 4211000,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "672d3602f1dd7c1709a7ee16ea05f1a48e30d9d5c793049037553fe6333fb2ee",
+      "source": "writeQueues=new Map;"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "start": 4211000,
+      "end": 4211016,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "4a01b1112d9c0351a1a9617aaed8cb70cf87cbf9bf9d3ab52cc6269c06b2a9e0",
+      "source": "flushTimer=null;"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "start": 4211016,
+      "end": 4211033,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "fd2987e124546814c3f5cf3bc833c2be0a0e0937e16d3ea2d33448146a133afe",
+      "source": "activeDrain=null;"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "start": 4211033,
+      "end": 4211051,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "810a2620a9b0d3eb6923d75cda6f130d3884f176cab98dcf9ccc0719c8fc3b54",
+      "source": "storeFence=void 0;"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "start": 4211051,
+      "end": 4211080,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "7663946991f4ae04460bfc8f2730ec4fc52f6081fe6baa748eeff66fde2c7d2d",
+      "source": "drainChain=Promise.resolve();"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "start": 4211080,
+      "end": 4211102,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "cc4b4ae7bf554ad8056e70a9a70f0e017dec459d84c6956fd6875fe3765aef63",
+      "source": "FLUSH_INTERVAL_MS=100;"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "start": 4211102,
+      "end": 4211128,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "a4e34be3c82988d8413c735fd7a96b8a4802eae4d32c4203f2077205b332135c",
+      "source": "MAX_CHUNK_BYTES=104857600;"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "start": 4211128,
+      "end": 4211157,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "c1b4edac52808dfc55c0d95c7115571542a7c6845cead0e25254dac43c34428d",
+      "source": "bytesSinceMetadataReAppend=0;"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "start": 4211157,
+      "end": 4211188,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "416d7ad078a0801de3bb1d776daa94aa45413e88bd2770f76d04c802b70a38c7",
+      "source": "sessionFileAppendSource=void 0;"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "start": 4211188,
+      "end": 4211208,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "7018e7e5608e2259dfda33450f5ddf43dd9e7b6c3ed6a3abde34eceacd9bb1e4",
+      "source": "tornTailToSeal=null;"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "start": 4211208,
+      "end": 4211228,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "238ddb30f8c9a638442b58b6cc055dd2604c51dc5da9a9854e816d10990de0f9",
+      "source": "bytesSinceCompact=0;"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "start": 4211228,
+      "end": 4211254,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "4900e063838f2d4fe62f9697b592dda18382a035c563290b48e9f00f43a5e1b0",
+      "source": "backstopThresholdBytes=LL;"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "start": 4211254,
+      "end": 4211284,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "1cf1a993675f24fac78ec9485b7bd1caba6f19650876b995b9656984e327e662",
+      "source": "compactAwaitingSummary=void 0;"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "start": 4213936,
+      "end": 4213953,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "377046652049a149e1ac974caad3a9aef8835e4ef71aa5c74cb024410fdf10a8",
+      "source": "drainsInFlight=0;"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "start": 4213953,
+      "end": 4213977,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "17b5d503416e9ee143b9c77435023af2d6e443af16b3d5ac4f6f24fc8e7c0396",
+      "source": "directAppendsInFlight=0;"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "start": 4233256,
+      "end": 4233284,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "64f3d10b1219ab8121f8239487e410b9f27d47ca515e171574740a9cddcf61c1",
+      "source": "appendsSealedForShutdown=!1;"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "start": 4236802,
+      "end": 4236824,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "9e07c9f88e00c0b9bbb9b142ee41716bb909c8c192658506fdd1f57ee66089f9",
+      "source": "replaySources=new Map;"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "start": 4236824,
+      "end": 4236850,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "3614385f7a5ca15dd38be8ffdb157b58a9be5afe07e87384c792a150a95453c9",
+      "source": "queuedToolResults=new Map;"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "start": 4236850,
+      "end": 4236879,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "4f7b735eac4163575dafa75b47b364727200af5e3403ad34cc6a452989a0225f",
+      "source": "oversizeReplayShapes=new Set;"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "start": 4241137,
+      "end": 4241166,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "4726efe26f49a8c993d8144867c14ec28e40a0948bd5379117893ad3b51de891",
+      "source": "existingSessionFiles=new Map;"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "start": 4241166,
+      "end": 4241200,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "6718db1746edd9942cdd16800e273402a595fc21a9f21710fba0a1a8edc8cf77",
+      "source": "foreignWithheldEntryUuids=new Set;"
+    }
+  ],
+  "adaptation": "Original field initializer expressions only when the same canonical Project has no own field; complete original Wfn prototype is reused from existing lifecycle namespace, never new Wfn."
+}

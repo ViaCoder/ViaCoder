@@ -1,0 +1,157 @@
+{
+  "version": "2.1.287",
+  "platform": "darwin-arm64",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16 code units",
+  "modules": [
+    {
+      "file": "chunk-xmc0bp9s.js",
+      "moduleSha256": "8d0dcef1db8c631b05db36385708c530397b731b39b8db7a231f8baf1c600005",
+      "moduleLength": 47001,
+      "rows": [
+        {
+          "name": "Do.ordinarySelection",
+          "start": 17754,
+          "end": 19615,
+          "source": "{let r=await act(de,ye,re,e);Ft=r;let b=r.map((P)=>P.agentType);if(w===void 0&&!Rn(de,ye)){i(\"tengu_subagent_type_miss\",{requestedNormalized:S(\"OMITTED\"),availableCount:r.length}),m(\"subagent_launch\",\"subagent_type_missing\");let P=Pt&&vn(Ot)===null?[eU,...b]:b;throw new ne(`${f_n}. Available agents: ${tt(P)}`)}let A=w??A5.agentType,M=r.find((P)=>P.agentType===A);if(!M){let P=cce(A),E=new Set(b),F=P?de.filter((O)=>cce(O.agentType)===P):[],D=See(P,F.length>0&&F.every(Sl)),ie=P.length;if(F.length>1){i(\"tengu_subagent_type_miss\",{requestedNormalized:D,requestedLength:ie,availableCount:r.length,ambiguousCount:F.length}),m(\"subagent_launch\",\"subagent_type_ambiguous\");let O=F.map((J)=>J.agentType).filter((J)=>E.has(J));throw new ne(`Agent type '${A}' is ambiguous \\u2014 matches ${F.map((J)=>E.has(J.agentType)?J.agentType:`${J.agentType} (unavailable)`).join(\", \")}. ${O.length>0?`Use the exact name: ${O.join(\" or \")}`:`None of these are available. Available agents: ${tt(b)}`}`)}if(F.length===1){let O=F[0];if(E.has(O.agentType)){if(M=O,M.color)N8e(A,M.color);i(\"tengu_subagent_type_normalized\",{requestedNormalized:D,matched:yie(M)})}else{let J=O.agentType,ke=iQ(re,yt,J);if(ke)throw m(\"subagent_launch\",\"subagent_type_denied\"),new ne(`Agent type '${J}' has been denied by permission rule '${yt}(${J})' from ${ke.source}.`);if(ZNe(O,re))throw m(\"subagent_launch\",\"subagent_type_tools_denied\"),new ne(eFe(J))}}if(!M)throw i(\"tengu_subagent_type_miss\",{requestedNormalized:D,requestedLength:ie,availableCount:r.length}),m(\"subagent_launch\",\"subagent_type_not_found\"),new ne(`Agent type '${A}' not found. Available agents: ${tt(b)}`)}if(M.source===\"plugin\"&&M.loadDefinition!==void 0){let P=await M.loadDefinition();if(P===void 0||P.agentType!==M.agentType||P.source!==\"plugin\")throw new ne(`Agent type '${A}' could not be loaded from its plugin.`);M=P}s=M}",
+          "sha256": "c50b75d68123a73ca7fe9899fb91b6416327557aa43258498719dfb52f39c392"
+        },
+        {
+          "name": "ne",
+          "start": 9228,
+          "end": 9303,
+          "source": "class ne extends Error{constructor(n){super(n);this.name=\"AgentTypeError\"}}",
+          "sha256": "e2bdf7332e09cfcb9213d4a8285f51b23e58a8e9ee46f4d952c967477208de43"
+        }
+      ]
+    },
+    {
+      "file": "chunk-n4qghq20.js",
+      "moduleSha256": "39fd2d5d055aa0449210ddff4a5907753c0460a10b43931920c5796a088aabbb",
+      "moduleLength": 1262,
+      "rows": [
+        {
+          "name": "r",
+          "start": 615,
+          "end": 638,
+          "source": "function r(n){return n}",
+          "sha256": "7ac8535ec006bd379527c3fb1d4d746d6639b386f73779d1e02aac28e0d004c6"
+        },
+        {
+          "name": "S",
+          "start": 638,
+          "end": 664,
+          "source": "function S(n){return r(n)}",
+          "sha256": "65a65776e268960bd5cc11c861e76e3529375e2df46f70130ed18e27f72b5593"
+        },
+        {
+          "name": "bn",
+          "start": 985,
+          "end": 1012,
+          "source": "function bn(n){return r(n)}",
+          "sha256": "154b4998904c821fa8c2cd6248b54e59cc1beea09fbba21437c6a72212d5d90b"
+        },
+        {
+          "name": "See",
+          "start": 1051,
+          "end": 1096,
+          "source": "function See(n,e){return e?bn(n):S(\"custom\")}",
+          "sha256": "1dd88ea91dc1ebdac3be4f0c54f3fe73589b4d107b171c530b1982b92eaca43a"
+        },
+        {
+          "name": "yie",
+          "start": 1096,
+          "end": 1158,
+          "source": "function yie(n){return See(n.agentType,n.source===\"built-in\")}",
+          "sha256": "1d41e70c9a38aff9960bcc7400cf77734d9bf9a0d8b1cc9bd79a83407a27c689"
+        }
+      ]
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "moduleLength": 4409957,
+      "rows": [
+        {
+          "name": "Sl",
+          "start": 1507734,
+          "end": 1507778,
+          "source": "function Sl(e){return e.source===\"built-in\"}",
+          "sha256": "6f807032211ee64526b7587ebb8186b5e3fd4a5dab4abd105da0587fbdad51d4"
+        },
+        {
+          "name": "ine",
+          "start": 1389717,
+          "end": 1389992,
+          "source": "function ine(e){if(e===void 0)return{};if(!e.includes(\"*\"))return null;let n;for(let r of e){if(r===\"*\")continue;let{toolName:s,ruleContent:g}=jn(r);if(s!==yt||!g)return null;n??=[],n.push(...g.split(\",\").map((h)=>h.trim()).filter(Boolean))}return n?{allowedAgentTypes:n}:{}}",
+          "sha256": "df90717010aa6be4aa1ceb053a19646aa915a9f7502764022603d8613b59d406"
+        },
+        {
+          "name": "cVt",
+          "start": 2680116,
+          "end": 2680342,
+          "source": "function cVt(e,n){return e.filter((r)=>{if(r.source!==\"built-in\"||!r.tools||r.tools.length===0||ine(r.tools)!==null)return!0;return r.tools.some((s)=>{if(s===\"*\")return!1;let g=jn(s).toolName;return!zs(n,{name:g})&&V2o(g)})})}",
+          "sha256": "ee8b9619911b4035ec0907baca92e6364bcf1cf77d9d389cf39f5ac5a5835dd5"
+        },
+        {
+          "name": "ZNe",
+          "start": 2680342,
+          "end": 2680389,
+          "source": "function ZNe(e,n){return cVt([e],n).length===0}",
+          "sha256": "bc351a2c5652cedfdaa18131617ead802919ca4d0742362bffc0729adc36c3f7"
+        },
+        {
+          "name": "eFe",
+          "start": 2680389,
+          "end": 2680522,
+          "source": "function eFe(e){return`Agent type '${e}' is unavailable because every tool it may use is denied by the current permission settings.`}",
+          "sha256": "843cd6c3b16a9c75b9a10dda8eabd8e89ce6e5affe6cf761b9905f74ab9ae653"
+        },
+        {
+          "name": "V2o",
+          "start": 2680522,
+          "end": 2680595,
+          "source": "function V2o(e){return e!==hr||!a.CLAUDE_CODE_DISABLE_WEB_FETCH&&on(rbe)}",
+          "sha256": "4d27bd57c1edfffe6d6fa61dadb90eab6bb35ad9c3eb419fdc3150738dfb968b"
+        }
+      ]
+    }
+  ],
+  "ports": [
+    "availableAgents",
+    "normalize",
+    "generalPurposeAvailable",
+    "parseRule",
+    "denyTool",
+    "environment",
+    "policyAllowed",
+    "forkGuard",
+    "denyRule",
+    "typeList",
+    "requiredTypeMessage",
+    "generalPurpose",
+    "forkType",
+    "setAgentColor",
+    "telemetry",
+    "launchMetric"
+  ],
+  "mapping": {
+    "act": "availableAgents",
+    "cce": "normalize",
+    "Rn": "generalPurposeAvailable",
+    "jn": "parseRule",
+    "zs": "denyTool",
+    "a": "environment",
+    "on": "policyAllowed",
+    "vn": "forkGuard",
+    "iQ": "denyRule",
+    "tt": "typeList",
+    "f_n": "requiredTypeMessage",
+    "A5": "generalPurpose",
+    "eU": "forkType",
+    "N8e": "setAgentColor",
+    "i": "telemetry",
+    "m": "launchMetric"
+  },
+  "scope": "Full ordinary branch and complete cVt/ine/V2o tool viability helpers. act and Mods agent.offer availability remain runtime ports, not recovered here. No claim of whole Do parity."
+}

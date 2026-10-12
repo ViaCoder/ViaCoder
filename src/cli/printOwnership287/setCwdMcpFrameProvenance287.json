@@ -1,0 +1,48 @@
+{
+  "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+  "segments": {
+    "fnXs": {
+      "file": "chunk-xapeakym.js",
+      "start": 394162,
+      "end": 394292,
+      "sha256": "125a7d23a008557fa51e1e7b597079e801074ab6a56153061a209ffa71b6efe6",
+      "source": "let fn={getAppState:v,setAppState:R,getDynamicMcpState:()=>Lt,setDynamicMcpState:(b)=>{Lt=b}};function Xs(b,D){return kie(fn,b,D)}"
+    },
+    "os": {
+      "file": "chunk-xapeakym.js",
+      "start": 394318,
+      "end": 394686,
+      "sha256": "2316c59c7612878187203861f43c7300f7354aa708c7da49ddca976429e0a3e0",
+      "source": "os=async(b,D,K)=>{let ce=yn(),ke=gr(),Ie=(Oe)=>({...Oe,attemptEpoch:ke}),Ye={};uo.set(b,Ye);try{if(!zR())return Ie(await ce.reconnectMcpServerImpl(b,D,I.storageV5,I.credentials));return Ie(await(K.distrust?ce.reconnectMcpServerDistrusted(b,D,I.storageV5,I.credentials):ce.reconnectMcpServerImpl(b,D,I.storageV5,I.credentials)))}finally{if(uo.get(b)===Ye)uo.delete(b)}}"
+    },
+    "ssis": {
+      "file": "chunk-xapeakym.js",
+      "start": 394687,
+      "end": 394909,
+      "sha256": "608f4c014a02bb71b2cbddb128f97b0ca165d9e4327ccb444f0f25ac873e8b2a",
+      "source": "ss=()=>({...Yn,...Lt.configs}),is=(b)=>{let D=v().mcp.clients.find((K)=>K.name===b)??Lt.clients.find((K)=>K.name===b);if(!D&&(v().mcp.suppressedPluginMcpServers??[]).includes(b))return null;return Jlr(b,ss(),D?.config,b2)}"
+    },
+    "Ni": {
+      "file": "chunk-xapeakym.js",
+      "start": 394910,
+      "end": 395799,
+      "sha256": "cbcf55418cb496c49797d79055a91676ed5ac45f769f9560dc7790bfe93db918",
+      "source": "Ni=(b,D)=>{if(D.type===\"sdk\")return;let K=yn(),ce=is(b),ke=!!ce&&K.areMcpConfigsEqual(ce,D),Ie=[],Ye=($e)=>{if($e.name!==b)return $e;if(K.areMcpConfigsEqual($e.config,D))return $e.type===\"disabled\"?{name:b,type:\"pending\",config:D}:$e;if(!ke)return $e;if(!Ie.some((Qe)=>K.areMcpConfigsEqual(Qe,$e.config)))Ie.push($e.config);return{name:b,type:\"pending\",config:D}},Oe=Lt.clients.some(($e)=>$e.name===b);if(Oe)Lt={...Lt,clients:Lt.clients.map(Ye)};let Ke=v().mcp.clients.some(($e)=>$e.name===b);if(R(($e)=>{if($e.mcp.clients.some((Qe)=>Qe.name===b))return{...$e,mcp:{...$e.mcp,clients:$e.mcp.clients.map(Ye)}};if(Oe||!ke)return $e;return{...$e,mcp:{...$e.mcp,clients:[...$e.mcp.clients,{name:b,type:\"pending\",config:D}]}}}),!Ke&&!Oe&&ke&&Object.hasOwn(Lt.configs,b))Lt={...Lt,clients:[...Lt.clients,{name:b,type:\"pending\",config:D}]};for(let $e of Ie)K.disposeServerConnectionDetached(b,$e)}"
+    },
+    "ji": {
+      "file": "chunk-xapeakym.js",
+      "start": 395800,
+      "end": 396468,
+      "sha256": "a36abd68f551e337067be62e46cf545bc53306720e3f11a97967773600d816a7",
+      "source": "ji=(b,D)=>{let K=Xs(b,D);if(K===\"superseded\"||K===\"dropped\"&&h3e(D.client.config,D.attemptEpoch))return D.client.type===\"failed\"&&D.client.errorCode===\"IDENTITY_CHANGED\"?D.client:yn().inertReconnectShape(b,D.client.config).client;let ce=v().mcp.clients.find((ke)=>ke.name===b)??Lt.clients.find((ke)=>ke.name===b);if(ce===D.client){if(D.client.type===\"connected\")ns([D.client]),Rp(D.client,Q);return D.client}if(ce&&(ce.type===\"disabled\"||ce.type===\"failed\"))return ce;if(!ce&&D.client.config.type===\"sdk\"&&D.client.type!==\"connected\")return D.client;return{name:b,type:\"failed\",config:D.client.config,error:ce?`Server status: ${ce.type}`:`Server not found: ${Kt(b)}`}}"
+    },
+    "Ad": {
+      "file": "chunk-xapeakym.js",
+      "start": 396469,
+      "end": 396542,
+      "sha256": "c9a5e84fa685d9cb1ed745c879cd23ab8170aa533cca69aff216d9a99cffaa1e",
+      "source": "Ad=async(b,D)=>{Ni(b,D);let K=await os(b,D,{distrust:!1});return ji(b,K)}"
+    }
+  },
+  "transport": "Original declarations/body retained; original uo supplied by existing canonical owner; return carrier only"
+}

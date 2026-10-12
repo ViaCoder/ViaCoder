@@ -1,0 +1,240 @@
+{
+  "version": "2.1.287",
+  "baseline": "linux-x64 native mgn + Yge",
+  "corpus": "../.work/official-modules-2.1.287",
+  "offsetUnits": [
+    "UTF-16 code units",
+    "UTF-8 bytes"
+  ],
+  "generatedClassSha256": "d236ee7602b8812f1e760da737c76c1be02bc12ab57c3c7b154054bd91071d72",
+  "generatedParserSha256": "5925ca2c5bb9ed08ce6b3f694f80904c8a52a2866dd4fc24e25a91cba5fc783c",
+  "generatedHelpers": {
+    "t4e": "98178b617540384d00593505f30e4621410c3dc895f054fc19229a2dd7bd080a",
+    "n4e": "d8b551f9af3190576ace27065e9fab36d5a9efedbe97cf0977568b42e44ecf41"
+  },
+  "requiredPorts": {
+    "now": "quota owner Date.now() in epoch milliseconds",
+    "overageStatusHeader": "anthropic-ratelimit-unified-overage-status",
+    "overageInUseHeader": "anthropic-ratelimit-unified-overage-in-use"
+  },
+  "closure": {
+    "helpers": [
+      "function t4e(e,n){let r=Number(e.get(n)??0);return Number.isFinite(r)?Math.max(0,Math.min(1,r)):0}",
+      "function n4e(e,n,r){let s=Number(e.get(n)??NaN);return Number.isFinite(s)&&s*1000>r?Math.round(s):void 0}"
+    ],
+    "parser": "function mgn(e,n){if(e.get(\"anthropic-ratelimit-unified-status\")===null)return{limiterRan:!1};let r=t4e(e,\"anthropic-ratelimit-unified-grace-5h-utilization\"),s=t4e(e,\"anthropic-ratelimit-unified-grace-7d-utilization\");if(r===0&&s===0)return{limiterRan:!0,zone:null};let g=n4e(e,\"anthropic-ratelimit-unified-5h-reset\",n),h=n4e(e,\"anthropic-ratelimit-unified-7d-reset\",n),S=r>0&&g!==void 0&&(h===void 0||g>h),w=s>0&&!S?\"seven_day\":\"five_hour\",H=e.get(Ocn),j=H===\"allowed\"||H===\"allowed_warning\"?H:void 0;return{limiterRan:!0,zone:{rateLimitType:w,resetsAt:w===\"seven_day\"?h:g,extraUsageStatus:j},covered:j!==void 0||e.get(xLt)===\"true\"}}",
+    "classSource": "class Yge{zone=null;covered=!1;turnNote=\"none\";fenceMs=0;getZone(e=Date.now()){let n=this.zone;return n!==null&&n.resetsAt!==void 0&&e/1000>=n.resetsAt?null:n}applyResponse(e,n){let r=mgn(e,n);if(!r.limiterRan||n<this.fenceMs)return;if(this.fenceMs=n,r.zone===null||r.zone.resetsAt!==void 0)this.dropEndedZone(n);if(this.zone=r.zone,this.covered=r.zone!==null&&r.covered,r.zone===null||r.covered)this.turnNote=\"none\";else if(this.turnNote===\"none\")this.turnNote=\"owed\"}dropEndedZone(e){if(this.zone!==null&&this.getZone(e)===null)this.zone=null,this.covered=!1,this.turnNote=\"none\"}onRefused(){if(this.zone!==null&&this.zone.extraUsageStatus!==void 0)this.zone={...this.zone,extraUsageStatus:void 0};this.covered=!1}leave(e=Date.now()){this.zone=null,this.covered=!1,this.turnNote=\"none\",this.fenceMs=Math.max(this.fenceMs,e)}onMainTurnStart(){this.turnNote=\"none\"}takeTurnNote(e=Date.now()){if(this.dropEndedZone(e),this.turnNote!==\"owed\")return!1;return this.turnNote=\"taken\",!0}markStartNotePlaced(){if(this.turnNote===\"taken\")this.turnNote=\"placed\"}continueAfterWrapUpAt(e=Date.now()){let n=this.getZone(e);return this.turnNote===\"placed\"&&n!==null&&!this.covered&&n.resetsAt!==void 0?{resetsAt:n.resetsAt,rateLimitType:n.rateLimitType}:null}subagentNoteDue(e=Date.now()){return this.getZone(e)!==null&&!this.covered}}"
+  },
+  "platforms": [
+    {
+      "platform": "darwin-arm64",
+      "binarySha256": "6eab8333fe2121553100d8f40bfada384a3e989b94f947e18ba6677a6fcb41ea",
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "moduleOffset": 185762130,
+      "moduleLength": 4409957,
+      "classCodeUnitOffset": 47942,
+      "classByteOffset": 47942,
+      "classSource": "class Xge{zone=null;covered=!1;turnNote=\"none\";fenceMs=0;getZone(e=Date.now()){let n=this.zone;return n!==null&&n.resetsAt!==void 0&&e/1000>=n.resetsAt?null:n}applyResponse(e,n){let r=pgn(e,n);if(!r.limiterRan||n<this.fenceMs)return;if(this.fenceMs=n,r.zone===null||r.zone.resetsAt!==void 0)this.dropEndedZone(n);if(this.zone=r.zone,this.covered=r.zone!==null&&r.covered,r.zone===null||r.covered)this.turnNote=\"none\";else if(this.turnNote===\"none\")this.turnNote=\"owed\"}dropEndedZone(e){if(this.zone!==null&&this.getZone(e)===null)this.zone=null,this.covered=!1,this.turnNote=\"none\"}onRefused(){if(this.zone!==null&&this.zone.extraUsageStatus!==void 0)this.zone={...this.zone,extraUsageStatus:void 0};this.covered=!1}leave(e=Date.now()){this.zone=null,this.covered=!1,this.turnNote=\"none\",this.fenceMs=Math.max(this.fenceMs,e)}onMainTurnStart(){this.turnNote=\"none\"}takeTurnNote(e=Date.now()){if(this.dropEndedZone(e),this.turnNote!==\"owed\")return!1;return this.turnNote=\"taken\",!0}markStartNotePlaced(){if(this.turnNote===\"taken\")this.turnNote=\"placed\"}continueAfterWrapUpAt(e=Date.now()){let n=this.getZone(e);return this.turnNote===\"placed\"&&n!==null&&!this.covered&&n.resetsAt!==void 0?{resetsAt:n.resetsAt,rateLimitType:n.rateLimitType}:null}subagentNoteDue(e=Date.now()){return this.getZone(e)!==null&&!this.covered}}",
+      "classSha256": "cc1e4108df3cac2b5140df75ac33bc055698bcc13e3d8d2e9b3bdc6dfe19a791",
+      "parserSymbol": "pgn",
+      "parserCodeUnitOffset": 47307,
+      "parserByteOffset": 47307,
+      "parserSource": "function pgn(e,n){if(e.get(\"anthropic-ratelimit-unified-status\")===null)return{limiterRan:!1};let r=U6e(e,\"anthropic-ratelimit-unified-grace-5h-utilization\"),s=U6e(e,\"anthropic-ratelimit-unified-grace-7d-utilization\");if(r===0&&s===0)return{limiterRan:!0,zone:null};let g=H6e(e,\"anthropic-ratelimit-unified-5h-reset\",n),h=H6e(e,\"anthropic-ratelimit-unified-7d-reset\",n),b=r>0&&g!==void 0&&(h===void 0||g>h),w=s>0&&!b?\"seven_day\":\"five_hour\",D=e.get(Jcn),j=D===\"allowed\"||D===\"allowed_warning\"?D:void 0;return{limiterRan:!0,zone:{rateLimitType:w,resetsAt:w===\"seven_day\"?h:g,extraUsageStatus:j},covered:j!==void 0||e.get(WLt)===\"true\"}}",
+      "parserSha256": "bdfe57fe13d5dff58c723d61d06eb889dfdba2e6b6283f8d2b6be9298eff96eb",
+      "helperUtilSymbol": "U6e",
+      "helperUtilSource": "function U6e(e,n){let r=Number(e.get(n)??0);return Number.isFinite(r)?Math.max(0,Math.min(1,r)):0}",
+      "helperUtilSha256": "9c0a970f50dd9067e2379ef273f3c7413978b4d3483f4f21cbe0c2fe8cfa06e0",
+      "helperResetSymbol": "H6e",
+      "helperResetSource": "function H6e(e,n,r){let s=Number(e.get(n)??NaN);return Number.isFinite(s)&&s*1000>r?Math.round(s):void 0}",
+      "helperResetSha256": "9ff127dda14a94f4058e15123595fe3184d338f576ebe3518586121741792d2b",
+      "externalConstants": {
+        "Jcn": {
+          "value": "anthropic-ratelimit-unified-overage-status",
+          "sourceFile": "chunk-09m4fzsj.js",
+          "sourceSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f"
+        },
+        "WLt": {
+          "value": "anthropic-ratelimit-unified-overage-in-use",
+          "sourceFile": "chunk-09m4fzsj.js",
+          "sourceSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f"
+        }
+      }
+    },
+    {
+      "platform": "darwin-x64",
+      "binarySha256": "f1863213e4f55aaadc2e6ee617f934ada29930e5de4c5e5f8f9e34a0d594fdd7",
+      "module": "chunk-xyr63zg5.js",
+      "moduleSha256": "350a58d418914413ef2b573f1feee859c944ad06217c830e64e8c65f161cdeed",
+      "moduleOffset": 192783128,
+      "moduleLength": 4409285,
+      "classCodeUnitOffset": 47886,
+      "classByteOffset": 47886,
+      "classSource": "class Xge{zone=null;covered=!1;turnNote=\"none\";fenceMs=0;getZone(e=Date.now()){let n=this.zone;return n!==null&&n.resetsAt!==void 0&&e/1000>=n.resetsAt?null:n}applyResponse(e,n){let r=pgn(e,n);if(!r.limiterRan||n<this.fenceMs)return;if(this.fenceMs=n,r.zone===null||r.zone.resetsAt!==void 0)this.dropEndedZone(n);if(this.zone=r.zone,this.covered=r.zone!==null&&r.covered,r.zone===null||r.covered)this.turnNote=\"none\";else if(this.turnNote===\"none\")this.turnNote=\"owed\"}dropEndedZone(e){if(this.zone!==null&&this.getZone(e)===null)this.zone=null,this.covered=!1,this.turnNote=\"none\"}onRefused(){if(this.zone!==null&&this.zone.extraUsageStatus!==void 0)this.zone={...this.zone,extraUsageStatus:void 0};this.covered=!1}leave(e=Date.now()){this.zone=null,this.covered=!1,this.turnNote=\"none\",this.fenceMs=Math.max(this.fenceMs,e)}onMainTurnStart(){this.turnNote=\"none\"}takeTurnNote(e=Date.now()){if(this.dropEndedZone(e),this.turnNote!==\"owed\")return!1;return this.turnNote=\"taken\",!0}markStartNotePlaced(){if(this.turnNote===\"taken\")this.turnNote=\"placed\"}continueAfterWrapUpAt(e=Date.now()){let n=this.getZone(e);return this.turnNote===\"placed\"&&n!==null&&!this.covered&&n.resetsAt!==void 0?{resetsAt:n.resetsAt,rateLimitType:n.rateLimitType}:null}subagentNoteDue(e=Date.now()){return this.getZone(e)!==null&&!this.covered}}",
+      "classSha256": "cc1e4108df3cac2b5140df75ac33bc055698bcc13e3d8d2e9b3bdc6dfe19a791",
+      "parserSymbol": "pgn",
+      "parserCodeUnitOffset": 47251,
+      "parserByteOffset": 47251,
+      "parserSource": "function pgn(e,n){if(e.get(\"anthropic-ratelimit-unified-status\")===null)return{limiterRan:!1};let r=U6e(e,\"anthropic-ratelimit-unified-grace-5h-utilization\"),s=U6e(e,\"anthropic-ratelimit-unified-grace-7d-utilization\");if(r===0&&s===0)return{limiterRan:!0,zone:null};let g=H6e(e,\"anthropic-ratelimit-unified-5h-reset\",n),h=H6e(e,\"anthropic-ratelimit-unified-7d-reset\",n),b=r>0&&g!==void 0&&(h===void 0||g>h),w=s>0&&!b?\"seven_day\":\"five_hour\",L=e.get(Jcn),j=L===\"allowed\"||L===\"allowed_warning\"?L:void 0;return{limiterRan:!0,zone:{rateLimitType:w,resetsAt:w===\"seven_day\"?h:g,extraUsageStatus:j},covered:j!==void 0||e.get(WDt)===\"true\"}}",
+      "parserSha256": "61382ee655703d5d5ffd56699b9dbb3dcfef69f7600e4cd30c61f618dd149345",
+      "helperUtilSymbol": "U6e",
+      "helperUtilSource": "function U6e(e,n){let r=Number(e.get(n)??0);return Number.isFinite(r)?Math.max(0,Math.min(1,r)):0}",
+      "helperUtilSha256": "9c0a970f50dd9067e2379ef273f3c7413978b4d3483f4f21cbe0c2fe8cfa06e0",
+      "helperResetSymbol": "H6e",
+      "helperResetSource": "function H6e(e,n,r){let s=Number(e.get(n)??NaN);return Number.isFinite(s)&&s*1000>r?Math.round(s):void 0}",
+      "helperResetSha256": "9ff127dda14a94f4058e15123595fe3184d338f576ebe3518586121741792d2b",
+      "externalConstants": {
+        "Jcn": {
+          "value": "anthropic-ratelimit-unified-overage-status",
+          "sourceFile": "chunk-2ep4dvcb.js",
+          "sourceSha256": "73836d3aaa92f01f4ac419f116a5554703f894f900651f3c77e21963f31c9510"
+        },
+        "WDt": {
+          "value": "anthropic-ratelimit-unified-overage-in-use",
+          "sourceFile": "chunk-2ep4dvcb.js",
+          "sourceSha256": "73836d3aaa92f01f4ac419f116a5554703f894f900651f3c77e21963f31c9510"
+        }
+      }
+    },
+    {
+      "platform": "linux-arm64",
+      "binarySha256": "e4daf793d1e74fb0d9874dd09e98690bbfd7be515f78a87fd05b9e2b4bb33b03",
+      "module": "chunk-gakypdfc.js",
+      "moduleSha256": "a9a2bc50c519b09d776b68b9852839e84acbebec53deb2438e96d73f52e56db3",
+      "moduleOffset": 205595787,
+      "moduleLength": 4409403,
+      "classCodeUnitOffset": 47840,
+      "classByteOffset": 47840,
+      "classSource": "class Yge{zone=null;covered=!1;turnNote=\"none\";fenceMs=0;getZone(e=Date.now()){let n=this.zone;return n!==null&&n.resetsAt!==void 0&&e/1000>=n.resetsAt?null:n}applyResponse(e,n){let r=mgn(e,n);if(!r.limiterRan||n<this.fenceMs)return;if(this.fenceMs=n,r.zone===null||r.zone.resetsAt!==void 0)this.dropEndedZone(n);if(this.zone=r.zone,this.covered=r.zone!==null&&r.covered,r.zone===null||r.covered)this.turnNote=\"none\";else if(this.turnNote===\"none\")this.turnNote=\"owed\"}dropEndedZone(e){if(this.zone!==null&&this.getZone(e)===null)this.zone=null,this.covered=!1,this.turnNote=\"none\"}onRefused(){if(this.zone!==null&&this.zone.extraUsageStatus!==void 0)this.zone={...this.zone,extraUsageStatus:void 0};this.covered=!1}leave(e=Date.now()){this.zone=null,this.covered=!1,this.turnNote=\"none\",this.fenceMs=Math.max(this.fenceMs,e)}onMainTurnStart(){this.turnNote=\"none\"}takeTurnNote(e=Date.now()){if(this.dropEndedZone(e),this.turnNote!==\"owed\")return!1;return this.turnNote=\"taken\",!0}markStartNotePlaced(){if(this.turnNote===\"taken\")this.turnNote=\"placed\"}continueAfterWrapUpAt(e=Date.now()){let n=this.getZone(e);return this.turnNote===\"placed\"&&n!==null&&!this.covered&&n.resetsAt!==void 0?{resetsAt:n.resetsAt,rateLimitType:n.rateLimitType}:null}subagentNoteDue(e=Date.now()){return this.getZone(e)!==null&&!this.covered}}",
+      "classSha256": "d236ee7602b8812f1e760da737c76c1be02bc12ab57c3c7b154054bd91071d72",
+      "parserSymbol": "mgn",
+      "parserCodeUnitOffset": 47205,
+      "parserByteOffset": 47205,
+      "parserSource": "function mgn(e,n){if(e.get(\"anthropic-ratelimit-unified-status\")===null)return{limiterRan:!1};let r=t4e(e,\"anthropic-ratelimit-unified-grace-5h-utilization\"),s=t4e(e,\"anthropic-ratelimit-unified-grace-7d-utilization\");if(r===0&&s===0)return{limiterRan:!0,zone:null};let g=n4e(e,\"anthropic-ratelimit-unified-5h-reset\",n),h=n4e(e,\"anthropic-ratelimit-unified-7d-reset\",n),S=r>0&&g!==void 0&&(h===void 0||g>h),w=s>0&&!S?\"seven_day\":\"five_hour\",D=e.get(Icn),j=D===\"allowed\"||D===\"allowed_warning\"?D:void 0;return{limiterRan:!0,zone:{rateLimitType:w,resetsAt:w===\"seven_day\"?h:g,extraUsageStatus:j},covered:j!==void 0||e.get(xLt)===\"true\"}}",
+      "parserSha256": "7aab8bbd57670d6b7d6b31ce2641aec61f46ce28711c817fa0cebf2cab23f9a1",
+      "helperUtilSymbol": "t4e",
+      "helperUtilSource": "function t4e(e,n){let r=Number(e.get(n)??0);return Number.isFinite(r)?Math.max(0,Math.min(1,r)):0}",
+      "helperUtilSha256": "98178b617540384d00593505f30e4621410c3dc895f054fc19229a2dd7bd080a",
+      "helperResetSymbol": "n4e",
+      "helperResetSource": "function n4e(e,n,r){let s=Number(e.get(n)??NaN);return Number.isFinite(s)&&s*1000>r?Math.round(s):void 0}",
+      "helperResetSha256": "d8b551f9af3190576ace27065e9fab36d5a9efedbe97cf0977568b42e44ecf41",
+      "externalConstants": {
+        "Icn": {
+          "value": "anthropic-ratelimit-unified-overage-status",
+          "sourceFile": "chunk-2sd5rhmn.js",
+          "sourceSha256": "625960635957a15a3d4b0c9859fed9f50b57788dd2cecf687b1a1518b055a334"
+        },
+        "xLt": {
+          "value": "anthropic-ratelimit-unified-overage-in-use",
+          "sourceFile": "chunk-2sd5rhmn.js",
+          "sourceSha256": "625960635957a15a3d4b0c9859fed9f50b57788dd2cecf687b1a1518b055a334"
+        }
+      }
+    },
+    {
+      "platform": "linux-x64",
+      "binarySha256": "3920489a5109cff5786a1a392c25277408ff22bc796d5edb9c16a60e5a1718f0",
+      "module": "chunk-jrjyjez0.js",
+      "moduleSha256": "910de0d981a1b620b1866ae5ca44f40dc05f06f1b2205bbb9c8dccf58d5c468e",
+      "moduleOffset": 206117801,
+      "moduleLength": 4410099,
+      "classCodeUnitOffset": 47898,
+      "classByteOffset": 47898,
+      "classSource": "class Yge{zone=null;covered=!1;turnNote=\"none\";fenceMs=0;getZone(e=Date.now()){let n=this.zone;return n!==null&&n.resetsAt!==void 0&&e/1000>=n.resetsAt?null:n}applyResponse(e,n){let r=mgn(e,n);if(!r.limiterRan||n<this.fenceMs)return;if(this.fenceMs=n,r.zone===null||r.zone.resetsAt!==void 0)this.dropEndedZone(n);if(this.zone=r.zone,this.covered=r.zone!==null&&r.covered,r.zone===null||r.covered)this.turnNote=\"none\";else if(this.turnNote===\"none\")this.turnNote=\"owed\"}dropEndedZone(e){if(this.zone!==null&&this.getZone(e)===null)this.zone=null,this.covered=!1,this.turnNote=\"none\"}onRefused(){if(this.zone!==null&&this.zone.extraUsageStatus!==void 0)this.zone={...this.zone,extraUsageStatus:void 0};this.covered=!1}leave(e=Date.now()){this.zone=null,this.covered=!1,this.turnNote=\"none\",this.fenceMs=Math.max(this.fenceMs,e)}onMainTurnStart(){this.turnNote=\"none\"}takeTurnNote(e=Date.now()){if(this.dropEndedZone(e),this.turnNote!==\"owed\")return!1;return this.turnNote=\"taken\",!0}markStartNotePlaced(){if(this.turnNote===\"taken\")this.turnNote=\"placed\"}continueAfterWrapUpAt(e=Date.now()){let n=this.getZone(e);return this.turnNote===\"placed\"&&n!==null&&!this.covered&&n.resetsAt!==void 0?{resetsAt:n.resetsAt,rateLimitType:n.rateLimitType}:null}subagentNoteDue(e=Date.now()){return this.getZone(e)!==null&&!this.covered}}",
+      "classSha256": "d236ee7602b8812f1e760da737c76c1be02bc12ab57c3c7b154054bd91071d72",
+      "parserSymbol": "mgn",
+      "parserCodeUnitOffset": 47263,
+      "parserByteOffset": 47263,
+      "parserSource": "function mgn(e,n){if(e.get(\"anthropic-ratelimit-unified-status\")===null)return{limiterRan:!1};let r=t4e(e,\"anthropic-ratelimit-unified-grace-5h-utilization\"),s=t4e(e,\"anthropic-ratelimit-unified-grace-7d-utilization\");if(r===0&&s===0)return{limiterRan:!0,zone:null};let g=n4e(e,\"anthropic-ratelimit-unified-5h-reset\",n),h=n4e(e,\"anthropic-ratelimit-unified-7d-reset\",n),S=r>0&&g!==void 0&&(h===void 0||g>h),w=s>0&&!S?\"seven_day\":\"five_hour\",H=e.get(Ocn),j=H===\"allowed\"||H===\"allowed_warning\"?H:void 0;return{limiterRan:!0,zone:{rateLimitType:w,resetsAt:w===\"seven_day\"?h:g,extraUsageStatus:j},covered:j!==void 0||e.get(xLt)===\"true\"}}",
+      "parserSha256": "5925ca2c5bb9ed08ce6b3f694f80904c8a52a2866dd4fc24e25a91cba5fc783c",
+      "helperUtilSymbol": "t4e",
+      "helperUtilSource": "function t4e(e,n){let r=Number(e.get(n)??0);return Number.isFinite(r)?Math.max(0,Math.min(1,r)):0}",
+      "helperUtilSha256": "98178b617540384d00593505f30e4621410c3dc895f054fc19229a2dd7bd080a",
+      "helperResetSymbol": "n4e",
+      "helperResetSource": "function n4e(e,n,r){let s=Number(e.get(n)??NaN);return Number.isFinite(s)&&s*1000>r?Math.round(s):void 0}",
+      "helperResetSha256": "d8b551f9af3190576ace27065e9fab36d5a9efedbe97cf0977568b42e44ecf41",
+      "externalConstants": {
+        "Ocn": {
+          "value": "anthropic-ratelimit-unified-overage-status",
+          "sourceFile": "chunk-da9jta6b.js",
+          "sourceSha256": "b19ab6a5a026375c831553d430f48fb03586db5415c52d606c1c579ad1dfe9d3"
+        },
+        "xLt": {
+          "value": "anthropic-ratelimit-unified-overage-in-use",
+          "sourceFile": "chunk-da9jta6b.js",
+          "sourceSha256": "b19ab6a5a026375c831553d430f48fb03586db5415c52d606c1c579ad1dfe9d3"
+        }
+      }
+    },
+    {
+      "platform": "win32-arm64",
+      "binarySha256": "11438981154e99af8f9aeabe193871c92b8b550b35354686a140fc056f1bfe54",
+      "module": "chunk-2ta2c3j5.js",
+      "moduleSha256": "32e092a685dc008cceed15b87d7d176136d31fb5bfef7914adbcab1a5f152cba",
+      "moduleOffset": 198270728,
+      "moduleLength": 4409585,
+      "classCodeUnitOffset": 47846,
+      "classByteOffset": 47846,
+      "classSource": "class Yge{zone=null;covered=!1;turnNote=\"none\";fenceMs=0;getZone(e=Date.now()){let n=this.zone;return n!==null&&n.resetsAt!==void 0&&e/1000>=n.resetsAt?null:n}applyResponse(e,n){let r=ggn(e,n);if(!r.limiterRan||n<this.fenceMs)return;if(this.fenceMs=n,r.zone===null||r.zone.resetsAt!==void 0)this.dropEndedZone(n);if(this.zone=r.zone,this.covered=r.zone!==null&&r.covered,r.zone===null||r.covered)this.turnNote=\"none\";else if(this.turnNote===\"none\")this.turnNote=\"owed\"}dropEndedZone(e){if(this.zone!==null&&this.getZone(e)===null)this.zone=null,this.covered=!1,this.turnNote=\"none\"}onRefused(){if(this.zone!==null&&this.zone.extraUsageStatus!==void 0)this.zone={...this.zone,extraUsageStatus:void 0};this.covered=!1}leave(e=Date.now()){this.zone=null,this.covered=!1,this.turnNote=\"none\",this.fenceMs=Math.max(this.fenceMs,e)}onMainTurnStart(){this.turnNote=\"none\"}takeTurnNote(e=Date.now()){if(this.dropEndedZone(e),this.turnNote!==\"owed\")return!1;return this.turnNote=\"taken\",!0}markStartNotePlaced(){if(this.turnNote===\"taken\")this.turnNote=\"placed\"}continueAfterWrapUpAt(e=Date.now()){let n=this.getZone(e);return this.turnNote===\"placed\"&&n!==null&&!this.covered&&n.resetsAt!==void 0?{resetsAt:n.resetsAt,rateLimitType:n.rateLimitType}:null}subagentNoteDue(e=Date.now()){return this.getZone(e)!==null&&!this.covered}}",
+      "classSha256": "7aebf0493e3d1e2e539a24eced7330a4b84c8664b0235828b0d3a03db56b4895",
+      "parserSymbol": "ggn",
+      "parserCodeUnitOffset": 47211,
+      "parserByteOffset": 47211,
+      "parserSource": "function ggn(e,n){if(e.get(\"anthropic-ratelimit-unified-status\")===null)return{limiterRan:!1};let r=n4e(e,\"anthropic-ratelimit-unified-grace-5h-utilization\"),s=n4e(e,\"anthropic-ratelimit-unified-grace-7d-utilization\");if(r===0&&s===0)return{limiterRan:!0,zone:null};let g=o4e(e,\"anthropic-ratelimit-unified-5h-reset\",n),h=o4e(e,\"anthropic-ratelimit-unified-7d-reset\",n),S=r>0&&g!==void 0&&(h===void 0||g>h),w=s>0&&!S?\"seven_day\":\"five_hour\",D=e.get(Ucn),j=D===\"allowed\"||D===\"allowed_warning\"?D:void 0;return{limiterRan:!0,zone:{rateLimitType:w,resetsAt:w===\"seven_day\"?h:g,extraUsageStatus:j},covered:j!==void 0||e.get(MLt)===\"true\"}}",
+      "parserSha256": "92b893204aa0eb1f01871d75b14165bc02edf055b0b266b3ff335122d61816cb",
+      "helperUtilSymbol": "n4e",
+      "helperUtilSource": "function n4e(e,n){let r=Number(e.get(n)??0);return Number.isFinite(r)?Math.max(0,Math.min(1,r)):0}",
+      "helperUtilSha256": "ca9f05c29fcd7f6d72cf4626961fd2228f2e23900be7854465d7ef5ddbf5eaed",
+      "helperResetSymbol": "o4e",
+      "helperResetSource": "function o4e(e,n,r){let s=Number(e.get(n)??NaN);return Number.isFinite(s)&&s*1000>r?Math.round(s):void 0}",
+      "helperResetSha256": "4e7b1380f16a830437e791cb20282075f159f4d864c4349082a748766b7622df",
+      "externalConstants": {
+        "Ucn": {
+          "value": "anthropic-ratelimit-unified-overage-status",
+          "sourceFile": "chunk-etyk70ys.js",
+          "sourceSha256": "b0239f6132eda0d9e38c93aa0e682b25fe057cefbc39cd9a7cba1dd7c1d84f88"
+        },
+        "MLt": {
+          "value": "anthropic-ratelimit-unified-overage-in-use",
+          "sourceFile": "chunk-etyk70ys.js",
+          "sourceSha256": "b0239f6132eda0d9e38c93aa0e682b25fe057cefbc39cd9a7cba1dd7c1d84f88"
+        }
+      }
+    },
+    {
+      "platform": "win32-x64",
+      "binarySha256": "6d5be51f0edfe3429cd1a9885950db31c1e59eb9a2c9a30a47e64179d2ff98b4",
+      "module": "chunk-5hdtkwdb.js",
+      "moduleSha256": "f0ee6d6caace627b5824e6197fe2474a196c0b59e36f19c725a9a4d1a7b1eda0",
+      "moduleOffset": 210706397,
+      "moduleLength": 4410233,
+      "classCodeUnitOffset": 47900,
+      "classByteOffset": 47900,
+      "classSource": "class Yge{zone=null;covered=!1;turnNote=\"none\";fenceMs=0;getZone(e=Date.now()){let n=this.zone;return n!==null&&n.resetsAt!==void 0&&e/1000>=n.resetsAt?null:n}applyResponse(e,n){let r=ggn(e,n);if(!r.limiterRan||n<this.fenceMs)return;if(this.fenceMs=n,r.zone===null||r.zone.resetsAt!==void 0)this.dropEndedZone(n);if(this.zone=r.zone,this.covered=r.zone!==null&&r.covered,r.zone===null||r.covered)this.turnNote=\"none\";else if(this.turnNote===\"none\")this.turnNote=\"owed\"}dropEndedZone(e){if(this.zone!==null&&this.getZone(e)===null)this.zone=null,this.covered=!1,this.turnNote=\"none\"}onRefused(){if(this.zone!==null&&this.zone.extraUsageStatus!==void 0)this.zone={...this.zone,extraUsageStatus:void 0};this.covered=!1}leave(e=Date.now()){this.zone=null,this.covered=!1,this.turnNote=\"none\",this.fenceMs=Math.max(this.fenceMs,e)}onMainTurnStart(){this.turnNote=\"none\"}takeTurnNote(e=Date.now()){if(this.dropEndedZone(e),this.turnNote!==\"owed\")return!1;return this.turnNote=\"taken\",!0}markStartNotePlaced(){if(this.turnNote===\"taken\")this.turnNote=\"placed\"}continueAfterWrapUpAt(e=Date.now()){let n=this.getZone(e);return this.turnNote===\"placed\"&&n!==null&&!this.covered&&n.resetsAt!==void 0?{resetsAt:n.resetsAt,rateLimitType:n.rateLimitType}:null}subagentNoteDue(e=Date.now()){return this.getZone(e)!==null&&!this.covered}}",
+      "classSha256": "7aebf0493e3d1e2e539a24eced7330a4b84c8664b0235828b0d3a03db56b4895",
+      "parserSymbol": "ggn",
+      "parserCodeUnitOffset": 47265,
+      "parserByteOffset": 47265,
+      "parserSource": "function ggn(e,n){if(e.get(\"anthropic-ratelimit-unified-status\")===null)return{limiterRan:!1};let r=u4e(e,\"anthropic-ratelimit-unified-grace-5h-utilization\"),s=u4e(e,\"anthropic-ratelimit-unified-grace-7d-utilization\");if(r===0&&s===0)return{limiterRan:!0,zone:null};let g=f4e(e,\"anthropic-ratelimit-unified-5h-reset\",n),h=f4e(e,\"anthropic-ratelimit-unified-7d-reset\",n),S=r>0&&g!==void 0&&(h===void 0||g>h),w=s>0&&!S?\"seven_day\":\"five_hour\",D=e.get($cn),j=D===\"allowed\"||D===\"allowed_warning\"?D:void 0;return{limiterRan:!0,zone:{rateLimitType:w,resetsAt:w===\"seven_day\"?h:g,extraUsageStatus:j},covered:j!==void 0||e.get(MNt)===\"true\"}}",
+      "parserSha256": "dcf2f0ba8f1bf88159e0c8427a6cee2cb24a760a57e81c1e1cb094c37939f4e9",
+      "helperUtilSymbol": "u4e",
+      "helperUtilSource": "function u4e(e,n){let r=Number(e.get(n)??0);return Number.isFinite(r)?Math.max(0,Math.min(1,r)):0}",
+      "helperUtilSha256": "f8df910da805e8d92513123dfad3fbb44b4be68cac05dfbcfabe874a78fa4467",
+      "helperResetSymbol": "f4e",
+      "helperResetSource": "function f4e(e,n,r){let s=Number(e.get(n)??NaN);return Number.isFinite(s)&&s*1000>r?Math.round(s):void 0}",
+      "helperResetSha256": "7f1623bfe1e0d9ed1a7a098500721440f9cb9f7984c3b50223c742cd36e88294",
+      "externalConstants": {
+        "$cn": {
+          "value": "anthropic-ratelimit-unified-overage-status",
+          "sourceFile": "chunk-162ty249.js",
+          "sourceSha256": "98fde11b1d1bb5bc9ae5cd2d160a41ee17a265ee2ffd319411145c870fb9b350"
+        },
+        "MNt": {
+          "value": "anthropic-ratelimit-unified-overage-in-use",
+          "sourceFile": "chunk-162ty249.js",
+          "sourceSha256": "98fde11b1d1bb5bc9ae5cd2d160a41ee17a265ee2ffd319411145c870fb9b350"
+        }
+      }
+    }
+  ]
+}

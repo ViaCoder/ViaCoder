@@ -1,0 +1,419 @@
+{
+  "version": "2.1.287",
+  "platform": "darwin-arm64",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16 code units",
+  "roots": {
+    "StartGate": [
+      "chunk-xapeakym.js",
+      "kl"
+    ],
+    "isMainThread": [
+      "chunk-mphp7acd.js",
+      "Xf"
+    ],
+    "endSessionHead": [
+      "chunk-xapeakym.js",
+      "Sw"
+    ],
+    "notifyTurnStarting": [
+      "chunk-dndmrt2q.js",
+      "notifyTurnStarting287"
+    ]
+  },
+  "sourceContracts": {
+    "yo": {
+      "file": "chunk-xapeakym.js",
+      "name": "yo",
+      "start": 380054,
+      "end": 380416,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "moduleLength": 566845,
+      "sha256": "cd82473472eaed34ba738dc1daaee4e9c7bc915e9c7207bd1a2519dec3110e8e",
+      "source": "yo=new kc({admissionBarrier:()=>JO.of(e),firstTurnGate:()=>$s,messageQueue:Q,drain:qe,receivedMessageUuids:bt,declinedRedeliveries:dr,io:r,transcriptForFrame:Wg({storageV5:I.storageV5}),kick:()=>void Jn(),retirementMayLandDuringReads:()=>Yt.retirementMayLandDuringReads(),rescueOwnsReRun:()=>Yt.rescueOwnsReRun(),idleTeeAllowed:()=>Ya()&&!r.hasStandingPrompt()})",
+      "variable": true
+    },
+    "resultCaller-holdsResults": {
+      "file": "chunk-xapeakym.js",
+      "name": "holdsResults",
+      "start": 386417,
+      "end": 386451,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "moduleLength": 566845,
+      "sha256": "89a5477a7faad1977621f70ef3e2b25c554f763d16fae9cbdd116435af14a26b",
+      "source": "holdsResults:()=>Bu.holdsResults()",
+      "variable": false
+    },
+    "Af": {
+      "file": "chunk-xapeakym.js",
+      "name": "Af",
+      "start": 435450,
+      "end": 436412,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "moduleLength": 566845,
+      "sha256": "d5046229c579f113da5e8b575d6072eed00726e1c2f8d179cc08a3aa0f179f17",
+      "source": "Af=async()=>{if(Ai())return\"teardown-now\";if(!await Mf())return\"teardown-now\";if(!Ai()&&Ef()){if(!Ai())return t(\"[print.ts] Input closed with active swarm, injected shutdown prompt \\u2014 teardown handed to its lineage\"),\"handed-off\";return\"teardown-now\"}let b=Pp(ht,a.CLAUDE_CODE_REMOTE),D=Date.now()+kw();while(!Ai()){let K=D-Date.now(),ce;if(K<=0)ce=\"deadline\";else try{ce=await Dt(Mf(),K,\"team teardown park deadline\")}catch{ce=\"deadline\"}if(ce===!1)return\"teardown-now\";if(ce===\"deadline\"){let ke=v();return t(`[print.ts] Team teardown park gave up after ${kw()}ms (shutdown prompt injected: ${xo}) with ${Object.keys(ke.teamContext?.teammates??{}).length} roster teammate(s) and ${G(Object.values(ke.tasks),(Ie)=>Ie.type===\"in_process_teammate\"&&Ie.status===\"running\")} in-process teammate task(s) still active; tearing down anyway`),i(\"tengu_headless_team_teardown_park_timeout\",{prompt_injected:xo}),\"teardown-now\"}b(),await ee(500)}return\"teardown-now\"}",
+      "variable": true
+    },
+    "Df": {
+      "file": "chunk-xapeakym.js",
+      "name": "Df",
+      "start": 436413,
+      "end": 437214,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "moduleLength": 566845,
+      "sha256": "d550bceb98b433f6c494752e22881d0463a03ad365515a98a694097cce9743d8",
+      "source": "async function Df(){let b=On.settle();if(b)await b;if(so.size>0)await Promise.allSettled(so);if(Op=!0,vb(),await Dt(Fr,30000,\"remote_control operation still pending at teardown\").catch(()=>{}),await kTo(),ya=!1,hb(),yb(),_b(),kb(),Ob(),xb(),Db(),await Dt(slr(),30000,\"session.detach hooks still running at teardown\").catch(()=>{}),wb(),Pb(),Rb(),Tb(),bb(),Ti?.(),ws(),Mp(),Fn?.dispose(),ZNr(Wp),pce.get()===Sf)pce.set(void 0);EIr(),Xw(),Gw(),zw(),Yw(),sn.dispose(),Po=!0;let D=[...v().mcp.clients,...Qt,...Lt.clients];if(D.some((K)=>K.type===\"connected\"))await yn().cleanupConnectedMcpClients(D);if(Mb(),await tI(r,Q),dt.dispose(),De(),Cb(),si.dispose(),eb(),await pun(),dh({shuttingDown:Ai(),remoteTransport:r instanceof qz}))uh(Gm(v,R));if(oo.close(),Ws.disarm(\"session_ending\"),!_r)ht.done(),lr=!0}",
+      "variable": false
+    },
+    "resultConstruction": {
+      "file": "chunk-xapeakym.js",
+      "name": "Bu",
+      "start": 437372,
+      "end": 437864,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "moduleLength": 566845,
+      "sha256": "8f500ae348b51d8f14480f70677b14003de9f63527fd0fbe58c7769aa42c870d",
+      "source": "Bu=new Jc({drain:qe,messageQueue:Q,toolState:Ht,store:Te,pendingNotificationWaits:gs,storageV5:I.storageV5,sessionMirror:I.sessionMirror===!0,flushSessionStorage:Nu,emit:(b)=>ht.enqueue(b),heldResultTotals:()=>({totalCostUsd:ah(),durationApiMs:_O(),modelUsage:nP(),usage:void 0,subagentStats:$4(e)}),turnAbortedForShutdown:Xr,shuttingDown:Ai,stopping:()=>Ai()||Dr(),teardownRequested:ul,emitPendingSuggestion:()=>On.emitPending(),handbackPointerResults:I.handbackPointerResults??new WeakSet})",
+      "variable": true
+    },
+    "resultCaller-onResult": {
+      "file": "chunk-xapeakym.js",
+      "name": "onResult",
+      "start": 439168,
+      "end": 439197,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "moduleLength": 566845,
+      "sha256": "b3c0d607048c7030c254183e5f05f7b91a0fbec9f6d3c3bc8d801c4fa1de4e6a",
+      "source": "onResult:(b,D)=>Bu.route(b,D)",
+      "variable": false
+    },
+    "el": {
+      "file": "chunk-xapeakym.js",
+      "name": "el",
+      "start": 440179,
+      "end": 443820,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "moduleLength": 566845,
+      "sha256": "6511be7c954771555ac0e2e642d40092b7896b4ab4a72a40f52533e4ae7675e0",
+      "source": "el=new Lc({drain:qe,messageQueue:Q,prewaitLatch:dt,deliveryLedger:ir,turnRunner:Ab,drainSettle:Ib,turnOutcome:Ft,io:r,emit:(b)=>ht.enqueue(b),drainSdkEvents:es,stopping:Ai,terminalShutdown:Dr,endSessionHead:Sw,commandLacksUserIntent:hd,revokeCodeliveredFollowups:Pa,deferredToolUsePending:()=>Zr!==void 0,idleRelease:jd,turnGate:I.turnGate,session:e,sessionMirror:I.sessionMirror,host:{onEntry:()=>{if(Lf.runEntered(),!Yt.inheritedPromptOwnsWorkerStatus())Hf();uyr(e.ccrRecap)},beforeDrain:()=>ni.beforeDrain(),openRun:()=>{let b=Pp(ht,a.CLAUDE_CODE_REMOTE),D=Pp(ht,!0),K=new Tc({drain:qe,messageQueue:Q,io:r,store:Te,toolState:Ht,detachedToolCalls:KS.of(e),pendingNotificationWaits:gs,ccrRecap:e.ccrRecap,maxBudgetUsd:I.maxBudgetUsd,storageV5:I.storageV5,turnAbortedForShutdown:Xr,stopping:Ai,pulseKeepAlive:b,decideStashedAnswer:()=>Yt.decideStashedAnswer(),onIdleReported:()=>{if(qn)qn.sessionInboxPointers.peek(e)?.renotifyUnfetched(Q)}});return qf=K,{afterPass:({drained:ce})=>{if(Cf.pushIfChanged(),ce)la();return K.park({drainedThisIteration:ce})},afterRelease:function*(){try{return yield*Uf.poll({pulseKeepAlive:b,pulseInboxFrameActivity:D})}catch(ce){return d(Z(ce)),\"done\"}}}},loopTop:()=>ni.loopTop(),holdsEvalSettles:()=>qf?.holdsEvalSettles()??!1,onLoopTopWork:()=>{uyr(e.ccrRecap);let b=r.sessionState.getState();if(b===\"idle\"&&!Dr()&&(qe.runningReported||!Yt.registrationKeepsPendingAction))r.sessionState.notifyStateChanged(\"running\");else if(b===\"running\"&&qe.runPhase!==void 0&&!Dr())r.sessionState.wipeTurnScopedMetadata()},onHead:()=>{if(qe.intentBatchInFlight)I.homeSeed?.record.markFirstCommandDequeued();vs?.()},replayMerged:(b,D)=>{if(!I.replayUserMessages)return;for(let K of b)if(K.uuid&&K.uuid!==D.uuid){let ce=Fq(K.origin);ht.enqueue({type:\"user\",message:{role:\"user\",content:K.value},session_id:q(),parent_tool_use_id:null,uuid:K.uuid,isReplay:!0,...K.isMeta&&{isSynthetic:!0},...K.fileAttachments?.length&&{file_attachments:K.fileAttachments},...ce&&{origin:ce}})}},firstCommand:()=>ni.firstCommand(),turnMountJoin:()=>{if(Ir){let b=Ir.takeFirstTurnJoins();if(!b.replyMount&&!b.grants)return null;let D=import.meta.require(\"/$bunfs/root/chunk-8hvekfp7.js\"),K=D.PROJECTS_MOUNT_FIRST_COMMAND_WAIT_MS;return Promise.all([b.replyMount?D.joinProjectsMountBeforeFirstCommand(b.replyMount,v,K):Promise.resolve(),b.grants?lt(b.grants,K).then(()=>{return}):Promise.resolve()]).then(()=>{return})}return null},sdkMcpServersJoin:({command:b})=>pf.join(b),deferredMcpServersJoin:({command:b})=>Th(()=>mb.join(Bc(b,b.mode===\"poll-event\"?\"\":b.value,cn)),()=>cb.join(b)),wireTurn:()=>(pk(Pu),ni.wireTurn()),onCommitted:({command:b,members:D})=>{let K=zwn(D);if(Bf=K,Zo=K===void 0?void 0:{userMessageUuid:K,anchor:Ct.at(-1)},qe.intentBatchInFlight)I.homeSeed?.record.markFirstCommandDequeued();if(Yt.onCommitted(b))Hf()},beforeArm:({batch:{command:b,members:D},input:K})=>{if(Fze(D,\"turn_end\"),I1e(D),r instanceof qz&&b.mode===\"prompt\"&&b.uuid!==void 0)i(\"tengu_bridge_message_received\",{is_repl:!1});On.onCommand(b,K)},afterArm:({signal:b,aheadOfStart:D})=>{if(!b.aborted)Oo(),Ws.disarm(\"live_turn\");Nf=Ff.beforeTurn();let K=D?void 0:Zw,ce=Yt.retirement;if(ce===void 0||K===void 0)return ce??K;return Promise.all([ce,K]).then(()=>{return})},afterTurn:({batch:b,signal:D,turnEnd:K})=>{$n(),Zo=void 0,Vt?.sendResult(K.abortedAtResult??D.aborted?void 0:{userMessageUuid:Bf,outcome:K.result}),Ff.afterTurn({turnStartTime:Nf,signal:D,userEventUuids:b.uuids}),On.afterResult(b.command),ju.route()},releaseHeld:()=>Bu.release(),onCrash:()=>{On.abort(),cs(1)},onInputClosed:async()=>{if(await Af()===\"handed-off\");else await Df()}}})",
+      "variable": true
+    },
+    "resultCaller-releaseHeld": {
+      "file": "chunk-xapeakym.js",
+      "name": "releaseHeld",
+      "start": 443687,
+      "end": 443715,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "moduleLength": 566845,
+      "sha256": "a52d8dcf304c4dfb3de1f4e4aa5ae0320addba8ba7e857c3ed8bf7088a286cf3",
+      "source": "releaseHeld:()=>Bu.release()",
+      "variable": false
+    },
+    "close": {
+      "file": "chunk-xapeakym.js",
+      "name": "uh",
+      "start": 61436,
+      "end": 61757,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "moduleLength": 566845,
+      "sha256": "49268779a0ba4034cc32c5bfee0624b5ca96bf4f4ea8525b2ff36483a9967cfb",
+      "source": "function uh(e){for(let r of Object.values(e.all())){if(!Lu(r)||r.status!==\"running\")continue;if(!r.isBackgrounded&&r.agentId!==void 0){let n=e.get(r.agentId);if(n===void 0||!yi(n.status))continue}t(`print teardown: killing shell ${r.id} (\"${r.description}\") still running at stream close`);try{_N(r.id,e)}catch(n){d(n)}}}",
+      "variable": false
+    },
+    "closeGate": {
+      "file": "chunk-xapeakym.js",
+      "name": "dh",
+      "start": 61375,
+      "end": 61436,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "moduleLength": 566845,
+      "sha256": "6d6817b8e33d157eb25be2571b0e21fbbc4bb75f3f7eab52d69642fdbd6ccc6f",
+      "source": "function dh({shuttingDown:e,remoteTransport:r}){return!e&&!r}",
+      "variable": false
+    },
+    "budget": {
+      "file": "chunk-xapeakym.js",
+      "name": "gl",
+      "start": 57366,
+      "end": 57858,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "moduleLength": 566845,
+      "sha256": "631b331756f1142f5c49b09d071fb815d4fb1c9693cb61f26c9382afc4294443",
+      "source": "function gl({maxBudgetUsd:e,abortedForShutdown:r,turnAborted:n,getAppState:s,setAppState:g,storageV5:w}){if(Ai()||r||ul()&&n)return!1;let h=Object.values(s().tasks??{});if(!bP(e,h))return!1;return t(`print budget halt: this run's spend ${zle()} reached --max-budget-usd ${e}; stopping background agents`),process.stderr.write(`Budget limit reached ($${zle().toFixed(2)} of $${e}); stopping background agents.\n`),y(\"print_budget_halt\"),Gee({taskRegistry:Gm(s,g),setAppState:g,storageV5:w}),!0}",
+      "variable": false
+    }
+  },
+  "modules": [
+    {
+      "file": "chunk-w8a1w7ad.js",
+      "moduleSha256": "03ec7fc7d8b2fcac6ab6f740bf667791aab768677052f0761732ea2e943e76f5",
+      "moduleLength": 175175,
+      "rows": [
+        {
+          "file": "chunk-w8a1w7ad.js",
+          "name": "Bve",
+          "start": 8978,
+          "end": 9020,
+          "moduleSha256": "03ec7fc7d8b2fcac6ab6f740bf667791aab768677052f0761732ea2e943e76f5",
+          "moduleLength": 175175,
+          "sha256": "e79bab1f855323fc67c11ed075e9f9317001730d864456ef18b19bada3a372c2",
+          "source": "Bve=(e)=>e!==void 0&&A6.get()?.has(e)===!0",
+          "variable": true
+        },
+        {
+          "file": "chunk-w8a1w7ad.js",
+          "name": "iV",
+          "start": 9825,
+          "end": 9856,
+          "moduleSha256": "03ec7fc7d8b2fcac6ab6f740bf667791aab768677052f0761732ea2e943e76f5",
+          "moduleLength": 175175,
+          "sha256": "9ea76091a73c35ec99c55476814b1a0c4eae8e815f1c71444cba04e876ac6c12",
+          "source": "iV=()=>A6.get()?JV.get():void 0",
+          "variable": true
+        }
+      ],
+      "bindings": {
+        "A6": {
+          "port": "startUuids",
+          "identity": "chunk-mphp7acd.js:A6"
+        },
+        "JV": {
+          "port": "startJoin",
+          "identity": "chunk-mphp7acd.js:JV"
+        }
+      },
+      "initializers": []
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "moduleLength": 4409957,
+      "rows": [
+        {
+          "file": "chunk-mphp7acd.js",
+          "name": "Xf",
+          "start": 221563,
+          "end": 221607,
+          "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+          "moduleLength": 4409957,
+          "sha256": "41b672d908f2d1972f73f0667e3eb4554d0c9b8e2fe73b1fb864512bddb5c3a0",
+          "source": "function Xf(e){return Ku(e)&&e.passive!==!0}",
+          "variable": false
+        }
+      ],
+      "bindings": {
+        "Ku": {
+          "port": "isMainThreadAgent",
+          "identity": "chunk-mphp7acd.js:Ku"
+        }
+      },
+      "initializers": []
+    },
+    {
+      "file": "chunk-n2zepamy.js",
+      "moduleSha256": "0b25d8e1138a155f83fd1f53d768fa0cfbd759a2177359108d03295616148a24",
+      "moduleLength": 118446,
+      "rows": [
+        {
+          "file": "chunk-n2zepamy.js",
+          "name": "lso",
+          "start": 111237,
+          "end": 111256,
+          "moduleSha256": "0b25d8e1138a155f83fd1f53d768fa0cfbd759a2177359108d03295616148a24",
+          "moduleLength": 118446,
+          "sha256": "581c8e52101ebfa6a4051eebf22cf7b8f21a04e41f90e85dd7cb067aaa67243d",
+          "source": "lso=(e)=>YKe.has(e)",
+          "variable": true
+        }
+      ],
+      "bindings": {
+        "YKe": {
+          "port": "aheadUuids",
+          "identity": "chunk-mphp7acd.js:YKe"
+        }
+      },
+      "initializers": []
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "moduleLength": 566845,
+      "rows": [
+        {
+          "file": "chunk-xapeakym.js",
+          "name": "pi",
+          "start": 76459,
+          "end": 76519,
+          "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+          "moduleLength": 566845,
+          "sha256": "50e7e8150adc0daf2da6e01fca5a24f4ab259fcb209ed07d70952b997d443404",
+          "source": "function pi(e){return Ku(e)&&e.mode===\"orphaned-permission\"}",
+          "variable": false
+        },
+        {
+          "file": "chunk-xapeakym.js",
+          "name": "kl",
+          "start": 81385,
+          "end": 82421,
+          "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+          "moduleLength": 566845,
+          "sha256": "dfe0f841529f2bba3795d897cc24317d39e5baf9384d3cd5174693a9879bf8c0",
+          "source": "class kl{messageQueue;stopping;isHeadAhead=!1;queuedAtWait;followersFrom;constructor(e,r){this.messageQueue=e,this.stopping=r}waitForHead(e){let r=iV();return this.isHeld(r,e())?this.waitOut(e,r):void 0}takeHead(e,r){if(this.isHeadAhead=!1,this.followersFrom=void 0,iV()!==void 0&&this.messageQueue.peek(Uc)!==void 0&&this.messageQueue.peek(e)!==void 0)return this.isHeadAhead=!0,this.messageQueue.dequeue((g)=>pi(g)&&e(g))??this.messageQueue.dequeue(Uc);if(this.isHeld(iV(),e))return;return this.followersFrom=this.queuedAtWait,this.queuedAtWait=void 0,(this.messageQueue.peek(pi)===void 0?this.messageQueue.dequeue((g)=>e(g)&&DP(g)):void 0)??r()}get isAheadOfStart(){return this.isHeadAhead}admits(e){return!this.isHeadAhead&&(this.followersFrom?.has(e)??!0)}async waitOut(e,r){let n=r;while(this.isHeld(n,e()))this.queuedAtWait??=new Set(this.messageQueue.getCommandQueue()),await xP(this.messageQueue,n),n=iV()}isHeld(e,r){return!this.stopping()&&e!==void 0&&this.messageQueue.peek(r)!==void 0&&this.messageQueue.peek(Uc)===void 0}}",
+          "variable": false
+        },
+        {
+          "file": "chunk-xapeakym.js",
+          "name": "Uc",
+          "start": 82421,
+          "end": 82462,
+          "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+          "moduleLength": 566845,
+          "sha256": "e0d2fc4efc6024e55273b19361de7d5e37334bbff4f507b7656cf5b63ee5cd1a",
+          "source": "function Uc(e){return Xf(e)&&Bve(e.uuid)}",
+          "variable": false
+        },
+        {
+          "file": "chunk-xapeakym.js",
+          "name": "DP",
+          "start": 82462,
+          "end": 82503,
+          "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+          "moduleLength": 566845,
+          "sha256": "acef53a63bc2cad3e876003e322f7c0e82d2191a15e82517129d732bc4386016",
+          "source": "function DP(e){return Xf(e)&&lso(e.uuid)}",
+          "variable": false
+        },
+        {
+          "file": "chunk-xapeakym.js",
+          "name": "xP",
+          "start": 82503,
+          "end": 82627,
+          "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+          "moduleLength": 566845,
+          "sha256": "dfdc93e5f19cef5c9bd49deaddde7d975c1a6dc25551724f6c40f6e655c216be",
+          "source": "async function xP(e,r){let n=()=>{},s=new Promise((g)=>{n=e.subscribe(()=>g())});try{await Promise.race([r,s])}finally{n()}}",
+          "variable": false
+        },
+        {
+          "file": "chunk-xapeakym.js",
+          "name": "Hw",
+          "start": 350802,
+          "end": 351373,
+          "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+          "moduleLength": 566845,
+          "sha256": "f22e6cbe6a39a3b15a29e30482b3241975558b30e0bbfeba5b5ace420467d1ac",
+          "source": "Hw=`<system-reminder>\nYou are running in non-interactive mode and cannot return a response to the user until your team is shut down.\n\nYou MUST shut down your team before preparing your final response:\n1. Use requestShutdown to ask each team member to shut down gracefully\n2. Wait for shutdown approvals\n3. Use the cleanup operation to clean up the team\n4. Only then provide your final response to the user\n\nThe user cannot receive your response until the team is completely shut down.\n</system-reminder>\n\nShut down your team and prepare your final response for the user.`",
+          "variable": true
+        },
+        {
+          "file": "chunk-xapeakym.js",
+          "name": "Sw",
+          "start": 351374,
+          "end": 351416,
+          "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+          "moduleLength": 566845,
+          "sha256": "9a33499e4ea2833a98915230ff2c09be5b495ea36235611172f1bcb62fd5ce5a",
+          "source": "function Sw(e){return Ku(e)&&e.value===Hw}",
+          "variable": false
+        }
+      ],
+      "bindings": {
+        "iV": {
+          "file": "chunk-w8a1w7ad.js",
+          "name": "iV"
+        },
+        "Xf": {
+          "file": "chunk-mphp7acd.js",
+          "name": "Xf"
+        },
+        "Bve": {
+          "file": "chunk-w8a1w7ad.js",
+          "name": "Bve"
+        },
+        "Ku": {
+          "port": "isMainThreadAgent",
+          "identity": "chunk-mphp7acd.js:Ku"
+        },
+        "lso": {
+          "file": "chunk-n2zepamy.js",
+          "name": "lso"
+        }
+      },
+      "initializers": []
+    },
+    {
+      "file": "chunk-dndmrt2q.js",
+      "moduleSha256": "5d79c206fd87b72a0210adacf299fdaf6fc2a2b36ab0602abf194d939b904760",
+      "moduleLength": 7673,
+      "rows": [
+        {
+          "file": "chunk-dndmrt2q.js",
+          "moduleSha256": "5d79c206fd87b72a0210adacf299fdaf6fc2a2b36ab0602abf194d939b904760",
+          "moduleLength": 7673,
+          "name": "notifyTurnStarting287",
+          "start": 4392,
+          "end": 4443,
+          "originalMethod": "notifyTurnStarting(e,n){this.onTurnStarting?.(e,n)}",
+          "source": "function notifyTurnStarting287(e,n){this.onTurnStarting?.(e,n)}",
+          "sha256": "3a3eaf2a6ac450cd601f40a6b2aea415fb5081dff896f0e587eb3acbae73594d",
+          "variable": false,
+          "syntheticWrapper": true
+        }
+      ],
+      "bindings": {},
+      "initializers": []
+    }
+  ],
+  "ports": [
+    {
+      "port": "startUuids",
+      "file": "chunk-mphp7acd.js",
+      "name": "A6",
+      "start": 1115168,
+      "end": 1115198,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "moduleLength": 4409957,
+      "sha256": "ed28cf934b1213bf27c79db15f04de355f7082616c0965bdc37b3d5b5b241f51",
+      "source": "A6=ct(Ys(),(e)=>e.set(void 0))",
+      "variable": true
+    },
+    {
+      "port": "startJoin",
+      "file": "chunk-mphp7acd.js",
+      "name": "JV",
+      "start": 533109,
+      "end": 533139,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "moduleLength": 4409957,
+      "sha256": "b728e0dc75bbc5ae9b09995fcd6a8d22f33672c2acfddd005286fffd49858c9b",
+      "source": "JV=ct(Ys(),(e)=>e.set(void 0))",
+      "variable": true
+    },
+    {
+      "port": "isMainThreadAgent",
+      "file": "chunk-mphp7acd.js",
+      "name": "Ku",
+      "start": 217464,
+      "end": 217503,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "moduleLength": 4409957,
+      "sha256": "798f3cd4cbb7f1361cc2c17e261cdb502d86414cb8e6470b90670cec47df6f71",
+      "source": "function Ku(e){return e.agentId===Ge()}",
+      "variable": false
+    },
+    {
+      "port": "aheadUuids",
+      "file": "chunk-mphp7acd.js",
+      "name": "YKe",
+      "start": 1115455,
+      "end": 1115483,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "moduleLength": 4409957,
+      "sha256": "eb9836b6cc2c803266e2db02755f8faa41a258d3dedcca68ecd249ac06a4e15f",
+      "source": "YKe=ct(NSt(),(e)=>e.clear())",
+      "variable": true
+    }
+  ],
+  "nativeSha256": "efecc4450b09e10043d3321af20eba348e3ae79ead102409c8634034fbda67b4"
+}

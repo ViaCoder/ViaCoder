@@ -1,0 +1,16 @@
+.permission-mode-picker { position:relative; max-width:100%; }
+.permission-mode-picker .permission-mode-picker-trigger { min-height:32px; max-width:100%; white-space:nowrap; }
+.permission-mode-picker-menu { position:fixed; z-index:50; inset:auto; margin:0; width:min(340px,calc(100vw - 20px)); max-height:420px; overflow-y:auto; overflow-x:hidden; overscroll-behavior:contain; padding:5px; background:#fffefa; border:1px solid #d8d7d0; border-radius:8px; box-shadow:0 8px 25px #2729231f; }
+.permission-mode-picker .permission-mode-picker-option { display:block; width:100%; min-height:48px; padding:9px; text-align:left; background:#fffefa; color:#2c302c; border-radius:6px; }
+.permission-mode-picker .permission-mode-picker-option:hover:not(:disabled),.permission-mode-picker .permission-mode-picker-option[aria-checked="true"] { background:#efeee9; }
+.permission-mode-picker-option strong,.permission-mode-picker-option small { display:block; }
+.permission-mode-picker-option strong { font-size:12px; }
+.permission-mode-picker-option code { font-size:10px; overflow-wrap:anywhere; color:#656b64; }
+.permission-mode-picker-option small { white-space:normal; overflow-wrap:anywhere; margin-top:3px; font-size:11px; line-height:1.45; color:#616760; }
+.permission-mode-picker button:disabled { opacity:1; color:#777c76; background:#f4f3ef; }
+.permission-mode-picker button:focus-visible { outline:2px solid #5e655d; outline-offset:1px; }
+.permission-mode-picker-status,.permission-mode-picker-error { display:block; margin-top:4px; font-size:11px; line-height:1.5; }
+.permission-mode-picker-status,.permission-mode-picker-readonly { color:#616760; }
+.permission-mode-picker-error { color:#a02f2f; overflow-wrap:anywhere; }
+
+.permission-mode-picker-menu::backdrop { background:transparent; }

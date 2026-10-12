@@ -1,0 +1,216 @@
+{
+  "version": "2.1.287",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16 end-exclusive",
+  "rawModules": [
+    {
+      "file": "chunk-mphp7acd.js",
+      "sha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "bytes": 4409957
+    },
+    {
+      "file": "chunk-9rrqtnad.js",
+      "sha256": "a5842fe37359dcf15e65ef5253177c12d2d02a03a26c121097b70b49b656f515",
+      "bytes": 1317
+    },
+    {
+      "file": "chunk-p54b66vv.js",
+      "sha256": "f3a80925f5efacd866866a5b846b48529ccfea55417fd8a0088d7dbcce946849",
+      "bytes": 20850
+    }
+  ],
+  "declarations": [
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "Lu",
+      "start": 748545,
+      "endExclusive": 748632,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "73422d01b627036cffe703e0673b09263b08529f5d6f455d059cd2406dae7c5d",
+      "source": "function Lu(e){return typeof e===\"object\"&&e!==null&&\"type\"in e&&e.type===\"local_bash\"}",
+      "variable": false
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "Ect",
+      "start": 748125,
+      "endExclusive": 748281,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "926b218ade3d564cbc7bb995c5b5f8b8e53afc15698bfd387bc4e7ef412a7b7f",
+      "source": "function Ect(e,{command:n,pendingHint:r,isMainThread:s,surface:g}){let{hints:h,stripped:b}=N7e(e,n);for(let w of h)if(PUn(w.value,g),s)r.submit(w);return b}",
+      "variable": false
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "PUn",
+      "start": 748281,
+      "endExclusive": 748545,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "c903ea3a368167d6e0d13f2d82e000463299ff2ebc8c54d93b71a5542310e4b4",
+      "source": "function PUn(e,n){if(Ch())return;let{seenHintPluginIds:r}=ut();if(r.has(e)||r.size>=AUn)return;r.add(e);let{name:s,marketplace:g}=vn(e);i(\"tengu_plugin_hint_seen\",{surface:c(n),...s&&g?{plugin_id_hash:ix(s,g),claims_official_marketplace:el(g)}:{parse_failed:!0}})}",
+      "variable": false
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "AUn",
+      "start": 748118,
+      "endExclusive": 748124,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "0ea1a87b9e4f131c864acf7f589111a4c09c5618f84222db05d3fe868f6ead9b",
+      "source": "AUn=64",
+      "variable": true
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "N7e",
+      "start": 212573,
+      "endExclusive": 213319,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "4b819124d16dc393ffce0d1b0edc4c2aaff62ee5909c9c92b0bf0186d9d03497",
+      "source": "function N7e(e,n){if(!e.includes(\"<claude-code-hint\"))return{hints:[],stripped:e};let r=pbn(n),s=[],g=e.replace(I7e,(b,w)=>{if(b.length>O7e)return t(\"[claudeCodeHints] dropped over-long hint line\"),\"\";let D=ubn(w),j=Number(D.v),{type:z,value:K}=D;if(!ZSn.has(j))return t(`[claudeCodeHints] dropped hint with unsupported v=${D.v}`),\"\";if(!z||!obn.has(z))return t(`[claudeCodeHints] dropped hint with unsupported type=${z}`),\"\";if(!K)return t(\"[claudeCodeHints] dropped hint with empty value\"),\"\";if(z===\"plugin\"&&!abn.test(K))return t(\"[claudeCodeHints] dropped plugin hint whose value is not name@marketplace\"),\"\";return s.push({v:j,type:z,value:K,sourceCommand:r}),\"\"}),h=s.length>0||g!==e?g.replace(/\\n{3,}/g,`\n\n`):g;return{hints:s,stripped:h}}",
+      "variable": false
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "Ihe",
+      "start": 213319,
+      "endExclusive": 213429,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "2c7a385e29eca27b9f5bcbfd59681c480f41537487bb4fc8b98e4084fc96117d",
+      "source": "function Ihe(e){if(!e.includes(\"<claude-code-hint\"))return e;return e.replace(I7e,\"\").replace(/\\n{3,}/g,`\n\n`)}",
+      "variable": false
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "MRr",
+      "start": 213429,
+      "endExclusive": 213523,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "b3dc3ef9bac8cbf8d29a7f0deb9b6430bec3815f06ab1731a0af77cc1d5739d8",
+      "source": "function MRr(e){if(e.length>O7e||!e.includes(\"<claude-code-hint\"))return!1;return ibn.test(e)}",
+      "variable": false
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "ubn",
+      "start": 213523,
+      "endExclusive": 213609,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "fa986f192cdae185922c207f272bcbbce2c721189f523cf91f1650e75e00b14a",
+      "source": "function ubn(e){let n={};for(let r of e.matchAll(lbn))n[r[1]]=r[2]??r[3]??\"\";return n}",
+      "variable": false
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "pbn",
+      "start": 213609,
+      "endExclusive": 213686,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "739811a8b92a95c146567dfd467e6e4a22599eafb37c6a61d0f6c4c4932e1811",
+      "source": "function pbn(e){let n=e.trim(),r=n.search(/\\s/);return r===-1?n:n.slice(0,r)}",
+      "variable": false
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "ZSn",
+      "start": 212299,
+      "endExclusive": 212315,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "9ded5c644dc82bdd6f40835f1e31c013d8b2bb602416f4d9a9a92998f56bcd7a",
+      "source": "ZSn=new Set([1])",
+      "variable": true
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "obn",
+      "start": 212316,
+      "endExclusive": 212339,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "28f9e2136dc20ca304d60b32c77e9b7b2f991171e5d231404d99345003118715",
+      "source": "obn=new Set([\"plugin\"])",
+      "variable": true
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "I7e",
+      "start": 212340,
+      "endExclusive": 212398,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "414cf2a44e0df7d65b86b00f0b713bea915a0538992eed98c3f6096510f55fea",
+      "source": "I7e=/^[ \\t]*<claude-code-hint[ \\t]([^>\\r\\n]*)\\/>[ \\t]*$/gm",
+      "variable": true
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "ibn",
+      "start": 212399,
+      "endExclusive": 212453,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "41b224c17af9386899791a721b0f99b5a64d7fc2fc3d93e5c1795728fa8d1698",
+      "source": "ibn=/^[ \\t]*<claude-code-hint[ \\t][^>\\r\\n]*\\/>[ \\t]*$/",
+      "variable": true
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "O7e",
+      "start": 212454,
+      "endExclusive": 212462,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "ad71b14c5a2823dbeac8716e130a666b2ff31b6f81920db6c57e06879a8205ea",
+      "source": "O7e=1024",
+      "variable": true
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "abn",
+      "start": 212463,
+      "endExclusive": 212534,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "c25b198bd78cea65feb1b52ca1cba307db5fa60027f0a6495fa2707a710600be",
+      "source": "abn=/^[A-Za-z0-9][A-Za-z0-9._-]{0,63}@[A-Za-z0-9][A-Za-z0-9._-]{0,63}$/",
+      "variable": true
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "lbn",
+      "start": 212535,
+      "endExclusive": 212572,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "346bb6a600f50c1c40ca0cc5ecbb3e40ee6f4860b06f613f700fcf5d1e16933d",
+      "source": "lbn=/(\\w+)=(?:\"([^\"]*)\"|([^\\s/>]+))/g",
+      "variable": true
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "IKn",
+      "start": 907693,
+      "endExclusive": 916932,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "278e91116c205aabf618e97fc06c638879a90c7aa8d0481962bc4563ef9c9740",
+      "source": "async function IKn(e){let{file_path:n,fullFilePath:r,resolvedFilePath:s,ext:g,offset:h,limit:b,pages:w,maxSizeBytes:D,maxTokens:j,context:z,messageId:K,io:he}=e,{readFileState:_e}=z;if(UU(s)){let Pn=await ygt((await he()).ioPath),$n=_(Pn),qn=Buffer.byteLength($n);if(qn>D){let Jn=ICe();throw Error(`Notebook content (${pn(qn)}) exceeds maximum allowed size (${pn(D)}). ${Jn}`)}await Ngt($n,g,j,z.credentials);let En=await(await he()).handle.stat();_e.set(r,{content:$n,timestamp:Math.floor(En.mtimeMs),offset:h,limit:b});let zn=z.nestedMemoryAttachmentTriggers;if(zn&&!zn.includes(r))zn.push(r);let xn={type:\"notebook\",file:{filePath:n,cells:Pn}};return CS({operation:\"read\",tool:\"FileReadTool\",filePath:r,content:$n}),{data:xn}}let ke=ql(z.mainLoopModel()),be=!1;if(g===\"\")try{let Pn=ae();if((await(await he()).handle.stat()).isFile()){let $n=await Pn.readFileBytes((await he()).ioPath,16);be=Bh($n)!==null}}catch{}if(W6t.has(g)||be){let Pn=await gOr((await he()).ioPath,j,void 0,ke,z.remoteCall===void 0?K0e:$rr(z.remoteCall.origin.transport).imageMaxRawBytes),$n=z.nestedMemoryAttachmentTriggers;if($n&&!$n.includes(r))$n.push(r);CS({operation:\"read\",tool:\"FileReadTool\",filePath:r,content:Pn.file.base64});let qn=Pn.file.dimensions?C9(Pn.file.dimensions):null;return{data:Pn,...qn&&{newMessages:[Re({content:qn,isMeta:!0})]}}}if(nht(g)){let Pn=Date.now();if(w!==void 0){let ao=FCe(w);if(!ao.ok)throw new P(ao.message,\"Invalid or oversized PDF pages parameter\");let mo=ao.range,{ioPath:$o}=await he(),Ao;try{Ao=await L7r($o,{...mo,signal:z.pdfRenderSignal??z.signal},z.storageV5)}catch(Yr){let gr=Yr instanceof Ye?\"aborted\":\"threw\";throw ZI(Pn,{request:\"page_range\",render:gr,outcome:gr,fileBytes:null,documentPages:null,pagesRendered:null}),Yr}if(!Ao.success)throw ZI(Pn,{request:\"page_range\",render:`failed_${Ao.error.reason}`,outcome:Ao.error.reason,fileBytes:null,documentPages:null,pagesRendered:null}),dee(Ao.error);i(\"tengu_pdf_page_extraction\",{success:!0,pageCount:Ao.data.file.count,fileSize:Ao.data.file.originalSize,hasPageRange:!0}),ZI(Pn,{request:\"page_range\",render:\"ok\",outcome:\"ok\",fileBytes:Ao.data.file.originalSize,documentPages:null,pagesRendered:Ao.data.file.count}),CS({operation:\"read\",tool:\"FileReadTool\",filePath:r,content:`PDF pages ${w}`});let Po=z.storageV5!==void 0?await OKn(z.storageV5,Ao.data.file.outputDir,Ao.data.v5SidecarScope):await(async()=>{let gr=(await mKn(Ao.data.file.outputDir)).filter((_o)=>_o.endsWith(\".jpg\")).sort();return Promise.all(gr.map((_o)=>gKn(jh.join(Ao.data.file.outputDir,_o))))})(),kr=(await Promise.all(Po.map((Yr)=>q_({data:Yr,mediaType:\"jpeg\",limits:ke})))).map(({block:Yr})=>Yr.type===\"image\"&&Yr.source.type===\"base64\"?{base64:Yr.source.data,mediaType:Yr.source.media_type}:{base64:\"\",mediaType:\"image/jpeg\",...Yr.type===\"text\"&&{error:Yr.text.replace(/^\\[Image could not be processed: ?/,\"\").replace(/\\]$/,\"\")}}),{v5SidecarScope:po,...Tr}=Ao.data;return{data:{...Tr,file:{...Tr.file,filePath:s},firstPage:mo.firstPage,pages:kr}}}let $n=z.remoteCall===void 0?void 0:$rr(z.remoteCall.origin.transport),qn=$n?.pdfMaxPagesPerRead??Y0e,En=await jrr((await he()).ioPath);if(En.pageCount!==null&&En.pageCount>ZAn)throw dee({reason:\"too_many_pages\",message:`This PDF has ${En.pageCount} pages, which is too many to read at once. Use the pages parameter to read specific page ranges (e.g., pages: \"1-5\"). Maximum ${qn} pages per request.`});let zn=await(await he()).handle.stat();if(En.pageCount===null&&await mOr(zn.size,En.pdfinfoFailure))throw dee({reason:\"page_count_unknown\",message:`This PDF's page count is unknown (${MYo(En.pdfinfoFailure)}). At ${pn(zn.size)} it may be too long to read whole. Use the pages parameter to read specific page ranges (e.g., pages: \"1-5\"). Maximum ${qn} pages per request.`});if($n!==void 0&&zn.size>$n.wholePdfMaxRawBytes){let ao=`This PDF (${pn(zn.size)}) is larger than can be returned whole from this machine to the calling session (at most ${pn($n.wholePdfMaxRawBytes)}). Use the pages parameter with at most ${$n.pdfMaxPagesPerRead} pages per call (for example pages: 1-3, which come back as images), or read the file where the session runs.`;throw z.remoteCall?.onToolVerdict?.({kind:\"refused\",code:\"invalid_request\"},ao),new P(ao,\"Served whole-PDF read over the transport budget\")}let xn=(!c2t()||zn.size>kYo)&&!k(\"tengu_deep_starlight\",!0),Jn=\"none\",wn=null;if(xn){let ao;try{ao=await L7r((await he()).ioPath,{signal:z.pdfRenderSignal??z.signal},z.storageV5)}catch(mo){let $o=mo instanceof Ye?\"aborted\":\"threw\";throw ZI(Pn,{request:\"whole_file\",render:$o,outcome:$o,fileBytes:zn.size,documentPages:En.pageCount,pagesRendered:null}),mo}if(Jn=ao.success?\"ok\":`failed_${ao.error.reason}`,ao.success)wn=ao.data.file.count,i(\"tengu_pdf_page_extraction\",{success:!0,pageCount:ao.data.file.count,fileSize:ao.data.file.originalSize});else i(\"tengu_pdf_page_extraction\",{success:!1,available:ao.error.reason!==\"unavailable\",fileSize:zn.size})}if(!c2t())throw ZI(Pn,{request:\"whole_file\",render:Jn,outcome:\"unsupported_model\",fileBytes:zn.size,documentPages:En.pageCount,pagesRendered:wn}),new P(`Reading full PDFs is not supported with this model. Use a newer model (Sonnet 3.5 v2 or later), or use the pages parameter to read specific page ranges (e.g., pages: \"1-5\", maximum ${Y0e} pages per request). Page extraction requires poppler-utils: install with \\`brew install poppler\\` on macOS or \\`apt-get install poppler-utils\\` on Debian/Ubuntu.`,\"PDF unsupported on current model\");let eo;try{eo=await DYo((await he()).ioPath)}catch(ao){throw ZI(Pn,{request:\"whole_file\",render:Jn,outcome:\"threw\",fileBytes:zn.size,documentPages:En.pageCount,pagesRendered:wn}),ao}if(ZI(Pn,{request:\"whole_file\",render:Jn,outcome:eo.success?\"ok\":eo.error.reason,fileBytes:zn.size,documentPages:En.pageCount,pagesRendered:wn}),!eo.success)throw dee(eo.error);let to={...eo.data,file:{...eo.data.file,filePath:s}};return CS({operation:\"read\",tool:\"FileReadTool\",filePath:r,content:to.file.base64}),{data:to}}let ve=h===0?0:h-1,Te=await Ake(s,ve,b,b===void 0?D:void 0,z.signal,b===void 0?{handle:(await he()).handle}:{maxSelectedBytes:j*JVr,handle:(await he()).handle}),{lineCount:xe,totalLines:Pe,totalBytes:$e,readBytes:Ne,mtimeMs:We}=Te,qe=T9e(r),Qe=qe!==null?z.taskRegistry.get(qe):void 0,Ze=Qe&&Lu(Qe)?Ect(Te.content,{command:Qe.command,pendingHint:z.session.pendingHint,isMainThread:!z.agentId,surface:\"file_read\"}):Te.content,et=Ze,bt=xe,ht=b,kt,$t=!1,It=(h??1)<=1&&b===void 0&&w===void 0;try{await Ngt(Ze,g,j,z.credentials,It)}catch(Pn){if(Pn instanceof IPe&&It){let $n=Ze.split(`\n`),qn=Math.max(0.5,Ze.length/Math.max(1,Pn.tokenCount)),En=(wn)=>wn.length/qn,zn=Math.max(1,Math.min($n.length,Math.floor($n.length*j/Math.max(1,Pn.tokenCount)*0.85))),xn=$n.slice(0,zn).join(`\n`);for(let wn=0;wn<6;wn++){if(En(xn)<=j||zn<=1)break;zn=Math.max(1,Math.floor(zn*0.7)),xn=$n.slice(0,zn).join(`\n`)}if(En(xn)>j||xn.trim()===\"\"){let wn=Math.max(1,Math.floor(j*qn*0.85));for(let to=0;to<6;to++){if(xn=Ze.slice(0,wn),En(xn)<=j)break;wn=Math.max(1,Math.floor(wn*0.7))}let eo=xn.charCodeAt(xn.length-1);if(eo>=55296&&eo<=56319)xn=xn.slice(0,-1);$t=!0}et=xn,bt=$t?Vt(xn,`\n`)+1:zn,ht=bt,kt=!$t&&bt<Pe?Gxe+`${r}: showing lines 1-${bt} of ${Pe} total (${Pn.tokenCount} tokens, cap ${j}). Call ${dt} with offset=${bt+1} limit=${bt} for the next page, or ${Jr} to find a specific section. Do NOT answer from this page alone if the answer may be further in the file.]`:Gxe+`${r}: showing the first ${xn.length} of ${Ze.length} characters (${Pn.tokenCount} tokens, cap ${j}); this file has very long lines and cannot be paginated by line. Use ${Jr} to find a specific section, or ${dt} with offset/limit to page through it. Do NOT answer from this excerpt alone if the answer may be elsewhere in the file.]`}else throw Pn}_e.set(r,{content:et,timestamp:Math.floor(We),offset:h,limit:ht,...kt!==void 0&&{isPartialView:!0}});let jt=z.nestedMemoryAttachmentTriggers;if(jt&&!jt.includes(r))jt.push(r);let Xt,un,rn;if(z.remoteCall===void 0&&X().pendingHandoverReads.has(r)){let{prepareHandoverRead:Pn,describeHandoverCoverage:$n}=await import(\"/$bunfs/root/chunk-gfrqkvhr.js\"),qn=await Pn(r,z,K,{firstLine:ve,lineCount:$t?bt-1:bt,totalLines:Pe,mtimeMs:We});if(Xt=qn.artifactRead,qn.remaining!==void 0)un=`[This file is the saved source of artifact ${qn.remaining.slug} at version ${qn.remaining.ver} (${$n(qn.remaining)}); that version counts as viewed only once you have Read every line of it.]`;rn=()=>{let En=qn.commit();if(En!==void 0)Yt.artifactRead=En;else if(Yt.artifactRead!==void 0)delete Yt.artifactRead}}let Yt={type:\"text\",file:{filePath:n,content:et,numLines:bt,startLine:kt!==void 0?Math.max(1,h):h,totalLines:Pe,...kt!==void 0&&{truncatedByTokenCap:!0}},...Xt&&{artifactRead:Xt}};if(AS(r))Jgt.set(Yt,We);if(un!==void 0)sht.set(Yt,un);if(kt!==void 0)QVr(Yt,kt);CS({operation:\"read\",tool:\"FileReadTool\",filePath:r,content:et});let Qt=TKn(r),nn=_U(r);return i(\"tengu_session_file_read\",{totalLines:Pe,readLines:bt,totalBytes:$e,readBytes:kt!==void 0?Buffer.byteLength(et,\"utf8\"):Ne,offset:h,...b!==void 0&&{limit:b},...nn!==void 0&&{ext:nn},...K!==void 0&&{messageID:ye(K)},is_session_transcript:Qt===\"session_transcript\"}),{data:Yt,...rn&&{afterResultCommitted:rn}}}",
+      "variable": false
+    },
+    {
+      "file": "chunk-9rrqtnad.js",
+      "name": "T9e",
+      "start": 831,
+      "endExclusive": 1046,
+      "moduleSha256": "a5842fe37359dcf15e65ef5253177c12d2d02a03a26c121097b70b49b656f515",
+      "sha256": "a1f34d3c1ac8685c5620609dba0e41aa41a509be4020c760121c81403a741547",
+      "source": "function T9e(t){if(Ut())return null;let e=`${Amt()}${i}`,n=\".output\";if(t.startsWith(e)&&t.endsWith(n)){let r=t.slice(e.length,-n.length);if(r.length>0&&r.length<=20&&/^[a-zA-Z0-9_-]+$/.test(r))return r}return null}",
+      "variable": false
+    },
+    {
+      "file": "chunk-p54b66vv.js",
+      "name": "Amt",
+      "start": 2290,
+      "endExclusive": 2468,
+      "moduleSha256": "f3a80925f5efacd866866a5b846b48529ccfea55417fd8a0088d7dbcce946849",
+      "sha256": "70e71ef36a6d3ace4d753b194d6f8642708cd7d28b221f422616781a417aa723",
+      "source": "function Amt(){let e=rS()?.adoptShellOutputRoot;if(e!==void 0)return b(e,q(),\"tasks\");let n=rr();if(n.outputDir===void 0||Ut())n.outputDir=b(Ak(),q(),\"tasks\");return n.outputDir}",
+      "variable": false
+    }
+  ],
+  "bodyRewriting": false,
+  "scope": "Complete original Read IKn source, task-output classifier T9e/Amt, shell guard Lu and Ect closure. Production adapts only the original task hint selector narrow block before existing token/cache/listener/output logic; does not replace full IKn or frozen Read C."
+}

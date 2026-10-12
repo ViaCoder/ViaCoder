@@ -1,0 +1,152 @@
+{
+  "version": "2.1.287",
+  "platform": "darwin-arm64",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16 code units",
+  "scope": "Full original d6e, host cell, signals, repo-tier freeze and primitives. Actual cache seam only; full M/Xje/I8o policy readers and primer producers are not claimed.",
+  "rows": [
+    {
+      "file": "chunk-bn3p37gv.js",
+      "name": "d6e",
+      "start": 11636,
+      "end": 15776,
+      "moduleLength": 117054,
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "sha256": "e01e0fc6185c718a0d77024849952de4d657fc314a95bdf2a8900d43f9b58f4e",
+      "source": "class d6e{mergedSettings=null;perSource=new Map;parsedFiles=new Map;folderListings=new Map;managedFileReads=new Map;primedFiles=new Set;policyWalks=0;walkedFolders=new Map;policy={};lastPolicyEnvComposition=null;isLoadingFromDisk=!1;autoModeUntrustedSourceWarned=!1;changed=Me();internalWrites=new Map;enabledSources;inlineFlagParse;repoTierFreeze=new re;pluginBase;epoch=0;systemSpaceServingLogged=!1;systemAttestationContradicted=!1;backendReadResetTail=Promise.resolve();backgroundWorkTail=Promise.resolve();invalidated=Me();pluginBaseLoaded=!1;primer;localStoreProbes=new Ht;retained=new Map;retainedListings=new Map;setPluginBase(e){this.pluginBase=e,this.pluginBaseLoaded=!0}clearPluginBase(){this.pluginBase=void 0}invalidateAll(e){if(this.epoch++,this.mergedSettings=null,this.perSource.clear(),this.parsedFiles.clear(),this.primedFiles.clear(),this.policyWalks=0,this.walkedFolders.clear(),this.folderListings.clear(),this.policy={},e?.userLayer===\"retain\"&&F()&&this.primer!==void 0){for(let[t,o]of this.retained)this.parsedFiles.set(t,o.parsed),this.primedFiles.add(t);for(let[t,o]of this.retainedListings)this.folderListings.set(t,o.names)}else this.retained.clear(),this.retainedListings.clear();this.invalidated.emit()}invalidatePolicyLayer(){this.mergedSettings=null,this.perSource.delete(\"policySettings\"),this.policy={}}onInvalidate(e){return this.invalidated.subscribe(e)}seedParsedFile(e,t,o,r){if(r!==this.epoch)return!1;let i=this.parsedFiles.get(e),s=i===void 0||!Or(i,o);if(this.parsedFiles.set(e,o),s||this.primedFiles.has(e))this.primedFiles.add(e);let a=this.retained.get(e);if(a!==void 0)a.parsed=o;if(s)this.dropDerivedCaches(t);return!0}walkReadDiffers(e,t){let o=this.parsedFiles.get(e);return o!==void 0&&!this.primedFiles.has(e)&&!Or(o,t)}unseedParsedFile(e,t,o){if(o!==this.epoch)return;if(this.retained.delete(e),!this.primedFiles.has(e)||t===\"policySettings\"&&this.policyWalks>0)return;this.primedFiles.delete(e),this.parsedFiles.delete(e),this.dropDerivedCaches(t)}dropDerivedCaches(e){if(this.perSource.delete(e),this.mergedSettings=null,e===\"policySettings\")this.policy={}}primedFolderListing(e){return F()?this.folderListings.get(e):void 0}folderListingForPolicyWalk(e){if(!F())return;this.policyWalks++;let t=this.folderListings.get(e);if(!this.walkedFolders.has(e)||t!==void 0)this.walkedFolders.set(e,t??null);return t}noteWalkListing(e,t){if(!F())return;this.walkedFolders.set(e,t)}get policyWalkCount(){return this.policyWalks}policyInstallVerdict(e,t,o){let r=this.parsedFiles.get(e);if(r===void 0||Or(r,t))return\"install\";if(!this.primedFiles.has(e))return\"raced\";if(this.policyWalks===0)return\"install\";return this.policyWalks>o?\"raced\":\"deferred\"}folderInstallVerdict(e,t,o){if(!this.walkedFolders.has(e))return this.hasParsedDropInOutside(e,t)?\"raced\":\"install\";let r=this.walkedFolders.get(e);if(r!==null&&r!==void 0&&Or(r,t))return\"install\";return this.policyWalks>o?\"raced\":\"deferred\"}seedFolderListing(e,t,o){if(o!==this.epoch)return!1;let r=this.folderListings.get(e);this.folderListings.set(e,t);let i=this.retainedListings.get(e);if(i!==void 0)i.names=t;if(r!==void 0&&!Or(r,t))this.dropDerivedCaches(\"policySettings\");return!0}walkReadManagedFileIn(e,t){for(let[o,r]of this.parsedFiles)if(!o.includes(\"\\x00\")&&!this.primedFiles.has(o)&&(r.settings!==null||r.errors.length>0)&&(o===e||Dt(o)===t))return!0;return!1}walkRead(e){return this.parsedFiles.has(e)&&!this.primedFiles.has(e)}hasParsedDropInOutside(e,t){for(let o of this.parsedFiles.keys())if(!o.includes(\"\\x00\")&&!this.primedFiles.has(o)&&Dt(o)===e&&!t.includes(Wr(o)))return!0;return!1}clearFolderListing(e,t){if(t!==this.epoch)return;if(this.retainedListings.delete(e),!this.folderListings.has(e)||this.walkedFolders.has(e))return;this.folderListings.delete(e),this.dropDerivedCaches(\"policySettings\")}retainLayer(e,t){let o={parsed:t};return this.retained.set(e,o),()=>{if(this.retained.get(e)===o)this.retained.delete(e)}}dropRetainedLayer(e){this.retained.delete(e)}retainFolderListing(e,t){let o={names:t};return this.retainedListings.set(e,o),()=>{if(this.retainedListings.get(e)===o)this.retainedListings.delete(e)}}}",
+      "variable": false
+    },
+    {
+      "file": "chunk-bn3p37gv.js",
+      "name": "V",
+      "start": 10007,
+      "end": 10151,
+      "moduleLength": 117054,
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "sha256": "3b223ad86a79e9969e8241054c03d04d80d046aab19dd519973e4aed1e79e9e9",
+      "source": "class V{#e;#t=new WeakMap;constructor(e){this.#e=e}of(e){let t=this.#t.get(e);if(t!==void 0)return t;let o=this.#e();return this.#t.set(e,o),o}}",
+      "variable": false
+    },
+    {
+      "file": "chunk-bn3p37gv.js",
+      "name": "re",
+      "start": 10260,
+      "end": 11293,
+      "moduleLength": 117054,
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "sha256": "69f390551c7d86c0461f417a309c12c09c403e6001504a7048514c43b7c2f13a",
+      "source": "class re{holders=0;tiers;key=\"\";baseline;lastBaselines=new Map;tier(e){return this.tiers?.get(e)}engage(e,t=\"\"){let o=!1;if(this.tiers===void 0){let i=e(),s=this.lastBaselines.get(t);o=s!==void 0&&Et(s,i).length>0,this.tiers=i,this.baseline=i,this.key=t}this.holders++;let r=!1;return{changedSinceLast:o,release:()=>{if(r)return{last:!1};if(r=!0,this.holders--,this.holders>0)return{last:!1};if(this.baseline!==void 0)this.lastBaselines.set(this.key,this.baseline);return this.tiers=void 0,this.baseline=void 0,{last:!0}},abandon:()=>{if(r)return;if(r=!0,this.holders--,this.holders===0)this.tiers=void 0,this.baseline=void 0}}}whileLive(e){let t=this.tiers;this.tiers=void 0;try{return e()}finally{this.tiers=t}}baselineTier(e){return this.baseline?.get(e)}differingTiers(e){return this.baseline===void 0?[]:Et(this.baseline,e)}rebaseline(e,t){if(this.baseline===void 0)return;let o=new Map(this.baseline);for(let r of t){let i=e.get(r);if(i===void 0)o.delete(r);else o.set(r,i)}this.baseline=o}isHeld(){return this.tiers!==void 0}}",
+      "variable": false
+    },
+    {
+      "file": "chunk-bn3p37gv.js",
+      "name": "Ht",
+      "start": 15776,
+      "end": 16325,
+      "moduleLength": 117054,
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "sha256": "1d35b53e384549e345ffcf2ec801466460043a6fbde33f3535a4fe426d8f0db6",
+      "source": "class Ht{ownerUidsByRoot=new Map;realHomeDir=void 0;canonicalRootOwnerUids(e,t){let o=this.ownerUidsByRoot.get(e);if(o!==void 0)return o;let r=t(e);return this.ownerUidsByRoot.set(e,r),r}hasCanonicalRootOwnerUids(e){return this.ownerUidsByRoot.has(e)}primeCanonicalRootOwnerUids(e,t){if(this.ownerUidsByRoot.has(e))return!1;return this.ownerUidsByRoot.set(e,t),!0}clearCanonicalRootOwnerUids(){this.ownerUidsByRoot.clear()}normalizedRealHomeDir(e){return this.realHomeDir??=e(),this.realHomeDir}clearNormalizedRealHomeDir(){this.realHomeDir=void 0}}",
+      "variable": false
+    },
+    {
+      "file": "chunk-bn3p37gv.js",
+      "name": "Et",
+      "start": 11487,
+      "end": 11636,
+      "moduleLength": 117054,
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "sha256": "8286e629d4c69027c428c31652323d017a72e932d4e17c15fd3b24765902a131",
+      "source": "function Et(e,t){return[...e.keys(),...[...t.keys()].filter((o)=>!e.has(o))].filter((o)=>{let r=e.get(o),i=t.get(o);return!Or(r&&ekn(r),i&&ekn(i))})}",
+      "variable": false
+    },
+    {
+      "file": "chunk-bn3p37gv.js",
+      "name": "ekn",
+      "start": 11359,
+      "end": 11487,
+      "moduleLength": 117054,
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "sha256": "7295810cfc23cb6ea92d9bfb26d79bc6b746a678abe588c445c448bbc5bd6562",
+      "source": "function ekn(e){return{...e,settings:vwt(e.settings),unfiltered:vwt(e.unfiltered),...e.legacy!==void 0&&{legacy:vwt(e.legacy)}}}",
+      "variable": false
+    },
+    {
+      "file": "chunk-bn3p37gv.js",
+      "name": "vwt",
+      "start": 11293,
+      "end": 11359,
+      "moduleLength": 117054,
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "sha256": "217925f69b2fc70d5583d46149b8502e94bf66a94175400b9b889dea8752f428",
+      "source": "function vwt(e){return e!==null&&Object.keys(e).length===0?null:e}",
+      "variable": false
+    },
+    {
+      "file": "chunk-bn3p37gv.js",
+      "name": "msr",
+      "start": 16329,
+      "end": 16351,
+      "moduleLength": 117054,
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "sha256": "04307871b5867d0dd8fe4c79d7c5d5f1e880ec5011c24df9cb13652149888f9e",
+      "source": "msr=new V(()=>new d6e)",
+      "variable": true
+    },
+    {
+      "file": "chunk-4s38z9x2.js",
+      "name": "Me",
+      "start": 1196,
+      "end": 1457,
+      "moduleLength": 2740,
+      "moduleSha256": "eb46628147f83403bbcd57ca88b3370e05c6631bf027a80117844f770b276b2d",
+      "sha256": "08c491676ef2243b475f885c45f1163b2f0abed6075a2e5fa3a32cdd2afb308a",
+      "source": "function Me(){let e=new Set;return{subscribe(n){let r=wKt(n);return e.add(r),()=>{e.delete(r)}},emit(...n){let r;for(let o of e)try{o(...n)}catch(i){(r??=[]).push(i)}if(r)throw r.length===1?r[0]:AggregateError(r,\"Signal listener(s) threw\")},clear(){e.clear()}}}",
+      "variable": false
+    },
+    {
+      "file": "chunk-4s38z9x2.js",
+      "name": "wKt",
+      "start": 1154,
+      "end": 1195,
+      "moduleLength": 2740,
+      "moduleSha256": "eb46628147f83403bbcd57ca88b3370e05c6631bf027a80117844f770b276b2d",
+      "sha256": "d871ff458e10c6c5509c5b70f7944fba032e2a42697e09aec182aaaac06d05b4",
+      "source": "wKt=s?(e)=>s.AsyncResource.bind(e):(e)=>e",
+      "variable": true
+    },
+    {
+      "file": "chunk-ky674g9x.js",
+      "name": "t",
+      "start": 1152,
+      "end": 1153,
+      "moduleLength": 1308,
+      "moduleSha256": "ac954af928cbc90fe1e16072facf98491ba2f5252bcf4e493ce24fdbded71e3c",
+      "sha256": "e3b98a4da31a127d4bde6e43033f66ba274cab0eb7eb1c70ec41402bf6273dd8",
+      "source": "t",
+      "variable": true
+    },
+    {
+      "file": "chunk-ky674g9x.js",
+      "name": "F",
+      "start": 1154,
+      "end": 1181,
+      "moduleLength": 1308,
+      "moduleSha256": "ac954af928cbc90fe1e16072facf98491ba2f5252bcf4e493ce24fdbded71e3c",
+      "sha256": "8c6e6b5568be322ed740bb6c9f394f262ea19548f19eaa5b29cbbf10701f844d",
+      "source": "function F(){return t===!0}",
+      "variable": false
+    },
+    {
+      "file": "chunk-ky674g9x.js",
+      "name": "U7o",
+      "start": 1181,
+      "end": 1280,
+      "moduleLength": 1308,
+      "moduleSha256": "ac954af928cbc90fe1e16072facf98491ba2f5252bcf4e493ce24fdbded71e3c",
+      "sha256": "c70e4f1d83b441dca66542bc2b4b876d560c92648d9c28ff0bbcaad97f3a7bfd",
+      "source": "function U7o(n){let e=n===!0;if(t===void 0)return t=e,\"pinned\";return t===e?\"unchanged\":\"conflict\"}",
+      "variable": false
+    }
+  ]
+}

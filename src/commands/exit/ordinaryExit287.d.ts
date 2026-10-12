@@ -1,0 +1,1 @@
+export function createOrdinaryExit287(read:(module:string,name:string)=>any,host:any):{call:(done:any,context:any)=>Promise<any>;ExitFlow:(props:any)=>any;WorktreeExitDialog:(props:any)=>any;Aae:(messages:any,options?:any,storage?:any,remove?:any)=>Promise<void>};

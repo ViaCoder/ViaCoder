@@ -1,0 +1,198 @@
+{
+  "version": "2.1.287",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF16 end-exclusive",
+  "scope": "TS input/next/abandonment cells; not full TS/Df",
+  "rows": [
+    {
+      "name": "Pe",
+      "file": "chunk-xapeakym.js",
+      "start": 247780,
+      "endExclusive": 247787,
+      "sha256": "9487742a7ab1958514cd884457f725c55362b01ca56202a5f8c26c5efa981090",
+      "source": "Pe=null",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "moduleLength": 566845
+    },
+    {
+      "name": "Q",
+      "file": "chunk-xapeakym.js",
+      "start": 247788,
+      "endExclusive": 247789,
+      "sha256": "4ae81572f06e1b88fd5ced7a1a000945432e83e1551e6f721ee9c00b8cc33260",
+      "source": "Q",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "moduleLength": 566845
+    },
+    {
+      "name": "Ue",
+      "file": "chunk-xapeakym.js",
+      "start": 247836,
+      "endExclusive": 247845,
+      "sha256": "8123bc0a4d276596980749494d6b75ab4d1da26441ca4a792c67d49d3d3a9041",
+      "source": "Ue=new Pw",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "moduleLength": 566845
+    },
+    {
+      "name": "_e",
+      "file": "chunk-xapeakym.js",
+      "start": 247846,
+      "endExclusive": 248235,
+      "sha256": "da1dc5bc74d036172fbc3a4ae0875de60ebfe2995ca5685c41a2dcece99f14a6",
+      "source": "_e=Q6e({run:LI,queryParams:async()=>{if(Pe===null)throw Error(\"headless session: turn picked up without prepared params\");let dt=Pe;return Pe=null,dt},hostOwnsPermissionMode:!0,sdkResultVerdict:!0,fastModeState:()=>z===void 0?void 0:F3(z.model,z.enabled),fastModeDisabledReason:()=>SF()??(z&&N3(z.model,z.enabled))??void 0,onCommandLifecycle:e.onCommandLifecycle,onTurnThrow:(dt)=>{Q=dt}})",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "moduleLength": 566845
+    },
+    {
+      "name": "Te",
+      "file": "chunk-xapeakym.js",
+      "start": 247790,
+      "endExclusive": 247832,
+      "sha256": "33648959a081a24c5862824f8c2cfee19625359465148f381a4cfa8fee8a9be8",
+      "source": "function Te(){let dt=Q;return Q=void 0,dt}",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "moduleLength": 566845
+    },
+    {
+      "name": "Wn",
+      "file": "chunk-xapeakym.js",
+      "start": 270427,
+      "endExclusive": 270729,
+      "sha256": "35058c6c810be9ff7ab2e9ccddd0a7a3446567909054c04bfe2066fc2cd710b3",
+      "source": "async function Wn(dt,De){if(dt===he)Se();try{while(!0){let{value:Pt,done:ht}=await _e.next();if(ht)return;if(Pt.type===\"result\"){De?.push(...Pt.permission_denials);return}}}catch(Pt){t(`headless session: draining an abandoned turn failed: ${Pt instanceof Error?Pt.message:String(Pt)}`,{level:\"warn\"})}}",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "moduleLength": 566845
+    },
+    {
+      "name": "streamInput",
+      "file": "chunk-xapeakym.js",
+      "start": 248236,
+      "endExclusive": 248263,
+      "sha256": "d382220f74cfeac8a796d51dd9be4802145e8beb33208e934d07a78f336f282d",
+      "source": "_e.streamInput(Ue).catch(d)",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "moduleLength": 566845
+    },
+    {
+      "name": "enqueue",
+      "file": "chunk-xapeakym.js",
+      "start": 260041,
+      "endExclusive": 260141,
+      "sha256": "987abb78c3a16aa5cf4c5222f8818e8d9878d76ba39ec5ad1272d7a42cc96df0",
+      "source": "Ue.enqueue({type:\"user\",message:{role:\"user\",content:dt},parent_tool_use_id:null,origin:De?.origin})",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "moduleLength": 566845
+    },
+    {
+      "name": "clearTurnThrow",
+      "file": "chunk-xapeakym.js",
+      "start": 259784,
+      "endExclusive": 259788,
+      "sha256": "74623f8b08c02bd621b275aa87905931c53519e7721aa47eb2abeb85a7dd3d53",
+      "source": "Te()",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "moduleLength": 566845
+    },
+    {
+      "name": "next",
+      "file": "chunk-xapeakym.js",
+      "start": 260550,
+      "endExclusive": 260559,
+      "sha256": "33bbb4926d446a9460a90558d64dbe4d70cc8e190031b4bdb97489cb960b29cd",
+      "source": "_e.next()",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "moduleLength": 566845
+    },
+    {
+      "name": "done",
+      "file": "chunk-xapeakym.js",
+      "start": 260560,
+      "endExclusive": 260644,
+      "sha256": "5c48b11ff4d3788f2ecbf3a0652132a10901f073d67c777d0422d8a3a8732814",
+      "source": "if(co)throw Error(\"headless session: the engine loop ended before the turn result\");",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "moduleLength": 566845
+    },
+    {
+      "name": "inputDone",
+      "file": "chunk-xapeakym.js",
+      "start": 272173,
+      "endExclusive": 272182,
+      "sha256": "bd4454bc5b0f1bda777b9d3753f9187190d5ede9557a451b2261e30476f17d0a",
+      "source": "Ue.done()",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "moduleLength": 566845
+    },
+    {
+      "name": "return",
+      "file": "chunk-xapeakym.js",
+      "start": 272183,
+      "endExclusive": 272209,
+      "sha256": "9d1351bb4c2dc6eeb848930faed2ced412cf27bf9be5545582872ce6a24b0d16",
+      "source": "_e.return(void 0).catch(d)",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "moduleLength": 566845
+    },
+    {
+      "name": "remote.sent",
+      "file": "chunk-xapeakym.js",
+      "start": 525702,
+      "endExclusive": 525762,
+      "sha256": "e6346369aa32b7bb01ba33a1f5fdb20439b70a4dcae898c2fdafd64c4f3a903d",
+      "source": "r.setOnControlRequestSent((wt)=>{kt.sendControlRequest(wt)})",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "moduleLength": 566845
+    },
+    {
+      "name": "remote.pendingReplay",
+      "file": "chunk-xapeakym.js",
+      "start": 525763,
+      "endExclusive": 525876,
+      "sha256": "40e8996a7404bf4c1a341fd7c201b1bbbb13cf695851fdb3e59f9e2bb2eb4a6e",
+      "source": "for(let wt of[...r.getPendingPermissionRequests(),...r.getPendingUserDialogRequests()])kt.sendControlRequest(wt);",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "moduleLength": 566845
+    },
+    {
+      "name": "remote.resolved",
+      "file": "chunk-xapeakym.js",
+      "start": 525879,
+      "endExclusive": 525949,
+      "sha256": "ca7c1b96383a10259c720cf6c9eb7928720db35dbc87bd566ae2fb05d0a3a94b",
+      "source": "r.setOnControlRequestResolved((wt)=>{kt.sendControlCancelRequest(wt)})",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "moduleLength": 566845
+    },
+    {
+      "name": "remote.snapshot",
+      "file": "chunk-xapeakym.js",
+      "start": 518557,
+      "endExclusive": 518570,
+      "sha256": "42adcd379c9e07aff1e3804131fd72922b3c1bcc65df44116e198a398f8d97bb",
+      "source": "St=Ct.slice()",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "moduleLength": 566845
+    },
+    {
+      "name": "remote.initialSnapshot",
+      "file": "chunk-xapeakym.js",
+      "start": 518571,
+      "endExclusive": 518599,
+      "sha256": "93551db73a24463e5e6e262e8ff5d82c9ed3b828ddfc48a5a405a250f09ac739",
+      "source": "J=St.length>0?St:void 0,dn=J",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "moduleLength": 566845
+    },
+    {
+      "name": "remote.clearSnapshot",
+      "file": "chunk-xapeakym.js",
+      "start": 524192,
+      "endExclusive": 524242,
+      "sha256": "9e8615f81e375edef550b5ed037d8d047b439bd3d20a2b9c5e03661d9f4466e8",
+      "source": "if(ft===\"connected\"&&J!==void 0&&dn===J)dn=void 0;",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "moduleLength": 566845
+    }
+  ]
+}

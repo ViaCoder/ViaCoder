@@ -1,0 +1,590 @@
+{
+  "version": "2.1.287",
+  "platform": "darwin-arm64",
+  "sourceManifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16 code units",
+  "rootModule": "chunk-nankzm0s.js",
+  "roots": [
+    "spe",
+    "ZA",
+    "hbn",
+    "QA",
+    "Qf",
+    "s8"
+  ],
+  "modules": [
+    {
+      "file": "chunk-wj72kvg2.js",
+      "moduleSha256": "02b70503c279e9ee2c77e69b253e19886fa22be36c45634735e655bbf153fcef",
+      "moduleLength": 34677,
+      "rows": [
+        {
+          "file": "chunk-wj72kvg2.js",
+          "name": "jU",
+          "start": 25927,
+          "end": 26253,
+          "moduleSha256": "02b70503c279e9ee2c77e69b253e19886fa22be36c45634735e655bbf153fcef",
+          "sha256": "ae2d0184ec6b493cdafe22222f1f1ddda29ffde483df74af9bdc7b1be0306b6d",
+          "source": "function jU(e,n){let r=n.lastIndexOf(\"/\");if(r<0)return!1;let o=n.slice(0,r),s=n.slice(r+1);if(!/^\\d+$/.test(s))return!1;let i=parseInt(s,10),c=je(o);if(!c)return!1;if(c.zone)return!1;let u=je(e);if(!u)return!1;let l=ln(u.bytes),f=c.bytes;if(l.length!==f.length)return!1;let h=f.length*8;if(i<0||i>h)return!1;return un(l,f,i)}",
+          "kind": "function"
+        },
+        {
+          "file": "chunk-wj72kvg2.js",
+          "name": "un",
+          "start": 26253,
+          "end": 26410,
+          "moduleSha256": "02b70503c279e9ee2c77e69b253e19886fa22be36c45634735e655bbf153fcef",
+          "sha256": "179af818c7c8b531a61ab1f335c2a85e5a3046cc75394418dfe34b8297574e35",
+          "source": "function un(e,n,r){let o=r>>3;for(let c=0;c<o;c++)if(e[c]!==n[c])return!1;let s=r&7;if(s===0)return!0;let i=255<<8-s&255;return((e[o]??0)&i)===((n[o]??0)&i)}",
+          "kind": "function"
+        },
+        {
+          "file": "chunk-wj72kvg2.js",
+          "name": "ln",
+          "start": 26410,
+          "end": 26549,
+          "moduleSha256": "02b70503c279e9ee2c77e69b253e19886fa22be36c45634735e655bbf153fcef",
+          "sha256": "9f8d6aee02b42c2c8b284d4c1a0a52f366c24fc31aa692d266ce9b7063e2dcd3",
+          "source": "function ln(e){if(e.length!==16)return e;for(let n=0;n<10;n++)if(e[n]!==0)return e;if(e[10]!==255||e[11]!==255)return e;return e.slice(12)}",
+          "kind": "function"
+        },
+        {
+          "file": "chunk-wj72kvg2.js",
+          "name": "je",
+          "start": 26549,
+          "end": 26778,
+          "moduleSha256": "02b70503c279e9ee2c77e69b253e19886fa22be36c45634735e655bbf153fcef",
+          "sha256": "ca1bc3b1b3300036c6bb97634554b072748615ab0c5fcb10182ffe925fbd85dc",
+          "source": "function je(e){if(e===\"\")return null;let n=\"\",r=e,o=e.indexOf(\"%\");if(o>=0)n=e.slice(o+1),r=e.slice(0,o);if(r.includes(\":\")){let i=fn(r);return i?{bytes:i,zone:n}:null}if(n)return null;let s=We(r);return s?{bytes:s,zone:\"\"}:null}",
+          "kind": "function"
+        },
+        {
+          "file": "chunk-wj72kvg2.js",
+          "name": "We",
+          "start": 26778,
+          "end": 27055,
+          "moduleSha256": "02b70503c279e9ee2c77e69b253e19886fa22be36c45634735e655bbf153fcef",
+          "sha256": "b5db9ff123002f561d1a534b5957fa8476a4f790500d27d5d7f4e4f76f985f45",
+          "source": "function We(e){let n=e.split(\".\");if(n.length!==4)return null;let r=new Uint8Array(4);for(let o=0;o<4;o++){let s=n[o];if(s===void 0||s===\"\"||!/^\\d{1,3}$/.test(s))return null;if(s.length>1&&s.startsWith(\"0\"))return null;let i=parseInt(s,10);if(i>255)return null;r[o]=i}return r}",
+          "kind": "function"
+        },
+        {
+          "file": "chunk-wj72kvg2.js",
+          "name": "fn",
+          "start": 27055,
+          "end": 28010,
+          "moduleSha256": "02b70503c279e9ee2c77e69b253e19886fa22be36c45634735e655bbf153fcef",
+          "sha256": "645bed96a423c3a3ab76b42c54110267cce97642729284ceae25320250d7b72a",
+          "source": "function fn(e){let n=null,r=e,o=e.lastIndexOf(\":\");if(o>=0&&e.slice(o+1).includes(\".\")){if(n=We(e.slice(o+1)),!n)return null;r=e.slice(0,o+1)}let s=r.split(\"::\");if(s.length>2)return null;let i=[],c=(l,f)=>{if(l===\"\")return[];let h=l.split(\":\"),T=[];for(let S=0;S<h.length;S++){let E=h[S];if(E===\"\"&&f&&S===h.length-1)continue;if(E===void 0||E===\"\"||!/^[0-9a-fA-F]{1,4}$/.test(E))return null;T.push(parseInt(E,16))}return T};if(s.length===1){let l=s[0]??\"\",f=c(l,n!==null);if(!f)return null;i.push(...f);let h=n?6:8;if(i.length!==h)return null}else{let l=s[0]??\"\",f=s[1]??\"\",h=c(l,!1),T=c(f,n!==null);if(!h||!T)return null;let S=n?2:0,E=8-h.length-T.length-S;if(E<1)return null;i.push(...h);for(let R=0;R<E;R++)i.push(0);if(i.push(...T),i.length+S!==8)return null}let u=new Uint8Array(16);for(let l=0;l<i.length;l++){let f=i[l];if(f===void 0)return null;u[l*2]=f>>8&255,u[l*2+1]=f&255}if(n)u[12]=n[0]??0,u[13]=n[1]??0,u[14]=n[2]??0,u[15]=n[3]??0;return u}",
+          "kind": "function"
+        }
+      ],
+      "bindings": {}
+    },
+    {
+      "file": "chunk-c9me9cp7.js",
+      "moduleSha256": "db81856ee883c31a0be18c305014a0d82d3bd698a459223b9de754b934b084ae",
+      "moduleLength": 10331,
+      "rows": [
+        {
+          "file": "chunk-c9me9cp7.js",
+          "name": "P",
+          "start": 3714,
+          "end": 3869,
+          "moduleSha256": "db81856ee883c31a0be18c305014a0d82d3bd698a459223b9de754b934b084ae",
+          "sha256": "e0165a34780a88fe34268a00a97acdaace9a83c4b760613e669e99daf6ac0899",
+          "source": "class P extends Error{telemetryMessage;errorClass;constructor(n,e,t){super(n);this.name=\"TelemetrySafeError\",this.telemetryMessage=e??n,this.errorClass=t}}",
+          "kind": "class"
+        }
+      ],
+      "bindings": {}
+    },
+    {
+      "file": "chunk-nankzm0s.js",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "moduleLength": 706979,
+      "rows": [
+        {
+          "file": "chunk-nankzm0s.js",
+          "name": "Rl",
+          "start": 20278,
+          "end": 20375,
+          "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+          "sha256": "c705f56f7a5fe52e503a16bf5d93f81e2d41b823e9d398d97b23dfa053ff8910",
+          "source": "Rl=[\"10.0.0.0/8\",\"172.16.0.0/12\",\"192.168.0.0/16\",\"127.0.0.0/8\",\"169.254.0.0/16\",\"100.64.0.0/10\"]",
+          "kind": "variable"
+        },
+        {
+          "file": "chunk-nankzm0s.js",
+          "name": "eo",
+          "start": 20521,
+          "end": 20831,
+          "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+          "sha256": "2669ffb511a9c441425d11df3882035bdcf39e6ee2028fed45455349835a7d77",
+          "source": "function eo(e){let n=e.replace(/%.*$/,\"\").toLowerCase();if(Yn(n))return Rl.some((g)=>jU(n,g));if(!jn(n))return!1;let r=/^::ffff:(\\d+\\.\\d+\\.\\d+\\.\\d+)$/.exec(n);if(r?.[1])return eo(r[1]);if(n===\"::1\")return!0;let s=parseInt(/^([0-9a-f]{1,4}):/.exec(n)?.[1]??\"0\",16);return s>=65152&&s<=65215||s>=64512&&s<=65023}",
+          "kind": "function"
+        },
+        {
+          "file": "chunk-nankzm0s.js",
+          "name": "Qf",
+          "start": 22266,
+          "end": 22914,
+          "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+          "sha256": "ea1ecdfcbe152eaad0acabdfe50ac92ac95114b2cc99f64ad58f57372d5ad2fd",
+          "source": "function Qf(e,n,r,s){if(!jU(s,e))return new P(`${n} answered from ${s||\"an unknown address\"}, outside its declared network ${e}: the name resolved differently between lookup and connect. Try again.`,\"gateway login: gateway address outside declared network\");if(!jU(r,e))return new P(`Claude Code only signs in to ${n} from inside its declared network ${e} (managed settings), and this machine is connecting from ${r||\"an unknown address\"}, outside it. Sign in `+\"from the host OS on that network \\u2014 not from a container, WSL2, or a \"+`VPN whose addresses sit outside ${e}.`,\"gateway login: this machine is outside the declared network\");return}",
+          "kind": "function"
+        },
+        {
+          "file": "chunk-nankzm0s.js",
+          "name": "Zf",
+          "start": 22918,
+          "end": 22974,
+          "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+          "sha256": "e5af82099477ca335dd7e2cbb908e9032c469c79e5a8f5e051b7a712c74eefb7",
+          "source": "Zf=[\"claude.fedstart.com\",\"claude.palantirfedstart.com\"]",
+          "kind": "variable"
+        },
+        {
+          "file": "chunk-nankzm0s.js",
+          "name": "Ci",
+          "start": 22975,
+          "end": 22994,
+          "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+          "sha256": "befa80300010af11dc16877e2224739df1885e234a9d3e126e26dc418e81e15f",
+          "source": "Ci=new Set([...Zf])",
+          "kind": "variable"
+        },
+        {
+          "file": "chunk-nankzm0s.js",
+          "name": "s8",
+          "start": 23027,
+          "end": 23083,
+          "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+          "sha256": "4d2a7fced9d93d2332e0e0a8c2e3e00b3192544932e131982f4c85bc49fc7488",
+          "source": "function s8(e){return e.hostname.replace(/^\\[|\\]$/g,\"\")}",
+          "kind": "function"
+        },
+        {
+          "file": "chunk-nankzm0s.js",
+          "name": "gbn",
+          "start": 33453,
+          "end": 33500,
+          "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+          "sha256": "e36908bed9f1d5309d29541dd99244b7053b287b8bdf7f49e1c070c9102f8e67",
+          "source": "gbn=\"gateway host resolved to a public address\"",
+          "kind": "variable"
+        },
+        {
+          "file": "chunk-nankzm0s.js",
+          "name": "hbn",
+          "start": 33501,
+          "end": 33977,
+          "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+          "sha256": "ca6f7475d2035e0f8ac2f756d547de2c8183c4f14f12a4bbd8dfb47b83ed3c6e",
+          "source": "function hbn(e,n){let r=new URL(e),s=s8(r),g=Yn(s)||jn(s);if(r.protocol!==\"https:\"||Ci.has(s)||g&&n===void 0||Hp()!==void 0&&!Ph(e))return;let h=cD(),b=new Yf({...iA(),...h&&{ca:h},lookup:QA(n)});if(n!==void 0){let v=b.createConnection.bind(b);b.createConnection=(w,A)=>{let R=v(w,A);return R?.prependOnceListener(\"connect\",()=>{let{localAddress:M=\"\",remoteAddress:D=\"\"}=R,K=Qf(n,s,M,D);if(K)R.destroy(Object.assign(Error(gbn),{code:\"EADDRNOTPRIVATE\",cause:K}))}),R}}return b}",
+          "kind": "function"
+        },
+        {
+          "file": "chunk-nankzm0s.js",
+          "name": "QA",
+          "start": 33977,
+          "end": 34233,
+          "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+          "sha256": "3eef47a24a53e7500553cb2714f388d4608d547ca7cdb806dfc5423cdef060bd",
+          "source": "function QA(e){return function(r,s,g){IA(r,{...s,all:!0},(h,b)=>{let v=b??[],w=v.find((R)=>e?!jU(R.address,e):!eo(R.address)),A=h??(w?Object.assign(Error(gbn),{code:\"EADDRNOTPRIVATE\"}):null);if(s.all)g(A,A?[]:v);else g(A,v[0]?.address??\"\",v[0]?.family)})}}",
+          "kind": "function"
+        },
+        {
+          "file": "chunk-nankzm0s.js",
+          "name": "ybn",
+          "start": 34237,
+          "end": 34304,
+          "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+          "sha256": "0e2cb67cc5c788cae89e52969f9870c105b2a55a18838a1034eba4d11d40a7af",
+          "source": "ybn=\"gateway TLS certificate does not match the pinned fingerprint\"",
+          "kind": "variable"
+        },
+        {
+          "file": "chunk-nankzm0s.js",
+          "name": "ZA",
+          "start": 34681,
+          "end": 34999,
+          "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+          "sha256": "972dc06b27caf30eb262341fa3dc519ec211d5e4a91b84a0482d48e290c26a23",
+          "source": "function ZA(e){let n=cD();return new Yf({...iA(),...n&&{ca:n},checkServerIdentity:(r,s)=>{let g=qf(r,s);if(g)return g;let h=typeof s.fingerprint256===\"string\"?s.fingerprint256.replaceAll(\":\",\"\").toLowerCase():\"\";if(h!==e){let b={pinnedFingerprint:e,presentedFingerprint:h};return Object.assign(Error(ybn),b)}return}})}",
+          "kind": "function"
+        },
+        {
+          "file": "chunk-nankzm0s.js",
+          "name": "spe",
+          "start": 34999,
+          "end": 35272,
+          "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+          "sha256": "154462fad201ac228c0f72ef03e29e778404579e1ed2257692dba5042786c8cf",
+          "source": "function spe(e,n){if(!e||new URL(n).protocol!==\"https:\")return;if(Hp()&&!Ph(n)){t(`[gateway] ${new URL(n).host} is reached through the HTTPS proxy \\u2014 per-request cert pin not applied (known gap; list the gateway in NO_PROXY to pin)`,{level:\"warn\"});return}return ZA(e)}",
+          "kind": "function"
+        }
+      ],
+      "bindings": {
+        "Hp": {
+          "port": "proxyConfigured",
+          "origin": "chunk-wj72kvg2.js:Hp",
+          "sourceBinding": {
+            "file": "chunk-nankzm0s.js",
+            "specifier": "/$bunfs/root/chunk-wj72kvg2.js",
+            "start": 3732,
+            "end": 3832,
+            "source": "import{fI,cD,jU,iA,u7r,B0e,Hp,Ph,xrr,W0e,G0e,FVt,Di,z0e,V0e,PK}from\"/$bunfs/root/chunk-wj72kvg2.js\";",
+            "sha256": "a2331fc3f53502f13f9af760737ed185242a14c85ab3c507ee2cdab550109112"
+          },
+          "ownerDeclaration": {
+            "file": "chunk-wj72kvg2.js",
+            "name": "Hp",
+            "start": 29057,
+            "end": 29240,
+            "moduleSha256": "02b70503c279e9ee2c77e69b253e19886fa22be36c45634735e655bbf153fcef",
+            "sha256": "9cf85e01e16a5d1d570eceaa3b9141a56dd7d26e7f01ad154506d1f568f440f5",
+            "source": "function Hp(e=process.env){let n=RK(e);if(!n)return;if(!xK(n.value)){let r=`${n.source}=${n.value}`;if(!ze.has(r))ze.add(r),console.error(Rbt(n.source,n.value));return}return n.value}",
+            "kind": "function"
+          }
+        },
+        "Ph": {
+          "port": "proxyBypass",
+          "origin": "chunk-wj72kvg2.js:Ph",
+          "sourceBinding": {
+            "file": "chunk-nankzm0s.js",
+            "specifier": "/$bunfs/root/chunk-wj72kvg2.js",
+            "start": 3732,
+            "end": 3832,
+            "source": "import{fI,cD,jU,iA,u7r,B0e,Hp,Ph,xrr,W0e,G0e,FVt,Di,z0e,V0e,PK}from\"/$bunfs/root/chunk-wj72kvg2.js\";",
+            "sha256": "a2331fc3f53502f13f9af760737ed185242a14c85ab3c507ee2cdab550109112"
+          },
+          "ownerDeclaration": {
+            "file": "chunk-wj72kvg2.js",
+            "name": "Ph",
+            "start": 29420,
+            "end": 29821,
+            "moduleSha256": "02b70503c279e9ee2c77e69b253e19886fa22be36c45634735e655bbf153fcef",
+            "sha256": "7a60947d5b9d41305b028af16efb1497823845ed8f0902dc9c7b9d0c1294bdea",
+            "source": "function Ph(e,n=j0e()){if(!n)return!1;if(n===\"*\")return!0;try{let r=new URL(e),o=r.hostname.toLowerCase(),s=r.protocol===\"https:\"||r.protocol===\"wss:\",i=r.port||(s?\"443\":\"80\"),c=`${o}:${i}`;return n.split(/[,\\s]+/).filter(Boolean).some((l)=>{if(l=l.toLowerCase().trim(),l.includes(\":\"))return c===l;if(l.startsWith(\".\")){let f=l;return o===l.substring(1)||o.endsWith(f)}return o===l})}catch{return!1}}",
+            "kind": "function"
+          }
+        },
+        "t": {
+          "port": "debug",
+          "origin": "chunk-q80zaav8.js:t",
+          "sourceBinding": {
+            "file": "chunk-nankzm0s.js",
+            "specifier": "/$bunfs/root/chunk-q80zaav8.js",
+            "start": 1740,
+            "end": 1811,
+            "source": "import{sh,Mp,_t,mA,_,Y,ae,$y,t,SY}from\"/$bunfs/root/chunk-q80zaav8.js\";",
+            "sha256": "9c412d0adff2079e575aefea1784bec76951f5511c7a94d87b8fbb94398496e7"
+          },
+          "ownerDeclaration": {
+            "file": "chunk-q80zaav8.js",
+            "name": "t",
+            "start": 46026,
+            "end": 46071,
+            "moduleSha256": "f9503296591b825624caf5932b9c5973cde96b859259266a506b616dca5cd41e",
+            "sha256": "da9e0b5e590a43c6f7cf46f3cfcd93d97f399db1017ff8dae938bdbd15e13790",
+            "source": "function t(e,n={level:\"debug\"}){U().log(e,n)}",
+            "kind": "function"
+          }
+        },
+        "cD": {
+          "port": "certificateAuthority",
+          "origin": "chunk-wj72kvg2.js:cD",
+          "sourceBinding": {
+            "file": "chunk-nankzm0s.js",
+            "specifier": "/$bunfs/root/chunk-wj72kvg2.js",
+            "start": 3732,
+            "end": 3832,
+            "source": "import{fI,cD,jU,iA,u7r,B0e,Hp,Ph,xrr,W0e,G0e,FVt,Di,z0e,V0e,PK}from\"/$bunfs/root/chunk-wj72kvg2.js\";",
+            "sha256": "a2331fc3f53502f13f9af760737ed185242a14c85ab3c507ee2cdab550109112"
+          },
+          "ownerDeclaration": {
+            "file": "chunk-wj72kvg2.js",
+            "name": "cD",
+            "start": 18895,
+            "end": 18935,
+            "moduleSha256": "02b70503c279e9ee2c77e69b253e19886fa22be36c45634735e655bbf153fcef",
+            "sha256": "bbae2b8b1d3c1b16c8fb17b29f50206b199dfef15421a1020cd728ccfaf0268b",
+            "source": "function cD(){return X().certificates()}",
+            "kind": "function"
+          }
+        },
+        "Yf": {
+          "port": "httpsAgent",
+          "origin": "https:Agent",
+          "sourceBinding": {
+            "file": "chunk-nankzm0s.js",
+            "specifier": "https",
+            "start": 15603,
+            "end": 15648,
+            "source": "import{Agent as Yf,request as FA}from\"https\";",
+            "sha256": "e506ecf14765a7a0a288e94fbf184523a72495adbd1d7dbe7557c032b717e768"
+          },
+          "nativeBinding": {
+            "module": "node:https",
+            "export": "Agent"
+          }
+        },
+        "iA": {
+          "port": "mtlsOptions",
+          "origin": "chunk-wj72kvg2.js:iA",
+          "sourceBinding": {
+            "file": "chunk-nankzm0s.js",
+            "specifier": "/$bunfs/root/chunk-wj72kvg2.js",
+            "start": 3732,
+            "end": 3832,
+            "source": "import{fI,cD,jU,iA,u7r,B0e,Hp,Ph,xrr,W0e,G0e,FVt,Di,z0e,V0e,PK}from\"/$bunfs/root/chunk-wj72kvg2.js\";",
+            "sha256": "a2331fc3f53502f13f9af760737ed185242a14c85ab3c507ee2cdab550109112"
+          },
+          "ownerDeclaration": {
+            "file": "chunk-wj72kvg2.js",
+            "name": "iA",
+            "start": 22928,
+            "end": 22962,
+            "moduleSha256": "02b70503c279e9ee2c77e69b253e19886fa22be36c45634735e655bbf153fcef",
+            "sha256": "e913d460c2212ba40819415af12e4cf14628d9b34e906a8a96b59b559434072a",
+            "source": "function iA(){return k().config()}",
+            "kind": "function"
+          }
+        },
+        "qf": {
+          "port": "checkServerIdentity",
+          "origin": "tls:checkServerIdentity",
+          "sourceBinding": {
+            "file": "chunk-nankzm0s.js",
+            "specifier": "tls",
+            "start": 15691,
+            "end": 15748,
+            "source": "import{connect as LA,checkServerIdentity as qf}from\"tls\";",
+            "sha256": "946d5fdf98f50cc626f8c361c969777ad0365ca84a3535dd83d5d58d03f3515b"
+          },
+          "nativeBinding": {
+            "module": "node:tls",
+            "export": "checkServerIdentity"
+          }
+        },
+        "Yn": {
+          "builtin": {
+            "module": "net",
+            "name": "isIPv4"
+          },
+          "origin": "net:isIPv4",
+          "sourceBinding": {
+            "file": "chunk-nankzm0s.js",
+            "specifier": "net",
+            "start": 15648,
+            "end": 15691,
+            "source": "import{isIPv4 as Yn,isIPv6 as jn}from\"net\";",
+            "sha256": "35bda813b54b752c696985fe10190ecd7e28793304fa88a9c05708cbe1a60a0b"
+          }
+        },
+        "jn": {
+          "builtin": {
+            "module": "net",
+            "name": "isIPv6"
+          },
+          "origin": "net:isIPv6",
+          "sourceBinding": {
+            "file": "chunk-nankzm0s.js",
+            "specifier": "net",
+            "start": 15648,
+            "end": 15691,
+            "source": "import{isIPv4 as Yn,isIPv6 as jn}from\"net\";",
+            "sha256": "35bda813b54b752c696985fe10190ecd7e28793304fa88a9c05708cbe1a60a0b"
+          }
+        },
+        "IA": {
+          "port": "dnsLookup",
+          "origin": "dns:lookup",
+          "sourceBinding": {
+            "file": "chunk-nankzm0s.js",
+            "specifier": "dns",
+            "start": 15502,
+            "end": 15532,
+            "source": "import{lookup as IA}from\"dns\";",
+            "sha256": "89d8dea12a3fca03f4e6169339f178034f82cff74bedad780bf52fe1f14dd095"
+          },
+          "nativeBinding": {
+            "module": "node:dns",
+            "export": "lookup"
+          }
+        },
+        "jU": {
+          "file": "chunk-wj72kvg2.js",
+          "name": "jU",
+          "origin": "chunk-wj72kvg2.js:jU"
+        },
+        "P": {
+          "file": "chunk-c9me9cp7.js",
+          "name": "P",
+          "origin": "chunk-c9me9cp7.js:P"
+        }
+      }
+    }
+  ],
+  "ports": {
+    "chunk-nankzm0s.js:Hp": {
+      "port": "proxyConfigured",
+      "origin": "chunk-wj72kvg2.js:Hp",
+      "sourceBinding": {
+        "file": "chunk-nankzm0s.js",
+        "specifier": "/$bunfs/root/chunk-wj72kvg2.js",
+        "start": 3732,
+        "end": 3832,
+        "source": "import{fI,cD,jU,iA,u7r,B0e,Hp,Ph,xrr,W0e,G0e,FVt,Di,z0e,V0e,PK}from\"/$bunfs/root/chunk-wj72kvg2.js\";",
+        "sha256": "a2331fc3f53502f13f9af760737ed185242a14c85ab3c507ee2cdab550109112"
+      },
+      "ownerDeclaration": {
+        "file": "chunk-wj72kvg2.js",
+        "name": "Hp",
+        "start": 29057,
+        "end": 29240,
+        "moduleSha256": "02b70503c279e9ee2c77e69b253e19886fa22be36c45634735e655bbf153fcef",
+        "sha256": "9cf85e01e16a5d1d570eceaa3b9141a56dd7d26e7f01ad154506d1f568f440f5",
+        "source": "function Hp(e=process.env){let n=RK(e);if(!n)return;if(!xK(n.value)){let r=`${n.source}=${n.value}`;if(!ze.has(r))ze.add(r),console.error(Rbt(n.source,n.value));return}return n.value}",
+        "kind": "function"
+      }
+    },
+    "chunk-nankzm0s.js:Ph": {
+      "port": "proxyBypass",
+      "origin": "chunk-wj72kvg2.js:Ph",
+      "sourceBinding": {
+        "file": "chunk-nankzm0s.js",
+        "specifier": "/$bunfs/root/chunk-wj72kvg2.js",
+        "start": 3732,
+        "end": 3832,
+        "source": "import{fI,cD,jU,iA,u7r,B0e,Hp,Ph,xrr,W0e,G0e,FVt,Di,z0e,V0e,PK}from\"/$bunfs/root/chunk-wj72kvg2.js\";",
+        "sha256": "a2331fc3f53502f13f9af760737ed185242a14c85ab3c507ee2cdab550109112"
+      },
+      "ownerDeclaration": {
+        "file": "chunk-wj72kvg2.js",
+        "name": "Ph",
+        "start": 29420,
+        "end": 29821,
+        "moduleSha256": "02b70503c279e9ee2c77e69b253e19886fa22be36c45634735e655bbf153fcef",
+        "sha256": "7a60947d5b9d41305b028af16efb1497823845ed8f0902dc9c7b9d0c1294bdea",
+        "source": "function Ph(e,n=j0e()){if(!n)return!1;if(n===\"*\")return!0;try{let r=new URL(e),o=r.hostname.toLowerCase(),s=r.protocol===\"https:\"||r.protocol===\"wss:\",i=r.port||(s?\"443\":\"80\"),c=`${o}:${i}`;return n.split(/[,\\s]+/).filter(Boolean).some((l)=>{if(l=l.toLowerCase().trim(),l.includes(\":\"))return c===l;if(l.startsWith(\".\")){let f=l;return o===l.substring(1)||o.endsWith(f)}return o===l})}catch{return!1}}",
+        "kind": "function"
+      }
+    },
+    "chunk-nankzm0s.js:t": {
+      "port": "debug",
+      "origin": "chunk-q80zaav8.js:t",
+      "sourceBinding": {
+        "file": "chunk-nankzm0s.js",
+        "specifier": "/$bunfs/root/chunk-q80zaav8.js",
+        "start": 1740,
+        "end": 1811,
+        "source": "import{sh,Mp,_t,mA,_,Y,ae,$y,t,SY}from\"/$bunfs/root/chunk-q80zaav8.js\";",
+        "sha256": "9c412d0adff2079e575aefea1784bec76951f5511c7a94d87b8fbb94398496e7"
+      },
+      "ownerDeclaration": {
+        "file": "chunk-q80zaav8.js",
+        "name": "t",
+        "start": 46026,
+        "end": 46071,
+        "moduleSha256": "f9503296591b825624caf5932b9c5973cde96b859259266a506b616dca5cd41e",
+        "sha256": "da9e0b5e590a43c6f7cf46f3cfcd93d97f399db1017ff8dae938bdbd15e13790",
+        "source": "function t(e,n={level:\"debug\"}){U().log(e,n)}",
+        "kind": "function"
+      }
+    },
+    "chunk-nankzm0s.js:cD": {
+      "port": "certificateAuthority",
+      "origin": "chunk-wj72kvg2.js:cD",
+      "sourceBinding": {
+        "file": "chunk-nankzm0s.js",
+        "specifier": "/$bunfs/root/chunk-wj72kvg2.js",
+        "start": 3732,
+        "end": 3832,
+        "source": "import{fI,cD,jU,iA,u7r,B0e,Hp,Ph,xrr,W0e,G0e,FVt,Di,z0e,V0e,PK}from\"/$bunfs/root/chunk-wj72kvg2.js\";",
+        "sha256": "a2331fc3f53502f13f9af760737ed185242a14c85ab3c507ee2cdab550109112"
+      },
+      "ownerDeclaration": {
+        "file": "chunk-wj72kvg2.js",
+        "name": "cD",
+        "start": 18895,
+        "end": 18935,
+        "moduleSha256": "02b70503c279e9ee2c77e69b253e19886fa22be36c45634735e655bbf153fcef",
+        "sha256": "bbae2b8b1d3c1b16c8fb17b29f50206b199dfef15421a1020cd728ccfaf0268b",
+        "source": "function cD(){return X().certificates()}",
+        "kind": "function"
+      }
+    },
+    "chunk-nankzm0s.js:Yf": {
+      "port": "httpsAgent",
+      "origin": "https:Agent",
+      "sourceBinding": {
+        "file": "chunk-nankzm0s.js",
+        "specifier": "https",
+        "start": 15603,
+        "end": 15648,
+        "source": "import{Agent as Yf,request as FA}from\"https\";",
+        "sha256": "e506ecf14765a7a0a288e94fbf184523a72495adbd1d7dbe7557c032b717e768"
+      },
+      "nativeBinding": {
+        "module": "node:https",
+        "export": "Agent"
+      }
+    },
+    "chunk-nankzm0s.js:iA": {
+      "port": "mtlsOptions",
+      "origin": "chunk-wj72kvg2.js:iA",
+      "sourceBinding": {
+        "file": "chunk-nankzm0s.js",
+        "specifier": "/$bunfs/root/chunk-wj72kvg2.js",
+        "start": 3732,
+        "end": 3832,
+        "source": "import{fI,cD,jU,iA,u7r,B0e,Hp,Ph,xrr,W0e,G0e,FVt,Di,z0e,V0e,PK}from\"/$bunfs/root/chunk-wj72kvg2.js\";",
+        "sha256": "a2331fc3f53502f13f9af760737ed185242a14c85ab3c507ee2cdab550109112"
+      },
+      "ownerDeclaration": {
+        "file": "chunk-wj72kvg2.js",
+        "name": "iA",
+        "start": 22928,
+        "end": 22962,
+        "moduleSha256": "02b70503c279e9ee2c77e69b253e19886fa22be36c45634735e655bbf153fcef",
+        "sha256": "e913d460c2212ba40819415af12e4cf14628d9b34e906a8a96b59b559434072a",
+        "source": "function iA(){return k().config()}",
+        "kind": "function"
+      }
+    },
+    "chunk-nankzm0s.js:qf": {
+      "port": "checkServerIdentity",
+      "origin": "tls:checkServerIdentity",
+      "sourceBinding": {
+        "file": "chunk-nankzm0s.js",
+        "specifier": "tls",
+        "start": 15691,
+        "end": 15748,
+        "source": "import{connect as LA,checkServerIdentity as qf}from\"tls\";",
+        "sha256": "946d5fdf98f50cc626f8c361c969777ad0365ca84a3535dd83d5d58d03f3515b"
+      },
+      "nativeBinding": {
+        "module": "node:tls",
+        "export": "checkServerIdentity"
+      }
+    },
+    "chunk-nankzm0s.js:IA": {
+      "port": "dnsLookup",
+      "origin": "dns:lookup",
+      "sourceBinding": {
+        "file": "chunk-nankzm0s.js",
+        "specifier": "dns",
+        "start": 15502,
+        "end": 15532,
+        "source": "import{lookup as IA}from\"dns\";",
+        "sha256": "89d8dea12a3fca03f4e6169339f178034f82cff74bedad780bf52fe1f14dd095"
+      },
+      "nativeBinding": {
+        "module": "node:dns",
+        "export": "lookup"
+      }
+    }
+  }
+}

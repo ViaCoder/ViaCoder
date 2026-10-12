@@ -1,0 +1,411 @@
+{
+  "schema": "official-foundry-286-raw-branch-v3",
+  "version": "2.1.286",
+  "platform": "darwin-arm64",
+  "sourceModules": [
+    {
+      "file": "chunk-tx79xqc5.js",
+      "path": "provenance-reference://not-bundled/f4d12283615e7c41f14c3f3a47cde6fa911fbc1202626ac99664ebe5d41504a7",
+      "sha256": "9c1e53986aa126f85e625401314cc5e1ef9e3250f7f7067894f2cb662cc9a069"
+    },
+    {
+      "file": "chunk-majxx0zh.js",
+      "path": "provenance-reference://not-bundled/99943055caf43dc77eac1214f35558a6712a9e796f884d36f1a6b75bc21c68c8",
+      "sha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49"
+    },
+    {
+      "file": "chunk-07mxqtdh.js",
+      "path": "provenance-reference://not-bundled/6cc272766830b881130571002fca7c12b54a2d81057dc73f88b5674534aab22e",
+      "sha256": "8fe1ef6c86ed39fc9bd66865a357b8f94de75b8133e01ee093c994d27eaa28ff"
+    },
+    {
+      "file": "chunk-rmy2pep5.js",
+      "path": "provenance-reference://not-bundled/c31876914f73dc97e09d4a4cc4235da73a2725edf6bc54ea9b76715524c3435f",
+      "sha256": "88ae7dd89db5a2d82e8c87782060c847c7d144eaccfbe64622b4a370cabb389c"
+    },
+    {
+      "file": "chunk-ktw7xkh2.js",
+      "path": "provenance-reference://not-bundled/857cae1ac9a7719e585758d3f96693290104384e2cd7b38fdc1e9cc4f46c2ed7",
+      "sha256": "9bb8f848f236e5f615eaa58d0ecf4264bff833a905243f2fd0e4b5fdeb4790ad"
+    },
+    {
+      "file": "chunk-h730kz80.js",
+      "path": "provenance-reference://not-bundled/2a1033530aadf520ebd488c74e1552b830c23f13497ea775886c2e14857fc6a0",
+      "sha256": "2fd1d1c89c1b8ab482265e429afb8a6163f1d75acd78a6e6476325a79d794f99"
+    },
+    {
+      "file": "chunk-gxp5am6q.js",
+      "path": "provenance-reference://not-bundled/4fad24e9e7e9128e756113a02864f8625298ece6863727cd604b753c2f66fd65",
+      "sha256": "cdf77705bef58c387fffc2f83592c38ff8812d3ebe0b1ba0b6e34535300feaee"
+    }
+  ],
+  "manifestSha256": "50f44fb473db94fcb7bab7c40d307dc5be4e54718b4f235d9c2a194549d54430",
+  "declaration": {
+    "sourceModule": "chunk-tx79xqc5.js",
+    "start": 597263,
+    "end": 606274,
+    "sha256": "a5fe3e1c4a3c746d9c1c16b01f8fc96d41f0553b1287efc013f6e597fdf7255a",
+    "source": "async function _D({apiKey:e,maxRetries:n,model:r,fetchOverride:s,source:h,querySource:g=h,agentContext:b,promptId:w,permissionContext:k,credentials:A,storageV5:D,signal:M,clock:W=zQ}){let B=process.env.CLAUDE_CODE_CONTAINER_ID,K=process.env.CLAUDE_CODE_REMOTE_SESSION_ID,Y=process.env.CLAUDE_AGENT_SDK_CLIENT_APP,X=vp(b)?void 0:b,ne=Wsn(),le=ne?ZUo(h,b):void 0,Q=ne?eBo(h,b):void 0,fe={userTurn:h!==\"side_query\"&&QUo(g)&&UN()===void 0&&fS()===void 0&&(b.agentType===\"main\"||b.isBackgroundAgent===!1)},he=mlt(),xe={...dw(),...he,...!1,...dO(),...B&&{\"x-claude-remote-container-id\":B},...K&&{\"x-claude-remote-session-id\":K},...Y&&{\"x-client-app\":Y},...X?.agentId&&{\"x-claude-code-agent-id\":IXn(X.agentId)},...X?.parentAgentId&&{\"x-claude-code-parent-agent-id\":IXn(X.parentAgentId)},...le&&{[W9n]:le},...Q&&{[G9n]:IXn(Q)},...ne&&w!==void 0&&Xt(w)!==null&&{[z9n]:w}};if(t(`[API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: ${!!process.env.ANTHROPIC_CUSTOM_HEADERS}, has Authorization header: ${!!he.Authorization}`,{level:\"verbose\"}),a.CLAUDE_CODE_ADDITIONAL_PROTECTION)xe[\"x-anthropic-additional-protection\"]=\"true\";if(He()===\"gateway\"&&!no()&&!jGt()){if(cc())throw FUt(\"Cloud gateway\");throw new plt(\"Not signed in to the Cloud gateway \\u2014 run /login.\",\"signin_required\")}let pe=await o9({credentials:A,storageV5:D}),Ee=pn(),ke=Imn({anthropicAuthEnabled:cl(),oauthScopes:Ee?.scopes}),Ne=null;if(!ke&&!no())Ne=await z3(xe,Ce());await jPe();let We=s9(s,h,Ul(r),D,W),Ve=Ul(r);if(sYe(Ve),wi().once(\"provider_route\"))y(\"provider_route\");let ot=Ve===\"bedrock\"||Ve===\"mantle\"?await MR():void 0,$e={defaultHeaders:xe,maxRetries:n,timeout:eQe(process.env.API_TIMEOUT_MS,600000),dangerouslyAllowBrowser:!0,fetchOptions:ki({forAnthropicAPI:!0,hasBodyIdleWatchdog:pWn(Ve),url:K3(Ve,r,ot)}),...We&&{fetch:We},...ZT};if(Ve===\"gateway\"){await v2();let Ge=no();if(!Ge||BYr()&&!NUt())throw Ge?.unpinned?new plt(\"Cloud gateway token expired \\u2014 refresh ANTHROPIC_AUTH_TOKEN and restart.\",\"token_expired\"):new plt(Emt,\"session_expired\");let{rest:Ye}=Ho($e.defaultHeaders);return new Ole({...$e,defaultHeaders:{...Ye,...gy(),Authorization:`Bearer ${Ge.jwt}`},apiKey:null,baseURL:Ge.url,authToken:Ge.jwt,...UG()&&{logger:cs()}})}if(Ve===\"bedrock\"){let{AnthropicBedrock:Ge}=await import(\"/$bunfs/root/chunk-m07ym6s6.js\"),Ye=zh(r,ot),mt=a.CLAUDE_CODE_SKIP_BEDROCK_AUTH,wt=Ho($e.defaultHeaders),Tt=Object.keys(wt.rest).some((Lr)=>Lr.toLowerCase()===\"x-api-key\"),Qt={...wt.rest,...gy(),Authorization:null,...!mt&&!Tt&&{\"X-Api-Key\":null},...process.env.ANTHROPIC_BEDROCK_SERVICE_TIER&&{\"X-Amzn-Bedrock-Service-Tier\":process.env.ANTHROPIC_BEDROCK_SERVICE_TIER}},Yt=process.env.AWS_BEARER_TOKEN_BEDROCK?.trim(),kt=Yt?`Bearer ${Yt}`:mt?wt.value:void 0,jt=cc(),dn=!kt&&!mt&&!jt?await od(sG(M,fe),M):null,ir={...$e,defaultHeaders:Qt,awsRegion:Ye,apiKey:null,...mt&&!kt&&{skipAuth:!0},...kt&&{apiKey:kt.match(/^Bearer (.+)$/i)?.[1]??kt,defaultHeaders:{...Qt,Authorization:kt,...mt&&Xgt(wt.rest)}},...jt&&!kt&&!mt&&{providerChainResolver:CJ(\"Bedrock\").providerChainResolver},...!jt&&!kt&&!mt&&{providerChainResolver:Wq(Ye)},...UG()&&{logger:cs()}};return dn?new Ge({...ir,awsAccessKey:dn.accessKeyId,awsSecretKey:dn.secretAccessKey,awsSessionToken:dn.sessionToken}):new Ge(ir)}if(Ve===\"foundry\"){let{AnthropicFoundry:Ge}=await import(\"/$bunfs/root/chunk-pqcbp6y3.js\"),Ye,mt=!1;if(a.ANTHROPIC_FOUNDRY_AUTH_TOKEN)Ye=async()=>a.ANTHROPIC_FOUNDRY_AUTH_TOKEN??\"\";else if(!process.env.ANTHROPIC_FOUNDRY_API_KEY)if(a.CLAUDE_CODE_SKIP_FOUNDRY_AUTH)mt=!0,Ye=()=>Promise.resolve(\"skip-foundry-auth\");else if(cc())throw FUt(\"Foundry\");else{let{DefaultAzureCredential:Yt,getBearerTokenProvider:kt}=await import(\"/$bunfs/root/chunk-mhzwng3e.js\");Ye=kt(new Yt,\"https://cognitiveservices.azure.com/.default\")}let wt=a.ANTHROPIC_FOUNDRY_RESOURCE;if(wt!==void 0&&a.ANTHROPIC_FOUNDRY_BASE_URL===void 0&&Gh(wt)===void 0)throw Error(\"ANTHROPIC_FOUNDRY_RESOURCE must be a Foundry resource name (2-64 letters, digits and hyphens, not starting or ending with a hyphen, such as my-resource), not a URL or host name. To use a full URL, set ANTHROPIC_FOUNDRY_BASE_URL instead.\");let Tt=Ho($e.defaultHeaders),Qt={...$e,...wt!==void 0&&{resource:wt},defaultHeaders:{...Tt.rest,...gy(),Authorization:null},...Ye&&{azureADTokenProvider:Ye,apiKey:null,defaultHeaders:mt?{...Tt.rest,...Tt.value!==void 0&&{Authorization:Tt.value}}:{...Tt.rest,...gy()}},...UG()&&{logger:cs()}};return new Ge(Qt)}if(Ve===\"anthropicAws\"){let{AnthropicAws:Ge}=await import(\"/$bunfs/root/chunk-6g2mf6dh.js\"),Ye=a.CLAUDE_CODE_SKIP_ANTHROPIC_AWS_AUTH,mt=await MR(),wt=Ho($e.defaultHeaders),Tt=Ye?wt.value:void 0,Qt=Object.entries(wt.rest).findLast(([kt])=>kt.toLowerCase()===\"anthropic-workspace-id\")?.[1],Yt={...$e,awsRegion:mt,...Qt&&a.ANTHROPIC_AWS_WORKSPACE_ID&&{workspaceId:Qt},defaultHeaders:{...wt.rest,...gy(),Authorization:null},...!Ye&&{authToken:null},...Ye&&!Tt&&{skipAuth:!0},...Tt&&{apiKey:Tt.match(/^Bearer (.+)$/i)?.[1]??Tt,defaultHeaders:{...wt.rest,...gy(),Authorization:Tt}},...UG()&&{logger:cs()}};if(!process.env.ANTHROPIC_AWS_API_KEY&&!Ye)if(cc())Yt.providerChainResolver=CJ(\"Anthropic-on-AWS\").providerChainResolver;else{let kt=await od(sG(M,fe),M);if(kt)Yt.awsAccessKey=kt.accessKeyId,Yt.awsSecretAccessKey=kt.secretAccessKey,Yt.awsSessionToken=kt.sessionToken;else Yt.providerChainResolver=Wq(mt)}return new Ge(Yt)}if(Ve===\"anthropicGoogleCloud\"){js(\"ANTHROPIC_GOOGLE_CLOUD_PROJECT\",a.ANTHROPIC_GOOGLE_CLOUD_PROJECT),js(\"ANTHROPIC_GOOGLE_CLOUD_LOCATION\",a.ANTHROPIC_GOOGLE_CLOUD_LOCATION),js(\"ANTHROPIC_GOOGLE_CLOUD_WORKSPACE_ID\",a.ANTHROPIC_GOOGLE_CLOUD_WORKSPACE_ID),js(\"GCLOUD_PROJECT\",a.GCLOUD_PROJECT),js(\"GOOGLE_CLOUD_PROJECT\",a.GOOGLE_CLOUD_PROJECT),js(\"gcloud_project\",a.gcloud_project),js(\"google_cloud_project\",a.google_cloud_project);let Ge=a.CLAUDE_CODE_SKIP_ANTHROPIC_GOOGLE_CLOUD_AUTH,Ye=cc();if(!Ge&&!Ye)await od(rgt(M,fe),M);let{AnthropicGoogleCloud:mt}=await import(\"/$bunfs/root/chunk-f6t7sx2s.js\"),wt=Ho($e.defaultHeaders),Tt=Ge?wt.value:void 0,Qt={...$e,defaultHeaders:{...wt.rest,...gy()},...Ge&&{skipAuth:!0},...Tt&&{defaultHeaders:{...wt.rest,Authorization:Tt}},...UG()&&{logger:cs()}};return new mt(Qt)}if(Ve===\"mantle\"){let{AnthropicBedrockMantle:Ge}=await import(\"/$bunfs/root/chunk-m07ym6s6.js\"),Ye=a.CLAUDE_CODE_SKIP_MANTLE_AUTH,mt=Ho($e.defaultHeaders),wt=Ye?mt.value:void 0,Tt=process.env.AWS_BEARER_TOKEN_BEDROCK?.trim(),Qt=cc(),Yt=!Tt&&!Ye&&!Qt?await od(sG(M,fe),M):null,kt=zh(r,ot),jt=Object.keys(mt.rest).some((dn)=>dn.toLowerCase()===\"x-api-key\");return new Ge({...$e,defaultHeaders:Tt?{...mt.rest,...gy(),Authorization:`Bearer ${Tt}`,...!jt&&{\"X-Api-Key\":null}}:{...mt.rest,...gy(),Authorization:null,...!Ye&&!jt&&{\"X-Api-Key\":null}},awsRegion:kt,...!Tt&&!Ye&&{authToken:null},...Ye&&!wt&&{skipAuth:!0},...wt&&{apiKey:wt.match(/^Bearer (.+)$/i)?.[1]??wt,defaultHeaders:{...mt.rest,...gy(),Authorization:wt}},...Yt&&{awsAccessKey:Yt.accessKeyId,awsSecretAccessKey:Yt.secretAccessKey,awsSessionToken:Yt.sessionToken},...Qt&&!Tt&&!Ye&&{providerChainResolver:CJ(\"Mantle\").providerChainResolver},...!Qt&&!Tt&&!Ye&&{providerChainResolver:Wq(kt)},...UG()&&{logger:cs()}})}if(Ve===\"vertex\"){let Ge=a.CLAUDE_CODE_SKIP_VERTEX_AUTH,Ye=cc();if(!Ge&&!Ye)await od(rgt(M,fe),M);let[{AnthropicVertex:mt},{buildVertexGoogleAuth:wt}]=await Promise.all([import(\"/$bunfs/root/chunk-nxn9f674.js\"),import(\"/$bunfs/root/chunk-j4rnww7w.js\")]),Tt=await wt(Ge?{kind:\"skip\"}:{kind:\"default\"},kYe()),Qt=Ho($e.defaultHeaders),Yt=Ge?Qt.value:void 0,kt={...$e,defaultHeaders:{...Qt.rest,...Phe(Ge?{wireAuthorization:Yt,headers:Qt.rest}:!1)},region:qoe(r),googleAuth:Tt,...UG()&&{logger:cs()}};return xhe(new mt(kt))}let be=e||AJ();if(!be&&Wc()){let Ge=await bde();if(Ge!==null){let Ye=await _Re(),{rest:mt}=Ho(xe),wt=a.ANTHROPIC_BASE_URL||Ye?.baseURL;sYe(Ve,wt);let Tt=await Ge.getToken();return new Ole({apiKey:null,authToken:Tt,baseURL:wt,...$e,defaultHeaders:{...mt,...gy(),Authorization:`Bearer ${Tt}`,...Ye?.extraHeaders},...UG()&&{logger:cs()}})}}if(!be&&!Ee&&!Ho(xe).value&&await Gq(A))throw new uNe;if(ke){let Ge=sUe();if(Ge)throw new Fre(Ge.url);if(pe===\"lock_timeout\"&&Ee?.expiresAt!=null&&Date.now()>=Ee.expiresAt&&R(\"tengu_sharded_beacon\",!0))throw new bKe}let Pe=Z$o({isSubscriber:ke,apiKey:be,oauthAccessToken:Ee?.accessToken});V9n({apiKey:Pe.apiKey,getApiKeySource:()=>{let{source:Ge}=wp({skipRetrievingKeyFromApiKeyHelper:!0});return Ge===\"none\"?\"unknown\":Ge},authToken:Pe.authToken,getAuthTokenSource:()=>{let{source:Ge}=dc();return Ge===\"CLAUDE_CODE_OAUTH_TOKEN\"||Ge===\"CLAUDE_CODE_OAUTH_TOKEN_FILE_DESCRIPTOR\"||Ge===\"CCR_OAUTH_TOKEN_FILE\"?Ge:\"claude.ai\"},defaultHeaders:xe,authorizationSource:Ne,customHeaderNames:Object.keys(he),envSuppliedHeaderNames:new Set([B&&\"x-claude-remote-container-id\",K&&\"x-claude-remote-session-id\",Y&&\"x-client-app\"].filter((Ge)=>Boolean(Ge)))});let Qe={apiKey:Pe.apiKey,authToken:Pe.authToken,...a.ANTHROPIC_BASE_URL?{baseURL:a.ANTHROPIC_BASE_URL}:!1,...$e,...UG()&&{logger:cs()}};return new Ole(Qe)}"
+  },
+  "branch": {
+    "start": 600526,
+    "end": 601712,
+    "sha256": "f9a13ded5c86d04a51cc57bcbc8600c65650eca6ff61e197943095c48ab21856",
+    "source": "if(Ve===\"foundry\"){let{AnthropicFoundry:Ge}=await import(\"/$bunfs/root/chunk-pqcbp6y3.js\"),Ye,mt=!1;if(a.ANTHROPIC_FOUNDRY_AUTH_TOKEN)Ye=async()=>a.ANTHROPIC_FOUNDRY_AUTH_TOKEN??\"\";else if(!process.env.ANTHROPIC_FOUNDRY_API_KEY)if(a.CLAUDE_CODE_SKIP_FOUNDRY_AUTH)mt=!0,Ye=()=>Promise.resolve(\"skip-foundry-auth\");else if(cc())throw FUt(\"Foundry\");else{let{DefaultAzureCredential:Yt,getBearerTokenProvider:kt}=await import(\"/$bunfs/root/chunk-mhzwng3e.js\");Ye=kt(new Yt,\"https://cognitiveservices.azure.com/.default\")}let wt=a.ANTHROPIC_FOUNDRY_RESOURCE;if(wt!==void 0&&a.ANTHROPIC_FOUNDRY_BASE_URL===void 0&&Gh(wt)===void 0)throw Error(\"ANTHROPIC_FOUNDRY_RESOURCE must be a Foundry resource name (2-64 letters, digits and hyphens, not starting or ending with a hyphen, such as my-resource), not a URL or host name. To use a full URL, set ANTHROPIC_FOUNDRY_BASE_URL instead.\");let Tt=Ho($e.defaultHeaders),Qt={...$e,...wt!==void 0&&{resource:wt},defaultHeaders:{...Tt.rest,...gy(),Authorization:null},...Ye&&{azureADTokenProvider:Ye,apiKey:null,defaultHeaders:mt?{...Tt.rest,...Tt.value!==void 0&&{Authorization:Tt.value}}:{...Tt.rest,...gy()}},...UG()&&{logger:cs()}};return new Ge(Qt)}"
+  },
+  "helperDeclarations": {
+    "HPr": {
+      "sourceModule": "chunk-tx79xqc5.js",
+      "start": 592346,
+      "end": 592390,
+      "sha256": "7327dd50aeb53c6cc3a91eae2203683ac54858955822bd4c79cb46db5a5dc057",
+      "source": "HPr=/^[a-z0-9](?:[a-z0-9-]{0,62}[a-z0-9])$/i"
+    },
+    "Gh": {
+      "sourceModule": "chunk-tx79xqc5.js",
+      "start": 592391,
+      "end": 592446,
+      "sha256": "1e718aa005cdf79ddbad68c820c27c482e5240609b809c9c3ad282d0821fd40b",
+      "source": "function Gh(e){return e!==void 0&&HPr.test(e)?e:void 0}"
+    },
+    "Ho": {
+      "sourceModule": "chunk-tx79xqc5.js",
+      "start": 607363,
+      "end": 607498,
+      "sha256": "cd87159133f7648c9024963797c8821fb334832cb78e74a63a389e7294bf915b",
+      "source": "function Ho(e){let n={},r;for(let[s,h]of Object.entries(e))if(s.toLowerCase()===\"authorization\")r=h;else n[s]=h;return{value:r,rest:n}}"
+    }
+  },
+  "hostPredicate": {
+    "sourceModule": "chunk-majxx0zh.js",
+    "start": 607057,
+    "end": 607117,
+    "sha256": "233052afe95e5ff2473b052a5d10240050742b75c2591707474ba28edb0482d8",
+    "source": "function cc(){return a.CLAUDE_CODE_PROVIDER_MANAGED_BY_HOST}"
+  },
+  "environment": {
+    "schema": {
+      "ANTHROPIC_FOUNDRY_AUTH_TOKEN": "mt",
+      "CLAUDE_CODE_SKIP_FOUNDRY_AUTH": "Io",
+      "ANTHROPIC_FOUNDRY_RESOURCE": "ji",
+      "ANTHROPIC_FOUNDRY_BASE_URL": "Zi"
+    },
+    "schemaBindings": [
+      {
+        "field": "ANTHROPIC_FOUNDRY_AUTH_TOKEN",
+        "symbol": "mt",
+        "sourceModule": "chunk-07mxqtdh.js",
+        "start": 13755,
+        "end": 13790,
+        "sha256": "35c3dc679327dbeb93b120d3fb0405f6951909907c2c6bc299b14045c4c68cc7",
+        "source": "ANTHROPIC_FOUNDRY_AUTH_TOKEN:()=>mt"
+      },
+      {
+        "field": "CLAUDE_CODE_SKIP_FOUNDRY_AUTH",
+        "symbol": "Io",
+        "sourceModule": "chunk-07mxqtdh.js",
+        "start": 15293,
+        "end": 15329,
+        "sha256": "a9af34bed545ab725ddb29e6528f0f8416dd9d2fff2152f2ce8c21340435ea38",
+        "source": "CLAUDE_CODE_SKIP_FOUNDRY_AUTH:()=>Io"
+      },
+      {
+        "field": "ANTHROPIC_FOUNDRY_BASE_URL",
+        "symbol": "Zi",
+        "sourceModule": "chunk-07mxqtdh.js",
+        "start": 61777,
+        "end": 61810,
+        "sha256": "44779f461d1d8c4d8c39c7d82fdc001ba35b43e6e566bdcb343066ebc78c1d64",
+        "source": "ANTHROPIC_FOUNDRY_BASE_URL:()=>Zi"
+      },
+      {
+        "field": "ANTHROPIC_FOUNDRY_RESOURCE",
+        "symbol": "ji",
+        "sourceModule": "chunk-07mxqtdh.js",
+        "start": 61811,
+        "end": 61844,
+        "sha256": "1874eed614ed2f0a2fb988cfba33c84a727add4047126b1111f2195cf977ee88",
+        "source": "ANTHROPIC_FOUNDRY_RESOURCE:()=>ji"
+      }
+    ],
+    "declarations": [
+      {
+        "sourceModule": "chunk-rmy2pep5.js",
+        "start": 950,
+        "end": 1024,
+        "sha256": "d4c92b69a26a58f43dca5ae491bd869fe4f5873b3628be5ad5e6f19f26af7e25",
+        "source": "function gKo(n){if(typeof n===\"boolean\")return n?\"1\":\"0\";return String(n)}"
+      },
+      {
+        "sourceModule": "chunk-07mxqtdh.js",
+        "start": 15948,
+        "end": 15958,
+        "sha256": "ae88276103007b436a72e0b7b90bbe094baae76ede5d11d8d1813b1a73d5c862",
+        "source": "mt=D.str()"
+      },
+      {
+        "sourceModule": "chunk-07mxqtdh.js",
+        "start": 16416,
+        "end": 16427,
+        "sha256": "6a01b48fa6c44873069fa44f85f218b26d24d62a0a37eb1d5725701eefad6700",
+        "source": "Io=D.bool()"
+      },
+      {
+        "sourceModule": "chunk-07mxqtdh.js",
+        "start": 64154,
+        "end": 64164,
+        "sha256": "4698d588a15d8530dd4d971a3157d498a282d28d6de44e19462a888a78baa89d",
+        "source": "ji=D.str()"
+      },
+      {
+        "sourceModule": "chunk-07mxqtdh.js",
+        "start": 64143,
+        "end": 64153,
+        "sha256": "424d07af0c50047c2ddd5974bbdc59d1ee2584976401e530f791df550d5bf99d",
+        "source": "Zi=D.str()"
+      },
+      {
+        "sourceModule": "chunk-07mxqtdh.js",
+        "start": 64815,
+        "end": 65149,
+        "sha256": "1ddb721aa3a310ee9114c10a56a8b97b9383f1a1fea92c658fda1134c27ac6ec",
+        "source": "function gJe(t,o){let _=Object.create(o);for(let[E,r]of Object.entries(t)){let e=_,s;Object.defineProperty(_,E,{get:()=>{let n=process.env[E];if(n!==e)s=r.parse(n),e=n;return s},enumerable:!0,configurable:!0})}return Object.defineProperties(_,{set:{value:(E,r)=>{process.env[E]=gKo(r)}},unset:{value:(E)=>{delete process.env[E]}}}),_}"
+      }
+    ],
+    "reusedDecoder": {
+      "path": "src/utils/officialAuthEnvironment/runtime.js",
+      "sha256": "611b4358c88c4615e20ece467f2f53c66d6d8f0e2afa83778a93d299da50cec2",
+      "declarations": [
+        {
+          "sourceModule": "chunk-ktw7xkh2.js",
+          "start": 615,
+          "end": 757,
+          "sha256": "c7c851b23895c896ce38865f13ecbb54e11e83018c8ced9cae422c41298e6dfd",
+          "source": "function Le(e){if(!e)return!1;if(typeof e===\"boolean\")return e;let n=String(e).toLowerCase().trim();return[\"1\",\"true\",\"yes\",\"on\"].includes(n)}"
+        },
+        {
+          "sourceModule": "chunk-ktw7xkh2.js",
+          "start": 757,
+          "end": 908,
+          "sha256": "88defc1253988f33c035451913f1018f77fe5394dc418b9650dbd6d92c0e836e",
+          "source": "function Cs(e){if(e===void 0)return!1;if(typeof e===\"boolean\")return!e;let n=String(e).toLowerCase().trim();return[\"0\",\"false\",\"no\",\"off\"].includes(n)}"
+        },
+        {
+          "sourceModule": "chunk-rmy2pep5.js",
+          "start": 801,
+          "end": 850,
+          "sha256": "7a686c44a4bdd8b12153c001f3bc94d776fa4b48eee2f0e23cd73cb09ee52149",
+          "source": "function u(n){return n===void 0?void 0:String(n)}"
+        },
+        {
+          "sourceModule": "chunk-rmy2pep5.js",
+          "start": 712,
+          "end": 753,
+          "sha256": "b310d818ac6a9248e1a446c3795ce08cc79264bc55d9f3672eeb783d0b24327c",
+          "source": "function i(n){return{parse:(e)=>n(u(e))}}"
+        },
+        {
+          "sourceModule": "chunk-rmy2pep5.js",
+          "start": 753,
+          "end": 801,
+          "sha256": "0785eff74b9253b961b8036e32691bf760b9907ae5cd4569c092f04bc896b6fe",
+          "source": "function t(n){let e=n?.trim();return e?e:void 0}"
+        },
+        {
+          "sourceModule": "chunk-rmy2pep5.js",
+          "start": 1165,
+          "end": 1392,
+          "sha256": "04a96418fb6fb64af48ecc100ef2d4273b4dd56975878272fadf9b478b1f17fe",
+          "source": "function d(n){return i((e)=>{if(e===void 0)return;if(n?.digitsOnly&&!/^[+-]?\\d+$/.test(e.trim()))return;let r=rc(e);if(!Number.isFinite(r))return;if(n?.min!==void 0&&r<n.min)return;if(n?.max!==void 0&&r>n.max)return;return r})}"
+        },
+        {
+          "sourceModule": "chunk-rmy2pep5.js",
+          "start": 854,
+          "end": 860,
+          "sha256": "6fc328d8fea2b2419cd13c9e5c144d1a9d2189473bf6a610ca8aaa6ea2f2cfbc",
+          "source": "f=i(t)"
+        },
+        {
+          "sourceModule": "chunk-rmy2pep5.js",
+          "start": 861,
+          "end": 872,
+          "sha256": "64a3368c80ea1356b39fb0076176734daa12af6718b77021dd86647c22a49ac8",
+          "source": "o=i((n)=>n)"
+        },
+        {
+          "sourceModule": "chunk-rmy2pep5.js",
+          "start": 873,
+          "end": 888,
+          "sha256": "4ac954bde4becf6149e0dcd245dd634f28bfcf859a2a29c153eb87db2bc69136",
+          "source": "s=i((n)=>Le(n))"
+        },
+        {
+          "sourceModule": "chunk-rmy2pep5.js",
+          "start": 889,
+          "end": 943,
+          "sha256": "8a15a5a9651d3e9e42ce493a2d975ed0dcfdcfc54abbd85f7595e59d214a0ec0",
+          "source": "l=i((n)=>{if(Le(n))return!0;if(Cs(n))return!1;return})"
+        },
+        {
+          "sourceModule": "chunk-rmy2pep5.js",
+          "start": 944,
+          "end": 949,
+          "sha256": "09ed0d48849129f78f6cbf0bc4f720e475ea4ddc01d5776dc8c70b29e7c46901",
+          "source": "m=d()"
+        },
+        {
+          "sourceModule": "chunk-rmy2pep5.js",
+          "start": 1028,
+          "end": 1164,
+          "sha256": "15c2ec2560412cfb56c1d2f520bd430b89d87dd2a339e35de30e0aa66663ea93",
+          "source": "D={str:()=>f,rawStr:()=>o,bool:()=>s,triBool:()=>l,int:(n)=>n?d(n):m,enum:(n)=>i((e)=>e!==void 0&&n.includes(e.trim())?e.trim():void 0)}"
+        }
+      ],
+      "integerDeclarations": [
+        {
+          "sourceModule": "chunk-gxp5am6q.js",
+          "start": 830,
+          "end": 872,
+          "sha256": "fc64be771d88469b3b720b95b7b99ee4d907ddeb49a233a646ecab7c3817e32d",
+          "source": "N=/^[+-]?(\\d+(\\.\\d*)?|\\.\\d+)[eE][+-]?\\d+$/"
+        },
+        {
+          "sourceModule": "chunk-gxp5am6q.js",
+          "start": 873,
+          "end": 927,
+          "sha256": "fd2ec11e9c74067bee439414a1810394cb842da2c20408bd04e19a1fe8366a35",
+          "source": "E=/^[+-]?\\d{1,3}([_,\\u00A0\\u202F ])\\d{3}(?:\\1\\d{3})*$/"
+        },
+        {
+          "sourceModule": "chunk-gxp5am6q.js",
+          "start": 928,
+          "end": 950,
+          "sha256": "33c84d7671033ca797af658d1febbce1f25f511ec97efcb216ae120ddd2f3bd9",
+          "source": "c=/[_,\\u00A0\\u202F ]/g"
+        },
+        {
+          "sourceModule": "chunk-gxp5am6q.js",
+          "start": 951,
+          "end": 1101,
+          "sha256": "9ca6c76819e310d839a98f586070d670ba09defdbb105da307c51e32cfccaff1",
+          "source": "function m(e){if(e.length<=32){if(N.test(e)){let n=Number(e);return Number.isInteger(n)?n:NaN}if(E.test(e))return parseInt(e.replace(c,\"\"),10)}return}"
+        },
+        {
+          "sourceModule": "chunk-gxp5am6q.js",
+          "start": 1101,
+          "end": 1167,
+          "sha256": "63ab5edfe23a809e5557cfb492784ba6243d7928aec64963f092e13890d3eddd",
+          "source": "function rc(e){let n=String(e).trim();return m(n)??parseInt(n,10)}"
+        },
+        {
+          "sourceModule": "chunk-gxp5am6q.js",
+          "start": 3290,
+          "end": 3370,
+          "sha256": "6fb16f57f4f85e6e8fcdbc47c31102dfc9a60995afdf52087c24c0fe711e903a",
+          "source": "function eQe(e,n){if(e===void 0)return n;let r=rc(e);return Number.isNaN(r)?n:r}"
+        }
+      ]
+    },
+    "boundary": "Original gJe/gKo and field parser declarations; Foundry-only schema assembly; base is existing authEnvironment. API_KEY in raw branch remains process.env raw."
+  },
+  "hostError": {
+    "declarations": [
+      {
+        "sourceModule": "chunk-h730kz80.js",
+        "start": 3714,
+        "end": 3869,
+        "sha256": "e0165a34780a88fe34268a00a97acdaace9a83c4b760613e669e99daf6ac0899",
+        "source": "class P extends Error{telemetryMessage;errorClass;constructor(n,e,t){super(n);this.name=\"TelemetrySafeError\",this.telemetryMessage=e??n,this.errorClass=t}}"
+      },
+      {
+        "sourceModule": "chunk-majxx0zh.js",
+        "start": 607117,
+        "end": 607138,
+        "sha256": "813f269785d24f2916f5e04f093183bc0a6b0e0796363a0681c829078de6bde3",
+        "source": "class Bhn extends P{}"
+      },
+      {
+        "sourceModule": "chunk-majxx0zh.js",
+        "start": 607138,
+        "end": 607415,
+        "sha256": "1bad8e6c1d347b96329a727ec64486615d1c7b82c638909f9edd5cc14ccea838",
+        "source": "function FUt(e,n=\"The app may have quit or its credential file is stale \\u2014 restart the desktop app.\"){return new Bhn(`${e} credentials are managed by the desktop app, but none are available. ${n}`,\"host-managed provider credentials unavailable \\u2014 restart desktop app\")}"
+      }
+    ],
+    "boundary": "P extends builtin Error; Bhn extends P; FUt closes over Bhn. No runtime/auth/credential port required."
+  },
+  "sourceEdges": [
+    {
+      "sourceModule": "chunk-tx79xqc5.js",
+      "symbol": "a",
+      "start": 1540,
+      "end": 1621,
+      "sha256": "9506f404929e052e8b0d5dc74f8563c154da0be94dc6a8826fe4ee7ab40a47ad",
+      "source": "import{au,gc,TO,yIe,F6t,uEn,bZn,za,gJe,a,kn}from\"/$bunfs/root/chunk-07mxqtdh.js\";"
+    },
+    {
+      "sourceModule": "chunk-tx79xqc5.js",
+      "symbol": "FUt",
+      "start": 2026,
+      "end": 2778,
+      "sha256": "16ac1f6473e48740d638b73b00e2fec2df5b6b0c0365e9b9dcb6a2020be3d2f2",
+      "source": "import{Emt,Wr,Ig,sYe,A9n,Gp,Imt,ehn,bt,YD,Di,dy,K_e,ohn,Ode,QUo,as,W9n,G9n,ZUo,eBo,z9n,Nmt,V9n,K1e,q9n,lhn,_J,SUt,mE,Dde,K9n,bUt,tp,Lde,IN,Q5,S1,b1,yYe,n8n,r8n,Z_e,Dr,YI,HN,o8n,$mt,AUt,ABo,nG,_Ye,Rjr,xjr,Pjr,$q,ON,xBo,Bmt,IBo,Shn,SYe,oS,lre,Wmt,wJ,Oh,et,XD,Nde,Fde,Vmt,ZRe,a8n,Z5,uy,IUt,Fjr,$jr,Ujr,JD,exe,hu,dm,S2,ZH,py,Ahn,Uq,cre,Ude,Gjr,ll,e9,J1e,khn,US,Ue,Dh,f8n,Bq,OUt,xhn,b2,Bde,yw,m8n,jde,Ss,Ky,It,Jmt,bp,IR,JI,Cd,k_,Gde,w2,Jjr,rSe,oxe,gre,v2,NUt,cc,FUt,CJ,Wc,tO,cl,qde,dc,AJ,wp,C2,Whn,oUe,sG,Wq,kYe,rgt,sUe,Gq,pn,Hi,o9,ct,Ep,$f,N8n,ZUt,Cn,nO,F8n,er,eue,rBt,hE,QI,Xy,mgt,Xa,vp,OYe,d9,mxe,kyn,NYe,Wt,PJ,UN,Rt,np,Km,vb,$u,bs,R,RBt,u6r,f6r,R2,hC,BYe,Mjo,IJ,HJ,S6r,HYn,iO,Gs,C6r,LYn,$jo,ns,pm,n0,vUe,Te,ce,sM,Td}from\"/$bunfs/root/chunk-majxx0zh.js\";"
+    },
+    {
+      "sourceModule": "chunk-07mxqtdh.js",
+      "symbol": "D",
+      "start": 1101,
+      "end": 1151,
+      "sha256": "c51a36ee122bd4cc20451506476d3f322e8ee6a682e44307d990cde42fe6fa22",
+      "source": "import{gKo,D}from\"/$bunfs/root/chunk-rmy2pep5.js\";"
+    },
+    {
+      "sourceModule": "chunk-rmy2pep5.js",
+      "symbol": "Le",
+      "start": 615,
+      "end": 665,
+      "sha256": "b617d511e28d36cc82948914b4b19fb2b393cf5d924a21145da145c61b6828ff",
+      "source": "import{Le,Cs}from\"/$bunfs/root/chunk-ktw7xkh2.js\";"
+    },
+    {
+      "sourceModule": "chunk-rmy2pep5.js",
+      "symbol": "rc",
+      "start": 665,
+      "end": 712,
+      "sha256": "5614bd8f66995aad2704ba926d653dfa2e55ed0e3ed82c8557e29771647e1a0b",
+      "source": "import{rc}from\"/$bunfs/root/chunk-gxp5am6q.js\";"
+    },
+    {
+      "sourceModule": "chunk-majxx0zh.js",
+      "symbol": "P",
+      "start": 732,
+      "end": 822,
+      "sha256": "9ee2efe6d581f4bcaa6a9c3368d7fcaafafcf7fd18e5d1b27abd8315a8dc2272",
+      "source": "import{Pt,Dm,xP,Eu,P,nt,ee,l,v,Tzt,kzt,$_,G,Dt,cu,Xs}from\"/$bunfs/root/chunk-h730kz80.js\";"
+    }
+  ],
+  "importBindingEdits": [
+    {
+      "start": 600583,
+      "end": 600615,
+      "original": "\"/$bunfs/root/chunk-pqcbp6y3.js\"",
+      "replacement": "\"../foundrySdk.js\""
+    },
+    {
+      "start": 600948,
+      "end": 600980,
+      "original": "\"/$bunfs/root/chunk-mhzwng3e.js\"",
+      "replacement": "\"../azureIdentity.js\""
+    }
+  ],
+  "generatedRuntime": "src/services/api/officialFoundry286/generated/rawBranch.ts",
+  "scope": [
+    "All executable branch/helper source comes directly from manifest-verified raw modules.",
+    "Only the two original dynamic import string-literal AST nodes are rebound; import/await syntax and other source remain exact.",
+    "HPr/Gh/Ho form the original lexical closure, without caller/helper substitutes.",
+    "cc is the original complete predicate, bound to the existing live typed host-management getter.",
+    "Default Foundry getters reuse the existing raw-verified D.str/D.bool, complete original gJe/gKo and parser declarations, without raw string copying or handwritten trim.",
+    "Default host error uses complete original P/Bhn/FUt closure; no generic error substitute.",
+    "Foundry consumer tests inject loopback fetch; other _D prologue dependencies remain fixture ports."
+  ]
+}

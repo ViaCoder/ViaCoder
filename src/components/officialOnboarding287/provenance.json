@@ -1,0 +1,690 @@
+{
+  "version": "2.1.287",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "rangeConvention": "UTF-16 end-exclusive",
+  "rows": [
+    {
+      "file": "chunk-m7tmqa6t.js",
+      "name": "fe",
+      "start": 17859,
+      "end": 17914,
+      "moduleSha256": "f6c4d0fb79da3103f4aab7bae9f063a324e75bcd8ea62ffd32dc784e179de5bd",
+      "sha256": "5d6f537256577d62f225e95ec79bd7b2441568333c7b9a5b216e43660a8241e5",
+      "source": "function fe(){iy(\"preflight_endpoint\"),process.exit(1)}",
+      "imports": {
+        "iy": {
+          "file": "chunk-g3fn1fm9.js",
+          "name": "iy"
+        }
+      }
+    },
+    {
+      "file": "chunk-m7tmqa6t.js",
+      "name": "Z",
+      "start": 17914,
+      "end": 17924,
+      "moduleSha256": "f6c4d0fb79da3103f4aab7bae9f063a324e75bcd8ea62ffd32dc784e179de5bd",
+      "sha256": "c26ccf9f5da1551ccb1d3eb5a5dbec50f326386f7a27e2d0a2c8c965426a5a4e",
+      "source": "var Z=1e4;",
+      "imports": {}
+    },
+    {
+      "file": "chunk-m7tmqa6t.js",
+      "name": "ee",
+      "start": 17924,
+      "end": 19036,
+      "moduleSha256": "f6c4d0fb79da3103f4aab7bae9f063a324e75bcd8ea62ffd32dc784e179de5bd",
+      "sha256": "5bc64417792c0662bc727419b201149242c82729d3dd5f05e845cc65a63057a8",
+      "source": "async function ee(){try{await G0e();let l=dn(),c=new URL(l.TOKEN_URL),t=[`${l.BASE_API_URL}/api/hello`,`${c.origin}/v1/oauth/hello`],P=async(f)=>{let x=new URL(f).hostname,h=Di({url:f}),S=h.proxy!==void 0;try{let p=await fetch(f,{headers:{\"User-Agent\":q0()},signal:AbortSignal.timeout(Z),...h});if(p.body?.cancel().catch(()=>{}),p.status!==200)return{success:!1,error:`Failed to connect to ${x}: Status ${p.status}`,usedProxy:S};return{success:!0}}catch(p){if(p instanceof Error&&p.name===\"TimeoutError\")return{success:!1,error:`Connection to ${x} timed out after ${Z/1000} seconds`,usedProxy:S};let k=uK(p);return{success:!1,error:`Failed to connect to ${x}: ${p instanceof Error?p.code||p.message:String(p)}`,sslHint:k??void 0,usedProxy:S}}},o=(await Promise.all(t.map(P))).find((f)=>!f.success);if(o)i(\"tengu_preflight_check_failed\",{isConnectivityError:!1,hasErrorMessage:!!o.error,isSSLError:!!o.sslHint});return o||{success:!0}}catch(l){return d(l),i(\"tengu_preflight_check_failed\",{isConnectivityError:!0}),{success:!1,error:`Connectivity check error: ${l instanceof Error?l.code||l.message:String(l)}`}}}",
+      "imports": {
+        "G0e": {
+          "file": "chunk-wj72kvg2.js",
+          "name": "G0e"
+        },
+        "dn": {
+          "file": "chunk-a5b8yq96.js",
+          "name": "dn"
+        },
+        "Di": {
+          "file": "chunk-wj72kvg2.js",
+          "name": "Di"
+        },
+        "q0": {
+          "file": "chunk-nankzm0s.js",
+          "name": "q0"
+        },
+        "uK": {
+          "file": "chunk-wgt53hn2.js",
+          "name": "uK"
+        },
+        "i": {
+          "file": "chunk-6hnyhakg.js",
+          "name": "i"
+        },
+        "d": {
+          "file": "chunk-amhtwhch.js",
+          "name": "d"
+        }
+      }
+    },
+    {
+      "file": "chunk-m7tmqa6t.js",
+      "name": "V",
+      "start": 19036,
+      "end": 20644,
+      "moduleSha256": "f6c4d0fb79da3103f4aab7bae9f063a324e75bcd8ea62ffd32dc784e179de5bd",
+      "sha256": "8292e09ed5e829686e4329bbf25be3aa99eb8445217698af393676755c1fd83e",
+      "source": "function V(l){let h=w(14),{onSuccess:c}=l,[t,P]=g(null),[u,o]=g(!0),f=RK()?.source,x=kr(1000)&&u,S,p;if(h[0]===b)S=()=>{let O=async function O(){let k=await ee();P(k),o(!1)};O()},p=[],h[0]=S,h[1]=p;else S=h[0],p=h[1];R(S,p);let E;if(h[2]!==c||h[3]!==t?.success)E=()=>{if(t?.success)c()},h[2]=c,h[3]=t?.success,h[4]=E;else E=h[4];let U;if(h[5]!==c||h[6]!==t)U=[t,c],h[5]=c,h[6]=t,h[7]=U;else U=h[7];R(E,U),kr(fe,t&&!t.success?100:null);let _;if(h[8]!==u||h[9]!==t||h[10]!==x)_=u&&x?r(s,{paddingLeft:1,children:[e(Ns,{}),e(n,{children:\"Checking connectivity...\"})]}):!t?.success&&!u&&r(s,{flexDirection:\"column\",gap:1,children:[e(n,{color:\"error\",children:\"Unable to connect to Anthropic services\"}),e(n,{color:\"error\",children:t?.error}),t?.sslHint?r(s,{flexDirection:\"column\",gap:1,children:[e(n,{children:t.sslHint}),e(n,{color:\"suggestion\",children:\"See https://code.claude.com/docs/en/network-config\"})]}):r(s,{flexDirection:\"column\",gap:1,children:[f&&t?.usedProxy?r(n,{children:[\"A proxy is configured via \",f,\". Check that it allows connections to the host above.\",\" \",e(n,{color:\"suggestion\",children:\"See https://code.claude.com/docs/en/network-config\"})]}):null,e(n,{children:\"Please check your internet connection and network settings.\"}),r(n,{children:[\"Note: Claude Code might not be available in your country. Check supported countries at\",\" \",e(n,{color:\"suggestion\",children:\"https://anthropic.com/supported-countries\"})]})]})]}),h[8]=u,h[9]=t,h[10]=x,h[11]=_;else _=h[11];let F;if(h[12]!==_)F=e(s,{flexDirection:\"column\",gap:1,paddingLeft:1,children:_}),h[12]=_,h[13]=F;else F=h[13];return F}",
+      "imports": {
+        "w": {
+          "file": "chunk-bgj860b4.js",
+          "name": "w"
+        },
+        "g": {
+          "file": "chunk-1y575bx8.js",
+          "name": "g"
+        },
+        "RK": {
+          "file": "chunk-wj72kvg2.js",
+          "name": "RK"
+        },
+        "kr": {
+          "file": "chunk-jkt292h5.js",
+          "name": "kr"
+        },
+        "b": {
+          "file": "chunk-870yz02b.js",
+          "name": "b"
+        },
+        "R": {
+          "file": "chunk-1y575bx8.js",
+          "name": "R"
+        },
+        "r": {
+          "file": "chunk-ysm7k028.js",
+          "name": "r"
+        },
+        "s": {
+          "file": "chunk-jkt292h5.js",
+          "name": "s"
+        },
+        "e": {
+          "file": "chunk-ysm7k028.js",
+          "name": "e"
+        },
+        "Ns": {
+          "file": "chunk-f3vd025c.js",
+          "name": "Ns"
+        },
+        "n": {
+          "file": "chunk-jkt292h5.js",
+          "name": "n"
+        }
+      }
+    },
+    {
+      "file": "chunk-m7tmqa6t.js",
+      "name": "X",
+      "start": 20644,
+      "end": 20811,
+      "moduleSha256": "f6c4d0fb79da3103f4aab7bae9f063a324e75bcd8ea62ffd32dc784e179de5bd",
+      "sha256": "4d1266a59485872371530fd868bd5cadf15917edef53dc9dc2a78ae644fe6eff",
+      "source": "function X(){let l=w(1),c;if(l[0]===b)c=r(n,{color:\"permission\",children:[\"Press \",e(n,{bold:!0,children:\"Enter\"}),\" to continue\\u2026\"]}),l[0]=c;else c=l[0];return c}",
+      "imports": {
+        "w": {
+          "file": "chunk-bgj860b4.js",
+          "name": "w"
+        },
+        "b": {
+          "file": "chunk-870yz02b.js",
+          "name": "b"
+        },
+        "r": {
+          "file": "chunk-ysm7k028.js",
+          "name": "r"
+        },
+        "n": {
+          "file": "chunk-jkt292h5.js",
+          "name": "n"
+        },
+        "e": {
+          "file": "chunk-ysm7k028.js",
+          "name": "e"
+        }
+      }
+    },
+    {
+      "file": "chunk-m7tmqa6t.js",
+      "name": "D",
+      "start": 20823,
+      "end": 20845,
+      "moduleSha256": "f6c4d0fb79da3103f4aab7bae9f063a324e75bcd8ea62ffd32dc784e179de5bd",
+      "sha256": "2089c68c2d9ff36497ce12c3932539db612a71d2a10bce00f63536c57e267aba",
+      "source": "var D=jt({marker:\"\"});",
+      "imports": {
+        "jt": {
+          "file": "chunk-1y575bx8.js",
+          "name": "jt"
+        }
+      }
+    },
+    {
+      "file": "chunk-m7tmqa6t.js",
+      "name": "v",
+      "start": 20845,
+      "end": 21161,
+      "moduleSha256": "f6c4d0fb79da3103f4aab7bae9f063a324e75bcd8ea62ffd32dc784e179de5bd",
+      "sha256": "34ef22d8d18ca78861579549c5a2b83d520f81954c565bf9a1dc6cbb28c8ceb2",
+      "source": "function v(l){let P=w(7),{children:c}=l,{marker:t}=ke(D),u;if(P[0]!==t)u=e(n,{dimColor:!0,children:t}),P[0]=t,P[1]=u;else u=P[1];let o;if(P[2]!==c)o=e(s,{flexDirection:\"column\",children:c}),P[2]=c,P[3]=o;else o=P[3];let f;if(P[4]!==u||P[5]!==o)f=r(s,{gap:1,children:[u,o]}),P[4]=u,P[5]=o,P[6]=f;else f=P[6];return f}",
+      "imports": {
+        "w": {
+          "file": "chunk-bgj860b4.js",
+          "name": "w"
+        },
+        "ke": {
+          "file": "chunk-1y575bx8.js",
+          "name": "ke"
+        },
+        "e": {
+          "file": "chunk-ysm7k028.js",
+          "name": "e"
+        },
+        "n": {
+          "file": "chunk-jkt292h5.js",
+          "name": "n"
+        },
+        "s": {
+          "file": "chunk-jkt292h5.js",
+          "name": "s"
+        },
+        "r": {
+          "file": "chunk-ysm7k028.js",
+          "name": "r"
+        }
+      }
+    },
+    {
+      "file": "chunk-m7tmqa6t.js",
+      "name": "B",
+      "start": 21161,
+      "end": 21183,
+      "moduleSha256": "f6c4d0fb79da3103f4aab7bae9f063a324e75bcd8ea62ffd32dc784e179de5bd",
+      "sha256": "00c3a1d83172e4226ad67897bec4789806d850d55bc3d113ec53346108e023b1",
+      "source": "var B=jt({marker:\"\"});",
+      "imports": {
+        "jt": {
+          "file": "chunk-1y575bx8.js",
+          "name": "jt"
+        }
+      }
+    },
+    {
+      "file": "chunk-m7tmqa6t.js",
+      "name": "q",
+      "start": 21183,
+      "end": 21768,
+      "moduleSha256": "f6c4d0fb79da3103f4aab7bae9f063a324e75bcd8ea62ffd32dc784e179de5bd",
+      "sha256": "5d7f815c8ea08125c199d1135a2763d53ee594460a610b4668aef8fbdaacfb87",
+      "source": "function q(l){let f=w(9),{children:c}=l,{marker:t}=ke(B),P=0;for(const u of by.toArray(c)){if(!sf(u)||u.type!==v){continue}P++}let o=String(P).length,x;if(f[0]!==c||f[1]!==o||f[2]!==t){let h;if(f[4]!==o||f[5]!==t)h=(S,p)=>{if(!sf(S)||S.type!==v){return S}let k=`${String(p+1).padStart(o)}.`;let O=`${t}${k}`;return e(B.Provider,{value:{marker:O},children:e(D.Provider,{value:{marker:O},children:S})})},f[4]=o,f[5]=t,f[6]=h;else h=f[6];x=by.map(c,h);f[0]=c,f[1]=o,f[2]=t,f[3]=x}else x=f[3];let h;if(f[7]!==x)h=e(s,{flexDirection:\"column\",children:x}),f[7]=x,f[8]=h;else h=f[8];return h}",
+      "imports": {
+        "w": {
+          "file": "chunk-bgj860b4.js",
+          "name": "w"
+        },
+        "ke": {
+          "file": "chunk-1y575bx8.js",
+          "name": "ke"
+        },
+        "by": {
+          "file": "chunk-1y575bx8.js",
+          "name": "by"
+        },
+        "sf": {
+          "file": "chunk-1y575bx8.js",
+          "name": "sf"
+        },
+        "e": {
+          "file": "chunk-ysm7k028.js",
+          "name": "e"
+        },
+        "s": {
+          "file": "chunk-jkt292h5.js",
+          "name": "s"
+        }
+      }
+    },
+    {
+      "file": "chunk-m7tmqa6t.js",
+      "name": "q.Item",
+      "start": 21768,
+      "end": 21777,
+      "moduleSha256": "f6c4d0fb79da3103f4aab7bae9f063a324e75bcd8ea62ffd32dc784e179de5bd",
+      "sha256": "dd585a402a7b39cd05bc71db11add70fb3e161cce4c832eb0fff93735d9b636f",
+      "source": "q.Item=v;",
+      "imports": {}
+    },
+    {
+      "file": "chunk-m7tmqa6t.js",
+      "name": "H",
+      "start": 21777,
+      "end": 21785,
+      "moduleSha256": "f6c4d0fb79da3103f4aab7bae9f063a324e75bcd8ea62ffd32dc784e179de5bd",
+      "sha256": "2af4a90682b08c72919668af5b4d3e92a36ea7d90afb9bb41990cf1312137c43",
+      "source": "var H=q;",
+      "imports": {}
+    },
+    {
+      "file": "chunk-m7tmqa6t.js",
+      "name": "wt",
+      "start": 21785,
+      "end": 24761,
+      "moduleSha256": "f6c4d0fb79da3103f4aab7bae9f063a324e75bcd8ea62ffd32dc784e179de5bd",
+      "sha256": "73f4b90e85bf632f1121f176f58e0390e1a817a2d4b076ad8383a1397d0dd1ff",
+      "source": "function wt({host:l,onDone:c}){let[t,P]=g(0),[u]=g(()=>Cbe()),[o]=g(()=>vl()||u&&He()===\"gateway\"&&!uo()),[f]=g(()=>u||u2e()),x=A(!1),[h,S]=Jn(),{storageV5:p}=Te();R(()=>{i(\"tengu_began_setup\",{oauthEnabled:o})},[o]);function k(L=1){let I=t+L;if(I<C.length){P(I);for(let W=t+1;W<=I;W++)i(\"tengu_onboarding_step\",{oauthEnabled:o,stepId:me(C[W]?.id)}),y(\"onboarding_step_complete\")}else{if(x.current)return;x.current=!0,y(\"onboarding_complete\"),c()}}function O(L){S(L),k()}let E=Ao(),U=e(s,{marginX:1,children:e(bve,{onThemeSelect:O,showIntroText:!0,helpText:\"To change this later, run /theme\",hideEscToCancel:!0,skipExitHandling:!0})}),_=r(s,{flexDirection:\"column\",gap:1,paddingLeft:1,children:[e(n,{bold:!0,children:\"Security notes:\"}),e(s,{flexDirection:\"column\",width:70,children:r(H,{children:[r(H.Item,{children:[e(n,{children:\"Claude can make mistakes.\"}),r(n,{dimColor:!0,wrap:\"wrap\",children:[\"You're responsible for Claude's actions and should always\",e(xR,{}),\"review them, especially when running code.\",e(xR,{})]})]}),r(H.Item,{children:[e(n,{children:\"Due to prompt injection risks, only use it with code you trust\"}),e(mS,{url:\"https://code.claude.com/docs/en/security\"})]})]})}),e(X,{})]}),F=e(V,{onSuccess:k}),z=Q(OWt,[]);function ce(L){let I=L&&C[t+1]?.id===\"oauth\";k(I?2:1)}let C=[];if(o&&!f)C.push({id:\"preflight\",component:F});if(C.push({id:\"theme\",component:U}),z)C.push({id:\"api-key\",component:e(Ykn,{customApiKeyTruncated:z,onDone:ce})});if(o)C.push({id:\"oauth\",component:e(s,{flexDirection:\"column\",gap:1,paddingLeft:1,children:e(xme,{onDone:k,urlOutdent:1})})});if(C.push({id:\"security\",component:_}),Pve())C.push({id:\"terminal-setup\",component:r(s,{flexDirection:\"column\",gap:1,paddingLeft:1,children:[e(n,{bold:!0,children:\"Use Claude Code's terminal setup?\"}),r(s,{flexDirection:\"column\",width:70,gap:1,children:[r(n,{children:[\"For the optimal coding experience, enable the recommended settings\",e(xR,{}),\"for your terminal:\",\" \",a.terminal===\"Apple_Terminal\"?Zm()?\"Option+Enter for newlines\":\"Option+Enter for newlines and no audible bell\":\"Shift+Enter for newlines\"]}),e(qn,{confirmLabel:\"Yes, use recommended settings\",cancelLabel:\"No, maybe later with /terminal-setup\",onConfirm:()=>void v0n(l,h,p).then(()=>y(\"onboarding_terminal_setup\")).catch(()=>m(\"onboarding_terminal_setup\",\"onboarding_terminal_setup_failed\")).finally(k),onCancel:k}),e(n,{dimColor:!0,children:E.pending?r(K,{children:[\"Press \",E.keyName,\" again to exit\"]}):r(be,{children:[e(j,{chord:\"enter\",action:\"confirm\"}),e(j,{chord:\"escape\",action:\"skip\"})]})})]})]})});let G=C[t];function J(){k()}return Qt({\"confirm:yes\":J},{context:\"Confirmation\",isActive:G?.id===\"security\"}),Qt({\"confirm:no\":J},{context:\"Confirmation\",isActive:G?.id===\"terminal-setup\"}),r(s,{flexDirection:\"column\",children:[e(jY,{}),r(s,{flexDirection:\"column\",marginTop:1,children:[G?.component,E.pending&&e(s,{padding:1,children:r(n,{dimColor:!0,children:[\"Press \",E.keyName,\" again to exit\"]})})]})]})}",
+      "imports": {
+        "g": {
+          "file": "chunk-1y575bx8.js",
+          "name": "g"
+        },
+        "Cbe": {
+          "file": "chunk-nankzm0s.js",
+          "name": "Cbe"
+        },
+        "vl": {
+          "file": "chunk-nankzm0s.js",
+          "name": "vl"
+        },
+        "He": {
+          "file": "chunk-wz6xag6e.js",
+          "name": "He"
+        },
+        "uo": {
+          "file": "chunk-bn3p37gv.js",
+          "name": "uo"
+        },
+        "u2e": {
+          "file": "chunk-nankzm0s.js",
+          "name": "u2e"
+        },
+        "A": {
+          "file": "chunk-1y575bx8.js",
+          "name": "A"
+        },
+        "Jn": {
+          "file": "chunk-038c023k.js",
+          "name": "Jn"
+        },
+        "Te": {
+          "file": "chunk-038c023k.js",
+          "name": "Te"
+        },
+        "R": {
+          "file": "chunk-1y575bx8.js",
+          "name": "R"
+        },
+        "i": {
+          "file": "chunk-6hnyhakg.js",
+          "name": "i"
+        },
+        "me": {
+          "file": "chunk-n4qghq20.js",
+          "name": "me"
+        },
+        "y": {
+          "file": "chunk-9d2ykxmy.js",
+          "name": "y"
+        },
+        "Ao": {
+          "file": "chunk-f5f86man.js",
+          "name": "Ao"
+        },
+        "e": {
+          "file": "chunk-ysm7k028.js",
+          "name": "e"
+        },
+        "s": {
+          "file": "chunk-jkt292h5.js",
+          "name": "s"
+        },
+        "bve": {
+          "file": "chunk-782963cg.js",
+          "name": "bve"
+        },
+        "r": {
+          "file": "chunk-ysm7k028.js",
+          "name": "r"
+        },
+        "n": {
+          "file": "chunk-jkt292h5.js",
+          "name": "n"
+        },
+        "xR": {
+          "file": "chunk-jkt292h5.js",
+          "name": "xR"
+        },
+        "mS": {
+          "file": "chunk-ewha1f47.js",
+          "name": "mS"
+        },
+        "Q": {
+          "file": "chunk-1y575bx8.js",
+          "name": "Q"
+        },
+        "OWt": {
+          "file": "chunk-nankzm0s.js",
+          "name": "OWt"
+        },
+        "Ykn": {
+          "file": "chunk-1fqx1zta.js",
+          "name": "Ykn"
+        },
+        "xme": {
+          "file": "chunk-sbdvdnyb.js",
+          "name": "xme"
+        },
+        "Pve": {
+          "file": "chunk-gydrkcn6.js",
+          "name": "Pve"
+        },
+        "a": {
+          "file": "chunk-mbfze585.js",
+          "name": "a"
+        },
+        "Zm": {
+          "file": "chunk-3bsqc8dr.js",
+          "name": "Zm"
+        },
+        "qn": {
+          "file": "chunk-n1ecg86x.js",
+          "name": "qn"
+        },
+        "v0n": {
+          "file": "chunk-069hbd8x.js",
+          "name": "v0n"
+        },
+        "m": {
+          "file": "chunk-9d2ykxmy.js",
+          "name": "m"
+        },
+        "K": {
+          "file": "chunk-ysm7k028.js",
+          "name": "K"
+        },
+        "be": {
+          "file": "chunk-134t0awf.js",
+          "name": "be"
+        },
+        "j": {
+          "file": "chunk-vbsw5qhh.js",
+          "name": "j"
+        },
+        "Qt": {
+          "file": "chunk-7j4jtzd4.js",
+          "name": "Qt"
+        },
+        "jY": {
+          "file": "chunk-998xh66v.js",
+          "name": "jY"
+        }
+      }
+    },
+    {
+      "file": "chunk-9d2ykxmy.js",
+      "name": "y",
+      "start": 5461,
+      "end": 5524,
+      "moduleSha256": "bfd24b568576517815372ff12b0cace8dd73dadc60ddf90aeed702a5b7b4242c",
+      "sha256": "875b389aa7f92e84373fdd3f907735494c5cc48031ffb7768e9072e8a816e311",
+      "source": "function y(e,r){i(\"tengu_feature_ok\",{feature_name:c(e),...r})}",
+      "imports": {
+        "i": {
+          "file": "chunk-6hnyhakg.js",
+          "name": "i"
+        },
+        "c": {
+          "file": "chunk-n4qghq20.js",
+          "name": "c"
+        }
+      }
+    },
+    {
+      "file": "chunk-9d2ykxmy.js",
+      "name": "m",
+      "start": 5524,
+      "end": 5608,
+      "moduleSha256": "bfd24b568576517815372ff12b0cace8dd73dadc60ddf90aeed702a5b7b4242c",
+      "sha256": "e47c27fed50f0706aee4941e58ea57403505a6e081c83d363bdd6e25ec5ec3d9",
+      "source": "function m(e,r,u){i(\"tengu_feature_bad\",{...u,feature_name:c(e),error_code:tme(r)})}",
+      "imports": {
+        "i": {
+          "file": "chunk-6hnyhakg.js",
+          "name": "i"
+        },
+        "c": {
+          "file": "chunk-n4qghq20.js",
+          "name": "c"
+        },
+        "tme": {
+          "file": "chunk-c9me9cp7.js",
+          "name": "tme"
+        }
+      }
+    }
+  ],
+  "ports": {
+    "iy": {
+      "file": "chunk-g3fn1fm9.js",
+      "name": "iy"
+    },
+    "G0e": {
+      "file": "chunk-wj72kvg2.js",
+      "name": "G0e"
+    },
+    "dn": {
+      "file": "chunk-a5b8yq96.js",
+      "name": "dn"
+    },
+    "Di": {
+      "file": "chunk-wj72kvg2.js",
+      "name": "Di"
+    },
+    "q0": {
+      "file": "chunk-nankzm0s.js",
+      "name": "q0"
+    },
+    "uK": {
+      "file": "chunk-wgt53hn2.js",
+      "name": "uK"
+    },
+    "i": {
+      "file": "chunk-6hnyhakg.js",
+      "name": "i"
+    },
+    "d": {
+      "file": "chunk-amhtwhch.js",
+      "name": "d"
+    },
+    "w": {
+      "file": "chunk-bgj860b4.js",
+      "name": "w"
+    },
+    "g": {
+      "file": "chunk-1y575bx8.js",
+      "name": "g"
+    },
+    "RK": {
+      "file": "chunk-wj72kvg2.js",
+      "name": "RK"
+    },
+    "kr": {
+      "file": "chunk-jkt292h5.js",
+      "name": "kr"
+    },
+    "b": {
+      "file": "chunk-870yz02b.js",
+      "name": "b"
+    },
+    "R": {
+      "file": "chunk-1y575bx8.js",
+      "name": "R"
+    },
+    "r": {
+      "file": "chunk-ysm7k028.js",
+      "name": "r"
+    },
+    "s": {
+      "file": "chunk-jkt292h5.js",
+      "name": "s"
+    },
+    "e": {
+      "file": "chunk-ysm7k028.js",
+      "name": "e"
+    },
+    "Ns": {
+      "file": "chunk-f3vd025c.js",
+      "name": "Ns"
+    },
+    "n": {
+      "file": "chunk-jkt292h5.js",
+      "name": "n"
+    },
+    "jt": {
+      "file": "chunk-1y575bx8.js",
+      "name": "jt"
+    },
+    "ke": {
+      "file": "chunk-1y575bx8.js",
+      "name": "ke"
+    },
+    "by": {
+      "file": "chunk-1y575bx8.js",
+      "name": "by"
+    },
+    "sf": {
+      "file": "chunk-1y575bx8.js",
+      "name": "sf"
+    },
+    "Cbe": {
+      "file": "chunk-nankzm0s.js",
+      "name": "Cbe"
+    },
+    "vl": {
+      "file": "chunk-nankzm0s.js",
+      "name": "vl"
+    },
+    "He": {
+      "file": "chunk-wz6xag6e.js",
+      "name": "He"
+    },
+    "uo": {
+      "file": "chunk-bn3p37gv.js",
+      "name": "uo"
+    },
+    "u2e": {
+      "file": "chunk-nankzm0s.js",
+      "name": "u2e"
+    },
+    "A": {
+      "file": "chunk-1y575bx8.js",
+      "name": "A"
+    },
+    "Jn": {
+      "file": "chunk-038c023k.js",
+      "name": "Jn"
+    },
+    "Te": {
+      "file": "chunk-038c023k.js",
+      "name": "Te"
+    },
+    "me": {
+      "file": "chunk-n4qghq20.js",
+      "name": "me"
+    },
+    "Ao": {
+      "file": "chunk-f5f86man.js",
+      "name": "Ao"
+    },
+    "bve": {
+      "file": "chunk-782963cg.js",
+      "name": "bve"
+    },
+    "xR": {
+      "file": "chunk-jkt292h5.js",
+      "name": "xR"
+    },
+    "mS": {
+      "file": "chunk-ewha1f47.js",
+      "name": "mS"
+    },
+    "Q": {
+      "file": "chunk-1y575bx8.js",
+      "name": "Q"
+    },
+    "OWt": {
+      "file": "chunk-nankzm0s.js",
+      "name": "OWt"
+    },
+    "Ykn": {
+      "file": "chunk-1fqx1zta.js",
+      "name": "Ykn"
+    },
+    "xme": {
+      "file": "chunk-sbdvdnyb.js",
+      "name": "xme"
+    },
+    "Pve": {
+      "file": "chunk-gydrkcn6.js",
+      "name": "Pve"
+    },
+    "a": {
+      "file": "chunk-mbfze585.js",
+      "name": "a"
+    },
+    "Zm": {
+      "file": "chunk-3bsqc8dr.js",
+      "name": "Zm"
+    },
+    "qn": {
+      "file": "chunk-n1ecg86x.js",
+      "name": "qn"
+    },
+    "v0n": {
+      "file": "chunk-069hbd8x.js",
+      "name": "v0n"
+    },
+    "K": {
+      "file": "chunk-ysm7k028.js",
+      "name": "K"
+    },
+    "be": {
+      "file": "chunk-134t0awf.js",
+      "name": "be"
+    },
+    "j": {
+      "file": "chunk-vbsw5qhh.js",
+      "name": "j"
+    },
+    "Qt": {
+      "file": "chunk-7j4jtzd4.js",
+      "name": "Qt"
+    },
+    "jY": {
+      "file": "chunk-998xh66v.js",
+      "name": "jY"
+    },
+    "c": {
+      "file": "chunk-n4qghq20.js",
+      "name": "c"
+    },
+    "tme": {
+      "file": "chunk-c9me9cp7.js",
+      "name": "tme"
+    }
+  },
+  "cCuts": [
+    "i uses existing disabled telemetry owner; complete y/m keep original sanitation",
+    "jY uses existing full original WelcomeV2",
+    "xme uses existing full OAuth UI with frozen C display"
+  ],
+  "transportation": []
+}

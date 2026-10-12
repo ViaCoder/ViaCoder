@@ -1,0 +1,535 @@
+{
+  "version": "2.1.287",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16 end-exclusive",
+  "rows": [
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Eu",
+      "start": 428235,
+      "end": 428381,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "504a1e75c282e940c313cd09ae0058e487507ddf91e8f21810d175102c244400",
+      "source": "function Eu(){if(za)return za;Mu++,lf||=Boolean(As||Ms);let b=fb().catch((D)=>{if(d(D),za===b)za=null}).finally(()=>{Mu--,bu||=lf});return za=b,b}"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "fb",
+      "start": 428381,
+      "end": 429685,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "1eb8bb71b4830d4b8f6d8e86036fd67867c4bf8d1607819361a371a8640117e1",
+      "source": "async function fb(){let b=!1;try{if(As){let K=performance.now(),ce=Jat()-(K-_u),ke=ee(Math.max(0,ce)).then(()=>\"timeout\"),Ie=await Promise.race([As,ke])===\"timeout\";if(ne(\"info\",\"plugins_sync_wait\",{timed_out:Ie}),Ie)i(\"tengu_plugins_sync_wait_timeout\",{}),As.then(()=>{ni.notePluginsSyncLanded()}).catch(d);if(wr(\"plugins_sync_install_ms\",performance.now()-K),As=null,!Ms&&!ei)await yf();b=!Ie}if(Ms){let K=performance.now();if(Bd>0){let ce=ee(Bd).then(()=>\"timeout\");if(await Promise.race([Ms,ce])===\"timeout\")t(`CLAUDE_CODE_SYNC_PLUGIN_INSTALL: plugin installation timed out after ${Bd}ms`,{level:\"error\"}),i(\"tengu_sync_plugin_install_timeout\",{timeout_ms:Bd})}else await Ms;if(wr(\"plugin_install_ms\",performance.now()-K,K),ds)wr(\"plugin_mcp_reconcile_ms\",(ds.end??performance.now())-ds.start,ds.start);Ms=null,Hd?.(),wr(\"plugin_install_total_ms\",performance.now()-K,K)}}finally{Zi?.({status:\"completed\"}),Zi=void 0,Hd?.()}if(ei){let K=performance.now();await ei,wr(\"plugin_state_refresh_join_ms\",performance.now()-K,K)}let D=ti?.needsRefresh===!0;if(Oh({idleRefreshRan:Vp,idleRefreshSyncTimedOut:Gp,syncLanded:b,syncRoundReplaced:yu!==null&&e.pluginsSync.firstSyncPromise!==yu,installNeedsRefresh:D})){if(await yf(),D&&ti)ti.needsRefresh=!1}if(Ka){let K=Ka;Ka=null;try{await Cu(K)}catch(ce){d(ce)}}}"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Cu",
+      "start": 427093,
+      "end": 428048,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "069166ed7f05da157263b0d50ea7bb5d924e20a6ef76344aaf14342ae9532ee2",
+      "source": "async function Cu(b){let D=performance.now(),K=xs,ce=K?ku():0,ke=wCo(),Ie=K&&ke===0?ce:ke,Ye=ea(b,\"plugins_sync\");if(Ie===0){Ye.catch((Qe)=>d(Qe)),wr(\"plugins_sync_mcp_ms\",0),i(\"tengu_plugins_sync_mcp_skipped\",{relay_marked:ri,relay_hold:xs});return}let Oe=ee(Ie).then(()=>\"timeout\"),Ke=!1;try{if(await Promise.race([Ye,Oe])===\"timeout\")Ke=!0,i(\"tengu_plugins_sync_mcp_timeout\",{timeout_ms:Ie}),Ye.catch((Qe)=>d(Qe))}catch(Qe){d(Qe)}let $e=performance.now();if(wr(\"plugins_sync_mcp_ms\",$e-D),K){if(Ke){let A=Math.max(0,ce-(performance.now()-D));await lt(Ye.catch(()=>{}),A)}let Qe=performance.now(),mt=Math.max(0,ce-(Qe-D));await Sa(v,U,mt,{skipTelemetry:!0,waitForDeferrable:!0}),i(\"tengu_plugins_sync_mcp_relay_wait\",{reconcile_timed_out:Ke,connect_budget_ms:Math.round(mt),connect_waited_ms:Math.round(performance.now()-Qe),pending_waited_after:G(v().mcp.clients,(A)=>A.type===\"pending\")}),wr(\"plugins_sync_mcp_relay_wait_ms\",performance.now()-$e,$e)}}"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "yf",
+      "start": 428048,
+      "end": 428218,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "22cd00753efab9a53fb61717ee9eae85e4d0e31805d81448f50e5da1fa7512a8",
+      "source": "async function yf(){Ka=null;let b=performance.now();try{let D=await Qd();await Ga(),await Cu(D),wr(\"plugin_state_refresh_inline_ms\",performance.now()-b,b)}catch(D){d(D)}}"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Wd",
+      "start": 425689,
+      "end": 425819,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "8fdd5f37aee97d19390d7f18ecda350014b773a61513200f9cb4aef9b24f7703",
+      "source": "function Wd(){let b=new Set(Object.keys(Lt.configs));return new Set(v().mcp.clients.filter((D)=>!b.has(D.name)).map((D)=>D.name))}"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Qd",
+      "start": 425819,
+      "end": 426123,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "0c974ca5aa2752ef70482dbe61ef6889b2f34662311397d5a0e914ca2c2c361e",
+      "source": "async function Qd(){let{servers:b}=await oH({storageV5:I.storageV5,credentials:I.credentials,admits:rte()}),D=Wd(),K=v().mcp.suppressedPluginMcpServers??[],ce=new Set;for(let[ke,Ie]of Object.entries(b))if(Ie.pluginSource===void 0||Bl(Ie.pluginSource)!==Gd||D.has(ke)||K.includes(ke))ce.add(ke);return ce}"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Oh",
+      "start": 96091,
+      "end": 96227,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "b5941200670981b454c148c6ebd567ddc1a8345b243e84418fd7c982a5147ca9",
+      "source": "function Oh(e){if(!e.idleRefreshRan)return!1;return e.idleRefreshSyncTimedOut&&e.syncLanded||e.syncRoundReplaced||e.installNeedsRefresh}"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Kp",
+      "start": 416710,
+      "end": 417252,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "f352de207e139600ec7cb47a9d31bf9ef1ccb55002699b964bcd0f92525f596e",
+      "source": "async function Kp(b){try{await Wbt(\"headless_managed_settings_wait\",()=>vX())}catch(K){d(K)}let D=!1;try{let K=new Set(Object.keys((await oH({storageV5:I.storageV5,credentials:I.credentials,admits:rte()})).servers));if(D=await jl(b,I.storageV5,I.credentials),a.CLAUDE_CODE_SYNC_PLUGIN_INSTALL)ds={start:performance.now()};if(D)await ea(K,\"plugin_install_diff\")}catch(K){t(`Headless plugin install / MCP reconcile failed: ${l(K)}`,{level:\"error\"})}if(ds)ds.end=performance.now(),wr(\"plugin_mcp_reconcile_ms\",ds.end-ds.start,ds.start);return D}"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "pk",
+      "start": 286777,
+      "end": 287042,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "7af56cf5f42723bc30c2d33f6a97dd82a1cc321a4d8a98c2c70903e51476a79a",
+      "source": "function pk({conversation:e,append:r,overdue:n}){for(let s of n.splice(0))try{r(ZTe(e(),s))}catch(g){m(\"plugin_late_session_start_hooks\",\"overdue_append_failed\"),t(`SessionStart hook output that came late could not be appended (dropped): ${l(g)}`,{level:\"error\"})}}"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "ei",
+      "start": 417264,
+      "end": 417271,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "9541fd885c1fd72522abe2c566704332d0897850628d179149ff6623566d924b",
+      "source": "ei=null"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Ka",
+      "start": 417272,
+      "end": 417279,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "2e95b88636102107e8f81453ee3bcc36654ab417f109d2fadc0c94f7329ef7c7",
+      "source": "Ka=null"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Vp",
+      "start": 417280,
+      "end": 417285,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "f387ff5cdadfe5345fc975443ccc8e9a4a334e4af2d0cc8e0b00e37f706d4f8c",
+      "source": "Vp=!1"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Gp",
+      "start": 417286,
+      "end": 417291,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "d89da31739b683798208c8023d2b7ce8f85b807bb7e90e3058012fbf30a79bb9",
+      "source": "Gp=!1"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "yu",
+      "start": 417292,
+      "end": 417299,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "6dccaf282a068483199ccc7bc714b476b1ad09c389e6ab822b765dac4c0bead1",
+      "source": "yu=null"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Hd",
+      "start": 417300,
+      "end": 417302,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "75badcb532a865120b3b7378670ca62b30967971f8b9d6d1137c072f68cd7b35",
+      "source": "Hd"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Bd",
+      "start": 417303,
+      "end": 417353,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "a9f756a99fa99b021fa426864bff95e0e8f78e67e45b834c7f04233d514e13e5",
+      "source": "Bd=a.CLAUDE_CODE_SYNC_PLUGIN_INSTALL_TIMEOUT_MS??0"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "ds",
+      "start": 417354,
+      "end": 417356,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "f9c7af7ebcbf098b9f5f37361d1b168bb2e5b98d930ceef0f055377a8c94db61",
+      "source": "ds"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "_u",
+      "start": 417454,
+      "end": 417474,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "0793e1c278ceb7676760fe120c297b4d26d7b2ceea3d2212ceca0a3e9995fa20",
+      "source": "_u=performance.now()"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "As",
+      "start": 417475,
+      "end": 417510,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "8d0a01e7a0811284bcbd66ed68b30b7f429d87cf424c81917a40b9f9ed80be5d",
+      "source": "As=jon(e)?ECo(e,I.credentials):null"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "ti",
+      "start": 417511,
+      "end": 417518,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "7f2d549aa553b5d63ea6b88bb5840ac5c4c5a033800aac68bab7a837be8c7619",
+      "source": "ti=null"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Zi",
+      "start": 417519,
+      "end": 417521,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "c718cb756313654b3d4d8141a5844fafbce4b1393df68fa8cc5081e55a1941d1",
+      "source": "Zi"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "za",
+      "start": 428222,
+      "end": 428229,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "29a63a636f8d623ad1f98390b5feedd4fee87d83364bfaca8a2fe5d8d6a6d928",
+      "source": "za=null"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Mu",
+      "start": 428230,
+      "end": 428234,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "cea1439deee05967aab1e9236ec27a1aae828aedc129a5b149ba7cd4079f878b",
+      "source": "Mu=0"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "bu",
+      "start": 419879,
+      "end": 419884,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "177d72fdf10e123f54631945b30db7453902b07ae9de061c6b2e93376ca2fe22",
+      "source": "bu=!1"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "lf",
+      "start": 419885,
+      "end": 419890,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "3ff32f073590af4f96ddafa4f0f3bb787b442f64c987b777e116aca46349d112",
+      "source": "lf=!1"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Pu",
+      "start": 419891,
+      "end": 419994,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "88718d2e48297546615067f1ebdb340d9b68d61227b4b4e599aa62294504bcc7",
+      "source": "Pu={session:e,conversation:()=>Ct,append:qr,overdue:[],storageV5:I.storageV5,credentials:I.credentials}"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "pluginStartup",
+      "start": 417522,
+      "end": 418324,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "e1dccf9d499e40d85aabd210da88e132ee2084fdd4b77574bedf74a1ce3870ba",
+      "source": "if(!xr())if(a.CLAUDE_CODE_SYNC_PLUGIN_INSTALL){Zi=I.outputFormat===\"stream-json\"?(ce)=>void r.write({type:\"system\",subtype:\"plugin_install\",status:ce.status,name:\"name\"in ce?ce.name:void 0,error:\"error\"in ce?ce.error:void 0,uuid:eo(),session_id:q()}):void 0,Zi?.({status:\"started\"}),Ms=Kp((ce)=>Zi?.(ce));let b=Ms,D=As,K=new Promise((ce)=>{Hd=ce});ei=(async()=>{try{if(await Promise.race([b.catch(()=>{}),K]),D){let Ie=Jat()-(performance.now()-_u);await Promise.race([D.catch(()=>{}),ee(Math.max(0,Ie))])}let ce=jon(e)?await Qd():null,ke=performance.now();if(await Ga(),wr(\"registry_refresh_ms\",performance.now()-ke,ke),ce)await Cu(ce)}catch(ce){d(ce)}try{let{setupPluginHookHotReload:ce}=await import(\"/$bunfs/root/chunk-hrypqa3m.js\");ce(I.storageV5,I.credentials)}catch(ce){d(ce)}})()}else ti=QA(Kp);"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Zc.serversStartedSinceKick",
+      "start": 112180,
+      "end": 112212,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "233057d6b4dc444318061c151fdb0fa1a6c60be49789bc93c892d5585f13cff5",
+      "source": "serversStartedSinceKick=new Set;"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Zc.noteServersStartedSinceKick",
+      "start": 114377,
+      "end": 114459,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "c9c7c100ed552c6e7f45df63967b1b1950cd6637dbcc11ac2bc5c99c159838d2",
+      "source": "noteServersStartedSinceKick(e){for(let r of e)this.serversStartedSinceKick.add(r)}"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Zc.pluginsSyncNeedsRefresh",
+      "start": 112153,
+      "end": 112180,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "064c674c6b9c018fd562d5c1bb0920d869dbc6fe6bd3b4d0d2ea196149d35abc",
+      "source": "pluginsSyncNeedsRefresh=!1;"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Zc.lateForwardedInstallNeedsRefresh",
+      "start": 112212,
+      "end": 112248,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "4db3064ba6b14dc588c749c4c2cbb4c455ae688b711508af5a67b8378553a51a",
+      "source": "lateForwardedInstallNeedsRefresh=!1;"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Zc.backgroundRefreshEnabled",
+      "start": 112248,
+      "end": 112276,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "04f60c1d1bfa79de762036fb3c2b0942867c3fcc64faf68ab4cc65162924ceec",
+      "source": "backgroundRefreshEnabled=!1;"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Zc.notePluginsSyncLanded",
+      "start": 114253,
+      "end": 114309,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "5e8582c119c258fe42eb050891f74f77ff0f8c71e1539b114ad59e094cf86217",
+      "source": "notePluginsSyncLanded(){this.pluginsSyncNeedsRefresh=!0}"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Zc.noteLateForwardedInstall",
+      "start": 114309,
+      "end": 114377,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "8740d96b5cfd061700e45d7aed2bfbb7ccc8dede1dfad79a33619f77bb111392",
+      "source": "noteLateForwardedInstall(){this.lateForwardedInstallNeedsRefresh=!0}"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Zc.loopTop",
+      "start": 117469,
+      "end": 118320,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "f75d83e43e45648a975bb63d9935a8d0a08ebe840defd0e5d9ec539b23da0824",
+      "source": "async loopTop(){let e=this.lateForwardedInstallNeedsRefresh;if(this.backgroundRefreshEnabled&&this.backgroundInstall?.needsRefresh||this.pluginsSyncNeedsRefresh||e){if(this.backgroundInstall)this.backgroundInstall.needsRefresh=!1;let r=this.pluginsSyncNeedsRefresh;this.pluginsSyncNeedsRefresh=!1,this.lateForwardedInstallNeedsRefresh=!1;try{let n=r&&!e?await this.serverNamesOwnedBeforePluginsSync():void 0;if(await this.refreshPluginState(),e)await this.applyPluginMcpDiff(this.connectedNonDynamicMcpServerNames(),\"late_plugin_install\").catch((g)=>t(`late plugin install: applyPluginMcpDiff failed: ${l(g)}`,{level:\"error\"}));else if(n)await this.applyPluginMcpDiff(n,\"plugins_sync\").catch((g)=>t(`late plugins sync: applyPluginMcpDiff failed: ${l(g)}`,{level:\"error\"}));let s=r&&this.runSessionStartHooksOfNewPlugins();if(s)await s}catch(n){d(n)}}}"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Va",
+      "start": 418977,
+      "end": 419009,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "fb36d196b9a6ea86d12dd879fed2cafc4311bd7f9a78cc614ec547b1d392fbf5",
+      "source": "Va=k(\"tengu_dapper_platypus\",!1)"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "ef",
+      "start": 419010,
+      "end": 419172,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "8187d8638105e143b090bde29c944a082367b5d79c7873907d2739b3efc3971e",
+      "source": "ef=()=>Uh({explicitMcpConfigFlag:I.explicitMcpConfigFlag,sdkUrl:I.sdkUrl,hasStreamingInput:Oet(),toolSearchAvailable:kTe(Zs(v())),relayHoldFollowsBootVerdict:Va})"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "pluginJoinMcpPolicy",
+      "start": 419173,
+      "end": 419330,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "2609161baa5bc9015f74ccc96019f68be24ebefbcf6b00662abc9ef322ae409d",
+      "source": "{deadlineMs:Nd,waitForDeferrable:rf,firstTurnHold:nf,localOnly:of,coordinatorMainThreadOnly:qd,relayMarked:ri,relayHold:xs,laterWakes:ab,launchNamed:db}=ef()"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "takeNewPluginsSessionStart",
+      "start": 420173,
+      "end": 420212,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "ba97c7c49d61010464428de5bb3a7a53cd760cc64eb90b185c21fbe89ed0fc22",
+      "source": "()=>{if(!bu)return;return bu=!1,zm(Pu)}"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Zc.backgroundRefreshAdmission",
+      "start": 117018,
+      "end": 117094,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "dd55cfc6edc9e9561392e93b0d284add96e3edde25bc2c8b1576727f0cdac5e4",
+      "source": "this.backgroundRefreshEnabled=a.CLAUDE_CODE_ENABLE_BACKGROUND_PLUGIN_REFRESH"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "df",
+      "start": 419573,
+      "end": 419593,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "9fd820974d82c7335f921132042e0b9e889978f0c06d049145ee5f70f1cb1af1",
+      "source": "df=performance.now()"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "ku",
+      "start": 419594,
+      "end": 419633,
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "sha256": "9585b2135f21bf64f5e16327a59486b4af9cee0eeccb81dda1cba861a8ab3d87",
+      "source": "ku=()=>yI(df,Nd??Ore,performance.now())"
+    }
+  ],
+  "bindings": {
+    "jon": {
+      "file": "chunk-mphp7acd.js",
+      "name": "jon"
+    },
+    "ECo": {
+      "file": "chunk-mphp7acd.js",
+      "name": "ECo"
+    },
+    "Jat": {
+      "file": "chunk-mphp7acd.js",
+      "name": "Jat"
+    },
+    "ee": {
+      "file": "chunk-f2n7vgt8.js",
+      "name": "ee"
+    },
+    "wCo": {
+      "file": "chunk-mphp7acd.js",
+      "name": "wCo"
+    },
+    "Sa": {
+      "file": "chunk-xapeakym.js",
+      "name": "Sa"
+    },
+    "lt": {
+      "file": "chunk-f2n7vgt8.js",
+      "name": "lt"
+    },
+    "oH": {
+      "file": "chunk-mphp7acd.js",
+      "name": "oH"
+    },
+    "Bl": {
+      "file": "chunk-h0r6byca.js",
+      "name": "Bl"
+    },
+    "xr": {
+      "file": "chunk-brnn4zwp.js",
+      "name": "xr"
+    },
+    "QA": {
+      "file": "chunk-xapeakym.js",
+      "name": "QA"
+    },
+    "rte": {
+      "file": "chunk-7pnv5sqm.js",
+      "name": "rte"
+    },
+    "Gd": {
+      "file": "chunk-h0r6byca.js",
+      "name": "Gd"
+    },
+    "G": {
+      "file": "chunk-h3rrxdgy.js",
+      "name": "G"
+    },
+    "l": {
+      "file": "chunk-c9me9cp7.js",
+      "name": "l"
+    },
+    "ne": {
+      "file": "chunk-h7xaj2fc.js",
+      "name": "ne"
+    },
+    "wr": {
+      "file": "chunk-wn3f9rb9.js",
+      "name": "wr"
+    },
+    "q": {
+      "file": "chunk-bn3p37gv.js",
+      "name": "q"
+    },
+    "k": {
+      "file": "chunk-nankzm0s.js",
+      "name": "k"
+    },
+    "Uh": {
+      "file": "chunk-xapeakym.js",
+      "name": "Uh"
+    },
+    "Oet": {
+      "file": "chunk-bn3p37gv.js",
+      "name": "Oet"
+    },
+    "kTe": {
+      "file": "chunk-mphp7acd.js",
+      "name": "kTe"
+    },
+    "yI": {
+      "file": "chunk-xapeakym.js",
+      "name": "yI"
+    },
+    "Ore": {
+      "file": "chunk-sbndfme5.js",
+      "name": "Ore"
+    },
+    "jl": {
+      "file": "chunk-xapeakym.js",
+      "name": "jl"
+    },
+    "Wbt": {
+      "file": "chunk-h7xaj2fc.js",
+      "name": "Wbt"
+    },
+    "vX": {
+      "file": "chunk-p03a4z7b.js",
+      "name": "vX"
+    },
+    "zm": {
+      "file": "chunk-xapeakym.js",
+      "name": "zm"
+    },
+    "ZTe": {
+      "file": "chunk-mphp7acd.js",
+      "name": "ZTe"
+    }
+  },
+  "hostPorts": [
+    "a",
+    "e",
+    "I",
+    "Ms",
+    "Ga",
+    "ea",
+    "v",
+    "U",
+    "Lt",
+    "Gd",
+    "d",
+    "t",
+    "i",
+    "ne",
+    "wr",
+    "xs",
+    "ri",
+    "Kp",
+    "r",
+    "eo",
+    "q",
+    "Ct",
+    "qr",
+    "readPluginHookModule287"
+  ],
+  "hostABICuts": [
+    "Ms reads/writes the existing pluginInstallPromise; Ga/ea call the existing print refresh/diff owner",
+    "Extracted original Zc complete plugin-marker/loopTop methods and fields bind same startup tickets; no second plugin cache/coordinator engine",
+    "One original hook dynamic import becomes canonical same-module reader"
+  ],
+  "nativeSha256": "060ca756a6b291ee5fc4b175726ce1f20f6d95fbe610370a53bf96931eaf6b5c"
+}

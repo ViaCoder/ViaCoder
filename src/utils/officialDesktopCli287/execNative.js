@@ -1,0 +1,3 @@
+export function createDesktopExec287(ports){const Je=ports.execute,oe=ports.cwd;var U=1000,B=60;
+function Ke(e,r,n={timeout:10*B*U,preserveOutputOnError:!0,useCwd:!0}){return Je(e,r,{allowRepoGitHooks:n.allowRepoGitHooks,allowGitTerminalPrompt:n.allowGitTerminalPrompt,abortSignal:n.abortSignal,timeout:n.timeout,preserveOutputOnError:n.preserveOutputOnError,cwd:n.cwd??(n.useCwd?oe():void 0),env:n.env,extendEnv:n.extendEnv,stdin:n.stdin,input:n.input,stdout:n.stdout,stderr:n.stderr,maxBuffer:n.maxBuffer,stripFinalNewline:n.stripFinalNewline,useToolMemoryCgroup:n.useToolMemoryCgroup,toolCgroupClass:n.toolCgroupClass,waitForExitAfterKill:n.waitForExitAfterKill})}
+return {exec:Ke};}

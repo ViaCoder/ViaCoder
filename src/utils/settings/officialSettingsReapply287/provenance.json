@@ -1,0 +1,44 @@
+{
+  "version": "2.1.287",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16 code units; end-exclusive",
+  "declarations": [
+    {
+      "file": "chunk-6xrs6gmd.js",
+      "name": "pc",
+      "start": 43511,
+      "end": 43799,
+      "moduleSha256": "f9dd0da1e467d32595bc9af036ebe3d18edca89a87e6204bf2519aeb61615e17",
+      "sha256": "4ee88c91ff5ba923fde34f2ea7229ed7f7121721e74ba2cbf2c54ab4e766079c",
+      "source": "function pc(D){if(!ne||ce)return;for(let z of D){let ue=[Zn(z),z===\"localSettings\"?eE():void 0].filter((fe)=>fe!==void 0);if(ue.length===0)continue;Promise.all(ue.map((fe)=>Br(z,fe))).then((fe)=>{if(fe.some((_e)=>_e)){t(`ConfigChange hook blocked reapplying ${z}`);return}if(!ce)Lt(z)})}}",
+      "owner": "jjr/Ki existing canonical watcher"
+    },
+    {
+      "file": "chunk-6xrs6gmd.js",
+      "name": "Br",
+      "start": 42349,
+      "end": 42488,
+      "moduleSha256": "f9dd0da1e467d32595bc9af036ebe3d18edca89a87e6204bf2519aeb61615e17",
+      "sha256": "98e5d42661190600ae6e4b5b1ed04d957ede28b1a82385296bf46e20b3e27565",
+      "source": "function Br(D,z){if(!Be)return d(Error(\"settingsChangeDetector: ConfigChange hook gate not wired\")),Promise.resolve(!0);return Be(_u(D),z)}",
+      "owner": "jjr/Ki existing canonical watcher"
+    }
+  ],
+  "outer": {
+    "start": 34930,
+    "end": 43954,
+    "sha256": "bb9143991bf07e8ff7b32ede7257e44508dd4ed810b1cbf96a4b8ec793c9c298"
+  },
+  "ports": [
+    "ne",
+    "ce",
+    "Zn",
+    "eE",
+    "t",
+    "Br",
+    "Be",
+    "_u",
+    "Lt",
+    "d"
+  ]
+}

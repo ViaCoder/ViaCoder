@@ -1,0 +1,67 @@
+{
+  "version": "2.1.287",
+  "platform": "darwin-arm64",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16 code units; end-exclusive",
+  "modules": [
+    {
+      "module": "chunk-k9q4wymh.js",
+      "moduleSha256": "4456fa35d62354ccd84dc369ce4a61ef7896a30cba166d54acb14f55ee1f44c8",
+      "moduleLength": 11758,
+      "declarations": [
+        {
+          "name": "et",
+          "start": 4905,
+          "end": 5014,
+          "sha256": "f793925017dbb7b4f199c7c85ff05b374e6d1935113e9f92cb30e2752d9b6c45",
+          "source": "function et(e){return{params:{entrypoint:e.entrypoint,model:e.model},userAgent:`claude-code/${e.ccVersion}`}}"
+        }
+      ]
+    },
+    {
+      "module": "chunk-nankzm0s.js",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "moduleLength": 706979,
+      "declarations": [
+        {
+          "name": "Xb",
+          "start": 620465,
+          "end": 620514,
+          "sha256": "388eaa8d6fcb496f337e429b5e15009ed501f10862d1e5bc5dfcd46a0d6ca1aa",
+          "source": "function Xb(){try{return nZ()}catch{return null}}"
+        },
+        {
+          "name": "zp",
+          "start": 665656,
+          "end": 665729,
+          "sha256": "f8a464317e4d84bf44dd6711ad5415d90b70c3a062a62148dc9e507916546bde",
+          "source": "function zp(){let e=fn()?.scopes;return Array.isArray(e)&&e.includes(WK)}"
+        }
+      ]
+    }
+  ],
+  "evidenceOnly": [
+    {
+      "module": "chunk-nankzm0s.js",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "moduleLength": 706979,
+      "declarations": [
+        {
+          "name": "E_",
+          "start": 113456,
+          "end": 114376,
+          "sha256": "f47a7f53b6ad6d382a47cc764d283d936e91dbe66c1faa93b2e20ac20ea5732d",
+          "source": "async function E_(e,n){let r;if(n?.gateToSessionOAuthCredential){let s=fn(),g=await NM();r=s?.accessToken&&s.refreshToken&&g.headers.Authorization===`Bearer ${s.accessToken}`?s.accessToken:void 0}try{return await e()}catch(s){if(!St.isAxiosError(s))throw s;let g=s.response?.status;if(!(g===401||n?.also403Revoked&&g===403&&typeof s.response?.data===\"string\"&&s.response.data.includes(\"OAuth token has been revoked\")))throw s;if(n?.gateToSessionOAuthCredential){if(!r)throw s;let v=fn()?.accessToken;if(v&&v!==r)return await e();let w=n.oauthRefreshLatch;if(w?.attempted)throw s;if(w)w.attempted=!0;let A=n.onForcedRefreshOutcome,R=!1;if(await nS(r,n?.credentials,void 0,{onForcedRefreshOutcome:w||A?(D)=>{if(R=!0,w&&$Wt.has(D))w.attempted=!1;A?.(D)}:void 0}),!R)A?.(void 0);let M=fn()?.accessToken;if(!M||M===r)throw s;return await e()}let b=fn()?.accessToken;if(!b)throw s;return await nS(b,n?.credentials),await e()}}"
+        }
+      ]
+    }
+  ],
+  "bindings": {
+    "et": "actual bootstrapResponse287 fetch port, exact params null/undefined kept",
+    "nZ": "existing getAnthropicApiKey selector; no replacement auth state",
+    "fn": "existing getClaudeAIOAuthTokens shared host credential cell",
+    "WK": "existing CLAUDE_AI_PROFILE_SCOPE; no qualification default",
+    "E_": "existing withOAuth401Retry/sharedHttpAuth; original 287 E_ evidence for independent raw test, no second recovery owner"
+  },
+  "scope": "normal OAuth/API-key nt public fetch only; WIF/gateway/enterprise excluded from new verification; no auth/client implementation edits"
+}

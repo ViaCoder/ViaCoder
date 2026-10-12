@@ -1,0 +1,682 @@
+{
+  "version": "2.1.287",
+  "rangeConvention": "UTF-16 end-exclusive",
+  "aJo": {
+    "file": "chunk-f5w4pbxy.js",
+    "start": 8768,
+    "end": 13992,
+    "moduleSha256": "0913c7f4c8738c828fdcbe63c0ede168389eb703b929d9a48b1ed4c749dcf965",
+    "sha256": "4a91d73984c52052aa2643eb2d2a8e8605884fd9e46cd2a911e56385028c7824"
+  },
+  "rows": [
+    {
+      "name": "approval",
+      "index": 4,
+      "file": "chunk-f5w4pbxy.js",
+      "start": 9909,
+      "end": 9973,
+      "moduleSha256": "0913c7f4c8738c828fdcbe63c0ede168389eb703b929d9a48b1ed4c749dcf965",
+      "sha256": "9021708c8535795f9582c8f046be186e389a74d757ae10138aa853905b9f69e6",
+      "source": "(u)=>a.CLAUBBIT?null:Aro(T,(f)=>{P.mcpApprovalSkipWarning=f})(u)",
+      "transport": []
+    },
+    {
+      "name": "externalIncludes",
+      "index": 5,
+      "file": "chunk-f5w4pbxy.js",
+      "start": 9974,
+      "end": 10210,
+      "moduleSha256": "0913c7f4c8738c828fdcbe63c0ede168389eb703b929d9a48b1ed4c749dcf965",
+      "sha256": "00a8f97ed9e993dbaf7dae5e53781006e784eaae372a3ef4183e1adad10d6c40",
+      "source": "async(u)=>{if(a.CLAUBBIT||!await OTo(o,T))return null;let f=rHt(await vw(o,!0,T,x)),{ClaudeMdExternalIncludesDialog:D}=await import(\"/$bunfs/root/chunk-1jyv7k4m.js\");return e(D,{onDone:()=>u(),isStandaloneDialog:!0,externalIncludes:f})}",
+      "transport": [
+        {
+          "from": "import(\"/$bunfs/root/chunk-1jyv7k4m.js\")",
+          "to": "importStartupModule287(\"chunk-1jyv7k4m.js\")"
+        }
+      ]
+    },
+    {
+      "name": "apiKey",
+      "index": 10,
+      "file": "chunk-f5w4pbxy.js",
+      "start": 11227,
+      "end": 11384,
+      "moduleSha256": "0913c7f4c8738c828fdcbe63c0ede168389eb703b929d9a48b1ed4c749dcf965",
+      "sha256": "a24b15067d1dd44107fdc3cf2c7ef2745eba2c6a60c523da09d20ab2aefea179",
+      "source": "(u)=>{let f=OWt();if(!f)return null;return import(\"/$bunfs/root/chunk-te71kedv.js\").then(({ApproveApiKey:D})=>e(D,{customApiKeyTruncated:f,onDone:()=>u()}))}",
+      "transport": [
+        {
+          "from": "import(\"/$bunfs/root/chunk-te71kedv.js\")",
+          "to": "importStartupModule287(\"chunk-te71kedv.js\")"
+        }
+      ]
+    },
+    {
+      "name": "bypass",
+      "index": 14,
+      "file": "chunk-f5w4pbxy.js",
+      "start": 11678,
+      "end": 11858,
+      "moduleSha256": "0913c7f4c8738c828fdcbe63c0ede168389eb703b929d9a48b1ed4c749dcf965",
+      "sha256": "ad6e1323759ce2b48666f7f9b042f5d23a853c014d73b889c596991e9be71518",
+      "source": "(u)=>{if(l!==\"bypassPermissions\"&&!h||Wj())return null;return import(\"/$bunfs/root/chunk-dmqdtz7f.js\").then(({BypassPermissionsModeDialog:f})=>e(f,{onAccept:()=>u(),storageV5:T}))}",
+      "transport": [
+        {
+          "from": "import(\"/$bunfs/root/chunk-dmqdtz7f.js\")",
+          "to": "importStartupModule287(\"chunk-dmqdtz7f.js\")"
+        }
+      ]
+    },
+    {
+      "name": "channels",
+      "index": 16,
+      "file": "chunk-f5w4pbxy.js",
+      "start": 11865,
+      "end": 12467,
+      "moduleSha256": "0913c7f4c8738c828fdcbe63c0ede168389eb703b929d9a48b1ed4c749dcf965",
+      "sha256": "082c39f095e979adb6f40da781e0a593acf8b4ba787d6bb255fa94250fa57a36",
+      "source": "async(u)=>{if(lh().length===0&&(C?.length??0)===0)return null;if(await v_(\"tengu_harbor\"),!C||C.length===0)return null;let[{isChannelsEnabled:f},{isChannelsPolicyBlocked:D},{getSettingsForSource:G}]=await Promise.all([import(\"/$bunfs/root/chunk-t7nyemmn.js\"),import(\"/$bunfs/root/chunk-n6xky7br.js\"),import(\"/$bunfs/root/chunk-139mqjgn.js\")]),F=()=>{let N=C.map((Y)=>({...Y,dev:!0}));JOe(lh().concat(N)),eno(!0)};if(!f()||He()!==\"firstParty\"||D(G(\"policySettings\")))return F(),null;let{DevChannelsDialog:K}=await import(\"/$bunfs/root/chunk-1f369gg9.js\");return e(K,{channels:C,onAccept:()=>{F(),u()}})}",
+      "transport": [
+        {
+          "from": "import(\"/$bunfs/root/chunk-t7nyemmn.js\")",
+          "to": "importStartupModule287(\"chunk-t7nyemmn.js\")"
+        },
+        {
+          "from": "import(\"/$bunfs/root/chunk-n6xky7br.js\")",
+          "to": "importStartupModule287(\"chunk-n6xky7br.js\")"
+        },
+        {
+          "from": "import(\"/$bunfs/root/chunk-139mqjgn.js\")",
+          "to": "importStartupModule287(\"chunk-139mqjgn.js\")"
+        },
+        {
+          "from": "import(\"/$bunfs/root/chunk-1f369gg9.js\")",
+          "to": "importStartupModule287(\"chunk-1f369gg9.js\")"
+        }
+      ]
+    },
+    {
+      "name": "chromeIntro",
+      "index": 17,
+      "file": "chunk-f5w4pbxy.js",
+      "start": 12468,
+      "end": 12643,
+      "moduleSha256": "0913c7f4c8738c828fdcbe63c0ede168389eb703b929d9a48b1ed4c749dcf965",
+      "sha256": "d9ad1a9cda723688bc85f1a60001d5f1084ac0acc5c20d3bfa576a672ffc65e9",
+      "source": "(u)=>{if(!S||le().hasCompletedClaudeInChromeOnboarding)return null;return import(\"/$bunfs/root/chunk-5mrx7tm5.js\").then(({ClaudeInChromeOnboarding:f})=>e(f,{onDone:()=>u()}))}",
+      "transport": [
+        {
+          "from": "import(\"/$bunfs/root/chunk-5mrx7tm5.js\")",
+          "to": "importStartupModule287(\"chunk-5mrx7tm5.js\")"
+        }
+      ]
+    }
+  ],
+  "importBindings": {
+    "Le": {
+      "file": "chunk-4s38z9x2.js",
+      "name": "Le"
+    },
+    "U": {
+      "file": "chunk-bn3p37gv.js",
+      "name": "U"
+    },
+    "Ee": {
+      "file": "chunk-bn3p37gv.js",
+      "name": "Ee"
+    },
+    "f3t": {
+      "file": "chunk-bn3p37gv.js",
+      "name": "f3t"
+    },
+    "pZr": {
+      "file": "chunk-bn3p37gv.js",
+      "name": "pZr"
+    },
+    "SO": {
+      "file": "chunk-bn3p37gv.js",
+      "name": "SO"
+    },
+    "XOe": {
+      "file": "chunk-bn3p37gv.js",
+      "name": "XOe"
+    },
+    "Wn": {
+      "file": "chunk-bn3p37gv.js",
+      "name": "Wn"
+    },
+    "lh": {
+      "file": "chunk-bn3p37gv.js",
+      "name": "lh"
+    },
+    "JOe": {
+      "file": "chunk-bn3p37gv.js",
+      "name": "JOe"
+    },
+    "eno": {
+      "file": "chunk-bn3p37gv.js",
+      "name": "eno"
+    },
+    "c": {
+      "file": "chunk-n4qghq20.js",
+      "name": "c"
+    },
+    "Z": {
+      "file": "chunk-c9me9cp7.js",
+      "name": "Z"
+    },
+    "Dt": {
+      "file": "chunk-f2n7vgt8.js",
+      "name": "Dt"
+    },
+    "gie": {
+      "file": "chunk-x954y317.js",
+      "name": "gie"
+    },
+    "i": {
+      "file": "chunk-6hnyhakg.js",
+      "name": "i"
+    },
+    "vw": {
+      "file": "chunk-mphp7acd.js",
+      "name": "vw"
+    },
+    "rHt": {
+      "file": "chunk-mphp7acd.js",
+      "name": "rHt"
+    },
+    "OTo": {
+      "file": "chunk-mphp7acd.js",
+      "name": "OTo"
+    },
+    "aTe": {
+      "file": "chunk-mphp7acd.js",
+      "name": "aTe"
+    },
+    "kye": {
+      "file": "chunk-mphp7acd.js",
+      "name": "kye"
+    },
+    "QGn": {
+      "file": "chunk-mphp7acd.js",
+      "name": "QGn"
+    },
+    "Kn": {
+      "file": "chunk-mphp7acd.js",
+      "name": "Kn"
+    },
+    "cs": {
+      "file": "chunk-mphp7acd.js",
+      "name": "cs"
+    },
+    "Lne": {
+      "file": "chunk-mphp7acd.js",
+      "name": "Lne"
+    },
+    "xi": {
+      "file": "chunk-mphp7acd.js",
+      "name": "xi"
+    },
+    "yy": {
+      "file": "chunk-mphp7acd.js",
+      "name": "yy"
+    },
+    "xr": {
+      "file": "chunk-brnn4zwp.js",
+      "name": "xr"
+    },
+    "uKt": {
+      "file": "chunk-brnn4zwp.js",
+      "name": "uKt"
+    },
+    "a": {
+      "file": "chunk-mbfze585.js",
+      "name": "a"
+    },
+    "t": {
+      "file": "chunk-q80zaav8.js",
+      "name": "t"
+    },
+    "d": {
+      "file": "chunk-amhtwhch.js",
+      "name": "d"
+    },
+    "OWt": {
+      "file": "chunk-nankzm0s.js",
+      "name": "OWt"
+    },
+    "hU": {
+      "file": "chunk-nankzm0s.js",
+      "name": "hU"
+    },
+    "Pt": {
+      "file": "chunk-nankzm0s.js",
+      "name": "Pt"
+    },
+    "Vd": {
+      "file": "chunk-nankzm0s.js",
+      "name": "Vd"
+    },
+    "k": {
+      "file": "chunk-nankzm0s.js",
+      "name": "k"
+    },
+    "v_": {
+      "file": "chunk-nankzm0s.js",
+      "name": "v_"
+    },
+    "H_t": {
+      "file": "chunk-nankzm0s.js",
+      "name": "H_t"
+    },
+    "ds": {
+      "file": "chunk-nankzm0s.js",
+      "name": "ds"
+    },
+    "Pm": {
+      "file": "chunk-nankzm0s.js",
+      "name": "Pm"
+    },
+    "YC": {
+      "file": "chunk-nankzm0s.js",
+      "name": "YC"
+    },
+    "J0": {
+      "file": "chunk-nankzm0s.js",
+      "name": "J0"
+    },
+    "Ae": {
+      "file": "chunk-nankzm0s.js",
+      "name": "Ae"
+    },
+    "le": {
+      "file": "chunk-nankzm0s.js",
+      "name": "le"
+    },
+    "MKr": {
+      "file": "chunk-nankzm0s.js",
+      "name": "MKr"
+    },
+    "y": {
+      "file": "chunk-9d2ykxmy.js",
+      "name": "y"
+    },
+    "m": {
+      "file": "chunk-9d2ykxmy.js",
+      "name": "m"
+    },
+    "p": {
+      "file": "chunk-9d2ykxmy.js",
+      "name": "p"
+    },
+    "Wj": {
+      "file": "chunk-f1vb7bx7.js",
+      "name": "Wj"
+    },
+    "He": {
+      "file": "chunk-wz6xag6e.js",
+      "name": "He"
+    },
+    "qP": {
+      "file": "chunk-2z1m9v0n.js",
+      "name": "qP"
+    },
+    "aRe": {
+      "file": "chunk-41a3h7pv.js",
+      "name": "aRe"
+    },
+    "X_": {
+      "file": "chunk-epk29mef.js",
+      "name": "X_"
+    },
+    "ce": {
+      "file": "chunk-1y575bx8.js",
+      "name": "ce"
+    },
+    "R": {
+      "file": "chunk-1y575bx8.js",
+      "name": "R"
+    },
+    "A": {
+      "file": "chunk-1y575bx8.js",
+      "name": "A"
+    },
+    "g": {
+      "file": "chunk-1y575bx8.js",
+      "name": "g"
+    },
+    "M": {
+      "file": "chunk-1y575bx8.js",
+      "name": "M"
+    },
+    "w": {
+      "file": "chunk-bgj860b4.js",
+      "name": "w"
+    },
+    "BIn": {
+      "file": "chunk-bv0yr1j4.js",
+      "name": "BIn"
+    },
+    "zEe": {
+      "file": "chunk-3svn1vf6.js",
+      "name": "zEe"
+    },
+    "dX": {
+      "file": "chunk-nzck9a32.js",
+      "name": "dX"
+    },
+    "s": {
+      "file": "chunk-jkt292h5.js",
+      "name": "s"
+    },
+    "n": {
+      "file": "chunk-jkt292h5.js",
+      "name": "n"
+    },
+    "_C": {
+      "file": "chunk-jkt292h5.js",
+      "name": "_C"
+    },
+    "foo": {
+      "file": "chunk-dgp2yyqt.js",
+      "name": "foo"
+    },
+    "vR": {
+      "file": "chunk-f9b5rem8.js",
+      "name": "vR"
+    },
+    "NGe": {
+      "file": "chunk-f86hj7zg.js",
+      "name": "NGe"
+    },
+    "kO": {
+      "file": "chunk-f86hj7zg.js",
+      "name": "kO"
+    },
+    "NVe": {
+      "file": "chunk-fb1bj6ca.js",
+      "name": "NVe"
+    },
+    "l8t": {
+      "file": "chunk-h2rq23mq.js",
+      "name": "l8t"
+    },
+    "fco": {
+      "file": "chunk-h2rq23mq.js",
+      "name": "fco"
+    },
+    "BT": {
+      "file": "chunk-2gyndh7q.js",
+      "name": "BT"
+    },
+    "Wot": {
+      "file": "chunk-2gyndh7q.js",
+      "name": "Wot"
+    },
+    "F_r": {
+      "file": "chunk-2gyndh7q.js",
+      "name": "F_r"
+    },
+    "N9t": {
+      "file": "chunk-q1wyfd82.js",
+      "name": "N9t"
+    },
+    "U5t": {
+      "file": "chunk-vjtp0md7.js",
+      "name": "U5t"
+    },
+    "aMe": {
+      "file": "chunk-51jzy656.js",
+      "name": "aMe"
+    },
+    "KVe": {
+      "file": "chunk-n2ppaa1m.js",
+      "name": "KVe"
+    },
+    "BY": {
+      "file": "chunk-qhbefnpx.js",
+      "name": "BY"
+    },
+    "Tro": {
+      "file": "chunk-1h0awj83.js",
+      "name": "Tro"
+    },
+    "rnt": {
+      "file": "chunk-qyp40g3x.js",
+      "name": "rnt"
+    },
+    "e": {
+      "file": "chunk-ysm7k028.js",
+      "name": "e"
+    },
+    "r": {
+      "file": "chunk-ysm7k028.js",
+      "name": "r"
+    },
+    "ogo": {
+      "file": "chunk-zvxr1qd8.js",
+      "name": "ogo"
+    },
+    "L": {
+      "file": "chunk-h3rrxdgy.js",
+      "name": "L"
+    },
+    "b": {
+      "file": "chunk-870yz02b.js",
+      "name": "b"
+    },
+    "be": {
+      "file": "fs",
+      "name": "openSync"
+    },
+    "Pe": {
+      "file": "fs",
+      "name": "writeSync"
+    },
+    "Me": {
+      "file": "os",
+      "name": "homedir"
+    }
+  },
+  "dynamicExports": {
+    "chunk-1jyv7k4m.js": {
+      "file": "chunk-1jyv7k4m.js",
+      "moduleSha256": "c8f7b987acc47c88f6102720654ac9c25f74b93e14df9e8fbe8423aec08639c8",
+      "bindings": {
+        "ClaudeMdExternalIncludesDialog": "TIn",
+        "recordExternalIncludesDecision": "J9t"
+      }
+    },
+    "chunk-te71kedv.js": {
+      "file": "chunk-te71kedv.js",
+      "moduleSha256": "18afb56777351c705cb2c86f7f8d1d92c379ca70e535747e58e687704ed8302f",
+      "bindings": {
+        "ApproveApiKey": "Ykn"
+      }
+    },
+    "chunk-dmqdtz7f.js": {
+      "file": "chunk-dmqdtz7f.js",
+      "moduleSha256": "046873668832749704eea6e8052d80910f9cfe785ca1f213a9984546b7b3951b",
+      "bindings": {
+        "BypassPermissionsModeDialog": "B"
+      }
+    },
+    "chunk-t7nyemmn.js": {
+      "file": "chunk-t7nyemmn.js",
+      "moduleSha256": "be736ebe24025dccb5c79dff32ac6c90849688b005013d09404ea5b4c5f91fa9",
+      "bindings": {
+        "getChannelAllowlist": "rMn",
+        "isChannelAllowlisted": "nRt",
+        "isChannelsEnabled": "ste"
+      }
+    },
+    "chunk-n6xky7br.js": {
+      "file": "chunk-n6xky7br.js",
+      "moduleSha256": "0c07e825998909436afdeb2d917620eb7ecac2cfaa2a25a9a9b1393b20f8a0f7",
+      "bindings": {
+        "CHANNEL_PERMISSION_METHOD": "tMn",
+        "CHANNEL_PERMISSION_REQUEST_METHOD": "r_r",
+        "ChannelMessageNotificationSchema": "Pot",
+        "ChannelPermissionNotificationSchema": "n_r",
+        "findChannelEntry": "ote",
+        "gateChannelServer": "Oot",
+        "getEffectiveChannelAllowlist": "K7t",
+        "isChannelGateHardRevocation": "o_r",
+        "isChannelsPolicyBlocked": "LVe",
+        "isPluginNamedByChannelEntry": "nMn",
+        "wrapChannelMessage": "Iot"
+      }
+    },
+    "chunk-139mqjgn.js": {
+      "file": "chunk-139mqjgn.js",
+      "moduleSha256": "13f532146f88a511c2f6c9f6a8062f24bc8a91195e3997131470a27569ae0d71",
+      "bindings": {
+        "AUTO_MODE_TRUSTED_SOURCES": "l0e",
+        "BACKGROUND_SETTINGS_WORK_WAIT_MS": "jns",
+        "SECURITY_SENSITIVE_SETTING_SOURCES": "Vns",
+        "adminPolicyLoadFailureRefusesLaunch": "j8",
+        "anyAdminPolicyTierGovernsRetention": "E8r",
+        "autoModeConfigSchema": "W8",
+        "compareRepoTiersWithHeld": "a8r",
+        "credentialHelperKeysFrom": "Bns",
+        "drainSettingsWrites": "Wtr",
+        "filterFatalPolicyErrors": "i0e",
+        "flagFileConsentDropped": "Pds",
+        "flagInlineConsentDropped": "xds",
+        "flagInlineSettingDropped": "c8r",
+        "getAdminAuthoredPolicySettings": "fzt",
+        "getAdminPolicyTierSettings": "zns",
+        "getAdminTierEnvValue": "HSt",
+        "getAllPolicyTierSettings": "bu",
+        "getArmedHelperOutput": "d8r",
+        "getAskUserQuestionTimeout": "jQe",
+        "getAutoModeConfig": "uT",
+        "getBasePolicySettings": "B8",
+        "getBasePolicySettingsOrigin": "mK",
+        "getDeniedModelsPolicyOverrides": "t8r",
+        "getDialogExpiry": "yzt",
+        "getDurablePolicyTierSettings": "kZ",
+        "getEffectiveSettingSource": "Nx",
+        "getEveryMachineAdminTierSettings": "f8r",
+        "getFatalAdminPolicyLoadErrors": "ufe",
+        "getHostManagedModelPricing": "n8r",
+        "getHostManagedToolSearchEnv": "r8r",
+        "getHostPolicyLoginPins": "BQe",
+        "getInitialSettings": "tt",
+        "getLegacyLocalSettingsFilePath": "eE",
+        "getLegacyLocalSettingsOverlay": "Ftr",
+        "getLocalSettingsValidationErrors": "dzt",
+        "getMachineAdminPolicyTier": "OSt",
+        "getMachineAdminPolicyTiers": "Utr",
+        "getMachineAdminTierSettings": "p8r",
+        "getManagedFileSettingsPresence": "_8r",
+        "getManagedSettingsKeysForLogging": "C8r",
+        "getManagedSourcesInEffect": "w8r",
+        "getMcpPolicyCompositionForLogging": "y8r",
+        "getMcpPolicyView": "fCn",
+        "getMergedPolicySources": "pzt",
+        "getModelProposedGoalsSetting": "T8r",
+        "getModelProposedGoalsSettingParsed": "WQe",
+        "getPairedPolicyModelOverrides": "pse",
+        "getPolicyEnvCompositionForLogging": "g8r",
+        "getPolicyHelperSourceLoadErrors": "s0e",
+        "getPolicySettingsLoadErrors": "eA",
+        "getPolicySettingsOrigin": "Jk",
+        "getRawSettingFromRejectedSource": "Ids",
+        "getRelativeSettingsFilePathForSource": "dO",
+        "getRemotePolicyTierWithKind": "$tr",
+        "getRuleAnchorRootForSource": "ISt",
+        "getSecuritySensitiveSetting": "Qk",
+        "getSecuritySensitiveSettingWithSources": "fse",
+        "getSettingsAfterPluginLoad": "mzt",
+        "getSettingsFilePathForSource": "Zn",
+        "getSettingsForSource": "ge",
+        "getSettingsForSourceWriteSeed": "lI",
+        "getSettingsParseErrorsForSource": "TZ",
+        "getSettingsRootPathForSource": "Rds",
+        "getSettingsWithErrors": "R_",
+        "getSettingsWithSources": "Btr",
+        "getSettings_DEPRECATED": "er",
+        "getShadowedManagedSources": "b8r",
+        "getShadowedMcpPolicySources": "h8r",
+        "getShadowedPolicyHelperSources": "u8r",
+        "getUseAutoModeDuringPlan": "hzt",
+        "getVouchedPolicyTierSettings": "S8r",
+        "hasAdminPolicyLoadRecords": "gCn",
+        "hasAutoModeOptIn": "A8r",
+        "hasDisableClaudeAiConnectors": "pfe",
+        "hasIsolatePeerMachines": "a0e",
+        "hasSkipDangerousModePermissionPrompt": "Wj",
+        "hasSkipWorkflowUsageWarning": "Gtr",
+        "hasSurvivingAdminPolicySource": "b9o",
+        "hasVouchedSkipDangerousModePermissionPrompt": "gzt",
+        "holdRepoTiers": "i8r",
+        "isAdminPolicyOrigin": "Zj",
+        "isAdminPolicyUnreadable": "hCn",
+        "isAutoModeClassifyAllShellEnabled": "k8r",
+        "isForceRemoteSettingsRefreshConfigured": "mCn",
+        "isMachineAdminDocumentUnreadable": "m8r",
+        "isNotDisabledInTrustedSources": "yCn",
+        "isPermissionDeniedPolicyError": "jtr",
+        "isPolicySlotAdminOrParentComposed": "wje",
+        "isRepoTierFreezeHeld": "uzt",
+        "isSettingsTierWithheld": "Ntr",
+        "legacyLocalConsentDropped": "Hds",
+        "legacyLocalSettingsProbes": "Uns",
+        "loadManagedFileSettings": "dCn",
+        "localSettingsStoreRootAwaitingOwnershipProbe": "Z9r",
+        "parentManagedTierParticipates": "bje",
+        "parseRemoteManagedSettings": "e8r",
+        "parseSettingsFile": "k_",
+        "parseSettingsFileUncached": "wK",
+        "projectRemovalsOnly": "w9o",
+        "projectSettingsAliasesUserSettings": "rw",
+        "rawSettingsKeyPresence": "c0e",
+        "readRepoDirSettingsFresh": "o8r",
+        "readRepoTierFileText": "uCn",
+        "readRepoTiersFresh": "pCn",
+        "repoDirSettingsParses": "Wns",
+        "repoTierFileLeadsAway": "Gns",
+        "repoTierFileSlots": "s8r",
+        "settingsMergeCustomizer": "Sz",
+        "settleBackgroundSettingsWork": "o0e",
+        "sourceFileConsentDropped": "Ods",
+        "surfaceManagedSettingsErrorsHeadless": "v8r",
+        "updateSettingsForSource": "hn",
+        "updateSettingsForSourceWithTransform": "Ri",
+        "withRepoTiersLive": "l8r"
+      }
+    },
+    "chunk-1f369gg9.js": {
+      "file": "chunk-1f369gg9.js",
+      "moduleSha256": "b9dd43a12f015741752c760afbf702fa396024d8dd2c7de6816704c16fa6ec30",
+      "bindings": {
+        "DevChannelsDialog": "k"
+      }
+    },
+    "chunk-5mrx7tm5.js": {
+      "file": "chunk-5mrx7tm5.js",
+      "moduleSha256": "0311a821a4be93fcf890b56fbffb8c7920b27b7b00a2050554463e7ab19ad8be",
+      "bindings": {
+        "ClaudeInChromeOnboarding": "Y"
+      }
+    }
+  },
+  "skipped": [
+    0,
+    1,
+    2,
+    3,
+    6,
+    7,
+    8,
+    9,
+    11,
+    12,
+    13,
+    15,
+    18
+  ],
+  "reason": "Restored/accepted C cuts and R04 source gates retained; no repeated green runtime"
+}

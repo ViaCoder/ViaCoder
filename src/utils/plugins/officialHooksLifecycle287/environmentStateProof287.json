@@ -1,0 +1,373 @@
+{
+  "version": "2.1.287",
+  "roots": [
+    [
+      "chunk-2ynta9xc.js",
+      "nn"
+    ],
+    [
+      "chunk-09m4fzsj.js",
+      "pDo"
+    ]
+  ],
+  "rangeConvention": "UTF-16 end-exclusive",
+  "baseSha256": "95adff77c211a275f81b2aa6ff2efa4b6f6bda0361babe2087d8c3d7e455f357",
+  "candidateSha256": "0d14478bee3b50318eafb0a0e18a4b3d41dc8f4395eeafe455eaf0aedb6cb0bd",
+  "baselineModules": 1101,
+  "baselineRows": 45382,
+  "rows": [
+    {
+      "file": "chunk-2ynta9xc.js",
+      "name": "nn",
+      "names": [
+        "nn"
+      ],
+      "start": 54001,
+      "end": 54023,
+      "source": "nn=new Tt(()=>new Map)",
+      "sha256": "9629553ca645a162b1aa253df6dddf922418b7ddf2b8172faafe1bafefc1595c",
+      "moduleSha256": "f3e239a22bc356ef2664a104850f816b164d4874821637ec72f203620c439e1d",
+      "variable": true
+    },
+    {
+      "file": "chunk-09m4fzsj.js",
+      "name": "kne",
+      "names": [
+        "kne"
+      ],
+      "start": 822235,
+      "end": 822241,
+      "source": "kne={}",
+      "sha256": "a0a59dc1efe9c62a9b26e13b729f93313abea63d8dc50e55ceccb3e0c671ad7e",
+      "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+      "variable": true
+    },
+    {
+      "file": "chunk-09m4fzsj.js",
+      "name": "pDo",
+      "names": [
+        "pDo"
+      ],
+      "start": 822242,
+      "end": 822259,
+      "source": "pDo=ZZe(kne,null)",
+      "sha256": "1b30de962fb2dc8c92d77e55cba860704b426b0a4be4eec5c99d3e604c75bd90",
+      "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+      "variable": true
+    }
+  ],
+  "borrowed": [
+    {
+      "consumer": "chunk-2ynta9xc.js",
+      "alias": "Tt",
+      "origin": {
+        "file": "chunk-bn3p37gv.js",
+        "name": "Tt",
+        "port": "sessionRegistry"
+      },
+      "value": "ports[\"sessionRegistry\"]"
+    },
+    {
+      "consumer": "chunk-09m4fzsj.js",
+      "alias": "ZZe",
+      "origin": {
+        "file": "chunk-mbfze585.js",
+        "name": "ZZe",
+        "sameAuthEnvironment": "a"
+      },
+      "value": "m29[\"ZZe\"]"
+    }
+  ],
+  "dependencies": [
+    {
+      "file": "chunk-bn3p37gv.js",
+      "name": "Tt",
+      "start": 52826,
+      "end": 53046,
+      "source": "class Tt{#e;#t=new WeakMap;constructor(e){this.#e=e}peek(e){return this.#t.get(e.root)}of(e){let t=e.root,o=this.#t.get(t);if(o!==void 0)return o;let r=this.#e();return this.#t.set(t,r),r}drop(e){this.#t.delete(e.root)}}",
+      "sha256": "1ec3030a1cdd33af0798eb5282f6c9c85fa2281d5d2186741378c3e496864cb5",
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "owner": "sessionRegistry"
+    },
+    {
+      "file": "chunk-mbfze585.js",
+      "name": "ZZe",
+      "start": 65146,
+      "end": 65480,
+      "source": "function ZZe(t,o){let _=Object.create(o);for(let[r,s]of Object.entries(t)){let n=_,e;Object.defineProperty(_,r,{get:()=>{let C=process.env[r];if(C!==n)e=s.parse(C),n=C;return e},enumerable:!0,configurable:!0})}return Object.defineProperties(_,{set:{value:(r,s)=>{process.env[r]=B7o(s)}},unset:{value:(r)=>{delete process.env[r]}}}),_}",
+      "sha256": "000c0d3ff5844fabe398581ab337f1a495ca35b4763f545def9cf2024fd20bd0",
+      "moduleSha256": "2e40ea5244009e4c37b57879f34c96cc3e3bc7d3c5468f9e65d63fe5ce13287a",
+      "owner": "existing canonical authEnvironment module",
+      "existingCanonicalDependencyBindings": {
+        "B7o": {
+          "file": "chunk-4geah9ee.js",
+          "name": "B7o"
+        },
+        "Le": {
+          "file": "chunk-4s38z9x2.js",
+          "name": "Le"
+        },
+        "V": {
+          "file": "chunk-bn3p37gv.js",
+          "name": "V"
+        },
+        "ae": {
+          "file": "chunk-q80zaav8.js",
+          "name": "ae"
+        },
+        "x": {
+          "builtin": {
+            "module": "path",
+            "name": "join"
+          }
+        },
+        "we": {
+          "file": "chunk-brnn4zwp.js",
+          "name": "we"
+        },
+        "jK": {
+          "file": "chunk-a5b8yq96.js",
+          "name": "jK"
+        },
+        "At": {
+          "builtin": {
+            "module": "os",
+            "name": "homedir"
+          }
+        },
+        "Dt": {
+          "file": "chunk-f2n7vgt8.js",
+          "name": "Dt"
+        },
+        "O": {
+          "file": "chunk-amhtwhch.js",
+          "name": "O"
+        },
+        "L": {
+          "file": "chunk-h3rrxdgy.js",
+          "name": "L"
+        },
+        "Tt": {
+          "builtin": {
+            "module": "path",
+            "name": "delimiter"
+          }
+        },
+        "MY": {
+          "file": "chunk-x954y317.js",
+          "name": "MY"
+        },
+        "By": {
+          "file": "chunk-x954y317.js",
+          "name": "By"
+        },
+        "wEe": {
+          "file": "chunk-q80zaav8.js",
+          "name": "wEe"
+        },
+        "h": {
+          "builtin": {
+            "module": "path",
+            "name": "resolve"
+          }
+        },
+        "nt": {
+          "builtin": {
+            "module": "fs/promises",
+            "name": "readdir"
+          }
+        },
+        "Ot": {
+          "builtin": {
+            "module": "fs/promises",
+            "name": "readlink"
+          }
+        },
+        "M": {
+          "builtin": {
+            "module": "fs/promises",
+            "name": "access"
+          }
+        },
+        "et": {
+          "builtin": {
+            "module": "fs",
+            "name": "constants"
+          }
+        },
+        "U": {
+          "port": "execution",
+          "origin": {
+            "file": "chunk-bn3p37gv.js",
+            "name": "U"
+          },
+          "original": {
+            "file": "chunk-bn3p37gv.js",
+            "name": "U",
+            "source": "function U(){return n()}",
+            "start": 71979,
+            "end": 72003,
+            "sha256": "d5765c805efa91af7bd3d31fd797817dc842807e44caf735c5f45538eada7a7c"
+          },
+          "importedFrom": {
+            "file": "chunk-bn3p37gv.js",
+            "name": "U"
+          }
+        },
+        "v": {
+          "builtin": {
+            "module": "path",
+            "name": "delimiter"
+          }
+        },
+        "Et": {
+          "builtin": {
+            "module": "path",
+            "name": "isAbsolute"
+          }
+        },
+        "q": {
+          "builtin": {
+            "module": "fs/promises",
+            "name": "unlink"
+          }
+        },
+        "E": {
+          "file": "chunk-c9me9cp7.js",
+          "name": "E"
+        },
+        "z": {
+          "builtin": {
+            "module": "fs/promises",
+            "name": "rmdir"
+          }
+        },
+        "Q": {
+          "builtin": {
+            "module": "fs/promises",
+            "name": "lstat"
+          }
+        },
+        "P": {
+          "builtin": {
+            "module": "fs/promises",
+            "name": "lstat"
+          }
+        },
+        "nHe": {
+          "file": "chunk-x954y317.js",
+          "name": "nHe"
+        },
+        "ot": {
+          "builtin": {
+            "module": "fs/promises",
+            "name": "readdir"
+          }
+        },
+        "l": {
+          "builtin": {
+            "module": "path",
+            "name": "join"
+          }
+        },
+        "f": {
+          "builtin": {
+            "module": "fs/promises",
+            "name": "unlink"
+          }
+        },
+        "i": {
+          "builtin": {
+            "module": "fs",
+            "name": "constants"
+          }
+        },
+        "tt": {
+          "builtin": {
+            "module": "fs/promises",
+            "name": "open"
+          }
+        },
+        "W": {
+          "file": "chunk-c9me9cp7.js",
+          "name": "W"
+        },
+        "QU": {
+          "file": "chunk-08y1k7pk.js",
+          "name": "s",
+          "dynamicRequire": {
+            "file": "chunk-mbfze585.js",
+            "name": "QU",
+            "source": "QU=import.meta.require(\"/$bunfs/root/chunk-08y1k7pk.js\").udsInboxShape",
+            "start": 65518,
+            "end": 65588,
+            "sha256": "91b9bf1029f1a751973d68bce95f0aac6f4dd3ea32edcf2996893307e0cdfe34"
+          }
+        },
+        "io": {
+          "file": "chunk-870yz02b.js",
+          "name": "io"
+        },
+        "D": {
+          "file": "chunk-4geah9ee.js",
+          "name": "D"
+        },
+        "bn": {
+          "file": "chunk-n4qghq20.js",
+          "name": "bn"
+        }
+      }
+    }
+  ],
+  "edits": [
+    {
+      "start": 16744327,
+      "end": 16744327,
+      "next": ",\"ZZe\":m29[\"ZZe\"]",
+      "beforeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "start": 16646332,
+      "end": 16646332,
+      "next": ",\"Tt\":ports[\"sessionRegistry\"]",
+      "beforeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "start": 5634848,
+      "end": 5634848,
+      "next": ",kne,pDo",
+      "beforeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "start": 5622099,
+      "end": 5622099,
+      "next": "var kne={};\nvar pDo=ZZe(kne,null);\n",
+      "beforeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "start": 4860289,
+      "end": 4860289,
+      "next": "\nconst ZZe=imports[\"ZZe\"];\n",
+      "beforeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "start": 1096622,
+      "end": 1096622,
+      "next": ",nn",
+      "beforeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "start": 1095222,
+      "end": 1095222,
+      "next": "var nn=new Tt(()=>new Map);\n",
+      "beforeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "start": 1030138,
+      "end": 1030138,
+      "next": "\nconst Tt=imports[\"Tt\"];\n",
+      "beforeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "contract": "Whole original nn/kne/pDo installed once in existing canonical module closures; original sessionRegistry Tt class and authEnvironment ZZe reused; no local cache, facade, session or public owner replacement"
+}

@@ -1,0 +1,231 @@
+{
+  "version": "2.1.287",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16 end-exclusive",
+  "rawModules": [
+    {
+      "file": "chunk-f2cpzzp9.js",
+      "sha256": "ecf059605929abc2d38c30fc6d3b5b0b69ef05c9d344e934443f320a48256dae",
+      "bytes": 1601421
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "sha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "bytes": 4409957
+    }
+  ],
+  "declarations": [
+    {
+      "file": "chunk-f2cpzzp9.js",
+      "name": "Lgo",
+      "start": 1534550,
+      "endExclusive": 1534557,
+      "moduleSha256": "ecf059605929abc2d38c30fc6d3b5b0b69ef05c9d344e934443f320a48256dae",
+      "sha256": "55ccd37a99f8164b97a830fab09dda60bd92d9d5cf9467126c7ee4da1f6f7ce4",
+      "source": "Lgo=100",
+      "variable": true
+    },
+    {
+      "file": "chunk-f2cpzzp9.js",
+      "name": "Lbe",
+      "start": 1534558,
+      "endExclusive": 1534921,
+      "moduleSha256": "ecf059605929abc2d38c30fc6d3b5b0b69ef05c9d344e934443f320a48256dae",
+      "sha256": "13db153b48d6a79d0dcbab459ac9b91abb038baebd9d683a7a8d39088ea5fa67",
+      "source": "function Lbe(h,v){if(Ch())return;if(v.shownThisSession)return;let D=le().claudeCodeHints;if(D?.disabled)return;let N=D?.plugin??[];if(N.length>=Lgo)return;let X=h.value,{name:Se,marketplace:_e}=vn(X);if(!Se||!_e)return;if(!el(_e))return;if(N.includes(X))return;if(CN(X))return;if(wp(X))return;let{hintedPluginIds:Pe}=ut();if(Pe.has(X))return;Pe.add(X),v.offer(h)}",
+      "variable": false
+    },
+    {
+      "file": "chunk-f2cpzzp9.js",
+      "name": "Fbe",
+      "start": 1534921,
+      "endExclusive": 1535582,
+      "moduleSha256": "ecf059605929abc2d38c30fc6d3b5b0b69ef05c9d344e934443f320a48256dae",
+      "sha256": "048f22afc91e1adfec7b26e38263d03af73a00141994c603fe06a12bc91f8f4d",
+      "source": "async function Fbe(h,v){let D=h.value,{name:N,marketplace:X}=vn(D);if(await X4e(D,v)!==void 0)return t(`[hintRecommendation] ${D} is installed under its other id; hint dropped`),null;let Se;try{Se=await a5e(D,v,\"install\")}catch(_e){if(_e instanceof Fl)return t(`Plugin hint ${D} not resolvable: ${l(_e)}`),null;throw _e}if(i(\"tengu_plugin_hint_detected\",{_PROTO_plugin_name:N??\"\",_PROTO_marketplace_name:X??\"\",result:S(Se?\"passed\":\"not_in_cache\")}),!Se)return t(`[hintRecommendation] ${D} not found in marketplace cache`),null;return{pluginId:D,pluginName:hf(Se.entry),marketplaceName:X??\"\",pluginDescription:Se.entry.description,sourceCommand:h.sourceCommand}}",
+      "variable": false
+    },
+    {
+      "file": "chunk-f2cpzzp9.js",
+      "name": "Bbe",
+      "start": 1535582,
+      "endExclusive": 1535743,
+      "moduleSha256": "ecf059605929abc2d38c30fc6d3b5b0b69ef05c9d344e934443f320a48256dae",
+      "sha256": "d6f35247b8696dec5763e60bb9549fac244613c695ae1abe564dde0f4f0ee2b7",
+      "source": "function Bbe(h,v){Ae((D)=>{let N=D.claudeCodeHints?.plugin??[];if(N.includes(h))return D;return{...D,claudeCodeHints:{...D.claudeCodeHints,plugin:[...N,h]}}},v)}",
+      "variable": false
+    },
+    {
+      "file": "chunk-f2cpzzp9.js",
+      "name": "Hbe",
+      "start": 1535743,
+      "endExclusive": 1535876,
+      "moduleSha256": "ecf059605929abc2d38c30fc6d3b5b0b69ef05c9d344e934443f320a48256dae",
+      "sha256": "89b1e371e25528276ccc50c12e605252d0053f8948f7a4417f4b9ee458a6da1f",
+      "source": "function Hbe(h){Ae((v)=>{if(v.claudeCodeHints?.disabled)return v;return{...v,claudeCodeHints:{...v.claudeCodeHints,disabled:!0}}},h)}",
+      "variable": false
+    },
+    {
+      "file": "chunk-f2cpzzp9.js",
+      "name": "UX",
+      "start": 1535876,
+      "endExclusive": 1537328,
+      "moduleSha256": "ecf059605929abc2d38c30fc6d3b5b0b69ef05c9d344e934443f320a48256dae",
+      "sha256": "c952f2153a583a81909d9fc8c99e97077545361e0d062678085a3e90de9f7ef6",
+      "source": "function UX(h,v){let _e=w(11),{pendingHint:D}=_r(),N=kt(D.subscribe,D.getSnapshot),{addNotification:X}=_o(),{storageV5:Se}=Te(),Pe,Ie;if(_e[0]!==D)Pe=()=>{let Ne=()=>{for(const Oe of D.takeSubmitted())Lbe(Oe,D)};return Ne(),D.subscribeSubmitted(Ne)},Ie=[D],_e[0]=D,_e[1]=Pe,_e[2]=Ie;else Pe=_e[1],Ie=_e[2];R(Pe,Ie);let Ve,qe;if(_e[3]!==X||_e[4]!==v||_e[5]!==D||_e[6]!==N||_e[7]!==h||_e[8]!==Se)Ve=()=>{if(!N){return}v(\"hint\",async()=>{if(D.shownThisSession){D.dismiss();return}let ze=await Fbe(N,Se);if(ze)t(`[useClaudeCodeHintRecommendation] surfacing ${ze.pluginId} from ${ze.sourceCommand}`);if(D.pending===N)D.dismiss();if(!ze){return}let pt=await h(Hb,{pluginName:ze.pluginName,pluginDescription:ze.pluginDescription,marketplaceName:ze.marketplaceName,sourceCommand:ze.sourceCommand},{place:\"under\"});if(pt===\"cancelled\"){return}Ut:switch(D.markShown(),Bbe(ze.pluginId,Se),i(\"tengu_plugin_hint_response\",{_PROTO_plugin_name:vn(ze.pluginId).name,_PROTO_marketplace_name:ze.marketplaceName,response:c(pt)}),pt){case\"yes\":{let{pluginId:St,pluginName:ht,marketplaceName:yt}=ze;GH(St,ht,\"hint-plugin\",X,async(bt)=>{let xt=await Pdt({pluginId:St,entry:bt.entry,marketplaceName:yt,scope:\"user\",trigger:\"hint\",storageV5:Se});if(!xt.success){throw xt.refusal??Error(xt.error)}},Se);break Ut}case\"disable\":{Hbe(Se);break Ut}case\"no\":}})},qe=[N,D,v,h,X,Se],_e[3]=X,_e[4]=v,_e[5]=D,_e[6]=N,_e[7]=h,_e[8]=Se,_e[9]=Ve,_e[10]=qe;else Ve=_e[9],qe=_e[10];R(Ve,qe)}",
+      "variable": false
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "ZSn",
+      "start": 212299,
+      "endExclusive": 212315,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "9ded5c644dc82bdd6f40835f1e31c013d8b2bb602416f4d9a9a92998f56bcd7a",
+      "source": "ZSn=new Set([1])",
+      "variable": true
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "obn",
+      "start": 212316,
+      "endExclusive": 212339,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "28f9e2136dc20ca304d60b32c77e9b7b2f991171e5d231404d99345003118715",
+      "source": "obn=new Set([\"plugin\"])",
+      "variable": true
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "I7e",
+      "start": 212340,
+      "endExclusive": 212398,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "414cf2a44e0df7d65b86b00f0b713bea915a0538992eed98c3f6096510f55fea",
+      "source": "I7e=/^[ \\t]*<claude-code-hint[ \\t]([^>\\r\\n]*)\\/>[ \\t]*$/gm",
+      "variable": true
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "ibn",
+      "start": 212399,
+      "endExclusive": 212453,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "41b224c17af9386899791a721b0f99b5a64d7fc2fc3d93e5c1795728fa8d1698",
+      "source": "ibn=/^[ \\t]*<claude-code-hint[ \\t][^>\\r\\n]*\\/>[ \\t]*$/",
+      "variable": true
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "O7e",
+      "start": 212454,
+      "endExclusive": 212462,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "ad71b14c5a2823dbeac8716e130a666b2ff31b6f81920db6c57e06879a8205ea",
+      "source": "O7e=1024",
+      "variable": true
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "abn",
+      "start": 212463,
+      "endExclusive": 212534,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "c25b198bd78cea65feb1b52ca1cba307db5fa60027f0a6495fa2707a710600be",
+      "source": "abn=/^[A-Za-z0-9][A-Za-z0-9._-]{0,63}@[A-Za-z0-9][A-Za-z0-9._-]{0,63}$/",
+      "variable": true
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "lbn",
+      "start": 212535,
+      "endExclusive": 212572,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "346bb6a600f50c1c40ca0cc5ecbb3e40ee6f4860b06f613f700fcf5d1e16933d",
+      "source": "lbn=/(\\w+)=(?:\"([^\"]*)\"|([^\\s/>]+))/g",
+      "variable": true
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "N7e",
+      "start": 212573,
+      "endExclusive": 213319,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "4b819124d16dc393ffce0d1b0edc4c2aaff62ee5909c9c92b0bf0186d9d03497",
+      "source": "function N7e(e,n){if(!e.includes(\"<claude-code-hint\"))return{hints:[],stripped:e};let r=pbn(n),s=[],g=e.replace(I7e,(b,w)=>{if(b.length>O7e)return t(\"[claudeCodeHints] dropped over-long hint line\"),\"\";let D=ubn(w),j=Number(D.v),{type:z,value:K}=D;if(!ZSn.has(j))return t(`[claudeCodeHints] dropped hint with unsupported v=${D.v}`),\"\";if(!z||!obn.has(z))return t(`[claudeCodeHints] dropped hint with unsupported type=${z}`),\"\";if(!K)return t(\"[claudeCodeHints] dropped hint with empty value\"),\"\";if(z===\"plugin\"&&!abn.test(K))return t(\"[claudeCodeHints] dropped plugin hint whose value is not name@marketplace\"),\"\";return s.push({v:j,type:z,value:K,sourceCommand:r}),\"\"}),h=s.length>0||g!==e?g.replace(/\\n{3,}/g,`\n\n`):g;return{hints:s,stripped:h}}",
+      "variable": false
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "Ihe",
+      "start": 213319,
+      "endExclusive": 213429,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "2c7a385e29eca27b9f5bcbfd59681c480f41537487bb4fc8b98e4084fc96117d",
+      "source": "function Ihe(e){if(!e.includes(\"<claude-code-hint\"))return e;return e.replace(I7e,\"\").replace(/\\n{3,}/g,`\n\n`)}",
+      "variable": false
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "MRr",
+      "start": 213429,
+      "endExclusive": 213523,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "b3dc3ef9bac8cbf8d29a7f0deb9b6430bec3815f06ab1731a0af77cc1d5739d8",
+      "source": "function MRr(e){if(e.length>O7e||!e.includes(\"<claude-code-hint\"))return!1;return ibn.test(e)}",
+      "variable": false
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "ubn",
+      "start": 213523,
+      "endExclusive": 213609,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "fa986f192cdae185922c207f272bcbbce2c721189f523cf91f1650e75e00b14a",
+      "source": "function ubn(e){let n={};for(let r of e.matchAll(lbn))n[r[1]]=r[2]??r[3]??\"\";return n}",
+      "variable": false
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "pbn",
+      "start": 213609,
+      "endExclusive": 213686,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "739811a8b92a95c146567dfd467e6e4a22599eafb37c6a61d0f6c4c4932e1811",
+      "source": "function pbn(e){let n=e.trim(),r=n.search(/\\s/);return r===-1?n:n.slice(0,r)}",
+      "variable": false
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "AUn",
+      "start": 748118,
+      "endExclusive": 748124,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "0ea1a87b9e4f131c864acf7f589111a4c09c5618f84222db05d3fe868f6ead9b",
+      "source": "AUn=64",
+      "variable": true
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "Ect",
+      "start": 748125,
+      "endExclusive": 748281,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "926b218ade3d564cbc7bb995c5b5f8b8e53afc15698bfd387bc4e7ef412a7b7f",
+      "source": "function Ect(e,{command:n,pendingHint:r,isMainThread:s,surface:g}){let{hints:h,stripped:b}=N7e(e,n);for(let w of h)if(PUn(w.value,g),s)r.submit(w);return b}",
+      "variable": false
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "PUn",
+      "start": 748281,
+      "endExclusive": 748545,
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "sha256": "c903ea3a368167d6e0d13f2d82e000463299ff2ebc8c54d93b71a5542310e4b4",
+      "source": "function PUn(e,n){if(Ch())return;let{seenHintPluginIds:r}=ut();if(r.has(e)||r.size>=AUn)return;r.add(e);let{name:s,marketplace:g}=vn(e);i(\"tengu_plugin_hint_seen\",{surface:c(n),...s&&g?{plugin_id_hash:ix(s,g),claims_official_marketplace:el(g)}:{parse_failed:!0}})}",
+      "variable": false
+    }
+  ],
+  "bodyRewriting": false,
+  "scope": "Full hint ingress parser/admission/alias resolution/UX listener lifecycle; existing actual session.pendingHint and Mods hinted/seen IDs only."
+}

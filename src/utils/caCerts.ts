@@ -1,0 +1,5 @@
+import {sharedTlsMaterial287} from './sharedTlsMaterial287.js'
+
+export const getCACertificates=sharedTlsMaterial287.getCACertificates
+export const clearCACertsCache=sharedTlsMaterial287.clearCACertsCache
+export const loadExtraCACerts=sharedTlsMaterial287.loadExtraCACerts

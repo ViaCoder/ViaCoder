@@ -1,0 +1,95 @@
+{
+  "version": "2.1.287",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "rangeConvention": "UTF-16 code units; end-exclusive",
+  "imports": {
+    "Mh": [
+      "chunk-bn3p37gv.js",
+      "Mh"
+    ],
+    "eB": [
+      "chunk-bn3p37gv.js",
+      "eB"
+    ],
+    "a": [
+      "chunk-mbfze585.js",
+      "a"
+    ],
+    "tt": [
+      "chunk-f1vb7bx7.js",
+      "tt"
+    ],
+    "ko": [
+      "chunk-vz8a844r.js",
+      "ko"
+    ],
+    "Mt": [
+      "chunk-1b21she7.js",
+      "Mt"
+    ],
+    "nm": [
+      "chunk-980njedm.js",
+      "nm"
+    ],
+    "WP": [
+      "chunk-91ddjhkd.js",
+      "WP"
+    ],
+    "So": [
+      "chunk-csmetexx.js",
+      "So"
+    ],
+    "gj": [
+      "chunk-j5dkfwxp.js",
+      "gj"
+    ],
+    "L3": [
+      "chunk-j5dkfwxp.js",
+      "L3"
+    ],
+    "_": [
+      "chunk-q80zaav8.js",
+      "_"
+    ]
+  },
+  "generatedSha256": "98329aa2090f4fa484b4e77b8bf277dfc1956324ce94adf9ae902b60aff341ad",
+  "declarations": [
+    {
+      "file": "chunk-tnh3ry3n.js",
+      "moduleSha256": "60a1b865113721691138b29b14d262e7cf216d4ff08f86b911bb606f2423f014",
+      "name": "eCe",
+      "start": 1043,
+      "end": 1180,
+      "sha256": "45e998051901fb5b81fffe68b9a2505c0f63732ead6a43f8885b2f1dadba08af",
+      "source": "function eCe(o){let l=ko();return l.workflowAuthoringSkillAvailable??=e(),l.workflowAuthoringSkillAvailable&&!L3(WP)&&(o===void 0||i(o))}"
+    },
+    {
+      "file": "chunk-tnh3ry3n.js",
+      "moduleSha256": "60a1b865113721691138b29b14d262e7cf216d4ff08f86b911bb606f2423f014",
+      "name": "e",
+      "start": 1180,
+      "end": 1428,
+      "sha256": "2010c7cc4b8a1fc12b4188678bc7fe1f60315d53e2352f6f9a00ffb5488afbc9",
+      "source": "function e(){if(!nm())return!1;if(gj()||Mh())return!1;if(a.CLAUDE_CODE_ENTRYPOINT===\"local-agent\")return!1;let o=tt().skillOverrides?.[WP];if(o===\"off\"||o===\"user-invocable-only\")return!1;let l=eB();if(l!==void 0&&!l.includes(WP))return!1;return!0}"
+    },
+    {
+      "file": "chunk-tnh3ry3n.js",
+      "moduleSha256": "60a1b865113721691138b29b14d262e7cf216d4ff08f86b911bb606f2423f014",
+      "name": "i",
+      "start": 1428,
+      "end": 1471,
+      "sha256": "b9ccc6c668250b939d762c3b7faaa4c2dab9b976ee34cef94487610862561e8b",
+      "source": "function i(o){return o.some((l)=>Mt(l,So))}"
+    },
+    {
+      "file": "chunk-g9gz9xx8.js",
+      "moduleSha256": "ddd050ee426a8292f616686e9223d3a4b2a403f5e6aa74ebbbc467a2238b88a7",
+      "name": "m",
+      "start": 12534,
+      "end": 13644,
+      "sha256": "619391d3a365fadda495da4af005b7671352eef30c6c2a8c766349472b3ba051",
+      "source": "function m(o){return{type:\"prompt\",name:o.name,description:o.description,hasUserSpecifiedDescription:!0,whenToUse:o.whenToUse,progressMessage:\"running dynamic workflow\",contentLength:o.script.length,source:o.source===\"built-in\"?\"bundled\":o.source,loadedFrom:o.source===\"built-in\"?\"bundled\":o.source===\"plugin\"?\"plugin\":\"skills\",...o.source===\"plugin\"&&{pluginInfo:{pluginManifest:o.pluginManifest,repository:o.plugin,...o.serverPluginId!==void 0&&{serverPluginId:o.serverPluginId}}},kind:\"workflow\",disableModelInvocation:typeof o.disableModelInvocation===\"function\"?o.disableModelInvocation():o.disableModelInvocation,async getPromptForCommand(n,t){let s=o.phases?`\n\nPhases:\n`+o.phases.map((r)=>`- ${r.title}${r.detail?`: ${r.detail}`:\"\"}`).join(`\n`):\"\",e=n.trim(),i=_(o.name),a=e?`{ name: ${i}, args: ${_(e)} }`:`{ name: ${i} }`,l=eCe(t?.options?.tools)?`\n\nIf the user asks you to modify this workflow or write a new script, load the \\`${WP}\\` skill first.`:\"\";return[{type:\"text\",text:`Run the \"${o.name}\" workflow.\n\n${o.description}${o.whenToUse?`\n\n${o.whenToUse}`:\"\"}${s}\n\nInvoke: Workflow(${a})${l}`}]}}}"
+    }
+  ],
+  "contract": "Exact public command/authoring closure; existing ko cache, settings, permission and tool identity; workflow loader/engine unchanged"
+}

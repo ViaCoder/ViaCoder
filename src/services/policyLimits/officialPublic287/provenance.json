@@ -1,0 +1,1985 @@
+{
+  "version": "2.1.287",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "module": "chunk-b5kmgz2n.js",
+  "moduleSha256": "3b02f5902f32e22b0bfb68e29d336b5b337a1b02ad226b5c61fe4f3ba83e5df1",
+  "offsetUnit": "UTF-16 end-exclusive",
+  "principal": {
+    "rows": [
+      {
+        "name": "goe",
+        "start": 4623,
+        "end": 4694,
+        "sha256": "f0e558af76bdfd22f79319f54532abc2eff146354ccf92093fe73974192aa375",
+        "source": "function goe(e){return ue(\"sha256\").update(e.descriptor).digest(\"hex\")}",
+        "variable": false
+      },
+      {
+        "name": "hoe",
+        "start": 4694,
+        "end": 4766,
+        "sha256": "91d0da6ed3cf6f7dc59d66e6a233a5f70a42776483a7f48028cd53d175709ba4",
+        "source": "function hoe(e){return ue(\"sha256\").update(e).digest(\"hex\").slice(0,32)}",
+        "variable": false
+      },
+      {
+        "name": "me",
+        "start": 4770,
+        "end": 4808,
+        "sha256": "5371ffdd2d79babdb02e4c39717237de04f5bce5210e0a884f54e2048f8b68af",
+        "source": "me={seen:[],incomplete:!1,ruledOut:[]}",
+        "variable": true
+      },
+      {
+        "name": "Se",
+        "start": 7354,
+        "end": 7554,
+        "sha256": "550c038df4ac8cd13781a954298f41ad846b10875e2f6edb214cd028af2570b6",
+        "source": "class Se{notice=null;changed=Me();replaceNotice(e){if(this.notice===e)return;if(this.notice&&e&&this.notice.text===e.text&&this.notice.url===e.url)return;this.notice=e,this.changed.emit(this.notice)}}",
+        "variable": false
+      },
+      {
+        "name": "rn",
+        "start": 7558,
+        "end": 7578,
+        "sha256": "f8b7133c19579154b22a71a488f9e43e5bba9d5a9b4a930646e72c2b1ce05f7e",
+        "source": "rn=new V(()=>new Se)",
+        "variable": true
+      },
+      {
+        "name": "w",
+        "start": 7579,
+        "end": 7615,
+        "sha256": "e0af7e07199856014e8d329021a837240850cd36313335f6c0ef7b97e74b21a4",
+        "source": "function w(){return rn.of(U().host)}",
+        "variable": false
+      },
+      {
+        "name": "be",
+        "start": 7615,
+        "end": 7651,
+        "sha256": "e5c2a936847692cbda0a3adaf9ff1837729b9c71053346c365b27f20947d52b3",
+        "source": "function be(e){w().replaceNotice(e)}",
+        "variable": false
+      },
+      {
+        "name": "KXe",
+        "start": 16556,
+        "end": 16562,
+        "sha256": "d48012d29248093dd76134fce2039c6c6f4e898eb87abb13d75abd2c394ae1c0",
+        "source": "KXe=16",
+        "variable": true
+      },
+      {
+        "name": "xe",
+        "start": 18100,
+        "end": 18106,
+        "sha256": "1056d787b2330a43368a4a59b498acecf3718759fdae0c40cf3bb64880edfdb5",
+        "source": "xe=256",
+        "variable": true
+      },
+      {
+        "name": "YXn",
+        "start": 18126,
+        "end": 18135,
+        "sha256": "1a26c24dd04c77894663b7044c8022a8c7651154de4381ed82d34ade2c210049",
+        "source": "YXn=30000",
+        "variable": true
+      },
+      {
+        "name": "EGo",
+        "start": 18234,
+        "end": 21400,
+        "sha256": "c7dca5de9c4dc04aeeef077291efaefe12e192c704ec1001efc8149c07177d70",
+        "source": "class EGo{sessionCache=null;lastFetchOutcome=null;settledWithoutVerdictFor=null;failOpenVerdict=!1;sessionFromServerFetch=!1;lastServedCoreSkills=null;verdictEnvBearerDigest=null;diskAdoptionSuppressed=!1;diskAdoptionEpoch=0;storageV5=void 0;lastStampVerdict=\"none\";lastStampMatchedIdentity=null;hipaaEvidence=me;hipaaSeenUnreadable=!1;diskBodyChecksum=null;diskConfirmedAtMs=null;diskRefusedAtMs=null;hipaaEvidenceLoaded=!1;hintedTaints=[];hintedDeniedKeys=[];hintedEnforcedKeys=[];sessionAttributed=!1;attributedBearerDigest=null;sessionVerdictDisowned=!1;principalRung=\"none\";evidenceRereadForBearer=void 0;wifRecordedOrg=void 0;wifAccountDiverged=!1;wifSourceLocation=void 0;wifRecordProfile=void 0;oauthPrincipalMemo=null;storedLoginAccountAtWire=null;storedLoginNotedTokenDigest=null;tunnelSocket=void 0;cacheRevision=0;verdictChanged=Me();heldStartSignal=Me();replaceSessionCache(e,n=!1,i=!1){if(this.failOpenVerdict=e!==null&&(n||this.failOpenVerdict&&(i||e===this.sessionCache)),this.sessionCache=e,e?.core_skills!==void 0)this.lastServedCoreSkills=this.sessionFromServerFetch?e.core_skills:this.narrowedServedList(e.core_skills);if(!i)this.verdictEnvBearerDigest=null;if(e===null)this.sessionAttributed=!1,this.attributedBearerDigest=null,this.sessionVerdictDisowned=!1,this.evidenceRereadForBearer=void 0;this.cacheRevision++;let r=dtr(this.effectiveTaints());if(be(e?.monitoring_notice??null),r)Ej();this.emitVerdictChanged()}effectiveTaints(e=this.sessionCache?.compliance_taints??[]){return this.hintedTaints.length===0?e:L([...this.hintedTaints,...e]).slice(0,KXe)}dropHintedTaints(){if(this.hintedTaints.length===0&&this.hintedDeniedKeys.length===0&&this.hintedEnforcedKeys.length===0)return;if(this.hintedTaints=[],this.hintedDeniedKeys=[],this.hintedEnforcedKeys=[],this.cacheRevision++,dtr(this.effectiveTaints()))Ej();this.emitVerdictChanged()}hintFromRefusedBody(e){if(this.sessionCache!==null&&this.sessionAttributed)return;let n=e.compliance_taints.filter((h)=>mzr.some(([g])=>g===h)),i=L([...this.hintedTaints,...n]),r=Object.entries(e.restrictions).filter(([h,g])=>g?.allowed===!1&&!Z(h)).map(([h])=>h),s=L([...this.hintedDeniedKeys,...r]).slice(0,xe),c=Object.entries(e.restrictions).filter(([h,g])=>g?.allowed===!0&&Z(h)).map(([h])=>h),d=L([...this.hintedEnforcedKeys,...c]).slice(0,xe),m=!1;if(e.core_skills!==void 0){let h=this.narrowedServedList(e.core_skills);if(this.lastServedCoreSkills===null||h.join(`\n`)!==this.lastServedCoreSkills.join(`\n`))this.lastServedCoreSkills=h,m=!0}if(!m&&i.length===this.hintedTaints.length&&s.length===this.hintedDeniedKeys.length&&d.length===this.hintedEnforcedKeys.length)return;if(this.hintedTaints=i,this.hintedDeniedKeys=s,this.hintedEnforcedKeys=d,this.cacheRevision++,dtr(this.effectiveTaints()))Ej();this.emitVerdictChanged()}narrowedServedList(e){let n=new Set(this.lastServedCoreSkills??ubn);return e.filter((i)=>n.has(i))}emitVerdictChanged(){try{this.heldStartSignal.emit()}catch(e){t(`Policy limits: a held-start listener threw: ${l(e)}`,{level:\"error\"})}if(ez())return;try{this.verdictChanged.emit()}catch(e){t(`Policy limits: a verdict-change listener threw: ${l(e)}`,{level:\"error\"})}}}",
+        "variable": false
+      },
+      {
+        "name": "cts",
+        "start": 21404,
+        "end": 21426,
+        "sha256": "05caee4a9c6e88eecc94863d938919262e7aaea481616eccd43c755dd6c460fe",
+        "source": "cts=new V(()=>new EGo)",
+        "variable": true
+      },
+      {
+        "name": "p",
+        "start": 21427,
+        "end": 21464,
+        "sha256": "35f40205342482a3025d1dc0faf9bc9f43352abb1f553fe63cf5e1d5418a3b31",
+        "source": "function p(){return cts.of(U().host)}",
+        "variable": false
+      },
+      {
+        "name": "RM",
+        "start": 23524,
+        "end": 23824,
+        "sha256": "08d683b93d0e194a2ebdd8e89a04b8df4230ba75547a349a75161387a2478c1f",
+        "source": "function RM(){let e=p();if(e.tunnelSocket===void 0){let n=a.ANTHROPIC_UNIX_SOCKET;e.tunnelSocket=n&&a5o({ANTHROPIC_UNIX_SOCKET:n,CLAUDE_CODE_OAUTH_TOKEN:a.CLAUDE_CODE_OAUTH_TOKEN,ANTHROPIC_API_KEY:a.ANTHROPIC_API_KEY,ANTHROPIC_AUTH_TOKEN:a.ANTHROPIC_AUTH_TOKEN})?n:null}return e.tunnelSocket??void 0}",
+        "variable": false
+      },
+      {
+        "name": "R3",
+        "start": 26245,
+        "end": 28229,
+        "sha256": "ff77b840833c4726d4ec27fb7c09148dab2d431f9a6e0ffd9377123b79170fce",
+        "source": "function R3(){let e=p();if(e.principalRung=\"none\",RM()!==void 0)return e.principalRung=\"tunnel\",null;let n=null,i=\"none\";try{({key:n,source:i}=mb())}catch{}if(!n&&fd()){if(e.principalRung=\"wif\",e.wifAccountDiverged)return null;let r=ew(),s=a.ANTHROPIC_PROFILE,c;try{if(c=(r===\"env-quad\"?a.ANTHROPIC_ORGANIZATION_ID?.trim():oje()?.organizationUuid?.trim())||\"\",c&&e.wifSourceLocation===void 0){if(r===\"profile-implicit\"){let g=rL();e.wifRecordProfile=g===null?void 0:mwe(g)}else if(r===\"profile-explicit\")e.wifRecordProfile=s;e.wifSourceLocation=Q(r)}}catch(g){return t(`Policy limits: WIF profile unreadable (${l(g)}); its policy verdicts are session-only until restart`),e.wifAccountDiverged=!0,null}if(e.wifRecordedOrg===void 0)e.wifRecordedOrg=c.toLowerCase()||null;else if(e.wifRecordedOrg!==(c.toLowerCase()||null))return t(\"Policy limits: the WIF source now records a different organization than the one this process derived its principal from; its policy verdicts are session-only until restart\"),e.wifAccountDiverged=!0,null;if(!c)return null;let d=r===\"env-quad\"?null:rL(),m=r===\"env-quad\"?Q(\"env-quad\"):s?ee(d,s):void 0;if(r===\"profile-implicit\"&&s!==void 0&&s!==e.wifRecordProfile||r===\"profile-explicit\"&&(s===void 0||s!==e.wifRecordProfile)||m!==void 0&&m!==e.wifSourceLocation||m===void 0&&r!==\"env-quad\"&&e.wifSourceLocation!==void 0&&(d===null?e.wifSourceLocation!==\"\":!e.wifSourceLocation.startsWith(ee(d,\"\"))))return t(\"Policy limits: the environment now selects a different WIF source than the one this process derived its principal from; its policy verdicts are session-only until restart\"),e.wifAccountDiverged=!0,null;let h=tn(c);if(h)return X(h);return{kind:\"wif\",descriptor:`wif:${hoe([e.wifSourceLocation,c.toLowerCase()].join(\"\\x00\"))}`}}if(ft()){let r=fn()?.accessToken;if(r)return e.principalRung=\"oauth\",Rn(r)}if(i===\"apiKeyHelper\")return e.principalRung=\"helper\",null;if(n)return e.principalRung=\"key\",{kind:\"key\",descriptor:`key:${hoe(n)}`};return null}",
+        "variable": false
+      },
+      {
+        "name": "izr",
+        "start": 28229,
+        "end": 29288,
+        "sha256": "3af676b5155536d4fe38f17781e4ed1f284ce7b3e7b57c41b2c794c89e160532",
+        "source": "function izr(){let e=p();if(e.wifAccountDiverged||Xb()||!fd())return;let n;try{n=e.wifSourceLocation!==void 0&&Q(ew())!==e.wifSourceLocation}catch(r){t(`Policy limits: WIF profile selection unreadable (${l(r)}); its policy verdicts are session-only until restart`),e.wifAccountDiverged=!0;return}if(n){e.wifAccountDiverged=!0,t(\"Policy limits: the active WIF source moved since this process derived its principal; its policy verdicts are session-only until restart\");return}let i;try{if(ew()===\"env-quad\")i=a.ANTHROPIC_ORGANIZATION_ID?.trim().toLowerCase()||null;else DGt(),i=oje()?.organizationUuid?.trim().toLowerCase()??null}catch(r){t(`Policy limits: WIF account record unreadable (${l(r)}); its policy verdicts are session-only until restart`),e.wifAccountDiverged=!0;return}if(e.wifRecordedOrg===void 0)e.wifRecordedOrg=i;else if(e.wifRecordedOrg!==i)e.wifAccountDiverged=!0,t(\"Policy limits: the WIF profile now records a different organization than the one this process derived its principal from; its policy verdicts are session-only until restart\")}",
+        "variable": false
+      },
+      {
+        "name": "i7n",
+        "start": 29288,
+        "end": 29614,
+        "sha256": "514ae28f65dfda5f1074d371349432f5b46d86ee9f0c63ebbb9b9ae801708edb",
+        "source": "async function i7n(e,n){let i=fn()?.accessToken;if(!i)return;let r=p(),s=await Zg(n);if(s!==\"store\"){if(s!==\"none\")r.storedLoginNotedTokenDigest=hoe(i);return}let c=await S3r(e),d=fn()?.accessToken;if(!d)return;r.storedLoginNotedTokenDigest=hoe(d),r.storedLoginAccountAtWire={tokenDigest:hoe(d),organizationUuid:d===i?c:null}}",
+        "variable": false
+      },
+      {
+        "name": "Rn",
+        "start": 29858,
+        "end": 30825,
+        "sha256": "72584fd032b593ac138c2b6e76a9899b42f5c77a17e33d9e9bca5816f2275bf0",
+        "source": "function Rn(e){let n=p(),i=Qm(),r=tn(a.CLAUDE_CODE_ORGANIZATION_UUID),s=hoe(e),c=n.storedLoginAccountAtWire,d=c!==null&&c.tokenDigest===s?c.organizationUuid:void 0,m=[s,r??\"\",i?.organizationUuid??\"\",d===void 0?\"\":`fresh:${d??\"-\"}`,a.CLAUDE_CODE_OAUTH_TOKEN?\"env\":\"\"].join(\"|\"),h=n.oauthPrincipalMemo;if(h?.key===m&&(h.expiresAtMs===null||Date.now()<h.expiresAtMs))return h.principal;let g={kind:\"token\",descriptor:`token:${s}`},y=!1,S=$k();switch(S){case\"store\":{let b=tn(i?.organizationUuid)??null;if(d!==void 0&&d!==b)g={kind:\"token\",descriptor:`token:${s}`,unclassified:!0};else if(b)g=X(b);else g={kind:\"token\",descriptor:`token:${s}`,storedLoginOrgless:!0};break}case\"env\":case\"fd\":if(S===\"fd\"&&Uz()&&!Jl())g=null,y=!0;else if(r)g={...X(r),bearerDigest:s};break;case\"none\":g={kind:\"token\",descriptor:`token:${s}`,unclassified:!0};break}return n.oauthPrincipalMemo={key:m,principal:g,daemonSnapshotWorker:y,expiresAtMs:S===\"none\"||g===null?Date.now()+YXn:null},g}",
+        "variable": false
+      },
+      {
+        "name": "X",
+        "start": 30825,
+        "end": 30894,
+        "sha256": "ba582afb7361e588630275835e049172b0c004e80f353c3e9ed723b16c6843b2",
+        "source": "function X(e){return{kind:\"org\",descriptor:`org:${e.toLowerCase()}`}}",
+        "variable": false
+      },
+      {
+        "name": "pzr",
+        "start": 33783,
+        "end": 38691,
+        "sha256": "e5cfa6f81bf5e68456abf25c0ceaa967fd2e32fadb47039dc13e20c14c285039",
+        "source": "pzr={allow_product_feedback:{deniedUnder:[\"hipaa\",\"zdr\"],serverPopulated:!0,onCacheMiss:\"deny\",label:\"Feedback\",verb:\"is\",requirementId:\"HIPAA-R1\"},allow_web_fetch:{deniedUnder:[\"hipaa\"],serverPopulated:!0,onCacheMiss:\"allow\",label:\"Web fetch\",verb:\"is\",requirementId:\"HIPAA-R3\"},allow_memory_sync:{deniedUnder:[\"hipaa\",\"zdr\"],onCacheMiss:\"allow\",label:\"Memory sync\",verb:\"is\",requirementId:\"HIPAA-R5\",hardBlockUnder:[\"hipaa\"]},allow_design_sync:{deniedUnder:[\"hipaa\"],onCacheMiss:\"allow\",label:\"Design sync\",verb:\"is\",requirementId:\"HIPAA-R9\"},allow_projects_tool:{deniedUnder:[\"hipaa\"],onCacheMiss:\"hold\",label:\"Projects\",verb:\"are\",requirementId:\"HIPAA-R17\",hardBlockUnder:[\"hipaa\"]},allow_claude_browser_extension:{deniedUnder:[\"hipaa\"],serverPopulated:!0,onCacheMiss:\"allow\",label:\"Claude in Chrome\",verb:\"is\",requirementId:\"HIPAA-R34\"},allow_remote_sessions:{deniedUnder:[\"hipaa\"],serverPopulated:!0,onCacheMiss:\"deny\",label:\"Cloud sessions\",verb:\"are\",requirementId:\"HIPAA-R6\"},allow_remote_control:{deniedUnder:[\"hipaa\"],serverPopulated:!0,onCacheMiss:\"deny\",label:\"Remote Control\",verb:\"is\",requirementId:\"HIPAA-R6\"},allow_cobalt_plinth:{deniedUnder:[\"hipaa\",\"zdr\"],serverPopulated:!0,onCacheMiss:\"deny\",label:\"Artifacts\",verb:\"are\",requirementId:\"HIPAA-R16\"},allow_team_onboarding:{deniedUnder:[\"hipaa\"],onCacheMiss:\"hold\",label:\"Team onboarding\",verb:\"is\",requirementId:\"HIPAA-R13\",hardBlockUnder:[\"hipaa\"]},allow_error_reporting:{deniedUnder:[\"hipaa\",\"zdr\"],onCacheMiss:\"deny\",label:\"Error reporting\",verb:\"is\",requirementId:\"HIPAA-R19\"},allow_auto_mode_sibling_docs:{deniedUnder:[\"hipaa\"],onCacheMiss:\"deny\",label:\"Repository lookups\",verb:\"are\",requirementId:\"HIPAA-R36\"},allow_repo_visibility_probe:{deniedUnder:[\"hipaa\"],onCacheMiss:\"hold\",label:\"Repository visibility checks\",verb:\"are\",requirementId:\"HIPAA-R36\"},allow_send_file:{deniedUnder:[\"hipaa\",\"zdr\"],onCacheMiss:\"deny\",label:\"File upload\",verb:\"is\",requirementId:\"HIPAA-R37\"},allow_heap_dump:{deniedUnder:[\"hipaa\",\"zdr\"],onCacheMiss:\"deny\",label:\"Heap dumps\",verb:\"are\",requirementId:\"HIPAA-R38\"},allow_local_checkpoint_commit:{deniedUnder:[\"hipaa\",\"zdr\"],onCacheMiss:\"deny\",label:\"Usage-limit checkpoints\",verb:\"are\",requirementId:\"HIPAA-R39\"},...{},allow_plugin_skill_search:{deniedUnder:[\"hipaa\"],onCacheMiss:\"deny\",label:\"Plugin and skill search\",verb:\"is\",requirementId:\"HIPAA-R26\"},allow_plugin_directory_search:{deniedUnder:[\"hipaa\"],onCacheMiss:\"deny\",onFailOpenVerdict:\"deny\",label:\"The plugin directory\",verb:\"is\",requirementId:\"HIPAA-R35\"},allow_connector_suggest:{deniedUnder:[\"hipaa\"],onCacheMiss:\"deny\",onFailOpenVerdict:\"deny\",label:\"Connector suggestions\",verb:\"are\",requirementId:\"HIPAA-R43\"},...{allow_mcp_task_worker_wake:{deniedUnder:[\"hipaa\"],onCacheMiss:\"deny\",label:\"Restarting a worker for a background task\",verb:\"is\",requirementId:\"HIPAA-R57\"}},...{},allow_account_skills_sync:{deniedUnder:[\"hipaa\"],serverPopulated:!0,onCacheMiss:\"deny\",label:\"Account skills sync\",verb:\"is\",requirementId:\"HIPAA-R29\"},allow_account_plugins_sync:{deniedUnder:[\"hipaa\"],serverPopulated:!0,onCacheMiss:\"deny\",label:\"Account plugins sync\",verb:\"is\",requirementId:\"HIPAA-R30\"},allow_bundled_skills:{deniedUnder:[\"hipaa\"],onCacheMiss:\"allow\",label:\"Bundled skills\",verb:\"are\",requirementId:\"HIPAA-R56\"},allow_mycelium:{deniedUnder:[\"hipaa\",\"zdr\"],onCacheMiss:\"deny\",label:\"Peer messaging\",verb:\"is\",requirementId:\"HIPAA-R25\",hardBlockUnder:[\"hipaa\"]},...{},allow_usage_transcript_scan:{deniedUnder:[\"hipaa\"],transcriptScan:!0,onCacheMiss:\"deny\",label:\"Usage patterns\",verb:\"are\",requirementId:\"HIPAA-R31\"},allow_skill_doctor_transcript_scan:{deniedUnder:[\"hipaa\"],transcriptScan:!0,onCacheMiss:\"deny\",label:\"Skill token counts\",verb:\"are\",requirementId:\"HIPAA-R32\"},allow_insights:{deniedUnder:[\"hipaa\"],transcriptScan:!0,onCacheMiss:\"deny\",label:\"Insights\",verb:\"are\",requirementId:\"HIPAA-R40\"},allow_stats_transcript_scan:{deniedUnder:[\"hipaa\"],transcriptScan:!0,onCacheMiss:\"deny\",label:\"Usage stats\",verb:\"are\",requirementId:\"HIPAA-R42\"},...{},allow_model_catalog:{deniedUnder:[\"hipaa\"],onCacheMiss:\"allow\",label:\"The model catalog\",verb:\"is\",requirementId:\"HIPAA-R33\"},allow_container_result_files:{deniedUnder:[\"hipaa\",\"zdr\"],onCacheMiss:\"deny\",label:\"Saving large tool results in the tool container\",verb:\"is\",requirementId:\"HIPAA-R53\"},allow_promo_offers:{deniedUnder:[\"hipaa\"],onCacheMiss:\"deny\",label:\"Promotional offers\",verb:\"are\",requirementId:\"HIPAA-R54\"},allow_previous_conversation_pointer:{deniedUnder:[\"hipaa\"],onCacheMiss:\"deny\",label:\"Linking a new conversation to the one it replaces\",verb:\"is\",requirementId:\"HIPAA-R58\"},allow_api_auth_warm:{deniedUnder:[\"hipaa\"],onCacheMiss:\"deny\",label:\"Warming the API credential cache\",verb:\"is\",requirementId:\"HIPAA-R59\"},allow_cache_keepalive:{deniedUnder:[\"hipaa\"],onCacheMiss:\"deny\",label:\"Renewing the prompt cache lifetime\",verb:\"is\",requirementId:\"HIPAA-R65\"}}",
+        "variable": true
+      },
+      {
+        "name": "fzr",
+        "start": 38692,
+        "end": 38736,
+        "sha256": "da175e5afbac40c255335a6f61a6a1005a69cebcf9b1318e4ae4859ff39f452c",
+        "source": "function fzr(e){return Object.hasOwn(pzr,e)}",
+        "variable": false
+      },
+      {
+        "name": "JXe",
+        "start": 38736,
+        "end": 38780,
+        "sha256": "d81e20cfe90ac9f32c839ff85092460abe9447c6d6b2746c7ccd0cec81c67b9e",
+        "source": "function JXe(e){return fzr(e)?pzr[e]:void 0}",
+        "variable": false
+      },
+      {
+        "name": "R",
+        "start": 38925,
+        "end": 38974,
+        "sha256": "b1a7f9449e8d185ed6b696aafaff73ed9a0860d084e94b9b6cae08d3810458df",
+        "source": "function R(){return Object.keys(pzr).filter(fzr)}",
+        "variable": false
+      },
+      {
+        "name": "mzr",
+        "start": 39058,
+        "end": 39121,
+        "sha256": "63948fa7f396ad7a2cf4323e7b5337a637d59dc6cb6005de84e0da2ee5975f34",
+        "source": "mzr=R().flatMap((e)=>(JXe(e)?.deniedUnder??[]).map((n)=>[n,e]))",
+        "variable": true
+      },
+      {
+        "name": "Z",
+        "start": 41701,
+        "end": 41773,
+        "sha256": "7daa4871140ca352270161fad295255347596340ba04a4456a38d02b13fe908d",
+        "source": "function Z(e){return e.startsWith(\"enforce_\")||e.startsWith(\"require_\")}",
+        "variable": false
+      },
+      {
+        "name": "Q",
+        "start": 45419,
+        "end": 45554,
+        "sha256": "f1075e145032ab2a97458f3b9d70c56fd0d2192cdc39f23cc982de7f8dd7b852",
+        "source": "function Q(e){if(e===\"env-quad\")return a.ANTHROPIC_FEDERATION_RULE_ID?.trim()??\"\";let n=rL();return n===null||e===null?\"\":ee(n,K5r(n))}",
+        "variable": false
+      },
+      {
+        "name": "ee",
+        "start": 45554,
+        "end": 45609,
+        "sha256": "00c71db3747096881acbd22bc966f35e946d4c87aa04c133d885fc4d5c98a4e4",
+        "source": "function ee(e,n){return e===null?\"\":`${kn(e)}\\x00${n}`}",
+        "variable": false
+      }
+    ],
+    "ports": [
+      {
+        "name": "U",
+        "imported": "U",
+        "module": "/$bunfs/root/chunk-bn3p37gv.js"
+      },
+      {
+        "name": "V",
+        "imported": "V",
+        "module": "/$bunfs/root/chunk-bn3p37gv.js"
+      },
+      {
+        "name": "Me",
+        "imported": "Me",
+        "module": "/$bunfs/root/chunk-4s38z9x2.js"
+      },
+      {
+        "name": "dtr",
+        "imported": "dtr",
+        "module": "/$bunfs/root/chunk-chme4mqf.js"
+      },
+      {
+        "name": "Ej",
+        "imported": "Ej",
+        "module": "/$bunfs/root/chunk-nankzm0s.js"
+      },
+      {
+        "name": "L",
+        "imported": "L",
+        "module": "/$bunfs/root/chunk-h3rrxdgy.js"
+      },
+      {
+        "name": "ubn",
+        "imported": "ubn",
+        "module": "/$bunfs/root/chunk-5a412bp8.js"
+      },
+      {
+        "name": "t",
+        "imported": "t",
+        "module": "/$bunfs/root/chunk-q80zaav8.js"
+      },
+      {
+        "name": "l",
+        "imported": "l",
+        "module": "/$bunfs/root/chunk-c9me9cp7.js"
+      },
+      {
+        "name": "ez",
+        "imported": "ez",
+        "module": "/$bunfs/root/chunk-nankzm0s.js"
+      },
+      {
+        "name": "a",
+        "imported": "a",
+        "module": "/$bunfs/root/chunk-mbfze585.js"
+      },
+      {
+        "name": "a5o",
+        "imported": "a5o",
+        "module": "/$bunfs/root/chunk-8ptzhr8g.js"
+      },
+      {
+        "name": "fn",
+        "imported": "fn",
+        "module": "/$bunfs/root/chunk-nankzm0s.js"
+      },
+      {
+        "name": "Zg",
+        "imported": "Zg",
+        "module": "/$bunfs/root/chunk-nankzm0s.js"
+      },
+      {
+        "name": "S3r",
+        "imported": "S3r",
+        "module": "/$bunfs/root/chunk-nankzm0s.js"
+      },
+      {
+        "name": "ue",
+        "imported": "createHash",
+        "module": "crypto"
+      },
+      {
+        "name": "Xb",
+        "imported": "Xb",
+        "module": "/$bunfs/root/chunk-nankzm0s.js"
+      },
+      {
+        "name": "fd",
+        "imported": "fd",
+        "module": "/$bunfs/root/chunk-nankzm0s.js"
+      },
+      {
+        "name": "ew",
+        "imported": "ew",
+        "module": "/$bunfs/root/chunk-8ptzhr8g.js"
+      },
+      {
+        "name": "DGt",
+        "imported": "DGt",
+        "module": "/$bunfs/root/chunk-8ptzhr8g.js"
+      },
+      {
+        "name": "oje",
+        "imported": "oje",
+        "module": "/$bunfs/root/chunk-8ptzhr8g.js"
+      },
+      {
+        "name": "rL",
+        "imported": "rL",
+        "module": "/$bunfs/root/chunk-8ptzhr8g.js"
+      },
+      {
+        "name": "K5r",
+        "imported": "K5r",
+        "module": "/$bunfs/root/chunk-8ptzhr8g.js"
+      },
+      {
+        "name": "kn",
+        "imported": "resolve",
+        "module": "path"
+      },
+      {
+        "name": "mb",
+        "imported": "mb",
+        "module": "/$bunfs/root/chunk-nankzm0s.js"
+      },
+      {
+        "name": "mwe",
+        "imported": "mwe",
+        "module": "/$bunfs/root/chunk-8ptzhr8g.js"
+      },
+      {
+        "name": "tn",
+        "imported": "tn",
+        "module": "/$bunfs/root/chunk-yptq0vrd.js"
+      },
+      {
+        "name": "ft",
+        "imported": "ft",
+        "module": "/$bunfs/root/chunk-nankzm0s.js"
+      },
+      {
+        "name": "Qm",
+        "imported": "Qm",
+        "module": "/$bunfs/root/chunk-nankzm0s.js"
+      },
+      {
+        "name": "$k",
+        "imported": "$k",
+        "module": "/$bunfs/root/chunk-nankzm0s.js"
+      },
+      {
+        "name": "Uz",
+        "imported": "Uz",
+        "module": "/$bunfs/root/chunk-bn3p37gv.js"
+      },
+      {
+        "name": "Jl",
+        "imported": "Jl",
+        "module": "/$bunfs/root/chunk-nankzm0s.js"
+      }
+    ]
+  },
+  "public": {
+    "roots": [
+      "y_",
+      "B0",
+      "tSn",
+      "XXe",
+      "rjt",
+      "nSn",
+      "$ht",
+      "njt",
+      "e7n",
+      "rzr",
+      "cbe",
+      "WE",
+      "RBe",
+      "PBe",
+      "c7n",
+      "sSn",
+      "hzr",
+      "eSn",
+      "ZGr",
+      "zXn",
+      "oSn",
+      "VXn",
+      "tjt",
+      "qXn",
+      "dzr",
+      "r7n",
+      "sjt",
+      "TBe",
+      "Lht",
+      "rSn",
+      "lzr",
+      "lbe",
+      "Fht",
+      "tzr",
+      "KXe",
+      "a7n",
+      "QXn",
+      "d7n",
+      "k3",
+      "Z_",
+      "bGo",
+      "SGo",
+      "o7n",
+      "azr",
+      "ZXn",
+      "YXn",
+      "n7n",
+      "uzr",
+      "nzr",
+      "XXn",
+      "u7n",
+      "s7n",
+      "JXn",
+      "gGo",
+      "hGo",
+      "yGo",
+      "p7n",
+      "wh",
+      "xBe",
+      "op",
+      "x3",
+      "eSn",
+      "zXn",
+      "tjt",
+      "njt",
+      "tSn",
+      "QXn",
+      "tzr",
+      "Fht",
+      "on",
+      "Z_",
+      "sjt",
+      "s7n",
+      "Lht",
+      "a7n",
+      "e7n",
+      "rU",
+      "dbe",
+      "mPe",
+      "mts",
+      "gts",
+      "PBe",
+      "$ht",
+      "ZGr",
+      "RBe",
+      "I",
+      "SGo",
+      "rjt",
+      "nSn",
+      "c7n",
+      "d7n",
+      "y_",
+      "k3"
+    ],
+    "rows": [
+      {
+        "name": "Z_n",
+        "start": 3766,
+        "end": 3850,
+        "sha256": "6a10257109d95e26db7a66b8fa40505365dfefc0f6e7e7fd86291b335e32a0ed",
+        "source": "function Z_n(e){return e.anthropicAuthEnabled&&Boolean(e.oauthScopes?.includes(fA))}",
+        "variable": false
+      },
+      {
+        "name": "P",
+        "start": 4241,
+        "end": 4244,
+        "sha256": "9cdf00b9d5e5eeabd983c0c28a3620084bf47ddc23d14f9b79d71a98bf46643b",
+        "source": "P=8",
+        "variable": true
+      },
+      {
+        "name": "fe",
+        "start": 4245,
+        "end": 4252,
+        "sha256": "882b68d8a1708af6da1d6266684ac53073bdfdb7232d26913be8d22c742f8cc8",
+        "source": "fe=4096",
+        "variable": true
+      },
+      {
+        "name": "Qe",
+        "start": 4253,
+        "end": 4269,
+        "sha256": "5d391a8d2e9ffefc512e6c7f16195216a09ea013296a0ad545691e7db40b5a28",
+        "source": "Qe=\".stamp.json\"",
+        "variable": true
+      },
+      {
+        "name": "he",
+        "start": 4270,
+        "end": 4588,
+        "sha256": "791dbf84b56bc2e5367470973ccce2bff4ac4d55e192212ddccdb19f10c7972e",
+        "source": "he=f(()=>u({v:x(1),identity:o().regex(/^[0-9a-f]{64}$/),kind:B([\"org\",\"key\",\"wif\",\"token\"]),sha:o().min(1).max(128),confirmed_at:C().int().nonnegative(),hipaa_seen:T(o().regex(/^[0-9a-f]{64}$/)).max(P).default([]),hipaa_seen_incomplete:H().optional(),hipaa_ruled_out:T(o().regex(/^[0-9a-f]{64}$/)).max(P).optional()}))",
+        "variable": true
+      },
+      {
+        "name": "kBe",
+        "start": 4589,
+        "end": 4623,
+        "sha256": "d06ab3aafbd5a370417a51ad78ba9b86a659e018142f3b78945d0b0a44a865fe",
+        "source": "function kBe(e){return`${e}${Qe}`}",
+        "variable": false
+      },
+      {
+        "name": "tjt",
+        "start": 4809,
+        "end": 4922,
+        "sha256": "ed5a371e2806497c7171b7087a6275a7b242b271428959d47bf1c8af036e9f2a",
+        "source": "function tjt(e){return{seen:e.hipaa_seen,incomplete:e.hipaa_seen_incomplete===!0,ruledOut:e.hipaa_ruled_out??[]}}",
+        "variable": false
+      },
+      {
+        "name": "zXn",
+        "start": 4922,
+        "end": 5068,
+        "sha256": "936324bd6a79fd0fef48cbc6cc164347a00b1e1df6ac1810bed0e37fdd7872e6",
+        "source": "function zXn(e,n){switch(e.kind){case\"ok\":return tjt(e.stamp);case\"absent\":return n;case\"unusable\":return{seen:n.seen,incomplete:!0,ruledOut:[]}}}",
+        "variable": false
+      },
+      {
+        "name": "ge",
+        "start": 5068,
+        "end": 5170,
+        "sha256": "30ce5e56ba8826bcede9055e0ab39b2fe97bd3ad21fd7e1be8df955744f04210",
+        "source": "function ge(e){return e.incomplete?{hipaa_seen_incomplete:!0,hipaa_ruled_out:e.ruledOut.slice(-P)}:{}}",
+        "variable": false
+      },
+      {
+        "name": "ye",
+        "start": 5170,
+        "end": 5358,
+        "sha256": "e59480a76a31375f4526abf325b69d34cc3019389ef32430e67c2930d6528f96",
+        "source": "function ye(e,n,i){if(e===null||e.sha!==i)return{kind:\"unstamped\",hipaaSeen:e?.hipaa_seen??[]};if(e.identity!==n)return{kind:\"foreign\",hipaaSeen:e.hipaa_seen};return{kind:\"match\",stamp:e}}",
+        "variable": false
+      },
+      {
+        "name": "en",
+        "start": 5362,
+        "end": 5418,
+        "sha256": "959fb9dc5879c36748d5bf2d27f7bab8064c32e13907192420b1fa8dd78e55dd",
+        "source": "en=new Set([\"EMFILE\",\"ENFILE\",\"EAGAIN\",\"EBUSY\",\"EINTR\"])",
+        "variable": true
+      },
+      {
+        "name": "_e",
+        "start": 5419,
+        "end": 5544,
+        "sha256": "c55441f6b549f393ac64a586a25791b37317f9ac7280fc9d3866fc0091ebe6e2",
+        "source": "function _e(e){let n=E(e);return n!==void 0&&en.has(n)?{kind:\"unusable\",cause:\"io\",code:n}:{kind:\"unusable\",cause:\"content\"}}",
+        "variable": false
+      },
+      {
+        "name": "eSn",
+        "start": 5544,
+        "end": 5603,
+        "sha256": "1a1edafa19a09c9af136a2bfc0a010b307eaa1ce8537f61dc1aa69843479259e",
+        "source": "function eSn(e){return e.kind===\"unusable\"&&e.cause===\"io\"}",
+        "variable": false
+      },
+      {
+        "name": "I",
+        "start": 5603,
+        "end": 6076,
+        "sha256": "7579da516f1d4e107331ec6bcac477fb92be43257fb1c481029b748ae6d2e795",
+        "source": "function I(e){let n=kBe(e),i;try{i=Ge(n,pe.O_RDONLY|Wl);let r=Ye(i);if(!r.isFile()||r.size>fe)return{kind:\"unusable\",cause:\"content\"};let s=Buffer.alloc(r.size),c=Xe(i,s,0,r.size,0),d=he().safeParse(gt(s.toString(\"utf-8\",0,c),!1));return d.success?{kind:\"ok\",stamp:d.data}:{kind:\"unusable\",cause:\"content\"}}catch(r){if(W(r))return{kind:\"absent\"};return t(`Policy limits: stamp unreadable (${l(r)}); cache reads as unvouched`),_e(r)}finally{if(i!==void 0)try{je(i)}catch{}}}",
+        "variable": false
+      },
+      {
+        "name": "RBe",
+        "start": 6076,
+        "end": 6454,
+        "sha256": "a2236ca191ecded5253245b61b73ca350c623c284f9384f9b6d775a76af32292",
+        "source": "async function RBe(e){let n;try{n=await Je(kBe(e),pe.O_RDONLY|Wl);let i=await n.stat();if(!i.isFile()||i.size>fe)return{kind:\"unusable\",cause:\"content\"};let r=he().safeParse(gt(await n.readFile({encoding:\"utf-8\"}),!1));return r.success?{kind:\"ok\",stamp:r.data}:{kind:\"unusable\",cause:\"content\"}}catch(i){return W(i)?{kind:\"absent\"}:_e(i)}finally{await n?.close().catch(()=>{})}}",
+        "variable": false
+      },
+      {
+        "name": "ZGr",
+        "start": 6454,
+        "end": 6906,
+        "sha256": "38e2b1552c51ba31b4484639ffd896a687eb63272bb851443e88f8add4e3e274",
+        "source": "function ZGr({principal:e,bodySha:n,confirmedAt:i,bodyTaints:r,previous:s,authority:c}){let d=goe(e),m=r.includes(\"hipaa\"),h,g;if(c===\"prior_evidence\"&&!m)h=s.seen.slice(),g=s.ruledOut.slice();else if(h=s.seen.filter((S)=>S!==d),g=s.ruledOut.filter((S)=>S!==d),m)h.push(d);else if(s.incomplete)g.push(d);let y=h.length>P;return{v:1,identity:d,kind:e.kind,sha:n,confirmed_at:i,hipaa_seen:h.slice(-P),...ge({...s,incomplete:s.incomplete||y,ruledOut:g})}}",
+        "variable": false
+      },
+      {
+        "name": "nn",
+        "start": 6910,
+        "end": 6927,
+        "sha256": "828d39ecb940720ba1bbbc9819ac540b378fbec13e4e2c4510bff76d442c4273",
+        "source": "nn=\"0\".repeat(64)",
+        "variable": true
+      },
+      {
+        "name": "SGo",
+        "start": 6928,
+        "end": 7044,
+        "sha256": "6ed0b2462b4ec03f9d4f34c9b12425c367274021acd23c859ef7585f004ae24d",
+        "source": "function SGo(e){return{v:1,identity:nn,kind:\"token\",sha:\"none\",confirmed_at:0,hipaa_seen:e.seen.slice(-P),...ge(e)}}",
+        "variable": false
+      },
+      {
+        "name": "VXn",
+        "start": 7044,
+        "end": 7094,
+        "sha256": "27cdf5e45f0ff272f491cbbd2eb751c1ef1fe9dec04e5fdb75d84016b69c5d79",
+        "source": "async function VXn(e,n){await Tn(kBe(e),_(n),384)}",
+        "variable": false
+      },
+      {
+        "name": "qXn",
+        "start": 7094,
+        "end": 7229,
+        "sha256": "a3885caa830c1bebf2c9c8c692900ff90f329939b713cc1faa6b68bd59d5e332",
+        "source": "async function qXn(e,n){try{return await VXn(e,n),!0}catch(i){return t(`Policy limits: failed to write the cache stamp - ${l(i)}`),!1}}",
+        "variable": false
+      },
+      {
+        "name": "bGo",
+        "start": 7229,
+        "end": 7354,
+        "sha256": "429e7eb1438ff45e9d27c11aa444cf7b467e6bd7635c1a0ac19a8797d7b3d05f",
+        "source": "async function bGo(e){try{await Ze(kBe(e))}catch(n){if(!W(n))t(`Policy limits: failed to remove the cache stamp - ${l(n)}`)}}",
+        "variable": false
+      },
+      {
+        "name": "KXe",
+        "start": 16556,
+        "end": 16562,
+        "sha256": "d48012d29248093dd76134fce2039c6c6f4e898eb87abb13d75abd2c394ae1c0",
+        "source": "KXe=16",
+        "variable": true
+      },
+      {
+        "name": "TBe",
+        "start": 17513,
+        "end": 17590,
+        "sha256": "f6fc6237bb5ec310a1a4b6a368bb4c07212eb223d19e8074f83169a6d7c9c9a6",
+        "source": "TBe={restrictions:{},compliance_taints:[],monitoring_notice:null,defaults:{}}",
+        "variable": true
+      },
+      {
+        "name": "gGo",
+        "start": 17591,
+        "end": 17728,
+        "sha256": "7024b57dadddead2ae8d1a8bc8bf5772e1f81359cd31eaaa4430147f45c6eb76",
+        "source": "gGo=[\"ENOTFOUND\",\"EAI_AGAIN\",\"ECONNREFUSED\",\"ECONNRESET\",\"ETIMEDOUT\",\"EHOSTUNREACH\",\"ENETUNREACH\",\"EPIPE\",\"CERT_ERROR\",\"ABORTED\",\"OTHER\"]",
+        "variable": true
+      },
+      {
+        "name": "hGo",
+        "start": 17729,
+        "end": 17837,
+        "sha256": "f6990f3e2b8bf63087ba8a59895604cbbd83ce106fa3590479a66d1ef6a320db",
+        "source": "hGo=[\"invalid_request_error\",\"authentication_error\",\"permission_error\",\"not_found_error\",\"rate_limit_error\"]",
+        "variable": true
+      },
+      {
+        "name": "yGo",
+        "start": 17838,
+        "end": 18062,
+        "sha256": "c96694b6168813fa3a3f44a9adc5848f3d500b1b93fb7edd0dd7294d2304fe4d",
+        "source": "yGo=[\"ip_not_in_allowed_range\",\"claude_code_key_creator_not_member\",\"organization_disabled\",\"organization_on_hold\",\"restricted_regime_endpoint\",\"oauth_not_allowed_for_organization\",\"oauth_scope_insufficient\",\"token_expired\"]",
+        "variable": true
+      },
+      {
+        "name": "KXn",
+        "start": 18067,
+        "end": 18091,
+        "sha256": "69d4590747a258cb06c8c7ea49064a537556aad00ffa22970f409d3b0950b808",
+        "source": "KXn=\"policy-limits.json\"",
+        "variable": true
+      },
+      {
+        "name": "vn",
+        "start": 18092,
+        "end": 18099,
+        "sha256": "5fbbbef6a1c1c86c1f45dc17d6b457d0a09e62c34e3830b0ede2e578851fe946",
+        "source": "vn=5000",
+        "variable": true
+      },
+      {
+        "name": "Te",
+        "start": 18107,
+        "end": 18125,
+        "sha256": "39134f59022609adddf449eef26d2b51c15d62b73e2771457e78c7b100573267",
+        "source": "Te={kind:\"absent\"}",
+        "variable": true
+      },
+      {
+        "name": "YXn",
+        "start": 18126,
+        "end": 18135,
+        "sha256": "1a26c24dd04c77894663b7044c8022a8c7651154de4381ed82d34ade2c210049",
+        "source": "YXn=30000",
+        "variable": true
+      },
+      {
+        "name": "XXn",
+        "start": 18136,
+        "end": 18175,
+        "sha256": "ed450530f1bd90eb087e98ac997cb9afc85acb15f9864bc53d1ffa50b3463768",
+        "source": "function XXn(){return Mwn()?Te:I(WE())}",
+        "variable": false
+      },
+      {
+        "name": "JXn",
+        "start": 18175,
+        "end": 18234,
+        "sha256": "23c25261eef17928e6556bf99de6129c5757fa9f1f79dbe7b9f9f26fb1041b46",
+        "source": "function JXn(e){return e.kind===\"absent\"&&!Mwn()?I(WE()):e}",
+        "variable": false
+      },
+      {
+        "name": "njt",
+        "start": 21464,
+        "end": 21549,
+        "sha256": "2908b342e7ca74e2630dd45ef613ac4d08a0bea424876424c0928011dc633b1a",
+        "source": "function njt(e){let n=p();n.sessionFromServerFetch=e!==null,n.replaceSessionCache(e)}",
+        "variable": false
+      },
+      {
+        "name": "tSn",
+        "start": 21549,
+        "end": 21628,
+        "sha256": "c1add549335a7970d3e7979ba2c9e93fda96117742203d09d701b2861df414da",
+        "source": "function tSn(e){let n=p();n.sessionFromServerFetch=!1,n.replaceSessionCache(e)}",
+        "variable": false
+      },
+      {
+        "name": "QXn",
+        "start": 21628,
+        "end": 21673,
+        "sha256": "4760da0d74289d1912812f39ba353c820c7cb16cc76c32df7fa44b38ba856b53",
+        "source": "function QXn(e){p().verdictEnvBearerDigest=e}",
+        "variable": false
+      },
+      {
+        "name": "ZXn",
+        "start": 21673,
+        "end": 21876,
+        "sha256": "5e5fce760133e45e6571c7e78f3e65a359d50de0de140c20f5ab3b3effeece93",
+        "source": "function ZXn(){let e=p().verdictEnvBearerDigest;if(e===null)return null;if(e6t())return!1;let n=KE();return n!==void 0&&hoe(n)===e&&!Z_n({anthropicAuthEnabled:vl(),oauthScopes:fn()?.scopes})&&Xb()==null}",
+        "variable": false
+      },
+      {
+        "name": "tzr",
+        "start": 21876,
+        "end": 21959,
+        "sha256": "79304bc6fc93e5e177c9365cb47b9ef5a8597d66744b531ac4fa5e7eeab9550d",
+        "source": "function tzr(){let e=p();e.sessionFromServerFetch=!1,e.replaceSessionCache(TBe,!0)}",
+        "variable": false
+      },
+      {
+        "name": "Lht",
+        "start": 21959,
+        "end": 22267,
+        "sha256": "c03533b6dccc0ff65cd96b6c35e47433bca39677ee3749b27f6d19c1947e9441",
+        "source": "function Lht(e){let n=p(),i=n.sessionCache!==null;if(!i)n.sessionFromServerFetch=!1,n.sessionAttributed=n.lastStampVerdict===\"match\",n.attributedBearerDigest=n.sessionAttributed?De():null,n.sessionVerdictDisowned=n.lastStampVerdict===\"disabled\",n.evidenceRereadForBearer=void 0;n.replaceSessionCache(e,!1,i)}",
+        "variable": false
+      },
+      {
+        "name": "nzr",
+        "start": 22267,
+        "end": 22298,
+        "sha256": "90a491d3c35c447881abb95a2e74fbed0641759e737e95d9cc22a1c8a18771d0",
+        "source": "function nzr(e){if(k5o(e))Ej()}",
+        "variable": false
+      },
+      {
+        "name": "e7n",
+        "start": 22298,
+        "end": 22685,
+        "sha256": "402fb8394f80bde1c4b470079dd3bf55c3da7ed422587a3aaf73622f1ae2ccc9",
+        "source": "function e7n(e,n,i=!0){let r=p();if(r.lastFetchOutcome=e,e===null||e.success)r.settledWithoutVerdictFor=null;else if(!e.retrying&&(i||!t7n(e))){let s=e.errorCode===\"network_error\"||e.errorCode===\"timeout\"||e.errorCode===\"request_failed\"&&e.httpStatus!==null&&(e.httpStatus===404||e.httpStatus>=500);r.settledWithoutVerdictFor=s?n??vGo()??\"\":null}r.cacheRevision++,r.emitVerdictChanged()}",
+        "variable": false
+      },
+      {
+        "name": "t7n",
+        "start": 22685,
+        "end": 22876,
+        "sha256": "b97e90096cbbc7dc9a9391d2c3a70f82514822090069faef0efd382cbcffab31",
+        "source": "function t7n(e){return e.errorCode===\"network_error\"||e.errorCode===\"timeout\"||e.errorCode===\"request_failed\"&&(e.httpStatus===null||e.httpStatus>=500||e.httpStatus>=400&&!H6e(e.httpStatus))}",
+        "variable": false
+      },
+      {
+        "name": "lbe",
+        "start": 22876,
+        "end": 22919,
+        "sha256": "433eabfa559aff4ba5c2a4f24fe325ff8e7820e9a529f25d1ac45b2c1ba11952",
+        "source": "function lbe(){return p().lastFetchOutcome}",
+        "variable": false
+      },
+      {
+        "name": "rzr",
+        "start": 22919,
+        "end": 22955,
+        "sha256": "93ec32678e6886593cb9857db7cf13fe336ad9049aaceefc09eb2a3ea3a249b9",
+        "source": "function rzr(){p().storageV5=void 0}",
+        "variable": false
+      },
+      {
+        "name": "cbe",
+        "start": 22955,
+        "end": 22997,
+        "sha256": "030e28450b9d07f111e0fb6148d3dead9c577861c959647bd0da47bb7e7d1fde",
+        "source": "function cbe(){return RM()!==void 0||Ut()}",
+        "variable": false
+      },
+      {
+        "name": "n7n",
+        "start": 22997,
+        "end": 23053,
+        "sha256": "5fa27be89e8027da498ff09cbe75c5526ea420766b4377b5546fab61082c6915",
+        "source": "function n7n(){return cbe()||p().diskAdoptionSuppressed}",
+        "variable": false
+      },
+      {
+        "name": "B0",
+        "start": 23053,
+        "end": 23091,
+        "sha256": "c9cbfd89649f8b136592af9a64755ad9785cd1d703469185c752bed7f19a339a",
+        "source": "function B0(){return p().sessionCache}",
+        "variable": false
+      },
+      {
+        "name": "rjt",
+        "start": 23091,
+        "end": 23166,
+        "sha256": "78bc102b90562eb3346e07aae15b720bd2eec8acec472a8090ada728e67aaa7d",
+        "source": "function rjt(){let e=p();e.diskAdoptionSuppressed=!0,e.diskAdoptionEpoch++}",
+        "variable": false
+      },
+      {
+        "name": "XXe",
+        "start": 23166,
+        "end": 23210,
+        "sha256": "d0e78844aa7d39c1fe4be866262efe29e24978e5eab91f236f9cd3bf7a17e061",
+        "source": "function XXe(){return p().diskAdoptionEpoch}",
+        "variable": false
+      },
+      {
+        "name": "nSn",
+        "start": 23210,
+        "end": 23255,
+        "sha256": "894dae777b25a388ad73baa958b7fe900eae1ab53f065a659ee56dd98e1697f8",
+        "source": "function nSn(){p().diskAdoptionSuppressed=!1}",
+        "variable": false
+      },
+      {
+        "name": "r7n",
+        "start": 23255,
+        "end": 23304,
+        "sha256": "3a5b592e6ebf247e7d1d43849b3fd6b30f0ef1b8670d4f51170d14df4c0ea63c",
+        "source": "function r7n(){return p().diskAdoptionSuppressed}",
+        "variable": false
+      },
+      {
+        "name": "xBe",
+        "start": 23434,
+        "end": 23490,
+        "sha256": "b7c9b25c27a9d824a27c3ced5a7f11ed9f4422f8239d908e7e1fa942f6e66dd7",
+        "source": "function xBe(e){return p().heldStartSignal.subscribe(e)}",
+        "variable": false
+      },
+      {
+        "name": "WE",
+        "start": 23490,
+        "end": 23524,
+        "sha256": "6de3637b2c0e6bf9170f3311962892f72b49e8a3e5a31e19363e6d389f78f3d6",
+        "source": "function WE(){return An(we(),KXn)}",
+        "variable": false
+      },
+      {
+        "name": "o7n",
+        "start": 23940,
+        "end": 24079,
+        "sha256": "4571fe326ff10df0a080c57548fd33fee839b09e2b5d3538ede8102c6f667013",
+        "source": "function o7n(e={}){if(He()!==\"firstParty\")return\"third_party_provider\";if(!e.skipBaseUrlCheck&&!RM()&&!Js())return\"custom_base_url\";return}",
+        "variable": false
+      },
+      {
+        "name": "y_",
+        "start": 24079,
+        "end": 24114,
+        "sha256": "dccc31be75dd7fe547fe473860077e7bdfe2c57bf87fd5f6481517b382024504",
+        "source": "function y_(){return k3()===void 0}",
+        "variable": false
+      },
+      {
+        "name": "k3",
+        "start": 24114,
+        "end": 24512,
+        "sha256": "0c409924ed82356d6f47921ba50c5ddce9c1e1b392710aaecff79063fdfd69ee",
+        "source": "function k3(e={}){let n=o7n(e);if(n!==void 0)return n;if(RM())return;try{let{key:r}=mb({skipRetrievingKeyFromApiKeyHelper:!0});if(r)return}catch{}if(fd())return;let i=fn();if(!i?.accessToken)return\"no_auth\";if(!i.scopes?.includes(fA))return\"oauth_no_inference_scope\";if(i.subscriptionType==null)return;if(i.subscriptionType!==\"enterprise\"&&i.subscriptionType!==\"team\")return\"prosumer_oauth\";return}",
+        "variable": false
+      },
+      {
+        "name": "sjt",
+        "start": 24512,
+        "end": 24965,
+        "sha256": "3af9d44d1f2437f8964b0248a613fcd6ece498d6623d03ec455503caff0684d9",
+        "source": "function sjt(){let e=p();if(F()&&e.storageV5!==void 0&&e.sessionCache)return e.sessionCache;if(n7n())return p().sessionCache;if(e.diskRefusedAtMs!==null&&Date.now()-e.diskRefusedAtMs<vn)return null;let n=XXn();if(!e.hipaaEvidenceLoaded&&!Mwn())v(n);let i;try{i=sSn(Pn(WE(),\"utf-8\"))}catch{return null}if(i===null)return null;try{return s7n(i,JXn(n))}catch(r){return t(`Policy limits: cache admission failed (${l(r)}); cold start`,{level:\"error\"}),null}}",
+        "variable": false
+      },
+      {
+        "name": "s7n",
+        "start": 24965,
+        "end": 26245,
+        "sha256": "224420e8c3e20bd00f8cbd1dd8501b5c81c464227f3dd25b62e4b4e5bfeee982",
+        "source": "function s7n(e,n){let i=p();if(Mwn())return i.lastStampVerdict=\"disabled\",i.lastStampMatchedIdentity=null,i.diskConfirmedAtMs=null,i.diskRefusedAtMs=null,e;let r=Dwe(Uht(e));if(v(n),n.kind===\"absent\")return i.lastStampVerdict=\"legacy\",i.lastStampMatchedIdentity=null,i.diskBodyChecksum=r,i.diskConfirmedAtMs=null,i.diskRefusedAtMs=null,e;let s=n.kind===\"ok\"?n.stamp:null,c=R3(),d=c===null?\"\":goe(c),m=ye(s,d,r);switch(i.lastStampMatchedIdentity=null,m.kind){case\"match\":return i.lastStampVerdict=\"match\",i.lastStampMatchedIdentity=d,i.diskBodyChecksum=r,i.diskConfirmedAtMs=m.stamp.confirmed_at,i.diskRefusedAtMs=null,i.dropHintedTaints(),e;case\"unstamped\":return i.lastStampVerdict=\"torn\",i.diskBodyChecksum=null,i.diskConfirmedAtMs=null,i.diskRefusedAtMs=Date.now(),i.hintFromRefusedBody(e),t(\"Policy limits: the cache stamp does not vouch for the cached body; cold start (its compliance taints and explicit denials still deny)\"),null;case\"foreign\":return i.lastStampVerdict=\"foreign\",i.diskBodyChecksum=null,i.diskConfirmedAtMs=null,i.diskRefusedAtMs=Date.now(),i.hintFromRefusedBody(e),t(\"Policy limits: the cache was written under another credential's identity; cold start (its compliance taints and explicit denials still deny until this credential's verdict lands)\"),null}}",
+        "variable": false
+      },
+      {
+        "name": "azr",
+        "start": 29614,
+        "end": 29858,
+        "sha256": "92a486fb0062d039e5b53a1d4b2624100fe5b1a77c62be4349a941d0694122c7",
+        "source": "function azr(){let e=fn()?.accessToken;if(!e)return!1;let n=p(),i=hoe(e);if(n.storedLoginNotedTokenDigest!==i)return!0;let r=n.storedLoginAccountAtWire;return r!==null&&r.tokenDigest===i&&r.organizationUuid!==(tn(Qm()?.organizationUuid)??null)}",
+        "variable": false
+      },
+      {
+        "name": "a7n",
+        "start": 30894,
+        "end": 31054,
+        "sha256": "81ef0e7e81307aa5a5f94486efd5aabb96a48e88b8b7c015764e1d461a7b6d6f",
+        "source": "function a7n(){let e=p();e.sessionAttributed=!0,e.attributedBearerDigest=De(),e.sessionVerdictDisowned=!1,e.evidenceRereadForBearer=void 0,e.dropHintedTaints()}",
+        "variable": false
+      },
+      {
+        "name": "Oe",
+        "start": 31054,
+        "end": 31113,
+        "sha256": "a8f1d021583cea4e44d7837b7ac60cdaf3569430365ad936529e71d2d73e1ec8",
+        "source": "function Oe(){let e=fn()?.accessToken;return e?hoe(e):null}",
+        "variable": false
+      },
+      {
+        "name": "De",
+        "start": 31113,
+        "end": 31207,
+        "sha256": "30c8cb316c4a0509227020566bad1e14c15ee291a3df7393d5d35e0ad092d147",
+        "source": "function De(){let e=p();try{R3()}catch{return null}return e.principalRung===\"oauth\"?Oe():null}",
+        "variable": false
+      },
+      {
+        "name": "Fht",
+        "start": 31207,
+        "end": 31420,
+        "sha256": "5221ac31572c9121376bf449af158713a30201388be8a75c5ade4c9eeec7583b",
+        "source": "function Fht(){let e=p(),n=!e.sessionVerdictDisowned;if(e.sessionAttributed=!1,e.attributedBearerDigest=null,e.sessionVerdictDisowned=!0,e.evidenceRereadForBearer=void 0,n)e.cacheRevision++,e.emitVerdictChanged()}",
+        "variable": false
+      },
+      {
+        "name": "vGo",
+        "start": 31420,
+        "end": 31474,
+        "sha256": "70ac2c7512f9640d8b3e00f44f374b1687c802f3ab8e075d30b8e128117a5ee6",
+        "source": "function vGo(){let e=R3();return e===null?null:goe(e)}",
+        "variable": false
+      },
+      {
+        "name": "rSn",
+        "start": 31474,
+        "end": 31517,
+        "sha256": "2fa2a5e5c27e3993386845de291d0138f74dba1485c3380cac731b87c52bb6bb",
+        "source": "function rSn(){return p().lastStampVerdict}",
+        "variable": false
+      },
+      {
+        "name": "lzr",
+        "start": 31517,
+        "end": 31568,
+        "sha256": "1aa87e2e87a74956642467e1fe5f6b003bdfb7a18818844b1d996ca91bfca68a",
+        "source": "function lzr(){return p().lastStampMatchedIdentity}",
+        "variable": false
+      },
+      {
+        "name": "l7n",
+        "start": 31568,
+        "end": 31650,
+        "sha256": "5c39464b54eb151d230d7c06a5d9c40162fbba8b83ac766ce885c11de56fb6b7",
+        "source": "function l7n(){let e=p();if(!e.hipaaEvidenceLoaded)v(Le());return e.hipaaEvidence}",
+        "variable": false
+      },
+      {
+        "name": "v",
+        "start": 31650,
+        "end": 31812,
+        "sha256": "f04655b8ef011d78143abd0274776645ded74e5bd3c52b4c00fba275ad3cc06f",
+        "source": "function v(e){let n=p();if(n.hipaaEvidenceLoaded=!eSn(e),e.kind===\"ok\")n.hipaaEvidence=tjt(e.stamp);else if(e.kind===\"unusable\"&&!eSn(e))n.hipaaSeenUnreadable=!0}",
+        "variable": false
+      },
+      {
+        "name": "Le",
+        "start": 31812,
+        "end": 31850,
+        "sha256": "a7bbf13e8f41d02a38d12fa744cfe88f43f399ed27723e754aec076d4668c282",
+        "source": "function Le(){return cbe()?Te:I(WE())}",
+        "variable": false
+      },
+      {
+        "name": "oSn",
+        "start": 31850,
+        "end": 31890,
+        "sha256": "08c02dcb0b6b202cca7161cfce276252647a6eb0d4a33924741d6eeee9eb8e42",
+        "source": "function oSn(){return p().hipaaEvidence}",
+        "variable": false
+      },
+      {
+        "name": "czr",
+        "start": 31890,
+        "end": 32488,
+        "sha256": "e629e4c8bde5b3b36936d0a919f8c1d1142eec0c77b581ee474359b4cccca4e1",
+        "source": "function czr(){let e;try{e=R3()}catch(r){t(`Policy limits: principal unreadable for the evidence tier (${l(r)}); judged on the machine's evidence`,{level:\"error\"}),e={kind:\"token\",descriptor:\"token:unreadable\",unclassified:!0}}if(e===null){let r=p().oauthPrincipalMemo;if(!r?.daemonSnapshotWorker||r.principal!==null)return!1;let s=l7n();return s.seen.length>0||s.incomplete}let n=l7n();if(ne(e)){let r=e.storedLoginOrgless===!0&&e.unclassified!==!0&&n.ruledOut.includes(goe(e));return n.seen.length>0||n.incomplete&&!r}let i=goe(e);return n.seen.includes(i)||n.incomplete&&!n.ruledOut.includes(i)}",
+        "variable": false
+      },
+      {
+        "name": "ne",
+        "start": 32488,
+        "end": 32557,
+        "sha256": "abebf7ea53f1099a69d6095ef416c071bdd84f2d84d8d1210b4ecd3667d344db",
+        "source": "function ne(e){return e.unclassified===!0||e.storedLoginOrgless===!0}",
+        "variable": false
+      },
+      {
+        "name": "c7n",
+        "start": 32557,
+        "end": 32696,
+        "sha256": "0b773c24ec401f1c229abda1b4edd12da53758d96c46b54c1f6711898eba1925",
+        "source": "function c7n(e,n,i){let r=p();r.diskBodyChecksum=e,r.diskConfirmedAtMs=i,r.hipaaEvidence=n,r.hipaaEvidenceLoaded=!0,r.diskRefusedAtMs=null}",
+        "variable": false
+      },
+      {
+        "name": "PBe",
+        "start": 32696,
+        "end": 32863,
+        "sha256": "de66a115bcd47eece51960b7dde0ea54c534b90c200693715ff280837e71974b",
+        "source": "function PBe(e){let n=p(),{hipaaEvidence:i,hipaaSeenUnreadable:r}=n;if(v(e),r!==n.hipaaSeenUnreadable||!En(i,n.hipaaEvidence))n.cacheRevision++,n.emitVerdictChanged()}",
+        "variable": false
+      },
+      {
+        "name": "En",
+        "start": 32863,
+        "end": 33065,
+        "sha256": "d6da531d870ed02a0959fe29f4ddc115035ddac04649a7573c2c279f320ee8f1",
+        "source": "function En(e,n){return e.incomplete===n.incomplete&&e.seen.length===n.seen.length&&e.seen.every((i,r)=>i===n.seen[r])&&e.ruledOut.length===n.ruledOut.length&&e.ruledOut.every((i,r)=>i===n.ruledOut[r])}",
+        "variable": false
+      },
+      {
+        "name": "dzr",
+        "start": 33065,
+        "end": 33108,
+        "sha256": "a56225a7b826b8c950a72259f6afd47fa71428401b9f162d3ccdfcb39337ae4b",
+        "source": "function dzr(){return p().diskBodyChecksum}",
+        "variable": false
+      },
+      {
+        "name": "uzr",
+        "start": 33108,
+        "end": 33152,
+        "sha256": "2ed1efef58cfaf9a6be1aadc3acc77f54855854e1f973382c4619ff662f0e3d8",
+        "source": "function uzr(){return p().diskConfirmedAtMs}",
+        "variable": false
+      },
+      {
+        "name": "d7n",
+        "start": 33152,
+        "end": 33268,
+        "sha256": "5dcece431644a9a455339ce3b54ed8c064abd2f0ffda829c15caef8e9b6b6be7",
+        "source": "function d7n(e,n){let i=p();if(e!==void 0&&i.diskBodyChecksum===e&&i.diskConfirmedAtMs!==null)i.diskConfirmedAtMs=n}",
+        "variable": false
+      },
+      {
+        "name": "$ht",
+        "start": 33268,
+        "end": 33469,
+        "sha256": "b2db5818fe0a9490afcc8dabe8238da850fb0c4d331c2270a7ad9fab0d25ea16",
+        "source": "function $ht(){let e=p();e.diskBodyChecksum=null,e.diskConfirmedAtMs=null,e.diskRefusedAtMs=null,e.hipaaEvidenceLoaded=!1,e.lastStampVerdict=\"none\",e.lastStampMatchedIdentity=null,e.dropHintedTaints()}",
+        "variable": false
+      },
+      {
+        "name": "sSn",
+        "start": 33469,
+        "end": 33534,
+        "sha256": "c10a5535875ceaee61dc2d7554ef2dbec7fbe376379eab8e34f6bb99445ad9eb",
+        "source": "function sSn(e){let n=ijt(gt(e,!1));return n.success?n.data:null}",
+        "variable": false
+      },
+      {
+        "name": "u7n",
+        "start": 33668,
+        "end": 33779,
+        "sha256": "54a7e1fafde103a15fd8b4e0941b5338bf139ded3a34339586caa0ae7aa87901",
+        "source": "function u7n(e,n){let i=p();if(i.storageV5=e,n!==null&&i.sessionCache===null&&!i.diskAdoptionSuppressed)Lht(n)}",
+        "variable": false
+      },
+      {
+        "name": "fzr",
+        "start": 38692,
+        "end": 38736,
+        "sha256": "da175e5afbac40c255335a6f61a6a1005a69cebcf9b1318e4ae4859ff39f452c",
+        "source": "function fzr(e){return Object.hasOwn(pzr,e)}",
+        "variable": false
+      },
+      {
+        "name": "JXe",
+        "start": 38736,
+        "end": 38780,
+        "sha256": "d81e20cfe90ac9f32c839ff85092460abe9447c6d6b2746c7ccd0cec81c67b9e",
+        "source": "function JXe(e){return fzr(e)?pzr[e]:void 0}",
+        "variable": false
+      },
+      {
+        "name": "Ie",
+        "start": 38784,
+        "end": 38805,
+        "sha256": "478662c93261ced3508594cd766a7c22d4efbc0039403a8f5037a62c952b87c7",
+        "source": "Ie=new Set([\"hipaa\"])",
+        "variable": true
+      },
+      {
+        "name": "dts",
+        "start": 38806,
+        "end": 38866,
+        "sha256": "c8828eb5b9ece6a7d4dcd7841b4c1c0bda5eb610cc9c5a26c7af1a1ec014051c",
+        "source": "function dts(e){return JXe(e)?.serverPopulated===!0&&!g3o()}",
+        "variable": false
+      },
+      {
+        "name": "CGo",
+        "start": 38866,
+        "end": 38925,
+        "sha256": "a848c0730bba4cc69053cbdce94eca6a91fe9684846decde466b3dd14d943254",
+        "source": "function CGo(e){return JXe(e)?.transcriptScan===!0&&!_3o()}",
+        "variable": false
+      },
+      {
+        "name": "R",
+        "start": 38925,
+        "end": 38974,
+        "sha256": "b1a7f9449e8d185ed6b696aafaff73ed9a0860d084e94b9b6cae08d3810458df",
+        "source": "function R(){return Object.keys(pzr).filter(fzr)}",
+        "variable": false
+      },
+      {
+        "name": "x3",
+        "start": 38974,
+        "end": 39054,
+        "sha256": "2b3a96712cfea3401b164df81f8504afb65f271fbb6661d265a96a96d1054ddf",
+        "source": "function x3(e){let n=JXe(e);return{featureLabel:n?.label??e,verb:n?.verb??\"is\"}}",
+        "variable": false
+      },
+      {
+        "name": "mzr",
+        "start": 39058,
+        "end": 39121,
+        "sha256": "63948fa7f396ad7a2cf4323e7b5337a637d59dc6cb6005de84e0da2ee5975f34",
+        "source": "mzr=R().flatMap((e)=>(JXe(e)?.deniedUnder??[]).map((n)=>[n,e]))",
+        "variable": true
+      },
+      {
+        "name": "uts",
+        "start": 39122,
+        "end": 39188,
+        "sha256": "bd7dbdd224d9b29d69eee608d6289b2c93ec681a6c9e62892222606f17b7bbdb",
+        "source": "uts=R().flatMap((e)=>(JXe(e)?.hardBlockUnder??[]).map((n)=>[n,e]))",
+        "variable": true
+      },
+      {
+        "name": "pts",
+        "start": 39189,
+        "end": 39248,
+        "sha256": "a8f42f9c961686288cef5a513b2571003d2674bda6dc74e675e453ee285982f8",
+        "source": "pts=new Set(R().filter((e)=>JXe(e)?.onCacheMiss!==\"allow\"))",
+        "variable": true
+      },
+      {
+        "name": "gzr",
+        "start": 39249,
+        "end": 39307,
+        "sha256": "c6c3b30f94760ca7bea9748d6a8739cdc0418cf3c7cb3303a43a40e36d31f796",
+        "source": "gzr=new Set(R().filter((e)=>JXe(e)?.onCacheMiss===\"hold\"))",
+        "variable": true
+      },
+      {
+        "name": "AGo",
+        "start": 39308,
+        "end": 39372,
+        "sha256": "c4bc31673c864da27a80e6ba7213a531383999644c52ba02579aca77499d8732",
+        "source": "AGo=new Set(R().filter((e)=>JXe(e)?.onFailOpenVerdict===\"deny\"))",
+        "variable": true
+      },
+      {
+        "name": "xn",
+        "start": 39373,
+        "end": 39411,
+        "sha256": "45fa4fca76a1ab12aed473a312958137e599306d90b98818fd73e4de91509fff",
+        "source": "xn=new Set([\"allow_product_feedback\"])",
+        "variable": true
+      },
+      {
+        "name": "Fe",
+        "start": 39412,
+        "end": 39463,
+        "sha256": "deb5df00a859d3ce006dc8f813633ca51cea6f1819af38e3cbfb9c181bc7db89",
+        "source": "Fe=new Set([\"allow_web_fetch\",\"allow_design_sync\"])",
+        "variable": true
+      },
+      {
+        "name": "ajt",
+        "start": 39464,
+        "end": 39509,
+        "sha256": "d60638948c5fb36944c521f51c5361de96a244e84384024fb6ad94a0c694faa4",
+        "source": "function ajt(e){let n=In(e);return fts(e)||n}",
+        "variable": false
+      },
+      {
+        "name": "fts",
+        "start": 39509,
+        "end": 39819,
+        "sha256": "7a08fd56885ae76d370583036ed4528d256cc18838d48bdd9951045328c17776",
+        "source": "function fts(e){if(!Fe.has(e)||y3o()||!y_())return!1;let n=p();if(n.sessionCache!==null&&!n.failOpenVerdict&&!n.sessionVerdictDisowned)return!1;let i;try{R3(),i=n.principalRung}catch{return!0}if(i===\"wif\"&&ft())return!0;if(i===\"none\"&&KE()!==void 0&&e6t())return!1;return i===\"oauth\"||i===\"tunnel\"||i===\"none\"}",
+        "variable": false
+      },
+      {
+        "name": "In",
+        "start": 39819,
+        "end": 40153,
+        "sha256": "de9eb4e0ff5752371653f0da93a569411831addc5c818d16e4f218bc4df79355",
+        "source": "function In(e){if(!Fe.has(e)||!y_()||h3o())return!1;let n=p();if(n.sessionCache!==null&&n.sessionAttributed){let i=Oe();if(i!==null&&i===n.attributedBearerDigest)return!1;if(n.evidenceRereadForBearer!==i)n.evidenceRereadForBearer=i,n.hipaaEvidenceLoaded=!1;let r=l7n();if(r.seen.length===0&&!r.incomplete||!wn())return!1}return czr()}",
+        "variable": false
+      },
+      {
+        "name": "wn",
+        "start": 40153,
+        "end": 40221,
+        "sha256": "457076b1a1d960e982f47bc8201afdf6d55df69926aa23e204e35acc579f85c1",
+        "source": "function wn(){try{let e=R3();return e!==null&&ne(e)}catch{return!0}}",
+        "variable": false
+      },
+      {
+        "name": "on",
+        "start": 40221,
+        "end": 40849,
+        "sha256": "f4c6840f979025e731739623f931d8cfc968e2b947f12a50aef7ab8cdad804e1",
+        "source": "function on(e){let n=Z_();if(CGo(e)){let i=n?.restrictions[e];if(i)return i.allowed;return!(y_()&&p().hintedDeniedKeys.includes(e))}if(!n){if(pts.has(e)){if(y_()&&!(gzr.has(e)&&dbe()&&!mPe()))return!1;if(xn.has(e)&&At()&&!(e===\"allow_product_feedback\"&&T8()))return!1}if(M(e,utr()))return!1;if(ajt(e))return!1;let i=p();if(i.hintedDeniedKeys.length===0&&i.hintedTaints.length===0)return!0;if(!y_())return!0;if(i.hintedDeniedKeys.includes(e))return!1;return ljt({restrictions:{},compliance_taints:[]},e,i.hintedTaints)}if(gzr.has(e)&&rU()&&!(dbe()&&!mPe()))return!1;if(AGo.has(e)&&rU())return!1;if(ajt(e))return!1;return!Ue(e,n)}",
+        "variable": false
+      },
+      {
+        "name": "Ue",
+        "start": 40849,
+        "end": 41122,
+        "sha256": "a098d39d55e2dba2edf453fb5e3ecc0b561c7c258da83999880015f5f31d35ac",
+        "source": "function Ue(e,n){let i=p();if(n.restrictions[e]===void 0&&i.hintedDeniedKeys.includes(e))return!0;let r=i.sessionFromServerFetch;return!ljt({restrictions:n.restrictions,compliance_taints:r?n.compliance_taints:[]},e,[...utr(),...i.hintedTaints,...r?[]:n.compliance_taints])}",
+        "variable": false
+      },
+      {
+        "name": "ljt",
+        "start": 41122,
+        "end": 41421,
+        "sha256": "d8e07f91828a80623d66bc18f487b25e4ca88de4bd11f996af742e4b0b7492ca",
+        "source": "function ljt(e,n,i=[]){let r=e.compliance_taints;if(uts.some(([d,m])=>m===n&&(r.includes(d)||i.includes(d))))return!1;let s=e.restrictions[n];if(s)return s.allowed;if(CGo(n))return!0;let c=dts(n)?[...i.filter((d)=>!(Ie.has(d)&&r.includes(d))),...r.filter((d)=>!Ie.has(d))]:[...i,...r];return!M(n,c)}",
+        "variable": false
+      },
+      {
+        "name": "hzr",
+        "start": 41421,
+        "end": 41701,
+        "sha256": "8adb80d7288dd92cbd45ec26ed5abf7ef4faf9a43f1386c992d0333a86edea12",
+        "source": "function hzr(e){if(e.compliance_taints.some((n)=>mzr.some(([i])=>i===n)))return!1;if(Object.keys(e.defaults??{}).length>0||e.monitoring_notice!==null&&e.monitoring_notice!==void 0)return!1;return Object.entries(e.restrictions).every(([n,i])=>Z(n)?i?.allowed!==!0:i?.allowed!==!1)}",
+        "variable": false
+      },
+      {
+        "name": "Z",
+        "start": 41701,
+        "end": 41773,
+        "sha256": "7daa4871140ca352270161fad295255347596340ba04a4456a38d02b13fe908d",
+        "source": "function Z(e){return e.startsWith(\"enforce_\")||e.startsWith(\"require_\")}",
+        "variable": false
+      },
+      {
+        "name": "M",
+        "start": 41773,
+        "end": 41875,
+        "sha256": "6efe10fbbc0c8ea7171b5b21a19f50c3b0ab6d9d4fe9258e70a2d9841e0c5cbf",
+        "source": "function M(e,n){if(n.length===0)return!1;for(let[i,r]of mzr)if(r===e&&n.includes(i))return!0;return!1}",
+        "variable": false
+      },
+      {
+        "name": "mts",
+        "start": 42225,
+        "end": 42342,
+        "sha256": "52cc5d2ae5e699ae81071b22093d30aada45871112006a237c8897181c195020",
+        "source": "function mts(){if(!rU())return\"loaded\";if(dbe())return On()?\"unobtainable_seen_hipaa\":\"unobtainable\";return\"pending\"}",
+        "variable": false
+      },
+      {
+        "name": "On",
+        "start": 42342,
+        "end": 42451,
+        "sha256": "57f521941265e2ffeda97c2187386f506375899649494c99a81225cfb27a0fb5",
+        "source": "function On(){let e;try{e=R3()}catch{return!1}if(e===null||ne(e))return!1;return l7n().seen.includes(goe(e))}",
+        "variable": false
+      },
+      {
+        "name": "gts",
+        "start": 42451,
+        "end": 42582,
+        "sha256": "f0f5e674f2569df6a3e1cecfa981802eaa02e94dcf196e675c1fe17929c8bd17",
+        "source": "function gts(e){if(!fzr(e))return t(`[policy] policyGate names unknown policy key \"${e}\"; denying`,{level:\"warn\"}),!1;return on(e)}",
+        "variable": false
+      },
+      {
+        "name": "rU",
+        "start": 42582,
+        "end": 42654,
+        "sha256": "116db932d03c328124ec0bb0285675272b0397b5d7668127dee202dcb36ddbba",
+        "source": "function rU(){if(!y_())return!1;return Z_()===null||p().failOpenVerdict}",
+        "variable": false
+      },
+      {
+        "name": "dbe",
+        "start": 42716,
+        "end": 42882,
+        "sha256": "d78c82a9a42165f414d8f27b6c2d313613e2224e78dc1c0dedb04db6a0259618",
+        "source": "function dbe(){if(!rU())return!1;let e=p();if(e.settledWithoutVerdictFor===null)return!1;let n;try{n=vGo()}catch{return!1}return e.settledWithoutVerdictFor===(n??\"\")}",
+        "variable": false
+      },
+      {
+        "name": "mPe",
+        "start": 42882,
+        "end": 43078,
+        "sha256": "b3f2b214d650f4c91e6bd19a542cb373fafae4b94de6a728e81583bbc81cad82",
+        "source": "function mPe(){let e;try{e=R3()}catch{return!0}if(e===null||e.unclassified)return!0;let n=p();if(!n.hipaaSeenUnreadable)v(Le());let i=czr();return n.hipaaSeenUnreadable||!n.hipaaEvidenceLoaded||i}",
+        "variable": false
+      },
+      {
+        "name": "gPe",
+        "start": 43078,
+        "end": 43135,
+        "sha256": "71f7d63b8dbd7990290e6e258dc0577672982d4735c2c81295111de68e8e9404",
+        "source": "function gPe(){if(!y_()||Z_()!==null)return!1;return J()}",
+        "variable": false
+      },
+      {
+        "name": "J",
+        "start": 43135,
+        "end": 43223,
+        "sha256": "c6619d8faf03bc758e96a77ecafa3f9e53c215a0156cec964497ff885a36995d",
+        "source": "function J(){let e=p().lastFetchOutcome;return e!==null&&!e.success&&e.httpStatus===404}",
+        "variable": false
+      },
+      {
+        "name": "op",
+        "start": 43223,
+        "end": 43449,
+        "sha256": "c6f8799ab495f9dc040955a31484764ed2ee892957c5f265aba4341c02dc19a7",
+        "source": "function op(e,n,i,r){if(on(e))return null;if(gPe())return NJe(n);switch(wh(e)){case\"route_missing\":return NJe(n);case\"cache_miss\":return Qoe(n);case\"latched\":return iwe(n,i);case\"org_denied\":case null:return nSt(n,i,ase(),r)}}",
+        "variable": false
+      },
+      {
+        "name": "wh",
+        "start": 43490,
+        "end": 43772,
+        "sha256": "a8822213d49d0391274240530d6a1708b311c5c544a3f6d55967a2018964ba67",
+        "source": "function wh(e){if(on(e))return null;if(iSn(e))return\"latched\";let n=Z_();if(n!==null){if((gzr.has(e)||AGo.has(e)&&!Ue(e,n))&&rU())return J()?\"route_missing\":\"cache_miss\";if(!ajt(e))return\"org_denied\";return J()?\"route_missing\":\"cache_miss\"}return gPe()?\"route_missing\":\"cache_miss\"}",
+        "variable": false
+      },
+      {
+        "name": "iSn",
+        "start": 43772,
+        "end": 43879,
+        "sha256": "9736552950c06f070bd2f44d712b55e8924a708b9211479de77a3a303f73c2cd",
+        "source": "function iSn(e){if(!M(e,utr())||M(e,ase()))return!1;if(Z_()===null)return!0;return te()?.[e]?.allowed!==!1}",
+        "variable": false
+      },
+      {
+        "name": "p7n",
+        "start": 44089,
+        "end": 44543,
+        "sha256": "8122e6ec290b11044498ba50f3b6da79ad8df539287e7e0ca9077d1c06bca4ff",
+        "source": "function p7n(){let e=ZXn();if(e===!1)return!1;if(Gk()||bKo()||!tg()||He()!==\"firstParty\"||a.ANTHROPIC_UNIX_SOCKET!==void 0||vh()!==void 0||KE()!==void 0&&!Z_n({anthropicAuthEnabled:vl(),oauthScopes:fn()?.scopes})&&!(e===!0&&Z_()!==null))return!1;if(Z_()!==null)return!0;let n=fn();return(n?.subscriptionType===\"pro\"||n?.subscriptionType===\"max\")&&n.scopes?.includes(fA)===!0&&$k()===\"store\"&&!xr()&&!Gp({skipRetrievingKeyFromApiKeyHelper:!0}).key&&!fd()}",
+        "variable": false
+      },
+      {
+        "name": "Z_",
+        "start": 45152,
+        "end": 45322,
+        "sha256": "10344cbe8f746c99378fa84318308d8fcda20b4d3cd70bda1ecace583bf370fe",
+        "source": "function Z_(){if(!y_())return null;let e=p();if(e.sessionCache)return e.sessionCache;if(e.diskAdoptionSuppressed)return null;let n=sjt();if(n)return Lht(n),n;return null}",
+        "variable": false
+      },
+      {
+        "name": "te",
+        "start": 45373,
+        "end": 45419,
+        "sha256": "8fe24e6d21096b35bb38c96a3da8207cf271a4eb2d8e9f7b2ebcf93d166d454b",
+        "source": "function te(){return Z_()?.restrictions??null}",
+        "variable": false
+      }
+    ],
+    "ports": [
+      {
+        "name": "mb",
+        "imported": "mb",
+        "module": "/$bunfs/root/chunk-nankzm0s.js"
+      },
+      {
+        "name": "fd",
+        "imported": "fd",
+        "module": "/$bunfs/root/chunk-nankzm0s.js"
+      },
+      {
+        "name": "fn",
+        "imported": "fn",
+        "module": "/$bunfs/root/chunk-nankzm0s.js"
+      },
+      {
+        "name": "fA",
+        "imported": "fA",
+        "module": "/$bunfs/root/chunk-a5b8yq96.js"
+      },
+      {
+        "name": "RM",
+        "module": "canonical-owner"
+      },
+      {
+        "name": "He",
+        "imported": "He",
+        "module": "/$bunfs/root/chunk-wz6xag6e.js"
+      },
+      {
+        "name": "Js",
+        "imported": "Js",
+        "module": "/$bunfs/root/chunk-wz6xag6e.js"
+      },
+      {
+        "name": "p",
+        "module": "canonical-owner"
+      },
+      {
+        "name": "Ge",
+        "imported": "openSync",
+        "module": "fs"
+      },
+      {
+        "name": "pe",
+        "imported": "constants",
+        "module": "fs"
+      },
+      {
+        "name": "Wl",
+        "imported": "Wl",
+        "module": "/$bunfs/root/chunk-m59srz4k.js"
+      },
+      {
+        "name": "Ye",
+        "imported": "fstatSync",
+        "module": "fs"
+      },
+      {
+        "name": "Xe",
+        "imported": "readSync",
+        "module": "fs"
+      },
+      {
+        "name": "gt",
+        "imported": "gt",
+        "module": "/$bunfs/root/chunk-1cedw4af.js"
+      },
+      {
+        "name": "W",
+        "imported": "W",
+        "module": "/$bunfs/root/chunk-c9me9cp7.js"
+      },
+      {
+        "name": "t",
+        "imported": "t",
+        "module": "/$bunfs/root/chunk-q80zaav8.js"
+      },
+      {
+        "name": "l",
+        "imported": "l",
+        "module": "/$bunfs/root/chunk-c9me9cp7.js"
+      },
+      {
+        "name": "je",
+        "imported": "closeSync",
+        "module": "fs"
+      },
+      {
+        "name": "E",
+        "imported": "E",
+        "module": "/$bunfs/root/chunk-c9me9cp7.js"
+      },
+      {
+        "name": "f",
+        "imported": "f",
+        "module": "/$bunfs/root/chunk-5qqrzb2c.js"
+      },
+      {
+        "name": "u",
+        "imported": "u",
+        "module": "/$bunfs/root/chunk-aybmj3t4.js"
+      },
+      {
+        "name": "x",
+        "imported": "x",
+        "module": "/$bunfs/root/chunk-aybmj3t4.js"
+      },
+      {
+        "name": "o",
+        "imported": "o",
+        "module": "/$bunfs/root/chunk-aybmj3t4.js"
+      },
+      {
+        "name": "B",
+        "imported": "B",
+        "module": "/$bunfs/root/chunk-aybmj3t4.js"
+      },
+      {
+        "name": "C",
+        "imported": "C",
+        "module": "/$bunfs/root/chunk-aybmj3t4.js"
+      },
+      {
+        "name": "T",
+        "imported": "T",
+        "module": "/$bunfs/root/chunk-aybmj3t4.js"
+      },
+      {
+        "name": "H",
+        "imported": "H",
+        "module": "/$bunfs/root/chunk-aybmj3t4.js"
+      },
+      {
+        "name": "Je",
+        "imported": "open",
+        "module": "fs/promises"
+      },
+      {
+        "name": "goe",
+        "module": "canonical-owner"
+      },
+      {
+        "name": "At",
+        "imported": "At",
+        "module": "/$bunfs/root/chunk-amhtwhch.js"
+      },
+      {
+        "name": "T8",
+        "imported": "T8",
+        "module": "/$bunfs/root/chunk-3pvpzycx.js"
+      },
+      {
+        "name": "utr",
+        "imported": "utr",
+        "module": "/$bunfs/root/chunk-chme4mqf.js"
+      },
+      {
+        "name": "pzr",
+        "module": "canonical-owner"
+      },
+      {
+        "name": "g3o",
+        "imported": "g3o",
+        "module": "/$bunfs/root/chunk-nankzm0s.js"
+      },
+      {
+        "name": "_3o",
+        "imported": "_3o",
+        "module": "/$bunfs/root/chunk-nankzm0s.js"
+      },
+      {
+        "name": "y3o",
+        "imported": "y3o",
+        "module": "/$bunfs/root/chunk-nankzm0s.js"
+      },
+      {
+        "name": "ft",
+        "imported": "ft",
+        "module": "/$bunfs/root/chunk-nankzm0s.js"
+      },
+      {
+        "name": "KE",
+        "imported": "KE",
+        "module": "/$bunfs/root/chunk-nankzm0s.js"
+      },
+      {
+        "name": "e6t",
+        "imported": "e6t",
+        "module": "/$bunfs/root/chunk-nankzm0s.js"
+      },
+      {
+        "name": "R3",
+        "module": "canonical-owner"
+      },
+      {
+        "name": "h3o",
+        "imported": "h3o",
+        "module": "/$bunfs/root/chunk-nankzm0s.js"
+      },
+      {
+        "name": "An",
+        "imported": "join",
+        "module": "path"
+      },
+      {
+        "name": "we",
+        "imported": "we",
+        "module": "/$bunfs/root/chunk-brnn4zwp.js"
+      },
+      {
+        "name": "Ut",
+        "imported": "Ut",
+        "module": "/$bunfs/root/chunk-bn3p37gv.js"
+      },
+      {
+        "name": "hoe",
+        "module": "canonical-owner"
+      },
+      {
+        "name": "F",
+        "imported": "F",
+        "module": "/$bunfs/root/chunk-ky674g9x.js"
+      },
+      {
+        "name": "Mwn",
+        "imported": "Mwn",
+        "module": "/$bunfs/root/chunk-nankzm0s.js"
+      },
+      {
+        "name": "Pn",
+        "imported": "readFileSync",
+        "module": "fs"
+      },
+      {
+        "name": "Dwe",
+        "imported": "Dwe",
+        "module": "/$bunfs/root/chunk-hrhfcbdv.js"
+      },
+      {
+        "name": "Uht",
+        "module": "canonical-owner"
+      },
+      {
+        "name": "ijt",
+        "module": "canonical-owner"
+      },
+      {
+        "name": "H6e",
+        "imported": "H6e",
+        "module": "/$bunfs/root/chunk-c9me9cp7.js"
+      },
+      {
+        "name": "NJe",
+        "imported": "NJe",
+        "module": "/$bunfs/root/chunk-a56phknn.js"
+      },
+      {
+        "name": "Qoe",
+        "imported": "Qoe",
+        "module": "/$bunfs/root/chunk-a56phknn.js"
+      },
+      {
+        "name": "iwe",
+        "imported": "iwe",
+        "module": "/$bunfs/root/chunk-a56phknn.js"
+      },
+      {
+        "name": "nSt",
+        "imported": "nSt",
+        "module": "/$bunfs/root/chunk-a56phknn.js"
+      },
+      {
+        "name": "ase",
+        "imported": "ase",
+        "module": "/$bunfs/root/chunk-chme4mqf.js"
+      },
+      {
+        "name": "Gk",
+        "imported": "Gk",
+        "module": "/$bunfs/root/chunk-xep95vq1.js"
+      },
+      {
+        "name": "bKo",
+        "imported": "bKo",
+        "module": "/$bunfs/root/chunk-xep95vq1.js"
+      },
+      {
+        "name": "tg",
+        "imported": "tg",
+        "module": "/$bunfs/root/chunk-wz6xag6e.js"
+      },
+      {
+        "name": "a",
+        "imported": "a",
+        "module": "/$bunfs/root/chunk-mbfze585.js"
+      },
+      {
+        "name": "vh",
+        "imported": "vh",
+        "module": "/$bunfs/root/chunk-nankzm0s.js"
+      },
+      {
+        "name": "vl",
+        "imported": "vl",
+        "module": "/$bunfs/root/chunk-nankzm0s.js"
+      },
+      {
+        "name": "$k",
+        "imported": "$k",
+        "module": "/$bunfs/root/chunk-nankzm0s.js"
+      },
+      {
+        "name": "xr",
+        "imported": "xr",
+        "module": "/$bunfs/root/chunk-brnn4zwp.js"
+      },
+      {
+        "name": "Gp",
+        "imported": "Gp",
+        "module": "/$bunfs/root/chunk-nankzm0s.js"
+      },
+      {
+        "name": "Xb",
+        "imported": "Xb",
+        "module": "/$bunfs/root/chunk-nankzm0s.js"
+      },
+      {
+        "name": "k5o",
+        "imported": "k5o",
+        "module": "/$bunfs/root/chunk-chme4mqf.js"
+      },
+      {
+        "name": "Ej",
+        "imported": "Ej",
+        "module": "/$bunfs/root/chunk-nankzm0s.js"
+      },
+      {
+        "name": "tn",
+        "imported": "tn",
+        "module": "/$bunfs/root/chunk-yptq0vrd.js"
+      },
+      {
+        "name": "Qm",
+        "imported": "Qm",
+        "module": "/$bunfs/root/chunk-nankzm0s.js"
+      },
+      {
+        "name": "Ze",
+        "imported": "unlink",
+        "module": "fs/promises"
+      },
+      {
+        "name": "Tn",
+        "imported": "Tn",
+        "module": "/$bunfs/root/chunk-31g8tfvj.js"
+      },
+      {
+        "name": "_",
+        "imported": "_",
+        "module": "/$bunfs/root/chunk-q80zaav8.js"
+      }
+    ]
+  },
+  "response": {
+    "rows": [
+      {
+        "name": "sn",
+        "start": 7802,
+        "end": 7840,
+        "sha256": "634e85e6ff6a5b8ee5a39451f50e52263eb58ca11125403cad904e3da0a4237b",
+        "source": "sn=/\\p{Default_Ignorable_Code_Point}/u",
+        "variable": true
+      },
+      {
+        "name": "an",
+        "start": 7841,
+        "end": 7853,
+        "sha256": "3f4073d30e0331290b3a979ffea05e51fc9322d62462635caabd997fa30575d2",
+        "source": "an=/\\p{Cf}/u",
+        "variable": true
+      },
+      {
+        "name": "D",
+        "start": 7952,
+        "end": 8073,
+        "sha256": "a99abd74f69e87acad5f1d4a706abbeb24e9e76a61d33a1e3ce189a3a9c49562",
+        "source": "function D(e,n){return sn.test(e)||e===\"\\u2028\"||e===\"\\u2029\"||e===\"\\u2800\"||n>=55296&&n<=57343||n===1109742||an.test(e)}",
+        "variable": false
+      },
+      {
+        "name": "Y9",
+        "start": 8073,
+        "end": 8149,
+        "sha256": "cd8e0206aa6d61103fca011ec6dff9df63d24486f3864cdd50a60589c36438f8",
+        "source": "function Y9(e){for(let n of e)if(D(n,n.codePointAt(0)??0))return!0;return!1}",
+        "variable": false
+      },
+      {
+        "name": "ABe",
+        "start": 16392,
+        "end": 16460,
+        "sha256": "0678a3775c6da8f659b47ae9a4d7eef14437d8f39b684290f24bdb4df86116b4",
+        "source": "function ABe(e){return/[\\u0000-\\u001f\\u007f-\\u009f]/.test(e)||Y9(e)}",
+        "variable": false
+      },
+      {
+        "name": "Y",
+        "start": 16460,
+        "end": 16552,
+        "sha256": "b325d3fda2d86c111672ac492000820fa43e836e835ece37bf633ce7647ff75f",
+        "source": "function Y(e){let n=re(hD(e,\"\").toLowerCase(),64).trim();return/^[a-z0-9_-]+$/.test(n)?n:\"\"}",
+        "variable": false
+      },
+      {
+        "name": "KXe",
+        "start": 16556,
+        "end": 16562,
+        "sha256": "d48012d29248093dd76134fce2039c6c6f4e898eb87abb13d75abd2c394ae1c0",
+        "source": "KXe=16",
+        "variable": true
+      },
+      {
+        "name": "GXn",
+        "start": 16563,
+        "end": 16849,
+        "sha256": "00cca1b7706b72df926f5d878e1801f8b5926252c678505105ad500e311e93e8",
+        "source": "function GXn(e){let n=typeof e===\"object\"&&e!==null&&\"compliance_taints\"in e?e.compliance_taints:void 0;if(!Array.isArray(n))return 0;let i=G(n,(s)=>typeof s!==\"string\"||Y(s)===\"\"),r=L(n.filter((s)=>typeof s===\"string\").map(Y).filter((s)=>s.length>0));return i+Math.max(0,r.length-KXe)}",
+        "variable": false
+      },
+      {
+        "name": "Ee",
+        "start": 16853,
+        "end": 17512,
+        "sha256": "43b96e54a28187d39992ef42803dab3cda66e3a0d150e77f3f4cf45e6decf659",
+        "source": "Ee=f(()=>u({restrictions:de(o(),u({allowed:H()})),compliance_taints:T(se()).default([]).transform((e,n)=>{let i=L(e.filter((r)=>typeof r===\"string\").map(Y).filter((r)=>r.length>0)).slice(0,KXe);if(e.length>0&&i.length===0)n.addIssue({code:\"custom\",message:\"compliance_taints had entries but none were well-formed regime names\"});return i}),monitoring_notice:u({text:o().max(500).transform((e)=>hD(e,\"\",{keepEmojiJoiners:!0})),url:o().max(2048).url().startsWith(\"https://\").refine((e)=>!ABe(e)).nullish().catch(null)}).nullable().default(null).catch(null),defaults:de(o(),se()).default({}).catch({}),core_skills:T(o().max(128)).max(256).optional().catch([])}))",
+        "variable": true
+      },
+      {
+        "name": "Ne",
+        "start": 33538,
+        "end": 33552,
+        "sha256": "1accf57d56b1eaa4aad49f2b0c98374d2dec46efbaa3a48b0af6d709e07b3ad4",
+        "source": "Ne=new WeakMap",
+        "variable": true
+      },
+      {
+        "name": "ijt",
+        "start": 33553,
+        "end": 33632,
+        "sha256": "31e586d3fbe428061393b3c1abca792bd3b6f86d982f6b0e4e70d24a0ca7e1af",
+        "source": "function ijt(e){let n=Ee().safeParse(e);if(n.success)Ne.set(n.data,e);return n}",
+        "variable": false
+      },
+      {
+        "name": "Uht",
+        "start": 33632,
+        "end": 33668,
+        "sha256": "758b6a37d31bf590e4b74d5f3b7fe19140eab19879cfdf8b9eb3f20f89d8409c",
+        "source": "function Uht(e){return Ne.get(e)??e}",
+        "variable": false
+      }
+    ],
+    "ports": [
+      {
+        "name": "G",
+        "imported": "G",
+        "module": "/$bunfs/root/chunk-h3rrxdgy.js"
+      },
+      {
+        "name": "L",
+        "imported": "L",
+        "module": "/$bunfs/root/chunk-h3rrxdgy.js"
+      },
+      {
+        "name": "re",
+        "imported": "re",
+        "module": "/$bunfs/root/chunk-eske5nfz.js"
+      },
+      {
+        "name": "hD",
+        "imported": "hD",
+        "module": "/$bunfs/root/chunk-6re9qmwv.js"
+      },
+      {
+        "name": "f",
+        "imported": "f",
+        "module": "/$bunfs/root/chunk-5qqrzb2c.js"
+      },
+      {
+        "name": "u",
+        "imported": "u",
+        "module": "/$bunfs/root/chunk-aybmj3t4.js"
+      },
+      {
+        "name": "de",
+        "imported": "de",
+        "module": "/$bunfs/root/chunk-aybmj3t4.js"
+      },
+      {
+        "name": "o",
+        "imported": "o",
+        "module": "/$bunfs/root/chunk-aybmj3t4.js"
+      },
+      {
+        "name": "H",
+        "imported": "H",
+        "module": "/$bunfs/root/chunk-aybmj3t4.js"
+      },
+      {
+        "name": "T",
+        "imported": "T",
+        "module": "/$bunfs/root/chunk-aybmj3t4.js"
+      },
+      {
+        "name": "se",
+        "imported": "se",
+        "module": "/$bunfs/root/chunk-aybmj3t4.js"
+      }
+    ]
+  },
+  "checksum": {
+    "module": "chunk-hrhfcbdv.js",
+    "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+    "rows": [
+      {
+        "name": "aO",
+        "start": 315924,
+        "end": 316086,
+        "sha256": "b957f56d05f9f4c8c2d4aab0972270743cb95869e23d207950592301e0030219"
+      },
+      {
+        "name": "Dwe",
+        "start": 316086,
+        "end": 316176,
+        "sha256": "4bf2140105cc2cd9083ce266497232cad6c5eb2893e21ff67589deb50e6daa13"
+      }
+    ]
+  },
+  "fetchKey": {
+    "module": "chunk-b7yc4zs1.js",
+    "moduleSha256": "e8dbbc612181438bc16dcd53cbd6b4dc84da107add9a4f8e24f9881fa529ff20",
+    "start": 44728,
+    "end": 44813,
+    "sha256": "a2f0d34413da522ccbce7c7a06de236cc550fb2f25f38c0d35f0414716ea0e3a"
+  },
+  "booleanSource": {
+    "module": "chunk-nankzm0s.js",
+    "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+    "start": 143781,
+    "end": 143943,
+    "sha256": "515b98fa4c57b37137102465b5132c3bf4fb899e07e021b8595a205735848ad0"
+  }
+}

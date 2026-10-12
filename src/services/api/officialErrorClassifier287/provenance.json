@@ -1,0 +1,1415 @@
+{
+  "evidenceOnly": [
+    {
+      "module": "chunk-nankzm0s.js",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "name": "fd",
+      "start": 615724,
+      "end": 615929,
+      "sha256": "988bb14b750a2ea2d36c5a5073775661ee0d2cd52a02b1f892f46ebfd76ba688",
+      "source": "function fd(e={}){if(!n5o())return!1;if(MQn(e))return!1;let n=e.skipApiKeyHelper?void 0:Jts.of(U().host);if(ew()===\"profile-implicit\"){let r=fn();if(BWt(r)&&MGt()){if(n)xH(n);return!1}}if(n)PH(n);return!0}"
+    },
+    {
+      "module": "chunk-nankzm0s.js",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "name": "MQn",
+      "start": 615553,
+      "end": 615724,
+      "sha256": "c3b034ccf8d2db12387ab7902ab4217895fd8b08d866f3ea6eaf05e1028aed2a",
+      "source": "function MQn(e={}){return Boolean(f8()||a.ANTHROPIC_UNIX_SOCKET||pr()||Jl()||a.ANTHROPIC_AUTH_TOKEN||a.CLAUDE_CODE_OAUTH_TOKEN||sO()||(e.skipApiKeyHelper?!1:vh())||!Vn())}"
+    },
+    {
+      "module": "chunk-nankzm0s.js",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "name": "nZ",
+      "start": 620426,
+      "end": 620465,
+      "sha256": "838eee4f6ea5ef5fb6f67d1627a5f32a40803937cb90dba3483827bc5cadefb9",
+      "source": "function nZ(){let{key:e}=mb();return e}"
+    },
+    {
+      "module": "chunk-nankzm0s.js",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "name": "r_",
+      "start": 260763,
+      "end": 262147,
+      "sha256": "0dac353c88dfd5bf044c772a0877c478ad0ef853696401d0e6103f4ccdeef747",
+      "source": "class r_{runtimeState={status:\"active\"};hasLoggedCooldownExpiry=!1;creditsExhaustedNotifiedThisTurn=!1;orgStatus={status:\"pending\"};lastPrefetchAt=0;inflightPrefetch=null;cooldownTriggered=Me();cooldownExpired=Me();overageRejection=Me();orgFastModeChange=Me();fastRejectedFallbackModels=new Set;everFastRejectedModels=new Set;fallbackModelFastRejected=Me();fastRejectedFallbackModelsChanged=Me();reset(){this.runtimeState={status:\"active\"},this.hasLoggedCooldownExpiry=!1,this.creditsExhaustedNotifiedThisTurn=!1,this.orgStatus={status:\"pending\"},this.fastRejectedFallbackModels.clear(),this.everFastRejectedModels.clear(),this.lastPrefetchAt=0,this.inflightPrefetch=null}enterCooldown(e,n){this.runtimeState={status:\"cooldown\",resetAt:e,reason:n},this.hasLoggedCooldownExpiry=!1}clearCooldown(){this.runtimeState={status:\"active\"}}markCooldownExpiryLogged(){this.hasLoggedCooldownExpiry=!0}replaceOrgStatus(e){let n=this.orgStatus;return this.orgStatus=e,n}claimCreditsExhaustedNotice(){if(this.creditsExhaustedNotifiedThisTurn)return!1;return this.creditsExhaustedNotifiedThisTurn=!0,!0}rearmCreditsExhaustedNotice(){this.creditsExhaustedNotifiedThisTurn=!1}beginPrefetchWindow(e,n){if(e-this.lastPrefetchAt<n)return!1;return this.lastPrefetchAt=e,!0}trackInflightPrefetch(e){this.inflightPrefetch=e}clearInflightPrefetch(e){if(this.inflightPrefetch===e)this.inflightPrefetch=null}}"
+    },
+    {
+      "module": "chunk-nankzm0s.js",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "name": "Xl",
+      "start": 262151,
+      "end": 262179,
+      "sha256": "98d5c7241d9db3475543f0919aa0b03fecbb6ad18318d2e6cf020b9aab6c95de",
+      "source": "Xl=ct(new r_,(e)=>e.reset())"
+    },
+    {
+      "module": "chunk-nankzm0s.js",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "name": "mVo",
+      "start": 263211,
+      "end": 263527,
+      "sha256": "6481270d31791dd375fcc035a4354d94e78d1aa97a56b32fdf5ef1070c2a5b10",
+      "source": "function mVo(e){let n=Jm(e);if(Xl.everFastRejectedModels.add(n),Xl.fastRejectedFallbackModels.has(n))return;Xl.fastRejectedFallbackModels.add(n),t(`Fast mode rejected for fallback model ${e}; using standard speed for it this session`),Xl.fallbackModelFastRejected.emit(e),Xl.fastRejectedFallbackModelsChanged.emit()}"
+    },
+    {
+      "module": "chunk-nankzm0s.js",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "name": "$7e",
+      "start": 263527,
+      "end": 263673,
+      "sha256": "81d528d36a6464673d3f5e86bbf770f7771d1da6157c37d4b477c4bf63c13b23",
+      "source": "function $7e(){if(Xl.fastRejectedFallbackModels.size===0)return;Xl.fastRejectedFallbackModels.clear(),Xl.fastRejectedFallbackModelsChanged.emit()}"
+    },
+    {
+      "module": "chunk-nankzm0s.js",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "name": "zPe",
+      "start": 263673,
+      "end": 263746,
+      "sha256": "cab1844028753853f1a9791393df4774d4e7dc14060040f80d33e0423eaa24b5",
+      "source": "function zPe(e){return Xl.fastRejectedFallbackModelsChanged.subscribe(e)}"
+    },
+    {
+      "module": "chunk-nankzm0s.js",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "name": "sWt",
+      "start": 263746,
+      "end": 263842,
+      "sha256": "9143f49f179156f8306940017199182d363d21e5b149096ebd84019b3eebd086",
+      "source": "function sWt(e){try{return Xl.fastRejectedFallbackModels.has(Jm(e))}catch(n){return d(Z(n)),!1}}"
+    },
+    {
+      "module": "chunk-c9me9cp7.js",
+      "moduleSha256": "db81856ee883c31a0be18c305014a0d82d3bd698a459223b9de754b934b084ae",
+      "name": "xt",
+      "start": 1276,
+      "end": 2162,
+      "sha256": "92935efd7d952c54f624abf22425158fd06f9c3d443bf7ba0bb7b017075d2c0c",
+      "source": "class xt extends $n{constructor(n,e,t,r,o){super(`${xt.makeMessage(n,e,t)}`);this.status=n,this.headers=r,this.requestID=r?.get(\"request-id\"),this.workspaceID=r?.get(\"anthropic-workspace-id\"),this.error=e,this.type=o??null}static makeMessage(n,e,t){let r=e?.message?typeof e.message===\"string\"?e.message:JSON.stringify(e.message):e?JSON.stringify(e):t;if(n&&r)return`${n} ${r}`;if(n)return`${n} status code (no body)`;if(r)return r;return\"(no status code or body)\"}static generate(n,e,t,r){if(!n||!r)return new Jd({message:t,cause:sEt(e)});let o=e,i=o?.error?.type;if(n===400)return new iEt(n,o,t,r,i);if(n===401)return new rHe(n,o,t,r,i);if(n===403)return new aEt(n,o,t,r,i);if(n===404)return new oHe(n,o,t,r,i);if(n===409)return new lEt(n,o,t,r,i);if(n===422)return new cEt(n,o,t,r,i);if(n===429)return new dEt(n,o,t,r,i);if(n>=500)return new uEt(n,o,t,r,i);return new xt(n,o,t,r,i)}}"
+    },
+    {
+      "module": "chunk-c9me9cp7.js",
+      "moduleSha256": "db81856ee883c31a0be18c305014a0d82d3bd698a459223b9de754b934b084ae",
+      "name": "Dd",
+      "start": 2162,
+      "end": 2265,
+      "sha256": "a36e008d3c5cd6ebb577e1d51ffa9cd789c749964b4c100fb13311bb84c18fd9",
+      "source": "class Dd extends xt{constructor({message:n}={}){super(void 0,void 0,n||\"Request was aborted.\",void 0)}}"
+    },
+    {
+      "module": "chunk-wz6xag6e.js",
+      "moduleSha256": "24c4b2f916cc12257edf0008fa8d98838ac2f5cb0ae35bdc3b5447f963347d58",
+      "name": "tg",
+      "start": 27665,
+      "end": 27744,
+      "sha256": "a2cbdf2e135e6fba5ebeaab884f9f129c5f1849719457cab5a8ef5f44272613d",
+      "source": "function tg(){let e=process.env.ANTHROPIC_BASE_URL;if(!e)return!0;return ry(e)}"
+    },
+    {
+      "module": "chunk-wz6xag6e.js",
+      "moduleSha256": "24c4b2f916cc12257edf0008fa8d98838ac2f5cb0ae35bdc3b5447f963347d58",
+      "name": "ry",
+      "start": 27910,
+      "end": 28007,
+      "sha256": "9a06a899998d707d66ae1154cdf250c2691a87d05c2a2fb8bd782958147ef057",
+      "source": "function ry(e){try{let t=new URL(e).host;return[\"api.anthropic.com\"].includes(t)}catch{return!1}}"
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "ljt.abortCompletion",
+      "start": 2166571,
+      "end": 2166661,
+      "sha256": "213cc84455b13f60acfa5904e6badc9309f31adcb8097b1150ece394ac2b7899",
+      "source": "if(ji instanceof Dd){Jp?.settle({kind:\"aborted\"},vs?null:Zi,vs?void 0:ef?.id),Pb();return}"
+    }
+  ],
+  "existingOwners": {
+    "xt": "@anthropic-ai/sdk/error APIError and APIUserAbortError; no same-name class substitutes",
+    "BH": "nZ -> getAnthropicApiKey; fd -> hasWorkloadIdentityConfiguration -> original existing Wc owner/selectorState, not isClaudeAISubscriber",
+    "ko": "getExecutionSession287().host.displayUpdatesProbeFailures; exact BFt/HFt source",
+    "tokens": "getModelBetaProducer287().r4r -> original beta token registry; sxe and dxe use same singleton tokens",
+    "authBoundary": "credential selection/client frozen; no source changes; WIF gate remains original existing 286 owner, broad 287 profile lifecycle parity not newly claimed"
+  },
+  "version": "2.1.287",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16 code units; end-exclusive",
+  "declarations": [
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "AUt",
+      "start": 2017168,
+      "end": 2017211,
+      "sha256": "6518142d69a01824a8aac1197c6f94a201517af434c93941f2bbad451a7cb455",
+      "source": "function AUt(e){return xUt.some((n)=>n(e))}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "QDe",
+      "start": 2030049,
+      "end": 2030259,
+      "sha256": "de30cf53df2f8d399738b6f1da7bc003ca93444ab36775e9c5689d6e06483de8",
+      "source": "function QDe(e,n){if(!(e instanceof xt)||e.status!==400)return!1;try{let r=e.message?.match(/'([^']+)' does not support the `speed` parameter/)?.[1];return r!==void 0&&Jm(r)===Jm(n)}catch(r){return d(Z(r)),!1}}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "dxe",
+      "start": 1051844,
+      "end": 1051863,
+      "sha256": "d325ccfd9a104dc1a00a55f93abfecfa802a9f2b5da61c1ec539e9c7cef8981b",
+      "source": "dxe=[...sxe.keys()]",
+      "variable": true
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "MVe",
+      "start": 2080690,
+      "end": 2080765,
+      "sha256": "a4bf44b8530ac6734c59cbc3fe1ba338926a6b853b8839f1a43af1dfda699a3a",
+      "source": "MVe=(Gn)=>QDe(Gn,z.model)&&(!!z.modelIsRefusalFallbackTarget||QJn(z.model))",
+      "variable": true
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "bC",
+      "start": 2080766,
+      "end": 2080791,
+      "sha256": "b3bd14655907c0ead7af5114bcd8937a5771587c00d9663cafd92b9204101224",
+      "source": "bC=(Gn)=>AUt(Gn)||MVe(Gn)",
+      "variable": true
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "XL",
+      "start": 2100266,
+      "end": 2100501,
+      "sha256": "cdc0430a1362e5522338c83fb6a0e3719c424b665914c825b61edef8e2961579",
+      "source": "XL=(Gn)=>Lut(z.model,Gn)===\"refused\"||Gee(Gn)||exe(Gn)||txe(Gn)||gO(Gn)||M$(Gn)||Uee(Gn)!==void 0||cxe(Gn,sT(dxe)).length>0||nxe(Gn)||oxe(Gn)||rxe(Gn)||Qee(Gn)!==null||qT(Gn)||zT(Gn)||Ukt(Gn)||Hkt(Gn)||hxe(Gn)||Xee(Gn)||yxe(Gn)||I$(Gn)",
+      "variable": true
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "OVe",
+      "start": 2081316,
+      "end": 2081734,
+      "sha256": "0d27284e1d17641a74656e04a995021899ca8807764b710f4d4694b123f33602",
+      "source": "OVe=(Gn)=>{try{if(!(Gn instanceof xt)||Gn.status!==400&&Gn.status!==422)return;if(GP===\"retrying\"){if(GP=\"spent\",!bC(Gn))HFt();return}if(GP!==\"idle\"||!Nb.includes(nwe.header)||Gn.type===\"billing_error\"||bC(Gn)||XL(Gn)||!BFt()||He()===\"firstParty\"&&a.ANTHROPIC_UNIX_SOCKET===void 0&&tg()&&!BH())return;return Ze=Ze.filter((Fo)=>Fo!==nwe),GP=\"retrying\",\"retry:thinking-display-updates-unclaimed\"}catch(Fo){d(Fo);return}}",
+      "variable": true
+    },
+    {
+      "module": "chunk-nankzm0s.js",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "name": "BH",
+      "start": 615929,
+      "end": 615968,
+      "sha256": "3c13edb83753a916eaf74d39ef1803b1430bae78c85dffd0acb69bfc8dab7b1c",
+      "source": "function BH(){return nZ()===null&&fd()}",
+      "variable": false
+    },
+    {
+      "module": "chunk-nankzm0s.js",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "name": "Jm",
+      "start": 363916,
+      "end": 363962,
+      "sha256": "cb3a5f07e4eca1361215319c7a448cafc7466e6bc44558a418db9536b3fd3ebf",
+      "source": "function Jm(e){return Ct(Be(e,{identity:!0}))}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "xUt",
+      "start": 2017095,
+      "end": 2017167,
+      "sha256": "2a78d66d9ff7a0b4adc6e6cb04c3c0ee5ec3b992546e9e3664555250c3b04b61",
+      "source": "xUt=[(e)=>yO(e)&&!Gkt(e),BR,uO,Tq,jee,lae,Cq,fje,F5o,P$,Fee,R$,zT,gO,M$]",
+      "variable": true
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "sxe",
+      "start": 1051711,
+      "end": 1051843,
+      "sha256": "ea3900f103ca92a1a4a1237726858352684f7da64c42b5aa4069e87ad7e96778",
+      "source": "sxe=new Map([[Upe,null],[O2e,(e)=>e.includes(\"evict_on_complete\")&&e.includes(\"beta\")],[nwe,(e)=>Fkt.test(e)],...IF?[[IF,null]]:[]])",
+      "variable": true
+    },
+    {
+      "module": "chunk-09m4fzsj.js",
+      "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+      "name": "Lut",
+      "start": 731534,
+      "end": 731632,
+      "sha256": "0b0ccc9ee3150b61f43701f0b2bc91abab97fe1a32c06aecb0b58f70316e4551",
+      "source": "function Lut(e,n){let r=cc(e);return r===\"bedrock\"||r===\"vertex\"||r===\"mantle\"?Cut(r,n):\"unknown\"}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "Gee",
+      "start": 1048907,
+      "end": 1048985,
+      "sha256": "f2f17e520522dd438dd3adedb52ab28044d058e4bdb540e765ff38fdb6d71bf9",
+      "source": "function Gee(e){return!!zM&&e instanceof xt&&e.status===400&&GS(e.message,zM)}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "exe",
+      "start": 1049687,
+      "end": 1049877,
+      "sha256": "1029af928d7961c193cca12d46049d289864af678c78cd4b5a587a1335e22363",
+      "source": "function exe(e){return e instanceof xt&&e.status===400&&(e.message.includes(\"Advisor tool result content could not be processed\")||e.message.includes(\"found in advisor_tool_result blocks\"))}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "txe",
+      "start": 1050501,
+      "end": 1050774,
+      "sha256": "eeea16c22f3a60a83bd2fa8714660e0b273f959ed39ee0661b317667d2f961ea",
+      "source": "function txe(e){if(!(e instanceof xt))return!1;if(e.status===400)return e.message.includes(\"the advisor tool is not available\")||e.message.includes(\"cannot be used as an advisor\")||/tools\\.\\d+\\.model: /.test(e.message)||QRe(e.message);return e.status===422&&QRe(e.message)}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "gO",
+      "start": 1050154,
+      "end": 1050273,
+      "sha256": "183393decfa911f1d2d936e033e4a0d25ca0b2dd3bbb9c2df615fa6ecd3448ce",
+      "source": "function gO(e){if(!(e instanceof xt)||e.status!==400)return!1;let n=Lkt(e.message);return h9n.some((r)=>n.includes(r))}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "M$",
+      "start": 1050273,
+      "end": 1050357,
+      "sha256": "b78d5812d0144be179257b52193024d58356b86535262d33bd92cd2ddbcd8378",
+      "source": "function M$(e){return e instanceof xt&&e.status===400&&Lkt(e.message).includes(k9n)}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "Uee",
+      "start": 1040417,
+      "end": 1040499,
+      "sha256": "1f435bed361dffda3cac29fe51dc5b8e0d95f299bfc15390f72f61fc17bfa930",
+      "source": "function Uee(e){if(!(e instanceof xt)||e.status!==400)return;return A3(e.message)}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "cxe",
+      "start": 1051864,
+      "end": 1052038,
+      "sha256": "d8b885ae75e857a395a73fa6de0d408851c095a436ea2f19d7515a298257e681",
+      "source": "function cxe(e,n){if(!(e instanceof xt)||e.status!==400||yO(e)||qT(e))return[];let{message:r}=e;return dxe.filter((s)=>n.includes(s.header)&&(GS(r,s)||sxe.get(s)?.(r)===!0))}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "nxe",
+      "start": 1050991,
+      "end": 1051064,
+      "sha256": "e67448f7912d88001dad1994b9f1abdb383973879bd8fef39a6b1f1bc4465080",
+      "source": "function nxe(e){return e instanceof xt&&e.status===400&&GS(e.message,Ix)}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "oxe",
+      "start": 1051064,
+      "end": 1051138,
+      "sha256": "dcd3706189b91ddccebdf026da66daca909453ee217b692437a137fb59be2122",
+      "source": "function oxe(e){return e instanceof xt&&e.status===400&&GS(e.message,H2e)}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "rxe",
+      "start": 1051280,
+      "end": 1051495,
+      "sha256": "598f201201dab1823983b3af4a7fc6b274e82b0025f5dcf5886482ad06ade25d",
+      "source": "function rxe(e){return e instanceof xt&&e.status===400&&!qT(e)&&!yO(e)&&(GS(e.message,HF)||/thinking\\.(adaptive|enabled)\\.block_binding(\\.prefix_mismatch_behavior)?: Extra inputs are not permitted/.test(e.message))}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "Qee",
+      "start": 1057948,
+      "end": 1058177,
+      "sha256": "33b512d652b763274a0cb433298f955a6c2c9f75257dc034b899d93ce82f4987",
+      "source": "function Qee(e){if(!(e instanceof xt)||e.status!==400)return null;let n=nMr(e.message);if(n)return n;if(kP(e.message,\"thinking_type:enabled\"))return\"enabled\";if(kP(e.message,\"thinking_type:adaptive\"))return\"adaptive\";return null}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "qT",
+      "start": 1057828,
+      "end": 1057948,
+      "sha256": "261bc36f18d5df5141fa7c8cba63f35953736b33233e8dca1088efb4268c1fd7",
+      "source": "function qT(e){if(!(e instanceof xt)||e.status!==400)return!1;return tMr(e.message)||kP(e.message,\"thinking_signature\")}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "zT",
+      "start": 1054261,
+      "end": 1054420,
+      "sha256": "3eba90609e6744cf2cd7cb922dc55b9eaff155cca943c2cf85f97700006b6497",
+      "source": "function zT(e){if(!(e instanceof xt)||e.status!==400)return!1;return sMr(e.message)||kP(e.message,\"mid_conv_system\")||kP(e.message,`beta_header:${QE.header}`)}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "Ukt",
+      "start": 1054514,
+      "end": 1054553,
+      "sha256": "b7936091d3f4d048e8863f8114a62e9f3d2417a5868004fb7034d8ce96fb0389",
+      "source": "function Ukt(e){return Yee(e)!==void 0}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "Hkt",
+      "start": 1054553,
+      "end": 1054592,
+      "sha256": "5cb47d89a215cb437439dd926d8928fb39f9012103baffee49e5570fc11d2bfc",
+      "source": "function Hkt(e){return Vee(e)!==void 0}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "hxe",
+      "start": 1055795,
+      "end": 1055917,
+      "sha256": "70da4ab8ff8cf20110a99420e78bec57d38acb49d480c5c69a8533053d57557a",
+      "source": "function hxe(e){if(!(e instanceof xt)||e.status!==400)return!1;return BVn(e.message)||kP(e.message,\"cache_control_field\")}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "Xee",
+      "start": 1055917,
+      "end": 1056228,
+      "sha256": "2c5e049553864ea75627feda28225ca96793820ff7622fa9eba2f9ca86eecfb0",
+      "source": "function Xee(e){if(!(e instanceof xt)||e.status!==400)return!1;if(qkt(e)!==null&&!/messages\\.\\d+:\\s*output_config\\.effort/.test(e.message))return!1;if(Kee(e)!==null)return!1;let n=e.message;if(GS(n,OF))return!0;return n.includes(\"output_config\")&&!n.includes(\"output_config.timing\")||kP(n,\"effort_unsupported\")}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "yxe",
+      "start": 1056438,
+      "end": 1056557,
+      "sha256": "0de0663322a01e0e8541ae9d2c75186e6b4ef83094c08d3e07d66f69e982972e",
+      "source": "function yxe(e){return e instanceof xt&&e.status===400&&(GS(e.message,Pj)||e.message.includes(\"output_config.timing\"))}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "I$",
+      "start": 1056557,
+      "end": 1056895,
+      "sha256": "0dcade042fd37ab9bbb8b96f7c87d3c0c523d442ebdbed0b5f51b45be3a3c1a7",
+      "source": "function I$(e){if(!(e instanceof xt)||e.status!==400)return!1;if(Qee(e)!==null)return!1;let n=e.message.toLowerCase();if(n.includes(\"effort parameter\")&&n.includes(\"not support\"))return!0;if(n.includes(\"output_config\")&&n.includes(\"effort\")&&n.includes(\"extra inputs are not permitted\"))return!0;return kP(e.message,\"effort_unsupported\")}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "HFt",
+      "start": 1922836,
+      "end": 1922929,
+      "sha256": "36b5c517edaf507c0211b8199cb9d7f02b1cf7b73e603504785874e06682128a",
+      "source": "function HFt(){let e=ko();e.displayUpdatesProbeFailures=(e.displayUpdatesProbeFailures??0)+1}",
+      "variable": false
+    },
+    {
+      "module": "chunk-xep95vq1.js",
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "name": "nwe",
+      "start": 160212,
+      "end": 160283,
+      "sha256": "45c9437744ba2a4ceca4aa9b04fc09eeab00c86514f5730abf63305dbbac37ca",
+      "source": "nwe=R(\"thinking_display_updates\",\"thinking-display-updates-2026-08-18\")",
+      "variable": true
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "BFt",
+      "start": 1922775,
+      "end": 1922836,
+      "sha256": "074ec8084127d8dd605ab75bbbd55ead08d9791096d7738ed3214dd3a656f479",
+      "source": "function BFt(){return(ko().displayUpdatesProbeFailures??0)<2}",
+      "variable": false
+    },
+    {
+      "module": "chunk-aer2x4hk.js",
+      "moduleSha256": "2329bc1120dc1b6eac6b5d5d0adf1f4af2aacebcc960b4716b5a50a1ca5a9a02",
+      "name": "Ct",
+      "start": 1338,
+      "end": 1385,
+      "sha256": "4d004cd2974adb8190cb452c8cad994ce692a3683f35f0ad16e5b39ebc8aadc8",
+      "source": "function Ct(e){return e.replace(/\\[1m\\]$/i,\"\")}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "yO",
+      "start": 1056895,
+      "end": 1057090,
+      "sha256": "7833e4654d08bdeb2e393459d4c8b51b0bd02a38c935f3f045dbb0b42dd3acf5",
+      "source": "function yO(e){if(!(e instanceof xt)||e.status!==400)return!1;let n=e.message.toLowerCase();return n.includes(\"not created in this conversation\")||n.includes(\"bound to a different conversation\")}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "Gkt",
+      "start": 1057151,
+      "end": 1057251,
+      "sha256": "e5971b8bfcf11e1ca44654b31f04cf2442ab90bdf8be44cabce46b5facda7b29",
+      "source": "function Gkt(e){return e instanceof xt&&\"prefixLockHealDeclined\"in e&&e.prefixLockHealDeclined===!0}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "BR",
+      "start": 1040629,
+      "end": 1040733,
+      "sha256": "e7a13abea5021d49c594021b797db9521ddd4d34a1b8cd4076e39c60243e7d4a",
+      "source": "function BR(e){if(!(e instanceof Error))return!1;return $Vn(e.message)||kP(e.message,\"prompt_too_long\")}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "uO",
+      "start": 1040733,
+      "end": 1040837,
+      "sha256": "1b3e9f808017b92fd2e26b563c5f160eec92d86b4137570a1cb62753a7c92a66",
+      "source": "function uO(e){return e instanceof Error&&(eMr(e.message)||kP(e.message,\"max_tokens_context_overflow\"))}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "Tq",
+      "start": 1041102,
+      "end": 1041206,
+      "sha256": "4da9cc9f712f2bc7ebcd67235ecf364521e560e1741307d72be9423394c05bb1",
+      "source": "function Tq(e){return e instanceof Error&&e.message.toLowerCase().includes(\"credit balance is too low\")}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "jee",
+      "start": 1041206,
+      "end": 1041316,
+      "sha256": "96ae5acbb82280514f5507c37dcc08f7882a6cf36abd197da3de844f25255877",
+      "source": "function jee(e){return e instanceof Error&&e.message.toLowerCase().includes(\"organization has been disabled\")}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "lae",
+      "start": 2029925,
+      "end": 2030049,
+      "sha256": "53bb26d519325d846af5cdf3276523e4b20a15277058899288ee8710c30e385b",
+      "source": "function lae(e){if(!(e instanceof xt))return!1;return e.status===400&&(e.message?.includes(\"Fast mode is not enabled\")??!1)}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "Cq",
+      "start": 1050422,
+      "end": 1050501,
+      "sha256": "4c6f7f2f7c93bd72d96c8eb1d997efd9e766d7fc62df25b21b7028b0660ec2d2",
+      "source": "function Cq(e){return e instanceof xt&&e.status===400&&e.message.includes(S9n)}",
+      "variable": false
+    },
+    {
+      "module": "chunk-wgt53hn2.js",
+      "moduleSha256": "54b4f40b9522131bac4b0ac54c37afc637d7a8b2a68dd17b8de774fe91dcb4a0",
+      "name": "fje",
+      "start": 12925,
+      "end": 12961,
+      "sha256": "65011c7e56063b6bccd7f1ee5973d0e832f3d27990515c8d520b1db04efc9813",
+      "source": "function fje(e){return Kvn(e)===wwe}",
+      "variable": false
+    },
+    {
+      "module": "chunk-wgt53hn2.js",
+      "moduleSha256": "54b4f40b9522131bac4b0ac54c37afc637d7a8b2a68dd17b8de774fe91dcb4a0",
+      "name": "F5o",
+      "start": 12961,
+      "end": 13078,
+      "sha256": "cdf45fa19d29ce45d02553048bfc7cf1362d58846fbff22679d9d16f44b7467c",
+      "source": "function F5o(e){if(!(e instanceof xt)||e.status!==400||!O(e))return!1;return e.error?.error?.type===\"policy_blocked\"}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "P$",
+      "start": 1040890,
+      "end": 1041102,
+      "sha256": "2f326f7d8afce5188335246ece9d437d86f2d080bf5db08783bf5c286b7a2d4f",
+      "source": "function P$(e){if(!(e instanceof Error)||!e.message.includes(D3n))return!1;let n=\"originalError\"in e&&e.originalError instanceof Error?e.originalError:e,r=n instanceof xt?Str(n):void 0;return r===void 0||r===400}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "Fee",
+      "start": 1036739,
+      "end": 1036764,
+      "sha256": "04d987cc8e7be460b20e125dfcbc344a2705f7949ef04bcac6790e131d3a35ee",
+      "source": "function Fee(e){return!1}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "R$",
+      "start": 1037093,
+      "end": 1037124,
+      "sha256": "00b4b4ca382f4bde9f48efcc168d7d0308598caedf95068c85be77238ec7a999",
+      "source": "function R$(e,n=He()){return!1}",
+      "variable": false
+    },
+    {
+      "module": "chunk-xep95vq1.js",
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "name": "Upe",
+      "start": 159149,
+      "end": 159202,
+      "sha256": "a6b4748eab60b1f002cb96d2a57bbbd0884243b9859a541abe4d8d406244c228",
+      "source": "Upe=R(\"cache_diagnosis\",\"cache-diagnosis-2026-04-07\")",
+      "variable": true
+    },
+    {
+      "module": "chunk-xep95vq1.js",
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "name": "O2e",
+      "start": 158668,
+      "end": 158731,
+      "sha256": "601ac3c0b122016a329741d8703f466ad22d0f984bf84e7be775f7b63e5d3320",
+      "source": "O2e=R(\"prompt_caching_evict\",\"prompt-caching-evict-2026-05-12\")",
+      "variable": true
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "Fkt",
+      "start": 1051142,
+      "end": 1051203,
+      "sha256": "b9953f4a6be65b97cb92eaa6efe4834d982c7cc70021747649f5acddc2a70538",
+      "source": "Fkt=/thinking\\.(adaptive|enabled)\\.display: Input should be /",
+      "variable": true
+    },
+    {
+      "module": "chunk-xep95vq1.js",
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "name": "IF",
+      "start": 158999,
+      "end": 159061,
+      "sha256": "cc31749659495f4a0cb26c663cc1858b07b2d8a50704af0805eaaccc0d148226",
+      "source": "IF=R(\"thinking_token_count\",\"thinking-token-count-2026-05-13\")",
+      "variable": true
+    },
+    {
+      "module": "chunk-xep95vq1.js",
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "name": "zM",
+      "start": 159062,
+      "end": 159100,
+      "sha256": "d22399ef2afd5b2d4dc96ecd3232b807fab7ad2706df6674dd69bdb1a1a80e37",
+      "source": "zM=R(\"afk_mode\",\"afk-mode-2026-01-31\")",
+      "variable": true
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "GS",
+      "start": 1054221,
+      "end": 1054261,
+      "sha256": "40c2e4d723f35634db5d109e23be9c42692c0160aa6de8a97a5bec8af84a1c7f",
+      "source": "function GS(e,n){return lOo(e,n.header)}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "QRe",
+      "start": 1050819,
+      "end": 1050854,
+      "sha256": "fb8bd811e93762e524da012b0efebf70d0a2477d76f7f2e574067b025639fb28",
+      "source": "function QRe(e){return b9n.test(e)}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "Lkt",
+      "start": 1050096,
+      "end": 1050154,
+      "sha256": "1affd0b8420d658d9795a4e88b9d49cca54cb9d1e4fafd821eec2195a532e6be",
+      "source": "function Lkt(e){return e.toLowerCase().replaceAll(\"`\",\"\")}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "h9n",
+      "start": 1049881,
+      "end": 1050023,
+      "sha256": "1a3ce0d531ce82dd9d49af8512a0aee62aefd398182a0f5b5ca9e2b29d2cd81f",
+      "source": "h9n=[\"invalid encrypted_content in search_result block\",\"invalid encrypted_index in text block\",\"failed to decrypt web search result content\"]",
+      "variable": true
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "k9n",
+      "start": 1050024,
+      "end": 1050095,
+      "sha256": "435e20a35b32986942d1166ef40c247855324f316d4cc7a3096eee8ba6700c56",
+      "source": "k9n=\"invalid encrypted_stdout in encrypted_code_execution_result block\"",
+      "variable": true
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "A3",
+      "start": 147897,
+      "end": 148068,
+      "sha256": "bd4aeff8d3819f4d3a31815c22e6a2d9882da18411f08e48c711ebe74e5fb1b6",
+      "source": "function A3(e){if(kP(e,\"image_block\"))return{kind:\"image\"};if(kP(e,\"document_block\"))return{kind:\"document\"};if(kP(e,\"media_budget\"))return{kind:\"document\"};return rMr(e)}",
+      "variable": false
+    },
+    {
+      "module": "chunk-xep95vq1.js",
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "name": "Ix",
+      "start": 158732,
+      "end": 158784,
+      "sha256": "a35f9dd1c05551b48231c2a8aab3f853949512ca87e7405a5758f7cf41b115cf",
+      "source": "Ix=R(\"cache_keepalive\",\"cache-keepalive-2026-09-03\")",
+      "variable": true
+    },
+    {
+      "module": "chunk-xep95vq1.js",
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "name": "H2e",
+      "start": 158937,
+      "end": 158998,
+      "sha256": "4b1e4103462e07181c91bc5ecf7588dd215097bc8166cdd4e65f46df3dd48777",
+      "source": "H2e=R(\"thinking_resumption\",\"thinking-resumption-2026-07-17\")",
+      "variable": true
+    },
+    {
+      "module": "chunk-xep95vq1.js",
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "name": "HF",
+      "start": 160284,
+      "end": 160356,
+      "sha256": "ad5f596dfb755f2458e32f90fa0554cf2d0fda5812fbfedd809ad9e6386e8116",
+      "source": "HF=R(\"thinking_binding_controls\",\"thinking-binding-controls-2026-08-01\")",
+      "variable": true
+    },
+    {
+      "module": "chunk-09m4fzsj.js",
+      "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+      "name": "nMr",
+      "start": 926746,
+      "end": 926932,
+      "sha256": "5a37b654c2d7ad35a84c338a3fd9c91a4e7f926bf26432b4a224285a4cd44534",
+      "source": "function nMr(e){let n=/thinking\\.type[^a-z]{1,8}(enabled|adaptive)[^]*?not supported/i.exec(e)??/\\b(adaptive) thinking is not supported/i.exec(e);return n?.[1]?n[1].toLowerCase():void 0}",
+      "variable": false
+    },
+    {
+      "module": "chunk-09m4fzsj.js",
+      "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+      "name": "kP",
+      "start": 925411,
+      "end": 925571,
+      "sha256": "31e85bc2c32c7c2388f33776cf3db8d1bbaa4054a1933a9a316afb198cebefbe",
+      "source": "function kP(e,n){let r=ZDr(n),s=0;for(;;){let h=e.indexOf(r,s);if(h===-1)return!1;let g=e[h+r.length];if(g===void 0||!/[A-Za-z0-9_:.-]/.test(g))return!0;s=h+1}}",
+      "variable": false
+    },
+    {
+      "module": "chunk-09m4fzsj.js",
+      "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+      "name": "tMr",
+      "start": 926355,
+      "end": 926746,
+      "sha256": "13f4804f282a61ed1a396abef54c97d8192d8899db90ce6aebcdff616d72c441",
+      "source": "function tMr(e){let n=e.toLowerCase().replaceAll(\"`\",\"\");if(n.includes(\"signature in thinking block\"))return!0;if(n.includes(\"invalid data in redacted_thinking block\"))return!0;if(n.includes(\"thinking.signature\")&&n.includes(\"field required\"))return!0;return(n.includes(\"thinking block\")||n.includes(\"redacted_thinking\"))&&(n.includes(\"cannot be modified\")||n.includes(\"invalid signature\"))}",
+      "variable": false
+    },
+    {
+      "module": "chunk-09m4fzsj.js",
+      "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+      "name": "sMr",
+      "start": 928166,
+      "end": 928445,
+      "sha256": "88a73e3b497af85ce913b098c11077bcb957f3d66084837eb75dd93276129fe8",
+      "source": "function sMr(e){if(Kcn(e,QE.header))return!0;if(oMr(e)!==void 0||uie.test(e))return!0;if(e.includes(\"Unexpected role\")&&e.includes(\"input message role\"))return!0;if(e.includes(\"cache_control\")&&AF.test(e))return!0;return e.includes(\"not supported\")&&/role .{0,2}system/i.test(e)}",
+      "variable": false
+    },
+    {
+      "module": "chunk-xep95vq1.js",
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "name": "QE",
+      "start": 159427,
+      "end": 159495,
+      "sha256": "32bd59d92d2cfc687e62847bd6b3e65823397b6538220dfe417cf0a2eb9980c0",
+      "source": "QE=R(\"mid_conversation_system\",\"mid-conversation-system-2026-04-07\")",
+      "variable": true
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "Yee",
+      "start": 1055133,
+      "end": 1055795,
+      "sha256": "fb902f6a7aeebc53c5a6b405f93fb828e04d5ad0964cd95eeb2ecfd803c0efd6",
+      "source": "function Yee(e){if(!(e instanceof xt))return;let n=e.message;if((e.status===400||e.status===422)&&/Input tag 'tool_(addition|removal)'/.test(n))return\"block_type_unknown\";if(e.status!==400)return;if(GS(n,Dy))return\"header_rejected\";if(!/\\btool_addition\\b/.test(n)||BVn(n))return;if(n.includes(\"paused assistant turn\"))return\"after_paused_turn\";if(n.includes(\"not supported on this model\")||n.includes(\"requires a model that supports\"))return\"model_unsupported\";if(n.includes(\"exceed\"))return\"too_many_definitions\";if(n.includes(\"PFC-only\"))return\"pfc_only\";if(n.includes(\"references\")||n.includes(\"names a declared\"))return\"unknown_tool_reference\";return\"other\"}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "Vee",
+      "start": 1054592,
+      "end": 1055133,
+      "sha256": "8417a4cbb1d959ded84b8c9e5806936fef7314acd4ebce5c5cd8f8bf66e8bdb0",
+      "source": "function Vee(e){if(!(e instanceof xt))return;let n=e.message;if((e.status===400||e.status===422)&&/Input tag 'tool_definition'/.test(n))return\"unsupported_on_platform\";if(e.status!==400)return;if(GS(n,Jh))return\"header_rejected\";if(n.includes(\"are not available on this platform\")&&/tool definitions|tool_addition/.test(n))return\"unsupported_on_platform\";if(n.includes(\"cannot yet be defined in a message\"))return\"kind_not_enabled\";if(n.includes(\"is already used by a\")&&/tool\\.definition|tool_addition/.test(n))return\"name_conflict\";return}",
+      "variable": false
+    },
+    {
+      "module": "chunk-09m4fzsj.js",
+      "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+      "name": "BVn",
+      "start": 928445,
+      "end": 928869,
+      "sha256": "55f3cc82cc571bfc238003e7f6d1f9fe8a32e25aeb83ed995f3b9fc70e76c2fc",
+      "source": "function BVn(e){if(!e.includes(\"cache_control\"))return!1;if(AF.test(e))return!1;if(e.includes(\"empty text block\"))return!1;if(/\\bsystem\\.\\d+\\./.test(e)||e.includes(\"tool_result\"))return!1;if(/\\bttl\\b/i.test(e))return!1;let n=e.toLowerCase();return n.includes(\"not permitted\")||n.includes(\"cannot be set\")||n.includes(\"unknown name\")||n.includes(\"unknown field\")||n.includes(\"unrecognized\")||n.includes(\"additional propert\")}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "qkt",
+      "start": 1058177,
+      "end": 1058340,
+      "sha256": "9f7c54ad4056662c15fb689116e24bae2cbf9705587282a4d01f6d0a53c4a0c6",
+      "source": "function qkt(e){if(!(e instanceof xt)||e.status!==400)return null;return/effort '([a-z]+)' is not supported when thinking is disabled/i.exec(e.message)?.[1]??null}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "Kee",
+      "start": 1054420,
+      "end": 1054514,
+      "sha256": "210fed5487be60820bd152d15bda2afe7129868f44545d189efd04d18b4468ac",
+      "source": "function Kee(e){if(!(e instanceof xt)||e.status!==400)return null;return oMr(e.message)??null}",
+      "variable": false
+    },
+    {
+      "module": "chunk-xep95vq1.js",
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "name": "OF",
+      "start": 159496,
+      "end": 159552,
+      "sha256": "071f2bba18ef26507abea3a7ad144810cf790f333e22e022e2a8199a2d2b2893",
+      "source": "OF=R(\"per_message_effort\",\"per-turn-control-2026-07-01\")",
+      "variable": true
+    },
+    {
+      "module": "chunk-xep95vq1.js",
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "name": "Pj",
+      "start": 159553,
+      "end": 159596,
+      "sha256": "c67b91f33619e8da1db762c4798880485810f6deb47762e6762d4339b09763e6",
+      "source": "Pj=R(\"per_turn_timing\",\"timing-2026-09-09\")",
+      "variable": true
+    },
+    {
+      "module": "chunk-xep95vq1.js",
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "name": "R",
+      "start": 158017,
+      "end": 158073,
+      "sha256": "6fd8283e57ef06495a2151d1a1f9534a040b0034be37f957b3c24f74eec65658",
+      "source": "function R(e,s){return Object.freeze({name:e,header:s})}",
+      "variable": false
+    },
+    {
+      "module": "chunk-09m4fzsj.js",
+      "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+      "name": "$Vn",
+      "start": 925626,
+      "end": 925757,
+      "sha256": "7ccc6d0eae0aba5614582eec2b5b01f3bf04de835b1d6bc853925661b4f06253",
+      "source": "function $Vn(e){let n=e.toLowerCase();return n.includes(\"prompt is too long\")||n.includes(\"input is too long for requested model\")}",
+      "variable": false
+    },
+    {
+      "module": "chunk-09m4fzsj.js",
+      "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+      "name": "eMr",
+      "start": 925823,
+      "end": 925925,
+      "sha256": "29ad797b06fc9a7420fea38d88a21b821028cb3cc0a0f8644f16f7583f7b9cc1",
+      "source": "function eMr(e){return e.toLowerCase().includes(\"input length and `max_tokens` exceed context limit\")}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "S9n",
+      "start": 1050361,
+      "end": 1050421,
+      "sha256": "5d1a58121197d3a7f4b6ea25ede42e36f3f0d30bcc7c082e037f0375439eb34b",
+      "source": "S9n=\"cannot be used as an advisor when the request model is\"",
+      "variable": true
+    },
+    {
+      "module": "chunk-wgt53hn2.js",
+      "moduleSha256": "54b4f40b9522131bac4b0ac54c37afc637d7a8b2a68dd17b8de774fe91dcb4a0",
+      "name": "Kvn",
+      "start": 13489,
+      "end": 13584,
+      "sha256": "faed56ea8f0c8ffe9b08abc18ff2022c8424731176c77c1e7bcd7afef575b206",
+      "source": "function Kvn(e){if(!(e instanceof xt)||!O(e))return;return e.error?.error?.details?.error_code}",
+      "variable": false
+    },
+    {
+      "module": "chunk-wgt53hn2.js",
+      "moduleSha256": "54b4f40b9522131bac4b0ac54c37afc637d7a8b2a68dd17b8de774fe91dcb4a0",
+      "name": "wwe",
+      "start": 12900,
+      "end": 12924,
+      "sha256": "dba3181121610bc5e8640771541e08c174437560732c77acc720b5d0531e76bb",
+      "source": "wwe=\"dlp_request_denied\"",
+      "variable": true
+    },
+    {
+      "module": "chunk-wgt53hn2.js",
+      "moduleSha256": "54b4f40b9522131bac4b0ac54c37afc637d7a8b2a68dd17b8de774fe91dcb4a0",
+      "name": "O",
+      "start": 16163,
+      "end": 16270,
+      "sha256": "aefe48c343003d28caa1b9c7e28b8763145d4291ab6e2ce6ae5cd8f7286c9fde",
+      "source": "function O(e){return typeof e===\"object\"&&e!==null&&\"error\"in e&&typeof e.error===\"object\"&&e.error!==null}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "D3n",
+      "start": 1040841,
+      "end": 1040889,
+      "sha256": "6c7751839f9db3db8f829714fe9fe002ad2be9d2397ce46d8413842e1e0f000d",
+      "source": "D3n=\"Output blocked by content filtering policy\"",
+      "variable": true
+    },
+    {
+      "module": "chunk-wgt53hn2.js",
+      "moduleSha256": "54b4f40b9522131bac4b0ac54c37afc637d7a8b2a68dd17b8de774fe91dcb4a0",
+      "name": "Str",
+      "start": 13693,
+      "end": 13802,
+      "sha256": "b2b9244fe0325f16331918a11bb2948a2c75d358e398349968fdabf66c13de28",
+      "source": "function Str(e){if(typeof e.status===\"number\")return e.status;if(RU(e))return 529;if(he(e))return 429;return}",
+      "variable": false
+    },
+    {
+      "module": "chunk-09m4fzsj.js",
+      "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+      "name": "lOo",
+      "start": 928106,
+      "end": 928166,
+      "sha256": "c849bca408316a6cc479e6ed9c99b569d071b23e86363092239963a204d18742",
+      "source": "function lOo(e,n){return Kcn(e,n)||kP(e,`beta_header:${n}`)}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "b9n",
+      "start": 1050778,
+      "end": 1050818,
+      "sha256": "b8c1e0132a0cb76d00a5804e95b257626eb849afae406381795e784758ebf7a9",
+      "source": "b9n=new RegExp(`Input tag '${Z_t}\\\\d+'`)",
+      "variable": true
+    },
+    {
+      "module": "chunk-09m4fzsj.js",
+      "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+      "name": "rMr",
+      "start": 927235,
+      "end": 927664,
+      "sha256": "74ef86659aee4745fdae21290630b118e78ee84d23d00a1727f822c2d859af1a",
+      "source": "function rMr(e){let n=e.match(/messages[.[](\\d+)[\\].]+content[.[](\\d+)[\\].]+(?:tool_result[.[]content[.[](\\d+)[\\].]+)?(image|document|pdf)/);if(n)return{messageIdx:Number(n[1]),contentIdx:Number(n[2]),...n[3]!==void 0&&{nestedContentIdx:Number(n[3])},kind:n[4]===\"image\"?\"image\":\"document\"};let r=e.toLowerCase();if(sie.some((s)=>r.includes(s)))return{kind:\"image\"};if(iie.some((s)=>r.includes(s)))return{kind:\"document\"};return}",
+      "variable": false
+    },
+    {
+      "module": "chunk-09m4fzsj.js",
+      "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+      "name": "ZDr",
+      "start": 925377,
+      "end": 925411,
+      "sha256": "a4202856ca60e975f64bd867a0227f4f1504e4db71fa6022c38a6cc1a3377290",
+      "source": "function ZDr(e){return`${xF}${e}`}",
+      "variable": false
+    },
+    {
+      "module": "chunk-09m4fzsj.js",
+      "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+      "name": "Kcn",
+      "start": 928038,
+      "end": 928106,
+      "sha256": "f89ed45dfb775dd3ea94382bb2cc996790f7e72adcd9cd84e407ea096cb42ccb",
+      "source": "function Kcn(e,n){return e.includes(n)&&/anthropic[-_]beta/.test(e)}",
+      "variable": false
+    },
+    {
+      "module": "chunk-09m4fzsj.js",
+      "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+      "name": "oMr",
+      "start": 927936,
+      "end": 928038,
+      "sha256": "aab6db44f768230b5dd950e7a4270ecdf24459bed093f98f5c91b0849b999bad",
+      "source": "function oMr(e){let n=cie.exec(e);if(!n)return;return{messageIndex:n[1]===void 0?void 0:Number(n[1])}}",
+      "variable": false
+    },
+    {
+      "module": "chunk-09m4fzsj.js",
+      "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+      "name": "uie",
+      "start": 927878,
+      "end": 927935,
+      "sha256": "bb4b974abb6f18515d2cea6bb18d4b2003dee93a66fbb23f5d18c2d39f6addb3",
+      "source": "uie=/text-only role .{0,2}system.{0,2} messages require/i",
+      "variable": true
+    },
+    {
+      "module": "chunk-09m4fzsj.js",
+      "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+      "name": "AF",
+      "start": 927668,
+      "end": 927710,
+      "sha256": "d3de549c3e6828467d85ab4916884abcefe3f2729c9cf9a6e6cddf75ed7cda2c",
+      "source": "AF=/system messages?\\b|role .{0,2}system/i",
+      "variable": true
+    },
+    {
+      "module": "chunk-xep95vq1.js",
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "name": "Dy",
+      "start": 159597,
+      "end": 159668,
+      "sha256": "34962e2a44a8eef47f6c083a6f46eba0e5face0a6ebdf31adb6499660c81e74e",
+      "source": "Dy=R(\"mid_conv_tool_change\",\"mid-conversation-tool-changes-2026-07-01\")",
+      "variable": true
+    },
+    {
+      "module": "chunk-xep95vq1.js",
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "name": "Jh",
+      "start": 159669,
+      "end": 159715,
+      "sha256": "14a4e995014420e827e6213631b29a5e39e0558502fdbc7c38e13084d7492d97",
+      "source": "Jh=R(\"inline_tools\",\"inline-tools-2026-09-15\")",
+      "variable": true
+    },
+    {
+      "module": "chunk-wgt53hn2.js",
+      "moduleSha256": "54b4f40b9522131bac4b0ac54c37afc637d7a8b2a68dd17b8de774fe91dcb4a0",
+      "name": "RU",
+      "start": 12351,
+      "end": 12475,
+      "sha256": "a8f9cbeef050fdbb36ebba0e80be467a5e7785062d04d5b6f0a978f7d6ff103e",
+      "source": "function RU(e){if(!(e instanceof xt))return!1;return e.status===529||(e.message?.includes('\"type\":\"overloaded_error\"')??!1)}",
+      "variable": false
+    },
+    {
+      "module": "chunk-wgt53hn2.js",
+      "moduleSha256": "54b4f40b9522131bac4b0ac54c37afc637d7a8b2a68dd17b8de774fe91dcb4a0",
+      "name": "he",
+      "start": 12690,
+      "end": 12814,
+      "sha256": "185141a06a5c2ba56b38711ea5fd2d9eadc83221be8578ae37047798b29c459f",
+      "source": "function he(e){if(!(e instanceof xt))return!1;return e.status===429||(e.message?.includes('\"type\":\"rate_limit_error\"')??!1)}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "Z_t",
+      "start": 1026278,
+      "end": 1026319,
+      "sha256": "818b9351b708a571be7af36cc1e36e13252e9eb839841cdd7a6c9332070d7940",
+      "source": "Z_t=\"advisor_20260301\".replace(/\\d+$/,\"\")",
+      "variable": true
+    },
+    {
+      "module": "chunk-09m4fzsj.js",
+      "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+      "name": "sie",
+      "start": 925929,
+      "end": 926197,
+      "sha256": "338c99e8c68c0cab9dc1830c2e85e3bad71fe3955a9c4feec6cd24a4f4eb3fa7",
+      "source": "sie=[\"could not process image\",\"image exceeds\",\"image dimensions exceed\",\"image does not match the provided media type\",\"image cannot be empty\",\"exceeds api limit\",\"images exceed the api limit\",\"unable to resize image\",\"unable to compress image\",\"image file is empty\"]",
+      "variable": true
+    },
+    {
+      "module": "chunk-09m4fzsj.js",
+      "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+      "name": "iie",
+      "start": 926198,
+      "end": 926354,
+      "sha256": "2d9a5d28980ef92d76aa6a2f7a1d0f7d5eb64aa3af08eb0f3f7f3cffa45dbb2f",
+      "source": "iie=[\"could not process pdf\",\"pdf pages\",\"the pdf specified was not valid\",\"the pdf specified is password protected\",\"pdf cannot be empty\",\"too much media\"]",
+      "variable": true
+    },
+    {
+      "module": "chunk-09m4fzsj.js",
+      "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+      "name": "xF",
+      "start": 925350,
+      "end": 925376,
+      "sha256": "fea99462df517f69d8a02776bc8043586af663470ab31625968fe7d47cd798a0",
+      "source": "xF=\"capability_rejected: \"",
+      "variable": true
+    },
+    {
+      "module": "chunk-09m4fzsj.js",
+      "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+      "name": "cie",
+      "start": 927711,
+      "end": 927877,
+      "sha256": "1c9f0abddf3351efd5dd5dc126adb9f3fb002c21b426c9f875ed6d6ac340ab5a",
+      "source": "cie=/(?:messages\\.(\\d{1,6}): )?(?:role .{0,2}system.{0,2} must (?:precede an|follow a)|use the top-level .{0,2}system.{0,2} parameter for the initial system prompt)/i",
+      "variable": true
+    },
+    {
+      "module": "chunk-nankzm0s.js",
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "name": "QJn",
+      "start": 263914,
+      "end": 264052,
+      "sha256": "c9d12409c73eb40e524a547fc8d9eb2af7529bbb6e24f8f8254a048f54583260",
+      "source": "function QJn(e){try{let n=Jm(e);return Xl.fastRejectedFallbackModels.has(n)||Xl.everFastRejectedModels.has(n)}catch(n){return d(Z(n)),!1}}",
+      "variable": false
+    }
+  ],
+  "imports": [
+    {
+      "from": "chunk-mphp7acd.js",
+      "local": "Lut",
+      "to": "chunk-09m4fzsj.js",
+      "symbol": "Lut"
+    },
+    {
+      "from": "chunk-mphp7acd.js",
+      "local": "nwe",
+      "to": "chunk-xep95vq1.js",
+      "symbol": "nwe"
+    },
+    {
+      "from": "chunk-mphp7acd.js",
+      "local": "BH",
+      "to": "chunk-nankzm0s.js",
+      "symbol": "BH"
+    },
+    {
+      "from": "chunk-nankzm0s.js",
+      "local": "Ct",
+      "to": "chunk-aer2x4hk.js",
+      "symbol": "Ct"
+    },
+    {
+      "from": "chunk-mphp7acd.js",
+      "local": "fje",
+      "to": "chunk-wgt53hn2.js",
+      "symbol": "fje"
+    },
+    {
+      "from": "chunk-mphp7acd.js",
+      "local": "F5o",
+      "to": "chunk-wgt53hn2.js",
+      "symbol": "F5o"
+    },
+    {
+      "from": "chunk-mphp7acd.js",
+      "local": "Upe",
+      "to": "chunk-xep95vq1.js",
+      "symbol": "Upe"
+    },
+    {
+      "from": "chunk-mphp7acd.js",
+      "local": "O2e",
+      "to": "chunk-xep95vq1.js",
+      "symbol": "O2e"
+    },
+    {
+      "from": "chunk-mphp7acd.js",
+      "local": "IF",
+      "to": "chunk-xep95vq1.js",
+      "symbol": "IF"
+    },
+    {
+      "from": "chunk-mphp7acd.js",
+      "local": "zM",
+      "to": "chunk-xep95vq1.js",
+      "symbol": "zM"
+    },
+    {
+      "from": "chunk-mphp7acd.js",
+      "local": "Ix",
+      "to": "chunk-xep95vq1.js",
+      "symbol": "Ix"
+    },
+    {
+      "from": "chunk-mphp7acd.js",
+      "local": "H2e",
+      "to": "chunk-xep95vq1.js",
+      "symbol": "H2e"
+    },
+    {
+      "from": "chunk-mphp7acd.js",
+      "local": "HF",
+      "to": "chunk-xep95vq1.js",
+      "symbol": "HF"
+    },
+    {
+      "from": "chunk-mphp7acd.js",
+      "local": "nMr",
+      "to": "chunk-09m4fzsj.js",
+      "symbol": "nMr"
+    },
+    {
+      "from": "chunk-mphp7acd.js",
+      "local": "kP",
+      "to": "chunk-09m4fzsj.js",
+      "symbol": "kP"
+    },
+    {
+      "from": "chunk-mphp7acd.js",
+      "local": "tMr",
+      "to": "chunk-09m4fzsj.js",
+      "symbol": "tMr"
+    },
+    {
+      "from": "chunk-mphp7acd.js",
+      "local": "sMr",
+      "to": "chunk-09m4fzsj.js",
+      "symbol": "sMr"
+    },
+    {
+      "from": "chunk-mphp7acd.js",
+      "local": "QE",
+      "to": "chunk-xep95vq1.js",
+      "symbol": "QE"
+    },
+    {
+      "from": "chunk-mphp7acd.js",
+      "local": "BVn",
+      "to": "chunk-09m4fzsj.js",
+      "symbol": "BVn"
+    },
+    {
+      "from": "chunk-mphp7acd.js",
+      "local": "OF",
+      "to": "chunk-xep95vq1.js",
+      "symbol": "OF"
+    },
+    {
+      "from": "chunk-mphp7acd.js",
+      "local": "Pj",
+      "to": "chunk-xep95vq1.js",
+      "symbol": "Pj"
+    },
+    {
+      "from": "chunk-mphp7acd.js",
+      "local": "$Vn",
+      "to": "chunk-09m4fzsj.js",
+      "symbol": "$Vn"
+    },
+    {
+      "from": "chunk-mphp7acd.js",
+      "local": "eMr",
+      "to": "chunk-09m4fzsj.js",
+      "symbol": "eMr"
+    },
+    {
+      "from": "chunk-mphp7acd.js",
+      "local": "Str",
+      "to": "chunk-wgt53hn2.js",
+      "symbol": "Str"
+    },
+    {
+      "from": "chunk-mphp7acd.js",
+      "local": "lOo",
+      "to": "chunk-09m4fzsj.js",
+      "symbol": "lOo"
+    },
+    {
+      "from": "chunk-mphp7acd.js",
+      "local": "rMr",
+      "to": "chunk-09m4fzsj.js",
+      "symbol": "rMr"
+    },
+    {
+      "from": "chunk-09m4fzsj.js",
+      "local": "QE",
+      "to": "chunk-xep95vq1.js",
+      "symbol": "QE"
+    },
+    {
+      "from": "chunk-mphp7acd.js",
+      "local": "Dy",
+      "to": "chunk-xep95vq1.js",
+      "symbol": "Dy"
+    },
+    {
+      "from": "chunk-mphp7acd.js",
+      "local": "Jh",
+      "to": "chunk-xep95vq1.js",
+      "symbol": "Jh"
+    },
+    {
+      "from": "chunk-mphp7acd.js",
+      "local": "oMr",
+      "to": "chunk-09m4fzsj.js",
+      "symbol": "oMr"
+    }
+  ],
+  "ports": [
+    "PORT:xt",
+    "PORT:Jm",
+    "PORT:d",
+    "PORT:Z",
+    "PORT:dxe",
+    "chunk-mphp7acd.js:z",
+    "PORT:QJn",
+    "chunk-mphp7acd.js:MVe",
+    "PORT:sT",
+    "chunk-mphp7acd.js:GP",
+    "chunk-mphp7acd.js:bC",
+    "chunk-mphp7acd.js:Nb",
+    "chunk-mphp7acd.js:XL",
+    "PORT:He",
+    "PORT:a",
+    "PORT:tg",
+    "chunk-mphp7acd.js:Ze",
+    "PORT:nZ",
+    "PORT:fd",
+    "PORT:Be",
+    "PORT:cc",
+    "PORT:Cut",
+    "PORT:ko"
+  ],
+  "projection": "Lut: AWS/Vertex/Mantle branches explicitly excluded by R04; no Cut or provider SDK copied",
+  "tokens": [
+    {
+      "name": "nwe",
+      "header": "thinking-display-updates-2026-08-18"
+    },
+    {
+      "name": "Upe",
+      "header": "cache-diagnosis-2026-04-07"
+    },
+    {
+      "name": "O2e",
+      "header": "prompt-caching-evict-2026-05-12"
+    },
+    {
+      "name": "IF",
+      "header": "thinking-token-count-2026-05-13"
+    },
+    {
+      "name": "zM",
+      "header": "afk-mode-2026-01-31"
+    },
+    {
+      "name": "Ix",
+      "header": "cache-keepalive-2026-09-03"
+    },
+    {
+      "name": "H2e",
+      "header": "thinking-resumption-2026-07-17"
+    },
+    {
+      "name": "HF",
+      "header": "thinking-binding-controls-2026-08-01"
+    },
+    {
+      "name": "QE",
+      "header": "mid-conversation-system-2026-04-07"
+    },
+    {
+      "name": "OF",
+      "header": "per-turn-control-2026-07-01"
+    },
+    {
+      "name": "Pj",
+      "header": "timing-2026-09-09"
+    },
+    {
+      "name": "Dy",
+      "header": "mid-conversation-tool-changes-2026-07-01"
+    },
+    {
+      "name": "Jh",
+      "header": "inline-tools-2026-09-15"
+    }
+  ],
+  "fastOwner": "QJn binds getFastModeOwner287 original r_ through actual mVo writer/sWt request gate/$7e Fast command; separate provenance officialFastRejection287/provenance.json"
+}

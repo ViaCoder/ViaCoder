@@ -1,0 +1,55 @@
+{
+  "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+  "offsetUnit": "UTF-16",
+  "rows": [
+    {
+      "name": "W_e",
+      "start": 220415,
+      "end": 220480,
+      "source": "function W_e(e){return e?.kind===\"peer\"&&e.senderTaskId===void 0}",
+      "sha256": "8fc6502ac0290ed6eeb4002ba202c159d5fade8d7cfedf6476d77328cc0c97c6",
+      "variable": false
+    },
+    {
+      "name": "V7e",
+      "start": 220480,
+      "end": 220750,
+      "source": "function V7e(e){if(!W_e(e.origin))return e;let n=e.value;if(typeof n===\"string\"){let g=yvn(n);return g===n?e:{...e,value:g}}let r=!1,s=n.map((g)=>{if(g.type!==\"text\")return g;let h=yvn(g.text);if(h===g.text)return g;return r=!0,{...g,text:h}});return r?{...e,value:s}:e}",
+      "sha256": "a8f6b7c848fe3c04e9915510d5495485424b9bc940a6d8211f88fe1f921de0d0",
+      "variable": false
+    },
+    {
+      "name": "X7e",
+      "start": 220750,
+      "end": 220820,
+      "source": "function X7e(e){return e.verifiedPeerPid!==void 0||e.from!==\"unknown\"}",
+      "sha256": "57a35bbecdee0e72cb4ef5ca1a105d27e23f0160521e091fc395e4b715383994",
+      "variable": false
+    },
+    {
+      "name": "H_e",
+      "start": 223725,
+      "end": 223742,
+      "source": "H_e={admitted:!0}",
+      "sha256": "9b882a972319470da95f21ebffaa1337370a700dacab180611b5680f9943b99a",
+      "variable": true
+    },
+    {
+      "name": "Tr",
+      "start": 226998,
+      "end": 227959,
+      "source": "function Tr(Yo,qr=\"coalesced\"){let Lr=Yo.origin;if(!W_e(Lr))return H_e;let Kr=Yo.admissionExempt===\"resurrected\";if(!Kr&&!X7e(Lr)){let vr=$o.checkHopChain(Lr.hopChain,R1r());if(vr&&!vr.admitted){if(Po.report({reason:vr.reason,from:Lr.from,...Lr.name!==void 0&&{name:Lr.name}}),qr===\"coalesced\")Yr(Yo,vr.reason);return{admitted:!1,reason:vr.reason}}}if(!Kr&&X7e(Lr)){let vr=typeof Yo.value===\"string\"?Yo.value:fo(Yo.value),nr=$o.admit({senderKey:Lr.from!==\"unknown\"?`from:${Lr.from}`:`pid:${Lr.verifiedPeerPid}`,body:vr,hopChain:Lr.hopChain,ownTokens:R1r()});if(!nr.admitted){if(Po.report({reason:nr.reason,from:Lr.from,...Lr.name!==void 0&&{name:Lr.name}}),qr===\"coalesced\")Yr(Yo,nr.reason);return{admitted:!1,reason:nr.reason}}}if(po()>=C$t().maxQueuedPeerMessages){if(Po.report({reason:\"queue-full\",from:Lr.from,...Lr.name!==void 0&&{name:Lr.name}}),qr===\"coalesced\")Yr(Yo,\"queue-full\");return{admitted:!1,reason:\"queue-full\"}}return y(\"peer_loop_guard\"),H_e}",
+      "sha256": "8f320df9a5027fc831700f837be828836119a05dd24818af73ef01acabcd1030",
+      "variable": false
+    },
+    {
+      "name": "gr",
+      "start": 228250,
+      "end": 228820,
+      "source": "function gr(Yo,{receipt:qr=\"coalesced\",ahead:Lr=!1}={}){let Kr=Tr(Yo,qr);if(!Kr.admitted)return Kr;let vr={...V7e(Yo),priority:Yo.priority??\"next\",timestamp:Yo.timestamp??new Date().toISOString()};if(Lr)g.unshift(vr);else g.push(vr);if(Yo.origin?.kind===\"peer\"&&Yo.origin.handback===!0&&Yo.origin.senderTaskId!==void 0&&Yo.admissionExempt!==\"resurrected\")_9n({sender:Yo.origin.senderTaskId,recipient:Yo.agentId,senderName:Yo.origin.from,flagged:Yo.origin.flagged===!0});if(zFo(Yo.uuid),K(),!Yo.unlogged)s(\"enqueue\",typeof Yo.value===\"string\"?Yo.value:void 0);return H_e}",
+      "sha256": "4276dee1aecc87e3b476eff09b606937e39d3e7b8a0e13fd7c14439904f78f89",
+      "variable": false
+    }
+  ],
+  "nativeSha256": "198c6556bb0e190d5da4c94cac50a6ae6309e215a9e1b9bda77af10ea7b5f27c"
+}

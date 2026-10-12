@@ -1,0 +1,436 @@
+{
+  "version": "2.1.287",
+  "platform": "darwin-arm64",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16 end-exclusive",
+  "rows": [
+    {
+      "file": "chunk-zgj3cvgf.js",
+      "moduleSha256": "1f54c6b400a53d2b5eb62214f8abbba2a581b378c9957f9f3d023188612e513a",
+      "name": "_",
+      "local": "_",
+      "range": [
+        12394,
+        12466
+      ],
+      "sha256": "e373c86c426134514dd7328055a3066a504b0da25929256c94e64c004fcefb9b",
+      "kind": "complete_variable_declaration",
+      "source": "_=\"Couldn't save the output style (detail withheld on this connection).\""
+    },
+    {
+      "file": "chunk-zgj3cvgf.js",
+      "moduleSha256": "1f54c6b400a53d2b5eb62214f8abbba2a581b378c9957f9f3d023188612e513a",
+      "name": "C",
+      "local": "C",
+      "range": [
+        12467,
+        12485
+      ],
+      "sha256": "ee8abef6697c5ff594988488d206f5e9340b6b513911c82bfaeacf8a29a5aee2",
+      "kind": "complete_variable_declaration",
+      "source": "C=\"a custom style\""
+    },
+    {
+      "file": "chunk-zgj3cvgf.js",
+      "moduleSha256": "1f54c6b400a53d2b5eb62214f8abbba2a581b378c9957f9f3d023188612e513a",
+      "name": "k",
+      "local": "k",
+      "range": [
+        12486,
+        13591
+      ],
+      "sha256": "e0e452d0226370248a150289ded3472851b88440fcbb3d86504c05bff339ab41",
+      "kind": "complete_function_declaration",
+      "source": "async function k(O,o){let s=await u1(oe(),o.storageV5),u=qJ(o),m=Object.keys(s),a=u?m.filter((e)=>OHt(s[e])):m,n=mTe(),p=u?`\n${yin}`:\"\",r=O.trim(),l=r.toLowerCase(),t=r?a.find((e)=>e.toLowerCase()===l):void 0;if(t===void 0){if(r&&!Hz.includes(l)&&!dR.includes(l))return{type:\"text\",value:`Unknown output style \"${Kt(r)}\". Available styles: ${a.map(Kt).join(\", \")}${p}`};let e=a.map((c)=>{let d=s[c]?.description,f=Kt(c),g=c===n?\" (current)\":\"\";return d?`- ${f}${g}: ${Kt(d)}`:`- ${f}${g}`});return{type:\"text\",value:`Output style: ${u&&!OHt(s[n])?C:Kt(n)}\n\nAvailable styles:\n${e.join(`\n`)}\n\nUsage: /output-style <style>${p}`}}if(t===n)return{type:\"text\",value:`Output style is already ${Kt(t)}`};if(!tr(\"localSettings\"))return{type:\"text\",value:_in};let y=await hn(\"localSettings\",{outputStyle:t},void 0,o.storageV5);if(y.error)return{type:\"text\",value:Bo(o.session)?_:`Could not save output style: ${y.error.message}`};return yR(\"output_style\"),i(\"tengu_output_style_changed\",{style:SJt(t),source:S(\"slash_command\"),settings_source:S(\"localSettings\")}),{type:\"text\",value:`Output style set to ${Kt(t)}`}}"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "mTe",
+      "local": "mTe",
+      "range": [
+        1140913,
+        1140957
+      ],
+      "sha256": "2bfe09902e231a199cafdff09f3d92dc7fe6415f248fca7ada47d0415882fefd",
+      "kind": "complete_function_declaration",
+      "source": "function mTe(){return er()?.outputStyle||SP}"
+    }
+  ],
+  "ports": [
+    {
+      "name": "u1",
+      "module": "chunk-mphp7acd.js",
+      "export": "u1",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "local": "u1",
+      "declaration": {
+        "file": "chunk-mphp7acd.js",
+        "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+        "name": "u1",
+        "local": "u1",
+        "range": [
+          1139437,
+          1139505
+        ],
+        "sha256": "bbb9f787d9101c10d25cc01ebf4a583683ca718ee23d7637a7bbb059c5833c7c",
+        "kind": "complete_function_declaration",
+        "source": "function u1(e,n){return t8(ro().allOutputStyles,n8(e),()=>W7n(e,n))}"
+      }
+    },
+    {
+      "name": "oe",
+      "module": "chunk-s354e3rr.js",
+      "export": "oe",
+      "moduleSha256": "567ef3371f57fc1378c9e923c39f428683b7d791b1528bad0b34cefa35a4f70e",
+      "local": "oe",
+      "declaration": {
+        "file": "chunk-s354e3rr.js",
+        "moduleSha256": "567ef3371f57fc1378c9e923c39f428683b7d791b1528bad0b34cefa35a4f70e",
+        "name": "oe",
+        "local": "oe",
+        "range": [
+          1098,
+          1148
+        ],
+        "sha256": "77b60cc78e0aeaa08693fcca0da77379aceefeffc334fcd583e5b4537167ad76",
+        "kind": "complete_function_declaration",
+        "source": "function oe(){try{return Aqt()}catch{return Ee()}}"
+      }
+    },
+    {
+      "name": "qJ",
+      "module": "chunk-scey49m3.js",
+      "export": "qJ",
+      "moduleSha256": "57ef49a9766dd232a907fd4978c3999d7ba95b3439ed6da2f17aca3b8d78f3dd",
+      "local": "qJ",
+      "declaration": {
+        "file": "chunk-scey49m3.js",
+        "moduleSha256": "57ef49a9766dd232a907fd4978c3999d7ba95b3439ed6da2f17aca3b8d78f3dd",
+        "name": "qJ",
+        "local": "qJ",
+        "range": [
+          1012,
+          1103
+        ],
+        "sha256": "7d8244daa5d816d600279198b23199887c8dee8527a6362288ac529c7398a7d4",
+        "kind": "complete_function_declaration",
+        "source": "function qJ(e){return e.dispatchedOverBridge===!0||e.submissionVerifiedSlackHumanTurn===!0}"
+      }
+    },
+    {
+      "name": "OHt",
+      "module": "chunk-mphp7acd.js",
+      "export": "OHt",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "local": "OHt",
+      "declaration": {
+        "file": "chunk-mphp7acd.js",
+        "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+        "name": "OHt",
+        "local": "OHt",
+        "range": [
+          1140132,
+          1140188
+        ],
+        "sha256": "1111b2f3f583df9b74618eb44fec02e3fdf5d032939b3066c30768a35e4563e4",
+        "kind": "complete_function_declaration",
+        "source": "function OHt(e){return e===null||e?.source===\"built-in\"}"
+      }
+    },
+    {
+      "name": "yin",
+      "module": "chunk-mphp7acd.js",
+      "export": "yin",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "local": "yin",
+      "declaration": {
+        "file": "chunk-mphp7acd.js",
+        "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+        "name": "yin",
+        "local": "yin",
+        "range": [
+          1140192,
+          1140348
+        ],
+        "sha256": "da57251c39cd26bbe3c04ee74c45350940c2b0326aeb243bc27b68d0032d0918",
+        "kind": "complete_variable_declaration",
+        "source": "yin=\"Custom output styles can't be selected over Remote Control or from a relayed message. Select one in the session itself, or pick a built-in style here.\""
+      }
+    },
+    {
+      "name": "Hz",
+      "module": "chunk-amhtwhch.js",
+      "export": "Hz",
+      "moduleSha256": "5fb2fb2d3d66c7ec04ce0fac39ed9f665b410441ebae71d3f893920600949ecb",
+      "local": "Hz",
+      "declaration": {
+        "file": "chunk-amhtwhch.js",
+        "moduleSha256": "5fb2fb2d3d66c7ec04ce0fac39ed9f665b410441ebae71d3f893920600949ecb",
+        "name": "Hz",
+        "local": "Hz",
+        "range": [
+          10412,
+          10416
+        ],
+        "sha256": "c595124df321dc4014d728ce0b01ff45c6dc5d1193dd9902e9b0eda91cb89d2c",
+        "kind": "complete_variable_declaration",
+        "source": "Hz=A"
+      }
+    },
+    {
+      "name": "dR",
+      "module": "chunk-amhtwhch.js",
+      "export": "dR",
+      "moduleSha256": "5fb2fb2d3d66c7ec04ce0fac39ed9f665b410441ebae71d3f893920600949ecb",
+      "local": "dR",
+      "declaration": {
+        "file": "chunk-amhtwhch.js",
+        "moduleSha256": "5fb2fb2d3d66c7ec04ce0fac39ed9f665b410441ebae71d3f893920600949ecb",
+        "name": "dR",
+        "local": "dR",
+        "range": [
+          10277,
+          10302
+        ],
+        "sha256": "c40474e81a5c3ce2b02fc6788aedee396c7568ab17118fe1313842a608147de6",
+        "kind": "complete_variable_declaration",
+        "source": "dR=[\"help\",\"-h\",\"--help\"]"
+      }
+    },
+    {
+      "name": "Kt",
+      "module": "chunk-hrhfcbdv.js",
+      "export": "Kt",
+      "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+      "local": "Kt",
+      "declaration": {
+        "file": "chunk-hrhfcbdv.js",
+        "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+        "name": "Kt",
+        "local": "Kt",
+        "range": [
+          78327,
+          78427
+        ],
+        "sha256": "5e98994ca530b297f3e1686bde486af6f4acd6008dfd34d5f5c0bdaeb47607ea",
+        "kind": "complete_function_declaration",
+        "source": "function Kt(e){if(typeof e!==\"string\")return\"\";return re(GCn(e.length>4096?e.slice(0,4096):e),1024)}"
+      }
+    },
+    {
+      "name": "tr",
+      "module": "chunk-s3exmmq6.js",
+      "export": "tr",
+      "moduleSha256": "3ffa1fa6a8703bab1f7418e04f68d263132d744f24762fc223caabc81ed9307c",
+      "local": "tr",
+      "declaration": {
+        "file": "chunk-s3exmmq6.js",
+        "moduleSha256": "3ffa1fa6a8703bab1f7418e04f68d263132d744f24762fc223caabc81ed9307c",
+        "name": "tr",
+        "local": "tr",
+        "range": [
+          5822,
+          5861
+        ],
+        "sha256": "201085541dc20f215ea421bfdeaccef74f5b9ef57ec2d703dd597674048b7c9b",
+        "kind": "complete_function_declaration",
+        "source": "function tr(e){return Xo().includes(e)}"
+      }
+    },
+    {
+      "name": "_in",
+      "module": "chunk-mphp7acd.js",
+      "export": "_in",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "local": "_in",
+      "declaration": {
+        "file": "chunk-mphp7acd.js",
+        "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+        "name": "_in",
+        "local": "_in",
+        "range": [
+          1140349,
+          1140496
+        ],
+        "sha256": "b45ba03d016bf788535f56bfbeee23e49df68239f987654ae9a8bdb125302d76",
+        "kind": "complete_variable_declaration",
+        "source": "_in=\"Output styles are saved to local settings (.claude/settings.local.json), which this session doesn't load, so the style can't be changed here.\""
+      }
+    },
+    {
+      "name": "hn",
+      "module": "chunk-f1vb7bx7.js",
+      "export": "hn",
+      "moduleSha256": "2f76d1800a2202fe6717904ab677e2509d0b124302d3d31e325353b307f795d1",
+      "local": "hn",
+      "declaration": {
+        "file": "chunk-f1vb7bx7.js",
+        "moduleSha256": "2f76d1800a2202fe6717904ab677e2509d0b124302d3d31e325353b307f795d1",
+        "name": "hn",
+        "local": "hn",
+        "range": [
+          100241,
+          100285
+        ],
+        "sha256": "9d690f9452a9b5a7c289b4918db5df6ba194ff3c57199d64ead5b9aaae4b34bd",
+        "kind": "complete_function_declaration",
+        "source": "function hn(e,n,r,s){return Ri(e,()=>n,r,s)}"
+      }
+    },
+    {
+      "name": "Bo",
+      "module": "chunk-x5mcrns6.js",
+      "export": "Bo",
+      "moduleSha256": "0dec846560b29698084c11481ad2c649c41d0caa2470f935223b831e50417a09",
+      "local": "Bo",
+      "declaration": {
+        "file": "chunk-x5mcrns6.js",
+        "moduleSha256": "0dec846560b29698084c11481ad2c649c41d0caa2470f935223b831e50417a09",
+        "name": "Bo",
+        "local": "Bo",
+        "range": [
+          1285,
+          1341
+        ],
+        "sha256": "17e9918123e4ee50077c0255810526ba540f6cd01765e36e17efadb718c57ac8",
+        "kind": "complete_function_declaration",
+        "source": "function Bo(r){return qm(r)||a_.of(r).bridgeMayBeLive()}"
+      }
+    },
+    {
+      "name": "yR",
+      "module": "chunk-bn3p37gv.js",
+      "export": "yR",
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "local": "yR",
+      "declaration": {
+        "file": "chunk-bn3p37gv.js",
+        "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+        "name": "yR",
+        "local": "yR",
+        "range": [
+          109193,
+          109247
+        ],
+        "sha256": "9497593b54eeb013c2a830d42c4b29012e67dea597b26f30a8dffae470d4428f",
+        "kind": "complete_function_declaration",
+        "source": "function yR(e){n().promptAssembly.noteInvalidation(e)}"
+      }
+    },
+    {
+      "name": "i",
+      "module": "chunk-6hnyhakg.js",
+      "export": "i",
+      "moduleSha256": "b2c8cad6d46be86d5715172f94bfc8b9ddbe5f28c2e068ee53ebebb35b9948de",
+      "local": "i",
+      "declaration": {
+        "file": "chunk-6hnyhakg.js",
+        "moduleSha256": "b2c8cad6d46be86d5715172f94bfc8b9ddbe5f28c2e068ee53ebebb35b9948de",
+        "name": "i",
+        "local": "i",
+        "range": [
+          1280,
+          1397
+        ],
+        "sha256": "7f2df95e7a21ebb980f33de170d716031fa6e71b459046f55a71def4a55e662f",
+        "kind": "complete_function_declaration",
+        "source": "function i(t,e){let n=a().state;if(n.sink===null){s(n,{eventName:t,metadata:e,async:!1});return}n.sink.logEvent(t,e)}"
+      }
+    },
+    {
+      "name": "SJt",
+      "module": "chunk-fs7r25h7.js",
+      "export": "SJt",
+      "moduleSha256": "f22ec6fde228355536057423962fe7e3a0102dae3d7e621231ad034532abf1d5",
+      "local": "SJt",
+      "declaration": {
+        "file": "chunk-fs7r25h7.js",
+        "moduleSha256": "f22ec6fde228355536057423962fe7e3a0102dae3d7e621231ad034532abf1d5",
+        "name": "SJt",
+        "local": "SJt",
+        "range": [
+          711,
+          772
+        ],
+        "sha256": "bc01a1d2636eb8b34a91e66f6a88db25529840d5d05f45c381adf4da7e6e5ae8",
+        "kind": "complete_function_declaration",
+        "source": "function SJt(t){return Object.hasOwn(XV,t)?bn(t):S(\"custom\")}"
+      }
+    },
+    {
+      "name": "S",
+      "module": "chunk-n4qghq20.js",
+      "export": "S",
+      "moduleSha256": "39fd2d5d055aa0449210ddff4a5907753c0460a10b43931920c5796a088aabbb",
+      "local": "S",
+      "declaration": {
+        "file": "chunk-n4qghq20.js",
+        "moduleSha256": "39fd2d5d055aa0449210ddff4a5907753c0460a10b43931920c5796a088aabbb",
+        "name": "S",
+        "local": "S",
+        "range": [
+          638,
+          664
+        ],
+        "sha256": "65a65776e268960bd5cc11c861e76e3529375e2df46f70130ed18e27f72b5593",
+        "kind": "complete_function_declaration",
+        "source": "function S(n){return r(n)}"
+      }
+    },
+    {
+      "name": "er",
+      "module": "chunk-f1vb7bx7.js",
+      "export": "er",
+      "moduleSha256": "2f76d1800a2202fe6717904ab677e2509d0b124302d3d31e325353b307f795d1",
+      "local": "er",
+      "declaration": {
+        "file": "chunk-f1vb7bx7.js",
+        "moduleSha256": "2f76d1800a2202fe6717904ab677e2509d0b124302d3d31e325353b307f795d1",
+        "name": "er",
+        "local": "er",
+        "range": [
+          96120,
+          96125
+        ],
+        "sha256": "2b65391503408a01319d1722cab749e99d7550bc01727cb8af9b8ab71933f292",
+        "kind": "complete_variable_declaration",
+        "source": "er=tt"
+      }
+    },
+    {
+      "name": "SP",
+      "module": "chunk-mphp7acd.js",
+      "export": "SP",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "local": "SP",
+      "declaration": {
+        "file": "chunk-mphp7acd.js",
+        "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+        "name": "SP",
+        "local": "SP",
+        "range": [
+          1133326,
+          1133338
+        ],
+        "sha256": "b85d7094d8b52fa0e8626d746bf2bc4465a715665de5de945201b32f39015310",
+        "kind": "complete_variable_declaration",
+        "source": "SP=\"default\""
+      }
+    }
+  ],
+  "missingCanonicalAlias": {
+    "module": "chunk-mphp7acd.js",
+    "export": "mTe",
+    "cause": "Existing clearLifecycleSource287 rejects this declaration as not selected; full stateless mTe restored here, not a replacement settings owner."
+  },
+  "contract": {
+    "hn": "Original hn -> installed Ri settingsTransform287 -> getFastStatusSettingsWriter287().transform; original four arguments including storageV5 retained.",
+    "yR": "Original yR -> same execution session promptAssembly.noteInvalidation(\"output_style\"); no new cache.",
+    "u1": "Installed canonical u1 -> existing ro().allOutputStyles/cbt/Sbt; no custom filtering or catalog reconstruction.",
+    "entryBoundary": "Existing R04 safe/restricted startup blocking unchanged.",
+    "privateBackend": "Original optional StorageV5 client carried through; unavailable retention backend not implemented or claimed verified."
+  },
+  "nativeSha256": "81014d2794c290cb6874d9ca1cfd390d097f32cfd5fa42d2ad24cdc134452010",
+  "adapterSha256": "d5b3ec7d1bf15b2b2f405b076d6c12c90d31d4f32672ae670767f53551c37270"
+}

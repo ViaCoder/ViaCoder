@@ -1,0 +1,221 @@
+{
+  "version": "2.1.287",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "module": "chunk-mphp7acd.js",
+  "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+  "offsetUnit": "UTF-16 code units; end-exclusive",
+  "records": [
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "Yde",
+      "start": 2994678,
+      "end": 2994798,
+      "sha256": "176d56c9b86cc67ae5b0861594213be367c6e9ea9e6a5c634d86e94ecbd8982c",
+      "source": "function Yde(){return process.env.ANTHROPIC_BASE_URL||process.env.CLAUDE_CODE_API_BASE_URL||\"https://api.anthropic.com\"}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "kHe",
+      "start": 2995038,
+      "end": 2995092,
+      "sha256": "f0bd670368beb3b0012584cd289413e433e257f2b0fb2fabce7cfdd9033a481f",
+      "source": "function kHe(e){t(`[files-api] ${e}`,{level:\"error\"})}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "RE",
+      "start": 2995092,
+      "end": 2995129,
+      "sha256": "6c5003a2716828cab00beb0857907580c426f05b33b27c84f5680eeabcb0afa1",
+      "source": "function RE(e){t(`[files-api] ${e}`)}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "uU",
+      "start": 2995259,
+      "end": 2995263,
+      "sha256": "98504d536c4bcab7e87373e8284a5d4dec00ecaeb7a70819f4ccc7ac92856473",
+      "source": "uU=3",
+      "variable": true
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "_Xo",
+      "start": 2995264,
+      "end": 2995271,
+      "sha256": "cd8eb07c5a17a05b222b6d6cb6eea0c6561f1408837144e2eab749d66bc3487e",
+      "source": "_Xo=500",
+      "variable": true
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "kXo",
+      "start": 2995272,
+      "end": 2995282,
+      "sha256": "7fb8b46e5716ae6aa1418a122382ec900f583a85e0c846031ddca72a7b79cd21",
+      "source": "kXo=120000",
+      "variable": true
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "U5t",
+      "start": 2995283,
+      "end": 2995296,
+      "sha256": "40c2eae38a65c5d54a5662cb14205cf1845c42ad49503b09930ab0a4345a8394",
+      "source": "U5t=524288000",
+      "variable": true
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "j5t",
+      "start": 2995297,
+      "end": 2995585,
+      "sha256": "a89f37f33847e30fbf2dd9a27a7ba6eaa6aeb13a9e5a6a9bd49fad16ee0fc71c",
+      "source": "async function j5t(e,n){let r=\"\";for(let s=1;s<=uU;s++){let g=await n(s);if(g.done)return g.value;if(r=g.error||`${e} failed`,RE(`${e} attempt ${s}/${uU} failed: ${r}`),s<uU){let h=_Xo*Math.pow(2,s-1);RE(`Retrying ${e} in ${h}ms...`),await ee(h)}}throw Error(`${r} after ${uU} attempts`)}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "wXo",
+      "start": 2995585,
+      "end": 2996297,
+      "sha256": "1534eb8adcc6dfff3638e458910d37969c8fe2595131a3c4349df114ad2aa081",
+      "source": "async function wXo(e,n){let r=n.baseUrl||Yde();_He(r);let s=`${r}/v1/files/${e}/content`,g=H5t(n);return RE(`Downloading file ${e} from ${s}`),j5t(`Download file ${e}`,async()=>{try{let h=await St.get(s,{headers:g,responseType:\"arraybuffer\",timeout:60000,validateStatus:(b)=>b<500});if(h.status===200)return RE(`Downloaded file ${e} (${h.data.length} bytes)`),{done:!0,value:Buffer.from(h.data)};if(h.status===404)throw Error(`File not found: ${e}`);if(h.status===401)throw Error(\"Authentication failed: invalid or missing API key\");if(h.status===403)throw Error(`Access denied to file: ${e}`);return{done:!1,error:`status ${h.status}`}}catch(h){if(!St.isAxiosError(h))throw h;return{done:!1,error:h.message}}})}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "vXo",
+      "start": 2996297,
+      "end": 2996602,
+      "sha256": "e36cd8ab2b3780e752c3b8f2a78bb263fb41938f59ea8ab25bd0a69550bcfefd",
+      "source": "function vXo(e,n,r){let s=uy.normalize(r);if(s.startsWith(\"..\"))return kHe(`Invalid file path: ${r}. Path must not traverse above workspace`),null;let g=uy.join(e,n,\"uploads\"),b=[uy.join(e,n,\"uploads\")+uy.sep,uy.sep+\"uploads\"+uy.sep].find((D)=>s.startsWith(D)),w=b?s.slice(b.length):s;return uy.join(g,w)}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "TXo",
+      "start": 2996602,
+      "end": 2997065,
+      "sha256": "d61a5043c161817846163f302871538b48ee2e5e3189bf7e702974b8e17e9bde",
+      "source": "async function TXo(e,n){let{fileId:r,relativePath:s}=e,g=vXo(oe(),n.sessionId,s);if(!g)return{fileId:r,path:\"\",success:!1,error:`Invalid file path: ${s}`};try{let h=await wXo(r,n),b=uy.dirname(g);return await fU.mkdir(b,{recursive:!0}),await fU.writeFile(g,h),RE(`Saved file ${r} to ${g} (${h.length} bytes)`),{fileId:r,path:g,success:!0,bytesWritten:h.length}}catch(h){return kHe(`Failed to download file ${r}: ${l(h)}`),{fileId:r,path:g,success:!1,error:l(h)}}}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "EXo",
+      "start": 2997069,
+      "end": 2997074,
+      "sha256": "6a2fde701326b4025e77a7f9c7a36c19206547476732082b55cdf8d2fa92bf66",
+      "source": "EXo=5",
+      "variable": true
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "TIo",
+      "start": 2997075,
+      "end": 2997493,
+      "sha256": "b80c914f03721c281d22c3108778e9a46cdbca7053f2d84a64cd2585500c9364",
+      "source": "async function TIo(e,n,r=EXo){if(e.length===0)return[];RE(`Downloading ${e.length} file(s) for session ${n.sessionId}`);let s=Date.now(),g=await Promise.all(e.map($d(r,(w)=>TXo(w,n)))),h=Date.now()-s,b=G(g,(w)=>w.success);if(RE(`Downloaded ${b}/${e.length} file(s) in ${h}ms`),b===e.length)y(\"api_files_download\");else if(b>0)p(\"api_files_download\",\"partial_failed\");else m(\"api_files_download\",\"all_failed\");return g}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "W5t",
+      "start": 2997493,
+      "end": 2997766,
+      "sha256": "4d66177e8ee82e7c83f9ab37aed12733a838293e8b08c70180bc5d9ab3ff704e",
+      "source": "async function W5t(e,n,r,s){_He(r.baseUrl||Yde()),RE(`Uploading file ${e} as ${n}`);let g;try{g=s?.content??await fU.readFile(e)}catch(h){return i(\"tengu_file_upload_failed\",{error_type:S(\"file_read\")}),{path:n,error:l(h),success:!1,reason:\"file_read\"}}return CXo(g,n,r,s)}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "CXo",
+      "start": 2997766,
+      "end": 3000418,
+      "sha256": "358377685f1680daed124ff37833cd05333bb14c3dff49d6103bde3b250653a6",
+      "source": "async function CXo(e,n,r,s){let g=r.baseUrl||Yde();_He(g);let h=`${g}/v1/files`,b=H5t(r),w=e.length;if(w>U5t)return i(\"tengu_file_upload_failed\",{error_type:S(\"file_too_large\")}),{path:n,error:`File exceeds maximum size of ${U5t} bytes (actual: ${w})`,success:!1,reason:\"too_large\"};let D=`----FormBoundary${mXo()}`,j=RXo(uy.basename(n)),z=[];if(z.push(Buffer.from(`--${D}\\r\nContent-Disposition: form-data; name=\"file\"; filename=\"${j}\"\\r\nContent-Type: application/octet-stream\\r\n\\r\n`)),z.push(e),z.push(Buffer.from(`\\r\n`)),z.push(Buffer.from(`--${D}\\r\nContent-Disposition: form-data; name=\"purpose\"\\r\n\\r\nuser_data\\r\n`)),s?.expiresInSeconds!==void 0)z.push(Buffer.from(`--${D}\\r\nContent-Disposition: form-data; name=\"expires_in_seconds\"\\r\n\\r\n${s.expiresInSeconds}\\r\n`));z.push(Buffer.from(`--${D}--\\r\n`));let K=Buffer.concat(z);try{return await j5t(`Upload file ${n}`,async(he)=>{if(s?.signal?.aborted)throw new ib(\"Upload canceled\",\"canceled\");let _e=(ke)=>{if(he>=uU)throw i(\"tengu_file_upload_failed\",{error_type:S(\"server\")}),new ib(`${ke} after ${uU} attempts`,\"server\");return{done:!1,error:ke}};try{let ke=await St.post(h,K,{headers:{...b,\"Content-Type\":`multipart/form-data; boundary=${D}`,\"Content-Length\":K.length.toString()},timeout:s?.timeoutMs??kXo,signal:s?.signal,validateStatus:(be)=>be<500});if(ke.status===200||ke.status===201){let be=ke.data?.id;if(!be)return _e(\"Upload succeeded but no file ID returned\");return RE(`Uploaded ${n} -> ${be} (${w} bytes)`),{done:!0,value:{path:n,fileId:be,size:w,success:!0}}}if(ke.status===401)throw i(\"tengu_file_upload_failed\",{error_type:S(\"auth\")}),new ib(\"Authentication failed: invalid or missing API key\",\"auth\");if(ke.status===403)throw i(\"tengu_file_upload_failed\",{error_type:S(\"forbidden\")}),new ib(\"Access denied for upload\",\"forbidden\");if(ke.status===413)throw i(\"tengu_file_upload_failed\",{error_type:S(\"size\")}),new ib(\"File too large for upload\",\"too_large\");if(ke.status===400||ke.status===404||ke.status===422)throw i(\"tengu_file_upload_failed\",{error_type:S(\"server\")}),new ib(`status ${ke.status}`,\"server\");return _e(`status ${ke.status}`)}catch(ke){if(ke instanceof ib)throw ke;if(St.isCancel(ke))throw new ib(\"Upload canceled\",\"canceled\");if(St.isAxiosError(ke)){if(s?.retryAfterTimeout===!1&&ke.code===\"ECONNABORTED\"&&ke.cause===void 0)throw i(\"tengu_file_upload_failed\",{error_type:S(\"network\")}),new ib(ke.message,\"network\");return{done:!1,error:ke.message}}throw ke}})}catch(he){if(he instanceof ib)return{path:n,error:he.message,success:!1,reason:he.reason};return i(\"tengu_file_upload_failed\",{error_type:S(\"network\")}),{path:n,error:l(he),success:!1,reason:\"network\"}}}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "RXo",
+      "start": 3000418,
+      "end": 3000503,
+      "sha256": "b4cb6a4a5bd476431d6ee9d54213ffb38aec21fd124033348df004d967f04bd9",
+      "source": "function RXo(e){return e.replace(/[\"\\r\\n]/g,(n)=>n==='\"'?\"%22\":n===\"\\r\"?\"%0D\":\"%0A\")}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "ib",
+      "start": 3000503,
+      "end": 3000610,
+      "sha256": "be2eb3a8590f3ac4edc5375028d7f99ca898bf485afddca6742e3f58d5829a40",
+      "source": "class ib extends Error{reason;constructor(e,n){super(e);this.reason=n;this.name=\"UploadNonRetriableError\"}}",
+      "variable": false
+    },
+    {
+      "module": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "kIo",
+      "start": 3000610,
+      "end": 3000910,
+      "sha256": "93ee723873fd68aa7df4a5e1f8219c445addf072d695eaa76ea3bb52e9d21a25",
+      "source": "function kIo(e){let n=[],r=e.flatMap((s)=>s.split(\" \").filter(Boolean));for(let s of r){let g=s.indexOf(\":\");if(g===-1)continue;let h=s.substring(0,g),b=s.substring(g+1);if(!h||!b){kHe(`Invalid file spec: ${s}. Both file_id and path are required`);continue}n.push({fileId:h,relativePath:b})}return n}",
+      "variable": false
+    },
+    {
+      "module": "chunk-0ynmkq26.js",
+      "moduleSha256": "3ec56eb6a2994839f2a21970e25e1b2dd7b7bf6e255f3da02e25eae47515308a",
+      "name": "$d",
+      "start": 615,
+      "end": 846,
+      "sha256": "be8285bf307d901a14aa747ea7e9cc29dc315faa774d269ec246a66c12bac783",
+      "source": "function $d(i,s){let e=0,n=[];function o(){if(e<i)return e++,Promise.resolve();return new Promise((r)=>n.push(r))}function t(){let r=n.shift();if(r)r();else e--}return async(...r)=>{await o();try{return await s(...r)}finally{t()}}}",
+      "variable": false
+    },
+    {
+      "module": "chunk-h3rrxdgy.js",
+      "moduleSha256": "4012f37687d6f056e0a15ff409aeac2a1192a31d4ae1687c29d0332c634c4876",
+      "name": "G",
+      "start": 673,
+      "end": 732,
+      "sha256": "9c397ccb93b3adbdafea0ab6db7fc8369fc1dbadbff1ea3948e5839625563ea8",
+      "source": "function G(n,e){let r=0;for(let t of n)r+=+!!e(t);return r}",
+      "variable": false
+    }
+  ],
+  "ports": {
+    "_He": "filesPolicy287 actual native source owner",
+    "H5t": "filesHeaders287 actual header owner",
+    "i": "existing disabled analytics C",
+    "St": "axios actual transport",
+    "oe": "existing getCwd ALS/session owner",
+    "y": "existing telemetry-disabled C logEvent feature-ok port",
+    "p": "existing telemetry-disabled C logEvent feature-sad port",
+    "m": "existing telemetry-disabled C logEvent feature-bad port",
+    "$d": "whole standalone original per-batch limiter",
+    "G": "whole standalone original count predicate"
+  }
+}

@@ -1,0 +1,2 @@
+// Complete pinned aJo public Grove stage; only fixed import transportation.
+export function createGroveStartupStage287(ports){return new Function("ports","const {NVe,T,x,e,i,cs,P,importGrove287}=ports;return (async(u)=>{if(!await NVe(T,x))return null;let{GroveDialog:f}=await importGrove287();return e(f,{showIfAlreadyViewed:!1,location:P.onboardingShown?\"onboarding\":\"policy_update_modal\",onDone:(D)=>{if(D!==\"escape\"){u();return}i(\"tengu_grove_policy_exited\",{}),cs(0),P.onboardingShown=!1,P.claudeInChromeAccepted=!1,u(\"stop\")}})});")(ports)}

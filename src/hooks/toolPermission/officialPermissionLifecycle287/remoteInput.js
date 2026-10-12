@@ -1,0 +1,1 @@
+export const sourceRemoteInput287=new Function("function Td(e){return i(e)!==void 0};\nfunction i(e){if(typeof e!==\"object\"||e===null||!(Sr in e))return;let t=e[Sr];if(typeof t!==\"string\")return;let n=t.trim();return n===\"\"||Bw(n)?void 0:n};\nvar Sr=\"_host\";\nfunction Bw(e){return c.some((t)=>t===e)};\nvar c=[\"container\",\"this-machine\"];\nreturn Td;")();

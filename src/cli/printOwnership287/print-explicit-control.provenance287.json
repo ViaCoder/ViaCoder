@@ -1,0 +1,204 @@
+{
+  "version": "2.1.287",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16 end-exclusive",
+  "generator": {
+    "file": "src/cli/printOwnership287/recoverExplicitControl287.mjs",
+    "sha256": "10a57c5bf73b757d6185b279d96c3043f481de350e352c20f17fe5b734d366eb"
+  },
+  "finalSources": [
+    {
+      "file": "src/cli/printOwnership287/explicitHelpersNative287.js",
+      "sha256": "f03778b163443aab1acabebaf18f964880f4e6cc9f580f3f44fd1d5467774cb6",
+      "bytes": 58174
+    },
+    {
+      "file": "src/cli/printOwnership287/explicitHelpersNative287.d.ts",
+      "sha256": "7bf5e60407299a3383f11edb2eded986fc71f5c8ed8156878d3ab2b2cd672656",
+      "bytes": 146
+    },
+    {
+      "file": "src/cli/printOwnership287/print-explicit-control.native.js",
+      "sha256": "6578165c61197c391df0455657a17b51266ab19fa1738a92ef804566bf238c15",
+      "bytes": 4691
+    },
+    {
+      "file": "src/cli/printOwnership287/print-explicit-control.native.d.ts",
+      "sha256": "5d42edf77f98cdd7c63fd48f5e28952ae84ababba926fd70ad74743c29a47ed1",
+      "bytes": 248
+    },
+    {
+      "file": "src/cli/printOwnership287/explicitControlRuntime287.ts",
+      "sha256": "b5bf8796d5a3a652b34588a6247f9c246d4b253b52e386faf60c61f4e6c8b7f1",
+      "bytes": 4451
+    }
+  ],
+  "scope": "mechanically restored client source; provenance does not claim runtime invocation or full production acceptance",
+  "file": "chunk-xapeakym.js",
+  "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+  "rows": [
+    {
+      "subtype": "submit_feedback",
+      "start": 514885,
+      "end": 515838,
+      "sha256": "e2e8d9f9aeb2f938d48237f9b7e74e0da01794617a18c5bbdaddbc86adb30ec0",
+      "body": "else if(A.request.subtype===\"submit_feedback\"){let{description:j,surface:ue,draft_id:J,type:ie,title:be,area:ve,attach_transcript:pt,save_locally:St}=A.request;sl(async()=>{try{if(J==null&&St===!0){Ze(A,await txn({messages:Ct,description:j,surface:ue??\"sdk\",storageV5:I.storageV5}));return}let it=q4t();if(it){Ze(A,{feedback_id:null,unavailable_reason:it});return}if(J!=null){let{submitDraftFromRequest:Wt}=await import(\"/$bunfs/root/chunk-gf9kpcg4.js\");Ze(A,await Wt({draftId:J,description:j,type:ie,title:be,area:ve,attachTranscript:pt,surface:ue,messages:Ct,storageV5:I.storageV5,credentials:I.credentials}));return}let Bt=await J6e({messages:Ct,description:j,surface:ue??\"sdk\",storageV5:I.storageV5,credentials:I.credentials});if(Bt.success){let Wt;Ze(A,{feedback_id:Bt.feedbackId,ccshare_url:Wt})}else Ze(A,{feedback_id:null,is_zdr_org:Bt.isZdrOrg,failure_reason:Bt.failureReason,status_code:Bt.statusCode})}catch(it){nr(A,\"submit_feedback\",it)}})}",
+      "file": "chunk-xapeakym.js",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "raw": {
+        "file": "chunk-xapeakym.js",
+        "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+        "start": 514885,
+        "end": 515838,
+        "sha256": "e2e8d9f9aeb2f938d48237f9b7e74e0da01794617a18c5bbdaddbc86adb30ec0"
+      },
+      "transport": {
+        "from": "await import(\"/$bunfs/root/chunk-gf9kpcg4.js\")",
+        "to": "await loadOriginalModule287(\"chunk-gf9kpcg4.js\")",
+        "count": 1
+      },
+      "generatedBindings": [
+        {
+          "file": "src/cli/printOwnership287/print-explicit-control.native.js",
+          "sourceSha256": "6578165c61197c391df0455657a17b51266ab19fa1738a92ef804566bf238c15",
+          "kind": "branchTable[submit_feedback]",
+          "literalStart": 159,
+          "literalEnd": 1126,
+          "start": 160,
+          "end": 1125,
+          "encodedSha256": "ee9582d1339edc11572ea68c83a4d54e8b72ecab6632f18498faccad99f16ad2",
+          "decodedStart": 0,
+          "decodedEnd": 955,
+          "decodedSha256": "496533543ef8c9f413d5c1784de0b37b2e4faf5368aca099609f6b42a7c66234",
+          "forwardExact": true,
+          "inverseExact": true
+        },
+        {
+          "file": "src/cli/printOwnership287/print-explicit-control.native.js",
+          "sourceSha256": "6578165c61197c391df0455657a17b51266ab19fa1738a92ef804566bf238c15",
+          "kind": "actualDispatcherBody[submit_feedback]",
+          "literalStart": 2362,
+          "literalEnd": 4599,
+          "start": 2551,
+          "end": 3516,
+          "encodedSha256": "ee9582d1339edc11572ea68c83a4d54e8b72ecab6632f18498faccad99f16ad2",
+          "decodedStart": 181,
+          "decodedEnd": 1136,
+          "decodedSha256": "496533543ef8c9f413d5c1784de0b37b2e4faf5368aca099609f6b42a7c66234",
+          "forwardExact": true,
+          "inverseExact": true
+        }
+      ]
+    },
+    {
+      "subtype": "ultrareview_launch",
+      "start": 516974,
+      "end": 517555,
+      "sha256": "f6aa7c6d54a27657c475a60076c9b288af29c1b3bc2c458db736cacfdfcd1f7b",
+      "body": "else if(A.request.subtype===\"ultrareview_launch\"){let{args:j=\"\",confirm:ue=!1}=A.request;sl(async()=>{try{let J=await TMe(j,{confirm:ue,confirmsBeforeLaunch:!0,overageConfirmed:v().ultrareviewOverageConfirmed,markOverageConfirmed:()=>ODn(R),context:{abortController:Bn(),taskRegistry:Gm(v,R),storageV5:I.storageV5,credentials:I.credentials}}),ie=KA(j,J);qr(ie);for(let be of ie)ht.enqueue({type:\"user\",message:be.message,session_id:q(),parent_tool_use_id:null,uuid:be.uuid,timestamp:be.timestamp,isReplay:!0,isSynthetic:be.isMeta});Ze(A,J)}catch(J){nr(A,\"ultrareview_launch\",J)}})}",
+      "file": "chunk-xapeakym.js",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "raw": {
+        "file": "chunk-xapeakym.js",
+        "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+        "start": 516974,
+        "end": 517555,
+        "sha256": "f6aa7c6d54a27657c475a60076c9b288af29c1b3bc2c458db736cacfdfcd1f7b"
+      },
+      "generatedBindings": [
+        {
+          "file": "src/cli/printOwnership287/print-explicit-control.native.js",
+          "sourceSha256": "6578165c61197c391df0455657a17b51266ab19fa1738a92ef804566bf238c15",
+          "kind": "branchTable[ultrareview_launch]",
+          "literalStart": 1152,
+          "literalEnd": 1743,
+          "start": 1153,
+          "end": 1742,
+          "encodedSha256": "0e4eb737efd6cc5f9fe7f54f36061d8da55c86309b991d8f59e72eaad51c24b5",
+          "decodedStart": 0,
+          "decodedEnd": 581,
+          "decodedSha256": "f6aa7c6d54a27657c475a60076c9b288af29c1b3bc2c458db736cacfdfcd1f7b",
+          "forwardExact": true,
+          "inverseExact": true
+        },
+        {
+          "file": "src/cli/printOwnership287/print-explicit-control.native.js",
+          "sourceSha256": "6578165c61197c391df0455657a17b51266ab19fa1738a92ef804566bf238c15",
+          "kind": "actualDispatcherBody[ultrareview_launch]",
+          "literalStart": 2362,
+          "literalEnd": 4599,
+          "start": 3518,
+          "end": 4107,
+          "encodedSha256": "0e4eb737efd6cc5f9fe7f54f36061d8da55c86309b991d8f59e72eaad51c24b5",
+          "decodedStart": 1137,
+          "decodedEnd": 1718,
+          "decodedSha256": "f6aa7c6d54a27657c475a60076c9b288af29c1b3bc2c458db736cacfdfcd1f7b",
+          "forwardExact": true,
+          "inverseExact": true
+        }
+      ]
+    },
+    {
+      "subtype": "message_rated",
+      "start": 517555,
+      "end": 518012,
+      "sha256": "b1e0760c097d03d7fb5c43900db7b90caf7e41772b4c70b0e34cbfb9b9683370",
+      "body": "else if(A.request.subtype===\"message_rated\"){let j=IEn().safeParse(A.request);if(!j.success){We(A,'message_rated: messageUuid must be a string, sentiment \"positive\" or \"negative\", surface \"tool_use\" or \"assistant_text\", and cleared a boolean');continue}if(on(\"allow_product_feedback\")){let{messageUuid:ue,sentiment:J,surface:ie=\"tool_use\",cleared:be=!1}=j.data;i(\"tengu_message_rated\",{message_uuid:ye(ue),sentiment:c(J),surface:c(ie),cleared:be})}Ze(A,{})}",
+      "file": "chunk-xapeakym.js",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "raw": {
+        "file": "chunk-xapeakym.js",
+        "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+        "start": 517555,
+        "end": 518012,
+        "sha256": "b1e0760c097d03d7fb5c43900db7b90caf7e41772b4c70b0e34cbfb9b9683370"
+      },
+      "generatedBindings": [
+        {
+          "file": "src/cli/printOwnership287/print-explicit-control.native.js",
+          "sourceSha256": "6578165c61197c391df0455657a17b51266ab19fa1738a92ef804566bf238c15",
+          "kind": "branchTable[message_rated]",
+          "literalStart": 1764,
+          "literalEnd": 2239,
+          "start": 1765,
+          "end": 2238,
+          "encodedSha256": "6eafd3c78f0ffe927ffb90b784bc671b50ef5a863b473b298ef84689e6cbfa63",
+          "decodedStart": 0,
+          "decodedEnd": 457,
+          "decodedSha256": "b1e0760c097d03d7fb5c43900db7b90caf7e41772b4c70b0e34cbfb9b9683370",
+          "forwardExact": true,
+          "inverseExact": true
+        },
+        {
+          "file": "src/cli/printOwnership287/print-explicit-control.native.js",
+          "sourceSha256": "6578165c61197c391df0455657a17b51266ab19fa1738a92ef804566bf238c15",
+          "kind": "actualDispatcherBody[message_rated]",
+          "literalStart": 2362,
+          "literalEnd": 4599,
+          "start": 4109,
+          "end": 4582,
+          "encodedSha256": "6eafd3c78f0ffe927ffb90b784bc671b50ef5a863b473b298ef84689e6cbfa63",
+          "decodedStart": 1719,
+          "decodedEnd": 2176,
+          "decodedSha256": "b1e0760c097d03d7fb5c43900db7b90caf7e41772b4c70b0e34cbfb9b9683370",
+          "forwardExact": true,
+          "inverseExact": true
+        }
+      ]
+    }
+  ],
+  "generated": {
+    "file": "src/cli/printOwnership287/print-explicit-control.native.js",
+    "sha256": "6578165c61197c391df0455657a17b51266ab19fa1738a92ef804566bf238c15",
+    "dispatcherBodySha256": "80f4058fb336f0b83ed27f230e2e1de968abdcc4d3b18da9c3a94412e34d1248"
+  },
+  "forwardInverse": {
+    "branches": 3,
+    "bindings": 6,
+    "tableAndActualDispatcherBound": true,
+    "allForwardExact": true,
+    "allInverseExact": true
+  },
+  "helpersProvenance": "src/cli/printOwnership287/explicitHelpersProvenance287.json",
+  "telemetry": "existing logEvent no-op C; explicit feedback client transport preserved"
+}

@@ -1,0 +1,2464 @@
+{
+  "version": "2.1.287",
+  "platform": "darwin-arm64",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "hI": {
+    "file": "chunk-xapeakym.js",
+    "name": "hI",
+    "start": 376077,
+    "endExclusive": 536834,
+    "sha256": "aa26ddf2cab6a1b498c9008654205d64060bb28740aaf42464fe770c74392319",
+    "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+    "variable": false
+  },
+  "branchBlock": {
+    "start": 477873,
+    "endExclusive": 488150,
+    "sha256": "bebe14d2c89b4bddf77fb1f5398adb6c617cadadc15ad087b04199215a62a493"
+  },
+  "branches": [
+    {
+      "name": "ui_attach",
+      "start": 477873,
+      "endExclusive": 478611,
+      "sha256": "cdffc8fe61b4967e5e9d46d4614ed24ffb6ba7fad7e8922f9748b6ab69762ed6",
+      "source": "if(A.request.subtype===\"ui_attach\"){let j=OEn().safeParse(A.request);if(!j.success){We(A,`ui_attach: surface must be \"desktop\", \"mobile\" or \"vscode\", client_id 1-64 of letters, digits, . _ - (the colon is the engine's), viewport (when given) positive integer columns and rows with isFullscreen (when given) a boolean, and answers (when given) a list of \"ui_copy\", \"ui_prompt_read\", \"ui_prompt_fill\", \"ui_prompt_suggest\"`);continue}let ue=A,J=j.data;Cr(async()=>{try{let ie=Voo({surface:J.surface,clientId:J.client_id,...J.viewport!==void 0&&{viewport:J.viewport}},J.answers),be=Uu;if(Wm(),Ze(ue,{surfaces:[...r7()]}),Oun().some((pt)=>pt.clientId===J.client_id)&&Uu===be)Pf(vd(li().getState()));await ie}catch(ie){nr(ue,\"ui_attach\",ie)}})}",
+      "free": [
+        "A",
+        "Cr",
+        "OEn",
+        "Oun",
+        "Pf",
+        "Uu",
+        "Voo",
+        "We",
+        "Wm",
+        "Ze",
+        "li",
+        "nr",
+        "r7",
+        "vd"
+      ]
+    },
+    {
+      "name": "ui_detach",
+      "start": 478616,
+      "endExclusive": 479013,
+      "sha256": "d9cef2732d439b80d7335500beda263008bdd736ca8d68d5acc4ef098749bb4f",
+      "source": "if(A.request.subtype===\"ui_detach\"){let j=HEn().safeParse(A.request);if(!j.success){We(A,\"ui_detach: client_id must be 1-64 of letters, digits, . _ - (the colon is the engine's)\");continue}let ue=A,J=j.data;Cr(async()=>{try{let ie=Y5.list().some((ve)=>ve.clientId===J.client_id),be=olr(J.client_id,\"detach\");Wm(),Ze(ue,{detached:ie,surfaces:[...r7()]}),await be}catch(ie){nr(ue,\"ui_detach\",ie)}})}",
+      "free": [
+        "A",
+        "Cr",
+        "HEn",
+        "We",
+        "Wm",
+        "Y5",
+        "Ze",
+        "nr",
+        "olr",
+        "r7"
+      ]
+    },
+    {
+      "name": "ui_render",
+      "start": 479018,
+      "endExclusive": 480886,
+      "sha256": "aafe0bf44ae4142dd07da55a862e2de6f51b23f2312afc37654961d95e1183e1",
+      "source": "if(A.request.subtype===\"ui_render\"){let j=DEn().safeParse(A.request);if(!j.success){We(A,'ui_render: surface must be \"desktop\", \"mobile\" or \"vscode\", component a render site name, instance_id a string, props an object, client_id (when given) 1-64 safe characters, viewport (when given) positive integer columns and rows with isFullscreen (when given) a boolean, and on_screen (when given) null or integers first <= last < of');continue}let ue=A,J=j.data,ie=`${J.instance_id}#${J.bench?.seq??0}`;t(`BENCH ui_render key=${ie} rid=${ue.request_id} C0=${Date.now()}`);let be=Bn();mo.get(ue.request_id)?.abort(),mo.set(ue.request_id,be),Cr(async()=>{try{Voo({surface:J.surface,clientId:J.client_id??mtt(J.surface),...J.viewport!==void 0&&{viewport:J.viewport}}),Wm();let ve=J.component===\"Pane\"||J.component===\"AbovePrompt\"?{clientId:J.client_id??mtt(J.surface),component:J.component,requestId:J.instance_id}:void 0;if(ve!==void 0)ZS({...ve,...$C(J.props),...J.content_rows!==void 0&&{contentRows:J.content_rows},...J.keyed!==void 0&&{keyed:J.keyed}});let pt=await import(\"/$bunfs/root/chunk-3s6pfw1n.js\"),St=iI(J.component,J.instance_id,sI(J.props)),{onScreen:it,...Bt}=St,Wt=!Djt.has(J.component)?St:J.on_screen===void 0?Bt:{...Bt,onScreen:J.on_screen},ot=await h5e.run({surface:J.surface,component:J.component,requestId:J.instance_id,...J.viewport!==void 0&&{viewport:J.viewport},props:Wt});if(be.signal.aborted)return;if(ve!==void 0)ek({...ve,tree:ot.tree});t(`BENCH ui_render key=${ie} rid=${ue.request_id} C3=${Date.now()}`);let Je=Object.keys(ot.clientModules).length>0;Ze(ue,{tree:ot.tree,props:ot.props,rewritten:ot.rewritten,hooked:pt.hasRenderHooks(J.component),...Je&&{client_modules:ot.clientModules},...J.bench!==void 0&&{bench:J.bench}})}catch(ve){if(!be.signal.aborted)nr(ue,\"ui_render\",ve)}finally{if(mo.get(ue.request_id)===be)mo.delete(ue.request_id)}})}",
+      "free": [
+        "$C",
+        "A",
+        "Bn",
+        "Cr",
+        "DEn",
+        "Djt",
+        "Voo",
+        "We",
+        "Wm",
+        "ZS",
+        "Ze",
+        "ek",
+        "h5e",
+        "iI",
+        "mo",
+        "mtt",
+        "nr",
+        "sI",
+        "t"
+      ]
+    },
+    {
+      "name": "ui_press",
+      "start": 480891,
+      "endExclusive": 481407,
+      "sha256": "1b70b7d62f1b38e0c7b7e9db46431fcb190d265092deb427060865156831e807",
+      "source": "if(A.request.subtype===\"ui_press\"){let j=MEn().safeParse(A.request);if(!j.success){We(A,'ui_press: plugin must be a string, handle an integer, surface (when given) \"desktop\", \"mobile\" or \"vscode\" and href (when given) a string of at most 2048 characters');continue}let ue=A,J=j.data;Cr(async()=>{try{let ie=await h5e.press({plugin:J.plugin,handle:J.handle,surface:J.surface,link:J.href===void 0?void 0:{href:J.href}});Ze(ue,ie===void 0?{handled:!1}:{handled:!0,element:ie.element})}catch(ie){nr(ue,\"ui_press\",ie)}})}",
+      "free": [
+        "A",
+        "Cr",
+        "MEn",
+        "We",
+        "Ze",
+        "h5e",
+        "nr"
+      ]
+    },
+    {
+      "name": "ui_input",
+      "start": 481412,
+      "endExclusive": 482185,
+      "sha256": "3dfff8f04a6d439ef3a5008b79a2211b429c2534b51e5234fa88dfdb6b84661a",
+      "source": "if(A.request.subtype===\"ui_input\"){let j=$En().safeParse(A.request);if(!j.success){We(A,'ui_input: plugin must be a string, handle an integer, kind \"change\" or \"submit\", value a string of at most 16384 characters, key (when given) a string, component (when given) a render site name, instance_id (when given) a string and surface (when given) \"desktop\", \"mobile\" or \"vscode\"');continue}let ue=A,J=j.data;Cr(async()=>{try{let ie=await h5e.input({plugin:J.plugin,handle:J.handle,surface:J.surface,kind:J.kind,value:J.value,...J.key!==void 0&&{element:J.key},...J.component!==void 0&&{component:J.component},...J.instance_id!==void 0&&{requestId:J.instance_id}});Ze(ue,ie===void 0?{handled:!1}:{handled:!0,element:ie.element,value:ie.value})}catch(ie){nr(ue,\"ui_input\",ie)}})}",
+      "free": [
+        "$En",
+        "A",
+        "Cr",
+        "We",
+        "Ze",
+        "h5e",
+        "nr"
+      ]
+    },
+    {
+      "name": "ui_prompt_edit",
+      "start": 482190,
+      "endExclusive": 482903,
+      "sha256": "18a637305f07bf40d25bfaf818b957eaa661b20f0dade4171e202803f6be6f29",
+      "source": "if(A.request.subtype===\"ui_prompt_edit\"){let j=qEn().safeParse(A.request);if(!j.success){We(A,'ui_prompt_edit: text must be a string of at most 1000000 characters, cursor an integer >= 0, key (when given) an object with key a string of 1-32 characters and ctrl, shift, meta each true when present, by (when given) \"person\" or \"app\", surface (when given) \"desktop\", \"mobile\" or \"vscode\" and client_id (when given) 1-64 of letters, digits, . _ -');continue}let ue=A,J=j.data,ie=J.client_id??mtt(J.surface),be={text:J.text,cursor:J.cursor};Cr(async()=>{try{let ve=J.by===\"app\"?Km.adopt(ie,be):await Km.edit({clientKey:ie,box:be,...J.key!==void 0&&{key:J.key}});Ze(ue,{...ve})}catch(ve){nr(ue,\"ui_prompt_edit\",ve)}})}",
+      "free": [
+        "A",
+        "Cr",
+        "Km",
+        "We",
+        "Ze",
+        "mtt",
+        "nr",
+        "qEn"
+      ]
+    },
+    {
+      "name": "ui_select",
+      "start": 482908,
+      "endExclusive": 483646,
+      "sha256": "14605e09d344d893b66618ec55c4557fed2788957b8bcd29b95d6c183882c78f",
+      "source": "if(A.request.subtype===\"ui_select\"){let j=UEn().safeParse(A.request);if(!j.success){We(A,'ui_select: plugin must be a string, handle an integer, value a string of at most 16384 characters, key (when given) a string, component (when given) a render site name, instance_id (when given) a string and surface (when given) \"desktop\", \"mobile\" or \"vscode\"');continue}let ue=A,J=j.data;Cr(async()=>{try{let ie=await h5e.select({plugin:J.plugin,handle:J.handle,surface:J.surface,value:J.value,...J.key!==void 0&&{element:J.key},...J.component!==void 0&&{component:J.component},...J.instance_id!==void 0&&{requestId:J.instance_id}});Ze(ue,ie===void 0?{handled:!1}:{handled:!0,element:ie.element,value:ie.value})}catch(ie){nr(ue,\"ui_select\",ie)}})}",
+      "free": [
+        "A",
+        "Cr",
+        "UEn",
+        "We",
+        "Ze",
+        "h5e",
+        "nr"
+      ]
+    },
+    {
+      "name": "ui_panes",
+      "start": 483651,
+      "endExclusive": 483862,
+      "sha256": "d7e0288601ce334d48063232afc5d49616a7a761c158652fd8be5ae8ae2bc10b",
+      "source": "if(A.request.subtype===\"ui_panes\"){if(!BEn().safeParse(A.request).success){We(A,\"ui_panes: client_id (when given) 1-64 safe characters\");continue}try{Ze(A,rk(vd(li().getState())))}catch(ue){nr(A,\"ui_panes\",ue)}}",
+      "free": [
+        "A",
+        "BEn",
+        "We",
+        "Ze",
+        "li",
+        "nr",
+        "rk",
+        "vd"
+      ]
+    },
+    {
+      "name": "ui_pane_show",
+      "start": 483867,
+      "endExclusive": 484232,
+      "sha256": "45171b3344b2db4855c5dec71e0edd9ec6fcfdab86f7e37a81a77c5bbdbb57ba",
+      "source": "if(A.request.subtype===\"ui_pane_show\"){let j=jEn().safeParse(A.request);if(!j.success){We(A,\"ui_pane_show: id must be 1-64 of letters, digits, _ or -\");continue}try{let ue=li().getState().focusedId;if(L3n(j.data.id),li().getState().focusedId!==ue)WS(j.data.client_id??mtt(j.data.surface));Ze(A,{shown_id:li().getState().shownId})}catch(ue){nr(A,\"ui_pane_show\",ue)}}",
+      "free": [
+        "A",
+        "L3n",
+        "WS",
+        "We",
+        "Ze",
+        "jEn",
+        "li",
+        "mtt",
+        "nr"
+      ]
+    },
+    {
+      "name": "ui_pane_focus",
+      "start": 484237,
+      "endExclusive": 484603,
+      "sha256": "69c600a5d7e3168390524b26e643fe00680097ff30702607a3b9e4d3e2f45d55",
+      "source": "if(A.request.subtype===\"ui_pane_focus\"){let j=WEn().safeParse(A.request);if(!j.success){We(A,'ui_pane_focus: id must be null or 1-64 of letters, digits, _ or -, surface (when given) \"desktop\", \"mobile\" or \"vscode\"');continue}let ue=j.data;try{Dq(ue.id),WS(ue.client_id??mtt(ue.surface)),Ze(A,{focused_id:li().getState().focusedId})}catch(J){nr(A,\"ui_pane_focus\",J)}}",
+      "free": [
+        "A",
+        "Dq",
+        "WEn",
+        "WS",
+        "We",
+        "Ze",
+        "li",
+        "mtt",
+        "nr"
+      ]
+    },
+    {
+      "name": "ui_close",
+      "start": 484608,
+      "endExclusive": 484972,
+      "sha256": "df70aaa0a8cea9725304c5194d7a37ee355a5fe650dc86fef2872c23622e42d6",
+      "source": "if(A.request.subtype===\"ui_close\"){let j=GEn().safeParse(A.request);if(!j.success){We(A,\"ui_close: id must be 1-64 of letters, digits, _ or -\");continue}let ue=A,J=j.data.id,ie=()=>Sde(li().getState()).some((be)=>be.id===J);if(!ie()){Ze(ue,{closed:!0});continue}Cr(async()=>{try{await m9e(J,{kind:\"person\"}),Ze(ue,{closed:!ie()})}catch(be){nr(ue,\"ui_close\",be)}})}",
+      "free": [
+        "A",
+        "Cr",
+        "GEn",
+        "Sde",
+        "We",
+        "Ze",
+        "li",
+        "m9e",
+        "nr"
+      ]
+    },
+    {
+      "name": "ui_scroll",
+      "start": 484977,
+      "endExclusive": 485881,
+      "sha256": "74e326ccdb7070bdf36de44c6a79d963ad6bf4208db38318f3aacbe86c55c8be",
+      "source": "if(A.request.subtype===\"ui_scroll\"){let j=zEn().safeParse(A.request);if(!j.success){We(A,'ui_scroll: component must be \"Pane\" or \"AbovePrompt\", instance_id a string of at most 256 characters, offset, body_rows and content_rows non-negative integers, by an integer, pointer (when given) integer column and row, keyed (when given) at most 512 of {plugin, key, top, bottom}, surface (when given) \"desktop\", \"mobile\" or \"vscode\"');continue}let ue=A,J=j.data;Cr(async()=>{try{let ie=await WC({clientId:J.client_id??mtt(J.surface),component:J.component,requestId:J.instance_id,offset:J.offset,by:J.by,bodyRows:J.body_rows,contentRows:J.content_rows,...J.pointer!==void 0&&{pointer:J.pointer},...J.keyed!==void 0&&{keyed:J.keyed}});Ze(ue,{moved:ie.result.deny===void 0,offset:ie.offset,...ie.result.deny!==void 0&&{deny:ie.result.deny},...ie.isFollowingEnd&&{follow_end:!0}})}catch(ie){nr(ue,\"ui_scroll\",ie)}})}",
+      "free": [
+        "A",
+        "Cr",
+        "WC",
+        "We",
+        "Ze",
+        "mtt",
+        "nr",
+        "zEn"
+      ]
+    },
+    {
+      "name": "ui_focus",
+      "start": 485886,
+      "endExclusive": 486617,
+      "sha256": "f9605fa8d8f919f6e02dc387865d9a8f6552158f6604426b085ca5d47ce83a79",
+      "source": "if(A.request.subtype===\"ui_focus\"){let j=VEn().safeParse(A.request);if(!j.success){We(A,'ui_focus: component must be \"Pane\" or \"AbovePrompt\", instance_id a string of at most 256 characters, is_held a boolean, element (when given) null or {plugin, key} of at most 256 characters each, by (when given) \"person\" or \"auto\", surface (when given) \"desktop\", \"mobile\" or \"vscode\"');continue}let ue=A,J=j.data;Cr(async()=>{try{let ie=await pC({clientId:J.client_id??mtt(J.surface),component:J.component,requestId:J.instance_id,isHeld:J.is_held,...J.element!==void 0&&{element:J.element},by:J.by});Ze(ue,{moved:ie.result.deny===void 0,element:ie.element,...ie.result.deny!==void 0&&{deny:ie.result.deny}})}catch(ie){nr(ue,\"ui_focus\",ie)}})}",
+      "free": [
+        "A",
+        "Cr",
+        "VEn",
+        "We",
+        "Ze",
+        "mtt",
+        "nr",
+        "pC"
+      ]
+    },
+    {
+      "name": "ui_client_module",
+      "start": 486622,
+      "endExclusive": 486995,
+      "sha256": "49aa78058563628a30dba337eb89e1407da2a26cb608427189f92fe30c705a6e",
+      "source": "if(A.request.subtype===\"ui_client_module\"){let j=LEn().safeParse(A.request);if(!j.success){We(A,\"ui_client_module: plugin must be a string\");continue}try{let ue=h5e.clientModule(j.data.plugin);if(ue===void 0)We(A,`ui_client_module: plugin ${Kt(j.data.plugin)} is not loaded or its hooks module names no surface module`);else Ze(A,ue)}catch(ue){nr(A,\"ui_client_module\",ue)}}",
+      "free": [
+        "A",
+        "Kt",
+        "LEn",
+        "We",
+        "Ze",
+        "h5e",
+        "nr"
+      ]
+    },
+    {
+      "name": "ui_client_press",
+      "start": 487000,
+      "endExclusive": 487623,
+      "sha256": "bb73974c5514afe66791542a05b4e6a5c4fe56c8097e1468255da67a3a5ae310",
+      "source": "if(A.request.subtype===\"ui_client_press\"){let j=NEn().safeParse(A.request);if(!j.success){We(A,'ui_client_press: plugin, instance_id, client, module and element must be strings, component a render site name, and event {type: \"press\"} | {type: \"input\", kind, value} | {type: \"select\", value}');continue}let ue=A,J=j.data;Cr(async()=>{try{let ie=await h5e.clientPress({plugin:J.plugin,component:J.component,requestId:J.instance_id,key:J.client,module:J.module,element:J.element,event:J.event});Ze(ue,ie===void 0?{handled:!1}:{handled:!0,...ie.reached!==void 0&&{reached:ie.reached}})}catch(ie){nr(ue,\"ui_client_press\",ie)}})}",
+      "free": [
+        "A",
+        "Cr",
+        "NEn",
+        "We",
+        "Ze",
+        "h5e",
+        "nr"
+      ]
+    },
+    {
+      "name": "ui_message",
+      "start": 487628,
+      "endExclusive": 488150,
+      "sha256": "39e419a6dd8bf1f2a1c38f06e795592c4ef034febb0cad537bdce52b32b1a3b8",
+      "source": "if(A.request.subtype===\"ui_message\"){let j=FEn().safeParse(A.request);if(!j.success){We(A,\"ui_message: plugin, instance_id, client and module must be strings, component a render site name, and data present (plain JSON)\");continue}let ue=A,J=j.data;Cr(async()=>{try{let ie=await h5e.clientMessage({plugin:J.plugin,component:J.component,requestId:J.instance_id,key:J.client,module:J.module,data:J.data});Ze(ue,ie===void 0?{handled:!1}:{handled:!0,...ie.props!==void 0&&{props:ie.props}})}catch(ie){nr(ue,\"ui_message\",ie)}})}",
+      "free": [
+        "A",
+        "Cr",
+        "FEn",
+        "We",
+        "Ze",
+        "h5e",
+        "nr"
+      ]
+    }
+  ],
+  "lexicalDependencies": [
+    {
+      "local": "$C",
+      "kind": "new-module-initializer",
+      "source": {
+        "file": "chunk-xapeakym.js",
+        "name": "$C",
+        "start": 283715,
+        "endExclusive": 284052,
+        "sha256": "31e345c3fd54c852162889689f291a22f91138361398ce3ec0799fd526cf2992",
+        "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+        "source": "function $C(e){let{scroll:r,isFocused:n}=e,s=typeof r===\"object\"&&r!==null&&\"offset\"in r&&\"bodyRows\"in r,g=s?r.offset:void 0,w=s?r.bodyRows:void 0;return{...typeof g===\"number\"&&typeof w===\"number\"&&Number.isInteger(g)&&Number.isInteger(w)&&g>=0&&w>=0&&{scroll:{offset:g,bodyRows:w}},...typeof n===\"boolean\"&&{keyboard:n?\"held\":\"away\"}}}",
+        "variable": false
+      }
+    },
+    {
+      "local": "$En",
+      "kind": "existing-source",
+      "source": {
+        "file": "chunk-xep95vq1.js",
+        "name": "$En",
+        "start": 578644,
+        "endExclusive": 580863,
+        "sha256": "1a744e90aab5860de65b4d331bb39ac51eeb8f1633ea4f3aa3ee92b5cf77d59d",
+        "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+        "source": "$En=f(()=>u({subtype:x(\"ui_input\"),plugin:o().max(Y).describe(\"@internal The plugin whose hook drew the Input, as its `press.plugin` carried it.\"),handle:C().int().describe(\"@internal The handle the Input carried (`press.handle`), naming the onInput and onSubmit closures held in that plugin's environment.\"),kind:B([\"change\",\"submit\"]).describe(\"@internal Which of the two: `change` on an edit of the field, `submit` on Enter. The `ui.input` hooks reached see it as `e.kind`.\"),value:o().max(lr).describe(\"@internal The field's whole text as the surface holds it now; the hooks reached see it as `e.value` and may rewrite it before the closure.\"),key:o().optional().describe(\"@internal The Input's own `key`, as the tree carried it (the engine puts no length on a key): with `component` and `instance_id`, a handle a redraw just retired is re-resolved to the one Input that plugin holds under this key there, so typing across a re-render is not lost.\"),component:cr().optional().describe(\"@internal The render site the Input was drawn in, as the ui_render that drew it named it; pairs with `key` for the re-resolve.\"),instance_id:o().max(Y).optional().describe(\"@internal The instance the Input was drawn in (the ui_render's `instance_id`): with `key` and `component`, names the one field among several instances that draw the same key (one per transcript row). Without it a retired handle re-resolves only when a single instance holds the key.\"),surface:J().default(\"desktop\").describe(\"@internal The surface the field is on, as the ui_render that drew it named it; absent means `desktop`. The `ui.input` hooks reached see it as `e.surface`.\"),client_id:j().optional().describe(\"@internal The typing client, as its ui_attach named it; optional, and the input runs the same with or without it.\")}).describe(\"@internal A change of, or Enter in, an `Input` a plugin drew for a remote surface: runs the `ui.input` chain over every hooked plugin with the element's own onInput (kind `change`) or onSubmit (kind `submit`) closure at the bottom, one at a time per plugin so typing arrives in order. A handle no Input is held under answers `{handled: false}` and nothing runs. No model turn unless the plugin asks for one.\"))",
+        "variable": true,
+        "declarationKind": "var"
+      },
+      "provider": "canonical"
+    },
+    {
+      "local": "A",
+      "kind": "hI-lexical",
+      "source": {
+        "file": "chunk-xapeakym.js",
+        "name": "A",
+        "start": 456457,
+        "endExclusive": 456458,
+        "sha256": "559aead08264d5795d3909718cdd05abd49572e84fe55590eef31a88a08fdffd",
+        "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+        "source": "A",
+        "variable": true,
+        "declarationKind": "let"
+      }
+    },
+    {
+      "local": "BEn",
+      "kind": "existing-source",
+      "source": {
+        "file": "chunk-xep95vq1.js",
+        "name": "BEn",
+        "start": 584507,
+        "endExclusive": 584773,
+        "sha256": "6f90885dac409f6d2ef455f5bf8eaaccf40e0dff510091e4f405cb5d16838a10",
+        "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+        "source": "BEn=f(()=>u({subtype:x(\"ui_panes\"),client_id:j().optional()}).describe(\"@internal Ask for the pane roster as the engine holds it now: what a surface that places panes reads on mount, before any ui_panes push (a pane opened before the stream armed pushes nothing).\"))",
+        "variable": true,
+        "declarationKind": "var"
+      },
+      "provider": "canonical"
+    },
+    {
+      "local": "Bn",
+      "kind": "existing-source",
+      "source": {
+        "file": "chunk-k35krsdc.js",
+        "name": "Bn",
+        "start": 665,
+        "endExclusive": 731,
+        "sha256": "1ffe906fd619ac24e546a21ed0051e52df6188a5dd6586756d2e6720ee4c7f67",
+        "moduleSha256": "4bdedb0dcb7dee6a20f04802ab9ed001bb8e405332be73c4b92b2dcb387432fd",
+        "source": "function Bn(e=A){let r=new AbortController;return b(e,r.signal),r}",
+        "variable": false
+      },
+      "provider": "canonical"
+    },
+    {
+      "local": "Cr",
+      "kind": "hI-lexical",
+      "source": {
+        "file": "chunk-xapeakym.js",
+        "name": "Cr",
+        "start": 456818,
+        "endExclusive": 456981,
+        "sha256": "b7f9458c049aaeb828bd73b31410282f86598b0c44a11943a94b37eba9265a40",
+        "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+        "source": "Cr=(j)=>{if(ur=!0,sr)r.onCommandLifecycle?.(sr,\"started\");Promise.resolve().then(j).finally(()=>{if(sr)r.onCommandLifecycle?.(sr,\"completed\")}).catch((ue)=>d(ue))}",
+        "variable": true,
+        "declarationKind": "let"
+      }
+    },
+    {
+      "local": "DEn",
+      "kind": "existing-source",
+      "source": {
+        "file": "chunk-xep95vq1.js",
+        "name": "DEn",
+        "start": 567496,
+        "endExclusive": 570254,
+        "sha256": "008a2fdd72f25df16e4f1238f99f146851dfce65eda26a56b378a19dd7ff190c",
+        "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+        "source": "DEn=f(()=>u({subtype:x(\"ui_render\"),surface:J().describe(\"@internal The surface asking: `desktop` (Claude Code Desktop), `mobile` (the Claude mobile app) or `vscode` (Claude Code for VS Code); the hooks reached see it as `e.surface` and answer from that surface's element table.\"),client_id:j().optional().describe(\"@internal The asking client, as its ui_attach named it. The ask puts it on the roster when it is not there: the id given, else `<surface>:default`.\"),component:cr(),instance_id:o().describe(\"@internal The engine's requestId for this instance: the tool_use_id of a tool row or dialog, the message id of a message, the uuid of a command's output row (its twin's), 'session-mode' for the session chip. Two drawings of one component are two instances.\"),props:de(o(),se()).describe(\"@internal The component's plain-data props as the asking surface holds them; the `ui.render` site rule validates their shape per component. `output` on a ToolUse is capped at 64 KB before the chain sees it.\"),viewport:Hw().optional(),on_screen:PW().nullable().optional().describe(\"@internal What of this instance the asking surface's viewport shows now, for a transcript message (UserMessage, AssistantMessage, ToolUse, ToolResult, ToolGroup, CommandOutput, TurnDuration, InfoNotice): the extent, or null while the surface draws it outside its viewport. The engine hands it to the hooks as `e.props.onScreen` for this surface's ask alone (a rewrite of it is refused) and never carries one surface's report to another; leave it out when the surface does not track visibility, and ask again, coalesced to the surface's frame, when it changes, so the hooks re-run for the messages crossing the viewport's edges.\"),content_rows:C().int().nonnegative().optional().describe(\"@internal For a `Pane` or `AbovePrompt` ask: the rows the instance's whole tree lays out to as the surface last drew it (the window itself rides `props.scroll`), so a plugin's `$.ui.scroll` to `end` knows the last offset. Leave it out before the first layout.\"),keyed:T(tE(()=>Ww())).max($w).optional().describe(\"@internal For a `Pane` or `AbovePrompt` ask: where the keyed elements of the tree last drawn sit, so a plugin's `$.ui.scroll({ to: { key } })` lands; without it that call is denied.\"),bench:qw().optional()}).describe('@internal Ask the hooks engine to draw one component instance for a remote surface: runs the `ui.render` chain (every plugin hooked on it, then core) with the surface asked and answers the tree plus the props core was handed. A session with no hooks module loaded answers `{tree: {type: \"engine\", ref: 0}, hooked: false}` without running anything. Re-ask every mounted instance on each `ui_invalidate` system message, and an instance whose `on_screen` changed.'))",
+        "variable": true,
+        "declarationKind": "var"
+      },
+      "provider": "canonical"
+    },
+    {
+      "local": "Djt",
+      "kind": "existing-source",
+      "source": {
+        "file": "chunk-hhxhpvxp.js",
+        "name": "Djt",
+        "start": 7138,
+        "endExclusive": 7264,
+        "sha256": "5ec5cee1c7b6ab9837ab8389cbc4f5bb5dee0182187c4148bb7b2f1fe0cc7a83",
+        "moduleSha256": "ecdb6abdb941b1a990d5cda13d161a77996b7e2b4a07fef88c4f1c0d0afa9ca5",
+        "source": "Djt=new Set([\"UserMessage\",\"AssistantMessage\",\"ToolUse\",\"ToolResult\",\"ToolGroup\",\"CommandOutput\",\"TurnDuration\",\"InfoNotice\"])",
+        "variable": true,
+        "declarationKind": "var"
+      },
+      "provider": "canonical"
+    },
+    {
+      "local": "Dq",
+      "kind": "existing-source",
+      "source": {
+        "file": "chunk-kgfqrfpa.js",
+        "name": "Dq",
+        "start": 6487,
+        "endExclusive": 6713,
+        "sha256": "9f3ad55ff7e7ef531c4a738143a21b841a898c5a0c50e2fdefcccbfb52629bba",
+        "moduleSha256": "60d9743fc52d6e3895bfea75292fe0a3930160ed99fd873182e177723b216dd3",
+        "source": "Dq=(e)=>li().setState((r)=>{let n=e===null||r.open.some((a)=>a.id===e),s=n?e:r.focusedId,i=n&&e!==null?e:r.shownId;return r.focusedId===s&&r.shownId===i&&r.focusRequest===null?r:{...r,focusedId:s,shownId:i,focusRequest:null}})",
+        "variable": true,
+        "declarationKind": "var"
+      },
+      "provider": "canonical"
+    },
+    {
+      "local": "FEn",
+      "kind": "existing-source",
+      "source": {
+        "file": "chunk-xep95vq1.js",
+        "name": "FEn",
+        "start": 577720,
+        "endExclusive": 578264,
+        "sha256": "a73ae5c1def594d6cff8ef784e5a959b5c5b7408bd26d81b36e3eab0c3901771",
+        "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+        "source": "FEn=f(()=>Fw().extend({subtype:x(\"ui_message\"),data:se().describe(\"@internal What the instance posted (`surface.post(data)`): plain JSON, bounded as a Client post is (2000 values, depth 32, 100 000 characters); the hooks reached see `e.data`.\")}).describe('@internal A post from a `Client` instance the desktop drew: runs the owning plugin\\'s `ui.message` chain alone (origin `client`) with `surface: \"desktop\"`. One naming a Client the latest ui_render of that instance did not carry answers `{handled: false}`; data past the bounds errors.'))",
+        "variable": true,
+        "declarationKind": "var"
+      },
+      "provider": "canonical"
+    },
+    {
+      "local": "GEn",
+      "kind": "existing-source",
+      "source": {
+        "file": "chunk-xep95vq1.js",
+        "name": "GEn",
+        "start": 586304,
+        "endExclusive": 586759,
+        "sha256": "3342097bcb1c2fdcb0a9a6565ea247c7df90e3fb4bb1e6ca1faa785f41d46452",
+        "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+        "source": "GEn=f(()=>u({subtype:x(\"ui_close\"),id:me().describe(\"@internal The pane the person closed (its close control, or Escape under `close_on_escape`).\"),client_id:j().optional()}).describe(\"@internal The person's close of a pane on a remote surface: runs the `ui.close` chain with origin `person` (a hook may keep the pane open) and answers whether it closed. The surface removes the pane only on `closed: true`; the ui_panes push that follows drops it too.\"))",
+        "variable": true,
+        "declarationKind": "var"
+      },
+      "provider": "canonical"
+    },
+    {
+      "local": "HEn",
+      "kind": "existing-source",
+      "source": {
+        "file": "chunk-xep95vq1.js",
+        "name": "HEn",
+        "start": 566997,
+        "endExclusive": 567249,
+        "sha256": "e46469f432ab4fbc28a59cde22e52f4a436d760cc761432fdefc0a707e8b4715",
+        "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+        "source": "HEn=f(()=>u({subtype:x(\"ui_detach\"),client_id:j()}).describe(\"@internal A remote surface leaves the session: the engine drops the client from its roster and raises `session.detach` with reason `detach`. A client_id not on the roster changes nothing.\"))",
+        "variable": true,
+        "declarationKind": "var"
+      },
+      "provider": "canonical"
+    },
+    {
+      "local": "Km",
+      "kind": "existing-source",
+      "source": {
+        "file": "chunk-xapeakym.js",
+        "name": "Km",
+        "start": 285614,
+        "endExclusive": 285662,
+        "sha256": "8f68821d6f67e8c525802457ac418232687dabf1b3de6b13d37909edfbfcd467",
+        "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+        "source": "Km=ct(ak({onDetach:Y5.onDetach}),(e)=>e.clear())",
+        "variable": true,
+        "declarationKind": "var"
+      },
+      "provider": "canonical"
+    },
+    {
+      "local": "Kt",
+      "kind": "existing-source",
+      "source": {
+        "file": "chunk-hrhfcbdv.js",
+        "name": "Kt",
+        "start": 78327,
+        "endExclusive": 78427,
+        "sha256": "5e98994ca530b297f3e1686bde486af6f4acd6008dfd34d5f5c0bdaeb47607ea",
+        "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+        "source": "function Kt(e){if(typeof e!==\"string\")return\"\";return re(GCn(e.length>4096?e.slice(0,4096):e),1024)}",
+        "variable": false
+      },
+      "provider": "canonical"
+    },
+    {
+      "local": "L3n",
+      "kind": "existing-source",
+      "source": {
+        "file": "chunk-kgfqrfpa.js",
+        "name": "L3n",
+        "start": 6718,
+        "endExclusive": 6844,
+        "sha256": "977448ef26c2988287fccc148b8d5e29db1daf84868988c11e84d16367442219",
+        "moduleSha256": "60d9743fc52d6e3895bfea75292fe0a3930160ed99fd873182e177723b216dd3",
+        "source": "L3n=(e)=>li().setState((r)=>r.shownId===e||!r.open.some((s)=>s.id===e)?r:{...r,shownId:e,focusedId:r.focusedId===null?null:e})",
+        "variable": true,
+        "declarationKind": "var"
+      },
+      "provider": "canonical"
+    },
+    {
+      "local": "LEn",
+      "kind": "existing-source",
+      "source": {
+        "file": "chunk-xep95vq1.js",
+        "name": "LEn",
+        "start": 573738,
+        "endExclusive": 574327,
+        "sha256": "b723fe0bba03d2a76e7d2c2c5d0daa3e94b521786fbd194ef3a34e922e5ee624",
+        "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+        "source": "LEn=f(()=>u({subtype:x(\"ui_client_module\"),plugin:o().describe(\"@internal The plugin whose surface modules the surface wants, as a Client node and `client_modules` named it.\")}).describe(\"@internal Ask for a plugin's surface modules as a desktop `Client` frame loads them: every file the host read when the hooks module loaded (only those: the paths its `Client`s name by literal), compiled to JavaScript, its own imports rewritten to import-map keys, each module's entry and component, and the hash ui_render announced. Errors when the plugin is not loaded or loaded no surface module.\"))",
+        "variable": true,
+        "declarationKind": "var"
+      },
+      "provider": "canonical"
+    },
+    {
+      "local": "MEn",
+      "kind": "existing-source",
+      "source": {
+        "file": "chunk-xep95vq1.js",
+        "name": "MEn",
+        "start": 571290,
+        "endExclusive": 572731,
+        "sha256": "bc770f0d0fb8a0a2b4385410a42b0cbb07777d8b017f6a4407f0088fa3802cee",
+        "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+        "source": "MEn=f(()=>u({subtype:x(\"ui_press\"),plugin:o().describe(\"@internal The plugin whose hook drew the pressed element, as the tree carried it.\"),handle:C().int().describe(\"@internal The handle the element carried (`press.handle`), naming the onPress closure held in that plugin's environment.\"),key:o().optional().describe(\"@internal The element's own key, for the debug log and for a `ui.press` matcher.\"),surface:J().default(\"desktop\").describe(\"@internal The surface the press came from, as the ui_render that drew the element named it; absent means `desktop`. The `ui.press` hooks reached see it as `e.surface`.\"),href:o().max(2048).optional().describe(\"@internal For a press on a link inside a `Markdown` element that carries a `press` (its plugin answers its links): the link's target as the tree's text wrote it, one `pressableLinks` names when that list is present. The `ui.press` hooks reached see it as `e.link.href`. Absent for a Button; a Markdown handle without it runs nothing.\"),client_id:j().optional().describe(\"@internal The pressing client, as its ui_attach named it; optional, and the press runs the same with or without it.\")}).describe(\"@internal A press on an element a plugin drew for a remote surface: a Button, or a link inside a Markdown whose plugin answers its links (with `href`). Runs the `ui.press` chain with the element's closure at the bottom. A CLI whose engine has no press site answers `{handled: false}`.\"))",
+        "variable": true,
+        "declarationKind": "var"
+      },
+      "provider": "canonical"
+    },
+    {
+      "local": "NEn",
+      "kind": "existing-source",
+      "source": {
+        "file": "chunk-xep95vq1.js",
+        "name": "NEn",
+        "start": 576193,
+        "endExclusive": 577148,
+        "sha256": "c2ba08bd6f9182930dc620af52d366668a636935cc7b265c226954488157ff10",
+        "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+        "source": "NEn=f(()=>Fw().extend({subtype:x(\"ui_client_press\"),element:o().max(Y).describe(\"@internal The pressed element's own `key` inside the Client's tree; the hooks reached see `e.element`.\"),event:Wo(\"type\",[u({type:x(\"press\")}),u({type:x(\"input\"),kind:B([\"change\",\"submit\"]),value:o().max(lr)}),u({type:x(\"select\"),value:o().max(lr)})]).describe(\"@internal What happened: a Button pressed, an Input changed or submitted with its text, a Select picked with its value.\")}).describe(\"@internal A press, input or pick on a Button, Input or Select a surface module drew inside a `Client` the desktop drew: runs the `ui.press`, `ui.input` or `ui.select` chain over every hooked plugin with `surface: \\\"desktop\\\"`. The element's closure lives in the surface's frame, so the answer says whether the chain reached it and with what argument, and the surface runs it. One naming a Client the latest ui_render of that instance did not carry answers `{handled: false}`.\"))",
+        "variable": true,
+        "declarationKind": "var"
+      },
+      "provider": "canonical"
+    },
+    {
+      "local": "OEn",
+      "kind": "existing-source",
+      "source": {
+        "file": "chunk-xep95vq1.js",
+        "name": "OEn",
+        "start": 565681,
+        "endExclusive": 566744,
+        "sha256": "e21f22ff3d059dfa53c4d5e28f02e282d1ce8ff646c6efbbbc83829739698001",
+        "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+        "source": "OEn=f(()=>u({subtype:x(\"ui_attach\"),surface:J(),client_id:j(),viewport:Hw().optional(),answers:T(tE(()=>XW())).max($W).optional().describe(\"@internal The engine's requests this client answers on a plugin's behalf: `ui_copy` (its clipboard), `ui_prompt_read` / `ui_prompt_fill` / `ui_prompt_suggest` (its composer). The engine sends each only to a client that named it; a client that never names any (or names `[]`) is never asked, so `$.ui.copy` to its surface answers `no-clipboard` and the prompt calls the empty box / false, as before. On a repeated ui_attach a given list (including `[]`) replaces the earlier one and an absent field keeps it: send `[]` to stop answering.\")}).describe(\"@internal A remote surface joins the session: the engine adds the client to its roster of attached surfaces and raises `session.attach` for it (`$.session.surfaces()` then lists the surface). Idempotent per client_id. A client that never sends it is attached by its first ui_render, under `<surface>:default`; every client still attached detaches when the session ends.\"))",
+        "variable": true,
+        "declarationKind": "var"
+      },
+      "provider": "canonical"
+    },
+    {
+      "local": "Oun",
+      "kind": "existing-source",
+      "source": {
+        "file": "chunk-kgfqrfpa.js",
+        "name": "Oun",
+        "start": 2718,
+        "endExclusive": 2782,
+        "sha256": "e2cd3e4963e79c4850a575f8d0c67447773dc33d1ec6d177ae0de1e1ec471b52",
+        "moduleSha256": "60d9743fc52d6e3895bfea75292fe0a3930160ed99fd873182e177723b216dd3",
+        "source": "Oun=()=>Y5.list().filter((e)=>e.viewport?.isFullscreen!==void 0)",
+        "variable": true,
+        "declarationKind": "var"
+      },
+      "provider": "canonical"
+    },
+    {
+      "local": "Pf",
+      "kind": "hI-lexical",
+      "source": {
+        "file": "chunk-xapeakym.js",
+        "name": "Pf",
+        "start": 433455,
+        "endExclusive": 433533,
+        "sha256": "50692e4a6575b04b7754e4f9a8a235fbc4e0f1c0a3695f6a9894329ed214eaba",
+        "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+        "source": "Pf=(b)=>{if(!ta())return;Uu++,Wi({type:\"system\",subtype:\"ui_panes\",...rk(b)})}",
+        "variable": true,
+        "declarationKind": "let"
+      }
+    },
+    {
+      "local": "Sde",
+      "kind": "existing-source",
+      "source": {
+        "file": "chunk-kgfqrfpa.js",
+        "name": "Sde",
+        "start": 3329,
+        "endExclusive": 3363,
+        "sha256": "7ead5602e625138fb60b649f1bc7bfeb5e46dce14e4ecaa2331ee3489d27f028",
+        "moduleSha256": "60d9743fc52d6e3895bfea75292fe0a3930160ed99fd873182e177723b216dd3",
+        "source": "Sde=(e)=>[...e.open,...e.unplaced]",
+        "variable": true,
+        "declarationKind": "var"
+      },
+      "provider": "canonical"
+    },
+    {
+      "local": "UEn",
+      "kind": "existing-source",
+      "source": {
+        "file": "chunk-xep95vq1.js",
+        "name": "UEn",
+        "start": 581402,
+        "endExclusive": 583272,
+        "sha256": "e21acc42ca27b0a933853eafbc477be6f1e0882ceb44504a5338f1785cbbac81",
+        "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+        "source": "UEn=f(()=>u({subtype:x(\"ui_select\"),plugin:o().max(Y).describe(\"@internal The plugin whose hook drew the Select, as its `press.plugin` carried it.\"),handle:C().int().describe(\"@internal The handle the Select carried (`press.handle`), naming the onSelect closure held in that plugin's environment.\"),value:o().max(lr).describe(\"@internal The picked option's `value`, one of the Select's `options` as the tree last drew them (any other value answers `handled: false` and runs nothing); the hooks reached see it as `e.value` and may rewrite it before the closure.\"),key:o().optional().describe(\"@internal The Select's own `key`, as the tree carried it: with `component` and `instance_id`, a handle a redraw just retired is re-resolved to the one Select that plugin holds under this key there.\"),component:cr().optional().describe(\"@internal The render site the Select was drawn in, as the ui_render that drew it named it; pairs with `key` for the re-resolve.\"),instance_id:o().max(Y).optional().describe(\"@internal The instance the Select was drawn in (the ui_render's `instance_id`): with `key` and `component`, names the one picker among several instances that draw the same key.\"),surface:J().default(\"desktop\").describe(\"@internal The surface the picker is on, as the ui_render that drew it named it; absent means `desktop`. The `ui.select` hooks reached see it as `e.surface`.\"),client_id:j().optional().describe(\"@internal The picking client, as its ui_attach named it; optional, and the pick runs the same with or without it.\")}).describe(\"@internal A pick in a `Select` a plugin drew for a remote surface: runs the `ui.select` chain over every hooked plugin with the element's own onSelect closure at the bottom, one at a time per plugin. A handle no Select is held under answers `{handled: false}` and nothing runs. No model turn unless the plugin asks for one.\"))",
+        "variable": true,
+        "declarationKind": "var"
+      },
+      "provider": "canonical"
+    },
+    {
+      "local": "Uu",
+      "kind": "hI-lexical",
+      "source": {
+        "file": "chunk-xapeakym.js",
+        "name": "Uu",
+        "start": 433450,
+        "endExclusive": 433454,
+        "sha256": "bf786433583cae2af30eb16853ed62b76badf143c004c2606c2b0e431a0c397a",
+        "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+        "source": "Uu=0",
+        "variable": true,
+        "declarationKind": "let"
+      }
+    },
+    {
+      "local": "VEn",
+      "kind": "existing-source",
+      "source": {
+        "file": "chunk-xep95vq1.js",
+        "name": "VEn",
+        "start": 589807,
+        "endExclusive": 590864,
+        "sha256": "a8a4b8a7575cad701d580a55d79a26ba2d9c658b548fc2a24cc0e83e96203392",
+        "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+        "source": "VEn=f(()=>u({subtype:x(\"ui_focus\"),component:Yw(),instance_id:o().max(Y),is_held:H().describe(\"@internal Whether the site holds the keyboard now (DOM focus is inside its container).\"),element:Xw().nullable().optional().describe(\"@internal The element that took the focus ring: one the site draws, or null for the container itself; absent reports `is_held` alone and moves nothing.\"),by:B([\"person\",\"auto\"]).default(\"person\").describe(\"@internal Who moved it: the person (Tab, a click), or an `autoFocus` element taking the ring as the site mounted (`auto`, raised as that plugin's move).\"),surface:J().default(\"desktop\").describe(\"@internal The surface the site is on; absent means `desktop`. Names the default client when `client_id` is not given.\"),client_id:j().optional()}).describe(\"@internal The keyboard moved in a site a remote surface draws: the engine records the hold and raises `ui.focus` for the element (origin `person`, or the element's plugin under `auto`); a hook may redirect it, which the answer then carries for the surface to follow.\"))",
+        "variable": true,
+        "declarationKind": "var"
+      },
+      "provider": "canonical"
+    },
+    {
+      "local": "Voo",
+      "kind": "new-module-initializer",
+      "source": {
+        "file": "chunk-n2zepamy.js",
+        "name": "Voo",
+        "start": 10215,
+        "endExclusive": 10489,
+        "sha256": "758c33e54aa78e9f44abba6e9fc1cd3509314c3119f416f670bd02853faae846",
+        "moduleSha256": "0b25d8e1138a155f83fd1f53d768fa0cfbd759a2177359108d03295616148a24",
+        "source": "async function Voo(e,n){if(!Y5.attach({...e,attachedAt:Date.now(),...n!==void 0&&{answers:n}}))return!1;t(`session.attach: ${e.clientId} on ${e.surface}`);try{await JV.get(),await V7().session.attach(e)}catch(r){t(`session.attach: failed: ${l(r)}`,{level:\"error\"})}return!0}",
+        "variable": false
+      }
+    },
+    {
+      "local": "WC",
+      "kind": "new-module-initializer",
+      "source": {
+        "file": "chunk-xapeakym.js",
+        "name": "WC",
+        "start": 283698,
+        "endExclusive": 283714,
+        "sha256": "ceb47bf640591e1a9a3bd3cd56b0153da256ea6275e0fdf3da2ff7dd1ef13ee9",
+        "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+        "source": "WC=(e)=>Ol(e,JS)",
+        "variable": true,
+        "declarationKind": "var"
+      }
+    },
+    {
+      "local": "WEn",
+      "kind": "existing-source",
+      "source": {
+        "file": "chunk-xep95vq1.js",
+        "name": "WEn",
+        "start": 585430,
+        "endExclusive": 586186,
+        "sha256": "c40cb8eaed3f22dc6d8c700166b1286edf76e87799a03eab993cae3519f0a153",
+        "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+        "source": "WEn=f(()=>u({subtype:x(\"ui_pane_focus\"),id:me().nullable().describe(\"@internal The pane the person gave the keyboard (a click into its body, honouring a focus request), or null when the keyboard went back to the composer (Escape, a click there, a refused focus request). Settles a standing focus request either way.\"),surface:J().default(\"desktop\").describe(\"@internal The surface the panes are on; absent means `desktop`. Names the default client when `client_id` is not given.\"),client_id:j().optional()}).describe(\"@internal The keyboard moved between the composer and a pane on a remote surface; answers the roster's `focused_id` afterwards, and the pane's Pane site then holds the keyboard for `$.ui.focus`. A ui_panes push follows when it changed.\"))",
+        "variable": true,
+        "declarationKind": "var"
+      },
+      "provider": "canonical"
+    },
+    {
+      "local": "WS",
+      "kind": "new-module-initializer",
+      "source": {
+        "file": "chunk-xapeakym.js",
+        "name": "WS",
+        "start": 279852,
+        "endExclusive": 280014,
+        "sha256": "5d5a4bd6bf578ec00f0962dbe9b5d1a09ddfcf6cf157d0a5143ea06f2ca8442f",
+        "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+        "source": "function WS(e){let{open:r,focusedId:n}=li().getState();for(let s of r){let g=Jt.has(c2(\"Pane\",s.id)),w=s.id===n;if(g||w)jS({clientId:e,requestId:s.id,isHeld:w})}}",
+        "variable": false
+      }
+    },
+    {
+      "local": "We",
+      "kind": "hI-lexical",
+      "source": {
+        "file": "chunk-xapeakym.js",
+        "name": "We",
+        "start": 447132,
+        "endExclusive": 447184,
+        "sha256": "1314b8a9d289cfe6a75e1a8d8f84a8b421177e74673a83a0b2d2eeeccea28326",
+        "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+        "source": "We=function(b,D,K){ht.enqueue(xz(b.request_id,D,K))}",
+        "variable": true,
+        "declarationKind": "let"
+      }
+    },
+    {
+      "local": "Wm",
+      "kind": "new-module-initializer",
+      "source": {
+        "file": "chunk-xapeakym.js",
+        "name": "Wm",
+        "start": 283047,
+        "endExclusive": 283357,
+        "sha256": "dd84e8f4e58e3d3ff65258156a28e4eb6cc11ed25d8f6079e89c2dc843147bd4",
+        "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+        "source": "function Wm(){let e=new Set(Oun().map((s)=>s.clientId)),r=new Set(Y5.list().map((s)=>s.clientId));Fl((s)=>!r.has(s.clientId));for(let[s,g]of wd)if(!e.has(s))wd.delete(s),g();for(let s of e)if(!wd.has(s))wd.set(s,YNt()),D3n(`${s} attached`);if(Jne.get()===void 0&&Mun()===void 0)D3n(\"no sized client attached\")}",
+        "variable": false
+      }
+    },
+    {
+      "local": "Y5",
+      "kind": "existing-source",
+      "source": {
+        "file": "chunk-kgfqrfpa.js",
+        "name": "Y5",
+        "start": 2652,
+        "endExclusive": 2713,
+        "sha256": "a3db2a95a9a9281a3aaecef4d757a8f1d44f04dd24b859ff5ab29bf318a1e331",
+        "moduleSha256": "60d9743fc52d6e3895bfea75292fe0a3930160ed99fd873182e177723b216dd3",
+        "source": "Y5=ct(ae(),(e)=>{for(let r of e.list())e.detach(r.clientId)})",
+        "variable": true,
+        "declarationKind": "var"
+      },
+      "provider": "canonical"
+    },
+    {
+      "local": "ZS",
+      "kind": "new-module-initializer",
+      "source": {
+        "file": "chunk-xapeakym.js",
+        "name": "ZS",
+        "start": 282374,
+        "endExclusive": 282739,
+        "sha256": "c77ca1c5c0874d92aea4c855b02163ef2c15f300e435ebc1507d6fcb3aea3dc6",
+        "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+        "source": "function ZS(e){let{clientId:r,component:n,requestId:s}=e;if(!(Eo(n,s)&&gi(r)))return;let w=c2(n,s),h=Jt.get(w);Jt.set(w,fs({component:n,requestId:s,clientId:r},h,{clientId:r,...e.scroll!==void 0&&XS(e.scroll,h),...e.contentRows!==void 0&&{contentRows:e.contentRows},...e.keyed!==void 0&&{keyed:e.keyed},...e.keyboard!==void 0&&{isHeld:e.keyboard===\"held\"}})),Ao(w)}",
+        "variable": false
+      }
+    },
+    {
+      "local": "Ze",
+      "kind": "hI-lexical",
+      "source": {
+        "file": "chunk-xapeakym.js",
+        "name": "Ze",
+        "start": 447023,
+        "endExclusive": 447072,
+        "sha256": "5c7c57138b3bb08dba1da42c040213181e8c07ffc04e346eae3b8b4fba2a1fe9",
+        "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+        "source": "Ze=function(b,D){ht.enqueue(pEe(b.request_id,D))}",
+        "variable": true,
+        "declarationKind": "let"
+      }
+    },
+    {
+      "local": "ek",
+      "kind": "new-module-initializer",
+      "source": {
+        "file": "chunk-xapeakym.js",
+        "name": "ek",
+        "start": 282739,
+        "endExclusive": 283013,
+        "sha256": "1d9270d85cf4cd866c15ab761bc215d689ed36d9b52245228e20d02edab8d9e2",
+        "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+        "source": "function ek(e){let{clientId:r,component:n,requestId:s}=e,g=c2(n,s),w=Jt.get(g);if(!(w!==void 0&&gi(r)&&Eo(n,s)))return;let M=K6e(e.tree),{holder:v}=w,R=v!==void 0&&M.some((U)=>U.plugin===v.plugin&&U.element===v.element);Jt.set(g,{...w,focusables:M,holder:R?v:void 0}),Ao(g)}",
+        "variable": false
+      }
+    },
+    {
+      "local": "h5e",
+      "kind": "existing-source",
+      "source": {
+        "file": "chunk-09m4fzsj.js",
+        "name": "h5e",
+        "start": 495492,
+        "endExclusive": 495505,
+        "sha256": "65580a54a5a7a577c6cb4a37f5a5260879b489f7328f77e1ec79acc6c4f3e1dd",
+        "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+        "source": "h5e=bh.render",
+        "variable": true,
+        "declarationKind": "var"
+      },
+      "provider": "canonical"
+    },
+    {
+      "local": "iI",
+      "kind": "new-module-initializer",
+      "source": {
+        "file": "chunk-xapeakym.js",
+        "name": "iI",
+        "start": 354620,
+        "endExclusive": 354754,
+        "sha256": "d67010f42dce120f963c9ef2d3ae06c88d118de6a1fbeceb0bdb6591ae59e0bb",
+        "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+        "source": "function iI(e,r,n){if(e!==\"ToolUse\"&&e!==\"ToolResult\")return n;if(typeof n.tool_use_id===\"string\")return n;return{...n,tool_use_id:r}}",
+        "variable": false
+      }
+    },
+    {
+      "local": "jEn",
+      "kind": "existing-source",
+      "source": {
+        "file": "chunk-xep95vq1.js",
+        "name": "jEn",
+        "start": 584774,
+        "endExclusive": 585330,
+        "sha256": "a4628cfa368f14226a7bd24ab368b8bce3346a197cf87d04e73563ddcaf51154",
+        "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+        "source": "jEn=f(()=>u({subtype:x(\"ui_pane_show\"),id:me().describe(\"@internal The pane the person picked (a click on its tab): shown at once, the keyboard following if a pane held it. An id not open changes nothing.\"),surface:J().default(\"desktop\").describe(\"@internal The surface the panes are on; absent means `desktop`. Names the default client when `client_id` is not given.\"),client_id:j().optional()}).describe(\"@internal The person chose which open pane the surface shows; answers the roster's `shown_id` afterwards. A ui_panes push follows when it changed.\"))",
+        "variable": true,
+        "declarationKind": "var"
+      },
+      "provider": "canonical"
+    },
+    {
+      "local": "li",
+      "kind": "existing-source",
+      "source": {
+        "file": "chunk-kgfqrfpa.js",
+        "name": "li",
+        "start": 3276,
+        "endExclusive": 3324,
+        "sha256": "fe0e068e06afbe5bdb0d3cc169decdcd96a5b58e70a64b73e8eab307395e3839",
+        "moduleSha256": "60d9743fc52d6e3895bfea75292fe0a3930160ed99fd873182e177723b216dd3",
+        "source": "li=ct(()=>ut().panes,(e)=>e().setState(()=>eyn))",
+        "variable": true,
+        "declarationKind": "var"
+      },
+      "provider": "canonical"
+    },
+    {
+      "local": "m9e",
+      "kind": "existing-source",
+      "source": {
+        "file": "chunk-kgfqrfpa.js",
+        "name": "m9e",
+        "start": 5632,
+        "endExclusive": 6483,
+        "sha256": "4b3ea3f77be7a4d2f061a21a96f9b893d0ca1ac3a6b69eccbf8655e6a53a254e",
+        "moduleSha256": "60d9743fc52d6e3895bfea75292fe0a3930160ed99fd873182e177723b216dd3",
+        "source": "async function m9e(e,r){let n=li().getState(),s=n.closing.includes(e),i=r.kind===\"unload\",m=Sde(n).find((x)=>x.id===e)?.plugin,a=!1;if(i)KNt(e);if(s)return;let d=S0(\"ui.close\").filter((x)=>!i||x.name!==m);if(d.length===0){KNt(e),H(e,r,m);return}if(!i)li().setState((x)=>({...x,closing:[...x.closing,e]}));try{let x=await Ex({e:{id:e,origin:r},handlers:d,site:hbe(\"ui.close\"),bottom:(w)=>{if(w.id!==e||li().getState().closing.includes(e))KNt(w.id),a=w.id===e;return Promise.resolve({value:void 0})}}),S=li().getState();if(S.closing.includes(e)&&Sde(S).some((w)=>w.id===e))t(`ui.close ${e} (${r.kind}): kept open by a hook`+(x.deny===void 0?\"\":` (${x.deny})`))}catch(x){t(`ui.close ${e} (${r.kind}): the chain failed: `+l(x),{level:\"error\"})}finally{if(li().setState((x)=>x.closing.includes(e)?{...x,closing:x.closing.filter((S)=>S!==e)}:x),a)H(e,r,m)}}",
+        "variable": false
+      },
+      "provider": "canonical"
+    },
+    {
+      "local": "mo",
+      "kind": "hI-lexical",
+      "source": {
+        "file": "chunk-xapeakym.js",
+        "name": "mo",
+        "start": 447320,
+        "endExclusive": 447330,
+        "sha256": "6205db55715a0de120ccfa44b56f4534c51c80b36bb33e65d611d6d723c5f2d4",
+        "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+        "source": "mo=new Map",
+        "variable": true,
+        "declarationKind": "let"
+      }
+    },
+    {
+      "local": "mtt",
+      "kind": "new-module-initializer",
+      "source": {
+        "file": "chunk-n2zepamy.js",
+        "name": "mtt",
+        "start": 10493,
+        "endExclusive": 10516,
+        "sha256": "2cb2b7d625ffe7a7eb97e30db225159c81b71959c5ac5731f7f8da2b85f2b1e6",
+        "moduleSha256": "0b25d8e1138a155f83fd1f53d768fa0cfbd759a2177359108d03295616148a24",
+        "source": "mtt=(e)=>`${e}:default`",
+        "variable": true,
+        "declarationKind": "var"
+      }
+    },
+    {
+      "local": "nr",
+      "kind": "hI-lexical",
+      "source": {
+        "file": "chunk-xapeakym.js",
+        "name": "nr",
+        "start": 447185,
+        "endExclusive": 447240,
+        "sha256": "7dc0d8a2687f88ab696f0a5291d432b23dea80a6f5d2741d240558d0db93c806",
+        "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+        "source": "nr=function(b,D,K,ce={}){We(b,pme(qm(e),D,K,ce).error)}",
+        "variable": true,
+        "declarationKind": "let"
+      }
+    },
+    {
+      "local": "olr",
+      "kind": "existing-source",
+      "source": {
+        "file": "chunk-n2zepamy.js",
+        "name": "olr",
+        "start": 10517,
+        "endExclusive": 10774,
+        "sha256": "b430c7bd2f0172996a661cddd0692d481d7450a06c1bed5c60a37ea57f7a386f",
+        "moduleSha256": "0b25d8e1138a155f83fd1f53d768fa0cfbd759a2177359108d03295616148a24",
+        "source": "async function olr(e,n,o){let r=Y5.detach(e);if(r===void 0)return;t(`session.detach: ${e} (${n})`);try{await JV.get(),await V7(o).session.detach({surface:r.surface,clientId:e,reason:n})}catch(s){t(`session.detach: failed: ${l(s)}`,{level:\"error\"})}return r}",
+        "variable": false
+      },
+      "provider": "canonical"
+    },
+    {
+      "local": "pC",
+      "kind": "new-module-initializer",
+      "source": {
+        "file": "chunk-xapeakym.js",
+        "name": "pC",
+        "start": 279572,
+        "endExclusive": 279588,
+        "sha256": "5cf35aa13e9ad3c429a3d0611da065b857e0d947b2404a9f907a9bc04e4efc5c",
+        "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+        "source": "pC=(e)=>Ol(e,BS)",
+        "variable": true,
+        "declarationKind": "var"
+      }
+    },
+    {
+      "local": "qEn",
+      "kind": "existing-source",
+      "source": {
+        "file": "chunk-xep95vq1.js",
+        "name": "qEn",
+        "start": 596497,
+        "endExclusive": 598142,
+        "sha256": "1a530c0c06dee315d7fcbef86cf6dd34eb2fabddce95cea817f6c6711cd87736",
+        "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+        "source": "qEn=f(()=>u({subtype:x(\"ui_prompt_edit\"),text:o().max(dr).describe(\"@internal The Composer's whole draft after the edit, as the surface holds it.\"),cursor:C().int().nonnegative().describe(\"@internal The caret after the edit, in UTF-16 code units into `text`; one past the end is clamped to it.\"),key:JW().optional().describe(\"@internal The one key that made the edit; absent for a paste, a drop, or text that came with no single key.\"),by:B([\"person\",\"app\"]).default(\"person\").describe(\"@internal Who changed the box: the person's own edit (`person`, raised as `prompt.edit`), or the app itself when it was not the person typing (`app`: a submit emptied it, a fill landed, a history recall, a draft restore), which the engine adopts as the box before the next edit without raising anything, answering the box with no runs. `app` carries no key.\"),surface:J().default(\"desktop\").describe(\"@internal The surface the Composer is on; absent means `desktop`.\"),client_id:j().optional().describe(\"@internal The editing client, as its ui_attach named it; absent names the surface's default client.\")}).describe(\"@internal An edit in a remote surface's own Composer: the engine raises `prompt.edit` (origin `composer`) over the box before it (the box this client sent last, or the rewrite answered to it when the edit follows from that), as the terminal's editor does for a key, and answers what the Composer is to show. One dispatch per client at a time; of the edits that arrive meanwhile only the newest is raised, the older ones answering `superseded`, and an edit folded that way carries no key. A chain that fails answers the request's own box.\"))",
+        "variable": true,
+        "declarationKind": "var"
+      },
+      "provider": "canonical"
+    },
+    {
+      "local": "r7",
+      "kind": "existing-source",
+      "source": {
+        "file": "chunk-mphp7acd.js",
+        "name": "r7",
+        "start": 434357,
+        "endExclusive": 434477,
+        "sha256": "8ad534ac3f7da5a76da0f57e834080ecff23d2f0cd162a45f8fe81fa9da6db37",
+        "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+        "source": "function r7(){let e=xP()?.surface===\"terminal\",n=Y5.surfaces().filter((r)=>r!==\"terminal\");return e?[\"terminal\",...n]:n}",
+        "variable": false
+      },
+      "provider": "canonical"
+    },
+    {
+      "local": "rk",
+      "kind": "existing-source",
+      "source": {
+        "file": "chunk-xapeakym.js",
+        "name": "rk",
+        "start": 283361,
+        "endExclusive": 283693,
+        "sha256": "af708ec9d8ae236682d4016a28298918c6cafd8a679b1ca61156c7578604bc09",
+        "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+        "source": "rk=(e)=>({panes:e.panes.map((r)=>({id:r.id,title:r.title,plugin:r.plugin,...r.closeOnEscape&&{close_on_escape:r.closeOnEscape},...r.holdToasts&&{hold_toasts:r.holdToasts},...r.rows!==void 0&&{rows:r.rows},...r.columns!==void 0&&{columns:r.columns}})),shown_id:e.shownId,focused_id:e.focusedId,focus_requested_id:e.focusRequestedId})",
+        "variable": true,
+        "declarationKind": "var"
+      },
+      "provider": "canonical"
+    },
+    {
+      "local": "sI",
+      "kind": "new-module-initializer",
+      "source": {
+        "file": "chunk-xapeakym.js",
+        "name": "sI",
+        "start": 354515,
+        "endExclusive": 354620,
+        "sha256": "cf13287a9de78e7e88d6fc984d437acb0ddfce87bef192917f907f239a22eea1",
+        "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+        "source": "function sI(e){let r=e.output;if(typeof r!==\"string\"||r.length<=Tw)return e;return{...e,output:re(r,Tw)}}",
+        "variable": false
+      }
+    },
+    {
+      "local": "t",
+      "kind": "new-module-initializer",
+      "source": {
+        "file": "chunk-q80zaav8.js",
+        "name": "t",
+        "start": 46026,
+        "endExclusive": 46071,
+        "sha256": "da9e0b5e590a43c6f7cf46f3cfcd93d97f399db1017ff8dae938bdbd15e13790",
+        "moduleSha256": "f9503296591b825624caf5932b9c5973cde96b859259266a506b616dca5cd41e",
+        "source": "function t(e,n={level:\"debug\"}){U().log(e,n)}",
+        "variable": false
+      }
+    },
+    {
+      "local": "vd",
+      "kind": "existing-source",
+      "source": {
+        "file": "chunk-xapeakym.js",
+        "name": "vd",
+        "start": 280259,
+        "endExclusive": 280579,
+        "sha256": "f7ccb0f2163a8ede7df82ea384a37164a660c7a70a60ce2f2f4b85346cb494c0",
+        "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+        "source": "vd=(e)=>({panes:e.open.map((r)=>({id:r.id,title:r.title,plugin:r.plugin,...r.closeOnEscape&&{closeOnEscape:r.closeOnEscape},...r.holdToasts&&{holdToasts:r.holdToasts},...r.rows!==void 0&&{rows:r.rows},...r.columns!==void 0&&{columns:r.columns}})),shownId:e.shownId,focusedId:e.focusedId,focusRequestedId:e.focusRequest})",
+        "variable": true,
+        "declarationKind": "var"
+      },
+      "provider": "canonical"
+    },
+    {
+      "local": "zEn",
+      "kind": "existing-source",
+      "source": {
+        "file": "chunk-xep95vq1.js",
+        "name": "zEn",
+        "start": 587085,
+        "endExclusive": 588664,
+        "sha256": "538a98db44815b4947371a32a66b206298fe44c5f040597960145b3e194185cb",
+        "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+        "source": "zEn=f(()=>u({subtype:x(\"ui_scroll\"),component:Yw(),instance_id:o().max(Y),offset:C().int().nonnegative().describe(\"@internal The first content row the window shows after the move, 0 at the top, in rows of the surface's monospace line height.\"),by:C().int().describe(\"@internal The rows the move covered, signed, negative toward the top; what the `ui.scroll` hooks see as `e.by`.\"),body_rows:C().int().nonnegative().describe(\"@internal The rows the window shows at once.\"),content_rows:C().int().nonnegative().describe(\"@internal The rows the site's whole tree lays out to; the last offset is `content_rows - body_rows`.\"),pointer:u({column:C().int(),row:C().int()}).optional().describe(\"@internal The body cell the wheel or trackpad was over, 0/0 at the body's top left; absent for scroll keys and the scrollbar.\"),keyed:T(Ww()).max($w).optional(),surface:J().default(\"desktop\").describe(\"@internal The surface the site is on; absent means `desktop`. Names the default client when `client_id` is not given, so the site is that client's.\"),client_id:j().optional()}).describe(\"@internal The person scrolled a site a remote surface draws (a pane's body, the band): the engine records the layout reported, moves its own window by `by` (clamped to the layout) and raises `ui.scroll` with origin `person` over that; a hook may rewrite or deny it, and the answer carries the offset the surface should show. Send it throttled to the surface's frame; reports arriving while one is in flight for the instance are folded (`by` summed) into one that follows and answered alike, in order.\"))",
+        "variable": true,
+        "declarationKind": "var"
+      },
+      "provider": "canonical"
+    }
+  ],
+  "gateOrigins": [
+    {
+      "file": "chunk-64z3xwk8.js",
+      "name": "Ie",
+      "start": 15221,
+      "endExclusive": 15229,
+      "sha256": "d994d545986db3fc26d0e58a2455450d6ffe8e19591d94f6af02b7fc6a2b1b05",
+      "moduleSha256": "63b72939ef879fd6a6be0186e4c7fa1f334e1e6195c2da9c9e5e3fa5e3ea7d1f",
+      "source": "Ie=\"ui_\"",
+      "variable": true,
+      "declarationKind": "var"
+    },
+    {
+      "file": "chunk-64z3xwk8.js",
+      "name": "He",
+      "start": 15230,
+      "endExclusive": 15244,
+      "sha256": "d705d404f87e32f6af4e4c0e7051f4118a8de65c303b403b87bed0b5c1c9c53f",
+      "moduleSha256": "63b72939ef879fd6a6be0186e4c7fa1f334e1e6195c2da9c9e5e3fa5e3ea7d1f",
+      "source": "He=\"ui_detach\"",
+      "variable": true,
+      "declarationKind": "var"
+    },
+    {
+      "file": "chunk-64z3xwk8.js",
+      "name": "LEt",
+      "start": 15245,
+      "endExclusive": 15272,
+      "sha256": "28aab5371043383a6c4e34780ed86fe0a4a193973f1112678ea22050a8c383f8",
+      "moduleSha256": "63b72939ef879fd6a6be0186e4c7fa1f334e1e6195c2da9c9e5e3fa5e3ea7d1f",
+      "source": "function LEt(){return YJ()}",
+      "variable": false,
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-64z3xwk8.js",
+      "name": "Roo",
+      "start": 15272,
+      "endExclusive": 15357,
+      "sha256": "a517a879c2787bbfee25bade42dc3308c5df5910b0c0546b20506b2916a6c72c",
+      "moduleSha256": "63b72939ef879fd6a6be0186e4c7fa1f334e1e6195c2da9c9e5e3fa5e3ea7d1f",
+      "source": "function Roo(s,e){return typeof s===\"string\"&&s.startsWith(Ie)&&!(s===He&&e)&&!LEt()}",
+      "variable": false
+    },
+    {
+      "file": "chunk-110gm4an.js",
+      "name": "RYe",
+      "start": 809,
+      "endExclusive": 841,
+      "sha256": "b2856cb4aa5a82194060bd50d72c4edbe5adc0faf45e5530ec640fa3a9ba689f",
+      "moduleSha256": "64c5d775aad20eaa985bf20c412e92c4b6c153837560b7c4cde5455f22a2dda5",
+      "source": "RYe=\"tengu_plugin_hooks_modules\"",
+      "variable": true,
+      "declarationKind": "var",
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-110gm4an.js",
+      "name": "mUt",
+      "start": 846,
+      "endExclusive": 852,
+      "sha256": "5599432e25e68f6793bf3d6054e5ae551aa29ae40119d212833613bbcaf0e81c",
+      "moduleSha256": "64c5d775aad20eaa985bf20c412e92c4b6c153837560b7c4cde5455f22a2dda5",
+      "source": "mUt=!0",
+      "variable": true,
+      "declarationKind": "var",
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-110gm4an.js",
+      "name": "YJ",
+      "start": 857,
+      "endExclusive": 874,
+      "sha256": "2c6af4560f6edd6a9fbf6a686c7182a073d018984b1fb9a4c9bc84eb67d58a9f",
+      "moduleSha256": "64c5d775aad20eaa985bf20c412e92c4b6c153837560b7c4cde5455f22a2dda5",
+      "source": "YJ=()=>k(RYe,mUt)",
+      "variable": true,
+      "declarationKind": "var",
+      "provider": "canonical"
+    }
+  ],
+  "newDeclarations": [
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "$C",
+      "start": 283715,
+      "endExclusive": 284052,
+      "sha256": "31e345c3fd54c852162889689f291a22f91138361398ce3ec0799fd526cf2992",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "source": "function $C(e){let{scroll:r,isFocused:n}=e,s=typeof r===\"object\"&&r!==null&&\"offset\"in r&&\"bodyRows\"in r,g=s?r.offset:void 0,w=s?r.bodyRows:void 0;return{...typeof g===\"number\"&&typeof w===\"number\"&&Number.isInteger(g)&&Number.isInteger(w)&&g>=0&&w>=0&&{scroll:{offset:g,bodyRows:w}},...typeof n===\"boolean\"&&{keyboard:n?\"held\":\"away\"}}}",
+      "variable": false,
+      "refs": []
+    },
+    {
+      "file": "chunk-n2zepamy.js",
+      "name": "Voo",
+      "start": 10215,
+      "endExclusive": 10489,
+      "sha256": "758c33e54aa78e9f44abba6e9fc1cd3509314c3119f416f670bd02853faae846",
+      "moduleSha256": "0b25d8e1138a155f83fd1f53d768fa0cfbd759a2177359108d03295616148a24",
+      "source": "async function Voo(e,n){if(!Y5.attach({...e,attachedAt:Date.now(),...n!==void 0&&{answers:n}}))return!1;t(`session.attach: ${e.clientId} on ${e.surface}`);try{await JV.get(),await V7().session.attach(e)}catch(r){t(`session.attach: failed: ${l(r)}`,{level:\"error\"})}return!0}",
+      "variable": false,
+      "refs": [
+        "JV",
+        "V7",
+        "Y5",
+        "l",
+        "t"
+      ]
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "WC",
+      "start": 283698,
+      "endExclusive": 283714,
+      "sha256": "ceb47bf640591e1a9a3bd3cd56b0153da256ea6275e0fdf3da2ff7dd1ef13ee9",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "source": "WC=(e)=>Ol(e,JS)",
+      "variable": true,
+      "declarationKind": "var",
+      "refs": [
+        "JS",
+        "Ol"
+      ]
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "JS",
+      "start": 282235,
+      "endExclusive": 282279,
+      "sha256": "835279a882e9512ccaf33a8681f59f1350997ec513246c26cac72fef40ed6e47",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "source": "JS={turnsOf:(e)=>e.scrolls,run:YS,denied:Hl}",
+      "variable": true,
+      "declarationKind": "var",
+      "refs": [
+        "Hl",
+        "YS"
+      ]
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Hl",
+      "start": 281471,
+      "endExclusive": 281545,
+      "sha256": "44add40d2ebb6e0820f77ef4a955d2d649ad25290c2bc0e4006cf42130dafc81",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "source": "Hl=(e)=>({result:{deny:\"no such site\"},offset:e.offset,isFollowingEnd:!1})",
+      "variable": true,
+      "declarationKind": "var",
+      "refs": []
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "YS",
+      "start": 281546,
+      "endExclusive": 282231,
+      "sha256": "96f5d1d5acbff883dfb06f5287149449841877c76cc3cbbc3ff57452cd3aed25",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "source": "async function YS(e){let{clientId:r,component:n,requestId:s}=e,g=c2(n,s),w=Jt.get(g);if(w===void 0||!Eo(n,s))return Hl(e);let h=zS(e,w),M=Math.min(Math.max(0,h.before+e.by),h.end.offset);Jt.set(g,fs({component:n,requestId:s,clientId:r},w,{offset:h.before,bodyRows:e.bodyRows,contentRows:e.contentRows,...e.keyed!==void 0&&{keyed:e.keyed},isPersonMoving:!0,isSuperseded:!1})),Ao(g);try{return $S(h,await ODt({input:{component:n,requestId:s,offset:M,by:e.by,bodyRows:e.bodyRows,contentRows:e.contentRows,origin:{kind:\"person\"},...e.pointer!==void 0&&{pointer:e.pointer}}}))}finally{let v=Jt.get(g);if(v!==void 0&&v.scrolls===h.scrolls)Jt.set(g,{...v,isPersonMoving:!1,isSuperseded:!1})}}",
+      "variable": false,
+      "refs": [
+        "$S",
+        "Ao",
+        "Eo",
+        "Hl",
+        "Jt",
+        "ODt",
+        "c2",
+        "fs",
+        "zS"
+      ]
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "$S",
+      "start": 280815,
+      "endExclusive": 281218,
+      "sha256": "539991402c9797d116cf6c2c10498b224bdeab34d4c0e6d5baf660b82b0f72dd",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "source": "function $S(e,r){let{key:n,before:s}=e,g=Jt.get(n);if(g===void 0||g.scrolls!==e.scrolls)return{result:r,offset:s,isFollowingEnd:!1};if(g.isSuperseded){let v=QS(g);return g.scrolls.drop(v),v}let w=r.deny!==void 0,{end:h}=e,M=g.isFollowingEnd||!w&&h.wasFollowed&&h.isDownward&&g.offset>=h.offset;return Jt.set(n,{...g,offset:w?s:g.offset,isFollowingEnd:M}),{result:r,offset:w?s:g.offset,isFollowingEnd:M}}",
+      "variable": false,
+      "refs": [
+        "Jt",
+        "QS"
+      ]
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "QS",
+      "start": 280715,
+      "endExclusive": 280814,
+      "sha256": "96a41251394bfd102a2997cecc5184c67c5b14fabb789c0ca7f2e025afda24e5",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "source": "QS=(e)=>({result:{deny:\"the window moved meanwhile\"},offset:Dl(e),isFollowingEnd:e.isFollowingEnd})",
+      "variable": true,
+      "declarationKind": "var",
+      "refs": [
+        "Dl"
+      ]
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Eo",
+      "start": 276619,
+      "endExclusive": 276735,
+      "sha256": "49996ab477a5260bd21ad3bc77dfb91b162952e08fe09353010b8d0de4b1a0e1",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "source": "function Eo(e,r){let n=e===\"AbovePrompt\"&&r===O6,s=e===\"Pane\"&&li().getState().open.some((g)=>g.id===r);return n||s}",
+      "variable": false,
+      "refs": [
+        "O6",
+        "li"
+      ]
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "fs",
+      "start": 278396,
+      "endExclusive": 278672,
+      "sha256": "6642e16c769e116af430f1c31b143743e1583f09b06254fd7131b6a3fd984c10",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "source": "fs=(e,r,n)=>({owner:r?.owner??LS(e.component,e.requestId),offset:0,bodyRows:0,contentRows:0,keyed:[],focusables:[],isHeld:!1,holder:void 0,isPersonMoving:!1,isSuperseded:!1,isReporting:!1,isFollowingEnd:!1,scrolls:r?.scrolls??jm(US),focuses:r?.focuses??jm(FS),...e,...r,...n})",
+      "variable": true,
+      "declarationKind": "var",
+      "refs": [
+        "FS",
+        "LS",
+        "US",
+        "jm"
+      ]
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "FS",
+      "start": 277675,
+      "endExclusive": 277783,
+      "sha256": "73edf834ead8398856d7493d80ac5798e333ff1b04423c5aef20046d09dd0283",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "source": "function FS(e,r){return r.element===void 0&&r.isHeld&&e.element!==void 0?{...r,element:e.element,by:e.by}:r}",
+      "variable": false,
+      "refs": []
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "LS",
+      "start": 277819,
+      "endExclusive": 277907,
+      "sha256": "e002a74b4763d1b1bfae097bde20a5dd263505c1f830a057d53aaa50e2c63e91",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "source": "function LS(e,r){return(e===\"Pane\"?Sde(li().getState()):[]).find((g)=>g.id===r)?.plugin}",
+      "variable": false,
+      "refs": [
+        "Sde",
+        "li"
+      ]
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "US",
+      "start": 277787,
+      "endExclusive": 277818,
+      "sha256": "89a2ac9bcf414906200f6e2801caab7fb5809b36889c54c60c44511285a4c52d",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "source": "US=(e,r)=>({...r,by:e.by+r.by})",
+      "variable": true,
+      "declarationKind": "var",
+      "refs": []
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "jm",
+      "start": 277907,
+      "endExclusive": 278392,
+      "sha256": "aa006623e4ed3b954516b79df97f43fd680fc4b0e0dbb59971a41a271355ad7e",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "source": "function jm(e){let r,n;async function s(g,w){try{return await new Promise((h,M)=>{w(g).then(h,M)})}finally{let h=n;if(n=void 0,r=h&&s(h.report,w),h!==void 0)r?.then(h.resolve,h.reject)}}return{drop:(g)=>{let w=n,h=()=>w?.resolve(g);n=void 0,(r??Promise.resolve()).then(h,h)},take:(g,w)=>{if(r===void 0)return r=s(g,w),r;if(n!==void 0)return n.report=e(n.report,g),n.promise;let{promise:h,resolve:M,reject:v}=Promise.withResolvers();return n={report:g,resolve:M,reject:v,promise:h},h}}}",
+      "variable": false,
+      "refs": []
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "zS",
+      "start": 281376,
+      "endExclusive": 281466,
+      "sha256": "12fd1f3070fc802c8a68e89ea8a302f3426eba4a6c9f6dd8b9cb2d0dfa75e266",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "source": "zS=(e,r)=>({key:c2(e.component,e.requestId),scrolls:r.scrolls,before:GS(e,r),end:VS(e,r)})",
+      "variable": true,
+      "declarationKind": "var",
+      "refs": [
+        "GS",
+        "VS",
+        "c2"
+      ]
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "GS",
+      "start": 281296,
+      "endExclusive": 281372,
+      "sha256": "eb360468ab4bfdc31aa472e85c67c07781a8810d04da49cda9fdaccad0861412",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "source": "function GS(e,r){let n=Ul(e);return r.isFollowingEnd?n:Math.min(r.offset,n)}",
+      "variable": false,
+      "refs": [
+        "Ul"
+      ]
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Ul",
+      "start": 280210,
+      "endExclusive": 280254,
+      "sha256": "70b0b133f69054be57446067dc74e3ca9f5c37681237f4f1ebf97de735882622",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "source": "Ul=(e)=>Math.max(0,e.contentRows-e.bodyRows)",
+      "variable": true,
+      "declarationKind": "var",
+      "refs": []
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "VS",
+      "start": 281222,
+      "endExclusive": 281295,
+      "sha256": "5887f3df69f53baa19cc4a4889db1026c31506606e8cbac5cc791501c6f943b0",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "source": "VS=(e,r)=>({offset:Ul(e),wasFollowed:r.isFollowingEnd,isDownward:e.by>0})",
+      "variable": true,
+      "declarationKind": "var",
+      "refs": [
+        "Ul"
+      ]
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Ol",
+      "start": 279321,
+      "endExclusive": 279568,
+      "sha256": "41f395e763cfb485a4b760c8e210fd2ad6c46cd1e577cba54c098ad9367fa102",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "source": "function Ol(e,r){let{clientId:n,component:s,requestId:g}=e,w=c2(s,g),h=Jt.get(w);if(!Eo(s,g)||h===void 0&&!gi(n))return Promise.resolve(r.denied(e));let v=fs({component:s,requestId:g,clientId:n},h,{});return Jt.set(w,v),r.turnsOf(v).take(e,r.run)}",
+      "variable": false,
+      "refs": [
+        "Eo",
+        "Jt",
+        "c2",
+        "fs",
+        "gi"
+      ]
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "gi",
+      "start": 279277,
+      "endExclusive": 279320,
+      "sha256": "91edd14ba5badba75da0b56171c3e89dcf2f6f1000665876f322a3a8eb2eba07",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "source": "gi=(e)=>Y5.list().some((r)=>r.clientId===e)",
+      "variable": true,
+      "declarationKind": "var",
+      "refs": [
+        "Y5"
+      ]
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "WS",
+      "start": 279852,
+      "endExclusive": 280014,
+      "sha256": "5d5a4bd6bf578ec00f0962dbe9b5d1a09ddfcf6cf157d0a5143ea06f2ca8442f",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "source": "function WS(e){let{open:r,focusedId:n}=li().getState();for(let s of r){let g=Jt.has(c2(\"Pane\",s.id)),w=s.id===n;if(g||w)jS({clientId:e,requestId:s.id,isHeld:w})}}",
+      "variable": false,
+      "refs": [
+        "Jt",
+        "c2",
+        "jS",
+        "li"
+      ]
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "jS",
+      "start": 279589,
+      "endExclusive": 279852,
+      "sha256": "479c004658ff6a5ac74e3bd876eb3df57c9c1cc3dd3b09cbb65cd1af93c9d2f9",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "source": "function jS(e){let r=c2(\"Pane\",e.requestId),n=Jt.get(r);if(!(Eo(\"Pane\",e.requestId)&&(n!==void 0||e.isHeld&&gi(e.clientId))))return;Jt.set(r,fs({component:\"Pane\",requestId:e.requestId,clientId:e.clientId},n,{isHeld:e.isHeld,...!e.isHeld&&{holder:void 0}})),Ao(r)}",
+      "variable": false,
+      "refs": [
+        "Ao",
+        "Eo",
+        "Jt",
+        "c2",
+        "fs",
+        "gi"
+      ]
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Wm",
+      "start": 283047,
+      "endExclusive": 283357,
+      "sha256": "dd84e8f4e58e3d3ff65258156a28e4eb6cc11ed25d8f6079e89c2dc843147bd4",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "source": "function Wm(){let e=new Set(Oun().map((s)=>s.clientId)),r=new Set(Y5.list().map((s)=>s.clientId));Fl((s)=>!r.has(s.clientId));for(let[s,g]of wd)if(!e.has(s))wd.delete(s),g();for(let s of e)if(!wd.has(s))wd.set(s,YNt()),D3n(`${s} attached`);if(Jne.get()===void 0&&Mun()===void 0)D3n(\"no sized client attached\")}",
+      "variable": false,
+      "refs": [
+        "D3n",
+        "Fl",
+        "Jne",
+        "Mun",
+        "Oun",
+        "Y5",
+        "YNt",
+        "wd"
+      ]
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "wd",
+      "start": 283017,
+      "endExclusive": 283046,
+      "sha256": "fe450e5b0c00a94d6081c2d8eed84ded43c81f65cd87f0e75e898c5d4e7a39ba",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "source": "wd=ct(new Map,(e)=>e.clear())",
+      "variable": true,
+      "declarationKind": "var",
+      "refs": [
+        "ct"
+      ]
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "ZS",
+      "start": 282374,
+      "endExclusive": 282739,
+      "sha256": "c77ca1c5c0874d92aea4c855b02163ef2c15f300e435ebc1507d6fcb3aea3dc6",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "source": "function ZS(e){let{clientId:r,component:n,requestId:s}=e;if(!(Eo(n,s)&&gi(r)))return;let w=c2(n,s),h=Jt.get(w);Jt.set(w,fs({component:n,requestId:s,clientId:r},h,{clientId:r,...e.scroll!==void 0&&XS(e.scroll,h),...e.contentRows!==void 0&&{contentRows:e.contentRows},...e.keyed!==void 0&&{keyed:e.keyed},...e.keyboard!==void 0&&{isHeld:e.keyboard===\"held\"}})),Ao(w)}",
+      "variable": false,
+      "refs": [
+        "Ao",
+        "Eo",
+        "Jt",
+        "XS",
+        "c2",
+        "fs",
+        "gi"
+      ]
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "XS",
+      "start": 282280,
+      "endExclusive": 282374,
+      "sha256": "dd687d039aafb8a4fdd3dbf9f93c828aaa7bd7ab3f94408992281b7b0ba42bb4",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "source": "function XS(e,r){return r===void 0||r.bodyRows===0&&r.contentRows===0?e:{bodyRows:e.bodyRows}}",
+      "variable": false,
+      "refs": []
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "ek",
+      "start": 282739,
+      "endExclusive": 283013,
+      "sha256": "1d9270d85cf4cd866c15ab761bc215d689ed36d9b52245228e20d02edab8d9e2",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "source": "function ek(e){let{clientId:r,component:n,requestId:s}=e,g=c2(n,s),w=Jt.get(g);if(!(w!==void 0&&gi(r)&&Eo(n,s)))return;let M=K6e(e.tree),{holder:v}=w,R=v!==void 0&&M.some((U)=>U.plugin===v.plugin&&U.element===v.element);Jt.set(g,{...w,focusables:M,holder:R?v:void 0}),Ao(g)}",
+      "variable": false,
+      "refs": [
+        "Ao",
+        "Eo",
+        "Jt",
+        "K6e",
+        "c2",
+        "gi"
+      ]
+    },
+    {
+      "file": "chunk-n2zepamy.js",
+      "name": "K6e",
+      "start": 102702,
+      "endExclusive": 103093,
+      "sha256": "5bb737667aefb93924d3893e1ef39a4b4ecfb6986da56e6f7183fc496be92507",
+      "moduleSha256": "0b25d8e1138a155f83fd1f53d768fa0cfbd759a2177359108d03295616148a24",
+      "source": "function K6e(e){if(e===void 0||typeof e===\"string\"||e.type===\"engine\")return[];if(e.type===\"Button\"||e.type===\"Input\"||e.type===\"Select\"){let{plugin:r,handle:s}=e.press;return[{tag:e.type,plugin:r,handle:s,element:e.props.key,isAutoFocus:e.props.autoFocus===!0,...e.type!==\"Button\"&&{value:e.props.value},...e.type===\"Select\"&&{options:e.props.options}}]}return(e.children??[]).flatMap(K6e)}",
+      "variable": false,
+      "refs": []
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "iI",
+      "start": 354620,
+      "endExclusive": 354754,
+      "sha256": "d67010f42dce120f963c9ef2d3ae06c88d118de6a1fbeceb0bdb6591ae59e0bb",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "source": "function iI(e,r,n){if(e!==\"ToolUse\"&&e!==\"ToolResult\")return n;if(typeof n.tool_use_id===\"string\")return n;return{...n,tool_use_id:r}}",
+      "variable": false,
+      "refs": []
+    },
+    {
+      "file": "chunk-n2zepamy.js",
+      "name": "mtt",
+      "start": 10493,
+      "endExclusive": 10516,
+      "sha256": "2cb2b7d625ffe7a7eb97e30db225159c81b71959c5ac5731f7f8da2b85f2b1e6",
+      "moduleSha256": "0b25d8e1138a155f83fd1f53d768fa0cfbd759a2177359108d03295616148a24",
+      "source": "mtt=(e)=>`${e}:default`",
+      "variable": true,
+      "declarationKind": "var",
+      "refs": []
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "pC",
+      "start": 279572,
+      "endExclusive": 279588,
+      "sha256": "5cf35aa13e9ad3c429a3d0611da065b857e0d947b2404a9f907a9bc04e4efc5c",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "source": "pC=(e)=>Ol(e,BS)",
+      "variable": true,
+      "declarationKind": "var",
+      "refs": [
+        "BS",
+        "Ol"
+      ]
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "BS",
+      "start": 279228,
+      "endExclusive": 279272,
+      "sha256": "f82ed9ad67e6fe79a4fa56708788807624b322d6121d1ef70fcbc73b643f6ab8",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "source": "BS={turnsOf:(e)=>e.focuses,run:HS,denied:xl}",
+      "variable": true,
+      "declarationKind": "var",
+      "refs": [
+        "HS",
+        "xl"
+      ]
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "HS",
+      "start": 278730,
+      "endExclusive": 279224,
+      "sha256": "ef3b308299552eb2d91258bf9246fab3e4c723e4447d30d771c3c9deddd0a241",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "source": "async function HS(e){let{clientId:r,component:n,requestId:s,element:g}=e,w=c2(n,s),h=Jt.get(w);if(h===void 0||!Eo(n,s))return xl();Jt.set(w,fs({component:n,requestId:s,clientId:r},h,{isHeld:e.isHeld,holder:e.isHeld?h.holder:void 0,isReporting:!0})),Ao(w);let M=g!==void 0&&e.isHeld,v=g??void 0;try{return OS(w,M?await xan({input:{component:n,requestId:s,...v!==void 0&&{plugin:v.plugin,element:v.key},origin:DS(e,g)}}):{})}finally{let R=Jt.get(w);if(R!==void 0)Jt.set(w,{...R,isReporting:!1})}}",
+      "variable": false,
+      "refs": [
+        "Ao",
+        "DS",
+        "Eo",
+        "Jt",
+        "OS",
+        "c2",
+        "fs",
+        "xan",
+        "xl"
+      ]
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "DS",
+      "start": 276369,
+      "endExclusive": 276475,
+      "sha256": "d112409bb6f88825bc673cf1de5e7ba1653b568e317cb0a3afda1ce83e3720f8",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "source": "function DS(e,r){return e.by===\"auto\"&&r!==null&&r!==void 0?{kind:\"plugin\",name:r.plugin}:{kind:\"person\"}}",
+      "variable": false,
+      "refs": []
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "OS",
+      "start": 276582,
+      "endExclusive": 276618,
+      "sha256": "39b0d2da1ad0415c539c7da3d853b965a5039ff9f71cd51f4aaa3dd1eb9fe01b",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "source": "OS=(e,r)=>({result:r,element:xS(e)})",
+      "variable": true,
+      "declarationKind": "var",
+      "refs": [
+        "xS"
+      ]
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "xS",
+      "start": 276475,
+      "endExclusive": 276578,
+      "sha256": "43ce9f790c0c2137bdf25d7727b9fd898abd2a4bac2a5a5a7220c1b88af3d134",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "source": "function xS(e){let r=Jt.get(e)?.holder;if(r===void 0)return null;return{plugin:r.plugin,key:r.element}}",
+      "variable": false,
+      "refs": [
+        "Jt"
+      ]
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "xl",
+      "start": 278677,
+      "endExclusive": 278729,
+      "sha256": "99c95c6d5b63359345c60e1fb2be77ca50a029847c847ce51540a3133a89f08a",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "source": "xl=()=>({result:{deny:\"no such site\"},element:null})",
+      "variable": true,
+      "declarationKind": "var",
+      "refs": []
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "sI",
+      "start": 354515,
+      "endExclusive": 354620,
+      "sha256": "cf13287a9de78e7e88d6fc984d437acb0ddfce87bef192917f907f239a22eea1",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "source": "function sI(e){let r=e.output;if(typeof r!==\"string\"||r.length<=Tw)return e;return{...e,output:re(r,Tw)}}",
+      "variable": false,
+      "refs": [
+        "Tw",
+        "re"
+      ]
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Tw",
+      "start": 354506,
+      "endExclusive": 354514,
+      "sha256": "1b4d8c050820aa9764f9b9e1bf361dda2e48e6df0807d9110ce64b40353c998f",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "source": "Tw=65536",
+      "variable": true,
+      "declarationKind": "var",
+      "refs": []
+    },
+    {
+      "file": "chunk-64z3xwk8.js",
+      "name": "Roo",
+      "start": 15272,
+      "endExclusive": 15357,
+      "sha256": "a517a879c2787bbfee25bade42dc3308c5df5910b0c0546b20506b2916a6c72c",
+      "moduleSha256": "63b72939ef879fd6a6be0186e4c7fa1f334e1e6195c2da9c9e5e3fa5e3ea7d1f",
+      "source": "function Roo(s,e){return typeof s===\"string\"&&s.startsWith(Ie)&&!(s===He&&e)&&!LEt()}",
+      "variable": false,
+      "refs": [
+        "He",
+        "Ie",
+        "LEt"
+      ]
+    },
+    {
+      "file": "chunk-64z3xwk8.js",
+      "name": "He",
+      "start": 15230,
+      "endExclusive": 15244,
+      "sha256": "d705d404f87e32f6af4e4c0e7051f4118a8de65c303b403b87bed0b5c1c9c53f",
+      "moduleSha256": "63b72939ef879fd6a6be0186e4c7fa1f334e1e6195c2da9c9e5e3fa5e3ea7d1f",
+      "source": "He=\"ui_detach\"",
+      "variable": true,
+      "declarationKind": "var",
+      "refs": []
+    },
+    {
+      "file": "chunk-64z3xwk8.js",
+      "name": "Ie",
+      "start": 15221,
+      "endExclusive": 15229,
+      "sha256": "d994d545986db3fc26d0e58a2455450d6ffe8e19591d94f6af02b7fc6a2b1b05",
+      "moduleSha256": "63b72939ef879fd6a6be0186e4c7fa1f334e1e6195c2da9c9e5e3fa5e3ea7d1f",
+      "source": "Ie=\"ui_\"",
+      "variable": true,
+      "declarationKind": "var",
+      "refs": []
+    }
+  ],
+  "borrowed": [
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "$En",
+      "start": 578644,
+      "endExclusive": 580863,
+      "sha256": "1a744e90aab5860de65b4d331bb39ac51eeb8f1633ea4f3aa3ee92b5cf77d59d",
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "source": "$En=f(()=>u({subtype:x(\"ui_input\"),plugin:o().max(Y).describe(\"@internal The plugin whose hook drew the Input, as its `press.plugin` carried it.\"),handle:C().int().describe(\"@internal The handle the Input carried (`press.handle`), naming the onInput and onSubmit closures held in that plugin's environment.\"),kind:B([\"change\",\"submit\"]).describe(\"@internal Which of the two: `change` on an edit of the field, `submit` on Enter. The `ui.input` hooks reached see it as `e.kind`.\"),value:o().max(lr).describe(\"@internal The field's whole text as the surface holds it now; the hooks reached see it as `e.value` and may rewrite it before the closure.\"),key:o().optional().describe(\"@internal The Input's own `key`, as the tree carried it (the engine puts no length on a key): with `component` and `instance_id`, a handle a redraw just retired is re-resolved to the one Input that plugin holds under this key there, so typing across a re-render is not lost.\"),component:cr().optional().describe(\"@internal The render site the Input was drawn in, as the ui_render that drew it named it; pairs with `key` for the re-resolve.\"),instance_id:o().max(Y).optional().describe(\"@internal The instance the Input was drawn in (the ui_render's `instance_id`): with `key` and `component`, names the one field among several instances that draw the same key (one per transcript row). Without it a retired handle re-resolves only when a single instance holds the key.\"),surface:J().default(\"desktop\").describe(\"@internal The surface the field is on, as the ui_render that drew it named it; absent means `desktop`. The `ui.input` hooks reached see it as `e.surface`.\"),client_id:j().optional().describe(\"@internal The typing client, as its ui_attach named it; optional, and the input runs the same with or without it.\")}).describe(\"@internal A change of, or Enter in, an `Input` a plugin drew for a remote surface: runs the `ui.input` chain over every hooked plugin with the element's own onInput (kind `change`) or onSubmit (kind `submit`) closure at the bottom, one at a time per plugin so typing arrives in order. A handle no Input is held under answers `{handled: false}` and nothing runs. No model turn unless the plugin asks for one.\"))",
+      "variable": true,
+      "declarationKind": "var",
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "BEn",
+      "start": 584507,
+      "endExclusive": 584773,
+      "sha256": "6f90885dac409f6d2ef455f5bf8eaaccf40e0dff510091e4f405cb5d16838a10",
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "source": "BEn=f(()=>u({subtype:x(\"ui_panes\"),client_id:j().optional()}).describe(\"@internal Ask for the pane roster as the engine holds it now: what a surface that places panes reads on mount, before any ui_panes push (a pane opened before the stream armed pushes nothing).\"))",
+      "variable": true,
+      "declarationKind": "var",
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-k35krsdc.js",
+      "name": "Bn",
+      "start": 665,
+      "endExclusive": 731,
+      "sha256": "1ffe906fd619ac24e546a21ed0051e52df6188a5dd6586756d2e6720ee4c7f67",
+      "moduleSha256": "4bdedb0dcb7dee6a20f04802ab9ed001bb8e405332be73c4b92b2dcb387432fd",
+      "source": "function Bn(e=A){let r=new AbortController;return b(e,r.signal),r}",
+      "variable": false,
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "DEn",
+      "start": 567496,
+      "endExclusive": 570254,
+      "sha256": "008a2fdd72f25df16e4f1238f99f146851dfce65eda26a56b378a19dd7ff190c",
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "source": "DEn=f(()=>u({subtype:x(\"ui_render\"),surface:J().describe(\"@internal The surface asking: `desktop` (Claude Code Desktop), `mobile` (the Claude mobile app) or `vscode` (Claude Code for VS Code); the hooks reached see it as `e.surface` and answer from that surface's element table.\"),client_id:j().optional().describe(\"@internal The asking client, as its ui_attach named it. The ask puts it on the roster when it is not there: the id given, else `<surface>:default`.\"),component:cr(),instance_id:o().describe(\"@internal The engine's requestId for this instance: the tool_use_id of a tool row or dialog, the message id of a message, the uuid of a command's output row (its twin's), 'session-mode' for the session chip. Two drawings of one component are two instances.\"),props:de(o(),se()).describe(\"@internal The component's plain-data props as the asking surface holds them; the `ui.render` site rule validates their shape per component. `output` on a ToolUse is capped at 64 KB before the chain sees it.\"),viewport:Hw().optional(),on_screen:PW().nullable().optional().describe(\"@internal What of this instance the asking surface's viewport shows now, for a transcript message (UserMessage, AssistantMessage, ToolUse, ToolResult, ToolGroup, CommandOutput, TurnDuration, InfoNotice): the extent, or null while the surface draws it outside its viewport. The engine hands it to the hooks as `e.props.onScreen` for this surface's ask alone (a rewrite of it is refused) and never carries one surface's report to another; leave it out when the surface does not track visibility, and ask again, coalesced to the surface's frame, when it changes, so the hooks re-run for the messages crossing the viewport's edges.\"),content_rows:C().int().nonnegative().optional().describe(\"@internal For a `Pane` or `AbovePrompt` ask: the rows the instance's whole tree lays out to as the surface last drew it (the window itself rides `props.scroll`), so a plugin's `$.ui.scroll` to `end` knows the last offset. Leave it out before the first layout.\"),keyed:T(tE(()=>Ww())).max($w).optional().describe(\"@internal For a `Pane` or `AbovePrompt` ask: where the keyed elements of the tree last drawn sit, so a plugin's `$.ui.scroll({ to: { key } })` lands; without it that call is denied.\"),bench:qw().optional()}).describe('@internal Ask the hooks engine to draw one component instance for a remote surface: runs the `ui.render` chain (every plugin hooked on it, then core) with the surface asked and answers the tree plus the props core was handed. A session with no hooks module loaded answers `{tree: {type: \"engine\", ref: 0}, hooked: false}` without running anything. Re-ask every mounted instance on each `ui_invalidate` system message, and an instance whose `on_screen` changed.'))",
+      "variable": true,
+      "declarationKind": "var",
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-hhxhpvxp.js",
+      "name": "Djt",
+      "start": 7138,
+      "endExclusive": 7264,
+      "sha256": "5ec5cee1c7b6ab9837ab8389cbc4f5bb5dee0182187c4148bb7b2f1fe0cc7a83",
+      "moduleSha256": "ecdb6abdb941b1a990d5cda13d161a77996b7e2b4a07fef88c4f1c0d0afa9ca5",
+      "source": "Djt=new Set([\"UserMessage\",\"AssistantMessage\",\"ToolUse\",\"ToolResult\",\"ToolGroup\",\"CommandOutput\",\"TurnDuration\",\"InfoNotice\"])",
+      "variable": true,
+      "declarationKind": "var",
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-kgfqrfpa.js",
+      "name": "Dq",
+      "start": 6487,
+      "endExclusive": 6713,
+      "sha256": "9f3ad55ff7e7ef531c4a738143a21b841a898c5a0c50e2fdefcccbfb52629bba",
+      "moduleSha256": "60d9743fc52d6e3895bfea75292fe0a3930160ed99fd873182e177723b216dd3",
+      "source": "Dq=(e)=>li().setState((r)=>{let n=e===null||r.open.some((a)=>a.id===e),s=n?e:r.focusedId,i=n&&e!==null?e:r.shownId;return r.focusedId===s&&r.shownId===i&&r.focusRequest===null?r:{...r,focusedId:s,shownId:i,focusRequest:null}})",
+      "variable": true,
+      "declarationKind": "var",
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "FEn",
+      "start": 577720,
+      "endExclusive": 578264,
+      "sha256": "a73ae5c1def594d6cff8ef784e5a959b5c5b7408bd26d81b36e3eab0c3901771",
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "source": "FEn=f(()=>Fw().extend({subtype:x(\"ui_message\"),data:se().describe(\"@internal What the instance posted (`surface.post(data)`): plain JSON, bounded as a Client post is (2000 values, depth 32, 100 000 characters); the hooks reached see `e.data`.\")}).describe('@internal A post from a `Client` instance the desktop drew: runs the owning plugin\\'s `ui.message` chain alone (origin `client`) with `surface: \"desktop\"`. One naming a Client the latest ui_render of that instance did not carry answers `{handled: false}`; data past the bounds errors.'))",
+      "variable": true,
+      "declarationKind": "var",
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "GEn",
+      "start": 586304,
+      "endExclusive": 586759,
+      "sha256": "3342097bcb1c2fdcb0a9a6565ea247c7df90e3fb4bb1e6ca1faa785f41d46452",
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "source": "GEn=f(()=>u({subtype:x(\"ui_close\"),id:me().describe(\"@internal The pane the person closed (its close control, or Escape under `close_on_escape`).\"),client_id:j().optional()}).describe(\"@internal The person's close of a pane on a remote surface: runs the `ui.close` chain with origin `person` (a hook may keep the pane open) and answers whether it closed. The surface removes the pane only on `closed: true`; the ui_panes push that follows drops it too.\"))",
+      "variable": true,
+      "declarationKind": "var",
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "HEn",
+      "start": 566997,
+      "endExclusive": 567249,
+      "sha256": "e46469f432ab4fbc28a59cde22e52f4a436d760cc761432fdefc0a707e8b4715",
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "source": "HEn=f(()=>u({subtype:x(\"ui_detach\"),client_id:j()}).describe(\"@internal A remote surface leaves the session: the engine drops the client from its roster and raises `session.detach` with reason `detach`. A client_id not on the roster changes nothing.\"))",
+      "variable": true,
+      "declarationKind": "var",
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Km",
+      "start": 285614,
+      "endExclusive": 285662,
+      "sha256": "8f68821d6f67e8c525802457ac418232687dabf1b3de6b13d37909edfbfcd467",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "source": "Km=ct(ak({onDetach:Y5.onDetach}),(e)=>e.clear())",
+      "variable": true,
+      "declarationKind": "var",
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-hrhfcbdv.js",
+      "name": "Kt",
+      "start": 78327,
+      "endExclusive": 78427,
+      "sha256": "5e98994ca530b297f3e1686bde486af6f4acd6008dfd34d5f5c0bdaeb47607ea",
+      "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+      "source": "function Kt(e){if(typeof e!==\"string\")return\"\";return re(GCn(e.length>4096?e.slice(0,4096):e),1024)}",
+      "variable": false,
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-kgfqrfpa.js",
+      "name": "L3n",
+      "start": 6718,
+      "endExclusive": 6844,
+      "sha256": "977448ef26c2988287fccc148b8d5e29db1daf84868988c11e84d16367442219",
+      "moduleSha256": "60d9743fc52d6e3895bfea75292fe0a3930160ed99fd873182e177723b216dd3",
+      "source": "L3n=(e)=>li().setState((r)=>r.shownId===e||!r.open.some((s)=>s.id===e)?r:{...r,shownId:e,focusedId:r.focusedId===null?null:e})",
+      "variable": true,
+      "declarationKind": "var",
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "LEn",
+      "start": 573738,
+      "endExclusive": 574327,
+      "sha256": "b723fe0bba03d2a76e7d2c2c5d0daa3e94b521786fbd194ef3a34e922e5ee624",
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "source": "LEn=f(()=>u({subtype:x(\"ui_client_module\"),plugin:o().describe(\"@internal The plugin whose surface modules the surface wants, as a Client node and `client_modules` named it.\")}).describe(\"@internal Ask for a plugin's surface modules as a desktop `Client` frame loads them: every file the host read when the hooks module loaded (only those: the paths its `Client`s name by literal), compiled to JavaScript, its own imports rewritten to import-map keys, each module's entry and component, and the hash ui_render announced. Errors when the plugin is not loaded or loaded no surface module.\"))",
+      "variable": true,
+      "declarationKind": "var",
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "MEn",
+      "start": 571290,
+      "endExclusive": 572731,
+      "sha256": "bc770f0d0fb8a0a2b4385410a42b0cbb07777d8b017f6a4407f0088fa3802cee",
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "source": "MEn=f(()=>u({subtype:x(\"ui_press\"),plugin:o().describe(\"@internal The plugin whose hook drew the pressed element, as the tree carried it.\"),handle:C().int().describe(\"@internal The handle the element carried (`press.handle`), naming the onPress closure held in that plugin's environment.\"),key:o().optional().describe(\"@internal The element's own key, for the debug log and for a `ui.press` matcher.\"),surface:J().default(\"desktop\").describe(\"@internal The surface the press came from, as the ui_render that drew the element named it; absent means `desktop`. The `ui.press` hooks reached see it as `e.surface`.\"),href:o().max(2048).optional().describe(\"@internal For a press on a link inside a `Markdown` element that carries a `press` (its plugin answers its links): the link's target as the tree's text wrote it, one `pressableLinks` names when that list is present. The `ui.press` hooks reached see it as `e.link.href`. Absent for a Button; a Markdown handle without it runs nothing.\"),client_id:j().optional().describe(\"@internal The pressing client, as its ui_attach named it; optional, and the press runs the same with or without it.\")}).describe(\"@internal A press on an element a plugin drew for a remote surface: a Button, or a link inside a Markdown whose plugin answers its links (with `href`). Runs the `ui.press` chain with the element's closure at the bottom. A CLI whose engine has no press site answers `{handled: false}`.\"))",
+      "variable": true,
+      "declarationKind": "var",
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "NEn",
+      "start": 576193,
+      "endExclusive": 577148,
+      "sha256": "c2ba08bd6f9182930dc620af52d366668a636935cc7b265c226954488157ff10",
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "source": "NEn=f(()=>Fw().extend({subtype:x(\"ui_client_press\"),element:o().max(Y).describe(\"@internal The pressed element's own `key` inside the Client's tree; the hooks reached see `e.element`.\"),event:Wo(\"type\",[u({type:x(\"press\")}),u({type:x(\"input\"),kind:B([\"change\",\"submit\"]),value:o().max(lr)}),u({type:x(\"select\"),value:o().max(lr)})]).describe(\"@internal What happened: a Button pressed, an Input changed or submitted with its text, a Select picked with its value.\")}).describe(\"@internal A press, input or pick on a Button, Input or Select a surface module drew inside a `Client` the desktop drew: runs the `ui.press`, `ui.input` or `ui.select` chain over every hooked plugin with `surface: \\\"desktop\\\"`. The element's closure lives in the surface's frame, so the answer says whether the chain reached it and with what argument, and the surface runs it. One naming a Client the latest ui_render of that instance did not carry answers `{handled: false}`.\"))",
+      "variable": true,
+      "declarationKind": "var",
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "OEn",
+      "start": 565681,
+      "endExclusive": 566744,
+      "sha256": "e21f22ff3d059dfa53c4d5e28f02e282d1ce8ff646c6efbbbc83829739698001",
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "source": "OEn=f(()=>u({subtype:x(\"ui_attach\"),surface:J(),client_id:j(),viewport:Hw().optional(),answers:T(tE(()=>XW())).max($W).optional().describe(\"@internal The engine's requests this client answers on a plugin's behalf: `ui_copy` (its clipboard), `ui_prompt_read` / `ui_prompt_fill` / `ui_prompt_suggest` (its composer). The engine sends each only to a client that named it; a client that never names any (or names `[]`) is never asked, so `$.ui.copy` to its surface answers `no-clipboard` and the prompt calls the empty box / false, as before. On a repeated ui_attach a given list (including `[]`) replaces the earlier one and an absent field keeps it: send `[]` to stop answering.\")}).describe(\"@internal A remote surface joins the session: the engine adds the client to its roster of attached surfaces and raises `session.attach` for it (`$.session.surfaces()` then lists the surface). Idempotent per client_id. A client that never sends it is attached by its first ui_render, under `<surface>:default`; every client still attached detaches when the session ends.\"))",
+      "variable": true,
+      "declarationKind": "var",
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-kgfqrfpa.js",
+      "name": "Oun",
+      "start": 2718,
+      "endExclusive": 2782,
+      "sha256": "e2cd3e4963e79c4850a575f8d0c67447773dc33d1ec6d177ae0de1e1ec471b52",
+      "moduleSha256": "60d9743fc52d6e3895bfea75292fe0a3930160ed99fd873182e177723b216dd3",
+      "source": "Oun=()=>Y5.list().filter((e)=>e.viewport?.isFullscreen!==void 0)",
+      "variable": true,
+      "declarationKind": "var",
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-kgfqrfpa.js",
+      "name": "Sde",
+      "start": 3329,
+      "endExclusive": 3363,
+      "sha256": "7ead5602e625138fb60b649f1bc7bfeb5e46dce14e4ecaa2331ee3489d27f028",
+      "moduleSha256": "60d9743fc52d6e3895bfea75292fe0a3930160ed99fd873182e177723b216dd3",
+      "source": "Sde=(e)=>[...e.open,...e.unplaced]",
+      "variable": true,
+      "declarationKind": "var",
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "UEn",
+      "start": 581402,
+      "endExclusive": 583272,
+      "sha256": "e21acc42ca27b0a933853eafbc477be6f1e0882ceb44504a5338f1785cbbac81",
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "source": "UEn=f(()=>u({subtype:x(\"ui_select\"),plugin:o().max(Y).describe(\"@internal The plugin whose hook drew the Select, as its `press.plugin` carried it.\"),handle:C().int().describe(\"@internal The handle the Select carried (`press.handle`), naming the onSelect closure held in that plugin's environment.\"),value:o().max(lr).describe(\"@internal The picked option's `value`, one of the Select's `options` as the tree last drew them (any other value answers `handled: false` and runs nothing); the hooks reached see it as `e.value` and may rewrite it before the closure.\"),key:o().optional().describe(\"@internal The Select's own `key`, as the tree carried it: with `component` and `instance_id`, a handle a redraw just retired is re-resolved to the one Select that plugin holds under this key there.\"),component:cr().optional().describe(\"@internal The render site the Select was drawn in, as the ui_render that drew it named it; pairs with `key` for the re-resolve.\"),instance_id:o().max(Y).optional().describe(\"@internal The instance the Select was drawn in (the ui_render's `instance_id`): with `key` and `component`, names the one picker among several instances that draw the same key.\"),surface:J().default(\"desktop\").describe(\"@internal The surface the picker is on, as the ui_render that drew it named it; absent means `desktop`. The `ui.select` hooks reached see it as `e.surface`.\"),client_id:j().optional().describe(\"@internal The picking client, as its ui_attach named it; optional, and the pick runs the same with or without it.\")}).describe(\"@internal A pick in a `Select` a plugin drew for a remote surface: runs the `ui.select` chain over every hooked plugin with the element's own onSelect closure at the bottom, one at a time per plugin. A handle no Select is held under answers `{handled: false}` and nothing runs. No model turn unless the plugin asks for one.\"))",
+      "variable": true,
+      "declarationKind": "var",
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "VEn",
+      "start": 589807,
+      "endExclusive": 590864,
+      "sha256": "a8a4b8a7575cad701d580a55d79a26ba2d9c658b548fc2a24cc0e83e96203392",
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "source": "VEn=f(()=>u({subtype:x(\"ui_focus\"),component:Yw(),instance_id:o().max(Y),is_held:H().describe(\"@internal Whether the site holds the keyboard now (DOM focus is inside its container).\"),element:Xw().nullable().optional().describe(\"@internal The element that took the focus ring: one the site draws, or null for the container itself; absent reports `is_held` alone and moves nothing.\"),by:B([\"person\",\"auto\"]).default(\"person\").describe(\"@internal Who moved it: the person (Tab, a click), or an `autoFocus` element taking the ring as the site mounted (`auto`, raised as that plugin's move).\"),surface:J().default(\"desktop\").describe(\"@internal The surface the site is on; absent means `desktop`. Names the default client when `client_id` is not given.\"),client_id:j().optional()}).describe(\"@internal The keyboard moved in a site a remote surface draws: the engine records the hold and raises `ui.focus` for the element (origin `person`, or the element's plugin under `auto`); a hook may redirect it, which the answer then carries for the surface to follow.\"))",
+      "variable": true,
+      "declarationKind": "var",
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "JV",
+      "start": 533109,
+      "endExclusive": 533139,
+      "sha256": "b728e0dc75bbc5ae9b09995fcd6a8d22f33672c2acfddd005286fffd49858c9b",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "source": "JV=ct(Ys(),(e)=>e.set(void 0))",
+      "variable": true,
+      "declarationKind": "var",
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "V7",
+      "start": 2339530,
+      "endExclusive": 2339543,
+      "sha256": "6b542d6b8c4537416f0b0cbbc9cf5a44242f47cc0cf02c62c26303f54d723f11",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "source": "V7=(e)=>U5(e)",
+      "variable": true,
+      "declarationKind": "var",
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-kgfqrfpa.js",
+      "name": "Y5",
+      "start": 2652,
+      "endExclusive": 2713,
+      "sha256": "a3db2a95a9a9281a3aaecef4d757a8f1d44f04dd24b859ff5ab29bf318a1e331",
+      "moduleSha256": "60d9743fc52d6e3895bfea75292fe0a3930160ed99fd873182e177723b216dd3",
+      "source": "Y5=ct(ae(),(e)=>{for(let r of e.list())e.detach(r.clientId)})",
+      "variable": true,
+      "declarationKind": "var",
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-c9me9cp7.js",
+      "name": "l",
+      "start": 4754,
+      "endExclusive": 4814,
+      "sha256": "2f921ed78ffeed39032d7e9c4783e05c294cba2ce61cc5ac20466ece27a81075",
+      "moduleSha256": "db81856ee883c31a0be18c305014a0d82d3bd698a459223b9de754b934b084ae",
+      "source": "function l(n){return n instanceof Error?n.message:String(n)}",
+      "variable": false,
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Jt",
+      "start": 275428,
+      "endExclusive": 275457,
+      "sha256": "c15647d594ace37704a7af9aa972197313560c0dd5b3d709857bc8d079371b73",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "source": "Jt=ct(new Map,(e)=>e.clear())",
+      "variable": true,
+      "declarationKind": "var",
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Dl",
+      "start": 276735,
+      "endExclusive": 276843,
+      "sha256": "8e7917f8f1cec703394085efb063cd11db18e5348e4351e373b4aa697d7d316d",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "source": "function Dl(e){if(e===void 0)return 0;return e.isFollowingEnd?Math.max(0,e.contentRows-e.bodyRows):e.offset}",
+      "variable": false,
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Ao",
+      "start": 276843,
+      "endExclusive": 277675,
+      "sha256": "46f57fbcc3d6086c752d8751933e9de63bb4f2a2ddb9d42bfd72b94b9b6117e8",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "source": "function Ao(e){let r=Jt.get(e);if(r===void 0){kce().delete(e),A4e().delete(e);return}let{component:n,requestId:s,owner:g,bodyRows:w,contentRows:h}=r,M=Math.max(0,h-w),v=()=>Jt.get(e);kce().set(e,{component:n,requestId:s,owner:g,bodyRows:w,contentRows:h,maxOffset:M,offset:()=>Dl(v()),keyRows:(R,U)=>{let H=v()?.keyed.find((I)=>I.plugin===R&&I.key===U);return H&&{top:H.top,bottom:H.bottom}},commit:(R,U)=>AS(e,Math.min(M,R),U)===void 0,followEnd:()=>{let R=v();if(R!==void 0)Jt.set(e,{...R,isFollowingEnd:!0}),fi.scroll.emit({clientId:R.clientId,component:n,requestId:s,offset:R.offset,isFollowingEnd:!0})}}),A4e().set(e,{component:n,requestId:s,owner:g,isHeldNow:()=>v()?.isHeld===!0,holderNow:()=>v()?.holder?.plugin,hasElement:(R,U)=>v()?.focusables.some((H)=>H.plugin===R&&H.element===U)===!0,commit:(R)=>MS(e,R)}),HDt().emit()}",
+      "variable": false,
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "O6",
+      "start": 524028,
+      "endExclusive": 524045,
+      "sha256": "4c3e75dff1be14ed3bbf562234274009484d9a651d4aaaf6bd081fec5c87b9bf",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "source": "O6=\"above-prompt\"",
+      "variable": true,
+      "declarationKind": "var",
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-kgfqrfpa.js",
+      "name": "li",
+      "start": 3276,
+      "endExclusive": 3324,
+      "sha256": "fe0e068e06afbe5bdb0d3cc169decdcd96a5b58e70a64b73e8eab307395e3839",
+      "moduleSha256": "60d9743fc52d6e3895bfea75292fe0a3930160ed99fd873182e177723b216dd3",
+      "source": "li=ct(()=>ut().panes,(e)=>e().setState(()=>eyn))",
+      "variable": true,
+      "declarationKind": "var",
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "ODt",
+      "start": 524778,
+      "endExclusive": 525100,
+      "sha256": "00f78e98884e4b8dff28e3e294ee8d47390da275d57ddc7ef4747ae8fd4f8c7f",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "source": "async function ODt(e){let{input:n,hookOrigin:r,signal:s}=e,g=S0(\"ui.scroll\",r),b=g.length===0?DG(n):await K7({event:\"ui.scroll\",input:n,handlers:g,hookOrigin:r,signal:s},DG);return t(`ui.scroll ${n.component} ${n.requestId} (${n.origin.kind}) by ${n.by} to ${n.offset}: `+(b.deny===void 0?\"moved\":`denied (${b.deny})`)),b}",
+      "variable": false,
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "c2",
+      "start": 524100,
+      "endExclusive": 524121,
+      "sha256": "ef85069e0d872856be516e5275f1c5d1e728cf163df2f0bed35adbe1df07ad5c",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "source": "c2=(e,n)=>`${e}:${n}`",
+      "variable": true,
+      "declarationKind": "var",
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "WEn",
+      "start": 585430,
+      "endExclusive": 586186,
+      "sha256": "c40cb8eaed3f22dc6d8c700166b1286edf76e87799a03eab993cae3519f0a153",
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "source": "WEn=f(()=>u({subtype:x(\"ui_pane_focus\"),id:me().nullable().describe(\"@internal The pane the person gave the keyboard (a click into its body, honouring a focus request), or null when the keyboard went back to the composer (Escape, a click there, a refused focus request). Settles a standing focus request either way.\"),surface:J().default(\"desktop\").describe(\"@internal The surface the panes are on; absent means `desktop`. Names the default client when `client_id` is not given.\"),client_id:j().optional()}).describe(\"@internal The keyboard moved between the composer and a pane on a remote surface; answers the roster's `focused_id` afterwards, and the pane's Pane site then holds the keyboard for `$.ui.focus`. A ui_panes push follows when it changed.\"))",
+      "variable": true,
+      "declarationKind": "var",
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-kgfqrfpa.js",
+      "name": "D3n",
+      "start": 16325,
+      "endExclusive": 16537,
+      "sha256": "aefb0b0d7729bbc93182ae9580cb5385977510e4f19b597d5485340766aa6f45",
+      "moduleSha256": "60d9743fc52d6e3895bfea75292fe0a3930160ed99fd873182e177723b216dd3",
+      "source": "function D3n(e){let r=li().getState().unplaced;if(r.length===0)return;li().setState((n)=>n.unplaced.reduce((s,i)=>A(s,i,s.focusRequest),n));for(let n of r)t(`ui.open ${n.plugin} ${n.id} (waiting, ${e}): placed`)}",
+      "variable": false,
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Fl",
+      "start": 280014,
+      "endExclusive": 280124,
+      "sha256": "661f9d06a69e8ef3aeae3811ab7cb3dcff0479c2fdb58e634a40aad8fcbd81fd",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "source": "function Fl(e){let r=[...Jt.entries()].filter(([,n])=>e(n));for(let[n]of r)Jt.delete(n),Ao(n);return r.length}",
+      "variable": false,
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-kgfqrfpa.js",
+      "name": "Jne",
+      "start": 8295,
+      "endExclusive": 8326,
+      "sha256": "a9148306cf41ce926efd87c90f370e4719d8745550374e38adf876ec30fe976c",
+      "moduleSha256": "60d9743fc52d6e3895bfea75292fe0a3930160ed99fd873182e177723b216dd3",
+      "source": "Jne=ct(Ys(),(e)=>e.set(void 0))",
+      "variable": true,
+      "declarationKind": "var",
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-kgfqrfpa.js",
+      "name": "Mun",
+      "start": 8902,
+      "endExclusive": 9153,
+      "sha256": "c2273030f9c5adc2937e3886f1124d92a59420c2c27f2dca92585db86d418d44",
+      "moduleSha256": "60d9743fc52d6e3895bfea75292fe0a3930160ed99fd873182e177723b216dd3",
+      "source": "function Mun(){let e=xe();if(e.length===0)return;if(Oun().length>0)return{isPlaced:!0};return{isPlaced:!1,reason:`no attached surface places panes (${e.map((n)=>n.clientId).join(\", \")}): placed when a surface that does attaches, or once they detach`}}",
+      "variable": false,
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-kgfqrfpa.js",
+      "name": "YNt",
+      "start": 8128,
+      "endExclusive": 8264,
+      "sha256": "b4b1eb7c5cddb3ea368918b068bacb4a134472707309b9d52b5d0b621a40800f",
+      "moduleSha256": "60d9743fc52d6e3895bfea75292fe0a3930160ed99fd873182e177723b216dd3",
+      "source": "function YNt(){return li().setState((e)=>({...e,placements:e.placements+1})),()=>li().setState((e)=>({...e,placements:e.placements-1}))}",
+      "variable": false,
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-x954y317.js",
+      "name": "ct",
+      "start": 5356,
+      "endExclusive": 5382,
+      "sha256": "5da0f7703a355ff03a7692122a7882ea1749f0801ed8f38d6b64ce727d2cd856",
+      "moduleSha256": "c7315d9d19dfef6318f4eeceb3dbc792344d7feed2814f6d9b06bc28831e0c43",
+      "source": "function ct(t,e){return t}",
+      "variable": false,
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-09m4fzsj.js",
+      "name": "h5e",
+      "start": 495492,
+      "endExclusive": 495505,
+      "sha256": "65580a54a5a7a577c6cb4a37f5a5260879b489f7328f77e1ec79acc6c4f3e1dd",
+      "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+      "source": "h5e=bh.render",
+      "variable": true,
+      "declarationKind": "var",
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "jEn",
+      "start": 584774,
+      "endExclusive": 585330,
+      "sha256": "a4628cfa368f14226a7bd24ab368b8bce3346a197cf87d04e73563ddcaf51154",
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "source": "jEn=f(()=>u({subtype:x(\"ui_pane_show\"),id:me().describe(\"@internal The pane the person picked (a click on its tab): shown at once, the keyboard following if a pane held it. An id not open changes nothing.\"),surface:J().default(\"desktop\").describe(\"@internal The surface the panes are on; absent means `desktop`. Names the default client when `client_id` is not given.\"),client_id:j().optional()}).describe(\"@internal The person chose which open pane the surface shows; answers the roster's `shown_id` afterwards. A ui_panes push follows when it changed.\"))",
+      "variable": true,
+      "declarationKind": "var",
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-kgfqrfpa.js",
+      "name": "m9e",
+      "start": 5632,
+      "endExclusive": 6483,
+      "sha256": "4b3ea3f77be7a4d2f061a21a96f9b893d0ca1ac3a6b69eccbf8655e6a53a254e",
+      "moduleSha256": "60d9743fc52d6e3895bfea75292fe0a3930160ed99fd873182e177723b216dd3",
+      "source": "async function m9e(e,r){let n=li().getState(),s=n.closing.includes(e),i=r.kind===\"unload\",m=Sde(n).find((x)=>x.id===e)?.plugin,a=!1;if(i)KNt(e);if(s)return;let d=S0(\"ui.close\").filter((x)=>!i||x.name!==m);if(d.length===0){KNt(e),H(e,r,m);return}if(!i)li().setState((x)=>({...x,closing:[...x.closing,e]}));try{let x=await Ex({e:{id:e,origin:r},handlers:d,site:hbe(\"ui.close\"),bottom:(w)=>{if(w.id!==e||li().getState().closing.includes(e))KNt(w.id),a=w.id===e;return Promise.resolve({value:void 0})}}),S=li().getState();if(S.closing.includes(e)&&Sde(S).some((w)=>w.id===e))t(`ui.close ${e} (${r.kind}): kept open by a hook`+(x.deny===void 0?\"\":` (${x.deny})`))}catch(x){t(`ui.close ${e} (${r.kind}): the chain failed: `+l(x),{level:\"error\"})}finally{if(li().setState((x)=>x.closing.includes(e)?{...x,closing:x.closing.filter((S)=>S!==e)}:x),a)H(e,r,m)}}",
+      "variable": false,
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-n2zepamy.js",
+      "name": "olr",
+      "start": 10517,
+      "endExclusive": 10774,
+      "sha256": "b430c7bd2f0172996a661cddd0692d481d7450a06c1bed5c60a37ea57f7a386f",
+      "moduleSha256": "0b25d8e1138a155f83fd1f53d768fa0cfbd759a2177359108d03295616148a24",
+      "source": "async function olr(e,n,o){let r=Y5.detach(e);if(r===void 0)return;t(`session.detach: ${e} (${n})`);try{await JV.get(),await V7(o).session.detach({surface:r.surface,clientId:e,reason:n})}catch(s){t(`session.detach: failed: ${l(s)}`,{level:\"error\"})}return r}",
+      "variable": false,
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "xan",
+      "start": 1669518,
+      "endExclusive": 1669969,
+      "sha256": "2c0c5c88104564bd3a739512a2477dd6f7498c9eb83706d112ae2dcadd11925d",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "source": "function xan(e){let{input:n,hookOrigin:r,signal:s}=e,g=S0(\"ui.focus\",r);function h(w){let j=n.element===void 0?\"the engine's stop\":`${n.plugin}'s ${n.element}`;return t(`ui.focus ${n.component} ${n.requestId} (${n.origin.kind}) onto ${j}: `+(w.deny===void 0?\"moved\":`denied (${w.deny})`)),w}return g.length===0?h(LG(n)):K7({event:\"ui.focus\",input:n,handlers:g,hookOrigin:r,signal:s},(w)=>s?.aborted===!0?{deny:\"the move was abandoned\"}:LG(w)).then(h)}",
+      "variable": false,
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "qEn",
+      "start": 596497,
+      "endExclusive": 598142,
+      "sha256": "1a530c0c06dee315d7fcbef86cf6dd34eb2fabddce95cea817f6c6711cd87736",
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "source": "qEn=f(()=>u({subtype:x(\"ui_prompt_edit\"),text:o().max(dr).describe(\"@internal The Composer's whole draft after the edit, as the surface holds it.\"),cursor:C().int().nonnegative().describe(\"@internal The caret after the edit, in UTF-16 code units into `text`; one past the end is clamped to it.\"),key:JW().optional().describe(\"@internal The one key that made the edit; absent for a paste, a drop, or text that came with no single key.\"),by:B([\"person\",\"app\"]).default(\"person\").describe(\"@internal Who changed the box: the person's own edit (`person`, raised as `prompt.edit`), or the app itself when it was not the person typing (`app`: a submit emptied it, a fill landed, a history recall, a draft restore), which the engine adopts as the box before the next edit without raising anything, answering the box with no runs. `app` carries no key.\"),surface:J().default(\"desktop\").describe(\"@internal The surface the Composer is on; absent means `desktop`.\"),client_id:j().optional().describe(\"@internal The editing client, as its ui_attach named it; absent names the surface's default client.\")}).describe(\"@internal An edit in a remote surface's own Composer: the engine raises `prompt.edit` (origin `composer`) over the box before it (the box this client sent last, or the rewrite answered to it when the edit follows from that), as the terminal's editor does for a key, and answers what the Composer is to show. One dispatch per client at a time; of the edits that arrive meanwhile only the newest is raised, the older ones answering `superseded`, and an edit folded that way carries no key. A chain that fails answers the request's own box.\"))",
+      "variable": true,
+      "declarationKind": "var",
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-mphp7acd.js",
+      "name": "r7",
+      "start": 434357,
+      "endExclusive": 434477,
+      "sha256": "8ad534ac3f7da5a76da0f57e834080ecff23d2f0cd162a45f8fe81fa9da6db37",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "source": "function r7(){let e=xP()?.surface===\"terminal\",n=Y5.surfaces().filter((r)=>r!==\"terminal\");return e?[\"terminal\",...n]:n}",
+      "variable": false,
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "rk",
+      "start": 283361,
+      "endExclusive": 283693,
+      "sha256": "af708ec9d8ae236682d4016a28298918c6cafd8a679b1ca61156c7578604bc09",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "source": "rk=(e)=>({panes:e.panes.map((r)=>({id:r.id,title:r.title,plugin:r.plugin,...r.closeOnEscape&&{close_on_escape:r.closeOnEscape},...r.holdToasts&&{hold_toasts:r.holdToasts},...r.rows!==void 0&&{rows:r.rows},...r.columns!==void 0&&{columns:r.columns}})),shown_id:e.shownId,focused_id:e.focusedId,focus_requested_id:e.focusRequestedId})",
+      "variable": true,
+      "declarationKind": "var",
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-eske5nfz.js",
+      "name": "re",
+      "start": 1128,
+      "endExclusive": 1270,
+      "sha256": "0cd9c06e168964b38d4d40e576fb3ecc8b21f8d0f864efa607f0f0fec619afe7",
+      "moduleSha256": "0ab96d3fc2e14f26d13bba42a3f5583f805c2f100c56befce938b7b723d405a5",
+      "source": "function re(t,n){if(n<=0)return\"\";if(t.length<=n)return t;let e=t.slice(0,n),r=e.charCodeAt(n-1);return f(r>=55296&&r<=56319?e.slice(0,-1):e)}",
+      "variable": false,
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "vd",
+      "start": 280259,
+      "endExclusive": 280579,
+      "sha256": "f7ccb0f2163a8ede7df82ea384a37164a660c7a70a60ce2f2f4b85346cb494c0",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5",
+      "source": "vd=(e)=>({panes:e.open.map((r)=>({id:r.id,title:r.title,plugin:r.plugin,...r.closeOnEscape&&{closeOnEscape:r.closeOnEscape},...r.holdToasts&&{holdToasts:r.holdToasts},...r.rows!==void 0&&{rows:r.rows},...r.columns!==void 0&&{columns:r.columns}})),shownId:e.shownId,focusedId:e.focusedId,focusRequestedId:e.focusRequest})",
+      "variable": true,
+      "declarationKind": "var",
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-xep95vq1.js",
+      "name": "zEn",
+      "start": 587085,
+      "endExclusive": 588664,
+      "sha256": "538a98db44815b4947371a32a66b206298fe44c5f040597960145b3e194185cb",
+      "moduleSha256": "bcca47f9fc106c4beee4a7982339a7596574d78362dceccc83ec5e507c90719c",
+      "source": "zEn=f(()=>u({subtype:x(\"ui_scroll\"),component:Yw(),instance_id:o().max(Y),offset:C().int().nonnegative().describe(\"@internal The first content row the window shows after the move, 0 at the top, in rows of the surface's monospace line height.\"),by:C().int().describe(\"@internal The rows the move covered, signed, negative toward the top; what the `ui.scroll` hooks see as `e.by`.\"),body_rows:C().int().nonnegative().describe(\"@internal The rows the window shows at once.\"),content_rows:C().int().nonnegative().describe(\"@internal The rows the site's whole tree lays out to; the last offset is `content_rows - body_rows`.\"),pointer:u({column:C().int(),row:C().int()}).optional().describe(\"@internal The body cell the wheel or trackpad was over, 0/0 at the body's top left; absent for scroll keys and the scrollbar.\"),keyed:T(Ww()).max($w).optional(),surface:J().default(\"desktop\").describe(\"@internal The surface the site is on; absent means `desktop`. Names the default client when `client_id` is not given, so the site is that client's.\"),client_id:j().optional()}).describe(\"@internal The person scrolled a site a remote surface draws (a pane's body, the band): the engine records the layout reported, moves its own window by `by` (clamped to the layout) and raises `ui.scroll` with origin `person` over that; a hook may rewrite or deny it, and the answer carries the offset the surface should show. Send it throttled to the surface's frame; reports arriving while one is in flight for the instance are folded (`by` summed) into one that follows and answered alike, in order.\"))",
+      "variable": true,
+      "declarationKind": "var",
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-64z3xwk8.js",
+      "name": "LEt",
+      "start": 15245,
+      "endExclusive": 15272,
+      "sha256": "28aab5371043383a6c4e34780ed86fe0a4a193973f1112678ea22050a8c383f8",
+      "moduleSha256": "63b72939ef879fd6a6be0186e4c7fa1f334e1e6195c2da9c9e5e3fa5e3ea7d1f",
+      "source": "function LEt(){return YJ()}",
+      "variable": false,
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-09m4fzsj.js",
+      "name": "d9e",
+      "start": 494057,
+      "endExclusive": 494104,
+      "sha256": "e2f2d943d155ffe01ee9d4585476b301a7837e515818b351aa5aafd621de3476",
+      "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+      "source": "d9e=(e)=>dd(Cv,e===void 0?void 0:{component:e})",
+      "variable": true,
+      "declarationKind": "var",
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-jbmda45v.js",
+      "name": "Aee",
+      "start": 619,
+      "endExclusive": 660,
+      "sha256": "e6d7db82057858387c9a4e85d3d39ddc83a281ef5954fd7bfce03e683c4c3324",
+      "moduleSha256": "1bfc048a9c3ffa333ae0dff1e45a6b0e69d4da58a0013bf5e90407fe290b6a2a",
+      "source": "Aee=\"Unsupported control request subtype\"",
+      "variable": true,
+      "declarationKind": "var",
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-n2zepamy.js",
+      "name": "pme",
+      "start": 75010,
+      "endExclusive": 75311,
+      "sha256": "7a914e04be82e9d3b59a9a6b0e6c971ccd490219f4bc4fe136ba43d37b249916",
+      "moduleSha256": "0b25d8e1138a155f83fd1f53d768fa0cfbd759a2177359108d03295616148a24",
+      "source": "function pme(e,n,o,{expected:r=!1}={}){if(r){let s=l(o),u=s.startsWith(`${n}: `)?s.slice(n.length+2):s;t(`${n}: refused: ${u}`,{level:\"warn\"})}else if(e&&!(o instanceof Hr))vee(!0,n,o);else d(st(Z(o),`${n}: handler failed`));return{subtype:\"error\",error:o instanceof Hr?Kt(l(o)):e?`${n} failed`:l(o)}}",
+      "variable": false,
+      "provider": "canonical"
+    },
+    {
+      "file": "chunk-x5mcrns6.js",
+      "name": "qm",
+      "start": 1201,
+      "endExclusive": 1285,
+      "sha256": "a0385d44aa19da43f0b3641c772aa37a75682f8ff4e31b1d7c94db39005fa7c1",
+      "moduleSha256": "0dec846560b29698084c11481ad2c649c41d0caa2470f935223b831e50417a09",
+      "source": "function qm(r){let e=a_.of(r);return e.hostedWorker||MF()&&e.transportPersists!==!1}",
+      "variable": false,
+      "provider": "canonical"
+    }
+  ],
+  "host": [
+    {
+      "file": "chunk-q80zaav8.js",
+      "name": "t",
+      "start": 46026,
+      "endExclusive": 46071,
+      "sha256": "da9e0b5e590a43c6f7cf46f3cfcd93d97f399db1017ff8dae938bdbd15e13790",
+      "moduleSha256": "f9503296591b825624caf5932b9c5973cde96b859259266a506b616dca5cd41e",
+      "source": "function t(e,n={level:\"debug\"}){U().log(e,n)}",
+      "variable": false,
+      "port": "logForDebugging"
+    }
+  ],
+  "renderTransport": {
+    "original": "import(\"/$bunfs/root/chunk-3s6pfw1n.js\")",
+    "replacement": "loadRenderHooksModule287()",
+    "source": {
+      "file": "chunk-09m4fzsj.js",
+      "name": "d9e",
+      "start": 494057,
+      "endExclusive": 494104,
+      "sha256": "e2f2d943d155ffe01ee9d4585476b301a7837e515818b351aa5aafd621de3476",
+      "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+      "source": "d9e=(e)=>dd(Cv,e===void 0?void 0:{component:e})",
+      "variable": true,
+      "declarationKind": "var"
+    }
+  },
+  "subscriptionsExposure": {
+    "currentSourceSha256": "0aa7ef6acffb731a5be4502ff1972d691657dcb1c6b6b77304908e9443fd4499",
+    "currentFunctionSha256": "300e89f3817cebb8714f6b03d4a3827dc47b55f6fbd4b5236c02351f1d9fc6cf",
+    "onlyChange": "panesRevision:()=>Uu -> panesRevision:()=>Uu,publishPanes:Pf"
+  },
+  "adaptations": [
+    "Bun render-hooks import -> same canonical d9e",
+    "one-frame loop wrapper preserves every original continue",
+    "live Uu -> existing subscription revision getter",
+    "same mo -> inFlightSdkControls.source287",
+    "expose original Pf from the one unchanged subscription closure"
+  ],
+  "runtimeTests": "See external HANDOFF; source proof is not behavior acceptance"
+}

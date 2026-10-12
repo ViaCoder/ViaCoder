@@ -1,0 +1,347 @@
+{
+  "version": "2.1.287",
+  "platform": "darwin-arm64",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16 code units",
+  "scope": "Complete canonical-only fb/OI/parser/catalog lookup closure. Tb/Be overrides and non-identity modelKnowledge are separate unfinished bindings.",
+  "rows": [
+    {
+      "file": "chunk-mbfze585.js",
+      "name": "QZ",
+      "start": 13469,
+      "end": 13518,
+      "moduleLength": 65738,
+      "moduleSha256": "2e40ea5244009e4c37b57879f34c96cc3e3bc7d3c5468f9e65d63fe5ce13287a",
+      "source": "QZ=[\"us\",\"eu\",\"apac\",\"jp\",\"au\",\"us-gov\",\"global\"]",
+      "sha256": "9327aa03e3a4d6b3dcd4f7495f131402e300833c70e5ecdc8ed78fedde010e9a",
+      "variable": true
+    },
+    {
+      "file": "chunk-wz6xag6e.js",
+      "name": "Vtr",
+      "start": 973,
+      "end": 18475,
+      "moduleLength": 30022,
+      "moduleSha256": "24c4b2f916cc12257edf0008fa8d98838ac2f5cb0ae35bdc3b5447f963347d58",
+      "source": "Vtr={\"//\":\"Hand-maintained baked-in model catalog \\u2014 the source of truth for per-model provider IDs and metadata. On model launch add one entry to `models` below; `bun run generate:model-catalog` validates this file against the schema and formats it.\",schema_version:1,pricing_tiers:{tier_2_10:{input:2,output:10,cache_write_5m:2.5,cache_write_1h:4,cache_read:0.2,web_search:0.01},tier_3_15:{input:3,output:15,cache_write_5m:3.75,cache_write_1h:6,cache_read:0.3,web_search:0.01},tier_5_25:{input:5,output:25,cache_write_5m:6.25,cache_write_1h:10,cache_read:0.5,web_search:0.01},tier_15_75:{input:15,output:75,cache_write_5m:18.75,cache_write_1h:30,cache_read:1.5,web_search:0.01},tier_10_50:{input:10,output:50,cache_write_5m:12.5,cache_write_1h:20,cache_read:1,web_search:0.01},tier_10_50_cache_read_0_25:{input:10,output:50,cache_write_5m:12.5,cache_write_1h:20,cache_read:0.25,web_search:0.01},tier_4_20_cache_read_0_20:{input:4,output:20,cache_write_5m:5,cache_write_1h:8,cache_read:0.2,web_search:0.01},haiku_35:{input:0.8,output:4,cache_write_5m:1,cache_write_1h:1.6,cache_read:0.08,web_search:0.01},haiku_45:{input:1,output:5,cache_write_5m:1.25,cache_write_1h:2,cache_read:0.1,web_search:0.01}},models:[{id:\"claude-3-5-haiku\",family:\"haiku\",display_name:\"Haiku 3.5\",provider_ids:{first_party:\"claude-3-5-haiku-20241022\",bedrock:\"us.anthropic.claude-3-5-haiku-20241022-v1:0\",vertex:\"claude-3-5-haiku@20241022\",foundry:\"claude-3-5-haiku\",anthropic_aws:\"claude-3-5-haiku-20241022\",anthropic_google_cloud:null,mantle:null,gateway:\"claude-3-5-haiku-20241022\"},eager_input_streaming:{vertex:!0},vertex_region_env_var:\"VERTEX_REGION_CLAUDE_3_5_HAIKU\",max_output_tokens:{default:8192,upper:8192},pricing:\"haiku_35\",capabilities:[]},{id:\"claude-haiku-4-5\",family:\"haiku\",display_name:\"Haiku 4.5\",knowledge_cutoff:\"February 2025\",provider_ids:{first_party:\"claude-haiku-4-5-20251001\",bedrock:\"us.anthropic.claude-haiku-4-5-20251001-v1:0\",vertex:\"claude-haiku-4-5@20251001\",foundry:\"claude-haiku-4-5\",anthropic_aws:\"claude-haiku-4-5-20251001\",anthropic_google_cloud:\"claude-haiku-4-5-20251001\",mantle:\"anthropic.claude-haiku-4-5\",gateway:\"claude-haiku-4-5-20251001\"},vertex_region_env_var:\"VERTEX_REGION_CLAUDE_HAIKU_4_5\",context:{window:200000,supports_1m_suffix:!0},max_output_tokens:{default:32000,upper:64000},pricing:\"haiku_45\",capabilities:[\"context_management\"],advisor_rank:1},{id:\"claude-3-5-sonnet\",family:\"sonnet\",display_name:\"Sonnet 3.5\",provider_ids:{first_party:\"claude-3-5-sonnet-20241022\",bedrock:\"us.anthropic.claude-3-5-sonnet-20241022-v2:0\",vertex:\"claude-3-5-sonnet-v2@20241022\",foundry:\"claude-3-5-sonnet\",anthropic_aws:\"claude-3-5-sonnet-20241022\",anthropic_google_cloud:null,mantle:null,gateway:\"claude-3-5-sonnet-20241022\"},vertex_region_env_var:\"VERTEX_REGION_CLAUDE_3_5_SONNET\",max_output_tokens:{default:8192,upper:8192},pricing:\"tier_3_15\",capabilities:[]},{id:\"claude-3-7-sonnet\",family:\"sonnet\",display_name:\"Sonnet 3.7\",provider_ids:{first_party:\"claude-3-7-sonnet-20250219\",bedrock:\"us.anthropic.claude-3-7-sonnet-20250219-v1:0\",vertex:\"claude-3-7-sonnet@20250219\",foundry:\"claude-3-7-sonnet\",anthropic_aws:\"claude-3-7-sonnet-20250219\",anthropic_google_cloud:null,mantle:null,gateway:\"claude-3-7-sonnet-20250219\"},vertex_region_env_var:\"VERTEX_REGION_CLAUDE_3_7_SONNET\",max_output_tokens:{default:32000,upper:64000},pricing:\"tier_3_15\",capabilities:[]},{id:\"claude-sonnet-4-0\",family:\"sonnet\",display_name:\"Sonnet 4\",knowledge_cutoff:\"January 2025\",provider_ids:{first_party:\"claude-sonnet-4-20250514\",bedrock:\"us.anthropic.claude-sonnet-4-20250514-v1:0\",vertex:\"claude-sonnet-4@20250514\",foundry:\"claude-sonnet-4\",anthropic_aws:\"claude-sonnet-4-20250514\",anthropic_google_cloud:null,mantle:null,gateway:\"claude-sonnet-4-20250514\"},eager_input_streaming:{vertex:!0},vertex_region_env_var:\"VERTEX_REGION_CLAUDE_4_0_SONNET\",context:{window:200000,supports_1m_beta:!0,supports_1m_suffix:!0},max_output_tokens:{default:32000,upper:64000},pricing:\"tier_3_15\",capabilities:[\"context_management\"]},{id:\"claude-sonnet-4-5\",family:\"sonnet\",display_name:\"Sonnet 4.5\",knowledge_cutoff:\"January 2025\",provider_ids:{first_party:\"claude-sonnet-4-5-20250929\",bedrock:\"us.anthropic.claude-sonnet-4-5-20250929-v1:0\",vertex:\"claude-sonnet-4-5@20250929\",foundry:\"claude-sonnet-4-5\",anthropic_aws:\"claude-sonnet-4-5-20250929\",anthropic_google_cloud:\"claude-sonnet-4-5-20250929\",mantle:null,gateway:\"claude-sonnet-4-5-20250929\"},eager_input_streaming:{vertex:!0},vertex_region_env_var:\"VERTEX_REGION_CLAUDE_4_5_SONNET\",fallback_3p:\"claude-sonnet-4-0\",context:{window:200000,supports_1m_beta:!0,supports_1m_suffix:!0},max_output_tokens:{default:32000,upper:64000},pricing:\"tier_3_15\",capabilities:[\"context_management\"]},{id:\"claude-sonnet-4-6\",family:\"sonnet\",display_name:\"Sonnet 4.6\",knowledge_cutoff:\"August 2025\",provider_ids:{first_party:\"claude-sonnet-4-6\",bedrock:\"us.anthropic.claude-sonnet-4-6\",vertex:\"claude-sonnet-4-6\",foundry:\"claude-sonnet-4-6\",anthropic_aws:\"claude-sonnet-4-6\",anthropic_google_cloud:\"claude-sonnet-4-6\",mantle:null,gateway:\"claude-sonnet-4-6\"},eager_input_streaming:{bedrock:!0,vertex:!0},vertex_region_env_var:\"VERTEX_REGION_CLAUDE_4_6_SONNET\",fallback_3p:\"claude-sonnet-4-5\",context:{window:200000,supports_1m_beta:!0,supports_1m_suffix:!0},max_output_tokens:{default:32000,upper:128000},pricing:\"tier_3_15\",capabilities:[\"effort\",\"max_effort\",\"adaptive_thinking\",\"context_management\"],advisor_rank:2},{id:\"claude-sonnet-5\",family:\"sonnet\",display_name:\"Sonnet 5\",knowledge_cutoff:\"January 2026\",provider_ids:{first_party:\"claude-sonnet-5\",bedrock:\"us.anthropic.claude-sonnet-5\",vertex:\"claude-sonnet-5\",foundry:\"claude-sonnet-5\",anthropic_aws:\"claude-sonnet-5\",anthropic_google_cloud:\"claude-sonnet-5\",mantle:\"anthropic.claude-sonnet-5\",gateway:\"claude-sonnet-5\"},eager_input_streaming:{bedrock:!0,vertex:!0},vertex_region_env_var:\"VERTEX_REGION_CLAUDE_5_SONNET\",fallback_3p:\"claude-sonnet-4-6\",context:{window:1e6,native_1m:!0,supports_1m_beta:!0},max_output_tokens:{default:64000,upper:128000},pricing:\"tier_2_10\",capabilities:[\"effort\",\"max_effort\",\"xhigh_effort\",\"adaptive_thinking\",\"mid_conv_system\",\"context_management\"],default_effort:\"high\",effort_cost_index:{low:0.47,medium:0.74,high:1,xhigh:2.41,max:5.59},image_limits:{maxWidth:2000,maxHeight:2000},advisor_rank:4},{id:\"claude-sonnet-5-5\",family:\"sonnet\",display_name:\"Sonnet 5.5\",knowledge_cutoff:\"June 2026\",provider_ids:{first_party:\"claude-sonnet-5-5\",bedrock:\"us.anthropic.claude-sonnet-5-5\",vertex:\"claude-sonnet-5-5\",foundry:\"claude-sonnet-5-5\",anthropic_aws:\"claude-sonnet-5-5\",anthropic_google_cloud:\"claude-sonnet-5-5\",mantle:\"anthropic.claude-sonnet-5-5\",gateway:\"claude-sonnet-5-5\"},eager_input_streaming:{bedrock:!0,vertex:!0},vertex_region_env_var:\"VERTEX_REGION_CLAUDE_5_5_SONNET\",fallback_3p:\"claude-sonnet-5\",context:{window:1e6,native_1m:!0,supports_1m_beta:!0},max_output_tokens:{default:128000,upper:128000},pricing:\"tier_2_10\",capabilities:[\"effort\",\"max_effort\",\"xhigh_effort\",\"adaptive_thinking\",\"mid_conv_system\",\"mid_conv_tool_change\",\"context_management\",\"rejects_disabled_thinking\",\"per_turn_effort\",\"lean_prompt\",\"refusal_fallback\",\"silent_turn_reminder\",\"org_locked_thinking\"],default_effort:\"medium\",image_limits:{maxWidth:2000,maxHeight:2000},advisor_rank:6},{id:\"claude-opus-4-0\",family:\"opus\",display_name:\"Opus 4\",knowledge_cutoff:\"January 2025\",provider_ids:{first_party:\"claude-opus-4-20250514\",bedrock:\"us.anthropic.claude-opus-4-20250514-v1:0\",vertex:\"claude-opus-4@20250514\",foundry:\"claude-opus-4\",anthropic_aws:\"claude-opus-4-20250514\",anthropic_google_cloud:null,mantle:null,gateway:\"claude-opus-4-20250514\"},vertex_region_env_var:\"VERTEX_REGION_CLAUDE_4_0_OPUS\",context:{window:200000,supports_1m_suffix:!0},max_output_tokens:{default:32000,upper:32000},pricing:\"tier_15_75\",capabilities:[\"context_management\"]},{id:\"claude-opus-4-1\",family:\"opus\",display_name:\"Opus 4.1\",knowledge_cutoff:\"January 2025\",provider_ids:{first_party:\"claude-opus-4-1-20250805\",bedrock:\"us.anthropic.claude-opus-4-1-20250805-v1:0\",vertex:\"claude-opus-4-1@20250805\",foundry:\"claude-opus-4-1\",anthropic_aws:\"claude-opus-4-1-20250805\",anthropic_google_cloud:null,mantle:null,gateway:\"claude-opus-4-1-20250805\"},vertex_region_env_var:\"VERTEX_REGION_CLAUDE_4_1_OPUS\",context:{window:200000,supports_1m_suffix:!0},max_output_tokens:{default:32000,upper:32000},pricing:\"tier_15_75\",capabilities:[\"context_management\"]},{id:\"claude-opus-4-5\",family:\"opus\",display_name:\"Opus 4.5\",knowledge_cutoff:\"May 2025\",provider_ids:{first_party:\"claude-opus-4-5-20251101\",bedrock:\"us.anthropic.claude-opus-4-5-20251101-v1:0\",vertex:\"claude-opus-4-5@20251101\",foundry:\"claude-opus-4-5\",anthropic_aws:\"claude-opus-4-5-20251101\",anthropic_google_cloud:\"claude-opus-4-5-20251101\",mantle:null,gateway:\"claude-opus-4-5-20251101\"},eager_input_streaming:{vertex:!0},vertex_region_env_var:\"VERTEX_REGION_CLAUDE_4_5_OPUS\",fallback_3p:\"claude-opus-4-1\",context:{window:200000,supports_1m_suffix:!0},max_output_tokens:{default:32000,upper:64000},pricing:\"tier_5_25\",capabilities:[\"context_management\"]},{id:\"claude-opus-4-6\",family:\"opus\",display_name:\"Opus 4.6\",knowledge_cutoff:\"May 2025\",provider_ids:{first_party:\"claude-opus-4-6\",bedrock:\"us.anthropic.claude-opus-4-6-v1\",vertex:\"claude-opus-4-6\",foundry:\"claude-opus-4-6\",anthropic_aws:\"claude-opus-4-6\",anthropic_google_cloud:\"claude-opus-4-6\",mantle:null,gateway:\"claude-opus-4-6\"},eager_input_streaming:{vertex:!0},vertex_region_env_var:\"VERTEX_REGION_CLAUDE_4_6_OPUS\",fallback_3p:\"claude-opus-4-5\",context:{window:200000,supports_1m_beta:!0,supports_1m_suffix:!0},max_output_tokens:{default:64000,upper:128000},pricing:\"tier_5_25\",capabilities:[\"effort\",\"max_effort\",\"adaptive_thinking\",\"context_management\"],advisor_rank:3},{id:\"claude-opus-4-7\",family:\"opus\",display_name:\"Opus 4.7\",knowledge_cutoff:\"January 2026\",provider_ids:{first_party:\"claude-opus-4-7\",bedrock:\"us.anthropic.claude-opus-4-7\",vertex:\"claude-opus-4-7\",foundry:\"claude-opus-4-7\",anthropic_aws:\"claude-opus-4-7\",anthropic_google_cloud:\"claude-opus-4-7\",mantle:\"anthropic.claude-opus-4-7\",gateway:\"claude-opus-4-7\"},eager_input_streaming:{bedrock:!0,vertex:!0},vertex_region_env_var:\"VERTEX_REGION_CLAUDE_4_7_OPUS\",fallback_3p:\"claude-opus-4-6\",context:{window:1e6,native_1m:!0,supports_1m_beta:!0,supports_1m_suffix:!0},max_output_tokens:{default:64000,upper:128000},pricing:\"tier_5_25\",capabilities:[\"effort\",\"max_effort\",\"xhigh_effort\",\"adaptive_thinking\",\"context_management\"],default_effort:\"xhigh\",image_limits:{maxWidth:2000,maxHeight:2000},advisor_rank:5},{id:\"claude-opus-4-8\",family:\"opus\",display_name:\"Opus 4.8\",knowledge_cutoff:\"January 2026\",provider_ids:{first_party:\"claude-opus-4-8\",bedrock:\"us.anthropic.claude-opus-4-8\",vertex:\"claude-opus-4-8\",foundry:\"claude-opus-4-8\",anthropic_aws:\"claude-opus-4-8\",anthropic_google_cloud:\"claude-opus-4-8\",mantle:\"anthropic.claude-opus-4-8\",gateway:\"claude-opus-4-8\"},eager_input_streaming:{bedrock:!0,vertex:!0},vertex_region_env_var:\"VERTEX_REGION_CLAUDE_4_8_OPUS\",fallback_3p:\"claude-opus-4-7\",context:{window:1e6,native_1m:!0,supports_1m_beta:!0,supports_1m_suffix:!0},max_output_tokens:{default:64000,upper:128000},pricing:\"tier_5_25\",capabilities:[\"effort\",\"max_effort\",\"xhigh_effort\",\"adaptive_thinking\",\"mid_conv_system\",\"mid_conv_tool_change\",\"context_management\",\"fast_mode\",\"lean_prompt\"],default_effort:\"high\",effort_cost_index:{low:0.72,medium:0.9,high:1,xhigh:1.65,max:1.88},image_limits:{maxWidth:2000,maxHeight:2000},advisor_rank:5},{id:\"claude-opus-5\",family:\"opus\",display_name:\"Opus 5\",knowledge_cutoff:\"May 2026\",provider_ids:{first_party:\"claude-opus-5\",bedrock:\"us.anthropic.claude-opus-5\",vertex:\"claude-opus-5\",foundry:\"claude-opus-5\",anthropic_aws:\"claude-opus-5\",anthropic_google_cloud:\"claude-opus-5\",mantle:\"anthropic.claude-opus-5\",gateway:\"claude-opus-5\"},eager_input_streaming:{bedrock:!0,vertex:!0},vertex_region_env_var:\"VERTEX_REGION_CLAUDE_5_OPUS\",fallback_3p:\"claude-opus-4-8\",context:{window:1e6,native_1m:!0,supports_1m_beta:!0,supports_1m_suffix:!0},max_output_tokens:{default:64000,upper:128000},pricing:\"tier_5_25\",capabilities:[\"effort\",\"max_effort\",\"xhigh_effort\",\"adaptive_thinking\",\"mid_conv_system\",\"mid_conv_tool_change\",\"context_management\",\"thinking_disabled_effort_cap\",\"fast_mode\",\"lean_prompt\",\"refusal_fallback\",\"opus_5_prompt_bundle\"],default_effort:\"high\",effort_cost_index:{low:0.67,medium:0.76,high:1,xhigh:1.6,max:1.7},image_limits:{maxWidth:2000,maxHeight:2000},advisor_rank:7},{id:\"claude-opus-5-5\",family:\"opus\",display_name:\"Opus 5.5\",knowledge_cutoff:\"June 2026\",provider_ids:{first_party:\"claude-opus-5-5\",bedrock:\"us.anthropic.claude-opus-5-5\",vertex:\"claude-opus-5-5\",foundry:\"claude-opus-5-5\",anthropic_aws:\"claude-opus-5-5\",anthropic_google_cloud:\"claude-opus-5-5\",mantle:\"anthropic.claude-opus-5-5\",gateway:\"claude-opus-5-5\"},eager_input_streaming:{bedrock:!0,vertex:!0},vertex_region_env_var:\"VERTEX_REGION_CLAUDE_5_5_OPUS\",fallback_3p:\"claude-opus-5\",context:{window:1e6,native_1m:!0,supports_1m_beta:!0,supports_1m_suffix:!0},max_output_tokens:{default:128000,upper:128000},pricing:\"tier_4_20_cache_read_0_20\",capabilities:[\"effort\",\"max_effort\",\"xhigh_effort\",\"adaptive_thinking\",\"rejects_disabled_thinking\",\"mid_conv_system\",\"mid_conv_tool_change\",\"per_turn_effort\",\"per_turn_timing\",\"context_management\",\"fast_mode\",\"lean_prompt\",\"refusal_fallback\",\"opus_5_5_prompt_bundle\"],default_effort:\"medium\",image_limits:{maxWidth:2000,maxHeight:2000},advisor_rank:7},{id:\"claude-fable-5\",family:\"fable\",display_name:\"Fable 5\",knowledge_cutoff:\"January 2026\",provider_ids:{first_party:\"claude-fable-5\",bedrock:\"us.anthropic.claude-fable-5\",vertex:\"claude-fable-5\",foundry:\"claude-fable-5\",anthropic_aws:\"claude-fable-5\",anthropic_google_cloud:\"claude-fable-5\",mantle:\"anthropic.claude-fable-5\",gateway:\"claude-fable-5\"},eager_input_streaming:{bedrock:!0,vertex:!0},vertex_region_env_var:\"VERTEX_REGION_CLAUDE_FABLE_5\",fallback_3p:\"claude-opus-5-5\",context:{window:1e6,native_1m:!0,supports_1m_beta:!0},max_output_tokens:{default:64000,upper:128000},pricing:\"tier_10_50\",capabilities:[\"effort\",\"max_effort\",\"xhigh_effort\",\"adaptive_thinking\",\"rejects_disabled_thinking\",\"mid_conv_system\",\"mid_conv_tool_change\",\"context_management\",\"lean_prompt\",\"fable_5_mitigations\",\"refusal_fallback\"],default_effort:\"high\",effort_cost_index:{low:0.6,medium:0.77,high:1,xhigh:1.74,max:1.91},image_limits:{maxWidth:2000,maxHeight:2000},advisor_rank:8},{id:\"claude-fable-5-1\",family:\"fable\",display_name:\"Fable 5.1\",knowledge_cutoff:\"June 2026\",provider_ids:{first_party:\"claude-fable-5-1\",bedrock:\"us.anthropic.claude-fable-5-1\",vertex:\"claude-fable-5-1\",foundry:\"claude-fable-5-1\",anthropic_aws:\"claude-fable-5-1\",anthropic_google_cloud:\"claude-fable-5-1\",mantle:\"anthropic.claude-fable-5-1\",gateway:\"claude-fable-5-1\"},eager_input_streaming:{bedrock:!0,vertex:!0},vertex_region_env_var:\"VERTEX_REGION_CLAUDE_FABLE_5_1\",fallback_3p:\"claude-fable-5\",context:{window:1e6,native_1m:!0,supports_1m_beta:!0},max_output_tokens:{default:64000,upper:128000},pricing:\"tier_10_50_cache_read_0_25\",capabilities:[\"effort\",\"max_effort\",\"xhigh_effort\",\"adaptive_thinking\",\"rejects_disabled_thinking\",\"mid_conv_system\",\"mid_conv_tool_change\",\"per_turn_effort\",\"per_turn_timing\",\"context_management\",\"lean_prompt\",\"fable_5_mitigations\",\"refusal_fallback\",\"fable_5_1_prompt_bundle\"],default_effort:\"high\",effort_cost_index:{low:0.75,medium:0.86,high:1,xhigh:1.38,max:1.74},image_limits:{maxWidth:2000,maxHeight:2000},advisor_rank:9},{id:\"claude-mythos-5\",family:\"mythos\",display_name:\"Mythos 5\",knowledge_cutoff:\"January 2026\",provider_ids:{first_party:\"claude-mythos-5\",bedrock:null,vertex:null,foundry:null,anthropic_aws:null,anthropic_google_cloud:null,mantle:null,gateway:null},context:{window:1e6,native_1m:!0,supports_1m_beta:!0},max_output_tokens:{default:64000,upper:128000},pricing:\"tier_10_50\",capabilities:[],image_limits:{maxWidth:2000,maxHeight:2000},advisor_rank:8},{id:\"claude-mythos-5-1\",family:\"mythos\",display_name:\"Mythos 5.1\",knowledge_cutoff:\"June 2026\",provider_ids:{first_party:\"claude-mythos-5-1\",bedrock:null,vertex:null,foundry:null,anthropic_aws:null,anthropic_google_cloud:null,mantle:null,gateway:null},context:{window:1e6,native_1m:!0,supports_1m_beta:!0},max_output_tokens:{default:64000,upper:128000},pricing:\"tier_10_50_cache_read_0_25\",capabilities:[\"effort\",\"max_effort\",\"xhigh_effort\",\"adaptive_thinking\",\"rejects_disabled_thinking\",\"mid_conv_system\",\"mid_conv_tool_change\",\"per_turn_timing\",\"context_management\",\"lean_prompt\",\"fable_5_mitigations\",\"fable_5_1_prompt_bundle\"],default_effort:\"high\",effort_cost_index:{low:0.75,medium:0.86,high:1,xhigh:1.38,max:1.74},image_limits:{maxWidth:2000,maxHeight:2000},advisor_rank:9}],aliases:{opus:{default:\"claude-opus-5-5\",per_provider:{bedrock:\"claude-opus-5-5\",vertex:\"claude-opus-5-5\",foundry:\"claude-opus-4-6\",mantle:\"claude-opus-5-5\",anthropic_aws:\"claude-opus-5-5\",gateway:\"claude-opus-4-7\"}},sonnet:{default:\"claude-sonnet-5-5\",per_provider:{bedrock:\"claude-sonnet-4-5\",vertex:\"claude-sonnet-4-5\",foundry:\"claude-sonnet-4-5\",mantle:\"claude-sonnet-4-5\",anthropic_aws:\"claude-sonnet-4-6\",gateway:\"claude-sonnet-4-6\"}},haiku:{default:\"claude-haiku-4-5\"},fable:{default:\"claude-fable-5-1\",per_provider:{gateway:\"claude-fable-5\"}}},defaults:{},best:\"fable\",latest_per_family:{fable:\"claude-fable-5-1\",opus:\"claude-opus-5-5\",sonnet:\"claude-sonnet-5-5\",haiku:\"claude-haiku-4-5\"},alias_migration:{}}",
+      "sha256": "c00274e499755bf30086402d9dc8d3770a9b402da99ef7e8c6736c45a9867f67",
+      "variable": true,
+      "expression": "{\"//\":\"Hand-maintained baked-in model catalog \\u2014 the source of truth for per-model provider IDs and metadata. On model launch add one entry to `models` below; `bun run generate:model-catalog` validates this file against the schema and formats it.\",schema_version:1,pricing_tiers:{tier_2_10:{input:2,output:10,cache_write_5m:2.5,cache_write_1h:4,cache_read:0.2,web_search:0.01},tier_3_15:{input:3,output:15,cache_write_5m:3.75,cache_write_1h:6,cache_read:0.3,web_search:0.01},tier_5_25:{input:5,output:25,cache_write_5m:6.25,cache_write_1h:10,cache_read:0.5,web_search:0.01},tier_15_75:{input:15,output:75,cache_write_5m:18.75,cache_write_1h:30,cache_read:1.5,web_search:0.01},tier_10_50:{input:10,output:50,cache_write_5m:12.5,cache_write_1h:20,cache_read:1,web_search:0.01},tier_10_50_cache_read_0_25:{input:10,output:50,cache_write_5m:12.5,cache_write_1h:20,cache_read:0.25,web_search:0.01},tier_4_20_cache_read_0_20:{input:4,output:20,cache_write_5m:5,cache_write_1h:8,cache_read:0.2,web_search:0.01},haiku_35:{input:0.8,output:4,cache_write_5m:1,cache_write_1h:1.6,cache_read:0.08,web_search:0.01},haiku_45:{input:1,output:5,cache_write_5m:1.25,cache_write_1h:2,cache_read:0.1,web_search:0.01}},models:[{id:\"claude-3-5-haiku\",family:\"haiku\",display_name:\"Haiku 3.5\",provider_ids:{first_party:\"claude-3-5-haiku-20241022\",bedrock:\"us.anthropic.claude-3-5-haiku-20241022-v1:0\",vertex:\"claude-3-5-haiku@20241022\",foundry:\"claude-3-5-haiku\",anthropic_aws:\"claude-3-5-haiku-20241022\",anthropic_google_cloud:null,mantle:null,gateway:\"claude-3-5-haiku-20241022\"},eager_input_streaming:{vertex:!0},vertex_region_env_var:\"VERTEX_REGION_CLAUDE_3_5_HAIKU\",max_output_tokens:{default:8192,upper:8192},pricing:\"haiku_35\",capabilities:[]},{id:\"claude-haiku-4-5\",family:\"haiku\",display_name:\"Haiku 4.5\",knowledge_cutoff:\"February 2025\",provider_ids:{first_party:\"claude-haiku-4-5-20251001\",bedrock:\"us.anthropic.claude-haiku-4-5-20251001-v1:0\",vertex:\"claude-haiku-4-5@20251001\",foundry:\"claude-haiku-4-5\",anthropic_aws:\"claude-haiku-4-5-20251001\",anthropic_google_cloud:\"claude-haiku-4-5-20251001\",mantle:\"anthropic.claude-haiku-4-5\",gateway:\"claude-haiku-4-5-20251001\"},vertex_region_env_var:\"VERTEX_REGION_CLAUDE_HAIKU_4_5\",context:{window:200000,supports_1m_suffix:!0},max_output_tokens:{default:32000,upper:64000},pricing:\"haiku_45\",capabilities:[\"context_management\"],advisor_rank:1},{id:\"claude-3-5-sonnet\",family:\"sonnet\",display_name:\"Sonnet 3.5\",provider_ids:{first_party:\"claude-3-5-sonnet-20241022\",bedrock:\"us.anthropic.claude-3-5-sonnet-20241022-v2:0\",vertex:\"claude-3-5-sonnet-v2@20241022\",foundry:\"claude-3-5-sonnet\",anthropic_aws:\"claude-3-5-sonnet-20241022\",anthropic_google_cloud:null,mantle:null,gateway:\"claude-3-5-sonnet-20241022\"},vertex_region_env_var:\"VERTEX_REGION_CLAUDE_3_5_SONNET\",max_output_tokens:{default:8192,upper:8192},pricing:\"tier_3_15\",capabilities:[]},{id:\"claude-3-7-sonnet\",family:\"sonnet\",display_name:\"Sonnet 3.7\",provider_ids:{first_party:\"claude-3-7-sonnet-20250219\",bedrock:\"us.anthropic.claude-3-7-sonnet-20250219-v1:0\",vertex:\"claude-3-7-sonnet@20250219\",foundry:\"claude-3-7-sonnet\",anthropic_aws:\"claude-3-7-sonnet-20250219\",anthropic_google_cloud:null,mantle:null,gateway:\"claude-3-7-sonnet-20250219\"},vertex_region_env_var:\"VERTEX_REGION_CLAUDE_3_7_SONNET\",max_output_tokens:{default:32000,upper:64000},pricing:\"tier_3_15\",capabilities:[]},{id:\"claude-sonnet-4-0\",family:\"sonnet\",display_name:\"Sonnet 4\",knowledge_cutoff:\"January 2025\",provider_ids:{first_party:\"claude-sonnet-4-20250514\",bedrock:\"us.anthropic.claude-sonnet-4-20250514-v1:0\",vertex:\"claude-sonnet-4@20250514\",foundry:\"claude-sonnet-4\",anthropic_aws:\"claude-sonnet-4-20250514\",anthropic_google_cloud:null,mantle:null,gateway:\"claude-sonnet-4-20250514\"},eager_input_streaming:{vertex:!0},vertex_region_env_var:\"VERTEX_REGION_CLAUDE_4_0_SONNET\",context:{window:200000,supports_1m_beta:!0,supports_1m_suffix:!0},max_output_tokens:{default:32000,upper:64000},pricing:\"tier_3_15\",capabilities:[\"context_management\"]},{id:\"claude-sonnet-4-5\",family:\"sonnet\",display_name:\"Sonnet 4.5\",knowledge_cutoff:\"January 2025\",provider_ids:{first_party:\"claude-sonnet-4-5-20250929\",bedrock:\"us.anthropic.claude-sonnet-4-5-20250929-v1:0\",vertex:\"claude-sonnet-4-5@20250929\",foundry:\"claude-sonnet-4-5\",anthropic_aws:\"claude-sonnet-4-5-20250929\",anthropic_google_cloud:\"claude-sonnet-4-5-20250929\",mantle:null,gateway:\"claude-sonnet-4-5-20250929\"},eager_input_streaming:{vertex:!0},vertex_region_env_var:\"VERTEX_REGION_CLAUDE_4_5_SONNET\",fallback_3p:\"claude-sonnet-4-0\",context:{window:200000,supports_1m_beta:!0,supports_1m_suffix:!0},max_output_tokens:{default:32000,upper:64000},pricing:\"tier_3_15\",capabilities:[\"context_management\"]},{id:\"claude-sonnet-4-6\",family:\"sonnet\",display_name:\"Sonnet 4.6\",knowledge_cutoff:\"August 2025\",provider_ids:{first_party:\"claude-sonnet-4-6\",bedrock:\"us.anthropic.claude-sonnet-4-6\",vertex:\"claude-sonnet-4-6\",foundry:\"claude-sonnet-4-6\",anthropic_aws:\"claude-sonnet-4-6\",anthropic_google_cloud:\"claude-sonnet-4-6\",mantle:null,gateway:\"claude-sonnet-4-6\"},eager_input_streaming:{bedrock:!0,vertex:!0},vertex_region_env_var:\"VERTEX_REGION_CLAUDE_4_6_SONNET\",fallback_3p:\"claude-sonnet-4-5\",context:{window:200000,supports_1m_beta:!0,supports_1m_suffix:!0},max_output_tokens:{default:32000,upper:128000},pricing:\"tier_3_15\",capabilities:[\"effort\",\"max_effort\",\"adaptive_thinking\",\"context_management\"],advisor_rank:2},{id:\"claude-sonnet-5\",family:\"sonnet\",display_name:\"Sonnet 5\",knowledge_cutoff:\"January 2026\",provider_ids:{first_party:\"claude-sonnet-5\",bedrock:\"us.anthropic.claude-sonnet-5\",vertex:\"claude-sonnet-5\",foundry:\"claude-sonnet-5\",anthropic_aws:\"claude-sonnet-5\",anthropic_google_cloud:\"claude-sonnet-5\",mantle:\"anthropic.claude-sonnet-5\",gateway:\"claude-sonnet-5\"},eager_input_streaming:{bedrock:!0,vertex:!0},vertex_region_env_var:\"VERTEX_REGION_CLAUDE_5_SONNET\",fallback_3p:\"claude-sonnet-4-6\",context:{window:1e6,native_1m:!0,supports_1m_beta:!0},max_output_tokens:{default:64000,upper:128000},pricing:\"tier_2_10\",capabilities:[\"effort\",\"max_effort\",\"xhigh_effort\",\"adaptive_thinking\",\"mid_conv_system\",\"context_management\"],default_effort:\"high\",effort_cost_index:{low:0.47,medium:0.74,high:1,xhigh:2.41,max:5.59},image_limits:{maxWidth:2000,maxHeight:2000},advisor_rank:4},{id:\"claude-sonnet-5-5\",family:\"sonnet\",display_name:\"Sonnet 5.5\",knowledge_cutoff:\"June 2026\",provider_ids:{first_party:\"claude-sonnet-5-5\",bedrock:\"us.anthropic.claude-sonnet-5-5\",vertex:\"claude-sonnet-5-5\",foundry:\"claude-sonnet-5-5\",anthropic_aws:\"claude-sonnet-5-5\",anthropic_google_cloud:\"claude-sonnet-5-5\",mantle:\"anthropic.claude-sonnet-5-5\",gateway:\"claude-sonnet-5-5\"},eager_input_streaming:{bedrock:!0,vertex:!0},vertex_region_env_var:\"VERTEX_REGION_CLAUDE_5_5_SONNET\",fallback_3p:\"claude-sonnet-5\",context:{window:1e6,native_1m:!0,supports_1m_beta:!0},max_output_tokens:{default:128000,upper:128000},pricing:\"tier_2_10\",capabilities:[\"effort\",\"max_effort\",\"xhigh_effort\",\"adaptive_thinking\",\"mid_conv_system\",\"mid_conv_tool_change\",\"context_management\",\"rejects_disabled_thinking\",\"per_turn_effort\",\"lean_prompt\",\"refusal_fallback\",\"silent_turn_reminder\",\"org_locked_thinking\"],default_effort:\"medium\",image_limits:{maxWidth:2000,maxHeight:2000},advisor_rank:6},{id:\"claude-opus-4-0\",family:\"opus\",display_name:\"Opus 4\",knowledge_cutoff:\"January 2025\",provider_ids:{first_party:\"claude-opus-4-20250514\",bedrock:\"us.anthropic.claude-opus-4-20250514-v1:0\",vertex:\"claude-opus-4@20250514\",foundry:\"claude-opus-4\",anthropic_aws:\"claude-opus-4-20250514\",anthropic_google_cloud:null,mantle:null,gateway:\"claude-opus-4-20250514\"},vertex_region_env_var:\"VERTEX_REGION_CLAUDE_4_0_OPUS\",context:{window:200000,supports_1m_suffix:!0},max_output_tokens:{default:32000,upper:32000},pricing:\"tier_15_75\",capabilities:[\"context_management\"]},{id:\"claude-opus-4-1\",family:\"opus\",display_name:\"Opus 4.1\",knowledge_cutoff:\"January 2025\",provider_ids:{first_party:\"claude-opus-4-1-20250805\",bedrock:\"us.anthropic.claude-opus-4-1-20250805-v1:0\",vertex:\"claude-opus-4-1@20250805\",foundry:\"claude-opus-4-1\",anthropic_aws:\"claude-opus-4-1-20250805\",anthropic_google_cloud:null,mantle:null,gateway:\"claude-opus-4-1-20250805\"},vertex_region_env_var:\"VERTEX_REGION_CLAUDE_4_1_OPUS\",context:{window:200000,supports_1m_suffix:!0},max_output_tokens:{default:32000,upper:32000},pricing:\"tier_15_75\",capabilities:[\"context_management\"]},{id:\"claude-opus-4-5\",family:\"opus\",display_name:\"Opus 4.5\",knowledge_cutoff:\"May 2025\",provider_ids:{first_party:\"claude-opus-4-5-20251101\",bedrock:\"us.anthropic.claude-opus-4-5-20251101-v1:0\",vertex:\"claude-opus-4-5@20251101\",foundry:\"claude-opus-4-5\",anthropic_aws:\"claude-opus-4-5-20251101\",anthropic_google_cloud:\"claude-opus-4-5-20251101\",mantle:null,gateway:\"claude-opus-4-5-20251101\"},eager_input_streaming:{vertex:!0},vertex_region_env_var:\"VERTEX_REGION_CLAUDE_4_5_OPUS\",fallback_3p:\"claude-opus-4-1\",context:{window:200000,supports_1m_suffix:!0},max_output_tokens:{default:32000,upper:64000},pricing:\"tier_5_25\",capabilities:[\"context_management\"]},{id:\"claude-opus-4-6\",family:\"opus\",display_name:\"Opus 4.6\",knowledge_cutoff:\"May 2025\",provider_ids:{first_party:\"claude-opus-4-6\",bedrock:\"us.anthropic.claude-opus-4-6-v1\",vertex:\"claude-opus-4-6\",foundry:\"claude-opus-4-6\",anthropic_aws:\"claude-opus-4-6\",anthropic_google_cloud:\"claude-opus-4-6\",mantle:null,gateway:\"claude-opus-4-6\"},eager_input_streaming:{vertex:!0},vertex_region_env_var:\"VERTEX_REGION_CLAUDE_4_6_OPUS\",fallback_3p:\"claude-opus-4-5\",context:{window:200000,supports_1m_beta:!0,supports_1m_suffix:!0},max_output_tokens:{default:64000,upper:128000},pricing:\"tier_5_25\",capabilities:[\"effort\",\"max_effort\",\"adaptive_thinking\",\"context_management\"],advisor_rank:3},{id:\"claude-opus-4-7\",family:\"opus\",display_name:\"Opus 4.7\",knowledge_cutoff:\"January 2026\",provider_ids:{first_party:\"claude-opus-4-7\",bedrock:\"us.anthropic.claude-opus-4-7\",vertex:\"claude-opus-4-7\",foundry:\"claude-opus-4-7\",anthropic_aws:\"claude-opus-4-7\",anthropic_google_cloud:\"claude-opus-4-7\",mantle:\"anthropic.claude-opus-4-7\",gateway:\"claude-opus-4-7\"},eager_input_streaming:{bedrock:!0,vertex:!0},vertex_region_env_var:\"VERTEX_REGION_CLAUDE_4_7_OPUS\",fallback_3p:\"claude-opus-4-6\",context:{window:1e6,native_1m:!0,supports_1m_beta:!0,supports_1m_suffix:!0},max_output_tokens:{default:64000,upper:128000},pricing:\"tier_5_25\",capabilities:[\"effort\",\"max_effort\",\"xhigh_effort\",\"adaptive_thinking\",\"context_management\"],default_effort:\"xhigh\",image_limits:{maxWidth:2000,maxHeight:2000},advisor_rank:5},{id:\"claude-opus-4-8\",family:\"opus\",display_name:\"Opus 4.8\",knowledge_cutoff:\"January 2026\",provider_ids:{first_party:\"claude-opus-4-8\",bedrock:\"us.anthropic.claude-opus-4-8\",vertex:\"claude-opus-4-8\",foundry:\"claude-opus-4-8\",anthropic_aws:\"claude-opus-4-8\",anthropic_google_cloud:\"claude-opus-4-8\",mantle:\"anthropic.claude-opus-4-8\",gateway:\"claude-opus-4-8\"},eager_input_streaming:{bedrock:!0,vertex:!0},vertex_region_env_var:\"VERTEX_REGION_CLAUDE_4_8_OPUS\",fallback_3p:\"claude-opus-4-7\",context:{window:1e6,native_1m:!0,supports_1m_beta:!0,supports_1m_suffix:!0},max_output_tokens:{default:64000,upper:128000},pricing:\"tier_5_25\",capabilities:[\"effort\",\"max_effort\",\"xhigh_effort\",\"adaptive_thinking\",\"mid_conv_system\",\"mid_conv_tool_change\",\"context_management\",\"fast_mode\",\"lean_prompt\"],default_effort:\"high\",effort_cost_index:{low:0.72,medium:0.9,high:1,xhigh:1.65,max:1.88},image_limits:{maxWidth:2000,maxHeight:2000},advisor_rank:5},{id:\"claude-opus-5\",family:\"opus\",display_name:\"Opus 5\",knowledge_cutoff:\"May 2026\",provider_ids:{first_party:\"claude-opus-5\",bedrock:\"us.anthropic.claude-opus-5\",vertex:\"claude-opus-5\",foundry:\"claude-opus-5\",anthropic_aws:\"claude-opus-5\",anthropic_google_cloud:\"claude-opus-5\",mantle:\"anthropic.claude-opus-5\",gateway:\"claude-opus-5\"},eager_input_streaming:{bedrock:!0,vertex:!0},vertex_region_env_var:\"VERTEX_REGION_CLAUDE_5_OPUS\",fallback_3p:\"claude-opus-4-8\",context:{window:1e6,native_1m:!0,supports_1m_beta:!0,supports_1m_suffix:!0},max_output_tokens:{default:64000,upper:128000},pricing:\"tier_5_25\",capabilities:[\"effort\",\"max_effort\",\"xhigh_effort\",\"adaptive_thinking\",\"mid_conv_system\",\"mid_conv_tool_change\",\"context_management\",\"thinking_disabled_effort_cap\",\"fast_mode\",\"lean_prompt\",\"refusal_fallback\",\"opus_5_prompt_bundle\"],default_effort:\"high\",effort_cost_index:{low:0.67,medium:0.76,high:1,xhigh:1.6,max:1.7},image_limits:{maxWidth:2000,maxHeight:2000},advisor_rank:7},{id:\"claude-opus-5-5\",family:\"opus\",display_name:\"Opus 5.5\",knowledge_cutoff:\"June 2026\",provider_ids:{first_party:\"claude-opus-5-5\",bedrock:\"us.anthropic.claude-opus-5-5\",vertex:\"claude-opus-5-5\",foundry:\"claude-opus-5-5\",anthropic_aws:\"claude-opus-5-5\",anthropic_google_cloud:\"claude-opus-5-5\",mantle:\"anthropic.claude-opus-5-5\",gateway:\"claude-opus-5-5\"},eager_input_streaming:{bedrock:!0,vertex:!0},vertex_region_env_var:\"VERTEX_REGION_CLAUDE_5_5_OPUS\",fallback_3p:\"claude-opus-5\",context:{window:1e6,native_1m:!0,supports_1m_beta:!0,supports_1m_suffix:!0},max_output_tokens:{default:128000,upper:128000},pricing:\"tier_4_20_cache_read_0_20\",capabilities:[\"effort\",\"max_effort\",\"xhigh_effort\",\"adaptive_thinking\",\"rejects_disabled_thinking\",\"mid_conv_system\",\"mid_conv_tool_change\",\"per_turn_effort\",\"per_turn_timing\",\"context_management\",\"fast_mode\",\"lean_prompt\",\"refusal_fallback\",\"opus_5_5_prompt_bundle\"],default_effort:\"medium\",image_limits:{maxWidth:2000,maxHeight:2000},advisor_rank:7},{id:\"claude-fable-5\",family:\"fable\",display_name:\"Fable 5\",knowledge_cutoff:\"January 2026\",provider_ids:{first_party:\"claude-fable-5\",bedrock:\"us.anthropic.claude-fable-5\",vertex:\"claude-fable-5\",foundry:\"claude-fable-5\",anthropic_aws:\"claude-fable-5\",anthropic_google_cloud:\"claude-fable-5\",mantle:\"anthropic.claude-fable-5\",gateway:\"claude-fable-5\"},eager_input_streaming:{bedrock:!0,vertex:!0},vertex_region_env_var:\"VERTEX_REGION_CLAUDE_FABLE_5\",fallback_3p:\"claude-opus-5-5\",context:{window:1e6,native_1m:!0,supports_1m_beta:!0},max_output_tokens:{default:64000,upper:128000},pricing:\"tier_10_50\",capabilities:[\"effort\",\"max_effort\",\"xhigh_effort\",\"adaptive_thinking\",\"rejects_disabled_thinking\",\"mid_conv_system\",\"mid_conv_tool_change\",\"context_management\",\"lean_prompt\",\"fable_5_mitigations\",\"refusal_fallback\"],default_effort:\"high\",effort_cost_index:{low:0.6,medium:0.77,high:1,xhigh:1.74,max:1.91},image_limits:{maxWidth:2000,maxHeight:2000},advisor_rank:8},{id:\"claude-fable-5-1\",family:\"fable\",display_name:\"Fable 5.1\",knowledge_cutoff:\"June 2026\",provider_ids:{first_party:\"claude-fable-5-1\",bedrock:\"us.anthropic.claude-fable-5-1\",vertex:\"claude-fable-5-1\",foundry:\"claude-fable-5-1\",anthropic_aws:\"claude-fable-5-1\",anthropic_google_cloud:\"claude-fable-5-1\",mantle:\"anthropic.claude-fable-5-1\",gateway:\"claude-fable-5-1\"},eager_input_streaming:{bedrock:!0,vertex:!0},vertex_region_env_var:\"VERTEX_REGION_CLAUDE_FABLE_5_1\",fallback_3p:\"claude-fable-5\",context:{window:1e6,native_1m:!0,supports_1m_beta:!0},max_output_tokens:{default:64000,upper:128000},pricing:\"tier_10_50_cache_read_0_25\",capabilities:[\"effort\",\"max_effort\",\"xhigh_effort\",\"adaptive_thinking\",\"rejects_disabled_thinking\",\"mid_conv_system\",\"mid_conv_tool_change\",\"per_turn_effort\",\"per_turn_timing\",\"context_management\",\"lean_prompt\",\"fable_5_mitigations\",\"refusal_fallback\",\"fable_5_1_prompt_bundle\"],default_effort:\"high\",effort_cost_index:{low:0.75,medium:0.86,high:1,xhigh:1.38,max:1.74},image_limits:{maxWidth:2000,maxHeight:2000},advisor_rank:9},{id:\"claude-mythos-5\",family:\"mythos\",display_name:\"Mythos 5\",knowledge_cutoff:\"January 2026\",provider_ids:{first_party:\"claude-mythos-5\",bedrock:null,vertex:null,foundry:null,anthropic_aws:null,anthropic_google_cloud:null,mantle:null,gateway:null},context:{window:1e6,native_1m:!0,supports_1m_beta:!0},max_output_tokens:{default:64000,upper:128000},pricing:\"tier_10_50\",capabilities:[],image_limits:{maxWidth:2000,maxHeight:2000},advisor_rank:8},{id:\"claude-mythos-5-1\",family:\"mythos\",display_name:\"Mythos 5.1\",knowledge_cutoff:\"June 2026\",provider_ids:{first_party:\"claude-mythos-5-1\",bedrock:null,vertex:null,foundry:null,anthropic_aws:null,anthropic_google_cloud:null,mantle:null,gateway:null},context:{window:1e6,native_1m:!0,supports_1m_beta:!0},max_output_tokens:{default:64000,upper:128000},pricing:\"tier_10_50_cache_read_0_25\",capabilities:[\"effort\",\"max_effort\",\"xhigh_effort\",\"adaptive_thinking\",\"rejects_disabled_thinking\",\"mid_conv_system\",\"mid_conv_tool_change\",\"per_turn_timing\",\"context_management\",\"lean_prompt\",\"fable_5_mitigations\",\"fable_5_1_prompt_bundle\"],default_effort:\"high\",effort_cost_index:{low:0.75,medium:0.86,high:1,xhigh:1.38,max:1.74},image_limits:{maxWidth:2000,maxHeight:2000},advisor_rank:9}],aliases:{opus:{default:\"claude-opus-5-5\",per_provider:{bedrock:\"claude-opus-5-5\",vertex:\"claude-opus-5-5\",foundry:\"claude-opus-4-6\",mantle:\"claude-opus-5-5\",anthropic_aws:\"claude-opus-5-5\",gateway:\"claude-opus-4-7\"}},sonnet:{default:\"claude-sonnet-5-5\",per_provider:{bedrock:\"claude-sonnet-4-5\",vertex:\"claude-sonnet-4-5\",foundry:\"claude-sonnet-4-5\",mantle:\"claude-sonnet-4-5\",anthropic_aws:\"claude-sonnet-4-6\",gateway:\"claude-sonnet-4-6\"}},haiku:{default:\"claude-haiku-4-5\"},fable:{default:\"claude-fable-5-1\",per_provider:{gateway:\"claude-fable-5\"}}},defaults:{},best:\"fable\",latest_per_family:{fable:\"claude-fable-5-1\",opus:\"claude-opus-5-5\",sonnet:\"claude-sonnet-5-5\",haiku:\"claude-haiku-4-5\"},alias_migration:{}}"
+    },
+    {
+      "file": "chunk-wz6xag6e.js",
+      "name": "p",
+      "start": 18649,
+      "end": 18650,
+      "moduleLength": 30022,
+      "moduleSha256": "24c4b2f916cc12257edf0008fa8d98838ac2f5cb0ae35bdc3b5447f963347d58",
+      "source": "p",
+      "sha256": "148de9c5a7a44d19e56cd9ae1a554bf67847afb0c58f6e12fa29ac7ddfca9940",
+      "variable": true
+    },
+    {
+      "file": "chunk-wz6xag6e.js",
+      "name": "O",
+      "start": 18476,
+      "end": 18645,
+      "moduleLength": 30022,
+      "moduleSha256": "24c4b2f916cc12257edf0008fa8d98838ac2f5cb0ae35bdc3b5447f963347d58",
+      "source": "function O(){return{bakedCatalog:void 0,canonicalNameMemo:new Map,mainLoopCanonical:void 0,servedCapabilityLookup:void 0,featureGateLookup:void 0,modelKnowledge:void 0}}",
+      "sha256": "2b80d3134efa61484310dd5d783f1d923020825d2ce8235fa75867c7ec726984",
+      "variable": false
+    },
+    {
+      "file": "chunk-wz6xag6e.js",
+      "name": "cL",
+      "start": 18651,
+      "end": 18694,
+      "moduleLength": 30022,
+      "moduleSha256": "24c4b2f916cc12257edf0008fa8d98838ac2f5cb0ae35bdc3b5447f963347d58",
+      "source": "function cL(){if(p===void 0)p=O();return p}",
+      "sha256": "7df273d17a7253f6c3bab5dc2b0488a8d11fda4b2a30f04a14f07018303c1444",
+      "variable": false
+    },
+    {
+      "file": "chunk-wz6xag6e.js",
+      "name": "R",
+      "start": 20681,
+      "end": 21036,
+      "moduleLength": 30022,
+      "moduleSha256": "24c4b2f916cc12257edf0008fa8d98838ac2f5cb0ae35bdc3b5447f963347d58",
+      "source": "function R(e){let t=new Map,n=new Map;for(let r of e.models){t.set(r.id,r);for(let s of Object.values(r.provider_ids)){if(typeof s!==\"string\")continue;let _=s.toLowerCase(),l=n.get(_);if(l!==void 0&&l!==r.id)throw Error(\"model catalog: provider id collision across distinct entries\");n.set(_,r.id)}}return{catalog:e,entriesById:t,catalogIdByProviderId:n}}",
+      "sha256": "fa474a23e8bf4e6dc21625e1664cb672bac77f023284e20ff30d97ab61d89da6",
+      "variable": false
+    },
+    {
+      "file": "chunk-wz6xag6e.js",
+      "name": "g",
+      "start": 21036,
+      "end": 21131,
+      "moduleLength": 30022,
+      "moduleSha256": "24c4b2f916cc12257edf0008fa8d98838ac2f5cb0ae35bdc3b5447f963347d58",
+      "source": "function g(){let e=cL();if(e.bakedCatalog===void 0)e.bakedCatalog=R(Vtr);return e.bakedCatalog}",
+      "sha256": "2596de9e525212bc1c58c599c390410bda335a69b620a633fc617189a4231e4d",
+      "variable": false
+    },
+    {
+      "file": "chunk-wz6xag6e.js",
+      "name": "vwe",
+      "start": 21131,
+      "end": 21165,
+      "moduleLength": 30022,
+      "moduleSha256": "24c4b2f916cc12257edf0008fa8d98838ac2f5cb0ae35bdc3b5447f963347d58",
+      "source": "function vwe(){return g().catalog}",
+      "sha256": "037ce64bef2d60913b1072fbcacbd9967faec8a86cd91675d2508cc3883b39e6",
+      "variable": false
+    },
+    {
+      "file": "chunk-wz6xag6e.js",
+      "name": "gse",
+      "start": 21176,
+      "end": 21246,
+      "moduleLength": 30022,
+      "moduleSha256": "24c4b2f916cc12257edf0008fa8d98838ac2f5cb0ae35bdc3b5447f963347d58",
+      "source": "function gse(e){return g().catalogIdByProviderId.get(e.toLowerCase())}",
+      "sha256": "945241d779dfb3d3a824c94b99dc44e038fa82adf2fe06eab3aa336f3726a910",
+      "variable": false
+    },
+    {
+      "file": "chunk-wz6xag6e.js",
+      "name": "xa",
+      "start": 21246,
+      "end": 21291,
+      "moduleLength": 30022,
+      "moduleSha256": "24c4b2f916cc12257edf0008fa8d98838ac2f5cb0ae35bdc3b5447f963347d58",
+      "source": "function xa(e){return g().entriesById.get(e)}",
+      "sha256": "83379394cdc5706ca6d4b1c02389b0edf5869148245ddb94c0fd26a2ccd25bf2",
+      "variable": false
+    },
+    {
+      "file": "chunk-aer2x4hk.js",
+      "name": "u",
+      "start": 2864,
+      "end": 3276,
+      "moduleLength": 3349,
+      "moduleSha256": "2329bc1120dc1b6eac6b5d5d0adf1f4af2aacebcc960b4716b5a50a1ca5a9a02",
+      "source": "function u(e){let n=/^claude-([a-z]+)-(\\d{1,2})(?!\\d)(?:-(\\d{1,2})(?!\\d))?/.exec(e);if(n){let[t,r=\"\",o=\"\",i]=n;return{family:r,major:Number(o),minor:i===void 0?void 0:Number(i),legacyVersionFirst:!1,base:t}}let s=/^claude-(\\d{1,2})(?!\\d)(?:-(\\d{1,2})(?!\\d))?-([a-z]+)/.exec(e);if(s){let[t,r=\"\",o,i=\"\"]=s;return{family:i,major:Number(r),minor:o===void 0?void 0:Number(o),legacyVersionFirst:!0,base:t}}return null}",
+      "sha256": "80dea315aca8ecd68dcdae6665149b969a4af47f21d1adf73419564d689404b6",
+      "variable": false
+    },
+    {
+      "file": "chunk-aer2x4hk.js",
+      "name": "$8r",
+      "start": 2151,
+      "end": 2261,
+      "moduleLength": 3349,
+      "moduleSha256": "2329bc1120dc1b6eac6b5d5d0adf1f4af2aacebcc960b4716b5a50a1ca5a9a02",
+      "source": "function $8r(e){return/^(?:-fast|-latest)?(?:-v\\d{1,3}@\\d{8}|[-@]\\d{8})?(?:-v\\d{1,3}(?::\\d{1,3})?)?$/.test(e)}",
+      "sha256": "8d48bc0957a845ef0fa54731ffd922313e15d99c3edb2ba006458413d58d2fe6",
+      "variable": false
+    },
+    {
+      "file": "chunk-aer2x4hk.js",
+      "name": "wu",
+      "start": 1539,
+      "end": 2151,
+      "moduleLength": 3349,
+      "moduleSha256": "2329bc1120dc1b6eac6b5d5d0adf1f4af2aacebcc960b4716b5a50a1ca5a9a02",
+      "source": "function wu(e){let n=e.trim().toLowerCase();if(n===\"\"||/\\s/.test(n))return null;n=n.replace(/\\[[12]m\\]$/,\"\");let s=n.lastIndexOf(\"/\");if(s!==-1)n=n.slice(s+1);let t=/^(?:([a-z-]+)\\.)?anthropic\\.(claude-.*)$/.exec(n);if(t){let[,a,l=\"\"]=t;if(a!==void 0&&!QZ.includes(a))return null;n=l}let r=u(n);if(!r)return null;let o=n.slice(r.base.length);if(o!==\"\"&&!/^[-@]/.test(o))return null;let i={family:r.family,major:r.major,legacyVersionFirst:r.legacyVersionFirst,base:r.base};if(r.minor!==void 0)i.minor=r.minor;if(!$8r(o))i.trailer=o;else{let a=/(?:-v\\d+@|[-@])(\\d{8})/.exec(o)?.[1];if(a!==void 0)i.date=a}return i}",
+      "sha256": "6b70c887a2cb4b68d83016a97b3c24569328738fba3800051e7684efcc89dd26",
+      "variable": false
+    },
+    {
+      "file": "chunk-aer2x4hk.js",
+      "name": "qj",
+      "start": 2309,
+      "end": 2360,
+      "moduleLength": 3349,
+      "moduleSha256": "2329bc1120dc1b6eac6b5d5d0adf1f4af2aacebcc960b4716b5a50a1ca5a9a02",
+      "source": "function qj(e){return e!==null&&e.trailer===void 0}",
+      "sha256": "b9caeb1da03dc5bb76463f1a18d40d4c14091fe411359474f38df8c009c2801c",
+      "variable": false
+    },
+    {
+      "file": "chunk-aer2x4hk.js",
+      "name": "u0e",
+      "start": 2360,
+      "end": 2428,
+      "moduleLength": 3349,
+      "moduleSha256": "2329bc1120dc1b6eac6b5d5d0adf1f4af2aacebcc960b4716b5a50a1ca5a9a02",
+      "source": "function u0e(e,n){return e.major-n.major||(e.minor??0)-(n.minor??0)}",
+      "sha256": "f7234468ab824b8f527fbfcb6eada8a846619706dc6e5d5c4aa956a09c290bab",
+      "variable": false
+    },
+    {
+      "file": "chunk-aer2x4hk.js",
+      "name": "qQe",
+      "start": 2428,
+      "end": 2532,
+      "moduleLength": 3349,
+      "moduleSha256": "2329bc1120dc1b6eac6b5d5d0adf1f4af2aacebcc960b4716b5a50a1ca5a9a02",
+      "source": "function qQe(e,n){return e.family===n.family&&e.legacyVersionFirst===n.legacyVersionFirst&&u0e(e,n)===0}",
+      "sha256": "e45c3c72865ac61a0f5b3f7d2544ada0f4390f0435e66988431b82928f1283c7",
+      "variable": false
+    },
+    {
+      "file": "chunk-aer2x4hk.js",
+      "name": "Ct",
+      "start": 1338,
+      "end": 1385,
+      "moduleLength": 3349,
+      "moduleSha256": "2329bc1120dc1b6eac6b5d5d0adf1f4af2aacebcc960b4716b5a50a1ca5a9a02",
+      "source": "function Ct(e){return e.replace(/\\[1m\\]$/i,\"\")}",
+      "sha256": "4d004cd2974adb8190cb452c8cad994ce692a3683f35f0ad16e5b39ebc8aadc8",
+      "variable": false
+    },
+    {
+      "file": "chunk-aer2x4hk.js",
+      "name": "MSt",
+      "start": 1196,
+      "end": 1223,
+      "moduleLength": 3349,
+      "moduleSha256": "2329bc1120dc1b6eac6b5d5d0adf1f4af2aacebcc960b4716b5a50a1ca5a9a02",
+      "source": "MSt=\"claude-mythos-preview\"",
+      "sha256": "c294b309b5ea16648c19b4ea917184bae0d82fa5854f92afdbe1ce66d6d02480",
+      "variable": true
+    },
+    {
+      "file": "chunk-nankzm0s.js",
+      "name": "$b",
+      "start": 362976,
+      "end": 363049,
+      "moduleLength": 706979,
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "source": "function $b(){return[\"claude-3-opus\",\"claude-3-sonnet\",\"claude-3-haiku\"]}",
+      "sha256": "7c6a625a9ed8e10843508a453dec04ab977fac5e3dc3b9bc5b91c4a0f6a7d552",
+      "variable": false
+    },
+    {
+      "file": "chunk-nankzm0s.js",
+      "name": "Ab",
+      "start": 362805,
+      "end": 362851,
+      "moduleLength": 706979,
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "source": "function Ab(e){return e.replace(/-\\d{8}$/,\"\")}",
+      "sha256": "ef80a27d2faa1095cc5931b4aa576a50935c2d81d5966760e9189697709e954b",
+      "variable": false
+    },
+    {
+      "file": "chunk-nankzm0s.js",
+      "name": "xI",
+      "start": 362851,
+      "end": 362976,
+      "moduleLength": 706979,
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "source": "function xI(e){let n=[...vwe().models.map((r)=>r.id),...$b()];for(let r of n){let s=wu(r);if(qj(s)&&qQe(s,e))return r}return}",
+      "sha256": "5e619f065aecc957fa392edb56c58651f756e6375eda3d4cfaa513eea1bb9363",
+      "variable": false
+    },
+    {
+      "file": "chunk-nankzm0s.js",
+      "name": "OI",
+      "start": 361164,
+      "end": 362805,
+      "moduleLength": 706979,
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "source": "function OI(e){let n=gse(e);if(n!==void 0)return n;for(let s of QZ)if(s!==\"us\"&&e.startsWith(`${s}.anthropic.`)){let g=gse(`us${e.slice(s.length)}`);if(g!==void 0)return g;break}let r=wu(e);if(qj(r))return xI(r)??Ab(r.base);if(e.includes(\"claude-fable-5-1\"))return\"claude-fable-5-1\";if(e.includes(\"claude-fable-5\"))return\"claude-fable-5\";if(e.includes(\"claude-mythos-5-1\"))return\"claude-mythos-5-1\";if(e.includes(\"claude-mythos-5\"))return\"claude-mythos-5\";if(e.includes(\"claude-opus-5-5\"))return\"claude-opus-5-5\";if(e.includes(\"claude-opus-5\"))return\"claude-opus-5\";if(e.includes(\"claude-opus-4-8\"))return\"claude-opus-4-8\";if(e.includes(\"claude-opus-4-7\"))return\"claude-opus-4-7\";if(e.includes(\"claude-opus-4-6\"))return\"claude-opus-4-6\";if(e.includes(\"claude-opus-4-5\"))return\"claude-opus-4-5\";if(e.includes(\"claude-opus-4-1\"))return\"claude-opus-4-1\";if(/claude-opus-4(?!-\\d(?!\\d))/.test(e))return\"claude-opus-4-0\";if(e.includes(\"claude-sonnet-5-5\"))return\"claude-sonnet-5-5\";if(e.includes(\"claude-sonnet-5\"))return\"claude-sonnet-5\";if(e.includes(\"claude-sonnet-4-6\"))return\"claude-sonnet-4-6\";if(e.includes(\"claude-sonnet-4-5\"))return\"claude-sonnet-4-5\";if(/claude-sonnet-4(?!-\\d(?!\\d))/.test(e))return\"claude-sonnet-4-0\";if(e.includes(\"claude-haiku-4-5\"))return\"claude-haiku-4-5\";if(e.includes(\"claude-3-7-sonnet\"))return\"claude-3-7-sonnet\";if(e.includes(\"claude-3-5-sonnet\"))return\"claude-3-5-sonnet\";if(e.includes(\"claude-3-5-haiku\"))return\"claude-3-5-haiku\";if(e.includes(\"claude-3-opus\"))return\"claude-3-opus\";if(e.includes(\"claude-3-sonnet\"))return\"claude-3-sonnet\";if(e.includes(\"claude-3-haiku\"))return\"claude-3-haiku\";return Ab(e)}",
+      "sha256": "5272d06235cd83d885b573b89e5c887d2748b4e74b7044cb909fe69b9f6c8a44",
+      "variable": false
+    },
+    {
+      "file": "chunk-nankzm0s.js",
+      "name": "fb",
+      "start": 360993,
+      "end": 361164,
+      "moduleLength": 706979,
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "source": "function fb(e){e=e.toLowerCase();let n=cL().canonicalNameMemo,r=n.get(e);if(r!==void 0)return r;let s=OI(e);if(e.length<=256){if(n.size>=256)n.clear();n.set(e,s)}return s}",
+      "sha256": "be05bcc128c43e167ef240a334627e4dd4262dc7204456148eb222ce7b2e76a0",
+      "variable": false
+    },
+    {
+      "file": "chunk-nankzm0s.js",
+      "name": "PI",
+      "start": 363053,
+      "end": 363069,
+      "moduleLength": 706979,
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "source": "PI=new Set($b())",
+      "sha256": "ae33da6310db47c86139e003da1e324bc11ddcff800eb9e80615127288b93004",
+      "variable": true
+    },
+    {
+      "file": "chunk-nankzm0s.js",
+      "name": "Doe",
+      "start": 363070,
+      "end": 363140,
+      "moduleLength": 706979,
+      "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+      "source": "function Doe(e){let n=Ct(e);return xa(n)!==void 0||PI.has(n)||n===MSt}",
+      "sha256": "03db82754babf5781c933969e390cc121391f03d302d1899e1718410eda093fc",
+      "variable": false
+    }
+  ],
+  "catalogPlatforms": [
+    {
+      "platform": "darwin-arm64",
+      "file": "chunk-wz6xag6e.js",
+      "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+      "moduleLength": 30022,
+      "moduleSha256": "24c4b2f916cc12257edf0008fa8d98838ac2f5cb0ae35bdc3b5447f963347d58",
+      "start": 977,
+      "end": 18475,
+      "expressionSha256": "0d1bee9ddd02febf4e79c8cfedacddb058edf804532e7af732249ca201a1ce0e"
+    },
+    {
+      "platform": "darwin-x64",
+      "file": "chunk-vhewhfxj.js",
+      "manifestSha256": "ba9e122d28e8a42927eb23c7c86b62295f24a223546ee5476e761837579a709b",
+      "moduleLength": 30022,
+      "moduleSha256": "c3b48dced6fcfccea6d88175383d08b99de1910837410cc3cdedf683022fd52e",
+      "start": 977,
+      "end": 18475,
+      "expressionSha256": "0d1bee9ddd02febf4e79c8cfedacddb058edf804532e7af732249ca201a1ce0e"
+    },
+    {
+      "platform": "linux-arm64",
+      "file": "chunk-h2jaxvwe.js",
+      "manifestSha256": "f3be5b23f9cbb909555fe028143b9a3a40c1e3e49961e09c49d8e5a6b61ae83b",
+      "moduleLength": 30022,
+      "moduleSha256": "148c8e60c3380eaeb09fc9aa0270298840675a70c248cde1f7406c6dd7893f03",
+      "start": 977,
+      "end": 18475,
+      "expressionSha256": "0d1bee9ddd02febf4e79c8cfedacddb058edf804532e7af732249ca201a1ce0e"
+    },
+    {
+      "platform": "linux-x64",
+      "file": "chunk-e8vff9an.js",
+      "manifestSha256": "ecae5d9ddbf13ef27b6b6a1141953aab4ba311e47dde3ac2a7cc8b5a01c63784",
+      "moduleLength": 30022,
+      "moduleSha256": "a54d8d1c34c9cc94cba7249224ddacb1a60926a7c7c8bdddc8d0baf1501b2091",
+      "start": 977,
+      "end": 18475,
+      "expressionSha256": "0d1bee9ddd02febf4e79c8cfedacddb058edf804532e7af732249ca201a1ce0e"
+    },
+    {
+      "platform": "win32-arm64",
+      "file": "chunk-g0bp3a9z.js",
+      "manifestSha256": "d0d8b3b882ba61ba321ab072b5cbc28a1a4089cfb4c5dce0698311aae10c739e",
+      "moduleLength": 30022,
+      "moduleSha256": "a7943d0146d2a8f36ae07da75475185513d623fe2a5a9dffaab9e1b5874161c5",
+      "start": 977,
+      "end": 18475,
+      "expressionSha256": "0d1bee9ddd02febf4e79c8cfedacddb058edf804532e7af732249ca201a1ce0e"
+    },
+    {
+      "platform": "win32-x64",
+      "file": "chunk-nzkna3hq.js",
+      "manifestSha256": "c71e85888df3301fd3c4cb158744538810418e2d67591debe8e4f7c771fcdddc",
+      "moduleLength": 30022,
+      "moduleSha256": "e82fbbb4821c032f957d4c83ccdf2c8516cce1d2ff7d9ca2b95cbe415bd5e02d",
+      "start": 977,
+      "end": 18475,
+      "expressionSha256": "0d1bee9ddd02febf4e79c8cfedacddb058edf804532e7af732249ca201a1ce0e"
+    }
+  ]
+}

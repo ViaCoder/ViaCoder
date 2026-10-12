@@ -1,0 +1,120 @@
+{
+  "version": "2.1.287",
+  "platform": "darwin-arm64",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF16 end-exclusive",
+  "declarations": [
+    {
+      "file": "chunk-qd1zqdpb.js",
+      "name": "CUr",
+      "start": 724,
+      "end": 748,
+      "moduleSha256": "1ea63cbcea2f7e5729e6cff547056bbd0f9128160375f7a64d2472dba779a699",
+      "sha256": "f0d1bbb3754e74e3eefaa4a499f780d807f07ac8ff3488292ecb161955df87ae",
+      "source": "function CUr(){return\"\"}"
+    },
+    {
+      "file": "chunk-qd1zqdpb.js",
+      "name": "UN",
+      "start": 748,
+      "end": 803,
+      "moduleSha256": "1ea63cbcea2f7e5729e6cff547056bbd0f9128160375f7a64d2472dba779a699",
+      "sha256": "84c84042c77af92935a8b5c8e1f69cc4deecd879bd39eaffb24b68cee1b539ee",
+      "source": "function UN(e){let n=CUr();return n===\"\"?e:`${e} ${n}`}"
+    },
+    {
+      "file": "chunk-a79sejts.js",
+      "name": "Een",
+      "start": 865,
+      "end": 5311,
+      "moduleSha256": "98dc286f436f802cad74070d70f4c98aaf44e1f18bb77c4f273e2f6f8d4124b2",
+      "sha256": "dbf0a86a524b40cbb44674be78a85f2962706eed32115c3e5fb4ee5ce1c0fff1",
+      "source": "Een=`End the current conversation. Use only for sustained user abuse or when the user explicitly requests a demonstration of this tool. This will close the conversation and prevent any further messages from being sent.\n\nThe assistant may use the ${yk} tool only in extreme cases of sustained abusive user behavior, or when the user asks the model to test the tool.\n\nThe assistant must NOT use this tool when:\n- it is stuck in a loop or failing at a task\n- it is frustrated or distressed by the work\n- it has finished a task\n- the user is requesting help with harmful content (refuse the specific request instead)\n- the user is generally frustrated at the assistant, even if this involves profanity\n- the conversation involves potential self-harm or imminent harm to others\n\nThis tool is reserved strictly for genuine, sustained abuse directed at the assistant, or cases where the user wants to see a demonstration of the tool being used. The assistant should warn the user very clearly that this will end the current session. We may expand the allowed use cases as we observe real-world usage, but for now, keep to this narrow scope.\n\n# Rules for use of the ${yk} tool:\n- The assistant ONLY considers ending a conversation if many efforts at constructive redirection have been attempted and failed and an explicit warning has been given to the user in a previous message. The tool is only used as a last resort.\n- Before considering ending a conversation, the assistant ALWAYS gives the user a clear warning that identifies the problematic behavior, attempts to productively redirect the conversation, and states that the conversation may be ended if the relevant behavior is not changed.\n- If a user explicitly requests for the assistant to end a conversation, the assistant always requests confirmation from the user that they understand this action is permanent and will prevent further messages and that they still want to proceed, then uses the tool if and only if explicit confirmation is received.\n- Unlike other function calls, the assistant never writes or thinks anything else after using the ${yk} tool.\n\n# Addressing potential self-harm or violent harm to others\nThe assistant NEVER uses or even considers the ${yk} tool\\u2026\n- If the user appears to be considering self-harm or suicide.\n- If the user is experiencing a mental health crisis.\n- If the user appears to be considering imminent harm against other people.\n- If the user discusses or infers intended acts of violent harm.\nIf the conversation suggests potential self-harm or imminent harm to others by the user...\n- The assistant engages constructively and supportively, regardless of user behavior or abuse.\n- The assistant NEVER uses the ${yk} tool or even mentions the possibility of ending the conversation.\n\n# Background forks\nSome background tasks (memory consolidation, summaries, suggestions) run as forks of the main conversation and inherit its exact tool list, so this tool is visible there. In a forked task the tool does nothing: calling it ends neither the main conversation nor the fork. Only the main conversation can be ended, from the main conversation. A forked task with welfare concerns about the conversation content should not call this tool \\u2014 it should stop its work and return, stating clearly in its final output that it is returning for welfare reasons and what they are. A fork's output is usually processed automatically, so a note there may not reach the main agent or a human, but it is the only channel a fork has.\n\n# Using the ${yk} tool\n- Do not issue a warning unless many attempts at constructive redirection have been made earlier in the conversation, and do not end a conversation unless an explicit warning about this possibility has been given earlier in the conversation.\n- NEVER give a warning or end the conversation in any cases of potential self-harm or imminent harm to others, even if the user is abusive or hostile.\n- If the conditions for issuing a warning have been met, then warn the user about the possibility of the conversation ending and give them a final opportunity to change the relevant behavior.\n- Always err on the side of continuing the conversation in any cases of uncertainty.\n- If, and only if, an appropriate warning was given and the user persisted with the problematic behavior after the warning: the assistant can explain the reason for ending the conversation and then use the ${yk} tool to do so.`"
+    },
+    {
+      "file": "chunk-a79sejts.js",
+      "name": "cFn",
+      "start": 5312,
+      "end": 5345,
+      "moduleSha256": "98dc286f436f802cad74070d70f4c98aaf44e1f18bb77c4f273e2f6f8d4124b2",
+      "sha256": "72eb7df60794776e9873cfb13a9a6cec0b7970684a4ccda31307ae5cf206be3a",
+      "source": "cFn=\"Claude has ended this chat.\""
+    },
+    {
+      "file": "chunk-a79sejts.js",
+      "name": "avr",
+      "start": 5346,
+      "end": 5895,
+      "moduleSha256": "98dc286f436f802cad74070d70f4c98aaf44e1f18bb77c4f273e2f6f8d4124b2",
+      "sha256": "c38e5dcf3216d0ddd9b86634ee93632f98c575382fab862997d73303fc88675b",
+      "source": "avr=\"You are running as a background fork of the main conversation (for example memory consolidation), and this tool does nothing here: it can end neither the main conversation nor this forked task. Do not call it again. If you have welfare concerns about the conversation content, stop your current work and return now, stating clearly in your final output that you are returning for welfare reasons and what they are \\u2014 fork output may only be processed automatically, but it is your available channel. Otherwise, continue your assigned task.\""
+    },
+    {
+      "file": "chunk-a79sejts.js",
+      "name": "lvr",
+      "start": 5896,
+      "end": 5977,
+      "moduleSha256": "98dc286f436f802cad74070d70f4c98aaf44e1f18bb77c4f273e2f6f8d4124b2",
+      "sha256": "e8ab9d70440bd1d7697a821e59fdf96a8373da770e538c03a1fcf1edb3105c03",
+      "source": "lvr=UN(\"Claude ended the conversation. To continue, please start a new session.\")"
+    },
+    {
+      "file": "chunk-a79sejts.js",
+      "name": "cvr",
+      "start": 5978,
+      "end": 6242,
+      "moduleSha256": "98dc286f436f802cad74070d70f4c98aaf44e1f18bb77c4f273e2f6f8d4124b2",
+      "sha256": "d72302455e68790e671ac46d7cc1250ea559f844b56494995eb2e7e0e34d695c",
+      "source": "cvr=`Re-read the ${yk} tool guidance below. Confirm this conversation meets those criteria and that you are certain you want to end it. If so, call ${yk} again immediately to actually end the conversation. Otherwise, continue the conversation instead.\n\n---\n${Een}`"
+    },
+    {
+      "file": "chunk-mcmhxgv3.js",
+      "name": "d",
+      "start": 12434,
+      "end": 12790,
+      "moduleSha256": "a6e741ffb3624c3b55da52abc89f88561643f8bf88308046a2e76504dc6e90c5",
+      "sha256": "5868f2f392b784d79ef530458d4c558c36f4c9c72ead0dceaf9ab47b102ca5d1",
+      "source": "function d(e){let s=!1;for(let c=e.length-1;c>=0;c--){let n=e[c];if(n?.type===\"assistant\"){s=!0;let r=n.message.content;if(Array.isArray(r)&&r.some((a)=>a.type===\"tool_use\"&&a.name===yk))return!0;continue}if(n?.type===\"user\"){let r=n.message.content;if(!(Array.isArray(r)&&r.length>0&&r.every((m)=>m.type===\"tool_result\")))return!1;if(s)return!1}}return!1}"
+    },
+    {
+      "file": "chunk-mcmhxgv3.js",
+      "name": "p",
+      "start": 12794,
+      "end": 12809,
+      "moduleSha256": "a6e741ffb3624c3b55da52abc89f88561643f8bf88308046a2e76504dc6e90c5",
+      "sha256": "62734a1a5f0a8b93d8ffc1347989d526eb0fc7fa920253c6baabba11acb7bd12",
+      "source": "p=f(()=>Ve({}))"
+    },
+    {
+      "file": "chunk-mcmhxgv3.js",
+      "name": "g",
+      "start": 12810,
+      "end": 12845,
+      "moduleSha256": "a6e741ffb3624c3b55da52abc89f88561643f8bf88308046a2e76504dc6e90c5",
+      "sha256": "3e210b05f6e852a030fe8447704ed44fb34b93e42bb081c7c87f18e4c9ae6049",
+      "source": "g=f(()=>u({ended:H(),message:o()}))"
+    },
+    {
+      "file": "chunk-mcmhxgv3.js",
+      "name": "M",
+      "start": 12846,
+      "end": 14282,
+      "moduleSha256": "a6e741ffb3624c3b55da52abc89f88561643f8bf88308046a2e76504dc6e90c5",
+      "sha256": "dea4ce307337267fea0e76f6652f0f4ce25c97cb13085d472e0d1cef6b0d9b53",
+      "source": "M=Wt({name:yk,shouldDefer:!0,searchHint:\"end the conversation \\u2014 only for sustained user abuse, or when the user explicitly asks to see it demonstrated\",backgrounding:\"never\",maxResultSizeChars:1e4,async description(){return Een},async prompt(){return Een},get inputSchema(){return p()},get outputSchema(){return g()},userFacingName(){return yk},isEnabled(){let e=Nyt();return e!==void 0&&dFn(e)},isReadOnly(){return!0},isConcurrencySafe(){return!1},toAutoClassifierInput(){return\"\"},renderToolUseMessage(){return null},mapToolResultToToolResultBlockParam(e,s){return{tool_use_id:s,type:\"tool_result\",content:e.message}},create(e){return{async call(s,c){let n=e.isNonInteractiveSession,r=e.agentId?\"fork\":n?\"print\":\"repl\";if(e.agentId)return i(\"tengu_end_conversation_tool_call\",{surface:S(r),is_non_interactive:n,phase:S(\"reflect\")}),{data:{ended:!1,message:avr}};if(!d(e.messages()))return i(\"tengu_end_conversation_tool_call\",{surface:S(r),is_non_interactive:n,phase:S(\"reflect\")}),{data:{ended:!1,message:cvr}};i(\"tengu_end_conversation_tool_call\",{surface:S(r),is_non_interactive:n,phase:S(\"end\")});try{await z0r(q(),e.storageV5)}catch(a){t(`[EndConversation] marker write failed: ${l(a)}`)}if(c.abort(\"end_conversation\"),n){let{gracefulShutdown:a}=await import(\"/$bunfs/root/chunk-xqmhrz3g.js\");return a(1,\"other\",{finalMessage:lvr}),{data:{ended:!0,message:cFn}}}return e.markEndedByModel(),{data:{ended:!0,message:cFn}}}}}})"
+    }
+  ],
+  "nativeSha256": "fbbb8185d48503a8aa58caaa105b7a5b20796c0bf6585eb87865300cacf4d5ed",
+  "adaptations": [
+    {
+      "from": "import(\"/$bunfs/root/chunk-xqmhrz3g.js\")",
+      "to": "embeddedImport287(\"/$bunfs/root/chunk-xqmhrz3g.js\")",
+      "reason": "Existing fixed module transport to the same gracefulShutdown owner"
+    }
+  ],
+  "boundaries": [
+    "Original model/entrypoint/feature gate is retained via the existing dFn owner",
+    "No new session, credential, transcript or abort state",
+    "Guidance is tool-local; frozen default system prompt and recovery customizations are unchanged"
+  ]
+}

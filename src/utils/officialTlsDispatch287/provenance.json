@@ -1,0 +1,218 @@
+{
+  "version": "2.1.287",
+  "platform": "darwin-arm64",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16 code units",
+  "scope": "Complete eI/p7r/kbt/NVt dispatch closure; TLS material and host-state accessors are application ports. No TLS library/session ticket implementation recovered.",
+  "rows": [
+    {
+      "file": "chunk-mbfze585.js",
+      "name": "ku",
+      "start": 1267,
+      "end": 1336,
+      "moduleLength": 65738,
+      "moduleSha256": "2e40ea5244009e4c37b57879f34c96cc3e3bc7d3c5468f9e65d63fe5ce13287a",
+      "sha256": "666addf867fb8840dcb6fbe21b59a832ec49931b17cc7cd2b0b875a1fb80aba3",
+      "source": "function ku(){return typeof Bun<\"u\"&&Bun.isStandaloneExecutable===!0}",
+      "variable": false
+    },
+    {
+      "file": "chunk-wj72kvg2.js",
+      "name": "kbt",
+      "start": 23966,
+      "end": 24050,
+      "moduleLength": 34677,
+      "moduleSha256": "02b70503c279e9ee2c77e69b253e19886fa22be36c45634735e655bbf153fcef",
+      "sha256": "1fedafe80aaa5486fe7881ee635546833e246c82b78b5b3075db00942c282b1f",
+      "source": "function kbt(){let e=iA(),n=cD();if(!e&&!n)return{};return{tls:{...e,...n&&{ca:n}}}}",
+      "variable": false
+    },
+    {
+      "file": "chunk-wj72kvg2.js",
+      "name": "p7r",
+      "start": 24050,
+      "end": 24322,
+      "moduleLength": 34677,
+      "moduleSha256": "02b70503c279e9ee2c77e69b253e19886fa22be36c45634735e655bbf153fcef",
+      "sha256": "a847912f2a5f785a8c717751bd216b5ca2d658b9f9f4f3d42de89f37b2949882",
+      "source": "function p7r(){let e=typeof Bun>\"u\"?void 0:Bun.FetchSession;if(!e)return;let n=kbt(),r=k();if(!r.fetchSession||!at(r.fetchSession.tls,n.tls))r.fetchSession?.session.close(),r.fetchSession={tls:n.tls,session:new e(n)};return r.fetchSession.tls=n.tls,r.fetchSession.session}",
+      "variable": false
+    },
+    {
+      "file": "chunk-09m4fzsj.js",
+      "name": "eI",
+      "start": 594378,
+      "end": 594539,
+      "moduleLength": 950788,
+      "moduleSha256": "b7e3a951949d16458b1df3b61fb11e679d85661777cbae88952799458b3f956f",
+      "sha256": "22e38424098adf144cba85c0215a15f890fc59f5b55a451cec2e9ef27ee19182",
+      "source": "function eI(e,n){let r=ku()?p7r():void 0;if(!r)return NVt(e,n);let{tls:s,...h}=n??{},g=n?.proxy===void 0&&n?.unix===void 0?h:n;return NVt(e,n,(b)=>r.fetch(b,g))}",
+      "variable": false
+    },
+    {
+      "file": "chunk-4s38z9x2.js",
+      "name": "Le",
+      "start": 615,
+      "end": 757,
+      "moduleLength": 2740,
+      "moduleSha256": "eb46628147f83403bbcd57ca88b3370e05c6631bf027a80117844f770b276b2d",
+      "sha256": "c7c851b23895c896ce38865f13ecbb54e11e83018c8ced9cae422c41298e6dfd",
+      "source": "function Le(e){if(!e)return!1;if(typeof e===\"boolean\")return e;let n=String(e).toLowerCase().trim();return[\"1\",\"true\",\"yes\",\"on\"].includes(n)}",
+      "variable": false
+    },
+    {
+      "file": "chunk-15vd7hmp.js",
+      "name": "o",
+      "start": 619,
+      "end": 657,
+      "moduleLength": 767,
+      "moduleSha256": "1f4322bc0a196b7a3bb45e4b82604641bed9ad8d417058c10f285de84fa68bb8",
+      "sha256": "cd5d9207d97eef2f54ab1a590e046d7170567dface24ad827feb7ccc75d150cb",
+      "source": "o=new Set([\"localhost\",\"::1\",\"[::1]\"])",
+      "variable": true
+    },
+    {
+      "file": "chunk-15vd7hmp.js",
+      "name": "n",
+      "start": 658,
+      "end": 711,
+      "moduleLength": 767,
+      "moduleSha256": "1f4322bc0a196b7a3bb45e4b82604641bed9ad8d417058c10f285de84fa68bb8",
+      "sha256": "bc2912548d0ced2c81ea386a6ae766c0bd0de24831bab4206bd5038dde6e4f1e",
+      "source": "n=/^127(?:\\.(?:25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}$/",
+      "variable": true
+    },
+    {
+      "file": "chunk-15vd7hmp.js",
+      "name": "hL",
+      "start": 712,
+      "end": 754,
+      "moduleLength": 767,
+      "moduleSha256": "1f4322bc0a196b7a3bb45e4b82604641bed9ad8d417058c10f285de84fa68bb8",
+      "sha256": "77cbda0162b7c356f575019262407591b29e6aa224d2fc0e022146e58068bac3",
+      "source": "function hL(t){return o.has(t)||n.test(t)}",
+      "variable": false
+    },
+    {
+      "file": "chunk-wrxh9xyj.js",
+      "name": "i",
+      "start": 1094,
+      "end": 1171,
+      "moduleLength": 4078,
+      "moduleSha256": "3be60028014c3b11e3f60eb2c41a0c255c7678db8d8e34b3cf3a2093ac7d4ab4",
+      "sha256": "38ebe548e3d91f32abe85f10216cc87725593d2a73af8b4ac6b26ae510249dca",
+      "source": "class i extends Error{name=\"TestEgressBlockedError\";code=\"TestEgressBlocked\"}",
+      "variable": false
+    },
+    {
+      "file": "chunk-wrxh9xyj.js",
+      "name": "d",
+      "start": 1175,
+      "end": 1193,
+      "moduleLength": 4078,
+      "moduleSha256": "3be60028014c3b11e3f60eb2c41a0c255c7678db8d8e34b3cf3a2093ac7d4ab4",
+      "sha256": "e272797fbdadef73b623662ca710687667233f822af1a18e93845a165d52a6ad",
+      "source": "d=globalThis.fetch",
+      "variable": true
+    },
+    {
+      "file": "chunk-wrxh9xyj.js",
+      "name": "jAn",
+      "start": 1198,
+      "end": 1363,
+      "moduleLength": 4078,
+      "moduleSha256": "3be60028014c3b11e3f60eb2c41a0c255c7678db8d8e34b3cf3a2093ac7d4ab4",
+      "sha256": "40fe5b5223650c96fc3585b1faef1a9cd23a58bb2d9a29f53e5a6c8576755030",
+      "source": "function jAn(e,t){if(e instanceof Request)return{method:(t?.method??e.method).toUpperCase(),url:e.url};return{method:(t?.method??\"GET\").toUpperCase(),url:String(e)}}",
+      "variable": false
+    },
+    {
+      "file": "chunk-wrxh9xyj.js",
+      "name": "m",
+      "start": 1363,
+      "end": 1435,
+      "moduleLength": 4078,
+      "moduleSha256": "3be60028014c3b11e3f60eb2c41a0c255c7678db8d8e34b3cf3a2093ac7d4ab4",
+      "sha256": "6dcc0f2367fcd9a1a30d60b5f9302184458259063a6aa98232dbcdee988c3691",
+      "source": "function m(){return Le(process.env.CLAUDE_CODE_TEST_ALLOW_REAL_NETWORK)}",
+      "variable": false
+    },
+    {
+      "file": "chunk-wrxh9xyj.js",
+      "name": "p",
+      "start": 1435,
+      "end": 1542,
+      "moduleLength": 4078,
+      "moduleSha256": "3be60028014c3b11e3f60eb2c41a0c255c7678db8d8e34b3cf3a2093ac7d4ab4",
+      "sha256": "bda3a7d49592370f504ed619a5ec014d74905d4698839acde29b35871d88cbb6",
+      "source": "function p(e,t){return`[CLAUDE_CODE_TEST_ALLOW_REAL_NETWORK] live request from a test runtime: ${e} ${t}\n`}",
+      "variable": false
+    },
+    {
+      "file": "chunk-wrxh9xyj.js",
+      "name": "u",
+      "start": 1542,
+      "end": 1657,
+      "moduleLength": 4078,
+      "moduleSha256": "3be60028014c3b11e3f60eb2c41a0c255c7678db8d8e34b3cf3a2093ac7d4ab4",
+      "sha256": "b670a0a4f5db001cfef0230e02f3d3b74146c254592d6ec7712c64d68af0835a",
+      "source": "function u(e){let t;try{t=hL(new URL(e).hostname)}catch{t=!1}if(t)return\"loopback\";return m()?\"opted-in\":\"refused\"}",
+      "variable": false
+    },
+    {
+      "file": "chunk-wrxh9xyj.js",
+      "name": "o",
+      "start": 1657,
+      "end": 1912,
+      "moduleLength": 4078,
+      "moduleSha256": "3be60028014c3b11e3f60eb2c41a0c255c7678db8d8e34b3cf3a2093ac7d4ab4",
+      "sha256": "229be94d614d79a1faf94941339ff238619fedf5448dcdfe117a39519897069a",
+      "source": "function o(e,t){return`Blocked under test: ${e} ${t} \\u2014 test runtimes must not reach the network. `+\"Run the file via `bun run test:file -- <path>` with this request mocked, or set CLAUDE_CODE_TEST_ALLOW_REAL_NETWORK=1 for an intentional live probe.\"}",
+      "variable": false
+    },
+    {
+      "file": "chunk-wrxh9xyj.js",
+      "name": "R",
+      "start": 2524,
+      "end": 2546,
+      "moduleLength": 4078,
+      "moduleSha256": "3be60028014c3b11e3f60eb2c41a0c255c7678db8d8e34b3cf3a2093ac7d4ab4",
+      "sha256": "88534d6d256e0cd1ef8b3b4c3427fcf1d9e8cc07184d352dede6ca5f0ccd8ceb",
+      "source": "function R(){return!1}",
+      "variable": false
+    },
+    {
+      "file": "chunk-wrxh9xyj.js",
+      "name": "r7r",
+      "start": 2568,
+      "end": 2731,
+      "moduleLength": 4078,
+      "moduleSha256": "3be60028014c3b11e3f60eb2c41a0c255c7678db8d8e34b3cf3a2093ac7d4ab4",
+      "sha256": "e87edbce5727a3b935bc1eb05b8f9e61e49dfeefe52ff8924a89021234e404b6",
+      "source": "function r7r(e,t,r){if(e!==d||!R())return;switch(u(r)){case\"loopback\":return;case\"opted-in\":process.stderr.write(p(t,r));return;case\"refused\":throw new i(o(t,r))}}",
+      "variable": false
+    },
+    {
+      "file": "chunk-wrxh9xyj.js",
+      "name": "o7r",
+      "start": 2731,
+      "end": 2835,
+      "moduleLength": 4078,
+      "moduleSha256": "3be60028014c3b11e3f60eb2c41a0c255c7678db8d8e34b3cf3a2093ac7d4ab4",
+      "sha256": "ca18289529a44258a72388d23feeefcace627d6edeaa5760c2c465eb9fe9aa2a",
+      "source": "function o7r(e,t,r){if(e!==d||!R())return;if(r.redirected&&u(r.url)===\"refused\")throw new i(o(t,r.url))}",
+      "variable": false
+    },
+    {
+      "file": "chunk-wrxh9xyj.js",
+      "name": "NVt",
+      "start": 3037,
+      "end": 3174,
+      "moduleLength": 4078,
+      "moduleSha256": "3be60028014c3b11e3f60eb2c41a0c255c7678db8d8e34b3cf3a2093ac7d4ab4",
+      "sha256": "d679e6058133012861141b60737b0b9ac27a3a44cbe265aeb3c34936855ccad8",
+      "source": "async function NVt(e,t,r){let s=globalThis.fetch,{method:a,url:n}=jAn(e,t);r7r(s,a,n);let f=await(r&&s===d?r:s)(e,t);return o7r(s,a,f),f}",
+      "variable": false
+    }
+  ]
+}

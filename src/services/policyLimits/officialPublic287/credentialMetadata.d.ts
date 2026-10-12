@@ -1,0 +1,1 @@
+export declare function createPolicyCredentialMetadata287(ports:Record<string,unknown>):{l_t():'sdk_host_refresh'|'runner_rotation'|'none'|undefined;WWt():'api_key'|'none'|'claude_ai_oauth'|'oauth_token_env'|'oauth_token_fd'|'auth_token_env'|'api_key_helper'|'wif'|undefined}

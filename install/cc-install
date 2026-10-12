@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+set -euo pipefail
+case "$(uname -s)" in
+  Darwin|Linux) ;;
+  *) echo 'Source+Bun installer supports macOS/Linux only; Windows is not supported.' >&2; exit 1 ;;
+esac
+case "$(uname -m)" in
+  arm64|aarch64|x86_64|amd64) ;;
+  *) echo 'Source+Bun installer supports arm64 and amd64/x86_64 only.' >&2; exit 1 ;;
+esac
+SOURCE="${BASH_SOURCE[0]}"
+while [[ -L "$SOURCE" ]]; do
+  BASE="$(cd -P "$(dirname "$SOURCE")" && pwd)"
+  SOURCE="$(readlink "$SOURCE")"
+  [[ "$SOURCE" = /* ]] || SOURCE="$BASE/$SOURCE"
+done
+ROOT="$(cd -P "$(dirname "$SOURCE")/.." && pwd)"
+BUN_BIN="${BUN_BIN:-$(command -v bun || true)}"
+[[ -n "$BUN_BIN" ]] || { echo 'Set BUN_BIN to the destination Bun 1.4.2 runtime, the latest public Bun for this source release.' >&2; exit 1; }
+exec "$BUN_BIN" --no-env-file --config="$ROOT/packaging/runtime.bunfig.toml" "$ROOT/packaging/release.ts" "$@"

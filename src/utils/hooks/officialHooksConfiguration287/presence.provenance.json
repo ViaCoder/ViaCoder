@@ -1,0 +1,163 @@
+{
+  "version": "2.1.287",
+  "platform": "darwin-arm64",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16 end-exclusive",
+  "roots": {
+    "hasEvent": [
+      "chunk-mphp7acd.js",
+      "mFe"
+    ],
+    "sessionEndTimeout": [
+      "chunk-mphp7acd.js",
+      "_ye"
+    ]
+  },
+  "modules": [
+    {
+      "file": "chunk-mphp7acd.js",
+      "rows": [
+        {
+          "file": "chunk-mphp7acd.js",
+          "name": "oPo",
+          "start": 2233115,
+          "end": 2233123,
+          "moduleLength": 4409957,
+          "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+          "sha256": "1c379e4f5b63821b5be1dcd71a7bfd8d52286e76b6b6f135a7c388e86d1b3ee1",
+          "source": "oPo=1500",
+          "variable": true,
+          "exportNames": [
+            "oPo"
+          ]
+        },
+        {
+          "file": "chunk-mphp7acd.js",
+          "name": "I$o",
+          "start": 2233124,
+          "end": 2233133,
+          "moduleLength": 4409957,
+          "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+          "sha256": "4796ffde1447372f882cda3a94fac340c95130c55c5ef0b63fb446ea1d61dcb8",
+          "source": "I$o=60000",
+          "variable": true,
+          "exportNames": [
+            "I$o"
+          ]
+        },
+        {
+          "file": "chunk-mphp7acd.js",
+          "name": "_ye",
+          "start": 2233420,
+          "end": 2233700,
+          "moduleLength": 4409957,
+          "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+          "sha256": "98ae9a8c8809fa1319e0ebf3a6ffba0566a7d468b3f92528abeb85e1447ea7d6",
+          "source": "function _ye(){let e=a.CLAUDE_CODE_SESSIONEND_HOOKS_TIMEOUT_MS;if(e!==void 0)return e;let n=0,r=Ty()?[]:LEe()?.SessionEnd??[],s=[...V9()?.SessionEnd??[],...r];for(let g of s)for(let h of g.hooks)if(h.timeout&&h.timeout*1000>n)n=h.timeout*1000;return Math.max(oPo,Math.min(n,I$o))}",
+          "variable": false,
+          "exportNames": [
+            "_ye"
+          ]
+        },
+        {
+          "file": "chunk-mphp7acd.js",
+          "name": "mFe",
+          "start": 2275488,
+          "end": 2275724,
+          "moduleLength": 4409957,
+          "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+          "sha256": "db8bab0a1a4dd979b42ee4ad67a4b96700232995b47622fc30ee3831c0f25936",
+          "source": "function mFe(e,n,r){let s=V9()?.[e];if(s&&s.length>0)return!0;if(!Ty()){let b=LEe()?.[e];if(b&&b.length>0)return!0}let g=S$()?.[e];if(g&&g.length>0)return!0;if(n===void 0)return!1;return(typeof r===\"string\"?[r]:r).some((b)=>n.has(b,e))}",
+          "variable": false,
+          "exportNames": [
+            "mFe"
+          ]
+        }
+      ],
+      "bindings": {
+        "V9": {
+          "port": "snapshot",
+          "identity": "chunk-n3ptvp2f.js:V9"
+        },
+        "Ty": {
+          "port": "managedOnly",
+          "identity": "chunk-n3ptvp2f.js:Ty"
+        },
+        "LEe": {
+          "port": "agentHooks",
+          "identity": "chunk-bn3p37gv.js:LEe"
+        },
+        "S$": {
+          "port": "registered",
+          "identity": "chunk-bn3p37gv.js:S$"
+        },
+        "a": {
+          "port": "environment",
+          "identity": "chunk-mbfze585.js:a"
+        }
+      }
+    }
+  ],
+  "ports": [
+    {
+      "port": "snapshot",
+      "file": "chunk-n3ptvp2f.js",
+      "name": "V9",
+      "start": 2636,
+      "end": 2764,
+      "moduleLength": 2836,
+      "moduleSha256": "a1115afde17e1cf7bb204206b5841f480ed928aa61e384ba889ee6f10083dd65",
+      "sha256": "464e39e56c7ccafa25e3af9dcf0d657cc0a0828de19fb1dc2ec4f84d1a79d499",
+      "source": "function V9(){let o=e().current();if(o.initialHooksConfig===null)Ro(),o.initialHooksConfig=n(),PY();return o.initialHooksConfig}",
+      "variable": false
+    },
+    {
+      "port": "managedOnly",
+      "file": "chunk-n3ptvp2f.js",
+      "name": "Ty",
+      "start": 1893,
+      "end": 1926,
+      "moduleLength": 2836,
+      "moduleSha256": "a1115afde17e1cf7bb204206b5841f480ed928aa61e384ba889ee6f10083dd65",
+      "sha256": "4ac90ba78aa55e6f37e62a3857e3d3b62207cab94f7c7ee693b4d7cb2410714a",
+      "source": "function Ty(){return yr()||coe()}",
+      "variable": false
+    },
+    {
+      "port": "agentHooks",
+      "file": "chunk-bn3p37gv.js",
+      "name": "LEe",
+      "start": 108375,
+      "end": 108472,
+      "moduleLength": 117054,
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "sha256": "e40854d2ddaadbf507eeaeeb9983b71f2a514d9abbf3c26f66fe25fa9487855d",
+      "source": "function LEe(){let e=c();return e?e.mainThreadAgentHooks:n().hookRegistry.mainThreadAgentHooks()}",
+      "variable": false
+    },
+    {
+      "port": "registered",
+      "file": "chunk-bn3p37gv.js",
+      "name": "S$",
+      "start": 104624,
+      "end": 104665,
+      "moduleLength": 117054,
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "sha256": "151f3016e1e2e2c128a3501f2f3da02c212e90bbf34f50b77c2617d461eb8931",
+      "source": "function S$(){return R().registeredHooks}",
+      "variable": false
+    },
+    {
+      "port": "environment",
+      "file": "chunk-mbfze585.js",
+      "name": "a",
+      "start": 65484,
+      "end": 65495,
+      "moduleLength": 65738,
+      "moduleSha256": "2e40ea5244009e4c37b57879f34c96cc3e3bc7d3c5468f9e65d63fe5ce13287a",
+      "sha256": "44ef2e88407080f40da65be8f6c06357952a012f91c7fbf90982c130cc9ac988",
+      "source": "a=ZZe(jU,R)",
+      "variable": true
+    }
+  ]
+}

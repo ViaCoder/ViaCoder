@@ -1,0 +1,44 @@
+{
+  "component": "computer-use-linux",
+  "version": "0.7.3",
+  "repository": "https://github.com/agent-sh/computer-use-linux",
+  "sourceCommit": "579ff7cc61cf679627cdd32338fcf20960b71e6e",
+  "release": {
+    "tag": "v0.7.3",
+    "tagCommit": "374f0af3d5959bb88cfa45317df69da43cb040df",
+    "note": "Release tag precedes sourceCommit by one post-release commit; doctor/cli source files are byte-identical, server.rs differs in AT-SPI snapshot PID bookkeeping.",
+    "tagServerSourceSha256": "2d3a919f3fc14defc0d93be8ee01457ccf9f151bef5a528a58ab41c20cb27228",
+    "linuxAmd64": {
+      "asset": "computer-use-linux-x86_64-unknown-linux-gnu",
+      "sha256": "7e5ce643a22fd37978f3220732813a0ca4accc55587e8f1c38c71ae83f67fcc4",
+      "sidecarSha256": "1c8d3ee4ca4b3e1e3f172a6405b73a8ce784f92647f954aa70f6d168f4d95939"
+    },
+    "linuxAmd64CosmicHelper": {
+      "asset": "computer-use-linux-cosmic-x86_64-unknown-linux-gnu",
+      "sha256": "490b3ed2ac221e089ce522b4ba5b780767cacd743877b22e64e80bfa3518ae7c",
+      "sidecarSha256": "6805fa1b3904efed721f2de147049e8473946de465c3aa727d66878f8dfa89a1"
+    }
+  },
+  "license": "MIT",
+  "licenseNotice": "packaging/linux-computer-use.LICENSE",
+  "distribution": "existing-installed-binary-only; not bundled or auto-installed",
+  "localDragPatch": {
+    "id": "cclaude-linux-drag-073-v1",
+    "manifest": "packaging/linux-drag-patch/manifest.json",
+    "patch": "packaging/linux-drag-patch/computer-use-linux-0.7.3-drag.patch",
+    "explicitWorkflow": "packaging/linux-drag-patch.mjs",
+    "instructions": "packaging/linux-drag-patch/README.md",
+    "installedReceiptSuffix": ".cclaude-linux-drag.json",
+    "installation": "explicit offline build and copy to a fresh absolute versioned path; same installed stdio MCP client",
+    "acceptanceBoundary": "Patch and consumer wiring only; original release is unchanged and unpatched. Full Linux backend build and native input acceptance remain required."
+  },
+  "sourceFileSha256": {
+    "Cargo.toml": "dd5eca7163649fa33e8a094720eae36089ac6fdb6c712e619268dfa48a05b91c",
+    "LICENSE": "865367984df228c2bbf9df7e790b26c3b083376b705375db36a8a032daa03a25",
+    "src/cli.rs": "12884b57289c71205d8d097b75bca477d574ed13c85030e578e91c87a06538ac",
+    "src/diagnostics.rs": "0e94ea54411f693955174be1c394896fab43dc7bdf09f98c0d2a38d9d3a5766f",
+    "src/server.rs": "e3451f02ff34c6c388fc8b740bcb5097c315dd9a4578dfceeda084167e202560"
+  },
+  "entrypoint": { "executable": "computer-use-linux", "doctorArgs": ["doctor"], "stdioMcpArgs": ["mcp"] },
+  "mcpProtocol": "2024-11-05"
+}

@@ -1,0 +1,1086 @@
+{
+  "version": "2.1.287",
+  "offsetUnit": "UTF-16 end-exclusive",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "declarations": [
+    {
+      "platform": "darwin-arm64",
+      "file": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "EEe",
+      "start": 679663,
+      "end": 679671,
+      "source": "EEe=2000",
+      "sha256": "5a963d32ca08ff966e858aaa7dee2438f92aca732be28401efabc1160ce66f72",
+      "variable": true
+    },
+    {
+      "platform": "darwin-arm64",
+      "file": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "N0n",
+      "start": 679672,
+      "end": 679721,
+      "source": "N0n=[\"--no-optional-locks\",\"status\",\"--short\",$S]",
+      "sha256": "1f57aeabd50c643a13c03d60a1b680bd2187f66ee9452b000dd0518faf865553",
+      "variable": true
+    },
+    {
+      "platform": "darwin-arm64",
+      "file": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "V2n",
+      "start": 679722,
+      "end": 681254,
+      "source": "async function V2n(){let e=Date.now();ne(\"info\",\"git_status_started\");let n=Date.now(),r=await Kx();if(ne(\"info\",\"git_is_git_check_completed\",{duration_ms:Date.now()-n,is_git:r}),!r)return ne(\"info\",\"git_status_skipped_not_git\",{duration_ms:Date.now()-e}),y(\"context_git_detect\"),null;try{let s=Date.now(),[g,h,b,w,D]=await Promise.all([sd(),_T(),Ke(vt(),[...N0n],{preserveOutputOnError:!1,env:Qo()}).then(({stdout:K})=>K.trim()),Ke(vt(),[\"--no-optional-locks\",\"log\",\"--oneline\",\"-n\",\"5\"],{preserveOutputOnError:!1,env:Qo()}).then(({stdout:K})=>K.trim()),Ke(vt(),[\"config\",\"user.name\"],{preserveOutputOnError:!1,env:Qo()}).then(({stdout:K})=>K.trim())]);ne(\"info\",\"git_commands_completed\",{duration_ms:Date.now()-s,status_length:b.length});let j=$a()?Ue:wt,z=b.length>EEe?b.substring(0,EEe)+`\n... (truncated because it exceeds 2k characters. If you need more information, run \"git status\" using ${j})`:b;return ne(\"info\",\"git_status_completed\",{duration_ms:Date.now()-e,truncated:b.length>EEe}),y(\"context_git_detect\"),[\"This is the git status at the start of the conversation. Note that this status is a snapshot in time, and will not update during the conversation.\",`Current branch: ${g}`,`Main branch (you will usually use this for PRs): ${h}`,...D?[`Git user: ${D}`]:[],`Status:\n${z||\"(clean)\"}`,`Recent commits:\n${w}`].join(`\n\n`)}catch(s){return ne(\"error\",\"git_status_failed\",{duration_ms:Date.now()-e}),p(\"context_git_detect\",\"git_cmd_failed\"),t(`Failed to get git status for system context: ${l(s)}`,{level:\"error\"}),null}}",
+      "sha256": "88213c0f0d5c96c172815296b3f3e986a361639fc77682610ca23b3db48b05d2",
+      "variable": false
+    },
+    {
+      "platform": "darwin-arm64",
+      "file": "chunk-mphp7acd.js",
+      "moduleSha256": "cc43640e5f66aa04eb3757b878e50f5f5ecbf3fb35ac7a5d9cc7459276feb384",
+      "name": "Exr",
+      "start": 682102,
+      "end": 682152,
+      "source": "function Exr(){return!a.CLAUDE_CODE_REMOTE&&oHt()}",
+      "sha256": "5ce36578052543f6ed6ea13112af785ad268d244a855c84e0ece12d544c7afdc",
+      "variable": false
+    }
+  ],
+  "environmentPlatforms": [
+    {
+      "platform": "darwin-arm64",
+      "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+      "declarations": [
+        {
+          "platform": "darwin-arm64",
+          "file": "chunk-fmv8bhm3.js",
+          "moduleSha256": "f12234b916e119ba08925edd52562e4f1f5f62a9589769d536f8ede611adaf2f",
+          "name": "$S",
+          "start": 4908,
+          "end": 4938,
+          "source": "$S=\"--ignore-submodules=dirty\"",
+          "sha256": "cde858bf10562568fd5d7c866a7a26873aeaa3f1bfe19721b2dcee5cfd4cc631",
+          "variable": true
+        },
+        {
+          "platform": "darwin-arm64",
+          "file": "chunk-fmv8bhm3.js",
+          "moduleSha256": "f12234b916e119ba08925edd52562e4f1f5f62a9589769d536f8ede611adaf2f",
+          "name": "I",
+          "start": 5037,
+          "end": 5079,
+          "source": "I=Object.freeze({GIT_LFS_SKIP_SMUDGE:\"1\"})",
+          "sha256": "054564111d53af7686eb59cbb4d70b5047d127458828531b0bba8f3c7f0d19c8",
+          "variable": true
+        },
+        {
+          "platform": "darwin-arm64",
+          "file": "chunk-fmv8bhm3.js",
+          "moduleSha256": "f12234b916e119ba08925edd52562e4f1f5f62a9589769d536f8ede611adaf2f",
+          "name": "ue",
+          "start": 5088,
+          "end": 5239,
+          "source": "ue=[\"'alias.remote-none=version'\",\"'alias.remote-none.command=version'\",\"'alias.remote-/.command=version'\",\"'fetch.bundleURI='\",\"'help.autocorrect=0'\"]",
+          "sha256": "7b2076676bd13563c59e3412c024ca552813d69c6041d36c358103767082fb7e",
+          "variable": true
+        },
+        {
+          "platform": "darwin-arm64",
+          "file": "chunk-fmv8bhm3.js",
+          "moduleSha256": "f12234b916e119ba08925edd52562e4f1f5f62a9589769d536f8ede611adaf2f",
+          "name": "le",
+          "start": 5240,
+          "end": 5255,
+          "source": "le=ue.join(\" \")",
+          "sha256": "2f3a7b21c91d9b94b841f0262d3ec212e41b60d5cef238fd53595c4a0f6b0855",
+          "variable": true
+        },
+        {
+          "platform": "darwin-arm64",
+          "file": "chunk-fmv8bhm3.js",
+          "moduleSha256": "f12234b916e119ba08925edd52562e4f1f5f62a9589769d536f8ede611adaf2f",
+          "name": "Ze",
+          "start": 5256,
+          "end": 5401,
+          "source": "Ze=Object.freeze({GIT_ALLOW_PROTOCOL:\"/\",GIT_CONFIG_PARAMETERS:le,GIT_NO_LAZY_FETCH:\"1\",GIT_NO_REPLACE_OBJECTS:\"1\",GIT_TERMINAL_PROMPT:\"0\",...I})",
+          "sha256": "6d64c276a6783c910f47ae2f525c3f430209b43286f7bfe4c0062a673e126ff4",
+          "variable": true
+        },
+        {
+          "platform": "darwin-arm64",
+          "file": "chunk-fmv8bhm3.js",
+          "moduleSha256": "f12234b916e119ba08925edd52562e4f1f5f62a9589769d536f8ede611adaf2f",
+          "name": "Xe",
+          "start": 5402,
+          "end": 5445,
+          "source": "Xe=Object.freeze({GIT_SSH_COMMAND:\"false\"})",
+          "sha256": "7df527a9ab31800f1868255711993ab13dda8456b7dbe7d063c2138228f0eb8d",
+          "variable": true
+        },
+        {
+          "platform": "darwin-arm64",
+          "file": "chunk-fmv8bhm3.js",
+          "moduleSha256": "f12234b916e119ba08925edd52562e4f1f5f62a9589769d536f8ede611adaf2f",
+          "name": "aTn",
+          "start": 5551,
+          "end": 5794,
+          "source": "aTn=[\"GIT_DIR\",\"GIT_WORK_TREE\",\"GIT_COMMON_DIR\",\"GIT_INDEX_FILE\",\"GIT_CEILING_DIRECTORIES\",\"GIT_DISCOVERY_ACROSS_FILESYSTEM\",\"GIT_OBJECT_DIRECTORY\",\"GIT_ALTERNATE_OBJECT_DIRECTORIES\",\"GIT_SHALLOW_FILE\",\"GIT_NAMESPACE\",\"GIT_IMPLICIT_WORK_TREE\"]",
+          "sha256": "d7c6529201576d8a73f89a873e9dcb70ec35e2d1a7a8f2edfe9c153ced35ec13",
+          "variable": true
+        },
+        {
+          "platform": "darwin-arm64",
+          "file": "chunk-fmv8bhm3.js",
+          "moduleSha256": "f12234b916e119ba08925edd52562e4f1f5f62a9589769d536f8ede611adaf2f",
+          "name": "Gbt",
+          "start": 5795,
+          "end": 5903,
+          "source": "Gbt=[...aTn,\"GIT_CONFIG_COUNT\",\"GIT_CONFIG_PARAMETERS\",\"GIT_CONFIG_GLOBAL\",\"GIT_CONFIG_SYSTEM\",\"GIT_CONFIG\"]",
+          "sha256": "40fd3cc872ed0780467064ddd401f7e6b348c1cb4d9941178440f017744a2443",
+          "variable": true
+        },
+        {
+          "platform": "darwin-arm64",
+          "file": "chunk-fmv8bhm3.js",
+          "moduleSha256": "f12234b916e119ba08925edd52562e4f1f5f62a9589769d536f8ede611adaf2f",
+          "name": "qe",
+          "start": 5904,
+          "end": 5937,
+          "source": "qe=/^GIT_CONFIG_(KEY|VALUE)_\\d+$/",
+          "sha256": "471bee560f0cf0e05ba4a3793d1380c3ecf0389a2a4c0ed28257fa9540f3e994",
+          "variable": true
+        },
+        {
+          "platform": "darwin-arm64",
+          "file": "chunk-fmv8bhm3.js",
+          "moduleSha256": "f12234b916e119ba08925edd52562e4f1f5f62a9589769d536f8ede611adaf2f",
+          "name": "lqt",
+          "start": 5938,
+          "end": 5967,
+          "source": "lqt=new RegExp(qe.source,\"i\")",
+          "sha256": "3a736cf0aa8aff1b1f04b31460ab759991770df41332af2012da093a45dc42cc",
+          "variable": true
+        },
+        {
+          "platform": "darwin-arm64",
+          "file": "chunk-fmv8bhm3.js",
+          "moduleSha256": "f12234b916e119ba08925edd52562e4f1f5f62a9589769d536f8ede611adaf2f",
+          "name": "Qe",
+          "start": 5968,
+          "end": 5983,
+          "source": "Qe=new Set(Gbt)",
+          "sha256": "a424791412eecea5b33ae83760a88104f4b2a76b6a59a54548a93a044ceb17b7",
+          "variable": true
+        },
+        {
+          "platform": "darwin-arm64",
+          "file": "chunk-fmv8bhm3.js",
+          "moduleSha256": "f12234b916e119ba08925edd52562e4f1f5f62a9589769d536f8ede611adaf2f",
+          "name": "Qo",
+          "start": 5984,
+          "end": 6101,
+          "source": "function Qo(e,r={}){let n=e?.GIT_ALLOW_PROTOCOL?.split(\":\").includes(\"ssh\")??!1;return nt(fe({...Ze,...!n&&Xe},e,r))}",
+          "sha256": "e44b1fc87acb437bede85c971e4080b2c29e85ed08c18cb51790c7aa88210c08",
+          "variable": false
+        },
+        {
+          "platform": "darwin-arm64",
+          "file": "chunk-fmv8bhm3.js",
+          "moduleSha256": "f12234b916e119ba08925edd52562e4f1f5f62a9589769d536f8ede611adaf2f",
+          "name": "fe",
+          "start": 6265,
+          "end": 6713,
+          "source": "function fe(e,r,{base:n=process.env,repository:o}){let i=tt({...e,...o!==void 0&&{GIT_DIR:o.gitDir,GIT_COMMON_DIR:o.commonDir},...o!==void 0&&(o.workTree!==null?{GIT_WORK_TREE:o.workTree}:{GIT_IMPLICIT_WORK_TREE:\"0\"}),...r}),s={};for(let c of Gbt)s[c]=void 0;let u=new Set(Object.keys(i).map((c)=>c.toUpperCase()));for(let c of Object.keys(n)){let p=c.toUpperCase();if(Qe.has(p)||lqt.test(c)||u.has(p)&&!(c in i))s[c]=void 0}return{...n,...s,...i}}",
+          "sha256": "9a1b72deca8e1021e20e5ed196fda4948b01c9e7228200f6b87afdf06fb59495",
+          "variable": false
+        },
+        {
+          "platform": "darwin-arm64",
+          "file": "chunk-fmv8bhm3.js",
+          "moduleSha256": "f12234b916e119ba08925edd52562e4f1f5f62a9589769d536f8ede611adaf2f",
+          "name": "tt",
+          "start": 6713,
+          "end": 7202,
+          "source": "function tt(e){let r=e.GIT_ALLOW_PROTOCOL;if(r===void 0)return{...e};let n=r.split(\":\").filter((c)=>c!==\"/\");if(n.find((c)=>!/^[A-Za-z0-9-]*$/.test(c))!==void 0)throw Error('GIT_ALLOW_PROTOCOL may list only transport names made of letters, digits and \"-\"');let i=[...new Set([...ue,...n.flatMap((c)=>[`'alias.remote-${c}=version'`,`'alias.remote-${c}.command=version'`])])],s=e.GIT_CONFIG_PARAMETERS;return{...e,GIT_CONFIG_PARAMETERS:[...s===void 0||s===\"\"||s===le?[]:[s],...i].join(\" \")}}",
+          "sha256": "28dffb6f5f341026a8077f0552b5316e9f8e57bbde569fb9aa7b1c04d75ba744",
+          "variable": false
+        },
+        {
+          "platform": "darwin-arm64",
+          "file": "chunk-fmv8bhm3.js",
+          "moduleSha256": "f12234b916e119ba08925edd52562e4f1f5f62a9589769d536f8ede611adaf2f",
+          "name": "nt",
+          "start": 7202,
+          "end": 7480,
+          "source": "function nt(e){let o=(c)=>c,i=(c)=>c.startsWith(\"/\"),s=(c)=>{if(c===void 0)return;let p=c.split(\":\").map(o).filter((l)=>l!==\"\"&&i(l));return p.length>0?p.join(\":\"):\"/dev/null\"},u=Object.keys(e).filter((c)=>c===\"PATH\");return{...e,...Object.fromEntries(u.map((c)=>[c,s(e[c])]))}}",
+          "sha256": "7878969c2160d07a5fb161a94a3f7f870b3d245d7dcbe2cb57448232e31325e2",
+          "variable": false
+        }
+      ],
+      "ignoreSubmodules": "$S"
+    },
+    {
+      "platform": "darwin-x64",
+      "manifestSha256": "ba9e122d28e8a42927eb23c7c86b62295f24a223546ee5476e761837579a709b",
+      "declarations": [
+        {
+          "platform": "darwin-x64",
+          "file": "chunk-sgykyqwa.js",
+          "moduleSha256": "a71d74e30831661fde9954ac3ea04e7595718333ba3f8270d6bd2224f1d5541a",
+          "name": "$S",
+          "start": 4908,
+          "end": 4938,
+          "source": "$S=\"--ignore-submodules=dirty\"",
+          "sha256": "cde858bf10562568fd5d7c866a7a26873aeaa3f1bfe19721b2dcee5cfd4cc631",
+          "variable": true
+        },
+        {
+          "platform": "darwin-x64",
+          "file": "chunk-sgykyqwa.js",
+          "moduleSha256": "a71d74e30831661fde9954ac3ea04e7595718333ba3f8270d6bd2224f1d5541a",
+          "name": "N",
+          "start": 5037,
+          "end": 5079,
+          "source": "N=Object.freeze({GIT_LFS_SKIP_SMUDGE:\"1\"})",
+          "sha256": "957a2014eb61b60e794506504257f88918be4e4a54d85fde2f178314491450bf",
+          "variable": true
+        },
+        {
+          "platform": "darwin-x64",
+          "file": "chunk-sgykyqwa.js",
+          "moduleSha256": "a71d74e30831661fde9954ac3ea04e7595718333ba3f8270d6bd2224f1d5541a",
+          "name": "ue",
+          "start": 5088,
+          "end": 5239,
+          "source": "ue=[\"'alias.remote-none=version'\",\"'alias.remote-none.command=version'\",\"'alias.remote-/.command=version'\",\"'fetch.bundleURI='\",\"'help.autocorrect=0'\"]",
+          "sha256": "7b2076676bd13563c59e3412c024ca552813d69c6041d36c358103767082fb7e",
+          "variable": true
+        },
+        {
+          "platform": "darwin-x64",
+          "file": "chunk-sgykyqwa.js",
+          "moduleSha256": "a71d74e30831661fde9954ac3ea04e7595718333ba3f8270d6bd2224f1d5541a",
+          "name": "le",
+          "start": 5240,
+          "end": 5255,
+          "source": "le=ue.join(\" \")",
+          "sha256": "2f3a7b21c91d9b94b841f0262d3ec212e41b60d5cef238fd53595c4a0f6b0855",
+          "variable": true
+        },
+        {
+          "platform": "darwin-x64",
+          "file": "chunk-sgykyqwa.js",
+          "moduleSha256": "a71d74e30831661fde9954ac3ea04e7595718333ba3f8270d6bd2224f1d5541a",
+          "name": "ze",
+          "start": 5256,
+          "end": 5401,
+          "source": "ze=Object.freeze({GIT_ALLOW_PROTOCOL:\"/\",GIT_CONFIG_PARAMETERS:le,GIT_NO_LAZY_FETCH:\"1\",GIT_NO_REPLACE_OBJECTS:\"1\",GIT_TERMINAL_PROMPT:\"0\",...N})",
+          "sha256": "6d7eba6b78c50a5056de2ba3c97fab71e739168f65a9b8d0ac447ce4151f9e50",
+          "variable": true
+        },
+        {
+          "platform": "darwin-x64",
+          "file": "chunk-sgykyqwa.js",
+          "moduleSha256": "a71d74e30831661fde9954ac3ea04e7595718333ba3f8270d6bd2224f1d5541a",
+          "name": "Ze",
+          "start": 5402,
+          "end": 5445,
+          "source": "Ze=Object.freeze({GIT_SSH_COMMAND:\"false\"})",
+          "sha256": "c4a591e1f3f1e9f263331df6467272b31e8474bc7e6aff873eb999132bd70e22",
+          "variable": true
+        },
+        {
+          "platform": "darwin-x64",
+          "file": "chunk-sgykyqwa.js",
+          "moduleSha256": "a71d74e30831661fde9954ac3ea04e7595718333ba3f8270d6bd2224f1d5541a",
+          "name": "akn",
+          "start": 5551,
+          "end": 5794,
+          "source": "akn=[\"GIT_DIR\",\"GIT_WORK_TREE\",\"GIT_COMMON_DIR\",\"GIT_INDEX_FILE\",\"GIT_CEILING_DIRECTORIES\",\"GIT_DISCOVERY_ACROSS_FILESYSTEM\",\"GIT_OBJECT_DIRECTORY\",\"GIT_ALTERNATE_OBJECT_DIRECTORIES\",\"GIT_SHALLOW_FILE\",\"GIT_NAMESPACE\",\"GIT_IMPLICIT_WORK_TREE\"]",
+          "sha256": "ae1fa6bb285dfd5bd342e42648540fa23f25edd7a12147eeab58dafeadee87dd",
+          "variable": true
+        },
+        {
+          "platform": "darwin-x64",
+          "file": "chunk-sgykyqwa.js",
+          "moduleSha256": "a71d74e30831661fde9954ac3ea04e7595718333ba3f8270d6bd2224f1d5541a",
+          "name": "Gbt",
+          "start": 5795,
+          "end": 5903,
+          "source": "Gbt=[...akn,\"GIT_CONFIG_COUNT\",\"GIT_CONFIG_PARAMETERS\",\"GIT_CONFIG_GLOBAL\",\"GIT_CONFIG_SYSTEM\",\"GIT_CONFIG\"]",
+          "sha256": "f3b50a8ff87c78366528e03e64d849fc66e12db7ca4d3f6e6e1577e58f8cc25e",
+          "variable": true
+        },
+        {
+          "platform": "darwin-x64",
+          "file": "chunk-sgykyqwa.js",
+          "moduleSha256": "a71d74e30831661fde9954ac3ea04e7595718333ba3f8270d6bd2224f1d5541a",
+          "name": "Xe",
+          "start": 5904,
+          "end": 5937,
+          "source": "Xe=/^GIT_CONFIG_(KEY|VALUE)_\\d+$/",
+          "sha256": "985283403f2eb27cabafa6e497fe9fd1b00ced485d48ecdda17fee58e098f8ed",
+          "variable": true
+        },
+        {
+          "platform": "darwin-x64",
+          "file": "chunk-sgykyqwa.js",
+          "moduleSha256": "a71d74e30831661fde9954ac3ea04e7595718333ba3f8270d6bd2224f1d5541a",
+          "name": "l3t",
+          "start": 5938,
+          "end": 5967,
+          "source": "l3t=new RegExp(Xe.source,\"i\")",
+          "sha256": "45880fe22816d1b1dcaaf6d0209c5cb78e6702f72924c479069445899b7c086c",
+          "variable": true
+        },
+        {
+          "platform": "darwin-x64",
+          "file": "chunk-sgykyqwa.js",
+          "moduleSha256": "a71d74e30831661fde9954ac3ea04e7595718333ba3f8270d6bd2224f1d5541a",
+          "name": "Qe",
+          "start": 5968,
+          "end": 5983,
+          "source": "Qe=new Set(Gbt)",
+          "sha256": "a424791412eecea5b33ae83760a88104f4b2a76b6a59a54548a93a044ceb17b7",
+          "variable": true
+        },
+        {
+          "platform": "darwin-x64",
+          "file": "chunk-sgykyqwa.js",
+          "moduleSha256": "a71d74e30831661fde9954ac3ea04e7595718333ba3f8270d6bd2224f1d5541a",
+          "name": "Qo",
+          "start": 5984,
+          "end": 6101,
+          "source": "function Qo(e,r={}){let n=e?.GIT_ALLOW_PROTOCOL?.split(\":\").includes(\"ssh\")??!1;return nt(fe({...ze,...!n&&Ze},e,r))}",
+          "sha256": "5148e399cf3eb9df69101373eb8d000d5dac367e835088e04af79bd8bdf5d3c3",
+          "variable": false
+        },
+        {
+          "platform": "darwin-x64",
+          "file": "chunk-sgykyqwa.js",
+          "moduleSha256": "a71d74e30831661fde9954ac3ea04e7595718333ba3f8270d6bd2224f1d5541a",
+          "name": "fe",
+          "start": 6265,
+          "end": 6713,
+          "source": "function fe(e,r,{base:n=process.env,repository:o}){let i=tt({...e,...o!==void 0&&{GIT_DIR:o.gitDir,GIT_COMMON_DIR:o.commonDir},...o!==void 0&&(o.workTree!==null?{GIT_WORK_TREE:o.workTree}:{GIT_IMPLICIT_WORK_TREE:\"0\"}),...r}),s={};for(let c of Gbt)s[c]=void 0;let u=new Set(Object.keys(i).map((c)=>c.toUpperCase()));for(let c of Object.keys(n)){let p=c.toUpperCase();if(Qe.has(p)||l3t.test(c)||u.has(p)&&!(c in i))s[c]=void 0}return{...n,...s,...i}}",
+          "sha256": "09a34cf4f565ae8e2e9be928bd210037bd835d76c43f1d3e3804ad7fbb635826",
+          "variable": false
+        },
+        {
+          "platform": "darwin-x64",
+          "file": "chunk-sgykyqwa.js",
+          "moduleSha256": "a71d74e30831661fde9954ac3ea04e7595718333ba3f8270d6bd2224f1d5541a",
+          "name": "tt",
+          "start": 6713,
+          "end": 7202,
+          "source": "function tt(e){let r=e.GIT_ALLOW_PROTOCOL;if(r===void 0)return{...e};let n=r.split(\":\").filter((c)=>c!==\"/\");if(n.find((c)=>!/^[A-Za-z0-9-]*$/.test(c))!==void 0)throw Error('GIT_ALLOW_PROTOCOL may list only transport names made of letters, digits and \"-\"');let i=[...new Set([...ue,...n.flatMap((c)=>[`'alias.remote-${c}=version'`,`'alias.remote-${c}.command=version'`])])],s=e.GIT_CONFIG_PARAMETERS;return{...e,GIT_CONFIG_PARAMETERS:[...s===void 0||s===\"\"||s===le?[]:[s],...i].join(\" \")}}",
+          "sha256": "28dffb6f5f341026a8077f0552b5316e9f8e57bbde569fb9aa7b1c04d75ba744",
+          "variable": false
+        },
+        {
+          "platform": "darwin-x64",
+          "file": "chunk-sgykyqwa.js",
+          "moduleSha256": "a71d74e30831661fde9954ac3ea04e7595718333ba3f8270d6bd2224f1d5541a",
+          "name": "nt",
+          "start": 7202,
+          "end": 7480,
+          "source": "function nt(e){let o=(c)=>c,i=(c)=>c.startsWith(\"/\"),s=(c)=>{if(c===void 0)return;let p=c.split(\":\").map(o).filter((l)=>l!==\"\"&&i(l));return p.length>0?p.join(\":\"):\"/dev/null\"},u=Object.keys(e).filter((c)=>c===\"PATH\");return{...e,...Object.fromEntries(u.map((c)=>[c,s(e[c])]))}}",
+          "sha256": "7878969c2160d07a5fb161a94a3f7f870b3d245d7dcbe2cb57448232e31325e2",
+          "variable": false
+        }
+      ],
+      "ignoreSubmodules": "$S"
+    },
+    {
+      "platform": "linux-x64",
+      "manifestSha256": "ecae5d9ddbf13ef27b6b6a1141953aab4ba311e47dde3ac2a7cc8b5a01c63784",
+      "declarations": [
+        {
+          "platform": "linux-x64",
+          "file": "chunk-9h99vqw6.js",
+          "moduleSha256": "447c120e6eb2ead2136abcf23e6e1c8f034bfdafb19afc2393bc65b42a4ecb28",
+          "name": "Fb",
+          "start": 4908,
+          "end": 4938,
+          "source": "Fb=\"--ignore-submodules=dirty\"",
+          "sha256": "eece549c59be96168cb1a7755c3d99fba553cb08d01ba9d071343e497fdddb80",
+          "variable": true
+        },
+        {
+          "platform": "linux-x64",
+          "file": "chunk-9h99vqw6.js",
+          "moduleSha256": "447c120e6eb2ead2136abcf23e6e1c8f034bfdafb19afc2393bc65b42a4ecb28",
+          "name": "I",
+          "start": 5037,
+          "end": 5079,
+          "source": "I=Object.freeze({GIT_LFS_SKIP_SMUDGE:\"1\"})",
+          "sha256": "054564111d53af7686eb59cbb4d70b5047d127458828531b0bba8f3c7f0d19c8",
+          "variable": true
+        },
+        {
+          "platform": "linux-x64",
+          "file": "chunk-9h99vqw6.js",
+          "moduleSha256": "447c120e6eb2ead2136abcf23e6e1c8f034bfdafb19afc2393bc65b42a4ecb28",
+          "name": "ue",
+          "start": 5088,
+          "end": 5239,
+          "source": "ue=[\"'alias.remote-none=version'\",\"'alias.remote-none.command=version'\",\"'alias.remote-/.command=version'\",\"'fetch.bundleURI='\",\"'help.autocorrect=0'\"]",
+          "sha256": "7b2076676bd13563c59e3412c024ca552813d69c6041d36c358103767082fb7e",
+          "variable": true
+        },
+        {
+          "platform": "linux-x64",
+          "file": "chunk-9h99vqw6.js",
+          "moduleSha256": "447c120e6eb2ead2136abcf23e6e1c8f034bfdafb19afc2393bc65b42a4ecb28",
+          "name": "le",
+          "start": 5240,
+          "end": 5255,
+          "source": "le=ue.join(\" \")",
+          "sha256": "2f3a7b21c91d9b94b841f0262d3ec212e41b60d5cef238fd53595c4a0f6b0855",
+          "variable": true
+        },
+        {
+          "platform": "linux-x64",
+          "file": "chunk-9h99vqw6.js",
+          "moduleSha256": "447c120e6eb2ead2136abcf23e6e1c8f034bfdafb19afc2393bc65b42a4ecb28",
+          "name": "ze",
+          "start": 5256,
+          "end": 5401,
+          "source": "ze=Object.freeze({GIT_ALLOW_PROTOCOL:\"/\",GIT_CONFIG_PARAMETERS:le,GIT_NO_LAZY_FETCH:\"1\",GIT_NO_REPLACE_OBJECTS:\"1\",GIT_TERMINAL_PROMPT:\"0\",...I})",
+          "sha256": "e9821f45c7d7bda5611d2b2c708df0a24f661a818afd13d00f3060602e890ea2",
+          "variable": true
+        },
+        {
+          "platform": "linux-x64",
+          "file": "chunk-9h99vqw6.js",
+          "moduleSha256": "447c120e6eb2ead2136abcf23e6e1c8f034bfdafb19afc2393bc65b42a4ecb28",
+          "name": "Ze",
+          "start": 5402,
+          "end": 5445,
+          "source": "Ze=Object.freeze({GIT_SSH_COMMAND:\"false\"})",
+          "sha256": "c4a591e1f3f1e9f263331df6467272b31e8474bc7e6aff873eb999132bd70e22",
+          "variable": true
+        },
+        {
+          "platform": "linux-x64",
+          "file": "chunk-9h99vqw6.js",
+          "moduleSha256": "447c120e6eb2ead2136abcf23e6e1c8f034bfdafb19afc2393bc65b42a4ecb28",
+          "name": "GTn",
+          "start": 5551,
+          "end": 5794,
+          "source": "GTn=[\"GIT_DIR\",\"GIT_WORK_TREE\",\"GIT_COMMON_DIR\",\"GIT_INDEX_FILE\",\"GIT_CEILING_DIRECTORIES\",\"GIT_DISCOVERY_ACROSS_FILESYSTEM\",\"GIT_OBJECT_DIRECTORY\",\"GIT_ALTERNATE_OBJECT_DIRECTORIES\",\"GIT_SHALLOW_FILE\",\"GIT_NAMESPACE\",\"GIT_IMPLICIT_WORK_TREE\"]",
+          "sha256": "a7df7d91de96c0b74744585b22456b0a08b857770ce9e86eace3b5b9c8365277",
+          "variable": true
+        },
+        {
+          "platform": "linux-x64",
+          "file": "chunk-9h99vqw6.js",
+          "moduleSha256": "447c120e6eb2ead2136abcf23e6e1c8f034bfdafb19afc2393bc65b42a4ecb28",
+          "name": "DSt",
+          "start": 5795,
+          "end": 5903,
+          "source": "DSt=[...GTn,\"GIT_CONFIG_COUNT\",\"GIT_CONFIG_PARAMETERS\",\"GIT_CONFIG_GLOBAL\",\"GIT_CONFIG_SYSTEM\",\"GIT_CONFIG\"]",
+          "sha256": "e1fb04b068389c00842a4f1e8410c2e085d274d8209c32c5e8604e383e26433c",
+          "variable": true
+        },
+        {
+          "platform": "linux-x64",
+          "file": "chunk-9h99vqw6.js",
+          "moduleSha256": "447c120e6eb2ead2136abcf23e6e1c8f034bfdafb19afc2393bc65b42a4ecb28",
+          "name": "qe",
+          "start": 5904,
+          "end": 5937,
+          "source": "qe=/^GIT_CONFIG_(KEY|VALUE)_\\d+$/",
+          "sha256": "471bee560f0cf0e05ba4a3793d1380c3ecf0389a2a4c0ed28257fa9540f3e994",
+          "variable": true
+        },
+        {
+          "platform": "linux-x64",
+          "file": "chunk-9h99vqw6.js",
+          "moduleSha256": "447c120e6eb2ead2136abcf23e6e1c8f034bfdafb19afc2393bc65b42a4ecb28",
+          "name": "Qqt",
+          "start": 5938,
+          "end": 5967,
+          "source": "Qqt=new RegExp(qe.source,\"i\")",
+          "sha256": "7e8687349fedb54c5fdfd6c79f3accfd1416dae272d3bfbe8329babf6c03619f",
+          "variable": true
+        },
+        {
+          "platform": "linux-x64",
+          "file": "chunk-9h99vqw6.js",
+          "moduleSha256": "447c120e6eb2ead2136abcf23e6e1c8f034bfdafb19afc2393bc65b42a4ecb28",
+          "name": "Qe",
+          "start": 5968,
+          "end": 5983,
+          "source": "Qe=new Set(DSt)",
+          "sha256": "f7d84c6e81f809d670fc898a0c537437f3b9f11a0deef06939c28de402f0c842",
+          "variable": true
+        },
+        {
+          "platform": "linux-x64",
+          "file": "chunk-9h99vqw6.js",
+          "moduleSha256": "447c120e6eb2ead2136abcf23e6e1c8f034bfdafb19afc2393bc65b42a4ecb28",
+          "name": "Qo",
+          "start": 5984,
+          "end": 6101,
+          "source": "function Qo(e,r={}){let n=e?.GIT_ALLOW_PROTOCOL?.split(\":\").includes(\"ssh\")??!1;return nt(fe({...ze,...!n&&Ze},e,r))}",
+          "sha256": "5148e399cf3eb9df69101373eb8d000d5dac367e835088e04af79bd8bdf5d3c3",
+          "variable": false
+        },
+        {
+          "platform": "linux-x64",
+          "file": "chunk-9h99vqw6.js",
+          "moduleSha256": "447c120e6eb2ead2136abcf23e6e1c8f034bfdafb19afc2393bc65b42a4ecb28",
+          "name": "fe",
+          "start": 6265,
+          "end": 6713,
+          "source": "function fe(e,r,{base:n=process.env,repository:o}){let i=tt({...e,...o!==void 0&&{GIT_DIR:o.gitDir,GIT_COMMON_DIR:o.commonDir},...o!==void 0&&(o.workTree!==null?{GIT_WORK_TREE:o.workTree}:{GIT_IMPLICIT_WORK_TREE:\"0\"}),...r}),s={};for(let c of DSt)s[c]=void 0;let u=new Set(Object.keys(i).map((c)=>c.toUpperCase()));for(let c of Object.keys(n)){let p=c.toUpperCase();if(Qe.has(p)||Qqt.test(c)||u.has(p)&&!(c in i))s[c]=void 0}return{...n,...s,...i}}",
+          "sha256": "6d9d8dcf735037c686978e9344443e3e4909a73a2f87841e8acdf5bd7502e79f",
+          "variable": false
+        },
+        {
+          "platform": "linux-x64",
+          "file": "chunk-9h99vqw6.js",
+          "moduleSha256": "447c120e6eb2ead2136abcf23e6e1c8f034bfdafb19afc2393bc65b42a4ecb28",
+          "name": "tt",
+          "start": 6713,
+          "end": 7202,
+          "source": "function tt(e){let r=e.GIT_ALLOW_PROTOCOL;if(r===void 0)return{...e};let n=r.split(\":\").filter((c)=>c!==\"/\");if(n.find((c)=>!/^[A-Za-z0-9-]*$/.test(c))!==void 0)throw Error('GIT_ALLOW_PROTOCOL may list only transport names made of letters, digits and \"-\"');let i=[...new Set([...ue,...n.flatMap((c)=>[`'alias.remote-${c}=version'`,`'alias.remote-${c}.command=version'`])])],s=e.GIT_CONFIG_PARAMETERS;return{...e,GIT_CONFIG_PARAMETERS:[...s===void 0||s===\"\"||s===le?[]:[s],...i].join(\" \")}}",
+          "sha256": "28dffb6f5f341026a8077f0552b5316e9f8e57bbde569fb9aa7b1c04d75ba744",
+          "variable": false
+        },
+        {
+          "platform": "linux-x64",
+          "file": "chunk-9h99vqw6.js",
+          "moduleSha256": "447c120e6eb2ead2136abcf23e6e1c8f034bfdafb19afc2393bc65b42a4ecb28",
+          "name": "nt",
+          "start": 7202,
+          "end": 7480,
+          "source": "function nt(e){let o=(c)=>c,i=(c)=>c.startsWith(\"/\"),s=(c)=>{if(c===void 0)return;let p=c.split(\":\").map(o).filter((l)=>l!==\"\"&&i(l));return p.length>0?p.join(\":\"):\"/dev/null\"},u=Object.keys(e).filter((c)=>c===\"PATH\");return{...e,...Object.fromEntries(u.map((c)=>[c,s(e[c])]))}}",
+          "sha256": "7878969c2160d07a5fb161a94a3f7f870b3d245d7dcbe2cb57448232e31325e2",
+          "variable": false
+        }
+      ],
+      "ignoreSubmodules": "Fb"
+    },
+    {
+      "platform": "linux-arm64",
+      "manifestSha256": "f3be5b23f9cbb909555fe028143b9a3a40c1e3e49961e09c49d8e5a6b61ae83b",
+      "declarations": [
+        {
+          "platform": "linux-arm64",
+          "file": "chunk-tf6fp71c.js",
+          "moduleSha256": "2211aefa6a151bd5d3eafa64d3ade2f75bfac02fb946602db3f54d33fb0853a3",
+          "name": "Ub",
+          "start": 4908,
+          "end": 4938,
+          "source": "Ub=\"--ignore-submodules=dirty\"",
+          "sha256": "badd6a39b0e6fc85d5cbb5cd1ec066bfbbc1ad5293eb9d56635de366ef4a0452",
+          "variable": true
+        },
+        {
+          "platform": "linux-arm64",
+          "file": "chunk-tf6fp71c.js",
+          "moduleSha256": "2211aefa6a151bd5d3eafa64d3ade2f75bfac02fb946602db3f54d33fb0853a3",
+          "name": "h",
+          "start": 5037,
+          "end": 5079,
+          "source": "h=Object.freeze({GIT_LFS_SKIP_SMUDGE:\"1\"})",
+          "sha256": "5ed94c78b014a9849ba81c5b9e4b99d998e0fe4c06cee878f107508ec193ed1f",
+          "variable": true
+        },
+        {
+          "platform": "linux-arm64",
+          "file": "chunk-tf6fp71c.js",
+          "moduleSha256": "2211aefa6a151bd5d3eafa64d3ade2f75bfac02fb946602db3f54d33fb0853a3",
+          "name": "ue",
+          "start": 5088,
+          "end": 5239,
+          "source": "ue=[\"'alias.remote-none=version'\",\"'alias.remote-none.command=version'\",\"'alias.remote-/.command=version'\",\"'fetch.bundleURI='\",\"'help.autocorrect=0'\"]",
+          "sha256": "7b2076676bd13563c59e3412c024ca552813d69c6041d36c358103767082fb7e",
+          "variable": true
+        },
+        {
+          "platform": "linux-arm64",
+          "file": "chunk-tf6fp71c.js",
+          "moduleSha256": "2211aefa6a151bd5d3eafa64d3ade2f75bfac02fb946602db3f54d33fb0853a3",
+          "name": "le",
+          "start": 5240,
+          "end": 5255,
+          "source": "le=ue.join(\" \")",
+          "sha256": "2f3a7b21c91d9b94b841f0262d3ec212e41b60d5cef238fd53595c4a0f6b0855",
+          "variable": true
+        },
+        {
+          "platform": "linux-arm64",
+          "file": "chunk-tf6fp71c.js",
+          "moduleSha256": "2211aefa6a151bd5d3eafa64d3ade2f75bfac02fb946602db3f54d33fb0853a3",
+          "name": "ze",
+          "start": 5256,
+          "end": 5401,
+          "source": "ze=Object.freeze({GIT_ALLOW_PROTOCOL:\"/\",GIT_CONFIG_PARAMETERS:le,GIT_NO_LAZY_FETCH:\"1\",GIT_NO_REPLACE_OBJECTS:\"1\",GIT_TERMINAL_PROMPT:\"0\",...h})",
+          "sha256": "c1814bbf5e7bc922fd3999d2e1da8bb4ab74bcad1ef984f4141c57bdcf8eb072",
+          "variable": true
+        },
+        {
+          "platform": "linux-arm64",
+          "file": "chunk-tf6fp71c.js",
+          "moduleSha256": "2211aefa6a151bd5d3eafa64d3ade2f75bfac02fb946602db3f54d33fb0853a3",
+          "name": "Ze",
+          "start": 5402,
+          "end": 5445,
+          "source": "Ze=Object.freeze({GIT_SSH_COMMAND:\"false\"})",
+          "sha256": "c4a591e1f3f1e9f263331df6467272b31e8474bc7e6aff873eb999132bd70e22",
+          "variable": true
+        },
+        {
+          "platform": "linux-arm64",
+          "file": "chunk-tf6fp71c.js",
+          "moduleSha256": "2211aefa6a151bd5d3eafa64d3ade2f75bfac02fb946602db3f54d33fb0853a3",
+          "name": "GTn",
+          "start": 5551,
+          "end": 5794,
+          "source": "GTn=[\"GIT_DIR\",\"GIT_WORK_TREE\",\"GIT_COMMON_DIR\",\"GIT_INDEX_FILE\",\"GIT_CEILING_DIRECTORIES\",\"GIT_DISCOVERY_ACROSS_FILESYSTEM\",\"GIT_OBJECT_DIRECTORY\",\"GIT_ALTERNATE_OBJECT_DIRECTORIES\",\"GIT_SHALLOW_FILE\",\"GIT_NAMESPACE\",\"GIT_IMPLICIT_WORK_TREE\"]",
+          "sha256": "a7df7d91de96c0b74744585b22456b0a08b857770ce9e86eace3b5b9c8365277",
+          "variable": true
+        },
+        {
+          "platform": "linux-arm64",
+          "file": "chunk-tf6fp71c.js",
+          "moduleSha256": "2211aefa6a151bd5d3eafa64d3ade2f75bfac02fb946602db3f54d33fb0853a3",
+          "name": "NSt",
+          "start": 5795,
+          "end": 5903,
+          "source": "NSt=[...GTn,\"GIT_CONFIG_COUNT\",\"GIT_CONFIG_PARAMETERS\",\"GIT_CONFIG_GLOBAL\",\"GIT_CONFIG_SYSTEM\",\"GIT_CONFIG\"]",
+          "sha256": "221a96cd4e47564a127ab41d594722f5938b91818510a1a37566cd21448de6ff",
+          "variable": true
+        },
+        {
+          "platform": "linux-arm64",
+          "file": "chunk-tf6fp71c.js",
+          "moduleSha256": "2211aefa6a151bd5d3eafa64d3ade2f75bfac02fb946602db3f54d33fb0853a3",
+          "name": "qe",
+          "start": 5904,
+          "end": 5937,
+          "source": "qe=/^GIT_CONFIG_(KEY|VALUE)_\\d+$/",
+          "sha256": "471bee560f0cf0e05ba4a3793d1380c3ecf0389a2a4c0ed28257fa9540f3e994",
+          "variable": true
+        },
+        {
+          "platform": "linux-arm64",
+          "file": "chunk-tf6fp71c.js",
+          "moduleSha256": "2211aefa6a151bd5d3eafa64d3ade2f75bfac02fb946602db3f54d33fb0853a3",
+          "name": "QKt",
+          "start": 5938,
+          "end": 5967,
+          "source": "QKt=new RegExp(qe.source,\"i\")",
+          "sha256": "4c97a055c9ded5e3855b7d2e7be026e0b6924a397f77bd2cd28696acb28544a8",
+          "variable": true
+        },
+        {
+          "platform": "linux-arm64",
+          "file": "chunk-tf6fp71c.js",
+          "moduleSha256": "2211aefa6a151bd5d3eafa64d3ade2f75bfac02fb946602db3f54d33fb0853a3",
+          "name": "Qe",
+          "start": 5968,
+          "end": 5983,
+          "source": "Qe=new Set(NSt)",
+          "sha256": "df6a389c43626e0fb0f01a46586196e7d0aeeb01c20c01d4dca5195d8f2bee58",
+          "variable": true
+        },
+        {
+          "platform": "linux-arm64",
+          "file": "chunk-tf6fp71c.js",
+          "moduleSha256": "2211aefa6a151bd5d3eafa64d3ade2f75bfac02fb946602db3f54d33fb0853a3",
+          "name": "Qo",
+          "start": 5984,
+          "end": 6101,
+          "source": "function Qo(e,r={}){let n=e?.GIT_ALLOW_PROTOCOL?.split(\":\").includes(\"ssh\")??!1;return nt(fe({...ze,...!n&&Ze},e,r))}",
+          "sha256": "5148e399cf3eb9df69101373eb8d000d5dac367e835088e04af79bd8bdf5d3c3",
+          "variable": false
+        },
+        {
+          "platform": "linux-arm64",
+          "file": "chunk-tf6fp71c.js",
+          "moduleSha256": "2211aefa6a151bd5d3eafa64d3ade2f75bfac02fb946602db3f54d33fb0853a3",
+          "name": "fe",
+          "start": 6265,
+          "end": 6713,
+          "source": "function fe(e,r,{base:n=process.env,repository:o}){let i=tt({...e,...o!==void 0&&{GIT_DIR:o.gitDir,GIT_COMMON_DIR:o.commonDir},...o!==void 0&&(o.workTree!==null?{GIT_WORK_TREE:o.workTree}:{GIT_IMPLICIT_WORK_TREE:\"0\"}),...r}),s={};for(let c of NSt)s[c]=void 0;let u=new Set(Object.keys(i).map((c)=>c.toUpperCase()));for(let c of Object.keys(n)){let p=c.toUpperCase();if(Qe.has(p)||QKt.test(c)||u.has(p)&&!(c in i))s[c]=void 0}return{...n,...s,...i}}",
+          "sha256": "00c7f29faf0adeefe5efab0c2a7eb9d31b45e920ccc67c126b9fa6fedaf5be03",
+          "variable": false
+        },
+        {
+          "platform": "linux-arm64",
+          "file": "chunk-tf6fp71c.js",
+          "moduleSha256": "2211aefa6a151bd5d3eafa64d3ade2f75bfac02fb946602db3f54d33fb0853a3",
+          "name": "tt",
+          "start": 6713,
+          "end": 7202,
+          "source": "function tt(e){let r=e.GIT_ALLOW_PROTOCOL;if(r===void 0)return{...e};let n=r.split(\":\").filter((c)=>c!==\"/\");if(n.find((c)=>!/^[A-Za-z0-9-]*$/.test(c))!==void 0)throw Error('GIT_ALLOW_PROTOCOL may list only transport names made of letters, digits and \"-\"');let i=[...new Set([...ue,...n.flatMap((c)=>[`'alias.remote-${c}=version'`,`'alias.remote-${c}.command=version'`])])],s=e.GIT_CONFIG_PARAMETERS;return{...e,GIT_CONFIG_PARAMETERS:[...s===void 0||s===\"\"||s===le?[]:[s],...i].join(\" \")}}",
+          "sha256": "28dffb6f5f341026a8077f0552b5316e9f8e57bbde569fb9aa7b1c04d75ba744",
+          "variable": false
+        },
+        {
+          "platform": "linux-arm64",
+          "file": "chunk-tf6fp71c.js",
+          "moduleSha256": "2211aefa6a151bd5d3eafa64d3ade2f75bfac02fb946602db3f54d33fb0853a3",
+          "name": "nt",
+          "start": 7202,
+          "end": 7480,
+          "source": "function nt(e){let o=(c)=>c,i=(c)=>c.startsWith(\"/\"),s=(c)=>{if(c===void 0)return;let p=c.split(\":\").map(o).filter((l)=>l!==\"\"&&i(l));return p.length>0?p.join(\":\"):\"/dev/null\"},u=Object.keys(e).filter((c)=>c===\"PATH\");return{...e,...Object.fromEntries(u.map((c)=>[c,s(e[c])]))}}",
+          "sha256": "7878969c2160d07a5fb161a94a3f7f870b3d245d7dcbe2cb57448232e31325e2",
+          "variable": false
+        }
+      ],
+      "ignoreSubmodules": "Ub"
+    },
+    {
+      "platform": "win32-x64",
+      "manifestSha256": "c71e85888df3301fd3c4cb158744538810418e2d67591debe8e4f7c771fcdddc",
+      "declarations": [
+        {
+          "platform": "win32-x64",
+          "file": "chunk-vgyj8wz1.js",
+          "moduleSha256": "368c1af05ca48c60df444ed15ae7b921df07d0883ac2402de4a08afc827c2213",
+          "name": "Bb",
+          "start": 4955,
+          "end": 4985,
+          "source": "Bb=\"--ignore-submodules=dirty\"",
+          "sha256": "373703d6bd0756955fc341b1adc60b35a51fc02c417bb791c623ea9c9650e9b7",
+          "variable": true
+        },
+        {
+          "platform": "win32-x64",
+          "file": "chunk-vgyj8wz1.js",
+          "moduleSha256": "368c1af05ca48c60df444ed15ae7b921df07d0883ac2402de4a08afc827c2213",
+          "name": "N",
+          "start": 5084,
+          "end": 5126,
+          "source": "N=Object.freeze({GIT_LFS_SKIP_SMUDGE:\"1\"})",
+          "sha256": "957a2014eb61b60e794506504257f88918be4e4a54d85fde2f178314491450bf",
+          "variable": true
+        },
+        {
+          "platform": "win32-x64",
+          "file": "chunk-vgyj8wz1.js",
+          "moduleSha256": "368c1af05ca48c60df444ed15ae7b921df07d0883ac2402de4a08afc827c2213",
+          "name": "ue",
+          "start": 5135,
+          "end": 5286,
+          "source": "ue=[\"'alias.remote-none=version'\",\"'alias.remote-none.command=version'\",\"'alias.remote-/.command=version'\",\"'fetch.bundleURI='\",\"'help.autocorrect=0'\"]",
+          "sha256": "7b2076676bd13563c59e3412c024ca552813d69c6041d36c358103767082fb7e",
+          "variable": true
+        },
+        {
+          "platform": "win32-x64",
+          "file": "chunk-vgyj8wz1.js",
+          "moduleSha256": "368c1af05ca48c60df444ed15ae7b921df07d0883ac2402de4a08afc827c2213",
+          "name": "le",
+          "start": 5287,
+          "end": 5302,
+          "source": "le=ue.join(\" \")",
+          "sha256": "2f3a7b21c91d9b94b841f0262d3ec212e41b60d5cef238fd53595c4a0f6b0855",
+          "variable": true
+        },
+        {
+          "platform": "win32-x64",
+          "file": "chunk-vgyj8wz1.js",
+          "moduleSha256": "368c1af05ca48c60df444ed15ae7b921df07d0883ac2402de4a08afc827c2213",
+          "name": "ze",
+          "start": 5303,
+          "end": 5448,
+          "source": "ze=Object.freeze({GIT_ALLOW_PROTOCOL:\"/\",GIT_CONFIG_PARAMETERS:le,GIT_NO_LAZY_FETCH:\"1\",GIT_NO_REPLACE_OBJECTS:\"1\",GIT_TERMINAL_PROMPT:\"0\",...N})",
+          "sha256": "6d7eba6b78c50a5056de2ba3c97fab71e739168f65a9b8d0ac447ce4151f9e50",
+          "variable": true
+        },
+        {
+          "platform": "win32-x64",
+          "file": "chunk-vgyj8wz1.js",
+          "moduleSha256": "368c1af05ca48c60df444ed15ae7b921df07d0883ac2402de4a08afc827c2213",
+          "name": "Ze",
+          "start": 5449,
+          "end": 5492,
+          "source": "Ze=Object.freeze({GIT_SSH_COMMAND:\"false\"})",
+          "sha256": "c4a591e1f3f1e9f263331df6467272b31e8474bc7e6aff873eb999132bd70e22",
+          "variable": true
+        },
+        {
+          "platform": "win32-x64",
+          "file": "chunk-vgyj8wz1.js",
+          "moduleSha256": "368c1af05ca48c60df444ed15ae7b921df07d0883ac2402de4a08afc827c2213",
+          "name": "ZTn",
+          "start": 5598,
+          "end": 5841,
+          "source": "ZTn=[\"GIT_DIR\",\"GIT_WORK_TREE\",\"GIT_COMMON_DIR\",\"GIT_INDEX_FILE\",\"GIT_CEILING_DIRECTORIES\",\"GIT_DISCOVERY_ACROSS_FILESYSTEM\",\"GIT_OBJECT_DIRECTORY\",\"GIT_ALTERNATE_OBJECT_DIRECTORIES\",\"GIT_SHALLOW_FILE\",\"GIT_NAMESPACE\",\"GIT_IMPLICIT_WORK_TREE\"]",
+          "sha256": "9a93c22d4c9943f6433e7e8b6a94e59984d6f7e46875f5b72f6c85c0d1ddb20a",
+          "variable": true
+        },
+        {
+          "platform": "win32-x64",
+          "file": "chunk-vgyj8wz1.js",
+          "moduleSha256": "368c1af05ca48c60df444ed15ae7b921df07d0883ac2402de4a08afc827c2213",
+          "name": "BSt",
+          "start": 5842,
+          "end": 5950,
+          "source": "BSt=[...ZTn,\"GIT_CONFIG_COUNT\",\"GIT_CONFIG_PARAMETERS\",\"GIT_CONFIG_GLOBAL\",\"GIT_CONFIG_SYSTEM\",\"GIT_CONFIG\"]",
+          "sha256": "a287ab06e0a4a9bb6f39de74155320a42f5c6244f5061a500bdd8a7164dce5e2",
+          "variable": true
+        },
+        {
+          "platform": "win32-x64",
+          "file": "chunk-vgyj8wz1.js",
+          "moduleSha256": "368c1af05ca48c60df444ed15ae7b921df07d0883ac2402de4a08afc827c2213",
+          "name": "Xe",
+          "start": 5951,
+          "end": 5984,
+          "source": "Xe=/^GIT_CONFIG_(KEY|VALUE)_\\d+$/",
+          "sha256": "985283403f2eb27cabafa6e497fe9fd1b00ced485d48ecdda17fee58e098f8ed",
+          "variable": true
+        },
+        {
+          "platform": "win32-x64",
+          "file": "chunk-vgyj8wz1.js",
+          "moduleSha256": "368c1af05ca48c60df444ed15ae7b921df07d0883ac2402de4a08afc827c2213",
+          "name": "tKt",
+          "start": 5985,
+          "end": 6014,
+          "source": "tKt=new RegExp(Xe.source,\"i\")",
+          "sha256": "11898ca2c604d563068ae4cbbcc40ecb87fd4d02ee50d078e0cfe74c7c05b6b4",
+          "variable": true
+        },
+        {
+          "platform": "win32-x64",
+          "file": "chunk-vgyj8wz1.js",
+          "moduleSha256": "368c1af05ca48c60df444ed15ae7b921df07d0883ac2402de4a08afc827c2213",
+          "name": "qe",
+          "start": 6015,
+          "end": 6030,
+          "source": "qe=new Set(BSt)",
+          "sha256": "67ddb4dfef0a6543c70e7d5cae5fefa30e586b8f1ba144dcc9085d2f0217d5d1",
+          "variable": true
+        },
+        {
+          "platform": "win32-x64",
+          "file": "chunk-vgyj8wz1.js",
+          "moduleSha256": "368c1af05ca48c60df444ed15ae7b921df07d0883ac2402de4a08afc827c2213",
+          "name": "Qo",
+          "start": 6031,
+          "end": 6148,
+          "source": "function Qo(e,r={}){let n=e?.GIT_ALLOW_PROTOCOL?.split(\":\").includes(\"ssh\")??!1;return nt(fe({...ze,...!n&&Ze},e,r))}",
+          "sha256": "5148e399cf3eb9df69101373eb8d000d5dac367e835088e04af79bd8bdf5d3c3",
+          "variable": false
+        },
+        {
+          "platform": "win32-x64",
+          "file": "chunk-vgyj8wz1.js",
+          "moduleSha256": "368c1af05ca48c60df444ed15ae7b921df07d0883ac2402de4a08afc827c2213",
+          "name": "fe",
+          "start": 6312,
+          "end": 6760,
+          "source": "function fe(e,r,{base:n=process.env,repository:o}){let i=et({...e,...o!==void 0&&{GIT_DIR:o.gitDir,GIT_COMMON_DIR:o.commonDir},...o!==void 0&&(o.workTree!==null?{GIT_WORK_TREE:o.workTree}:{GIT_IMPLICIT_WORK_TREE:\"0\"}),...r}),s={};for(let c of BSt)s[c]=void 0;let u=new Set(Object.keys(i).map((c)=>c.toUpperCase()));for(let c of Object.keys(n)){let p=c.toUpperCase();if(qe.has(p)||tKt.test(c)||u.has(p)&&!(c in i))s[c]=void 0}return{...n,...s,...i}}",
+          "sha256": "343fccf79602ddec879426c8426b0581b4571303057d923339d915c6b8ade81e",
+          "variable": false
+        },
+        {
+          "platform": "win32-x64",
+          "file": "chunk-vgyj8wz1.js",
+          "moduleSha256": "368c1af05ca48c60df444ed15ae7b921df07d0883ac2402de4a08afc827c2213",
+          "name": "et",
+          "start": 6760,
+          "end": 7249,
+          "source": "function et(e){let r=e.GIT_ALLOW_PROTOCOL;if(r===void 0)return{...e};let n=r.split(\":\").filter((c)=>c!==\"/\");if(n.find((c)=>!/^[A-Za-z0-9-]*$/.test(c))!==void 0)throw Error('GIT_ALLOW_PROTOCOL may list only transport names made of letters, digits and \"-\"');let i=[...new Set([...ue,...n.flatMap((c)=>[`'alias.remote-${c}=version'`,`'alias.remote-${c}.command=version'`])])],s=e.GIT_CONFIG_PARAMETERS;return{...e,GIT_CONFIG_PARAMETERS:[...s===void 0||s===\"\"||s===le?[]:[s],...i].join(\" \")}}",
+          "sha256": "e0eb7bdc57fcbc8afd1d3d7cb9eede3217196b4e21085d0b106f597d7f31726b",
+          "variable": false
+        },
+        {
+          "platform": "win32-x64",
+          "file": "chunk-vgyj8wz1.js",
+          "moduleSha256": "368c1af05ca48c60df444ed15ae7b921df07d0883ac2402de4a08afc827c2213",
+          "name": "nt",
+          "start": 7249,
+          "end": 7582,
+          "source": "function nt(e){let o=(c)=>c.replaceAll('\"',\"\"),i=(c)=>/^(?:[A-Za-z]:[\\\\/]|[\\\\/]{2})/.test(c),s=(c)=>{if(c===void 0)return;let p=c.split(\";\").map(o).filter((f)=>f!==\"\"&&i(f));return p.length>0?p.join(\";\"):\"\\\\\\\\.\\\\nul\"},u=Object.keys(e).filter((c)=>c.toUpperCase()===\"PATH\");return{...e,...Object.fromEntries(u.map((c)=>[c,s(e[c])]))}}",
+          "sha256": "0ada6cbecb162b800510e55d05f39bfdd6a9a9f80b12fdceef841ac2dd45fce5",
+          "variable": false
+        }
+      ],
+      "ignoreSubmodules": "Bb"
+    },
+    {
+      "platform": "win32-arm64",
+      "manifestSha256": "d0d8b3b882ba61ba321ab072b5cbc28a1a4089cfb4c5dce0698311aae10c739e",
+      "declarations": [
+        {
+          "platform": "win32-arm64",
+          "file": "chunk-sg7dxhxq.js",
+          "moduleSha256": "b8d95e5fb60425bed9dc156dcca1585c5bf878c850d7e5998c1d9ce6d4e2ca2c",
+          "name": "Hb",
+          "start": 4955,
+          "end": 4985,
+          "source": "Hb=\"--ignore-submodules=dirty\"",
+          "sha256": "eb05c51453082713233efd40a390f81371f9d557d625101d4784d9581333df93",
+          "variable": true
+        },
+        {
+          "platform": "win32-arm64",
+          "file": "chunk-sg7dxhxq.js",
+          "moduleSha256": "b8d95e5fb60425bed9dc156dcca1585c5bf878c850d7e5998c1d9ce6d4e2ca2c",
+          "name": "N",
+          "start": 5084,
+          "end": 5126,
+          "source": "N=Object.freeze({GIT_LFS_SKIP_SMUDGE:\"1\"})",
+          "sha256": "957a2014eb61b60e794506504257f88918be4e4a54d85fde2f178314491450bf",
+          "variable": true
+        },
+        {
+          "platform": "win32-arm64",
+          "file": "chunk-sg7dxhxq.js",
+          "moduleSha256": "b8d95e5fb60425bed9dc156dcca1585c5bf878c850d7e5998c1d9ce6d4e2ca2c",
+          "name": "ue",
+          "start": 5135,
+          "end": 5286,
+          "source": "ue=[\"'alias.remote-none=version'\",\"'alias.remote-none.command=version'\",\"'alias.remote-/.command=version'\",\"'fetch.bundleURI='\",\"'help.autocorrect=0'\"]",
+          "sha256": "7b2076676bd13563c59e3412c024ca552813d69c6041d36c358103767082fb7e",
+          "variable": true
+        },
+        {
+          "platform": "win32-arm64",
+          "file": "chunk-sg7dxhxq.js",
+          "moduleSha256": "b8d95e5fb60425bed9dc156dcca1585c5bf878c850d7e5998c1d9ce6d4e2ca2c",
+          "name": "le",
+          "start": 5287,
+          "end": 5302,
+          "source": "le=ue.join(\" \")",
+          "sha256": "2f3a7b21c91d9b94b841f0262d3ec212e41b60d5cef238fd53595c4a0f6b0855",
+          "variable": true
+        },
+        {
+          "platform": "win32-arm64",
+          "file": "chunk-sg7dxhxq.js",
+          "moduleSha256": "b8d95e5fb60425bed9dc156dcca1585c5bf878c850d7e5998c1d9ce6d4e2ca2c",
+          "name": "ze",
+          "start": 5303,
+          "end": 5448,
+          "source": "ze=Object.freeze({GIT_ALLOW_PROTOCOL:\"/\",GIT_CONFIG_PARAMETERS:le,GIT_NO_LAZY_FETCH:\"1\",GIT_NO_REPLACE_OBJECTS:\"1\",GIT_TERMINAL_PROMPT:\"0\",...N})",
+          "sha256": "6d7eba6b78c50a5056de2ba3c97fab71e739168f65a9b8d0ac447ce4151f9e50",
+          "variable": true
+        },
+        {
+          "platform": "win32-arm64",
+          "file": "chunk-sg7dxhxq.js",
+          "moduleSha256": "b8d95e5fb60425bed9dc156dcca1585c5bf878c850d7e5998c1d9ce6d4e2ca2c",
+          "name": "Ze",
+          "start": 5449,
+          "end": 5492,
+          "source": "Ze=Object.freeze({GIT_SSH_COMMAND:\"false\"})",
+          "sha256": "c4a591e1f3f1e9f263331df6467272b31e8474bc7e6aff873eb999132bd70e22",
+          "variable": true
+        },
+        {
+          "platform": "win32-arm64",
+          "file": "chunk-sg7dxhxq.js",
+          "moduleSha256": "b8d95e5fb60425bed9dc156dcca1585c5bf878c850d7e5998c1d9ce6d4e2ca2c",
+          "name": "ZTn",
+          "start": 5598,
+          "end": 5841,
+          "source": "ZTn=[\"GIT_DIR\",\"GIT_WORK_TREE\",\"GIT_COMMON_DIR\",\"GIT_INDEX_FILE\",\"GIT_CEILING_DIRECTORIES\",\"GIT_DISCOVERY_ACROSS_FILESYSTEM\",\"GIT_OBJECT_DIRECTORY\",\"GIT_ALTERNATE_OBJECT_DIRECTORIES\",\"GIT_SHALLOW_FILE\",\"GIT_NAMESPACE\",\"GIT_IMPLICIT_WORK_TREE\"]",
+          "sha256": "9a93c22d4c9943f6433e7e8b6a94e59984d6f7e46875f5b72f6c85c0d1ddb20a",
+          "variable": true
+        },
+        {
+          "platform": "win32-arm64",
+          "file": "chunk-sg7dxhxq.js",
+          "moduleSha256": "b8d95e5fb60425bed9dc156dcca1585c5bf878c850d7e5998c1d9ce6d4e2ca2c",
+          "name": "HSt",
+          "start": 5842,
+          "end": 5950,
+          "source": "HSt=[...ZTn,\"GIT_CONFIG_COUNT\",\"GIT_CONFIG_PARAMETERS\",\"GIT_CONFIG_GLOBAL\",\"GIT_CONFIG_SYSTEM\",\"GIT_CONFIG\"]",
+          "sha256": "b0ab2d95e5be6cf4f96fea504d87a9101ee6d2f774d711e79335bf6d9c5c1da2",
+          "variable": true
+        },
+        {
+          "platform": "win32-arm64",
+          "file": "chunk-sg7dxhxq.js",
+          "moduleSha256": "b8d95e5fb60425bed9dc156dcca1585c5bf878c850d7e5998c1d9ce6d4e2ca2c",
+          "name": "Xe",
+          "start": 5951,
+          "end": 5984,
+          "source": "Xe=/^GIT_CONFIG_(KEY|VALUE)_\\d+$/",
+          "sha256": "985283403f2eb27cabafa6e497fe9fd1b00ced485d48ecdda17fee58e098f8ed",
+          "variable": true
+        },
+        {
+          "platform": "win32-arm64",
+          "file": "chunk-sg7dxhxq.js",
+          "moduleSha256": "b8d95e5fb60425bed9dc156dcca1585c5bf878c850d7e5998c1d9ce6d4e2ca2c",
+          "name": "tKt",
+          "start": 5985,
+          "end": 6014,
+          "source": "tKt=new RegExp(Xe.source,\"i\")",
+          "sha256": "11898ca2c604d563068ae4cbbcc40ecb87fd4d02ee50d078e0cfe74c7c05b6b4",
+          "variable": true
+        },
+        {
+          "platform": "win32-arm64",
+          "file": "chunk-sg7dxhxq.js",
+          "moduleSha256": "b8d95e5fb60425bed9dc156dcca1585c5bf878c850d7e5998c1d9ce6d4e2ca2c",
+          "name": "qe",
+          "start": 6015,
+          "end": 6030,
+          "source": "qe=new Set(HSt)",
+          "sha256": "9e17ebcd010c09dca540397dd4b16ea3e6999c8533e3d312a631b42dd3c6385a",
+          "variable": true
+        },
+        {
+          "platform": "win32-arm64",
+          "file": "chunk-sg7dxhxq.js",
+          "moduleSha256": "b8d95e5fb60425bed9dc156dcca1585c5bf878c850d7e5998c1d9ce6d4e2ca2c",
+          "name": "Qo",
+          "start": 6031,
+          "end": 6148,
+          "source": "function Qo(e,r={}){let n=e?.GIT_ALLOW_PROTOCOL?.split(\":\").includes(\"ssh\")??!1;return nt(fe({...ze,...!n&&Ze},e,r))}",
+          "sha256": "5148e399cf3eb9df69101373eb8d000d5dac367e835088e04af79bd8bdf5d3c3",
+          "variable": false
+        },
+        {
+          "platform": "win32-arm64",
+          "file": "chunk-sg7dxhxq.js",
+          "moduleSha256": "b8d95e5fb60425bed9dc156dcca1585c5bf878c850d7e5998c1d9ce6d4e2ca2c",
+          "name": "fe",
+          "start": 6312,
+          "end": 6760,
+          "source": "function fe(e,r,{base:n=process.env,repository:o}){let i=et({...e,...o!==void 0&&{GIT_DIR:o.gitDir,GIT_COMMON_DIR:o.commonDir},...o!==void 0&&(o.workTree!==null?{GIT_WORK_TREE:o.workTree}:{GIT_IMPLICIT_WORK_TREE:\"0\"}),...r}),s={};for(let c of HSt)s[c]=void 0;let u=new Set(Object.keys(i).map((c)=>c.toUpperCase()));for(let c of Object.keys(n)){let p=c.toUpperCase();if(qe.has(p)||tKt.test(c)||u.has(p)&&!(c in i))s[c]=void 0}return{...n,...s,...i}}",
+          "sha256": "8b5fbceffa7233ec836c4eb954e11ecbf9383a81765b1159ad0004660e25725e",
+          "variable": false
+        },
+        {
+          "platform": "win32-arm64",
+          "file": "chunk-sg7dxhxq.js",
+          "moduleSha256": "b8d95e5fb60425bed9dc156dcca1585c5bf878c850d7e5998c1d9ce6d4e2ca2c",
+          "name": "et",
+          "start": 6760,
+          "end": 7249,
+          "source": "function et(e){let r=e.GIT_ALLOW_PROTOCOL;if(r===void 0)return{...e};let n=r.split(\":\").filter((c)=>c!==\"/\");if(n.find((c)=>!/^[A-Za-z0-9-]*$/.test(c))!==void 0)throw Error('GIT_ALLOW_PROTOCOL may list only transport names made of letters, digits and \"-\"');let i=[...new Set([...ue,...n.flatMap((c)=>[`'alias.remote-${c}=version'`,`'alias.remote-${c}.command=version'`])])],s=e.GIT_CONFIG_PARAMETERS;return{...e,GIT_CONFIG_PARAMETERS:[...s===void 0||s===\"\"||s===le?[]:[s],...i].join(\" \")}}",
+          "sha256": "e0eb7bdc57fcbc8afd1d3d7cb9eede3217196b4e21085d0b106f597d7f31726b",
+          "variable": false
+        },
+        {
+          "platform": "win32-arm64",
+          "file": "chunk-sg7dxhxq.js",
+          "moduleSha256": "b8d95e5fb60425bed9dc156dcca1585c5bf878c850d7e5998c1d9ce6d4e2ca2c",
+          "name": "nt",
+          "start": 7249,
+          "end": 7582,
+          "source": "function nt(e){let o=(c)=>c.replaceAll('\"',\"\"),i=(c)=>/^(?:[A-Za-z]:[\\\\/]|[\\\\/]{2})/.test(c),s=(c)=>{if(c===void 0)return;let p=c.split(\";\").map(o).filter((f)=>f!==\"\"&&i(f));return p.length>0?p.join(\";\"):\"\\\\\\\\.\\\\nul\"},u=Object.keys(e).filter((c)=>c.toUpperCase()===\"PATH\");return{...e,...Object.fromEntries(u.map((c)=>[c,s(e[c])]))}}",
+          "sha256": "0ada6cbecb162b800510e55d05f39bfdd6a9a9f80b12fdceef841ac2dd45fce5",
+          "variable": false
+        }
+      ],
+      "ignoreSubmodules": "Hb"
+    }
+  ],
+  "scope": "Whole V2n/Exr/EEe/N0n and whole pure Qo dependency closures from all six platform sources; existing Git filesystem optimizations are host boundaries"
+}

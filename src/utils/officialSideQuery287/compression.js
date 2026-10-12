@@ -1,0 +1,7 @@
+// Complete pinned official 2.1.287 source; see provenance.json.
+export function createSideQueryCompression287(ports){
+const {Ms,c}=ports;
+function _mt(e){if(e===void 0)return;let n=Ms().gzipRequestBody.telemetryByClientRequestId,r=n.get(e);return n.delete(e),r};
+function Ign(e){if(e===void 0)return{};return{requestBodyEncoding:c(e.requestBodyEncoding),requestBodyChars:e.requestBodyChars,...e.requestBodyEncoding==="gzip"&&e.requestBodyGzipLevel!==void 0&&{requestBodyGzipLevel:e.requestBodyGzipLevel},..."requestPrepareMs"in e&&e.requestPrepareMs!==void 0&&{requestPrepareMs:e.requestPrepareMs},..."gzipBlocks"in e&&e.gzipBlocks!==void 0&&{requestBodyGzipBlocksMode:e.gzipBlocks.mode,requestBodyGzipBlocksOutcome:c(e.gzipBlocks.outcome),...e.gzipBlocks.planned!==void 0&&{requestBodyGzipBlockCount:e.gzipBlocks.planned.blockCount,requestBodyGzipReusedBlockCount:e.gzipBlocks.planned.reusedBlockCount,requestBodyGzipReusedBytes:e.gzipBlocks.planned.reusedBytes,requestBodyGzipBlocksMs:e.gzipBlocks.planned.spentMs,...e.gzipBlocks.planned.gzippedBytes!==void 0&&{requestBodyGzippedBytes:e.gzipBlocks.planned.gzippedBytes},requestBodyGzipStoredBytes:e.gzipBlocks.planned.storedBytes,requestBodyGzipEvictedBlockCount:e.gzipBlocks.planned.evictedForSpaceCount}},..."gzipSkipReason"in e&&{gzipSkipReason:c(e.gzipSkipReason)},..."gzipFallbackStatus"in e&&{gzipFallback:!0,gzipFallbackStatus:e.gzipFallbackStatus}}};
+return {_mt,Ign};
+}

@@ -1,0 +1,87 @@
+{
+  "version": "2.1.286",
+  "platform": "darwin-arm64",
+  "file": "chunk-tx79xqc5.js",
+  "moduleSha256": "9c1e53986aa126f85e625401314cc5e1ef9e3250f7f7067894f2cb662cc9a069",
+  "declarations": [
+    {
+      "symbol": "kOt",
+      "start": 608165,
+      "end": 608253,
+      "source": "function kOt(){return Math.max(JM(process.env.CLAUDE_STREAM_IDLE_TIMEOUT_MS)||0,300000)}",
+      "sha256": "23269b7d617dd9cfb5d6fe0418dbd154899cdf8105c2aeee9351c53e4edd6f3c",
+      "variable": false
+    },
+    {
+      "symbol": "mw",
+      "start": 608257,
+      "end": 608263,
+      "source": "mw=1e4",
+      "sha256": "f8804e8aba0b825fd29407699a91d2c793d2113aff7f35e511c87dc841d4a883",
+      "variable": true
+    },
+    {
+      "symbol": "VM",
+      "start": 608264,
+      "end": 608274,
+      "source": "VM=1800000",
+      "sha256": "f7297bf38be4f97e335e1ec457d438144d681aabd2a24ad3970563b0a451fd76",
+      "variable": true
+    },
+    {
+      "symbol": "V3",
+      "start": 608275,
+      "end": 608284,
+      "source": "V3=180000",
+      "sha256": "651a4297910fd59e7ec7607b79af20b61d6054e60444e96ea7a4941aa1119b13",
+      "variable": true
+    },
+    {
+      "symbol": "q3",
+      "start": 608285,
+      "end": 608624,
+      "source": "function q3(e){let n=kOt(),r=e===\"firstParty\"?V3:n,s=n,h=JM(process.env.CLAUDE_BYTE_STREAM_IDLE_TIMEOUT_MS),g=JM(process.env.CLAUDE_STREAM_IDLE_TIMEOUT_MS)>0;if(Number.isFinite(h)&&h>0)s=h;else if(!g){s=r;let b=R(\"tengu_byte_stream_idle_timeout_ms\",r);if(typeof b===\"number\"&&Number.isFinite(b)&&b>0)s=b}return Math.min(Math.max(s,mw),VM)}",
+      "sha256": "fd218d33c2f1022f607d35065f9108fea0be04840e662a07a13ffb01c5842945",
+      "variable": false
+    },
+    {
+      "symbol": "uWn",
+      "start": 608624,
+      "end": 608666,
+      "source": "function uWn(e){return q3(gw(e)?e:void 0)}",
+      "sha256": "07584166c65d1ca2593542ebeb8db75f6cd5f3dd4beee621a903859dddb80a54",
+      "variable": false
+    },
+    {
+      "symbol": "Y3",
+      "start": 608666,
+      "end": 608788,
+      "source": "function Y3(e){let n=a.CLAUDE_STREAM_FIRST_BYTE_TIMEOUT_MS;if(n!==void 0)return Math.min(Math.max(n,mw),VM);return uWn(e)}",
+      "sha256": "10d403f7e28788bd196082d9a05eee02f17bd0b4d457db15f12b36a8a2dc32f8",
+      "variable": false
+    },
+    {
+      "symbol": "hw",
+      "start": 613241,
+      "end": 613362,
+      "source": "function hw(){let e=a.CLAUDE_ENABLE_BYTE_WATCHDOG;if(e!==void 0)return e;return R(\"tengu_stream_watchdog_default_on\",!0)}",
+      "sha256": "e52541bed187b87a726bf28f44950550b0e8cee15a697956bc4ddf23756e7471",
+      "variable": false
+    },
+    {
+      "symbol": "gw",
+      "start": 613449,
+      "end": 613551,
+      "source": "function gw(e){return e===\"firstParty\"&&Us()||e===\"anthropicAws\"&&!process.env.ANTHROPIC_AWS_BASE_URL}",
+      "sha256": "2ccf440f9bf8c826c40181976da84ba0a47757f2b0274ecb910ad00b103bd546",
+      "variable": false
+    }
+  ],
+  "bodyRewrites": [],
+  "ports": {
+    "JM": "existing native auth integer kernel",
+    "a": "authEnvironment",
+    "R": "existing cached GrowthBook functional owner",
+    "Us": "existing endpoint gate"
+  }
+}

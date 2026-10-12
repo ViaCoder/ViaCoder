@@ -1,0 +1,115 @@
+{
+  "version": "2.1.287",
+  "offsetUnit": "UTF16 end-exclusive",
+  "rows": [
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "wo",
+      "start": 393320,
+      "endExclusive": 393330,
+      "source": "wo=new Map",
+      "sha256": "8592b4ab588eada7f061ff3b8ad17c154b64cb3902a6475c853217b8609774a2",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "pn",
+      "start": 393331,
+      "endExclusive": 393341,
+      "source": "pn=new Set",
+      "sha256": "676181108e16a4ec2c1a57bc53a343afbbff3f6ba72927b8404d7cfdef6eec4f",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Js",
+      "start": 393342,
+      "endExclusive": 393352,
+      "source": "Js=new Set",
+      "sha256": "af9a9e5ba71557e743ff724cb24b66e04b5ff27e4a891abfc69f81117a317772",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Ed",
+      "start": 393353,
+      "endExclusive": 393465,
+      "source": "Ed=()=>{for(let b of pn)if(Object.hasOwn(M,b)&&Qt.some((D)=>D.name===b&&D.type===\"connected\"))return!0;return!1}",
+      "sha256": "1cab2aa85c394f0dd525ae345a77c75313c8d4787c3e773cf7022042c1599de3",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Ps",
+      "start": 393589,
+      "endExclusive": 394162,
+      "source": "async function Ps(b){te(b.name,\"Received tools/list_changed notification, refreshing tools\");let D=await age(b,()=>{},I.storageV5);if(D.status===\"kept-previous\"){if(te(b.name,\"tools/list failed after list_changed \\u2014 keeping previous tool set\"),Js.delete(b.name)){p(\"mcp_sdk_tools_refresh\",\"gave_up\");return}p(\"mcp_sdk_tools_refresh\",\"kept_previous\"),Js.add(b.name),pn.add(b.name);return}return Js.delete(b.name),y(\"mcp_sdk_tools_refresh\"),i(\"tengu_mcp_list_changed\",{mcpServerKeyHash:BM(b.name),type:S(\"tools\"),cause:oTe(void 0),newCount:D.newTools.length}),D.newTools}",
+      "sha256": "ba87c75c2450cf792568400fca7a43c0f09bc81aa0427096a3483bf3d6d6c824",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "ze",
+      "start": 398909,
+      "endExclusive": 401217,
+      "source": "ze=Zx(async(b=\"redial\")=>{for(let Qe of Xi())Qe.reassertOwnership();for(let Qe of[...pn]){if(!Object.hasOwn(M,Qe)){pn.delete(Qe);continue}let mt=Qt.find((nt)=>nt.name===Qe);if(mt?.type!==\"connected\")continue;pn.delete(Qe);let A=await Ps(mt);if(A!==void 0&&Qt.includes(mt))Un=[...KV(Un,Qe),...A],R((nt)=>({...nt,mcp:{...nt.mcp,tools:[...KV(nt.mcp.tools,Qe),...A]}}))}for(let Qe of wo.keys())if(!Object.hasOwn(M,Qe)||Qt.some((mt)=>mt.name===Qe&&mt.type===\"connected\"))wo.delete(Qe);let D=kp(M,Qt);if(D===\"none\"||D===\"retry_failed\"&&b===\"skip\")return;let K=new Map(wo);wo.clear();let ce=new Set(Object.keys(M)),ke=new Set(Qt.map((Qe)=>Qe.name));Dn();for(let Qe of Qt)if(!ce.has(Qe.name)){if(Qe.type===\"connected\")await Qe.cleanup()}let Ie={};for(let[Qe,mt]of Object.entries(M))if(!Qt.some((A)=>A.name===Qe&&A.type===\"disabled\"))Ie[Qe]=mt;Gf(\"before_setupSdkMcp\"),F6o(Object.keys(Ie).length);let Ye=await yn().setupSdkMcpClients(Ie,(Qe,mt)=>r.sendMcpMessage(Qe,mt),K,I.storageV5);Gf(\"after_setupSdkMcp\");for(let Qe of Ye.clients){if(Qe.type!==\"connected\"||!pn.delete(Qe.name))continue;let mt=await Ps(Qe);if(mt!==void 0)Ye.tools=[...KV(Ye.tools,Qe.name),...mt]}let Oe=Qt.filter((Qe)=>Object.hasOwn(M,Qe.name)&&(Qe.type===\"disabled\"||Qe.type===\"pending\"&&!Object.hasOwn(Ie,Qe.name)));for(let Qe of Oe){let mt=Ye.clients.find((A)=>A.name===Qe.name);if(mt===void 0)continue;if(mt.type===\"connected\")mt.cleanup().catch(()=>{});Ye.clients=Ye.clients.filter((A)=>A!==mt),Ye.tools=KV(Ye.tools,Qe.name),Ye.commands=Jte(Ye.commands,Qe.name)}Wo.add(Qt.filter((Qe)=>Qe.type===\"connected\")),Qt=[...Ye.clients,...Oe],Un=Ye.tools,Ln=Ye.commands;for(let Qe of Qt)if(Qe.type===\"connected\")wo.delete(Qe.name);let Ke=L([...ke,...ce]),$e=Ke.map((Qe)=>[Qe,Ds(Qe)]);R((Qe)=>({...Qe,mcp:{...Qe.mcp,tools:[...Qe.mcp.tools.filter((mt)=>!$e.some(([A,nt])=>zc(mt,A,nt))),...Un],commands:[...Qe.mcp.commands.filter((mt)=>!Ke.some((A)=>fy(mt,A))),...Ye.commands]}}));for(let Qe of Xi())Qe.reassertOwnership();Qk(Qt,{onFeedbackSurveyEvent:(Qe)=>Nk(Qe,I.storageV5),refusalFallbackSettingToggleVisible:ldn(),refusalFallbackLaneEnabled:xN(),fable5LaunchShow:!1,startupAnnouncement:Gao(),autoDefaultLaunchEnabled:Zyn(),ccrV2SessionCrudEnabled:F1(),maxEffortReminderEnabled:eoe(),onAutoDefaultNudgeEvent:(Qe,mt)=>pcr(Qe,mt,I.storageV5)}),$k(Qt)})",
+      "sha256": "1cb199a3bbbe7fc9666bc270fe78ae88f43367a244964bbc6df1a6e0211472c5",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "wn",
+      "start": 401227,
+      "endExclusive": 401647,
+      "source": "wn=async(b)=>{let D=ra(M,b),K=Qt.find((ke)=>ke.name===b);if(D===void 0||K?.type===\"disabled\")return;let ce={name:b,type:\"disabled\",config:{...D,scope:\"dynamic\"}};Qt=[...Qt.filter((ke)=>ke.name!==b),ce],Un=KV(Un,b),Ln=Jte(Ln,b),pn.delete(b),Js.delete(b),await Promise.all([Wo.closeFor(b),K?.type===\"connected\"?K.cleanup():void 0]).catch((ke)=>{te(b,`Failed to close SDK MCP server after mcp_toggle disabled it: ${ke}`)})}",
+      "sha256": "fd1ca8a31e9cbacad9f7ab84141412f887ff32b44993a2f03f5ae81ad08191ee",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "Tr",
+      "start": 401648,
+      "endExclusive": 401945,
+      "source": "Tr=async(b)=>{let D=ra(M,b);if(D===void 0)return;let K=Qt.find((ce)=>ce.name===b);if(K?.type===\"connected\")return K;if(K?.type===\"disabled\"||K?.type===\"failed\"){let ce={name:b,type:\"pending\",config:{...D,scope:\"dynamic\"}};Qt=Qt.map((ke)=>ke===K?ce:ke)}return await ze(),Qt.find((ce)=>ce.name===b)}",
+      "sha256": "6a9efb707481e2c31d7e7231617869e5f6bd950ed0f070c070790109c11af98c",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "hI.initialize.sdkManifest",
+      "start": 459217,
+      "endExclusive": 461521,
+      "source": "if(A.request.sdkMcpServers&&A.request.sdkMcpServers.length>0){for(let Ut of A.request.sdkMcpServers){let vt=ra(M,Ut),hr=be?ra(be,Ut):void 0,gn=N(hr)?hr.timeout:void 0,kr=frt(gn);if(gn!==void 0&&kr===void 0)t(`initialize: ignoring invalid timeout for SDK MCP server '${Ut}'`);if(vt){if(vt.timeout!==kr)t(`initialize: SDK MCP server '${Ut}' is already registered; its timeout change is ignored until the server is removed and re-added`);continue}M[Ut]={type:\"sdk\",name:Ut,...kr!==void 0&&{timeout:kr}}}let ot=A.request.sdkMcpServerManifests,Je=r instanceof qz&&ot!==void 0&&ot!==null&&vl()?await Yh({origin:A.request.sdkMcpServerManifestsOrigin,frameCreatedAt:Bar(A),sessionWriters:jar(A)}):void 0,jt=vl()&&Je===void 0,kt=hdo(ot,A.request.sdkMcpServers),Pr=new Set(Qt.filter((Ut)=>Ut.type===\"connected\").map((Ut)=>Ut.name)),ft=ot===void 0||ot===null?void 0:Object.create(null);if(ft!==void 0&&Je!==void 0)t(`initialize: sdkMcpServerManifests not honoured on this remote-session worker (${Je}); SDK MCP servers will handshake over the control channel`),p(\"mcp_sdk_manifest\",`mcp_sdk_manifest_remote_${Je}`);if(kt.malformedField){if(ft!==void 0)for(let Ut of A.request.sdkMcpServers)ft[Ut]=\"malformed\";if(jt)t(\"initialize: sdkMcpServerManifests is not an object keyed by server name \\u2014 ignoring it; SDK MCP servers will handshake over the control channel\",{level:\"warn\"}),p(\"mcp_sdk_manifest\",\"mcp_sdk_manifest_malformed_field\")}for(let Ut of kt.malformedServerNames){if(ft!==void 0)ft[Ut]=\"malformed\";if(jt)t(`initialize: sdkMcpServerManifests entry for '${Ut}' is malformed \\u2014 ignoring it; the server will handshake over the control channel`,{level:\"warn\"}),p(\"mcp_sdk_manifest\",\"mcp_sdk_manifest_malformed_entry\")}let wt=!1;for(let[Ut,vt]of kt.manifests){if(!jt){if(ft!==void 0)ft[Ut]=\"not_honoured\";continue}if(Pr.has(Ut)){if(ft!==void 0)ft[Ut]=\"already_connected\";continue}if(vt.initializeResult.protocolVersion!==Ide){if(t(`initialize: sdkMcpServerManifests entry for '${Ut}' was not captured with MCP protocol ${Ide} \\u2014 ignoring it; the server will handshake over the control channel`),p(\"mcp_sdk_manifest\",\"mcp_sdk_manifest_protocol_version_at_initialize\"),ft!==void 0)ft[Ut]=\"protocol_version_mismatch\";continue}if(wo.set(Ut,vt),ft!==void 0)ft[Ut]=\"parked\";wt=!0}if(it=ft,ue=wt,!ue)ze()}",
+      "sha256": "cd4c5b3d1cce858144b4a9ae16807b9136a5ef4e3995973da4a9dd4d09b0580b",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "hI.mcp_message",
+      "start": 472996,
+      "endExclusive": 473436,
+      "source": "{let j=A.request,ue=Qt.find((J)=>J.name===j.server_name);if(ue&&ue.type===\"connected\")QUo(ue,j.message);if(AYt(j.message)&&Object.hasOwn(M,j.server_name)&&vl()){Js.delete(j.server_name),pn.add(j.server_name);let J=wo.get(j.server_name);if(J?.toolsListResult!==void 0)wo.set(j.server_name,{initializeResult:J.initializeResult}),p(\"mcp_sdk_manifest\",\"mcp_sdk_manifest_tools_changed_before_connect\");if(ue?.type===\"connected\")ze(\"skip\")}Ze(A)}",
+      "sha256": "c5131673cbc8bdb8d015d19d4b0c7b8b304f888b4de14396534c63f1dd02ae03",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "hI.initialize.sdkConfig.0",
+      "start": 458253,
+      "endExclusive": 458309,
+      "source": "let ie=A.request.sdkMcpServerConfigs,be=N(ie)?ie:void 0;",
+      "sha256": "db850fb2c0eb78e762334cb1590c88b406ed366f2c76c359512f26721a585d41",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5"
+    },
+    {
+      "file": "chunk-xapeakym.js",
+      "name": "hI.initialize.sdkConfig.1",
+      "start": 458309,
+      "endExclusive": 458432,
+      "source": "if(ie!=null&&be===void 0)t(\"initialize: ignoring sdkMcpServerConfigs (not an object keyed by server name)\",{level:\"warn\"});",
+      "sha256": "957419687fc0801e95dd52393e244b28ca1a7b4dd6f8e35350d2d53b92b56084",
+      "moduleSha256": "626dbc5a6bf95a754c0bfc9f2ab68ac0c0499d242817f37ce2909365e96a11f5"
+    }
+  ],
+  "existingOwner": "printPluginRefresh287; existing Wo/Xi/Dn returned by its unchanged closure; original pn/Js/wo initialized once and fed by original initialize/mcp_message/Ps/ze"
+}

@@ -1,0 +1,2112 @@
+{
+  "sourceVersion": "2.1.287",
+  "canonicalPlatform": "linux-x64",
+  "bodyRewriting": false,
+  "wholeLogoutRestored": false,
+  "platforms": [
+    {
+      "platform": "linux-x64",
+      "logoutModule": {
+        "file": "chunk-6d2kw0hk.js",
+        "moduleSha256": "c887a413df02a6bc4bfd221d1334136e8a06611787f8f62a0694d3868be58f1e",
+        "moduleLength": 14486,
+        "manifestSha256": "ecae5d9ddbf13ef27b6b6a1141953aab4ba311e47dde3ac2a7cc8b5a01c63784",
+        "binarySha256": "3920489a5109cff5786a1a392c25277408ff22bc796d5edb9c16a60e5a1718f0"
+      },
+      "logout": {
+        "symbol": "Qee",
+        "start": 10345,
+        "end": 13043,
+        "source": "async function Qee({clearOnboarding:e=!1,preserveInProcessTokens:r=!1,preserveNonAnthropicAuth:n=!1,storageV5:s,preserveQuotaAutoResume:c=!1,artifactAccount:u=\"signed_out\",incomingIdentity:h,credentials:g}){let{flushTelemetry:R}=await import(\"/$bunfs/root/chunk-d3jt381w.js\");if(await R(),await y1o(u),Pt()){await UJt(s,{preserveQuotaAutoResume:c,artifactAccount:u,incomingIdentity:h});return}if(!r&&Me()===\"firstParty\"){let p=Gn();p.invalidateCache?.();let i=await p.readAsync(g),m=i?.claudeAiOauth;if(m?.refreshToken)await Gk(m.refreshToken,m.clientId);let C=i?.designOauth;if(C?.refreshToken)await Gk(C.refreshToken,C.clientId)}if(Me()===\"gateway\"){let p=Date.now()+5000;for(let C=Cve();C&&Date.now()<p;C=Cve())await lt(C.catch(()=>{}),p-Date.now());let i=Gn();i.invalidateCache?.();let m=(await i.readAsync(g))?.enterpriseGateway;if(m)await Wqo(m,g)}if(!r)a.unset(\"CLAUDE_CODE_OAUTH_TOKEN\"),FB(null);await UKr(s),await b({revoke:!r&&Me()===\"firstParty\"?({refreshToken:p,clientId:i})=>Gk(p,i):void 0});let w=Gn();if(n){if(Me()===\"firstParty\"){w.invalidateCache?.();let p=(await w.readAsync(g))?.designOauth;if(p?.refreshToken)await Gk(p.refreshToken,p.clientId)}await w.mutate((p)=>{let i={...p};return delete i.claudeAiOauth,delete i.organizationUuid,delete i.trustedDeviceToken,delete i.enterpriseGateway,delete i.designOauth,i},g).catch((p)=>{let i=E(p);if(i===\"EPERM\"||i===\"ENOENT\"||lh(p)){t(`[performLogout] re-login secure-storage prune failed (${i}): ${l(p)}`,{level:\"error\"});return}d(p)})}else{let p=!1,i=async()=>{p=!0;let m=await Q(w,g);if(await w.delete(g),m&&Object.keys(m).length>0)await Z(w,m,g)};await dXr(i).catch((m)=>{if(p)throw m;return d(m),JYo(i)})}S9(null),Bfe(null),await UJt(s,{preserveQuotaAutoResume:c,artifactAccount:u,incomingIdentity:h,credentials:g}),await Te((p)=>{let i={...p};if(e){if(i.hasCompletedOnboarding=!1,i.subscriptionNoticeCount=0,i.hasAvailableSubscription=!1,i.customApiKeyResponses!==void 0)i.customApiKeyResponses={approved:[],rejected:KO(i).rejected};let m=Rot;if(i.seenNotifications?.[m]!==void 0){let{[m]:C,...x}=i.seenNotifications;i.seenNotifications=x}}return i.oauthAccount=void 0,i.additionalModelOptionsCache=void 0,i.additionalModelOptionsAnsweredAt=void 0,i.additionalModelCostsCache=void 0,i.modelAccessCache=void 0,i.orgModelDefaultCache=void 0,i.cachedArtifactRoster=void 0,i.artifactRosterDenied=void 0,i.lastSeenOrgDefaultUpdatedAt=void 0,i.clientDataCache=void 0,i.clientDataCacheSlots=void 0,i.autoCompactWindowsCache=void 0,i.cachedUsageUtilization=void 0,i.metricsStatusCache=void 0,i.metricsStatusCacheByPrincipal=void 0,i.githubWebConnectionStatusCache=void 0,i.startupPrefetchedAt=void 0,i},s),dGe(void 0),y(\"oauth_logout\")}",
+        "sha256": "5f5dc63534eb550acade7cc00d0e6069d87e0893e09a9920b47355bdbea0bf1f"
+      },
+      "options": {
+        "clearOnboarding": "e",
+        "preserveInProcessTokens": "r",
+        "preserveNonAnthropicAuth": "n",
+        "storageV5": "s",
+        "preserveQuotaAutoResume": "c",
+        "artifactAccount": "u",
+        "incomingIdentity": "h",
+        "credentials": "g"
+      },
+      "clear": {
+        "start": 11350,
+        "end": 12019,
+        "source": "let w=Gn();if(n){if(Me()===\"firstParty\"){w.invalidateCache?.();let p=(await w.readAsync(g))?.designOauth;if(p?.refreshToken)await Gk(p.refreshToken,p.clientId)}await w.mutate((p)=>{let i={...p};return delete i.claudeAiOauth,delete i.organizationUuid,delete i.trustedDeviceToken,delete i.enterpriseGateway,delete i.designOauth,i},g).catch((p)=>{let i=E(p);if(i===\"EPERM\"||i===\"ENOENT\"||lh(p)){t(`[performLogout] re-login secure-storage prune failed (${i}): ${l(p)}`,{level:\"error\"});return}d(p)})}else{let p=!1,i=async()=>{p=!0;let m=await Q(w,g);if(await w.delete(g),m&&Object.keys(m).length>0)await Z(w,m,g)};await dXr(i).catch((m)=>{if(p)throw m;return d(m),JYo(i)})}",
+        "sha256": "af1ed90d3293cefb1b723b6ea16a0d851537cccab20caab0e7bf306093061bfc"
+      },
+      "clearSlots": {
+        "start": 12019,
+        "end": 12037,
+        "source": "S9(null),Bfe(null)",
+        "sha256": "36bd199d900520946c1a6fc5a455f23368286275b261477ccc39f3fc31d8292e"
+      },
+      "slotDeclarations": [
+        {
+          "origin": {
+            "module": "/$bunfs/root/chunk-8e9587qc.js",
+            "file": "chunk-8e9587qc.js",
+            "symbol": "S9"
+          },
+          "module": {
+            "file": "chunk-8e9587qc.js",
+            "moduleSha256": "845c5cd9333e01d7042b4934b489049dea4ccd1428b87d828e028136e3bf4dd3",
+            "manifestSha256": "ecae5d9ddbf13ef27b6b6a1141953aab4ba311e47dde3ac2a7cc8b5a01c63784"
+          },
+          "declaration": {
+            "symbol": "S9",
+            "start": 96262,
+            "end": 96324,
+            "source": "function S9(e){n().host.credentialSlots.replaceGatewayAuth(e)}",
+            "sha256": "7c843731a23b109082776e8b942abab03df0130f5669dc043150eae1c202b871"
+          }
+        },
+        {
+          "origin": {
+            "module": "/$bunfs/root/chunk-8e9587qc.js",
+            "file": "chunk-8e9587qc.js",
+            "symbol": "Bfe"
+          },
+          "module": {
+            "file": "chunk-8e9587qc.js",
+            "moduleSha256": "845c5cd9333e01d7042b4934b489049dea4ccd1428b87d828e028136e3bf4dd3",
+            "manifestSha256": "ecae5d9ddbf13ef27b6b6a1141953aab4ba311e47dde3ac2a7cc8b5a01c63784"
+          },
+          "declaration": {
+            "symbol": "Bfe",
+            "start": 96394,
+            "end": 96464,
+            "source": "function Bfe(e){n().host.credentialSlots.stampAuthenticatedAccount(e)}",
+            "sha256": "580f651a29c87badf8ff94804384433e34d4041a78b7fdb74f207ceb93e8132f"
+          }
+        }
+      ],
+      "revokeExisting": {
+        "start": 10738,
+        "end": 10976,
+        "source": "if(!r&&Me()===\"firstParty\"){let p=Gn();p.invalidateCache?.();let i=await p.readAsync(g),m=i?.claudeAiOauth;if(m?.refreshToken)await Gk(m.refreshToken,m.clientId);let C=i?.designOauth;if(C?.refreshToken)await Gk(C.refreshToken,C.clientId)}",
+        "sha256": "97886907dc0fb2f58b977a439130d935c23318b0c793520c28d2e9526932977f"
+      },
+      "clearInProcess": {
+        "start": 11199,
+        "end": 11249,
+        "source": "if(!r)a.unset(\"CLAUDE_CODE_OAUTH_TOKEN\"),FB(null);",
+        "sha256": "e7b7938c2abb00045e1b567f707453a6f25ffbea40ff6841d9b77ef17fc68690"
+      },
+      "config": {
+        "start": 12139,
+        "end": 13009,
+        "source": "(p)=>{let i={...p};if(e){if(i.hasCompletedOnboarding=!1,i.subscriptionNoticeCount=0,i.hasAvailableSubscription=!1,i.customApiKeyResponses!==void 0)i.customApiKeyResponses={approved:[],rejected:KO(i).rejected};let m=Rot;if(i.seenNotifications?.[m]!==void 0){let{[m]:C,...x}=i.seenNotifications;i.seenNotifications=x}}return i.oauthAccount=void 0,i.additionalModelOptionsCache=void 0,i.additionalModelOptionsAnsweredAt=void 0,i.additionalModelCostsCache=void 0,i.modelAccessCache=void 0,i.orgModelDefaultCache=void 0,i.cachedArtifactRoster=void 0,i.artifactRosterDenied=void 0,i.lastSeenOrgDefaultUpdatedAt=void 0,i.clientDataCache=void 0,i.clientDataCacheSlots=void 0,i.autoCompactWindowsCache=void 0,i.cachedUsageUtilization=void 0,i.metricsStatusCache=void 0,i.metricsStatusCacheByPrincipal=void 0,i.githubWebConnectionStatusCache=void 0,i.startupPrefetchedAt=void 0,i}",
+        "sha256": "78724d73de99c8883cee2849cf8155bdfd849cb3b5fbe99b96389c5cb4bae8e7"
+      },
+      "readDevice": {
+        "symbol": "Q",
+        "start": 14187,
+        "end": 14436,
+        "source": "async function Q(e,r){for(let n=0;n<2;n++){let s=await(e.readAsyncStrict?.(r)??e.readAsync(r));if(s!==Pc)return s?.coworkRemoteDevice}d(Error(\"logout: secure storage could not be read, so the device identity is not carried across the wipe\"));return}",
+        "sha256": "c5fa21ca421784aa3fd7dd50d96f987137f419322f8384d84d18840b2489971d"
+      },
+      "writeDevice": {
+        "symbol": "Z",
+        "start": 13929,
+        "end": 14187,
+        "source": "async function Z(e,r,n){let s;for(let c=0;c<2;c++)try{let u=await e.mutate(()=>({coworkRemoteDevice:r}),n);if(u.success)return;if(s=Error(\"logout: the device identity could not be written back after the credential wipe\"),!u.transient)break}catch(u){s=u}d(s)}",
+        "sha256": "b96acf3fa27c36f06d81badf19c726324fa8c055f72c882a5af09473d5945107"
+      },
+      "aliases": {
+        "storage": "Gn",
+        "provider": "Me",
+        "revoke": "Gk",
+        "debug": "t",
+        "report": "d",
+        "writeLock": "dXr",
+        "alreadyLocked": "JYo",
+        "readFailed": "Pc",
+        "environment": "a",
+        "setFd": "FB",
+        "setGateway": "S9",
+        "stampAccount": "Bfe"
+      },
+      "portOrigins": {
+        "storage": {
+          "module": "/$bunfs/root/chunk-erj0qgne.js",
+          "file": "chunk-erj0qgne.js",
+          "symbol": "Gn"
+        },
+        "provider": {
+          "module": "/$bunfs/root/chunk-e8vff9an.js",
+          "file": "chunk-e8vff9an.js",
+          "symbol": "Me"
+        },
+        "revoke": {
+          "module": "/$bunfs/root/chunk-k985080f.js",
+          "file": "chunk-k985080f.js",
+          "symbol": "Gk"
+        },
+        "debug": {
+          "module": "/$bunfs/root/chunk-bgzq3rjr.js",
+          "file": "chunk-bgzq3rjr.js",
+          "symbol": "t"
+        },
+        "report": {
+          "module": "/$bunfs/root/chunk-fs7xtb5z.js",
+          "file": "chunk-fs7xtb5z.js",
+          "symbol": "d"
+        },
+        "writeLock": {
+          "module": "/$bunfs/root/chunk-erj0qgne.js",
+          "file": "chunk-erj0qgne.js",
+          "symbol": "dXr"
+        },
+        "alreadyLocked": {
+          "module": "/$bunfs/root/chunk-erj0qgne.js",
+          "file": "chunk-erj0qgne.js",
+          "symbol": "JYo"
+        },
+        "readFailed": {
+          "module": "/$bunfs/root/chunk-erj0qgne.js",
+          "file": "chunk-erj0qgne.js",
+          "symbol": "Pc"
+        },
+        "environment": {
+          "module": "/$bunfs/root/chunk-ex1nk6dh.js",
+          "file": "chunk-ex1nk6dh.js",
+          "symbol": "a"
+        },
+        "setFd": {
+          "module": "/$bunfs/root/chunk-8e9587qc.js",
+          "file": "chunk-8e9587qc.js",
+          "symbol": "FB"
+        },
+        "setGateway": {
+          "module": "/$bunfs/root/chunk-8e9587qc.js",
+          "file": "chunk-8e9587qc.js",
+          "symbol": "S9"
+        },
+        "stampAccount": {
+          "module": "/$bunfs/root/chunk-8e9587qc.js",
+          "file": "chunk-8e9587qc.js",
+          "symbol": "Bfe"
+        }
+      },
+      "lockEvidence": [
+        {
+          "semantic": "writeLock",
+          "module": {
+            "file": "chunk-erj0qgne.js",
+            "moduleSha256": "5b5e3cdb7e13d698bcf5665f2381db48072400c55cf9e02ec49561f6c0742210",
+            "manifestSha256": "ecae5d9ddbf13ef27b6b6a1141953aab4ba311e47dde3ac2a7cc8b5a01c63784"
+          },
+          "declaration": {
+            "symbol": "dXr",
+            "start": 1505,
+            "end": 1980,
+            "source": "async function dXr(e){if(C.getStore())return e();let r=T,n;T=new Promise((o)=>{n=o});try{await r;let o=wS();await ae().mkdir(o);let a=await sa(B(o,\".storage-write\"),{realpath:!1,retries:{retries:10,minTimeout:100,maxTimeout:1000},stale:15000,onCompromised:(s)=>t(`[secureStorage] write lock compromised: ${l(s)}`,{level:\"warn\"})});try{return await C.run(!0,e)}finally{await a().catch((s)=>t(`[secureStorage] write lock release failed: ${l(s)}`,{level:\"warn\"}))}}finally{n()}}",
+            "sha256": "a210950e4b50312c9fd33b6611106a7f72c24ba081405335610e0a5226448981"
+          }
+        },
+        {
+          "semantic": "alreadyLocked",
+          "module": {
+            "file": "chunk-erj0qgne.js",
+            "moduleSha256": "5b5e3cdb7e13d698bcf5665f2381db48072400c55cf9e02ec49561f6c0742210",
+            "manifestSha256": "ecae5d9ddbf13ef27b6b6a1141953aab4ba311e47dde3ac2a7cc8b5a01c63784"
+          },
+          "declaration": {
+            "symbol": "JYo",
+            "start": 1980,
+            "end": 2021,
+            "source": "async function JYo(e){return C.run(!0,e)}",
+            "sha256": "492ae3757297104dda9ff45f0a137282d662b4dd84e810463e783e0c415df987"
+          }
+        },
+        {
+          "semantic": "readFailed",
+          "module": {
+            "file": "chunk-erj0qgne.js",
+            "moduleSha256": "5b5e3cdb7e13d698bcf5665f2381db48072400c55cf9e02ec49561f6c0742210",
+            "manifestSha256": "ecae5d9ddbf13ef27b6b6a1141953aab4ba311e47dde3ac2a7cc8b5a01c63784"
+          },
+          "declaration": {
+            "symbol": "Pc",
+            "start": 1358,
+            "end": 1396,
+            "source": "Pc=Symbol(\"secureStorage.READ_FAILED\")",
+            "sha256": "8b4b122ffda0e3fac18d0fbe49e5e02ac6f622498feee0994b18104ee370045b"
+          }
+        }
+      ],
+      "errors": {
+        "module": {
+          "file": "chunk-5pp15f99.js",
+          "moduleSha256": "d304d5ac5154290e1285e5876ad74d63e3a972b7c811ce7671dcda052020f448",
+          "manifestSha256": "ecae5d9ddbf13ef27b6b6a1141953aab4ba311e47dde3ac2a7cc8b5a01c63784"
+        },
+        "declarations": [
+          {
+            "symbol": "E",
+            "start": 4814,
+            "end": 4913,
+            "source": "function E(n){if(n&&typeof n===\"object\"&&\"code\"in n&&typeof n.code===\"string\")return n.code;return}",
+            "sha256": "a84ab0a2488aed5689416393c679dde4e7f4b29aa980e121bd56b25ab3e7b5e4"
+          },
+          {
+            "symbol": "lh",
+            "start": 8632,
+            "end": 8664,
+            "source": "function lh(n){return dir(E(n))}",
+            "sha256": "3e064d5802654da4e1abbf1714770566539fe6dac011955ee92971d458e285c8"
+          },
+          {
+            "symbol": "l",
+            "start": 4754,
+            "end": 4814,
+            "source": "function l(n){return n instanceof Error?n.message:String(n)}",
+            "sha256": "2f921ed78ffeed39032d7e9c4783e05c294cba2ce61cc5ac20466ece27a81075"
+          },
+          {
+            "symbol": "dir",
+            "start": 8664,
+            "end": 8837,
+            "source": "function dir(n){return n===\"EDEADLK\"||n===\"EINTR\"||n===\"ENXIO\"||n===\"ENODEV\"||n===\"ECANCELED\"||n===\"ENEEDAUTH\"||n===\"ESTALE\"||n===\"EUNKNOWN\"||n===\"ENOMEM\"||n!==void 0&&c(n)}",
+            "sha256": "7429960a91499bed2fdca8f9f683cceea6b099e62fa86495e717867254594184"
+          },
+          {
+            "symbol": "c",
+            "start": 8837,
+            "end": 8910,
+            "source": "function c(n){return n===\"UNKNOWN\"||n.startsWith(\"Unknown system error\")}",
+            "sha256": "27c8d43976cbebe4947766cb1f6023324022453070ac4f34ab5d8c428423dea6"
+          }
+        ],
+        "aliases": {
+          "errorCode": "E",
+          "transient": "lh",
+          "message": "l"
+        }
+      },
+      "normalizer": {
+        "module": {
+          "file": "chunk-k985080f.js",
+          "moduleSha256": "d6199404b28747162a26ebad430cd2da54bba9f337d9f6326241b38e313cf917",
+          "manifestSha256": "ecae5d9ddbf13ef27b6b6a1141953aab4ba311e47dde3ac2a7cc8b5a01c63784"
+        },
+        "declaration": {
+          "symbol": "KO",
+          "start": 545895,
+          "end": 545998,
+          "source": "function KO(e){let n=e.customApiKeyResponses;return{approved:wi(n?.approved),rejected:wi(n?.rejected)}}",
+          "sha256": "9a050508629247516d6c1a14b27dc52acb0d16d55cdf4b386a51c5a989c6b24e"
+        },
+        "local": "KO",
+        "strings": {
+          "module": {
+            "file": "chunk-62stp5my.js",
+            "moduleSha256": "a616e07fd6b2ba86b14e76d3292d2361bba9e9b4debfa94a5610e7ba5f5fc5d8",
+            "manifestSha256": "ecae5d9ddbf13ef27b6b6a1141953aab4ba311e47dde3ac2a7cc8b5a01c63784"
+          },
+          "declaration": {
+            "symbol": "wi",
+            "start": 919,
+            "end": 1042,
+            "source": "function wi(n){if(!Array.isArray(n))return[];return n.every((e)=>typeof e===\"string\")?n:n.filter((e)=>typeof e===\"string\")}",
+            "sha256": "b5cf54bd3bbe2b2d56d2a0e4cf042832cf629abdc2ca1a25216111791b0af6ab"
+          },
+          "local": "wi"
+        }
+      },
+      "notification": {
+        "module": {
+          "file": "chunk-nbz804r7.js",
+          "moduleSha256": "915c695f54853bee880504262ed71a0f722b6d54f6d249156d4c16304fc0fe0d",
+          "manifestSha256": "ecae5d9ddbf13ef27b6b6a1141953aab4ba311e47dde3ac2a7cc8b5a01c63784"
+        },
+        "declaration": {
+          "symbol": "Rot",
+          "start": 619,
+          "end": 644,
+          "source": "Rot=\"subscription-switch\"",
+          "sha256": "51a69fcc270773d3d8e9070367269733c8587def66495c8437bf7a0a0c9b751e"
+        },
+        "local": "Rot"
+      },
+      "revoke": {
+        "module": {
+          "file": "chunk-k985080f.js",
+          "moduleSha256": "d6199404b28747162a26ebad430cd2da54bba9f337d9f6326241b38e313cf917",
+          "manifestSha256": "ecae5d9ddbf13ef27b6b6a1141953aab4ba311e47dde3ac2a7cc8b5a01c63784"
+        },
+        "declaration": {
+          "symbol": "Gk",
+          "start": 693310,
+          "end": 693727,
+          "source": "async function Gk(e,n){try{await _t.post(`${dn().TOKEN_URL}/revoke`,{token:e,token_type_hint:\"refresh_token\",client_id:n??dn().CLIENT_ID},{headers:{\"Content-Type\":\"application/json\"},timeout:5000}),y(\"oauth_token_revoke\")}catch(r){let s=_t.isAxiosError(r)?r.response?.status:void 0;t(`OAuth token revoke failed (status=${s??\"network\"}); continuing with local logout.`),p(\"oauth_token_revoke\",`http_${s??\"network\"}`)}}",
+          "sha256": "035a880a37e800e7713548113d84e7468cfea1cfdd2a459434f4adbc280a9fea"
+        },
+        "aliases": {
+          "http": "_t",
+          "config": "dn",
+          "ok": "y",
+          "debug": "t",
+          "sad": "p"
+        }
+      }
+    },
+    {
+      "platform": "linux-arm64",
+      "logoutModule": {
+        "file": "chunk-b3jrqn71.js",
+        "moduleSha256": "e6fc9821b9578677abeeb1af52f6443a8851c2f7d663199ac9f3719708a0567a",
+        "moduleLength": 14486,
+        "manifestSha256": "f3be5b23f9cbb909555fe028143b9a3a40c1e3e49961e09c49d8e5a6b61ae83b",
+        "binarySha256": "e4daf793d1e74fb0d9874dd09e98690bbfd7be515f78a87fd05b9e2b4bb33b03"
+      },
+      "logout": {
+        "symbol": "Qee",
+        "start": 10345,
+        "end": 13043,
+        "source": "async function Qee({clearOnboarding:e=!1,preserveInProcessTokens:r=!1,preserveNonAnthropicAuth:n=!1,storageV5:s,preserveQuotaAutoResume:c=!1,artifactAccount:u=\"signed_out\",incomingIdentity:h,credentials:g}){let{flushTelemetry:E}=await import(\"/$bunfs/root/chunk-v3b793cr.js\");if(await E(),await y1o(u),Pt()){await BJt(s,{preserveQuotaAutoResume:c,artifactAccount:u,incomingIdentity:h});return}if(!r&&Me()===\"firstParty\"){let p=Gn();p.invalidateCache?.();let i=await p.readAsync(g),m=i?.claudeAiOauth;if(m?.refreshToken)await GE(m.refreshToken,m.clientId);let C=i?.designOauth;if(C?.refreshToken)await GE(C.refreshToken,C.clientId)}if(Me()===\"gateway\"){let p=Date.now()+5000;for(let C=Cve();C&&Date.now()<p;C=Cve())await lt(C.catch(()=>{}),p-Date.now());let i=Gn();i.invalidateCache?.();let m=(await i.readAsync(g))?.enterpriseGateway;if(m)await WKo(m,g)}if(!r)a.unset(\"CLAUDE_CODE_OAUTH_TOKEN\"),UH(null);await BVr(s),await b({revoke:!r&&Me()===\"firstParty\"?({refreshToken:p,clientId:i})=>GE(p,i):void 0});let w=Gn();if(n){if(Me()===\"firstParty\"){w.invalidateCache?.();let p=(await w.readAsync(g))?.designOauth;if(p?.refreshToken)await GE(p.refreshToken,p.clientId)}await w.mutate((p)=>{let i={...p};return delete i.claudeAiOauth,delete i.organizationUuid,delete i.trustedDeviceToken,delete i.enterpriseGateway,delete i.designOauth,i},g).catch((p)=>{let i=k(p);if(i===\"EPERM\"||i===\"ENOENT\"||lh(p)){t(`[performLogout] re-login secure-storage prune failed (${i}): ${l(p)}`,{level:\"error\"});return}d(p)})}else{let p=!1,i=async()=>{p=!0;let m=await Q(w,g);if(await w.delete(g),m&&Object.keys(m).length>0)await Z(w,m,g)};await dXr(i).catch((m)=>{if(p)throw m;return d(m),JYo(i)})}S8(null),Hfe(null),await BJt(s,{preserveQuotaAutoResume:c,artifactAccount:u,incomingIdentity:h,credentials:g}),await Te((p)=>{let i={...p};if(e){if(i.hasCompletedOnboarding=!1,i.subscriptionNoticeCount=0,i.hasAvailableSubscription=!1,i.customApiKeyResponses!==void 0)i.customApiKeyResponses={approved:[],rejected:VI(i).rejected};let m=Aot;if(i.seenNotifications?.[m]!==void 0){let{[m]:C,...F}=i.seenNotifications;i.seenNotifications=F}}return i.oauthAccount=void 0,i.additionalModelOptionsCache=void 0,i.additionalModelOptionsAnsweredAt=void 0,i.additionalModelCostsCache=void 0,i.modelAccessCache=void 0,i.orgModelDefaultCache=void 0,i.cachedArtifactRoster=void 0,i.artifactRosterDenied=void 0,i.lastSeenOrgDefaultUpdatedAt=void 0,i.clientDataCache=void 0,i.clientDataCacheSlots=void 0,i.autoCompactWindowsCache=void 0,i.cachedUsageUtilization=void 0,i.metricsStatusCache=void 0,i.metricsStatusCacheByPrincipal=void 0,i.githubWebConnectionStatusCache=void 0,i.startupPrefetchedAt=void 0,i},s),d2e(void 0),y(\"oauth_logout\")}",
+        "sha256": "928157c60c13503ebd98b14f7b348299dcb0596c61c560b8b084d39a9db68244"
+      },
+      "options": {
+        "clearOnboarding": "e",
+        "preserveInProcessTokens": "r",
+        "preserveNonAnthropicAuth": "n",
+        "storageV5": "s",
+        "preserveQuotaAutoResume": "c",
+        "artifactAccount": "u",
+        "incomingIdentity": "h",
+        "credentials": "g"
+      },
+      "clear": {
+        "start": 11350,
+        "end": 12019,
+        "source": "let w=Gn();if(n){if(Me()===\"firstParty\"){w.invalidateCache?.();let p=(await w.readAsync(g))?.designOauth;if(p?.refreshToken)await GE(p.refreshToken,p.clientId)}await w.mutate((p)=>{let i={...p};return delete i.claudeAiOauth,delete i.organizationUuid,delete i.trustedDeviceToken,delete i.enterpriseGateway,delete i.designOauth,i},g).catch((p)=>{let i=k(p);if(i===\"EPERM\"||i===\"ENOENT\"||lh(p)){t(`[performLogout] re-login secure-storage prune failed (${i}): ${l(p)}`,{level:\"error\"});return}d(p)})}else{let p=!1,i=async()=>{p=!0;let m=await Q(w,g);if(await w.delete(g),m&&Object.keys(m).length>0)await Z(w,m,g)};await dXr(i).catch((m)=>{if(p)throw m;return d(m),JYo(i)})}",
+        "sha256": "5dfb620bc1cea688eb5b06ba20512c4a7c9362d8a5ab4f701e6f4d50c7f6dab9"
+      },
+      "clearSlots": {
+        "start": 12019,
+        "end": 12037,
+        "source": "S8(null),Hfe(null)",
+        "sha256": "463ca762a41f9750df0e146bc9d06705da03990a0eeca43e7d0addaaa760043a"
+      },
+      "slotDeclarations": [
+        {
+          "origin": {
+            "module": "/$bunfs/root/chunk-jx85q2yb.js",
+            "file": "chunk-jx85q2yb.js",
+            "symbol": "S8"
+          },
+          "module": {
+            "file": "chunk-jx85q2yb.js",
+            "moduleSha256": "8041243c03cf81a5ea9f562db34e00d5a58bf29d69c503ff77cd9801ac1f21da",
+            "manifestSha256": "f3be5b23f9cbb909555fe028143b9a3a40c1e3e49961e09c49d8e5a6b61ae83b"
+          },
+          "declaration": {
+            "symbol": "S8",
+            "start": 96262,
+            "end": 96324,
+            "source": "function S8(e){n().host.credentialSlots.replaceGatewayAuth(e)}",
+            "sha256": "731bc9b21484b49dbcf6e6841d44ba77b9b25844da3cbc7a40a44d8ef4304779"
+          }
+        },
+        {
+          "origin": {
+            "module": "/$bunfs/root/chunk-jx85q2yb.js",
+            "file": "chunk-jx85q2yb.js",
+            "symbol": "Hfe"
+          },
+          "module": {
+            "file": "chunk-jx85q2yb.js",
+            "moduleSha256": "8041243c03cf81a5ea9f562db34e00d5a58bf29d69c503ff77cd9801ac1f21da",
+            "manifestSha256": "f3be5b23f9cbb909555fe028143b9a3a40c1e3e49961e09c49d8e5a6b61ae83b"
+          },
+          "declaration": {
+            "symbol": "Hfe",
+            "start": 96394,
+            "end": 96464,
+            "source": "function Hfe(e){n().host.credentialSlots.stampAuthenticatedAccount(e)}",
+            "sha256": "827445e3edf3e8aaf623bb4b8090e1710b62ed3b94da2c2ef57b699c82300154"
+          }
+        }
+      ],
+      "revokeExisting": {
+        "start": 10738,
+        "end": 10976,
+        "source": "if(!r&&Me()===\"firstParty\"){let p=Gn();p.invalidateCache?.();let i=await p.readAsync(g),m=i?.claudeAiOauth;if(m?.refreshToken)await GE(m.refreshToken,m.clientId);let C=i?.designOauth;if(C?.refreshToken)await GE(C.refreshToken,C.clientId)}",
+        "sha256": "145179a21b5402bb80b8fb7ace522b8ade44dfc713ef137b02b9f34a68b158a0"
+      },
+      "clearInProcess": {
+        "start": 11199,
+        "end": 11249,
+        "source": "if(!r)a.unset(\"CLAUDE_CODE_OAUTH_TOKEN\"),UH(null);",
+        "sha256": "498d4d0bc28d5c060f331647ce784f059b37762ac6d4a60ee5561a2f62f74b4a"
+      },
+      "config": {
+        "start": 12139,
+        "end": 13009,
+        "source": "(p)=>{let i={...p};if(e){if(i.hasCompletedOnboarding=!1,i.subscriptionNoticeCount=0,i.hasAvailableSubscription=!1,i.customApiKeyResponses!==void 0)i.customApiKeyResponses={approved:[],rejected:VI(i).rejected};let m=Aot;if(i.seenNotifications?.[m]!==void 0){let{[m]:C,...F}=i.seenNotifications;i.seenNotifications=F}}return i.oauthAccount=void 0,i.additionalModelOptionsCache=void 0,i.additionalModelOptionsAnsweredAt=void 0,i.additionalModelCostsCache=void 0,i.modelAccessCache=void 0,i.orgModelDefaultCache=void 0,i.cachedArtifactRoster=void 0,i.artifactRosterDenied=void 0,i.lastSeenOrgDefaultUpdatedAt=void 0,i.clientDataCache=void 0,i.clientDataCacheSlots=void 0,i.autoCompactWindowsCache=void 0,i.cachedUsageUtilization=void 0,i.metricsStatusCache=void 0,i.metricsStatusCacheByPrincipal=void 0,i.githubWebConnectionStatusCache=void 0,i.startupPrefetchedAt=void 0,i}",
+        "sha256": "6e47dab0828eea87ead3baad8819ceacf70bd2eb9327b8a37a69d87edf311db5"
+      },
+      "readDevice": {
+        "symbol": "Q",
+        "start": 14187,
+        "end": 14436,
+        "source": "async function Q(e,r){for(let n=0;n<2;n++){let s=await(e.readAsyncStrict?.(r)??e.readAsync(r));if(s!==Pc)return s?.coworkRemoteDevice}d(Error(\"logout: secure storage could not be read, so the device identity is not carried across the wipe\"));return}",
+        "sha256": "c5fa21ca421784aa3fd7dd50d96f987137f419322f8384d84d18840b2489971d"
+      },
+      "writeDevice": {
+        "symbol": "Z",
+        "start": 13929,
+        "end": 14187,
+        "source": "async function Z(e,r,n){let s;for(let c=0;c<2;c++)try{let u=await e.mutate(()=>({coworkRemoteDevice:r}),n);if(u.success)return;if(s=Error(\"logout: the device identity could not be written back after the credential wipe\"),!u.transient)break}catch(u){s=u}d(s)}",
+        "sha256": "b96acf3fa27c36f06d81badf19c726324fa8c055f72c882a5af09473d5945107"
+      },
+      "aliases": {
+        "storage": "Gn",
+        "provider": "Me",
+        "revoke": "GE",
+        "debug": "t",
+        "report": "d",
+        "writeLock": "dXr",
+        "alreadyLocked": "JYo",
+        "readFailed": "Pc",
+        "environment": "a",
+        "setFd": "UH",
+        "setGateway": "S8",
+        "stampAccount": "Hfe"
+      },
+      "portOrigins": {
+        "storage": {
+          "module": "/$bunfs/root/chunk-7rc1b0zg.js",
+          "file": "chunk-7rc1b0zg.js",
+          "symbol": "Gn"
+        },
+        "provider": {
+          "module": "/$bunfs/root/chunk-h2jaxvwe.js",
+          "file": "chunk-h2jaxvwe.js",
+          "symbol": "Me"
+        },
+        "revoke": {
+          "module": "/$bunfs/root/chunk-g77csgy5.js",
+          "file": "chunk-g77csgy5.js",
+          "symbol": "GE"
+        },
+        "debug": {
+          "module": "/$bunfs/root/chunk-m2pbrf6n.js",
+          "file": "chunk-m2pbrf6n.js",
+          "symbol": "t"
+        },
+        "report": {
+          "module": "/$bunfs/root/chunk-sh2djrhe.js",
+          "file": "chunk-sh2djrhe.js",
+          "symbol": "d"
+        },
+        "writeLock": {
+          "module": "/$bunfs/root/chunk-7rc1b0zg.js",
+          "file": "chunk-7rc1b0zg.js",
+          "symbol": "dXr"
+        },
+        "alreadyLocked": {
+          "module": "/$bunfs/root/chunk-7rc1b0zg.js",
+          "file": "chunk-7rc1b0zg.js",
+          "symbol": "JYo"
+        },
+        "readFailed": {
+          "module": "/$bunfs/root/chunk-7rc1b0zg.js",
+          "file": "chunk-7rc1b0zg.js",
+          "symbol": "Pc"
+        },
+        "environment": {
+          "module": "/$bunfs/root/chunk-ysvw6cpd.js",
+          "file": "chunk-ysvw6cpd.js",
+          "symbol": "a"
+        },
+        "setFd": {
+          "module": "/$bunfs/root/chunk-jx85q2yb.js",
+          "file": "chunk-jx85q2yb.js",
+          "symbol": "UH"
+        },
+        "setGateway": {
+          "module": "/$bunfs/root/chunk-jx85q2yb.js",
+          "file": "chunk-jx85q2yb.js",
+          "symbol": "S8"
+        },
+        "stampAccount": {
+          "module": "/$bunfs/root/chunk-jx85q2yb.js",
+          "file": "chunk-jx85q2yb.js",
+          "symbol": "Hfe"
+        }
+      },
+      "lockEvidence": [
+        {
+          "semantic": "writeLock",
+          "module": {
+            "file": "chunk-7rc1b0zg.js",
+            "moduleSha256": "1bad4b4bc0b46b1afc9e2090414bd34c15c3b8e1ee412653ff7e85ede87ebe99",
+            "manifestSha256": "f3be5b23f9cbb909555fe028143b9a3a40c1e3e49961e09c49d8e5a6b61ae83b"
+          },
+          "declaration": {
+            "symbol": "dXr",
+            "start": 1505,
+            "end": 1980,
+            "source": "async function dXr(e){if(y.getStore())return e();let r=w,n;w=new Promise((o)=>{n=o});try{await r;let o=wS();await ae().mkdir(o);let a=await sa(v(o,\".storage-write\"),{realpath:!1,retries:{retries:10,minTimeout:100,maxTimeout:1000},stale:15000,onCompromised:(s)=>t(`[secureStorage] write lock compromised: ${l(s)}`,{level:\"warn\"})});try{return await y.run(!0,e)}finally{await a().catch((s)=>t(`[secureStorage] write lock release failed: ${l(s)}`,{level:\"warn\"}))}}finally{n()}}",
+            "sha256": "d751bfbe8b5dc6d8342dbbd0bb4c36bfc8adb121cf0aefcbf744b63c485914c9"
+          }
+        },
+        {
+          "semantic": "alreadyLocked",
+          "module": {
+            "file": "chunk-7rc1b0zg.js",
+            "moduleSha256": "1bad4b4bc0b46b1afc9e2090414bd34c15c3b8e1ee412653ff7e85ede87ebe99",
+            "manifestSha256": "f3be5b23f9cbb909555fe028143b9a3a40c1e3e49961e09c49d8e5a6b61ae83b"
+          },
+          "declaration": {
+            "symbol": "JYo",
+            "start": 1980,
+            "end": 2021,
+            "source": "async function JYo(e){return y.run(!0,e)}",
+            "sha256": "909e4bc2c0fcf1f6798373fa00361ac77d235a07924df60fbeb353da5cb58d56"
+          }
+        },
+        {
+          "semantic": "readFailed",
+          "module": {
+            "file": "chunk-7rc1b0zg.js",
+            "moduleSha256": "1bad4b4bc0b46b1afc9e2090414bd34c15c3b8e1ee412653ff7e85ede87ebe99",
+            "manifestSha256": "f3be5b23f9cbb909555fe028143b9a3a40c1e3e49961e09c49d8e5a6b61ae83b"
+          },
+          "declaration": {
+            "symbol": "Pc",
+            "start": 1358,
+            "end": 1396,
+            "source": "Pc=Symbol(\"secureStorage.READ_FAILED\")",
+            "sha256": "8b4b122ffda0e3fac18d0fbe49e5e02ac6f622498feee0994b18104ee370045b"
+          }
+        }
+      ],
+      "errors": {
+        "module": {
+          "file": "chunk-gwr1he3z.js",
+          "moduleSha256": "013d1bf1d328fd90a53b3188caacf31ef0b54140e783c094cccb6bec6f1ac424",
+          "manifestSha256": "f3be5b23f9cbb909555fe028143b9a3a40c1e3e49961e09c49d8e5a6b61ae83b"
+        },
+        "declarations": [
+          {
+            "symbol": "k",
+            "start": 4814,
+            "end": 4913,
+            "source": "function k(n){if(n&&typeof n===\"object\"&&\"code\"in n&&typeof n.code===\"string\")return n.code;return}",
+            "sha256": "30989737b326ea6cc73ea4f358375de688c7476f7d872fd74ea71d11917d53b8"
+          },
+          {
+            "symbol": "lh",
+            "start": 8632,
+            "end": 8664,
+            "source": "function lh(n){return dir(k(n))}",
+            "sha256": "bc2a4020eb7ba97ba31052f77afd6681ee7acaa8cc676a8c1322a98946ef971a"
+          },
+          {
+            "symbol": "l",
+            "start": 4754,
+            "end": 4814,
+            "source": "function l(n){return n instanceof Error?n.message:String(n)}",
+            "sha256": "2f921ed78ffeed39032d7e9c4783e05c294cba2ce61cc5ac20466ece27a81075"
+          },
+          {
+            "symbol": "dir",
+            "start": 8664,
+            "end": 8837,
+            "source": "function dir(n){return n===\"EDEADLK\"||n===\"EINTR\"||n===\"ENXIO\"||n===\"ENODEV\"||n===\"ECANCELED\"||n===\"ENEEDAUTH\"||n===\"ESTALE\"||n===\"EUNKNOWN\"||n===\"ENOMEM\"||n!==void 0&&c(n)}",
+            "sha256": "7429960a91499bed2fdca8f9f683cceea6b099e62fa86495e717867254594184"
+          },
+          {
+            "symbol": "c",
+            "start": 8837,
+            "end": 8910,
+            "source": "function c(n){return n===\"UNKNOWN\"||n.startsWith(\"Unknown system error\")}",
+            "sha256": "27c8d43976cbebe4947766cb1f6023324022453070ac4f34ab5d8c428423dea6"
+          }
+        ],
+        "aliases": {
+          "errorCode": "k",
+          "transient": "lh",
+          "message": "l"
+        }
+      },
+      "normalizer": {
+        "module": {
+          "file": "chunk-g77csgy5.js",
+          "moduleSha256": "4835e14445bc039be98296d558b8319aa9783d4ce2e83ad50b153d5717f6d306",
+          "manifestSha256": "f3be5b23f9cbb909555fe028143b9a3a40c1e3e49961e09c49d8e5a6b61ae83b"
+        },
+        "declaration": {
+          "symbol": "VI",
+          "start": 545606,
+          "end": 545709,
+          "source": "function VI(e){let n=e.customApiKeyResponses;return{approved:wi(n?.approved),rejected:wi(n?.rejected)}}",
+          "sha256": "495225cd7349b8da166b140c784cc43b7fe2fc8dd25c7568d726b6f0f52cd7f6"
+        },
+        "local": "VI",
+        "strings": {
+          "module": {
+            "file": "chunk-hcvb1rq6.js",
+            "moduleSha256": "eb1ea556340727b1d7264f63dd084e54dd173c8a9a7a9f7a2e4cd9d1cb7d2a95",
+            "manifestSha256": "f3be5b23f9cbb909555fe028143b9a3a40c1e3e49961e09c49d8e5a6b61ae83b"
+          },
+          "declaration": {
+            "symbol": "wi",
+            "start": 919,
+            "end": 1042,
+            "source": "function wi(n){if(!Array.isArray(n))return[];return n.every((e)=>typeof e===\"string\")?n:n.filter((e)=>typeof e===\"string\")}",
+            "sha256": "b5cf54bd3bbe2b2d56d2a0e4cf042832cf629abdc2ca1a25216111791b0af6ab"
+          },
+          "local": "wi"
+        }
+      },
+      "notification": {
+        "module": {
+          "file": "chunk-rha4941g.js",
+          "moduleSha256": "9acb2311ad3c32e263dabd1a15f7c8e14c087afe87549853cba384df286eb295",
+          "manifestSha256": "f3be5b23f9cbb909555fe028143b9a3a40c1e3e49961e09c49d8e5a6b61ae83b"
+        },
+        "declaration": {
+          "symbol": "Aot",
+          "start": 619,
+          "end": 644,
+          "source": "Aot=\"subscription-switch\"",
+          "sha256": "bdb730c5d48d37333536070415f39f4c85a24d3b6258a638256f2e990f88a3de"
+        },
+        "local": "Aot"
+      },
+      "revoke": {
+        "module": {
+          "file": "chunk-g77csgy5.js",
+          "moduleSha256": "4835e14445bc039be98296d558b8319aa9783d4ce2e83ad50b153d5717f6d306",
+          "manifestSha256": "f3be5b23f9cbb909555fe028143b9a3a40c1e3e49961e09c49d8e5a6b61ae83b"
+        },
+        "declaration": {
+          "symbol": "GE",
+          "start": 692876,
+          "end": 693293,
+          "source": "async function GE(e,n){try{await _t.post(`${dn().TOKEN_URL}/revoke`,{token:e,token_type_hint:\"refresh_token\",client_id:n??dn().CLIENT_ID},{headers:{\"Content-Type\":\"application/json\"},timeout:5000}),y(\"oauth_token_revoke\")}catch(r){let s=_t.isAxiosError(r)?r.response?.status:void 0;t(`OAuth token revoke failed (status=${s??\"network\"}); continuing with local logout.`),p(\"oauth_token_revoke\",`http_${s??\"network\"}`)}}",
+          "sha256": "96ca549444bdc115c6c80d4646c4f69db7f950edcec11661a2866feb50a2a601"
+        },
+        "aliases": {
+          "http": "_t",
+          "config": "dn",
+          "ok": "y",
+          "debug": "t",
+          "sad": "p"
+        }
+      }
+    },
+    {
+      "platform": "darwin-x64",
+      "logoutModule": {
+        "file": "chunk-53sc2ee8.js",
+        "moduleSha256": "34930d9db4cf4f75a467b05a1d40d7500caf3bc23cf940200e482a3705b44929",
+        "moduleLength": 14486,
+        "manifestSha256": "ba9e122d28e8a42927eb23c7c86b62295f24a223546ee5476e761837579a709b",
+        "binarySha256": "f1863213e4f55aaadc2e6ee617f934ada29930e5de4c5e5f8f9e34a0d594fdd7"
+      },
+      "logout": {
+        "symbol": "ite",
+        "start": 10345,
+        "end": 13043,
+        "source": "async function ite({clearOnboarding:e=!1,preserveInProcessTokens:r=!1,preserveNonAnthropicAuth:n=!1,storageV5:s,preserveQuotaAutoResume:c=!1,artifactAccount:u=\"signed_out\",incomingIdentity:h,credentials:g}){let{flushTelemetry:S}=await import(\"/$bunfs/root/chunk-kwgeatcq.js\");if(await S(),await ZBo(u),Ht()){await rJt(s,{preserveQuotaAutoResume:c,artifactAccount:u,incomingIdentity:h});return}if(!r&&Oe()===\"firstParty\"){let p=zn();p.invalidateCache?.();let i=await p.readAsync(g),m=i?.claudeAiOauth;if(m?.refreshToken)await KA(m.refreshToken,m.clientId);let C=i?.designOauth;if(C?.refreshToken)await KA(C.refreshToken,C.clientId)}if(Oe()===\"gateway\"){let p=Date.now()+5000;for(let C=LEe();C&&Date.now()<p;C=LEe())await lt(C.catch(()=>{}),p-Date.now());let i=zn();i.invalidateCache?.();let m=(await i.readAsync(g))?.enterpriseGateway;if(m)await C3o(m,g)}if(!r)a.unset(\"CLAUDE_CODE_OAUTH_TOKEN\"),ZU(null);await mKr(s),await N({revoke:!r&&Oe()===\"firstParty\"?({refreshToken:p,clientId:i})=>KA(p,i):void 0});let w=zn();if(n){if(Oe()===\"firstParty\"){w.invalidateCache?.();let p=(await w.readAsync(g))?.designOauth;if(p?.refreshToken)await KA(p.refreshToken,p.clientId)}await w.mutate((p)=>{let i={...p};return delete i.claudeAiOauth,delete i.organizationUuid,delete i.trustedDeviceToken,delete i.enterpriseGateway,delete i.designOauth,i},g).catch((p)=>{let i=E(p);if(i===\"EPERM\"||i===\"ENOENT\"||ch(p)){t(`[performLogout] re-login secure-storage prune failed (${i}): ${l(p)}`,{level:\"error\"});return}d(p)})}else{let p=!1,i=async()=>{p=!0;let m=await J(w,g);if(await w.delete(g),m&&Object.keys(m).length>0)await Q(w,m,g)};await _9r(i).catch((m)=>{if(p)throw m;return d(m),D5o(i)})}TY(null),Kfe(null),await rJt(s,{preserveQuotaAutoResume:c,artifactAccount:u,incomingIdentity:h,credentials:g}),await Ce((p)=>{let i={...p};if(e){if(i.hasCompletedOnboarding=!1,i.subscriptionNoticeCount=0,i.hasAvailableSubscription=!1,i.customApiKeyResponses!==void 0)i.customApiKeyResponses={approved:[],rejected:ZP(i).rejected};let m=Mot;if(i.seenNotifications?.[m]!==void 0){let{[m]:C,...D}=i.seenNotifications;i.seenNotifications=D}}return i.oauthAccount=void 0,i.additionalModelOptionsCache=void 0,i.additionalModelOptionsAnsweredAt=void 0,i.additionalModelCostsCache=void 0,i.modelAccessCache=void 0,i.orgModelDefaultCache=void 0,i.cachedArtifactRoster=void 0,i.artifactRosterDenied=void 0,i.lastSeenOrgDefaultUpdatedAt=void 0,i.clientDataCache=void 0,i.clientDataCacheSlots=void 0,i.autoCompactWindowsCache=void 0,i.cachedUsageUtilization=void 0,i.metricsStatusCache=void 0,i.metricsStatusCacheByPrincipal=void 0,i.githubWebConnectionStatusCache=void 0,i.startupPrefetchedAt=void 0,i},s),gGe(void 0),y(\"oauth_logout\")}",
+        "sha256": "e6bcce51129e7dd355673da10c90d2fe37609a3303f3400d359dd07744485a57"
+      },
+      "options": {
+        "clearOnboarding": "e",
+        "preserveInProcessTokens": "r",
+        "preserveNonAnthropicAuth": "n",
+        "storageV5": "s",
+        "preserveQuotaAutoResume": "c",
+        "artifactAccount": "u",
+        "incomingIdentity": "h",
+        "credentials": "g"
+      },
+      "clear": {
+        "start": 11350,
+        "end": 12019,
+        "source": "let w=zn();if(n){if(Oe()===\"firstParty\"){w.invalidateCache?.();let p=(await w.readAsync(g))?.designOauth;if(p?.refreshToken)await KA(p.refreshToken,p.clientId)}await w.mutate((p)=>{let i={...p};return delete i.claudeAiOauth,delete i.organizationUuid,delete i.trustedDeviceToken,delete i.enterpriseGateway,delete i.designOauth,i},g).catch((p)=>{let i=E(p);if(i===\"EPERM\"||i===\"ENOENT\"||ch(p)){t(`[performLogout] re-login secure-storage prune failed (${i}): ${l(p)}`,{level:\"error\"});return}d(p)})}else{let p=!1,i=async()=>{p=!0;let m=await J(w,g);if(await w.delete(g),m&&Object.keys(m).length>0)await Q(w,m,g)};await _9r(i).catch((m)=>{if(p)throw m;return d(m),D5o(i)})}",
+        "sha256": "849f7ab36a93d9a5bf9274621a205f31575caaffbbd35ce80baa71b1530153fa"
+      },
+      "clearSlots": {
+        "start": 12019,
+        "end": 12037,
+        "source": "TY(null),Kfe(null)",
+        "sha256": "81f14090018705a82c5727efdf51dcb5559b17656854536548f2218288f6be43"
+      },
+      "slotDeclarations": [
+        {
+          "origin": {
+            "module": "/$bunfs/root/chunk-ascjmg0h.js",
+            "file": "chunk-ascjmg0h.js",
+            "symbol": "TY"
+          },
+          "module": {
+            "file": "chunk-ascjmg0h.js",
+            "moduleSha256": "d6cf648e81761e2b99976a475da3be111d7dd28a92369820fb72933848b74af3",
+            "manifestSha256": "ba9e122d28e8a42927eb23c7c86b62295f24a223546ee5476e761837579a709b"
+          },
+          "declaration": {
+            "symbol": "TY",
+            "start": 96383,
+            "end": 96445,
+            "source": "function TY(e){n().host.credentialSlots.replaceGatewayAuth(e)}",
+            "sha256": "844661094a93dbf6c68a2ba4a35089395f89a7e6437a194600a0c5d28269b144"
+          }
+        },
+        {
+          "origin": {
+            "module": "/$bunfs/root/chunk-ascjmg0h.js",
+            "file": "chunk-ascjmg0h.js",
+            "symbol": "Kfe"
+          },
+          "module": {
+            "file": "chunk-ascjmg0h.js",
+            "moduleSha256": "d6cf648e81761e2b99976a475da3be111d7dd28a92369820fb72933848b74af3",
+            "manifestSha256": "ba9e122d28e8a42927eb23c7c86b62295f24a223546ee5476e761837579a709b"
+          },
+          "declaration": {
+            "symbol": "Kfe",
+            "start": 96515,
+            "end": 96585,
+            "source": "function Kfe(e){n().host.credentialSlots.stampAuthenticatedAccount(e)}",
+            "sha256": "993d54eb88864c78708bb8afa24d0972846844ac4fc7fd647eebbe0dd5bb7ea3"
+          }
+        }
+      ],
+      "revokeExisting": {
+        "start": 10738,
+        "end": 10976,
+        "source": "if(!r&&Oe()===\"firstParty\"){let p=zn();p.invalidateCache?.();let i=await p.readAsync(g),m=i?.claudeAiOauth;if(m?.refreshToken)await KA(m.refreshToken,m.clientId);let C=i?.designOauth;if(C?.refreshToken)await KA(C.refreshToken,C.clientId)}",
+        "sha256": "984e7dd99ca6c81a35ac604552f34524e8c77aa5a18a02730f62cf67f20d5e72"
+      },
+      "clearInProcess": {
+        "start": 11199,
+        "end": 11249,
+        "source": "if(!r)a.unset(\"CLAUDE_CODE_OAUTH_TOKEN\"),ZU(null);",
+        "sha256": "974853b58a9f4204ee610b93acf2100a50c0f8378097260a99e3dfe263b57dbc"
+      },
+      "config": {
+        "start": 12139,
+        "end": 13009,
+        "source": "(p)=>{let i={...p};if(e){if(i.hasCompletedOnboarding=!1,i.subscriptionNoticeCount=0,i.hasAvailableSubscription=!1,i.customApiKeyResponses!==void 0)i.customApiKeyResponses={approved:[],rejected:ZP(i).rejected};let m=Mot;if(i.seenNotifications?.[m]!==void 0){let{[m]:C,...D}=i.seenNotifications;i.seenNotifications=D}}return i.oauthAccount=void 0,i.additionalModelOptionsCache=void 0,i.additionalModelOptionsAnsweredAt=void 0,i.additionalModelCostsCache=void 0,i.modelAccessCache=void 0,i.orgModelDefaultCache=void 0,i.cachedArtifactRoster=void 0,i.artifactRosterDenied=void 0,i.lastSeenOrgDefaultUpdatedAt=void 0,i.clientDataCache=void 0,i.clientDataCacheSlots=void 0,i.autoCompactWindowsCache=void 0,i.cachedUsageUtilization=void 0,i.metricsStatusCache=void 0,i.metricsStatusCacheByPrincipal=void 0,i.githubWebConnectionStatusCache=void 0,i.startupPrefetchedAt=void 0,i}",
+        "sha256": "79d5707cc7a835dc11498866ec368b4d5960c37753895200a23786cbbc908ab3"
+      },
+      "readDevice": {
+        "symbol": "J",
+        "start": 14187,
+        "end": 14436,
+        "source": "async function J(e,r){for(let n=0;n<2;n++){let s=await(e.readAsyncStrict?.(r)??e.readAsync(r));if(s!==qa)return s?.coworkRemoteDevice}d(Error(\"logout: secure storage could not be read, so the device identity is not carried across the wipe\"));return}",
+        "sha256": "31fefaeca882ccac4c73673600779de03005ce5ecd00f5590f831ab61dd26693"
+      },
+      "writeDevice": {
+        "symbol": "Q",
+        "start": 13929,
+        "end": 14187,
+        "source": "async function Q(e,r,n){let s;for(let c=0;c<2;c++)try{let u=await e.mutate(()=>({coworkRemoteDevice:r}),n);if(u.success)return;if(s=Error(\"logout: the device identity could not be written back after the credential wipe\"),!u.transient)break}catch(u){s=u}d(s)}",
+        "sha256": "9774c717f8af99ba482ebb108a2092f940cc168cc56151257064e5f18c53c122"
+      },
+      "aliases": {
+        "storage": "zn",
+        "provider": "Oe",
+        "revoke": "KA",
+        "debug": "t",
+        "report": "d",
+        "writeLock": "_9r",
+        "alreadyLocked": "D5o",
+        "readFailed": "qa",
+        "environment": "a",
+        "setFd": "ZU",
+        "setGateway": "TY",
+        "stampAccount": "Kfe"
+      },
+      "portOrigins": {
+        "storage": {
+          "module": "/$bunfs/root/chunk-8n0cnnx6.js",
+          "file": "chunk-8n0cnnx6.js",
+          "symbol": "zn"
+        },
+        "provider": {
+          "module": "/$bunfs/root/chunk-vhewhfxj.js",
+          "file": "chunk-vhewhfxj.js",
+          "symbol": "Oe"
+        },
+        "revoke": {
+          "module": "/$bunfs/root/chunk-j825n4z9.js",
+          "file": "chunk-j825n4z9.js",
+          "symbol": "KA"
+        },
+        "debug": {
+          "module": "/$bunfs/root/chunk-twb9dkx9.js",
+          "file": "chunk-twb9dkx9.js",
+          "symbol": "t"
+        },
+        "report": {
+          "module": "/$bunfs/root/chunk-a7t07gyz.js",
+          "file": "chunk-a7t07gyz.js",
+          "symbol": "d"
+        },
+        "writeLock": {
+          "module": "/$bunfs/root/chunk-8n0cnnx6.js",
+          "file": "chunk-8n0cnnx6.js",
+          "symbol": "_9r"
+        },
+        "alreadyLocked": {
+          "module": "/$bunfs/root/chunk-8n0cnnx6.js",
+          "file": "chunk-8n0cnnx6.js",
+          "symbol": "D5o"
+        },
+        "readFailed": {
+          "module": "/$bunfs/root/chunk-8n0cnnx6.js",
+          "file": "chunk-8n0cnnx6.js",
+          "symbol": "qa"
+        },
+        "environment": {
+          "module": "/$bunfs/root/chunk-5kdb7ws1.js",
+          "file": "chunk-5kdb7ws1.js",
+          "symbol": "a"
+        },
+        "setFd": {
+          "module": "/$bunfs/root/chunk-ascjmg0h.js",
+          "file": "chunk-ascjmg0h.js",
+          "symbol": "ZU"
+        },
+        "setGateway": {
+          "module": "/$bunfs/root/chunk-ascjmg0h.js",
+          "file": "chunk-ascjmg0h.js",
+          "symbol": "TY"
+        },
+        "stampAccount": {
+          "module": "/$bunfs/root/chunk-ascjmg0h.js",
+          "file": "chunk-ascjmg0h.js",
+          "symbol": "Kfe"
+        }
+      },
+      "lockEvidence": [
+        {
+          "semantic": "writeLock",
+          "module": {
+            "file": "chunk-8n0cnnx6.js",
+            "moduleSha256": "91321c88e8c29ab584579763fb109e24f50c9576f8beb75c78f3bfea15772c61",
+            "manifestSha256": "ba9e122d28e8a42927eb23c7c86b62295f24a223546ee5476e761837579a709b"
+          },
+          "declaration": {
+            "symbol": "_9r",
+            "start": 1588,
+            "end": 2063,
+            "source": "async function _9r(e){if(I.getStore())return e();let r=b,n;b=new Promise((s)=>{n=s});try{await r;let s=yb();await ae().mkdir(s);let a=await oa(Z(s,\".storage-write\"),{realpath:!1,retries:{retries:10,minTimeout:100,maxTimeout:1000},stale:15000,onCompromised:(o)=>t(`[secureStorage] write lock compromised: ${l(o)}`,{level:\"warn\"})});try{return await I.run(!0,e)}finally{await a().catch((o)=>t(`[secureStorage] write lock release failed: ${l(o)}`,{level:\"warn\"}))}}finally{n()}}",
+            "sha256": "27ada229424ab2ad9e4fce3cf1d8baa890cfcd512a2ac2429230077a26738ca7"
+          }
+        },
+        {
+          "semantic": "alreadyLocked",
+          "module": {
+            "file": "chunk-8n0cnnx6.js",
+            "moduleSha256": "91321c88e8c29ab584579763fb109e24f50c9576f8beb75c78f3bfea15772c61",
+            "manifestSha256": "ba9e122d28e8a42927eb23c7c86b62295f24a223546ee5476e761837579a709b"
+          },
+          "declaration": {
+            "symbol": "D5o",
+            "start": 2063,
+            "end": 2104,
+            "source": "async function D5o(e){return I.run(!0,e)}",
+            "sha256": "ee20165442490dbb5f94d41c3cad166c106f80fff55e649f2fe30b695bdd5f23"
+          }
+        },
+        {
+          "semantic": "readFailed",
+          "module": {
+            "file": "chunk-8n0cnnx6.js",
+            "moduleSha256": "91321c88e8c29ab584579763fb109e24f50c9576f8beb75c78f3bfea15772c61",
+            "manifestSha256": "ba9e122d28e8a42927eb23c7c86b62295f24a223546ee5476e761837579a709b"
+          },
+          "declaration": {
+            "symbol": "qa",
+            "start": 1441,
+            "end": 1479,
+            "source": "qa=Symbol(\"secureStorage.READ_FAILED\")",
+            "sha256": "5da108979b7921c7999c7d0219e260da2e53656eedafa06c78909b2868723403"
+          }
+        }
+      ],
+      "errors": {
+        "module": {
+          "file": "chunk-sbek65a7.js",
+          "moduleSha256": "ea7cfffb45ba6720135b9540897917beddcaa994f57691602f9d28c5563affd0",
+          "manifestSha256": "ba9e122d28e8a42927eb23c7c86b62295f24a223546ee5476e761837579a709b"
+        },
+        "declarations": [
+          {
+            "symbol": "E",
+            "start": 4814,
+            "end": 4913,
+            "source": "function E(n){if(n&&typeof n===\"object\"&&\"code\"in n&&typeof n.code===\"string\")return n.code;return}",
+            "sha256": "a84ab0a2488aed5689416393c679dde4e7f4b29aa980e121bd56b25ab3e7b5e4"
+          },
+          {
+            "symbol": "ch",
+            "start": 8632,
+            "end": 8664,
+            "source": "function ch(n){return Oir(E(n))}",
+            "sha256": "e499858a3547b183f0857c337609c1183b52e2e92cf494b4adad79bafd9a3ff4"
+          },
+          {
+            "symbol": "l",
+            "start": 4754,
+            "end": 4814,
+            "source": "function l(n){return n instanceof Error?n.message:String(n)}",
+            "sha256": "2f921ed78ffeed39032d7e9c4783e05c294cba2ce61cc5ac20466ece27a81075"
+          },
+          {
+            "symbol": "Oir",
+            "start": 8664,
+            "end": 8837,
+            "source": "function Oir(n){return n===\"EDEADLK\"||n===\"EINTR\"||n===\"ENXIO\"||n===\"ENODEV\"||n===\"ECANCELED\"||n===\"ENEEDAUTH\"||n===\"ESTALE\"||n===\"EUNKNOWN\"||n===\"ENOMEM\"||n!==void 0&&c(n)}",
+            "sha256": "bbf58a4ab20538e99e27cd018909eac571dc5ed278020efb73ab331c84512453"
+          },
+          {
+            "symbol": "c",
+            "start": 8837,
+            "end": 8910,
+            "source": "function c(n){return n===\"UNKNOWN\"||n.startsWith(\"Unknown system error\")}",
+            "sha256": "27c8d43976cbebe4947766cb1f6023324022453070ac4f34ab5d8c428423dea6"
+          }
+        ],
+        "aliases": {
+          "errorCode": "E",
+          "transient": "ch",
+          "message": "l"
+        }
+      },
+      "normalizer": {
+        "module": {
+          "file": "chunk-j825n4z9.js",
+          "moduleSha256": "44acfb339cd1323b1a59ae7dcbd3efbcacb183bc5f4043b0e2d52e1511ac113f",
+          "manifestSha256": "ba9e122d28e8a42927eb23c7c86b62295f24a223546ee5476e761837579a709b"
+        },
+        "declaration": {
+          "symbol": "ZP",
+          "start": 545516,
+          "end": 545619,
+          "source": "function ZP(e){let n=e.customApiKeyResponses;return{approved:wi(n?.approved),rejected:wi(n?.rejected)}}",
+          "sha256": "ecc2633d01d21c28a6fbd780ccb89398c97818a565b0ff3f734771c2321399c2"
+        },
+        "local": "ZP",
+        "strings": {
+          "module": {
+            "file": "chunk-aqx4g8xw.js",
+            "moduleSha256": "b508c8f84b6e524aa7172b3eecf12dae72f80708daccf6a252fc90b0c3075942",
+            "manifestSha256": "ba9e122d28e8a42927eb23c7c86b62295f24a223546ee5476e761837579a709b"
+          },
+          "declaration": {
+            "symbol": "wi",
+            "start": 919,
+            "end": 1042,
+            "source": "function wi(n){if(!Array.isArray(n))return[];return n.every((e)=>typeof e===\"string\")?n:n.filter((e)=>typeof e===\"string\")}",
+            "sha256": "b5cf54bd3bbe2b2d56d2a0e4cf042832cf629abdc2ca1a25216111791b0af6ab"
+          },
+          "local": "wi"
+        }
+      },
+      "notification": {
+        "module": {
+          "file": "chunk-vscqnsjk.js",
+          "moduleSha256": "72f9f685ab83cf4c96c744643a43446940b7ae1a92fddc099c78c80490c8af07",
+          "manifestSha256": "ba9e122d28e8a42927eb23c7c86b62295f24a223546ee5476e761837579a709b"
+        },
+        "declaration": {
+          "symbol": "Mot",
+          "start": 619,
+          "end": 644,
+          "source": "Mot=\"subscription-switch\"",
+          "sha256": "68b0672adf34d6485bbd1f32018eef6ba097cd9108baa1cebf5ac0f5c671d1a3"
+        },
+        "local": "Mot"
+      },
+      "revoke": {
+        "module": {
+          "file": "chunk-j825n4z9.js",
+          "moduleSha256": "44acfb339cd1323b1a59ae7dcbd3efbcacb183bc5f4043b0e2d52e1511ac113f",
+          "manifestSha256": "ba9e122d28e8a42927eb23c7c86b62295f24a223546ee5476e761837579a709b"
+        },
+        "declaration": {
+          "symbol": "KA",
+          "start": 693683,
+          "end": 694100,
+          "source": "async function KA(e,n){try{await St.post(`${dn().TOKEN_URL}/revoke`,{token:e,token_type_hint:\"refresh_token\",client_id:n??dn().CLIENT_ID},{headers:{\"Content-Type\":\"application/json\"},timeout:5000}),y(\"oauth_token_revoke\")}catch(r){let s=St.isAxiosError(r)?r.response?.status:void 0;t(`OAuth token revoke failed (status=${s??\"network\"}); continuing with local logout.`),p(\"oauth_token_revoke\",`http_${s??\"network\"}`)}}",
+          "sha256": "69d8377225d272df4bc1d4421fecd83bc7fa522d7632dddd2aaf05c7153d934e"
+        },
+        "aliases": {
+          "http": "St",
+          "config": "dn",
+          "ok": "y",
+          "debug": "t",
+          "sad": "p"
+        }
+      }
+    },
+    {
+      "platform": "darwin-arm64",
+      "logoutModule": {
+        "file": "chunk-kjjppes5.js",
+        "moduleSha256": "37a1a0f4e4252495df65c6dfd6bb6ea330b0596147f86836dfb1ebd66f9aade1",
+        "moduleLength": 14486,
+        "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+        "binarySha256": "6eab8333fe2121553100d8f40bfada384a3e989b94f947e18ba6677a6fcb41ea"
+      },
+      "logout": {
+        "symbol": "ite",
+        "start": 10345,
+        "end": 13043,
+        "source": "async function ite({clearOnboarding:e=!1,preserveInProcessTokens:r=!1,preserveNonAnthropicAuth:n=!1,storageV5:s,preserveQuotaAutoResume:c=!1,artifactAccount:u=\"signed_out\",incomingIdentity:h,credentials:g}){let{flushTelemetry:R}=await import(\"/$bunfs/root/chunk-pc840nxb.js\");if(await R(),await ZBo(u),Pt()){await rJt(s,{preserveQuotaAutoResume:c,artifactAccount:u,incomingIdentity:h});return}if(!r&&He()===\"firstParty\"){let p=zn();p.invalidateCache?.();let i=await p.readAsync(g),m=i?.claudeAiOauth;if(m?.refreshToken)await qC(m.refreshToken,m.clientId);let C=i?.designOauth;if(C?.refreshToken)await qC(C.refreshToken,C.clientId)}if(He()===\"gateway\"){let p=Date.now()+5000;for(let C=DEe();C&&Date.now()<p;C=DEe())await lt(C.catch(()=>{}),p-Date.now());let i=zn();i.invalidateCache?.();let m=(await i.readAsync(g))?.enterpriseGateway;if(m)await Aqo(m,g)}if(!r)a.unset(\"CLAUDE_CODE_OAUTH_TOKEN\"),ZU(null);await m3r(s),await b({revoke:!r&&He()===\"firstParty\"?({refreshToken:p,clientId:i})=>qC(p,i):void 0});let w=zn();if(n){if(He()===\"firstParty\"){w.invalidateCache?.();let p=(await w.readAsync(g))?.designOauth;if(p?.refreshToken)await qC(p.refreshToken,p.clientId)}await w.mutate((p)=>{let i={...p};return delete i.claudeAiOauth,delete i.organizationUuid,delete i.trustedDeviceToken,delete i.enterpriseGateway,delete i.designOauth,i},g).catch((p)=>{let i=E(p);if(i===\"EPERM\"||i===\"ENOENT\"||ch(p)){t(`[performLogout] re-login secure-storage prune failed (${i}): ${l(p)}`,{level:\"error\"});return}d(p)})}else{let p=!1,i=async()=>{p=!0;let m=await J(w,g);if(await w.delete(g),m&&Object.keys(m).length>0)await Q(w,m,g)};await _9r(i).catch((m)=>{if(p)throw m;return d(m),L5o(i)})}kY(null),qfe(null),await rJt(s,{preserveQuotaAutoResume:c,artifactAccount:u,incomingIdentity:h,credentials:g}),await Ae((p)=>{let i={...p};if(e){if(i.hasCompletedOnboarding=!1,i.subscriptionNoticeCount=0,i.hasAvailableSubscription=!1,i.customApiKeyResponses!==void 0)i.customApiKeyResponses={approved:[],rejected:Z0(i).rejected};let m=Mot;if(i.seenNotifications?.[m]!==void 0){let{[m]:C,...x}=i.seenNotifications;i.seenNotifications=x}}return i.oauthAccount=void 0,i.additionalModelOptionsCache=void 0,i.additionalModelOptionsAnsweredAt=void 0,i.additionalModelCostsCache=void 0,i.modelAccessCache=void 0,i.orgModelDefaultCache=void 0,i.cachedArtifactRoster=void 0,i.artifactRosterDenied=void 0,i.lastSeenOrgDefaultUpdatedAt=void 0,i.clientDataCache=void 0,i.clientDataCacheSlots=void 0,i.autoCompactWindowsCache=void 0,i.cachedUsageUtilization=void 0,i.metricsStatusCache=void 0,i.metricsStatusCacheByPrincipal=void 0,i.githubWebConnectionStatusCache=void 0,i.startupPrefetchedAt=void 0,i},s),g6e(void 0),y(\"oauth_logout\")}",
+        "sha256": "ce918b8332b0ed3eabf8a5a8233739421f4ffa39361d1ebeca3c6fd4cc6f7deb"
+      },
+      "options": {
+        "clearOnboarding": "e",
+        "preserveInProcessTokens": "r",
+        "preserveNonAnthropicAuth": "n",
+        "storageV5": "s",
+        "preserveQuotaAutoResume": "c",
+        "artifactAccount": "u",
+        "incomingIdentity": "h",
+        "credentials": "g"
+      },
+      "clear": {
+        "start": 11350,
+        "end": 12019,
+        "source": "let w=zn();if(n){if(He()===\"firstParty\"){w.invalidateCache?.();let p=(await w.readAsync(g))?.designOauth;if(p?.refreshToken)await qC(p.refreshToken,p.clientId)}await w.mutate((p)=>{let i={...p};return delete i.claudeAiOauth,delete i.organizationUuid,delete i.trustedDeviceToken,delete i.enterpriseGateway,delete i.designOauth,i},g).catch((p)=>{let i=E(p);if(i===\"EPERM\"||i===\"ENOENT\"||ch(p)){t(`[performLogout] re-login secure-storage prune failed (${i}): ${l(p)}`,{level:\"error\"});return}d(p)})}else{let p=!1,i=async()=>{p=!0;let m=await J(w,g);if(await w.delete(g),m&&Object.keys(m).length>0)await Q(w,m,g)};await _9r(i).catch((m)=>{if(p)throw m;return d(m),L5o(i)})}",
+        "sha256": "d0964c2641bcc7192d82fa0c0abf504235edf0bb7e20841fbc3d47fefba3f4e0"
+      },
+      "clearSlots": {
+        "start": 12019,
+        "end": 12037,
+        "source": "kY(null),qfe(null)",
+        "sha256": "26a147abfb75ec59522ea24fe287cd0525597b445df2d8d3afb0f522c30de598"
+      },
+      "slotDeclarations": [
+        {
+          "origin": {
+            "module": "/$bunfs/root/chunk-bn3p37gv.js",
+            "file": "chunk-bn3p37gv.js",
+            "symbol": "kY"
+          },
+          "module": {
+            "file": "chunk-bn3p37gv.js",
+            "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+            "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5"
+          },
+          "declaration": {
+            "symbol": "kY",
+            "start": 96383,
+            "end": 96445,
+            "source": "function kY(e){n().host.credentialSlots.replaceGatewayAuth(e)}",
+            "sha256": "319b48b691b222a7470885fd063f5f92d396035a654c497dfa2b71261ed355c5"
+          }
+        },
+        {
+          "origin": {
+            "module": "/$bunfs/root/chunk-bn3p37gv.js",
+            "file": "chunk-bn3p37gv.js",
+            "symbol": "qfe"
+          },
+          "module": {
+            "file": "chunk-bn3p37gv.js",
+            "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+            "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5"
+          },
+          "declaration": {
+            "symbol": "qfe",
+            "start": 96515,
+            "end": 96585,
+            "source": "function qfe(e){n().host.credentialSlots.stampAuthenticatedAccount(e)}",
+            "sha256": "fd0e686151dfb8e11be3dad6a8a317653718416df2b0555ba1523e544fb45117"
+          }
+        }
+      ],
+      "revokeExisting": {
+        "start": 10738,
+        "end": 10976,
+        "source": "if(!r&&He()===\"firstParty\"){let p=zn();p.invalidateCache?.();let i=await p.readAsync(g),m=i?.claudeAiOauth;if(m?.refreshToken)await qC(m.refreshToken,m.clientId);let C=i?.designOauth;if(C?.refreshToken)await qC(C.refreshToken,C.clientId)}",
+        "sha256": "b0bde4eaf4a397a1131a78d811322181488ccb127b81503d7cd6b8e6e05adbef"
+      },
+      "clearInProcess": {
+        "start": 11199,
+        "end": 11249,
+        "source": "if(!r)a.unset(\"CLAUDE_CODE_OAUTH_TOKEN\"),ZU(null);",
+        "sha256": "974853b58a9f4204ee610b93acf2100a50c0f8378097260a99e3dfe263b57dbc"
+      },
+      "config": {
+        "start": 12139,
+        "end": 13009,
+        "source": "(p)=>{let i={...p};if(e){if(i.hasCompletedOnboarding=!1,i.subscriptionNoticeCount=0,i.hasAvailableSubscription=!1,i.customApiKeyResponses!==void 0)i.customApiKeyResponses={approved:[],rejected:Z0(i).rejected};let m=Mot;if(i.seenNotifications?.[m]!==void 0){let{[m]:C,...x}=i.seenNotifications;i.seenNotifications=x}}return i.oauthAccount=void 0,i.additionalModelOptionsCache=void 0,i.additionalModelOptionsAnsweredAt=void 0,i.additionalModelCostsCache=void 0,i.modelAccessCache=void 0,i.orgModelDefaultCache=void 0,i.cachedArtifactRoster=void 0,i.artifactRosterDenied=void 0,i.lastSeenOrgDefaultUpdatedAt=void 0,i.clientDataCache=void 0,i.clientDataCacheSlots=void 0,i.autoCompactWindowsCache=void 0,i.cachedUsageUtilization=void 0,i.metricsStatusCache=void 0,i.metricsStatusCacheByPrincipal=void 0,i.githubWebConnectionStatusCache=void 0,i.startupPrefetchedAt=void 0,i}",
+        "sha256": "6f215c90442acbb5e74750cf25223b0018cc058635d0c6e4b18ab84d77942f89"
+      },
+      "readDevice": {
+        "symbol": "J",
+        "start": 14187,
+        "end": 14436,
+        "source": "async function J(e,r){for(let n=0;n<2;n++){let s=await(e.readAsyncStrict?.(r)??e.readAsync(r));if(s!==Ka)return s?.coworkRemoteDevice}d(Error(\"logout: secure storage could not be read, so the device identity is not carried across the wipe\"));return}",
+        "sha256": "867867338ccabb8992e0dd2d0da514c167cce44b5df8d1c906ad98dd6a4d5d8c"
+      },
+      "writeDevice": {
+        "symbol": "Q",
+        "start": 13929,
+        "end": 14187,
+        "source": "async function Q(e,r,n){let s;for(let c=0;c<2;c++)try{let u=await e.mutate(()=>({coworkRemoteDevice:r}),n);if(u.success)return;if(s=Error(\"logout: the device identity could not be written back after the credential wipe\"),!u.transient)break}catch(u){s=u}d(s)}",
+        "sha256": "9774c717f8af99ba482ebb108a2092f940cc168cc56151257064e5f18c53c122"
+      },
+      "aliases": {
+        "storage": "zn",
+        "provider": "He",
+        "revoke": "qC",
+        "debug": "t",
+        "report": "d",
+        "writeLock": "_9r",
+        "alreadyLocked": "L5o",
+        "readFailed": "Ka",
+        "environment": "a",
+        "setFd": "ZU",
+        "setGateway": "kY",
+        "stampAccount": "qfe"
+      },
+      "portOrigins": {
+        "storage": {
+          "module": "/$bunfs/root/chunk-wgt53hn2.js",
+          "file": "chunk-wgt53hn2.js",
+          "symbol": "zn"
+        },
+        "provider": {
+          "module": "/$bunfs/root/chunk-wz6xag6e.js",
+          "file": "chunk-wz6xag6e.js",
+          "symbol": "He"
+        },
+        "revoke": {
+          "module": "/$bunfs/root/chunk-nankzm0s.js",
+          "file": "chunk-nankzm0s.js",
+          "symbol": "qC"
+        },
+        "debug": {
+          "module": "/$bunfs/root/chunk-q80zaav8.js",
+          "file": "chunk-q80zaav8.js",
+          "symbol": "t"
+        },
+        "report": {
+          "module": "/$bunfs/root/chunk-amhtwhch.js",
+          "file": "chunk-amhtwhch.js",
+          "symbol": "d"
+        },
+        "writeLock": {
+          "module": "/$bunfs/root/chunk-wgt53hn2.js",
+          "file": "chunk-wgt53hn2.js",
+          "symbol": "_9r"
+        },
+        "alreadyLocked": {
+          "module": "/$bunfs/root/chunk-wgt53hn2.js",
+          "file": "chunk-wgt53hn2.js",
+          "symbol": "L5o"
+        },
+        "readFailed": {
+          "module": "/$bunfs/root/chunk-wgt53hn2.js",
+          "file": "chunk-wgt53hn2.js",
+          "symbol": "Ka"
+        },
+        "environment": {
+          "module": "/$bunfs/root/chunk-mbfze585.js",
+          "file": "chunk-mbfze585.js",
+          "symbol": "a"
+        },
+        "setFd": {
+          "module": "/$bunfs/root/chunk-bn3p37gv.js",
+          "file": "chunk-bn3p37gv.js",
+          "symbol": "ZU"
+        },
+        "setGateway": {
+          "module": "/$bunfs/root/chunk-bn3p37gv.js",
+          "file": "chunk-bn3p37gv.js",
+          "symbol": "kY"
+        },
+        "stampAccount": {
+          "module": "/$bunfs/root/chunk-bn3p37gv.js",
+          "file": "chunk-bn3p37gv.js",
+          "symbol": "qfe"
+        }
+      },
+      "lockEvidence": [
+        {
+          "semantic": "writeLock",
+          "module": {
+            "file": "chunk-wgt53hn2.js",
+            "moduleSha256": "54b4f40b9522131bac4b0ac54c37afc637d7a8b2a68dd17b8de774fe91dcb4a0",
+            "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5"
+          },
+          "declaration": {
+            "symbol": "_9r",
+            "start": 1588,
+            "end": 2063,
+            "source": "async function _9r(e){if(I.getStore())return e();let r=b,n;b=new Promise((s)=>{n=s});try{await r;let s=yb();await ae().mkdir(s);let a=await oa(Z(s,\".storage-write\"),{realpath:!1,retries:{retries:10,minTimeout:100,maxTimeout:1000},stale:15000,onCompromised:(o)=>t(`[secureStorage] write lock compromised: ${l(o)}`,{level:\"warn\"})});try{return await I.run(!0,e)}finally{await a().catch((o)=>t(`[secureStorage] write lock release failed: ${l(o)}`,{level:\"warn\"}))}}finally{n()}}",
+            "sha256": "27ada229424ab2ad9e4fce3cf1d8baa890cfcd512a2ac2429230077a26738ca7"
+          }
+        },
+        {
+          "semantic": "alreadyLocked",
+          "module": {
+            "file": "chunk-wgt53hn2.js",
+            "moduleSha256": "54b4f40b9522131bac4b0ac54c37afc637d7a8b2a68dd17b8de774fe91dcb4a0",
+            "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5"
+          },
+          "declaration": {
+            "symbol": "L5o",
+            "start": 2063,
+            "end": 2104,
+            "source": "async function L5o(e){return I.run(!0,e)}",
+            "sha256": "339c75a3cd9b5d58bdf5d3b215ec41e99ff2b630d60be5614f0a0d185cae8841"
+          }
+        },
+        {
+          "semantic": "readFailed",
+          "module": {
+            "file": "chunk-wgt53hn2.js",
+            "moduleSha256": "54b4f40b9522131bac4b0ac54c37afc637d7a8b2a68dd17b8de774fe91dcb4a0",
+            "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5"
+          },
+          "declaration": {
+            "symbol": "Ka",
+            "start": 1441,
+            "end": 1479,
+            "source": "Ka=Symbol(\"secureStorage.READ_FAILED\")",
+            "sha256": "f92f0c556ae492fb177c19e36aef969fa62ee72f43a794fffe36ee09242ebad6"
+          }
+        }
+      ],
+      "errors": {
+        "module": {
+          "file": "chunk-c9me9cp7.js",
+          "moduleSha256": "db81856ee883c31a0be18c305014a0d82d3bd698a459223b9de754b934b084ae",
+          "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5"
+        },
+        "declarations": [
+          {
+            "symbol": "E",
+            "start": 4814,
+            "end": 4913,
+            "source": "function E(n){if(n&&typeof n===\"object\"&&\"code\"in n&&typeof n.code===\"string\")return n.code;return}",
+            "sha256": "a84ab0a2488aed5689416393c679dde4e7f4b29aa980e121bd56b25ab3e7b5e4"
+          },
+          {
+            "symbol": "ch",
+            "start": 8632,
+            "end": 8664,
+            "source": "function ch(n){return Hir(E(n))}",
+            "sha256": "b4b5510c8d45c6a1057d7b98e1dc7e5abf700efc30564b8115b8147a98a8d8fd"
+          },
+          {
+            "symbol": "l",
+            "start": 4754,
+            "end": 4814,
+            "source": "function l(n){return n instanceof Error?n.message:String(n)}",
+            "sha256": "2f921ed78ffeed39032d7e9c4783e05c294cba2ce61cc5ac20466ece27a81075"
+          },
+          {
+            "symbol": "Hir",
+            "start": 8664,
+            "end": 8837,
+            "source": "function Hir(n){return n===\"EDEADLK\"||n===\"EINTR\"||n===\"ENXIO\"||n===\"ENODEV\"||n===\"ECANCELED\"||n===\"ENEEDAUTH\"||n===\"ESTALE\"||n===\"EUNKNOWN\"||n===\"ENOMEM\"||n!==void 0&&c(n)}",
+            "sha256": "904344e2861be863362e139f9c07b185ec3cba8487f64b01e229bc3ed36bb1ad"
+          },
+          {
+            "symbol": "c",
+            "start": 8837,
+            "end": 8910,
+            "source": "function c(n){return n===\"UNKNOWN\"||n.startsWith(\"Unknown system error\")}",
+            "sha256": "27c8d43976cbebe4947766cb1f6023324022453070ac4f34ab5d8c428423dea6"
+          }
+        ],
+        "aliases": {
+          "errorCode": "E",
+          "transient": "ch",
+          "message": "l"
+        }
+      },
+      "normalizer": {
+        "module": {
+          "file": "chunk-nankzm0s.js",
+          "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+          "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5"
+        },
+        "declaration": {
+          "symbol": "Z0",
+          "start": 545796,
+          "end": 545899,
+          "source": "function Z0(e){let n=e.customApiKeyResponses;return{approved:wi(n?.approved),rejected:wi(n?.rejected)}}",
+          "sha256": "8e262f4044b4c5c4b7b1c45da48226b7a02b7b4f757dae70c23e82259d5c7ee0"
+        },
+        "local": "Z0",
+        "strings": {
+          "module": {
+            "file": "chunk-h3rrxdgy.js",
+            "moduleSha256": "4012f37687d6f056e0a15ff409aeac2a1192a31d4ae1687c29d0332c634c4876",
+            "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5"
+          },
+          "declaration": {
+            "symbol": "wi",
+            "start": 919,
+            "end": 1042,
+            "source": "function wi(n){if(!Array.isArray(n))return[];return n.every((e)=>typeof e===\"string\")?n:n.filter((e)=>typeof e===\"string\")}",
+            "sha256": "b5cf54bd3bbe2b2d56d2a0e4cf042832cf629abdc2ca1a25216111791b0af6ab"
+          },
+          "local": "wi"
+        }
+      },
+      "notification": {
+        "module": {
+          "file": "chunk-vscqnsjk.js",
+          "moduleSha256": "72f9f685ab83cf4c96c744643a43446940b7ae1a92fddc099c78c80490c8af07",
+          "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5"
+        },
+        "declaration": {
+          "symbol": "Mot",
+          "start": 619,
+          "end": 644,
+          "source": "Mot=\"subscription-switch\"",
+          "sha256": "68b0672adf34d6485bbd1f32018eef6ba097cd9108baa1cebf5ac0f5c671d1a3"
+        },
+        "local": "Mot"
+      },
+      "revoke": {
+        "module": {
+          "file": "chunk-nankzm0s.js",
+          "moduleSha256": "9079ca3b46000d8e97a924af7c7de432c859148354d3463ce1495c571d2161fa",
+          "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5"
+        },
+        "declaration": {
+          "symbol": "qC",
+          "start": 694103,
+          "end": 694520,
+          "source": "async function qC(e,n){try{await St.post(`${dn().TOKEN_URL}/revoke`,{token:e,token_type_hint:\"refresh_token\",client_id:n??dn().CLIENT_ID},{headers:{\"Content-Type\":\"application/json\"},timeout:5000}),y(\"oauth_token_revoke\")}catch(r){let s=St.isAxiosError(r)?r.response?.status:void 0;t(`OAuth token revoke failed (status=${s??\"network\"}); continuing with local logout.`),p(\"oauth_token_revoke\",`http_${s??\"network\"}`)}}",
+          "sha256": "aa19b4491b047ef276dbbe65e33c086eef3a6aca88125ee58d402b481425417e"
+        },
+        "aliases": {
+          "http": "St",
+          "config": "dn",
+          "ok": "y",
+          "debug": "t",
+          "sad": "p"
+        }
+      }
+    },
+    {
+      "platform": "win32-x64",
+      "logoutModule": {
+        "file": "chunk-9xbcz4jc.js",
+        "moduleSha256": "c9a00cd8e917e16d776c7c99b2a0d0bb75cb7482051c091bf5278048a87d864e",
+        "moduleLength": 14486,
+        "manifestSha256": "c71e85888df3301fd3c4cb158744538810418e2d67591debe8e4f7c771fcdddc",
+        "binarySha256": "6d5be51f0edfe3429cd1a9885950db31c1e59eb9a2c9a30a47e64179d2ff98b4"
+      },
+      "logout": {
+        "symbol": "rte",
+        "start": 10345,
+        "end": 13043,
+        "source": "async function rte({clearOnboarding:e=!1,preserveInProcessTokens:r=!1,preserveNonAnthropicAuth:n=!1,storageV5:s,preserveQuotaAutoResume:c=!1,artifactAccount:u=\"signed_out\",incomingIdentity:h,credentials:g}){let{flushTelemetry:R}=await import(\"B:/~BUN/root/chunk-yp5wqrtx.js\");if(await R(),await w1o(u),Pt()){await qJt(s,{preserveQuotaAutoResume:c,artifactAccount:u,incomingIdentity:h});return}if(!r&&Oe()===\"firstParty\"){let p=Gn();p.invalidateCache?.();let i=await p.readAsync(g),m=i?.claudeAiOauth;if(m?.refreshToken)await Vk(m.refreshToken,m.clientId);let C=i?.designOauth;if(C?.refreshToken)await Vk(C.refreshToken,C.clientId)}if(Oe()===\"gateway\"){let p=Date.now()+5000;for(let C=Ave();C&&Date.now()<p;C=Ave())await lt(C.catch(()=>{}),p-Date.now());let i=Gn();i.invalidateCache?.();let m=(await i.readAsync(g))?.enterpriseGateway;if(m)await qqo(m,g)}if(!r)a.unset(\"CLAUDE_CODE_OAUTH_TOKEN\"),jB(null);await KKr(s),await b({revoke:!r&&Oe()===\"firstParty\"?({refreshToken:p,clientId:i})=>Vk(p,i):void 0});let w=Gn();if(n){if(Oe()===\"firstParty\"){w.invalidateCache?.();let p=(await w.readAsync(g))?.designOauth;if(p?.refreshToken)await Vk(p.refreshToken,p.clientId)}await w.mutate((p)=>{let i={...p};return delete i.claudeAiOauth,delete i.organizationUuid,delete i.trustedDeviceToken,delete i.enterpriseGateway,delete i.designOauth,i},g).catch((p)=>{let i=v(p);if(i===\"EPERM\"||i===\"ENOENT\"||lh(p)){t(`[performLogout] re-login secure-storage prune failed (${i}): ${l(p)}`,{level:\"error\"});return}d(p)})}else{let p=!1,i=async()=>{p=!0;let m=await Q(w,g);if(await w.delete(g),m&&Object.keys(m).length>0)await Z(w,m,g)};await p8r(i).catch((m)=>{if(p)throw m;return d(m),t5o(i)})}E9(null),jfe(null),await qJt(s,{preserveQuotaAutoResume:c,artifactAccount:u,incomingIdentity:h,credentials:g}),await Te((p)=>{let i={...p};if(e){if(i.hasCompletedOnboarding=!1,i.subscriptionNoticeCount=0,i.hasAvailableSubscription=!1,i.customApiKeyResponses!==void 0)i.customApiKeyResponses={approved:[],rejected:YO(i).rejected};let m=Iot;if(i.seenNotifications?.[m]!==void 0){let{[m]:C,...x}=i.seenNotifications;i.seenNotifications=x}}return i.oauthAccount=void 0,i.additionalModelOptionsCache=void 0,i.additionalModelOptionsAnsweredAt=void 0,i.additionalModelCostsCache=void 0,i.modelAccessCache=void 0,i.orgModelDefaultCache=void 0,i.cachedArtifactRoster=void 0,i.artifactRosterDenied=void 0,i.lastSeenOrgDefaultUpdatedAt=void 0,i.clientDataCache=void 0,i.clientDataCacheSlots=void 0,i.autoCompactWindowsCache=void 0,i.cachedUsageUtilization=void 0,i.metricsStatusCache=void 0,i.metricsStatusCacheByPrincipal=void 0,i.githubWebConnectionStatusCache=void 0,i.startupPrefetchedAt=void 0,i},s),u2e(void 0),y(\"oauth_logout\")}",
+        "sha256": "3834c28deaeeee1914081ef75379d3adf49ad82357a8f45a387b2f7001f78ab4"
+      },
+      "options": {
+        "clearOnboarding": "e",
+        "preserveInProcessTokens": "r",
+        "preserveNonAnthropicAuth": "n",
+        "storageV5": "s",
+        "preserveQuotaAutoResume": "c",
+        "artifactAccount": "u",
+        "incomingIdentity": "h",
+        "credentials": "g"
+      },
+      "clear": {
+        "start": 11350,
+        "end": 12019,
+        "source": "let w=Gn();if(n){if(Oe()===\"firstParty\"){w.invalidateCache?.();let p=(await w.readAsync(g))?.designOauth;if(p?.refreshToken)await Vk(p.refreshToken,p.clientId)}await w.mutate((p)=>{let i={...p};return delete i.claudeAiOauth,delete i.organizationUuid,delete i.trustedDeviceToken,delete i.enterpriseGateway,delete i.designOauth,i},g).catch((p)=>{let i=v(p);if(i===\"EPERM\"||i===\"ENOENT\"||lh(p)){t(`[performLogout] re-login secure-storage prune failed (${i}): ${l(p)}`,{level:\"error\"});return}d(p)})}else{let p=!1,i=async()=>{p=!0;let m=await Q(w,g);if(await w.delete(g),m&&Object.keys(m).length>0)await Z(w,m,g)};await p8r(i).catch((m)=>{if(p)throw m;return d(m),t5o(i)})}",
+        "sha256": "ac72cf94f7038c2e7d0131451a754a9f979fe95e36afc98f1a203688f3426a7d"
+      },
+      "clearSlots": {
+        "start": 12019,
+        "end": 12037,
+        "source": "E9(null),jfe(null)",
+        "sha256": "1f49576b7dcbe78f3d0843516763c654b7788cacf0c31ab74857e5674e66e0c6"
+      },
+      "slotDeclarations": [
+        {
+          "origin": {
+            "module": "B:/~BUN/root/chunk-q2pbxf3c.js",
+            "file": "chunk-q2pbxf3c.js",
+            "symbol": "E9"
+          },
+          "module": {
+            "file": "chunk-q2pbxf3c.js",
+            "moduleSha256": "a20c5e6ea8e977791440c01c89feb244fa3c4ead75b11fe5d81fc6ea9e433f38",
+            "manifestSha256": "c71e85888df3301fd3c4cb158744538810418e2d67591debe8e4f7c771fcdddc"
+          },
+          "declaration": {
+            "symbol": "E9",
+            "start": 96268,
+            "end": 96330,
+            "source": "function E9(e){n().host.credentialSlots.replaceGatewayAuth(e)}",
+            "sha256": "8de4b40cf216e42d441644db5d3a582c2764ffde655a98fb6d10a87bf4296775"
+          }
+        },
+        {
+          "origin": {
+            "module": "B:/~BUN/root/chunk-q2pbxf3c.js",
+            "file": "chunk-q2pbxf3c.js",
+            "symbol": "jfe"
+          },
+          "module": {
+            "file": "chunk-q2pbxf3c.js",
+            "moduleSha256": "a20c5e6ea8e977791440c01c89feb244fa3c4ead75b11fe5d81fc6ea9e433f38",
+            "manifestSha256": "c71e85888df3301fd3c4cb158744538810418e2d67591debe8e4f7c771fcdddc"
+          },
+          "declaration": {
+            "symbol": "jfe",
+            "start": 96400,
+            "end": 96470,
+            "source": "function jfe(e){n().host.credentialSlots.stampAuthenticatedAccount(e)}",
+            "sha256": "ac86dad31b1fc44aba6e304d603a88af1c966ba9c6b589fe63c79a5c054416e7"
+          }
+        }
+      ],
+      "revokeExisting": {
+        "start": 10738,
+        "end": 10976,
+        "source": "if(!r&&Oe()===\"firstParty\"){let p=Gn();p.invalidateCache?.();let i=await p.readAsync(g),m=i?.claudeAiOauth;if(m?.refreshToken)await Vk(m.refreshToken,m.clientId);let C=i?.designOauth;if(C?.refreshToken)await Vk(C.refreshToken,C.clientId)}",
+        "sha256": "3adbcc030a91276712d900cfdf9b50839ef59396ef11c30ce3258e3c07d207c3"
+      },
+      "clearInProcess": {
+        "start": 11199,
+        "end": 11249,
+        "source": "if(!r)a.unset(\"CLAUDE_CODE_OAUTH_TOKEN\"),jB(null);",
+        "sha256": "322639f1abac1f32c77b6cb3804737fd72d758fa45661e31917112342b9cf4b7"
+      },
+      "config": {
+        "start": 12139,
+        "end": 13009,
+        "source": "(p)=>{let i={...p};if(e){if(i.hasCompletedOnboarding=!1,i.subscriptionNoticeCount=0,i.hasAvailableSubscription=!1,i.customApiKeyResponses!==void 0)i.customApiKeyResponses={approved:[],rejected:YO(i).rejected};let m=Iot;if(i.seenNotifications?.[m]!==void 0){let{[m]:C,...x}=i.seenNotifications;i.seenNotifications=x}}return i.oauthAccount=void 0,i.additionalModelOptionsCache=void 0,i.additionalModelOptionsAnsweredAt=void 0,i.additionalModelCostsCache=void 0,i.modelAccessCache=void 0,i.orgModelDefaultCache=void 0,i.cachedArtifactRoster=void 0,i.artifactRosterDenied=void 0,i.lastSeenOrgDefaultUpdatedAt=void 0,i.clientDataCache=void 0,i.clientDataCacheSlots=void 0,i.autoCompactWindowsCache=void 0,i.cachedUsageUtilization=void 0,i.metricsStatusCache=void 0,i.metricsStatusCacheByPrincipal=void 0,i.githubWebConnectionStatusCache=void 0,i.startupPrefetchedAt=void 0,i}",
+        "sha256": "df51e8e14cb464d38c72eceb9618f3f5eeedb9a2a575266a889935f202c270ce"
+      },
+      "readDevice": {
+        "symbol": "Q",
+        "start": 14187,
+        "end": 14436,
+        "source": "async function Q(e,r){for(let n=0;n<2;n++){let s=await(e.readAsyncStrict?.(r)??e.readAsync(r));if(s!==Il)return s?.coworkRemoteDevice}d(Error(\"logout: secure storage could not be read, so the device identity is not carried across the wipe\"));return}",
+        "sha256": "c86612cdba1e062de0bf251039d3780fb949e56419f607188fc3d46c9b4465ab"
+      },
+      "writeDevice": {
+        "symbol": "Z",
+        "start": 13929,
+        "end": 14187,
+        "source": "async function Z(e,r,n){let s;for(let c=0;c<2;c++)try{let u=await e.mutate(()=>({coworkRemoteDevice:r}),n);if(u.success)return;if(s=Error(\"logout: the device identity could not be written back after the credential wipe\"),!u.transient)break}catch(u){s=u}d(s)}",
+        "sha256": "b96acf3fa27c36f06d81badf19c726324fa8c055f72c882a5af09473d5945107"
+      },
+      "aliases": {
+        "storage": "Gn",
+        "provider": "Oe",
+        "revoke": "Vk",
+        "debug": "t",
+        "report": "d",
+        "writeLock": "p8r",
+        "alreadyLocked": "t5o",
+        "readFailed": "Il",
+        "environment": "a",
+        "setFd": "jB",
+        "setGateway": "E9",
+        "stampAccount": "jfe"
+      },
+      "portOrigins": {
+        "storage": {
+          "module": "B:/~BUN/root/chunk-z6vhnmey.js",
+          "file": "chunk-z6vhnmey.js",
+          "symbol": "Gn"
+        },
+        "provider": {
+          "module": "B:/~BUN/root/chunk-nzkna3hq.js",
+          "file": "chunk-nzkna3hq.js",
+          "symbol": "Oe"
+        },
+        "revoke": {
+          "module": "B:/~BUN/root/chunk-xybe1vrh.js",
+          "file": "chunk-xybe1vrh.js",
+          "symbol": "Vk"
+        },
+        "debug": {
+          "module": "B:/~BUN/root/chunk-18x8g08z.js",
+          "file": "chunk-18x8g08z.js",
+          "symbol": "t"
+        },
+        "report": {
+          "module": "B:/~BUN/root/chunk-eg7cx7jg.js",
+          "file": "chunk-eg7cx7jg.js",
+          "symbol": "d"
+        },
+        "writeLock": {
+          "module": "B:/~BUN/root/chunk-z6vhnmey.js",
+          "file": "chunk-z6vhnmey.js",
+          "symbol": "p8r"
+        },
+        "alreadyLocked": {
+          "module": "B:/~BUN/root/chunk-z6vhnmey.js",
+          "file": "chunk-z6vhnmey.js",
+          "symbol": "t5o"
+        },
+        "readFailed": {
+          "module": "B:/~BUN/root/chunk-z6vhnmey.js",
+          "file": "chunk-z6vhnmey.js",
+          "symbol": "Il"
+        },
+        "environment": {
+          "module": "B:/~BUN/root/chunk-5g00bdfr.js",
+          "file": "chunk-5g00bdfr.js",
+          "symbol": "a"
+        },
+        "setFd": {
+          "module": "B:/~BUN/root/chunk-q2pbxf3c.js",
+          "file": "chunk-q2pbxf3c.js",
+          "symbol": "jB"
+        },
+        "setGateway": {
+          "module": "B:/~BUN/root/chunk-q2pbxf3c.js",
+          "file": "chunk-q2pbxf3c.js",
+          "symbol": "E9"
+        },
+        "stampAccount": {
+          "module": "B:/~BUN/root/chunk-q2pbxf3c.js",
+          "file": "chunk-q2pbxf3c.js",
+          "symbol": "jfe"
+        }
+      },
+      "lockEvidence": [
+        {
+          "semantic": "writeLock",
+          "module": {
+            "file": "chunk-z6vhnmey.js",
+            "moduleSha256": "e83c3e6c262c680824b4e06980769bd73d16ea2045245bd1c3f90ec2b50e82bb",
+            "manifestSha256": "c71e85888df3301fd3c4cb158744538810418e2d67591debe8e4f7c771fcdddc"
+          },
+          "declaration": {
+            "symbol": "p8r",
+            "start": 1603,
+            "end": 2079,
+            "source": "async function p8r(e){if(N.getStore())return e();let r=H,n;H=new Promise((s)=>{n=s});try{await r;let s=SS();await ae().mkdir(s);let a=await oa(re(s,\".storage-write\"),{realpath:!1,retries:{retries:10,minTimeout:100,maxTimeout:1000},stale:15000,onCompromised:(o)=>t(`[secureStorage] write lock compromised: ${l(o)}`,{level:\"warn\"})});try{return await N.run(!0,e)}finally{await a().catch((o)=>t(`[secureStorage] write lock release failed: ${l(o)}`,{level:\"warn\"}))}}finally{n()}}",
+            "sha256": "c365e58ed3b4a4701e82a16d67df2abcff2d6489aec1e59c44255005d61b25e0"
+          }
+        },
+        {
+          "semantic": "alreadyLocked",
+          "module": {
+            "file": "chunk-z6vhnmey.js",
+            "moduleSha256": "e83c3e6c262c680824b4e06980769bd73d16ea2045245bd1c3f90ec2b50e82bb",
+            "manifestSha256": "c71e85888df3301fd3c4cb158744538810418e2d67591debe8e4f7c771fcdddc"
+          },
+          "declaration": {
+            "symbol": "t5o",
+            "start": 2079,
+            "end": 2120,
+            "source": "async function t5o(e){return N.run(!0,e)}",
+            "sha256": "79adedcc2b36a8341610931eb172ec17781b45f219eddf2f5281cc5c3d0df1e5"
+          }
+        },
+        {
+          "semantic": "readFailed",
+          "module": {
+            "file": "chunk-z6vhnmey.js",
+            "moduleSha256": "e83c3e6c262c680824b4e06980769bd73d16ea2045245bd1c3f90ec2b50e82bb",
+            "manifestSha256": "c71e85888df3301fd3c4cb158744538810418e2d67591debe8e4f7c771fcdddc"
+          },
+          "declaration": {
+            "symbol": "Il",
+            "start": 1453,
+            "end": 1491,
+            "source": "Il=Symbol(\"secureStorage.READ_FAILED\")",
+            "sha256": "dbe8642c1aa826f1bd86b97eed4d0ef150e8bec2613e04620b71604b7a32fafd"
+          }
+        }
+      ],
+      "errors": {
+        "module": {
+          "file": "chunk-dtespbs4.js",
+          "moduleSha256": "f7767d0c0924847be79dfeaade788dc4d97d5f99a5e91e36d3e9ce23946a432a",
+          "manifestSha256": "c71e85888df3301fd3c4cb158744538810418e2d67591debe8e4f7c771fcdddc"
+        },
+        "declarations": [
+          {
+            "symbol": "v",
+            "start": 4814,
+            "end": 4913,
+            "source": "function v(n){if(n&&typeof n===\"object\"&&\"code\"in n&&typeof n.code===\"string\")return n.code;return}",
+            "sha256": "fac610e89149796538ed2079d613248acb1ba8228f14c4b19c9a70581fe0af8b"
+          },
+          {
+            "symbol": "lh",
+            "start": 8632,
+            "end": 8664,
+            "source": "function lh(n){return bir(v(n))}",
+            "sha256": "1c20518c55b6b83a2535feaa3a02fd53fd5c80e605e3fb33a5283ee34458c44b"
+          },
+          {
+            "symbol": "l",
+            "start": 4754,
+            "end": 4814,
+            "source": "function l(n){return n instanceof Error?n.message:String(n)}",
+            "sha256": "2f921ed78ffeed39032d7e9c4783e05c294cba2ce61cc5ac20466ece27a81075"
+          },
+          {
+            "symbol": "bir",
+            "start": 8664,
+            "end": 8837,
+            "source": "function bir(n){return n===\"EDEADLK\"||n===\"EINTR\"||n===\"ENXIO\"||n===\"ENODEV\"||n===\"ECANCELED\"||n===\"ENEEDAUTH\"||n===\"ESTALE\"||n===\"EUNKNOWN\"||n===\"ENOMEM\"||n!==void 0&&c(n)}",
+            "sha256": "758dce2cc3555dbdf8cc8e41f33b6e9f4f76c197fdf8cb28edd216f6b76992f6"
+          },
+          {
+            "symbol": "c",
+            "start": 8837,
+            "end": 8910,
+            "source": "function c(n){return n===\"UNKNOWN\"||n.startsWith(\"Unknown system error\")}",
+            "sha256": "27c8d43976cbebe4947766cb1f6023324022453070ac4f34ab5d8c428423dea6"
+          }
+        ],
+        "aliases": {
+          "errorCode": "v",
+          "transient": "lh",
+          "message": "l"
+        }
+      },
+      "normalizer": {
+        "module": {
+          "file": "chunk-xybe1vrh.js",
+          "moduleSha256": "f6bcd764f28c2767881941459fcd034e465882afc68abf977d197c0e3b9cfd27",
+          "manifestSha256": "c71e85888df3301fd3c4cb158744538810418e2d67591debe8e4f7c771fcdddc"
+        },
+        "declaration": {
+          "symbol": "YO",
+          "start": 545777,
+          "end": 545880,
+          "source": "function YO(e){let n=e.customApiKeyResponses;return{approved:wi(n?.approved),rejected:wi(n?.rejected)}}",
+          "sha256": "9d9f61c0741bb0ebaee5625de380f6df5ca86d171663c435cfb07866ec57e17d"
+        },
+        "local": "YO",
+        "strings": {
+          "module": {
+            "file": "chunk-vqm57kwc.js",
+            "moduleSha256": "2c42474e9d27dbecf6b1d1582c097f35d2f87bb76aa3b035d0d46fdc0c5ee019",
+            "manifestSha256": "c71e85888df3301fd3c4cb158744538810418e2d67591debe8e4f7c771fcdddc"
+          },
+          "declaration": {
+            "symbol": "wi",
+            "start": 919,
+            "end": 1042,
+            "source": "function wi(n){if(!Array.isArray(n))return[];return n.every((e)=>typeof e===\"string\")?n:n.filter((e)=>typeof e===\"string\")}",
+            "sha256": "b5cf54bd3bbe2b2d56d2a0e4cf042832cf629abdc2ca1a25216111791b0af6ab"
+          },
+          "local": "wi"
+        }
+      },
+      "notification": {
+        "module": {
+          "file": "chunk-35yjj6bh.js",
+          "moduleSha256": "b08588396b1d1fe7d98df3a5d555950601f1bf76e4a3038153b6ce813589e744",
+          "manifestSha256": "c71e85888df3301fd3c4cb158744538810418e2d67591debe8e4f7c771fcdddc"
+        },
+        "declaration": {
+          "symbol": "Iot",
+          "start": 619,
+          "end": 644,
+          "source": "Iot=\"subscription-switch\"",
+          "sha256": "13cc1cbf459085c1d5ce1e761daf7c7af16a595a731de330347687103ae53442"
+        },
+        "local": "Iot"
+      },
+      "revoke": {
+        "module": {
+          "file": "chunk-xybe1vrh.js",
+          "moduleSha256": "f6bcd764f28c2767881941459fcd034e465882afc68abf977d197c0e3b9cfd27",
+          "manifestSha256": "c71e85888df3301fd3c4cb158744538810418e2d67591debe8e4f7c771fcdddc"
+        },
+        "declaration": {
+          "symbol": "Vk",
+          "start": 693109,
+          "end": 693526,
+          "source": "async function Vk(e,n){try{await _t.post(`${dn().TOKEN_URL}/revoke`,{token:e,token_type_hint:\"refresh_token\",client_id:n??dn().CLIENT_ID},{headers:{\"Content-Type\":\"application/json\"},timeout:5000}),y(\"oauth_token_revoke\")}catch(r){let s=_t.isAxiosError(r)?r.response?.status:void 0;t(`OAuth token revoke failed (status=${s??\"network\"}); continuing with local logout.`),p(\"oauth_token_revoke\",`http_${s??\"network\"}`)}}",
+          "sha256": "2a6678ed469a81d47e8c6a2668088fd81cc82f70a2fcaadcd6a568630e7a09bd"
+        },
+        "aliases": {
+          "http": "_t",
+          "config": "dn",
+          "ok": "y",
+          "debug": "t",
+          "sad": "p"
+        }
+      }
+    },
+    {
+      "platform": "win32-arm64",
+      "logoutModule": {
+        "file": "chunk-g6rfqq5z.js",
+        "moduleSha256": "06bc2e27ed28143178ce1cc0c702010968b753bc7f0c126a2c4933ed3070f485",
+        "moduleLength": 14486,
+        "manifestSha256": "d0d8b3b882ba61ba321ab072b5cbc28a1a4089cfb4c5dce0698311aae10c739e",
+        "binarySha256": "11438981154e99af8f9aeabe193871c92b8b550b35354686a140fc056f1bfe54"
+      },
+      "logout": {
+        "symbol": "rte",
+        "start": 10345,
+        "end": 13043,
+        "source": "async function rte({clearOnboarding:e=!1,preserveInProcessTokens:r=!1,preserveNonAnthropicAuth:n=!1,storageV5:s,preserveQuotaAutoResume:c=!1,artifactAccount:u=\"signed_out\",incomingIdentity:h,credentials:g}){let{flushTelemetry:R}=await import(\"B:/~BUN/root/chunk-ygf97770.js\");if(await R(),await w1o(u),Pt()){await VJt(s,{preserveQuotaAutoResume:c,artifactAccount:u,incomingIdentity:h});return}if(!r&&Oe()===\"firstParty\"){let p=Gn();p.invalidateCache?.();let i=await p.readAsync(g),m=i?.claudeAiOauth;if(m?.refreshToken)await qE(m.refreshToken,m.clientId);let C=i?.designOauth;if(C?.refreshToken)await qE(C.refreshToken,C.clientId)}if(Oe()===\"gateway\"){let p=Date.now()+5000;for(let C=Ave();C&&Date.now()<p;C=Ave())await lt(C.catch(()=>{}),p-Date.now());let i=Gn();i.invalidateCache?.();let m=(await i.readAsync(g))?.enterpriseGateway;if(m)await VVo(m,g)}if(!r)a.unset(\"CLAUDE_CODE_OAUTH_TOKEN\"),jH(null);await KKr(s),await b({revoke:!r&&Oe()===\"firstParty\"?({refreshToken:p,clientId:i})=>qE(p,i):void 0});let w=Gn();if(n){if(Oe()===\"firstParty\"){w.invalidateCache?.();let p=(await w.readAsync(g))?.designOauth;if(p?.refreshToken)await qE(p.refreshToken,p.clientId)}await w.mutate((p)=>{let i={...p};return delete i.claudeAiOauth,delete i.organizationUuid,delete i.trustedDeviceToken,delete i.enterpriseGateway,delete i.designOauth,i},g).catch((p)=>{let i=v(p);if(i===\"EPERM\"||i===\"ENOENT\"||lh(p)){t(`[performLogout] re-login secure-storage prune failed (${i}): ${l(p)}`,{level:\"error\"});return}d(p)})}else{let p=!1,i=async()=>{p=!0;let m=await Q(w,g);if(await w.delete(g),m&&Object.keys(m).length>0)await Z(w,m,g)};await p8r(i).catch((m)=>{if(p)throw m;return d(m),tYo(i)})}k9(null),jfe(null),await VJt(s,{preserveQuotaAutoResume:c,artifactAccount:u,incomingIdentity:h,credentials:g}),await Te((p)=>{let i={...p};if(e){if(i.hasCompletedOnboarding=!1,i.subscriptionNoticeCount=0,i.hasAvailableSubscription=!1,i.customApiKeyResponses!==void 0)i.customApiKeyResponses={approved:[],rejected:YO(i).rejected};let m=Iot;if(i.seenNotifications?.[m]!==void 0){let{[m]:C,...F}=i.seenNotifications;i.seenNotifications=F}}return i.oauthAccount=void 0,i.additionalModelOptionsCache=void 0,i.additionalModelOptionsAnsweredAt=void 0,i.additionalModelCostsCache=void 0,i.modelAccessCache=void 0,i.orgModelDefaultCache=void 0,i.cachedArtifactRoster=void 0,i.artifactRosterDenied=void 0,i.lastSeenOrgDefaultUpdatedAt=void 0,i.clientDataCache=void 0,i.clientDataCacheSlots=void 0,i.autoCompactWindowsCache=void 0,i.cachedUsageUtilization=void 0,i.metricsStatusCache=void 0,i.metricsStatusCacheByPrincipal=void 0,i.githubWebConnectionStatusCache=void 0,i.startupPrefetchedAt=void 0,i},s),u2e(void 0),y(\"oauth_logout\")}",
+        "sha256": "7b4b27d104ff31a48d399249b63e38103bd51ba2319e3e3b989c97fcd2417225"
+      },
+      "options": {
+        "clearOnboarding": "e",
+        "preserveInProcessTokens": "r",
+        "preserveNonAnthropicAuth": "n",
+        "storageV5": "s",
+        "preserveQuotaAutoResume": "c",
+        "artifactAccount": "u",
+        "incomingIdentity": "h",
+        "credentials": "g"
+      },
+      "clear": {
+        "start": 11350,
+        "end": 12019,
+        "source": "let w=Gn();if(n){if(Oe()===\"firstParty\"){w.invalidateCache?.();let p=(await w.readAsync(g))?.designOauth;if(p?.refreshToken)await qE(p.refreshToken,p.clientId)}await w.mutate((p)=>{let i={...p};return delete i.claudeAiOauth,delete i.organizationUuid,delete i.trustedDeviceToken,delete i.enterpriseGateway,delete i.designOauth,i},g).catch((p)=>{let i=v(p);if(i===\"EPERM\"||i===\"ENOENT\"||lh(p)){t(`[performLogout] re-login secure-storage prune failed (${i}): ${l(p)}`,{level:\"error\"});return}d(p)})}else{let p=!1,i=async()=>{p=!0;let m=await Q(w,g);if(await w.delete(g),m&&Object.keys(m).length>0)await Z(w,m,g)};await p8r(i).catch((m)=>{if(p)throw m;return d(m),tYo(i)})}",
+        "sha256": "8ac72abfa6455e49cddbd7c35106c739f055af2a6e29329164a7157f5bc766dd"
+      },
+      "clearSlots": {
+        "start": 12019,
+        "end": 12037,
+        "source": "k9(null),jfe(null)",
+        "sha256": "e5b6a330737342f32230d1eb9676a419cb6c1fc1cf96dc249e5131e8818d737d"
+      },
+      "slotDeclarations": [
+        {
+          "origin": {
+            "module": "B:/~BUN/root/chunk-ce0nkjpw.js",
+            "file": "chunk-ce0nkjpw.js",
+            "symbol": "k9"
+          },
+          "module": {
+            "file": "chunk-ce0nkjpw.js",
+            "moduleSha256": "53308b4aa66d0d0cfad8da957e35f5b0c7111332c7ec506dd95bd4dc92fa28bf",
+            "manifestSha256": "d0d8b3b882ba61ba321ab072b5cbc28a1a4089cfb4c5dce0698311aae10c739e"
+          },
+          "declaration": {
+            "symbol": "k9",
+            "start": 96268,
+            "end": 96330,
+            "source": "function k9(e){n().host.credentialSlots.replaceGatewayAuth(e)}",
+            "sha256": "084ef673b484ae74ab143d2203bbcfb9b63ae8d3660723a0ee6fba0e1d485b81"
+          }
+        },
+        {
+          "origin": {
+            "module": "B:/~BUN/root/chunk-ce0nkjpw.js",
+            "file": "chunk-ce0nkjpw.js",
+            "symbol": "jfe"
+          },
+          "module": {
+            "file": "chunk-ce0nkjpw.js",
+            "moduleSha256": "53308b4aa66d0d0cfad8da957e35f5b0c7111332c7ec506dd95bd4dc92fa28bf",
+            "manifestSha256": "d0d8b3b882ba61ba321ab072b5cbc28a1a4089cfb4c5dce0698311aae10c739e"
+          },
+          "declaration": {
+            "symbol": "jfe",
+            "start": 96400,
+            "end": 96470,
+            "source": "function jfe(e){n().host.credentialSlots.stampAuthenticatedAccount(e)}",
+            "sha256": "ac86dad31b1fc44aba6e304d603a88af1c966ba9c6b589fe63c79a5c054416e7"
+          }
+        }
+      ],
+      "revokeExisting": {
+        "start": 10738,
+        "end": 10976,
+        "source": "if(!r&&Oe()===\"firstParty\"){let p=Gn();p.invalidateCache?.();let i=await p.readAsync(g),m=i?.claudeAiOauth;if(m?.refreshToken)await qE(m.refreshToken,m.clientId);let C=i?.designOauth;if(C?.refreshToken)await qE(C.refreshToken,C.clientId)}",
+        "sha256": "a8e7bfbaf648191ad03e7c0604ba58f2b66d7a74ee6c1b48f2840f3d608cd5c4"
+      },
+      "clearInProcess": {
+        "start": 11199,
+        "end": 11249,
+        "source": "if(!r)a.unset(\"CLAUDE_CODE_OAUTH_TOKEN\"),jH(null);",
+        "sha256": "2b0e2f8b81749184c13dae891f818d872fdefe85cc7fd88136675d016cccd927"
+      },
+      "config": {
+        "start": 12139,
+        "end": 13009,
+        "source": "(p)=>{let i={...p};if(e){if(i.hasCompletedOnboarding=!1,i.subscriptionNoticeCount=0,i.hasAvailableSubscription=!1,i.customApiKeyResponses!==void 0)i.customApiKeyResponses={approved:[],rejected:YO(i).rejected};let m=Iot;if(i.seenNotifications?.[m]!==void 0){let{[m]:C,...F}=i.seenNotifications;i.seenNotifications=F}}return i.oauthAccount=void 0,i.additionalModelOptionsCache=void 0,i.additionalModelOptionsAnsweredAt=void 0,i.additionalModelCostsCache=void 0,i.modelAccessCache=void 0,i.orgModelDefaultCache=void 0,i.cachedArtifactRoster=void 0,i.artifactRosterDenied=void 0,i.lastSeenOrgDefaultUpdatedAt=void 0,i.clientDataCache=void 0,i.clientDataCacheSlots=void 0,i.autoCompactWindowsCache=void 0,i.cachedUsageUtilization=void 0,i.metricsStatusCache=void 0,i.metricsStatusCacheByPrincipal=void 0,i.githubWebConnectionStatusCache=void 0,i.startupPrefetchedAt=void 0,i}",
+        "sha256": "eefbfd4a3f85d0708b83005ba24fd5e30b6c099c85077cbf0912564ab86a4b41"
+      },
+      "readDevice": {
+        "symbol": "Q",
+        "start": 14187,
+        "end": 14436,
+        "source": "async function Q(e,r){for(let n=0;n<2;n++){let s=await(e.readAsyncStrict?.(r)??e.readAsync(r));if(s!==Il)return s?.coworkRemoteDevice}d(Error(\"logout: secure storage could not be read, so the device identity is not carried across the wipe\"));return}",
+        "sha256": "c86612cdba1e062de0bf251039d3780fb949e56419f607188fc3d46c9b4465ab"
+      },
+      "writeDevice": {
+        "symbol": "Z",
+        "start": 13929,
+        "end": 14187,
+        "source": "async function Z(e,r,n){let s;for(let c=0;c<2;c++)try{let u=await e.mutate(()=>({coworkRemoteDevice:r}),n);if(u.success)return;if(s=Error(\"logout: the device identity could not be written back after the credential wipe\"),!u.transient)break}catch(u){s=u}d(s)}",
+        "sha256": "b96acf3fa27c36f06d81badf19c726324fa8c055f72c882a5af09473d5945107"
+      },
+      "aliases": {
+        "storage": "Gn",
+        "provider": "Oe",
+        "revoke": "qE",
+        "debug": "t",
+        "report": "d",
+        "writeLock": "p8r",
+        "alreadyLocked": "tYo",
+        "readFailed": "Il",
+        "environment": "a",
+        "setFd": "jH",
+        "setGateway": "k9",
+        "stampAccount": "jfe"
+      },
+      "portOrigins": {
+        "storage": {
+          "module": "B:/~BUN/root/chunk-8bm10azh.js",
+          "file": "chunk-8bm10azh.js",
+          "symbol": "Gn"
+        },
+        "provider": {
+          "module": "B:/~BUN/root/chunk-g0bp3a9z.js",
+          "file": "chunk-g0bp3a9z.js",
+          "symbol": "Oe"
+        },
+        "revoke": {
+          "module": "B:/~BUN/root/chunk-jzrab299.js",
+          "file": "chunk-jzrab299.js",
+          "symbol": "qE"
+        },
+        "debug": {
+          "module": "B:/~BUN/root/chunk-afd6vefy.js",
+          "file": "chunk-afd6vefy.js",
+          "symbol": "t"
+        },
+        "report": {
+          "module": "B:/~BUN/root/chunk-vc0xq0q5.js",
+          "file": "chunk-vc0xq0q5.js",
+          "symbol": "d"
+        },
+        "writeLock": {
+          "module": "B:/~BUN/root/chunk-8bm10azh.js",
+          "file": "chunk-8bm10azh.js",
+          "symbol": "p8r"
+        },
+        "alreadyLocked": {
+          "module": "B:/~BUN/root/chunk-8bm10azh.js",
+          "file": "chunk-8bm10azh.js",
+          "symbol": "tYo"
+        },
+        "readFailed": {
+          "module": "B:/~BUN/root/chunk-8bm10azh.js",
+          "file": "chunk-8bm10azh.js",
+          "symbol": "Il"
+        },
+        "environment": {
+          "module": "B:/~BUN/root/chunk-r5twd8z5.js",
+          "file": "chunk-r5twd8z5.js",
+          "symbol": "a"
+        },
+        "setFd": {
+          "module": "B:/~BUN/root/chunk-ce0nkjpw.js",
+          "file": "chunk-ce0nkjpw.js",
+          "symbol": "jH"
+        },
+        "setGateway": {
+          "module": "B:/~BUN/root/chunk-ce0nkjpw.js",
+          "file": "chunk-ce0nkjpw.js",
+          "symbol": "k9"
+        },
+        "stampAccount": {
+          "module": "B:/~BUN/root/chunk-ce0nkjpw.js",
+          "file": "chunk-ce0nkjpw.js",
+          "symbol": "jfe"
+        }
+      },
+      "lockEvidence": [
+        {
+          "semantic": "writeLock",
+          "module": {
+            "file": "chunk-8bm10azh.js",
+            "moduleSha256": "e2fc534d4daa78e5621d09ca52301433af0475adc3cb10f3cfae17918c2fe23d",
+            "manifestSha256": "d0d8b3b882ba61ba321ab072b5cbc28a1a4089cfb4c5dce0698311aae10c739e"
+          },
+          "declaration": {
+            "symbol": "p8r",
+            "start": 1603,
+            "end": 2079,
+            "source": "async function p8r(e){if(N.getStore())return e();let r=M,n;M=new Promise((s)=>{n=s});try{await r;let s=SS();await ae().mkdir(s);let a=await oa(re(s,\".storage-write\"),{realpath:!1,retries:{retries:10,minTimeout:100,maxTimeout:1000},stale:15000,onCompromised:(o)=>t(`[secureStorage] write lock compromised: ${l(o)}`,{level:\"warn\"})});try{return await N.run(!0,e)}finally{await a().catch((o)=>t(`[secureStorage] write lock release failed: ${l(o)}`,{level:\"warn\"}))}}finally{n()}}",
+            "sha256": "18984d5a414ccc90fe6f2837d6f0ad4ec638743af467a00ed98a83f672fc0679"
+          }
+        },
+        {
+          "semantic": "alreadyLocked",
+          "module": {
+            "file": "chunk-8bm10azh.js",
+            "moduleSha256": "e2fc534d4daa78e5621d09ca52301433af0475adc3cb10f3cfae17918c2fe23d",
+            "manifestSha256": "d0d8b3b882ba61ba321ab072b5cbc28a1a4089cfb4c5dce0698311aae10c739e"
+          },
+          "declaration": {
+            "symbol": "tYo",
+            "start": 2079,
+            "end": 2120,
+            "source": "async function tYo(e){return N.run(!0,e)}",
+            "sha256": "e0c8d7588f8cfa6eb857b16a5d9cfa419327a7c08f0deb7ed04d0573e3794885"
+          }
+        },
+        {
+          "semantic": "readFailed",
+          "module": {
+            "file": "chunk-8bm10azh.js",
+            "moduleSha256": "e2fc534d4daa78e5621d09ca52301433af0475adc3cb10f3cfae17918c2fe23d",
+            "manifestSha256": "d0d8b3b882ba61ba321ab072b5cbc28a1a4089cfb4c5dce0698311aae10c739e"
+          },
+          "declaration": {
+            "symbol": "Il",
+            "start": 1453,
+            "end": 1491,
+            "source": "Il=Symbol(\"secureStorage.READ_FAILED\")",
+            "sha256": "dbe8642c1aa826f1bd86b97eed4d0ef150e8bec2613e04620b71604b7a32fafd"
+          }
+        }
+      ],
+      "errors": {
+        "module": {
+          "file": "chunk-216b0h9x.js",
+          "moduleSha256": "9cc92ff38922e454a2bebcfbef8a955253134bca9881fea24ddfba31d87c3d7c",
+          "manifestSha256": "d0d8b3b882ba61ba321ab072b5cbc28a1a4089cfb4c5dce0698311aae10c739e"
+        },
+        "declarations": [
+          {
+            "symbol": "v",
+            "start": 4814,
+            "end": 4913,
+            "source": "function v(n){if(n&&typeof n===\"object\"&&\"code\"in n&&typeof n.code===\"string\")return n.code;return}",
+            "sha256": "fac610e89149796538ed2079d613248acb1ba8228f14c4b19c9a70581fe0af8b"
+          },
+          {
+            "symbol": "lh",
+            "start": 8632,
+            "end": 8664,
+            "source": "function lh(n){return bir(v(n))}",
+            "sha256": "1c20518c55b6b83a2535feaa3a02fd53fd5c80e605e3fb33a5283ee34458c44b"
+          },
+          {
+            "symbol": "l",
+            "start": 4754,
+            "end": 4814,
+            "source": "function l(n){return n instanceof Error?n.message:String(n)}",
+            "sha256": "2f921ed78ffeed39032d7e9c4783e05c294cba2ce61cc5ac20466ece27a81075"
+          },
+          {
+            "symbol": "bir",
+            "start": 8664,
+            "end": 8837,
+            "source": "function bir(n){return n===\"EDEADLK\"||n===\"EINTR\"||n===\"ENXIO\"||n===\"ENODEV\"||n===\"ECANCELED\"||n===\"ENEEDAUTH\"||n===\"ESTALE\"||n===\"EUNKNOWN\"||n===\"ENOMEM\"||n!==void 0&&c(n)}",
+            "sha256": "758dce2cc3555dbdf8cc8e41f33b6e9f4f76c197fdf8cb28edd216f6b76992f6"
+          },
+          {
+            "symbol": "c",
+            "start": 8837,
+            "end": 8910,
+            "source": "function c(n){return n===\"UNKNOWN\"||n.startsWith(\"Unknown system error\")}",
+            "sha256": "27c8d43976cbebe4947766cb1f6023324022453070ac4f34ab5d8c428423dea6"
+          }
+        ],
+        "aliases": {
+          "errorCode": "v",
+          "transient": "lh",
+          "message": "l"
+        }
+      },
+      "normalizer": {
+        "module": {
+          "file": "chunk-jzrab299.js",
+          "moduleSha256": "9363128c17a7aa7a3eea09d61cd42d6a8773c0c2c0d563037ba1aa9152513549",
+          "manifestSha256": "d0d8b3b882ba61ba321ab072b5cbc28a1a4089cfb4c5dce0698311aae10c739e"
+        },
+        "declaration": {
+          "symbol": "YO",
+          "start": 545507,
+          "end": 545610,
+          "source": "function YO(e){let n=e.customApiKeyResponses;return{approved:wi(n?.approved),rejected:wi(n?.rejected)}}",
+          "sha256": "9d9f61c0741bb0ebaee5625de380f6df5ca86d171663c435cfb07866ec57e17d"
+        },
+        "local": "YO",
+        "strings": {
+          "module": {
+            "file": "chunk-0mtv3td9.js",
+            "moduleSha256": "6ac455659776b08e78d8c6bd471da1f8d38b2c165f7cc52871157d53c087ba85",
+            "manifestSha256": "d0d8b3b882ba61ba321ab072b5cbc28a1a4089cfb4c5dce0698311aae10c739e"
+          },
+          "declaration": {
+            "symbol": "wi",
+            "start": 919,
+            "end": 1042,
+            "source": "function wi(n){if(!Array.isArray(n))return[];return n.every((e)=>typeof e===\"string\")?n:n.filter((e)=>typeof e===\"string\")}",
+            "sha256": "b5cf54bd3bbe2b2d56d2a0e4cf042832cf629abdc2ca1a25216111791b0af6ab"
+          },
+          "local": "wi"
+        }
+      },
+      "notification": {
+        "module": {
+          "file": "chunk-62k771c4.js",
+          "moduleSha256": "c3b30b1d8e2a2c6b59fe7aa865c21276b9e7e5fc7ebbcacaaa8e251fbb8bcbb5",
+          "manifestSha256": "d0d8b3b882ba61ba321ab072b5cbc28a1a4089cfb4c5dce0698311aae10c739e"
+        },
+        "declaration": {
+          "symbol": "Iot",
+          "start": 619,
+          "end": 644,
+          "source": "Iot=\"subscription-switch\"",
+          "sha256": "13cc1cbf459085c1d5ce1e761daf7c7af16a595a731de330347687103ae53442"
+        },
+        "local": "Iot"
+      },
+      "revoke": {
+        "module": {
+          "file": "chunk-jzrab299.js",
+          "moduleSha256": "9363128c17a7aa7a3eea09d61cd42d6a8773c0c2c0d563037ba1aa9152513549",
+          "manifestSha256": "d0d8b3b882ba61ba321ab072b5cbc28a1a4089cfb4c5dce0698311aae10c739e"
+        },
+        "declaration": {
+          "symbol": "qE",
+          "start": 692704,
+          "end": 693121,
+          "source": "async function qE(e,n){try{await _t.post(`${dn().TOKEN_URL}/revoke`,{token:e,token_type_hint:\"refresh_token\",client_id:n??dn().CLIENT_ID},{headers:{\"Content-Type\":\"application/json\"},timeout:5000}),y(\"oauth_token_revoke\")}catch(r){let s=_t.isAxiosError(r)?r.response?.status:void 0;t(`OAuth token revoke failed (status=${s??\"network\"}); continuing with local logout.`),p(\"oauth_token_revoke\",`http_${s??\"network\"}`)}}",
+          "sha256": "7844b313c36c8e193f2771a50146dc2e0579d0ef0f50d21fb01cfebcff71649f"
+        },
+        "aliases": {
+          "http": "_t",
+          "config": "dn",
+          "ok": "y",
+          "debug": "t",
+          "sad": "p"
+        }
+      }
+    }
+  ],
+  "generated": {
+    "src/utils/officialOAuthClear287/runtime.js": {
+      "sha256": "9657e68d8d29b5f077fe69926eb38ebc82d4a27ef1a0e17b3a214a3a181a8f98",
+      "bytes": 4467
+    },
+    "src/utils/officialOAuthClear287/runtime.d.ts": {
+      "sha256": "ec53b5ddbe12f8947b986bb472d88747675e6d370c3bed10dcb85997ad41e1c0",
+      "bytes": 1393
+    }
+  }
+}

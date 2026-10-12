@@ -1,0 +1,68 @@
+{
+  "version": "2.1.286",
+  "platform": "darwin-arm64",
+  "binarySha256": "75e3016e9d2570767b08e43a7467d4817a4f149232c169ca295f2c95fef21433",
+  "offsetUnit": "UTF-16 code units",
+  "sourceRoot": "../.work/official-modules-2.1.286/darwin-arm64/raw",
+  "entries": [
+    {
+      "file": "chunk-tx79xqc5.js",
+      "symbol": "subscriberGuardStatement",
+      "start": 605331,
+      "end": 605493,
+      "sha256": "9db39bbe6091e778a2fc81560cff135aa77b092e118c06cb78652acc1d528bba",
+      "source": "if(ke){let Ge=sUe();if(Ge)throw new Fre(Ge.url);if(pe===\"lock_timeout\"&&Ee?.expiresAt!=null&&Date.now()>=Ee.expiresAt&&R(\"tengu_sharded_beacon\",!0))throw new bKe}",
+      "moduleSha256": "9c1e53986aa126f85e625401314cc5e1ef9e3250f7f7067894f2cb662cc9a069"
+    },
+    {
+      "file": "chunk-tx79xqc5.js",
+      "symbol": "bKe",
+      "start": 596809,
+      "end": 596997,
+      "sha256": "97231e93c6e4a8a73a3759f9d742e6e48b46f5445f45ff2e5ba52891bafb897e",
+      "source": "class bKe extends Error{constructor(){super(\"OAuth access token could not be refreshed: another Claude Code process is holding the refresh lock\");this.name=\"OAuthRefreshLockTimeoutError\"}}",
+      "moduleSha256": "9c1e53986aa126f85e625401314cc5e1ef9e3250f7f7067894f2cb662cc9a069"
+    },
+    {
+      "file": "chunk-ttgve2cs.js",
+      "symbol": "Fre",
+      "start": 7085,
+      "end": 7210,
+      "sha256": "3a72242316557a17e474afa84e710621842f46bb54848c27827a667da5439602",
+      "source": "class Fre extends Error{url;constructor(e){super(\"OAuth account is on hold\");this.url=e;this.name=\"OAuthAccountOnHoldError\"}}",
+      "moduleSha256": "869bc671f61cf91870e70275877a3c6d2ea8eabd927606c4c004afa22e3fe677"
+    },
+    {
+      "file": "chunk-majxx0zh.js",
+      "symbol": "sUe",
+      "start": 642998,
+      "end": 643103,
+      "sha256": "8910eae03b8c197588737628381af4d571638fa5e1f5e85228f252448356abf2",
+      "source": "function sUe(){let e=pn()?.refreshToken;if(!e)return null;let n=_i.get(e);return n===void 0?null:{url:n}}",
+      "moduleSha256": "3b15e1cc872b123eb48013680aa6604ba661f89c9ecbd0731e5d40f6418aef49"
+    }
+  ],
+  "bindings": {
+    "pn": {
+      "kind": "local-port",
+      "source": "getClaudeAIOAuthTokens"
+    },
+    "_i": {
+      "kind": "local-port",
+      "source": "getSharedOAuthEngine().holdTokens"
+    },
+    "R": {
+      "kind": "verified-import-port",
+      "file": "src/services/analytics/growthbook.ts",
+      "imported": "getFeatureValue_CACHED_MAY_BE_STALE",
+      "feature": "tengu_sharded_beacon",
+      "fallback": true
+    }
+  },
+  "placement": "After gateway/provider-specific early returns and provider credential waits; immediately before Z$o/auth validation and final SDK construction, matching _D.",
+  "guardOrder": [
+    "if ke",
+    "sUe hold URL lookup and OAuthAccountOnHoldError",
+    "lock_timeout + Ee?.expiresAt != null + elapsed check + cached tengu_sharded_beacon gate + OAuthRefreshLockTimeoutError"
+  ]
+}

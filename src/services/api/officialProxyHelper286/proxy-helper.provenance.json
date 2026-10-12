@@ -1,0 +1,135 @@
+{
+  "version": "2.1.286",
+  "platform": "darwin-arm64",
+  "baselineHead": "be2a58be50a7ab8ec23d90f75ec279d4aa683983",
+  "extraction": "Top-level FunctionDeclaration spans from TypeScript JavaScript AST",
+  "officialRootRelativeToGenerator": "../../../.work/official-modules-2.1.286/darwin-arm64/",
+  "manifestSha256": "50f44fb473db94fcb7bab7c40d307dc5be4e54718b4f235d9c2a194549d54430",
+  "binarySha256": "75e3016e9d2570767b08e43a7467d4817a4f149232c169ca295f2c95fef21433",
+  "modules": [
+    {
+      "file": "chunk-9qmnd54c.js",
+      "manifestIndex": 98,
+      "manifestName": "/$bunfs/root/chunk-9qmnd54c.js",
+      "byteLength": 43737,
+      "sha256": "ca1424c44dcb6f60b0b99e2514aa7fc85ae4da7d4226a70b73b66ce0028d1515"
+    },
+    {
+      "file": "chunk-ar1aj28g.js",
+      "manifestIndex": 18,
+      "manifestName": "/$bunfs/root/chunk-ar1aj28g.js",
+      "byteLength": 116006,
+      "sha256": "b72275f518c5a3a834ecf2baecdac8d3429ce0770a6188e9c8003bcef264e295"
+    },
+    {
+      "file": "chunk-07mxqtdh.js",
+      "manifestIndex": 31,
+      "manifestName": "/$bunfs/root/chunk-07mxqtdh.js",
+      "byteLength": 65407,
+      "sha256": "8fe1ef6c86ed39fc9bd66865a357b8f94de75b8133e01ee093c994d27eaa28ff"
+    }
+  ],
+  "declarations": [
+    {
+      "file": "chunk-9qmnd54c.js",
+      "fileSha256": "ca1424c44dcb6f60b0b99e2514aa7fc85ae4da7d4226a70b73b66ce0028d1515",
+      "symbol": "BPe",
+      "start": 39975,
+      "end": 40080,
+      "offsetUnits": "UTF-16 code units",
+      "source": "function BPe(){if(!a.CLAUDE_CODE_ENABLE_PROXY_AUTH_HELPER)return;return D().proxyAuthHelperConfig.helper}",
+      "sha256": "8e1ce06ad35943d2e3f9323572596ca2cd60ccd3f888a049d23f87629b5194c9",
+      "emitted": false
+    },
+    {
+      "file": "chunk-9qmnd54c.js",
+      "fileSha256": "ca1424c44dcb6f60b0b99e2514aa7fc85ae4da7d4226a70b73b66ce0028d1515",
+      "symbol": "wt",
+      "start": 40080,
+      "end": 40161,
+      "offsetUnits": "UTF-16 code units",
+      "source": "function wt(e){return BPe()!==void 0&&e.proxyAuthHelperConfig.fromProjectOrLocal}",
+      "sha256": "c7b3f191569692aab413499814a783bf93e98d9a0a8ae85339bf600272e93f9b",
+      "emitted": true
+    },
+    {
+      "file": "chunk-9qmnd54c.js",
+      "fileSha256": "ca1424c44dcb6f60b0b99e2514aa7fc85ae4da7d4226a70b73b66ce0028d1515",
+      "symbol": "ur",
+      "start": 40161,
+      "end": 40259,
+      "offsetUnits": "UTF-16 code units",
+      "source": "function ur(){let e=a.CLAUDE_CODE_PROXY_AUTH_HELPER_TTL_MS;if(e!==void 0&&e>=0)return e;return ar}",
+      "sha256": "696c8a8bca7a66be089408b5ff93a2184dda1059173315571ed3cf5e726d111f",
+      "emitted": true
+    },
+    {
+      "file": "chunk-9qmnd54c.js",
+      "fileSha256": "ca1424c44dcb6f60b0b99e2514aa7fc85ae4da7d4226a70b73b66ce0028d1515",
+      "symbol": "jPe",
+      "start": 40259,
+      "end": 41283,
+      "offsetUnits": "UTF-16 code units",
+      "source": "async function jPe(){let e=BPe();if(!e)return null;let n=D();if(wt(n)&&!Ce()&&!n.proxyAuthHelperConfig.trustAccepted())return t(\"proxyAuthHelper configured in project/local settings but workspace trust not yet accepted \\u2014 skipping\",{level:\"warn\"}),null;let r=n.proxyAuthPendingChallenge;if(!r&&n.proxyAuthCache&&Date.now()-n.proxyAuthCache.timestamp<ur())return n.proxyAuthCache.value;n.proxyAuthPendingChallenge=void 0;let o=$Pe(),s;try{s=o?new URL(o).hostname:void 0}catch{s=void 0}let i=Io(),c=await xC(e,{...i!==null&&{cwd:i},timeout:30000,reject:!1,useToolMemoryCgroup:!1,env:{...process.env,...o&&{CLAUDE_CODE_PROXY_URL:o},...s&&{CLAUDE_CODE_PROXY_HOST:s},...r&&{CLAUDE_CODE_PROXY_AUTHENTICATE:r}}});if(c.failed||!c.stdout?.trim()){let l=c.timedOut?\"timed out\":c.failed?`exited ${c.exitCode}`:\"did not return a value\",f=c.stderr?.trim();return console.error(`proxyAuthHelper failed: ${f?`${l}: ${f}`:l}`),n.proxyAuthCache?.value??null}let u=c.stdout.trim();return n.proxyAuthCache={value:u,timestamp:Date.now()},u}",
+      "sha256": "abe0fc4b1a9d866ee439fb038c1b196b6eeb881c152c2af9ac9f3c20a3d3fe1c",
+      "emitted": true
+    },
+    {
+      "file": "chunk-ar1aj28g.js",
+      "fileSha256": "b72275f518c5a3a834ecf2baecdac8d3429ce0770a6188e9c8003bcef264e295",
+      "symbol": "Io",
+      "start": 85048,
+      "end": 85112,
+      "offsetUnits": "UTF-16 code units",
+      "source": "function Io(){return n().host.launchOptions.projectConfigRoot()}",
+      "sha256": "e1086b893de4a6bfa1991282888800075c98f7a816b716c2806c6e21f7cd4161",
+      "emitted": false
+    },
+    {
+      "file": "chunk-ar1aj28g.js",
+      "fileSha256": "b72275f518c5a3a834ecf2baecdac8d3429ce0770a6188e9c8003bcef264e295",
+      "symbol": "Ce",
+      "start": 86688,
+      "end": 86748,
+      "offsetUnits": "UTF-16 code units",
+      "source": "function Ce(){return!n().host.launchOptions.isInteractive()}",
+      "sha256": "c5962d665b6699f61261e7a0bccf7d54659c6deee200a6725eeb6402707056f1",
+      "emitted": false
+    },
+    {
+      "file": "chunk-07mxqtdh.js",
+      "fileSha256": "8fe1ef6c86ed39fc9bd66865a357b8f94de75b8133e01ee093c994d27eaa28ff",
+      "symbol": "po",
+      "start": 16381,
+      "end": 16391,
+      "offsetUnits": "UTF-16 code units",
+      "source": "po=D.int()",
+      "sha256": "36bb148bc8f73bc389016c358bef742a14b3449632deea95562627ba7a2e0077",
+      "emitted": false
+    }
+  ],
+  "emitOrder": [
+    "wt",
+    "ur",
+    "jPe"
+  ],
+  "bodyRewrites": [],
+  "externalBindings": {
+    "a": "Typed runtime config gate and original po=D.int() decoder using the existing manifest-restored auth decoder; ur handles negative/undefined with native default.",
+    "D": "Existing proxyRetry286 owner backed by the sole live proxy auth cache and challenge.",
+    "BPe": "Existing native helper config getter from proxyRetry286.",
+    "Ce": "getIsNonInteractiveSession: true preserves original trust-check exception.",
+    "Io": "Host projectConfigRoot launch option.",
+    "xC": "Injected execa executor; synthetic tests inject a fake runner.",
+    "t": "Existing debug logger.",
+    "$Pe": "Existing proxy URL getter.",
+    "ar": "Original default TTL, 300000ms."
+  },
+  "evidenceOnly": {
+    "imports": "Io and Ce are complete raw declarations; runtime binds equivalent typed host launch-option/session ports."
+  },
+  "outputs": {
+    "proxy-helper.runtime.js": "fd8afc49361c42b22f8cfb7f51786de104184a95a31456026d5c48112617364a",
+    "proxy-helper.runtime.d.ts": "df14fdf4817500fd6ed4d6fbe3728f10140c55da72095f4a346c423df1726b58"
+  }
+}

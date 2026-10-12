@@ -1,0 +1,319 @@
+{
+  "status": "bounded three full original list-change closures contract; no shared generation or hook restoration",
+  "file": "chunk-f2cpzzp9.js",
+  "moduleSha256": "ecf059605929abc2d38c30fc6d3b5b0b69ef05c9d344e934443f320a48256dae",
+  "rawPath": "provenance-reference://not-bundled/859fc84c594cf8227222324f3a767c8130e37e39c0c09344d4761b92bd9623f3",
+  "offsetUnit": "UTF16 end-exclusive",
+  "epochGuard": {
+    "start": 1466279,
+    "end": 1466323,
+    "sha256": "84fe73b2a5d26333338ddce80fcd4b43bc13740f13f3b0bca9890892634789a4",
+    "source": "let An=gr(),wr=()=>gr()===An||!ww(Zt.config)"
+  },
+  "canonicalEnclosingSelected": [],
+  "callbacks": [
+    {
+      "handler": "onMcpToolListChanged",
+      "callback": {
+        "start": 1466392,
+        "end": 1467687,
+        "sha256": "06acbcc04a98cd25e0753c6212fff8e1f31d999c1be711dea2f9e3e5e5caa126",
+        "source": "async(dr)=>{if(!wr())return;let{fetchToolsForClient:Jr,getToolsListErrorForResult:Mn,persistRefreshedToolsIfPresent:zn}=Ql(),Ln=X$(Zt.name,Zt.config),ps=oTe(dr);te(Zt.name,dr===fJ?\"Synthesized tools refetch after listen-stream reopen (no notification received)\":\"Received tools/list_changed notification, refreshing tools\");try{let us=vr(Zt.name,Zt.config),jn=Jr.cache.get(us);Jr.cache.delete(us);let Rr=await Jr(Zt,Se),Ur=Mn(Rr);if(Ur)t(`[mcp] ${Zt.name}: tools/list_changed refresh failed (${Ur}); keeping previous tools`,{level:\"warn\"});let nr=Zt.discoveryAuthFailure&&Rr.length===0;if(nr)te(Zt.name,\"tools refresh returned the needs-auth empty list; keeping previous tools\");let Dr=Rr.length,Br=Boolean(Ur)||nr;if(!Br&&jn)jn.then((Or)=>{i(\"tengu_mcp_list_changed\",{mcpServerKeyHash:BM(Zt.name),type:S(\"tools\"),cause:ps,previousCount:Or.length,newCount:Dr})},()=>{i(\"tengu_mcp_list_changed\",{mcpServerKeyHash:BM(Zt.name),type:S(\"tools\"),cause:ps,newCount:Dr})});else if(!Br)i(\"tengu_mcp_list_changed\",{mcpServerKeyHash:BM(Zt.name),type:S(\"tools\"),cause:ps,newCount:Dr});if(!wr())return;if(Do({...Zt,tools:Ur||nr?void 0:Rr}),!Br&&Ca())Ln.then((Or)=>zn(Zt,Rr,{identityEpoch:An,grantLeg:Or}))}catch(us){Go(Zt.name,`Failed to refresh tools after list_changed notification: ${$o(us,Zt.config)}`)}}"
+      },
+      "registration": {
+        "start": 1466324,
+        "end": 1467689,
+        "sha256": "d69146a79bfcdfa8ed5b9984b448ea1ca417668898c565b86ca8a928e235bc74",
+        "source": "if(Zt.capabilities?.tools?.listChanged)Ql().onMcpToolListChanged(Zt,async(dr)=>{if(!wr())return;let{fetchToolsForClient:Jr,getToolsListErrorForResult:Mn,persistRefreshedToolsIfPresent:zn}=Ql(),Ln=X$(Zt.name,Zt.config),ps=oTe(dr);te(Zt.name,dr===fJ?\"Synthesized tools refetch after listen-stream reopen (no notification received)\":\"Received tools/list_changed notification, refreshing tools\");try{let us=vr(Zt.name,Zt.config),jn=Jr.cache.get(us);Jr.cache.delete(us);let Rr=await Jr(Zt,Se),Ur=Mn(Rr);if(Ur)t(`[mcp] ${Zt.name}: tools/list_changed refresh failed (${Ur}); keeping previous tools`,{level:\"warn\"});let nr=Zt.discoveryAuthFailure&&Rr.length===0;if(nr)te(Zt.name,\"tools refresh returned the needs-auth empty list; keeping previous tools\");let Dr=Rr.length,Br=Boolean(Ur)||nr;if(!Br&&jn)jn.then((Or)=>{i(\"tengu_mcp_list_changed\",{mcpServerKeyHash:BM(Zt.name),type:S(\"tools\"),cause:ps,previousCount:Or.length,newCount:Dr})},()=>{i(\"tengu_mcp_list_changed\",{mcpServerKeyHash:BM(Zt.name),type:S(\"tools\"),cause:ps,newCount:Dr})});else if(!Br)i(\"tengu_mcp_list_changed\",{mcpServerKeyHash:BM(Zt.name),type:S(\"tools\"),cause:ps,newCount:Dr});if(!wr())return;if(Do({...Zt,tools:Ur||nr?void 0:Rr}),!Br&&Ca())Ln.then((Or)=>zn(Zt,Rr,{identityEpoch:An,grantLeg:Or}))}catch(us){Go(Zt.name,`Failed to refresh tools after list_changed notification: ${$o(us,Zt.config)}`)}});"
+      },
+      "enclosingFunctions": [
+        {
+          "kind": "ArrowFunction",
+          "start": 1460773,
+          "end": 1471109
+        },
+        {
+          "kind": "FunctionDeclaration",
+          "name": "fbe",
+          "start": 1458922,
+          "end": 1484151
+        }
+      ]
+    },
+    {
+      "handler": "onMcpPromptListChanged",
+      "callback": {
+        "start": 1467748,
+        "end": 1468577,
+        "sha256": "056f9b2cca6e6267996e1f15b6567badaba7005fcf00e744f64822ceaa92d4df",
+        "source": "async(dr)=>{if(!wr())return;let{fetchCommandsForClient:Jr,getDiscoveryFetchError:Mn}=Ql();te(Zt.name,dr===fJ?\"Synthesized prompts refetch after listen-stream reopen (no notification received)\":\"Received prompts/list_changed notification, refreshing prompts\");try{Jr.cache.delete(vr(Zt.name,Zt.config));let[zn,Ln]=await Promise.all([Jr(Zt),rb()&&Zt.capabilities?.resources?GS.fetchMcpSkillsForClient(Zt,Se):Promise.resolve([])]),ps=Mn(zn);if(ps)t(`[mcp] ${Zt.name}: prompts/list_changed refresh failed (${$o(ps,Zt.config)}); keeping previous commands`,{level:\"warn\"});if(!wr())return;Do({...Zt,commands:ps?void 0:[...zn,...Ln]}),mbe(),i(\"tengu_mcp_list_changed\",{mcpServerKeyHash:BM(Zt.name),type:S(\"prompts\"),cause:oTe(dr)})}catch(zn){Go(Zt.name,`Failed to refresh prompts after list_changed notification: ${$o(zn,Zt.config)}`)}}"
+      },
+      "registration": {
+        "start": 1467689,
+        "end": 1468579,
+        "sha256": "c2f4a8f301066cdb94ce1fec79851af89b172cd78859761393f923f38f21a488",
+        "source": "if(Zt.capabilities?.prompts)Ql().onMcpPromptListChanged(Zt,async(dr)=>{if(!wr())return;let{fetchCommandsForClient:Jr,getDiscoveryFetchError:Mn}=Ql();te(Zt.name,dr===fJ?\"Synthesized prompts refetch after listen-stream reopen (no notification received)\":\"Received prompts/list_changed notification, refreshing prompts\");try{Jr.cache.delete(vr(Zt.name,Zt.config));let[zn,Ln]=await Promise.all([Jr(Zt),rb()&&Zt.capabilities?.resources?GS.fetchMcpSkillsForClient(Zt,Se):Promise.resolve([])]),ps=Mn(zn);if(ps)t(`[mcp] ${Zt.name}: prompts/list_changed refresh failed (${$o(ps,Zt.config)}); keeping previous commands`,{level:\"warn\"});if(!wr())return;Do({...Zt,commands:ps?void 0:[...zn,...Ln]}),mbe(),i(\"tengu_mcp_list_changed\",{mcpServerKeyHash:BM(Zt.name),type:S(\"prompts\"),cause:oTe(dr)})}catch(zn){Go(Zt.name,`Failed to refresh prompts after list_changed notification: ${$o(zn,Zt.config)}`)}});"
+      },
+      "enclosingFunctions": [
+        {
+          "kind": "ArrowFunction",
+          "start": 1460773,
+          "end": 1471109
+        },
+        {
+          "kind": "FunctionDeclaration",
+          "name": "fbe",
+          "start": 1458922,
+          "end": 1484151
+        }
+      ]
+    },
+    {
+      "handler": "onMcpResourceListChanged",
+      "callback": {
+        "start": 1468642,
+        "end": 1470025,
+        "sha256": "9ffa5859608e5f2441c5e865283635b4665284b2d23b95dd03a4b7054824810e",
+        "source": "async(dr)=>{if(!wr())return;let{fetchResourcesForClient:Jr,fetchResourceTemplatesForClient:Mn,fetchCommandsForClient:zn,getDiscoveryFetchError:Ln}=Ql();te(Zt.name,dr===fJ?\"Synthesized resources refetch after listen-stream reopen (no notification received)\":\"Received resources/list_changed notification, refreshing resources\");try{let ps=vr(Zt.name,Zt.config);if(Jr.cache.delete(ps),Mn.cache.delete(ps),rb()){GS.invalidateMcpSkillsForServer(ps),zn.cache.delete(ps);let[us,jn,Rr,Ur]=await Promise.all([Jr(Zt),Mn(Zt),zn(Zt),GS.fetchMcpSkillsForClient(Zt,Se)]),nr=Ln(us),Dr=Ln(jn),Br=Ln(Rr),Or=nr??Dr??Br;if(Or)t(`[mcp] ${Zt.name}: resources/list_changed refresh partial failure (${$o(Or,Zt.config)}); keeping previous for failed fields`,{level:\"warn\"});if(!wr())return;Do({...Zt,resources:nr?void 0:us,resourceTemplates:Dr?void 0:jn,commands:Br?void 0:[...Rr,...Ur]}),mbe()}else{let[us,jn]=await Promise.all([Jr(Zt),Mn(Zt)]),Rr=Ln(us),Ur=Ln(jn),nr=Rr??Ur;if(nr)t(`[mcp] ${Zt.name}: resources/list_changed refresh partial failure (${$o(nr,Zt.config)}); keeping previous for failed fields`,{level:\"warn\"});if(!wr())return;Do({...Zt,resources:Rr?void 0:us,resourceTemplates:Ur?void 0:jn})}i(\"tengu_mcp_list_changed\",{mcpServerKeyHash:BM(Zt.name),type:S(\"resources\"),cause:oTe(dr)})}catch(ps){Go(Zt.name,`Failed to refresh resources after list_changed notification: ${$o(ps,Zt.config)}`)}}"
+      },
+      "registration": {
+        "start": 1468579,
+        "end": 1470027,
+        "sha256": "87797769dffc9c6d7a98e9eefc8f418879f3fa6782697f1fb74f6aa22b778f5d",
+        "source": "if(Zt.capabilities?.resources)Ql().onMcpResourceListChanged(Zt,async(dr)=>{if(!wr())return;let{fetchResourcesForClient:Jr,fetchResourceTemplatesForClient:Mn,fetchCommandsForClient:zn,getDiscoveryFetchError:Ln}=Ql();te(Zt.name,dr===fJ?\"Synthesized resources refetch after listen-stream reopen (no notification received)\":\"Received resources/list_changed notification, refreshing resources\");try{let ps=vr(Zt.name,Zt.config);if(Jr.cache.delete(ps),Mn.cache.delete(ps),rb()){GS.invalidateMcpSkillsForServer(ps),zn.cache.delete(ps);let[us,jn,Rr,Ur]=await Promise.all([Jr(Zt),Mn(Zt),zn(Zt),GS.fetchMcpSkillsForClient(Zt,Se)]),nr=Ln(us),Dr=Ln(jn),Br=Ln(Rr),Or=nr??Dr??Br;if(Or)t(`[mcp] ${Zt.name}: resources/list_changed refresh partial failure (${$o(Or,Zt.config)}); keeping previous for failed fields`,{level:\"warn\"});if(!wr())return;Do({...Zt,resources:nr?void 0:us,resourceTemplates:Dr?void 0:jn,commands:Br?void 0:[...Rr,...Ur]}),mbe()}else{let[us,jn]=await Promise.all([Jr(Zt),Mn(Zt)]),Rr=Ln(us),Ur=Ln(jn),nr=Rr??Ur;if(nr)t(`[mcp] ${Zt.name}: resources/list_changed refresh partial failure (${$o(nr,Zt.config)}); keeping previous for failed fields`,{level:\"warn\"});if(!wr())return;Do({...Zt,resources:Rr?void 0:us,resourceTemplates:Ur?void 0:jn})}i(\"tengu_mcp_list_changed\",{mcpServerKeyHash:BM(Zt.name),type:S(\"resources\"),cause:oTe(dr)})}catch(ps){Go(Zt.name,`Failed to refresh resources after list_changed notification: ${$o(ps,Zt.config)}`)}});"
+      },
+      "enclosingFunctions": [
+        {
+          "kind": "ArrowFunction",
+          "start": 1460773,
+          "end": 1471109
+        },
+        {
+          "kind": "FunctionDeclaration",
+          "name": "fbe",
+          "start": 1458922,
+          "end": 1484151
+        }
+      ]
+    }
+  ],
+  "dependencies": {
+    "gr": {
+      "rawImport": {
+        "file": "chunk-z6w3579x.js",
+        "export": "gr"
+      },
+      "canonical": {
+        "selected": false,
+        "meaning": "not currently source-local selected; may use actual imported owner already public"
+      }
+    },
+    "ww": {
+      "rawImport": {
+        "file": "chunk-z6w3579x.js",
+        "export": "ww"
+      },
+      "canonical": {
+        "selected": false,
+        "meaning": "not currently source-local selected; may use actual imported owner already public"
+      }
+    },
+    "Ql": {
+      "rawImport": null,
+      "canonical": {
+        "selected": false,
+        "meaning": "captured enclosing caller binding; not standalone module export"
+      }
+    },
+    "GS": {
+      "rawImport": null,
+      "canonical": {
+        "selected": false,
+        "meaning": "captured enclosing caller binding; not standalone module export"
+      }
+    },
+    "X$": {
+      "rawImport": {
+        "file": "chunk-z6w3579x.js",
+        "export": "X$"
+      },
+      "canonical": {
+        "selected": false,
+        "meaning": "not currently source-local selected; may use actual imported owner already public"
+      }
+    },
+    "oTe": {
+      "rawImport": {
+        "file": "chunk-mphp7acd.js",
+        "export": "oTe"
+      },
+      "canonical": {
+        "selected": false,
+        "meaning": "not currently source-local selected; may use actual imported owner already public"
+      }
+    },
+    "fJ": {
+      "rawImport": {
+        "file": "chunk-0rn4hgq0.js",
+        "export": "fJ"
+      },
+      "canonical": {
+        "selected": false,
+        "meaning": "not currently source-local selected; may use actual imported owner already public"
+      }
+    },
+    "vr": {
+      "rawImport": {
+        "file": "chunk-scey49m3.js",
+        "export": "vr"
+      },
+      "canonical": {
+        "selected": false,
+        "meaning": "not currently source-local selected; may use actual imported owner already public"
+      }
+    },
+    "t": {
+      "rawImport": {
+        "file": "chunk-q80zaav8.js",
+        "export": "t"
+      },
+      "canonical": {
+        "binding": {
+          "port": "debug",
+          "origin": {
+            "file": "chunk-q80zaav8.js",
+            "name": "t"
+          },
+          "original": {
+            "file": "chunk-q80zaav8.js",
+            "name": "t",
+            "source": "function t(e,n={level:\"debug\"}){U().log(e,n)}",
+            "start": 46026,
+            "end": 46071,
+            "sha256": "da9e0b5e590a43c6f7cf46f3cfcd93d97f399db1017ff8dae938bdbd15e13790"
+          },
+          "importedFrom": {
+            "file": "chunk-q80zaav8.js",
+            "name": "t"
+          }
+        }
+      }
+    },
+    "i": {
+      "rawImport": {
+        "file": "chunk-6hnyhakg.js",
+        "export": "i"
+      },
+      "canonical": {
+        "binding": {
+          "file": "chunk-6hnyhakg.js",
+          "name": "i"
+        }
+      }
+    },
+    "BM": {
+      "rawImport": {
+        "file": "chunk-nankzm0s.js",
+        "export": "BM"
+      },
+      "canonical": {
+        "selected": false,
+        "meaning": "not currently source-local selected; may use actual imported owner already public"
+      }
+    },
+    "S": {
+      "rawImport": {
+        "file": "chunk-n4qghq20.js",
+        "export": "S"
+      },
+      "canonical": {
+        "binding": {
+          "file": "chunk-n4qghq20.js",
+          "name": "S"
+        }
+      }
+    },
+    "Ca": {
+      "rawImport": {
+        "file": "chunk-mphp7acd.js",
+        "export": "Ca"
+      },
+      "canonical": {
+        "selected": false,
+        "meaning": "not currently source-local selected; may use actual imported owner already public"
+      }
+    },
+    "$o": {
+      "rawImport": {
+        "file": "chunk-bwba1qcq.js",
+        "export": "$o"
+      },
+      "canonical": {
+        "selected": false,
+        "meaning": "not currently source-local selected; may use actual imported owner already public"
+      }
+    },
+    "rb": {
+      "rawImport": {
+        "file": "chunk-gr2z631p.js",
+        "export": "rb"
+      },
+      "canonical": {
+        "selected": false,
+        "meaning": "not currently source-local selected; may use actual imported owner already public"
+      }
+    },
+    "mbe": {
+      "rawImport": null,
+      "canonical": {
+        "selected": false,
+        "meaning": "captured enclosing caller binding; not standalone module export"
+      }
+    },
+    "te": {
+      "rawImport": {
+        "file": "chunk-amhtwhch.js",
+        "export": "te"
+      },
+      "canonical": {
+        "selected": false,
+        "meaning": "not currently source-local selected; may use actual imported owner already public"
+      }
+    },
+    "Go": {
+      "rawImport": {
+        "file": "chunk-amhtwhch.js",
+        "export": "Go"
+      },
+      "canonical": {
+        "selected": false,
+        "meaning": "not currently source-local selected; may use actual imported owner already public"
+      }
+    },
+    "Se": {
+      "rawImport": null,
+      "canonical": {
+        "selected": false,
+        "meaning": "captured enclosing caller binding; not standalone module export"
+      }
+    },
+    "Do": {
+      "rawImport": null,
+      "canonical": {
+        "selected": false,
+        "meaning": "captured enclosing caller binding; not standalone module export"
+      }
+    },
+    "Zt": {
+      "rawImport": null,
+      "canonical": {
+        "selected": false,
+        "meaning": "captured enclosing caller binding; not standalone module export"
+      }
+    }
+  },
+  "callerPorts": "Zt same connection; Se same storage; Do same updateServer; wr/An same epoch scope; no new transport/cache/dispatcher",
+  "scope": "conditional original capabilities + stale guards + partial-failure preservation + existing same-owner gateways; no whole React hook",
+  "guard0": true,
+  "typesRun": false
+}

@@ -1,0 +1,2112 @@
+{
+  "version": "2.1.287",
+  "platform": "darwin-arm64",
+  "manifestSha256": "ad7d73a99c7d564a7ae4867cbdcd0ef190a5549e9aa2f63ba809d2e7b35d3db5",
+  "offsetUnit": "UTF-16 code units",
+  "roots": {
+    "resetEpoch": "Mwe",
+    "consented": "uAn",
+    "markConsented": "$nr",
+    "helperConsentHash": "zYr",
+    "cachePath": "PZ",
+    "helperConsentPath": "dAn",
+    "helperConsentName": "Sfe",
+    "cacheOverride": "oA",
+    "diskWritesDisabled": "cVt",
+    "notifyWritten": "Vje",
+    "artifacts": "De",
+    "ineligibleReason": "aVt",
+    "Owner": "fl",
+    "registry": "Jm",
+    "owner": "ce",
+    "replace": "gZe",
+    "isVerified": "wb",
+    "isVerifiedConsented": "abt",
+    "setLoadStatus": "pAn",
+    "loadStatus": "uI",
+    "isSnapshot": "E8o",
+    "hasContent": "ml",
+    "consentHash": "cAn",
+    "matchesConsent": "Rs",
+    "stripInternal": "Fnr",
+    "read": "mAn",
+    "project": "mT",
+    "unverified": "rf",
+    "snapshot": "qm",
+    "snapshotEnabled": "zje",
+    "setSnapshot": "QYr"
+  },
+  "modules": [
+    {
+      "file": "chunk-bn3p37gv.js",
+      "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+      "moduleLength": 117054,
+      "rows": [
+        {
+          "file": "chunk-bn3p37gv.js",
+          "name": "V",
+          "start": 10007,
+          "end": 10151,
+          "moduleSha256": "29c5bee6774af95c55e4ad4d7f1857459fcca3370ab5647e9af68ed32766d0a5",
+          "sha256": "3b223ad86a79e9969e8241054c03d04d80d046aab19dd519973e4aed1e79e9e9",
+          "source": "class V{#e;#t=new WeakMap;constructor(e){this.#e=e}of(e){let t=this.#t.get(e);if(t!==void 0)return t;let o=this.#e();return this.#t.set(e,o),o}}",
+          "variable": false
+        }
+      ],
+      "bindings": {}
+    },
+    {
+      "file": "chunk-4s38z9x2.js",
+      "moduleSha256": "eb46628147f83403bbcd57ca88b3370e05c6631bf027a80117844f770b276b2d",
+      "moduleLength": 2740,
+      "rows": [
+        {
+          "file": "chunk-4s38z9x2.js",
+          "name": "Le",
+          "start": 615,
+          "end": 757,
+          "moduleSha256": "eb46628147f83403bbcd57ca88b3370e05c6631bf027a80117844f770b276b2d",
+          "sha256": "c7c851b23895c896ce38865f13ecbb54e11e83018c8ced9cae422c41298e6dfd",
+          "source": "function Le(e){if(!e)return!1;if(typeof e===\"boolean\")return e;let n=String(e).toLowerCase().trim();return[\"1\",\"true\",\"yes\",\"on\"].includes(n)}",
+          "variable": false
+        },
+        {
+          "file": "chunk-4s38z9x2.js",
+          "name": "gs",
+          "start": 757,
+          "end": 908,
+          "moduleSha256": "eb46628147f83403bbcd57ca88b3370e05c6631bf027a80117844f770b276b2d",
+          "sha256": "179a1d5ab26e1fe5a886487bf5243904864209c435ef03702a82ba2c01b38596",
+          "source": "function gs(e){if(e===void 0)return!1;if(typeof e===\"boolean\")return!e;let n=String(e).toLowerCase().trim();return[\"0\",\"false\",\"no\",\"off\"].includes(n)}",
+          "variable": false
+        },
+        {
+          "file": "chunk-4s38z9x2.js",
+          "name": "s",
+          "start": 1098,
+          "end": 1153,
+          "moduleSha256": "eb46628147f83403bbcd57ca88b3370e05c6631bf027a80117844f770b276b2d",
+          "sha256": "8b79e9ad51e95ede56e4385a196d4187b05a3d78fde643acd8c68658ff8e8521",
+          "source": "s=globalThis.process?.getBuiltinModule?.(\"async_hooks\")",
+          "variable": true
+        },
+        {
+          "file": "chunk-4s38z9x2.js",
+          "name": "wKt",
+          "start": 1154,
+          "end": 1195,
+          "moduleSha256": "eb46628147f83403bbcd57ca88b3370e05c6631bf027a80117844f770b276b2d",
+          "sha256": "d871ff458e10c6c5509c5b70f7944fba032e2a42697e09aec182aaaac06d05b4",
+          "source": "wKt=s?(e)=>s.AsyncResource.bind(e):(e)=>e",
+          "variable": true
+        },
+        {
+          "file": "chunk-4s38z9x2.js",
+          "name": "Me",
+          "start": 1196,
+          "end": 1457,
+          "moduleSha256": "eb46628147f83403bbcd57ca88b3370e05c6631bf027a80117844f770b276b2d",
+          "sha256": "08c491676ef2243b475f885c45f1163b2f0abed6075a2e5fa3a32cdd2afb308a",
+          "source": "function Me(){let e=new Set;return{subscribe(n){let r=wKt(n);return e.add(r),()=>{e.delete(r)}},emit(...n){let r;for(let o of e)try{o(...n)}catch(i){(r??=[]).push(i)}if(r)throw r.length===1?r[0]:AggregateError(r,\"Signal listener(s) threw\")},clear(){e.clear()}}}",
+          "variable": false
+        }
+      ],
+      "bindings": {}
+    },
+    {
+      "file": "chunk-eske5nfz.js",
+      "moduleSha256": "0ab96d3fc2e14f26d13bba42a3f5583f805c2f100c56befce938b7b723d405a5",
+      "moduleLength": 7043,
+      "rows": [
+        {
+          "file": "chunk-eske5nfz.js",
+          "name": "Vt",
+          "start": 3316,
+          "end": 3407,
+          "moduleSha256": "0ab96d3fc2e14f26d13bba42a3f5583f805c2f100c56befce938b7b723d405a5",
+          "sha256": "e68ff13173600adac81887cc3c742efbeb398d86b364001ec339fdf8286aac64",
+          "source": "function Vt(t,n,e=0){let r=0,i=t.indexOf(n,e);while(i!==-1)r++,i=t.indexOf(n,i+1);return r}",
+          "variable": false
+        }
+      ],
+      "bindings": {}
+    },
+    {
+      "file": "chunk-h3rrxdgy.js",
+      "moduleSha256": "4012f37687d6f056e0a15ff409aeac2a1192a31d4ae1687c29d0332c634c4876",
+      "moduleLength": 1162,
+      "rows": [
+        {
+          "file": "chunk-h3rrxdgy.js",
+          "name": "L",
+          "start": 883,
+          "end": 919,
+          "moduleSha256": "4012f37687d6f056e0a15ff409aeac2a1192a31d4ae1687c29d0332c634c4876",
+          "sha256": "bf15941ab5ff7c7dfa13c5b92d7cf4c366ae478147b655b832123da24baf1b3f",
+          "source": "function L(n){return[...new Set(n)]}",
+          "variable": false
+        }
+      ],
+      "bindings": {}
+    },
+    {
+      "file": "chunk-brnn4zwp.js",
+      "moduleSha256": "6fc81e7fe2a8a0809d0901a28e8bd5487b116b245931c3ac30fcf9b6655400c7",
+      "moduleLength": 5165,
+      "rows": [
+        {
+          "file": "chunk-brnn4zwp.js",
+          "name": "Zfe",
+          "start": 2704,
+          "end": 2742,
+          "moduleSha256": "6fc81e7fe2a8a0809d0901a28e8bd5487b116b245931c3ac30fcf9b6655400c7",
+          "sha256": "3253f7bbc1e080c29eb7578ff2727557b55bfeaf1f680b3b54107bfeee6a3aeb",
+          "source": "function Zfe(e){return t(we())===t(e)}",
+          "variable": false
+        }
+      ],
+      "bindings": {
+        "t": {
+          "builtin": {
+            "module": "path",
+            "name": "resolve"
+          }
+        },
+        "we": {
+          "port": "configHome"
+        }
+      }
+    },
+    {
+      "file": "chunk-bffwghss.js",
+      "moduleSha256": "a6bd8add7b714256af5bdedc9bb78c13ec1e63f8019feb128c718144e5ad9bbe",
+      "moduleLength": 3171,
+      "rows": [
+        {
+          "file": "chunk-bffwghss.js",
+          "name": "u",
+          "start": 710,
+          "end": 751,
+          "moduleSha256": "a6bd8add7b714256af5bdedc9bb78c13ec1e63f8019feb128c718144e5ad9bbe",
+          "sha256": "517e087b4876c25717c8e7c560eb1f9ed31461b435913d35cfcef5dda02ed573",
+          "source": "function u(n,e,i){D0e(n.statSync(e),e,i)}",
+          "variable": false
+        },
+        {
+          "file": "chunk-bffwghss.js",
+          "name": "D0e",
+          "start": 751,
+          "end": 1182,
+          "moduleSha256": "a6bd8add7b714256af5bdedc9bb78c13ec1e63f8019feb128c718144e5ad9bbe",
+          "sha256": "2d80aa37130cf527c08e8606fc8babf7fb286453fdc0024811da6f1009495db4",
+          "source": "function D0e(n,e,i){if(n.isDirectory())throw Object.assign(Error(\"EISDIR: illegal operation on a directory, read\"),{code:\"EISDIR\",errno:-21,syscall:\"read\",path:e});if(!n.isFile())throw Object.assign(Error(\"Not a regular file (device, FIFO, or socket)\"),{code:\"ERR_NOT_REGULAR_FILE\",path:e});if(i!==void 0&&n.size>i)throw Object.assign(Error(\"File exceeds maxBytes limit\"),{code:\"ERR_FILE_TOO_LARGE\",path:e,size:n.size,maxBytes:i})}",
+          "variable": false
+        },
+        {
+          "file": "chunk-bffwghss.js",
+          "name": "yrr",
+          "start": 1331,
+          "end": 1490,
+          "moduleSha256": "a6bd8add7b714256af5bdedc9bb78c13ec1e63f8019feb128c718144e5ad9bbe",
+          "sha256": "2c6ac465a07aa28b45650cc4dbfe558630f976fc4b7644020cbeb8660964c8a5",
+          "source": "function yrr(n,e,i){if(i===void 0)return;if(n>i)throw Object.assign(Error(\"File exceeds maxBytes limit\"),{code:\"ERR_FILE_TOO_LARGE\",path:e,size:n,maxBytes:i})}",
+          "variable": false
+        },
+        {
+          "file": "chunk-bffwghss.js",
+          "name": "t$",
+          "start": 1586,
+          "end": 1680,
+          "moduleSha256": "a6bd8add7b714256af5bdedc9bb78c13ec1e63f8019feb128c718144e5ad9bbe",
+          "sha256": "331fb6aef033212c03a38315b975a037a276444eca65a34c58ef24e69a8ebe1c",
+          "source": "function t$(n){return n!=null&&typeof n===\"object\"&&\"code\"in n&&n.code===\"ERR_FILE_TOO_LARGE\"}",
+          "variable": false
+        },
+        {
+          "file": "chunk-bffwghss.js",
+          "name": "HAn",
+          "start": 1680,
+          "end": 1872,
+          "moduleSha256": "a6bd8add7b714256af5bdedc9bb78c13ec1e63f8019feb128c718144e5ad9bbe",
+          "sha256": "d50deb96dcb1be0b004becd71b882af65cce68b658b4efe2efe15dc54634f4e9",
+          "source": "function HAn(n){if(n.byteLength===0)return\"utf8\";if(n.byteLength>=2){if(n[0]===255&&n[1]===254)return\"utf16le\"}if(n.byteLength>=3&&n[0]===239&&n[1]===187&&n[2]===191)return\"utf8\";return\"utf8\"}",
+          "variable": false
+        },
+        {
+          "file": "chunk-bffwghss.js",
+          "name": "zXr",
+          "start": 2007,
+          "end": 2108,
+          "moduleSha256": "a6bd8add7b714256af5bdedc9bb78c13ec1e63f8019feb128c718144e5ad9bbe",
+          "sha256": "9efc78a368f07affe927d65c9a96fccbd51726e324c53ebfe0a7443bd39aecd1",
+          "source": "function zXr(n){let{buffer:e,bytesRead:i}=ae().readSync(n,{length:4096});return HAn(e.subarray(0,i))}",
+          "variable": false
+        },
+        {
+          "file": "chunk-bffwghss.js",
+          "name": "DAn",
+          "start": 2108,
+          "end": 2235,
+          "moduleSha256": "a6bd8add7b714256af5bdedc9bb78c13ec1e63f8019feb128c718144e5ad9bbe",
+          "sha256": "3b77672c658644efbbee0fe51057c712015c06872d134f64716ecd890d2f5a41",
+          "source": "function DAn(n){let e=0,i=0;for(let r=0;r<n.length;r++)if(n[r]===`\n`)if(r>0&&n[r-1]===\"\\r\")e++;else i++;return e>i?\"CRLF\":\"LF\"}",
+          "variable": false
+        },
+        {
+          "file": "chunk-bffwghss.js",
+          "name": "VXr",
+          "start": 2235,
+          "end": 2611,
+          "moduleSha256": "a6bd8add7b714256af5bdedc9bb78c13ec1e63f8019feb128c718144e5ad9bbe",
+          "sha256": "56c8624798230565b153405af270f0ad7a88a7605964b77a3e7c93afba034744",
+          "source": "function VXr(n,e){let i=ae(),{resolvedPath:r,isSymlink:s}=bo(i,n);if(s)t(`Reading through symlink: ${n} -> ${r}`);u(i,n,e);let o=zXr(n),c;if(e===void 0)c=i.readFileSync(n,{encoding:o});else{let{buffer:g,bytesRead:a}=i.readSync(n,{length:e+1});yrr(a,n,e),c=g.subarray(0,a).toString(o)}let d=DAn(c.slice(0,4096));return{content:c.replaceAll(`\\r\n`,`\n`),encoding:o,lineEndings:d}}",
+          "variable": false
+        },
+        {
+          "file": "chunk-bffwghss.js",
+          "name": "gL",
+          "start": 2611,
+          "end": 2652,
+          "moduleSha256": "a6bd8add7b714256af5bdedc9bb78c13ec1e63f8019feb128c718144e5ad9bbe",
+          "sha256": "5a2db82b2a456a90e8df1113fe89ec6e5ae4fb0a2ac8e460ebf109ceefaa9fc2",
+          "source": "function gL(n,e){return VXr(n,e).content}",
+          "variable": false
+        }
+      ],
+      "bindings": {
+        "ae": {
+          "port": "filesystem"
+        },
+        "bo": {
+          "port": "resolvePath"
+        },
+        "t": {
+          "port": "debug"
+        }
+      }
+    },
+    {
+      "file": "chunk-0a47xg8f.js",
+      "moduleSha256": "56b1137e8e2fc0767cae6db3cc88a8a2e15de689a3f58cdc37ee6cdd94c4adbb",
+      "moduleLength": 8246,
+      "rows": [
+        {
+          "file": "chunk-0a47xg8f.js",
+          "name": "Mor",
+          "start": 2542,
+          "end": 2593,
+          "moduleSha256": "56b1137e8e2fc0767cae6db3cc88a8a2e15de689a3f58cdc37ee6cdd94c4adbb",
+          "sha256": "8590b6afeb26000bbff82c7b8b549a524427e0422e91f513431dcb73e9cb5682",
+          "source": "Mor=new Set([\"claude-desktop\",\"claude-desktop-3p\"])",
+          "variable": true
+        },
+        {
+          "file": "chunk-0a47xg8f.js",
+          "name": "f$",
+          "start": 2859,
+          "end": 3018,
+          "moduleSha256": "56b1137e8e2fc0767cae6db3cc88a8a2e15de689a3f58cdc37ee6cdd94c4adbb",
+          "sha256": "ed119050a2182c30b1d741b104e32a985c605ff7a408266240393b602ccfcbd4",
+          "source": "function f$(){{let e=a.CLAUDE_CODE_ENTRYPOINT;return a.CLAUDE_CODE_PROVIDER_MANAGED_BY_HOST&&a.CLAUDE_CODE_USE_GATEWAY&&(e!==void 0&&Mor.has(e)||i())}return!1}",
+          "variable": false
+        },
+        {
+          "file": "chunk-0a47xg8f.js",
+          "name": "i",
+          "start": 3050,
+          "end": 3138,
+          "moduleSha256": "56b1137e8e2fc0767cae6db3cc88a8a2e15de689a3f58cdc37ee6cdd94c4adbb",
+          "sha256": "f6618274ea4d1f19b7073171a69e4ac64de08cebab9960fd1e220c319275f3ee",
+          "source": "function i(){return a.CLAUDE_CODE_HOST_GATEWAY_LINEAGE&&!!a.CLAUDE_CODE_HOST_CREDS_FILE}",
+          "variable": false
+        }
+      ],
+      "bindings": {
+        "a": {
+          "port": "environment"
+        }
+      }
+    },
+    {
+      "file": "chunk-2z86j2rq.js",
+      "moduleSha256": "c0e9adfb23356848ce652afebb82d14e59a6059ac1232a5900a4254d399a40c7",
+      "moduleLength": 7293,
+      "rows": [
+        {
+          "file": "chunk-2z86j2rq.js",
+          "name": "r",
+          "start": 1614,
+          "end": 1665,
+          "moduleSha256": "c0e9adfb23356848ce652afebb82d14e59a6059ac1232a5900a4254d399a40c7",
+          "sha256": "fca32e806e14721878d31fe8cce48ea9ba54bfb3a277ed5ce2d39abe9d7c3c6b",
+          "source": "function r(e,n,a){return a===void 0?e:{...e,[n]:a}}",
+          "variable": false
+        },
+        {
+          "file": "chunk-2z86j2rq.js",
+          "name": "f",
+          "start": 1665,
+          "end": 1785,
+          "moduleSha256": "c0e9adfb23356848ce652afebb82d14e59a6059ac1232a5900a4254d399a40c7",
+          "sha256": "c0a94e50772262e5da00761368376b60dba3a58750563dde00206726dadb0c6f",
+          "source": "function f(e,n,a,t){let o=r({namespace:\"transcript\",projectKey:e,sessionId:n},\"agentId\",a);return r(o,\"agentRelPath\",t)}",
+          "variable": false
+        },
+        {
+          "file": "chunk-2z86j2rq.js",
+          "name": "h",
+          "start": 1785,
+          "end": 1902,
+          "moduleSha256": "c0e9adfb23356848ce652afebb82d14e59a6059ac1232a5900a4254d399a40c7",
+          "sha256": "413341c3f903f5b1ce716115053848f6212c63127c874915571f34cbb435668a",
+          "source": "function h(e,n,a){let c=r({namespace:\"log\",sessionId:e,channel:n},\"agentId\",a?.agentId);return r(c,\"runId\",a?.runId)}",
+          "variable": false
+        },
+        {
+          "file": "chunk-2z86j2rq.js",
+          "name": "De",
+          "start": 1906,
+          "end": 4479,
+          "moduleSha256": "c0e9adfb23356848ce652afebb82d14e59a6059ac1232a5900a4254d399a40c7",
+          "sha256": "eddceb66f4c552e7c49b68c70aa1e83686a64e0e73de31eb8ffae5409c716ce8",
+          "source": "De={transcript:f,journal:(e,n,a)=>({namespace:\"transcript\",projectKey:e,sessionId:n,agentRelPath:a,journal:!0}),sessionJournal:(e,n,a)=>({namespace:\"transcript\",projectKey:e,sessionId:n,sessionJournal:a}),history:()=>({namespace:\"history\"}),log:h,globalConfig:()=>({namespace:\"globalConfig\"}),globalConfigCopy:(e,n)=>({namespace:\"globalConfig\",kind:e,stamp:n}),userSettings:()=>({namespace:\"settings\",layer:\"user\"}),projectSettings:(e)=>({namespace:\"settings\",layer:\"project\",projectKey:e}),localSettings:(e)=>({namespace:\"settings\",layer:\"local\",consentRootKey:e}),task:(e,n)=>({namespace:\"task\",listId:e,taskId:n}),taskListMeta:(e)=>({namespace:\"task\",listId:e,meta:!0}),taskListHighWaterMark:(e)=>({namespace:\"task\",listId:e,highWaterMark:!0}),memory:(e,n)=>({namespace:\"memory\",projectKey:e,relPath:n}),pluginRegistry:(e)=>({namespace:\"pluginRegistry\",file:e}),marketplaceCache:(e,n)=>({namespace:\"marketplaceCache\",marketplace:e,form:n}),marketplaceTree:(e,n)=>({namespace:\"marketplaceCache\",marketplace:e,relPath:n}),pluginCache:(e,n,a,t)=>({namespace:\"pluginCache\",marketplace:e,plugin:n,version:a,relPath:t}),cache:(e,n)=>({namespace:\"cache\",store:e,id:n}),paste:(e)=>({namespace:\"paste\",id:e}),state:(e)=>({namespace:\"state\",id:e}),pluginAssetCache:(e)=>({namespace:\"pluginAssetCache\",digest:e}),plan:(e)=>({namespace:\"plan\",name:e}),daemon:(e)=>({namespace:\"daemon\",relPath:e}),feedbackDraft:(e)=>({namespace:\"feedbackDraft\",draftId:e}),agentMemory:(e,n)=>({namespace:\"agentMemory\",layer:\"user\",agentType:e,relPath:n}),identity:()=>({namespace:\"identity\"}),team:(e)=>({namespace:\"team\",team:e}),sidecar:(e,n,a)=>({namespace:\"sidecar\",projectKey:e,sessionId:n,relPath:a}),mailbox:(e,n)=>({namespace:\"mailbox\",team:e,teammate:n}),scratch:(e,n)=>({namespace:\"scratch\",sessionId:e,relPath:n}),userConfigDir:(e,n)=>({namespace:\"userConfigDir\",dir:e,relPath:n}),fileHistory:(e,n)=>({namespace:\"fileHistory\",sessionId:e,backupFileName:n}),job:(e,n)=>({namespace:\"job\",jobId:e,relPath:n}),jobTimeline:(e)=>({namespace:\"jobTimeline\",jobId:e}),recording:(e,n,a)=>({namespace:\"recording\",projectKey:e,sessionId:n,stamp:a}),sessionLog:(e,n,a)=>({namespace:\"sessionLog\",projectKey:e,year:n.year,month:n.month,day:n.day,logName:a}),jobPins:()=>({namespace:\"jobsRoot\",file:\"pins\"}),jobDraft:(e)=>({namespace:\"jobsRoot\",draftKey:e}),session:(e)=>({namespace:\"session\",file:e}),bridgePointer:(e)=>({namespace:\"bridgePointer\",projectKey:e}),sessionAliases:(e)=>({namespace:\"sessionAliases\",projectKey:e}),dirSyncRecord:(e,n)=>({namespace:\"dirSyncRecord\",projectKey:e,sessionId:n})}",
+          "variable": true
+        }
+      ],
+      "bindings": {}
+    },
+    {
+      "file": "chunk-q80zaav8.js",
+      "moduleSha256": "f9503296591b825624caf5932b9c5973cde96b859259266a506b616dca5cd41e",
+      "moduleLength": 67079,
+      "rows": [
+        {
+          "file": "chunk-q80zaav8.js",
+          "name": "wr",
+          "start": 46337,
+          "end": 46362,
+          "moduleSha256": "f9503296591b825624caf5932b9c5973cde96b859259266a506b616dca5cd41e",
+          "sha256": "deee931ee5ab2c558ffc6ffc6e7a938c1e9c7c0cea66132bedcfe7d3db248f80",
+          "source": "wr={[Symbol.dispose](){}}",
+          "variable": true
+        },
+        {
+          "file": "chunk-q80zaav8.js",
+          "name": "Rr",
+          "start": 46363,
+          "end": 46387,
+          "moduleSha256": "f9503296591b825624caf5932b9c5973cde96b859259266a506b616dca5cd41e",
+          "sha256": "930d0ad79dbd512fe00567c895f90de0d1a7a5cea37e519c882a7731699a12f7",
+          "source": "function Rr(){return wr}",
+          "variable": false
+        },
+        {
+          "file": "chunk-q80zaav8.js",
+          "name": "ng",
+          "start": 46391,
+          "end": 46396,
+          "moduleSha256": "f9503296591b825624caf5932b9c5973cde96b859259266a506b616dca5cd41e",
+          "sha256": "e42e10badba2eb5fb0f5fcd885465c38f438ad11d3086fca0fd71c9162223670",
+          "source": "ng=Rr",
+          "variable": true
+        },
+        {
+          "file": "chunk-q80zaav8.js",
+          "name": "Y",
+          "start": 46693,
+          "end": 46786,
+          "moduleSha256": "f9503296591b825624caf5932b9c5973cde96b859259266a506b616dca5cd41e",
+          "sha256": "20803a156fd733bef35bd61ed1363839ce84756656d8a0fec8c8ad9cccb444d0",
+          "source": "Y=(e,n)=>{using r=ng`JSON.parse(${Se(e)})`;return typeof n>\"u\"?JSON.parse(e):JSON.parse(e,n)}",
+          "variable": true
+        },
+        {
+          "file": "chunk-q80zaav8.js",
+          "name": "Se",
+          "start": 46981,
+          "end": 47034,
+          "moduleSha256": "f9503296591b825624caf5932b9c5973cde96b859259266a506b616dca5cd41e",
+          "sha256": "b50b854105c6389487436c6944cae2b5adc6dc87dc2d83a132913fa7c7081f0d",
+          "source": "function Se(e){return typeof e===\"string\"?e.length:e}",
+          "variable": false
+        }
+      ],
+      "bindings": {}
+    },
+    {
+      "file": "chunk-1cedw4af.js",
+      "moduleSha256": "49006209e7e007b9075560f496ac9bf3a5426f9c35a99c811134053076c8df0c",
+      "moduleLength": 21513,
+      "rows": [
+        {
+          "file": "chunk-1cedw4af.js",
+          "name": "Do",
+          "start": 803,
+          "end": 861,
+          "moduleSha256": "49006209e7e007b9075560f496ac9bf3a5426f9c35a99c811134053076c8df0c",
+          "sha256": "617ba387f66555665310900c96786d56e8149d4658a45e63db7ea6d05b8d3b2a",
+          "source": "function Do(e){return e.startsWith(\"\\uFEFF\")?e.slice(1):e}",
+          "variable": false
+        }
+      ],
+      "bindings": {}
+    },
+    {
+      "file": "chunk-5qqrzb2c.js",
+      "moduleSha256": "91b433ccc5add9cada15ca727fd71e45dc2b3042168625a06d879b12cab45945",
+      "moduleLength": 981,
+      "rows": [
+        {
+          "file": "chunk-5qqrzb2c.js",
+          "name": "i",
+          "start": 615,
+          "end": 918,
+          "moduleSha256": "91b433ccc5add9cada15ca727fd71e45dc2b3042168625a06d879b12cab45945",
+          "sha256": "ac8fa5a2a589fa1dd648bd6ea9451f06fb378142827f2b065f3628d8134987d9",
+          "source": "class i{resetters=[];built=[];lazy(e){let t,r=()=>{t=void 0};return this.resetters.push(r),()=>{if(t===void 0)t=e(),this.built.push(r);return t}}builtCount(){return this.built.length}releaseBuiltSince(e){for(let t of this.built.splice(e))t()}reset(){for(let e of this.resetters)e();this.built.length=0}}",
+          "variable": false
+        },
+        {
+          "file": "chunk-5qqrzb2c.js",
+          "name": "_rr",
+          "start": 922,
+          "end": 931,
+          "moduleSha256": "91b433ccc5add9cada15ca727fd71e45dc2b3042168625a06d879b12cab45945",
+          "sha256": "a044ed0ffcd2af33f87dba4847114fcfa941b77911af4eff3fc5c51c8011e070",
+          "source": "_rr=new i",
+          "variable": true
+        },
+        {
+          "file": "chunk-5qqrzb2c.js",
+          "name": "f",
+          "start": 932,
+          "end": 965,
+          "moduleSha256": "91b433ccc5add9cada15ca727fd71e45dc2b3042168625a06d879b12cab45945",
+          "sha256": "d9356663a66c8ccff1054002018547334d12bd2d053a1f041a6d6e6b128d3e1e",
+          "source": "function f(e){return _rr.lazy(e)}",
+          "variable": false
+        }
+      ],
+      "bindings": {}
+    },
+    {
+      "file": "chunk-hrhfcbdv.js",
+      "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+      "moduleLength": 433955,
+      "rows": [
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "p0e",
+          "start": 27875,
+          "end": 27944,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "12a4a96e4b539310a5a265f8fec7f49559a3cb31d37b801c28fa491e047eca66",
+          "source": "p0e=[\"AWS_ACCESS_KEY_ID\",\"AWS_SECRET_ACCESS_KEY\",\"AWS_SESSION_TOKEN\"]",
+          "variable": true
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "Nt",
+          "start": 27989,
+          "end": 28018,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "7abe0ea6ec194ac5c1faa320be85a47df32f4946b9dcc082e744d1d158c11a16",
+          "source": "Nt=\"_PARENT_PAIR_SUPPRESSOR_\"",
+          "variable": true
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "nu",
+          "start": 36421,
+          "end": 36461,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "e56d7460be6d792c15bfd169a2adb2713960c46e2b27e96feba6a2682523f557",
+          "source": "nu=[\"low\",\"medium\",\"high\",\"xhigh\",\"max\"]",
+          "variable": true
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "ACn",
+          "start": 36579,
+          "end": 36626,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "c2f7d7e45e1d4eda99b457d15d98252074472252b07536b7d66ae0b22a316cda",
+          "source": "function ACn(e){return e===void 0||e===!1?e:!0}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "st",
+          "start": 36630,
+          "end": 40367,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "04d01f4d0c6aee778fd1a27e76c8e8e0ba48b4f3530f7685fd44ff3c4c595524",
+          "source": "st=f(()=>[{path:[\"allowManagedPermissionRulesOnly\"],restrictive:!0},{path:[\"allowManagedHooksOnly\"],restrictive:!0},{path:[\"allowManagedMcpServersOnly\"],restrictive:!0},{path:[\"enforceAvailableModels\"],restrictive:!0},{path:[\"disableAllHooks\"],restrictive:!0},{path:[\"disableClaudeAiConnectors\"],restrictive:!0},{path:[\"disableCommandPluginSources\"],restrictive:!0},{path:[\"disableSideloadFlags\"],restrictive:!0},{path:[\"disableSkillShellExecution\"],restrictive:!0},{path:[\"disableRemoteControl\"],restrictive:!0},{path:[\"disableAgentView\"],restrictive:!0},{path:[\"disableWorkflows\"],restrictive:!0},{path:[\"disableArtifact\"],restrictive:!0},{path:[\"disableBundledSkills\"],restrictive:!0},{path:[\"fastModePerSessionOptIn\"],restrictive:!0},{path:[\"isolatePeerMachines\"],restrictive:!0},{path:[\"strictPluginOnlyCustomization\"],restrictive:!0},{path:[\"disableAutoMode\"],restrictive:\"disable\"},{path:[\"disableDeepLinkRegistration\"],restrictive:\"disable\"},{path:[\"permissions\",\"disableBypassPermissionsMode\"],restrictive:\"disable\"},{path:[\"permissions\",\"disableAutoMode\"],restrictive:\"disable\"},{path:[\"permissions\",\"blockReadsOutsideWorkingDirectories\"],restrictive:!0},{path:[\"autoMode\",\"classifyAllShell\"],restrictive:!0},{path:[\"worktree\",\"bgIsolation\"],restrictive:\"worktree\"},{path:[\"enableArtifact\"],restrictive:!1},{path:[\"enableWorkflows\"],restrictive:!1},{path:[\"syncClaudeAiSkills\"],restrictive:!1},{path:[\"syncClaudeAiPlugins\"],restrictive:!1},{path:[\"useAutoModeDuringPlan\"],restrictive:!1},{path:[\"skipDangerousModePermissionPrompt\"],restrictive:!1},{path:[\"skipAutoPermissionPrompt\"],restrictive:!1},{path:[\"enableAllProjectMcpServers\"],restrictive:!1},{path:[\"channelsEnabled\"],restrictive:!1},{path:[\"skipWebFetchPreflight\"],restrictive:!1},{path:[\"skipWorkflowUsageWarning\"],restrictive:!1},{path:[\"autoUploadSessions\"],restrictive:!1},{path:[\"remoteControlAtStartup\"],restrictive:!1},{path:[\"remoteTools\",\"allowUnattendedServing\"],restrictive:!1},{path:[\"autoContinueAtUsageLimit\"],restrictive:!1},{path:[\"disablePluginDirectory\"],restrictive:!0,normalize:ACn},{path:[\"attribution\",\"sessionUrl\"],restrictive:!1},{path:[\"crossSessionInbound\"],restrictive:[\"refuse\",\"hold\"]},{path:[\"remoteControl\",\"shareHostProfile\"],restrictive:[\"off\",\"basic\"]},{path:[\"modelProposedGoals\"],restrictive:[\"disabled\",\"alwaysAsk\"]},{path:[\"maxEffortLevel\"],restrictive:nu},{path:[\"feedbackDrafts\"],restrictive:\"off\"},{path:[\"availableModelsMatch\"],restrictive:\"exact\"},{path:[\"askUserQuestionTimeout\"],restrictive:\"never\"},{path:[\"dialogExpiry\"],restrictive:\"never\"},{path:[\"sandbox\",\"enabled\"],restrictive:!0},{path:[\"sandbox\",\"failIfUnavailable\"],restrictive:!0},{path:[\"sandbox\",\"autoAllowBashIfSandboxed\"],restrictive:!1},{path:[\"sandbox\",\"allowUnsandboxedCommands\"],restrictive:!1},{path:[\"sandbox\",\"enableWeakerNestedSandbox\"],restrictive:!1},{path:[\"sandbox\",\"enableWeakerNetworkIsolation\"],restrictive:!1},{path:[\"sandbox\",\"allowAppleEvents\"],restrictive:!1},{path:[\"sandbox\",\"network\",\"allowManagedDomainsOnly\"],restrictive:!0},{path:[\"sandbox\",\"network\",\"strictAllowlist\"],restrictive:!0},{path:[\"sandbox\",\"network\",\"allowAllUnixSockets\"],restrictive:!1},{path:[\"sandbox\",\"network\",\"allowLocalBinding\"],restrictive:!1},{path:[\"sandbox\",\"filesystem\",\"allowManagedReadPathsOnly\"],restrictive:!0},{path:[\"sandbox\",\"filesystem\",\"disabled\"],restrictive:!1},{path:[\"sandbox\",\"credentials\",\"allowPlaintextInject\"],restrictive:!1},{path:[\"sandbox\",\"credentials\",\"sigv4\",\"streaming\"],restrictive:\"deny\"},{path:[\"sandbox\",\"credentials\",\"sigv4\",\"presigned\"],restrictive:\"deny\"},{path:[\"sandbox\",\"credentials\",\"sigv4\",\"sigv4a\"],restrictive:\"deny\"},{path:[\"isolation\",\"required\"],restrictive:!0},{path:[\"isolation\",\"persistHome\"],restrictive:!1}])",
+          "variable": true
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "dt",
+          "start": 40368,
+          "end": 40413,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "d8288c14a20052381804a3f344153e3b4d136e521aac06b75497cbee490a53f2",
+          "source": "function dt(e){return Array.isArray(e)?e:[e]}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "Te",
+          "start": 40413,
+          "end": 40510,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "628d26147f88b3aa0df9306caca8110dd9f036f82dab49bc98a27e83ea768a7c",
+          "source": "function Te(e,n){let s=e;for(let r of n){if(s===null||typeof s!==\"object\")return;s=s[r]}return s}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "qe",
+          "start": 40510,
+          "end": 40753,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "b080f992cb092507cc897e560576f35fd6109a4907652566e3063e3929c30f80",
+          "source": "function qe(e,n,s){let r=[e],i=e;for(let c of n.slice(0,-1)){let p={...i[c]};i[c]=p,i=p,r.push(i)}let d=n.at(-1);if(s!==void 0){i[d]=s;return}delete i[d];for(let c=r.length-1;c>0;c--){if(Object.keys(r[c]).length>0)break;delete r[c-1][n[c-1]]}}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "dn",
+          "start": 40753,
+          "end": 40834,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "1217598bbb9ff4437f5ba831358734b46e616d9b0230fe9dd994a0f623ae9cbc",
+          "source": "function dn(e,n){let s=Te(n,e.path);return e.normalize===void 0?s:e.normalize(s)}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "er",
+          "start": 40838,
+          "end": 40869,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "9c90604419af509c8ba6550aaead9a2f541df8070acd012f0c1d4a32588d01d9",
+          "source": "er=new Set([\"disableAllHooks\"])",
+          "variable": true
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "nnr",
+          "start": 40870,
+          "end": 42449,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "3048cb79d96918b24c6b87c7063583f1e91406489afe9ff36d69a0dc2874e606",
+          "source": "function nnr(e){let n={};for(let m of st()){let{path:y,restrictive:S}=m;if(er.has(y[0]))continue;let b=dn(m,e);if((typeof b===\"boolean\"||typeof b===\"string\")&&dt(S).includes(b))qe(n,y,b)}if(Te(e,[\"attribution\"])===!1)qe(n,[\"attribution\",\"sessionUrl\"],!1);let s=cn(e.permissions,[\"deny\",\"ask\",\"disableBypassPermissionsMode\",\"disableAutoMode\"]);if(s)n.permissions={...n.permissions,...s};for(let m of Hc)if(e[m]!==void 0)n[m]=e[m];for(let[m,y]of Object.entries(e))if((m.startsWith(\"disable\")&&(y===!0||y===\"disable\")||m.startsWith(\"enable\")&&y===!1)&&!er.has(m))n[m]=y;if(e.disableAllHooks===!0)n.allowManagedHooksOnly=!0;if(Array.isArray(e.httpHookAllowedEnvVars)&&e.httpHookAllowedEnvVars.length===0)n.httpHookAllowedEnvVars=[];let r=cn(e.sandbox?.filesystem,[\"denyRead\",\"denyWrite\",\"allowManagedReadPathsOnly\"]),i=cn(e.sandbox?.network,[\"deniedDomains\",\"strictAllowlist\",\"allowManagedDomainsOnly\"]),d=cn(e.sandbox?.credentials,[\"files\",\"envVars\"])??{},c=(e.sandbox?.credentials?.awsPairs??[]).flatMap((m)=>[m.accessKeyIdVar,m.secretAccessKeyVar,m.sessionTokenVar]),p=p0e.filter((m)=>c.includes(m));if(p.length>0)d.awsPairs=p.map((m,y)=>({accessKeyIdVar:m,secretAccessKeyVar:`${Nt}${y+1}_`}));let g=e.sandbox?.credentials?.sigv4;if(g){let m={};for(let[y,S]of Object.entries(g))if(S===\"deny\")m[y]=\"deny\";if(Object.keys(m).length>0)d.sigv4=m}let h=Object.keys(d).length>0;if(r||i||h){let m=n.sandbox??{};n.sandbox={...m,...r&&{filesystem:{...m.filesystem,...r}},...i&&{network:{...m.network,...i}},...h&&{credentials:{...m.credentials,...d}}}}return Object.keys(n).length>0?n:null}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "cn",
+          "start": 42449,
+          "end": 42570,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "3de0b570dcc32b30a84f4c09d3f8c0aa0e9ea51890110db66b104fd6fe744172",
+          "source": "function cn(e,n){if(!e)return;let s={};for(let r of n)if(e[r]!==void 0)s[r]=e[r];return Object.keys(s).length>0?s:void 0}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "Hc",
+          "start": 42574,
+          "end": 42919,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "bb6f96f2f540347a46de229862b02ed26b4a85bace6da521897a081a190c432e",
+          "source": "Hc=[\"allowedMcpServers\",\"deniedMcpServers\",\"allowManagedMcpServersOnly\",\"disabledMcpjsonServers\",\"allowManagedHooksOnly\",\"allowedHttpHookUrls\",\"strictKnownMarketplaces\",\"allowedMarketplaces\",\"blockedMarketplaces\",\"strictPluginOnlyCustomization\",\"availableModels\",\"enforceAvailableModels\",\"availableModelsMatch\",\"deniedModels\",\"allowedProviders\"]",
+          "variable": true
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "LSt",
+          "start": 43379,
+          "end": 43724,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "ef840b5fa180c0c04560c34a844ae03baca772b49d9a7e33cda07a960119a37c",
+          "source": "function LSt(e){let n=0,s=e.length;while(n<s&&tr(e.charCodeAt(n)))n++;while(s>n&&tr(e.charCodeAt(s-1)))s--;let r=or(e.slice(n,s));if(r!==-1)return{kind:\"line_break\",index:Ze(e,n+r)};for(let i=n;i<s;i++){let d=e.charCodeAt(i);if(d===0)return{kind:\"nul\",index:Ze(e,i)};if(d>255)return{kind:\"non_ascii\",index:Ze(e,i),codePoint:sr(e,i)}}return null}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "or",
+          "start": 45211,
+          "end": 45314,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "cc26e9b083cbc01afd1e8faf43aab0c40fbebb2fdc356763ec19234b974b479d",
+          "source": "function or(e){let n=e.indexOf(`\n`),s=e.indexOf(\"\\r\");if(n===-1)return s;return s===-1?n:Math.min(n,s)}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "tr",
+          "start": 45314,
+          "end": 45366,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "e54f550596ac2835efb3a3ded75424ec5c1e72d557426aa40694de96191fe51e",
+          "source": "function tr(e){return e===9||e===32||e===10||e===13}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "sr",
+          "start": 45366,
+          "end": 45424,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "06c6b6310e232bc064f6b130310d594e58631d8b07d2bc7bcf06d25fed8fcd39",
+          "source": "function sr(e,n){return e.codePointAt(n)??e.charCodeAt(n)}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "Ze",
+          "start": 45424,
+          "end": 45580,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "f30ff85439f9d2606bed2aa0d680aa48736e5df7ea4ac41fd98f1de0f2f6042b",
+          "source": "function Ze(e,n){let s=0;for(let r=0;r<n;r++){let i=e.charCodeAt(r);if(i>=55296&&i<=56319&&r+1<e.length&&(e.charCodeAt(r+1)&64512)===56320)r++;s++}return s}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "Kj",
+          "start": 45652,
+          "end": 46068,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "ccb8e36d08937ffadbf2445ce3132e4da0b03f75e142595a2b275bd1af50d9e1",
+          "source": "Kj=[\"CLAUDE_CODE_USE_BEDROCK\",\"CLAUDE_CODE_USE_VERTEX\",\"CLAUDE_CODE_USE_FOUNDRY\",\"CLAUDE_CODE_USE_ANTHROPIC_AWS\",\"CLAUDE_CODE_USE_ANTHROPIC_GOOGLE_CLOUD\",\"CLAUDE_CODE_USE_MANTLE\",\"CLAUDE_CODE_USE_GATEWAY\",\"ANTHROPIC_FOUNDRY_RESOURCE\",\"ANTHROPIC_VERTEX_PROJECT_ID\",\"ANTHROPIC_AWS_WORKSPACE_ID\",\"ANTHROPIC_GOOGLE_CLOUD_PROJECT\",\"ANTHROPIC_GOOGLE_CLOUD_LOCATION\",\"ANTHROPIC_GOOGLE_CLOUD_WORKSPACE_ID\",\"CLOUD_ML_REGION\"]",
+          "variable": true
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "dr",
+          "start": 49205,
+          "end": 49274,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "b3cbce11417455744b15dd3ac5d5bd080abc4591b86178ebc77b6513f415fdc9",
+          "source": "dr=[\"CLAUDE_CODE_MEMORY_API_BASE_URL\",\"CLAUDE_CODE_MEMORY_API_TOKEN\"]",
+          "variable": true
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "qF",
+          "start": 49317,
+          "end": 49794,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "78854f13f24e2a40313743917340e8cb1877ed84d837bb27a4b46c5658094b7a",
+          "source": "qF=[\"ANTHROPIC_BASE_URL\",\"_CLAUDE_CODE_ASSUME_FIRST_PARTY_BASE_URL\",\"ANTHROPIC_BEDROCK_BASE_URL\",\"ANTHROPIC_VERTEX_BASE_URL\",\"ANTHROPIC_FOUNDRY_BASE_URL\",\"ANTHROPIC_AWS_BASE_URL\",\"ANTHROPIC_GOOGLE_CLOUD_BASE_URL\",\"ANTHROPIC_BEDROCK_MANTLE_BASE_URL\",\"CLAUDE_CODE_ARTIFACTS_API_BASE_URL\",\"CLAUDE_CODE_ARTIFACTS_API_TOKEN\",\"CLAUDE_CODE_ARTIFACT_ASSET_BASE_URL\",\"CLAUDE_CODE_ARTIFACT_LIVE_BASE_URL\",\"CLAUDE_CODE_ARTIFACT_SYNC_BASE_URL\",\"CLAUDE_CODE_ARTIFACT_VIEWER_BASE_URL\",...dr]",
+          "variable": true
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "uL",
+          "start": 50903,
+          "end": 51086,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "c08aa84e46e380f144e34ee5df60bd4eca9b06fa37c39050753d18cea99381f2",
+          "source": "uL=[\"ANTHROPIC_API_KEY\",\"ANTHROPIC_AUTH_TOKEN\",\"CLAUDE_CODE_OAUTH_TOKEN\",\"AWS_BEARER_TOKEN_BEDROCK\",\"ANTHROPIC_FOUNDRY_API_KEY\",\"ANTHROPIC_FOUNDRY_AUTH_TOKEN\",\"ANTHROPIC_AWS_API_KEY\"]",
+          "variable": true
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "fo",
+          "start": 53056,
+          "end": 53124,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "d876492188f2a1118730a7e110884a4f11565fdc359dec20817144be77ef3ea4",
+          "source": "fo=[\"AWS_ACCESS_KEY_ID\",\"AWS_SECRET_ACCESS_KEY\",\"AWS_SESSION_TOKEN\"]",
+          "variable": true
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "FSt",
+          "start": 53125,
+          "end": 53254,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "6f6d92f0822f84e0045702f4c83ddda2c9f18ef0abd8d61c33b3720951bccb51",
+          "source": "FSt=[...fo,\"AWS_PROFILE\",\"AWS_CONFIG_FILE\",\"AWS_SHARED_CREDENTIALS_FILE\",\"GOOGLE_APPLICATION_CREDENTIALS\",\"GOOGLE_CLOUD_PROJECT\"]",
+          "variable": true
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "ho",
+          "start": 53345,
+          "end": 53626,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "700d8839a4e88e6d3ab83d1c6280b53e6856e9e8920cd469a1f1a36c936c193b",
+          "source": "ho=[\"AWS_CONTAINER_CREDENTIALS_FULL_URI\",\"AWS_CONTAINER_CREDENTIALS_RELATIVE_URI\",\"AWS_CONTAINER_AUTHORIZATION_TOKEN\",\"AWS_CONTAINER_AUTHORIZATION_TOKEN_FILE\",\"AWS_EC2_METADATA_SERVICE_ENDPOINT\",\"AWS_EC2_METADATA_SERVICE_ENDPOINT_MODE\",\"AWS_WEB_IDENTITY_TOKEN_FILE\",\"AWS_ROLE_ARN\"]",
+          "variable": true
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "PCn",
+          "start": 53627,
+          "end": 53718,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "74663b0ed618c06887ba72a6e84c8c5f6737c30306b60809b2244f4e95378e68",
+          "source": "PCn=[\"GCE_METADATA_HOST\",\"GCE_METADATA_ROOT\",\"GCE_METADATA_IP\",\"METADATA_SERVER_DETECTION\"]",
+          "variable": true
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "cr",
+          "start": 55570,
+          "end": 55767,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "2866910c1c47f8eb0b985db3d71492041a441cdee641469296e30fb39966df0d",
+          "source": "cr=[\"apiKeyHelper\",\"awsAuthRefresh\",\"awsCredentialExport\",\"fileSuggestion\",\"gcpAuthRefresh\",\"otelHeadersHelper\",\"processWrapper\",\"policyHelpers\",\"proxyAuthHelper\",\"statusLine\",\"subagentStatusLine\"]",
+          "variable": true
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "yo",
+          "start": 55768,
+          "end": 55806,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "49dd3cb2cb812fc6ea08cb31715e960ba76fd8603ee7b48c1c83e9e63ffb4733",
+          "source": "yo=[\"bwrapPath\",\"ripgrep\",\"socatPath\"]",
+          "variable": true
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "ur",
+          "start": 55807,
+          "end": 56080,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "50a8fbbb4b8ae68c5feb2bd797d6c19bf53991c0e5cf974ffce66f3f6cadae24",
+          "source": "ur=[\"allowAppleEvents\",\"credentials\",\"enableWeakerNestedSandbox\",\"enableWeakerNetworkIsolation\",\"filesystem.disabled\",\"network.allowAllUnixSockets\",\"network.allowMachLookup\",\"network.allowUnixSockets\",\"network.httpProxyPort\",\"network.socksProxyPort\",\"network.tlsTerminate\"]",
+          "variable": true
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "pr",
+          "start": 56081,
+          "end": 56105,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "e7a5be9586d0a32c69febed7a8ae9af58ac7e2871c76dac11f8bac112e8dd9c9",
+          "source": "pr=[\"required\",\"egress\"]",
+          "variable": true
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "Jc",
+          "start": 56106,
+          "end": 63040,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "dc7005f2cbc806692b3483b101b662843e1dfeb8be7f1acfcab995df0eb0b2c6",
+          "source": "Jc=new Set([\"ANTHROPIC_BEDROCK_REGION_PREFIX\",\"ANTHROPIC_BEDROCK_SERVICE_TIER\",\"ANTHROPIC_CUSTOM_MODEL_OPTION\",\"ANTHROPIC_CUSTOM_MODEL_OPTION_DESCRIPTION\",\"ANTHROPIC_CUSTOM_MODEL_OPTION_NAME\",\"ANTHROPIC_CUSTOM_MODEL_OPTION_SUPPORTED_CAPABILITIES\",\"ANTHROPIC_DEFAULT_FABLE_MODEL\",\"ANTHROPIC_DEFAULT_FABLE_MODEL_DESCRIPTION\",\"ANTHROPIC_DEFAULT_FABLE_MODEL_NAME\",\"ANTHROPIC_DEFAULT_FABLE_MODEL_SUPPORTED_CAPABILITIES\",\"ANTHROPIC_DEFAULT_MODEL\",\"ANTHROPIC_DEFAULT_HAIKU_MODEL\",\"ANTHROPIC_DEFAULT_HAIKU_MODEL_DESCRIPTION\",\"ANTHROPIC_DEFAULT_HAIKU_MODEL_NAME\",\"ANTHROPIC_DEFAULT_HAIKU_MODEL_SUPPORTED_CAPABILITIES\",\"ANTHROPIC_DEFAULT_OPUS_MODEL\",\"ANTHROPIC_DEFAULT_OPUS_MODEL_DESCRIPTION\",\"ANTHROPIC_DEFAULT_OPUS_MODEL_NAME\",\"ANTHROPIC_DEFAULT_OPUS_MODEL_SUPPORTED_CAPABILITIES\",\"ANTHROPIC_DEFAULT_SONNET_MODEL\",\"ANTHROPIC_DEFAULT_SONNET_MODEL_DESCRIPTION\",\"ANTHROPIC_DEFAULT_SONNET_MODEL_NAME\",\"ANTHROPIC_DEFAULT_SONNET_MODEL_SUPPORTED_CAPABILITIES\",\"ANTHROPIC_FOUNDRY_API_KEY\",\"ANTHROPIC_MODEL\",\"ANTHROPIC_SMALL_FAST_MODEL_AWS_REGION\",\"ANTHROPIC_SMALL_FAST_MODEL\",\"AWS_DEFAULT_REGION\",\"AWS_PROFILE\",\"AWS_REGION\",\"BASH_DEFAULT_TIMEOUT_MS\",\"BASH_MAX_OUTPUT_LENGTH\",\"BASH_MAX_TIMEOUT_MS\",\"CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR\",\"CLAUDE_CODE_API_KEY_HELPER_TTL_MS\",\"CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS\",\"CLAUDE_CODE_DISABLE_TERMINAL_TITLE\",\"CLAUDE_CODE_ENABLE_AUTO_MODE\",\"CLAUDE_CODE_ENABLE_DESIGN_SYNC\",\"CLAUDE_CODE_ENABLE_FEEDBACK_SURVEY_FOR_OTEL\",\"CLAUDE_CODE_ENABLE_TELEMETRY\",\"CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS\",\"CLAUDE_CODE_IDE_SKIP_AUTO_INSTALL\",\"CLAUDE_CODE_MAX_MCP_DESCRIPTION_LENGTH\",\"CLAUDE_CODE_MAX_OUTPUT_TOKENS\",\"CLAUDE_CODE_SKIP_BEDROCK_AUTH\",\"CLAUDE_CODE_SKIP_FOUNDRY_AUTH\",\"CLAUDE_CODE_SKIP_ANTHROPIC_AWS_AUTH\",\"CLAUDE_CODE_SKIP_ANTHROPIC_GOOGLE_CLOUD_AUTH\",\"CLAUDE_CODE_SKIP_MANTLE_AUTH\",\"CLAUDE_CODE_SKIP_VERTEX_AUTH\",\"CLAUDE_CODE_SUBAGENT_MODEL\",\"CLAUDE_CODE_USE_BEDROCK\",\"CLAUDE_CODE_USE_FOUNDRY\",\"CLAUDE_CODE_USE_ANTHROPIC_AWS\",\"CLAUDE_CODE_USE_ANTHROPIC_GOOGLE_CLOUD\",\"CLAUDE_CODE_USE_GATEWAY\",\"CLAUDE_CODE_USE_MANTLE\",\"CLAUDE_CODE_USE_POWERSHELL_TOOL\",\"CLAUDE_CODE_USE_VERTEX\",\"DISABLE_AUTOUPDATER\",\"DISABLE_BUG_COMMAND\",\"DISABLE_COST_WARNINGS\",\"DISABLE_FEEDBACK_COMMAND\",\"DISABLE_GROWTHBOOK\",\"DISABLE_INSTALLATION_CHECKS\",\"DISABLE_UPDATES\",\"ENABLE_TOOL_SEARCH\",\"MAX_MCP_OUTPUT_TOKENS\",\"MAX_THINKING_TOKENS\",\"MCP_CONNECT_TIMEOUT_MS\",\"MCP_TIMEOUT\",\"MCP_TOOL_TIMEOUT\",\"OTEL_EXPORTER_OTLP_COMPRESSION\",\"OTEL_EXPORTER_OTLP_HEADERS\",\"OTEL_EXPORTER_OTLP_LOGS_COMPRESSION\",\"OTEL_EXPORTER_OTLP_LOGS_HEADERS\",\"OTEL_EXPORTER_OTLP_LOGS_PROTOCOL\",\"OTEL_EXPORTER_OTLP_METRICS_COMPRESSION\",\"OTEL_EXPORTER_OTLP_METRICS_HEADERS\",\"OTEL_EXPORTER_OTLP_METRICS_PROTOCOL\",\"OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE\",\"OTEL_EXPORTER_OTLP_PROTOCOL\",\"OTEL_EXPORTER_OTLP_TRACES_COMPRESSION\",\"OTEL_EXPORTER_OTLP_TRACES_HEADERS\",\"OTEL_EXPORTER_OTLP_TRACES_PROTOCOL\",\"OTEL_LOG_ASSISTANT_RESPONSES\",\"OTEL_LOG_TOOL_CONTENT\",\"OTEL_LOG_TOOL_DETAILS\",\"OTEL_LOG_USER_PROMPTS\",\"OTEL_LOGS_EXPORT_INTERVAL\",\"OTEL_LOGS_EXPORTER\",\"OTEL_METRIC_EXPORT_INTERVAL\",\"OTEL_METRICS_EXPORTER\",\"OTEL_METRICS_INCLUDE_ACCOUNT_UUID\",\"OTEL_METRICS_INCLUDE_ENTRYPOINT\",\"OTEL_METRICS_INCLUDE_REPOSITORY\",\"OTEL_METRICS_INCLUDE_RESOURCE_ATTRIBUTES\",\"OTEL_METRICS_INCLUDE_SESSION_ID\",\"OTEL_METRICS_INCLUDE_VERSION\",\"OTEL_RESOURCE_ATTRIBUTES\",\"OTEL_SERVICE_NAME\",\"OTEL_TRACES_EXPORT_INTERVAL\",\"OTEL_TRACES_EXPORTER\",\"USE_BUILTIN_RIPGREP\",\"VERTEX_REGION_CLAUDE_3_5_HAIKU\",\"VERTEX_REGION_CLAUDE_3_5_SONNET\",\"VERTEX_REGION_CLAUDE_3_7_SONNET\",\"VERTEX_REGION_CLAUDE_4_0_OPUS\",\"VERTEX_REGION_CLAUDE_4_0_SONNET\",\"VERTEX_REGION_CLAUDE_4_1_OPUS\",\"VERTEX_REGION_CLAUDE_4_5_OPUS\",\"VERTEX_REGION_CLAUDE_4_6_OPUS\",\"VERTEX_REGION_CLAUDE_4_7_OPUS\",\"VERTEX_REGION_CLAUDE_4_8_OPUS\",\"VERTEX_REGION_CLAUDE_5_OPUS\",\"VERTEX_REGION_CLAUDE_5_5_OPUS\",\"VERTEX_REGION_CLAUDE_FABLE_5\",\"VERTEX_REGION_CLAUDE_FABLE_5_1\",\"VERTEX_REGION_CLAUDE_4_5_SONNET\",\"VERTEX_REGION_CLAUDE_4_6_SONNET\",\"VERTEX_REGION_CLAUDE_5_SONNET\",\"VERTEX_REGION_CLAUDE_5_5_SONNET\",\"VERTEX_REGION_CLAUDE_HAIKU_4_5\",\"CLAUDE_AUTOCOMPACT_PCT_OVERRIDE\",\"CLAUDE_CODE_AUTO_COMPACT_WINDOW\",\"CLAUDE_CODE_DISABLE_UNKNOWN_MODEL_WINDOW_ENFORCEMENT\",\"CLAUDE_CODE_MAX_CONTEXT_TOKENS\",\"DISABLE_AUTO_COMPACT\",\"DISABLE_COMPACT\",\"CLAUDE_CODE_ALWAYS_ENABLE_EFFORT\",\"CLAUDE_CODE_DISABLE_ADAPTIVE_THINKING\",\"CLAUDE_CODE_DISABLE_FAST_MODE\",\"CLAUDE_CODE_DISABLE_LEGACY_MODEL_REMAP\",\"CLAUDE_CODE_DISABLE_NONSTREAMING_FALLBACK\",\"CLAUDE_CODE_DISABLE_THINKING\",\"CLAUDE_CODE_EFFORT_LEVEL\",\"CLAUDE_CODE_MAX_EFFORT_REMINDER\",\"CLAUDE_CODE_PROMPT_CACHE_TTL\",\"CLAUDE_CODE_SUBAGENT_PROMPT_CACHE_TTL\",\"DISABLE_INTERLEAVED_THINKING\",\"DISABLE_PROMPT_CACHING\",\"DISABLE_PROMPT_CACHING_FABLE\",\"DISABLE_PROMPT_CACHING_HAIKU\",\"DISABLE_PROMPT_CACHING_OPUS\",\"DISABLE_PROMPT_CACHING_SONNET\",\"ENABLE_PROMPT_CACHING_1H\",\"ENABLE_PROMPT_CACHING_1H_BEDROCK\",\"FALLBACK_FOR_ALL_PRIMARY_MODELS\",\"FORCE_PROMPT_CACHING_5M\",\"CLAUDE_AUTO_BACKGROUND_TASKS\",\"CLAUDE_CODE_DISABLE_ADVISOR_TOOL\",\"CLAUDE_CODE_DISABLE_AGENT_VIEW\",\"CLAUDE_CODE_DISABLE_ARTIFACT\",\"CLAUDE_CODE_DISABLE_BACKGROUND_TASKS\",\"CLAUDE_CODE_DISABLE_BUNDLED_SKILLS\",\"CLAUDE_CODE_DISABLE_CRON\",\"CLAUDE_CODE_DISABLE_EXPLORE_PLAN_AGENTS\",\"CLAUDE_CODE_DISABLE_FEEDBACK_SURVEY\",\"CLAUDE_CODE_DISABLE_FILE_CHECKPOINTING\",\"CLAUDE_CODE_DISABLE_MCP_TASK_BACKGROUND\",\"CLAUDE_CODE_DISABLE_MEMORY_RO_UNSAVED_NOTICE\",\"CLAUDE_CODE_DISABLE_WORKFLOWS\",\"CLAUDE_CODE_ENABLE_AWAY_SUMMARY\",\"CLAUDE_CODE_ENABLE_FINE_GRAINED_TOOL_STREAMING\",\"CLAUDE_CODE_ENABLE_FUNCTION_HOOKS\",\"CLAUDE_CODE_ENABLE_PROMPT_SUGGESTION\",\"CLAUDE_CODE_ENABLE_TASKS\",\"CLAUDE_CODE_FORK_SUBAGENT\",\"CLAUDE_CODE_PLAN_MODE_REQUIRED\",\"DISABLE_DOCTOR_COMMAND\",\"DISABLE_EXTRA_USAGE_COMMAND\",\"DISABLE_INSTALL_GITHUB_APP_COMMAND\",\"DISABLE_LOGIN_COMMAND\",\"DISABLE_LOGOUT_COMMAND\",\"DISABLE_UPGRADE_COMMAND\",\"CLAUDE_AX_SCREEN_READER\",\"CLAUDE_CODE_ACCESSIBILITY\",\"CLAUDE_CODE_DISABLE_ALTERNATE_SCREEN\",\"CLAUDE_CODE_DISABLE_MOUSE\",\"CLAUDE_CODE_DISABLE_MOUSE_CLICKS\",\"CLAUDE_CODE_DISABLE_VIRTUAL_SCROLL\",\"CLAUDE_CODE_FORCE_STRIKETHROUGH\",\"CLAUDE_CODE_FORCE_TERMINAL_IMAGES\",\"CLAUDE_CODE_HIDE_CWD\",\"CLAUDE_CODE_NATIVE_CURSOR\",\"CLAUDE_CODE_NO_FLICKER\",\"CLAUDE_CODE_SCROLL_SPEED\",\"CLAUDE_CODE_SYNTAX_HIGHLIGHT\",\"API_TIMEOUT_MS\",\"CLAUDE_ASYNC_AGENT_STALL_TIMEOUT_MS\",\"CLAUDE_CODE_FILE_READ_MAX_OUTPUT_TOKENS\",\"CLAUDE_CODE_GLOB_TIMEOUT_SECONDS\",\"CLAUDE_CODE_MAX_RETRIES\",\"CLAUDE_CODE_MAX_SUBAGENTS_PER_SESSION\",\"CLAUDE_CODE_MAX_TOOL_USE_CONCURRENCY\",\"CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION\",\"CLAUDE_CODE_MCP_AUTO_BACKGROUND_MS\",\"CLAUDE_CODE_MCP_TOOL_IDLE_TIMEOUT\",\"CLAUDE_CODE_TEAM_TEARDOWN_PARK_TIMEOUT_MS\",\"CLAUDE_STREAM_FIRST_BYTE_TIMEOUT_MS\",\"CLAUDE_STREAM_IDLE_TIMEOUT_MS\",\"MAX_STRUCTURED_OUTPUT_RETRIES\",\"MCP_REMOTE_SERVER_CONNECTION_BATCH_SIZE\",\"MCP_SERVER_CONNECTION_BATCH_SIZE\",\"SLASH_COMMAND_TOOL_CHAR_BUDGET\",\"TASK_MAX_OUTPUT_LENGTH\",\"MCP_CONNECTION_NONBLOCKING\",\"CLAUDE_ENABLE_BYTE_WATCHDOG\",\"CLAUDE_ENABLE_BYTE_WATCHDOG_BEDROCK\",\"CLAUDE_ENABLE_STREAM_WATCHDOG\"])",
+          "variable": true
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "z8r",
+          "start": 63041,
+          "end": 63216,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "32d5bfd32dbcd8b05783cfa1d1c48852ad8476a8522ec535438db45a91938079",
+          "source": "z8r=new Set([\"API_FORCE_IDLE_TIMEOUT\",\"CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC\",\"CLAUDE_CODE_DISABLE_WEB_FETCH\",\"DISABLE_ERROR_REPORTING\",\"DISABLE_TELEMETRY\",\"DO_NOT_TRACK\"])",
+          "variable": true
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "qc",
+          "start": 63217,
+          "end": 63287,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "ff622c6d0747ae0c5f18dba32e0a0f9c9a2d46efdfe51e658f0c83a5ce7be887",
+          "source": "qc=new Set([\"ENABLE_BETA_TRACING_DETAILED\",\"OTEL_LOG_RAW_API_BODIES\"])",
+          "variable": true
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "Zc",
+          "start": 63288,
+          "end": 63664,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "ce3d28dba686ec57ab2d946e9e01e618585008b78a72e7af83312a0e13d5aa01",
+          "source": "Zc=/auth|key|token|cookie|secret|credential|session|signature|passw|jwt|assertion|cert|oidc|org|tenant|account|project|workspace|user|email|identity|principal|consumer|client|host|url|base|target|upstream|endpoint|proxy|forward|route|fallback|override|apigw|x-goog-|l5d-|bypass|guardrail|amz|x-ms-|azureml|extra-parameters|envoy|helicone|litellm|cf-aig|cf-access|beta|version/",
+          "variable": true
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "Qc",
+          "start": 63665,
+          "end": 63886,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "1d6089c4d8dbaa804ca6e0fe07257c3a59d4daa58edaafb9ef935574347d9e38",
+          "source": "function Qc(e){if(/\\r(?!\\n)/.test(e))return!0;return e.split(/\\n|\\r\\n/).some((n)=>{let s=n.indexOf(\":\");if(s===-1)return!1;let r=n.slice(0,s).trim();return!eu.test(r)||LSt(n.slice(s+1))!==null||Zc.test(r.toLowerCase())})}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "eu",
+          "start": 63890,
+          "end": 63924,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "732fca38d196200730ec6f411437273ce2878c6bce32c1de128b69bb4b1ada16",
+          "source": "eu=/^[!#$%&'*+.^_`|~0-9A-Za-z-]+$/",
+          "variable": true
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "BSt",
+          "start": 63925,
+          "end": 64031,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "467df3eeb748ead75cbaf74e115de43bc209aeb4099aedcbec218e0cc08b1302",
+          "source": "function BSt(e,n){let s=e.toUpperCase();return Jc.has(s)||gr(s,n)||s===\"ANTHROPIC_CUSTOM_HEADERS\"&&!Qc(n)}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "gr",
+          "start": 64078,
+          "end": 64138,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "6a02993f797683b4ba964a31421ce57220cd113f6362077b883fb1047c85041d",
+          "source": "function gr(e,n){return z8r.has(e)&&Le(n)||qc.has(e)&&gs(n)}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "JF",
+          "start": 205150,
+          "end": 205186,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "ec1f8892fc2139c027fa520584f5033637213459319e05547b580699fff468a2",
+          "source": "JF=[\"macos\",\"linux\",\"windows\",\"wsl\"]",
+          "variable": true
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "ft",
+          "start": 313338,
+          "end": 313476,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "0a82bccc6eca6feadf872326491810736cac4114232340245e865f035b0ce367",
+          "source": "ft=[{alias:\"additionalMarketplaces\",canonical:\"extraKnownMarketplaces\"},{alias:\"allowedMarketplaces\",canonical:\"strictKnownMarketplaces\"}]",
+          "variable": true
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "Ji",
+          "start": 315761,
+          "end": 315887,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "a915b9b3e26a2ecf367a3cc82ca123eb45eac9d7ae1894614e5758e197f7f3bb",
+          "source": "function Ji(e){if(typeof e!==\"object\"||e===null)return!1;let n=Object.getPrototypeOf(e);return n===Object.prototype||n===null}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "aO",
+          "start": 315924,
+          "end": 316086,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "b957f56d05f9f4c8c2d4aab0972270743cb95869e23d207950592301e0030219",
+          "source": "function aO(e){if(Array.isArray(e))return e.map(aO);if(e!==null&&typeof e===\"object\"){let n={};for(let s of Object.keys(e).sort())n[s]=aO(e[s]);return n}return e}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "Sm",
+          "start": 316180,
+          "end": 316213,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "8dd7ca71011cce9e3877225ade8187e9e766239f98114dcff3369734637f0599",
+          "source": "Sm=[\"enabled\",\"enabledPlatforms\"]",
+          "variable": true
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "Gt",
+          "start": 316214,
+          "end": 316241,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "2066f85c44d0ff109b69f26e6207835e7975df9326702af74bf92114eabe9340",
+          "source": "Gt=\"network.allowedDomains\"",
+          "variable": true
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "bm",
+          "start": 316242,
+          "end": 316283,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "9bbda5f97aacce9c70e0200b2a3ba01b2997f422d36abc85a447454a6cd57a31",
+          "source": "bm=new Set([\"OTEL_LOG_MANAGED_SETTINGS\"])",
+          "variable": true
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "fL",
+          "start": 316284,
+          "end": 316736,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "3418167b0c0c994c6ac021e7de663f600ef485ebe1ee245d76e67b1e504ddcf2",
+          "source": "function fL(e){if(!e)return{shellSettings:{},envVars:{},sandboxSettings:{},isolationSettings:{},hasHooks:!1,payloadSlots:{}};let n=Ja(e),s=Em(e);km([n,...s.map(([,c])=>c)]);let r={};for(let[c,p]of s){let g={shellSettings:p.hasHooks?{...p.shellSettings,hooks:Ge(p.hooks)}:p.shellSettings,envVars:p.envVars,sandboxSettings:p.sandboxSettings,isolationSettings:p.isolationSettings};if(Yt(g))r[c]=g}let{sandboxSwitches:i,...d}=n;return{...d,payloadSlots:r}}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "Ja",
+          "start": 316736,
+          "end": 319009,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "ef7a51ec476970ada91b55656919c3d6d95ac22958fa9b2ecc4a50d9451272eb",
+          "source": "function Ja(e){let n={},s;for(let y of cr){let S=e[y];if(y===\"policyHelpers\"){if(S!==null&&typeof S===\"object\")for(let A of JF){let D=sl(S[A]);if(D){if(n[`policyHelpers.${A}`]=D.command,D.scriptSize)s??={},s[`policyHelpers.${A}`]=D.scriptSize}}continue}let b;if(typeof S===\"string\")b=S;else if(S!==null&&typeof S===\"object\"&&\"command\"in S&&typeof S.command===\"string\")b=S.command;if(b!==void 0&&b.length>0)n[y]=b}let r=Xm(e);if(r&&typeof r===\"object\")for(let[y,S]of Object.entries(r)){let b=S?.source;if(!b||typeof b!==\"object\")continue;if(b.source===\"url\"&&typeof b.headersHelper===\"string\"&&b.headersHelper.length>0)n[`extraKnownMarketplaces[${_(y)}].source.headersHelper`]=Fa(b.headersHelper,\"url\",b.url);if(b.source===\"settings\"&&Array.isArray(b.plugins)){let A=new Map;for(let D of b.plugins){let v=_(D?.name),K=A.get(v)??0;A.set(v,K+1);let M=D?.source;if(M!==null&&typeof M===\"object\"&&\"source\"in M&&M.source===\"command\"&&\"command\"in M&&typeof M.command===\"string\"&&M.command.length>0)n[`extraKnownMarketplaces[${_(y)}].plugins[${_(D.name)}][${K}].source.command`]=M.command;if(typeof D?.headersHelper===\"string\"&&D.headersHelper.length>0){let z=D.source,Z=z!==null&&typeof z===\"object\";n[`extraKnownMarketplaces[${_(y)}].plugins[${_(D.name)}][${K}].headersHelper`]=Fa(D.headersHelper,Z&&\"source\"in z?z.source:void 0,Z&&\"url\"in z?z.url:void 0)}}}}let i=e.sandbox,d={},c={enabled:Ot(i,\"enabled\"),enabledPlatforms:Ot(i,\"enabledPlatforms\"),[Gt]:Ot(i,Gt)};if(i!==null&&typeof i===\"object\"){let y={enabled:c.enabled,enabledPlatforms:c.enabledPlatforms};for(let S of yo){let b=Tm(i[S]);if(b)n[`sandbox.${S}`]=Ge({value:b,...y})}for(let S of ur){let b=Ot(i,S);if(wm(S,b))d[`sandbox.${S}`]=Ge({value:b,...y,...Qa.has(S)&&{allowedDomains:el(c[Gt])}})}}let p=e.isolation,g={};for(let y of pr){let S=Ot(p,y);if(Am(y,S))g[`isolation.${y}`]=Ge({value:S})}let h={};if(e.env&&typeof e.env===\"object\")for(let[y,S]of Object.entries(e.env)){if(S===void 0)continue;let b=String(S);if(b.length>0&&!bm.has(y.toUpperCase())&&!BSt(y,b))h[y]=b}let m=e.hooks!==void 0&&e.hooks!==null&&typeof e.hooks===\"object\"&&Object.keys(e.hooks).length>0;return{shellSettings:n,inlineHelperScriptSizes:s,envVars:h,sandboxSettings:d,isolationSettings:g,hasHooks:m,hooks:m?e.hooks:void 0,sandboxSwitches:c}}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "Em",
+          "start": 319009,
+          "end": 319061,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "775348955fd425426159fc016c4ec9c6f7e1cf7c7aa6fddf02faee7ddc05b338",
+          "source": "function Em(e){return As(e).map(([n,s])=>[n,Ja(s)])}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "As",
+          "start": 319061,
+          "end": 319224,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "842174dade05006997f6edeff56c7d8ea12caf3fcf04e500336567a381db05a9",
+          "source": "function As(e){let n=[];for(let s of Za){let r=`policyHelpers.${s}`,i=Ot(e,r);if(!Ji(i))continue;let{policyHelper:d,policyHelpers:c,...p}=i;n.push([r,p])}return n}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "km",
+          "start": 319301,
+          "end": 319786,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "ffb608f920afd70ad683ca4cb8161437cd0e0640584580dcaa8d9dffcd376fae",
+          "source": "function km(e){let n=e.map((r)=>Object.keys(r.sandboxSettings).length>0||yo.some((i)=>r.shellSettings[`sandbox.${i}`]!==void 0)),s=e.map((r)=>[...Qa].some((i)=>r.sandboxSettings[`sandbox.${i}`]!==void 0));e.forEach((r,i)=>{if(n.some((d,c)=>d&&c!==i))for(let d of Sm){let c=r.sandboxSwitches[d];if(c!==void 0)r.sandboxSettings[`sandbox.${d}`]=Ge({value:c})}if(s.some((d,c)=>d&&c!==i)){let d=r.sandboxSwitches[Gt];if(d!==void 0)r.sandboxSettings[`sandbox.${Gt}`]=Ge({value:el(d)??d})}})}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "Za",
+          "start": 319790,
+          "end": 319843,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "278214d0a7e49d5c4020262bfa6a9ea99e8d4eeaf4a52b49fb244ee017d0b19c",
+          "source": "Za=[...JF.map((e)=>`${e}.defaultSettings`),\"default\"]",
+          "variable": true
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "xe",
+          "start": 319844,
+          "end": 319976,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "fc92b35e930df82f422558fdcb659b89a6cca316b78337617156112926518ad2",
+          "source": "function xe(e){let n=[];for(let s of Za){let r=`policyHelpers.${s}`,i=e.payloadSlots[r];if(i!==void 0&&Yt(i))n.push([r,i])}return n}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "Yt",
+          "start": 320043,
+          "end": 320220,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "6df9684e47a8d82f112d779a3312e59b4ea2de08ec2e90eaaf1d17817e930aa7",
+          "source": "function Yt(e){return Object.keys(e.shellSettings).length>0||Object.keys(e.envVars).length>0||Object.keys(e.sandboxSettings).length>0||Object.keys(e.isolationSettings).length>0}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "Qa",
+          "start": 320224,
+          "end": 320274,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "748ce952f88ca1c185224fd1aba03ed4ba147e017115ed1717432bd9a4d570f5",
+          "source": "Qa=new Set([\"credentials\",\"network.tlsTerminate\"])",
+          "variable": true
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "el",
+          "start": 320275,
+          "end": 320366,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "63370568fc76d9bed357cf8f1bb5599f10590c7f413ef79fda2758a43ba186f4",
+          "source": "function el(e){return Array.isArray(e)?L(e.filter((n)=>typeof n===\"string\")).sort():void 0}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "Ot",
+          "start": 320366,
+          "end": 320474,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "8551c7924c82a2f7a47cc0e004b7388e78e2467a2fa206bfcc04be88deed7b31",
+          "source": "function Ot(e,n){let s=e;for(let r of n.split(\".\")){if(s===null||typeof s!==\"object\")return;s=s[r]}return s}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "wm",
+          "start": 320474,
+          "end": 320609,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "24d7a56425b3d54d34afa8dc3b6df9d24bd55e57a5a95d853efd66a6f6afa1a8",
+          "source": "function wm(e,n){if(n===void 0||n===null||n===!1)return!1;if(Array.isArray(n)&&n.length===0)return!1;return!(e===\"credentials\"&&Om(n))}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "Am",
+          "start": 320609,
+          "end": 320836,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "26afb04170c4a6a5a258645648a3e38cffbcd35ab493dd249b6438b7822e12c0",
+          "source": "function Am(e,n){if(n===void 0||n===null)return!1;switch(e){case\"required\":return n!==!1;case\"egress\":return!Ji(n)||Object.entries(n).some(([s,r])=>Rm.has(s)?r!==void 0&&r!==null&&!(Array.isArray(r)&&r.length===0):r!==void 0)}}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "Rm",
+          "start": 320840,
+          "end": 320882,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "25cbf1874f9c65f72e368bd997eb3819c29bffb366dbf881f8d57d9ddb226d2d",
+          "source": "Rm=new Set([\"allowedHosts\",\"deniedHosts\"])",
+          "variable": true
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "Om",
+          "start": 320883,
+          "end": 321269,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "194ad6c7cae4e55b61c6a325eaf89fc8539ed1662b8b2992f1ef6a901bb1be5e",
+          "source": "function Om(e){if(typeof e!==\"object\"||e===null)return!1;return Object.entries(e).every(([n,s])=>{if(s===void 0)return!0;if(n===\"files\"||n===\"envVars\")return Array.isArray(s)&&s.every((r)=>typeof r===\"object\"&&r!==null&&r.mode===\"deny\");if(n===\"sigv4\")return typeof s===\"object\"&&s!==null&&Object.values(s).every((r)=>r===void 0||r===\"deny\");return n===\"allowPlaintextInject\"&&s===!1})}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "vm",
+          "start": 321269,
+          "end": 321329,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "2940ad6af2f7c08afdc2f849e1ceee085d64b72aba7def37ee52ebf963d08e48",
+          "source": "function vm(e){return Object.keys(e.shellSettings).some(tl)}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "tl",
+          "start": 321329,
+          "end": 321390,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "fea88c5535b9dd5117a4a7438f446efe918a22803d18c9035a4d75b47ed00bd7",
+          "source": "function tl(e){return JF.some((n)=>e===`policyHelpers.${n}`)}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "nl",
+          "start": 321390,
+          "end": 321515,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "9bbb5ee2ea2ef574f3dc83a7fc82dc6b05fc89701c5a7b3fdf4f2d1955c77d91",
+          "source": "function nl(e){return vm(e)||Object.keys(e.shellSettings).some((n)=>n.startsWith(\"extraKnownMarketplaces[\"))||xe(e).length>0}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "ol",
+          "start": 321515,
+          "end": 321558,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "df3e60c666d1baf7f4c62c4d6476c69d85f19f5b1e625bac27bc57dc0aa36d42",
+          "source": "function ol(e){return e===\"sh\"||e===\"pwsh\"}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "sl",
+          "start": 321728,
+          "end": 322027,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "655cec4140428fd9f53913e85d7962799cd0361e6d5484e2546cb87411714b99",
+          "source": "function sl(e){if(e===null||typeof e!==\"object\")return;let{path:n,script:s,interpreter:r,timeoutMs:i,refreshIntervalMs:d}=e,c,p;if(typeof n===\"string\"&&n)c=n;else if(typeof s===\"string\"&&s&&ol(r))c={interpreter:r,script:rl(s)},p=Pm(s);else return;return{command:_([c,i??null,d??null]),scriptSize:p}}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "Pm",
+          "start": 322027,
+          "end": 322122,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "d94fd8b7db4f6fe57065d8e0d6b1eb90595b7c7a6567fe7a3d1838bc22aecdf3",
+          "source": "function Pm(e){return{bytes:Buffer.byteLength(e,\"utf8\"),lines:Vt(e,`\n`)+(e.endsWith(`\n`)?0:1)}}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "rl",
+          "start": 322122,
+          "end": 322153,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "b542391036816903d00813bf15d1cfc5f9994c40baaf26dbb0dc3c1fba859504",
+          "source": "function rl(e){return Zt(_(e))}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "Tm",
+          "start": 322153,
+          "end": 322396,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "7ab234b3f3fd40ca145d413940d412e2e87ea46905727ea774a2fc17ff46ab44",
+          "source": "function Tm(e){if(typeof e===\"string\")return e||void 0;if(e===null||typeof e!==\"object\"||!(\"command\"in e)||typeof e.command!==\"string\"||!e.command)return;let n=\"args\"in e&&Array.isArray(e.args)?e.args.map(String):[];return _([e.command,...n])}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "ws",
+          "start": 322452,
+          "end": 322484,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "23099bc9a3446684ded4e0a36e9a1d52ffbd91f3c79450f05a12f3b1c55e86cf",
+          "source": "function ws(e){return Ge(il(e))}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "il",
+          "start": 322484,
+          "end": 322794,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "47a829a5ea5d2b165beb805e499d133097b14dd5e1c9efa86e610b71a484749c",
+          "source": "function il(e){return{shellSettings:e.shellSettings,envVars:e.envVars,sandboxSettings:Object.keys(e.sandboxSettings).length>0?e.sandboxSettings:void 0,...ja(e),hooks:e.hooks,payloadSlots:xe(e).length>0?Object.fromEntries(xe(e).map(([n,s])=>{let{isolationSettings:r,...i}=s;return[n,{...i,...ja(s)}]})):void 0}}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "ja",
+          "start": 322794,
+          "end": 322901,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "f58cdb03640593d46b9868c6ead107bc5b75bf56fcbb2b30b2937850a7a5f71f",
+          "source": "function ja(e){return Object.keys(e.isolationSettings).length>0?{isolationSettings:e.isolationSettings}:{}}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "Ge",
+          "start": 322901,
+          "end": 322932,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "accda42be3731e4831924139e3ab965afabcb0eb2803641842ad89f4a211d6d7",
+          "source": "function Ge(e){return _(aO(e))}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "cAn",
+          "start": 322932,
+          "end": 322965,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "f80721c93fb79ab3f5a25cbf38f688da5480968d212de00f55700f984db77a3b",
+          "source": "function cAn(e){return Zt(ws(e))}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "Rs",
+          "start": 322965,
+          "end": 323081,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "f56126fd38ff53a5a4e55d36bb2f226bf9e2864af2a2a1320c659c89227b2163",
+          "source": "function Rs(e,n,s){if(cAn(n)===e)return!0;return typeof s===\"string\"&&s.length>0&&Zt(Ge({...il(n),claudeMd:s}))===e}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "Fa",
+          "start": 323237,
+          "end": 323324,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "700d4e7e19832f041970de9825c14f624887e874b27fa105d6fc8c237a722540",
+          "source": "function Fa(e,n,s){return _([e,typeof n===\"string\"?n:null,typeof s===\"string\"?s:null])}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "Xm",
+          "start": 329728,
+          "end": 329963,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "1d779712cd33a9f49b20a25a2483156c2dbc676f834f2ee5dad3020f3d72beb1",
+          "source": "function Xm(e){let n=e.extraKnownMarketplaces;if(n!==void 0&&n!==null)return n;let s=e;for(let{alias:r,canonical:i}of ft){if(i!==\"extraKnownMarketplaces\")continue;let d=s[r];if(d!==void 0&&d!==null&&typeof d===\"object\")return d}return}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "ibt",
+          "start": 329967,
+          "end": 329993,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "c95a7c9998ce64f03bbc1f0521bc43e81dca7ff5568f81db6e99067ebf56aba2",
+          "source": "ibt=\"remote-settings.json\"",
+          "variable": true
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "Sfe",
+          "start": 330005,
+          "end": 330041,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "8c3d6d62718470633523e12cca548e2f2b315cecf836d3cbc127bc0a044c8ce1",
+          "source": "Sfe=\"remote-settings-helper-consent\"",
+          "variable": true
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "dAn",
+          "start": 330042,
+          "end": 330077,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "331b870c03a9a1000e207ba563c9df38603836c8d24e9e910e1f9222d548fbfb",
+          "source": "function dAn(){return gl(we(),Sfe)}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "ml",
+          "start": 330077,
+          "end": 330126,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "6be91315c5c755c817b8fab3a883cbbdcdc3313815906017c4118fa47f73fbfb",
+          "source": "function ml(e){let n=fL(e);return nl(n)?n:void 0}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "zYr",
+          "start": 330126,
+          "end": 330171,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "0511d80a29b4b46e6e3c05456cdbbf2c4ecefe8eea066fbd7be6b93f2b12beb5",
+          "source": "function zYr(e){let n=ml(e);return n&&cAn(n)}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "Fnr",
+          "start": 330171,
+          "end": 330240,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "afaac00110c83f30e969a0f9022f51bb58f2b4b1611cd0edfe9c7a801c2087a7",
+          "source": "function Fnr(e){return di(e,(n,s)=>s.startsWith(\"$\")&&s!==\"$schema\")}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "fl",
+          "start": 330240,
+          "end": 331850,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "abb3eb840810259b8020f3f90bc70b8e013eab63a0aef5e36925c6a7e8097cbc",
+          "source": "class fl{sessionCache=null;eligible=void 0;eligibilityMemo=void 0;ineligibleReason=void 0;evalPolicySnapshotOnly=!1;lastLoadStatus=void 0;lastLoadStatusChanged=Me();policySettingsNotified=!1;verifiedPayload=null;unverifiedView=null;projectedView=null;consentedPayload=null;deferredPayload=null;resetEpoch=0;backendView=void 0;replaceSessionCache(e,n){if(this.sessionCache=e,n?.verified){if(this.verifiedPayload=e,n.consentDeferred)this.deferredPayload=e}}seedFromDisk(e){this.sessionCache=e;let n=ml(e);if(n!==void 0){let s=ef();if(s===void 0||!Rs(s,n,e.claudeMd))return}this.consentedPayload??=e}markConsented(e){this.consentedPayload=e}dropConsentDeferral(){this.deferredPayload=null}markPolicySettingsNotified(){this.policySettingsNotified=!0}recordEligibility(e,n){if(this.eligible=e,n.memoize)this.eligibilityMemo=e,this.ineligibleReason=e?void 0:n.ineligibleReason}resetListener=null;registerResetListener(e){if(this.resetListener!==null)throw Error(\"registerSyncCacheResetListener: a listener is already registered; a second one would unhook the first\");this.resetListener=e}reset(){this.sessionCache=null,this.eligible=void 0,this.eligibilityMemo=void 0,this.ineligibleReason=void 0,this.evalPolicySnapshotOnly=!1,this.lastLoadStatus=void 0,this.policySettingsNotified=!1,this.verifiedPayload=null,this.unverifiedView=null,this.projectedView=null,this.consentedPayload=null,this.deferredPayload=null,this.resetEpoch++,this.emitLoadStatusChanged(void 0)}emitLoadStatusChanged(e){try{this.lastLoadStatusChanged.emit(e)}catch(n){t(`Remote settings: load-status listener threw: ${l(n)}`,{level:\"error\"})}}}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "Jm",
+          "start": 331854,
+          "end": 331874,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "ba940c824fbe51c1895eac0a0c2e0bef6aaf32fbd82150d4d22a4e8686aba00c",
+          "source": "Jm=new V(()=>new fl)",
+          "variable": true
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "ce",
+          "start": 331875,
+          "end": 331912,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "8dd1258a80d14f759e30788cf2b795fa9ff189ab9fcafa8b53ed66d76b7a3a72",
+          "source": "function ce(){return Jm.of(U().host)}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "Mwe",
+          "start": 331912,
+          "end": 331950,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "2f1e5d7acc2527f3f6e9e68130a634d09177c9660137ad2432528a21160dc2af",
+          "source": "function Mwe(){return ce().resetEpoch}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "uAn",
+          "start": 331950,
+          "end": 331994,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "c19f074ae52c8bae7331e7eff2a2fa8cd74f255cbbee9aeed67077b32e1571bc",
+          "source": "function uAn(){return ce().consentedPayload}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "$nr",
+          "start": 331994,
+          "end": 332032,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "c8a1e04575e1b5929464df4d194c6bf52d41f5ea051dfdd814c14431c69d558c",
+          "source": "function $nr(e){ce().markConsented(e)}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "gZe",
+          "start": 332074,
+          "end": 332130,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "f0440ef0a747c2544ebed915ebddb249118fd2ba2062045a29f0ed4a9c5b2f30",
+          "source": "function gZe(e,n,s){ce().replaceSessionCache(e,n),Ro(s)}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "wb",
+          "start": 332130,
+          "end": 332210,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "0bde08a8e8b110576ce5f61e93044c262e0deee147c56b36c9996a4c0d88b4aa",
+          "source": "function wb(){let{sessionCache:e,verifiedPayload:n}=ce();return e!==null&&e===n}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "abt",
+          "start": 332210,
+          "end": 332344,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "c058f48cbe470fa837beb3f61360baeed84cbd63d1d74081ef8712ca361204e1",
+          "source": "function abt(){let{sessionCache:e,verifiedPayload:n,consentedPayload:s,deferredPayload:r}=ce();return e!==null&&e===n&&(e===s||e===r)}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "aVt",
+          "start": 332673,
+          "end": 332717,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "aeca7eb59c1ab23dc441e74f30808d6825326e781a1f1251b72a3af4d9547d52",
+          "source": "function aVt(){return ce().ineligibleReason}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "pAn",
+          "start": 332717,
+          "end": 332790,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "6115a53b4e353caf1fb36d9b7f7cc26f50550ec718c3a1ba5f6ef6b0b3cd2b47",
+          "source": "function pAn(e){let n=ce();n.lastLoadStatus=e,n.emitLoadStatusChanged(e)}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "uI",
+          "start": 332790,
+          "end": 332831,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "247e6dca1e9f8d8af050ab7678cbe5988c7e6e6b670d46d9d8ab03eff8cbd17c",
+          "source": "function uI(){return ce().lastLoadStatus}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "oA",
+          "start": 332894,
+          "end": 332915,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "cb16f12b706092cafe06be5288c54aeddc3044bbf009ca3e36e961f2471d7b16",
+          "source": "function oA(){return}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "zje",
+          "start": 332915,
+          "end": 332965,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "da6aef7dd5fd071d49afe86fbd1203fb44b49bb3c0f4bdf0a785e9269e61edf6",
+          "source": "function zje(){return ce().evalPolicySnapshotOnly}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "QYr",
+          "start": 332965,
+          "end": 333011,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "8379defdf2078a4ca31570491d5bf1a9eafdb0fa6744e8833260757816e5e470",
+          "source": "function QYr(e){ce().evalPolicySnapshotOnly=e}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "E8o",
+          "start": 333011,
+          "end": 333073,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "cf300138f772041ab59674cc0663af0210b711870eedd27deb16a7e6fb24688f",
+          "source": "function E8o(e){return e!==null&&ce().projectedView?.view===e}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "qm",
+          "start": 333073,
+          "end": 333149,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "a9b21ef98bbf9043fc441c4e123c6b12d09856ea15a22a93221d2a50ac0ce14d",
+          "source": "function qm(e){return e&&zje()?{...nnr(e),managedSourcesBehavior:\"merge\"}:e}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "cVt",
+          "start": 333149,
+          "end": 333191,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "cb4ad4f0c5b5e67ec78b6415f90ff97b83610d073813a78883487e8520d8ef8d",
+          "source": "function cVt(){return oA()===void 0&&f$()}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "PZ",
+          "start": 333191,
+          "end": 333231,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "cb665906d99c90e1758602acf0974ec49855dd48544466fd0b128834d07d3d0b",
+          "source": "function PZ(){return oA()??gl(we(),ibt)}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "hl",
+          "start": 333351,
+          "end": 333361,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "0cba4221c35f674cc117a0b418b3931e3196672592bd98a2777231a0240d1525",
+          "source": "hl=8388608",
+          "variable": true
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "Zm",
+          "start": 333362,
+          "end": 333632,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "4dabcb555926e87e628c17b668085116da24fa8a0851b6e9c3065b4e27268044",
+          "source": "function Zm(){if(cVt())return null;try{let e=tf();if(e===null)return null;let n=Y(Do(e));if(!n||typeof n!==\"object\"||Array.isArray(n))return null;return Fnr(n)}catch(e){if(t$(e))t(`Remote settings: Disk cache exceeds ${hl} bytes; ignoring it as if absent`);return null}}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "Qm",
+          "start": 333636,
+          "end": 333643,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "b7fdcddbe14906818255f691f5971d426a8c041b92f9d423460f0bf7f9858bd6",
+          "source": "Qm=4096",
+          "variable": true
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "ef",
+          "start": 333644,
+          "end": 333757,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "28549816878d22e35af37ba4e8d99fd114acaf439a5d740d1b07bf9657a3b4fb",
+          "source": "function ef(){let e=Os();if(e!==void 0)return e.attestation;try{return gL(dAn(),Qm).trim()||void 0}catch{return}}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "tf",
+          "start": 333757,
+          "end": 333832,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "435ec00643559c4764e06c60ef45b2ad3fcfc80c89237b2dcc6e15c1180e0089",
+          "source": "function tf(){let e=Os();if(e!==void 0)return e.content;return gL(PZ(),hl)}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "Os",
+          "start": 333832,
+          "end": 334008,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "1a36ac41f66e6142c68068fb01e4ae9aa2f6126c33fa6bde1d1de60c21fe0117",
+          "source": "function Os(){let e=ce().backendView;if(!F()||e===void 0||!e.ready||e.stoodDown||oA()!==void 0)return;if(!Zfe(e.configHome)){e.standDown(\"config home changed\");return}return e}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "vs",
+          "start": 334012,
+          "end": 334042,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "044f8d2e35b980fb85014a3b239992725c477ff02ffa44bd78b5647d45f6c6e6",
+          "source": "vs=De.state(\"remote-settings\")",
+          "variable": true
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "Ps",
+          "start": 334043,
+          "end": 334059,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "06c3dd49b696d6eaeddd16de1e6fd81b7ebc30df336ed4dc35b4bef5b050d500",
+          "source": "Ps=De.state(Sfe)",
+          "variable": true
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "Vje",
+          "start": 334068,
+          "end": 334133,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "842d08d1edf614b0938ae914ac55597974e7ae87c8a53f27517d803f48b23a6e",
+          "source": "function Vje(e,n){ce().backendView?.written(e===\"cache\"?vs:Ps,n)}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "bl",
+          "start": 338616,
+          "end": 340583,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "bce7a0c6023fa9a433286e1c98efc4037c6f1f07fe58839627f618bf174fb500",
+          "source": "bl=new Set([\"HTTPS_PROXY\",\"HTTP_PROXY\",\"NO_PROXY\",\"CLAUDE_CODE_PROXY_RESOLVES_HOSTS\",\"CLAUDE_CODE_ENABLE_PROXY_AUTH_HELPER\",\"CLAUDE_CODE_PROXY_AUTH_HELPER_TTL_MS\",\"API_FORCE_IDLE_TIMEOUT\",\"ANTHROPIC_UNIX_SOCKET\",\"NODE_EXTRA_CA_CERTS\",\"CLAUDE_CODE_CERT_STORE\",\"CLAUDE_CODE_CLIENT_CERT\",\"CLAUDE_CODE_CLIENT_KEY\",\"CLAUDE_CODE_CLIENT_KEY_PASSPHRASE\",\"ALL_PROXY\",\"NODE_OPTIONS\",\"NODE_TLS_REJECT_UNAUTHORIZED\",...Kj,...qF,\"AWS_ENDPOINT_URL_STS\",\"AWS_ENDPOINT_URL\",\"AWS_ENDPOINT_URL_SSO\",\"AWS_ENDPOINT_URL_SSO_OIDC\",\"AWS_ENDPOINT_URL_BEDROCK\",\"AWS_ENDPOINT_URL_BEDROCK_RUNTIME\",...FSt,...ho,...PCn,\"CLOUDSDK_CONFIG\",\"GOOGLE_EXTERNAL_ACCOUNT_ALLOW_EXECUTABLES\",\"GCLOUD_PROJECT\",\"CLAUDE_CODE_CUSTOM_OAUTH_URL\",...uL,\"CLAUDE_CODE_API_BASE_URL\",\"CLAUDE_CODE_OAUTH_REFRESH_TOKEN\",\"CLAUDE_CODE_OAUTH_SCOPES\",\"CLAUDE_CODE_OAUTH_CLIENT_ID\",\"CLAUDE_CODE_SESSION_ACCESS_TOKEN\",\"CLAUDE_SESSION_INGRESS_TOKEN_FILE\",\"CLAUDE_CODE_ENVIRONMENT_KIND\",\"CLAUDE_CODE_REMOTE_SESSION_ID\",\"ANTHROPIC_FEDERATION_RULE_ID\",\"ANTHROPIC_ORGANIZATION_ID\",\"ANTHROPIC_WORKSPACE_ID\",\"ANTHROPIC_SERVICE_ACCOUNT_ID\",\"ANTHROPIC_IDENTITY_TOKEN\",\"ANTHROPIC_IDENTITY_TOKEN_FILE\",\"ANTHROPIC_SCOPE\",\"ANTHROPIC_PROFILE\",\"ANTHROPIC_CONFIG_DIR\",\"CLAUDE_CODE_FEDERATION_CACHE_DIR\",\"HOME\",\"XDG_CONFIG_HOME\",\"APPDATA\",\"USERPROFILE\",\"HOMEDRIVE\",\"HOMEPATH\",\"PROGRAMDATA\",\"ALLUSERSPROFILE\",\"ANTHROPIC_CUSTOM_HEADERS\",\"CLAUDE_CODE_HOST_CREDS_FILE\",\"CLAUDE_CODE_PROVIDER_MANAGED_BY_HOST\",\"CLAUDE_CODE_HOST_AUTH_ENV_VAR\",\"CLAUDE_CONFIG_DIR\",\"CLAUDE_SECURESTORAGE_CONFIG_DIR\",\"CLAUDE_CODE_REMOTE_SETTINGS_PATH\",\"CLAUDE_CODE_MANAGED_SETTINGS_PATH\",\"CLAUDE_CODE_DISABLE_ADMIN_ENV_UNION\",\"CLAUDE_CODE_MOCK_REMOTE_SETTINGS\",\"USE_LOCAL_OAUTH\",\"USE_STAGING_OAUTH\",\"CLAUDE_LOCAL_OAUTH_API_BASE\",\"CLAUDE_LOCAL_OAUTH_APPS_BASE\",\"CLAUDE_LOCAL_OAUTH_CONSOLE_BASE\",\"CLAUDE_BRIDGE_BASE_URL\",\"CLAUDE_BRIDGE_OAUTH_TOKEN\",\"CLAUDE_BRIDGE_SESSION_INGRESS_URL\",\"CLAUDE_REMOTE_TOOLS_BRIDGE_URL\",\"CLAUDE_CODE_GB_BASE_URL\"].map((e)=>e.toUpperCase()))",
+          "variable": true
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "El",
+          "start": 340584,
+          "end": 340749,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "bc05734298f54db7e9d6730f83225dc96282d1e5040dca8d665dfa4785e9248f",
+          "source": "function El(e){if(!e||!e.env&&!(\"managedMcpServers\"in e))return e;let{managedMcpServers:n,...s}=e;return e.env?{...s,env:di(e.env,(r,i)=>bl.has(i.toUpperCase()))}:s}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "kl",
+          "start": 341161,
+          "end": 341222,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "4c3fa77c786a24b100f3e5be92901f82789ae28a6a3024caa045c4cca093a6b6",
+          "source": "function kl(e,n){return n===e.verifiedPayload||Boolean(oA())}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "mAn",
+          "start": 341222,
+          "end": 341442,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "98c240907e8728a8e6fd2356e97a1380f9555d1021a2455c9cf68e294588a7a9",
+          "source": "function mAn(){let e=ce();if(!oA()&&e.eligible!==!0)return null;if(e.sessionCache)return e.sessionCache;let n=Os()!==void 0,s=Zm();if(s){if(e.seedFromDisk(s),n)va().invalidatePolicyLayer();else Ro();return s}return null}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "mT",
+          "start": 341442,
+          "end": 341615,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "1f2f6b7b147bea7a2f2dfa1771446dae1a94e4fd8fbfa8aed47646c8955f592c",
+          "source": "function mT(){let e=mAn(),n=ce(),s=kl(n,e)?e:rf(n,e);if(s===null||!zje())return s;if(n.projectedView?.raw!==s)n.projectedView={raw:s,view:qm(s)};return n.projectedView.view}",
+          "variable": false
+        },
+        {
+          "file": "chunk-hrhfcbdv.js",
+          "name": "rf",
+          "start": 341615,
+          "end": 341750,
+          "moduleSha256": "1227551b6344de46fc4f445033bd95d10afb260205a4746eac81c6e866a2ddf6",
+          "sha256": "82f8f854fbd169098a1da88b43cb02e92e8f3a02253bc62435d490a852b1199b",
+          "source": "function rf(e,n){if(n===null)return null;if(e.unverifiedView?.raw!==n)e.unverifiedView={raw:n,view:El(n)};return e.unverifiedView.view}",
+          "variable": false
+        }
+      ],
+      "bindings": {
+        "V": {
+          "file": "chunk-bn3p37gv.js",
+          "name": "V"
+        },
+        "Me": {
+          "file": "chunk-4s38z9x2.js",
+          "name": "Me"
+        },
+        "Zt": {
+          "port": "sha256"
+        },
+        "_": {
+          "port": "stringify"
+        },
+        "Vt": {
+          "file": "chunk-eske5nfz.js",
+          "name": "Vt"
+        },
+        "L": {
+          "file": "chunk-h3rrxdgy.js",
+          "name": "L"
+        },
+        "Le": {
+          "file": "chunk-4s38z9x2.js",
+          "name": "Le"
+        },
+        "gs": {
+          "file": "chunk-4s38z9x2.js",
+          "name": "gs"
+        },
+        "F": {
+          "port": "primerEnabled"
+        },
+        "Zfe": {
+          "file": "chunk-brnn4zwp.js",
+          "name": "Zfe"
+        },
+        "gL": {
+          "file": "chunk-bffwghss.js",
+          "name": "gL"
+        },
+        "gl": {
+          "builtin": {
+            "module": "path",
+            "name": "join"
+          }
+        },
+        "we": {
+          "port": "configHome"
+        },
+        "t": {
+          "port": "debug"
+        },
+        "l": {
+          "port": "errorText"
+        },
+        "U": {
+          "port": "execution"
+        },
+        "f$": {
+          "file": "chunk-0a47xg8f.js",
+          "name": "f$"
+        },
+        "De": {
+          "file": "chunk-2z86j2rq.js",
+          "name": "De"
+        },
+        "Ro": {
+          "port": "invalidateSettings"
+        },
+        "di": {
+          "port": "omitBy"
+        },
+        "Y": {
+          "file": "chunk-q80zaav8.js",
+          "name": "Y"
+        },
+        "Do": {
+          "file": "chunk-1cedw4af.js",
+          "name": "Do"
+        },
+        "t$": {
+          "file": "chunk-bffwghss.js",
+          "name": "t$"
+        },
+        "va": {
+          "port": "settingsStore"
+        },
+        "f": {
+          "file": "chunk-5qqrzb2c.js",
+          "name": "f"
+        }
+      }
+    },
+    {
+      "file": "chunk-c9me9cp7.js",
+      "moduleSha256": "db81856ee883c31a0be18c305014a0d82d3bd698a459223b9de754b934b084ae",
+      "moduleLength": 10331,
+      "rows": [
+        {
+          "file": "chunk-c9me9cp7.js",
+          "name": "E",
+          "start": 4814,
+          "end": 4913,
+          "moduleSha256": "db81856ee883c31a0be18c305014a0d82d3bd698a459223b9de754b934b084ae",
+          "sha256": "a84ab0a2488aed5689416393c679dde4e7f4b29aa980e121bd56b25ab3e7b5e4",
+          "source": "function E(n){if(n&&typeof n===\"object\"&&\"code\"in n&&typeof n.code===\"string\")return n.code;return}",
+          "variable": false
+        },
+        {
+          "file": "chunk-c9me9cp7.js",
+          "name": "W",
+          "start": 7491,
+          "end": 7528,
+          "moduleSha256": "db81856ee883c31a0be18c305014a0d82d3bd698a459223b9de754b934b084ae",
+          "sha256": "8439c063340ce5b84a3647299d7b288005264d912e9522120edf677792960d6f",
+          "source": "function W(n){return E(n)===\"ENOENT\"}",
+          "variable": false
+        }
+      ],
+      "bindings": {}
+    },
+    {
+      "file": "chunk-m59srz4k.js",
+      "moduleSha256": "efb40170e4252963a73cf62c28f20ad76a04090842b663f47dc127ceb1387f94",
+      "moduleLength": 15347,
+      "rows": [
+        {
+          "file": "chunk-m59srz4k.js",
+          "name": "Q0e",
+          "start": 13101,
+          "end": 13117,
+          "moduleSha256": "efb40170e4252963a73cf62c28f20ad76a04090842b663f47dc127ceb1387f94",
+          "sha256": "afd8528732020dd94192223758c5220fee97369ad16cf0c2e39b018ffe8c6a06",
+          "source": "Q0e=k.O_NONBLOCK",
+          "variable": true
+        },
+        {
+          "file": "chunk-m59srz4k.js",
+          "name": "Wl",
+          "start": 13118,
+          "end": 13137,
+          "moduleSha256": "efb40170e4252963a73cf62c28f20ad76a04090842b663f47dc127ceb1387f94",
+          "sha256": "bbf10dae50ff11bdf0b24fa888e4eeb1490e210e535e324bda2b97a44def7f7f",
+          "source": "Wl=k.O_NOFOLLOW|Q0e",
+          "variable": true
+        }
+      ],
+      "bindings": {
+        "k": {
+          "builtin": {
+            "module": "fs",
+            "name": "constants"
+          }
+        }
+      }
+    },
+    {
+      "file": "chunk-7jv3p546.js",
+      "moduleSha256": "5e71a1aa21bcbe757d235d1a0d39796237a777faba622017c4483dc0092e8c95",
+      "moduleLength": 6630,
+      "rows": [
+        {
+          "file": "chunk-7jv3p546.js",
+          "name": "dPe",
+          "start": 4269,
+          "end": 4313,
+          "moduleSha256": "5e71a1aa21bcbe757d235d1a0d39796237a777faba622017c4483dc0092e8c95",
+          "sha256": "b460641e902338f3d7f3799486f25109c307ba0872e68c676b6938a290171c74",
+          "source": "function dPe(e){return`${e}.signature.json`}",
+          "variable": false
+        },
+        {
+          "file": "chunk-7jv3p546.js",
+          "name": "EBe",
+          "start": 4313,
+          "end": 4361,
+          "moduleSha256": "5e71a1aa21bcbe757d235d1a0d39796237a777faba622017c4483dc0092e8c95",
+          "sha256": "234db1bf3a185978506f00ad4d692f5412f3fd4a8ab219b134d4cf9e7115372d",
+          "source": "function EBe(e){return`${e}.signature-iat.json`}",
+          "variable": false
+        },
+        {
+          "file": "chunk-7jv3p546.js",
+          "name": "uPe",
+          "start": 4488,
+          "end": 4605,
+          "moduleSha256": "5e71a1aa21bcbe757d235d1a0d39796237a777faba622017c4483dc0092e8c95",
+          "sha256": "f7455f0ee1a5d81fc0a08182e51fefba9f4b9bc6b3b9b4e949b23e689937a165",
+          "source": "async function uPe(e,n){if(n===void 0){await k(dPe(e));return}let r={jws:n,receivedAt:Date.now()};await Ce(dPe(e),r)}",
+          "variable": false
+        },
+        {
+          "file": "chunk-7jv3p546.js",
+          "name": "X2t",
+          "start": 4605,
+          "end": 4668,
+          "moduleSha256": "5e71a1aa21bcbe757d235d1a0d39796237a777faba622017c4483dc0092e8c95",
+          "sha256": "b8ed6f583b9a784316d47a1623642a435d3eec31677d39ec4e027006e9128ea5",
+          "source": "async function X2t(e){await Promise.all([k(dPe(e)),k(EBe(e))])}",
+          "variable": false
+        },
+        {
+          "file": "chunk-7jv3p546.js",
+          "name": "J2t",
+          "start": 4668,
+          "end": 4743,
+          "moduleSha256": "5e71a1aa21bcbe757d235d1a0d39796237a777faba622017c4483dc0092e8c95",
+          "sha256": "a0d2de55dbb7f664c5ed375387183e7e8d100d080c873d306e64b38e9ef224b8",
+          "source": "async function J2t(e,n){if(!n&&await we(e))return!1;return await X2t(e),!0}",
+          "variable": false
+        },
+        {
+          "file": "chunk-7jv3p546.js",
+          "name": "we",
+          "start": 4743,
+          "end": 4811,
+          "moduleSha256": "5e71a1aa21bcbe757d235d1a0d39796237a777faba622017c4483dc0092e8c95",
+          "sha256": "5bbf28d5775c70959c59a69230dc522bf0935f4e3be0a51125787e86df4bd047",
+          "source": "async function we(e){try{return await j(e),!0}catch(n){return!W(n)}}",
+          "variable": false
+        },
+        {
+          "file": "chunk-7jv3p546.js",
+          "name": "Ce",
+          "start": 5846,
+          "end": 6091,
+          "moduleSha256": "5e71a1aa21bcbe757d235d1a0d39796237a777faba622017c4483dc0092e8c95",
+          "sha256": "6ec78c2f2843aa53d9142e8ea64ff8f5a3edf5715ee3c43b38faf71cd2a56da6",
+          "source": "async function Ce(e,n){try{if(Wl===0&&await Te(e))return;let r=await me(e,R.O_WRONLY|R.O_CREAT|R.O_TRUNC|Wl,384);try{await r.writeFile(_(n),{encoding:\"utf-8\"})}finally{await r.close()}}catch(r){t(`Signed cache: failed to write ${e} - ${l(r)}`)}}",
+          "variable": false
+        },
+        {
+          "file": "chunk-7jv3p546.js",
+          "name": "Te",
+          "start": 6091,
+          "end": 6168,
+          "moduleSha256": "5e71a1aa21bcbe757d235d1a0d39796237a777faba622017c4483dc0092e8c95",
+          "sha256": "b35f1c81ed18d8f87e080097889111685b929aa631c62ee8f073d442ff8cf930",
+          "source": "async function Te(e){try{return(await j(e)).isSymbolicLink()}catch{return!1}}",
+          "variable": false
+        },
+        {
+          "file": "chunk-7jv3p546.js",
+          "name": "k",
+          "start": 6168,
+          "end": 6274,
+          "moduleSha256": "5e71a1aa21bcbe757d235d1a0d39796237a777faba622017c4483dc0092e8c95",
+          "sha256": "27baf533a8fa04c67fffc2a6a89c15f5393a7993ce44f1dedff80d1a64bf6873",
+          "source": "async function k(e){try{await ge(e)}catch(n){if(!W(n))t(`Signed cache: failed to remove ${e} - ${l(n)}`)}}",
+          "variable": false
+        }
+      ],
+      "bindings": {
+        "ge": {
+          "builtin": {
+            "module": "fs/promises",
+            "name": "unlink"
+          }
+        },
+        "W": {
+          "file": "chunk-c9me9cp7.js",
+          "name": "W"
+        },
+        "t": {
+          "port": "debug"
+        },
+        "l": {
+          "port": "errorText"
+        },
+        "Wl": {
+          "file": "chunk-m59srz4k.js",
+          "name": "Wl"
+        },
+        "j": {
+          "builtin": {
+            "module": "fs/promises",
+            "name": "lstat"
+          }
+        },
+        "me": {
+          "builtin": {
+            "module": "fs/promises",
+            "name": "open"
+          }
+        },
+        "R": {
+          "builtin": {
+            "module": "fs",
+            "name": "constants"
+          }
+        },
+        "_": {
+          "port": "stringify"
+        }
+      }
+    },
+    {
+      "file": "chunk-eetz002h.js",
+      "moduleSha256": "b16f44fb0205158327677002981f54a4cb44c631630e1874e1b9324732d80192",
+      "moduleLength": 2212,
+      "rows": [
+        {
+          "file": "chunk-eetz002h.js",
+          "name": "it",
+          "start": 1879,
+          "end": 2061,
+          "moduleSha256": "b16f44fb0205158327677002981f54a4cb44c631630e1874e1b9324732d80192",
+          "sha256": "342007de6990a886b49928444a731c00bd7522ae05c44729eb7aeb52033e249a",
+          "source": "function it(e){return e.code+(\"failureClass\"in e?` ${e.failureClass}`:\"\")+(\"telemetryCode\"in e&&e.telemetryCode?` ${e.telemetryCode}`:\"\")+(\"cause\"in e&&e.cause?`: ${i(e.cause)}`:\"\")}",
+          "variable": false
+        },
+        {
+          "file": "chunk-eetz002h.js",
+          "name": "i",
+          "start": 2061,
+          "end": 2121,
+          "moduleSha256": "b16f44fb0205158327677002981f54a4cb44c631630e1874e1b9324732d80192",
+          "sha256": "494f94fb8166ea6d9de6d2dd4f66461df167720a5c1a8f777a0bf8fb9fd76d77",
+          "source": "function i(e){return e instanceof Error?e.message:String(e)}",
+          "variable": false
+        }
+      ],
+      "bindings": {}
+    }
+  ],
+  "writerRow": {
+    "file": "chunk-p03a4z7b.js",
+    "name": "le",
+    "start": 20382,
+    "end": 21464,
+    "moduleSha256": "8771a71ec06e0533db85d461446f8dab10c0917debb6847f65d61b03731d7641",
+    "sha256": "74e9680ebc82ff082ac4a69d06dda409235abf18cfdd183aa7078580c29cd2e9",
+    "source": "async function le(e,n,r){if(cVt())return;let s=_(e,null,2),g=zYr(e);if(F()&&n!==void 0&&!oA()){let R=await n.write(De.state(\"remote-settings\"),s,{publishDiscipline:\"inPlace\",mode:384,flush:!0});if(!R.ok){t(`Remote settings: Failed to save - ${it(R.error)}`);return}if(t(\"Remote settings: Saved via storage backend\"),Vje(\"cache\",s),await uPe(PZ(),r),g!==void 0){let w=await n.write(De.state(Sfe),g,{publishDiscipline:\"inPlace\",mode:384});if(t(w.ok?\"Remote settings: Saved helper consent via storage backend\":`Remote settings: Failed to save helper consent - ${it(w.error)}`),w.ok)Vje(\"helperConsent\",g)}return}try{let R=PZ(),w=await Ie(R,\"w\",384);try{await w.writeFile(s,{encoding:\"utf-8\"}),await w.datasync()}finally{await w.close()}t(`Remote settings: Saved to ${R}`)}catch(R){t(`Remote settings: Failed to save - ${R instanceof Error?R.message:\"unknown error\"}`);return}if(F()&&!oA())Vje(\"cache\",s);if(await uPe(PZ(),r),g===void 0)return;try{if(await Be(dAn(),g,{mode:384}),F()&&!oA())Vje(\"helperConsent\",g)}catch(R){t(`Remote settings: Failed to save helper consent - ${l(R)}`)}}"
+  },
+  "writerPorts": [
+    "cVt",
+    "_",
+    "zYr",
+    "F",
+    "oA",
+    "De",
+    "t",
+    "it",
+    "Vje",
+    "uPe",
+    "PZ",
+    "Ie",
+    "Sfe",
+    "Be",
+    "dAn",
+    "l"
+  ],
+  "clearRow": {
+    "file": "chunk-p03a4z7b.js",
+    "name": "cRt",
+    "start": 21464,
+    "end": 21994,
+    "moduleSha256": "8771a71ec06e0533db85d461446f8dab10c0917debb6847f65d61b03731d7641",
+    "sha256": "6c787e76ca7e369aef6ee22a38d8667ac11c12f57c8529ba51f8d29f5003dd76",
+    "source": "async function cRt(e){aJt(),A3(),Ro(),I().detachBarrier()?.();let n=F()&&e!==void 0?await e.delete(De.state(Sfe)).then((r)=>r.ok?void 0:it(r.error)):await Le(dAn(),{force:!0}).then(()=>{return},l);if(n!==void 0){t(`Remote settings: Failed to remove helper consent - ${n}`);return}if(F()&&!oA())Vje(\"helperConsent\",null);if(oA())return;if(await X2t(PZ()),F()&&e!==void 0){if((await e.delete(De.state(\"remote-settings\"))).ok)Vje(\"cache\",null);return}try{let r=PZ();await He(r)}catch(r){if(F()&&!W(r))return}if(F())Vje(\"cache\",null)}"
+  },
+  "clearPorts": [
+    "aJt",
+    "A3",
+    "Ro",
+    "I",
+    "F",
+    "De",
+    "Sfe",
+    "it",
+    "Le",
+    "dAn",
+    "l",
+    "t",
+    "oA",
+    "Vje",
+    "X2t",
+    "PZ",
+    "He",
+    "W"
+  ],
+  "externalRoots": {
+    "writeSignature": {
+      "file": "chunk-7jv3p546.js",
+      "name": "uPe"
+    },
+    "clearSignatures": {
+      "file": "chunk-7jv3p546.js",
+      "name": "X2t"
+    },
+    "signatureAfterReset": {
+      "file": "chunk-7jv3p546.js",
+      "name": "J2t"
+    },
+    "formatStorageFailure": {
+      "file": "chunk-eetz002h.js",
+      "name": "it"
+    }
+  },
+  "reporterRows": [
+    {
+      "file": "chunk-p03a4z7b.js",
+      "name": "N",
+      "start": 28648,
+      "end": 29091,
+      "moduleSha256": "8771a71ec06e0533db85d461446f8dab10c0917debb6847f65d61b03731d7641",
+      "sha256": "6799ea011fae8d02fc0ae547ab4a63b8c71496bc4727b05b66e45b90c6dab264",
+      "source": "function N(e){if(!KP()){let r=aVt();if(r)pAn({state:\"ineligible\",reason:r});return}let n=ve()!==void 0;if(e.fetchSucceeded){if(pAn({state:\"ok\",hasSettings:e.settings!==null&&Object.keys(e.settings).length>0}),n)Ro();return}if(e.failure){let r=e.settings!==null&&Object.keys(e.settings).length>0;if(pAn(r?{state:\"stale_cache\",failure:e.failure,transportEnvWithheld:!wb()}:{state:\"failed\",failure:e.failure}),n||e.failure.rulings!==void 0)Ro()}}"
+    },
+    {
+      "file": "chunk-p03a4z7b.js",
+      "name": "ve",
+      "start": 29091,
+      "end": 29194,
+      "moduleSha256": "8771a71ec06e0533db85d461446f8dab10c0917debb6847f65d61b03731d7641",
+      "sha256": "d4e8c83d9a5122777fd754ca9aa3bb71e1ea2da0152ac20aef33e7ba2e1ee7c8",
+      "source": "function ve(){let e=uI();return e?.state===\"failed\"||e?.state===\"stale_cache\"?e.failure.rulings:void 0}"
+    }
+  ],
+  "failureClauses": [
+    {
+      "file": "chunk-p03a4z7b.js",
+      "start": 24523,
+      "end": 24715,
+      "moduleSha256": "8771a71ec06e0533db85d461446f8dab10c0917debb6847f65d61b03731d7641",
+      "sha256": "b0c61bff46017eaf06cb8c485d2b2245ff8ca75a66b312e8827087ec8da7b969",
+      "source": "{errorKind:h.errorKind??\"unknown_error\",message:h.error??\"Unknown error\",...h.httpStatus!==void 0&&{httpStatus:h.httpStatus},...h.gatewayPinMismatch&&{gatewayPinMismatch:h.gatewayPinMismatch}}"
+    },
+    {
+      "file": "chunk-p03a4z7b.js",
+      "start": 28359,
+      "end": 28444,
+      "moduleSha256": "8771a71ec06e0533db85d461446f8dab10c0917debb6847f65d61b03731d7641",
+      "sha256": "eaf704f354c65660a5b521280ece2aac177cd213f0072d1b1586de40818603a0",
+      "source": "{errorKind:\"unknown_error\",message:\"Unexpected error while applying remote settings\"}"
+    }
+  ],
+  "ports": [
+    "configHome",
+    "debug",
+    "environment",
+    "errorText",
+    "execution",
+    "filesystem",
+    "invalidateSettings",
+    "omitBy",
+    "primerEnabled",
+    "resolvePath",
+    "settingsStore",
+    "sha256",
+    "stringify"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "version": "2.1.287",
+  "rawPath": "provenance-reference://not-bundled/cbefc0a9ccbd798ca098a39e6e24d202acfe8056c00af964fb7d9feb2e276d6c",
+  "moduleSha256": "6e112ad1a9be2e1bf841a648e9657285aa062595ebb13d498f5ea1989c750ff3",
+  "rangeConvention": "UTF-16 end-exclusive",
+  "declarations": [
+    {
+      "name": "c",
+      "start": 14783,
+      "end": 14883,
+      "sha256": "b5d953c6f1889cc43db8f05195a089f7893dd75942b57dfcb54ec221e6b2c518",
+      "source": "var c=\"Review and manage your privacy settings at https://claude.ai/settings/data-privacy-controls\";"
+    },
+    {
+      "name": "D",
+      "start": 14883,
+      "end": 15767,
+      "sha256": "acc9cb986a1c5134ec101f2d751f88150edd4a975f411ede961c949d4fcb5169",
+      "source": "async function D(t,a){if(!await NVe(a.storageV5,a.credentials))return t(c),null;let[r,l]=await Promise.all([EX(a.credentials),Cge(a.credentials)]);if(!r.success)return t(c),null;let o=r.data,g=l.success?l.data:null;async function u(s){if(s===\"escape\"||s===\"defer\"){t(\"Privacy settings dialog dismissed\",{display:\"system\"});return}await d()}async function d(){let s=await EX(a.credentials);if(!s.success){t(\"Unable to retrieve updated privacy settings\",{display:\"system\"});return}let n=s.data,m=n.grove_enabled?\"true\":\"false\";if(t(`\"Help improve our AI models\" set to ${m}.`),o.grove_enabled!==null&&o.grove_enabled!==n.grove_enabled)i(\"tengu_grove_policy_toggled\",{state:n.grove_enabled??void 0,location:S(\"settings\")})}if(o.grove_enabled!==null)return e(uPn,{settings:o,domainExcluded:g?.domain_excluded,onDone:d});return e(dPn,{showIfAlreadyViewed:!0,onDone:u,location:\"settings\"})}"
+    }
+  ],
+  "hostAdaptation": {
+    "e": "same React jsx runtime",
+    "i": "existing no-op analytics C",
+    "EX/NVe/Cge": "same typed Grove API wrappers -> canonical owner/cache/Gt",
+    "dPn/uPn": "same existing Grove wrappers -> canonical originals",
+    "S": "existing canonical original metadata identity"
+  },
+  "cCuts": []
+}

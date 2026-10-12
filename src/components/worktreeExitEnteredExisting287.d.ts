@@ -1,0 +1,1 @@
+export function createEnteredExistingExit287(read:(module:string,name:string)=>any,storage:typeof import('../utils/sessionStorage.js'),projectSetter:(cwd:string)=>void,worktreeState:typeof import('../utils/officialWorktreeState287.generated.js').getWorktreeState287):(session:import('../utils/worktree.js').WorktreeSession,storageV5:unknown)=>Promise<string>;

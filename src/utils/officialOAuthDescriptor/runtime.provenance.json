@@ -1,0 +1,418 @@
+{
+  "version": "2.1.286",
+  "platform": "darwin-arm64",
+  "binarySha256": "75e3016e9d2570767b08e43a7467d4817a4f149232c169ca295f2c95fef21433",
+  "offsetUnit": "UTF-16 code units",
+  "records": [
+    {
+      "group": "descriptor",
+      "file": "chunk-vb1bzxcm.js",
+      "symbol": "pjt",
+      "start": 619,
+      "end": 628,
+      "moduleSha256": "95fcf4d189d66cb3bbdf61ed5990d0d7c3c2fb7dbb607f6c7c13f23483f26012",
+      "sha256": "8e553fb0035105aef17e541bf23e071b5c867d6e3b4355933f7b3367bcd86706",
+      "source": "pjt=65536",
+      "variable": true
+    },
+    {
+      "group": "descriptor",
+      "file": "chunk-f09yefd8.js",
+      "symbol": "_G",
+      "start": 1043,
+      "end": 1111,
+      "moduleSha256": "3264a9d37006ad7aebdae874d28bf54dcd48d508f39c55030f2aa9341c34904a",
+      "sha256": "b6e541743dc9fc1837cf6e06a5c2e2e0ed7029c214e1838293cc067345429770",
+      "source": "function _G(){return a.CLAUDE_CODE_REMOTE_SESSION_ORIGIN===\"review\"}",
+      "variable": false
+    },
+    {
+      "group": "descriptor",
+      "file": "chunk-f09yefd8.js",
+      "symbol": "y",
+      "start": 1202,
+      "end": 1233,
+      "moduleSha256": "3264a9d37006ad7aebdae874d28bf54dcd48d508f39c55030f2aa9341c34904a",
+      "sha256": "969c9d70941a29df247ec62b2f1a23508592f35f02cb1fc1f370e5031163ddc0",
+      "source": "y=\"/home/claude/.claude/remote\"",
+      "variable": true
+    },
+    {
+      "group": "descriptor",
+      "file": "chunk-f09yefd8.js",
+      "symbol": "xht",
+      "start": 1234,
+      "end": 1257,
+      "moduleSha256": "3264a9d37006ad7aebdae874d28bf54dcd48d508f39c55030f2aa9341c34904a",
+      "sha256": "26334df9bec5704758e4851c1f14d68befd98546a14e000763930836b44ad1ec",
+      "source": "xht=`${y}/.oauth_token`",
+      "variable": true
+    },
+    {
+      "group": "descriptor",
+      "file": "chunk-f09yefd8.js",
+      "symbol": "f7n",
+      "start": 1258,
+      "end": 1277,
+      "moduleSha256": "3264a9d37006ad7aebdae874d28bf54dcd48d508f39c55030f2aa9341c34904a",
+      "sha256": "fdb3bbf756093ea67779927298a7e7804290f0af3c3e0c75cf04c23e6d9dddb6",
+      "source": "f7n=`${y}/.api_key`",
+      "variable": true
+    },
+    {
+      "group": "descriptor",
+      "file": "chunk-f09yefd8.js",
+      "symbol": "jSe",
+      "start": 1312,
+      "end": 1319,
+      "moduleSha256": "3264a9d37006ad7aebdae874d28bf54dcd48d508f39c55030f2aa9341c34904a",
+      "sha256": "e18a59d65beaabb1df1b4679d0c9592856e942dc6f2bcf59ac964413792cf7b6",
+      "source": "jSe=pjt",
+      "variable": true
+    },
+    {
+      "group": "descriptor",
+      "file": "chunk-f09yefd8.js",
+      "symbol": "F",
+      "start": 1320,
+      "end": 1679,
+      "moduleSha256": "3264a9d37006ad7aebdae874d28bf54dcd48d508f39c55030f2aa9341c34904a",
+      "sha256": "3eac6a8f1ade192a02fa39933f207142845b560343d84a30910ff372268b460e",
+      "source": "function F(e,n,r,{skipInReviewOrigin:o=!1}={}){if(!a.CLAUDE_CODE_REMOTE)return;if(o&&_G()){t(`Skipping ${r} disk persistence in review-origin session`);return}try{H(y,{recursive:!0,mode:448}),N(e,n,{encoding:\"utf8\",mode:384}),t(`Persisted ${r} to ${e} for subprocess access`)}catch(s){t(`Failed to persist ${r} to disk (non-fatal): ${l(s)}`,{level:\"error\"})}}",
+      "variable": false
+    },
+    {
+      "group": "descriptor",
+      "file": "chunk-f09yefd8.js",
+      "symbol": "h",
+      "start": 1679,
+      "end": 1717,
+      "moduleSha256": "3264a9d37006ad7aebdae874d28bf54dcd48d508f39c55030f2aa9341c34904a",
+      "sha256": "db8311ec350fb8f02dc9a9922fb701af2a54fab2d2ea93090dfd55cc8441c0eb",
+      "source": "function h(e,n){return Pht(e,n).token}",
+      "variable": false
+    },
+    {
+      "group": "descriptor",
+      "file": "chunk-f09yefd8.js",
+      "symbol": "Pht",
+      "start": 1717,
+      "end": 2058,
+      "moduleSha256": "3264a9d37006ad7aebdae874d28bf54dcd48d508f39c55030f2aa9341c34904a",
+      "sha256": "42e3724f1c3dbb412d37b36ff34736e68932c1300e228d58fdf153e252594000",
+      "source": "function Pht(e,n){try{let r=t2e(e,{maxBytes:jSe,regularFileOnly:!0}).trim();if(!r)return{token:null,miss:\"empty\"};return t(`Read ${n} from well-known file ${e}`),{token:r}}catch(r){if(G(r))return{token:null,miss:\"enoent\"};return t(`Failed to read ${n} from ${e}: ${l(r)}`,{level:\"debug\"}),{token:null,miss:v(r)===\"EACCES\"?\"eacces\":\"other\"}}}",
+      "variable": false
+    },
+    {
+      "group": "descriptor",
+      "file": "chunk-f09yefd8.js",
+      "symbol": "D",
+      "start": 2786,
+      "end": 3882,
+      "moduleSha256": "3264a9d37006ad7aebdae874d28bf54dcd48d508f39c55030f2aa9341c34904a",
+      "sha256": "9c7502fbb9425681afece569075bb200ffaeefa8d7266180216d852cfb999c5d",
+      "source": "function D({envVar:e,wellKnownPath:n,readPath:r=n,label:o,fileLabel:s=o,getCached:p,setCached:c,skipInReviewOrigin:E=!1}){let m=p();if(m!==void 0)return m;let g=process.env[e];if(!g){let i=h(r,s);return c(i),i}let f=parseInt(g,10);if(Number.isNaN(f))return t(`${e} must be a valid file descriptor number, got: ${g}`,{level:\"error\"}),c(null),null;if(JJn(f)){let i=!a.CLAUDE_CODE_REMOTE&&typeof process.send!==\"function\",u=i?S(f,o):h(r,s);if(i)delete process.env[e],KEn(e);if(c(u),u&&i)F(n,u,s,{skipInReviewOrigin:E});return u}try{let i=`/dev/fd/${f}`,u=t2e(i,{maxBytes:jSe}).trim();if(!u)return t(`File descriptor contained empty ${o}`,{level:\"error\"}),c(null),null;return t(`Successfully read ${o} from file descriptor ${f}`),c(u),F(n,u,s,{skipInReviewOrigin:E}),u}catch(i){t(`Failed to read ${o} from file descriptor ${f}: ${l(i)}`,{level:\"error\"});let u=h(r,s);if(u)return c(u),u;let A=v(i);if((A===\"EACCES\"||A===\"EPERM\")&&!a.CLAUDE_CODE_REMOTE&&typeof process.send!==\"function\"){let d=S(f,o);if(delete process.env[e],KEn(e),d)return c(d),F(n,d,s,{skipInReviewOrigin:E}),d}return c(null),null}}",
+      "variable": false
+    },
+    {
+      "group": "descriptor",
+      "file": "chunk-f09yefd8.js",
+      "symbol": "S",
+      "start": 3882,
+      "end": 4279,
+      "moduleSha256": "3264a9d37006ad7aebdae874d28bf54dcd48d508f39c55030f2aa9341c34904a",
+      "sha256": "00cbd04f4c6807693d03a9314d87cf9f4f8d411aa270d5e903557d0281dc50f3",
+      "source": "function S(e,n){try{t(`Reading ${n} from inherited descriptor ${e} (until newline or end-of-stream)`);let r=fVo(e,{maxBytes:jSe}).trim();if(!r)return t(`File descriptor ${e} contained empty ${n}`,{level:\"error\"}),null;return t(`Successfully read ${n} directly from inherited descriptor ${e}`),r}catch(r){return t(`Failed to read ${n} directly from descriptor ${e}: ${l(r)}`,{level:\"error\"}),null}}",
+      "variable": false
+    },
+    {
+      "group": "descriptor",
+      "file": "chunk-f09yefd8.js",
+      "symbol": "P",
+      "start": 5647,
+      "end": 6646,
+      "moduleSha256": "3264a9d37006ad7aebdae874d28bf54dcd48d508f39c55030f2aa9341c34904a",
+      "sha256": "98cdf08d5e4100421ad2a522a0d19c2af342ad2dee5148ed6facf98be6e6319b",
+      "source": "function P(){let e=process.env.CLAUDE_BG_AUTH_SNAPSHOT_PATH;if(!e)return;let n;try{n=b(e)}catch(r){if(U(r)){t(`bg auth snapshot busy, will retry on the next read: ${l(r)}`,{level:\"warn\"});return}if(!G(r))t(`Failed to consume bg auth snapshot: ${l(r)}`,{level:\"warn\"})}if(delete process.env.CLAUDE_BG_AUTH_SNAPSHOT_PATH,n===void 0)return;try{L(e).catch(()=>{});let r=JSON.parse(n);if(typeof r?.gatewayToken===\"string\"&&r.gatewayToken){YEn(r.gatewayToken),t(\"Consumed gateway token from bg auth snapshot\");return}if(typeof r?.accessToken!==\"string\"||!r.accessToken){t(\"bg auth snapshot missing accessToken\",{level:\"warn\"});return}if(iU(r.accessToken),W_t(!0),Array.isArray(r.scopes)&&r.scopes.length>0)G_t(r.scopes);if(r.subscriptionType)process.env.CLAUDE_CODE_SUBSCRIPTION_TYPE=r.subscriptionType;if(r.rateLimitTier)process.env.CLAUDE_CODE_RATE_LIMIT_TIER=r.rateLimitTier;t(\"Consumed bg auth snapshot from sockDir\")}catch(r){if(!G(r))t(`Failed to consume bg auth snapshot: ${l(r)}`,{level:\"warn\"})}}",
+      "variable": false
+    },
+    {
+      "group": "descriptor",
+      "file": "chunk-f09yefd8.js",
+      "symbol": "d0",
+      "start": 8018,
+      "end": 8183,
+      "moduleSha256": "3264a9d37006ad7aebdae874d28bf54dcd48d508f39c55030f2aa9341c34904a",
+      "sha256": "d935a57c9f0fc7a35d99a91034979be0d765c832fd5f918f0dcad8f2884a1d60",
+      "source": "function d0(){return P(),D({envVar:\"CLAUDE_CODE_OAUTH_TOKEN_FILE_DESCRIPTOR\",wellKnownPath:xht,label:\"OAuth token\",getCached:bj,setCached:iU,skipInReviewOrigin:!0})}",
+      "variable": false
+    },
+    {
+      "group": "descriptor",
+      "file": "chunk-f09yefd8.js",
+      "symbol": "U",
+      "start": 9114,
+      "end": 9202,
+      "moduleSha256": "3264a9d37006ad7aebdae874d28bf54dcd48d508f39c55030f2aa9341c34904a",
+      "sha256": "e8796af616cf508ad8bf5def5c07a831251098555aed2199e3f6930bac831ea8",
+      "source": "function U(e){let n=v(e);return n===\"EBUSY\"||n===\"EPERM\"||n===\"EACCES\"&&O()===\"windows\"}",
+      "variable": false
+    },
+    {
+      "group": "descriptor",
+      "file": "chunk-f09yefd8.js",
+      "symbol": "b",
+      "start": 9202,
+      "end": 9390,
+      "moduleSha256": "3264a9d37006ad7aebdae874d28bf54dcd48d508f39c55030f2aa9341c34904a",
+      "sha256": "5bf23f8d56f88782efd53fb24546b46e31da5ec77951674fdd7eca7e4f7eae06",
+      "source": "function b(e){let n=()=>t2e(e,{maxBytes:jSe,symlinkAtPath:a.CLAUDE_CODE_PROVIDER_MANAGED_BY_HOST?\"follow\":\"refuse\",regularFileOnly:!0});try{return n()}catch(r){if(U(r))return n();throw r}}",
+      "variable": false
+    }
+  ],
+  "ports": {
+    "descriptor": [
+      "G",
+      "G_t",
+      "H",
+      "JJn",
+      "KEn",
+      "L",
+      "N",
+      "O",
+      "W_t",
+      "YEn",
+      "a",
+      "bj",
+      "fVo",
+      "iU",
+      "l",
+      "t",
+      "t2e",
+      "v"
+    ]
+  },
+  "portBindings": {
+    "descriptor": {
+      "G": [
+        {
+          "kind": "import",
+          "file": "chunk-f09yefd8.js",
+          "module": "/$bunfs/root/chunk-h730kz80.js",
+          "imported": "G",
+          "start": 626,
+          "end": 627,
+          "source": "G",
+          "sha256": "333e0a1e27815d0ceee55c473fe3dc93d56c63e3bee2b3b4aee8eed6d70191a3"
+        }
+      ],
+      "G_t": [
+        {
+          "kind": "import",
+          "file": "chunk-f09yefd8.js",
+          "module": "/$bunfs/root/chunk-ar1aj28g.js",
+          "imported": "G_t",
+          "start": 782,
+          "end": 785,
+          "source": "G_t",
+          "sha256": "b4f9811bf3c61e661b524a880b09f045785399780286d6ca8b4026fa44f847f1"
+        }
+      ],
+      "H": [
+        {
+          "kind": "import",
+          "file": "chunk-f09yefd8.js",
+          "module": "fs",
+          "imported": "mkdirSync",
+          "start": 1118,
+          "end": 1132,
+          "source": "mkdirSync as H",
+          "sha256": "5f6fc90c51170596293b37e736494a80ba180145118019048d74d2623515c275"
+        }
+      ],
+      "JJn": [
+        {
+          "kind": "import",
+          "file": "chunk-f09yefd8.js",
+          "module": "/$bunfs/root/chunk-ycv3ax30.js",
+          "imported": "JJn",
+          "start": 954,
+          "end": 957,
+          "source": "JJn",
+          "sha256": "a81ccd3d050ef0975d6f534bbb221918916b079d36f2d3e64dc6a23f033e7a03"
+        }
+      ],
+      "KEn": [
+        {
+          "kind": "import",
+          "file": "chunk-f09yefd8.js",
+          "module": "/$bunfs/root/chunk-ar1aj28g.js",
+          "imported": "KEn",
+          "start": 798,
+          "end": 801,
+          "source": "KEn",
+          "sha256": "0161f5c1f63f90ad9c6a623aaa7c09ff8bca81c10401ededaea9a1b14da59b23"
+        }
+      ],
+      "L": [
+        {
+          "kind": "import",
+          "file": "chunk-f09yefd8.js",
+          "module": "fs/promises",
+          "imported": "unlink",
+          "start": 1168,
+          "end": 1179,
+          "source": "unlink as L",
+          "sha256": "813fd5cb47410c67c257b4b2cf6d595c85e27d135746e9f14d95a218544f7462"
+        }
+      ],
+      "N": [
+        {
+          "kind": "import",
+          "file": "chunk-f09yefd8.js",
+          "module": "fs",
+          "imported": "writeFileSync",
+          "start": 1133,
+          "end": 1151,
+          "source": "writeFileSync as N",
+          "sha256": "625fc00785720e991cdde92c638d0d38135cf121803adfcc3d4d321782214b23"
+        }
+      ],
+      "O": [
+        {
+          "kind": "import",
+          "file": "chunk-f09yefd8.js",
+          "module": "/$bunfs/root/chunk-j72sz16r.js",
+          "imported": "O",
+          "start": 900,
+          "end": 901,
+          "source": "O",
+          "sha256": "c4694f2e93d5c4e7d51f9c5deb75e6cc8be5e1114178c6a45b6fc2c566a0aa8c"
+        }
+      ],
+      "W_t": [
+        {
+          "kind": "import",
+          "file": "chunk-f09yefd8.js",
+          "module": "/$bunfs/root/chunk-ar1aj28g.js",
+          "imported": "W_t",
+          "start": 778,
+          "end": 781,
+          "source": "W_t",
+          "sha256": "ae58458e74e50c6f3383f28a18381744561755f0967a32b49c96b2c9d95f5e0b"
+        }
+      ],
+      "YEn": [
+        {
+          "kind": "import",
+          "file": "chunk-f09yefd8.js",
+          "module": "/$bunfs/root/chunk-ar1aj28g.js",
+          "imported": "YEn",
+          "start": 806,
+          "end": 809,
+          "source": "YEn",
+          "sha256": "97e329b6fe5f34954f57572dca46ee60182f8c9ada9e15397712e46b9976d6c5"
+        }
+      ],
+      "a": [
+        {
+          "kind": "import",
+          "file": "chunk-f09yefd8.js",
+          "module": "/$bunfs/root/chunk-07mxqtdh.js",
+          "imported": "a",
+          "start": 718,
+          "end": 719,
+          "source": "a",
+          "sha256": "ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb"
+        }
+      ],
+      "bj": [
+        {
+          "kind": "import",
+          "file": "chunk-f09yefd8.js",
+          "module": "/$bunfs/root/chunk-ar1aj28g.js",
+          "imported": "bj",
+          "start": 772,
+          "end": 774,
+          "source": "bj",
+          "sha256": "652742992acbaf9a5a3fbef60f7a51e853a93534fac251e375c662d6a5cd8d01"
+        }
+      ],
+      "fVo": [
+        {
+          "kind": "import",
+          "file": "chunk-f09yefd8.js",
+          "module": "/$bunfs/root/chunk-ycv3ax30.js",
+          "imported": "fVo",
+          "start": 950,
+          "end": 953,
+          "source": "fVo",
+          "sha256": "ecb6017a7fc5f71d3b5fddae4dd9c24ad87a0072270af7a2fe2b62e4234efba2"
+        }
+      ],
+      "iU": [
+        {
+          "kind": "import",
+          "file": "chunk-f09yefd8.js",
+          "module": "/$bunfs/root/chunk-ar1aj28g.js",
+          "imported": "iU",
+          "start": 775,
+          "end": 777,
+          "source": "iU",
+          "sha256": "27417d46d6ec5e4a7db54d53db45b16016556ba372ecea304a132f9a9dbde45e"
+        }
+      ],
+      "l": [
+        {
+          "kind": "import",
+          "file": "chunk-f09yefd8.js",
+          "module": "/$bunfs/root/chunk-h730kz80.js",
+          "imported": "l",
+          "start": 622,
+          "end": 623,
+          "source": "l",
+          "sha256": "acac86c0e609ca906f632b0e2dacccb2b77d22b0621f20ebece1a4835b93f6f0"
+        }
+      ],
+      "t": [
+        {
+          "kind": "import",
+          "file": "chunk-f09yefd8.js",
+          "module": "/$bunfs/root/chunk-yx145v00.js",
+          "imported": "t",
+          "start": 854,
+          "end": 855,
+          "source": "t",
+          "sha256": "e3b98a4da31a127d4bde6e43033f66ba274cab0eb7eb1c70ec41402bf6273dd8"
+        }
+      ],
+      "t2e": [
+        {
+          "kind": "import",
+          "file": "chunk-f09yefd8.js",
+          "module": "/$bunfs/root/chunk-ycv3ax30.js",
+          "imported": "t2e",
+          "start": 946,
+          "end": 949,
+          "source": "t2e",
+          "sha256": "c433a7a81a96a6eafa42cc7bb860f5ac1d4b729089f0ba2bd37335f4a9a95f68"
+        }
+      ],
+      "v": [
+        {
+          "kind": "import",
+          "file": "chunk-f09yefd8.js",
+          "module": "/$bunfs/root/chunk-h730kz80.js",
+          "imported": "v",
+          "start": 624,
+          "end": 625,
+          "source": "v",
+          "sha256": "4c94485e0c21ae6c41ce1dfe7b6bfaceea5ab68e40a2476f50208e526f506080"
+        }
+      ]
+    }
+  },
+  "returns": {
+    "descriptor": "{oauth:d0,read:D,persist:F,wellKnown:h,probe:Pht,consume:P,path:xht,apiKeyPath:f7n}"
+  }
+}

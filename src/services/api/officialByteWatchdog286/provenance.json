@@ -1,0 +1,78 @@
+{
+  "version": "2.1.286",
+  "platform": "darwin-arm64",
+  "modules": [
+    {
+      "file": "chunk-52qbm57h.js",
+      "sha256": "a481d621d143a6f4a8189656940cdb28cf5f7c300c0e646eb6036f5dddecc350",
+      "declarations": [
+        {
+          "symbol": "mtr",
+          "start": 940,
+          "end": 1103,
+          "source": "class mtr{now(){return Date.now()}monotonicNow(){return performance.now()}setTimeout(t,r,e){let o=setTimeout(t,r);if(e?.unref)o.unref();return()=>clearTimeout(o)}}",
+          "sha256": "254c1be502d7871322f905b2a788e3befb145d60290aee795cc97a508678aad0",
+          "variable": false
+        },
+        {
+          "symbol": "zQ",
+          "start": 1107,
+          "end": 1117,
+          "source": "zQ=new mtr",
+          "sha256": "e79f2def1b650e53b33cb9d896f663d76f1f928badb472b98047a7d2efff26cb",
+          "variable": true
+        }
+      ]
+    },
+    {
+      "file": "chunk-tx79xqc5.js",
+      "sha256": "9c1e53986aa126f85e625401314cc5e1ef9e3250f7f7067894f2cb662cc9a069",
+      "declarations": [
+        {
+          "symbol": "oin",
+          "start": 610298,
+          "end": 610590,
+          "source": "class oin extends Error{idleMs;bytesReceived;ttfbMs;bodyReadPending;cfRay;sleptMs;constructor(e,n=0,r,s=!0,h,g=0){super(`stream idle: no bytes for ${e}ms`);this.name=\"StreamIdleTimeoutError\",this.idleMs=e,this.bytesReceived=n,this.ttfbMs=r,this.bodyReadPending=s,this.cfRay=h,this.sleptMs=g}}",
+          "sha256": "32620ec8fbc67c1c23f33abc8bd88630e79c6cd840e25fa06beb6a5f6b98538c",
+          "variable": false
+        },
+        {
+          "symbol": "ROt",
+          "start": 610590,
+          "end": 610799,
+          "source": "class ROt extends Error{sleptMs;code=\"StreamSuspended\";constructor(e){super(\"Stream watchdog detected system suspend; aborting to retry on a fresh connection\");this.sleptMs=e;this.name=\"StreamSuspendedError\"}}",
+          "sha256": "a326fbe1c35f8891926dada83a879ddc58dee83c708e6d00caff5fd0ca2ae287",
+          "variable": false
+        },
+        {
+          "symbol": "r9",
+          "start": 611440,
+          "end": 613241,
+          "source": "function r9(e,n,r,s,h=zQ){let g=null,b=null,w=0,k=0,A=h.monotonicNow(),D=null,M=!1,W=[15000,30000,60000,120000],B=()=>{if(b!==null)b(),b=null},K=()=>{if(g!==null)g(),g=null},Y=()=>{K(),B()},X=0,ne=0,le=(he)=>{if(B(),w>=W.length)return;let xe=W[w],pe=h.monotonicNow()-X;b=h.setTimeout(()=>{if(b=null,he.desiredSize===null)return;if(h.monotonicNow()-X<xe/2){le(he);return}try{t(`[Stall] stream_idle_partial lastChunkAgeMs=${Math.round(h.monotonicNow()-X)} bytesTotal=${k} idleDeadlineMs=${n}`,{level:\"warn\"})}catch{}w++,le(he)},Math.max(0,xe-pe),{unref:!0})},Q=(he)=>{Y(),X=h.monotonicNow(),ne=h.now(),w=0,le(he),g=h.setTimeout(()=>{g=null;let xe=h.monotonicNow(),pe=h.now(),Ee=Math.round(xe-X-n),ke=Math.max(0,Math.round(pe-ne-(xe-X))),Ne=he.desiredSize===null;if(Ee<-n/2){t(`[byte-watchdog] aborting: late=${Ee}ms slept=${ke}ms (sleep/suspend)`);let ot=new ROt(ke);try{he.error(ot)}catch{}fe.cancel(ot).catch(()=>{});return}let We=D!==null?Math.round(D-A):void 0;try{if(t(`[byte-watchdog] firing: idle=${n}ms late=${Ee}ms errored=${Ne} bodyReadPending=${M}`,{level:\"warn\"}),te(\"warn\",\"cli_byte_watchdog_fired\",{idle_ms:n,late_ms:Ee,readable_errored:Ne,body_read_pending:M,slept_ms:ke,bytes_received:k,ttfb_ms:We??null}),Ee>=1000)i(\"tengu_byte_watchdog_fired_late\",{idle_ms:n,late_ms:Ee,readable_errored:Ne})}catch{}let Ve=new oin(n,k,We,M,r,ke);try{he.error(Ve)}catch{}fe.cancel(Ve).catch(()=>{})},n)},fe=e.getReader();return new ReadableStream({start(he){Q(he)},async pull(he){M=!0;let xe;try{xe=await fe.read()}catch(Ee){M=!1,Y();try{he.error(Ee)}catch{}return}if(M=!1,xe.done){Y();try{he.close()}catch{}return}let pe=xe.value;if(D===null&&pe.byteLength>0)D=h.monotonicNow();if(k+=pe.byteLength,s)s.lastAt=h.monotonicNow();Q(he);try{he.enqueue(pe)}catch{Y()}},cancel(he){return Y(),fe.cancel(he)}})}",
+          "sha256": "59b84eff76609aa69770c4b8626bca93eaf3ef8df3332263fda821b2718e573d",
+          "variable": false
+        },
+        {
+          "symbol": "zM",
+          "start": 613827,
+          "end": 613922,
+          "source": "function zM(e,n){let r=new Response(n,e);return Object.defineProperty(r,\"url\",{value:e.url}),r}",
+          "sha256": "107660262cf45f1d3f8824410cadd376085a9cdf74e1c7b30092e19ee5b65d06",
+          "variable": false
+        }
+      ]
+    }
+  ],
+  "roots": [
+    "r9",
+    "zM",
+    "oin",
+    "ROt"
+  ],
+  "bodyRewrites": [],
+  "ports": {
+    "t": "logForDebugging",
+    "te": "existing explicit logForDiagnosticsNoPII",
+    "i": "existing local analytics cancellation leaf"
+  }
+}
